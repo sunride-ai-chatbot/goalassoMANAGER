@@ -1,10 +1,10 @@
 // cloud save round-trip with a fake claude.use db + sim/export tests
-const {JSDOM}=require('jsdom');
+const {JSDOM}=require('jsdom');const assert=require('node:assert/strict');
 const fs=require('fs');let html=fs.readFileSync(require('path').join(__dirname,'..','ligat-haal-manager.html'),'utf8');
 html='<!doctype html><html><head><meta charset="utf-8"></head><body><script>window.__ilmUnlock=1;window.__ilmNoSplash=1</script>'+html.replace(/<link[^>]*>/g,'')+'</body></html>';
 const store={};
 const mkDoc=path=>({get:async()=>({exists:path in store,data:()=>store[path]}),set:async d=>{store[path]=d},collection:sub=>({doc:id=>mkDoc(path+'/'+sub+'/'+id)})});
-const dom=new JSDOM('<script>window.__ilmUnlock=1;window.__ilmNoSplash=1</script>'+html,{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.claude={use:async n=>n==='db'?{doc:mkDoc}:n==='user'?{id:async()=>'u1'}:n==='downloads'?{save:async({filename,data})=>{w.__dl={filename,len:data.length}}}:null};w.CompressionStream=globalThis.CompressionStream;w.DecompressionStream=globalThis.DecompressionStream;w.TextEncoder=TextEncoder;w.TextDecoder=TextDecoder;w.Response=Response;}});
+const dom=new JSDOM('<script>window.__ilmUnlock=1;window.__ilmNoSplash=1</script>'+html,{url:'https://cloud.test/',runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.claude={use:async n=>n==='db'?{doc:mkDoc}:n==='user'?{id:async()=>'u1'}:n==='downloads'?{save:async({filename,data})=>{w.__dl={filename,len:data.length}}}:null};w.CompressionStream=globalThis.CompressionStream;w.DecompressionStream=globalThis.DecompressionStream;w.TextEncoder=TextEncoder;w.TextDecoder=TextDecoder;w.Response=Response;}});
 const w=dom.window;w.matchMedia=()=>({matches:true});const errors=[];w.addEventListener('error',e=>errors.push(e.message));
 const $=id=>w.document.getElementById(id);const click=el=>{if(!el)throw new Error('missing');el.dispatchEvent(new w.MouseEvent('click',{bubbles:true}))};
 setTimeout(async()=>{
@@ -17,7 +17,8 @@ setTimeout(async()=>{
  // mutate, then load from cloud
  const wk0=G.wk;click($('simNext'));console.log('after simNext wk',w.ILM.G.wk,'next match',!!w.ILM.myNextMatch());
  w.ILM.G.view='money';w.ILM.render();click($('cloudLoad'));await new Promise(r=>setTimeout(r,800));
+ assert.equal(w.ILM.G.wk,wk0,'cloud round-trip must restore saved week');
  console.log('after cloud load wk',w.ILM.G.wk,'(expected',wk0,')','club',w.ILM.me().name);
  click($('exportBtn'));await new Promise(r=>setTimeout(r,200));console.log('export',JSON.stringify(w.__dl));
  w.ILM.G.view='money';w.ILM.render();click($('simSeason'));click($('simGo'));console.log('after simSeason phase',w.ILM.G.phase,'summary pos',w.ILM.G.summary&&w.ILM.G.summary.pos);
- console.log('errors',errors);process.exit(0)},300);
+ assert.deepEqual(errors,[]);console.log('errors',errors);process.exit(0)},300);
