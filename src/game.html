@@ -639,6 +639,31 @@ h3.sec:not(.btn){font-size:24px}
 .ev-hero .board{background:rgba(7,8,12,.62);backdrop-filter:blur(3px);border-radius:12px;margin-top:auto!important}
 .teamcard{background:linear-gradient(180deg,#15171e,#0d0e13);border-color:var(--line)}
 .winchip.open{color:var(--accent)}
+
+/* GOALASSO stadium edition: projected pitch, upright player cards. No WebGL required. */
+.stad{width:min(100%,660px);border:1px solid #38556b;border-radius:22px;overflow:hidden;background:#07121b;box-shadow:0 24px 60px #0008,inset 0 1px #ffffff18}
+.stad-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:linear-gradient(110deg,#142e3b,#0b1723);border-bottom:1px solid #ffffff15;gap:10px}
+.stad-head strong{display:block;font-size:16px}.stad-head small{color:#9eb6c4;font-size:11px}.stad-form{font:700 19px var(--display);direction:ltr;color:#d4ff65;background:#172d25;border:1px solid #a4da3833;padding:6px 12px;border-radius:9px}
+.stad-pitch{aspect-ratio:650/960;border-radius:0;isolation:isolate;background:#07121b}
+.stad-scene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.stad-light{border-radius:0;background:radial-gradient(ellipse at 50% 25%,#d5ffff15,transparent 60%);z-index:1}
+.stad-footer{display:flex;justify-content:space-between;gap:8px;padding:11px 14px;border-top:1px solid #ffffff15;background:#0b1921;color:#a6b9c7;font-size:11px}
+.stad-footer b{color:#d7ff7b}.t3{width:16%;max-width:98px;min-height:44px;transform:translate(-50%,-54%);border:0;background:none;padding:0;color:inherit;font:inherit;-webkit-tap-highlight-color:transparent}
+.t3-in{position:relative;gap:3px}.t3-in::before{content:"";position:absolute;inset:auto 9% -9px;height:15px;background:#0008;border-radius:50%;filter:blur(5px);z-index:-1}
+.t3 .fc{width:76%;aspect-ratio:.88;filter:drop-shadow(0 6px 3px #0008)}
+.t3 .fc-face{clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);border-radius:8px 8px 0 0;background:linear-gradient(140deg,#294451,#0a1928 70%);color:#fff;box-shadow:inset 0 1px #ffffff80,inset 0 0 0 1px #8eafbe66}
+.t3 .fc::before{clip-path:polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);background:var(--club-color,#c6f24e);border-radius:8px}
+.t3 .fc-ovr{color:#f5ffd8;font-size:clamp(17px,4.6vw,27px)}.t3 .fc-pos{color:#b7cfdf;font-size:9px}.t3 .fc-name{display:none}.t3 .fc-kit{width:60%;margin-top:12%;transform:translateX(23%)}
+.t3 .fc-shine{animation:none;background:linear-gradient(120deg,#ffffff18,transparent 45%);clip-path:none;border-radius:8px;mix-blend-mode:normal}
+.t3-nm{border:1px solid #68829466;border-radius:6px;margin:2px -6px 0;padding:4px 3px;width:calc(100% + 12px);max-width:none;min-height:32px;display:flex;align-items:center;justify-content:center;white-space:normal;overflow-wrap:anywhere;font:700 clamp(11px,2.9vw,14px)/1.15 var(--body);background:linear-gradient(#142a38,#0b1725);box-shadow:0 4px 8px #0007}
+.t3 .m10{margin:0;padding:2px 4px;min-height:11px}.t3 .m10b b{height:4px}.t3 .m10i,.t3 .m10i svg{width:8px;height:8px}.t3 .capb{left:8%;top:-5px;background:#d6ff69;color:#10200b}
+.t3.sel{z-index:100!important}.t3.sel .fc{filter:drop-shadow(0 0 9px #d5ff68)}.t3.sel .t3-nm{border-color:#e3ff95;background:#c6f24e;color:#102008}.t3.sel .t3-in{transform:translateY(-5px)}
+.t3.empty .fc-face{background:#0b192a99;border:1px dashed #b5d9b899}.t3.empty .t3-nm{color:#d3e4d6;background:#10291de6}.t3:focus-visible{outline:2px solid #e6ffab;outline-offset:4px;border-radius:8px}
+.arena{border:1px solid #4d6a7880!important;box-shadow:0 18px 40px #0007,inset 0 0 0 1px #ffffff10;border-radius:16px!important}
+.bug{background:linear-gradient(120deg,#172f3b,#07141f 65%);border-color:#415969;border-radius:14px;box-shadow:0 8px 24px #0005}
+.live-side{background:linear-gradient(150deg,#19303b,#0b1722);border-color:#3b5666}.xc{background:linear-gradient(150deg,#203543,#0c1924);border-color:#425c6a}.xc .nm{font-size:14px;max-width:120px}.lbtn.primary{box-shadow:0 4px 15px #baff2925}
+@media(max-width:380px){.stad-head{padding:10px}.stad-head strong{font-size:14px}.t3-nm{font-size:11px;min-height:30px}.t3 .m10b{gap:.5px}.t3 .m10b b{width:2px}.stad-footer{font-size:10px;padding:9px}.t3 .fc-pos{font-size:8px}}
+
 </style>
 
 <div id="top" class="hide">
@@ -3653,13 +3678,39 @@ function meter10(v,kind){const n=Math.round(clamp(v,0,100)/10);const lab=kind===
   return `<span class="m10" role="img" aria-label="${lab}" title="${lab}"><i class="m10i" style="color:hsl(${hue} 85% 55%)">${icon}</i><span class="m10b">${Array.from({length:10},(_,i)=>`<b class="${i<n?'on':''}" style="--h:${i*12}"></b>`).join('')}</span></span>`}
 function fifaCardHTML(p,c){const t=tierClass(p.ovr);const known=isKnown(p);const ovr=known?p.ovr:shownOvr(p);
   return `<div class="fc ${t}${known?'':' unk'}"><div class="fc-face"><div class="fc-top"><b class="fc-ovr">${ovr}</b><span class="fc-pos">${POSB[p.pos]}</span></div><div class="fc-kit">${shirtSVG(c,p.no,'fc'+p.id)}</div><div class="fc-name">${esc(p.last||p.first)}</div></div><span class="fc-shine"></span></div>`}
+// A shared projection keeps the graphic and all interactive slots aligned.
+function lineupProject(x,y){const t=clamp(y/100,0,1);return [50+(x-50)*(.76+.24*t),17+76*t]}
+function lineupSceneSVG(c){
+ const pt=(x,y)=>lineupProject(x,y).map(v=>(v*10).toFixed(1)).join(',');
+ const poly=points=>points.map(([x,y])=>pt(x,y)).join(' ');
+ const box=(x,y,w,h)=>poly([[x,y],[x+w,y],[x+w,y+h],[x,y+h]]);
+ const ellipse=(cx,cy,rx,ry)=>poly(Array.from({length:65},(_,i)=>{const a=i*Math.PI/32;return [cx+Math.cos(a)*rx,cy+Math.sin(a)*ry]}));
+ const stripes=Array.from({length:12},(_,i)=>`<polygon points="${box(5,i*100/12,90,100/12)}" fill="${i%2?'#23794e':'#1b6944'}"/>`).join('');
+ const rows=Array.from({length:8},(_,i)=>`<path d="M${55+i*9} ${56+i*11}H${945-i*9}" stroke="#7a99a2" stroke-opacity=".18" stroke-width="3"/>`).join('');
+ return `<svg class="stad-scene" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><defs>
+ <linearGradient id="luNight" x2="0" y2="1"><stop stop-color="#172b42"/><stop offset="1" stop-color="#050d16"/></linearGradient>
+ <radialGradient id="luGlow"><stop stop-color="#e0ffff" stop-opacity=".65"/><stop offset="1" stop-color="#c6faff" stop-opacity="0"/></radialGradient>
+ <radialGradient id="luTurf"><stop stop-color="#8ae89b" stop-opacity=".18"/><stop offset="1" stop-color="#001d18" stop-opacity=".55"/></radialGradient>
+ <pattern id="luCrowd" width="19" height="14" patternUnits="userSpaceOnUse"><rect width="19" height="14" fill="#182a36"/><circle cx="4" cy="5" r="2" fill="${esc(c.c1)}"/><circle cx="13" cy="10" r="2.3" fill="#bbd1cc" opacity=".65"/><path d="M2 9h5m4 5h5" stroke="#6d8b9b" stroke-width="3"/></pattern>
+ </defs><rect width="1000" height="1000" fill="url(#luNight)"/>
+ <path d="M35 38H965L911 145H89Z M20 65L95 160 30 936 0 970Z M980 65L905 160 970 936 1000 970Z" fill="url(#luCrowd)"/>
+ ${rows}<path d="M40 34H960M90 148H910" stroke="#89a5b2" stroke-opacity=".4" stroke-width="4"/>
+ <polygon points="${box(1,-3,98,107)}" fill="#102e2b"/><polygon points="${box(4,1,92,101)}" fill="#000" opacity=".45" transform="translate(0 8)"/>
+ ${stripes}<polygon points="${box(5,0,90,100)}" fill="url(#luTurf)"/>
+ <g fill="none" stroke="#d5f8df" stroke-opacity=".62" stroke-width="2"><polygon points="${box(5,0,90,100)}"/><polyline points="${poly([[5,50],[95,50]])}"/><polygon points="${ellipse(50,50,13,9)}"/><polygon points="${box(24,0,52,16)}"/><polygon points="${box(38,0,24,6)}"/><polygon points="${box(24,84,52,16)}"/><polygon points="${box(38,94,24,6)}"/></g>
+ <g fill="#e3ffee"><circle cx="500" cy="550" r="3"/></g>
+ <g fill="#bce4de22" stroke="#d7f5ef" stroke-width="2"><path d="M450 168v-18h100v18M450 150l-7 16h114l-7-16"/><path d="M433 930v22h134v-22M433 952l-8-17h150l-8 17"/></g>
+ <g stroke="#b6ebff" stroke-width="5"><path d="M48 46h130M822 46h130"/></g><ellipse cx="115" cy="48" rx="160" ry="105" fill="url(#luGlow)"/><ellipse cx="885" cy="48" rx="160" ry="105" fill="url(#luGlow)"/>
+ <path d="M60 50L390 600 550 900 175 50M940 50L610 600 450 900 825 50" fill="#c8faff" opacity=".025"/>
+ <path d="M0 985Q500 945 1000 985" stroke="${esc(c.c1)}" stroke-width="18" opacity=".65"/><path d="M0 972Q500 932 1000 972" stroke="#8aa5b5" stroke-width="3" opacity=".5"/>
+ </svg>`}
 function token3dHTML(c,p,slot,i,o){const cls=['t3'];if(!p)cls.push('empty');if(o.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');
-  const S=STADIUM_IMG;const X=S.px0+(o.x/100)*(S.px1-S.px0),Y=S.py0+((o.y-13)/82)*(S.py1-S.py0);
-  return `<div class="${cls.join(' ')}" style="left:${X.toFixed(2)}%;top:${Y.toFixed(2)}%;z-index:${Math.round(Y)}" data-slot="${i}" tabindex="0" role="button" aria-label="${p?esc(fullName(p))+', כושר '+Math.round(p.fit??100)+'%, מורל '+moraleWord(p.morale??65):'מקום ריק, '+POSHE[slot]}"><div class="t3-in">
-   ${p?fifaCardHTML(p,c):`<div class="fc empty"><div class="fc-face"><b class="fc-ovr">+</b><span class="fc-pos">${POSB[slot]}</span></div></div>`}${p&&isCaptain(c,p)?'<span class="capb">C</span>':''}
-   ${p?`${meter10(p.fit??100,'fit')}${meter10(p.morale??65,'mor')}`:''}</div></div>`}
-function stadiumFieldHTML(c,slots,lay,ps,selSlot){const S=STADIUM_IMG;return `<div class="stad" style="margin-top:8px"><div class="stad-3d"><div class="stad-pitch"><picture><source srcset="${S.webp}" type="image/webp"><img src="${S.jpg}" width="${S.w}" height="${S.h}" alt="" decoding="async" onerror="this.closest('.stad').classList.add('noimg')"></picture><span class="stad-light"></span>
-  ${slots.map((sl,i)=>token3dHTML(c,ps[i],sl,i,{x:lay[i].x,y:lay[i].y,sel:selSlot===i})).join('')}</div></div></div>`}
+ const [X,Y]=lineupProject(50+(o.x-50)*1.18,o.y);
+ return `<button type="button" class="${cls.join(' ')}" style="left:${X.toFixed(2)}%;top:${Y.toFixed(2)}%;z-index:${Math.round(Y)}" data-slot="${i}" aria-pressed="${!!o.sel}" aria-label="${p?esc(fullName(p))+', '+POSHE[p.pos]+', דירוג '+p.ovr+', כושר '+Math.round(p.fit??100)+'%':'מקום ריק, '+POSHE[slot]}"><span class="t3-in">
+ ${p?fifaCardHTML(p,c):`<span class="fc empty"><span class="fc-face"><b class="fc-ovr">+</b><span class="fc-pos">${POSB[slot]}</span></span></span>`}${p&&isCaptain(c,p)?'<span class="capb">C</span>':''}
+ <span class="t3-nm">${p?esc(fullName(p)):POSHE[slot]}</span>${p?meter10(p.fit??100,'fit'):''}</span></button>`}
+function stadiumFieldHTML(c,slots,lay,ps,selSlot){return `<section class="stad" style="margin-top:12px;--club-color:${esc(c.c1)}" aria-label="מגרש בחירת הרכב"><header class="stad-head"><div><small>חדר ההלבשה · ${esc(c.name)}</small><strong>${esc(c.stadium||'אצטדיון הבית')}</strong></div><bdi class="stad-form">${esc(c.formation)}</bdi></header><div class="stad-3d"><div class="stad-pitch">${lineupSceneSVG(c)}<span class="stad-light"></span>
+ ${slots.map((sl,i)=>token3dHTML(c,ps[i],sl,i,{x:lay[i].x,y:lay[i].y,sel:selSlot===i})).join('')}</div></div><footer class="stad-footer"><span><b>${ps.filter(Boolean).length}/11</b> שחקנים בהרכב</span><span>${selSlot!=null?'נבחרה עמדה · בחר מחליף מהספסל':'בחר שחקן במגרש כדי להחליף'}</span></footer></section>`}
 let lineupSel=null;
 function pitchLines(){return `<svg class="lines" viewBox="0 0 100 133" preserveAspectRatio="none"><g fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".7"><rect x="3" y="3" width="94" height="127" rx="1"/><line x1="3" y1="66.5" x2="97" y2="66.5"/><circle cx="50" cy="66.5" r="10"/><circle cx="50" cy="66.5" r=".9" fill="rgba(255,255,255,.6)"/><rect x="22" y="3" width="56" height="20"/><rect x="36" y="3" width="28" height="7"/><rect x="22" y="110" width="56" height="20"/><rect x="36" y="123" width="28" height="7"/><path d="M38 23 a12 12 0 0 0 24 0"/><path d="M38 110 a12 12 0 0 1 24 0"/></g></svg>`}
 function tokenHTML(c,p,slot,i,opts){const cls=['tok'];if(!p)cls.push('empty');if(opts&&opts.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');
@@ -3703,7 +3754,7 @@ function lineupTapSlot(i){const c=me();ensureLineup(c);
   save();render()}
 function lineupTapBench(pid){const c=me();ensureLineup(c);const p=c.players.find(x=>x.id===pid);if(!p)return;
   if(lineupSel&&lineupSel.pid===pid){lineupSel=null}
-  else if(lineupSel&&lineupSel.slot!=null){if(p.inj||p.susp)toast(p.inj?'השחקן פצוע':'השחקן מורחק');c.lineup[lineupSel.slot]=pid;lineupSel=null}
+  else if(lineupSel&&lineupSel.slot!=null){if(p.inj||p.susp){toast(p.inj?'השחקן פצוע':'השחקן מורחק');return}c.lineup[lineupSel.slot]=pid;lineupSel=null}
   else{if(p.inj||p.susp){toast(p.inj?'השחקן פצוע, לא יכול לשחק':'השחקן מורחק למשחק הזה');return}lineupSel={pid}}
   save();render()}
 let squadTab='all',squadSort='pos';
