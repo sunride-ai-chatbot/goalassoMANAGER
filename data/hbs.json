@@ -1,0 +1,43 @@
+{
+  "id": "hbs",
+  "name_he": "הפועל באר שבע",
+  "coach_he": "רן קוז'וך",
+  "colors": ["#d7141a", "#ffffff"],
+  "stadium_he": "אצטדיון טרנר",
+  "capacity": 16126,
+  "founded": 1949,
+  "nickname_he": "הגמלים",
+  "players": [
+    {"he": "אופיר מרציאנו", "en": "Ofir Marciano", "pos": "GK", "age": 37, "nat": "Israel", "value_m": 0.2},
+    {"he": "מרקו וולף", "en": "Marko Wolf", "pos": "GK", "age": null, "nat": null, "value_m": null, "unmatched": true},
+
+    {"he": "מיגל ויטור", "en": "Miguel Vítor", "pos": "DF", "age": 37, "nat": "Israel", "value_m": 0.2},
+    {"he": "איתי רוטמן", "en": "Itay Rotman", "pos": "DF", "age": 24, "nat": "Israel", "value_m": 0.8},
+    {"he": "גיא מזרחי", "en": "Guy Mizrahi", "pos": "DF", "age": 25, "nat": "Israel", "value_m": 1.3},
+    {"he": "מתן בלטקסה", "en": "Matan Baltaxa", "pos": "DF", "age": 31, "nat": "Israel", "value_m": 0.4},
+    {"he": "אופיר דוידזאדה", "en": "Ofir Davidzada", "pos": "DF", "age": 35, "nat": "Israel", "value_m": 0.2},
+    {"he": "ג'יבריל דיופ", "en": "Djibril Diop", "pos": "DF", "age": 27, "nat": "Senegal", "value_m": 0.5},
+    {"he": "פדרו אמאדור", "en": "Pedro Amador", "pos": "DF", "age": 27, "nat": "Portugal", "value_m": 0.7},
+    {"he": "עידן נחמיאס", "en": "Idan Nachmias", "pos": "DF", "age": 29, "nat": "Israel", "value_m": 0.5},
+
+    {"he": "ניב יהושע", "en": "Niv Yehoshua", "pos": "MF", "age": 21, "nat": "Israel", "value_m": 1.5},
+    {"he": "אמיר גנאח", "en": "Amir Ganah", "pos": "MF", "age": 22, "nat": "Israel", "value_m": 1.7},
+    {"he": "אליאל פרץ", "en": "Eliel Peretz", "pos": "MF", "age": 29, "nat": "Israel", "value_m": 0.9},
+    {"he": "יוני סטויאנוב", "en": "Yoan Stoyanov", "pos": "MF", "age": 25, "nat": "Bulgaria", "value_m": 0.6},
+    {"he": "לוקאס ונטורה", "en": "Lucas Ventura", "pos": "MF", "age": 28, "nat": "Brazil", "value_m": 1.6},
+    {"he": "דן ביטון", "en": "Dan Biton", "pos": "MF", "age": 31, "nat": "Israel", "value_m": 1.2},
+    {"he": "חמודי כנעאן", "en": "Hamode Kanaan", "pos": "MF", "age": 26, "nat": "Israel", "value_m": 0.9},
+    {"he": "ז'ואאו ויקטור", "en": "João Victor", "pos": "MF", "age": 22, "nat": "Brazil", "value_m": 0.6},
+    {"he": "אמנקווה פורסון", "en": "Amankwah Forson", "pos": "MF", "age": 23, "nat": "Ghana", "value_m": 1.9},
+
+    {"he": "זאהי אחמד", "en": "Zahi Ahmed", "pos": "FW", "age": 25, "nat": "Israel", "value_m": 0.5},
+    {"he": "איגור זלאטנוביץ'", "en": "Igor Zlatanovic", "pos": "FW", "age": 28, "nat": "Serbia", "value_m": 1.1},
+    {"he": "ג'בון איסט", "en": "Javon East", "pos": "FW", "age": 31, "nat": "Jamaica", "value_m": 0.5},
+    {"he": "מוחמד אבו רומי", "en": "Muhammad Abu Rumi", "pos": "FW", "age": 22, "nat": "Israel", "value_m": 1.2},
+    {"he": "עמית אוחנה", "en": "Amit Ohana", "pos": "FW", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "יונס מלדה", "en": "Yonas Malede", "pos": "FW", "age": 26, "nat": "Israel", "value_m": 0.4},
+    {"he": "אדריאן אוגריסה", "en": "Adrián Ugarriza", "pos": "FW", "age": 29, "nat": "Peru", "value_m": 1.1},
+
+    {"he": "יונתן שני", "en": "Jonathan Shani", "pos": "GK", "age": 20, "nat": "Israel", "value_m": null, "ft_only": true}
+  ]
+}

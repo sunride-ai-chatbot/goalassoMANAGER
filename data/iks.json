@@ -1,0 +1,44 @@
+{
+  "id": "iks",
+  "name_he": "עירוני קריית שמונה",
+  "coach_he": "שי ברדה",
+  "colors": ["#1d4ed8", "#ffffff"],
+  "stadium_he": "אצטדיון נתניה",
+  "capacity": 13610,
+  "founded": 2000,
+  "nickname_he": "הקריה",
+  "players": [
+    {"he": "ניקולה ג'ורקוביץ'", "en": "Nikola Djurkovic", "pos": "GK", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "דניאל טננבאום", "en": "Daniel Tenenbaum", "pos": "GK", "age": 31, "nat": "Brazil", "value_m": 0.2},
+    {"he": "תומר אלון", "en": "Tomer Alon", "pos": "GK", "age": null, "nat": null, "value_m": null, "unmatched": true},
+
+    {"he": "שי בן דוד", "en": "Shay Ben David", "pos": "DF", "age": 29, "nat": "Israel", "value_m": 0.2},
+    {"he": "שון עדרי", "en": "Shon Edri", "pos": "DF", "age": 22, "nat": "Israel", "value_m": null},
+    {"he": "שי סבח", "en": "Shai Sabah", "pos": "DF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "אופיר בנבנישתי", "en": "Ofir Benbenishti", "pos": "DF", "age": 26, "nat": "Israel", "value_m": 0.2},
+    {"he": "עידו וייר", "en": "Ido Vaier", "pos": "DF", "age": 30, "nat": "Israel", "value_m": 0.2},
+    {"he": "עובדיה דרויש", "en": "Ovadia Darwish", "pos": "DF", "age": 28, "nat": "Israel", "value_m": 0.3},
+    {"he": "עמית גלזר", "en": "Amit Glazer", "pos": "DF", "age": 26, "nat": "Israel", "value_m": 0.2},
+    {"he": "בילאל שאהין", "en": "Bilal Shaheen", "pos": "DF", "age": 23, "nat": "Israel", "value_m": 0.3},
+    {"he": "נמניה ליוביסבלייביץ'", "en": "Nemanja Ljubisavljevic", "pos": "DF", "age": 29, "nat": "Serbia", "value_m": 0.3},
+    {"he": "איציק שולמייסטר", "en": "Itzik Sholmyster", "pos": "DF", "age": 28, "nat": "Israel", "value_m": 0.2},
+
+    {"he": "אריאל שרצקי", "en": "Ariel Sheratzky", "pos": "MF", "age": 25, "nat": "Israel", "value_m": 0.3},
+    {"he": "טאלס קוסטה", "en": "Thales Costa", "pos": "MF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "אלכס סולה", "en": "Alex Sola", "pos": "MF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "רופאט עבדולזאדה", "en": "Rufat Abdullazada", "pos": "MF", "age": 25, "nat": "Azerbaijan", "value_m": 0.4},
+    {"he": "יהונתן מלכה", "en": "Yehonatan Malka", "pos": "MF", "age": 19, "nat": "Israel", "value_m": null},
+    {"he": "אווג'ו אספה", "en": "Awajo Asefa", "pos": "MF", "age": 27, "nat": "Israel", "value_m": 0.2},
+    {"he": "נדב מרקוביץ'", "en": "Nadav Markovich", "pos": "MF", "age": 22, "nat": "Israel", "value_m": 0.3},
+
+    {"he": "אמאדו סאניה", "en": "Amadou Sagna", "pos": "FW", "age": 27, "nat": "Senegal", "value_m": 0.5},
+    {"he": "ניב גבאי", "en": "Niv Gabay", "pos": "FW", "age": 19, "nat": "Israel", "value_m": null},
+    {"he": "אורי שנפר", "en": "Ori Shnaper", "pos": "FW", "age": 22, "nat": "Israel", "value_m": null},
+    {"he": "ג'ואן חלבי", "en": "Jwan Halabi", "pos": "FW", "age": 21, "nat": "Israel", "value_m": 0.4},
+    {"he": "מור סימן טוב", "en": "Mor Siman Tov", "pos": "FW", "age": 23, "nat": "Israel", "value_m": null},
+    {"he": "אלכסנדרו פופ", "en": "Alexandru Pop", "pos": "FW", "age": 26, "nat": "Romania", "value_m": 0.5},
+
+    {"he": "הראל גולדנברג", "en": "Harel Goldenberg", "pos": "DF", "age": 21, "nat": "Israel", "value_m": 0.5, "ft_only": true},
+    {"he": "יואב קראדי", "en": "Yoav Karadi", "pos": "MF", "age": 20, "nat": "Israel", "value_m": null, "ft_only": true}
+  ]
+}

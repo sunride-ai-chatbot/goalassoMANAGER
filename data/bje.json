@@ -1,0 +1,263 @@
+{
+ "id": "bje",
+ "name_he": "בית\"ר ירושלים",
+ "coach_he": "אלמוג כהן",
+ "colors": [
+  "#f5d000",
+  "#111111"
+ ],
+ "stadium_he": "אצטדיון טדי",
+ "capacity": 31733,
+ "founded": 1936,
+ "nickname_he": "המנורה",
+ "players": [
+  {
+   "he": "מיגל סילבה",
+   "en": "Miguel Silva",
+   "pos": "GK",
+   "age": 31,
+   "nat": "Portugal",
+   "value_m": 0.2
+  },
+  {
+   "he": "יהונתן עוזר",
+   "en": "Yehonatan Ozer",
+   "pos": "GK",
+   "age": 26,
+   "nat": "Israel",
+   "value_m": 0.2
+  },
+  {
+   "he": "דביר ניר",
+   "en": "Dvir Nir",
+   "pos": "GK",
+   "age": 23,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "נבו שדו",
+   "en": "Nevo Shedo",
+   "pos": "DF",
+   "age": 23,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "רועי אלימלך",
+   "en": "Roey Elimelech",
+   "pos": "DF",
+   "age": 24,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "גיל כהן",
+   "en": "Gil Cohen",
+   "pos": "DF",
+   "age": 25,
+   "nat": "Israel",
+   "value_m": 0.5
+  },
+  {
+   "he": "ירדן כהן",
+   "en": "Yarden Cohen",
+   "pos": "DF",
+   "age": 29,
+   "nat": "Israel",
+   "value_m": 0.2
+  },
+  {
+   "he": "לוקה גדראני",
+   "en": "Luka Gadrani",
+   "pos": "DF",
+   "age": 29,
+   "nat": "Georgia",
+   "value_m": 0.5
+  },
+  {
+   "he": "בריאן קרבאלי",
+   "en": "Brayan Carabalí",
+   "pos": "DF",
+   "age": 27,
+   "nat": "Colombia",
+   "value_m": 0.8
+  },
+  {
+   "he": "נאנה אנטווי",
+   "en": "Nana Antwi",
+   "pos": "DF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "ליאל דרעי",
+   "en": "Liel Deri",
+   "pos": "DF",
+   "age": 22,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "נועם מוצ'ה",
+   "en": "Noam Muche",
+   "pos": "MF",
+   "age": 23,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "עדי יונה",
+   "en": "Adi Yona",
+   "pos": "MF",
+   "age": 22,
+   "nat": "Israel",
+   "value_m": 1.7
+  },
+  {
+   "he": "טימו מוזי",
+   "en": "Timothy Muzie",
+   "pos": "MF",
+   "age": 25,
+   "nat": "Israel",
+   "value_m": 0.8
+  },
+  {
+   "he": "דניאל וורקו",
+   "en": "Daniel (Degats) Worko",
+   "pos": "MF",
+   "age": 22,
+   "nat": "Israel",
+   "value_m": 0.3
+  },
+  {
+   "he": "עומר אצילי",
+   "en": "Omer Atzili",
+   "pos": "MF",
+   "age": 33,
+   "nat": "Israel",
+   "value_m": 0.6
+  },
+  {
+   "he": "זיו בן שימול",
+   "en": "Ziv Ben Shimol",
+   "pos": "MF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "תומר יוספי",
+   "en": "Tomer Yosefi",
+   "pos": "MF",
+   "age": 27,
+   "nat": "Israel",
+   "value_m": 0.3
+  },
+  {
+   "he": "בוריס אנו",
+   "en": "Boris Enow",
+   "pos": "MF",
+   "age": 26,
+   "nat": "Cameroon",
+   "value_m": 1.2
+  },
+  {
+   "he": "רביד אברג'יל",
+   "en": "Ravid Abergil",
+   "pos": "MF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "אלכסיס סרנה",
+   "en": "Alexis Serna",
+   "pos": "MF",
+   "age": 28,
+   "nat": "Colombia",
+   "value_m": 0.4
+  },
+  {
+   "he": "אורי עזו",
+   "en": "Ori Azu",
+   "pos": "MF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "ירדן שועה",
+   "en": "Yarden Shua",
+   "pos": "FW",
+   "age": 27,
+   "nat": "Israel",
+   "value_m": 1.6
+  },
+  {
+   "he": "ג'ונבוסקו קאלו",
+   "en": "Johnbosco Samuel Kalu",
+   "pos": "FW",
+   "age": 28,
+   "nat": "Nigeria",
+   "value_m": 0.7
+  },
+  {
+   "he": "יוג'ין אנסה",
+   "en": "Eugene Ansah",
+   "pos": "FW",
+   "age": 31,
+   "nat": "Ghana",
+   "value_m": 0.4
+  },
+  {
+   "he": "שון וייסמן",
+   "en": "Shon Weissman",
+   "pos": "FW",
+   "age": 30,
+   "nat": "Israel",
+   "value_m": 0.7
+  },
+  {
+   "he": "יאן שיקוט",
+   "en": "Yan Shikot",
+   "pos": "FW",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "עמית קורנפיין",
+   "en": "Amit Korenfein",
+   "pos": "GK",
+   "age": 21,
+   "nat": "Israel",
+   "value_m": null,
+   "ft_only": true
+  },
+  {
+   "he": "יובל שלו",
+   "en": "Yuval Shalev",
+   "pos": "DF",
+   "age": 20,
+   "nat": "Israel",
+   "value_m": null,
+   "ft_only": true
+  },
+  {
+   "he": "יאן יוסופוב",
+   "en": "Yan Yusupov",
+   "pos": "FW",
+   "age": 21,
+   "nat": "Israel",
+   "value_m": 0.2,
+   "ft_only": true
+  }
+ ]
+}

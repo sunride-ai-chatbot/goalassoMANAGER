@@ -1,0 +1,239 @@
+{
+ "id": "hje",
+ "name_he": "הפועל ירושלים",
+ "coach_he": "ליאור זדה",
+ "colors": [
+  "#d81e1e",
+  "#000000"
+ ],
+ "stadium_he": "אצטדיון טדי",
+ "capacity": 31733,
+ "founded": 1926,
+ "nickname_he": "קטמון",
+ "players": [
+  {
+   "he": "נדב זמיר",
+   "en": "Nadav Zamir",
+   "pos": "GK",
+   "age": 25,
+   "nat": "Israel",
+   "value_m": 0.7
+  },
+  {
+   "he": "בן גורדין",
+   "en": "Ben Gordin",
+   "pos": "GK",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "עומר אגבדיש",
+   "en": "Omer Agvadish",
+   "pos": "DF",
+   "age": 25,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "עידן כהן",
+   "en": "Idan Cohen",
+   "pos": "DF",
+   "age": 30,
+   "nat": "Israel",
+   "value_m": 0.2
+  },
+  {
+   "he": "אופק נדיר",
+   "en": "Ofek Nadir",
+   "pos": "DF",
+   "age": 27,
+   "nat": "Israel",
+   "value_m": 0.2
+  },
+  {
+   "he": "נועם מלמוד",
+   "en": "Noam Malmud",
+   "pos": "DF",
+   "age": 24,
+   "nat": "Israel",
+   "value_m": null
+  },
+  {
+   "he": "יונתן ליש",
+   "en": "Yonatan Laish",
+   "pos": "DF",
+   "age": 22,
+   "nat": "Israel",
+   "value_m": 0.6
+  },
+  {
+   "he": "לי און מזרחי",
+   "en": "Li On Mizrahi",
+   "pos": "DF",
+   "age": 23,
+   "nat": "Israel",
+   "value_m": 0.2
+  },
+  {
+   "he": "תמיר חיימוביץ'",
+   "en": "Tamir Haimovich",
+   "pos": "DF",
+   "age": 24,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "הילאי מלמן",
+   "en": "Hilai Melman",
+   "pos": "DF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "איינאו פרדה",
+   "en": "Aynaw Fereda",
+   "pos": "MF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "אוהד אלמגור",
+   "en": "Ohad Almagor",
+   "pos": "MF",
+   "age": 24,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "ינאי דיסטלפלד",
+   "en": "Yanai Distalfeld",
+   "pos": "MF",
+   "age": 21,
+   "nat": "Israel",
+   "value_m": 0.4
+  },
+  {
+   "he": "איליי מדמון",
+   "en": "Ilay Madmon",
+   "pos": "MF",
+   "age": 23,
+   "nat": "Israel",
+   "value_m": 0.3
+  },
+  {
+   "he": "כריסט טייהי",
+   "en": "Christ Tiehi",
+   "pos": "MF",
+   "age": 28,
+   "nat": "Côte d'Ivoire",
+   "value_m": 0.2
+  },
+  {
+   "he": "נתי שפראו",
+   "en": "Nati Shafrao",
+   "pos": "MF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "עומר אבוהב",
+   "en": "Omer Moshe Abuhav",
+   "pos": "MF",
+   "age": 23,
+   "nat": "Israel",
+   "value_m": 0.5
+  },
+  {
+   "he": "שראני זוברו",
+   "en": "Sharani Zuberu",
+   "pos": "MF",
+   "age": 26,
+   "nat": "Togo",
+   "value_m": 0.2
+  },
+  {
+   "he": "עבדולסלאם סאני",
+   "en": "Abdulsalam Sani",
+   "pos": "MF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "ריימונד אוקון",
+   "en": "Raymond Okon",
+   "pos": "MF",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "ויטלי דמשקאן",
+   "en": "Vitalie Damașcan",
+   "pos": "FW",
+   "age": 27,
+   "nat": "Moldova",
+   "value_m": 0.3
+  },
+  {
+   "he": "אנדרו אידוקו",
+   "en": "Andrew Idoko",
+   "pos": "FW",
+   "age": 20,
+   "nat": "Nigeria",
+   "value_m": 0.9
+  },
+  {
+   "he": "נדים וראסנה",
+   "en": "Nadim Vrasana",
+   "pos": "FW",
+   "age": 20,
+   "nat": "Israel",
+   "value_m": null
+  },
+  {
+   "he": "ישראל דאפה",
+   "en": "Israel Dappa",
+   "pos": "FW",
+   "age": 17,
+   "nat": "Israel",
+   "value_m": 0.9
+  },
+  {
+   "he": "חמודי דיאב",
+   "en": "Hamoudi Diab",
+   "pos": "FW",
+   "age": null,
+   "nat": null,
+   "value_m": null,
+   "unmatched": true
+  },
+  {
+   "he": "אדוארד צ'ילופיה",
+   "en": "Edward Chilufya",
+   "pos": "FW",
+   "age": 27,
+   "nat": "Zambia",
+   "value_m": 0.4
+  },
+  {
+   "he": "נועם שביט",
+   "en": "Noam Shavit",
+   "pos": "GK",
+   "age": 21,
+   "nat": "Israel",
+   "value_m": null,
+   "ft_only": true
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "goalasso-manager",
+  "private": true,
+  "version": "2.6.0",
+  "description": "GOALASSO · מאמן כדורגל — Hebrew football management game (single-file web build)",
+  "scripts": {
+    "build": "python3 -I src/build.py",
+    "test": "node tests/run-all.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.3"
+  }
+}

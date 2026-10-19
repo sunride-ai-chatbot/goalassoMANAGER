@@ -1,0 +1,41 @@
+{
+  "id": "hhf",
+  "name_he": "הפועל חיפה",
+  "coach_he": "חיים סילבס",
+  "colors": ["#d6001c", "#ffffff"],
+  "stadium_he": "אצטדיון סמי עופר",
+  "capacity": 30950,
+  "founded": 1924,
+  "nickname_he": "הכרישים",
+  "players": [
+    {"he": "מתן עמבר", "en": "Matan Ambar", "pos": "GK", "age": 31, "nat": "Israel", "value_m": 0.1},
+    {"he": "יואב ג'רפי", "en": "Yoav Gerafi", "pos": "GK", "age": 33, "nat": "Israel", "value_m": 0.3},
+
+    {"he": "דור מלול", "en": "Dor Malul", "pos": "DF", "age": 37, "nat": "Israel", "value_m": 0.2},
+    {"he": "ג'ורג' דיבה", "en": "George Diba", "pos": "DF", "age": 28, "nat": "Israel", "value_m": 0.2},
+    {"he": "תמיר ארבל", "en": "Tamir Arbel", "pos": "DF", "age": 24, "nat": "Israel", "value_m": 0.3},
+    {"he": "איבן קריצ'אק", "en": "Ivan Kricak", "pos": "DF", "age": 30, "nat": "Serbia", "value_m": 0.2},
+    {"he": "אריאל מנדי", "en": "Arial Mendy", "pos": "DF", "age": 31, "nat": "Senegal", "value_m": 0.2},
+    {"he": "דריו ז'ופאריץ'", "en": "Dario Župarić", "pos": "DF", "age": 34, "nat": "Croatia", "value_m": 0.2},
+    {"he": "נועם כהן", "en": "Noam Cohen", "pos": "DF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+
+    {"he": "נאור סבג", "en": "Naor Sabag", "pos": "MF", "age": 33, "nat": "Israel", "value_m": 0.2},
+    {"he": "סאלי פחימה", "en": "Sali Fahima", "pos": "MF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "טל נעים", "en": "Tal Naim", "pos": "MF", "age": 23, "nat": "Israel", "value_m": 0.3},
+    {"he": "לירן רוטמן", "en": "Liran Rotman", "pos": "MF", "age": 30, "nat": "Israel", "value_m": 0.3},
+    {"he": "יעד גונן", "en": "Yaad Gonen", "pos": "MF", "age": 20, "nat": "Israel", "value_m": 0.3},
+    {"he": "שי אליאס", "en": "Shai Elias", "pos": "MF", "age": 27, "nat": "Israel", "value_m": 0.2},
+    {"he": "שייק קייטה", "en": "Cheick Keita", "pos": "MF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "סער אלקיים", "en": "Saar Elkayam", "pos": "MF", "age": 19, "nat": "Israel", "value_m": null},
+    {"he": "שייקנה דיאקיטה", "en": "Cheikhna Diakite", "pos": "MF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "אניס פורת עיאש", "en": "Anis Porat Ayash", "pos": "MF", "age": 21, "nat": "Israel", "value_m": 0.4},
+
+    {"he": "והיב חביבאללה", "en": "Waheb Habiballah", "pos": "FW", "age": 28, "nat": "Israel", "value_m": 0.3},
+    {"he": "אחמד המאם", "en": "Ahmad Hamam", "pos": "FW", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "איתי זפרני", "en": "Itay Zafrani", "pos": "FW", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "אלון תורג'מן", "en": "Alon Turgeman", "pos": "FW", "age": 35, "nat": "Israel", "value_m": 0.2},
+    {"he": "עידן דדיה", "en": "Idan Dadia", "pos": "FW", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "מועתז חאמד", "en": "Moataz Hamed", "pos": "FW", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "וויליאם אגאדה", "en": "Willy Agada", "pos": "FW", "age": 27, "nat": "Nigeria", "value_m": 0.3}
+  ]
+}

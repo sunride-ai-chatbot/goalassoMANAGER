@@ -1,0 +1,40 @@
+{
+  "id": "itb",
+  "name_he": "עירוני טבריה",
+  "coach_he": "אלון זיו",
+  "colors": ["#2563eb", "#ffffff"],
+  "stadium_he": "אצטדיון בראל",
+  "capacity": 5200,
+  "founded": 2006,
+  "nickname_he": "הטבריינים",
+  "players": [
+    {"he": "עידו שרון", "en": "Ido Sharon", "pos": "GK", "age": 24, "nat": "Israel", "value_m": 0.3},
+    {"he": "גד עמוס", "en": "Gad Amos", "pos": "GK", "age": 37, "nat": "Israel", "value_m": 0.2},
+    {"he": "ג'ונאס אבו גנימה", "en": "Jones Abu Ganima", "pos": "GK", "age": 22, "nat": "Israel", "value_m": null},
+
+    {"he": "אונדז'יי באצ'ו", "en": "Ondrej Baco", "pos": "DF", "age": 30, "nat": "Czech Republic", "value_m": 0.2},
+    {"he": "גל מעתוק", "en": "Gal Maatuk", "pos": "DF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "נהוראי חן", "en": "Nehoray Chen", "pos": "DF", "age": 21, "nat": "Israel", "value_m": null},
+    {"he": "סמביניה", "en": "Sambinha", "pos": "DF", "age": 34, "nat": "Guinea-Bissau", "value_m": 0.2},
+    {"he": "רון אונגר", "en": "Ron Unger", "pos": "DF", "age": 25, "nat": "Israel", "value_m": 0.4},
+    {"he": "גיא סנקר", "en": "Guy Sanker", "pos": "DF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "זיו מורגן", "en": "Ziv Morgan", "pos": "DF", "age": 26, "nat": "Israel", "value_m": 0.2},
+    {"he": "דניאל גולאני", "en": "Daniel Joulani", "pos": "DF", "age": 23, "nat": "Ukraine", "value_m": 0.3},
+
+    {"he": "עדן שמיר", "en": "Eden Shamir", "pos": "MF", "age": 31, "nat": "Israel", "value_m": 0.2},
+    {"he": "ארי כהן", "en": "Ariel Cohen", "pos": "MF", "age": 23, "nat": "Israel", "value_m": 0.2},
+    {"he": "בר כהן", "en": "Bar Cohen", "pos": "MF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "דוד קלטינס", "en": "David Keltjens", "pos": "MF", "age": 31, "nat": "Israel", "value_m": 0.2},
+    {"he": "ניב גוטליב", "en": "Niv Gotlieb", "pos": "MF", "age": 23, "nat": "Israel", "value_m": null},
+    {"he": "ירין סוויסה", "en": "Yarin Swisa", "pos": "MF", "age": 21, "nat": "Israel", "value_m": 0.3},
+    {"he": "כריס קואקו", "en": "Chriso (Chris Kouakou)", "pos": "MF", "age": 26, "nat": "Côte d'Ivoire", "value_m": 0.2},
+    {"he": "ננה גבאמבלה", "en": "Néné Gbamblé", "pos": "MF", "age": 24, "nat": "Côte d'Ivoire", "value_m": 0.2},
+    {"he": "ירין סרדל", "en": "Yarin Sardal", "pos": "MF", "age": 25, "nat": "Israel", "value_m": 0.3},
+
+    {"he": "קייס גאנם", "en": "Qays Ghanem", "pos": "FW", "age": 28, "nat": "Israel", "value_m": 0.2},
+    {"he": "מנסור באג'י", "en": "Mansour Badjie", "pos": "FW", "age": 21, "nat": "Gambia", "value_m": 0.2},
+    {"he": "סמיר פרהוד", "en": "Samir Farhud", "pos": "FW", "age": 25, "nat": "Israel", "value_m": 0.3},
+    {"he": "אגם יהודה", "en": "Agam Yehuda", "pos": "FW", "age": 19, "nat": "Israel", "value_m": null},
+    {"he": "ארתור מירניאן", "en": "Artur Miranyan", "pos": "FW", "age": 30, "nat": "Armenia", "value_m": 0.3}
+  ]
+}

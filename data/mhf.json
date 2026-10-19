@@ -1,0 +1,47 @@
+{
+  "id": "mhf",
+  "name_he": "מכבי חיפה",
+  "coach_he": "ברק בכר",
+  "colors": ["#1f8a3a", "#ffffff"],
+  "stadium_he": "אצטדיון סמי עופר",
+  "capacity": 30950,
+  "founded": 1913,
+  "nickname_he": "הירוקים",
+  "players": [
+    {"he": "עומרי גלזר", "en": "Omri Glazer", "pos": "GK", "age": 30, "nat": "Israel", "value_m": 1.0},
+    {"he": "שריף כיוף", "en": "Sharif Kaiuf", "pos": "GK", "age": 25, "nat": "Israel", "value_m": null},
+    {"he": "גלן אלוין", "en": "Glen Alwin", "pos": "GK", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "עומר ניראון", "en": "Omer Niron", "pos": "GK", "age": 25, "nat": "Israel", "value_m": 0.3},
+
+    {"he": "שון גולדברג", "en": "Shon Goldberg", "pos": "DF", "age": 31, "nat": "Israel", "value_m": 0.5},
+    {"he": "צונאמי", "en": "Tsunami", "pos": "DF", "age": 30, "nat": "Brazil", "value_m": 1.1},
+    {"he": "זוהר זסנו", "en": "Zohar Zasano", "pos": "DF", "age": 24, "nat": "Israel", "value_m": 0.3},
+    {"he": "פדראו", "en": "Pedrão", "pos": "DF", "age": 29, "nat": "Brazil", "value_m": 0.4},
+    {"he": "אלעד אמיר", "en": "Elad Amir", "pos": "DF", "age": 20, "nat": "Israel", "value_m": 0.4},
+    {"he": "ילה בטאי", "en": "Jelle Bataille", "pos": "DF", "age": 27, "nat": "Belgium", "value_m": 1.2},
+    {"he": "פייר קורנו", "en": "Pierre Cornud", "pos": "DF", "age": 29, "nat": "France", "value_m": 0.4},
+    {"he": "נייג'ל לונווייק", "en": "Nigel Cello Lonwijk", "pos": "DF", "age": 23, "nat": "Suriname", "value_m": 1.2},
+    {"he": "ינון פיינגזיכט", "en": "Yinon Feingesicht", "pos": "DF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "נועם שטייפמן", "en": "Noam Shtaifman", "pos": "DF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "אלי דסה", "en": "Eli Dasa", "pos": "DF", "age": null, "nat": null, "value_m": null, "unmatched": true},
+
+    {"he": "עלי מוחמד", "en": "Ali Mohamed", "pos": "MF", "age": 30, "nat": "Niger", "value_m": 0.6},
+    {"he": "ירין לוי", "en": "Yarin Levi", "pos": "MF", "age": 21, "nat": "Israel", "value_m": 2.2},
+    {"he": "איתן אזולאי", "en": "Ethane Azoulay", "pos": "MF", "age": 24, "nat": "Israel", "value_m": 1.7},
+    {"he": "קני סייף", "en": "Kenny Saief", "pos": "MF", "age": 32, "nat": "United States", "value_m": 0.2},
+    {"he": "קנג'י גורה", "en": "Kenji Gorré", "pos": "MF", "age": 31, "nat": "Curaçao", "value_m": 0.3},
+    {"he": "ברוניניו", "en": "Bruninho", "pos": "MF", "age": 26, "nat": "Brazil", "value_m": 0.9},
+    {"he": "יאיר מרדכי", "en": "Yair Mordechai", "pos": "MF", "age": 22, "nat": "Israel", "value_m": 1.0},
+    {"he": "עמית ארזי", "en": "Amit Arazi", "pos": "MF", "age": 21, "nat": "Israel", "value_m": 0.3},
+    {"he": "איאד חלאילי", "en": "Iyad Khalaili", "pos": "MF", "age": 20, "nat": "Israel", "value_m": 1.0},
+    {"he": "נבות רטנר", "en": "Navot Ratner", "pos": "MF", "age": 19, "nat": "Israel", "value_m": null},
+    {"he": "סדריק דון", "en": "Cédric Franck Don", "pos": "MF", "age": 22, "nat": "Côte d'Ivoire", "value_m": 1.6},
+    {"he": "פדרו ברזאו", "en": "Pedro Brazão", "pos": "MF", "age": 23, "nat": "Portugal", "value_m": 0.9},
+
+    {"he": "סילבה קאני", "en": "Silva Kani", "pos": "FW", "age": 23, "nat": "Togo", "value_m": 0.5},
+    {"he": "גיא מלמד", "en": "Guy Melamed", "pos": "FW", "age": 33, "nat": "Israel", "value_m": 0.3},
+    {"he": "אנדריה נובאקוביץ'", "en": "Andrija Novakovich", "pos": "FW", "age": 30, "nat": "United States", "value_m": 0.3},
+    {"he": "אדם גרימברג", "en": "Adam Grimberg", "pos": "FW", "age": null, "nat": null, "value_m": null, "unmatched": true},
+    {"he": "ליאם לוסקי", "en": "Liam Luski", "pos": "FW", "age": null, "nat": null, "value_m": null, "unmatched": true}
+  ]
+}

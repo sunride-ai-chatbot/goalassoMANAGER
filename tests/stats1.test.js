@@ -1,0 +1,25 @@
+const {JSDOM}=require('jsdom');
+const fs=require('fs');let html=fs.readFileSync(require('path').join(__dirname,'..','ligat-haal-manager.html'),'utf8');
+html='<!doctype html><html><head><meta charset="utf-8"></head><body><script>window.__ilmUnlock=1;window.__ilmNoSplash=1</script>'+html.replace(/<link[^>]*>/g,'')+'</body></html>';
+const dom=new JSDOM('<script>window.__ilmUnlock=1;window.__ilmNoSplash=1</script>'+html,{runScripts:'dangerously',pretendToBeVisual:true});const w=dom.window;w.matchMedia=()=>({matches:true});
+const errors=[];w.addEventListener('error',e=>errors.push(e.message));
+const $=id=>w.document.getElementById(id);const click=el=>{if(!el)throw new Error('missing');el.dispatchEvent(new w.MouseEvent('click',{bubbles:true}))};
+click(w.document.querySelector('[data-pick="mta"]'));click($('signBtn'));click(w.document.querySelector('[data-sponsor="0"]'));click(w.document.querySelector('[data-board="none"]'));
+const G=w.ILM.G;G.pressMode='off';
+for(let i=0;i<12;i++){G.view='home';w.ILM.render();const t=$('toLineupBtn');if(t){click(t);click($('skipBtn'))}else click($('playBtn'))}
+const c=w.ILM.me();
+const mine=G.results.filter(r=>r.h===G.me||r.a===G.me);
+console.log('my matches',mine.length);
+const last=mine[mine.length-1];
+console.log('rec keys',Object.keys(last).join(','));
+console.log('ev types',[...new Set(last.ev.map(e=>e.t+(e.sub?':'+e.sub:'')))].join(','));
+const sh=last.ev.filter(e=>e.t==='shot'||e.t==='goal'||e.t==='pen');console.log('shots w/ coords',sh.filter(e=>e.x!=null).length,'/',sh.length,'xg sample',sh.slice(0,4).map(e=>e.sub||e.t+'@'+e.x+','+e.y+' xg'+e.xg).join(' | '));
+console.log('goals w/ assist',last.ev.filter(e=>e.t==='goal').map(e=>e.name+'<-'+(e.asstName||'-')).join(' | '));
+console.log('pm len',last.pm&&last.pm.length,'passes',JSON.stringify(last.passes));
+const ps=last.ps[G.me];const rows=Object.values(ps).sort((a,b)=>b.r-a.r);console.log('ratings',rows.slice(0,5).map(s=>`${s.name} ${s.pos} ${s.min}' r${s.r} sh${s.sh} ps${s.ps} a${s.a}${s.sv?' sv'+s.sv:''}${s.cs?' CS':''}`).join(' | '));
+console.log('min sum',rows.reduce((t,s)=>t+s.min,0),'players',rows.length);
+const top=c.players.slice().sort((a,b)=>(b.rsum/(b.rn||1))-(a.rsum/(a.rn||1)))[0];console.log('season best',w.ILM.me().short,top.first,top.last,'apps',top.apps,'mins',top.mins,'ast',top.assists,'passes',top.passes,'avg r',(top.rsum/top.rn).toFixed(2),'motm',top.motm);
+const gk=c.players.find(p=>p.pos==='GK'&&p.apps>0);console.log('gk',gk&&gk.last,'saves',gk&&gk.saves,'cs',gk&&gk.cs);
+const inj=[...G.clubs].flatMap(x=>x.players).filter(p=>p.inj>0);console.log('injured',inj.length,inj.slice(0,3).map(p=>p.last+' '+p.injT+' '+p.inj+'/'+p.injTot).join(' | '));
+console.log('motm',JSON.stringify(last.motm));
+console.log('errors',errors);
