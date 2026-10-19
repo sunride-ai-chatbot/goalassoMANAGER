@@ -1,5 +1,16 @@
-// Runs every *.test.js headless suite (jsdom) against the built ligat-haal-manager.html.
-const {execFileSync}=require('child_process');const fs=require('fs');const path=require('path');
-const files=fs.readdirSync(__dirname).filter(f=>f.endsWith('.test.js')).sort();let failed=0;
-for(const f of files){try{const out=execFileSync(process.execPath,[path.join(__dirname,f)],{encoding:'utf8',timeout:600000,stdio:['ignore','pipe','pipe']});const last=out.trim().split('\n').slice(-1)[0];const bad=/errors \[(?!\])|errs \[(?!\])/.test(last);if(bad)failed++;console.log((bad?'FAIL ':'ok   ')+f+'  '+last.slice(0,120))}catch(e){failed++;console.log('FAIL '+f+'  '+String(e.message).split('\n')[0])}}
-console.log(failed?`${failed} suite(s) failed`:'all suites passed');process.exit(failed?1:0);
+// Legacy suites are smoke checks; reliability.test.js adds business assertions.
+const {execFile}=require('node:child_process');
+const fs=require('node:fs');
+const path=require('node:path');
+const files=fs.readdirSync(__dirname).filter(f=>f.endsWith('.test.js')).sort();
+let next=0,failed=0;
+async function worker(){while(next<files.length){const file=files[next++];await new Promise(resolve=>{
+ execFile(process.execPath,[path.join(__dirname,file)],{encoding:'utf8',timeout:600000,maxBuffer:8*1024*1024},(error,stdout,stderr)=>{
+  const reported=[...stdout.matchAll(/(?:errors|errs)\s*\[([^\]]*)\]/g)].some(m=>m[1].trim());
+  const bad=!!error||reported||/Error: Uncaught \[/.test(stderr);
+  if(bad){failed++;console.error('FAIL '+file+'\n'+(error?error.message+'\n':'')+stdout+stderr)}
+  else console.log('ok   '+file);
+  resolve();
+ });
+})}}
+Promise.all(Array.from({length:3},worker)).then(()=>{console.log(failed?`${failed} suite(s) failed`:`all ${files.length} suites passed (legacy smoke checks + regression assertions)`);process.exitCode=failed?1:0});

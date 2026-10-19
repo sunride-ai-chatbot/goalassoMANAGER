@@ -1105,8 +1105,8 @@ function autoSub(M,c,pos){
   doSub(M,c,out?out.p.id:null,inP.id);
 }
 function doSub(M,c,outId,inId){
-  if(M.subs[c.id]>=MAX_SUBS)return false;
-  const inP=c.players.find(p=>p.id===inId);if(!inP)return false;
+  if(M.done||M.subs[c.id]>=MAX_SUBS)return false;
+  const inP=bench(M,c).find(p=>p.id===inId);if(!inP||outId&&!M.xi[c.id].some(e=>e.pid===outId)||!outId&&M.xi[c.id].length>=11)return false;
   let slot=inP.pos;if(outId){const oe=M.xi[c.id].find(e=>e.pid===outId);if(oe&&oe.slot)slot=oe.slot;if(oe&&M.mins)M.mins[c.id][outId]=M.m-oe.since;M.xi[c.id]=M.xi[c.id].filter(e=>e.pid!==outId);M.used[c.id].push(outId)}
   if(M.xi[c.id].length>=11)return false;
   M.xi[c.id].push({pid:inId,slot,since:M.m,yel:0});M.subs[c.id]++;
@@ -1868,11 +1868,11 @@ function runPress(kind,M,done){
 function halfTimeTalk(M,tick){const h=club(M.h),a=club(M.a);const mineHome=h.id===G.me;const gf=mineHome?M.gh:M.ga,ga=mineHome?M.ga:M.gh;
   const box=document.createElement('div');box.className='tt';box.innerHTML=`<div class="muted tiny">שיחת מחצית בחדר ההלבשה:</div><div class="row wrap" style="gap:6px;margin-top:4px"><button class="btn sm sec" data-ht="praise">כל הכבוד, תמשיכו ככה</button><button class="btn sm sec" data-ht="angry">אני מצפה להרבה יותר!</button><button class="btn sm sec" data-ht="calm">תירגעו, תשחקו את המשחק שלכם</button></div>`;
   tick.appendChild(box);tick.scrollTop=tick.scrollHeight;
-  box.onclick=e=>{const b=e.target.closest("[data-ht]");if(!b)return;e.stopPropagation();const k=b.dataset.ht;let v=0,txt='';const lead=gf-ga;const hot=me().players.filter(p=>me().lineup.includes(p.id)&&p.pers==='temperamental').length;
+  box.onclick=e=>{const b=e.target.closest("[data-ht]");if(!b)return;e.stopPropagation();if(M.halfTalk)return;const k=b.dataset.ht;let v=0,txt='';const lead=gf-ga;const hot=me().players.filter(p=>me().lineup.includes(p.id)&&p.pers==='temperamental').length;
     if(k==='praise'){v=lead>0?.4:lead===0?.1:-.3;txt=lead>0?'השחקנים יצאו בביטחון.':lead===0?'שביעות רצון מוקדמת.':'הקבוצה יצאה רגועה מדי.'}
     else if(k==='angry'){if(lead<=0){const backfire=Math.random()<.2+hot*.08;v=backfire?-.4:.7;txt=backfire?'כמה שחקנים נסגרו. חדר ההלבשה שקט מדי.':'הקבוצה יצאה עם אש בעיניים!'}else{v=-.5;txt='השחקנים לא הבינו את הכעס.'}}
     else{v=.2+(M.ev.some(e=>e.m>=40&&e.m<=45&&e.t==='goal'&&e.team!==G.me)?.3:0);txt='הראש חזר למקום.'}
-    M.boost=M.boost||{};M.boost[G.me]=(M.boost[G.me]||0)+v;box.innerHTML=`<div class="tiny" style="color:var(--accent)">${txt}</div>`;}
+    M.boost=M.boost||{};M.boost[G.me]=(M.boost[G.me]||0)+v;M.halfTalk=k;save();box.innerHTML=`<div class="tiny" style="color:var(--accent)">${txt}</div>`;}
 }
 
 /* ---- board meeting & ultimatums ---- */
@@ -2486,7 +2486,7 @@ async function cloudSave(silent){if(!cloud.ready||!G||cloud.busy)return;cloud.bu
     for(let i=0;i<n;i++){await base.collection('chunks').doc('c'+i).set({d:b64.slice(i*CHUNK,(i+1)*CHUNK)})}
     const meta={n,gz,t:Date.now(),slot:curSlot(),v:SAVE_VERSION,club:me().name,season:seasonLabel(),wk:G.wk,bytes:json.length};await base.set(meta);cloud.meta=meta;if(!silent)toast('נשמר בענן')}catch(e){console.error(e);if(!silent)toast('השמירה בענן נכשלה: '+(e&&e.code||e))}finally{cloud.busy=false;const el=$('cloudBox');if(el)el.outerHTML=cloudBoxHTML()}}
 async function cloudLoad(){if(!cloud.ready||!cloud.meta||cloud.busy)return;cloud.busy=true;try{const base=cloud.db.doc(cloudPath(curSlot()));const parts=[];for(let i=0;i<cloud.meta.n;i++){const s=await base.collection('chunks').doc('c'+i).get();if(!s.exists)throw new Error('chunk missing');parts.push(s.data().d)}
-    const json=await unB64(parts.join(''),cloud.meta.gz);const g=JSON.parse(json);G=g;G.slot=curSlot();try{localStorage.setItem(slotKey(curSlot()),json)}catch(e){}load();save();toast('נטען מהענן');render()}catch(e){console.error(e);toast('הטעינה נכשלה')}finally{cloud.busy=false}}
+    const json=await unB64(parts.join(''),cloud.meta.gz);if(installCareer(json,curSlot())){toast('נטען מהענן');render()}}catch(e){console.error(e);toast('הטעינה נכשלה')}finally{cloud.busy=false}}
 function cloudAutoTick(){if(G&&G.autoCloud&&cloud.ready&&G.wk%3===0)cloudSave(true)}
 
 /* ---- fast simulation ---- */
@@ -2509,8 +2509,10 @@ function confetti(ms){if(window.matchMedia&&window.matchMedia('(prefers-reduced-
 async function exportSave(){const dl=window.claude&&window.claude.use?await claude.use('downloads'):null;const json=JSON.stringify(G);const name=`ligat-haal-save-${(me()&&me().short||'club').replace(/[^\w֐-׿]+/g,'_')}-s${G.season}w${G.wk+1}.json`;
   if(dl){try{await dl.save({filename:name,data:json});toast('הקובץ נשמר');return}catch(e){}}
   try{await navigator.clipboard.writeText(json);toast('הורדה לא זמינה כאן, השמירה הועתקה ללוח')}catch(e){const ta=document.createElement('textarea');ta.value=json;document.body.appendChild(ta);ta.select();toast('סמן והעתק את הטקסט');setTimeout(()=>ta.remove(),8000)}}
-function importSave(file){const r=new FileReader();r.onload=()=>{try{const g=JSON.parse(r.result);if(!g.clubs||!g.me)throw 0;G=g;G.slot=curSlot();try{localStorage.setItem(slotKey(curSlot()),r.result)}catch(e){}load();save();toast('השמירה נטענה');render()}catch(e){toast('קובץ לא תקין')}};r.readAsText(file)}
-function settingsCardHTML(){return `<div class="card"><h3 class="sec">הגדרות ושמירה</h3>
+function importSave(file){if(!file||file.size>20*1024*1024)return toast('קובץ השמירה גדול מדי');const r=new FileReader();r.onerror=()=>toast('קריאת הקובץ נכשלה');r.onload=()=>{try{validateCareer(JSON.parse(r.result))}catch(e){toast('קובץ לא תקין או גרסה לא נתמכת. השמירה הקיימת נשמרה.');return}
+  openModal(`<h3 class="sec">ייבוא קריירה</h3><p>הקריירה במשבצת הנוכחית תוחלף. עותק קודם יישמר לגיבוי.</p><button class="btn" id="confirmImport">ייבא ושמור</button><button class="btn sec" data-close>ביטול</button>`,e=>{if(e.target.closest('#confirmImport')){if(installCareer(r.result,curSlot())){closeModal();render();toast('השמירה נטענה ונשמרה')}}})};r.readAsText(file)}
+
+function settingsCardHTML(){return `<div class="card"><h3 class="sec">הגדרות ושמירה</h3><div class="actions"><button class="btn sec" id="retrySave">שמור שוב</button><button class="btn sec" id="recoverBackup">שחזר גיבוי קודם</button></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">צלילים</span><div class="mt" style="flex:0 0 160px"><button data-snd="1" class="${G.sound!==false?'on':''}">פעיל</button><button data-snd="0" class="${G.sound===false?'on':''}">כבוי</button></div></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">אורך משחק חי (×1)</span><div class="mt" style="flex:0 0 200px"><button data-spd="90" class="${(G.speed||90)>=90?'on':''}">90 שנ'</button><button data-spd="45" class="${(G.speed||90)>=30&&(G.speed||90)<90?'on':''}">45 שנ'</button><button data-spd="20" class="${(G.speed||90)<30?'on':''}">20 שנ'</button></div></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">אנימציית אצטדיון</span><div class="mt" style="flex:0 0 200px"><button data-motion="full" class="${motionLevel()==='full'?'on':''}">מלאה</button><button data-motion="low" class="${motionLevel()==='low'?'on':''}">מופחתת</button><button data-motion="off" class="${motionLevel()==='off'?'on':''}">כבויה</button></div></div>
@@ -2554,7 +2556,7 @@ function advanceWeek(){
   if(!my)finishWeek();
   return my;
 }
-function afterMyMatch(M){if(M.settled)return;M.settled=true;settle(M);G.live=null;try{localStorage.removeItem('ilm2_livefl')}catch(e){}finishWeek()}
+function afterMyMatch(M){if(!M||M.settled)return;M.settled=true;settle(M);G.live=null;try{localStorage.removeItem('ilm2_livefl')}catch(e){}finishWeek()}
 function finishWeek(){
   const ev=currentEvent();
   if(ev.t==='cup')finishCupStage();
@@ -2662,8 +2664,11 @@ function weeklyOffers(){
   G.offers.push({pid:p.id,from:from.id,fee,wk:G.wk});news(`${from.name} הגישה הצעה של ${NIS(fee)} עבור ${fullName(p)}.`);
 }
 function acceptOffer(i){const o=G.offers[i];if(!o)return;const c=me(),from=club(o.from);const p=c.players.find(x=>x.id===o.pid);if(!p){G.offers.splice(i,1);return render()}
+  if(!from||from===c||!Number.isFinite(o.fee)||o.fee<=0||p.loan||G.wk-o.wk>=2||!WINDOW(G.wk))return toast('ההצעה כבר אינה תקפה');
+  if(!from.pseudo&&(!Number.isFinite(from.money)||from.money<o.fee))return toast('לקבוצה הקונה אין מספיק תקציב');
+  if(from.players.length>=30)return toast('הסגל של הקבוצה הקונה מלא');
   if(c.players.length<=16)return toast('אי אפשר לרדת מתחת ל-16 שחקנים');
-  c.players=c.players.filter(x=>x!==p);if(c.lineup)c.lineup=c.lineup.map(id=>id===p.id?null:id);if(c.captain===p.id)c.captain=null;let net=o.fee;if(p.sellon){const cut=Math.round(o.fee*p.sellon.pct/100);net-=cut;addLog(`${p.sellon.pct}% ל${p.sellon.to} ממכירת ${fullName(p)}`,-cut);p.sellon=null}c.money+=net;if(from.league)from.money-=o.fee;from.players.push(p);G.offers.splice(i,1);addLog(`מכירת ${fullName(p)}`,o.fee);news(`${fullName(p)} נמכר ל${from.short} תמורת ${NIS(o.fee)}.`);saleStory(p,c,from,o.fee);G.board.conf=clamp(G.board.conf+(o.fee>p.value*1.3?1:-2),0,100);autoLineups();save();render()}
+  c.players=c.players.filter(x=>x!==p);if(c.lineup)c.lineup=c.lineup.map(id=>id===p.id?null:id);if(c.captain===p.id)c.captain=null;let net=o.fee;if(p.sellon){const cut=Math.round(o.fee*p.sellon.pct/100);net-=cut;addLog(`${p.sellon.pct}% ל${p.sellon.to} ממכירת ${fullName(p)}`,-cut);p.sellon=null}c.money+=net;if(!from.pseudo)from.money-=o.fee;from.players.push(p);G.offers.splice(i,1);addLog(`מכירת ${fullName(p)}`,o.fee);news(`${fullName(p)} נמכר ל${from.short} תמורת ${NIS(o.fee)}.`);saleStory(p,c,from,o.fee);G.board.conf=clamp(G.board.conf+(o.fee>p.value*1.3?1:-2),0,100);autoLineups();save();render()}
 function counterOffer(i){const o=G.offers[i];if(!o)return;const from=club(o.from);const p=me().players.find(x=>x.id===o.pid);if(!p)return;if(o.countered)return toast('הם כבר שיפרו פעם אחת');
   if(Math.random()<.5&&(from.world||from.money*.6>=o.fee*1.15)){o.fee=Math.round(o.fee*1.15/1e5)*1e5;o.countered=true;news(`${from.short} שיפרה את ההצעה עבור ${fullName(p)} ל-${NIS(o.fee)}.`);toast('ההצעה שופרה')}else{G.offers.splice(i,1);news(`${from.short} משכה את ההצעה עבור ${fullName(p)}.`);if(p.unhappy)p.morale=clamp(p.morale-5,10,100);toast('ההצעה נמשכה')}save();render()}
 function rejectOffer(i){const o=G.offers[i];if(o){const p=me().players.find(x=>x.id===o.pid);if(p&&o.fee>p.value*1.3)p.morale=clamp((p.morale??65)-3,10,100)}G.offers.splice(i,1);save();render()}
@@ -2748,7 +2753,7 @@ function takeJob(id,skip){if(!skip){const to=club(id);return interviewModal(to,a
 /* ====================== TRANSFERS / FACILITIES ====================== */
 function askingPrice(p){return Math.round(p.value*1.15/1e4)*1e4}
 function buyPlayer(fromId,pid){
-  const from=club(fromId),c=me();const p=from.players.find(x=>x.id===pid);if(!p)return;
+  const from=club(fromId),c=me();if(!from||from===c)return;const p=from.players.find(x=>x.id===pid);if(!p||p.loan)return;
   if(!WINDOW(G.wk))return toast('חלון ההעברות סגור');
   if(c.players.length>=30)return toast('הסגל מלא (30 שחקנים)');
   if(from.league&&from.players.length<=17)return toast(`${from.short} מסרבת למכור, הסגל שלה קטן מדי`);
@@ -2760,7 +2765,7 @@ function sellPlayer(pid){
   const c=me();const p=c.players.find(x=>x.id===pid);if(!p)return;if(p.loan)return toast('שחקן מושאל, אי אפשר למכור');
   if(!WINDOW(G.wk))return toast('חלון ההעברות סגור');
   if(c.players.length<=16)return toast('אי אפשר לרדת מתחת ל-16 שחקנים');
-  const buyer=pick([...G.clubs,...(p.ovr<64?G.leumit:[])].filter(x=>x.id!==G.me&&x.players.length<28));const fee=Math.round(p.value*.8/1e4)*1e4;p.contract=Math.max(p.contract,2);
+  const fee=Math.round(p.value*.8/1e4)*1e4;const buyer=pick([...G.clubs,...(p.ovr<64?G.leumit:[])].filter(x=>x.id!==G.me&&x.players.length<28&&Number.isFinite(x.money)&&x.money>=fee));if(!buyer)return toast('אין כרגע קבוצה שיכולה לממן את הרכישה');p.contract=Math.max(p.contract,2);
   c.players=c.players.filter(x=>x!==p);if(c.lineup)c.lineup=c.lineup.map(id=>id===p.id?null:id);if(c.captain===p.id)c.captain=null;let net=fee;if(p.sellon){const cut=Math.round(fee*p.sellon.pct/100);net-=cut;addLog(`${p.sellon.pct}% ל${p.sellon.to}`,-cut);p.sellon=null}c.money+=net;buyer.players.push(p);buyer.money-=fee;addLog(`מכירת ${fullName(p)}`,fee);
   news(`${fullName(p)} נמכר ל${buyer.short} תמורת ${NIS(fee)}.`);saleStory(p,c,buyer,fee);toast('נמכר');closeModal();autoLineups();save();render();
 }
@@ -2789,12 +2794,44 @@ function curSlot(){try{return clamp(parseInt(localStorage.getItem('ilm2_cur'))||
 function setCurSlot(n){try{localStorage.setItem('ilm2_cur',String(n))}catch(e){}}
 function slotKey(n){return n===1?'ilm2':'ilm2_s'+n}
 function slotMeta(n){try{const m=localStorage.getItem('ilm2_meta_'+n);if(m)return JSON.parse(m);if(n===1&&localStorage.getItem('ilm2'))return {club:'קריירה שמורה',season:'',wk:0,t:0}}catch(e){}return null}
-function save(){if(!G||G.live)return;try{G.slot=G.slot||curSlot();G.v=SAVE_VERSION;G.savedAt=Date.now();localStorage.setItem(slotKey(G.slot),JSON.stringify(G));const c=me();localStorage.setItem('ilm2_meta_'+G.slot,JSON.stringify({club:c?c.name:'',season:seasonLabel(),wk:G.wk,mgr:G.manager&&G.manager.name,t:G.savedAt,phase:G.phase}))}catch(e){}}
+let persistenceError='';
+function storageNotice(message){
+  persistenceError=message||'';let box=$('saveWarning');
+  if(!message){if(box)box.remove();return}
+  if(!box){box=document.createElement('div');box.id='saveWarning';box.setAttribute('role','alert');box.style.cssText='position:fixed;top:0;left:0;right:0;z-index:100000;background:#702a23;color:white;padding:12px;text-align:center;font-size:15px';document.body.appendChild(box)}
+  box.textContent=message;const retry=document.createElement('button');retry.textContent='שמור שוב';retry.onclick=()=>save();box.append(' ',retry);const recovery=document.createElement('button');recovery.textContent='שחזר גיבוי';recovery.onclick=()=>openModal('<h3>לשחזר את הגיבוי הקודם?</h3><p>ההתקדמות הנוכחית תוחלף בגיבוי.</p><button class="btn" id="restoreWarningBackup">שחזר</button><button class="btn sec" data-close>ביטול</button>',e=>{if(e.target.closest('#restoreWarningBackup'))recoverBackup()});box.append(' ',recovery);
+}
+function save(){if(!G)return false;try{
+  const slot=G.slot||curSlot(),key=slotKey(slot),previous=localStorage.getItem(key),stamp=Date.now();
+  const json=JSON.stringify({...G,slot,v:SAVE_VERSION,savedAt:stamp});
+  // Keep the previous recoverable snapshot before replacing the primary save.
+  if(previous&&previous!==json){let recoverable=false;try{validateCareer(JSON.parse(previous));recoverable=true}catch(e){}if(recoverable)localStorage.setItem(key+'_backup',previous);}
+  localStorage.setItem(key,json);G.slot=slot;G.v=SAVE_VERSION;G.savedAt=stamp;
+  const c=me();try{localStorage.setItem('ilm2_meta_'+slot,JSON.stringify({club:c?c.name:'',season:seasonLabel(),wk:G.wk,mgr:G.manager&&G.manager.name,t:stamp,phase:G.phase}))}catch(e){/* metadata is derived; the full career is already durable */}
+  storageNotice('');return true;
+}catch(e){storageNotice('השמירה נכשלה. ההתקדמות נמצאת בזיכרון בלבד — פנו מקום ונסו לשמור שוב, או ייצאו גיבוי.');return false}}
+function validateCareer(g){
+  if(!g||typeof g!=='object'||Array.isArray(g)||!Array.isArray(g.clubs)||!g.clubs.length||!Array.isArray(g.leumit)||!g.pseudo||typeof g.pseudo!=='object'||!Array.isArray(g.cal)||!Number.isInteger(g.wk)||g.wk<0||!Number.isInteger(g.season)||g.season<1)throw new Error('invalid_career');
+  if(!['contract','sponsor','board','play','seasonEnd','fired'].includes(g.phase)||!g.manager||!g.board||!Array.isArray(g.results)||!Array.isArray(g.news)||!Array.isArray(g.offers))throw new Error('incomplete_career');
+  if(g.v!=null&&(!Number.isInteger(g.v)||g.v>SAVE_VERSION))throw new Error('unsupported_save_version');
+  const clubs=[...g.clubs,...g.leumit,...Object.values(g.pseudo),...Object.values(g.world||{}).flatMap(l=>l.clubs||[])];
+  if(!clubs.some(c=>c.id===g.me))throw new Error('missing_managed_club');
+  for(const c of clubs){if(!c||!c.id||!Array.isArray(c.players)||!Array.isArray(c.youth||[])||!Number.isFinite(c.money))throw new Error('invalid_club');
+    const ids=new Set();for(const p of [...c.players,...(c.youth||[])]){if(!p||!Number.isFinite(p.id)||ids.has(p.id)||!['GK','DF','MF','FW'].includes(p.pos))throw new Error('invalid_player');ids.add(p.id)}}
+  if(g.live){const m=g.live;if(!clubs.some(c=>c.id===m.h)||!clubs.some(c=>c.id===m.a)||!Number.isFinite(m.m)||m.m<0||m.m>130||!m.ctx||!m.xi||!m.subs||!m.used||!Array.isArray(m.ev))throw new Error('invalid_live_match')}
+  return g;
+}
+function restoreCareer(json,slot){const old=G,oldUid=uid;try{G=validateCareer(JSON.parse(json));G.slot=slot;hydrateCareer();return G}catch(e){G=old;uid=oldUid;throw e}}
+function installCareer(json,slot){const old=G,oldUid=uid;try{restoreCareer(json,slot);if(!save()){G=old;uid=oldUid;return false}return true}catch(e){G=old;uid=oldUid;toast('השמירה לא תקינה או אינה נתמכת. הקריירה הקיימת לא הוחלפה.');return false}}
+
 const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}]];
-function runMigrations(){const from=G.v||4;for(const [v,,fn] of MIGRATIONS){if(from<v){try{fn()}catch(e){console.warn('migration',v,e)}}}G.v=SAVE_VERSION;if(from<SAVE_VERSION)G.migratedFrom=from}
-function deleteSlot(n){try{localStorage.removeItem(slotKey(n));localStorage.removeItem('ilm2_meta_'+n)}catch(e){}}
+function runMigrations(){const from=G.v||4;for(const [v,,fn] of MIGRATIONS){if(from<v){fn()}}G.v=SAVE_VERSION;if(from<SAVE_VERSION)G.migratedFrom=from}
+function deleteSlot(n){try{localStorage.removeItem(slotKey(n));localStorage.removeItem(slotKey(n)+'_backup');localStorage.removeItem('ilm2_meta_'+n)}catch(e){}}
 async function deleteAllData(){for(let n=1;n<=SLOTS;n++)deleteSlot(n);try{localStorage.removeItem('ilm2_cur')}catch(e){}let cloudOk=true;if(cloud.ready){try{for(let n=1;n<=SLOTS;n++){const base=cloud.db.doc(cloudPath(n));const snap=await base.get();if(snap.exists){const m=snap.data();for(let i=0;i<(m.n||0);i++)await base.collection('chunks').doc('c'+i).delete();await base.delete()}}cloud.meta=null}catch(e){cloudOk=false}}G=null;render();toast(cloudOk?'כל הנתונים נמחקו (מקומי וענן)':'הנתונים המקומיים נמחקו. המחיקה בענן נכשלה, נסה שוב.')}
-function load(slot){try{const sl=slot||curSlot();const s=localStorage.getItem(slotKey(sl));if(s){G=JSON.parse(s);G.slot=sl;const all=[...G.clubs,...G.leumit,...Object.values(G.pseudo)];const wall=G.world?Object.values(G.world).flatMap(l=>l.clubs):[];uid=Math.max(uid,...all.concat(wall).flatMap(c=>[...c.players,...(c.youth||[])].map(p=>p.id)),...(G.scouts||[]).map(s=>s.id),...(G.scoutMarket||[]).map(s=>s.id),...(G.negs||[]).map(n=>n.id))+1;if(G.live)G.live=null;if(!G.paper)G.paper=[];if(!G.world)G.world={};if(!G.scouts)G.scouts=[];if(!G.scoutMarket)G.scoutMarket=[];if(!G.reports)G.reports=[];if(!G.negs)G.negs=[];if(!G.payables)G.payables=[];if(G.manager&&G.manager.trust==null)G.manager.trust=60;G.clubs.forEach(c=>{if(!c.div)c.div='top'});G.leumit.forEach(c=>{if(!c.div)c.div='leumit';if(c.tier==null)c.tier=4});if(G.leumit.length<16){const have=new Set(G.leumit.map(c=>c.name));for(const d of LEUMIT16){if(G.leumit.length>=16)break;if(!have.has(d.name)&&!G.clubs.some(c=>c.name===d.name))G.leumit.push(buildLeumitClub(d))}}if(!G.lfx||!G.lsched){buildLeumitSeason();G.leumit.forEach(c=>Object.assign(c,{P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0}))}if(!G.toto)buildToto();if(!G.hist)G.hist=[];computeLeumitPrestige();for(const c of all){if(c.scouting==null)c.scouting=1;for(const p of [...c.players,...(c.youth||[])])assignPers(p);if(c.fans==null)c.fans=baseFans(c);if(!c.focus)c.focus='bal';if(!c.intensity)c.intensity='mid';for(const p of [...c.players,...c.youth]){if(p.morale==null)p.morale=65;if(p.fit==null)p.fit=100}}migrateM2();ensureStaff();seedChem();runMigrations();if(G.phase==='play'&&G.cal&&G.wk<G.cal.length)ensureDraws();return true}}catch(e){}return false}
+function hydrateCareer(){const all=[...G.clubs,...G.leumit,...Object.values(G.pseudo)];const wall=G.world?Object.values(G.world).flatMap(l=>l.clubs):[];uid=Math.max(uid,...all.concat(wall).flatMap(c=>[...c.players,...(c.youth||[])].map(p=>p.id)),...(G.scouts||[]).map(s=>s.id),...(G.scoutMarket||[]).map(s=>s.id),...(G.negs||[]).map(n=>n.id))+1;if(!G.paper)G.paper=[];if(!G.world)G.world={};if(!G.scouts)G.scouts=[];if(!G.scoutMarket)G.scoutMarket=[];if(!G.reports)G.reports=[];if(!G.negs)G.negs=[];if(!G.payables)G.payables=[];if(G.manager&&G.manager.trust==null)G.manager.trust=60;G.clubs.forEach(c=>{if(!c.div)c.div='top'});G.leumit.forEach(c=>{if(!c.div)c.div='leumit';if(c.tier==null)c.tier=4});if(G.leumit.length<16){const have=new Set(G.leumit.map(c=>c.name));for(const d of LEUMIT16){if(G.leumit.length>=16)break;if(!have.has(d.name)&&!G.clubs.some(c=>c.name===d.name))G.leumit.push(buildLeumitClub(d))}}if(!G.lfx||!G.lsched){buildLeumitSeason();G.leumit.forEach(c=>Object.assign(c,{P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0}))}if(!G.toto)buildToto();if(!G.hist)G.hist=[];computeLeumitPrestige();for(const c of all){if(c.scouting==null)c.scouting=1;for(const p of [...c.players,...(c.youth||[])])assignPers(p);if(c.fans==null)c.fans=baseFans(c);if(!c.focus)c.focus='bal';if(!c.intensity)c.intensity='mid';for(const p of [...c.players,...(c.youth||[])]){if(p.morale==null)p.morale=65;if(p.fit==null)p.fit=100}}migrateM2();ensureStaff();seedChem();runMigrations();if(G.phase==='play'&&G.cal&&G.wk<G.cal.length)ensureDraws();}
+function load(slot){const sl=slot||curSlot();try{const json=localStorage.getItem(slotKey(sl));if(!json)return false;restoreCareer(json,sl);return true}catch(e){storageNotice('לא ניתן לטעון את הקריירה. הקובץ המקורי נשמר; אפשר לשחזר את הגיבוי מההגדרות.');return false}}
+function recoverBackup(){try{const json=localStorage.getItem(slotKey(curSlot())+'_backup');if(!json)return toast('לא נמצא גיבוי קודם');const old=G,oldUid=uid;restoreCareer(json,curSlot());try{localStorage.setItem(slotKey(curSlot()),JSON.stringify(G))}catch(e){G=old;uid=oldUid;throw e}storageNotice('');render();toast('הגיבוי הקודם שוחזר')}catch(e){storageNotice('שחזור הגיבוי נכשל. הקבצים הקיימים לא נמחקו.')}}
+
 let toastT;function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove('show'),2200)}
 
 
@@ -3037,6 +3074,7 @@ function renderNav(){$('nav').innerHTML=NAV.map(([id,l,s])=>`<button class="${G.
 function render(){
   closeModal();setTimeout(()=>{try{AdSvc.observe()}catch(e){}},50);if(G&&G.paperPop&&G.paperPop.length&&G.phase==='play')setTimeout(()=>{if(G&&G.view==='home'&&!liveTimer)showPaperPop()},80);
   if(!G){renderStart();return}
+  if(G.live&&!G.live.settled){startLive(G.live);return}
   $('top').classList.remove('hide');renderTop();
   if(G.phase!=='play'){$('nav').classList.add('hide');const v={contract:viewContract,sponsor:viewSponsor,board:viewBoard,seasonEnd:viewSeasonEnd,fired:viewFired}[G.phase];$('main').innerHTML=`<div class="view">${v()}</div>`;bind();return}
   $('nav').classList.remove('hide');renderNav();
@@ -3875,7 +3913,7 @@ function bind(){
     const ad4=t.closest('[data-adclick]');if(ad4&&!t.closest('[data-adpause]')){AdSvc.click(ad4.dataset.adclick);toast('פרסומת להדגמה בלבד: אין יעד אמיתי');return}
     if(id==='deleteAll')return openModal(`<h3 class="sec">מחיקת כל הנתונים</h3><p class="small">כל הקריירות במכשיר הזה${cloud.ready?' וכל השמירות שלך בענן':''} יימחקו לצמיתות. אי אפשר לבטל.</p><div class="actions"><button class="btn danger" id="delAllGo">מחק הכל</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#delAllGo')){closeModal();deleteAllData()}});
     if(id==='exportBtn')return exportSave();if(id==='simNext')return simUntilMyMatch();if(id==='simSeason')return simSeason();
-    if(id==='cloudSave')return cloudSave();if(id==='cloudLoad')return cloudLoad();if(id==='cloudAuto'){G.autoCloud=!G.autoCloud;save();if(G.autoCloud)cloudSave(true);return render()}
+    if(id==='retrySave'){if(save())toast('נשמר במכשיר');return}if(id==='recoverBackup')return openModal('<h3>לשחזר את הגיבוי הקודם?</h3><p>ההתקדמות הנוכחית תוחלף בגיבוי.</p><button class="btn" id="recoverGo">שחזר</button><button class="btn sec" data-close>ביטול</button>',e=>{if(e.target.closest('#recoverGo'))recoverBackup()});if(id==='cloudSave')return cloudSave();if(id==='cloudLoad')return cloudLoad();if(id==='cloudAuto'){G.autoCloud=!G.autoCloud;save();if(G.autoCloud)cloudSave(true);return render()}
     if(id==='sellNaming')return sellNaming();
     if(id==='refreshScouts'){const c=me();if(c.money<50000)return toast('אין מספיק תקציב');c.money-=50000;refreshScoutMarket();save();return render()}
     const pr=t.closest('[data-promote]');if(pr)return promoteYouth(+pr.dataset.promote);
@@ -3910,10 +3948,10 @@ function playInstant(){const M=advanceWeek();if(M){M.live=false;runInstant(M);if
 let liveTimer=null;
 function ensureNumbers(c){if(!c||!c.players)return;const used=new Set(c.players.filter(p=>p.no).map(p=>p.no));const order={GK:0,DF:1,MF:2,FW:3};const ps=c.players.filter(p=>!p.no).sort((x,y)=>(order[x.pos]-order[y.pos])||(y.ovr-x.ovr));let n=1;for(const p of ps){if(p.pos==='GK'&&!used.has(1)){p.no=1;used.add(1);continue}while(used.has(n)||n===1)n++;p.no=n;used.add(n)}}
 function xiListHTML(M,c){return xiPlayers(M,c).map(({p,e})=>`<span><span>${p.no||''} ${esc(p.last||p.first)}${e.slot&&e.slot!==p.pos?' <small class="muted">('+e.slot+')</small>':''}</span><b>${p.ovr}</b></span>`).join('')}
-function startLive(){
+function startLive(restored){
   try{localStorage.setItem('ilm2_livefl',String(G.slot||curSlot()))}catch(e){}
-  const M=advanceWeek();if(!M){try{localStorage.removeItem('ilm2_livefl')}catch(e){}render();return}
-  const h=club(M.h),a=club(M.a);ensureNumbers(h);ensureNumbers(a);
+  const M=restored||advanceWeek();if(!M){try{localStorage.removeItem('ilm2_livefl')}catch(e){}render();return}
+  save();const h=club(M.h),a=club(M.a);ensureNumbers(h);ensureNumbers(a);
   const ml=motionLevel();const base=(G.speed||90);
   $('nav').classList.add('hide');
   $('main').innerHTML=`<div class="view live-view">
@@ -3935,10 +3973,10 @@ function startLive(){
   <div class="card"><div class="ticker" id="ticker"><div class="muted">${ml==='off'?'שריקת פתיחה':'הקבוצות בדרך למגרש'}</div></div></div></div></div>`;
   const tick=$('ticker');let paused=true,shown=0,mult=1;const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
   if(p2d){p2d.onTap=(pid,team)=>{p2d.labels[pid]=performance.now()+2200;if(team===G.me&&!M.done&&M.subs[G.me]<MAX_SUBS){pause();openSubModal(pid)}}}
-  M.liveMent=M.liveMent||{};M.liveMent[G.me]=me().mentality||'bal';const paintLM=()=>document.querySelectorAll('[data-lm]').forEach(b=>b.classList.toggle('on',b.dataset.lm===M.liveMent[G.me]));paintLM();
-  document.querySelectorAll('[data-lm]').forEach(b=>b.onclick=()=>{M.liveMent[G.me]=b.dataset.lm;M.tadjDirty=true;paintLM();addLine('note',`${fm(M.m)} שינוי מנטליות: ${{def:'הגנתי',bal:'מאוזן',att:'התקפי'}[b.dataset.lm]}`)});
+  M.liveMent=M.liveMent||{};M.liveMent[G.me]=M.liveMent[G.me]||me().mentality||'bal';const paintLM=()=>document.querySelectorAll('[data-lm]').forEach(b=>b.classList.toggle('on',b.dataset.lm===M.liveMent[G.me]));paintLM();
+  document.querySelectorAll('[data-lm]').forEach(b=>b.onclick=()=>{M.liveMent[G.me]=b.dataset.lm;M.tadjDirty=true;save();paintLM();addLine('note',`${fm(M.m)} שינוי מנטליות: ${{def:'הגנתי',bal:'מאוזן',att:'התקפי'}[b.dataset.lm]}`)});
   const addLine=(cls,txt)=>{const prev=tick.querySelector('.latest');if(prev)prev.classList.remove('latest');const d=document.createElement('div');d.className=cls+' latest';d.textContent=txt;tick.appendChild(d);tick.scrollTop=tick.scrollHeight};
-  let replayQ=null;
+  let replayQ=null;let restoring=!!restored;
   const myC=me();const homeMe=M.h===G.me;
   const drawSide=()=>{const xs=xiPlayers(M,myC);const lay=slotLayout(myC.formation||'4-3-3');
     const chip=({p,e})=>{const en=liveEnergy(M,myC,p,e);const cls=en>=70?'good':en>=50?'warn':'bad';return `<button class="xc" data-xo="${p.id}" aria-label="${esc(fullName(p))}"><span class="pos ${p.pos}">${POSB[p.pos]}</span><b class="num">${p.ovr}</b><span class="nm">${esc(p.last||p.first)}</span><i class="en ${cls}"><u style="width:${en}%"></u></i>${e.yel?'<em class="yc"></em>':''}</button>`};
@@ -3947,7 +3985,7 @@ function startLive(){
   $('main').querySelector('.live-wrap').addEventListener('click',ev=>{const t=ev.target.closest('[data-xo]');if(t&&!M.done){if(M.subs[G.me]>=MAX_SUBS){toast('נגמרו החילופים');return}pause();openSubModal(+t.dataset.xo);return}if(ev.target.closest('#benchBtn')&&!M.done){pause();openSubModal()}});
   const flush=()=>{
     while(shown<M.ev.length){const e=M.ev[shown++];const who=club(e.team);const mine=e.team===G.me;
-      if(e.t==='goal'||e.t==='pen'||e.t==='own'){if(mine){SFX.goal(true);confetti(1200)}else SFX.groan();if(p2d&&e.path&&(e.t==='goal'||e.t==='pen'))replayQ=e}else if(e.t==='yellow'||e.t==='red')SFX.card();
+      if(!restoring&&(e.t==='goal'||e.t==='pen'||e.t==='own')){if(mine){SFX.goal(true);confetti(1200)}else SFX.groan();if(p2d&&e.path&&(e.t==='goal'||e.t==='pen'))replayQ=e}else if(!restoring&&(e.t==='yellow'||e.t==='red'))SFX.card();
       if(e.quiet)continue;
       if(e.t==='goal')addLine('goal '+(mine?'me':''),`⚽ ${fm(e.m)} שער! ${e.name} (${who.short})${e.asstName?' · בישול: '+e.asstName:''} · ${M.gh}:${M.ga}`);
       else if(e.t==='pen')addLine('goal '+(mine?'me':''),`⚽ ${fm(e.m)} שער מפנדל! ${e.name} (${who.short}) · ${M.gh}:${M.ga}`);
@@ -3955,7 +3993,7 @@ function startLive(){
       else if(e.t==='own')addLine('goal '+(mine?'me':''),`⚽ ${fm(e.m)} שער עצמי של ${e.name} (${club(e.ogteam).short}) · ${M.gh}:${M.ga}`);
       else if(e.t==='yellow')addLine('card',`🟨 ${fm(e.m)} צהוב ל${e.name} (${who.short})`);
       else if(e.t==='red')addLine('card',`🟥 ${fm(e.m)} אדום! ${e.name} (${who.short}) מורחק`);
-      else if(e.t==='inj'){addLine('inj',`🩹 ${fm(e.m)} ${e.name} (${who.short}) נפצע${e.injT?' ('+e.injT+')':''}, ${e.weeks} שבועות`);if(mine&&e.needSub){e.needSub=false;pause();openSubModal(null,true)}}
+      else if(e.t==='inj'){addLine('inj',`🩹 ${fm(e.m)} ${e.name} (${who.short}) נפצע${e.injT?' ('+e.injT+')':''}, ${e.weeks} שבועות`);if(!restoring&&mine&&e.needSub){e.needSub=false;pause();openSubModal(null,true)}}
       else if(e.t==='sub'){addLine('sub',`🔁 ${fm(e.m)} ${who.short}: ${e.name} נכנס${e.out?' במקום '+e.out:''}`);if(mine&&e.outPid&&e.outPid===me().captain)addLine('muted',`סרט הקפטן עובר לשחקן הוותיק על המגרש`)}
       else if(e.t==='shot'){if(e.sub==='save')addLine('muted',`🧤 ${fm(e.m)} הצלה גדולה של ${e.name}${e.shooter?' מול '+e.shooter:''}!`);else if(e.sub==='post')addLine('muted',`${fm(e.m)} קורה! ${e.name} (${who.short}) קרוב מאוד`)}
       else if(e.t==='corner')addLine('muted',`${fm(e.m)} קרן ל${who.short}`);
@@ -3969,16 +4007,18 @@ function startLive(){
     $('stats').innerHTML=bar('החזקת כדור %',ph,100-ph)+bar('בעיטות',M.shots[h.id],M.shots[a.id])+bar('למסגרת',(M.sot||{})[h.id]||0,(M.sot||{})[a.id]||0)+bar('קרנות',(M.corners||{})[h.id]||0,(M.corners||{})[a.id]||0)+bar('מסירות',(M.passes||{})[h.id]||0,(M.passes||{})[a.id]||0);
     if(replayQ&&!M.done){const e=replayQ;replayQ=null;const wasPaused=paused;paused=true;playReplay(p2d,e,h,()=>{if(!wasPaused&&!M.done&&$('ctrlBtn').textContent==='השהה')paused=false})}
   };
-  const pause=()=>{paused=true;$('ctrlBtn').textContent='המשך'};
-  const resume=()=>{paused=false;$('ctrlBtn').textContent='השהה'};
+  const pause=()=>{paused=true;M.paused=true;$('ctrlBtn').textContent=M.awaitingHalf?'מחצית שנייה':'המשך';save()};
+  const resume=()=>{paused=false;M.paused=false;M.awaitingHalf=false;$('ctrlBtn').textContent='השהה';save()};
   const finish=()=>{clearInterval(liveTimer);liveTimer=null;running=false;if(raf)cancelAnimationFrame(raf);raf=null;
+    if(!M.finishPrepared){
     if(M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);
     if(M.gh===M.ga&&M.ctx.kind==='euro'&&M.ctx.leg===2){const E=me().euro;if(E&&E.tie&&E.tie.g1&&E.tie.g1[0]+(M.h===G.me?M.gh:M.ga)===E.tie.g1[1]+(M.h===G.me?M.ga:M.gh))decidePens(M)}
     if(p2d)M.heat=p2d.heat;
     SFX.whistleEnd();const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;const wonIt=myG>opG||(M.pens&&((M.pens==='h')===(M.h===G.me)));if(wonIt&&(M.ctx.kind==='cup'&&M.ctx.stage==='F'||M.ctx.kind==='euro'&&M.ctx.stage==='F'||M.ctx.kind==='toto'&&M.ctx.stage==='F')){SFX.win();confetti(4000);recordMoment('cup',M.ctx.kind==='cup'?'גביע המדינה':M.ctx.kind==='toto'?'גביע הטוטו':(M.ctx.label||'').split('·')[0].trim()||'הגביע האירופי')}
+    M.finishPrepared=true;}
     addLine('',`שריקת סיום · ${h.short} ${M.gh}:${M.ga} ${a.short}${M.pens?` · ${(M.pens==='h'?h:a).short} ניצחה בפנדלים`:''}`);
-    const mm=manOfMatch(M,h,a);M.motmLive=mm;if(mm)addLine('goal '+(mm.team===G.me?'me':''),`⭐ שחקן המשחק: ${mm.name} (${mm.short}) · ציון ${mm.r}`);
-    $('subBtn').disabled=true;$('ctrlBtn').textContent='סיכום המשחק';$('livePill').textContent='סיום';$('livePill').classList.remove('live');$('livePill').classList.add('info');
+    const mm=M.motmLive||manOfMatch(M,h,a);M.motmLive=mm;if(mm)addLine('goal '+(mm.team===G.me?'me':''),`⭐ שחקן המשחק: ${mm.name} (${mm.short}) · ציון ${mm.r}`);
+    save();$('subBtn').disabled=true;$('ctrlBtn').textContent='סיכום המשחק';$('livePill').textContent='סיום';$('livePill').classList.remove('live');$('livePill').classList.add('info');
     $('ctrlBtn').onclick=()=>{afterMyMatch(M);G.view='home';const rec=G.results[G.results.length-1];if(rec&&rec.h===M.h&&rec.a===M.a){matchReportModal(rec,()=>runPress('post',M,()=>render()))}else runPress('post',M,()=>render())};
   };
   const period=()=>Math.round(base*1000/90/mult);
@@ -3986,8 +4026,8 @@ function startLive(){
     if(paused||(p2d&&p2d.hold))return;
     stepMinute(M);flush();
     if(M.m===62||M.m===76){const my=M.h===G.me?M.gh:M.ga,op=M.h===G.me?M.ga:M.gh;const oppC=M.h===G.me?a:h;const of=avgFit(M,oppC);const tip=my<op?'אנחנו מאחור. שווה לעבור להתקפי ולהכניס חלוץ.':my===op&&of<72?'הם נראים עייפים. אפשר ללחוץ עכשיו.':my>op&&M.m>=76?'מובילים בסיום. מנטליות הגנתית תסגור את המשחק.':null;if(tip)addLine('note',`🎧 העוזר: ${tip}`)}
-    if(M.m===45&&!M.half){M.half=true;addLine('muted','מחצית · לחץ "מחצית שנייה" כדי להמשיך');halfTimeTalk(M,tick);pause();$('ctrlBtn').textContent='מחצית שנייה';if(p2d){p2d.flip=true;pitchMinute(p2d,M,h,a,[]);for(const d of [...p2d.h,...p2d.a]){d.tx=52.5;d.ty=74}}}
-    if(M.done)finish();
+    if(M.m===45&&!M.half){M.half=true;M.awaitingHalf=true;addLine('muted','מחצית · לחץ "מחצית שנייה" כדי להמשיך');halfTimeTalk(M,tick);pause();$('ctrlBtn').textContent='מחצית שנייה';if(p2d){p2d.flip=true;pitchMinute(p2d,M,h,a,[]);for(const d of [...p2d.h,...p2d.a]){d.tx=52.5;d.ty=74}}}
+    if(M.done)finish();else save();
   },period());if(p2d&&!p2d.snap&&!raf)raf=requestAnimationFrame(frame)};
   document.querySelectorAll('[data-spx]').forEach(b=>b.onclick=()=>{mult=+b.dataset.spx;document.querySelectorAll('[data-spx]').forEach(x=>x.classList.toggle('on',x===b));if(liveTimer)startTimer()});
   $('muteBtn').onclick=()=>{G.sound=G.sound===false?true:false;$('muteBtn').textContent=G.sound===false?'🔇':'🔊';$('muteBtn').classList.toggle('on',G.sound!==false);save()};
@@ -3999,7 +4039,8 @@ function startLive(){
   // pre-match presentation
   const kickoff=()=>{const ov=$('arenaOver');if(ov)ov.innerHTML='';SFX.whistle();tick.innerHTML='<div class="muted">שריקת פתיחה</div>';paused=false;$('ctrlBtn').textContent='השהה';startTimer()};
   const ov=$('arenaOver');
-  if(ov&&ml==='full'){ov.innerHTML=`<div class="intro"><div class="comp">${esc(M.ctx.label)}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</div><div class="venue">${M.ctx.neutral?'מגרש ניטרלי':esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${M.ctx.firstLeg?` · משחק ראשון ${M.ctx.firstLeg[0]}:${M.ctx.firstLeg[1]}`:''}</div>
+  if(restored){if(p2d){p2d.entrance=false;p2d.entranceDone=true;p2d.flip=M.m>=45}flush();restoring=false;replayQ=null;if(M.awaitingHalf&&!M.halfTalk)halfTimeTalk(M,tick);if(M.done)finish();else{pause();startTimer()}toast('המשחק שוחזר. לחצו המשך כשתהיו מוכנים.')}
+  else if(ov&&ml==='full'){ov.innerHTML=`<div class="intro"><div class="comp">${esc(M.ctx.label)}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</div><div class="venue">${M.ctx.neutral?'מגרש ניטרלי':esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${M.ctx.firstLeg?` · משחק ראשון ${M.ctx.firstLeg[0]}:${M.ctx.firstLeg[1]}`:''}</div>
     <div class="vs"><div class="side" style="--c:${h.c1}"><h4>${kitSVG(h,'sm')} ${esc(h.short)}</h4><div class="xi">${xiListHTML(M,h)}</div></div><div class="vsx">VS</div><div class="side" style="--c:${a.c1}"><h4>${kitSVG(a,'sm')} ${esc(a.short)}</h4><div class="xi">${xiListHTML(M,a)}</div></div></div>
     <button class="btn big" id="kickBtn">שריקת פתיחה ▶</button></div>`;
     if(p2d){raf=requestAnimationFrame(frame);p2d.entranceDone=false;setTimeout(()=>{p2d.entranceDone=true},1800)}
@@ -4012,8 +4053,8 @@ function startLive(){
     const d=openModal('',e=>{
       const o=e.target.closest('[data-out]');if(o){outId=+o.dataset.out;draw();return}
       const i=e.target.closest('[data-in]');if(i){const inId=+i.dataset.in;if(M.xi[c.id].length>=11&&!outId){toast('בחר קודם מי יוצא');return}
-        if(doSub(M,c,outId,inId)){closeModal();flush();if(!forced)resume();else resume()}return}
-      if(e.target.closest('[data-skip]')){closeModal();resume()}
+        if(doSub(M,c,outId,inId)){save();closeModal();flush();if(!M.awaitingHalf)resume()}return}
+      if(e.target.closest('[data-skip]')){closeModal();if(!M.awaitingHalf)resume()}
     });d.dataset.lock='1';
     function draw(){const need=M.xi[c.id].length<11;
       d.querySelector('.card').innerHTML=`<h3 class="sec">חילוף · ${fm(M.m)}</h3>${need?'<div class="small muted">יש לך פחות מ-11 שחקנים על המגרש, בחר מי נכנס.</div>':'<div class="small muted">בחר מי יוצא ואז מי נכנס.</div>'}
@@ -4026,8 +4067,10 @@ function startLive(){
   }
 }
 
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&G)save()});
+window.addEventListener('pagehide',()=>{if(G)save()});
 /* ====================== BOOT ====================== */
-function start(){if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}if(!window.__ilmNoSplash)showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);if(G&&G.live){G.live=null}render();try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G)setTimeout(()=>toast('משחק חי נקטע באמצע. המשחק נשמר מלפני שריקת הפתיחה ויתחיל מחדש.'),400)}}catch(e){}cloudInit().then(()=>{if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
+function start(){if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}if(!window.__ilmNoSplash)showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);render();try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
 if(window.claude?.hot?.snapshot)window.claude.hot.snapshot(()=>({}));
 window.ILM={get G(){return G},me,render,NIS,myPos,myDiv,standingsOf,club,myNextMatch};
 window.claude?.hot?.ready?window.claude.hot.ready(start):start();
