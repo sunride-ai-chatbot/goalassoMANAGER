@@ -1,0 +1,3178 @@
+[
+  {
+    "ifaId": "111114",
+    "name": "איתן אזולאי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000640&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=111114",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "193251",
+    "name": "גלן אלוין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000641&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=193251",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "162762",
+    "name": "אלעד אמיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000644&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162762",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "155441",
+    "name": "עמית ארזי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000645&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=155441",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "302852",
+    "name": "יילה בטאיי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000646&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302852",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "216344",
+    "name": "איילון ברוך",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1001113&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=216344",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "324095",
+    "name": "פדרו דוד ברזאו טישיירה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1009493&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=324095",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "58440",
+    "name": "שון גולדברג",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000647&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=58440",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "302847",
+    "name": "קנג'י גורה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000648&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302847",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "78956",
+    "name": "עומרי גלזר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000650&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=78956",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "287089",
+    "name": "פדרו הנריקה דה אוליברה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000652&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=287089",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "320755",
+    "name": "וונדרסון דה פריטאס סוארס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995993&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320755",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "31209",
+    "name": "אלי דסה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1040682&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=31209",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "165543",
+    "name": "זוהר זסנו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000656&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=165543",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "170313",
+    "name": "איאד חלאילי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000657&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=170313",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "104530",
+    "name": "שריף כיוף",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000658&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=104530",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "180775",
+    "name": "ירין לוי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000659&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=180775",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "320893",
+    "name": "נייג'ל לונווייק",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000664&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320893",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "155444",
+    "name": "עלי מוחמד מוחמד אל פאזז",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000663&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=155444",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "17151",
+    "name": "גיא מלמד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000665&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=17151",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "149344",
+    "name": "יאיר מרדכי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000667&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=149344",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "320787",
+    "name": "אנדראה נובאקוביץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996081&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320787",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "117636",
+    "name": "עומר יעקב ניראון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636470&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=117636",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "249032",
+    "name": "דון סדריק",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000669&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=249032",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "34913",
+    "name": "קנט חסן סיף",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000670&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=34913",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "184446",
+    "name": "ינון פיינגזיכט",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000671&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=184446",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "320544",
+    "name": "ברונו רוברטו פריירה דה סילבה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995519&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320544",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "190688",
+    "name": "איי סילבה קאנגני סוקפה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000675&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=190688",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "248194",
+    "name": "פייר קורנו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000676&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=248194",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "162329",
+    "name": "ליאם קרגולה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1001114&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162329",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "162332",
+    "name": "נבות רטנר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000677&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162332",
+    "club": "mhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1005"
+  },
+  {
+    "ifaId": "284480",
+    "name": "טייריס אסנטה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958599&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=284480",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "303163",
+    "name": "קריסטיאן בליץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958638&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=303163",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "170994",
+    "name": "נועם בן הרוש",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958602&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=170994",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "120784",
+    "name": "איתי בן חמו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958603&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=120784",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "58445",
+    "name": "דן ליאון גלזר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995526&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=58445",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "87699",
+    "name": "דני גרופר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958609&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=87699",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "105732",
+    "name": "אושר דוידה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958610&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=105732",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "305644",
+    "name": "חליו וארלה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958640&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=305644",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "324223",
+    "name": "ג'יימס טברנייר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1010007&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=324223",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "173927",
+    "name": "עידן טראו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636290&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=173927",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "56185",
+    "name": "שגיב יחזקאל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958611&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=56185",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "98786",
+    "name": "השאם ליוס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=586210&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=98786",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "124295",
+    "name": "אלעד מדמון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958614&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=124295",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "143447",
+    "name": "אופק מליקה אהרון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958618&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=143447",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "22546",
+    "name": "רועי משפתי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958619&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=22546",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "108004",
+    "name": "איתמר נוי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958620&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=108004",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "247044",
+    "name": "איאון ניקולסקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958621&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=247044",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "320904",
+    "name": "אסטר סוקלר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996477&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320904",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "284963",
+    "name": "איסוף סיסוקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958622&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=284963",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "165018",
+    "name": "שליו סעדיה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958632&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=165018",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "59512",
+    "name": "דור פרץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958628&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=59512",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "189610",
+    "name": "מוחמד עלי קאמארה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958642&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=189610",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "77673",
+    "name": "גבריאל קניקובסקי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=586237&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=77673",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "121681",
+    "name": "שחר רוזן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=626809&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=121681",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "123490",
+    "name": "עידו שחר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958630&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=123490",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "81874",
+    "name": "רז שלמה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958631&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=81874",
+    "club": "mta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1061"
+  },
+  {
+    "ifaId": "321189",
+    "name": "דגלאס אווסו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027822&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321189",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "303478",
+    "name": "צ'יקו אלבס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027773&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=303478",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "49729",
+    "name": "עומרי אלטמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027777&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=49729",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "148927",
+    "name": "רועי אלקוקין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027779&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=148927",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "131593",
+    "name": "טל ארצ'ל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027780&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=131593",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "319808",
+    "name": "עמנואל בואטנג",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027781&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319808",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "179526",
+    "name": "מורדכי מור  בוסקילה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027782&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=179526",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "163074",
+    "name": "אלעד בן שמעון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=998678&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=163074",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "156051",
+    "name": "דור בנימיני",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027784&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=156051",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "225854",
+    "name": "דניאל דאפאאה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027785&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=225854",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "109403",
+    "name": "סתיו טוריאל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027786&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=109403",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "111677",
+    "name": "דורון ליידנר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027787&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=111677",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "323371",
+    "name": "יאניק ללינדאל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027823&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=323371",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "156061",
+    "name": "עמית למקין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027788&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=156061",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "266350",
+    "name": "פרננד דסטין מאיימבו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027789&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=266350",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "165014",
+    "name": "אורי מאיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=624167&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=165014",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "181146",
+    "name": "אלון מוסקוביץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996518&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=181146",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "109439",
+    "name": "אנאס מחאמיד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027790&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=109439",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "195885",
+    "name": "בן סורנסן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994168&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=195885",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "56756",
+    "name": "שחר בכטיאר פיבן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027793&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=56756",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "302880",
+    "name": "לוקאס פלקאו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027794&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302880",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "110597",
+    "name": "יונתן פרבר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027795&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=110597",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "87049",
+    "name": "אסף צור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027796&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=87049",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "319406",
+    "name": "מרקוס קוקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027799&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319406",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "126128",
+    "name": "רוי קורין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027800&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=126128",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "124778",
+    "name": "אל ים קנצפולסקי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027801&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=124778",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "303102",
+    "name": "אנדריאן קרייב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027802&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=303102",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "181365",
+    "name": "איתי שביט",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1027804&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=181365",
+    "club": "hta",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2176"
+  },
+  {
+    "ifaId": "135993",
+    "name": "מוחמד אבו רומי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993755&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=135993",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "302832",
+    "name": "אדריאן מרטין אוגריזה טלו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007864&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302832",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "199451",
+    "name": "עמית אוחנה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628221&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=199451",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "116370",
+    "name": "זאהי אחמד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628241&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=116370",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "301749",
+    "name": "ג'בון רומריו איסט",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993512&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=301749",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "320895",
+    "name": "פדרו אמאדור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007776&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320895",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "323708",
+    "name": "פורסון אמנקווה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1009027&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=323708",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "68917",
+    "name": "דן ביטון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628225&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=68917",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "57056",
+    "name": "מתן בלטקסה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628254&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=57056",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "179518",
+    "name": "אמיר חיים גנאח",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628258&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=179518",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "182015",
+    "name": "יונתן גרינבאום",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629808&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=182015",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "287456",
+    "name": "לוקאס דה סוזה ונטורה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628261&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=287456",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "49494",
+    "name": "אופיר דודזאדה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=624114&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=49494",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "307386",
+    "name": "ג'יבריל דיופ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=963111&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=307386",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "235266",
+    "name": "מרקו וולף",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007783&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=235266",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "320534",
+    "name": "ג'ואאו ויקטור ויירה פריירה סוזה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007786&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320534",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "235144",
+    "name": "איגור זלאטנוביץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=624567&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=235144",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "139650",
+    "name": "ניב יהושע",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007794&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=139650",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "95496",
+    "name": "מוחמד כנעאן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=624119&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=95496",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "176947",
+    "name": "מיגל אנג'לו לאונרדו ויטור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628285&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=176947",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "113625",
+    "name": "גיא מזרחי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628293&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=113625",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "122367",
+    "name": "יונס מלדה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007814&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=122367",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "5932",
+    "name": "אופיר מרציאנו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628324&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=5932",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "114368",
+    "name": "עידן נחמיאס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007816&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=114368",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "115265",
+    "name": "יואן סטויאנוב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628297&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=115265",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "237469",
+    "name": "דוד פילניק",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=961818&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=237469",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "71542",
+    "name": "אליאל פרץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628307&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=71542",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "130233",
+    "name": "איתי רוטמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007858&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=130233",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "201719",
+    "name": "ליאור שוגר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=578494&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=201719",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "206013",
+    "name": "יונתן שני",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628319&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=206013",
+    "club": "hbs",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2171"
+  },
+  {
+    "ifaId": "132959",
+    "name": "רביד חי אברגיל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003610&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=132959",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "234990",
+    "name": "בוריס אינאו טאקאנג",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003615&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=234990",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "120960",
+    "name": "רועי אלימלך",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993061&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=120960",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "319924",
+    "name": "נאנא אנטווי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003629&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319924",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "320529",
+    "name": "יוג'ין אנסה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003622&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320529",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "34253",
+    "name": "עומר אצילי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003630&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=34253",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "139228",
+    "name": "זיו ישראל בן שימול",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993063&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=139228",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "306375",
+    "name": "לוקה גדראני",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993064&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=306375",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "175746",
+    "name": "ליאל דרעי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003631&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=175746",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "202131",
+    "name": "מיכאל ראובן ואקנין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=524657&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=202131",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "168682",
+    "name": "דג'אץ וורקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003633&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=168682",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "65429",
+    "name": "שון וייסמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003636&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=65429",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "148934",
+    "name": "עדי מנחם יונה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003655&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=148934",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "120686",
+    "name": "תומר יוספי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003643&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=120686",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "108582",
+    "name": "גיל כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993069&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=108582",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "75390",
+    "name": "ירדן כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993070&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=75390",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "264339",
+    "name": "ז'ואאו מיגל מאקדו דה סילבה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993078&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=264339",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "111690",
+    "name": "טימוטי ליאור מוזי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993079&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=111690",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "124734",
+    "name": "נועם מו'צה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003644&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=124734",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "126705",
+    "name": "דביר ניר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003645&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=126705",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "325203",
+    "name": "אלקסיס סרנה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1013290&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=325203",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "106754",
+    "name": "יהונתן עוזר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003646&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=106754",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "170054",
+    "name": "אורי נתן עזו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=988585&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=170054",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "302799",
+    "name": "סמואל קאלו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993085&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302799",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "302741",
+    "name": "בריאן קרבאלי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003650&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302741",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "140180",
+    "name": "נבו יחזקאל שדו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003648&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=140180",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "86636",
+    "name": "ירדן שועה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003649&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=86636",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "171702",
+    "name": "איתיי יוסף שושן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=424250&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=171702",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "204665",
+    "name": "יאן שיקוט",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=585281&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=204665",
+    "club": "bje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=3595"
+  },
+  {
+    "ifaId": "306122",
+    "name": "מוחמד עזיז אווטארה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1012941&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=306122",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "325350",
+    "name": "ורדון אוליביר גאקוס איימה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1013816&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=325350",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "94906",
+    "name": "אלון אזוגי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006487&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=94906",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "306376",
+    "name": "מתיאוס אלברנגה דה אוליביירה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006488&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=306376",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "98244",
+    "name": "אילון אלמוג",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628224&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=98244",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "50125",
+    "name": "ניב אנטמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006491&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=50125",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "105271",
+    "name": "עוז בילו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006492&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=105271",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "140682",
+    "name": "איתי בן שבת",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006493&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=140682",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "319926",
+    "name": "קונאטה בקארי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006495&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319926",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "139725",
+    "name": "כראם גאבר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006501&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=139725",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "320653",
+    "name": "סמואל אנטוניו דה סילבה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006523&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320653",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "124321",
+    "name": "בסאם זערורה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006503&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=124321",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "49847",
+    "name": "דור חוגי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006504&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=49847",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "64322",
+    "name": "דולב חזיזה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006506&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=64322",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "165132",
+    "name": "אלכסיי טלפה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006509&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=165132",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "162834",
+    "name": "דניאל כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006511&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162834",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "145729",
+    "name": "ליאם כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006513&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=145729",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "76603",
+    "name": "עמית כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006522&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=76603",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "104753",
+    "name": "מאור לוי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006514&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=104753",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "209413",
+    "name": "איתי מונטיאלגרה דוני",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1025341&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=209413",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "264398",
+    "name": "גריגורי מורוזוב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006515&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=264398",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "102644",
+    "name": "נדב אביב נידם",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006516&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=102644",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "325871",
+    "name": "גבריאל סימיון בוגדאן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1015819&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=325871",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "164063",
+    "name": "בני פלדמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006517&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=164063",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "319954",
+    "name": "ווילאן גין קלאוד ציפרין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006518&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319954",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "151268",
+    "name": "דניס קוליקוב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006520&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=151268",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "325069",
+    "name": "איסק רודריגז דה לימה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1012947&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=325069",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "178008",
+    "name": "איתי שוורצמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1025344&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=178008",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "136005",
+    "name": "עמרי שמיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1006521&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=136005",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "176640",
+    "name": "אראל שריקי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1025345&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=176640",
+    "club": "mnt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1068"
+  },
+  {
+    "ifaId": "192477",
+    "name": "וויליאם אגאדה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=425839&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=192477",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "92982",
+    "name": "שי אליאס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628246&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=92982",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "178075",
+    "name": "סער אלקיים",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=574177&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=178075",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "129320",
+    "name": "תמיר ארבל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=571816&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=129320",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "184569",
+    "name": "יונתן ברוך",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=568034&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=184569",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "211982",
+    "name": "איברהים גדיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=967612&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=211982",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "154016",
+    "name": "יעד גונן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=574194&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=154016",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "38799",
+    "name": "פיני יואב גראפי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=958608&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=38799",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "323608",
+    "name": "שיקאנה דיאקיטה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1007420&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=323608",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "101704",
+    "name": "ג'ורג' דיבה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=571823&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=101704",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "169809",
+    "name": "אחמד המאם",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=625387&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=169809",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "320022",
+    "name": "דריו זופריץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993621&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320022",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "181163",
+    "name": "איתי זפרני",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636288&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=181163",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "116870",
+    "name": "והיב חביבאללה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=494034&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=116870",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "179166",
+    "name": "עילאי חזן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=574198&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=179166",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "183299",
+    "name": "מועתז חמד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=574180&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=183299",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "94492",
+    "name": "נעם כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=626796&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=94492",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "15402",
+    "name": "דור מלול",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=571831&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=15402",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "302882",
+    "name": "אריאל מנדי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993083&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302882",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "162884",
+    "name": "ליאם נחום",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=574205&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162884",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "127716",
+    "name": "טל נעים",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=585678&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=127716",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "48709",
+    "name": "נאור סבג",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=571834&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=48709",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "55704",
+    "name": "מתן עמבר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=630334&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=55704",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "150963",
+    "name": "אניס פורת עיאש",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=510061&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=150963",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "181413",
+    "name": "ישראל סאלי פחימה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=513466&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=181413",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "320574",
+    "name": "שיק אומר קייטה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995539&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320574",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "319614",
+    "name": "איבן קריצאק",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=991985&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319614",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "64761",
+    "name": "לירן רוטמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=953144&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=64761",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "3916",
+    "name": "אלון תורגמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628321&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=3916",
+    "club": "hhf",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2170"
+  },
+  {
+    "ifaId": "165233",
+    "name": "שאקר אבו חוסין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=512890&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=165233",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "127873",
+    "name": "מוחמד אבו ניל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=509802&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=127873",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "46796",
+    "name": "איאד אבו עוביד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=532872&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=46796",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "169365",
+    "name": "ביאן אבו ריא",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=512633&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=169365",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "325577",
+    "name": "לירוי נטיאמואה אווסו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1014682&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=325577",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "203597",
+    "name": "אחמד איברהים",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996295&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=203597",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "295832",
+    "name": "מת'יו קדג'ו אנים",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=602648&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=295832",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "138557",
+    "name": "ג'בייר בושנאק",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995802&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=138557",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "320740",
+    "name": "אנדרי - ראול בלבו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995894&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320740",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "303662",
+    "name": "סאנא גומס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627436&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=303662",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "180946",
+    "name": "מוחמד גנאים",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=549370&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=180946",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "139618",
+    "name": "מוחמד גנאמה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=509805&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=139618",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "198207",
+    "name": "עלי גנאמה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=520417&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=198207",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "97643",
+    "name": "מארון גנטוס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=509963&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=97643",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "107824",
+    "name": "אורי אור דהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003632&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=107824",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "320532",
+    "name": "מודסטס וורוביובס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995410&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320532",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "186816",
+    "name": "אכרם זבידאת",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=520419&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=186816",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "125867",
+    "name": "עילאי חגג",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=566990&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=125867",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "142071",
+    "name": "בסיל ח'ורי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=509796&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=142071",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "95986",
+    "name": "לואי חלף",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636463&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=95986",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "171795",
+    "name": "אחמד טאהא",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=509973&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=171795",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "190549",
+    "name": "ראני סיף",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=505540&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=190549",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "265189",
+    "name": "אנטוניו ולנטין ספר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=582425&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=265189",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "322180",
+    "name": "ג'ורג'י דניאל פרסקיב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1001537&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=322180",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "321004",
+    "name": "דימטרי קיוון קוואר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996843&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321004",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "161322",
+    "name": "עמית קרדי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994140&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=161322",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "116054",
+    "name": "איתמר שבירו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=621918&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=116054",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "122670",
+    "name": "סאהר תאג'י",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636484&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=122670",
+    "club": "bsk",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=4823"
+  },
+  {
+    "ifaId": "305646",
+    "name": "סאני אבדולסאלם",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636517&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=305646",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "120921",
+    "name": "עומר משה אבוהב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=525131&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=120921",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "122259",
+    "name": "עומר אגבדיש",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631632&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=122259",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "286121",
+    "name": "אנדרו אידוקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1043946&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=286121",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "120910",
+    "name": "אוהד אלמגור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631635&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=120910",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "163910",
+    "name": "מאור בן שמעון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=985347&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=163910",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "204605",
+    "name": "גיא בר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629698&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=204605",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "139829",
+    "name": "בן אנריקה גורדין ענברי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631640&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=139829",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "159111",
+    "name": "ינאי אריאל דיסטלפלד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631642&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=159111",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "284767",
+    "name": "ויטאלי דמשקאן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=579993&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=284767",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "234553",
+    "name": "נדים וראסנה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=567429&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=234553",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "321545",
+    "name": "שארני זוביירו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=998612&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321545",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "157991",
+    "name": "נדב זמיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631646&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=157991",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "126610",
+    "name": "תמיר חיימוביץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631649&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=126610",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "319993",
+    "name": "כריס טיהי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993538&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319993",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "76208",
+    "name": "עידן כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=626799&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=76208",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "158088",
+    "name": "איליי מדמון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631651&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=158088",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "110513",
+    "name": "לי און שמעון מזרחי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=993076&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=110513",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "170550",
+    "name": "נועם גיל מלמוד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631653&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=170550",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "130710",
+    "name": "אופק נדיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631654&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=130710",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "171575",
+    "name": "יונתן סורקין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994747&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=171575",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "160602",
+    "name": "איינאו פרדה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631658&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=160602",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "323833",
+    "name": "אדוארד צ'ילופיה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1008517&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=323833",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "143039",
+    "name": "יונתן קיי ליש",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631662&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=143039",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "320902",
+    "name": "אוקון ריימונד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996472&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320902",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "203332",
+    "name": "נתנאל שפראו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=991896&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=203332",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "143288",
+    "name": "הילאי שרעבי מלמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=632638&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=143288",
+    "club": "hje",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5981"
+  },
+  {
+    "ifaId": "160400",
+    "name": "בשאר אבדאח",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=426519&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=160400",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "129312",
+    "name": "אייל אינברום",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629178&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=129312",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "137685",
+    "name": "מאור ארליך",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629180&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=137685",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "182254",
+    "name": "איתי ברוך",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628400&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=182254",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "99101",
+    "name": "אור דדיה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994620&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=99101",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "152537",
+    "name": "גיא עמוס דיזנט",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629181&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=152537",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "181367",
+    "name": "מאור דימרי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=999585&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=181367",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "150210",
+    "name": "לי-ים דן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636459&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=150210",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "161744",
+    "name": "דור חברון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=630464&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=161744",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "162337",
+    "name": "לירן חזן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629185&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162337",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "142456",
+    "name": "עילאי טובים",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631650&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=142456",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "650",
+    "name": "איתן טיבי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=582414&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=650",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "237804",
+    "name": "אילוז' יאו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=519159&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=237804",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "161031",
+    "name": "עידו כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629190&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=161031",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "135160",
+    "name": "אריאל לוגסי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629193&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=135160",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "320522",
+    "name": "איברהימה סומה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995389&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320522",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "92665",
+    "name": "אביב סלם",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629196&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=92665",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "302829",
+    "name": "אווסו סמואל קוואמה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629197&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302829",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "320520",
+    "name": "קייל ספנס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995385&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320520",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "162319",
+    "name": "יהונתן עוז",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628408&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162319",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "182264",
+    "name": "יניב פרץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=999586&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=182264",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "185919",
+    "name": "ליאור קאסה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000674&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=185919",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "301187",
+    "name": "חוסה קורטס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629202&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=301187",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "320521",
+    "name": "פאבלוס קוריאה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995387&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320521",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "151958",
+    "name": "יואב קורן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628686&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=151958",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "120812",
+    "name": "אדר רטנר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994421&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=120812",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "319538",
+    "name": "מרקו רקוניאץ'",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=991667&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319538",
+    "club": "mpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=1064"
+  },
+  {
+    "ifaId": "212108",
+    "name": "דוד אסנקה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=631260&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=212108",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "321014",
+    "name": "כריסטופר אושה בוניפייס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996876&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321014",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "115760",
+    "name": "עידן ברנס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=953165&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=115760",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "94003",
+    "name": "תמיר גלזר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=574003&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=94003",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "320899",
+    "name": "לואן דה קמפוס קריסטינו דה סילבה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996443&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320899",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "126803",
+    "name": "תומר הרן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=634506&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=126803",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "66298",
+    "name": "מתן חוזז",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=584408&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=66298",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "56571",
+    "name": "דודו טויטו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627151&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=56571",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "172197",
+    "name": "דניאל טישלר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994135&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=172197",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "189397",
+    "name": "גטאצ'או יבלו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=567285&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=189397",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "14200",
+    "name": "אריק ינקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=630741&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=14200",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "113348",
+    "name": "עומר יצחק",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=456035&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=113348",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "196173",
+    "name": "אולי כהן ברגמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627159&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=196173",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "321854",
+    "name": "מארסיו גלייסון לייט דה סילבה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000026&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321854",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "142467",
+    "name": "עידו מזרחי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627169&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=142467",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "321538",
+    "name": "סרדן מיחאילוביץ'",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=998578&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321538",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "320735",
+    "name": "ג'אאו  פאולו  ז'וטה מרקס  גונסאלבש",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995873&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320735",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "321602",
+    "name": "מריוס נאוביסי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=998900&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321602",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "97295",
+    "name": "גוני נאור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1000668&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=97295",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "186867",
+    "name": "משה סמל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=423815&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=186867",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "116220",
+    "name": "אופק עובדיה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=585679&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=116220",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "155511",
+    "name": "עידו עולי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994658&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=155511",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "64243",
+    "name": "מקסים פלקושצנקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=636473&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=64243",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "320747",
+    "name": "איברהים פרד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995916&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320747",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "148013",
+    "name": "עמית צור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=630749&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=148013",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "173416",
+    "name": "דניאל קצר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=582017&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=173416",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "153325",
+    "name": "עמית רייף",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627155&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=153325",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "182253",
+    "name": "דניאל שורץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628502&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=182253",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "181106",
+    "name": "נועם שורץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=994379&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=181106",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "173413",
+    "name": "איתי חיים שמאי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=633735&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=173413",
+    "club": "hrg",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2175"
+  },
+  {
+    "ifaId": "146648",
+    "name": "איתי אהוד-זעירא",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004440&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=146648",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "71644",
+    "name": "תומר אלטמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004441&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=71644",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "302851",
+    "name": "בוני אמיאן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004442&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=302851",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "195314",
+    "name": "נחמן יעקב ויטה אסל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004446&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=195314",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "321013",
+    "name": "אדמונד אסנטה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004447&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=321013",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "322579",
+    "name": "דייגו ארויו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1002994&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=322579",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "35391",
+    "name": "גיא בדש",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004449&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=35391",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "325368",
+    "name": "אריק בילה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1013916&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=325368",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "207173",
+    "name": "זהר גרינברג",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=625305&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=207173",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "194274",
+    "name": "בן גרמה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627571&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=194274",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "120932",
+    "name": "רועי דוד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004451&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=120932",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "187258",
+    "name": "לירן יצחק דיין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=574028&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=187258",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "284757",
+    "name": "טבראס אנדרדה הוקלידס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004452&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=284757",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "145282",
+    "name": "אור אלון ישראלוב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=580122&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=145282",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "92897",
+    "name": "סתיו ישראלי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004453&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=92897",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "119009",
+    "name": "אבישי כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004454&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=119009",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "86256",
+    "name": "עומר כץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004455&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=86256",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "107638",
+    "name": "רועי לוי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=624121&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=107638",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "113065",
+    "name": "משה מאיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004456&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=113065",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "319870",
+    "name": "אלכס מוסונדה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004457&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=319870",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "153977",
+    "name": "עמית משיח",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004459&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=153977",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "108976",
+    "name": "יזן נסאר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004460&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=108976",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "324307",
+    "name": "חמידו קייטה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1010226&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=324307",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "303210",
+    "name": "כרים קימבודי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004464&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=303210",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "74651",
+    "name": "הראל שלום",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1004465&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=74651",
+    "club": "hpt",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2173"
+  },
+  {
+    "ifaId": "149340",
+    "name": "*****",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=-1&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=149340",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "320523",
+    "name": "רופאט אבדולאזאדה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995391&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320523",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "132000",
+    "name": "תומר אלון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=987456&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=132000",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "106152",
+    "name": "אוואגו אספה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=630457&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=106152",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "108275",
+    "name": "אופיר בנבניסטי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=613511&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=108275",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "69642",
+    "name": "שי בן-דוד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=613505&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=69642",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "167924",
+    "name": "ניב מיכאל גבאי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627404&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=167924",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "271738",
+    "name": "ניקולה ג'ורקוביץ'",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=529188&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=271738",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "94004",
+    "name": "עמית גלזר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=987924&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=94004",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "78260",
+    "name": "עובדיה דרויש",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=509964&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=78260",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "88558",
+    "name": "עידו וייר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=580120&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=88558",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "146156",
+    "name": "גואן חלבי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=614814&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=146156",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "195750",
+    "name": "מוחמד כרום",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=999055&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=195750",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "266070",
+    "name": "נמניה ליוביסאבליבץ'",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=511716&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=266070",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "178241",
+    "name": "נבו שלום מאיוסט",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=999054&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=178241",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "178551",
+    "name": "דניאל מילר טננבאום",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=503809&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=178551",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "217001",
+    "name": "יהונתן מלכה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627745&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=217001",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "320882",
+    "name": "טליס מקאדו טולדו קוסטה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996363&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320882",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "147403",
+    "name": "נדב מרקוביץ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1003647&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=147403",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "169983",
+    "name": "שי רפאל סבח",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=630747&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=169983",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "320495",
+    "name": "אמאדו סגנה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995334&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320495",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "320478",
+    "name": "אלכסנדר מוסולו סולה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995302&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320478",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "132414",
+    "name": "מור סמן טוב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628299&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=132414",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "132330",
+    "name": "שון עדרי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=623102&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=132330",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "324084",
+    "name": "אלכסנדרו מיחי קונסטנטין פופ",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1009446&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=324084",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "162225",
+    "name": "בילאל שאהין",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=613527&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=162225",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "89082",
+    "name": "איציק שולמייסטר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=560057&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=89082",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "115264",
+    "name": "אריאל שרצקי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=613530&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=115264",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "163431",
+    "name": "ראם תורגמן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=999053&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=163431",
+    "club": "iks",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=2182"
+  },
+  {
+    "ifaId": "151108",
+    "name": "ג'ונס אבו גנימה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=409782&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=151108",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "193673",
+    "name": "אימרי יוסף אוזן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=627234&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=193673",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "113204",
+    "name": "רון אונגר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=560037&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=113204",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "303277",
+    "name": "מיראניאן אריתור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=625940&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=303277",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "267341",
+    "name": "מנסור באדג'י",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=618154&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=267341",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "236428",
+    "name": "אונדרז' באצ'ו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=476749&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=236428",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "109976",
+    "name": "קייס גאנם",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=493602&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=109976",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "127410",
+    "name": "ניב גוטליב",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=560042&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=127410",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "132723",
+    "name": "דניאל גולאני",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=509935&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=132723",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "320849",
+    "name": "ננה גמבל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=996235&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320849",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "150643",
+    "name": "נהוראי יוסף חן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=621486&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=150643",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "169828",
+    "name": "אגם יהודה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=575369&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=169828",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "132280",
+    "name": "אריאל כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=953163&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=132280",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "108572",
+    "name": "בר כהן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=568945&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=108572",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "94625",
+    "name": "זיו מורגן",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=953159&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=94625",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "131821",
+    "name": "גל גבי מעתוק",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=629195&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=131821",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "218820",
+    "name": "עמית סארה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=1044071&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=218820",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "143336",
+    "name": "ירין סויסה",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=570752&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=143336",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "126571",
+    "name": "גיא סנקר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628807&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=126571",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "103884",
+    "name": "ירין סרדל",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=988649&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=103884",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "9592",
+    "name": "גד עמוס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=992648&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=9592",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "129960",
+    "name": "סמיר פרהוד",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=628304&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=129960",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "185017",
+    "name": "יהונתן צור",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=582945&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=185017",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "320741",
+    "name": "בנחורין כריס עמנואל קאוקו",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=995896&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=320741",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "58550",
+    "name": "דוד יאיר קלטינס",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=497083&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=58550",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "144691",
+    "name": "רביד שמאי",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=992115&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=144691",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "58646",
+    "name": "עדן שמיר",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=579995&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=58646",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  },
+  {
+    "ifaId": "126159",
+    "name": "עידו שרון",
+    "image": "https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=580143&width=200&height=190",
+    "profile": "https://www.football.org.il/players/player/?player_id=126159",
+    "club": "itb",
+    "roster": "https://www.football.org.il/?catid=2cf66391-238f-4199-aa04-4c61c7b892a9&itemid=2ae09ded-5019-4c49-bfd5-4458c66f9d24&team_id=5455"
+  }
+]

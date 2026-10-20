@@ -28,6 +28,17 @@ splash='data:image/webp;base64,'+base64.b64encode(open(os.path.join(ROOT,'src','
 src = src.replace('__SPLASH_IMG__', splash)
 logo='data:image/webp;base64,'+base64.b64encode(open(os.path.join(ROOT,'src','logo.webp'),'rb').read()).decode()
 src = src.replace('__LOGO_IMG__', logo)
+visuals = json.load(open(os.path.join(ROOT, 'data', 'visuals', 'players.json'), encoding='utf8'))
+face_names = {p['he']: p['visualId'] for p in visuals['players']}
+for c in clubs:
+    for p in c['players']:
+        if p['he'] not in face_names:
+            raise ValueError('Missing portrait identity: ' + p['he'])
+for face in visuals['faces'].values():
+    if not os.path.isfile(os.path.join(ROOT, 'assets', 'facepacks', face['pack']+'.json')):
+        raise ValueError('Missing portrait pack: ' + face['pack'])
+runtime_faces = {k: {f: v[f] for f in ('pack','crop','size','skin')} for k,v in visuals['faces'].items()}
+src = src.replace('__PLAYER_VISUALS__', enc({'names':face_names,'faces':runtime_faces}))
 out = src.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta))
 open(os.path.join(ROOT, 'ligat-haal-manager.html'), 'w', encoding='utf8').write(out)
 print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), 'euro clubs:', len(euro), 'euro players:', sum(len(v) for v in euro.values()), 'size KB:', len(out.encode('utf8'))//1024)
