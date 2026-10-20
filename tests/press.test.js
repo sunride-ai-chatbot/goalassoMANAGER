@@ -9,10 +9,13 @@ const G=w.ILM.G;console.log('after board: expect',G.board.expectText,'conf',G.bo
 G.pressMode='all';G.speed=0.45;G.motion='off';G.renderer='svg';
 // skip to week index 2 (Q3 leg1 -> HTA in ECL Q2 so plays weeks 0,1); let's just go until a non-friendly match with instant
 let played=0;
-for(let i=0;i<3;i++){G.view='home';w.ILM.render();if($('toLineupBtn')){click($('toLineupBtn'));click($('skipBtn'));let g=0;while($('modal')&&g++<6){const a=w.document.querySelector('[data-ans]');if(a){console.log('Q:',w.document.querySelector('.press-q').textContent.slice(0,60));click(a);console.log('  ->',w.document.querySelector('#modal .press-you')?.textContent.slice(0,50),'|',w.document.querySelector('#modal .small')?.textContent.slice(0,50))}const nx=$('pressNext');if(nx)click(nx)}}else click($('playBtn'))}
+for(let i=0;i<3;i++){G.view='home';w.ILM.render();if($('toLineupBtn')){click($('toLineupBtn'));click($('autoBtn'));click($('skipBtn'));let g=0;while($('modal')&&g++<6){const a=w.document.querySelector('[data-ans]');if(a){console.log('Q:',w.document.querySelector('.press-q').textContent.slice(0,60));click(a);console.log('  ->',w.document.querySelector('#modal .press-you')?.textContent.slice(0,50),'|',w.document.querySelector('#modal .small')?.textContent.slice(0,50))}const nx=$('pressNext');if(nx)click(nx)}}else click($('playBtn'))}
 // now live with pre-press
 G.view='home';w.ILM.render();if($('toLineupBtn'))click($('toLineupBtn'));
+// Re-select available players after earlier matches can create injuries/suspensions.
+if($('autoBtn'))click($('autoBtn'));
 click($('playBtn'));let g=0;while($("modal")&&!$("ticker")&&g++<12){const a=w.document.querySelector('[data-ans]');if(a){console.log('PRE Q:',w.document.querySelector('.press-q').textContent.slice(0,60));click(a)}const nx=$('pressNext');if(nx)click(nx)}
+assert.ok(G.live,'press fixture must start with a legal XI');
 console.log('live started',!!$('ticker'),'nextBoost consumed',G.nextBoost,'boost in match',JSON.stringify(G.live&&G.live.boost));
 async function waitFor(test){const until=Date.now()+30000;while(!test()){const injurySkip=w.document.querySelector('[data-skip]');if(injurySkip)click(injurySkip);if($('ctrlBtn')?.textContent==='המשך')click($('ctrlBtn'));if(Date.now()>until)throw new Error('match did not progress');await new Promise(r=>setTimeout(r,20))}}
 (async()=>{await waitFor(()=>G.live.half||G.live.done);if(!G.live.done)click($('ctrlBtn'));await waitFor(()=>G.live.done);click($('ctrlBtn'));const rn=$('reportNext');console.log('report modal',!!rn,'has shotmap',!!w.document.querySelector('.shotmap'),'ratings rows',w.document.querySelectorAll('.rrow').length);if(rn)click(rn);let g=0;while($('modal')&&g++<6){const a=w.document.querySelector('[data-ans]');if(a){console.log('POST Q:',w.document.querySelector('.press-q').textContent.slice(0,60));click(a)}const nx=$('pressNext');if(nx)click(nx)}
