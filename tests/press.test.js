@@ -7,9 +7,11 @@ const $=id=>w.document.getElementById(id);const click=el=>{if(!el)throw new Erro
 click(w.document.querySelector('[data-pick="hta"]'));click($('signBtn'));click(w.document.querySelector('[data-sponsor="0"]'));click(w.document.querySelector('[data-board="patience"]'));
 const G=w.ILM.G;console.log('after board: expect',G.board.expectText,'conf',G.board.conf,'owner',w.ILM.me().owner);
 G.pressMode='all';G.speed=0.45;G.motion='off';G.renderer='svg';
-// skip to week index 2 (Q3 leg1 -> HTA in ECL Q2 so plays weeks 0,1); let's just go until a non-friendly match with instant
+// Qualification results can leave preseason weeks empty. Reach the first league
+// fixture through the UI instead of assuming that week 3 always has a match.
 let played=0;
-for(let i=0;i<3;i++){G.view='home';w.ILM.render();if($('toLineupBtn')){click($('toLineupBtn'));click($('autoBtn'));click($('skipBtn'));let g=0;while($('modal')&&g++<6){const a=w.document.querySelector('[data-ans]');if(a){console.log('Q:',w.document.querySelector('.press-q').textContent.slice(0,60));click(a);console.log('  ->',w.document.querySelector('#modal .press-you')?.textContent.slice(0,50),'|',w.document.querySelector('#modal .small')?.textContent.slice(0,50))}const nx=$('pressNext');if(nx)click(nx)}}else click($('playBtn'))}
+for(let i=0;i<12&&G.cal[G.wk]?.t!=='league';i++){G.view='home';w.ILM.render();if($('toLineupBtn')){click($('toLineupBtn'));click($('autoBtn'));click($('skipBtn'));let g=0;while($('modal')&&g++<6){const a=w.document.querySelector('[data-ans]');if(a){console.log('Q:',w.document.querySelector('.press-q').textContent.slice(0,60));click(a);console.log('  ->',w.document.querySelector('#modal .press-you')?.textContent.slice(0,50),'|',w.document.querySelector('#modal .small')?.textContent.slice(0,50))}const nx=$('pressNext');if(nx)click(nx)}}else click($('playBtn'))}
+assert.equal(w.ILM.myNextMatch()?.kind,'league','press fixture must reach a scheduled league match');
 // now live with pre-press
 G.view='home';w.ILM.render();if($('toLineupBtn'))click($('toLineupBtn'));
 // Re-select available players after earlier matches can create injuries/suspensions.
