@@ -707,6 +707,19 @@ h3.sec:not(.btn){font-size:24px}
 .field.home-pitch .tok{width:16%;max-width:64px;min-height:44px}
 .field.home-pitch .tok .nm{font-size:12px;line-height:1.3;max-width:110%;padding:2px 3px}
 .home-news{display:block;font-size:15px;line-height:1.55}
+.market-price-filter{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.market-price-filter .price-select{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.price-select label{font-weight:700}
+.price-select select{flex:1 1 170px;min-width:0;font-size:16px;min-height:44px}
+.price-range{display:flex;gap:10px;align-items:end;flex-wrap:wrap;margin-top:10px}
+.price-range label{display:flex;flex:1 1 110px;flex-direction:column;gap:4px;min-width:0;font-size:14px}
+.price-range input{width:100%;background:var(--bg2);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;direction:ltr;min-height:44px}
+.price-range .btn{min-height:44px}
+.price-range .price-error{flex-basis:100%;color:var(--bad);font-size:14px}
+.price-range .price-error:empty{display:none}
+.market-price-filter .price-note{margin-top:8px}
+.market-results{margin-top:8px;font-size:14px;color:var(--muted)}
+.market-empty{text-align:center;padding:24px 14px}
 @media (max-width:639px){
   body{font-size:16px;line-height:1.5}
   #main{padding-inline:max(10px,env(safe-area-inset-right,0px)) max(10px,env(safe-area-inset-left,0px));padding-block:12px 24px}
@@ -1767,6 +1780,7 @@ function viewWorld(){
   const tabs=`<div class="tabs" style="margin-bottom:8px">${Object.keys(WORLD_LEAGUES).map(k=>`<button data-wl="${k}" class="${worldLg===k?'on':''}">${WORLD_LEAGUES[k].flag} ${WORLD_LEAGUES[k].name}</button>`).join('')}</div>`;
   let pool=clubs.flatMap(cl=>cl.players.map(p=>({p,cl})));
   if(worldClubId)pool=pool.filter(x=>x.cl.id===worldClubId);if(worldPos!=='all')pool=pool.filter(x=>x.p.pos===worldPos);if(mktAge!=='all')pool=pool.filter(x=>mktAge==='young'?x.p.age<=23:x.p.age>=29);
+  pool=filterMarketPrices(pool,marketValue);
   pool.sort((a,b)=>worldSort==='ovr'?(isKnown(b.p)?b.p.ovr:b.p.est)-(isKnown(a.p)?a.p.ovr:a.p.est):worldSort==='price'?marketValue(a.p)-marketValue(b.p):a.p.age-b.p.age);
   const scoutHere=(G.scouts||[]).some(s=>REGIONS[s.region].leagues.includes(worldLg));
   return `<div class="card">${marketTabs('world')}${tabs}
@@ -1774,8 +1788,9 @@ function viewWorld(){
   <div class="muted small" style="margin-top:4px">רמת הליגה ~${L.str} · שווי ×${L.vmult} · שכר ×${L.wmult} לעומת ישראל. שחקנים שלא נסקרו מוצגים עם טווח דירוג.</div>
   <div class="tabs" style="margin-top:8px"><button data-wc="all" class="${!worldClubId?'on':''}">כל המועדונים</button>${clubs.map(cl=>`<button data-wc="${cl.id}" class="${worldClubId===cl.id?'on':''}" style="--c1:${cl.c1}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${cl.c1};border:1px solid #0006;margin-left:4px"></span>${esc(cl.name)}</button>`).join('')}</div>
   <div class="tabs" style="margin-top:6px"><button data-wp="all" class="${worldPos==='all'?'on':''}">הכל</button>${POS.map(p=>`<button data-wp="${p}" class="${worldPos===p?'on':''}">${POSHE[p]}</button>`).join('')}<button data-wa="all" class="${mktAge==='all'?'on':''}">כל גיל</button><button data-wa="young" class="${mktAge==='young'?'on':''}">עד 23</button><button data-wa="old" class="${mktAge==='old'?'on':''}">29+</button></div>
-  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ws="ovr" class="${worldSort==='ovr'?'on':''}">דירוג</button><button data-ws="price" class="${worldSort==='price'?'on':''}">מחיר</button><button data-ws="age" class="${worldSort==='age'?'on':''}">גיל</button></div></div>
-  <div class="list">${pool.slice(0,150).map(({p,cl})=>worldRow(p,cl,open)).join('')||'<div class="muted small" style="text-align:center">אין שחקנים בסינון הזה</div>'}</div>`;
+  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ws="ovr" class="${worldSort==='ovr'?'on':''}">דירוג</button><button data-ws="price" class="${worldSort==='price'?'on':''}">מחיר</button><button data-ws="age" class="${worldSort==='age'?'on':''}">גיל</button></div>
+  ${marketPriceControls(pool.length,150)}</div>
+  <div class="list">${pool.slice(0,150).map(({p,cl})=>worldRow(p,cl,open)).join('')||marketPriceEmpty()}</div>`;
 }
 function worldRow(p,cl,open){
   const n=(G.negs||[]).find(x=>x.pid===p.id&&(x.stage==='club'||x.stage==='player'));
@@ -3921,6 +3936,27 @@ function viewYouth(){
   <div class="list">${c.youth.slice().sort((a,b)=>b.pot-a.pot).map(y=>`<div class="pl"><span class="pos ${y.pos}">${POSB[y.pos]}</span><div class="name"><b>${esc(fullName(y))}</b><small>גיל ${y.age} · פוטנציאל <b class="num">${y.pot}</b>${y.real?'':''}</small><div class="bar" style="margin-top:4px"><i style="width:${Math.round(y.ovr/y.pot*100)}%"></i></div></div><span class="ovr num ${ovrClass(y.ovr)}">${y.ovr}</span><button class="btn sm" data-promote="${y.id}">העלה</button></div>`).join('')}</div>`;
 }
 let marketPos='all',marketSort='ovr',marketTab='buy';
+let marketPrice='all',marketPriceMin='',marketPriceMax='';
+const MARKET_PRICE_LIMITS=[500000,1000000,3000000,5000000,10000000,20000000];
+function filterMarketPrices(pool,valueOf){
+  const min=marketPrice==='custom'&&marketPriceMin!==''?Number(marketPriceMin):0;
+  const max=marketPrice==='budget'?Math.max(0,me().money):marketPrice==='custom'?(marketPriceMax===''?Infinity:Number(marketPriceMax)):marketPrice==='all'?Infinity:Number(marketPrice);
+  return pool.filter(({p})=>{const value=valueOf(p);return value>=min&&value<=max});
+}
+function marketPriceControls(count,limit){
+  const options=[['all','כל המחירים'],['budget',`שווי עד התקציב שלי (${NIS(Math.max(0,me().money))})`],...MARKET_PRICE_LIMITS.map(n=>[String(n),`עד ${NIS(n)}`]),['custom','טווח מחירים לבחירתי']];
+  return `<div class="market-price-filter"><div class="price-select"><label for="marketPrice">סינון לפי מחיר</label><select id="marketPrice" aria-describedby="marketPriceNote">${options.map(([v,t])=>`<option value="${v}" ${marketPrice===v?'selected':''}>${esc(t)}</option>`).join('')}</select>${marketPrice!=='all'?'<button type="button" class="btn sm sec" data-price-reset>נקה סינון מחיר</button>':''}</div>
+  ${marketPrice==='custom'?`<form id="marketPriceRange" class="price-range"><label for="marketPriceMin">ממחיר (₪)<input id="marketPriceMin" type="number" inputmode="numeric" min="0" step="1" placeholder="ללא מינימום" value="${marketPriceMin}"></label><label for="marketPriceMax">עד מחיר (₪)<input id="marketPriceMax" type="number" inputmode="numeric" min="0" step="1" placeholder="ללא מקסימום" value="${marketPriceMax}"></label><button type="submit" class="btn">סנן</button><div id="marketPriceError" class="price-error" role="alert"></div></form>`:''}
+  <div id="marketPriceNote" class="muted tiny price-note">לפי שווי השחקן המוצג; מחיר העסקה נקבע במשא ומתן.</div>
+  <div class="market-results" role="status" aria-live="polite">${count>limit?`מוצגים ${limit} מתוך ${count} שחקנים בסינון`:`${count} שחקנים בסינון`}</div></div>`;
+}
+function marketPriceEmpty(){return `<div class="card market-empty"><p>אין שחקנים שמתאימים לסינון שבחרת.</p>${marketPrice!=='all'?'<button type="button" class="btn sec" data-price-reset>נקה סינון מחיר</button>':''}</div>`}
+function applyMarketPriceRange(){
+  const min=$('marketPriceMin').value,max=$('marketPriceMax').value;
+  if((min!==''&&(!Number.isFinite(Number(min))||Number(min)<0))||(max!==''&&(!Number.isFinite(Number(max))||Number(max)<0))){$('marketPriceError').textContent='יש להזין סכומים תקינים של אפס ומעלה.';return}
+  if(min!==''&&max!==''&&Number(min)>Number(max)){$('marketPriceError').textContent='מחיר המקסימום חייב להיות גדול או שווה למחיר המינימום.';$('marketPriceMax').focus();return}
+  marketPriceMin=min===''?'':String(Number(min));marketPriceMax=max===''?'':String(Number(max));render();
+}
 function viewFreeAgents(){
   const c=me();const open=WINDOW(G.wk);const fa=(G.freeAgents||[]).slice().sort(byOvr);
   return `<div class="card">${marketTabs('free')}
@@ -3935,14 +3971,16 @@ function viewMarket(){
   const c=me();const open=WINDOW(G.wk);
   let pool=[...G.clubs,...G.leumit].filter(x=>x.id!==G.me).flatMap(x=>x.players.map(p=>({p,c:x})));
   if(marketPos!=='all')pool=pool.filter(x=>x.p.pos===marketPos);
+  pool=filterMarketPrices(pool,p=>p.value);
   pool.sort((a,b)=>marketSort==='ovr'?b.p.ovr-a.p.ovr:marketSort==='age'?a.p.age-b.p.age:askingPrice(a.p)-askingPrice(b.p));
   const nextOpen=(()=>{for(let w=G.wk+1;w<G.cal.length;w++)if(WINDOW(w))return w+1;return null})();
   return `<div class="card">${marketTabs('buy')}<div class="row between"><h3 class="sec">שוק ההעברות · ליגת העל</h3>${open?'<span class="tag good">פתוח</span>':`<span class="tag bad">סגור${nextOpen?' · נפתח בשבוע '+nextOpen:''}</span>`}</div>
   <div class="muted small" style="margin-top:6px">תקציב <b>${NIS(c.money)}</b> · החלון פתוח בקיץ (עד מחזור 6) ובחורף (מחזורים 17–19). לחיצה על שחקן פותחת פרטים ומשא ומתן. מכירה מתוך מסך הסגל. סגל: ${c.players.length}/30</div>
   <div class="tabs" style="margin-top:10px"><button data-mp="all" class="${marketPos==='all'?'on':''}">הכל</button>${POS.map(p=>`<button data-mp="${p}" class="${marketPos===p?'on':''}">${POSHE[p]}</button>`).join('')}</div>
-  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ms="ovr" class="${marketSort==='ovr'?'on':''}">דירוג</button><button data-ms="price" class="${marketSort==='price'?'on':''}">מחיר</button><button data-ms="age" class="${marketSort==='age'?'on':''}">גיל</button></div></div>
+  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ms="ovr" class="${marketSort==='ovr'?'on':''}">דירוג</button><button data-ms="price" class="${marketSort==='price'?'on':''}">מחיר</button><button data-ms="age" class="${marketSort==='age'?'on':''}">גיל</button></div>
+  ${marketPriceControls(pool.length,50)}</div>
   ${(G.tlog||[]).length?`<div class="card"><h3 class="sec">חדשות העברות</h3>${G.tlog.filter(t=>t.s===G.season).slice(0,8).map(t=>`<div class="small tl ${t.big?'big':''}"><span class="muted tiny">שבוע ${t.wk+1}</span> ${esc(t.txt)}</div>`).join('')}</div>`:''}
-  <div class="list">${pool.slice(0,50).map(({p,c:x})=>{const n=(G.negs||[]).find(z=>z.pid===p.id&&(z.stage==='club'||z.stage==='player'));return playerRow(p,n?`<button class="btn sm" data-neg="${n.id}">במו"מ</button>`:`<button class="btn sm sec" data-wview="${p.id}">פרטים</button>`,'',`<span class="it">${kitSVG(x,'sm')} ${esc(x.short)}</span><span class="it">גיל ${p.age}</span><span class="it">חוזה עד ${contractYear(p)}</span><span class="it">שווי <b class="num">${NIS(p.value)}</b></span>`).replace('data-pid','data-wrow')}).join('')}</div>`;
+  <div class="list">${pool.slice(0,50).map(({p,c:x})=>{const n=(G.negs||[]).find(z=>z.pid===p.id&&(z.stage==='club'||z.stage==='player'));return playerRow(p,n?`<button class="btn sm" data-neg="${n.id}">במו"מ</button>`:`<button class="btn sm sec" data-wview="${p.id}">פרטים</button>`,'',`<span class="it">${kitSVG(x,'sm')} ${esc(x.short)}</span><span class="it">גיל ${p.age}</span><span class="it">חוזה עד ${contractYear(p)}</span><span class="it">שווי <b class="num">${NIS(p.value)}</b></span>`).replace('data-pid','data-wrow')}).join('')||marketPriceEmpty()}</div>`;
 }
 let clubTab='main';
 function viewClub(){const tabs=`<div class="tabs ctabs">${[['main','כללי'],['med','רפואה'],['staff','צוות'],['com','מסחרי'],['data','מקורות']].map(([k,l])=>`<button data-ctab="${k}" class="${clubTab===k?'on':''}">${l}${k==='med'&&me().players.some(p=>p.inj>0)?` <span class="dotb">${me().players.filter(p=>p.inj>0).length}</span>`:''}</button>`).join('')}</div>`;
@@ -4070,6 +4108,7 @@ function bind(){
     const ss=t.closest('[data-ss]');if(ss){squadSort=ss.dataset.ss;return render()}
     const mp=t.closest('[data-mp]');if(mp){marketPos=mp.dataset.mp;return render()}
     const ms=t.closest('[data-ms]');if(ms){marketSort=ms.dataset.ms;return render()}
+    if(t.closest('[data-price-reset]')){marketPrice='all';marketPriceMin='';marketPriceMax='';return render()}
     const tt=t.closest('[data-tt]');if(tt){tableTab=tt.dataset.tt;return render()}
     const buy=t.closest('[data-buy]');if(buy){const [c,p]=buy.dataset.buy.split(':');return buyPlayer(c,+p)}
     const wl=t.closest('[data-wl]');if(wl){worldLg=wl.dataset.wl;worldClubId=null;return render()}
@@ -4120,7 +4159,8 @@ function bind(){
     if(t.closest('[data-train]'))return startTraining();
     if(G.view==='squad'&&squadTab!=='youth'){const row=t.closest('[data-pid]');if(row)return playerModal(+row.dataset.pid)}
   };
-  m.onchange=e=>{const t=e.target;const dp=t.closest&&t.closest('[data-dplan]');if(dp){const [pid,f]=dp.dataset.dplan.split(':');return setDevPlan(+pid,f,t.value)}if(t.id==='importFile'&&t.files&&t.files[0])return importSave(t.files[0]);const tc=t.closest('[data-tac]');if(tc){const c=me();c.tac=Object.assign({},tacOf(c),{[tc.dataset.tac]:tc.value});save();return render()}const rl=t.closest('[data-role]');if(rl){const p=me().players.find(x=>x.id===+rl.dataset.role);if(p){p.roleT=rl.value;save();render()}return}const sr=t.closest('[data-sregion]');if(sr)return setScoutRegion(+sr.dataset.sregion,sr.value);const sb=t.closest('[data-sbrief]');if(sb){const [id,key]=sb.dataset.sbrief.split(':');return setScoutBrief(+id,key,sb.value)}if(t.id==='formSel'){const mc=me();if(mc&&t.value!==mc.formation)mc.tacFam=Math.max(10,(mc.tacFam??60)-15);return setFormation(t.value)}const pd=t.closest&&t.closest('[data-plday]');if(pd){const mc=me();planOf(mc)[+pd.dataset.plday]=t.value;save();return render()}if(t.id==='ticketSel'){me().ticket=+t.value;save();return render()}};
+  m.onsubmit=e=>{if(e.target.id==='marketPriceRange'){e.preventDefault();applyMarketPriceRange()}};
+  m.onchange=e=>{const t=e.target;if(t.id==='marketPrice'){if(['all','budget','custom',...MARKET_PRICE_LIMITS.map(String)].includes(t.value)){marketPrice=t.value;render()}return}const dp=t.closest&&t.closest('[data-dplan]');if(dp){const [pid,f]=dp.dataset.dplan.split(':');return setDevPlan(+pid,f,t.value)}if(t.id==='importFile'&&t.files&&t.files[0])return importSave(t.files[0]);const tc=t.closest('[data-tac]');if(tc){const c=me();c.tac=Object.assign({},tacOf(c),{[tc.dataset.tac]:tc.value});save();return render()}const rl=t.closest('[data-role]');if(rl){const p=me().players.find(x=>x.id===+rl.dataset.role);if(p){p.roleT=rl.value;save();render()}return}const sr=t.closest('[data-sregion]');if(sr)return setScoutRegion(+sr.dataset.sregion,sr.value);const sb=t.closest('[data-sbrief]');if(sb){const [id,key]=sb.dataset.sbrief.split(':');return setScoutBrief(+id,key,sb.value)}if(t.id==='formSel'){const mc=me();if(mc&&t.value!==mc.formation)mc.tacFam=Math.max(10,(mc.tacFam??60)-15);return setFormation(t.value)}const pd=t.closest&&t.closest('[data-plday]');if(pd){const mc=me();planOf(mc)[+pd.dataset.plday]=t.value;save();return render()}if(t.id==='ticketSel'){me().ticket=+t.value;save();return render()}};
   m.onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('[data-slot]')){e.preventDefault();e.target.click()}};
 }
 function playerModal(pid){
