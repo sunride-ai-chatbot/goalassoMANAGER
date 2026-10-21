@@ -103,7 +103,7 @@ def process(t, src, debug=None, key='', strict=False):
     eye = (re_ + le_) / 2; mouth = (mr + ml) / 2
     d = float(np.linalg.norm(mouth - eye))
     roll = float(np.degrees(np.arctan2(le_[1] - re_[1], le_[0] - re_[0])))
-    if abs(roll) > 25:
+    if abs(roll) > 32:
         return None, {'status': 'unresolved', 'reason': 'face_not_upright', 'flags': flags}
     if strict:
         # candid photos (Commons): one dominant, roughly frontal face only. A second sizeable face could be the
@@ -203,6 +203,15 @@ def webp_uri(im):
     buf = io.BytesIO(); im.save(buf, 'WEBP', quality=86, method=6, alpha_quality=90)
     return 'data:image/webp;base64,' + base64.b64encode(buf.getvalue()).decode(), hashlib.sha256(buf.getvalue()).hexdigest(), len(buf.getvalue())
 
+def pack_credits(V, images):
+    """attribution shown in the game for Commons photos: {visualId: {a: author, l: licence, u: file page}}"""
+    out = {}
+    for k in images:
+        src = (V['faces'].get(k) or {}).get('source')
+        if src:
+            out[k] = {'a': (src.get('author') or src.get('credit') or 'Unknown')[:120], 'l': src.get('license') or '', 'u': src.get('page') or ''}
+    return out
+
 def load_identities():
     """Israeli identities (players.json) plus European ones (euro-players.json), as one {faces: {visualId: {pack}}} map"""
     V = load_json(os.path.join(ROOT, 'data', 'visuals', 'players.json'))
@@ -279,7 +288,7 @@ def main():
             audit[key] = meas
             print(pack, key, meas['status'], meas.get('reason', ''), ','.join(meas.get('flags', [])), flush=True)
         with open(os.path.join(ROOT, 'assets', 'facepacks', pack + '.json'), 'w', encoding='utf8') as fh:
-            json.dump({'schema': 2, 'frame': [W, H], 'images': out}, fh, separators=(',', ':'))
+            json.dump({'schema': 2, 'frame': [W, H], 'images': out, 'credits': pack_credits(V, out)}, fh, separators=(',', ':'))
         with open(auditp, 'w', encoding='utf8') as fh:
             json.dump(audit, fh, ensure_ascii=False, indent=1, sort_keys=True)
 

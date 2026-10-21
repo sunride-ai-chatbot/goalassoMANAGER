@@ -33,15 +33,35 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'data', '*.json'))):
     ok = sum(1 for x in rows if '| ok |' in x)
     out += [f"## {c['name_he']} ({c['id']}) · {ok}/{len(rows)} portraits", '', '| Player | English | Pos | Identity | Status | Notes |', '|---|---|---|---|---|---|', *rows, '']
 out.insert(4, f"**Totals:** {tot['ok']} players with a portrait, {tot['fallback']} on the designed fallback, {tot['ok'] + tot['fallback']} squad entries.\n")
-# European leagues: no source photos exist in the project; every player renders the designed fallback (unresolved)
-EURO = [('La Liga', ['real_madrid', 'barcelona', 'atletico']), ('Premier League', ['liverpool', 'arsenal', 'man_city', 'chelsea', 'man_utd', 'tottenham'])]
-for lg, keys in EURO:
-    out += [f'# {lg}', '', 'No source photos are available for any player (none in the project; the photo sources are not reachable from the build environment). Every player shows the designed fallback and is unresolved. Clubs of this league that are not listed have generated squads (fictional players), which always use the fallback by design.', '']
+# European real squads: Wikimedia Commons portraits (scripts/fetch-commons-portraits.py → import-commons-portraits.py)
+LEAGUES = [('La Liga', ['real_madrid', 'barcelona', 'atletico']), ('Premier League', ['liverpool', 'arsenal', 'man_city', 'chelsea', 'man_utd', 'tottenham']),
+           ('Ligue 1', ['psg', 'monaco']), ('Bundesliga', ['bayern', 'dortmund', 'leverkusen']), ('Serie A', ['inter', 'milan', 'juventus', 'napoli']),
+           ('Primeira Liga', ['benfica', 'porto', 'sporting']), ('Eredivisie', ['ajax', 'psv', 'feyenoord']), ('Belgian Pro League', ['brugge']),
+           ('Scandinavia', ['copenhagen', 'bodo_glimt']), ('Eastern Europe', ['sparta_prague', 'slavia_prague', 'ferencvaros', 'ludogorets', 'shakhtar']),
+           ('Balkans', ['red_star', 'dinamo_zagreb']),
+           ('European competitions only', ['celtic', 'rangers', 'fenerbahce', 'galatasaray', 'olympiacos', 'salzburg', 'young_boys'])]
+ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
+E = json.load(open(ep, encoding='utf8')) if os.path.isfile(ep) else {'players': [], 'faces': {}, 'unresolved': []}
+by = {(p['key'], p['en']): p for p in E['players']}
+un = {(p['key'], p['en']): p for p in E['unresolved']}
+etot = {'ok': 0, 'fallback': 0}
+out += ['# European real squads', '', 'Portraits come from Wikimedia Commons, one freely licensed file per player (CC0, public domain, CC BY or CC BY-SA), identified on Wikidata by name plus club or birth year. Credits are shown in the game (player profile, Data sources → Photo credits). Clubs whose squads are generated keep the designed fallback by design.', '']
+for lg, keys in LEAGUES:
+    out += [f'## {lg}', '']
     for k in keys:
         d = json.load(open(os.path.join(ROOT, 'data', 'euro', k + '.json'), encoding='utf8'))
-        ps = d.get('players', [])
-        out += [f"## {d['name_he']} ({k}) · 0/{len(ps)} portraits", '', '| Player | English | Pos | Status |', '|---|---|---|---|',
-                *[f"| {p.get('he','')} | {p.get('en','')} | {p.get('pos','')} | fallback (no source photo) |" for p in ps], '']
+        rows = []; okc = 0
+        for p in d.get('players', []):
+            e = by.get((k, p.get('en')))
+            if e and A.get(e['visualId'], {}).get('status') == 'ok':
+                src = E['faces'][e['visualId']]['source']; okc += 1; etot['ok'] += 1
+                rows.append(f"| {p.get('en')} | {p.get('pos')} | ok | [{src.get('title','').replace('File:','')}]({src.get('page')}) · {src.get('author','')[:60]} · {src.get('license')} | {e.get('match')} |")
+            else:
+                etot['fallback'] += 1
+                why = (un.get((k, p.get('en'))) or {}).get('reason') or ('portrait rejected: ' + A.get(e['visualId'], {}).get('reason', '') if e else 'not fetched yet')
+                rows.append(f"| {p.get('en')} | {p.get('pos')} | fallback | {why[:220].replace('|', '/')} | |")
+        out += [f"### {d['name_he']} ({k}) · {okc}/{len(rows)} portraits", '', '| Player | Pos | Status | Source · author · licence / reason | Identified by |', '|---|---|---|---|---|', *rows, '']
+out.insert(5, f"**European real squads:** {etot['ok']} players with a portrait, {etot['fallback']} on the designed fallback.\n")
 os.makedirs(os.path.join(ROOT, 'docs'), exist_ok=True)
 open(os.path.join(ROOT, 'docs', 'portrait-audit.md'), 'w', encoding='utf8').write('\n'.join(out) + '\n')
-print(tot)
+print(tot, 'euro', etot)

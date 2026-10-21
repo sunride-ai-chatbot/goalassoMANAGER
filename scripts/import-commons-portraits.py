@@ -19,6 +19,11 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 spec = importlib.util.spec_from_file_location('bp', os.path.join(ROOT, 'scripts', 'build-portraits.py'))
 bp = importlib.util.module_from_spec(spec); spec.loader.exec_module(bp)
+def bp_norm(x):
+    import re, unicodedata
+    x = unicodedata.normalize('NFKD', x or '')
+    return re.sub(r'[^a-z ]', ' ', ''.join(ch for ch in x if not unicodedata.combining(ch)).lower())
+
 SRC_KEYS = ('title', 'page', 'author', 'license', 'licenseUrl', 'credit', 'attributionRequired', 'usageTerms', 'restrictions', 'date')
 
 def load(p, default=None):
@@ -54,7 +59,12 @@ def main():
             if not pl.get('qid'):
                 E['unresolved'].append({**base, 'reason': 'not identified on Wikidata: ' + (pl.get('match') or pl.get('error') or 'unknown')}); continue
             chosen, tried = None, []
+            surname = bp_norm(pl.get('label') or pl['en']).split()[-1:] + bp_norm(pl['en']).split()[-1:]
             for c in pl.get('candidates', []):
+                # files from the player's Commons category must name him: a category can be shared with, or polluted
+                # by, other subjects; the Wikidata main image (P18) is trusted as the person's own picture
+                if not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
+                    tried.append(c['title'] + ': file name does not name the player'); continue
                 path = os.path.join(a.sources, 'euro', key, c['file'])
                 try:
                     img = Image.open(path).convert('RGB')

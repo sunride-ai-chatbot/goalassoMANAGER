@@ -24,6 +24,7 @@ UA = 'GOALASSO-portrait-fetch/1.0 (https://github.com/sunride-ai-chatbot/goalass
 FOOTBALLER = 'Q937857'
 SEASON_YEAR = 2026
 WIDTH = 640
+CAT_LIMIT = 0
 CLUB_TITLES = {
     'ajax': 'AFC Ajax', 'arsenal': 'Arsenal F.C.', 'atletico': 'Atlético Madrid', 'barcelona': 'FC Barcelona',
     'bayern': 'FC Bayern Munich', 'benfica': 'S.L. Benfica', 'bodo_glimt': 'FK Bodø/Glimt', 'brugge': 'Club Brugge KV',
@@ -192,6 +193,7 @@ def file_info(titles):
     return out
 
 def category_files(cat, limit=8):
+    limit = CAT_LIMIT or limit
     r = commons({'action': 'query', 'list': 'categorymembers', 'cmtitle': 'Category:' + cat, 'cmtype': 'file', 'cmlimit': limit})
     return [m['title'] for m in r.get('query', {}).get('categorymembers', []) if re.search(r'\.(jpe?g|png|webp)$', m['title'], re.I)]
 
@@ -203,9 +205,9 @@ def licence_ok(i):
     return bool(OK_LICENSE.match(i.get('license', '').strip()))
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=5); ap.add_argument('--width', type=int, default=640); ap.add_argument('--players', default='')
+    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=5); ap.add_argument('--width', type=int, default=640); ap.add_argument('--players', default=''); ap.add_argument('--cat-limit', type=int, default=8)
     a = ap.parse_args()
-    global WIDTH; WIDTH = a.width
+    global WIDTH, CAT_LIMIT; WIDTH = a.width; CAT_LIMIT = a.cat_limit
     only = {x.strip() for x in a.players.split('|') if x.strip()}
     keys = list(CLUB_TITLES) if a.clubs == 'all' else a.clubs.split(',')
     for key in keys:
@@ -229,7 +231,9 @@ def main():
                     titles = ['File:' + t for t in images(ent)]
                     for cat in claim_ids(ent, 'P373')[:1]:
                         titles += [t for t in category_files(cat) if t not in titles]
-                    infos = file_info(titles[:12]) if titles else {}
+                    infos = {}
+                    for i in range(0, min(len(titles), 50), 25):
+                        infos.update(file_info(titles[i:i + 25]))
                     k = 0
                     for t in titles:
                         i = infos.get(t)
