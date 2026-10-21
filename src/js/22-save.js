@@ -59,25 +59,44 @@ function saveIndicator(state){const el=$('saveInd');if(!el)return;clearTimeout(s
   if(state==='saved')saveIndT=setTimeout(()=>{if(el.className==='saveind saved'){el.textContent='';el.className='saveind'}},2500)}
 
 /* ---- save ---- */
-const SV={q:null,busy:false,promise:null,known:null,blocked:null,lastOk:0,writer:Math.random().toString(36).slice(2,10),retry:null,persistAsked:false,legacySource:null};
-let saveBC=null;try{if(typeof BroadcastChannel!=='undefined'){saveBC=new BroadcastChannel('goalasso-save');saveBC.onmessage=e=>{const m=e.data||{};if(!G||m.writer===SV.writer||m.slot!==(G.slot||curSlot()))return;if(m.careerId!==G.careerId||(m.rev||0)>(G.rev||0)){SV.blocked={stored:{careerId:m.careerId,rev:m.rev,meta:m.meta},remote:true};saveIndicator('stale');showConflict()}}}}catch(e){}
+const SV={q:null,busy:false,promise:null,known:null,blocked:null,lastOk:0,writer:Math.random().toString(36).slice(2,10),retry:null,persistAsked:false,legacySource:null,
+  epoch:{},deleted:new Set()};
+/* Deletion fences. Every queued write records the slot's epoch; deleteSlot() bumps it, drops queued writes for the slot,
+   waits for the in-flight write to settle, then deletes. A write whose epoch is stale is discarded inside its own
+   transaction, so nothing that started before a deletion can recreate the slot afterwards. Careers that were deleted are
+   remembered by id and never saved again (a new career has a new id and saves normally). */
+function slotEpoch(n){return SV.epoch[n]||0}
+function isDeletedCareer(id){return !!id&&SV.deleted.has(id)}
+function reportStorageConflict(slot,src,err){STORE.migration=STORE.migration||[];if(!STORE.migration.some(r=>r.slot===slot&&r.src===src&&!r.ok))STORE.migration.push({slot,src,ok:false,err:err||'identity_mismatch',kept:true})}
+/* remove the emergency snapshot of `slot` only when it belongs to `careerId`, is not newer than `rev`, and the IndexedDB
+   record for exactly that career+rev has been read back. A snapshot of another career is kept and reported. */
+async function clearEmergencyIfOurs(slot,careerId,rev){let text=null;try{text=localStorage.getItem('ilm2_em_'+slot)}catch(e){return}if(!text)return;
+  let em=null;try{em=JSON.parse(text)}catch(e){reportStorageConflict(slot,'emergency','unreadable_snapshot');return}
+  if(!em||em.careerId!==careerId){reportStorageConflict(slot,'emergency','identity_mismatch');return}
+  if((em.rev||0)>rev)return;
+  try{const back=await idbGet('slot:'+slot);if(!back||back.careerId!==careerId||back.rev!==rev)return;validateCareer(JSON.parse(await unpackState(back)))}catch(e){return}
+  try{localStorage.removeItem('ilm2_em_'+slot)}catch(e){}}
+let saveBC=null;try{if(typeof BroadcastChannel!=='undefined'){saveBC=new BroadcastChannel('goalasso-save');saveBC.onmessage=e=>{const m=e.data||{};if(m.deleted){SV.epoch[m.slot]=Math.max(slotEpoch(m.slot),m.epoch||0)+0;for(const id of (m.careerIds||[]))SV.deleted.add(id);if(SV.q&&SV.q.slot===m.slot)SV.q=null;delete SLOT_META[m.slot];return}if(!G||m.writer===SV.writer||m.slot!==(G.slot||curSlot()))return;if(m.careerId!==G.careerId||(m.rev||0)>(G.rev||0)){SV.blocked={stored:{careerId:m.careerId,rev:m.rev,meta:m.meta},remote:true};saveIndicator('stale');showConflict()}}}}catch(e){}
 function broadcastSave(rec){try{if(saveBC)saveBC.postMessage({writer:SV.writer,slot:rec.slot,careerId:rec.careerId,rev:rec.rev,meta:rec.meta})}catch(e){}}
 /* Returns true/false synchronously in localStorage mode, a Promise<boolean> in IndexedDB mode. Callers that need the
    outcome use Promise.resolve(save()).then(ok=>…). */
-function save(opts){if(!G)return false;if(STORE.kind!=='idb')return saveSync();
+function save(opts){if(!G)return false;if(isDeletedCareer(G.careerId))return STORE.kind==='idb'?Promise.resolve(false):false;if(STORE.kind!=='idb')return saveSync();
   if(SV.blocked&&!(opts&&opts.force)){showConflict();return Promise.resolve(false)}
   try{validateCareer(G)}catch(e){storageNotice('המשחק במצב לא תקין ולא נשמר. ייצא גיבוי ופנה לתמיכה.');saveIndicator('error');return Promise.resolve(false)}
   ensureCareerIdentity(G);const slot=G.slot||curSlot();const stamp=Date.now();G.rev=(G.rev||0)+1;G.slot=slot;G.v=SAVE_VERSION;G.savedAt=stamp;
   const json=JSON.stringify(G);
-  SV.q={json,slot,rev:G.rev,careerId:G.careerId,meta:metaOf(G,stamp),t:stamp,force:!!(opts&&opts.force)};
+  // coalescing keeps a pending force flag: a newer snapshot of the same career must not lose the overwrite it was queued with
+  const keepForce=!!(SV.q&&SV.q.force&&SV.q.slot===slot&&SV.q.careerId===G.careerId);
+  SV.q={json,slot,rev:G.rev,careerId:G.careerId,meta:metaOf(G,stamp),t:stamp,force:!!(opts&&opts.force)||keepForce,epoch:slotEpoch(slot)};
   saveIndicator('saving');return pumpSaves()}
 function pumpSaves(){if(SV.busy)return SV.promise;SV.busy=true;SV.promise=(async()=>{let ok=false;while(SV.q){const job=SV.q;SV.q=null;ok=await writeJob(job)}return ok})().finally(()=>{SV.busy=false;SV.promise=null});return SV.promise}
-async function writeJob(job){try{const packed=await packState(job.json);const rec={key:'slot:'+job.slot,slot:job.slot,careerId:job.careerId,rev:job.rev,v:SAVE_VERSION,t:job.t,meta:job.meta,gz:packed.gz,data:packed.data,writer:SV.writer};
-    await idbPutCAS(rec,stored=>{if(!stored||job.force)return true;const k=SV.known;return !!k&&k.slot===job.slot&&stored.careerId===k.careerId&&stored.rev===k.rev});
-    SV.known={slot:job.slot,careerId:job.careerId,rev:job.rev};SV.blocked=null;SV.retry=null;SV.lastOk=job.t;SLOT_META[job.slot]=job.meta;try{localStorage.removeItem('ilm2_em_'+job.slot)}catch(e){}
-    if(SV.legacySource&&SV.legacySource.slot===job.slot&&SV.legacySource.careerId===job.careerId){try{const back=await idbGet('slot:'+job.slot);if(back&&back.careerId===job.careerId&&back.rev===job.rev){const K=legacyKeysOf(job.slot);localStorage.removeItem(K.main);localStorage.removeItem(K.meta);localStorage.removeItem(K.em);SV.legacySource=null;if(STORE.migration)STORE.migration=STORE.migration.filter(r=>r.slot!==job.slot||r.src==='backup')}}catch(e){}}
+function jobFenced(job){return job.epoch!==slotEpoch(job.slot)||isDeletedCareer(job.careerId)}
+async function writeJob(job){if(jobFenced(job))return false;try{const packed=await packState(job.json);if(jobFenced(job))return false;const rec={key:'slot:'+job.slot,slot:job.slot,careerId:job.careerId,rev:job.rev,v:SAVE_VERSION,t:job.t,meta:job.meta,gz:packed.gz,data:packed.data,writer:SV.writer};
+    await idbPutCAS(rec,stored=>{if(jobFenced(job))return false;if(!stored||job.force)return true;const k=SV.known;return !!k&&k.slot===job.slot&&stored.careerId===k.careerId&&stored.rev===k.rev});
+    SV.known={slot:job.slot,careerId:job.careerId,rev:job.rev};SV.blocked=null;SV.retry=null;SV.lastOk=job.t;SLOT_META[job.slot]=job.meta;await clearEmergencyIfOurs(job.slot,job.careerId,job.rev);
+    if(SV.legacySource&&SV.legacySource.slot===job.slot&&SV.legacySource.careerId===job.careerId){try{const back=await idbGet('slot:'+job.slot);if(back&&back.careerId===job.careerId&&back.rev===job.rev){const K=legacyKeysOf(job.slot);localStorage.removeItem(K.main);localStorage.removeItem(K.meta);SV.legacySource=null;if(STORE.migration)STORE.migration=STORE.migration.filter(r=>r.slot!==job.slot||r.src==='backup')}}catch(e){}}
     storageNotice('');saveIndicator('saved');broadcastSave(rec);askPersistence();return true}
-  catch(e){if(e&&e.conflict){SV.blocked={stored:e.stored};SV.retry=job;saveIndicator('stale');showConflict();return false}
+  catch(e){if(jobFenced(job))return false;if(e&&e.conflict){SV.blocked={stored:e.stored};SV.retry=job;saveIndicator('stale');showConflict();return false}
     SV.retry=job;saveIndicator('error');const quota=e&&(e.name==='QuotaExceededError'||/quota/i.test(String(e.message||e)));
     storageNotice(quota?'אין מקום באחסון של הדפדפן. ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי עכשיו, פנה מקום (מחק קריירה ישנה) ונסה לשמור שוב.':'השמירה נכשלה ('+(e&&e.name||'שגיאה')+'). ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי ונסה לשמור שוב.');return false}}
 function askPersistence(){if(SV.persistAsked)return;SV.persistAsked=true;try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{})}catch(e){}}
@@ -95,7 +114,7 @@ function saveSync(){try{
   storageNotice('');saveIndicator('saved');return true;
 }catch(e){saveIndicator('error');storageNotice('השמירה נכשלה. ההתקדמות נמצאת בזיכרון בלבד — פנו מקום ונסו לשמור שוב, או ייצאו גיבוי.');return false}}
 /* the tab is closing while a write is still in flight: park the newest snapshot in localStorage, restored at next boot */
-function emergencyFlush(){if(STORE.kind!=='idb'||!G)return;const job=SV.q||(SV.busy?SV.retry:null);if(!job&&!SV.busy)return;try{localStorage.setItem('ilm2_em_'+(G.slot||curSlot()),JSON.stringify(G))}catch(e){}}
+function emergencyFlush(){if(STORE.kind!=='idb'||!G||isDeletedCareer(G.careerId))return;const job=SV.q||(SV.busy?SV.retry:null);if(!job&&!SV.busy)return;try{localStorage.setItem('ilm2_em_'+(G.slot||curSlot()),JSON.stringify(G))}catch(e){}}
 try{window.addEventListener('pagehide',emergencyFlush);window.addEventListener('beforeunload',emergencyFlush)}catch(e){}
 
 /* ---- validation, restore, migrations ---- */
@@ -115,7 +134,8 @@ function restoreCareer(json,slot){const old=G,oldUid=uid;try{G=validateCareer(JS
 function installCareer(json,slot){const old=G,oldUid=uid;const fail=()=>{G=old;uid=oldUid;toast('השמירה לא תקינה או אינה נתמכת. הקריירה הקיימת לא הוחלפה.');return false};
   try{restoreCareer(json,slot)}catch(e){return fail()}
   if(STORE.kind!=='idb'){if(!save()){G=old;uid=oldUid;return false}return true}
-  SV.blocked=null;return Promise.resolve(save({force:true})).then(ok=>{if(!ok){G=old;uid=oldUid;return false}return true})}
+  // an explicit install (import, cloud, backup) brings a deleted career back on purpose
+  if(G&&G.careerId)SV.deleted.delete(G.careerId);SV.blocked=null;return Promise.resolve(save({force:true})).then(ok=>{if(!ok){G=old;uid=oldUid;return false}return true})}
 
 const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}],[8,'מזהה קריירה ומונה גרסאות',()=>ensureCareerIdentity(G)]];
 function runMigrations(){const from=G.v||4;for(const [v,,fn] of MIGRATIONS){if(from<v){fn()}}G.v=SAVE_VERSION;if(from<SAVE_VERSION)G.migratedFrom=from}
@@ -130,8 +150,24 @@ function load(slot){const sl=slot||curSlot();if(STORE.kind!=='idb'){try{const js
     catch(e){storageNotice('לא ניתן לטעון את הקריירה. הקובץ המקורי נשמר; אפשר לשחזר את הגיבוי מההגדרות.');return false}})()}
 function recoverBackup(){const n=curSlot();if(STORE.kind!=='idb'){try{const json=localStorage.getItem(slotKey(n)+'_backup');if(!json)return toast('לא נמצא גיבוי קודם');const old=G,oldUid=uid;restoreCareer(json,n);try{localStorage.setItem(slotKey(n),JSON.stringify(G))}catch(e){G=old;uid=oldUid;throw e}storageNotice('');render();toast('הגיבוי הקודם שוחזר')}catch(e){storageNotice('שחזור הגיבוי נכשל. הקבצים הקיימים לא נמחקו.')}return}
   return (async()=>{try{const rec=await idbGet('backup:'+n);if(!rec)return toast('לא נמצא גיבוי קודם');const json=await unpackState(rec);const ok=await installCareer(json,n);if(!ok)throw new Error('restore_failed');render();toast('הגיבוי הקודם שוחזר')}catch(e){storageNotice('שחזור הגיבוי נכשל. הקבצים הקיימים לא נמחקו.')}})()}
-function deleteSlot(n){try{localStorage.removeItem(slotKey(n));localStorage.removeItem(slotKey(n)+'_backup');localStorage.removeItem('ilm2_meta_'+n);localStorage.removeItem('ilm2_em_'+n)}catch(e){}delete SLOT_META[n];if(SV.known&&SV.known.slot===n)SV.known=null;if(STORE.kind==='idb')return idbDel(['slot:'+n,'backup:'+n]).catch(()=>false);return true}
-async function deleteAllData(){for(let n=1;n<=SLOTS;n++)await deleteSlot(n);try{localStorage.removeItem('ilm2_cur')}catch(e){}let cloudOk=true;if(cloud.ready){try{for(let n=1;n<=SLOTS;n++){const base=cloud.db.doc(cloudPath(n));const snap=await base.get();if(snap.exists){const m=snap.data();for(let i=0;i<(m.n||0);i++)await base.collection('chunks').doc('c'+i).delete();await base.delete()}}cloud.meta=null}catch(e){cloudOk=false}}G=null;render();toast(cloudOk?'כל הנתונים נמחקו (מקומי וענן)':'הנתונים המקומיים נמחקו. המחיקה בענן נכשלה, נסה שוב.')}
+function deleteSlot(n){
+  // fence first (synchronously), so any save() issued from here on for the old career, or queued earlier, is discarded
+  SV.epoch[n]=slotEpoch(n)+1;const ids=new Set();if(SV.known&&SV.known.slot===n&&SV.known.careerId)ids.add(SV.known.careerId);if(G&&(G.slot||curSlot())===n&&G.careerId)ids.add(G.careerId);if(SLOT_META[n]&&SLOT_META[n].careerId)ids.add(SLOT_META[n].careerId);
+  for(const id of ids)SV.deleted.add(id);if(SV.q&&SV.q.slot===n)SV.q=null;if(SV.retry&&SV.retry.slot===n)SV.retry=null;if(SV.legacySource&&SV.legacySource.slot===n)SV.legacySource=null;
+  try{localStorage.removeItem(slotKey(n));localStorage.removeItem(slotKey(n)+'_backup');localStorage.removeItem('ilm2_meta_'+n);localStorage.removeItem('ilm2_em_'+n)}catch(e){}
+  delete SLOT_META[n];if(SV.known&&SV.known.slot===n)SV.known=null;
+  try{if(saveBC)saveBC.postMessage({deleted:true,slot:n,epoch:SV.epoch[n],careerIds:[...ids],writer:SV.writer})}catch(e){}
+  if(STORE.kind!=='idb')return true;
+  // the in-flight write (if any) either committed before the fence — then it is deleted below — or aborts on the fence
+  const inflight=SV.busy&&SV.promise?SV.promise.catch(()=>false):Promise.resolve();
+  return inflight.then(async()=>{
+    // records written by this tab or another before the fence: remember their ids too, then delete
+    try{for(const k of ['slot:'+n,'backup:'+n]){const r=await idbGet(k);if(r&&r.careerId)SV.deleted.add(r.careerId)}}catch(e){}
+    await idbDel(['slot:'+n,'backup:'+n]);delete SLOT_META[n];
+    // nothing may have slipped in between: verify the slot is empty
+    const left=await idbGet('slot:'+n);if(left&&isDeletedCareer(left.careerId)){await idbDel(['slot:'+n]);}
+    return true}).catch(()=>false)}
+async function deleteAllData(){if(G&&G.careerId)SV.deleted.add(G.careerId);for(let n=1;n<=SLOTS;n++)await deleteSlot(n);try{localStorage.removeItem('ilm2_cur')}catch(e){}let cloudOk=true;if(cloud.ready){try{for(let n=1;n<=SLOTS;n++){const base=cloud.db.doc(cloudPath(n));const snap=await base.get();if(snap.exists){const m=snap.data();for(let i=0;i<(m.n||0);i++)await base.collection('chunks').doc('c'+i).delete();await base.delete()}}cloud.meta=null}catch(e){cloudOk=false}}G=null;render();toast(cloudOk?'כל הנתונים נמחקו (מקומי וענן)':'הנתונים המקומיים נמחקו. המחיקה בענן נכשלה, נסה שוב.')}
 
 /* ---- boot: open the database, move legacy localStorage careers over (verified before anything is deleted) ---- */
 /* Identity rules: a snapshot may replace a stored record only when it is the same career (careerId) and newer (rev);
@@ -156,8 +192,14 @@ async function migrateLegacyCareers(){const report=[];
       }catch(e){report.push({slot:n,src,ok:false,err:String(e&&e.message||e),kept:true})}}
     // the legacy backup moves on its own terms: deleted only after its own verified write, or when a newer backup already exists
     let bk=null;try{bk=localStorage.getItem(K.backup)}catch(e){}if(bk){try{const b=validateCareer(JSON.parse(bk));ensureCareerIdentity(b);const have=await idbGet('backup:'+n);
-        if(have&&(have.t||0)>=(b.savedAt||0)){localStorage.removeItem(K.backup);report.push({slot:n,src:'backup',ok:true,action:'superseded'})}
-        else{const brec=await recordFrom(b,n,'backup:'+n);await writeVerified(brec,()=>true,false);localStorage.removeItem(K.backup);report.push({slot:n,src:'backup',ok:true,action:'write'})}}
+        // a pre-v8 backup has no career id of its own: it can only move into an empty backup:N
+        const hadId=!!JSON.parse(bk).careerId;
+        if(have&&(!hadId||have.careerId!==b.careerId)){report.push({slot:n,src:'backup',ok:false,err:'identity_mismatch',kept:true})}
+        else if(have&&((have.rev||0)>(b.rev||0)||((have.rev||0)===(b.rev||0)&&(have.t||0)>=(b.savedAt||0)))){
+          // same career and the stored backup is at least as new: remove the legacy copy only if the stored one is readable
+          validateCareer(JSON.parse(await unpackState(have)));localStorage.removeItem(K.backup);report.push({slot:n,src:'backup',ok:true,action:'superseded'})}
+        else{const brec=await recordFrom(b,n,'backup:'+n);const expect=have?{careerId:have.careerId,rev:have.rev}:null;
+          await writeVerified(brec,s2=>expect?(!!s2&&s2.careerId===expect.careerId&&s2.rev===expect.rev):!s2,false);localStorage.removeItem(K.backup);report.push({slot:n,src:'backup',ok:true,action:'write'})}}
       catch(e){report.push({slot:n,src:'backup',ok:false,err:String(e&&e.message||e),kept:true})}}}
   return report}
 /* a slot whose legacy copy could not be moved is still a career: shown on the cards, loadable, exportable */
@@ -165,7 +207,7 @@ function legacyLeftover(n){if(STORE.kind!=='idb')return null;const K=legacyKeysO
 function migrationNoticeHTML(){const rep=(STORE.migration||[]).filter(r=>!r.ok);if(!rep.length)return '';
   return `<div class="card" id="migrationNotice" style="border-color:var(--warn)"><h3 class="sec">שמירות ישנות שלא הועברו</h3><div class="small" style="margin-top:6px">${rep.map(r=>`משבצת ${r.slot} (${r.src==='legacy'?'שמירה':r.src==='backup'?'גיבוי':'צילום חירום'}): ${r.err==='identity_mismatch'?'באחסון החדש כבר יש קריירה אחרת במשבצת הזאת':'שגיאה: '+esc(r.err||'')}`).join('<br>')}</div><div class="muted tiny" style="margin-top:4px">השמירה הישנה נשארה בדפדפן ולא נמחקה. אפשר לייצא אותה לקובץ, לנסות שוב, או לטעון אותה ולהמשיך ממנה (היא תישמר באחסון החדש בשמירה הבאה ותחליף את מה שיש במשבצת).</div><div class="actions" style="margin-top:8px">${rep.filter(r=>r.src!=='backup').map(r=>`<button class="btn sec sm" data-legacyexport="${r.slot}">ייצא משבצת ${r.slot}</button><button class="btn sec sm" data-legacyload="${r.slot}">טען משבצת ${r.slot}</button>`).join('')}<button class="btn sec sm" id="migrationRetry">נסה שוב</button></div></div>`}
 function exportLegacy(n){const L=legacyLeftover(n);if(!L)return toast('לא נמצאה שמירה ישנה');downloadText(L.text,`goalasso-legacy-slot${n}.json`)}
-function loadLegacy(n){const L=legacyLeftover(n);if(!L)return toast('לא נמצאה שמירה ישנה');setCurSlot(n);const old=G,oldUid=uid;try{restoreCareer(L.text,n)}catch(e){G=old;uid=oldUid;return toast('השמירה הישנה לא תקינה')}SV.known=null;SV.blocked=null;SV.legacySource={slot:n,key:L.key,careerId:G.careerId};Promise.resolve(save({force:true})).then(ok=>{render();toast(ok?'הקריירה הישנה נטענה ונשמרה באחסון החדש':'הקריירה נטענה, אבל השמירה נכשלה')})}
+function loadLegacy(n){const L=legacyLeftover(n);if(!L)return toast('לא נמצאה שמירה ישנה');setCurSlot(n);const old=G,oldUid=uid;try{restoreCareer(L.text,n)}catch(e){G=old;uid=oldUid;return toast('השמירה הישנה לא תקינה')}SV.known=null;SV.blocked=null;if(G.careerId)SV.deleted.delete(G.careerId);SV.legacySource={slot:n,key:L.key,careerId:G.careerId};Promise.resolve(save({force:true})).then(ok=>{render();toast(ok?'הקריירה הישנה נטענה ונשמרה באחסון החדש':'הקריירה נטענה, אבל השמירה נכשלה')})}
 async function retryMigration(){try{STORE.migration=await migrateLegacyCareers();await refreshMeta()}catch(e){}render();const left=(STORE.migration||[]).filter(r=>!r.ok).length;toast(left?'עדיין יש שמירות שלא הועברו':'כל השמירות הועברו')}
 let storageBootP=null;
 function storageBoot(){if(storageBootP)return storageBootP;storageBootP=(async()=>{if(STORE.kind!=='idb')return;try{await idbOpen()}catch(e){STORE.kind='ls';STORE.err=e;return}
