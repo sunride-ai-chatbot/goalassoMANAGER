@@ -31,7 +31,7 @@ async function main(){
     assert.deepEqual(ids(),[900060,900061,900065]);
     assert.match(d.querySelector('.market-results').textContent,/3 שחקנים/);
     click('[data-mp="MF"]');assert.deepEqual(ids(),[900061]);
-    click('[data-ms="price"]');assert.deepEqual(ids(),[900061]);
+    click('[data-ms="price-asc"]');assert.deepEqual(ids(),[900061]);
     click('[data-mp="all"]');
     change('marketPrice','budget');
     assert.deepEqual(ids(),[900060,900061,900062,900063,900065]);
