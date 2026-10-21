@@ -1,0 +1,41 @@
+name: Fetch Commons portraits
+# Manual: finds freely licensed Wikimedia Commons portraits for real European squads and commits the raw candidates
+# (images + manifest with licence/author/credit) to the `portrait-sources` branch. Nothing is shipped from here:
+# scripts/build-portraits.py selects and processes them on main.
+on:
+  workflow_dispatch:
+    inputs:
+      clubs:
+        description: 'comma-separated data/euro keys, or "all"'
+        required: true
+        default: 'real_madrid,barcelona,atletico'
+permissions:
+  contents: write
+concurrency:
+  group: portrait-sources
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch candidates
+        run: python3 scripts/fetch-commons-portraits.py --clubs "${{ github.event.inputs.clubs }}" --out /tmp/ps/euro
+      - name: Commit to portrait-sources
+        run: |
+          git config user.name "GOALASSO portraits bot"
+          git config user.email "actions@users.noreply.github.com"
+          git fetch origin portrait-sources || true
+          if git rev-parse --verify origin/portrait-sources >/dev/null 2>&1; then
+            git worktree add /tmp/wt origin/portrait-sources && cd /tmp/wt && git checkout -B portrait-sources
+          else
+            git worktree add --detach /tmp/wt && cd /tmp/wt && git checkout --orphan portrait-sources && git rm -rf . >/dev/null
+          fi
+          mkdir -p euro && cp -R /tmp/ps/euro/. euro/
+          git add -A euro
+          git commit -m "Commons portrait candidates: ${{ github.event.inputs.clubs }}" || echo "nothing new"
+          git push origin portrait-sources
