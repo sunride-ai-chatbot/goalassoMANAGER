@@ -15,13 +15,17 @@
 .cine-tools button{font-size:13px;color:var(--gold)}
 .cinematic-lineup .t3{width:20%;max-width:none;min-height:44px;transform:translate(-50%,-100%);border:0;padding:0;background:none;color:inherit;font:inherit;touch-action:manipulation}
 .cinematic-lineup .t3-in{gap:0;position:relative;isolation:isolate;transition:transform .15s}
-.cinematic-lineup .t3-in::before{content:"";position:absolute;bottom:24px;left:22%;right:22%;height:10%;border-radius:50%;background:#071b09aa;filter:blur(4px);z-index:-1;transform:skewX(-35deg)}
+.cinematic-lineup .t3-in::before{content:"";position:absolute;bottom:3%;left:22%;right:22%;height:10%;border-radius:50%;background:#071b09aa;filter:blur(4px);z-index:-1;transform:skewX(-35deg)}
 .player-figure{position:relative;display:block;width:60%;aspect-ratio:2/3;filter:drop-shadow(2px 3px 2px #07180977);flex:none}
 .player-figure>svg{width:100%;height:100%;display:block;overflow:visible}
 .cinematic-lineup .t3-nm{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;min-height:27px;max-width:none;margin:0;padding:3px 4px;background:linear-gradient(#112632ef,#03111ded);border:1px solid #859da780;border-radius:9px;color:#f5f8ff;white-space:normal;font:700 clamp(11px,2.5vw,15px)/1.15 var(--body);box-shadow:0 3px 8px #0005;text-shadow:0 1px #000;overflow-wrap:anywhere}
+/* the name plate sits on the figure's own shins: a token's height is the figure alone, so the row behind it is never
+   covered at head height (rows are further apart than one figure in every formation) */
+.cinematic-lineup .t3-nm{position:absolute;left:4%;right:4%;bottom:0;width:auto;z-index:1;min-height:0;padding:2px 5px;white-space:nowrap;font-size:clamp(10px,2.5vw,14px);line-height:1.2}
+.cinematic-lineup .t3-nmt{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .t3-nm .cine-rating{color:#d3ff40;font:800 clamp(12px,2.8vw,17px)/1 var(--body);flex:none;direction:ltr}
 .cinematic-lineup .t3.sel{z-index:100!important}.cinematic-lineup .t3.sel .t3-in{transform:translateY(-3px)}
-.cinematic-lineup .t3.sel .t3-in::after{content:"";position:absolute;bottom:24px;left:18%;right:18%;height:10%;border:2px solid #d7ff57;border-radius:50%;box-shadow:0 0 6px #d7ff57,inset 0 0 9px #b2ff3c,0 0 18px #d2ff40;z-index:-1}
+.cinematic-lineup .t3.sel .t3-in::after{content:"";position:absolute;bottom:3%;left:18%;right:18%;height:10%;border:2px solid #d7ff57;border-radius:50%;box-shadow:0 0 6px #d7ff57,inset 0 0 9px #b2ff3c,0 0 18px #d2ff40;z-index:-1}
 .cinematic-lineup .t3.sel .t3-nm{border-color:#dcff67;background:#152b20}
 .cinematic-lineup .t3.bad .t3-nm{border-color:#ff6976}.cinematic-lineup .t3.oop .t3-nm{border-color:#ffbe5b}
 .cinematic-lineup .t3 .capb{position:absolute;top:22%;left:15%;width:17px;height:17px;font-size:10px;background:#efd78b;color:#142115}
@@ -33,15 +37,15 @@
 .cine-sub{flex:0 0 22.5%;min-width:80px;border:1px solid #72828a55;border-radius:12px;background:linear-gradient(145deg,#263742,#06121c);padding:0;position:relative;overflow:hidden;scroll-snap-align:start}
 .cine-sub.sel{border-color:#d3ff40;box-shadow:inset 0 0 0 1px #d3ff40}.cine-sub:disabled{opacity:.4;cursor:not-allowed}
 .cine-portrait{height:clamp(65px,18vw,135px);overflow:hidden;position:relative;display:block;background:radial-gradient(ellipse at bottom,#54717555,transparent)}
-.cine-portrait .player-figure{width:150%;position:absolute;top:-5%;left:-25%;filter:none}
-.player-portrait{position:relative;display:block;flex:none;width:46px;height:50px;overflow:hidden;border-radius:9px;background:radial-gradient(ellipse at 50% 20%,#405664,#12202b);border:1px solid #687f8c55}
+.player-portrait{position:relative;display:block;flex:none;width:46px;aspect-ratio:240/264;height:auto;overflow:hidden;border-radius:9px;background:#0b1520;border:1px solid #687f8c55}
+/* portrait states: loading shows only the backdrop, ready shows the photo, anything else the designed fallback */
+.pp[data-pp-state="ready"] .pp-fb,.pp[data-pp-state="loading"] .pp-fb{display:none}
+.pp:not([data-pp-state="ready"]) .pp-photo{display:none}
 .player-portrait>svg{display:block;width:100%;height:100%}
-.source-face-svg[data-face-ready="true"]>.face-photo-fallback{display:none}
-.pl>.player-portrait{width:42px;height:46px}
-.cine-portrait>.player-portrait{position:absolute;inset:0 8%;width:84%;height:100%;border:0;border-radius:0;background:none}
-.cine-portrait>.player-portrait>svg{height:112%;width:100%;overflow:visible}
-.xc>.player-portrait{width:34px;height:38px;grid-row:span 2}
-@media(max-width:420px){.pl{column-gap:7px}.pl>.player-portrait{width:34px;height:40px}}
+.pl>.player-portrait{width:42px}
+.cine-portrait>.player-portrait{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.xc>.player-portrait{width:34px;grid-row:span 2}
+@media(max-width:420px){.pl{column-gap:7px}.pl>.player-portrait{width:36px}}
 .cine-sub-rating{position:absolute;top:5px;right:7px;color:#d3ff40;font-size:17px;font-weight:800;z-index:1}.cine-sub-pos{position:absolute;top:5px;left:5px;font-size:9px;background:#07111fbb;border-radius:4px;padding:2px 4px;z-index:1;color:#d4dce4}
 .cine-sub-name{display:block;position:relative;padding:6px 3px;background:#06111de8;font-size:12px;font-weight:700;line-height:1.2;min-height:39px}
 .cine-actions{display:flex;gap:10px;padding:17px 4% 22px}.cine-actions .btn{flex:1;min-height:54px;font-size:clamp(15px,3.5vw,21px);border-radius:17px;background:linear-gradient(145deg,#e1ff71,#b5ed27);border:1px solid #deff8a;color:#122206;box-shadow:0 0 25px #b7ee2933;font-weight:900}

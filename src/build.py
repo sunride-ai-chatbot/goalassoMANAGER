@@ -64,7 +64,12 @@ for c in clubs:
 for face in visuals['faces'].values():
     if not os.path.isfile(os.path.join(ROOT, 'assets', 'facepacks', face['pack'] + '.json')):
         raise ValueError('Missing portrait pack: ' + face['pack'])
-runtime_faces = {k: {f: v[f] for f in ('pack', 'crop', 'size', 'skin')} for k, v in visuals['faces'].items()}
+# portrait status and skin tone come from the offline rebuild (scripts/build-portraits.py → data/visuals/portrait-audit.json);
+# anything not marked ok there renders the designed fallback in the game
+audit_path = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json')
+audit = json.loads(read(audit_path)) if os.path.isfile(audit_path) else {}
+runtime_faces = {k: {'pack': v['pack'], 'status': 'ok' if audit.get(k, {}).get('status') == 'ok' else 'unresolved',
+                     'skin': audit.get(k, {}).get('skin') or v.get('skin')} for k, v in visuals['faces'].items()}
 page = page.replace('__PLAYER_VISUALS__', enc({'names': face_names, 'faces': runtime_faces}))
 out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta))
 for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__'):

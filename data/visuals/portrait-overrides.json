@@ -1,0 +1,91 @@
+{
+ "ifa-203597": {
+  "reason": "identity_unverified: IFA name \"אחמד איברהים\" does not match squad name \"אחמד סלמן\"",
+  "status": "unresolved"
+ },
+ "ifa-267341": {
+  "flag": "informal_source",
+  "note": "genuine and usable, but not a studio photo; replace when an official portrait is available",
+  "status": "ok"
+ },
+ "ifa-271738": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-303662": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-305646": {
+  "flag": "informal_source",
+  "note": "genuine and usable, but not a studio photo; replace when an official portrait is available",
+  "status": "ok"
+ },
+ "ifa-319614": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-320022": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-320521": {
+  "flag": "informal_source",
+  "note": "genuine and usable, but not a studio photo; replace when an official portrait is available",
+  "status": "ok"
+ },
+ "ifa-320522": {
+  "flag": "informal_source",
+  "note": "genuine and usable, but not a studio photo; replace when an official portrait is available",
+  "status": "ok"
+ },
+ "ifa-320532": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-320574": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-320740": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-320902": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-321545": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-322579": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-323833": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-324307": {
+  "flag": "informal_source",
+  "note": "genuine and usable, but not a studio photo; replace when an official portrait is available",
+  "status": "ok"
+ },
+ "ifa-325069": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-325203": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-325350": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ },
+ "ifa-325871": {
+  "reason": "source_is_document_scan",
+  "status": "unresolved"
+ }
+}

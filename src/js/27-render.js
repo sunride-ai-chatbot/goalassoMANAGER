@@ -20,7 +20,7 @@ function playerCardSVG(p,c,opts){
   <path d="M8 4 H92 Q96 4 96 8 V${H-22} L50 ${H-4} L4 ${H-22} V8 Q4 4 8 4 Z" fill="url(#${id}s)"/>
   <text x="81" y="26" text-anchor="middle" font-size="${opts.hidden?18:big?21:20}" fill="${ink}">${opts.hidden?'?':p.ovr}</text>
   <text x="81" y="35" text-anchor="middle" font-size="8" fill="${ink}" opacity=".85">${p.pos}</text>
-  <g transform="translate(17 7) scale(.62)">${playerPortraitHTML(p,c,id).match(/<svg[^>]*>([\s\S]*)<\/svg>/)[1]}</g>
+  <svg x="12" y="7" width="60" height="66" viewBox="0 0 240 264" overflow="hidden">${portraitGroup(p,c||playerClub(p)||{},id+'f',{bg:false})}</svg>
   ${big?`<text x="50" y="${H-18}" text-anchor="middle" font-size="10" fill="${ink}" class="nm">${name}</text>`:
   `<text x="50" y="76" text-anchor="middle" font-size="7.5" fill="${ink}" opacity=".85" class="at">${esc(p.nat||'')}</text>`}
   </svg>`;

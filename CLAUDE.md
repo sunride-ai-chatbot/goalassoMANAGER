@@ -10,6 +10,7 @@ Hebrew (RTL), mobile-first football management game. Single-file web build.
 - `data/*.json` — Israeli club squads; `data/euro/*.json` — European squads.
 - `assets/` — media loaded at runtime by relative path (intro/signing videos, lineup stadium, newspaper photos, trophy moments). They must sit next to the built HTML.
 - `tests/*.test.js` — jsdom suites (`npm install`, `npm run build`, `npm test`). A suite passes when its last line shows `errors []` / `errs []`. `idb-save.test.js` runs the IndexedDB path on `fake-indexeddb`; `window.ILM.ready` resolves after boot and `window.ILM.whenSaved()` after the pending write.
+- Player portraits: `scripts/build-portraits.py` turns the verified source photos (`data/visuals/source-photos/`) into canonical 240×300 transparent WebP cut-outs in `assets/facepacks/` (schema 2) and records each result in `data/visuals/portrait-audit.json`; manual decisions live in `data/visuals/portrait-overrides.json`; `scripts/portrait-report.py` writes `docs/portrait-audit.md`. The game never crops faces at runtime (`portraitGroup` / `cinematicPlayerHTML` in `36-views.js`); anything not `ok` renders the designed club-kit monogram fallback. Never assign a face to a different player, and never match European players to Israeli faces by name.
 - `supabase/migrations/` — Phase 2 schema (not applied yet). `.env.example` lists the only public values the client may use.
 
 ## Rules

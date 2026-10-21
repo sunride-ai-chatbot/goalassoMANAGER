@@ -69,7 +69,7 @@
   .pp-cols{columns:1}
   .cine-header p,.cine-hint,.cine-status,.cine-sub-name{font-size:14px;line-height:1.4}
   .cine-sub-name{min-height:46px}
-  .cinematic-lineup .t3-nm{font-size:12px;line-height:1.25;min-height:32px}
+  .cinematic-lineup .t3-nm{font-size:12px;line-height:1.25;min-height:0}
   .cine-sub-pos{font-size:11px}
   .cine-details summary{min-height:44px;display:flex;align-items:center}
   .modal .row:has(#fee){flex-wrap:wrap}
