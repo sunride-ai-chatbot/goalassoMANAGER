@@ -110,8 +110,13 @@ def process(t, src, debug=None, key='', strict=False):
         # wrong person; a turned head (eyes close together relative to eye-mouth distance) is not a portrait.
         if rival:
             return None, {'status': 'unresolved', 'reason': 'multiple_faces', 'flags': flags}
-        if float(np.linalg.norm(le_ - re_)) < 0.6 * d:
+        ed = float(np.linalg.norm(le_ - re_))
+        if ed < 0.6 * d:
             return None, {'status': 'unresolved', 'reason': 'face_turned', 'flags': flags}
+        if ed > 1.55 * d:   # eyes far apart relative to eye-mouth: head bowed or tilted back
+            return None, {'status': 'unresolved', 'reason': 'face_tilted', 'flags': flags}
+        if float(f[14]) < 0.8:
+            return None, {'status': 'unresolved', 'reason': 'face_unclear', 'flags': flags}
     def background_kept(al):
         # the photo's corners beside/above the head must be empty once the background is removed
         hh_, ww_ = al.shape; yb = int(max(4, eye[1] - 0.6 * d))
@@ -149,7 +154,7 @@ def process(t, src, debug=None, key='', strict=False):
         S = (EYE_Y - TOP_MARGIN) * H / head_above_eye
         flags.append('scaled_for_hair')
     up = S * UP                     # canvas px per original source px
-    if up > MAX_UPSCALE:
+    if up > (1.25 if strict else MAX_UPSCALE):
         return None, {'status': 'unresolved', 'reason': 'face_too_small', 'flags': flags, 'upscale': round(up, 2)}
     A = np.array([[S, 0, W / 2 - S * eye[0]], [0, S, EYE_Y * H - S * eye[1]]], np.float32)
     warp = lambda a, interp=cv2.INTER_AREA if S < 1 else cv2.INTER_CUBIC: cv2.warpAffine(a, A, (W, H), flags=interp, borderMode=cv2.BORDER_CONSTANT, borderValue=0)

@@ -14,6 +14,7 @@ and the identification evidence). The offline pipeline (scripts/build-portraits.
 that yields a clean, complete head.
 
 Usage: python3 scripts/fetch-commons-portraits.py --clubs liverpool,arsenal --out portrait-sources/euro
+--width sets the rendition width (640 default; use a larger one to retry players whose face was too small).
 Only the Python standard library is used. Requests are sequential and identified by a User-Agent, per Wikimedia policy.
 """
 import argparse, html, json, os, re, sys, time, urllib.parse, urllib.request
@@ -22,6 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 UA = 'GOALASSO-portrait-fetch/1.0 (https://github.com/sunride-ai-chatbot/goalassoMANAGER; football management game)'
 FOOTBALLER = 'Q937857'
 SEASON_YEAR = 2026
+WIDTH = 640
 CLUB_TITLES = {
     'ajax': 'AFC Ajax', 'arsenal': 'Arsenal F.C.', 'atletico': 'Atlético Madrid', 'barcelona': 'FC Barcelona',
     'bayern': 'FC Bayern Munich', 'benfica': 'S.L. Benfica', 'bodo_glimt': 'FK Bodø/Glimt', 'brugge': 'Club Brugge KV',
@@ -155,7 +157,7 @@ def strip_html(s):
     return html.unescape(re.sub(r'<[^>]+>', '', s or '')).strip()
 
 def file_info(titles):
-    r = commons({'action': 'query', 'titles': '|'.join(titles), 'prop': 'imageinfo', 'iiprop': 'url|size|extmetadata|mime', 'iiurlwidth': 640})
+    r = commons({'action': 'query', 'titles': '|'.join(titles), 'prop': 'imageinfo', 'iiprop': 'url|size|extmetadata|mime', 'iiurlwidth': WIDTH})
     out = {}
     norm_map = {n['to']: n['from'] for n in r.get('query', {}).get('normalized', [])}
     for p in r.get('query', {}).get('pages', {}).values():
@@ -182,8 +184,10 @@ def licence_ok(i):
     return bool(OK_LICENSE.match(i.get('license', '').strip()))
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=5)
+    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=5); ap.add_argument('--width', type=int, default=640); ap.add_argument('--players', default='')
     a = ap.parse_args()
+    global WIDTH; WIDTH = a.width
+    only = {x.strip() for x in a.players.split('|') if x.strip()}
     keys = list(CLUB_TITLES) if a.clubs == 'all' else a.clubs.split(',')
     for key in keys:
         with open(os.path.join(ROOT, 'data', 'euro', key + '.json'), encoding='utf8') as fh:
@@ -192,6 +196,8 @@ def main():
         outdir = os.path.join(a.out, key); os.makedirs(outdir, exist_ok=True)
         manifest = {'club': key, 'clubName': squad.get('name_he'), 'clubQid': cq, 'players': []}
         for n, p in enumerate(squad.get('players', [])):
+            if only and p.get('en') not in only:
+                continue
             entry = {'he': p.get('he'), 'en': p.get('en'), 'pos': p.get('pos'), 'age': p.get('age'), 'candidates': []}
             try:
                 ent, why = identify(p, cq)
@@ -213,7 +219,7 @@ def main():
                         if not licence_ok(i):
                             entry.setdefault('rejectedFiles', []).append({'title': t, 'license': i.get('license')})
                             continue
-                        fn = f'{n:02d}-{qid}-{k}.jpg'
+                        fn = f'{n:02d}-{qid}-{k}' + ('' if WIDTH == 640 else f'-w{WIDTH}') + '.jpg'
                         data = get(i['thumb'], raw=True)
                         with open(os.path.join(outdir, fn), 'wb') as fh:
                             fh.write(data)
@@ -225,7 +231,14 @@ def main():
                 entry['error'] = str(e)[:200]
             manifest['players'].append(entry)
             print(key, p.get('en'), entry.get('match'), entry.get('qid'), len(entry['candidates']), flush=True)
-        with open(os.path.join(outdir, 'manifest.json'), 'w', encoding='utf8') as fh:
+        mp = os.path.join(outdir, 'manifest.json')
+        if only and os.path.isfile(mp):
+            # partial run: merge into the existing manifest (players not listed keep their entries)
+            with open(mp, encoding='utf8') as fh:
+                old = json.load(fh)
+            new = {e['en']: e for e in manifest['players']}
+            manifest['players'] = [new.get(e['en'], e) for e in old['players']]
+        with open(mp, 'w', encoding='utf8') as fh:
             json.dump(manifest, fh, ensure_ascii=False, indent=1)
 
 if __name__ == '__main__':
