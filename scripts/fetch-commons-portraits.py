@@ -115,13 +115,25 @@ def candidates_for(name):
         return []
     ents = {}
     for i in range(0, len(ids), 50):
-        r = wd({'action': 'wbgetentities', 'ids': '|'.join(ids[i:i + 50]), 'props': 'claims|labels|aliases|sitelinks', 'languages': 'en'})
+        r = wd({'action': 'wbgetentities', 'ids': '|'.join(ids[i:i + 50]), 'props': 'claims|labels|aliases|sitelinks', 'languages': 'en|mul'})
         ents.update(r.get('entities', {}))
     return [e for e in ents.values() if FOOTBALLER in claim_ids(e, 'P106')]
 
+def ent_names(ent):
+    out = [ent.get('labels', {}).get(l, {}).get('value', '') for l in ('en', 'mul')]
+    out += [a['value'] for l in ('en', 'mul') for a in ent.get('aliases', {}).get(l, [])]
+    t = ent.get('sitelinks', {}).get('enwiki', {}).get('title', '')
+    if t:
+        out.append(re.sub(r'\s*\([^)]*\)$', '', t))   # "Rodrigo Mendoza (footballer)" → "Rodrigo Mendoza"
+    return [n for n in out if n]
+
+def label(ent):
+    n = ent_names(ent)
+    return n[0] if n else '?'
+
 def name_matches(ent, name):
     want = norm(clean_name(name))
-    names = [ent.get('labels', {}).get('en', {}).get('value', '')] + [a['value'] for a in ent.get('aliases', {}).get('en', [])]
+    names = ent_names(ent)
     have = {norm(n) for n in names if n}
     if want in have:
         return True
@@ -135,11 +147,17 @@ def identify(player, club_q):
         return None, 'no_english_name'
     found = candidates_for(name)
     cands = [e for e in found if name_matches(e, name)]
-    if not cands:
-        seen = ', '.join(f"{e['id']}:{e.get('labels', {}).get('en', {}).get('value', '?')}" for e in found[:6])
-        return None, 'no_wikidata_footballer_with_this_name' + (f' (footballers found: {seen})' if seen else '')
     age = player.get('age')
     years = {SEASON_YEAR - age, SEASON_YEAR - age - 1} if age else set()
+    if not cands:
+        # nickname vs full name (Rodri/Rodrigo, Álex/Alejandro): same surname AND this club AND the birth year
+        sur = norm(clean_name(name)).split()[-1:] 
+        strong = [e for e in found if sur and any(norm(n).split()[-1:] == sur for n in ent_names(e))
+                  and club_q in claim_ids(e, 'P54') and birth_year(e) in years]
+        if len(strong) == 1:
+            return strong[0], 'surname+club+birth_year'
+        seen = ', '.join(f"{e['id']}:{label(e)}" for e in found[:6])
+        return None, 'no_wikidata_footballer_with_this_name' + (f' (footballers found: {seen})' if seen else '')
     team = [e for e in cands if club_q in claim_ids(e, 'P54')]
     if len(team) == 1:
         return team[0], 'name+club'
@@ -205,7 +223,7 @@ def main():
                 if ent:
                     qid = ent['id']; entry['qid'] = qid
                     entry['wikidata'] = 'https://www.wikidata.org/wiki/' + qid
-                    entry['label'] = ent.get('labels', {}).get('en', {}).get('value')
+                    entry['label'] = label(ent)
                     entry['birthYear'] = birth_year(ent)
                     titles = ['File:' + t for t in images(ent)]
                     for cat in claim_ids(ent, 'P373')[:1]:
