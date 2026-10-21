@@ -593,8 +593,32 @@
    "en": "Harry Maguire",
    "pos": "DF",
    "age": 33,
-   "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q165772:?, Q27671066:Laurence Maguire)"
+   "candidates": [
+    {
+     "title": "File:Harry Maguire 2023 (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Harry_Maguire_2023_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Harry_Maguire_2023_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 928,
+     "height": 1210,
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "author": "UK Prime Minister",
+     "credit": "https://www.flickr.com/photos/49707497@N06/53248339219/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-10-10 11:02:22",
+     "file": "07-Q165772-0.jpg",
+     "fromP18": true
+    }
+   ],
+   "match": "name+club",
+   "qid": "Q165772",
+   "wikidata": "https://www.wikidata.org/wiki/Q165772",
+   "label": "Harry Maguire",
+   "birthYear": 1993
   },
   {
    "he": "ליסנדרו מרטינס",
@@ -1618,8 +1642,32 @@
    "en": "Benjamin Šeško",
    "pos": "FW",
    "age": 23,
-   "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q65950315:?, Q135952018:Tian Nai Koren)"
+   "candidates": [
+    {
+     "title": "File:FC RB Salzburg gegen SK Austria Klagenfurt (2023-05-28) 38 (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_(2023-05-28)_38_(cropped).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_%282023-05-28%29_38_%28cropped%29.jpg/960px-FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_%282023-05-28%29_38_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2318,
+     "height": 3093,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Werner100359",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-05-28 16:32:08",
+     "file": "22-Q65950315-0.jpg",
+     "fromP18": true
+    }
+   ],
+   "match": "name+club",
+   "qid": "Q65950315",
+   "wikidata": "https://www.wikidata.org/wiki/Q65950315",
+   "label": "Benjamin Šeško",
+   "birthYear": 2003
   },
   {
    "he": "בריאן מבאומו",
