@@ -40,7 +40,7 @@ async function unpackState(rec){if(!rec)return null;if(!rec.gz)return typeof rec
 
 /* ---- slot metadata (the career cards on the title screen) ---- */
 let SLOT_META={};
-function slotMeta(n){if(STORE.kind==='idb')return SLOT_META[n]||null;try{const m=localStorage.getItem('ilm2_meta_'+n);if(m)return JSON.parse(m);if(n===1&&localStorage.getItem('ilm2'))return {club:'קריירה שמורה',season:'',wk:0,t:0}}catch(e){}return null}
+function slotMeta(n){if(STORE.kind==='idb'){if(SLOT_META[n])return SLOT_META[n];const L=legacyLeftover(n);if(L){const g=L.g;return g&&g.clubs?Object.assign(metaOf(g,g.savedAt||0),{legacy:true,club:(metaOf(g,0).club||'')+' (שמירה ישנה)'}):{club:'שמירה ישנה לא תקינה',season:'',wk:0,t:0,legacy:true}}return null}try{const m=localStorage.getItem('ilm2_meta_'+n);if(m)return JSON.parse(m);if(n===1&&localStorage.getItem('ilm2'))return {club:'קריירה שמורה',season:'',wk:0,t:0}}catch(e){}return null}
 function metaOf(g,stamp){const c=g.clubs&&[...g.clubs,...(g.leumit||[])].find(x=>x.id===g.me);return {club:c?c.name:'',season:(()=>{const y=2026+g.season-1;return `${y}/${String(y+1).slice(2)}`})(),wk:g.wk,mgr:g.manager&&g.manager.name,t:stamp,phase:g.phase,careerId:g.careerId,rev:g.rev}}
 async function refreshMeta(){SLOT_META={};try{for(const r of await idbGetAll()){if(/^slot:\d$/.test(r.key)&&r.meta)SLOT_META[r.slot]=r.meta}}catch(e){}}
 
@@ -59,7 +59,7 @@ function saveIndicator(state){const el=$('saveInd');if(!el)return;clearTimeout(s
   if(state==='saved')saveIndT=setTimeout(()=>{if(el.className==='saveind saved'){el.textContent='';el.className='saveind'}},2500)}
 
 /* ---- save ---- */
-const SV={q:null,busy:false,promise:null,known:null,blocked:null,lastOk:0,writer:Math.random().toString(36).slice(2,10),retry:null,persistAsked:false};
+const SV={q:null,busy:false,promise:null,known:null,blocked:null,lastOk:0,writer:Math.random().toString(36).slice(2,10),retry:null,persistAsked:false,legacySource:null};
 let saveBC=null;try{if(typeof BroadcastChannel!=='undefined'){saveBC=new BroadcastChannel('goalasso-save');saveBC.onmessage=e=>{const m=e.data||{};if(!G||m.writer===SV.writer||m.slot!==(G.slot||curSlot()))return;if(m.careerId!==G.careerId||(m.rev||0)>(G.rev||0)){SV.blocked={stored:{careerId:m.careerId,rev:m.rev,meta:m.meta},remote:true};saveIndicator('stale');showConflict()}}}}catch(e){}
 function broadcastSave(rec){try{if(saveBC)saveBC.postMessage({writer:SV.writer,slot:rec.slot,careerId:rec.careerId,rev:rec.rev,meta:rec.meta})}catch(e){}}
 /* Returns true/false synchronously in localStorage mode, a Promise<boolean> in IndexedDB mode. Callers that need the
@@ -75,6 +75,7 @@ function pumpSaves(){if(SV.busy)return SV.promise;SV.busy=true;SV.promise=(async
 async function writeJob(job){try{const packed=await packState(job.json);const rec={key:'slot:'+job.slot,slot:job.slot,careerId:job.careerId,rev:job.rev,v:SAVE_VERSION,t:job.t,meta:job.meta,gz:packed.gz,data:packed.data,writer:SV.writer};
     await idbPutCAS(rec,stored=>{if(!stored||job.force)return true;const k=SV.known;return !!k&&k.slot===job.slot&&stored.careerId===k.careerId&&stored.rev===k.rev});
     SV.known={slot:job.slot,careerId:job.careerId,rev:job.rev};SV.blocked=null;SV.retry=null;SV.lastOk=job.t;SLOT_META[job.slot]=job.meta;try{localStorage.removeItem('ilm2_em_'+job.slot)}catch(e){}
+    if(SV.legacySource&&SV.legacySource.slot===job.slot&&SV.legacySource.careerId===job.careerId){try{const back=await idbGet('slot:'+job.slot);if(back&&back.careerId===job.careerId&&back.rev===job.rev){const K=legacyKeysOf(job.slot);localStorage.removeItem(K.main);localStorage.removeItem(K.meta);localStorage.removeItem(K.em);SV.legacySource=null;if(STORE.migration)STORE.migration=STORE.migration.filter(r=>r.slot!==job.slot||r.src==='backup')}}catch(e){}}
     storageNotice('');saveIndicator('saved');broadcastSave(rec);askPersistence();return true}
   catch(e){if(e&&e.conflict){SV.blocked={stored:e.stored};SV.retry=job;saveIndicator('stale');showConflict();return false}
     SV.retry=job;saveIndicator('error');const quota=e&&(e.name==='QuotaExceededError'||/quota/i.test(String(e.message||e)));
@@ -124,7 +125,8 @@ function hydrateCareer(){const all=[...G.clubs,...G.leumit,...Object.values(G.ps
 /* localStorage mode returns true/false synchronously; IndexedDB mode returns Promise<boolean>. */
 function load(slot){const sl=slot||curSlot();if(STORE.kind!=='idb'){try{const json=localStorage.getItem(slotKey(sl));if(!json)return false;restoreCareer(json,sl);SV.known={slot:sl,careerId:G.careerId,rev:G.rev||0};return true}catch(e){storageNotice('לא ניתן לטעון את הקריירה. הקובץ המקורי נשמר; אפשר לשחזר את הגיבוי מההגדרות.');return false}}
   return (async()=>{let rec;try{rec=await idbGet('slot:'+sl)}catch(e){storageNotice('האחסון של הדפדפן לא זמין כרגע. נסה לרענן, או ייבא גיבוי.');return false}
-    if(!rec)return false;try{const json=await unpackState(rec);restoreCareer(json,sl);SV.known={slot:sl,careerId:rec.careerId,rev:rec.rev};SV.blocked=null;if(G.careerId!==rec.careerId||G.rev!==rec.rev){G.careerId=rec.careerId;G.rev=rec.rev}return true}
+    if(!rec){const L=legacyLeftover(sl);if(!L)return false;try{restoreCareer(L.text,sl);SV.known=null;SV.blocked=null;SV.legacySource={slot:sl,key:L.key,careerId:G.careerId};return true}catch(e){storageNotice('השמירה הישנה במשבצת הזאת לא תקינה. אפשר לייצא אותה מההגדרות.');return false}}
+    try{const json=await unpackState(rec);restoreCareer(json,sl);SV.known={slot:sl,careerId:rec.careerId,rev:rec.rev};SV.blocked=null;if(G.careerId!==rec.careerId||G.rev!==rec.rev){G.careerId=rec.careerId;G.rev=rec.rev}return true}
     catch(e){storageNotice('לא ניתן לטעון את הקריירה. הקובץ המקורי נשמר; אפשר לשחזר את הגיבוי מההגדרות.');return false}})()}
 function recoverBackup(){const n=curSlot();if(STORE.kind!=='idb'){try{const json=localStorage.getItem(slotKey(n)+'_backup');if(!json)return toast('לא נמצא גיבוי קודם');const old=G,oldUid=uid;restoreCareer(json,n);try{localStorage.setItem(slotKey(n),JSON.stringify(G))}catch(e){G=old;uid=oldUid;throw e}storageNotice('');render();toast('הגיבוי הקודם שוחזר')}catch(e){storageNotice('שחזור הגיבוי נכשל. הקבצים הקיימים לא נמחקו.')}return}
   return (async()=>{try{const rec=await idbGet('backup:'+n);if(!rec)return toast('לא נמצא גיבוי קודם');const json=await unpackState(rec);const ok=await installCareer(json,n);if(!ok)throw new Error('restore_failed');render();toast('הגיבוי הקודם שוחזר')}catch(e){storageNotice('שחזור הגיבוי נכשל. הקבצים הקיימים לא נמחקו.')}})()}
@@ -132,22 +134,39 @@ function deleteSlot(n){try{localStorage.removeItem(slotKey(n));localStorage.remo
 async function deleteAllData(){for(let n=1;n<=SLOTS;n++)await deleteSlot(n);try{localStorage.removeItem('ilm2_cur')}catch(e){}let cloudOk=true;if(cloud.ready){try{for(let n=1;n<=SLOTS;n++){const base=cloud.db.doc(cloudPath(n));const snap=await base.get();if(snap.exists){const m=snap.data();for(let i=0;i<(m.n||0);i++)await base.collection('chunks').doc('c'+i).delete();await base.delete()}}cloud.meta=null}catch(e){cloudOk=false}}G=null;render();toast(cloudOk?'כל הנתונים נמחקו (מקומי וענן)':'הנתונים המקומיים נמחקו. המחיקה בענן נכשלה, נסה שוב.')}
 
 /* ---- boot: open the database, move legacy localStorage careers over (verified before anything is deleted) ---- */
+/* Identity rules: a snapshot may replace a stored record only when it is the same career (careerId) and newer (rev);
+   a snapshot with no identity (pre-v8) may only fill an empty slot. Anything else stays where it is and is reported. */
+function legacyKeysOf(n){const key=slotKey(n);return {main:key,backup:key+'_backup',meta:'ilm2_meta_'+n,em:'ilm2_em_'+n}}
+async function writeVerified(rec,accept,keepBackup){await idbPutCAS(rec,accept,keepBackup);const back=await idbGet(rec.key);if(!back||back.careerId!==rec.careerId||back.rev!==rec.rev)throw new Error('verify_missing');const roundtrip=await unpackState(back);if(roundtrip!==rec.json)throw new Error('verify_mismatch');return back}
+async function recordFrom(g,n,key,writer){const stamp=g.savedAt||Date.now();const json=JSON.stringify(g);const packed=await packState(json);return {key,slot:n,careerId:g.careerId,rev:g.rev||0,v:g.v||SAVE_VERSION,t:stamp,meta:metaOf(g,stamp),gz:packed.gz,data:packed.data,writer:writer||'migration',json}}
 async function migrateLegacyCareers(){const report=[];
-  for(let n=1;n<=SLOTS;n++){const key=slotKey(n);let json=null,em=null;try{json=localStorage.getItem(key);em=localStorage.getItem('ilm2_em_'+n)}catch(e){}
-    for(const [src,text] of [['legacy',json],['emergency',em]]){if(!text)continue;
-      try{const g=validateCareer(JSON.parse(text));ensureCareerIdentity(g);const stored=await idbGet('slot:'+n);
-        const newer=!stored||(src==='emergency'?(g.rev||0)>(stored.rev||0)||(g.savedAt||0)>(stored.t||0):(g.savedAt||0)>(stored.t||0));
-        if(newer){const stamp=g.savedAt||Date.now();const out=JSON.stringify(g);const packed=await packState(out);
-          const rec={key:'slot:'+n,slot:n,careerId:g.careerId,rev:g.rev||0,v:g.v||SAVE_VERSION,t:stamp,meta:metaOf(g,stamp),gz:packed.gz,data:packed.data,writer:'migration'};
-          await idbPutCAS(rec,()=>true,true);
-          const back=await idbGet('slot:'+n);const roundtrip=await unpackState(back);if(roundtrip!==out)throw new Error('verify_mismatch');
-          if(src==='legacy'){let bk=null;try{bk=localStorage.getItem(key+'_backup')}catch(e){}if(bk&&!stored){try{const b=validateCareer(JSON.parse(bk));ensureCareerIdentity(b);const bo=JSON.stringify(b);const bp=await packState(bo);await idbPutCAS({key:'backup:'+n,slot:n,careerId:b.careerId,rev:b.rev||0,v:b.v||SAVE_VERSION,t:b.savedAt||0,meta:metaOf(b,b.savedAt||0),gz:bp.gz,data:bp.data,writer:'migration'},()=>true,false)}catch(e){}}}
-          report.push({slot:n,src,ok:true})}
-        else report.push({slot:n,src,ok:true,skipped:true});
-        // verified in IndexedDB (or already superseded there): the legacy copy may go
-        try{if(src==='legacy'){localStorage.removeItem(key);localStorage.removeItem(key+'_backup');localStorage.removeItem('ilm2_meta_'+n)}else localStorage.removeItem('ilm2_em_'+n)}catch(e){}
-      }catch(e){report.push({slot:n,src,ok:false,err:String(e&&e.message||e)})}}}
+  for(let n=1;n<=SLOTS;n++){const K=legacyKeysOf(n);let json=null,em=null;try{json=localStorage.getItem(K.main);em=localStorage.getItem(K.em)}catch(e){}
+    for(const [src,text] of [['legacy',json],['emergency',em]]){if(!text)continue;const srcKey=src==='legacy'?K.main:K.em;
+      try{const g=validateCareer(JSON.parse(text));const hadId=!!g.careerId;ensureCareerIdentity(g);const stored=await idbGet('slot:'+n);
+        let action;
+        if(!stored)action='write';
+        else if(hadId&&stored.careerId===g.careerId)action=((g.rev||0)>(stored.rev||0)||((g.rev||0)===(stored.rev||0)&&(g.savedAt||0)>(stored.t||0)))?'write':'superseded';
+        else action='mismatch';
+        if(action==='mismatch'){report.push({slot:n,src,ok:false,err:'identity_mismatch',kept:true});continue}
+        if(action==='write'){const rec=await recordFrom(g,n,'slot:'+n);const expect=stored?{careerId:stored.careerId,rev:stored.rev}:null;
+          await writeVerified(rec,s2=>expect?(!!s2&&s2.careerId===expect.careerId&&s2.rev===expect.rev):!s2,true)}
+        // the main copy is verified in IndexedDB (or an older revision of the same career): the source may go
+        try{localStorage.removeItem(srcKey);if(src==='legacy')localStorage.removeItem(K.meta)}catch(e){}
+        report.push({slot:n,src,ok:true,action});
+      }catch(e){report.push({slot:n,src,ok:false,err:String(e&&e.message||e),kept:true})}}
+    // the legacy backup moves on its own terms: deleted only after its own verified write, or when a newer backup already exists
+    let bk=null;try{bk=localStorage.getItem(K.backup)}catch(e){}if(bk){try{const b=validateCareer(JSON.parse(bk));ensureCareerIdentity(b);const have=await idbGet('backup:'+n);
+        if(have&&(have.t||0)>=(b.savedAt||0)){localStorage.removeItem(K.backup);report.push({slot:n,src:'backup',ok:true,action:'superseded'})}
+        else{const brec=await recordFrom(b,n,'backup:'+n);await writeVerified(brec,()=>true,false);localStorage.removeItem(K.backup);report.push({slot:n,src:'backup',ok:true,action:'write'})}}
+      catch(e){report.push({slot:n,src:'backup',ok:false,err:String(e&&e.message||e),kept:true})}}}
   return report}
+/* a slot whose legacy copy could not be moved is still a career: shown on the cards, loadable, exportable */
+function legacyLeftover(n){if(STORE.kind!=='idb')return null;const K=legacyKeysOf(n);try{const t=localStorage.getItem(K.main)||localStorage.getItem(K.em);if(!t)return null;let g=null;try{g=JSON.parse(t)}catch(e){}return {text:t,g,key:localStorage.getItem(K.main)?K.main:K.em}}catch(e){return null}}
+function migrationNoticeHTML(){const rep=(STORE.migration||[]).filter(r=>!r.ok);if(!rep.length)return '';
+  return `<div class="card" id="migrationNotice" style="border-color:var(--warn)"><h3 class="sec">שמירות ישנות שלא הועברו</h3><div class="small" style="margin-top:6px">${rep.map(r=>`משבצת ${r.slot} (${r.src==='legacy'?'שמירה':r.src==='backup'?'גיבוי':'צילום חירום'}): ${r.err==='identity_mismatch'?'באחסון החדש כבר יש קריירה אחרת במשבצת הזאת':'שגיאה: '+esc(r.err||'')}`).join('<br>')}</div><div class="muted tiny" style="margin-top:4px">השמירה הישנה נשארה בדפדפן ולא נמחקה. אפשר לייצא אותה לקובץ, לנסות שוב, או לטעון אותה ולהמשיך ממנה (היא תישמר באחסון החדש בשמירה הבאה ותחליף את מה שיש במשבצת).</div><div class="actions" style="margin-top:8px">${rep.filter(r=>r.src!=='backup').map(r=>`<button class="btn sec sm" data-legacyexport="${r.slot}">ייצא משבצת ${r.slot}</button><button class="btn sec sm" data-legacyload="${r.slot}">טען משבצת ${r.slot}</button>`).join('')}<button class="btn sec sm" id="migrationRetry">נסה שוב</button></div></div>`}
+function exportLegacy(n){const L=legacyLeftover(n);if(!L)return toast('לא נמצאה שמירה ישנה');downloadText(L.text,`goalasso-legacy-slot${n}.json`)}
+function loadLegacy(n){const L=legacyLeftover(n);if(!L)return toast('לא נמצאה שמירה ישנה');setCurSlot(n);const old=G,oldUid=uid;try{restoreCareer(L.text,n)}catch(e){G=old;uid=oldUid;return toast('השמירה הישנה לא תקינה')}SV.known=null;SV.blocked=null;SV.legacySource={slot:n,key:L.key,careerId:G.careerId};Promise.resolve(save({force:true})).then(ok=>{render();toast(ok?'הקריירה הישנה נטענה ונשמרה באחסון החדש':'הקריירה נטענה, אבל השמירה נכשלה')})}
+async function retryMigration(){try{STORE.migration=await migrateLegacyCareers();await refreshMeta()}catch(e){}render();const left=(STORE.migration||[]).filter(r=>!r.ok).length;toast(left?'עדיין יש שמירות שלא הועברו':'כל השמירות הועברו')}
 let storageBootP=null;
 function storageBoot(){if(storageBootP)return storageBootP;storageBootP=(async()=>{if(STORE.kind!=='idb')return;try{await idbOpen()}catch(e){STORE.kind='ls';STORE.err=e;return}
   try{STORE.migration=await migrateLegacyCareers()}catch(e){STORE.err=e}await refreshMeta()})();return storageBootP}

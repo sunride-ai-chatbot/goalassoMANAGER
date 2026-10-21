@@ -38,7 +38,8 @@ function confetti(ms){if(window.matchMedia&&window.matchMedia('(prefers-reduced-
   const t0=performance.now();(function fr(t){ctx.clearRect(0,0,cv.width,cv.height);for(const p of ps){p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.fillStyle=p.c;ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6);ctx.restore()}if(t-t0<(ms||2500))requestAnimationFrame(fr);else{ctx.clearRect(0,0,cv.width,cv.height);cv.remove()}})(t0)}
 
 /* ---- export / import ---- */
-async function exportSave(){const dl=window.claude&&window.claude.use?await claude.use('downloads'):null;const json=JSON.stringify(G);const name=`goalasso-save-${(me()&&me().id||'club')}-s${G.season}w${G.wk+1}.json`;
+async function exportSave(){if(!G)return toast('אין קריירה לייצא');return downloadText(JSON.stringify(G),`goalasso-save-${(me()&&me().id||'club')}-s${G.season}w${G.wk+1}.json`)}
+async function downloadText(json,name){const dl=window.claude&&window.claude.use?await claude.use('downloads'):null;
   if(dl){try{await dl.save({filename:name,data:json});toast('הקובץ נשמר');return}catch(e){}}
   try{if(typeof Blob!=='undefined'&&URL.createObjectURL){const url=URL.createObjectURL(new Blob([json],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.rel='noopener';document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(url)},4000);toast('קובץ הגיבוי יורד');return}}catch(e){}
   try{await navigator.clipboard.writeText(json);toast('הורדה לא זמינה כאן, השמירה הועתקה ללוח')}catch(e){const ta=document.createElement('textarea');ta.value=json;document.body.appendChild(ta);ta.select();toast('סמן והעתק את הטקסט');setTimeout(()=>ta.remove(),8000)}}

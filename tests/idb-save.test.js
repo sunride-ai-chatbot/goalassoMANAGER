@@ -32,7 +32,7 @@ async function unpack(rec){if(!rec.gz)return rec.data;const ds=new Decompression
  assert.ok(json1.length>rec.data.length*3,'compression ratio');
  assert.equal(a.eval("JSON.stringify(slotMeta(1)).includes(me().name)"),true);
  const b=boot(f1);await b.ILM.ready;assert.ok(b.ILM.G,'reloaded from IndexedDB');assert.equal(b.ILM.G.careerId,G1.careerId);assert.equal(b.ILM.G.rev,G1.rev);assert.equal(b.ILM.me().id,'hpt');assert.equal(b.ILM.G.v,b.eval('SAVE_VERSION'));
- console.log('round trip ok: bytes',json1.length,'→',rec.data.length);
+ console.log('round trip ok: bytes',json1.length,'→',rec.data.length);a.close();b.close();
 
  // 2. legacy localStorage careers (v7, three slots, with a backup) migrate and are deleted only after verification
  const f2=new fidb.IDBFactory();
@@ -48,7 +48,7 @@ async function unpack(rec){if(!rec.gz)return rec.data;const ds=new Decompression
  const bk=await stored(f2,'backup:1');assert.ok(bk,'legacy backup migrated');assert.equal(JSON.parse(await unpack(bk)).wk,0);
  assert.equal(c.eval('slotMeta(2).club'),l2club.name);
  const rep=c.ILM.storage.migration;assert.equal(JSON.stringify(rep.filter(r=>!r.ok).map(r=>r.slot)),'[3]');
- console.log('legacy migration ok:',JSON.stringify(rep));
+ console.log('legacy migration ok:',JSON.stringify(rep));c.close();
 
  // 3. migration must not delete the legacy copy when the IndexedDB write fails
  const f3=new fidb.IDBFactory();const origPut=fidb.IDBObjectStore.prototype.put;
@@ -56,7 +56,7 @@ async function unpack(rec){if(!rec.gz)return rec.data;const ds=new Decompression
  const c3=boot(f3,{ilm2:JSON.stringify(legacy)});await c3.ILM.ready;
  fidb.IDBObjectStore.prototype.put=origPut;
  assert.equal(c3.localStorage.getItem('ilm2'),JSON.stringify(legacy),'legacy copy kept after failed migration');assert.equal(await stored(f3,'slot:1'),undefined);
- console.log('failed migration keeps legacy copy ok');
+ console.log('failed migration keeps legacy copy ok');c3.close();
 
  // 4. two tabs: the stale one cannot overwrite the newer save, and can take it over explicitly
  const tabA=boot(f1);await tabA.ILM.ready;const tabB=boot(f1);await tabB.ILM.ready;assert.equal(tabA.ILM.G.rev,tabB.ILM.G.rev);
@@ -70,7 +70,7 @@ async function unpack(rec){if(!rec.gz)return rec.data;const ds=new Decompression
  // the other tab now sees a conflict on its next save and can reload the newer version
  tabB.eval('me().money=5');assert.equal(await tabB.eval('save()'),false);assert.ok(tabB.document.getElementById('conflictLoad'));
  click(tabB.document.getElementById('conflictLoad'));await sleep(300);assert.equal(tabB.ILM.me().money,1);assert.equal(await tabB.eval('save()'),true);
- console.log('two-tab compare-and-set ok');
+ console.log('two-tab compare-and-set ok');tabA.close();tabB.close();
 
  // 5. consecutive writes coalesce and the last one wins
  const tabC=boot(f1);await tabC.ILM.ready;const before=tabC.ILM.G.rev;let last;for(let i=1;i<=25;i++){tabC.eval(`me().money=${1000*i}`);last=tabC.eval('save()')}assert.equal(await last,true);
@@ -88,11 +88,11 @@ async function unpack(rec){if(!rec.gz)return rec.data;const ds=new Decompression
  console.log('quota failure and recovery ok');
 
  // 7. live match survives a reload
- tabC.eval("G.view='home';render()");const t=tabC.document.getElementById('toLineupBtn');if(t){click(t)}
- click(tabC.document.getElementById('playBtn'));assert.ok(tabC.ILM.G.live,'live match running');tabC.eval('for(let i=0;i<30;i++)stepMinute(G.live)');const minute=tabC.ILM.G.live.m;assert.equal(await tabC.eval('save()'),true);
+ tabC.eval("G.view='home';render()");for(let i=0;i<8;i++){if(tabC.document.getElementById('toLineupBtn'))break;click(tabC.document.getElementById('playBtn'));await sleep(50);tabC.eval("G.paperPop=[];const m=document.getElementById('modal');m&&m.remove();document.getElementById('npModal')?.remove();G.view='home';render()")}
+ click(tabC.document.getElementById('toLineupBtn'));click(tabC.document.getElementById('playBtn'));assert.ok(tabC.ILM.G.live,'live match running');tabC.eval('for(let i=0;i<30;i++)stepMinute(G.live)');const minute=tabC.ILM.G.live.m;assert.equal(await tabC.eval('save()'),true);
  const tabD=boot(f1);await tabD.ILM.ready;assert.ok(tabD.ILM.G.live,'live match restored');assert.equal(tabD.ILM.G.live.m,minute);
  tabD.eval('G.live=null;save()');await tabD.ILM.whenSaved();
- console.log('live match restore ok at minute',minute);
+ console.log('live match restore ok at minute',minute);tabC.close();tabD.close();
 
  // 8. an emergency snapshot parked in localStorage during unload is newer than the record and gets applied
  rec=await stored(f1,'slot:1');const em=JSON.parse(await unpack(rec));em.rev=rec.rev+5;em.clubs.find(x=>x.id==='hpt').money=42;
@@ -102,6 +102,6 @@ async function unpack(rec){if(!rec.gz)return rec.data;const ds=new Decompression
 
  // 9. delete removes the slot, its backup, and the meta
  await tabE.eval('deleteSlot(1)');assert.equal(await stored(f1,'slot:1'),undefined);assert.equal(await stored(f1,'backup:1'),undefined);assert.equal(tabE.eval('slotMeta(1)'),null);
- console.log('delete ok');
+ console.log('delete ok');tabE.close();
  console.log('idb persistence assertions passed; errors',JSON.stringify(errors));
 }catch(e){console.log('errors',JSON.stringify(errors));console.error(e);process.exitCode=1}finally{for(const w of windows)try{w.close()}catch(e){}}})();
