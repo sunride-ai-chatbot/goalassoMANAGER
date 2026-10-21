@@ -78,3 +78,7 @@
   .modal .card{max-height:100%;max-height:calc(100dvh - 24px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));min-width:0}
 }
 
+/* save-cycle indicator in the top bar: shown only while saving, right after a confirmed write, or on failure */
+.saveind:empty{display:none}
+.saveind{display:inline-block;font-size:11px;color:var(--muted);min-height:14px;line-height:14px;margin-inline-start:8px;transition:opacity .3s}
+.saveind.saving{color:var(--muted)}.saveind.saved{color:var(--good)}.saveind.error{color:var(--bad);font-weight:700}.saveind.stale{color:var(--warn);font-weight:700}

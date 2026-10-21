@@ -21,7 +21,7 @@ async function main(){try{
  w.__legacy=JSON.parse(valid);w.__legacy.v=4;
  w.eval("window.oldMigration=MIGRATIONS[0][2];MIGRATIONS[0][2]=()=>{throw new Error('migration failure')}");
  assert.equal(w.eval('installCareer(JSON.stringify(window.__legacy),1)'),false);assert.equal(w.localStorage.getItem('ilm2'),valid);assert.equal(w.ILM.me().money,money);
- w.eval('MIGRATIONS[0][2]=window.oldMigration');assert.equal(w.eval('installCareer(JSON.stringify(window.__legacy),1)'),true);assert.equal(state(w).v,7);
+ w.eval('MIGRATIONS[0][2]=window.oldMigration');assert.equal(w.eval('installCareer(JSON.stringify(window.__legacy),1)'),true);assert.equal(state(w).v,w.eval('SAVE_VERSION'));
  // A stale incoming offer cannot overdraw its buyer or move a player.
  w.eval("window.buyer=G.clubs.find(c=>c.id!==G.me);window.target=me().players.find(p=>!p.loan);window.buyer.players=window.buyer.players.slice(0,20);window.buyer.money=1;G.offers=[{pid:window.target.id,from:window.buyer.id,fee:1000000,wk:G.wk}]");
  w.eval('acceptOffer(0)');assert.equal(w.eval('window.buyer.money'),1);assert.equal(w.eval('me().players.includes(window.target)'),true);assert.equal(w.eval('G.offers.length'),1);

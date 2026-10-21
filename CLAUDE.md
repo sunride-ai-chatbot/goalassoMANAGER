@@ -9,11 +9,11 @@ Hebrew (RTL), mobile-first football management game. Single-file web build.
 - `src/build.py` — `python3 -I src/build.py` → writes `ligat-haal-manager.html` at the repo root (concatenates the modules, embeds data, splash, logo and the portrait manifest). Placeholders `__CLUBS_JSON__`, `__EURO_JSON__`, `__DATA_META__`, `__SPLASH_IMG__`, `__LOGO_IMG__`, `__PLAYER_VISUALS__` are filled by the build.
 - `data/*.json` — Israeli club squads; `data/euro/*.json` — European squads.
 - `assets/` — media loaded at runtime by relative path (intro/signing videos, lineup stadium, newspaper photos, trophy moments). They must sit next to the built HTML.
-- `tests/*.test.js` — jsdom suites (`npm install`, `npm run build`, `npm test`). A suite passes when its last line shows `errors []` / `errs []`.
+- `tests/*.test.js` — jsdom suites (`npm install`, `npm run build`, `npm test`). A suite passes when its last line shows `errors []` / `errs []`. `idb-save.test.js` runs the IndexedDB path on `fake-indexeddb`; `window.ILM.ready` resolves after boot and `window.ILM.whenSaved()` after the pending write.
 - `supabase/migrations/` — Phase 2 schema (not applied yet). `.env.example` lists the only public values the client may use.
 
 ## Rules
-- Keep saves backward compatible: `SAVE_VERSION` + `MIGRATIONS` in `src/js/22-save.js`.
+- Keep saves backward compatible: `SAVE_VERSION` + `MIGRATIONS` in `src/js/22-save.js`. Careers persist in IndexedDB (gzip, one record per slot + `backup:N`, career id + revision with compare-and-set); browsers without IndexedDB and the jsdom suites use the legacy localStorage layout. `save()`/`load()`/`installCareer()` return a Promise in IndexedDB mode and a boolean otherwise — wrap with `Promise.resolve(...)` when the outcome matters.
 - UI text in natural Hebrew; isolate numbers/Latin with `<bdi>`.
 - Never put a Supabase service_role/secret key in the repo or the client.
 - Multiplayer is a future phase — do not build it.
