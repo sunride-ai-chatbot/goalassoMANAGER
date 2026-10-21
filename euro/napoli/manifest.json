@@ -12,7 +12,7 @@
     {
      "title": "File:Palermo FC v Reggina Calcio, 5 February 2023 - 06.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Palermo_FC_v_Reggina_Calcio,_5_February_2023_-_06.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Palermo_FC_v_Reggina_Calcio%2C_5_February_2023_-_06.jpg/960px-Palermo_FC_v_Reggina_Calcio%2C_5_February_2023_-_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/22/Palermo_FC_v_Reggina_Calcio%2C_5_February_2023_-_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1170,
      "height": 814,
@@ -25,7 +25,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2023-02-05",
-     "file": "00-Q20740730-0.jpg",
+     "file": "00-Q20740730-0-w1280.jpg",
      "fromP18": false
     }
    ],
@@ -165,7 +165,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2022-12-01",
-     "file": "02-Q17517223-0.jpg",
+     "file": "02-Q17517223-0-w1280.jpg",
      "fromP18": true
     },
     {
@@ -184,7 +184,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2022-12-01",
-     "file": "02-Q17517223-1.jpg",
+     "file": "02-Q17517223-1-w1280.jpg",
      "fromP18": false
     },
     {
@@ -203,7 +203,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2022-12-01",
-     "file": "02-Q17517223-2.jpg",
+     "file": "02-Q17517223-2-w1280.jpg",
      "fromP18": false
     },
     {
@@ -222,13 +222,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2017-06-20 19:05:59",
-     "file": "02-Q17517223-3.jpg",
+     "file": "02-Q17517223-3-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:Lens - Torino FC (02-08-2023) 50.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Lens_-_Torino_FC_(02-08-2023)_50.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lens_-_Torino_FC_%2802-08-2023%29_50.jpg/960px-Lens_-_Torino_FC_%2802-08-2023%29_50.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lens_-_Torino_FC_%2802-08-2023%29_50.jpg/1280px-Lens_-_Torino_FC_%2802-08-2023%29_50.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2300,
      "height": 2875,
@@ -241,7 +241,64 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2023-08-02 20:13:34",
-     "file": "02-Q17517223-4.jpg",
+     "file": "02-Q17517223-4-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:Vanja Milinković Savić na utakmici protiv CG 2.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_2.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_2.jpg/1280px-Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3024,
+     "height": 4032,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Vux33",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-03-27 19:56:47",
+     "file": "02-Q17517223-5-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:Vanja Milinković Savić na utakmici protiv CG 3.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_3.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_3.jpg/1280px-Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3024,
+     "height": 4032,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Vux33",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-03-27 21:47:52",
+     "file": "02-Q17517223-6-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:Vanja Milinković Savić na utakmici protiv CG 4.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_4.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_4.jpg/1280px-Vanja_Milinkovi%C4%87_Savi%C4%87_na_utakmici_protiv_CG_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3024,
+     "height": 4032,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Vux33",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-03-27 21:47:54",
+     "file": "02-Q17517223-7-w1280.jpg",
      "fromP18": false
     }
    ],
