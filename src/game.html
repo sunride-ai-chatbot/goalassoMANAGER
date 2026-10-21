@@ -91,9 +91,9 @@ h3{font-size:18px}
 .pl .name{flex:1;min-width:0}
 .pl .name b{display:block;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pl .name small{color:var(--muted);font-size:12px}
-.pl .name small .it{display:inline-block;unicode-bidi:isolate}
+.pl .name small .it{display:inline-block;unicode-bidi:isolate;white-space:nowrap}
 .pl .name small .it+.it::before{content:"·";margin:0 5px;color:var(--line2)}
-.pl .name small .it b{color:var(--fg);font-weight:600}
+.pl .name small .it b{display:inline;color:var(--fg);font-weight:600;overflow:visible}
 .pl .ovr{font-family:var(--display);font-size:20px;width:40px;height:40px;display:grid;place-items:center;border-radius:10px;flex:none;color:#111;background:var(--tier,#8e98ab);box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)}
 .t-gold{--tier:#f3cf5a}.t-silver{--tier:#cfd6e3}.t-bronze{--tier:#c98b5a}.t-unk{--tier:#5e6a85}
 .pl .ovr.unk{font-size:12px;letter-spacing:-.3px;color:#eef;background:#2a3550;border:1px dashed #5e6a85}
@@ -193,7 +193,7 @@ h3{font-size:18px}
 .np-head{text-align:center;overflow:hidden}
 .np-brand{line-height:1;border-bottom:1px solid var(--ink);padding-bottom:6px}.np-logo{font-weight:900;font-size:19px;letter-spacing:-.4px;display:inline-block}.np-logo b{color:var(--ink)}.np-logo i{color:var(--red);font-style:normal}
 .np-brand small{display:block;font-size:11px;font-weight:500;color:#2a2a2a;margin-top:3px}
-.np-title{font-family:"Karantina","Heebo",sans-serif;font-weight:700;font-size:clamp(48px,19vw,150px);font-size:clamp(48px,23cqi,150px);line-height:.8;white-space:nowrap;overflow:hidden;max-width:100%;letter-spacing:-.5px;margin:8px 0 6px}
+.np-title{font-family:"Karantina","Heebo",sans-serif;font-weight:700;font-size:clamp(48px,19vw,150px);font-size:clamp(48px,23cqi,150px);line-height:.8;white-space:nowrap;max-width:100%;letter-spacing:-.5px;margin:8px 0 6px}
 .np-meta{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);padding:4px 0}
 .np-meta span:first-child,.np-meta span:last-child{white-space:nowrap}.np-red{flex:1;height:3px;background:var(--red)}
 .np-ribbon{display:table;margin:16px auto 8px;background:var(--red);color:#fff;font-weight:800;font-size:16px;line-height:1.2;padding:6px 18px;text-align:center}
@@ -863,7 +863,8 @@ const pick=a=>a[Math.floor(Math.random()*a.length)];
 const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const gauss=()=>{let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)};
-const NIS=n=>{const s=n<0?'-':'';n=Math.abs(n);return s+'₪'+(n>=1e6?(n/1e6).toFixed(n>=1e7?0:1)+'M':n>=1e3?(n/1e3).toFixed(0)+'K':n.toFixed(0))};
+/* amounts are LTR runs inside RTL text, so the minus sign and the ₪ stay in place: wrapped in LRI…PDI isolates */
+const NIS=n=>{const s=n<0?'-':'';n=Math.abs(n);return '\u2066'+s+'₪'+(n>=1e6?(n/1e6).toFixed(n>=1e7?0:1)+'M':n>=1e3?(n/1e3).toFixed(0)+'K':n.toFixed(0))+'\u2069'};
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const byOvr=(a,b)=>b.ovr-a.ovr;
@@ -2743,15 +2744,34 @@ function intlBreak(ev){
   ntBreak(ev.m);
 }
 function addLog(what,amt){G.log.unshift({wk:G.wk,s:G.season,what,amt});G.log=G.log.slice(0,80)}
+/* Single source of truth for the fixed weekly cash flow. Rows marked club:true apply to every club in weeklyEconomy;
+   the rest (manager, bank, naming, staff, ads) are paid elsewhere and only appear in the finance view (full:true). */
+function weeklyBreakdown(c,full){
+  const rows=[];const R=(label,amt,club)=>{if(amt)rows.push({label,amt,club:!!club})};
+  const wages=c.players.reduce((t,p)=>t+p.wage,0)+(c.youth||[]).reduce((t,p)=>t+Math.round(p.wage*.3),0);
+  const tv=c.tier===4?55000:180000+(c.tier===1?80000:c.tier===2?30000:0);
+  const sp=c.sponsor?Math.round(c.sponsor.annual/46):0;
+  const support=c.tier===4?120000:c.tier===3?40000:0;
+  const maint=Math.round(c.cap*(c.tier===4?1:3));const ops=c.tier===1?480000:c.tier===2?260000:c.tier===3?150000:70000;
+  const merch=Math.round((c.fans??50)*(c.tier===1?1600:c.tier===2?900:c.tier===3?500:220));
+  R('שכר שחקנים',-wages,true);R('זכויות שידור',tv,true);if(sp)R(`ספונסר ${c.sponsor.name}`,sp,true);R('תמיכת בעלים ועירייה',support,true);
+  R('תחזוקת אצטדיון',-maint,true);R('תפעול המועדון (צוות, נסיעות, נוער)',-ops,true);R('חנות המועדון ומנויים',merch,true);
+  if(full&&c.id===G.me){
+    R('שכר המנג\'ר',-(G.manager&&G.manager.wage||0));
+    if(G.staff)for(const r in G.staff){const st=G.staff[r];if(st&&!st.base&&st.wage)R(`שכר ${STAFF_ROLES[r].he}`,-st.wage)}
+    if(G.bank&&G.bank.left>0)R('החזר הלוואה',-G.bank.weekly);
+    if(c.naming)R('זכויות שם האצטדיון',Math.round(c.naming.annual/46));
+    for(const a of (c.ads||[]))if(a.left>0)R(`פרסום ${a.brand}`,a.weekly);
+  }
+  return rows;
+}
+function weeklyNet(c){return weeklyBreakdown(c,true).reduce((t,r)=>t+r.amt,0)}
 function weeklyEconomy(){
   for(const c of [...G.clubs,...G.leumit]){
-    const wages=c.players.reduce((t,p)=>t+p.wage,0)+c.youth.reduce((t,p)=>t+Math.round(p.wage*.3),0);c.money-=wages;
-    const tv=c.tier===4?55000:180000+(c.tier===1?80000:c.tier===2?30000:0);c.money+=tv;
     if(!c.sponsor&&c.id!==G.me){try{c.sponsor=sponsorOffers(c)[0]}catch(e){}}
-    const sp=c.sponsor?Math.round(c.sponsor.annual/46):0;c.money+=sp;
-    const support=c.tier===4?120000:c.tier===3?40000:0;if(support){c.money+=support;if(c.id===G.me)addLog('תמיכת בעלים ועירייה',support)}
-    const maint=Math.round(c.cap*(c.tier===4?1:3));c.money-=maint;const ops=c.tier===1?480000:c.tier===2?260000:c.tier===3?150000:70000;c.money-=ops;const merch=Math.round((c.fans??50)*(c.tier===1?1600:c.tier===2?900:c.tier===3?500:220));c.money+=merch;
-    if(c.id===G.me){if(c.money<0){G.board.conf=clamp(G.board.conf-1,0,100);if(!G.debtWarned){G.debtWarned=true;news('הקופה במינוס. ההנהלה דורשת לאזן את התקציב.')}}else G.debtWarned=false;c.money-=G.manager.wage;G.manager.bank+=G.manager.wage;addLog('שכר שחקנים',-wages);addLog('זכויות שידור',tv);if(sp)addLog(`ספונסר ${c.sponsor.name}`,sp);addLog('תחזוקת אצטדיון',-maint);addLog('תפעול המועדון (צוות, נסיעות, נוער)',-ops);addLog('חנות המועדון ומנויים',merch);addLog('שכר המנג\'ר',-G.manager.wage)}
+    const rows=weeklyBreakdown(c).filter(r=>r.club);
+    for(const r of rows)c.money+=r.amt;
+    if(c.id===G.me){if(c.money<0){G.board.conf=clamp(G.board.conf-1,0,100);if(!G.debtWarned){G.debtWarned=true;news('הקופה במינוס. ההנהלה דורשת לאזן את התקציב.')}}else G.debtWarned=false;c.money-=G.manager.wage;G.manager.bank+=G.manager.wage;for(const r of rows)addLog(r.label,r.amt);addLog('שכר המנג\'ר',-G.manager.wage)}
   }
   bankWeekly();namingWeekly();
 }
@@ -3432,12 +3452,14 @@ function frontPageHTML(st,o){o=o||{};const t=npTypeOf(st);const c=club(st.team);
    <footer class="np-foot">חדשות מתוך עולם המשחק</footer></article>`}
 /* ---- modal: own dialog (focus, Escape, scroll lock, safe areas). Never mutates the story's event. ---- */
 let NPM=null;
+/* the masthead is one word-pair that must never clip: shrink it until it fits the column (fallback fonts are wider than Karantina) */
+function fitMasthead(root){const el=root&&root.querySelector('.np-title');if(!el)return;el.style.fontSize='';let fs=parseFloat(getComputedStyle(el).fontSize)||48;let guard=0;while(el.scrollWidth>el.clientWidth+1&&fs>22&&guard++<14){fs*=.93;el.style.fontSize=fs.toFixed(1)+'px'}}
 function openFrontPage(st,opts){opts=opts||{};closeFrontPage(true);const prevFocus=document.activeElement;const sy=window.scrollY;
   const root=document.createElement('div');root.id='npModal';root.className='npm';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-labelledby','npH');
   const nextN=opts.queue?G.paperPop.length:0;
   root.innerHTML=`<div class="npm-scroll"><button class="npm-x" type="button" data-npclose aria-label="סגור">✕</button>${frontPageHTML(st,{live:opts.live,lazy:false})}</div>
    <div class="npm-bar">${nextN?`<button class="btn" type="button" data-npnext>לכתבה הבאה (${nextN})</button>`:''}<button class="btn ${nextN?'sec':''}" type="button" data-npclose>סגור</button>${opts.queue?`<button class="btn sec" type="button" data-npoff>בלי פופ-אפים של עיתון</button>`:''}</div>`;
-  document.body.appendChild(root);const lockPrev=document.body.style.overflow;document.body.style.overflow='hidden';
+  document.body.appendChild(root);const lockPrev=document.body.style.overflow;document.body.style.overflow='hidden';fitMasthead(root);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>fitMasthead(root));
   const onKey=e=>{if(e.key==='Escape'){e.preventDefault();closeFrontPage()}else if(e.key==='Tab'){const f=[...root.querySelectorAll('button')];if(!f.length)return;const i=f.indexOf(document.activeElement);if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}}};
   const onClick=e=>{const t=e.target;if(t===root||t.closest('[data-npclose]'))return closeFrontPage();if(t.closest('[data-npnext]')){closeFrontPage(true);return showPaperPop()}if(t.closest('[data-npoff]')){G.paperPopOff=true;G.paperPop=[];save();closeFrontPage();toast('אפשר להפעיל שוב בהגדרות')}};
   document.addEventListener('keydown',onKey);root.addEventListener('click',onClick);
@@ -4081,7 +4103,7 @@ function viewEuro(){
 function viewMoney(){
   const c=me();const wages=c.players.reduce((t,p)=>t+p.wage,0);const sv=c.squadValue;
   const wkLog=G.log.filter(l=>l.s===G.season).slice(0,30);
-  return `<div class="card"><h3 class="sec">כספים</h3><dl class="kv" style="margin-top:10px"><dt>תקציב</dt><dd class="num"><b>${NIS(c.money)}</b></dd><dt>שכר שחקנים לשבוע</dt><dd class="num">${NIS(wages)}</dd><dt>זכויות שידור לשבוע</dt><dd class="num">${NIS(c.tier===4?55000:180000+(c.tier===1?80000:c.tier===2?30000:0))}</dd><dt>ספונסר לשבוע</dt><dd class="num">${NIS(c.sponsor?Math.round(c.sponsor.annual/46):0)}</dd><dt>שווי הסגל</dt><dd class="num">${NIS(sv)}</dd><dt>מאזן שבועי קבוע</dt><dd class="num">${NIS(180000+(c.tier===4?-125000:c.tier===1?80000:c.tier===2?30000:0)+(c.sponsor?Math.round(c.sponsor.annual/46):0)-wages-c.cap*3-G.manager.wage-(c.tier===1?480000:c.tier===2?260000:c.tier===3?150000:70000)+Math.round((c.fans??50)*(c.tier===1?1600:c.tier===2?900:c.tier===3?500:220))-(G.bank?G.bank.weekly:0)+(c.naming?Math.round(c.naming.annual/46):0))}</dd></dl>
+  return `<div class="card"><h3 class="sec">כספים</h3><dl class="kv" style="margin-top:10px"><dt>תקציב</dt><dd class="num"><b>${NIS(c.money)}</b></dd>${weeklyBreakdown(c,true).map(r=>`<dt>${esc(r.label)}</dt><dd class="num" style="color:${r.amt<0?'var(--bad)':'var(--good)'}">${NIS(r.amt)}</dd>`).join('')}<dt>שווי הסגל</dt><dd class="num">${NIS(sv)}</dd><dt>מאזן שבועי קבוע</dt><dd class="num" style="color:${weeklyNet(c)<0?'var(--bad)':'var(--good)'}"><b>${NIS(weeklyNet(c))}</b></dd></dl>
   <div class="muted small" style="margin-top:10px">הכנסות: כרטיסים במשחקי בית (אירופה שווה פי 1.6), זכויות שידור, ספונסר, פרסי ליגה/גביע/אופ"א, מכירות. הוצאות: שכר, תחזוקה, רכישות, בנייה, שכר המנג'ר.</div></div>
   ${(G.payables||[]).length?`<div class="card"><h3 class="sec">תשלומים עתידיים על העברות</h3>${G.payables.map(x=>`<div class="fx"><span class="a">${esc(x.label)}</span><span class="s num">${NIS(x.amount)}</span><span class="h muted tiny">עונה ${x.s} · שבוע ${x.wk+1}</span></div>`).join('')}</div>`:''}
   <div class="card"><h3 class="sec">קהל במשחקי הבית האחרונים</h3>${G.results.filter(r=>r.h===G.me&&r.att).slice(-6).reverse().map(r=>`<div class="fx"><span class="a">${esc(r.an)} <span class="muted tiny">${esc(r.label||'')}</span></span><span class="s num">${r.att.toLocaleString('he')}</span><span class="h num muted">${NIS(r.income||0)}</span></div>`).join('')||'<div class="muted small">עוד לא היה משחק בית</div>'}</div>
@@ -4320,7 +4342,7 @@ function startLive(restored){
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'&&G)save()});
 window.addEventListener('pagehide',()=>{if(G)save()});
 /* ====================== BOOT ====================== */
-function start(){if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}if(!window.__ilmNoSplash)showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);render();try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
+function start(){if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}if(!window.__ilmNoSplash)showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);render();try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
 if(window.claude?.hot?.snapshot)window.claude.hot.snapshot(()=>({}));
 window.ILM={get G(){return G},me,render,NIS,myPos,myDiv,standingsOf,club,myNextMatch};
 window.claude?.hot?.ready?window.claude.hot.ready(start):start();
