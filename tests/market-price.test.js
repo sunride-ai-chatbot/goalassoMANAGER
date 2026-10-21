@@ -33,6 +33,12 @@ async function main(){
     click('[data-mp="MF"]');assert.deepEqual(ids(),[900061]);
     click('[data-ms="price-asc"]');assert.deepEqual(ids(),[900061]);
     click('[data-mp="all"]');
+    // Current squads mark foreign players explicitly; older saves may have only nationality.
+    seller.players.forEach(p=>{p.foreign=false;p.nat='ישראל'});
+    seller.players[0].foreign=true;seller.players[0].nat='זר';
+    delete seller.players[1].foreign;seller.players[1].nat='Brazil';
+    click('[data-mcat="legionnaires"]');assert.deepEqual(ids(),[900000,900001]);
+    click('[data-mcat="all"]');assert.equal(ids().length,50);
     change('marketPrice','budget');
     assert.deepEqual(ids(),[900060,900061,900062,900063,900065]);
     c.money=1000000;w.ILM.render();assert.deepEqual(ids(),[900060,900061,900065]);
