@@ -177,6 +177,7 @@ function marketPriceControls(count,limit){
   <div id="marketPriceNote" class="muted tiny price-note">לפי שווי השחקן המוצג; מחיר העסקה נקבע במשא ומתן.</div>
   <div class="market-results" role="status" aria-live="polite">${count>limit?`מוצגים ${limit} מתוך ${count} שחקנים בסינון`:`${count} שחקנים בסינון`}</div></div>`;
 }
+function isMarketLegionnaire(p){if(!p)return false;if(p.foreign===true)return true;const nat=String(p.nat||'').trim().toLocaleLowerCase();return !!nat&&!['israel','israeli','ישראל','ישראלי','ישראלית'].includes(nat)}
 function marketPriceEmpty(){return `<div class="card market-empty"><p>אין שחקנים שמתאימים לחיפוש ולמסננים שבחרת.</p><div class="actions">${marketSearch?'<button type="button" class="btn sec" data-market-search-reset>נקה חיפוש</button>':''}${marketCategory!=='all'?'<button type="button" class="btn sec" data-mcat="all">הצג את כל השחקנים</button>':''}${marketPrice!=='all'?'<button type="button" class="btn sec" data-price-reset>נקה סינון מחיר</button>':''}</div></div>`}
 function applyMarketPriceRange(){
   const min=$('marketPriceMin').value,max=$('marketPriceMax').value;
@@ -198,7 +199,7 @@ function viewMarket(){
   const c=me();const open=WINDOW(G.wk);
   let pool=[...G.clubs,...G.leumit].filter(x=>x.id!==G.me).flatMap(x=>x.players.map(p=>({p,c:x})));
   if(marketPos!=='all')pool=pool.filter(x=>x.p.pos===marketPos);
-  if(marketCategory==='legionnaires')pool=pool.filter(x=>x.p.foreign===true);
+  if(marketCategory==='legionnaires')pool=pool.filter(x=>isMarketLegionnaire(x.p));
   if(marketSearch){const q=marketSearch.trim().toLocaleLowerCase();pool=pool.filter(({p})=>`${fullName(p)} ${p.first||''} ${p.last||''} ${p.en||''} ${p.he||''}`.toLocaleLowerCase().includes(q))}
   pool=filterMarketPrices(pool,p=>p.value);
   pool.sort((a,b)=>{
