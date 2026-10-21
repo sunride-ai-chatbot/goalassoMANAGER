@@ -1,0 +1,31 @@
+/* ===== DIRECTION A · "לילה של שידור": charcoal & navy, restrained gold, lime for primary actions ===== */
+:root{--bg:#07080c;--bg2:#0e1016;--panel:#13151c;--panel2:#0c0d12;--line:#23262f;--line2:#343846;--fg:#f4efe2;--muted:#a8a294;--accent:#c6f24e;--accent-deep:#9fd12a;--gold:#e9c46a;--title:"Karantina","Heebo",sans-serif}
+body{background:radial-gradient(120% 60% at 50% -10%,#141a2b 0%,#07080c 55%) fixed,#07080c}
+#top{background:linear-gradient(180deg,#11131a,#0a0b10);border-bottom:1px solid rgba(233,196,106,.22)}
+#top .club b{font-family:var(--title);font-weight:700;font-size:24px;letter-spacing:.2px}
+#nav{background:linear-gradient(180deg,#0d0e13,#08090c);border-top:1px solid rgba(233,196,106,.2)}
+#nav button.on{color:var(--gold)}#nav button.on::before{background:var(--gold);box-shadow:0 0 10px rgba(233,196,106,.6)}
+.card{background:linear-gradient(180deg,#14161d,#0d0e13);border:1px solid var(--line);box-shadow:0 1px 0 rgba(233,196,106,.06) inset}
+.sec:not(.btn){font-family:var(--title);font-weight:700;font-size:26px;line-height:1;letter-spacing:.2px}
+h3.sec:not(.btn){font-size:24px}
+.sec:not(.btn)::before{background:var(--gold);box-shadow:0 0 10px rgba(233,196,106,.45);height:20px}
+.card h2,.view>h2{font-family:var(--title);font-weight:700;font-size:30px;line-height:1}
+.btn{background:linear-gradient(180deg,#d8ff5c,#b6f03c);color:#0b1004;box-shadow:0 6px 18px rgba(182,240,60,.22),inset 0 -2px 0 rgba(0,0,0,.15)}
+.btn.sec{background:linear-gradient(180deg,#1a1c24,#121318);color:var(--fg);box-shadow:inset 0 0 0 1px var(--line2)}
+.btn.sec:hover{box-shadow:inset 0 0 0 1px rgba(233,196,106,.5)}
+.btn.big{font-family:var(--title);font-weight:700;font-size:26px;padding:12px 14px;line-height:1}
+.tabs button{background:#0f1116;border-color:var(--line)}
+.tabs button.on{background:linear-gradient(180deg,#2a2416,#1a170f);color:#f6dc8c;border-color:rgba(233,196,106,.55)}
+.mt button.on{background:linear-gradient(180deg,#2a2416,#1a170f)!important;color:#f6dc8c!important;box-shadow:inset 0 0 0 1px rgba(233,196,106,.55)!important}
+.tag{background:#1b1d25;color:var(--muted)}.tag.info{background:rgba(233,196,106,.12);color:#f0d68f}
+.pl{background:rgba(18,20,27,.92);border-color:var(--line)}
+.hero-top h1{font-family:var(--title);font-weight:700;font-size:58px;line-height:.9;text-shadow:0 0 30px rgba(233,196,106,.25)}
+.hero-top h1 span{color:var(--gold)}
+.hero-top::before{background:radial-gradient(ellipse at center,rgba(233,196,106,.16),transparent 65%)}
+.ev-title{font-family:var(--title);font-weight:700;font-size:30px;line-height:1;margin:0}
+.ev-hero{background:linear-gradient(180deg,rgba(7,8,12,.35) 0%,rgba(7,8,12,.55) 45%,#0b0c11 100%),var(--spimg) center 56%/cover no-repeat;border-color:rgba(233,196,106,.28);padding-top:16px;min-height:280px;display:flex;flex-direction:column}
+.ev-hero .ev-title{font-size:40px;color:#fff;text-shadow:0 3px 14px rgba(0,0,0,.7)}
+.ev-hero .board{background:rgba(7,8,12,.62);backdrop-filter:blur(3px);border-radius:12px;margin-top:auto!important}
+.teamcard{background:linear-gradient(180deg,#15171e,#0d0e13);border-color:var(--line)}
+.winchip.open{color:var(--accent)}
+
