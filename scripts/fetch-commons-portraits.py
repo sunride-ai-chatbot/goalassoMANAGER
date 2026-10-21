@@ -117,7 +117,8 @@ def candidates_for(name):
     for i in range(0, len(ids), 50):
         r = wd({'action': 'wbgetentities', 'ids': '|'.join(ids[i:i + 50]), 'props': 'claims|labels|aliases|sitelinks', 'languages': 'en|mul'})
         ents.update(r.get('entities', {}))
-    return [e for e in ents.values() if FOOTBALLER in claim_ids(e, 'P106')]
+    uniq = {e['id']: e for e in ents.values() if 'id' in e}   # ids that redirect to one item come back twice
+    return [e for e in uniq.values() if FOOTBALLER in claim_ids(e, 'P106')]
 
 def ent_names(ent):
     out = [ent.get('labels', {}).get(l, {}).get('value', '') for l in ('en', 'mul')]
