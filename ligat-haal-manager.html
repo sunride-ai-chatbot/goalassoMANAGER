@@ -1707,7 +1707,7 @@ function startNegotiation(pid){const c=me();if(!WINDOW(G.wk))return toast('חל�
   closeModal();negModal(n.id)}
 function negById(id){return (G.negs||[]).find(x=>x.id===id)}
 function submitClubOffer(nid,fee,inst,sellon){
-  const n=negById(nid);if(!n||n.stage!=='club')return;const c=me();const f=sellerClub(n.pid);if(!f){n.stage='dead';n.log.push('השחקן כבר לא זמין');return}
+  const n=negById(nid);if(!n||n.stage!=='club')return;if(n.loanRequest)return submitLoanOffer(nid,fee);const c=me();const f=sellerClub(n.pid);if(!f){n.stage='dead';n.log.push('השחקן כבר לא זמין');return}
   const {p,c:sc}=f;fee=Math.max(0,Math.round(fee/5e4)*5e4);n.offer={fee,inst,sellon};n.rounds++;
   const upfront=inst===1?fee:Math.round(fee/inst);if(c.money<upfront){n.log.push(`אין לך ${NIS(upfront)} לתשלום הראשון`);n.rounds--;return}
   const eff=offerEffective(n.offer);const ratio=eff/n.ask;const noise=rnd(-.04,.04);const structF=o=>(o.inst===1?1:o.inst===2?.95:.9)*(1+(o.sellon||0)/200);
@@ -1746,7 +1746,7 @@ function playerInterest(p,c,o,n){
 }
 function submitPlayerOffer(nid,wage,years,role,bonus){
   const n=negById(nid);if(!n||n.stage!=='player')return;const c=me();const f=sellerClub(n.pid);if(!f){n.stage='dead';n.log.push('השחקן כבר לא זמין');return}
-  const {p,c:sc}=f;wage=Math.max(5000,Math.round(wage/500)*500);n.poffer={wage,years,role,bonus};n.prounds++;
+  const {p,c:sc}=f;if(n.loan)years=1;wage=Math.max(5000,Math.round(wage/500)*500);n.poffer={wage,years,role,bonus};n.prounds++;
   const interest=playerInterest(p,c,n.poffer,n);n.interest=interest;
   if(c.money<n.offer.fee/(n.offer.inst||1)+bonus){n.log.push('אין מספיק כסף לתשלום הראשון ולבונוס החתימה');n.prounds--;return}
   if(interest>=62){n.stage='review';n.log.push(`${fullName(p)} מסכים לתנאים. נשאר לאשר את הסיכום.`);save();return}
@@ -1841,37 +1841,38 @@ function playerModalAny(pid){
   <div class="actions" style="margin-top:12px">${n?`<button class="btn" data-neg="${n.id}">למשא ומתן</button>`:`<button class="btn" data-startneg="${p.id}" ${open&&c.players.length<30?'':'disabled'}>${open?'הגש הצעה':'החלון סגור'}</button>`}${!known&&p.lg?`<button class="btn sec" data-qscout="${p.id}">בדיקת סקאוט · ₪180K</button>`:''}<button class="btn sec" data-close>סגור</button></div>`);
 }
 function negModal(nid){
-  const n=negById(nid);if(!n)return;const c=me();const f=sellerClub(n.pid)||(()=>{const p=c.players.find(x=>x.id===n.pid);return p?{p,c:c}:null})();if(!f)return;const {p,c:sc}=f;
+  const n=negById(nid);if(!n)return;if(n.stage==='club'&&n.loanAsked&&!n.loan&&!n.loanRequest)requestLoan(nid);const c=me();const f=sellerClub(n.pid)||(()=>{const p=c.players.find(x=>x.id===n.pid);return p?{p,c:c}:null})();if(!f)return;const {p,c:sc}=f;
   const d=openModal('',e=>{
     const t=e.target;
     if(t.closest('[data-step]')){const [field,delta]=t.closest('[data-step]').dataset.step.split(':');const inp=d.querySelector('#'+field);inp.value=Math.max(0,(+inp.value||0)+(+delta));return}
-    if(t.closest('#sendClub')){const fee=+d.querySelector('#fee').value||0;const inst=+d.querySelector('#inst').value;const sellon=+d.querySelector('#sellon').value;submitClubOffer(nid,fee,inst,sellon);draw();return}
+    if(t.closest('#sendClub')){const fee=+d.querySelector('#fee').value||0;const inst=n.loanRequest?1:+d.querySelector('#inst').value;const sellon=n.loanRequest?0:+d.querySelector('#sellon').value;submitClubOffer(nid,fee,inst,sellon);draw();return}
     if(t.closest('#sendPlayer')){const wage=+d.querySelector('#wage').value||0;const years=+d.querySelector('#years').value;const role=d.querySelector('#role').value;const bonus=+d.querySelector('#bonus').value||0;submitPlayerOffer(nid,wage,years,role,bonus);draw();if(negById(nid).stage==='done'){setTimeout(()=>{closeModal();render()},1200)}return}
-    if(t.closest('#useCounter')){d.querySelector('#fee').value=n.counter;return}
+    if(t.closest('#useCounter')){d.querySelector('#fee').value=n.loanRequest?n.loanCounter:n.counter;return}
     if(t.closest('#confirmSign')){const nn=negById(nid);const f=sellerClub(nn.pid);if(!f){nn.stage='dead';draw();return}const o=nn.offer,po=nn.poffer;const up=(o.inst===1?o.fee:Math.round(o.fee/o.inst))+Math.round(o.fee*.05/1e4)*1e4+po.bonus;if(me().money<up){toast('אין מספיק כסף לתשלום הראשון');return}const over=wageBill(me())+po.wage>ensureWageCap();completeTransfer(nn,f.p,f.c);if(over){G.board.conf=clamp(G.board.conf-3,0,100);news('ההנהלה לא מרוצה: חתמת מעבר לתקציב השכר שאושר.')}draw();setTimeout(()=>{closeModal();render()},1200);return}
     if(t.closest('#backSign')){const nn=negById(nid);nn.stage='player';draw();return}
-    if(t.closest('#askLoan')){n.loanAsked=true;requestLoan(nid);draw();return}
+    if(t.closest('#askLoan')){requestLoan(nid);draw();return}
+    if(t.closest('#switchPurchase')){n.loanRequest=false;n.loanAsked=false;n.offer={fee:Math.round(marketValue(p)/1e5)*1e5,inst:1,sellon:0};n.log.push('בחרת לעבור למשא ומתן לרכישה קבועה.');save();draw();return}
     if(t.closest('#usePCounter')){d.querySelector('#wage').value=n.pcounter;return}
   });d.dataset.lock='1';
   function draw(){
     const nn=negById(nid);const known=isKnown(p);const L=leagueOf(p);
-    const head=`<div class="row"><div class="pc-big" style="width:90px;margin:0">${playerCardSVG(p,sc,{k:'n',hidden:!known})}</div><div style="flex:1;min-width:0"><h3>${esc(fullName(p))}</h3><div class="muted small">${POSHE[p.pos]} · ${p.age} · ${esc(sc.name)}${L?` · ${L.flag}`:''}</div><div class="small">שווי ${known?NIS(marketValue(p)):'~'+NIS(marketValue(p))}${nn.key?' · <span class="tag warn">שחקן מפתח</span>':''}${nn.rival?' · <span class="tag bad">יש מתחרים</span>':''}</div><div class="small muted">תקציב: ${NIS(c.money)}</div></div></div>`;
+    const head=`<div class="row"><div class="pc-big" style="width:90px;margin:0">${playerCardSVG(p,sc,{k:'n',hidden:!known})}</div><div style="flex:1;min-width:0"><h3>${esc(fullName(p))}</h3><div class="muted small">${POSHE[p.pos]} · ${p.age} · ${esc(sc.name)}${L?` · ${L.flag}`:''}</div><div class="small">שווי ${known?NIS(marketValue(p)):'~'+NIS(marketValue(p))}${nn.key?' · <span class="tag warn">שחקן מפתח</span>':''}${nn.rival?' · <span class="tag bad">יש מתחרים</span>':''}</div><div class="small muted">תקציב: ${NIS(c.money)}</div><span class="tag info">${nn.loanRequest||nn.loan?'השאלה לעונה אחת':'רכישה קבועה'}</span></div></div>`;
     const log=`<div class="neglog">${nn.log.slice(-5).map(l=>`<div>${esc(l)}</div>`).join('')||'<div class="muted">הגש הצעה ראשונה.</div>'}</div>`;
     let body='';
     if(nn.stage==='club'){
       body=`<div class="negstep"><span class="tag info">שלב 1 · המועדון</span><span class="muted tiny">סבלנות: ${'●'.repeat(nn.patience)}${'○'.repeat(3-nn.patience)}</span></div>
-      <label class="small">דמי העברה<div class="row"><button class="btn sm sec" data-step="fee:-500000">−500K</button><button class="btn sm sec" data-step="fee:-100000">−100K</button><input type="number" id="fee" value="${nn.offer.fee}" step="50000" min="0" style="flex:1;min-width:90px"><button class="btn sm sec" data-step="fee:100000">+100K</button><button class="btn sm sec" data-step="fee:500000">+500K</button></div></label>
-      <div class="row wrap" style="margin-top:8px"><label class="small">מבנה <select id="inst"><option value="1" ${nn.offer.inst===1?'selected':''}>מזומן</option><option value="2" ${nn.offer.inst===2?'selected':''}>2 תשלומים (−5% ערך)</option><option value="3" ${nn.offer.inst===3?'selected':''}>3 תשלומים (−10% ערך)</option></select></label>
-      <label class="small">אחוז ממכירה עתידית <select id="sellon"><option value="0" ${!nn.offer.sellon?'selected':''}>0%</option><option value="10" ${nn.offer.sellon===10?'selected':''}>10% (+5% ערך)</option><option value="20" ${nn.offer.sellon===20?'selected':''}>20% (+10% ערך)</option></select></label></div>
-      ${nn.counter?`<div class="small" style="margin-top:6px">הצעה נגדית של המועדון: <b class="num">${NIS(nn.counter)}</b> <button class="btn sm sec" id="useCounter">קבל את הסכום</button></div>`:''}
-      <div class="muted tiny" style="margin-top:6px">${known?`הערכה: המועדון מצפה לכ-${NIS(Math.round(nn.ask*.95/1e5)*1e5)}–${NIS(nn.ask)}.`:'בלי דוח סקאוט קשה לדעת כמה הם מצפים.'}</div>
-      <div class="actions" style="margin-top:10px"><button class="btn" id="sendClub">שלח הצעה</button>${marketValue(p)<=25e6&&!nn.loanAsked?`<button class="btn sec" id="askLoan" style="flex:0 0 auto">בקש השאלה</button>`:''}<button class="btn sec" data-close>סגור</button></div>`;
+      <label class="small">${nn.loanRequest?'דמי השאלה לעונה':'דמי העברה'}<div class="row"><button class="btn sm sec" data-step="fee:-${nn.loanRequest?50000:500000}">−${nn.loanRequest?'50K':'500K'}</button><button class="btn sm sec" data-step="fee:-${nn.loanRequest?10000:100000}">−${nn.loanRequest?'10K':'100K'}</button><input type="number" id="fee" value="${nn.offer.fee}" step="${nn.loanRequest?1000:50000}" min="0" style="flex:1;min-width:90px"><button class="btn sm sec" data-step="fee:${nn.loanRequest?10000:100000}">+${nn.loanRequest?'10K':'100K'}</button><button class="btn sm sec" data-step="fee:${nn.loanRequest?50000:500000}">+${nn.loanRequest?'50K':'500K'}</button></div></label>
+      ${nn.loanRequest?'<p class="small muted">דמי השאלה לעונה בלבד. השכר מסוכם בנפרד; אופציית רכישה אינה משולמת עכשיו.</p>':`<div class="row wrap" style="margin-top:8px"><label class="small">מבנה <select id="inst"><option value="1" ${nn.offer.inst===1?'selected':''}>מזומן</option><option value="2" ${nn.offer.inst===2?'selected':''}>2 תשלומים (−5% ערך)</option><option value="3" ${nn.offer.inst===3?'selected':''}>3 תשלומים (−10% ערך)</option></select></label>
+      <label class="small">אחוז ממכירה עתידית <select id="sellon"><option value="0" ${!nn.offer.sellon?'selected':''}>0%</option><option value="10" ${nn.offer.sellon===10?'selected':''}>10% (+5% ערך)</option><option value="20" ${nn.offer.sellon===20?'selected':''}>20% (+10% ערך)</option></select></label></div>`}
+      ${(nn.loanRequest?nn.loanCounter:nn.counter)?`<div class="small" style="margin-top:6px">הצעה נגדית של המועדון: <b class="num">${NIS(nn.loanRequest?nn.loanCounter:nn.counter)}</b> <button class="btn sm sec" id="useCounter">קבל את הסכום</button></div>`:''}
+      <div class="muted tiny" style="margin-top:6px">${nn.loanRequest?`דמי השאלה מבוקשים: ${NIS(nn.loanAsk)} (כ־10% משווי השחקן).`:known?`הערכה: המועדון מצפה לכ-${NIS(Math.round(nn.ask*.95/1e5)*1e5)}–${NIS(nn.ask)}.`:'בלי דוח סקאוט קשה לדעת כמה הם מצפים.'}</div>
+      <div class="actions" style="margin-top:10px"><button class="btn" id="sendClub" ${nn.loanRequest&&nn.loanRefused?'disabled':''}>${nn.loanRequest?'שלח הצעת השאלה':'שלח הצעת רכישה'}</button>${nn.loanRequest?'<button class="btn sec" id="switchPurchase">עבור לרכישה</button>':marketValue(p)<=25e6?`<button class="btn sec" id="askLoan" style="flex:0 0 auto">בקש השאלה</button>`:''}<button class="btn sec" data-close>סגור</button></div>`;
     }else if(nn.stage==='player'){
       const dm=nn.pdemand;const po=nn.poffer;const interest=playerInterest(p,c,po,nn);
       body=`<div class="negstep"><span class="tag info">שלב 2 · השחקן</span><span class="muted tiny">סבלנות: ${'●'.repeat(nn.ppatience)}${'○'.repeat(2-nn.ppatience)}</span></div>
       <div class="small">דרישות הסוכן: <b class="num">${NIS(dm.wage)}</b>/שבוע · ${dm.years} שנים · ${ROLE_HE[dm.role]} · בונוס ${NIS(dm.bonus)}${dm.current?` <span class="muted">(מרוויח היום כ-${NIS(dm.current)})</span>`:''}</div>
       <label class="small" style="display:block;margin-top:8px">שכר לשבוע<div class="row"><button class="btn sm sec" data-step="wage:-5000">−5K</button><input type="number" id="wage" value="${po.wage}" step="500" min="5000" style="flex:1;min-width:90px"><button class="btn sm sec" data-step="wage:5000">+5K</button></div></label>
-      <div class="row wrap" style="margin-top:8px"><label class="small">שנים <select id="years">${[1,2,3,4,5].map(y=>`<option value="${y}" ${po.years===y?'selected':''}>${y}</option>`).join('')}</select></label>
+      <div class="row wrap" style="margin-top:8px"><label class="small">שנים <select id="years">${(nn.loan?[1]:[1,2,3,4,5]).map(y=>`<option value="${y}" ${po.years===y?'selected':''}>${y}</option>`).join('')}</select></label>
       <label class="small">תפקיד מובטח <select id="role">${Object.keys(ROLE_HE).map(r=>`<option value="${r}" ${po.role===r?'selected':''}>${ROLE_HE[r]}</option>`).join('')}</select></label>
       <label class="small">בונוס חתימה <input type="number" id="bonus" value="${po.bonus}" step="10000" min="0" style="width:110px"></label></div>
       ${nn.pcounter?`<div class="small" style="margin-top:6px">השחקן מבקש <b class="num">${NIS(nn.pcounter)}</b>/שבוע <button class="btn sm sec" id="usePCounter">תן לו</button></div>`:''}
@@ -1879,7 +1880,7 @@ function negModal(nid){
       <div class="muted tiny" style="margin-top:4px">${L&&L.level===3?'שחקן מליגה גדולה ירד לישראל רק תמורת שכר גבוה, יוקרה או אירופה.':L&&L.level===1?'שחקנים מליגות קטנות רואים בישראל קפיצה קדימה.':''}${p.nat==='ישראל'?' ישראלי בחו"ל ישמח לחזור הביתה.':''}</div>
       <div class="actions" style="margin-top:10px"><button class="btn" id="sendPlayer">הצע חוזה</button><button class="btn sec" data-close>סגור</button></div>`;
     }else if(nn.stage==='review'){const o=nn.offer,po=nn.poffer;const cap=ensureWageCap();const bill=wageBill(c);const after=bill+po.wage;const up=o.inst===1?o.fee:Math.round(o.fee/o.inst);const agent=Math.round(o.fee*.05/1e4)*1e4;const total=o.fee+agent+po.bonus+po.wage*46*po.years;
-      body=`<div class="negstep"><h3 class="sec">סיכום לפני חתימה</h3><dl class="kv"><dt>דמי העברה</dt><dd class="num">${NIS(o.fee)}${o.inst>1?` · ${o.inst} תשלומים (עכשיו ${NIS(up)})`:''}</dd>${o.sellon?`<dt>סעיף מכירה</dt><dd>${o.sellon}% ל${esc(sc.short)}</dd>`:''}<dt>עמלת סוכן (5%)</dt><dd class="num">${NIS(agent)}</dd><dt>בונוס חתימה</dt><dd class="num">${NIS(po.bonus)}</dd><dt>שכר</dt><dd class="num">${NIS(po.wage)}/שבוע · ${po.years} ${po.years>1?'שנים':'שנה'}</dd><dt>מעמד מובטח</dt><dd>${ROLE_HE[po.role]||po.role}</dd><dt>תשלום עכשיו</dt><dd class="num"><b>${NIS(up+agent+po.bonus)}</b> מתוך ${NIS(c.money)}</dd><dt>עלות כוללת לאורך החוזה</dt><dd class="num">${NIS(total)}</dd><dt>תקציב שכר</dt><dd class="num" style="color:${after>cap?'var(--bad)':'inherit'}">${NIS(after)} / ${NIS(cap)} לשבוע</dd></dl>
+      body=`<div class="negstep"><h3 class="sec">סיכום לפני חתימה</h3><dl class="kv"><dt>${nn.loan?'דמי השאלה לעונה':'דמי העברה'}</dt><dd class="num">${NIS(o.fee)}${o.inst>1?` · ${o.inst} תשלומים (עכשיו ${NIS(up)})`:''}</dd>${nn.loan?`<dt>אופציית רכישה (לא לתשלום עכשיו)</dt><dd class="num">${NIS(nn.loan.buy)}</dd>`:''}${o.sellon?`<dt>סעיף מכירה</dt><dd>${o.sellon}% ל${esc(sc.short)}</dd>`:''}<dt>עמלת סוכן (5%)</dt><dd class="num">${NIS(agent)}</dd><dt>בונוס חתימה</dt><dd class="num">${NIS(po.bonus)}</dd><dt>שכר</dt><dd class="num">${NIS(po.wage)}/שבוע · ${po.years} ${po.years>1?'שנים':'שנה'}</dd><dt>מעמד מובטח</dt><dd>${ROLE_HE[po.role]||po.role}</dd><dt>תשלום עכשיו</dt><dd class="num"><b>${NIS(up+agent+po.bonus)}</b> מתוך ${NIS(c.money)}</dd><dt>עלות כוללת לאורך החוזה</dt><dd class="num">${NIS(total)}</dd><dt>תקציב שכר</dt><dd class="num" style="color:${after>cap?'var(--bad)':'inherit'}">${NIS(after)} / ${NIS(cap)} לשבוע</dd></dl>
       ${after>cap?'<div class="small" style="color:var(--bad);margin-top:6px">העסקה חורגת מתקציב השכר שההנהלה אישרה. אפשר לחתום, אבל האמון יירד ב-3.</div>':''}${o.inst>1?'<div class="muted tiny" style="margin-top:4px">התשלומים הבאים יופיעו בכספים ← תשלומים עתידיים.</div>':''}</div>
       <div class="actions" style="margin-top:10px"><button class="btn" id="confirmSign">אשר וחתום</button><button class="btn sec" id="backSign">חזרה לתנאים</button></div>`;
     }else{
@@ -2600,12 +2601,21 @@ function viewHistory(){const c=me();const h=G.hist||[];const hon=honours(c.id);c
   <div class="card"><h3 class="sec">ספר העונות</h3>${h.length?`<div class="scroll"><table class="tbl" style="margin-top:8px"><tr><th>עונה</th><th>אלופה</th><th>גביע</th><th>טוטו</th><th>מלך שערים</th><th>אני</th></tr>${h.map(x=>`<tr><td>${x.season}</td><td>${esc(x.champ)}</td><td>${esc(x.cup)}</td><td>${esc(x.toto||'—')}</td><td>${x.topScorer?esc(x.topScorer.name)+' ('+x.topScorer.goals+')':'—'}</td><td>${esc(x.myClub)} · ${x.myPos}${x.myDiv==='leumit'?' (לאומית)':''}</td></tr>`).join('')}</table></div>`:'<div class="muted small" style="margin-top:6px">העונה הראשונה עדיין רצה.</div>'}</div>`}
 
 /* ---- LOANS (players) ---- */
-function requestLoan(nid){const n=negById(nid);if(!n||n.stage!=='club')return;const f=sellerClub(n.pid);if(!f)return;const {p,c:sc}=f;const c=me();
-  const fee=Math.max(100000,Math.round(marketValue(p)*.15/5e4)*5e4);if(c.money<fee){n.log.push(`דמי השאלה: ${NIS(fee)}. אין מספיק תקציב.`);return}
-  n.rounds++;const ok=!n.key&&Math.random()<.8||(n.key&&Math.random()<.2);
-  if(ok){n.loan={fee,buy:Math.round(marketValue(p)*1.1/1e5)*1e5};n.offer={fee,inst:1,sellon:0};n.stage='player';n.pdemand=playerDemand(p,c,sc);n.pdemand.years=1;n.poffer={wage:n.pdemand.wage,years:1,role:n.pdemand.role,bonus:0};n.ppatience=2;n.log.push(`${sc.short} מסכימה להשאיל אותו לעונה תמורת ${NIS(fee)}, עם אופציית רכישה של ${NIS(n.loan.buy)}. עכשיו צריך לשכנע את השחקן.`)}
-  else{n.patience--;n.log.push(`${sc.short}: "${pick(['הוא לא יוצא בהשאלה.','אנחנו צריכים אותו העונה.','רק מכירה.'])}"`);if(n.patience<=0){n.stage='dead';n.log.push(`${sc.short} סגרה את הדלת.`)}}
-  save()}
+function loanFee(p){return Math.max(1000,Math.round(marketValue(p)*.1/1000)*1000)}
+function requestLoan(nid){const n=negById(nid);if(!n||n.stage!=='club')return;const f=sellerClub(n.pid);if(!f)return;
+  n.loanRequest=true;n.loanAsked=true;n.loanAsk=loanFee(f.p);n.offer={fee:n.loanAsk,inst:1,sellon:0};
+  n.log.push(`מסלול השאלה לעונה: דמי השאלה מבוקשים ${NIS(n.loanAsk)}, בנפרד מהשכר. זו אינה הצעת רכישה.`);save()}
+function submitLoanOffer(nid,fee){const n=negById(nid);if(!n||n.stage!=='club'||!n.loanRequest||n.loanRefused)return;
+  if(!WINDOW(G.wk))return;const f=sellerClub(n.pid);if(!f){n.stage='dead';n.log.push('השחקן כבר לא זמין');save();return}const {p,c:sc}=f;const c=me();
+  if(!Number.isFinite(fee)||fee<0)return;fee=Math.round(fee/1000)*1000;
+  if(c.money<fee){n.log.push(`דמי השאלה: ${NIS(fee)}. אין מספיק תקציב.`);save();return}
+  n.offer={fee,inst:1,sellon:0};n.rounds++;
+  if(n.loanAvailable==null)n.loanAvailable=Math.random()<(n.key?.2:.8);
+  if(!n.loanAvailable){n.loanRefused=true;n.log.push(`${sc.short}: "לא מסכימים להשאלה של השחקן." לא נשלחה הצעת רכישה. ניתן לבחור במפורש לעבור לרכישה.`);save();return}
+  n.loanAsk=n.loanAsk||loanFee(p);
+  if(fee<n.loanAsk*.85){n.loanCounter=n.loanAsk;n.patience--;n.log.push(`${sc.short}: "דמי ההשאלה המבוקשים הם ${NIS(n.loanAsk)} לעונה, לא מחיר רכישה."`);if(n.patience<=0){n.stage='dead';n.log.push('המשא ומתן על ההשאלה הסתיים.')}save();return}
+  n.loan={fee,buy:Math.round(marketValue(p)*1.1/1e5)*1e5};n.stage='player';n.pdemand=playerDemand(p,c,sc);n.pdemand.years=1;n.pdemand.bonus=0;n.poffer={wage:n.pdemand.wage,years:1,role:n.pdemand.role,bonus:0};n.ppatience=2;
+  n.log.push(`${sc.short} מסכימה להשאיל אותו לעונה תמורת ${NIS(fee)}. אופציית רכישה: ${NIS(n.loan.buy)} — אינה לתשלום עכשיו. עכשיו מסכמים שכר עם השחקן.`);save()}
 function exerciseBuy(pid){const c=me();const p=c.players.find(x=>x.id===pid);if(!p||!p.loan)return;if(!WINDOW(G.wk))return toast('אפשר להפעיל אופציה רק בחלון פתוח');if(c.money<p.loan.buy)return toast('אין מספיק תקציב');
   c.money-=p.loan.buy;addLog(`הפעלת אופציית רכישה: ${fullName(p)}`,-p.loan.buy);news(`${fullName(p)} נרכש סופית מ${p.loan.fromName} תמורת ${NIS(p.loan.buy)}.`);const fromN=p.loan.fromName,buyFee=p.loan.buy;p.loan=null;p.contract=3;p.morale=clamp(p.morale+6,10,100);closeModal();save();recordSigning(p,c,'perm',{from:fromN,fee:buyFee});render()}
 function returnLoans(){const c=me();for(const p of c.players.slice()){if(!p.loan)continue;const from=club(p.loan.from);c.players=c.players.filter(x=>x!==p);if(from){p.kn=2;p.lg=from.lg;if(from.lg){p.vmult=WORLD_LEAGUES[from.lg].vmult;p.wmult=WORLD_LEAGUES[from.lg].wmult}p.loan=null;p.contract=2;from.players.push(p)}news(`${fullName(p)} חזר מההשאלה ל${p.loan?p.loan.fromName:from?from.short:'המועדון שלו'}.`)}}
