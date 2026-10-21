@@ -79,10 +79,12 @@ def smooth(x):
     x = np.clip(x, 0, 1)
     return x * x * (3 - 2 * x)
 
-def process(t, src, debug=None, key=''):
+def process(t, src, debug=None, key='', strict=False):
     flags = []
     w0, h0 = src.size
-    img = src.resize((w0 * UP, h0 * UP), Image.LANCZOS)
+    # small federation photos (~240px) are processed at 2x; larger Commons renditions at their own size
+    UP = 2 if max(w0, h0) < 420 else 1
+    img = src.resize((w0 * UP, h0 * UP), Image.LANCZOS) if UP != 1 else src
     rgb = np.asarray(img)
     sat = np.asarray(src.convert('HSV'))[..., 1].mean()
     if sat < 18:
@@ -93,6 +95,9 @@ def process(t, src, debug=None, key=''):
     big = [f for f in faces if f[2] * f[3] >= 0.25 * faces[0][2] * faces[0][3]]
     if len(big) > 1:
         flags.append('multiple_faces')
+    # a second face nearly as large as the first makes the subject ambiguous (strict mode rejects it); smaller faces
+    # are background people, removed by the person matte
+    rival = len(faces) > 1 and faces[1][2] * faces[1][3] >= 0.55 * faces[0][2] * faces[0][3]
     f = faces[0]
     re_, le_, nose, mr, ml = (np.array(f[4:6]), np.array(f[6:8]), np.array(f[8:10]), np.array(f[10:12]), np.array(f[12:14]))
     eye = (re_ + le_) / 2; mouth = (mr + ml) / 2
@@ -100,6 +105,13 @@ def process(t, src, debug=None, key=''):
     roll = float(np.degrees(np.arctan2(le_[1] - re_[1], le_[0] - re_[0])))
     if abs(roll) > 25:
         return None, {'status': 'unresolved', 'reason': 'face_not_upright', 'flags': flags}
+    if strict:
+        # candid photos (Commons): one dominant, roughly frontal face only. A second sizeable face could be the
+        # wrong person; a turned head (eyes close together relative to eye-mouth distance) is not a portrait.
+        if rival:
+            return None, {'status': 'unresolved', 'reason': 'multiple_faces', 'flags': flags}
+        if float(np.linalg.norm(le_ - re_)) < 0.6 * d:
+            return None, {'status': 'unresolved', 'reason': 'face_turned', 'flags': flags}
     def background_kept(al):
         # the photo's corners beside/above the head must be empty once the background is removed
         hh_, ww_ = al.shape; yb = int(max(4, eye[1] - 0.6 * d))
@@ -186,10 +198,18 @@ def webp_uri(im):
     buf = io.BytesIO(); im.save(buf, 'WEBP', quality=86, method=6, alpha_quality=90)
     return 'data:image/webp;base64,' + base64.b64encode(buf.getvalue()).decode(), hashlib.sha256(buf.getvalue()).hexdigest(), len(buf.getvalue())
 
+def load_identities():
+    """Israeli identities (players.json) plus European ones (euro-players.json), as one {faces: {visualId: {pack}}} map"""
+    V = load_json(os.path.join(ROOT, 'data', 'visuals', 'players.json'))
+    ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
+    if os.path.isfile(ep):
+        V['faces'] = {**V['faces'], **load_json(ep)['faces']}
+    return V
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--only'); ap.add_argument('--keys'); ap.add_argument('--debug'); ap.add_argument('--skin-only', action='store_true'); ap.add_argument('--apply-overrides', action='store_true')
     a = ap.parse_args()
-    V = load_json(os.path.join(ROOT, 'data', 'visuals', 'players.json'))
+    V = load_identities()
     ovp = os.path.join(ROOT, 'data', 'visuals', 'portrait-overrides.json')
     overrides = load_json(ovp) if os.path.isfile(ovp) else {}
     if a.apply_overrides:
@@ -220,7 +240,7 @@ def main():
         with open(auditp, 'w', encoding='utf8') as fh:
             json.dump(audit, fh, ensure_ascii=False, indent=1, sort_keys=True)
         return
-    V = load_json(os.path.join(ROOT, 'data', 'visuals', 'players.json'))
+    V = load_identities()
     ovp = os.path.join(ROOT, 'data', 'visuals', 'portrait-overrides.json')
     overrides = load_json(ovp) if os.path.isfile(ovp) else {}
     auditp = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json')

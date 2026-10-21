@@ -131,9 +131,11 @@ def identify(player, club_q):
     name = player.get('en') or ''
     if not name:
         return None, 'no_english_name'
-    cands = [e for e in candidates_for(name) if name_matches(e, name)]
+    found = candidates_for(name)
+    cands = [e for e in found if name_matches(e, name)]
     if not cands:
-        return None, 'no_wikidata_footballer_with_this_name'
+        seen = ', '.join(f"{e['id']}:{e.get('labels', {}).get('en', {}).get('value', '?')}" for e in found[:6])
+        return None, 'no_wikidata_footballer_with_this_name' + (f' (footballers found: {seen})' if seen else '')
     age = player.get('age')
     years = {SEASON_YEAR - age, SEASON_YEAR - age - 1} if age else set()
     team = [e for e in cands if club_q in claim_ids(e, 'P54')]
@@ -143,11 +145,11 @@ def identify(player, club_q):
         both = [e for e in team if birth_year(e) in years]
         if len(both) == 1:
             return both[0], 'name+club+birth_year'
-        return None, 'ambiguous_same_club'
+        return None, 'ambiguous_same_club: ' + ', '.join(e['id'] for e in team)
     born = [e for e in cands if birth_year(e) in years]
     if len(born) == 1:
         return born[0], 'name+birth_year (club not yet on Wikidata)'
-    return None, 'ambiguous' if cands else 'no_match'
+    return None, 'ambiguous: ' + ', '.join(f"{e['id']}:{birth_year(e)}" for e in cands[:6])
 
 def strip_html(s):
     return html.unescape(re.sub(r'<[^>]+>', '', s or '')).strip()
@@ -180,7 +182,7 @@ def licence_ok(i):
     return bool(OK_LICENSE.match(i.get('license', '').strip()))
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=3)
+    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=5)
     a = ap.parse_args()
     keys = list(CLUB_TITLES) if a.clubs == 'all' else a.clubs.split(',')
     for key in keys:
