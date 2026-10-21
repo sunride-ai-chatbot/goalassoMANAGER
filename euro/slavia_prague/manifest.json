@@ -157,32 +157,32 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2018-09-30 15:19",
-     "file": "03-Q12042676-0.jpg",
+     "file": "03-Q12042676-0-w1280.jpg",
      "fromP18": true
     },
     {
      "title": "File:Ondřej Kolář2, FCB-SLAVIA 30092018.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Ond%C5%99ej_Kol%C3%A1%C5%992,_FCB-SLAVIA_30092018.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ond%C5%99ej_Kol%C3%A1%C5%992%2C_FCB-SLAVIA_30092018.jpg/960px-Ond%C5%99ej_Kol%C3%A1%C5%992%2C_FCB-SLAVIA_30092018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Ond%C5%99ej_Kol%C3%A1%C5%992%2C_FCB-SLAVIA_30092018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 995,
      "height": 1589,
      "license": "CC BY-SA 4.0",
      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "author": "",
-     "credit": "",
+     "author": "Tadeáš Bednarz",
+     "credit": "Own work",
      "attributionRequired": "true",
      "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
      "restrictions": "",
      "nonFree": "",
-     "date": "",
-     "file": "03-Q12042676-1.jpg",
+     "date": "2018-09-30 15:19",
+     "file": "03-Q12042676-1-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:Ondřej Kolář3, FCB-SLAVIA 30092018.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Ond%C5%99ej_Kol%C3%A1%C5%993,_FCB-SLAVIA_30092018.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Ond%C5%99ej_Kol%C3%A1%C5%993%2C_FCB-SLAVIA_30092018.jpg/960px-Ond%C5%99ej_Kol%C3%A1%C5%993%2C_FCB-SLAVIA_30092018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ond%C5%99ej_Kol%C3%A1%C5%993%2C_FCB-SLAVIA_30092018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1041,
      "height": 1102,
@@ -195,7 +195,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2018-09-30 16:12",
-     "file": "03-Q12042676-2.jpg",
+     "file": "03-Q12042676-2-w1280.jpg",
      "fromP18": false
     },
     {
@@ -214,7 +214,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2018-10-05 00:56:31",
-     "file": "03-Q12042676-3.jpg",
+     "file": "03-Q12042676-3-w1280.jpg",
      "fromP18": false
     }
    ],
@@ -745,13 +745,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2017-10",
-     "file": "23-Q17037384-0.jpg",
+     "file": "23-Q17037384-0-w1280.jpg",
      "fromP18": true
     },
     {
      "title": "File:Tomáš Chorý za FK Viktorii Plzeň proti FK Jablonec (r. 2023).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Tom%C3%A1%C5%A1_Chor%C3%BD_za_FK_Viktorii_Plze%C5%88_proti_FK_Jablonec_(r._2023).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Tom%C3%A1%C5%A1_Chor%C3%BD_za_FK_Viktorii_Plze%C5%88_proti_FK_Jablonec_%28r._2023%29.jpg/960px-Tom%C3%A1%C5%A1_Chor%C3%BD_za_FK_Viktorii_Plze%C5%88_proti_FK_Jablonec_%28r._2023%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Tom%C3%A1%C5%A1_Chor%C3%BD_za_FK_Viktorii_Plze%C5%88_proti_FK_Jablonec_%28r._2023%29.jpg/1280px-Tom%C3%A1%C5%A1_Chor%C3%BD_za_FK_Viktorii_Plze%C5%88_proti_FK_Jablonec_%28r._2023%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2792,
      "height": 2730,
@@ -764,7 +764,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2023-04-08",
-     "file": "23-Q17037384-1.jpg",
+     "file": "23-Q17037384-1-w1280.jpg",
      "fromP18": false
     },
     {
@@ -783,7 +783,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2017-10",
-     "file": "23-Q17037384-2.jpg",
+     "file": "23-Q17037384-2-w1280.jpg",
      "fromP18": false
     }
    ],
