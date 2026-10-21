@@ -362,7 +362,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2018-08-28 19:32:56",
-     "file": "04-Q26259982-0.jpg",
+     "file": "04-Q26259982-0-w1280.jpg",
      "fromP18": true
     },
     {
@@ -381,13 +381,13 @@
      "restrictions": "personality",
      "nonFree": "",
      "date": "2022-07-30",
-     "file": "04-Q26259982-1.jpg",
+     "file": "04-Q26259982-1-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:Ajax Open Training (28285488372).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Ajax_Open_Training_(28285488372).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Ajax_Open_Training_%2828285488372%29.jpg/960px-Ajax_Open_Training_%2828285488372%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Ajax_Open_Training_%2828285488372%29.jpg/1280px-Ajax_Open_Training_%2828285488372%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 5472,
      "height": 3648,
@@ -400,13 +400,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2016-07-10 22:42",
-     "file": "04-Q26259982-2.jpg",
+     "file": "04-Q26259982-2-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:Allianz Arena (25-11-2023) 07.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Allianz_Arena_(25-11-2023)_07.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Allianz_Arena_%2825-11-2023%29_07.jpg/960px-Allianz_Arena_%2825-11-2023%29_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Allianz_Arena_%2825-11-2023%29_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1024,
      "height": 1141,
@@ -419,13 +419,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2023-11-25 09:48:32",
-     "file": "04-Q26259982-3.jpg",
+     "file": "04-Q26259982-3-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:Atlético de Madrid v Juventus, 10 August 2019 (13).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Atl%C3%A9tico_de_Madrid_v_Juventus,_10_August_2019_(13).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Atl%C3%A9tico_de_Madrid_v_Juventus%2C_10_August_2019_%2813%29.jpg/960px-Atl%C3%A9tico_de_Madrid_v_Juventus%2C_10_August_2019_%2813%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Atl%C3%A9tico_de_Madrid_v_Juventus%2C_10_August_2019_%2813%29.jpg/1280px-Atl%C3%A9tico_de_Madrid_v_Juventus%2C_10_August_2019_%2813%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2816,
      "height": 1584,
@@ -438,7 +438,64 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2019-08-10 18:00",
-     "file": "04-Q26259982-4.jpg",
+     "file": "04-Q26259982-4-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:Deligt-juventus-2019 (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Deligt-juventus-2019_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Deligt-juventus-2019_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 568,
+     "height": 667,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "Original:  Anton Zaitsev\nDerivative work:  WikiGusta",
+     "credit": "Soccer.ru (original photo)",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-10-23",
+     "file": "04-Q26259982-5-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:Deligt-juventus-2019.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Deligt-juventus-2019.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Deligt-juventus-2019.jpg/1280px-Deligt-juventus-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1500,
+     "height": 1000,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "Anton Zaitsev",
+     "credit": "Soccer.ru",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-10-23",
+     "file": "04-Q26259982-6-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 02.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:FC_Zenit_Saint_Petersburg_vs._Juventus,_20_October_2021_02.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/FC_Zenit_Saint_Petersburg_vs._Juventus%2C_20_October_2021_02.jpg/1280px-FC_Zenit_Saint_Petersburg_vs._Juventus%2C_20_October_2021_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1500,
+     "height": 1000,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Kirill Venediktov",
+     "credit": "https://www.soccer.ru/galery/1287369/photo/932403",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-10-20",
+     "file": "04-Q26259982-7-w1280.jpg",
      "fromP18": false
     }
    ],
@@ -578,7 +635,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2025-12-16",
-     "file": "06-Q130319703-0.jpg",
+     "file": "06-Q130319703-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -750,7 +807,7 @@
     {
      "title": "File:Diogo Dalot USMNT v Portugal Mar 31 2026-12.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Diogo_Dalot_USMNT_v_Portugal_Mar_31_2026-12.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Diogo_Dalot_USMNT_v_Portugal_Mar_31_2026-12.jpg/960px-Diogo_Dalot_USMNT_v_Portugal_Mar_31_2026-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Diogo_Dalot_USMNT_v_Portugal_Mar_31_2026-12.jpg/1280px-Diogo_Dalot_USMNT_v_Portugal_Mar_31_2026-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 3333,
      "height": 5000,
@@ -763,7 +820,7 @@
      "restrictions": "personality",
      "nonFree": "",
      "date": "2026-03-31 18:30:02",
-     "file": "10-Q26255506-0.jpg",
+     "file": "10-Q26255506-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -903,7 +960,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2026-01-24 16:06:17",
-     "file": "12-Q113472432-0.jpg",
+     "file": "12-Q113472432-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -1297,7 +1354,7 @@
     {
      "title": "File:Mountbrightonoct3 2019 (cropped).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Mountbrightonoct3_2019_(cropped).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Mountbrightonoct3_2019_%28cropped%29.jpg/960px-Mountbrightonoct3_2019_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/32/Mountbrightonoct3_2019_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1240,
      "height": 1847,
@@ -1310,13 +1367,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2019-09-28 14:10:17",
-     "file": "17-Q38000669-0.jpg",
+     "file": "17-Q38000669-0-w1280.jpg",
      "fromP18": true
     },
     {
      "title": "File:2021 FIFA Club World Cup Final - 02.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:2021_FIFA_Club_World_Cup_Final_-_02.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/2021_FIFA_Club_World_Cup_Final_-_02.jpg/960px-2021_FIFA_Club_World_Cup_Final_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2e/2021_FIFA_Club_World_Cup_Final_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1050,
      "height": 554,
@@ -1329,13 +1386,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2022-02-13 00:03:49",
-     "file": "17-Q38000669-1.jpg",
+     "file": "17-Q38000669-1-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:2021 FIFA Club World Cup Final - 05.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:2021_FIFA_Club_World_Cup_Final_-_05.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/2021_FIFA_Club_World_Cup_Final_-_05.jpg/960px-2021_FIFA_Club_World_Cup_Final_-_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8d/2021_FIFA_Club_World_Cup_Final_-_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1050,
      "height": 700,
@@ -1348,13 +1405,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2022-02-12 20:57:35",
-     "file": "17-Q38000669-2.jpg",
+     "file": "17-Q38000669-2-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:2021 FIFA Club World Cup Final - 31.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:2021_FIFA_Club_World_Cup_Final_-_31.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/2021_FIFA_Club_World_Cup_Final_-_31.jpg/960px-2021_FIFA_Club_World_Cup_Final_-_31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1f/2021_FIFA_Club_World_Cup_Final_-_31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1050,
      "height": 554,
@@ -1367,7 +1424,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2022-02-13 18:22:48",
-     "file": "17-Q38000669-3.jpg",
+     "file": "17-Q38000669-3-w1280.jpg",
      "fromP18": false
     },
     {
@@ -1386,7 +1443,64 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2022-02-13 18:31:19",
-     "file": "17-Q38000669-4.jpg",
+     "file": "17-Q38000669-4-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:2021 FIFA Club World Cup Final - 32.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:2021_FIFA_Club_World_Cup_Final_-_32.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1a/2021_FIFA_Club_World_Cup_Final_-_32.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 1050,
+     "height": 554,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "محمد امین انصاری",
+     "credit": "https://www.farsnews.ir/photo/14001124000004",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-02-13 18:31:19",
+     "file": "17-Q38000669-5-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:2021-12-08 - FC Zenit Saint Petersburg v Chelsea F.C. - Photo 039.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_039.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_039.jpg/1280px-2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_039.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 4608,
+     "height": 3456,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Voltmetro",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-12-08 21:17:25",
+     "file": "17-Q38000669-6-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:2021-12-08 - FC Zenit Saint Petersburg v Chelsea F.C. - Photo 053.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_053.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_053.jpg/1280px-2021-12-08_-_FC_Zenit_Saint_Petersburg_v_Chelsea_F.C._-_Photo_053.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 4608,
+     "height": 3456,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Voltmetro",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-12-08 21:22:31",
+     "file": "17-Q38000669-7-w1280.jpg",
      "fromP18": false
     }
    ],
@@ -1418,7 +1532,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2024-12-30",
-     "file": "18-Q121903982-0.jpg",
+     "file": "18-Q121903982-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -1646,7 +1760,7 @@
     {
      "title": "File:FC RB Salzburg gegen SK Austria Klagenfurt (2023-05-28) 38 (cropped).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_(2023-05-28)_38_(cropped).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_%282023-05-28%29_38_%28cropped%29.jpg/960px-FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_%282023-05-28%29_38_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_%282023-05-28%29_38_%28cropped%29.jpg/1280px-FC_RB_Salzburg_gegen_SK_Austria_Klagenfurt_%282023-05-28%29_38_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2318,
      "height": 3093,
@@ -1659,7 +1773,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2023-05-28 16:32:08",
-     "file": "22-Q65950315-0.jpg",
+     "file": "22-Q65950315-0-w1280.jpg",
      "fromP18": true
     }
    ],

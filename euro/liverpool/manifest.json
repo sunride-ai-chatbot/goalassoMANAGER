@@ -44,7 +44,7 @@
     {
      "title": "File:Giorgi Mamardashvili 04012026 (1).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Giorgi_Mamardashvili_04012026_(1).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Giorgi_Mamardashvili_04012026_%281%29.jpg/960px-Giorgi_Mamardashvili_04012026_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Giorgi_Mamardashvili_04012026_%281%29.jpg/1280px-Giorgi_Mamardashvili_04012026_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2617,
      "height": 2592,
@@ -57,13 +57,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2026-01-04 13:41:17",
-     "file": "01-Q99529077-0.jpg",
+     "file": "01-Q99529077-0-w1280.jpg",
      "fromP18": true
     },
     {
      "title": "File:Giorgi Mamardashvili 04012026 (2).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Giorgi_Mamardashvili_04012026_(2).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Giorgi_Mamardashvili_04012026_%282%29.jpg/960px-Giorgi_Mamardashvili_04012026_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/12/Giorgi_Mamardashvili_04012026_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1124,
      "height": 1926,
@@ -76,7 +76,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2026-01-04 14:09:06",
-     "file": "01-Q99529077-1.jpg",
+     "file": "01-Q99529077-1-w1280.jpg",
      "fromP18": false
     },
     {
@@ -95,7 +95,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2021-07-21",
-     "file": "01-Q99529077-2.jpg",
+     "file": "01-Q99529077-2-w1280.jpg",
      "fromP18": false
     },
     {
@@ -114,13 +114,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2026-01-04 15:05:29",
-     "file": "01-Q99529077-3.jpg",
+     "file": "01-Q99529077-3-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:Liverpool Players 04012026 (5).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Liverpool_Players_04012026_(5).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Liverpool_Players_04012026_%285%29.jpg/960px-Liverpool_Players_04012026_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Liverpool_Players_04012026_%285%29.jpg/1280px-Liverpool_Players_04012026_%285%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 4532,
      "height": 3456,
@@ -133,7 +133,26 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2026-01-04 15:05:29",
-     "file": "01-Q99529077-4.jpg",
+     "file": "01-Q99529077-4-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:Liverpool Players 04012026 (6).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Liverpool_Players_04012026_(6).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Liverpool_Players_04012026_%286%29.jpg/1280px-Liverpool_Players_04012026_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3339,
+     "height": 3456,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Timmy96",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-01-04 15:05:41",
+     "file": "01-Q99529077-5-w1280.jpg",
      "fromP18": false
     }
    ],
@@ -260,7 +279,7 @@
     {
      "title": "File:Arteries and veins, illustrating an article entitled \"Artery Wellcome V0007875.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Arteries_and_veins,_illustrating_an_article_entitled_%22Artery_Wellcome_V0007875.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Arteries_and_veins%2C_illustrating_an_article_entitled_%22Artery_Wellcome_V0007875.jpg/960px-Arteries_and_veins%2C_illustrating_an_article_entitled_%22Artery_Wellcome_V0007875.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Arteries_and_veins%2C_illustrating_an_article_entitled_%22Artery_Wellcome_V0007875.jpg/1280px-Arteries_and_veins%2C_illustrating_an_article_entitled_%22Artery_Wellcome_V0007875.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2242,
      "height": 3496,
@@ -273,13 +292,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "",
-     "file": "03-Q126361834-0.jpg",
+     "file": "03-Q126361834-0-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:Tafelblad met familiewapen Tafelblad met wapen geslacht Witsen, BK-BR-485.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Tafelblad_met_familiewapen_Tafelblad_met_wapen_geslacht_Witsen,_BK-BR-485.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Tafelblad_met_familiewapen_Tafelblad_met_wapen_geslacht_Witsen%2C_BK-BR-485.jpg/960px-Tafelblad_met_familiewapen_Tafelblad_met_wapen_geslacht_Witsen%2C_BK-BR-485.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Tafelblad_met_familiewapen_Tafelblad_met_wapen_geslacht_Witsen%2C_BK-BR-485.jpg/1280px-Tafelblad_met_familiewapen_Tafelblad_met_wapen_geslacht_Witsen%2C_BK-BR-485.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 6394,
      "height": 4259,
@@ -292,13 +311,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "1685",
-     "file": "03-Q126361834-1.jpg",
+     "file": "03-Q126361834-1-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:The human venous and arterial systems. Engraving, after engr Wellcome V0007877.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:The_human_venous_and_arterial_systems._Engraving,_after_engr_Wellcome_V0007877.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/The_human_venous_and_arterial_systems._Engraving%2C_after_engr_Wellcome_V0007877.jpg/960px-The_human_venous_and_arterial_systems._Engraving%2C_after_engr_Wellcome_V0007877.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/The_human_venous_and_arterial_systems._Engraving%2C_after_engr_Wellcome_V0007877.jpg/1280px-The_human_venous_and_arterial_systems._Engraving%2C_after_engr_Wellcome_V0007877.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 3305,
      "height": 2136,
@@ -311,13 +330,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "",
-     "file": "03-Q126361834-2.jpg",
+     "file": "03-Q126361834-2-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:The trunks of the vena cava, with their branches(Table VI, f Wellcome V0007861.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:The_trunks_of_the_vena_cava,_with_their_branches(Table_VI,_f_Wellcome_V0007861.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/The_trunks_of_the_vena_cava%2C_with_their_branches%28Table_VI%2C_f_Wellcome_V0007861.jpg/960px-The_trunks_of_the_vena_cava%2C_with_their_branches%28Table_VI%2C_f_Wellcome_V0007861.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/The_trunks_of_the_vena_cava%2C_with_their_branches%28Table_VI%2C_f_Wellcome_V0007861.jpg/1280px-The_trunks_of_the_vena_cava%2C_with_their_branches%28Table_VI%2C_f_Wellcome_V0007861.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 3070,
      "height": 2351,
@@ -330,13 +349,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "",
-     "file": "03-Q126361834-3.jpg",
+     "file": "03-Q126361834-3-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:The trunks of the vena cava, with their branches, engraving Wellcome V0007839ER.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:The_trunks_of_the_vena_cava,_with_their_branches,_engraving_Wellcome_V0007839ER.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/The_trunks_of_the_vena_cava%2C_with_their_branches%2C_engraving_Wellcome_V0007839ER.jpg/960px-The_trunks_of_the_vena_cava%2C_with_their_branches%2C_engraving_Wellcome_V0007839ER.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3e/The_trunks_of_the_vena_cava%2C_with_their_branches%2C_engraving_Wellcome_V0007839ER.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
      "mime": "image/jpeg",
      "width": 1128,
      "height": 1776,
@@ -349,7 +368,26 @@
      "restrictions": "",
      "nonFree": "",
      "date": "",
-     "file": "03-Q126361834-4.jpg",
+     "file": "03-Q126361834-4-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:The trunks of the vena cava, with their branches, engraving Wellcome V0007855ER.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:The_trunks_of_the_vena_cava,_with_their_branches,_engraving_Wellcome_V0007855ER.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/14/The_trunks_of_the_vena_cava%2C_with_their_branches%2C_engraving_Wellcome_V0007855ER.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 1165,
+     "height": 1585,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "",
+     "credit": "https://wellcomeimages.org/indexplus/obf_images/5e/e1/2bee06f4d1345ba406212b929379.jpg\n\nGallery: https://wellcomeimages.org/indexplus/image/V0007855ER.html\nWellcome Collection gallery (2018-04-05): https://wellcomecollection.org/works/ng2ccdca CC-BY-4.0",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "",
+     "file": "03-Q126361834-5-w1280.jpg",
      "fromP18": false
     }
    ],
@@ -368,7 +406,7 @@
     {
      "title": "File:Jeremie Frimpong 04012026 (3) (cropped).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Jeremie_Frimpong_04012026_(3)_(cropped).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jeremie_Frimpong_04012026_%283%29_%28cropped%29.jpg/960px-Jeremie_Frimpong_04012026_%283%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jeremie_Frimpong_04012026_%283%29_%28cropped%29.jpg/1280px-Jeremie_Frimpong_04012026_%283%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 3375,
      "height": 3431,
@@ -381,7 +419,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2026-01-04 16:22:54",
-     "file": "04-Q67198835-0.jpg",
+     "file": "04-Q67198835-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -413,7 +451,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2025-02-08",
-     "file": "05-Q124283398-0.jpg",
+     "file": "05-Q124283398-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -1080,7 +1118,7 @@
     {
      "title": "File:Trey Nyoni 04012026 (1).jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Trey_Nyoni_04012026_(1).jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Trey_Nyoni_04012026_%281%29.jpg/960px-Trey_Nyoni_04012026_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Trey_Nyoni_04012026_%281%29.jpg/1280px-Trey_Nyoni_04012026_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2001,
      "height": 1738,
@@ -1093,7 +1131,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2026-01-04 13:40:38",
-     "file": "12-Q123367931-0.jpg",
+     "file": "12-Q123367931-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -1659,7 +1697,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2024-09-28",
-     "file": "19-Q118725657-0.jpg",
+     "file": "19-Q118725657-0-w1280.jpg",
      "fromP18": true
     }
    ],
