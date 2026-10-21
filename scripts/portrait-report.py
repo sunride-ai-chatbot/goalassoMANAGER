@@ -33,6 +33,15 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'data', '*.json'))):
     ok = sum(1 for x in rows if '| ok |' in x)
     out += [f"## {c['name_he']} ({c['id']}) · {ok}/{len(rows)} portraits", '', '| Player | English | Pos | Identity | Status | Notes |', '|---|---|---|---|---|---|', *rows, '']
 out.insert(4, f"**Totals:** {tot['ok']} players with a portrait, {tot['fallback']} on the designed fallback, {tot['ok'] + tot['fallback']} squad entries.\n")
+# European leagues: no source photos exist in the project; every player renders the designed fallback (unresolved)
+EURO = [('La Liga', ['real_madrid', 'barcelona', 'atletico']), ('Premier League', ['liverpool', 'arsenal', 'man_city', 'chelsea', 'man_utd', 'tottenham'])]
+for lg, keys in EURO:
+    out += [f'# {lg}', '', 'No source photos are available for any player (none in the project; the photo sources are not reachable from the build environment). Every player shows the designed fallback and is unresolved. Clubs of this league that are not listed have generated squads (fictional players), which always use the fallback by design.', '']
+    for k in keys:
+        d = json.load(open(os.path.join(ROOT, 'data', 'euro', k + '.json'), encoding='utf8'))
+        ps = d.get('players', [])
+        out += [f"## {d['name_he']} ({k}) · 0/{len(ps)} portraits", '', '| Player | English | Pos | Status |', '|---|---|---|---|',
+                *[f"| {p.get('he','')} | {p.get('en','')} | {p.get('pos','')} | fallback (no source photo) |" for p in ps], '']
 os.makedirs(os.path.join(ROOT, 'docs'), exist_ok=True)
 open(os.path.join(ROOT, 'docs', 'portrait-audit.md'), 'w', encoding='utf8').write('\n'.join(out) + '\n')
 print(tot)
