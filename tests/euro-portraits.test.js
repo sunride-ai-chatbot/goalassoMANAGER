@@ -9,7 +9,8 @@ const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p)));
 const E=read('data/visuals/euro-players.json'),audit=read('data/visuals/portrait-audit.json'),israeli=read('data/visuals/players.json');
-const FREE=/^(CC0|Public domain|PD|CC BY(-SA)? [0-9.]+( [a-z]+)?)$/i;
+// Commons {{Attribution}} = free use for any purpose provided the author is credited (Commons-free licence, no CC URL)
+const FREE=/^(CC0|Public domain|PD|CC BY(-SA)? [0-9.]+( [a-z]+)?|Attribution)$/i;
 function webpInfo(b){assert.equal(b.toString('ascii',0,4),'RIFF');assert.equal(b.toString('ascii',8,12),'WEBP');return {w:1+b.readUIntLE(24,3),h:1+b.readUIntLE(27,3),alpha:!!(b[20]&0x10)}}
 const vc=new VirtualConsole(),errors=[];
 vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});

@@ -17,6 +17,10 @@ on:
         description: 'optional: only these English names, separated by |'
         required: false
         default: ''
+      deep:
+        description: 'also search sub-categories and Commons full text (for players still on the fallback)'
+        required: false
+        default: 'false'
 permissions:
   contents: write
 concurrency:
@@ -40,7 +44,7 @@ jobs:
             git worktree add --detach /tmp/wt && git -C /tmp/wt checkout --orphan portrait-sources && git -C /tmp/wt rm -rf . >/dev/null || true
           fi
       - name: Fetch candidates
-        run: python3 scripts/fetch-commons-portraits.py --clubs "${{ github.event.inputs.clubs }}" --width "${{ github.event.inputs.width }}" --players "${{ github.event.inputs.players }}" --max-candidates "${{ github.event.inputs.players != '' && 8 || 5 }}" --cat-limit "${{ github.event.inputs.players != '' && 30 || 8 }}" --out /tmp/wt/euro
+        run: python3 scripts/fetch-commons-portraits.py --clubs "${{ github.event.inputs.clubs }}" --width "${{ github.event.inputs.width }}" --players "${{ github.event.inputs.players }}" --max-candidates "${{ github.event.inputs.deep == 'true' && 14 || (github.event.inputs.players != '' && 8 || 5) }}" --cat-limit "${{ github.event.inputs.players != '' && 30 || 8 }}" --out /tmp/wt/euro ${{ github.event.inputs.deep == 'true' && '--deep' || '' }}
       - name: Commit to portrait-sources
         run: |
           cd /tmp/wt

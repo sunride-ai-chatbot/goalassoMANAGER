@@ -98,8 +98,14 @@ function makeEuroPlayer(pos,base,country,str){
 }
 function euroRating(v,age){if(v==null)return null;let o=64+3.75*Math.log2(Math.max(v,.05));if(age!=null){if(age<=19)o-=4;else if(age<=21)o-=2;else if(age<=23)o-=1;else if(age>=33)o+=1.5;else if(age>=31)o+=.5}return clamp(Math.round(o),46,93)}
 function euroVisualId(club,en){const E=PLAYER_VISUALS.euro||{};return (club&&en&&E[club+'|'+en])||null}
+/* the face of a European squad player: by origin club (p.from, or the world club that lists him) + English name, then by
+   an English name that is unique across all squads */
+const euroNoFace=new WeakSet();
+function euroVisualIdFor(p){if(!p||!p.en||euroNoFace.has(p))return null;const F=PLAYER_VISUALS.faces;let k=euroVisualId(p.from,p.en);
+  if(!k&&typeof G!=='undefined'&&G&&G.world){for(const l of Object.values(G.world))for(const c of l.clubs||[])if(c.realSquad&&c.players.includes(p)){k=euroVisualId(c.name,p.en);break}}
+  if(!k)k=(PLAYER_VISUALS.euroEn||{})[p.en]||null;if(k&&F[k])return k;euroNoFace.add(p);return null}
 function fromRawEuro(r,fallback,club){const age=r.age??ri(20,31);const nat=r.nat||'זר';const natHe=NAT_HE[nat]||nat;const ovr=euroRating(r.value_m,age)??clamp(Math.round(fallback-14+gauss()*3),46,72);const [first,last]=splitName(r.he);
-  const p=finalize({id:uid++,first,last,pos:r.pos||'MF',age,nat:natHe,foreign:natHe!=='ישראל',ovr,pot:potentialFor(ovr,age),form:0,yellow:0,inj:0,susp:0,goals:0,apps:0,contract:ri(1,4),morale:65,fit:100,real:true,visualId:euroVisualId(club,r.en)});p.rv=r.value_m!=null?Math.round(r.value_m*1e6):Math.round((2+ri(0,6))*1e5);p.en=r.en||null;return p}
+  const p=finalize({id:uid++,first,last,pos:r.pos||'MF',age,nat:natHe,foreign:natHe!=='ישראל',ovr,pot:potentialFor(ovr,age),form:0,yellow:0,inj:0,susp:0,goals:0,apps:0,contract:ri(1,4),morale:65,fit:100,real:true,visualId:euroVisualId(club,r.en)});p.rv=r.value_m!=null?Math.round(r.value_m*1e6):Math.round((2+ri(0,6))*1e5);p.en=r.en||null;if(club)p.from=club;if(r.nat2)p.nat2=NAT_HE[r.nat2]||r.nat2;if(p.nat2==='ישראל')p.foreign=false;return p}
 /* shift a real squad so its best-14 average matches the club's designed strength (keeps the within-squad order from real market values) */
 function rawSquad(name,str){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)return null;const ps=raw.map(r=>fromRawEuro(r,str,name));const top=ps.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const mean=top.reduce((a,b)=>a+b,0)/top.length;const shift=clamp(Math.round(str+1-mean),-7,7);
   if(shift)for(const p of ps){p.ovr=clamp(p.ovr+shift,46,94);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.value=playerValue(p);p.wage=playerWage(p)}return ps}

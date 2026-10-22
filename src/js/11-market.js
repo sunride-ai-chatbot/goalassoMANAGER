@@ -30,10 +30,12 @@ const WORLD_LEAGUES={
    clubs:[['אל-אהלי','קהיר','#e30613','#ffffff',70,'ar','מצרים'],['זמאלק','קהיר','#ffffff','#e30613',66,'ar','מצרים'],['פירמידס','קהיר','#1d4ed8','#ffffff',65,'ar','מצרים'],['וידאד קזבלנקה','קזבלנקה','#e30613','#ffffff',66,'ar','מרוקו'],['ראג\'ה קזבלנקה','קזבלנקה','#0a7c3e','#ffffff',65,'ar','מרוקו'],['אספראנס טוניס','תוניס','#ffd200','#e30613',66,'ar','תוניסיה'],['ממלודי סאנדאונס','פרטוריה','#ffd200','#1d4ed8',67,'af','דרום אפריקה'],['אורלנדו פיראטס','יוהנסבורג','#000000','#ffffff',63,'af','דרום אפריקה'],['קייזר צ\'יפס','יוהנסבורג','#ffd200','#000000',61,'af','דרום אפריקה'],['אנימבה','אבה','#1d4ed8','#ffffff',58,'af','ניגריה'],['טי.פי מאזמבה','לובומבאשי','#000000','#ffffff',60,'af','קונגו'],['אסאנטה קוטוקו','קומאסי','#e30613','#ffd200',58,'af','גאנה'],['סימבה','דאר א-סלאם','#e30613','#ffffff',58,'af','טנזניה'],['יאנג אפריקנס','דאר א-סלאם','#0a7c3e','#ffd200',57,'af','טנזניה']]},
  samerica:{name:'דרום אמריקה',country:'דרום אמריקה',flag:'🌎',str:68,vmult:.9,wmult:1.0,region:'americas',level:2,pool:'br',foreign:.1,
    clubs:[['פלמנגו','ריו','#e30613','#000000',77,'br','ברזיל'],['פלמייראס','סאו פאולו','#0a7c3e','#ffffff',77,'br','ברזיל'],['סאו פאולו','סאו פאולו','#ffffff','#e30613',72,'br','ברזיל'],['קורינתיאנס','סאו פאולו','#000000','#ffffff',71,'br','ברזיל'],['פלומיננסה','ריו','#8b0000','#0a7c3e',71,'br','ברזיל'],['בוקה ג\'וניורס','בואנוס איירס','#1d4ed8','#ffd200',73,'ar_s','ארגנטינה'],['ריבר פלייט','בואנוס איירס','#ffffff','#e30613',74,'ar_s','ארגנטינה'],['ראסינג קלוב','אבייאנדה','#5bc2e7','#ffffff',69,'ar_s','ארגנטינה'],['אינדפנדיינטה','אבייאנדה','#e30613','#ffffff',67,'ar_s','ארגנטינה'],['פניארול','מונטווידאו','#ffd200','#000000',66,'ar_s','אורוגוואי'],['נסיונל','מונטווידאו','#ffffff','#1d4ed8',65,'ar_s','אורוגוואי'],['אתלטיקו נסיונל','מדיין','#0a7c3e','#ffffff',66,'ar_s','קולומביה'],['קולו-קולו','סנטיאגו','#ffffff','#000000',64,'ar_s','צ\'ילה']]},
+ europe:{name:'עוד באירופה',country:'אירופה',flag:'🇪🇺',str:72,vmult:1.4,wmult:1.5,region:'core',level:2,pool:'de',foreign:.45,
+   clubs:[['סלטיק','גלאזגו','#018749','#ffffff',73,'en','סקוטלנד'],['ריינג\'רס','גלאזגו','#1b458f','#ffffff',71,'en','סקוטלנד'],['גלאטסראיי','איסטנבול','#fdb912','#a90432',76,'tr','טורקיה'],['פנרבחצ\'ה','איסטנבול','#fff200','#00245d',75,'tr','טורקיה'],['אולימפיאקוס','פיראוס','#e4002b','#ffffff',73,'gr','יוון'],['רד בול זלצבורג','זלצבורג','#ffffff','#e30613',72,'de','אוסטריה'],['יאנג בויז','ברן','#ffd500','#000000',70,'de','שווייץ']]},
  mls:{name:'MLS',country:'ארה"ב',flag:'🇺🇸',str:64,vmult:1.1,wmult:1.6,region:'americas',level:2,pool:'us',foreign:.45,
    clubs:[['אינטר מיאמי','מיאמי','#f7b5cd','#000000',68],['לוס אנג\'לס אף.סי','לוס אנג\'לס','#000000','#c39e6d',67],['אל.איי גלאקסי','לוס אנג\'לס','#ffffff','#00245d',66],['אטלנטה יונייטד','אטלנטה','#80000b','#a19060',64],['סיאטל סאונדרס','סיאטל','#5d9741','#1d4ed8',65],['קולומבוס קרו','קולומבוס','#ffd200','#000000',65],['פילדלפיה יוניון','פילדלפיה','#071b2c','#b38707',63],['סינסינטי','סינסינטי','#f05323','#263b80',65],['ניו יורק סיטי','ניו יורק','#6cabdd','#041e42',63],['אורלנדו סיטי','אורלנדו','#633492','#fde192',63]]},
 };
-const REGIONS={uk:{name:'בריטניה',leagues:['epl','champ']},iberia:{name:'ספרד ופורטוגל',leagues:['laliga','segunda','portugal']},core:{name:'מערב אירופה',leagues:['bundes','seriea','ligue1','eredivisie','belgium']},east:{name:'מזרח אירופה והבלקן',leagues:['east','balkan','scand']},africa:{name:'אפריקה',leagues:['africa']},americas:{name:'אמריקה',leagues:['samerica','mls']}};
+const REGIONS={uk:{name:'בריטניה',leagues:['epl','champ']},iberia:{name:'ספרד ופורטוגל',leagues:['laliga','segunda','portugal']},core:{name:'מערב אירופה',leagues:['bundes','seriea','ligue1','eredivisie','belgium','europe']},east:{name:'מזרח אירופה והבלקן',leagues:['east','balkan','scand']},africa:{name:'אפריקה',leagues:['africa']},americas:{name:'אמריקה',leagues:['samerica','mls']}};
 const EXTRA_POOLS={
  ar:[['מוחמד','אחמד','מחמוד','עומר','יוסף','כרים','אמין','חמזה','ריאן','זכריא','עבדאללה','איימן','ביל אל','אשרף'],['חסן','עלי','עבד אל-רחמן','מחמוד','אל-סייד','אמארה','בן עלי','בוחדוז','בן מוסא','מראבט','חדאד','עליוי','אל-שאמי','טאהר']],
  br:[['גבריאל','מתאוס','ויניסיוס','לוקאס','פליפה','קאיו','רפאל','ברונו','אנדרסון','דוגלאס','תיאגו','ז\'ואאו','פדרו','מרסלו','אדוארדו'],['סילבה','סנטוס','אוליביירה','סוזה','רודריגס','פריירה','לימה','גומס','קוסטה','ריביירו','מרטינס','אראוז\'ו','פרננדס','ברבוזה']],
@@ -60,16 +62,33 @@ function makeWorldPlayer(lg,clubDef,kind,str){
   const h=(p.id*2246822519)>>>0;p.est=ovr+((h%7)-3);p.key=kind==='vet'&&ovr>=str;
   return p;
 }
+/* Real squads (data/euro) appear in full in the world market. The 11 most valuable players are the club's core and
+   are listed as "in squad, not for sale" (p.nfs); everyone else can be bought. Clubs without real data keep their
+   generated 7-player transfer list. */
+const WORLD_CORE=11;
+function prepWorldPlayer(p,lg,L,str){p.kn=p.kn??0;p.lg=lg;p.vmult=p.rv?clamp(p.rv/Math.max(p.value,1e5),.1,8):L.vmult;const pw=playerWage(p);const cw=Math.max(pw*.9,Math.min(pw*L.wmult,(p.rv||0)*.009));p.wmult=Math.round(cw/pw*100)/100;const h=(p.id*2246822519)>>>0;p.est=p.ovr+((h%7)-3);p.key=p.ovr>=str+1;p.real=true;return p}
+function markWorldCore(c){const ps=c.players.filter(p=>p.real&&p.en);const byVal=ps.slice().sort((a,b)=>(b.rv||b.value)-(a.rv||a.value));const core=new Set(byVal.slice(0,WORLD_CORE).map(p=>p.id));for(const p of ps)p.nfs=core.has(p.id)}
+/* names of real players already somewhere in the career (bought, moved, free agents): never duplicated by a top-up */
+function realKey(p){return p.en+'|'+(p.rv||'')}
+function careerRealNames(){const s=new Set();const add=p=>{if(p&&p.en)s.add(realKey(p))};for(const c of [...(G.clubs||[]),...(G.leumit||[]),...worldClubs()])(c.players||[]).forEach(add);(G.freeAgents||[]).forEach(add);return s}
+/* fills a real club up to its full data/euro squad (idempotent; keeps existing players and their ids) */
+function fillRealWorldSquad(c,lg){const L=WORLD_LEAGUES[lg];const all=rawSquad(c.name,c.str);if(!all)return false;
+  const have=careerRealNames();const busy=new Set((G.negs||[]).filter(n=>n.stage==='club'||n.stage==='player').map(n=>n.pid));
+  // a real club never shows invented players as part of its real squad
+  c.players=c.players.filter(p=>p.real&&p.en||busy.has(p.id));
+  for(const p of all){if(have.has(realKey(p)))continue;c.players.push(prepWorldPlayer(p,lg,L,c.str));have.add(realKey(p))}
+  c.realSquad=true;c.squadV=2;markWorldCore(c);return true}
 function ensureWorldLeague(lg){
-  if(!G.world)G.world={};if(G.world[lg])return G.world[lg];
+  if(!G.world)G.world={};if(G.world[lg]){for(const c of G.world[lg].clubs)if(c.realSquad&&c.squadV!==2)fillRealWorldSquad(c,lg);return G.world[lg]}
   const L=WORLD_LEAGUES[lg];const clubs=L.clubs.map(def=>{const [name,city,c1,c2,str]=def;const c={id:'w'+(uid++),name,short:name,city,country:def[6]||L.country,stadium:'',c1,c2,str,lg,league:false,world:true,pseudo:true,players:[],youth:[],money:0,tier:str>=76?1:str>=66?2:3,fans:60,P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0};
-    const all0=rawSquad(name,str);
-    if(all0){const all=all0.sort((a,b)=>(b.rv||b.value)-(a.rv||a.value));const top=new Set(all.slice(0,11).map(p=>p.id));const avail=all.filter(p=>!top.has(p.id));const young=avail.filter(p=>p.age<=21).slice(0,2);const vets=avail.filter(p=>p.age>=30&&!young.includes(p)).slice(0,2);const rest=avail.filter(p=>!young.includes(p)&&!vets.includes(p));const mid=rest.slice(0,7-young.length-vets.length);
-      for(const p of [...young,...mid,...vets]){p.kn=0;p.lg=lg;p.vmult=p.rv?clamp(p.rv/Math.max(p.value,1e5),.1,8):L.vmult;const pw=playerWage(p);const cw=Math.max(pw*.9,Math.min(pw*L.wmult,(p.rv||0)*.009));p.wmult=Math.round(cw/pw*100)/100;const h=(p.id*2246822519)>>>0;p.est=p.ovr+((h%7)-3);p.key=p.ovr>=str+1;p.real=true;c.players.push(p)}
-      while(c.players.length<7)c.players.push(makeWorldPlayer(lg,def,'mid',str));c.realSquad=true}
+    if(RAW_EURO&&RAW_EURO[name]&&RAW_EURO[name].length>=14)fillRealWorldSquad(c,lg)
     else{const kinds=['young','young','mid','mid','mid','vet','vet'];for(const k of kinds)c.players.push(makeWorldPlayer(lg,def,k,str))}return c});
   G.world[lg]={clubs};return G.world[lg];
 }
+/* v9: careers saved with 7-player world lists get the full real squads; players remember their origin club so their
+   face resolves after a transfer */
+function migrateWorldSquads(){if(!G.world)return;for(const [lg,l] of Object.entries(G.world)){if(!WORLD_LEAGUES[lg])continue;for(const c of l.clubs||[]){if(!c.realSquad)continue;for(const p of c.players)if(p.en&&!p.from)p.from=c.name;if(c.squadV!==2)fillRealWorldSquad(c,lg)}}}
+function ensureAllWorldLeagues(){for(const lg of Object.keys(WORLD_LEAGUES))ensureWorldLeague(lg)}
 function worldClubs(){return G.world?Object.values(G.world).flatMap(l=>l.clubs):[]}
 function wclub(id){return worldClubs().find(c=>c.id===id)}
 function findWorldPlayer(pid){for(const c of worldClubs()){const p=c.players.find(x=>x.id===pid);if(p)return {p,c}}return null}
@@ -100,7 +119,7 @@ function scoutTick(){
   for(const s of G.scouts){c.money-=s.wage;addLog(`שכר סקאוט ${s.name}`,-s.wage);s.timer--;if(s.timer>0)continue;
     s.timer=s.q>=4?2:3;const leagues=REGIONS[s.region].leagues;leagues.forEach(ensureWorldLeague);
     let pool=leagues.flatMap(lg=>G.world[lg].clubs.flatMap(cl=>cl.players.map(p=>({p,cl}))));
-    const b=s.brief;pool=pool.filter(x=>!x.p.rep&&(b.pos==='all'||x.p.pos===b.pos)&&x.p.age<=b.maxAge&&(b.budget==='any'||marketValue(x.p)*1.2<=(b.budget==='half'?c.money*.5:c.money)));
+    const b=s.brief;pool=pool.filter(x=>!x.p.rep&&!x.p.nfs&&(b.pos==='all'||x.p.pos===b.pos)&&x.p.age<=b.maxAge&&(b.budget==='any'||marketValue(x.p)*1.2<=(b.budget==='half'?c.money*.5:c.money)));
     if(!pool.length){news(`${s.name}: לא מצאתי שחקנים שמתאימים להנחיות ב${REGIONS[s.region].name}.`);continue}
     pool.forEach(x=>x.score=x.p.ovr+(x.p.age<=22?(x.p.pot-x.p.ovr)*.5:0)-Math.log2(Math.max(1,marketValue(x.p)/1e6))*2.2+rnd(-2,2));
     pool.sort((a,b)=>b.score-a.score);const depth=s.q>=5?4:s.q>=4?7:s.q>=3?12:20;const picks=shuffle(pool.slice(0,depth)).slice(0,3);
@@ -129,7 +148,7 @@ function askingFor(p,sc){const c=sc;let ask=marketValue(p)*1.15;
   return {ask:Math.round(ask/5e4)*5e4,key};
 }
 function offerEffective(o){return o.fee*(o.inst===1?1:o.inst===2?.95:.9)*(1+(o.sellon||0)/200)}
-function startNegotiation(pid){const c=me();if(!WINDOW(G.wk))return toast('חלון ההעברות סגור');const f=sellerClub(pid);if(!f)return;
+function startNegotiation(pid){const c=me();if(!WINDOW(G.wk))return toast('חלון ההעברות סגור');const f=sellerClub(pid);if(!f)return;if(f.p.nfs)return toast('השחקן בסגל הבכיר של המועדון ואינו עומד למכירה');
   if(c.players.length>=30)return toast('הסגל מלא (30)');
   G.negs=G.negs||[];let n=G.negs.find(x=>x.pid===pid&&x.stage!=='dead'&&x.stage!=='done');
   if(!n){const {ask,key}=askingFor(f.p,f.c);n={id:uid++,pid,club:f.c.id,stage:'club',rounds:0,prounds:0,ask,key,patience:3,log:[],wk:G.wk,s:G.season,offer:{fee:Math.round(marketValue(f.p)/1e5)*1e5,inst:1,sellon:0},pofffer:null};G.negs.unshift(n)}
@@ -212,26 +231,40 @@ function foreignBuyerFor(p){const lg=p.ovr>=76?pick(['epl','laliga','bundes','se
 let worldLg='champ',worldPos='all',worldClubId=null,worldSort='ovr',mktAge='all';
 function viewWorld(){
   const c=me();const open=WINDOW(G.wk);const L=WORLD_LEAGUES[worldLg];ensureWorldLeague(worldLg);const clubs=G.world[worldLg].clubs;
+  if(worldClubId&&!clubs.some(cl=>cl.id===worldClubId))worldClubId=null;const club=worldClubId?clubs.find(cl=>cl.id===worldClubId):null;
   const tabs=`<div class="tabs" style="margin-bottom:8px">${Object.keys(WORLD_LEAGUES).map(k=>`<button data-wl="${k}" class="${worldLg===k?'on':''}">${WORLD_LEAGUES[k].flag} ${WORLD_LEAGUES[k].name}</button>`).join('')}</div>`;
-  let pool=clubs.flatMap(cl=>cl.players.map(p=>({p,cl})));
-  if(worldClubId)pool=pool.filter(x=>x.cl.id===worldClubId);if(worldPos!=='all')pool=pool.filter(x=>x.p.pos===worldPos);if(mktAge!=='all')pool=pool.filter(x=>mktAge==='young'?x.p.age<=23:x.p.age>=29);
+  let pool=clubs.flatMap(cl=>cl.players.map(p=>({p,cl,c:cl})));
+  if(club)pool=pool.filter(x=>x.cl===club);if(worldPos!=='all')pool=pool.filter(x=>x.p.pos===worldPos);if(mktAge!=='all')pool=pool.filter(x=>mktAge==='young'?x.p.age<=23:x.p.age>=29);
+  if(worldAvail!=='all')pool=pool.filter(x=>worldAvail==='nfs'?x.p.nfs:!x.p.nfs);
+  if(marketSearch){const q=searchNorm(marketSearch);pool=pool.filter(({p})=>[fullName(p),p.en].some(h=>matchRank(searchNorm(h),q)<9))}
   pool=filterMarketPrices(pool,marketValue);
-  pool.sort((a,b)=>worldSort==='ovr'?(isKnown(b.p)?b.p.ovr:b.p.est)-(isKnown(a.p)?a.p.ovr:a.p.est):worldSort==='price'?marketValue(a.p)-marketValue(b.p):a.p.age-b.p.age);
+  const natHTML=natOptionsHTML('worldNatSel',pool,worldNat);
+  if(worldNat!=='all')pool=pool.filter(x=>hasNat(x.p,worldNat));
+  const ws=worldSort==='price'?'price-asc':worldSort;
+  pool.sort((a,b)=>ws==='ovr'?(isKnown(b.p)?b.p.ovr:b.p.est)-(isKnown(a.p)?a.p.ovr:a.p.est):ws==='price-asc'?marketValue(a.p)-marketValue(b.p):ws==='price-desc'?marketValue(b.p)-marketValue(a.p):a.p.age-b.p.age);
   const scoutHere=(G.scouts||[]).some(s=>REGIONS[s.region].leagues.includes(worldLg));
+  const sq=club&&club.realSquad?(()=>{const n=club.players.length,nfs=club.players.filter(p=>p.nfs).length;return `<div class="squad-note"><b>${esc(club.name)} · סגל מלא: <bdi>${n}</bdi> שחקנים</b><span><bdi>${n-nfs}</bdi> זמינים לרכישה · <bdi>${nfs}</bdi> בסגל הבכיר ולא למכירה</span></div>`})():club?`<div class="squad-note"><b>${esc(club.name)}</b><span class="muted">רשימת העברות (אין למועדון הזה נתוני סגל אמיתיים)</span></div>`:'';
+  const chips=activeChips([...(club?[[`מועדון: ${club.name}`,'club']]:[]),...(marketSearch?[[`שם: ${marketSearch}`,'search']]:[]),...(worldPos!=='all'?[[`עמדה: ${POSHE[worldPos]}`,'pos']]:[]),...(mktAge!=='all'?[[mktAge==='young'?'גיל: עד 23':'גיל: 29+','age']]:[]),...(worldAvail!=='all'?[[worldAvail==='buy'?'זמינים לרכישה':'לא למכירה','avail']]:[]),...(worldNat!=='all'?[[`לאום: ${worldNat}`,'nat']]:[]),...(marketPrice!=='all'?[[priceChipLabel(),'price']]:[])]);
   return `<div class="card">${marketTabs('world')}${tabs}
   <div class="row between wrap"><h3 class="sec">${L.flag} ${esc(L.name)}</h3><span class="tag ${scoutHere?'good':''}">${scoutHere?'יש לך סקאוט באזור':'אין סקאוט באזור'}</span></div>
-  <div class="muted small" style="margin-top:4px">רמת הליגה ~${L.str} · שווי ×${L.vmult} · שכר ×${L.wmult} לעומת ישראל. שחקנים שלא נסקרו מוצגים עם טווח דירוג.</div>
-  <div class="tabs" style="margin-top:8px"><button data-wc="all" class="${!worldClubId?'on':''}">כל המועדונים</button>${clubs.map(cl=>`<button data-wc="${cl.id}" class="${worldClubId===cl.id?'on':''}" style="--c1:${cl.c1}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${cl.c1};border:1px solid #0006;margin-left:4px"></span>${esc(cl.name)}</button>`).join('')}</div>
+  <div class="muted small" style="margin-top:4px">רמת הליגה ~${L.str} · שווי ×${L.vmult} · שכר ×${L.wmult} לעומת ישראל. במועדונים עם נתוני סגל אמיתיים מוצג הסגל המלא; 11 שחקני המפתח בסגל ואינם למכירה. שחקנים שלא נסקרו מוצגים עם טווח דירוג.</div>
+  ${marketSearchHTML()}
+  <div class="tabs" style="margin-top:8px"><button data-wc="all" class="${!club?'on':''}">כל המועדונים</button>${clubs.map(cl=>`<button data-wc="${cl.id}" class="${worldClubId===cl.id?'on':''}" style="--c1:${cl.c1}"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${cl.c1};border:1px solid #0006;margin-left:4px"></span>${esc(cl.name)}${cl.realSquad?` <span class="muted tiny"><bdi>${cl.players.length}</bdi></span>`:''}</button>`).join('')}</div>
+  ${sq}
+  <details class="mfold" data-mfold ${marketFiltersOpen?'open':''}><summary>סינון ומיון <span class="muted tiny">(עמדה, גיל, זמינות, לאום, מחיר)</span></summary>
   <div class="tabs" style="margin-top:6px"><button data-wp="all" class="${worldPos==='all'?'on':''}">הכל</button>${POS.map(p=>`<button data-wp="${p}" class="${worldPos===p?'on':''}">${POSHE[p]}</button>`).join('')}<button data-wa="all" class="${mktAge==='all'?'on':''}">כל גיל</button><button data-wa="young" class="${mktAge==='young'?'on':''}">עד 23</button><button data-wa="old" class="${mktAge==='old'?'on':''}">29+</button></div>
-  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ws="ovr" class="${worldSort==='ovr'?'on':''}">דירוג</button><button data-ws="price" class="${worldSort==='price'?'on':''}">מחיר</button><button data-ws="age" class="${worldSort==='age'?'on':''}">גיל</button></div>
-  ${marketPriceControls(pool.length,150)}</div>
+  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">זמינות:</span><button data-wav="all" class="${worldAvail==='all'?'on':''}">כל הסגל</button><button data-wav="buy" class="${worldAvail==='buy'?'on':''}">זמינים לרכישה</button><button data-wav="nfs" class="${worldAvail==='nfs'?'on':''}">לא למכירה</button></div>
+  <div class="mfilters">${natHTML}</div>
+  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ws="ovr" class="${ws==='ovr'?'on':''}">דירוג</button><button data-ws="price-asc" class="${ws==='price-asc'?'on':''}">מחיר: נמוך לגבוה</button><button data-ws="price-desc" class="${ws==='price-desc'?'on':''}">מחיר: גבוה לנמוך</button><button data-ws="age" class="${ws==='age'?'on':''}">גיל</button></div>
+  ${marketPriceControls(pool.length,150,true)}</details><div class="market-results" role="status" aria-live="polite">${pool.length>150?`מוצגים 150 מתוך ${pool.length} שחקנים בסינון`:`${pool.length} שחקנים בסינון`}</div>${chips}</div>
   <div class="list">${pool.slice(0,150).map(({p,cl})=>worldRow(p,cl,open)).join('')||marketPriceEmpty()}</div>`;
 }
-function worldRow(p,cl,open){
+function worldRow(p,cl,open,showLeague){
   const n=(G.negs||[]).find(x=>x.pid===p.id&&(x.stage==='club'||x.stage==='player'));
   const btn=n?`<button class="btn sm" data-neg="${n.id}">במו"מ</button>`:`<button class="btn sm sec" data-wview="${p.id}">פרטים</button>`;
-  const sub=`<span class="it">${kitSVG(cl,'sm')} ${esc(cl.short)}</span><span class="it">גיל ${p.age}</span><span class="it">${esc(p.nat)}</span><span class="it">שווי <b class="num">${isKnown(p)?NIS(marketValue(p)):'~'+NIS(marketValue(p))}</b></span>${p.rep?'<span class="it tag good" style="padding:0 6px">נסקר</span>':''}`;
-  return playerRow(p,btn,'',sub).replace('data-pid','data-wrow');
+  const L=showLeague&&cl.lg?WORLD_LEAGUES[cl.lg]:null;
+  const sub=`<span class="it">${kitSVG(cl,'sm')} ${esc(cl.short)}</span>${L?`<span class="it">${L.flag} ${esc(L.name)}</span>`:''}<span class="it">גיל ${p.age}</span>${p.foreign?'':`<span class="it">${esc(p.nat)}</span>`}${p.nat2?`<span class="it">${esc(p.nat2)}</span>`:''}<span class="it">שווי <b class="num">${isKnown(p)?NIS(marketValue(p)):'~'+NIS(marketValue(p))}</b></span>${p.nfs?'<span class="it tag nfs" style="padding:0 6px">בסגל · לא למכירה</span>':''}${!p.real?'<span class="it tag gen" style="padding:0 6px" title="אין נתוני סגל אמיתיים למועדון הזה">שחקן בדוי</span>':''}${p.rep?'<span class="it tag good" style="padding:0 6px">נסקר</span>':''}`;
+  return playerRow(p,btn,p.nfs?'nfs':'',sub).replace('data-pid','data-wrow');
 }
 function marketTabs(cur){const negs=(G.negs||[]).filter(n=>n.stage==='club'||n.stage==='player').length;const reps=(G.reports||[]).filter(r=>r.s===G.season&&G.wk-r.wk<4).length;
   return `<div class="tabs" style="margin-bottom:8px"><button data-mtab="buy" class="${cur==='buy'?'on':''}">ישראל</button><button data-mtab="world" class="${cur==='world'?'on':''}">העולם</button><button data-mtab="scout" class="${cur==='scout'?'on':''}">סקאוטינג${reps?` (${reps})`:''}</button><button data-mtab="negs" class="${cur==='negs'?'on':''}">משא ומתן${negs?` (${negs})`:''}</button><button data-mtab="free" class="${cur==='free'?'on':''}">חופשיים (${(G.freeAgents||[]).length})</button></div>`}
@@ -267,7 +300,7 @@ function playerModalAny(pid){
   ${known?attrBars(p,false)+dossierHTML(p,sc,false):`${attrBars(p,true)}<div class="small muted" style="text-align:center;margin-top:4px">דירוג משוער ${p.kn===1?'~'+p.est:lo+'–'+hi}. ${p.kn===1?'הסקאוט לא בטוח במספר המדויק.':'שלח סקאוט כדי לראות דירוג, פוטנציאל ומאפיינים.'}</div>`}
   <dl class="kv" style="margin-top:10px">${known?`<dt>פוטנציאל</dt><dd class="num">${p.pot}</dd>`:''}<dt>שווי שוק</dt><dd class="num">${known?NIS(marketValue(p)):'~'+NIS(marketValue(p))}</dd><dt>שכר נוכחי</dt><dd class="num">${NIS(Math.round(playerWage(p)*(p.wmult||1)))}/שבוע</dd><dt>חוזה</dt><dd>עד ${contractYear(p)}</dd>${p.key?'<dt>מעמד</dt><dd>שחקן מפתח במועדון</dd>':''}</dl>
   ${p.rep?`<div class="small" style="margin-top:10px;padding:8px 10px;border-radius:8px;background:var(--bg2)"><b>דוח סקאוט (${esc(p.rep.by)}):</b> ${esc(p.rep.txt)}</div>`:''}
-  <div class="actions" style="margin-top:12px">${n?`<button class="btn" data-neg="${n.id}">למשא ומתן</button>`:`<button class="btn" data-startneg="${p.id}" ${open&&c.players.length<30?'':'disabled'}>${open?'הגש הצעה':'החלון סגור'}</button>`}${!known&&p.lg?`<button class="btn sec" data-qscout="${p.id}">בדיקת סקאוט · ₪180K</button>`:''}<button class="btn sec" data-close>סגור</button></div>`);
+  ${p.nfs?`<div class="small nfs-note" style="margin-top:10px">${esc(sc.name)}: ${esc(fullName(p))} בסגל הבכיר של המועדון ואינו עומד למכירה.</div>`:''}<div class="actions" style="margin-top:12px">${n?`<button class="btn" data-neg="${n.id}">למשא ומתן</button>`:p.nfs?`<button class="btn" disabled>לא למכירה</button>`:`<button class="btn" data-startneg="${p.id}" ${open&&c.players.length<30?'':'disabled'}>${open?'הגש הצעה':'החלון סגור'}</button>`}${!known&&p.lg?`<button class="btn sec" data-qscout="${p.id}">בדיקת סקאוט · ₪180K</button>`:''}<button class="btn sec" data-close>סגור</button></div>`);
 }
 function negModal(nid){
   const n=negById(nid);if(!n)return;if(n.stage==='club'&&n.loanAsked&&!n.loan&&!n.loanRequest)requestLoan(nid);const c=me();const f=sellerClub(n.pid)||(()=>{const p=c.players.find(x=>x.id===n.pid);return p?{p,c:c}:null})();if(!f)return;const {p,c:sc}=f;

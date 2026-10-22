@@ -46,6 +46,9 @@ def main():
     global REJECT, ACCEPT
     REJECT = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-reject-files.json'), {})   # files rejected on visual review
     ACCEPT = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-accept-files.json'), {})   # files accepted on visual review
+    # files found by the player's Wikidata image or his own Commons category (before full-text search was added); a file
+    # found only by full-text search can be another person with the same name, so it needs a visual review (ACCEPT)
+    trusted = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-trusted-files.json'), {})
     t = bp.Tools()
     # decisions per candidate file (size+mtime+pipeline version), so retries only process new files
     cache_p = os.path.join(a.sources, '.import-cache.json'); cache = load(cache_p, {})
@@ -78,6 +81,8 @@ def main():
                 acc = ACCEPT.get(c['title'])
                 if acc and acc['player'] != pl['en']:
                     acc = None
+                if not acc and not c.get('fromP18') and c.get('via') not in ('category', 'subcat') and c['title'] not in trusted.get(key + '|' + pl['en'], []):
+                    tried.append(c['title'] + ': found by name search only, not yet confirmed on review'); continue
                 if not acc and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
                     tried.append(c['title'] + ': file name does not name the player'); continue
                 path = os.path.join(a.sources, 'euro', key, c['file'])
@@ -85,9 +90,10 @@ def main():
                     img = Image.open(path).convert('RGB')
                 except Exception as e:
                     tried.append(c['title'] + ': unreadable'); continue
-                ck = f"{key}/{c['file']}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if acc else '')
+                lenient = bool(acc) and not acc.get('strict')   # identity-only confirmations keep the strict quality checks
+                ck = f"{key}/{c['file']}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if lenient else '')
                 if ck not in cache:
-                    im, meas = bp.process(t, img, key=c['file'], strict=not acc)
+                    im, meas = bp.process(t, img, key=c['file'], strict=not lenient)
                     cache[ck] = 'ok' if im is not None else meas.get('reason')
                     save(cache_p, cache, compact=True)
                 if cache[ck] == 'ok':

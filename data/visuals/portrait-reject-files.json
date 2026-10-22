@@ -3,6 +3,10 @@
   "player": "Jonathan Levi",
   "reason": "side-on action shot, blurred"
  },
+ "File:2013 Nebelhorn Trophy Alisson Krystle Perticheto IMG 7340.JPG": {
+  "player": "Alisson",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:2019-06-11 Fußball, Männer, Länderspiel, Deutschland-Estland StP 2075 LR10 by Stepro.jpg": {
   "player": "Serge Gnabry",
   "reason": "side profile, not a frontal portrait"
@@ -10,6 +14,10 @@
  "File:2019-10-23 Fußball, Männer, UEFA Champions League, RB Leipzig - FC Zenit St. Petersburg 1DX 2586 by Stepro.jpg": {
   "player": "Ademola Lookman",
   "reason": "head bowed, face in shadow"
+ },
+ "File:2020 PROF. FRANCISCO MOURA CANDIDATO PREFEITO CE MARACANAU TSE (60001245757).jpg": {
+  "player": "Francisco Moura",
+  "reason": "a different person with the same name (found by name search)"
  },
  "File:2022-07-30 Fußball, Männer, DFL-Supercup, RB Leipzig - FC Bayern München 1DX 3417 by Stepro (Serge Gnabry) (cropped).jpg": {
   "player": "Serge Gnabry",
@@ -35,9 +43,17 @@
   "player": "Frank Anguissa",
   "reason": "shouting mid-match, low resolution"
  },
+ "File:Antonín Kinský1.jpg": {
+  "player": "Antonín Kinský",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:Ayden Heaven 2025.png": {
   "player": "Ayden Heaven",
   "reason": "background not separable (cut-out empty)"
+ },
+ "File:Barcelona Training Miami 2022 04 (cropped2).jpg": {
+  "player": "Ronald Araújo",
+  "reason": "low-resolution, blurred face"
  },
  "File:Bartosz Mazurek.png": {
   "player": "Bartosz Mazurek",
@@ -51,9 +67,37 @@
   "player": "Bryan Mbeumo",
   "reason": "goal net in front of the face"
  },
+ "File:Cadu Simões 2025.jpg": {
+  "player": "Cadu",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Carlos Augusto Monteiro.jpg": {
+  "player": "Carlos Augusto",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:Club Brugge x SL Benfica 07.png": {
   "player": "David Neres",
   "reason": "embraced by a team-mate; two bodies in the cut-out"
+ },
+ "File:D. Pedro Henrique Brasil 1951 (2).jpg": {
+  "player": "Pedro Henrique",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Dani Martínez 2022.jpg": {
+  "player": "Dani Martínez",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:David Jurásek Davídek.jpg": {
+  "player": "David Jurásek",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Edgar Allan Poe 2.jpg": {
+  "player": "Allan",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Edward-greene-malbone-david-moses.jpg": {
+  "player": "David Moses",
+  "reason": "a different person with the same name (found by name search)"
  },
  "File:FC RB Salzburg gegen FC Bayern München (2026-01-06 Testspiel) 46.jpg": {
   "player": "Anrie Chase",
@@ -95,6 +139,34 @@
   "player": "Souffian El Karouani",
   "reason": "action shot, head bowed, team-mate in the cut-out"
  },
+ "File:General Aleksandar Stanković.jpg": {
+  "player": "Aleksandar Stanković",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Gomez ulla.jpg": {
+  "player": "Mariano Gómez",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Hjulmand.png": {
+  "player": "Morten Hjulmand",
+  "reason": "blurred face, cut-out leaves only a face"
+ },
+ "File:Isaac Mabaya 09082025 (1).jpg": {
+  "player": "Isaac Mabaya",
+  "reason": "phone held against the face"
+ },
+ "File:Ivan Filipovic Ck 290708.jpg": {
+  "player": "Ivan Filipovic",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Jacopo Palma il Giovane.png": {
+  "player": "Giovane",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Jakub Martinec.jpg": {
+  "player": "Jakub Martinec",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:Jakub Moder signing autograph 02032024 (1).jpg": {
   "player": "Jakub Moder",
   "reason": "hood up, looking down"
@@ -111,9 +183,25 @@
   "player": "Jakub Moder",
   "reason": "hood up, looking down"
  },
+ "File:Jakub Moder with a fan 02032024.jpg": {
+  "player": "Jakub Moder",
+  "reason": "hood up, looking down"
+ },
+ "File:JamesPenrice.jpg": {
+  "player": "James Penrice",
+  "reason": "distant full-body shot; head too small"
+ },
+ "File:Javi Lopez (cropped).JPG": {
+  "player": "Javi López",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:Javi lopez alaves.jpg": {
   "player": "Javi López",
   "reason": "sunglasses and crowd heads around the face"
+ },
+ "File:Jeremie Frimpong 04012026 (5).jpg": {
+  "player": "Jeremie Frimpong",
+  "reason": "snood covers the lower face"
  },
  "File:Jhon Lucumí September 2019.jpg": {
   "player": "Jhon Lucumí",
@@ -127,13 +215,37 @@
   "player": "Joe Gomez",
   "reason": "cap on, looking down"
  },
+ "File:Johan Andreas Cornelius Ohme.jpg": {
+  "player": "Andreas Cornelius",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:John Elliott, James R. McConnell. SAAM-1927.8.15.jpg": {
+  "player": "James McConnell",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Jonathan-Levi-Author-Photo.jpg": {
+  "player": "Jonathan Levi",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Josep Martínez Ècija a Gràcia..jpg": {
+  "player": "Josep Martínez",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:Jota Silva image upload jpg.jpg": {
   "player": "Jota Silva",
   "reason": "shouting celebration, arm across the frame"
  },
+ "File:João Costa, Minister of Education of Portugal (52471846652).jpg": {
+  "player": "João Costa",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:João Neves (PSG).jpg": {
   "player": "João Neves",
   "reason": "tiny, blurred face from a distant full-body shot"
+ },
+ "File:João Simões Lopes Neto (c. 1915).jpg": {
+  "player": "João Simões",
+  "reason": "a different person with the same name (found by name search)"
  },
  "File:Karl Darlow 2014.jpg": {
   "player": "Karl Darlow",
@@ -163,6 +275,14 @@
   "player": "Luís Guilherme",
   "reason": "hand covering the face"
  },
+ "File:Luiz Cláudio Ramos.png": {
+  "player": "Cláudio Ramos",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Luke Chambers 07032026 (3).jpg": {
+  "player": "Luke Chambers",
+  "reason": "looking down"
+ },
  "File:Luke Shaw, Manchester United v Newcastle United, 11 September 2021 (44) (cropped).jpg": {
   "player": "Luke Shaw",
   "reason": "another player's head inside the cut-out"
@@ -171,9 +291,25 @@
   "player": "Manuel Locatelli",
   "reason": "another player's head and shoulder inside the cut-out"
  },
+ "File:Marco palestra.jpg": {
+  "player": "Marco Palestra",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Marcos López TV.jpg": {
+  "player": "Marcos López",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Matheus Enholm.jpg": {
+  "player": "Matheus",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:Matj kova-1772635856.JPG": {
   "player": "Matěj Kovář",
   "reason": "looking down at a press conference desk"
+ },
+ "File:Miguel Gutierrez (Legavolley 2017).jpg": {
+  "player": "Miguel Gutiérrez",
+  "reason": "a different person with the same name (found by name search)"
  },
  "File:Mislav-Orsic-2022.png": {
   "player": "Mislav Orsic",
@@ -190,6 +326,22 @@
  "File:Oğuz Aydın 70 Fenerbahçe 20260805 (1).JPG": {
   "player": "Oğuz Aydın",
   "reason": "side profile"
+ },
+ "File:Paul Bismark Tabinas.png": {
+  "player": "Paul Tabinas",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Pedro Lima.jpg": {
+  "player": "Pedro Lima",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Pedro Nuno Santos, Reabertura da Oficina de Guifões (2020-01-15).png": {
+  "player": "Nuno Santos",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Robert Frank (1953).jpg": {
+  "player": "Robert",
+  "reason": "a different person with the same name (found by name search)"
  },
  "File:Ross McCrorie 11042026 (1).jpg": {
   "player": "Ross McCrorie",
@@ -211,9 +363,21 @@
   "player": "Sofyan Amrabat",
   "reason": "distant shot, head too small for the frame"
  },
+ "File:Sulaimon Bamidele Yusuf.jpg": {
+  "player": "Bamidele Yusuf",
+  "reason": "a different person with the same name (found by name search)"
+ },
+ "File:TRABZONSPOR 2025-2026 İLK MAÇ İLK 11 (Tim Jabol-Folcarelli).jpg": {
+  "player": "Uğurcan Çakır",
+  "reason": "a different person with the same name (found by name search)"
+ },
  "File:Tosin Adarabioyo FIFA Club World Cup extraction.jpg": {
   "player": "Tosin Adarabioyo",
   "reason": "shouting, mouth wide open"
+ },
+ "File:USO-ASM - 20140927 - Wesley Fofana.jpg": {
+  "player": "Wesley Fofana",
+  "reason": "a different person with the same name (found by name search)"
  },
  "File:Viljami Sinisalo (2022-06-03).jpg": {
   "player": "Viljami Sinisalo",
@@ -226,6 +390,10 @@
  "File:Zaidu Sanusi1.jpg": {
   "player": "Zaidu Sanusi",
   "reason": "face too small and blurred in a full-body shot"
+ },
+ "File:Ádám Varga (HUN) 2024.jpg": {
+  "player": "Ádám Varga",
+  "reason": "a different person with the same name (found by name search)"
  },
  "File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137461 (Teun Koopmeiners).jpg": {
   "player": "Teun Koopmeiners",
