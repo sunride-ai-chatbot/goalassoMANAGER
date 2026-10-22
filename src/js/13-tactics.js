@@ -16,17 +16,17 @@ function avgFit(M,c){const xs=xiPlayers(M,c);if(!xs.length)return 100;return xs.
 /* returns {dh,da,poss,fatH,fatA,notes} = deltas to home/away expected goals per 90, possession shift, fatigue multipliers */
 function tacticAdj(M,h,a){
   const th=tacOfM(M,h),ta=tacOfM(M,a);let dh=0,da=0,poss=0,fatH=1,fatA=1;const notes=[];
-  const side=(c,o,t,to,isHome)=>{let own=0,opp=0,ps=0,fat=1;
+  const side=(c,o,t,to,isHome)=>{let own=0,opp=0,ps=0,fat=1;const oppMent=liveMentality(M,o);
     const mfPass=avgAttr(M,c,'MF',2),fwPace=avgAttr(M,c,'FW',0),fwPhys=avgAttr(M,c,'FW',5),dfDef=avgAttr(M,c,'DF',4),fit=avgFit(M,c);
     if(t.press==='high'){own+=.08;opp+=.03;fat*=1.3;if(to.style==='possession')own+=.06;if(to.style==='direct')own-=.03;if(fit<70){own-=.1;opp+=.06;if(isHome===(c.id===G.me))notes.push('הפרסינג נשבר: השחקנים עייפים מדי')}}
-    if(t.press==='low'){opp-=.1;own-=.07;if(to.mentality==='att'||to.style==='possession')opp-=.03}
+    if(t.press==='low'){opp-=.1;own-=.07;if(oppMent==='att'||to.style==='possession')opp-=.03}
     if(t.width==='wide'){if(fwPace>=68)own+=.06;else own+=.01;opp+=.03}
     if(t.width==='narrow'){opp-=.04;own-=.03}
     if(t.tempo==='fast'){own+=.05;opp+=.04;fat*=1.15}
     if(t.tempo==='slow'){own-=.04;opp-=.04;ps+=.03;fat*=.9}
     if(t.style==='possession'){ps+=.08;if(mfPass>=68)own+=.05;else{own-=.04;opp+=.03}if(to.style==='counter')opp-=.04}
     if(t.style==='direct'){ps-=.06;if(fwPhys>=68)own+=.06;else own+=.01}
-    if(t.style==='counter'){ps-=.05;if(to.mentality==='att'||to.press==='high')own+=.09;else own+=.01;if(fwPace>=68)own+=.03}
+    if(t.style==='counter'){ps-=.05;if(oppMent==='att'||to.press==='high')own+=.09;else own+=.01;if(fwPace>=68)own+=.03}
     if(dfDef>=70&&t.press==='low')opp-=.02;
     // roles
     for(const {p} of xiPlayers(M,c)){const r=roleOf(p);const f=roleFit(p)*.02+(p.roleM&&p.roleM===r?.015:0);if(r==='play')own+=.03+f;else if(r==='anchor')opp-=.03+f;else if(r==='target'){own+=(t.style==='direct'?.04:.01)+f}else if(r==='false9')own+=.02+f;else if(r==='winger'){own+=(t.width==='wide'?.03:.01)+f}else if(r==='wingback'){own+=.015+f;opp+=.01}else if(r==='ball'){ps+=.01;own+=f}else if(r==='sweep'){if(t.press==='high')opp-=.03;own+=f}else if(r==='poach')own+=f*.5;else own+=f*.5}
@@ -37,7 +37,7 @@ function tacticAdj(M,h,a){
   dh=H.own+A.opp;da=A.own+H.opp;poss=H.ps-A.ps;fatH=H.fat;fatA=A.fat;
   return {dh,da,poss,fatH,fatA,notes};
 }
-function liveEnergy(M,c,p,e){const t=tacOf(c);const rate=(t&&t.press==='high'?1.25:t&&t.press==='low'?.85:1)*(t&&t.tempo==='fast'?1.1:1);const played=Math.max(0,M.m-(e?e.since:0));return Math.round(clamp((p.fit??100)-played*.16*rate-Math.max(0,played-60)*.35*rate,15,100))}
+function liveEnergy(M,c,p,e,m){const t=tacOfM(M,c);const rate=(t&&t.press==='high'?1.25:t&&t.press==='low'?.85:1)*(t&&t.tempo==='fast'?1.1:1)*(p.pos==='GK'?.35:1);const played=Math.max(0,(m??M.m)-(e?e.since:0));return Math.round(clamp((p.fit??100)-played*.16*rate-Math.max(0,played-60)*.35*rate,15,100))}
 function liveMentality(M,c){return (M.liveMent&&M.liveMent[c.id])||c.mentality||'bal'}
 function matchupText(c,o){const t=tacOf(c),to=tacOf(o);const tips=[];
   tips.push(`${o.short} משחקת ב${TAC.press[to.press]}, ${TAC.style[to.style]}, ${TAC.tempo[to.tempo]}.`);
