@@ -3634,6 +3634,22 @@
     "usageTerms": ""
    }
   },
+  "wd-Q18237361": {
+   "fromP18": true,
+   "pack": "eu-liverpool",
+   "source": {
+    "attributionRequired": "true",
+    "author": "Bryan Berlin",
+    "credit": "Own work",
+    "date": "2026-06-13 18:34:35",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Alisson_Becker_Brazil_V_Morocco_13_June_2026-117_(cropped).jpg",
+    "restrictions": "personality",
+    "title": "File:Alisson Becker Brazil V Morocco 13 June 2026-117 (cropped).jpg",
+    "usageTerms": "Creative Commons Attribution-Share Alike 4.0"
+   }
+  },
   "wd-Q18331623": {
    "fromP18": true,
    "pack": "eu-rangers",
@@ -10147,6 +10163,166 @@
    "wikidata": "https://www.wikidata.org/wiki/Q96182871"
   },
   {
+   "club": "אתלטיקו מדריד",
+   "en": "Jan Oblak",
+   "he": "יאן אובלק",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q2058682",
+   "visualId": "wd-Q2058682",
+   "wikidata": "https://www.wikidata.org/wiki/Q2058682"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Juan Musso",
+   "he": "חואן מוסו",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q5951550",
+   "visualId": "wd-Q5951550",
+   "wikidata": "https://www.wikidata.org/wiki/Q5951550"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Alejandro Grimaldo",
+   "he": "אלחנדרו גרימאלדו",
+   "key": "atletico",
+   "match": "surname+club+birth_year",
+   "qid": "Q921324",
+   "visualId": "wd-Q921324",
+   "wikidata": "https://www.wikidata.org/wiki/Q921324"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Marcos Llorente",
+   "he": "מרקוס יורנטה",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q21130285",
+   "visualId": "wd-Q21130285",
+   "wikidata": "https://www.wikidata.org/wiki/Q21130285"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Marc Pubill",
+   "he": "מארק פוביל",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q110220404",
+   "visualId": "wd-Q110220404",
+   "wikidata": "https://www.wikidata.org/wiki/Q110220404"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Cristian Romero",
+   "he": "כריסטיאן רומרו",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q28058687",
+   "visualId": "wd-Q28058687",
+   "wikidata": "https://www.wikidata.org/wiki/Q28058687"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Dávid Hancko",
+   "he": "דויד הנצקו",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q23771427",
+   "visualId": "wd-Q23771427",
+   "wikidata": "https://www.wikidata.org/wiki/Q23771427"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Johnny Cardoso",
+   "he": "ג'וני קרדוסו",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q72219351",
+   "visualId": "wd-Q72219351",
+   "wikidata": "https://www.wikidata.org/wiki/Q72219351"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Lee Kang-in",
+   "he": "לי קאנג-אין",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q16174734",
+   "visualId": "wd-Q16174734",
+   "wikidata": "https://www.wikidata.org/wiki/Q16174734"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Koke",
+   "he": "קוקה",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q276091",
+   "visualId": "wd-Q276091",
+   "wikidata": "https://www.wikidata.org/wiki/Q276091"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Alexander Sørloth",
+   "he": "אלכסנדר סרלות'",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q13784739",
+   "visualId": "wd-Q13784739",
+   "wikidata": "https://www.wikidata.org/wiki/Q13784739"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Jonathan David",
+   "he": "ג'ונתן דייויד",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q56085180",
+   "visualId": "wd-Q56085180",
+   "wikidata": "https://www.wikidata.org/wiki/Q56085180"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Álex Baena",
+   "he": "אלכס באאנה",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q97404267",
+   "visualId": "wd-Q97404267",
+   "wikidata": "https://www.wikidata.org/wiki/Q97404267"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Giuliano Simeone",
+   "he": "ג'וליאנו סימאונה",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q111672750",
+   "visualId": "wd-Q111672750",
+   "wikidata": "https://www.wikidata.org/wiki/Q111672750"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Ademola Lookman",
+   "he": "אדמולה לוקמן",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q21484766",
+   "visualId": "wd-Q21484766",
+   "wikidata": "https://www.wikidata.org/wiki/Q21484766"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Julián Álvarez",
+   "he": "חוליאן אלוארס",
+   "key": "atletico",
+   "match": "name+club",
+   "qid": "Q59381180",
+   "visualId": "wd-Q59381180",
+   "wikidata": "https://www.wikidata.org/wiki/Q59381180"
+  },
+  {
    "club": "ברצלונה",
    "en": "Joan García",
    "he": "ז'ואן גארסיה",
@@ -12297,166 +12473,6 @@
    "wikidata": "https://www.wikidata.org/wiki/Q19903718"
   },
   {
-   "club": "יובנטוס",
-   "en": "Guglielmo Vicario",
-   "he": "גוליילמו ויקאריו",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q44083681",
-   "visualId": "wd-Q44083681",
-   "wikidata": "https://www.wikidata.org/wiki/Q44083681"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Lloyd Kelly",
-   "he": "לויד קלי",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q35851317",
-   "visualId": "wd-Q35851317",
-   "wikidata": "https://www.wikidata.org/wiki/Q35851317"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Zeki Çelik",
-   "he": "זקי צ'ליק",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q50628268",
-   "visualId": "wd-Q50628268",
-   "wikidata": "https://www.wikidata.org/wiki/Q50628268"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Bremer",
-   "he": "ברמר",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q38693097",
-   "visualId": "wd-Q38693097",
-   "wikidata": "https://www.wikidata.org/wiki/Q38693097"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Daniele Rugani",
-   "he": "דניאלה רוגאני",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q15830919",
-   "visualId": "wd-Q15830919",
-   "wikidata": "https://www.wikidata.org/wiki/Q15830919"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Federico Gatti",
-   "he": "פדריקו גאטי",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q108491198",
-   "visualId": "wd-Q108491198",
-   "wikidata": "https://www.wikidata.org/wiki/Q108491198"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Pierre Kalulu",
-   "he": "פייר קאלולו",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q98815671",
-   "visualId": "wd-Q98815671",
-   "wikidata": "https://www.wikidata.org/wiki/Q98815671"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Khéphren Thuram",
-   "he": "קפרן טוראם",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q58465451",
-   "visualId": "wd-Q58465451",
-   "wikidata": "https://www.wikidata.org/wiki/Q58465451"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Pape Matar Sarr",
-   "he": "פאפ מאטאר סאר",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q104877690",
-   "visualId": "wd-Q104877690",
-   "wikidata": "https://www.wikidata.org/wiki/Q104877690"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Weston McKennie",
-   "he": "ווסטון מקני",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q29998966",
-   "visualId": "wd-Q29998966",
-   "wikidata": "https://www.wikidata.org/wiki/Q29998966"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Douglas Luiz",
-   "he": "דוגלאס לואיס",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q28363823",
-   "visualId": "wd-Q28363823",
-   "wikidata": "https://www.wikidata.org/wiki/Q28363823"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Nick Woltemade",
-   "he": "ניק וולטמאדה",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q84158344",
-   "visualId": "wd-Q84158344",
-   "wikidata": "https://www.wikidata.org/wiki/Q84158344"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Francisco Conceição",
-   "he": "פרנסישקו קונסיסאו",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q99617367",
-   "visualId": "wd-Q99617367",
-   "wikidata": "https://www.wikidata.org/wiki/Q99617367"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Nico González",
-   "he": "ניקו גונזאלס",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q43381082",
-   "visualId": "wd-Q43381082",
-   "wikidata": "https://www.wikidata.org/wiki/Q43381082"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Edon Zhegrova",
-   "he": "אדון ז'גרובה",
-   "key": "juventus",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q42303600",
-   "visualId": "wd-Q42303600",
-   "wikidata": "https://www.wikidata.org/wiki/Q42303600"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Kerim Alajbegović",
-   "he": "קרים אלייבגוביץ'",
-   "key": "juventus",
-   "match": "name+club",
-   "qid": "Q130741313",
-   "visualId": "wd-Q130741313",
-   "wikidata": "https://www.wikidata.org/wiki/Q130741313"
-  },
-  {
    "club": "באייר לברקוזן",
    "en": "Mark Flekken",
    "he": "מארק פלקן",
@@ -12655,6 +12671,196 @@
    "qid": "Q16910257",
    "visualId": "wd-Q16910257",
    "wikidata": "https://www.wikidata.org/wiki/Q16910257"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Alisson",
+   "he": "אליסון",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q18237361",
+   "visualId": "wd-Q18237361",
+   "wikidata": "https://www.wikidata.org/wiki/Q18237361"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Vítězslav Jaroš",
+   "he": "ויטסלב יארוש",
+   "key": "liverpool",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q112503285",
+   "visualId": "wd-Q112503285",
+   "wikidata": "https://www.wikidata.org/wiki/Q112503285"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Joe Gomez",
+   "he": "ג'ו גומז",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q17505113",
+   "visualId": "wd-Q17505113",
+   "wikidata": "https://www.wikidata.org/wiki/Q17505113"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Kostas Tsimikas",
+   "he": "קוסטאס צימיקאס",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q22005877",
+   "visualId": "wd-Q22005877",
+   "wikidata": "https://www.wikidata.org/wiki/Q22005877"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Virgil van Dijk",
+   "he": "וירג'יל ואן דייק",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q133903",
+   "visualId": "wd-Q133903",
+   "wikidata": "https://www.wikidata.org/wiki/Q133903"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Conor Bradley",
+   "he": "קונור בראדלי",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q107031318",
+   "visualId": "wd-Q107031318",
+   "wikidata": "https://www.wikidata.org/wiki/Q107031318"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Milos Kerkez",
+   "he": "מילוש קרקז",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q110874376",
+   "visualId": "wd-Q110874376",
+   "wikidata": "https://www.wikidata.org/wiki/Q110874376"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Alexis Mac Allister",
+   "he": "אלכסיס מק אליסטר",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q33297140",
+   "visualId": "wd-Q33297140",
+   "wikidata": "https://www.wikidata.org/wiki/Q33297140"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Dominik Szoboszlai",
+   "he": "דומיניק סובוסלאי",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q30134278",
+   "visualId": "wd-Q30134278",
+   "wikidata": "https://www.wikidata.org/wiki/Q30134278"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Wataru Endo",
+   "he": "ואטארו אנדו",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q10526787",
+   "visualId": "wd-Q10526787",
+   "wikidata": "https://www.wikidata.org/wiki/Q10526787"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Ryan Gravenberch",
+   "he": "ראיין גראבנברך",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q56257870",
+   "visualId": "wd-Q56257870",
+   "wikidata": "https://www.wikidata.org/wiki/Q56257870"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Florian Wirtz",
+   "he": "פלוריאן וירץ",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q94699949",
+   "visualId": "wd-Q94699949",
+   "wikidata": "https://www.wikidata.org/wiki/Q94699949"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Bradley Barcola",
+   "he": "בראדלי בארקולה",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q99670930",
+   "visualId": "wd-Q99670930",
+   "wikidata": "https://www.wikidata.org/wiki/Q99670930"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Rio Ngumoha",
+   "he": "ריו נגומוהה",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q131466230",
+   "visualId": "wd-Q131466230",
+   "wikidata": "https://www.wikidata.org/wiki/Q131466230"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Alexander Isak",
+   "he": "אלכסנדר איסאק",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q23759917",
+   "visualId": "wd-Q23759917",
+   "wikidata": "https://www.wikidata.org/wiki/Q23759917"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Víctor Muñoz",
+   "he": "ויקטור מוניוס",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q121422889",
+   "visualId": "wd-Q121422889",
+   "wikidata": "https://www.wikidata.org/wiki/Q121422889"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Cody Gakpo",
+   "he": "קודי גאקפו",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q28801927",
+   "visualId": "wd-Q28801927",
+   "wikidata": "https://www.wikidata.org/wiki/Q28801927"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Federico Chiesa",
+   "he": "פדריקו קייזה",
+   "key": "liverpool",
+   "match": "name+club",
+   "qid": "Q26704703",
+   "visualId": "wd-Q26704703",
+   "wikidata": "https://www.wikidata.org/wiki/Q26704703"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Freddie Woodman",
+   "he": "פרדי וודמן",
+   "key": "liverpool",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q20127322",
+   "visualId": "wd-Q20127322",
+   "wikidata": "https://www.wikidata.org/wiki/Q20127322"
   },
   {
    "club": "לודוגורץ ראזגרד",
@@ -14257,6 +14463,106 @@
    "wikidata": "https://www.wikidata.org/wiki/Q161054"
   },
   {
+   "club": "ריינג'רס",
+   "en": "Liam Kelly",
+   "he": "ליאם קלי",
+   "key": "rangers",
+   "match": "name+club",
+   "qid": "Q27448075",
+   "visualId": "wd-Q27448075",
+   "wikidata": "https://www.wikidata.org/wiki/Q27448075"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Ivor Pandur",
+   "he": "איבור פאנדור",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q84462730",
+   "visualId": "wd-Q84462730",
+   "wikidata": "https://www.wikidata.org/wiki/Q84462730"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Ben Godfrey",
+   "he": "בן גודפרי",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q20829745",
+   "visualId": "wd-Q20829745",
+   "wikidata": "https://www.wikidata.org/wiki/Q20829745"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "John Souttar",
+   "he": "ג'ון סאוטר",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q3238952",
+   "visualId": "wd-Q3238952",
+   "wikidata": "https://www.wikidata.org/wiki/Q3238952"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Olwethu Makhanya",
+   "he": "אולווטו מקאניה",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q122207713",
+   "visualId": "wd-Q122207713",
+   "wikidata": "https://www.wikidata.org/wiki/Q122207713"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Nicolas Raskin",
+   "he": "ניקולא ראסקין",
+   "key": "rangers",
+   "match": "name+club",
+   "qid": "Q48525779",
+   "visualId": "wd-Q48525779",
+   "wikidata": "https://www.wikidata.org/wiki/Q48525779"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Badredine Bouanani",
+   "he": "בדרדין בואנאני",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q114593540",
+   "visualId": "wd-Q114593540",
+   "wikidata": "https://www.wikidata.org/wiki/Q114593540"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Findlay Curtis",
+   "he": "פינדליי קרטיס",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q131863254",
+   "visualId": "wd-Q131863254",
+   "wikidata": "https://www.wikidata.org/wiki/Q131863254"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Ross McCausland",
+   "he": "רוס מק'קוסלנד",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q111994930",
+   "visualId": "wd-Q111994930",
+   "wikidata": "https://www.wikidata.org/wiki/Q111994930"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Lawrence Shankland",
+   "he": "לורנס שנקלנד",
+   "key": "rangers",
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q18331623",
+   "visualId": "wd-Q18331623",
+   "wikidata": "https://www.wikidata.org/wiki/Q18331623"
+  },
+  {
    "club": "ריאל מדריד",
    "en": "Thibaut Courtois",
    "he": "תיבו קורטואה",
@@ -15317,444 +15623,164 @@
    "wikidata": "https://www.wikidata.org/wiki/Q56486404"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Jan Oblak",
-   "he": "יאן אובלק",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Guglielmo Vicario",
+   "he": "גוליילמו ויקאריו",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q2058682",
-   "visualId": "wd-Q2058682",
-   "wikidata": "https://www.wikidata.org/wiki/Q2058682"
+   "qid": "Q44083681",
+   "visualId": "wd-Q44083681",
+   "wikidata": "https://www.wikidata.org/wiki/Q44083681"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Juan Musso",
-   "he": "חואן מוסו",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Lloyd Kelly",
+   "he": "לויד קלי",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q5951550",
-   "visualId": "wd-Q5951550",
-   "wikidata": "https://www.wikidata.org/wiki/Q5951550"
+   "qid": "Q35851317",
+   "visualId": "wd-Q35851317",
+   "wikidata": "https://www.wikidata.org/wiki/Q35851317"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Alejandro Grimaldo",
-   "he": "אלחנדרו גרימאלדו",
-   "key": "atletico",
-   "match": "surname+club+birth_year",
-   "qid": "Q921324",
-   "visualId": "wd-Q921324",
-   "wikidata": "https://www.wikidata.org/wiki/Q921324"
-  },
-  {
-   "club": "אתלטיקו מדריד",
-   "en": "Marcos Llorente",
-   "he": "מרקוס יורנטה",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Zeki Çelik",
+   "he": "זקי צ'ליק",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q21130285",
-   "visualId": "wd-Q21130285",
-   "wikidata": "https://www.wikidata.org/wiki/Q21130285"
+   "qid": "Q50628268",
+   "visualId": "wd-Q50628268",
+   "wikidata": "https://www.wikidata.org/wiki/Q50628268"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Marc Pubill",
-   "he": "מארק פוביל",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Bremer",
+   "he": "ברמר",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q110220404",
-   "visualId": "wd-Q110220404",
-   "wikidata": "https://www.wikidata.org/wiki/Q110220404"
+   "qid": "Q38693097",
+   "visualId": "wd-Q38693097",
+   "wikidata": "https://www.wikidata.org/wiki/Q38693097"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Cristian Romero",
-   "he": "כריסטיאן רומרו",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Daniele Rugani",
+   "he": "דניאלה רוגאני",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q28058687",
-   "visualId": "wd-Q28058687",
-   "wikidata": "https://www.wikidata.org/wiki/Q28058687"
+   "qid": "Q15830919",
+   "visualId": "wd-Q15830919",
+   "wikidata": "https://www.wikidata.org/wiki/Q15830919"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Dávid Hancko",
-   "he": "דויד הנצקו",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Federico Gatti",
+   "he": "פדריקו גאטי",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q23771427",
-   "visualId": "wd-Q23771427",
-   "wikidata": "https://www.wikidata.org/wiki/Q23771427"
+   "qid": "Q108491198",
+   "visualId": "wd-Q108491198",
+   "wikidata": "https://www.wikidata.org/wiki/Q108491198"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Johnny Cardoso",
-   "he": "ג'וני קרדוסו",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Pierre Kalulu",
+   "he": "פייר קאלולו",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q72219351",
-   "visualId": "wd-Q72219351",
-   "wikidata": "https://www.wikidata.org/wiki/Q72219351"
+   "qid": "Q98815671",
+   "visualId": "wd-Q98815671",
+   "wikidata": "https://www.wikidata.org/wiki/Q98815671"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Lee Kang-in",
-   "he": "לי קאנג-אין",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Khéphren Thuram",
+   "he": "קפרן טוראם",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q16174734",
-   "visualId": "wd-Q16174734",
-   "wikidata": "https://www.wikidata.org/wiki/Q16174734"
+   "qid": "Q58465451",
+   "visualId": "wd-Q58465451",
+   "wikidata": "https://www.wikidata.org/wiki/Q58465451"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Koke",
-   "he": "קוקה",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Pape Matar Sarr",
+   "he": "פאפ מאטאר סאר",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q276091",
-   "visualId": "wd-Q276091",
-   "wikidata": "https://www.wikidata.org/wiki/Q276091"
+   "qid": "Q104877690",
+   "visualId": "wd-Q104877690",
+   "wikidata": "https://www.wikidata.org/wiki/Q104877690"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Alexander Sørloth",
-   "he": "אלכסנדר סרלות'",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Weston McKennie",
+   "he": "ווסטון מקני",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q13784739",
-   "visualId": "wd-Q13784739",
-   "wikidata": "https://www.wikidata.org/wiki/Q13784739"
+   "qid": "Q29998966",
+   "visualId": "wd-Q29998966",
+   "wikidata": "https://www.wikidata.org/wiki/Q29998966"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Jonathan David",
-   "he": "ג'ונתן דייויד",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Douglas Luiz",
+   "he": "דוגלאס לואיס",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q56085180",
-   "visualId": "wd-Q56085180",
-   "wikidata": "https://www.wikidata.org/wiki/Q56085180"
+   "qid": "Q28363823",
+   "visualId": "wd-Q28363823",
+   "wikidata": "https://www.wikidata.org/wiki/Q28363823"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Álex Baena",
-   "he": "אלכס באאנה",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Nick Woltemade",
+   "he": "ניק וולטמאדה",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q97404267",
-   "visualId": "wd-Q97404267",
-   "wikidata": "https://www.wikidata.org/wiki/Q97404267"
+   "qid": "Q84158344",
+   "visualId": "wd-Q84158344",
+   "wikidata": "https://www.wikidata.org/wiki/Q84158344"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Giuliano Simeone",
-   "he": "ג'וליאנו סימאונה",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Francisco Conceição",
+   "he": "פרנסישקו קונסיסאו",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q111672750",
-   "visualId": "wd-Q111672750",
-   "wikidata": "https://www.wikidata.org/wiki/Q111672750"
+   "qid": "Q99617367",
+   "visualId": "wd-Q99617367",
+   "wikidata": "https://www.wikidata.org/wiki/Q99617367"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Ademola Lookman",
-   "he": "אדמולה לוקמן",
-   "key": "atletico",
+   "club": "יובנטוס",
+   "en": "Nico González",
+   "he": "ניקו גונזאלס",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q21484766",
-   "visualId": "wd-Q21484766",
-   "wikidata": "https://www.wikidata.org/wiki/Q21484766"
+   "qid": "Q43381082",
+   "visualId": "wd-Q43381082",
+   "wikidata": "https://www.wikidata.org/wiki/Q43381082"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Julián Álvarez",
-   "he": "חוליאן אלוארס",
-   "key": "atletico",
-   "match": "name+club",
-   "qid": "Q59381180",
-   "visualId": "wd-Q59381180",
-   "wikidata": "https://www.wikidata.org/wiki/Q59381180"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Liam Kelly",
-   "he": "ליאם קלי",
-   "key": "rangers",
-   "match": "name+club",
-   "qid": "Q27448075",
-   "visualId": "wd-Q27448075",
-   "wikidata": "https://www.wikidata.org/wiki/Q27448075"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Ivor Pandur",
-   "he": "איבור פאנדור",
-   "key": "rangers",
+   "club": "יובנטוס",
+   "en": "Edon Zhegrova",
+   "he": "אדון ז'גרובה",
+   "key": "juventus",
    "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q84462730",
-   "visualId": "wd-Q84462730",
-   "wikidata": "https://www.wikidata.org/wiki/Q84462730"
+   "qid": "Q42303600",
+   "visualId": "wd-Q42303600",
+   "wikidata": "https://www.wikidata.org/wiki/Q42303600"
   },
   {
-   "club": "ריינג'רס",
-   "en": "Ben Godfrey",
-   "he": "בן גודפרי",
-   "key": "rangers",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q20829745",
-   "visualId": "wd-Q20829745",
-   "wikidata": "https://www.wikidata.org/wiki/Q20829745"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "John Souttar",
-   "he": "ג'ון סאוטר",
-   "key": "rangers",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q3238952",
-   "visualId": "wd-Q3238952",
-   "wikidata": "https://www.wikidata.org/wiki/Q3238952"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Olwethu Makhanya",
-   "he": "אולווטו מקאניה",
-   "key": "rangers",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q122207713",
-   "visualId": "wd-Q122207713",
-   "wikidata": "https://www.wikidata.org/wiki/Q122207713"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Nicolas Raskin",
-   "he": "ניקולא ראסקין",
-   "key": "rangers",
+   "club": "יובנטוס",
+   "en": "Kerim Alajbegović",
+   "he": "קרים אלייבגוביץ'",
+   "key": "juventus",
    "match": "name+club",
-   "qid": "Q48525779",
-   "visualId": "wd-Q48525779",
-   "wikidata": "https://www.wikidata.org/wiki/Q48525779"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Badredine Bouanani",
-   "he": "בדרדין בואנאני",
-   "key": "rangers",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q114593540",
-   "visualId": "wd-Q114593540",
-   "wikidata": "https://www.wikidata.org/wiki/Q114593540"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Findlay Curtis",
-   "he": "פינדליי קרטיס",
-   "key": "rangers",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q131863254",
-   "visualId": "wd-Q131863254",
-   "wikidata": "https://www.wikidata.org/wiki/Q131863254"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Ross McCausland",
-   "he": "רוס מק'קוסלנד",
-   "key": "rangers",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q111994930",
-   "visualId": "wd-Q111994930",
-   "wikidata": "https://www.wikidata.org/wiki/Q111994930"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Lawrence Shankland",
-   "he": "לורנס שנקלנד",
-   "key": "rangers",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q18331623",
-   "visualId": "wd-Q18331623",
-   "wikidata": "https://www.wikidata.org/wiki/Q18331623"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Vítězslav Jaroš",
-   "he": "ויטסלב יארוש",
-   "key": "liverpool",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q112503285",
-   "visualId": "wd-Q112503285",
-   "wikidata": "https://www.wikidata.org/wiki/Q112503285"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Joe Gomez",
-   "he": "ג'ו גומז",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q17505113",
-   "visualId": "wd-Q17505113",
-   "wikidata": "https://www.wikidata.org/wiki/Q17505113"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Kostas Tsimikas",
-   "he": "קוסטאס צימיקאס",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q22005877",
-   "visualId": "wd-Q22005877",
-   "wikidata": "https://www.wikidata.org/wiki/Q22005877"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Virgil van Dijk",
-   "he": "וירג'יל ואן דייק",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q133903",
-   "visualId": "wd-Q133903",
-   "wikidata": "https://www.wikidata.org/wiki/Q133903"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Conor Bradley",
-   "he": "קונור בראדלי",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q107031318",
-   "visualId": "wd-Q107031318",
-   "wikidata": "https://www.wikidata.org/wiki/Q107031318"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Milos Kerkez",
-   "he": "מילוש קרקז",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q110874376",
-   "visualId": "wd-Q110874376",
-   "wikidata": "https://www.wikidata.org/wiki/Q110874376"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Alexis Mac Allister",
-   "he": "אלכסיס מק אליסטר",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q33297140",
-   "visualId": "wd-Q33297140",
-   "wikidata": "https://www.wikidata.org/wiki/Q33297140"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Dominik Szoboszlai",
-   "he": "דומיניק סובוסלאי",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q30134278",
-   "visualId": "wd-Q30134278",
-   "wikidata": "https://www.wikidata.org/wiki/Q30134278"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Wataru Endo",
-   "he": "ואטארו אנדו",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q10526787",
-   "visualId": "wd-Q10526787",
-   "wikidata": "https://www.wikidata.org/wiki/Q10526787"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Ryan Gravenberch",
-   "he": "ראיין גראבנברך",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q56257870",
-   "visualId": "wd-Q56257870",
-   "wikidata": "https://www.wikidata.org/wiki/Q56257870"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Florian Wirtz",
-   "he": "פלוריאן וירץ",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q94699949",
-   "visualId": "wd-Q94699949",
-   "wikidata": "https://www.wikidata.org/wiki/Q94699949"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Bradley Barcola",
-   "he": "בראדלי בארקולה",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q99670930",
-   "visualId": "wd-Q99670930",
-   "wikidata": "https://www.wikidata.org/wiki/Q99670930"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Rio Ngumoha",
-   "he": "ריו נגומוהה",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q131466230",
-   "visualId": "wd-Q131466230",
-   "wikidata": "https://www.wikidata.org/wiki/Q131466230"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Alexander Isak",
-   "he": "אלכסנדר איסאק",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q23759917",
-   "visualId": "wd-Q23759917",
-   "wikidata": "https://www.wikidata.org/wiki/Q23759917"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Víctor Muñoz",
-   "he": "ויקטור מוניוס",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q121422889",
-   "visualId": "wd-Q121422889",
-   "wikidata": "https://www.wikidata.org/wiki/Q121422889"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Cody Gakpo",
-   "he": "קודי גאקפו",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q28801927",
-   "visualId": "wd-Q28801927",
-   "wikidata": "https://www.wikidata.org/wiki/Q28801927"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Federico Chiesa",
-   "he": "פדריקו קייזה",
-   "key": "liverpool",
-   "match": "name+club",
-   "qid": "Q26704703",
-   "visualId": "wd-Q26704703",
-   "wikidata": "https://www.wikidata.org/wiki/Q26704703"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Freddie Woodman",
-   "he": "פרדי וודמן",
-   "key": "liverpool",
-   "match": "name+birth_year (club not yet on Wikidata)",
-   "qid": "Q20127322",
-   "visualId": "wd-Q20127322",
-   "wikidata": "https://www.wikidata.org/wiki/Q20127322"
+   "qid": "Q130741313",
+   "visualId": "wd-Q130741313",
+   "wikidata": "https://www.wikidata.org/wiki/Q130741313"
   }
  ],
  "schema": 1,
@@ -15805,7 +15831,7 @@
    "he": "ראיאן בונידה",
    "key": "ajax",
    "qid": "Q111087062",
-   "reason": "no usable image (File:Bounida warming up against Paraguay.jpg: multiple_faces; File:Rayane bounida-1776338298.JPG: blurry; File:Rayane Bounida warming up with Morocco.jpg: multiple_faces; File:Rayane Bounida warming up with Morocco (cropped).jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Bounida warming up against Paraguay.jpg: multiple_faces; File:Rayane bounida-1776338298.JPG: blurry/face_too_small; File:Rayane Bounida warming up with Morocco.jpg: multiple_faces; File:Rayane Bounida warming up with Morocco (cropped).jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "אייאקס",
@@ -15828,6 +15854,68 @@
    "he": "קיאדאק או'ניל",
    "key": "arsenal",
    "qid": "Q127703410",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Dani Martínez",
+   "he": "דני מרטינס",
+   "key": "atletico",
+   "qid": "Q139785191",
+   "reason": "no usable image (File:Dani Martínez 2022.jpg: rejected on review (a different person with the same name (found by name search)); File:Dani Martínez.jpg: found by name search only, not yet confirmed on review; File:Equipo Tonterías las justas.jpg: found by name search only, not yet confirmed on review; File:Danimartinez-1-.jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Robin Le Normand",
+   "he": "רובן לה נורמן",
+   "key": "atletico",
+   "qid": "Q27469970",
+   "reason": "no usable image (File:Le Normand (cropped).jpg: blurry; File:CSC 0041 (45822082584).jpg: file name does not name the player; File:CSC 0059 (45822080384).jpg: file name does not name the player; File:CSC 0090 (45822076834).jpg: file name does not name the player; File:CSC 0095 (45822076004).jpg: file name does not name the player; File:CSC 0107 (46493942602).jpg: found by name search only, not yet confirmed on review; File:CSC 0108 (45822074644).jpg: found by name search only, not yet confirmed on review; File:CSC 0116 (46493941942).jpg: found by name search only, not yet confirmed on review; File:CSC 0137 (46493940562).jpg: found by name search only, not yet confirmed on review; File:DSC 2415 (51298342807).jpg: found by name search only, not yet confirmed on review; File:DSC 2416 (51298342787).jpg: found by name search only, not yet confirmed on review; File:DSC 2417 (51300098100).jpg: found by name search only, not yet confirmed on review; File:DSC 2423 (51298342702).jpg: found by name search only, not yet confirmed on review; File:DSC 2424 (51299094836).jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Jorge Castillo",
+   "he": "חורחה קסטיו",
+   "key": "atletico",
+   "reason": "not identified on Wikidata: no_wikidata_footballer_with_this_name (footballers found: Q24034870:Jorge Sánchez Ramos)"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Rodrigo Mendoza",
+   "he": "רודריגו מנדוסה",
+   "key": "atletico",
+   "reason": "not identified on Wikidata: no_wikidata_footballer_with_this_name (footballers found: Q122910207:Rodri Mendoza, Q137907783:Rodrigo Cáseres, Q65029168:Rodrigo González, Q6110811:Rodrigo Soria)"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Obed Vargas",
+   "he": "אובד ורגאס",
+   "key": "atletico",
+   "qid": "Q106778770",
+   "reason": "no usable image (File:Seattle Sounders FC vs. Charlotte FC goal - Feb 2025.jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Pablo Barrios",
+   "he": "פבלו באריוס",
+   "key": "atletico",
+   "qid": "Q114924158",
+   "reason": "no usable image (File:Spanish pre-match preparations - Japan vs. Spain, 2024 Summer Olympic men's association football, 2024-08-02.jpg: file name does not name the player; File:Pablo Barrios mit Con Air, CSIYH 1 Hamburg.JPG: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Morten Hjulmand",
+   "he": "מורטן יולמנד",
+   "key": "atletico",
+   "qid": "Q55761514",
+   "reason": "no usable image (File:MortenHjulmandSporting24.jpg: rejected on review (video still, blurry); File:Morten Hjulmand, FC Admira Wacker Mödling vs. LASK Linz 2018-08-12.jpg: multiple_faces; File:FC Admira Wacker Mödling vs. LASK Linz 2018-08-12 (018).jpg: file name does not name the player; File:FC Admira Wacker Mödling vs. LASK Linz 2018-08-12 (031).jpg: file name does not name the player; File:FC Admira Wacker Mödling vs. LASK Linz 2018-08-12 (046).jpg: file name does not name the player; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 21.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 25.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 30.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 37.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 47.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 48.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg vversus Admira Wacker (2. September 2018) 12.jpg: found by name search only, not yet confirmed on review; File:Hjulmand.png: rejected on review (blurred face, cut-out leaves only a face); File:Milan Lecce 2023 Hjulmand 1.jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "אתלטיקו מדריד",
+   "en": "Arnau Ortiz",
+   "he": "ארנאו אורטיס",
+   "key": "atletico",
+   "qid": "Q116849701",
    "reason": "no freely licensed image on Commons"
   },
   {
@@ -16210,7 +16298,7 @@
    "he": "דיין מארי",
    "key": "celtic",
    "qid": "Q107571007",
-   "reason": "no usable image (File:Celtic-20240722-067.jpg: multiple_faces; File:Celtic-20240722-050.jpg: file name does not name the player; File:Celtic-20240722-052.jpg: file name does not name the player; File:Celtic-20240722-065.jpg: file name does not name the player; File:Celtic-20240722-069.jpg: file name does not name the player)"
+   "reason": "no usable image (File:Celtic-20240722-067.jpg: multiple_faces/other_person_in_cutout; File:Celtic-20240722-050.jpg: file name does not name the player; File:Celtic-20240722-052.jpg: file name does not name the player; File:Celtic-20240722-065.jpg: file name does not name the player; File:Celtic-20240722-069.jpg: file name does not name the player)"
   },
   {
    "club": "סלטיק",
@@ -16469,7 +16557,7 @@
    "he": "אנדראס קורנליוס",
    "key": "copenhagen",
    "qid": "Q84077",
-   "reason": "no usable image (File:Andreas Cornelius.jpg: background_not_separable; File:Andreas Cornelius Cardiff 2013.jpg: other_person_in_cutout; File:Andreas Cornelius Cardiff City.jpg: face_too_small; File:Andreas Cornelius cropped.jpg: blurry; File:Andreas Cornelius warming up for Cardiff City.jpg: face_too_small; File:Dnepr-Kopengagen (1).jpg: file name does not name the player; File:F.C. Copenhagen 2017.jpg: file name does not name the player; File:FC København - Brøndby IF 2014-09-21 (15297384659).jpg: file name does not name the player; File:FC København - Brøndby IF 2014-09-21 (15297722417).jpg: found by name search only, not yet confirmed on review; File:FC København - Brøndby IF 2014-09-21 (15461179486).jpg: found by name search only, not yet confirmed on review; File:FC København - Brøndby IF 2014-09-21 (15484297685).jpg: found by name search only, not yet confirmed on review; File:Tosaint Ricketts and Andreas Cornelius.jpg: found by name search only, not yet confirmed on review; File:Johan Andreas Cornelius Ohme.jpg: rejected on review (a different person with the same name (found by name search)); File:Dnepr-Kopengagen (3) (cropped).jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Andreas Cornelius.jpg: background_not_separable; File:Andreas Cornelius Cardiff 2013.jpg: other_person_in_cutout; File:Andreas Cornelius Cardiff City.jpg: face_too_small/face_turned; File:Andreas Cornelius cropped.jpg: blurry; File:Andreas Cornelius warming up for Cardiff City.jpg: face_too_small; File:Dnepr-Kopengagen (1).jpg: file name does not name the player; File:F.C. Copenhagen 2017.jpg: file name does not name the player; File:FC København - Brøndby IF 2014-09-21 (15297384659).jpg: file name does not name the player; File:FC København - Brøndby IF 2014-09-21 (15297722417).jpg: found by name search only, not yet confirmed on review; File:FC København - Brøndby IF 2014-09-21 (15461179486).jpg: found by name search only, not yet confirmed on review; File:FC København - Brøndby IF 2014-09-21 (15484297685).jpg: found by name search only, not yet confirmed on review; File:Tosaint Ricketts and Andreas Cornelius.jpg: found by name search only, not yet confirmed on review; File:Johan Andreas Cornelius Ohme.jpg: rejected on review (a different person with the same name (found by name search)); File:Dnepr-Kopengagen (3) (cropped).jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "קופנהאגן",
@@ -16517,7 +16605,7 @@
    "he": "מתאו פרס וינלף",
    "key": "dinamo_zagreb",
    "qid": "Q121279864",
-   "reason": "no usable image (File:FC RB Salzburg vs. FK Austria Wien (2024-09-28-) 81 (Matteo Pérez Vinlöf).jpg: face_not_upright; File:FC RB Salzburg vs. FK Austria Wien (2024-09-28-) 81.jpg: file name does not name the player; File:FC RB Salzburg vs. FK Austria Wien (2024-09-28-) 82.jpg: file name does not name the player; File:FC Red Bull Salzburg gegen FK Austria Wien (2025-05-04 Bundesliga ) 75.jpg: file name does not name the player; File:FC Red Bull Salzburg gegen FK Austria Wien (2025-05-04 Bundesliga ) 84.jpg: file name does not name the player)"
+   "reason": "no usable image (File:FC RB Salzburg vs. FK Austria Wien (2024-09-28-) 81 (Matteo Pérez Vinlöf).jpg: face_not_upright/face_turned; File:FC RB Salzburg vs. FK Austria Wien (2024-09-28-) 81.jpg: file name does not name the player; File:FC RB Salzburg vs. FK Austria Wien (2024-09-28-) 82.jpg: file name does not name the player; File:FC Red Bull Salzburg gegen FK Austria Wien (2025-05-04 Bundesliga ) 75.jpg: file name does not name the player; File:FC Red Bull Salzburg gegen FK Austria Wien (2025-05-04 Bundesliga ) 84.jpg: file name does not name the player)"
   },
   {
    "club": "דינמו זאגרב",
@@ -16939,7 +17027,7 @@
    "he": "שאקיל ואן פרסי",
    "key": "feyenoord",
    "qid": "Q116878271",
-   "reason": "no usable image (File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 37 (Shaqueel van Persie).jpg: face_turned; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 02.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 12.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 19.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 25.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 28.jpg: found by name search only, not yet confirmed on review; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 37.jpg: found by name search only, not yet confirmed on review; File:Vanpersie with son shaqueel.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 37 (Shaqueel van Persie).jpg: face_turned/blurry; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 02.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 12.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 19.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 25.jpg: file name does not name the player; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 28.jpg: found by name search only, not yet confirmed on review; File:Feyenoord Rotterdam U19 vs. FC Salburg U19 (Uefa Youth League 2024-11-06 Vierte Runde) 37.jpg: found by name search only, not yet confirmed on review; File:Vanpersie with son shaqueel.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "פיינורד",
@@ -16979,7 +17067,7 @@
    "he": "אוגורג'אן צ'אקיר",
    "key": "galatasaray",
    "qid": "Q19610875",
-   "reason": "no usable image (File:Uğurcan Çakır at Antalyaspor vs Trabzonspor 20211211 (2) (cropped).jpg: multiple_faces; File:Ugurcan Cakir during Wales vs Turkey at UEFA EURO 2020.jpg: face_turned; File:Antalyaspor vs Trabzonspor 20211211 (4).jpg: multiple_faces; File:Diego Rossi celebrates his goal versus Trabzonspor (9th Matchday of the 2021-22 Süper Lig).png: face_turned; File:Fredy at Antalyaspor vs Trabzonspor 20211211 (2).jpg: multiple_faces; File:TRABZONSPOR 2025-2026 İLK MAÇ İLK 11 (Tim Jabol-Folcarelli).jpg: rejected on review (a different person with the same name (found by name search)); File:TRABZONSPOR 2025-2026 İLK MAÇ İLK 11.jpg: found by name search only, not yet confirmed on review; File:Uğurcan Çakır - beIN-Sports-Reklam (2021) (cropped).png: found by name search only, not yet confirmed on review; File:Uğurcan Çakır - beIN-Sports-Reklam (2021).png: found by name search only, not yet confirmed on review; File:Baku Olympic Stadium hosted final stage of European Football Championship Turkey-Wales Azerbaijani and Turkish presidents watched the game, June 2021 11.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Uğurcan Çakır at Antalyaspor vs Trabzonspor 20211211 (2) (cropped).jpg: multiple_faces; File:Ugurcan Cakir during Wales vs Turkey at UEFA EURO 2020.jpg: face_turned; File:Antalyaspor vs Trabzonspor 20211211 (4).jpg: multiple_faces; File:Diego Rossi celebrates his goal versus Trabzonspor (9th Matchday of the 2021-22 Süper Lig).png: face_turned/multiple_faces; File:Fredy at Antalyaspor vs Trabzonspor 20211211 (2).jpg: multiple_faces; File:TRABZONSPOR 2025-2026 İLK MAÇ İLK 11 (Tim Jabol-Folcarelli).jpg: rejected on review (a different person with the same name (found by name search)); File:TRABZONSPOR 2025-2026 İLK MAÇ İLK 11.jpg: found by name search only, not yet confirmed on review; File:Uğurcan Çakır - beIN-Sports-Reklam (2021) (cropped).png: found by name search only, not yet confirmed on review; File:Uğurcan Çakır - beIN-Sports-Reklam (2021).png: found by name search only, not yet confirmed on review; File:Baku Olympic Stadium hosted final stage of European Football Championship Turkey-Wales Azerbaijani and Turkish presidents watched the game, June 2021 11.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "גלאטסראיי",
@@ -17051,7 +17139,7 @@
    "he": "ג'וזפ מרטינס",
    "key": "inter",
    "qid": "Q63384393",
-   "reason": "no usable image (File:Josep Martinez in Wembley.jpg: multiple_faces; File:Josep Martínez Ècija a Gràcia..jpg: rejected on review (a different person with the same name (found by name search)); File:Josep Martínez Aloy.jpg: found by name search only, not yet confirmed on review; File:Tigre d'Alfara - Boxeo, 1934.jpg: found by name search only, not yet confirmed on review; File:Tigre d'Alfara - Boxeo, 1934 (2).jpg: found by name search only, not yet confirmed on review; File:Gráfico Martínez Alfara.jpg: found by name search only, not yet confirmed on review; File:Martínez de Alfara - El Gráfico 970.jpg: found by name search only, not yet confirmed on review; File:Martínez Lozano.jpg: found by name search only, not yet confirmed on review; File:Joan Benesiu.jpg: found by name search only, not yet confirmed on review; File:Mural literari del Parc de Batà MMXXV 15.jpg: found by name search only, not yet confirmed on review; File:Mural literari del Parc de Batà MMXXV 14.jpg: found by name search only, not yet confirmed on review; File:Mural literari del Parc de Batà MMXXV 20.jpg: found by name search only, not yet confirmed on review; File:José Martínez Aloy.jpg: found by name search only, not yet confirmed on review; File:Homenatge a J. Martínez Lozano. Casal Montblanquí, 1981.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Josep Martinez in Wembley.jpg: multiple_faces/blurry; File:Josep Martínez Ècija a Gràcia..jpg: rejected on review (a different person with the same name (found by name search)); File:Josep Martínez Aloy.jpg: found by name search only, not yet confirmed on review; File:Tigre d'Alfara - Boxeo, 1934.jpg: found by name search only, not yet confirmed on review; File:Tigre d'Alfara - Boxeo, 1934 (2).jpg: found by name search only, not yet confirmed on review; File:Gráfico Martínez Alfara.jpg: found by name search only, not yet confirmed on review; File:Martínez de Alfara - El Gráfico 970.jpg: found by name search only, not yet confirmed on review; File:Martínez Lozano.jpg: found by name search only, not yet confirmed on review; File:Joan Benesiu.jpg: found by name search only, not yet confirmed on review; File:Mural literari del Parc de Batà MMXXV 15.jpg: found by name search only, not yet confirmed on review; File:Mural literari del Parc de Batà MMXXV 14.jpg: found by name search only, not yet confirmed on review; File:Mural literari del Parc de Batà MMXXV 20.jpg: found by name search only, not yet confirmed on review; File:José Martínez Aloy.jpg: found by name search only, not yet confirmed on review; File:Homenatge a J. Martínez Lozano. Casal Montblanquí, 1981.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "אינטר",
@@ -17059,7 +17147,7 @@
    "he": "קרלוס אאוגוסטו",
    "key": "inter",
    "qid": "Q56223006",
-   "reason": "no usable image (File:FC Salzburg gegen Inter Mailand (UEFA Championsleague 2023-11-08) 15.jpg: multiple_faces; File:AC Monza 2022 Serie A celebration 02.jpg: file name does not name the player; File:AC Monza 2022 Serie A celebration 12.jpg: file name does not name the player; File:AC Monza 2022 Serie A celebration 13.jpg: file name does not name the player; File:Carlos Augusto, Monza v Alessandria (2021) 01 (cropped).jpg: face_not_upright; File:Carlos Augusto, Monza v Alessandria (2021) 01.jpg: face_turned; File:Carlos Augusto, Monza v Alessandria (2021) 02.jpg: other_person_in_cutout; File:FC Salzburg gegen Inter Mailand (UEFA Championsleague 2023-11-08) 57.jpg: file name does not name the player; File:FC Salzburg gegen Inter Mailand (UEFA Championsleague 2023-11-08) 68.jpg: found by name search only, not yet confirmed on review; File:Carlos Augusto Monteiro.jpg: rejected on review (a different person with the same name (found by name search)); File:Carlossantana (300dpi).jpg: found by name search only, not yet confirmed on review; File:Carlos santana-1547303295 (cropped).jpg: found by name search only, not yet confirmed on review; File:Carlos Santana backstage at the 1996 Olympics by Don Ramey Logan.jpg: found by name search only, not yet confirmed on review; File:Es un archivo.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:FC Salzburg gegen Inter Mailand (UEFA Championsleague 2023-11-08) 15.jpg: multiple_faces; File:AC Monza 2022 Serie A celebration 02.jpg: file name does not name the player; File:AC Monza 2022 Serie A celebration 12.jpg: file name does not name the player; File:AC Monza 2022 Serie A celebration 13.jpg: file name does not name the player; File:Carlos Augusto, Monza v Alessandria (2021) 01 (cropped).jpg: face_not_upright/face_turned; File:Carlos Augusto, Monza v Alessandria (2021) 01.jpg: face_turned; File:Carlos Augusto, Monza v Alessandria (2021) 02.jpg: other_person_in_cutout; File:FC Salzburg gegen Inter Mailand (UEFA Championsleague 2023-11-08) 57.jpg: file name does not name the player; File:FC Salzburg gegen Inter Mailand (UEFA Championsleague 2023-11-08) 68.jpg: found by name search only, not yet confirmed on review; File:Carlos Augusto Monteiro.jpg: rejected on review (a different person with the same name (found by name search)); File:Carlossantana (300dpi).jpg: found by name search only, not yet confirmed on review; File:Carlos santana-1547303295 (cropped).jpg: found by name search only, not yet confirmed on review; File:Carlos Santana backstage at the 1996 Olympics by Don Ramey Logan.jpg: found by name search only, not yet confirmed on review; File:Es un archivo.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "אינטר",
@@ -17097,86 +17185,6 @@
    "he": "פיו אספוזיטו",
    "key": "inter",
    "reason": "not identified on Wikidata: ambiguous: Q136813682:2005, Q119237165:2005"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Kamil Grabara",
-   "he": "קמיל גרבארה",
-   "key": "juventus",
-   "qid": "Q56441182",
-   "reason": "no usable image (File:Kamil Grabara FC København (cropped).jpg: face_turned; File:FC København - Aab, 22. May 2022 - FCK spillerne varmer op (c).jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Juan Cabal",
-   "he": "חואן קבאל",
-   "key": "juventus",
-   "qid": "Q104820962",
-   "reason": "no usable image (File:1910-04-15, Comedias y Comediantes, El teatro en Méjico, La tragedia de las rosas (cropped) José Escofet.jpg: found by name search only, not yet confirmed on review; File:1910-04-15, Comedias y Comediantes, El teatro en Méjico, La tragedia de las rosas.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Jhon Lucumí",
-   "he": "ג'ון לוקומי",
-   "key": "juventus",
-   "qid": "Q21573188",
-   "reason": "no usable image (File:Jhon Lucumí September 2019.jpg: rejected on review (a team-mate's hand in front of the face); File:FC Salzburg gegen KRC Genk (UEFA Championsleague 17. September 2019) 49.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 02.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 03.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 17.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 37.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 41.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 45.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 47.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus. KRC Genk (UEFA Championsleague 17. September 2019) 05.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus. KRC Genk (UEFA Championsleague 17. September 2019) 06.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus. KRC Genk (UEFA Championsleague 17. September 2019) 11.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Andrea Cambiaso",
-   "he": "אנדראה קמביאסו",
-   "key": "juventus",
-   "qid": "Q69656941",
-   "reason": "no usable image (File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 446 - Andrea Cambiaso (cropped).jpg: rejected on review (spectator photo; cut-out leaves only a small head); File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 189.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 190.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 191.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 192.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 193.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 440.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 441.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 442.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 443.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 444.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 446.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 447.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Manuel Locatelli",
-   "he": "מנואל לוקאטלי",
-   "key": "juventus",
-   "qid": "Q23899393",
-   "reason": "no usable image (File:MANUEL LOCATELLI - ZENIT vs JUVENTUS.jpg: rejected on review (another player's head and shoulder inside the cut-out); File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 08.jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 34 (Manuel Locatelli).jpg: rejected on review (another player's head beside his); File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 34.jpg: file name does not name the player; File:Locatelli Nazionale 2021.jpg: face_too_small; File:Manuel Locatelli (di spalle) 2021.jpg: found by name search only, not yet confirmed on review; File:Sergio Mattarella meets Italy national football team and Matteo Berrettini (12 July 2021) 14.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Teun Koopmeiners",
-   "he": "טון קופמיינרס",
-   "key": "juventus",
-   "qid": "Q39498277",
-   "reason": "no usable image (File:Teun Koopmeiners Manchester United v Atalanta BC, 20 October 2021 (12) (cropped).jpg: blurry; File:Manchester United v Atalanta BC, 20 October 2021 (12).jpg: file name does not name the player; File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137461 (Teun Koopmeiners).jpg: rejected on review (low resolution, green halo in the hair); File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137461.jpg: file name does not name the player; File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137465.jpg: file name does not name the player; File:Manchester City 2025 06 26 Juventus (cropped).jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus (Bernardo Silva).jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus.jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus (Omar Marmoush).jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus (cropped to Reijniders).jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Randal Kolo Muani",
-   "he": "רנדאל קולו מואני",
-   "key": "juventus",
-   "qid": "Q59655998",
-   "reason": "no usable image (File:Randal Kolo Muani 2020.jpg: face_turned; File:RC Lens - FC Nantes (25-11-2020) 13.jpg: file name does not name the player)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Jeff Ekhator",
-   "he": "ג'ף אקאטור",
-   "key": "juventus",
-   "qid": "Q128895710",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Jérémie Boga",
-   "he": "ז'רמי בוגה",
-   "key": "juventus",
-   "qid": "Q20925240",
-   "reason": "no usable image (File:Entrainement SRFC Dinan 20150902 - Jérémie Boga (cropped).JPG: no_face_detected; File:1E3A0008parade des éléphants champions d'Afrique 2023 - 54.jpg: file name does not name the player; File:1E3A0093parade des éléphants champions d'Afrique 2023 - 2.jpg: file name does not name the player; File:Arsenal 1 Chelsea 1 (4-1 on pens) (35613688313).jpg: file name does not name the player; File:Arsenal 1 Chelsea 1 (4-1 on pens) (36253057732).jpg: file name does not name the player; File:Arsenal 1 Chelsea 1 (4-1 on pens) (36421490505).jpg: file name does not name the player; File:Boga asse ogcn 2425.png: blurry; File:Chelsea 2 Manchester City 1 (5-2 Agg).jpg: file name does not name the player; File:Entrainement SRFC Dinan 20150902 - Joueurs (2).JPG: found by name search only, not yet confirmed on review; File:Entrainement SRFC Dinan 20150902 - Jérémie Boga.JPG: found by name search only, not yet confirmed on review; File:Jeremie Boga 20170812.jpg: found by name search only, not yet confirmed on review; File:Joueur guinéen et ivoirien 01.jpg: found by name search only, not yet confirmed on review; File:Joueur guinéen et ivoirien 06.jpg: found by name search only, not yet confirmed on review; File:Joueur ivoirien 03.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "יובנטוס",
-   "en": "Kenan Yıldız",
-   "he": "קנאן יילדיז",
-   "key": "juventus",
-   "qid": "Q113184832",
-   "reason": "no usable image (File:Kenan Yıldız in the international match (March 2025) (cropped).jpg: multiple_faces; File:Fiola and Kenan Yıldız in the international match (March 2025).jpg: multiple_faces; File:Kenan Yıldiz signature.png: no_face_detected; File:Kenan Yıldız.jpg: found by name search only, not yet confirmed on review; File:Fiola and Kenan Yıldız in the international match (March 2025) (cropped).jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "באייר לברקוזן",
@@ -17224,6 +17232,94 @@
    "key": "leverkusen",
    "qid": "Q96464733",
    "reason": "no usable image (File:Nathan-Tella-2025.jpg: blurry)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Giorgi Mamardashvili",
+   "he": "גיורגי ממרדשווילי",
+   "key": "liverpool",
+   "qid": "Q99529077",
+   "reason": "no usable image (File:Giorgi Mamardashvili 04012026 (1).jpg: face_turned; File:Giorgi Mamardashvili 04012026 (2).jpg: multiple_faces; File:Giorgi Mamardashvili Valencia 2021.png: face_too_small; File:Liverpool Players 04012026 (5) - Mamardashvili.jpg: face_turned; File:Liverpool Players 04012026 (5).jpg: file name does not name the player; File:Liverpool Players 04012026 (6).jpg: file name does not name the player)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Giovanni Leoni",
+   "he": "ג'ובאני לאוני",
+   "key": "liverpool",
+   "qid": "Q126361834",
+   "reason": "no usable image (File:Arteries and veins, illustrating an article entitled \"Artery Wellcome V0007875.jpg: no author recorded, so the required attribution cannot be given; File:Tafelblad met familiewapen Tafelblad met wapen geslacht Witsen, BK-BR-485.jpg: file name does not name the player; File:The human venous and arterial systems. Engraving, after engr Wellcome V0007877.jpg: no author recorded, so the required attribution cannot be given; File:The trunks of the vena cava, with their branches(Table VI, f Wellcome V0007861.jpg: no author recorded, so the required attribution cannot be given; File:The trunks of the vena cava, with their branches, engraving Wellcome V0007839ER.jpg: no author recorded, so the required attribution cannot be given; File:The trunks of the vena cava, with their branches, engraving Wellcome V0007855ER.jpg: no author recorded, so the required attribution cannot be given; File:Reliquaire de la main de sainte Marthe ayant appartenu au monastère de Santa Marta à Venise - Giovanni Lion da Colonia - Musée du Louvre Objets d'Art OA 5641.jpg: found by name search only, not yet confirmed on review; File:Reliquaire de la main de Sainte-Marthe (Louvre, OA 5641)- détail.jpg: found by name search only, not yet confirmed on review; File:Reliquaire de la main de Sainte-Marthe (Louvre, OA 5641).jpg: found by name search only, not yet confirmed on review; File:Scotia Bank Plaza as seen from Toronto Dominion Centre.jpg: found by name search only, not yet confirmed on review; File:Innenaufnahmen aus der Villa Tugendhat (02).jpg: found by name search only, not yet confirmed on review; File:Innenaufnahmen aus der Villa Tugendhat (11).jpg: found by name search only, not yet confirmed on review; File:2022 Aachen, Mies van der Rohe Museum.jpg: found by name search only, not yet confirmed on review; File:Tugenhat brno chairs.png: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Jeremie Frimpong",
+   "he": "ג'רמי פרימפונג",
+   "key": "liverpool",
+   "qid": "Q67198835",
+   "reason": "no usable image (File:Jeremie Frimpong 04012026 (3) (cropped).jpg: face_turned/face_not_upright; File:Jeremie Frimpong 04012026 (4).jpg: found by name search only, not yet confirmed on review; File:Jeremie Frimpong 04012026 (3).jpg: found by name search only, not yet confirmed on review; File:Jeremie Frimpong 04012026 (5).jpg: rejected on review (snood covers the lower face); File:Jeremie Frimpong 04012026 (1).jpg: found by name search only, not yet confirmed on review; File:Jeremie Frimpong 04012026 (2).jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Jérémy Jacquet",
+   "he": "ז'רמי ז'אקה",
+   "key": "liverpool",
+   "qid": "Q124283398",
+   "reason": "no usable image (File:Jacquet asse srfc 2425.png: face_turned)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Ronald Araújo",
+   "he": "רונאלד אראוחו",
+   "key": "liverpool",
+   "qid": "Q56332606",
+   "reason": "no usable image (File:FC Red Bull Salzburg gegen CF Barcelona (Testspiel 4. August 2021) 45 (cropped).jpg: face_turned; File:2025 04 26 Final de la Copa del Rey (cropped).jpg: file name does not name the player; File:2025 04 26 Final de la Copa del Rey.jpg: file name does not name the player; File:Barcelona Training Miami 2022 04 (cropped2).jpg: rejected on review (low-resolution, blurred face); File:Barcelona Training Miami 2022 04.jpg: file name does not name the player)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Trey Nyoni",
+   "he": "טריי ניוני",
+   "key": "liverpool",
+   "qid": "Q123367931",
+   "reason": "no usable image (File:Trey Nyoni 04012026 (1).jpg: face_turned)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Lewis Koumas",
+   "he": "לואיס קומאס",
+   "key": "liverpool",
+   "qid": "Q118725657",
+   "reason": "no usable image (File:Lewis Koumas.png: face_unclear)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Hugo Ekitiké",
+   "he": "הוגו אקיטיקה",
+   "key": "liverpool",
+   "qid": "Q100602910",
+   "reason": "no usable image (File:Hugo Ekitike (PSG 2023).jpg: other_person_in_cutout/face_turned; File:Hugo Ekitike (PSG 2023) (cropped).jpg: blurry; File:Hugo Ekitike (PSG 2023) (cropped2).jpg: blurry; File:Renato Sanches (PSG 2023).jpg: file name does not name the player)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Luke Chambers",
+   "he": "לוק צ'יימברס",
+   "key": "liverpool",
+   "qid": "Q112791108",
+   "reason": "no usable image (File:Luke Chambers 07032026 (1).jpg: face_unclear; File:Luke Chambers 07032026 (2).jpg: found by name search only, not yet confirmed on review; File:Luke Chambers 07032026 (3).jpg: rejected on review (looking down); File:Luke Chambers 07032026 (4).jpg: found by name search only, not yet confirmed on review; File:LukeChambersIpsNor.jpg: found by name search only, not yet confirmed on review; File:Luke Chambers 2.jpg: found by name search only, not yet confirmed on review; File:Chambers.png: found by name search only, not yet confirmed on review; File:03 - Luke Chambers.jpg: found by name search only, not yet confirmed on review; File:Luke Chambers 1.jpg: found by name search only, not yet confirmed on review; File:Defender 24 HOSPEX Makes History (8411893).jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "ליברפול",
+   "en": "Isaac Mabaya",
+   "he": "אייזק מבאיה",
+   "key": "liverpool",
+   "qid": "Q113434149",
+   "reason": "no usable image (File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 30.jpg: blurry; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 09.jpg: found by name search only, not yet confirmed on review; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 26.jpg: found by name search only, not yet confirmed on review; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 28.jpg: found by name search only, not yet confirmed on review; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 29.jpg: found by name search only, not yet confirmed on review; File:Isaac Mabaya 09082025 (1).jpg: rejected on review (phone held against the face))"
+  },
+  {
+   "club": "ליברפול",
+   "en": "James McConnell",
+   "he": "ג'יימס מקונל",
+   "key": "liverpool",
+   "qid": "Q118767830",
+   "reason": "no usable image (File:James McConnell.jpg: found by name search only, not yet confirmed on review; File:James McConnell historical marker.jpg: found by name search only, not yet confirmed on review; File:Maison James-McConnell.jpg: found by name search only, not yet confirmed on review; File:JAMES ROGERS McCONNELL dedication.JPG: found by name search only, not yet confirmed on review; File:Tomb of aviator O'Connell near Flavy Le Martel in 1918.jpg: found by name search only, not yet confirmed on review; File:Close Up of right side of mural commemorating James R. McConnell.jpg: found by name search only, not yet confirmed on review; File:CommHouse Monument (rectified).jpg: found by name search only, not yet confirmed on review; File:SEVEN SOCIETY plaque.JPG: found by name search only, not yet confirmed on review; File:SOARING-- inscription.JPG: found by name search only, not yet confirmed on review; File:CourtHouse Monument.jpg: found by name search only, not yet confirmed on review; File:John Elliott, James R. McConnell. SAAM-1927.8.15.jpg: rejected on review (a different person with the same name (found by name search)); File:John Elliott, James R. McConnell. SAAM-1927.8.15 (cropped).jpg: found by name search only, not yet confirmed on review; File:James McConnell House.jpg: found by name search only, not yet confirmed on review; File:JohnJMcConnell.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "לודוגורץ ראזגרד",
@@ -17319,7 +17415,7 @@
    "he": "ברנרד טקפטיי",
    "key": "ludogorets",
    "qid": "Q27132167",
-   "reason": "no usable image (File:FC Red Bull Salzburg gegen SCR Altach (28. Oktober 2017) 29.jpg: face_unclear; File:Bernard Tekpetey FC Red Bull Salzburg versus SCR Altach 28. October 2017.jpg: multiple_faces; File:FC Red Bull Salzburg gegen SCR Altach (28. Oktober 2017) 24.jpg: file name does not name the player; File:FC Red Bull Salzburg gegen SCR Altach (28. Oktober 2017) 30.jpg: file name does not name the player; File:FC Red Bull Salzburg versus SCR Altach (28. Oktober 2017) 01.jpg: file name does not name the player; File:FC Red Bull Salzburg versus SCR Altach (28. Oktober 2017) 02.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:FC Red Bull Salzburg gegen SCR Altach (28. Oktober 2017) 29.jpg: face_unclear/multiple_faces; File:Bernard Tekpetey FC Red Bull Salzburg versus SCR Altach 28. October 2017.jpg: multiple_faces; File:FC Red Bull Salzburg gegen SCR Altach (28. Oktober 2017) 24.jpg: file name does not name the player; File:FC Red Bull Salzburg gegen SCR Altach (28. Oktober 2017) 30.jpg: file name does not name the player; File:FC Red Bull Salzburg versus SCR Altach (28. Oktober 2017) 01.jpg: file name does not name the player; File:FC Red Bull Salzburg versus SCR Altach (28. Oktober 2017) 02.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "לודוגורץ ראזגרד",
@@ -17422,7 +17518,7 @@
    "he": "מתאו גאביה",
    "key": "milan",
    "qid": "Q37893002",
-   "reason": "no usable image (File:Matteo Gabbia.jpg: no_face_detected; File:Milan Rennes 2024 (5).png: file name does not name the player; File:Milan-Lecce 06 -04-2024 (cropped).jpg: file name does not name the player; File:Milan-Lecce 06 -04-2024.jpg: file name does not name the player; File:Abraham in Milan-Cagliari.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Matteo Gabbia.jpg: no_face_detected/face_turned; File:Milan Rennes 2024 (5).png: file name does not name the player; File:Milan-Lecce 06 -04-2024 (cropped).jpg: file name does not name the player; File:Milan-Lecce 06 -04-2024.jpg: file name does not name the player; File:Abraham in Milan-Cagliari.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "מילאן",
@@ -17564,7 +17660,7 @@
    "he": "אנסו פאטי",
    "key": "monaco",
    "qid": "Q66743376",
-   "reason": "no usable image (File:Матч «Динамо» - «Барселона» 0-1. 2 листопада 2021 року — 1289339 (cropped).jpg: face_turned; File:2025 04 26 Final de la Copa del Rey (cropped).jpg: file name does not name the player; File:2025 04 26 Final de la Copa del Rey.jpg: file name does not name the player; File:Ansu Fati — Dinamo vs Barcelona 0-1 (cropped).jpg: face_turned; File:Barcelona Training Miami 2022 01 (cropped).jpg: file name does not name the player; File:Barcelona Training Miami 2022 01 (Pierre-Emerick Aubameyang).jpg: file name does not name the player; File:Barcelona Training Miami 2022 01.jpg: file name does not name the player; File:Barcelona Training Miami 2022 02.jpg: file name does not name the player; File:Barcelona Training Miami 2022 03 (cropped).jpg: found by name search only, not yet confirmed on review; File:Barcelona Training Miami 2022 03.jpg: found by name search only, not yet confirmed on review; File:Barcelona Training Miami 2022 04 (cropped2).jpg: found by name search only, not yet confirmed on review; File:Barcelona Training Miami 2022 04.jpg: found by name search only, not yet confirmed on review; File:Лига наций УЕФА. Сборная Украины - Сборная Испании 1-0. 13 октября 2020 год — 1151559.jpg: found by name search only, not yet confirmed on review; File:Лига наций УЕФА. Сборная Украины - Сборная Испании 1-0. 13 октября 2020 год — 1151571 (Ansu Fati).jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Матч «Динамо» - «Барселона» 0-1. 2 листопада 2021 року — 1289339 (cropped).jpg: face_turned; File:2025 04 26 Final de la Copa del Rey (cropped).jpg: file name does not name the player; File:2025 04 26 Final de la Copa del Rey.jpg: file name does not name the player; File:Ansu Fati — Dinamo vs Barcelona 0-1 (cropped).jpg: face_turned; File:Barcelona Training Miami 2022 01 (cropped).jpg: file name does not name the player; File:Barcelona Training Miami 2022 01 (Pierre-Emerick Aubameyang).jpg: file name does not name the player; File:Barcelona Training Miami 2022 01.jpg: file name does not name the player; File:Barcelona Training Miami 2022 02.jpg: file name does not name the player; File:Barcelona Training Miami 2022 03 (cropped).jpg: found by name search only, not yet confirmed on review; File:Barcelona Training Miami 2022 03.jpg: found by name search only, not yet confirmed on review; File:Barcelona Training Miami 2022 04 (cropped2).jpg: rejected on review (low-resolution, blurred face); File:Barcelona Training Miami 2022 04.jpg: found by name search only, not yet confirmed on review; File:Лига наций УЕФА. Сборная Украины - Сборная Испании 1-0. 13 октября 2020 год — 1151559.jpg: found by name search only, not yet confirmed on review; File:Лига наций УЕФА. Сборная Украины - Сборная Испании 1-0. 13 октября 2020 год — 1151571 (Ansu Fati).jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "נאפולי",
@@ -17811,7 +17907,7 @@
    "he": "אלן ורלה",
    "key": "porto",
    "qid": "Q104375627",
-   "reason": "no usable image (File:FC Salzburg gegen FC Porto (2025-09-25 UEFA Euro League ) 63 (Alan Varela).jpg: blurry; File:FC Salzburg gegen FC Porto (2025-09-25 UEFA Euro League ) 63.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:FC Salzburg gegen FC Porto (2025-09-25 UEFA Euro League ) 63 (Alan Varela).jpg: blurry/face_turned; File:FC Salzburg gegen FC Porto (2025-09-25 UEFA Euro League ) 63.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "פורטו",
@@ -17907,7 +18003,7 @@
    "he": "ניק אוליי",
    "key": "psv",
    "qid": "Q3339778",
-   "reason": "no usable image (File:Sparta - Go Ahead Eagles - 53478974060.jpg: face_turned; File:Sparta - Go Ahead Eagles - 53477659882.jpg: file name does not name the player; File:Sparta - Go Ahead Eagles - 53478974060 (Nick Olij).jpg: face_turned)"
+   "reason": "no usable image (File:Sparta - Go Ahead Eagles - 53478974060.jpg: face_turned/face_not_upright; File:Sparta - Go Ahead Eagles - 53477659882.jpg: file name does not name the player; File:Sparta - Go Ahead Eagles - 53478974060 (Nick Olij).jpg: face_turned)"
   },
   {
    "club": "פ.ס.וו איינדהובן",
@@ -17947,7 +18043,7 @@
    "he": "סוון מיינאנס",
    "key": "psv",
    "qid": "Q99600149",
-   "reason": "no usable image (File:Sven Mijnans.jpg: face_turned; File:Go Ahead Eagles - AZ - 53170469546.jpg: file name does not name the player; File:Go Ahead Eagles - AZ - 53717471521.jpg: file name does not name the player; File:Go Ahead Eagles - AZ - 53717680783.jpg: file name does not name the player; File:Go Ahead Eagles - AZ - 53717900920.jpg: file name does not name the player; File:West Ham v Alkmaar.jpeg: file name does not name the player)"
+   "reason": "no usable image (File:Sven Mijnans.jpg: face_turned/multiple_faces; File:Go Ahead Eagles - AZ - 53170469546.jpg: file name does not name the player; File:Go Ahead Eagles - AZ - 53717471521.jpg: file name does not name the player; File:Go Ahead Eagles - AZ - 53717680783.jpg: file name does not name the player; File:Go Ahead Eagles - AZ - 53717900920.jpg: file name does not name the player; File:West Ham v Alkmaar.jpeg: file name does not name the player)"
   },
   {
    "club": "פ.ס.וו איינדהובן",
@@ -17964,6 +18060,133 @@
    "key": "psv",
    "qid": "Q4708679",
    "reason": "no usable image (File:Loc-Nicca (1).jpg: blurry; File:2022128152842 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0603 - B70I6714.jpg: file name does not name the player; File:2022128153337 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0103 - AK8I6838.jpg: file name does not name the player; File:2022128153337 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0107 - AK8I6842.jpg: file name does not name the player; File:2022128153338 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0110 - AK8I6845.jpg: file name does not name the player; File:2022128153338 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0113 - AK8I6848.jpg: found by name search only, not yet confirmed on review; File:2022128153348 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0737 - B70I6848.jpg: found by name search only, not yet confirmed on review; File:2022128153349 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0742 - B70I6853.jpg: found by name search only, not yet confirmed on review; File:2022128153525 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0766 - B70I6877.jpg: found by name search only, not yet confirmed on review; File:2022128153556 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0776 - B70I6887.jpg: found by name search only, not yet confirmed on review; File:2022128153556 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0777 - B70I6888.jpg: found by name search only, not yet confirmed on review; File:2022128153810 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0865 - B70I6976.jpg: found by name search only, not yet confirmed on review; File:2022128154035 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0915 - B70I7026.jpg: found by name search only, not yet confirmed on review; File:2022128154035 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0917 - B70I7028.jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Emmanuel Fernandez",
+   "he": "עמנואל פרננדס",
+   "key": "rangers",
+   "qid": "Q111671692",
+   "reason": "no usable image (File:Jay McClement 2006.jpg: found by name search only, not yet confirmed on review; File:Manny legace.jpg: found by name search only, not yet confirmed on review; File:Manny Legace St. Louis.jpg: found by name search only, not yet confirmed on review; File:Cercanía.jpg: found by name search only, not yet confirmed on review; File:Peregrinando.jpg: found by name search only, not yet confirmed on review; File:Viruses-11-00233-g006b-top.png: found by name search only, not yet confirmed on review; File:Plaza estado del vaticano.jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Kosta Nedeljkovic",
+   "he": "קוסטה נדליקוביץ'",
+   "key": "rangers",
+   "qid": "Q119719443",
+   "reason": "no usable image (File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (45) (cropped).jpg: face_turned; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (29).jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (45).jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (48).jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (51).jpg: file name does not name the player)"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Ross McCrorie",
+   "he": "רוס מק'קרורי",
+   "key": "rangers",
+   "qid": "Q20436700",
+   "reason": "no usable image (File:First Minister meets with Scottish National Football Team2 (cropped) (cropped).jpg: background_not_separable; File:First Minister meets with Scottish National Football Team - 55168603663.jpg: file name does not name the player; File:First Minister meets with Scottish National Football Team2 (cropped).jpg: background_not_separable; File:First Minister meets with Scottish National Football Team2.jpg: file name does not name the player; File:Ross McCrorie 11042026 (1).jpg: rejected on review (looking down, face hidden); File:Украина U-21 - Шотландия U-21 3-1. 12 октября 2018 года — 915146.jpg: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Dujon Sterling",
+   "he": "דוז'ון סטרלינג",
+   "key": "rangers",
+   "qid": "Q27625852",
+   "reason": "no usable image (File:Dujon Sterling 20180106.jpg: face_turned)"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "James Penrice",
+   "he": "ג'יימס פנרייס",
+   "key": "rangers",
+   "qid": "Q24084212",
+   "reason": "no usable image (File:JamesPenrice.jpg: rejected on review (distant full-body shot; head too small); File:SeanMcGinty.png: found by name search only, not yet confirmed on review)"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Tuur Rommens",
+   "he": "טור רומנס",
+   "key": "rangers",
+   "qid": "Q109451597",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Cammy Devlin",
+   "he": "קאמי דבלין",
+   "key": "rangers",
+   "reason": "not identified on Wikidata: ambiguous: Q57017726:1999"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Tochi Chukwuani",
+   "he": "טוצ'י צ'וקוואני",
+   "key": "rangers",
+   "qid": "Q72692691",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Dan Neil",
+   "he": "דן ניל",
+   "key": "rangers",
+   "qid": "Q58756408",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Vanja Dragojevic",
+   "he": "ואניה דראגוייביץ'",
+   "key": "rangers",
+   "qid": "Q133864160",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Ryan Don Naderi",
+   "he": "ראיין דון נאדרי",
+   "key": "rangers",
+   "qid": "Q130298918",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Youssef Chermiti",
+   "he": "יוסף שרמיטי",
+   "key": "rangers",
+   "qid": "Q116213349",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Daisuke Yokota",
+   "he": "דייסוקה יוקוטה",
+   "key": "rangers",
+   "qid": "Q106899258",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Djeidi Gassama",
+   "he": "ג'יידי גסאמה",
+   "key": "rangers",
+   "qid": "Q112033023",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Bojan Miovski",
+   "he": "בויאן מיובסקי",
+   "key": "rangers",
+   "qid": "Q100383588",
+   "reason": "no freely licensed image on Commons"
+  },
+  {
+   "club": "ריינג'רס",
+   "en": "Kevin Kelsy",
+   "he": "קווין קלסי",
+   "key": "rangers",
+   "qid": "Q114562469",
+   "reason": "no usable image (File:Kevin Kelsy.jpg: blurry; File:Контрольний матч. «Карпати» — «Шахтар» — 2-2 — 0650.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "ריאל מדריד",
@@ -18520,7 +18743,7 @@
    "he": "יאקוב מרטינץ",
    "key": "sparta_prague",
    "qid": "Q105501538",
-   "reason": "no usable image (File:Jakub Martinec za FK Jablonec proti FK Viktorii Plzeň (r. 2023).jpg: blurry; File:Jakub Martinec, 8 April 2023.jpg: blurry; File:Jakub Martinec.jpg: rejected on review (a different person with the same name (found by name search)); File:CzechBoysChoir.jpg: found by name search only, not yet confirmed on review)"
+   "reason": "no usable image (File:Jakub Martinec za FK Jablonec proti FK Viktorii Plzeň (r. 2023).jpg: blurry/face_too_small; File:Jakub Martinec, 8 April 2023.jpg: blurry; File:Jakub Martinec.jpg: rejected on review (a different person with the same name (found by name search)); File:CzechBoysChoir.jpg: found by name search only, not yet confirmed on review)"
   },
   {
    "club": "ספרטה פראג",
@@ -18974,289 +19197,84 @@
    "reason": "no usable image (File:Facinet Conté.jpg: face_turned; File:0K8A0168 (53446538486).jpg: file name does not name the player; File:0K8A0241 (53535834084).jpg: file name does not name the player; File:0K8A0303 (53535938605).jpg: file name does not name the player; File:0K8A6919 (53436163935).jpg: file name does not name the player; File:0K8A6961 (53434814302).jpg: found by name search only, not yet confirmed on review; File:0K8A6994 (53436059139).jpg: found by name search only, not yet confirmed on review; File:0K8A7135 (53438563704).jpg: found by name search only, not yet confirmed on review; File:0K8A7135-2 (53438664185).jpg: found by name search only, not yet confirmed on review; File:0K8A7184 (53438246376).jpg: found by name search only, not yet confirmed on review; File:0K8A7355 (53440161681).jpg: found by name search only, not yet confirmed on review; File:0K8A7387 (53440574285).jpg: found by name search only, not yet confirmed on review; File:0K8A7437 (53440572060).jpg: found by name search only, not yet confirmed on review; File:0K8A7447 (53439232897).jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Dani Martínez",
-   "he": "דני מרטינס",
-   "key": "atletico",
-   "qid": "Q139785191",
-   "reason": "no usable image (File:Dani Martínez 2022.jpg: rejected on review (a different person with the same name (found by name search)); File:Dani Martínez.jpg: found by name search only, not yet confirmed on review; File:Equipo Tonterías las justas.jpg: found by name search only, not yet confirmed on review; File:Danimartinez-1-.jpg: found by name search only, not yet confirmed on review)"
+   "club": "יובנטוס",
+   "en": "Kamil Grabara",
+   "he": "קמיל גרבארה",
+   "key": "juventus",
+   "qid": "Q56441182",
+   "reason": "no usable image (File:Kamil Grabara FC København (cropped).jpg: face_turned; File:FC København - Aab, 22. May 2022 - FCK spillerne varmer op (c).jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Robin Le Normand",
-   "he": "רובן לה נורמן",
-   "key": "atletico",
-   "qid": "Q27469970",
-   "reason": "no usable image (File:Le Normand (cropped).jpg: blurry; File:CSC 0041 (45822082584).jpg: file name does not name the player; File:CSC 0059 (45822080384).jpg: file name does not name the player; File:CSC 0090 (45822076834).jpg: file name does not name the player; File:CSC 0095 (45822076004).jpg: file name does not name the player; File:CSC 0107 (46493942602).jpg: found by name search only, not yet confirmed on review; File:CSC 0108 (45822074644).jpg: found by name search only, not yet confirmed on review; File:CSC 0116 (46493941942).jpg: found by name search only, not yet confirmed on review; File:CSC 0137 (46493940562).jpg: found by name search only, not yet confirmed on review; File:DSC 2415 (51298342807).jpg: found by name search only, not yet confirmed on review; File:DSC 2416 (51298342787).jpg: found by name search only, not yet confirmed on review; File:DSC 2417 (51300098100).jpg: found by name search only, not yet confirmed on review; File:DSC 2423 (51298342702).jpg: found by name search only, not yet confirmed on review; File:DSC 2424 (51299094836).jpg: found by name search only, not yet confirmed on review)"
+   "club": "יובנטוס",
+   "en": "Juan Cabal",
+   "he": "חואן קבאל",
+   "key": "juventus",
+   "qid": "Q104820962",
+   "reason": "no usable image (File:1910-04-15, Comedias y Comediantes, El teatro en Méjico, La tragedia de las rosas (cropped) José Escofet.jpg: found by name search only, not yet confirmed on review; File:1910-04-15, Comedias y Comediantes, El teatro en Méjico, La tragedia de las rosas.jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Jorge Castillo",
-   "he": "חורחה קסטיו",
-   "key": "atletico",
-   "reason": "not identified on Wikidata: no_wikidata_footballer_with_this_name (footballers found: Q24034870:Jorge Sánchez Ramos)"
+   "club": "יובנטוס",
+   "en": "Jhon Lucumí",
+   "he": "ג'ון לוקומי",
+   "key": "juventus",
+   "qid": "Q21573188",
+   "reason": "no usable image (File:Jhon Lucumí September 2019.jpg: rejected on review (a team-mate's hand in front of the face); File:FC Salzburg gegen KRC Genk (UEFA Championsleague 17. September 2019) 49.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 02.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 03.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 17.jpg: file name does not name the player; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 37.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 41.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 45.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus KRC Genk (UEFA Championsleague 17. September 2019) 47.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus. KRC Genk (UEFA Championsleague 17. September 2019) 05.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus. KRC Genk (UEFA Championsleague 17. September 2019) 06.jpg: found by name search only, not yet confirmed on review; File:FC Salzburg versus. KRC Genk (UEFA Championsleague 17. September 2019) 11.jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Rodrigo Mendoza",
-   "he": "רודריגו מנדוסה",
-   "key": "atletico",
-   "reason": "not identified on Wikidata: no_wikidata_footballer_with_this_name (footballers found: Q122910207:Rodri Mendoza, Q137907783:Rodrigo Cáseres, Q65029168:Rodrigo González, Q6110811:Rodrigo Soria)"
+   "club": "יובנטוס",
+   "en": "Andrea Cambiaso",
+   "he": "אנדראה קמביאסו",
+   "key": "juventus",
+   "qid": "Q69656941",
+   "reason": "no usable image (File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 446 - Andrea Cambiaso (cropped).jpg: rejected on review (spectator photo; cut-out leaves only a small head); File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 189.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 190.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 191.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 192.jpg: file name does not name the player; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 193.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 440.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 441.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 442.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 443.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 444.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 446.jpg: found by name search only, not yet confirmed on review; File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 447.jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Obed Vargas",
-   "he": "אובד ורגאס",
-   "key": "atletico",
-   "qid": "Q106778770",
-   "reason": "no usable image (File:Seattle Sounders FC vs. Charlotte FC goal - Feb 2025.jpg: found by name search only, not yet confirmed on review)"
+   "club": "יובנטוס",
+   "en": "Manuel Locatelli",
+   "he": "מנואל לוקאטלי",
+   "key": "juventus",
+   "qid": "Q23899393",
+   "reason": "no usable image (File:MANUEL LOCATELLI - ZENIT vs JUVENTUS.jpg: rejected on review (another player's head and shoulder inside the cut-out); File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 08.jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 34 (Manuel Locatelli).jpg: rejected on review (another player's head beside his); File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 34.jpg: file name does not name the player; File:Locatelli Nazionale 2021.jpg: face_too_small; File:Manuel Locatelli (di spalle) 2021.jpg: found by name search only, not yet confirmed on review; File:Sergio Mattarella meets Italy national football team and Matteo Berrettini (12 July 2021) 14.jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Pablo Barrios",
-   "he": "פבלו באריוס",
-   "key": "atletico",
-   "qid": "Q114924158",
-   "reason": "no usable image (File:Spanish pre-match preparations - Japan vs. Spain, 2024 Summer Olympic men's association football, 2024-08-02.jpg: file name does not name the player; File:Pablo Barrios mit Con Air, CSIYH 1 Hamburg.JPG: found by name search only, not yet confirmed on review)"
+   "club": "יובנטוס",
+   "en": "Teun Koopmeiners",
+   "he": "טון קופמיינרס",
+   "key": "juventus",
+   "qid": "Q39498277",
+   "reason": "no usable image (File:Teun Koopmeiners Manchester United v Atalanta BC, 20 October 2021 (12) (cropped).jpg: blurry; File:Manchester United v Atalanta BC, 20 October 2021 (12).jpg: file name does not name the player; File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137461 (Teun Koopmeiners).jpg: rejected on review (low resolution, green halo in the hair); File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137461.jpg: file name does not name the player; File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137465.jpg: file name does not name the player; File:Manchester City 2025 06 26 Juventus (cropped).jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus (Bernardo Silva).jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus.jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus (Omar Marmoush).jpg: found by name search only, not yet confirmed on review; File:Manchester City 2025 06 26 Juventus (cropped to Reijniders).jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Morten Hjulmand",
-   "he": "מורטן יולמנד",
-   "key": "atletico",
-   "qid": "Q55761514",
-   "reason": "no usable image (File:MortenHjulmandSporting24.jpg: rejected on review (video still, blurry); File:Morten Hjulmand, FC Admira Wacker Mödling vs. LASK Linz 2018-08-12.jpg: multiple_faces; File:FC Admira Wacker Mödling vs. LASK Linz 2018-08-12 (018).jpg: file name does not name the player; File:FC Admira Wacker Mödling vs. LASK Linz 2018-08-12 (031).jpg: file name does not name the player; File:FC Admira Wacker Mödling vs. LASK Linz 2018-08-12 (046).jpg: file name does not name the player; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 21.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 25.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 30.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 37.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 47.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg gegen Admira Wacker (2. September 2018) 48.jpg: found by name search only, not yet confirmed on review; File:FC Red Bull Salzburg vversus Admira Wacker (2. September 2018) 12.jpg: found by name search only, not yet confirmed on review; File:Hjulmand.png: rejected on review (blurred face, cut-out leaves only a face); File:Milan Lecce 2023 Hjulmand 1.jpg: found by name search only, not yet confirmed on review)"
+   "club": "יובנטוס",
+   "en": "Randal Kolo Muani",
+   "he": "רנדאל קולו מואני",
+   "key": "juventus",
+   "qid": "Q59655998",
+   "reason": "no usable image (File:Randal Kolo Muani 2020.jpg: face_turned/no_face_detected; File:RC Lens - FC Nantes (25-11-2020) 13.jpg: file name does not name the player)"
   },
   {
-   "club": "אתלטיקו מדריד",
-   "en": "Arnau Ortiz",
-   "he": "ארנאו אורטיס",
-   "key": "atletico",
-   "qid": "Q116849701",
+   "club": "יובנטוס",
+   "en": "Jeff Ekhator",
+   "he": "ג'ף אקאטור",
+   "key": "juventus",
+   "qid": "Q128895710",
    "reason": "no freely licensed image on Commons"
   },
   {
-   "club": "ריינג'רס",
-   "en": "Emmanuel Fernandez",
-   "he": "עמנואל פרננדס",
-   "key": "rangers",
-   "qid": "Q111671692",
-   "reason": "no usable image (File:Jay McClement 2006.jpg: found by name search only, not yet confirmed on review; File:Manny legace.jpg: found by name search only, not yet confirmed on review; File:Manny Legace St. Louis.jpg: found by name search only, not yet confirmed on review; File:Cercanía.jpg: found by name search only, not yet confirmed on review; File:Peregrinando.jpg: found by name search only, not yet confirmed on review; File:Viruses-11-00233-g006b-top.png: found by name search only, not yet confirmed on review; File:Plaza estado del vaticano.jpg: found by name search only, not yet confirmed on review)"
+   "club": "יובנטוס",
+   "en": "Jérémie Boga",
+   "he": "ז'רמי בוגה",
+   "key": "juventus",
+   "qid": "Q20925240",
+   "reason": "no usable image (File:Entrainement SRFC Dinan 20150902 - Jérémie Boga (cropped).JPG: rejected on review (head-only crop at an angle; kit and shoulders missing); File:1E3A0008parade des éléphants champions d'Afrique 2023 - 54.jpg: file name does not name the player; File:1E3A0093parade des éléphants champions d'Afrique 2023 - 2.jpg: file name does not name the player; File:Arsenal 1 Chelsea 1 (4-1 on pens) (35613688313).jpg: file name does not name the player; File:Arsenal 1 Chelsea 1 (4-1 on pens) (36253057732).jpg: file name does not name the player; File:Arsenal 1 Chelsea 1 (4-1 on pens) (36421490505).jpg: file name does not name the player; File:Boga asse ogcn 2425.png: blurry; File:Chelsea 2 Manchester City 1 (5-2 Agg).jpg: file name does not name the player; File:Entrainement SRFC Dinan 20150902 - Joueurs (2).JPG: found by name search only, not yet confirmed on review; File:Entrainement SRFC Dinan 20150902 - Jérémie Boga.JPG: found by name search only, not yet confirmed on review; File:Jeremie Boga 20170812.jpg: found by name search only, not yet confirmed on review; File:Joueur guinéen et ivoirien 01.jpg: found by name search only, not yet confirmed on review; File:Joueur guinéen et ivoirien 06.jpg: found by name search only, not yet confirmed on review; File:Joueur ivoirien 03.jpg: found by name search only, not yet confirmed on review)"
   },
   {
-   "club": "ריינג'רס",
-   "en": "Kosta Nedeljkovic",
-   "he": "קוסטה נדליקוביץ'",
-   "key": "rangers",
-   "qid": "Q119719443",
-   "reason": "no usable image (File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (45) (cropped).jpg: face_turned; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (29).jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (45).jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (48).jpg: file name does not name the player; File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (51).jpg: file name does not name the player)"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Ross McCrorie",
-   "he": "רוס מק'קרורי",
-   "key": "rangers",
-   "qid": "Q20436700",
-   "reason": "no usable image (File:First Minister meets with Scottish National Football Team2 (cropped) (cropped).jpg: background_not_separable; File:First Minister meets with Scottish National Football Team - 55168603663.jpg: file name does not name the player; File:First Minister meets with Scottish National Football Team2 (cropped).jpg: background_not_separable; File:First Minister meets with Scottish National Football Team2.jpg: file name does not name the player; File:Ross McCrorie 11042026 (1).jpg: rejected on review (looking down, face hidden); File:Украина U-21 - Шотландия U-21 3-1. 12 октября 2018 года — 915146.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Dujon Sterling",
-   "he": "דוז'ון סטרלינג",
-   "key": "rangers",
-   "qid": "Q27625852",
-   "reason": "no usable image (File:Dujon Sterling 20180106.jpg: face_turned)"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "James Penrice",
-   "he": "ג'יימס פנרייס",
-   "key": "rangers",
-   "qid": "Q24084212",
-   "reason": "no usable image (File:JamesPenrice.jpg: rejected on review (distant full-body shot; head too small); File:SeanMcGinty.png: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Tuur Rommens",
-   "he": "טור רומנס",
-   "key": "rangers",
-   "qid": "Q109451597",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Cammy Devlin",
-   "he": "קאמי דבלין",
-   "key": "rangers",
-   "reason": "not identified on Wikidata: ambiguous: Q57017726:1999"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Tochi Chukwuani",
-   "he": "טוצ'י צ'וקוואני",
-   "key": "rangers",
-   "qid": "Q72692691",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Dan Neil",
-   "he": "דן ניל",
-   "key": "rangers",
-   "qid": "Q58756408",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Vanja Dragojevic",
-   "he": "ואניה דראגוייביץ'",
-   "key": "rangers",
-   "qid": "Q133864160",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Ryan Don Naderi",
-   "he": "ראיין דון נאדרי",
-   "key": "rangers",
-   "qid": "Q130298918",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Youssef Chermiti",
-   "he": "יוסף שרמיטי",
-   "key": "rangers",
-   "qid": "Q116213349",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Daisuke Yokota",
-   "he": "דייסוקה יוקוטה",
-   "key": "rangers",
-   "qid": "Q106899258",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Djeidi Gassama",
-   "he": "ג'יידי גסאמה",
-   "key": "rangers",
-   "qid": "Q112033023",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Bojan Miovski",
-   "he": "בויאן מיובסקי",
-   "key": "rangers",
-   "qid": "Q100383588",
-   "reason": "no freely licensed image on Commons"
-  },
-  {
-   "club": "ריינג'רס",
-   "en": "Kevin Kelsy",
-   "he": "קווין קלסי",
-   "key": "rangers",
-   "qid": "Q114562469",
-   "reason": "no usable image (File:Kevin Kelsy.jpg: blurry; File:Контрольний матч. «Карпати» — «Шахтар» — 2-2 — 0650.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Alisson",
-   "he": "אליסון",
-   "key": "liverpool",
-   "qid": "Q18237361",
-   "reason": "no usable image (File:Alisson Becker Brazil V Morocco 13 June 2026-117 (cropped).jpg: other_person_in_cutout; File:20180610 FIFA Friendly Match Austria vs. Brazil 850 1625.jpg: found by name search only, not yet confirmed on review; File:20180610 FIFA Friendly Match Austria vs. Brazil Gruppenfoto Brasilien 850 0016.jpg: found by name search only, not yet confirmed on review; File:2013 Nebelhorn Trophy Alisson Krystle Perticheto IMG 7340.JPG: rejected on review (a different person with the same name (found by name search)); File:Russia-Brazil 23 March 2018 (cropped).jpg: found by name search only, not yet confirmed on review; File:EMELEC-INTERNACIONAL (16861342155) - Alisson Becker.jpg: found by name search only, not yet confirmed on review; File:FWC 2018 - Group E - SRB v BRA - Photo 019.jpg: found by name search only, not yet confirmed on review; File:2019 Final da Copa América 2019 - 48226706462 (cropped).jpg: found by name search only, not yet confirmed on review; File:2019 Final da Copa América 2019 - 48225433327.jpg: found by name search only, not yet confirmed on review; File:2019 Final da Copa América 2019 - Alisson.jpg: found by name search only, not yet confirmed on review; File:Bra-Cos (4).jpg: found by name search only, not yet confirmed on review; File:FWC 2018 - Group E - SRB v BRA - Photo 020.jpg: found by name search only, not yet confirmed on review; File:Alisson in 2018.jpg: found by name search only, not yet confirmed on review; File:FWC 2018 - Group E - SRB v BRA - Photo 083.jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Giorgi Mamardashvili",
-   "he": "גיורגי ממרדשווילי",
-   "key": "liverpool",
-   "qid": "Q99529077",
-   "reason": "no usable image (File:Giorgi Mamardashvili 04012026 (1).jpg: face_turned; File:Giorgi Mamardashvili 04012026 (2).jpg: multiple_faces; File:Giorgi Mamardashvili Valencia 2021.png: face_too_small; File:Liverpool Players 04012026 (5) - Mamardashvili.jpg: face_turned; File:Liverpool Players 04012026 (5).jpg: file name does not name the player; File:Liverpool Players 04012026 (6).jpg: file name does not name the player)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Giovanni Leoni",
-   "he": "ג'ובאני לאוני",
-   "key": "liverpool",
-   "qid": "Q126361834",
-   "reason": "no usable image (File:Arteries and veins, illustrating an article entitled \"Artery Wellcome V0007875.jpg: no author recorded, so the required attribution cannot be given; File:Tafelblad met familiewapen Tafelblad met wapen geslacht Witsen, BK-BR-485.jpg: file name does not name the player; File:The human venous and arterial systems. Engraving, after engr Wellcome V0007877.jpg: no author recorded, so the required attribution cannot be given; File:The trunks of the vena cava, with their branches(Table VI, f Wellcome V0007861.jpg: no author recorded, so the required attribution cannot be given; File:The trunks of the vena cava, with their branches, engraving Wellcome V0007839ER.jpg: no author recorded, so the required attribution cannot be given; File:The trunks of the vena cava, with their branches, engraving Wellcome V0007855ER.jpg: no author recorded, so the required attribution cannot be given; File:Reliquaire de la main de sainte Marthe ayant appartenu au monastère de Santa Marta à Venise - Giovanni Lion da Colonia - Musée du Louvre Objets d'Art OA 5641.jpg: found by name search only, not yet confirmed on review; File:Reliquaire de la main de Sainte-Marthe (Louvre, OA 5641)- détail.jpg: found by name search only, not yet confirmed on review; File:Reliquaire de la main de Sainte-Marthe (Louvre, OA 5641).jpg: found by name search only, not yet confirmed on review; File:Scotia Bank Plaza as seen from Toronto Dominion Centre.jpg: found by name search only, not yet confirmed on review; File:Innenaufnahmen aus der Villa Tugendhat (02).jpg: found by name search only, not yet confirmed on review; File:Innenaufnahmen aus der Villa Tugendhat (11).jpg: found by name search only, not yet confirmed on review; File:2022 Aachen, Mies van der Rohe Museum.jpg: found by name search only, not yet confirmed on review; File:Tugenhat brno chairs.png: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Jeremie Frimpong",
-   "he": "ג'רמי פרימפונג",
-   "key": "liverpool",
-   "qid": "Q67198835",
-   "reason": "no usable image (File:Jeremie Frimpong 04012026 (3) (cropped).jpg: face_turned; File:Jeremie Frimpong 04012026 (4).jpg: found by name search only, not yet confirmed on review; File:Jeremie Frimpong 04012026 (3).jpg: found by name search only, not yet confirmed on review; File:Jeremie Frimpong 04012026 (5).jpg: rejected on review (snood covers the lower face); File:Jeremie Frimpong 04012026 (1).jpg: found by name search only, not yet confirmed on review; File:Jeremie Frimpong 04012026 (2).jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Jérémy Jacquet",
-   "he": "ז'רמי ז'אקה",
-   "key": "liverpool",
-   "qid": "Q124283398",
-   "reason": "no usable image (File:Jacquet asse srfc 2425.png: face_turned)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Ronald Araújo",
-   "he": "רונאלד אראוחו",
-   "key": "liverpool",
-   "qid": "Q56332606",
-   "reason": "no usable image (File:FC Red Bull Salzburg gegen CF Barcelona (Testspiel 4. August 2021) 45 (cropped).jpg: face_turned; File:2025 04 26 Final de la Copa del Rey (cropped).jpg: file name does not name the player; File:2025 04 26 Final de la Copa del Rey.jpg: file name does not name the player; File:Barcelona Training Miami 2022 04 (cropped2).jpg: rejected on review (low-resolution, blurred face); File:Barcelona Training Miami 2022 04.jpg: file name does not name the player)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Trey Nyoni",
-   "he": "טריי ניוני",
-   "key": "liverpool",
-   "qid": "Q123367931",
-   "reason": "no usable image (File:Trey Nyoni 04012026 (1).jpg: face_turned)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Lewis Koumas",
-   "he": "לואיס קומאס",
-   "key": "liverpool",
-   "qid": "Q118725657",
-   "reason": "no usable image (File:Lewis Koumas.png: face_unclear)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Hugo Ekitiké",
-   "he": "הוגו אקיטיקה",
-   "key": "liverpool",
-   "qid": "Q100602910",
-   "reason": "no usable image (File:Hugo Ekitike (PSG 2023).jpg: other_person_in_cutout; File:Hugo Ekitike (PSG 2023) (cropped).jpg: blurry; File:Hugo Ekitike (PSG 2023) (cropped2).jpg: blurry; File:Renato Sanches (PSG 2023).jpg: file name does not name the player)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Luke Chambers",
-   "he": "לוק צ'יימברס",
-   "key": "liverpool",
-   "qid": "Q112791108",
-   "reason": "no usable image (File:Luke Chambers 07032026 (1).jpg: face_unclear; File:Luke Chambers 07032026 (2).jpg: found by name search only, not yet confirmed on review; File:Luke Chambers 07032026 (3).jpg: rejected on review (looking down); File:Luke Chambers 07032026 (4).jpg: found by name search only, not yet confirmed on review; File:LukeChambersIpsNor.jpg: found by name search only, not yet confirmed on review; File:Luke Chambers 2.jpg: found by name search only, not yet confirmed on review; File:Chambers.png: found by name search only, not yet confirmed on review; File:03 - Luke Chambers.jpg: found by name search only, not yet confirmed on review; File:Luke Chambers 1.jpg: found by name search only, not yet confirmed on review; File:Defender 24 HOSPEX Makes History (8411893).jpg: found by name search only, not yet confirmed on review)"
-  },
-  {
-   "club": "ליברפול",
-   "en": "Isaac Mabaya",
-   "he": "אייזק מבאיה",
-   "key": "liverpool",
-   "qid": "Q113434149",
-   "reason": "no usable image (File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 30.jpg: blurry; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 09.jpg: found by name search only, not yet confirmed on review; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 26.jpg: found by name search only, not yet confirmed on review; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 28.jpg: found by name search only, not yet confirmed on review; File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 29.jpg: found by name search only, not yet confirmed on review; File:Isaac Mabaya 09082025 (1).jpg: rejected on review (phone held against the face))"
-  },
-  {
-   "club": "ליברפול",
-   "en": "James McConnell",
-   "he": "ג'יימס מקונל",
-   "key": "liverpool",
-   "qid": "Q118767830",
-   "reason": "no usable image (File:James McConnell.jpg: found by name search only, not yet confirmed on review; File:James McConnell historical marker.jpg: found by name search only, not yet confirmed on review; File:Maison James-McConnell.jpg: found by name search only, not yet confirmed on review; File:JAMES ROGERS McCONNELL dedication.JPG: found by name search only, not yet confirmed on review; File:Tomb of aviator O'Connell near Flavy Le Martel in 1918.jpg: found by name search only, not yet confirmed on review; File:Close Up of right side of mural commemorating James R. McConnell.jpg: found by name search only, not yet confirmed on review; File:CommHouse Monument (rectified).jpg: found by name search only, not yet confirmed on review; File:SEVEN SOCIETY plaque.JPG: found by name search only, not yet confirmed on review; File:SOARING-- inscription.JPG: found by name search only, not yet confirmed on review; File:CourtHouse Monument.jpg: found by name search only, not yet confirmed on review; File:John Elliott, James R. McConnell. SAAM-1927.8.15.jpg: rejected on review (a different person with the same name (found by name search)); File:John Elliott, James R. McConnell. SAAM-1927.8.15 (cropped).jpg: found by name search only, not yet confirmed on review; File:James McConnell House.jpg: found by name search only, not yet confirmed on review; File:JohnJMcConnell.jpg: found by name search only, not yet confirmed on review)"
+   "club": "יובנטוס",
+   "en": "Kenan Yıldız",
+   "he": "קנאן יילדיז",
+   "key": "juventus",
+   "qid": "Q113184832",
+   "reason": "no usable image (File:Kenan Yıldız in the international match (March 2025) (cropped).jpg: multiple_faces; File:Fiola and Kenan Yıldız in the international match (March 2025).jpg: multiple_faces; File:Kenan Yıldiz signature.png: no_face_detected; File:Kenan Yıldız.jpg: found by name search only, not yet confirmed on review; File:Fiola and Kenan Yıldız in the international match (March 2025) (cropped).jpg: found by name search only, not yet confirmed on review)"
   }
  ]
 }

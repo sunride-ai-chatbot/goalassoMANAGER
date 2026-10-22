@@ -8991,18 +8991,18 @@
   "upscale": 0.95
  },
  "wd-Q18237361": {
-  "bytes": 8632,
-  "faceW": 0.357,
+  "bytes": 14220,
+  "faceW": 0.309,
   "flags": [],
-  "hairTop": 0.142,
+  "hairTop": 0.116,
   "pack": "eu-liverpool",
-  "roll": -1.4,
-  "score": 0.94,
-  "sha256": "0891d8cbdede481ba29df3fbedd27523a8f89fd88be6d08195d0d4f392185c21",
-  "shoulders": 0.52,
-  "skin": "#b17354",
+  "roll": -1.6,
+  "score": 0.93,
+  "sha256": "0b7a4df00ad30d460c5c3f99e262b2024474b1d54d9f30b1675e70e1b0fb16a3",
+  "shoulders": 0.49,
+  "skin": "#e09a89",
   "status": "ok",
-  "upscale": 0.62
+  "upscale": 0.25
  },
  "wd-Q18331623": {
   "bytes": 14964,
@@ -9720,6 +9720,22 @@
   "skin": "#946b4c",
   "status": "ok",
   "upscale": 0.19
+ },
+ "wd-Q20925240": {
+  "bytes": 8076,
+  "faceW": 0.253,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.16,
+  "pack": "eu-juventus",
+  "roll": 0.6,
+  "score": 0.69,
+  "sha256": "3873a57ec0ea1fbd01150ebea226f5af1921bc776f58c9305826340df1e63978",
+  "shoulders": 0.0,
+  "skin": "#6d3424",
+  "status": "ok",
+  "upscale": 0.13
  },
  "wd-Q20972400": {
   "bytes": 14732,

@@ -85,20 +85,31 @@ def main():
                     tried.append(c['title'] + ': found by name search only, not yet confirmed on review'); continue
                 if not acc and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
                     tried.append(c['title'] + ': file name does not name the player'); continue
-                path = os.path.join(a.sources, 'euro', key, c['file'])
-                try:
-                    img = Image.open(path).convert('RGB')
-                except Exception as e:
+                # the same Commons file may exist in several renditions (640 px first, wider retries later); a wider
+                # rendition can reveal a second face the detector rejects, so every rendition on disk is tried
+                import glob as _g, re as _re
+                stem = _re.sub(r'(-w\d+)?\.jpg$', '', c['file'])
+                paths = sorted(_g.glob(os.path.join(a.sources, 'euro', key, stem + '.jpg')) + _g.glob(os.path.join(a.sources, 'euro', key, stem + '-w*.jpg')), key=os.path.getsize, reverse=True)
+                if not paths:
                     tried.append(c['title'] + ': unreadable'); continue
-                lenient = bool(acc) and not acc.get('strict')   # identity-only confirmations keep the strict quality checks
-                ck = f"{key}/{c['file']}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if lenient else '')
-                if ck not in cache:
-                    im, meas = bp.process(t, img, key=c['file'], strict=not lenient)
-                    cache[ck] = 'ok' if im is not None else meas.get('reason')
-                    save(cache_p, cache, compact=True)
-                if cache[ck] == 'ok':
-                    chosen = (c, img); break
-                tried.append(f"{c['title']}: {cache[ck]}")
+                reasons = []
+                for path in paths:
+                    try:
+                        img = Image.open(path).convert('RGB')
+                    except Exception:
+                        reasons.append('unreadable'); continue
+                    lenient = bool(acc) and not acc.get('strict')   # identity-only confirmations keep the strict quality checks
+                    ck = f"{key}/{os.path.basename(path)}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if lenient else '')
+                    if ck not in cache:
+                        im, meas = bp.process(t, img, key=os.path.basename(path), strict=not lenient)
+                        cache[ck] = 'ok' if im is not None else meas.get('reason')
+                        save(cache_p, cache, compact=True)
+                    if cache[ck] == 'ok':
+                        chosen = (c, img); break
+                    reasons.append(cache[ck])
+                if chosen:
+                    break
+                tried.append(f"{c['title']}: {'/'.join(dict.fromkeys(reasons))}")
             if not chosen:
                 why = 'no freely licensed image on Commons' if not pl.get('candidates') else 'no usable image (' + '; '.join(tried) + ')'
                 if pl.get('rejectedFiles'):
