@@ -4,3 +4,6 @@ body.beginner{--bbase:#101d2b;--bpanel:#162638;--bline:#2b3d50;--bmuted:#b2c2d1;
 @media(prefers-reduced-motion:reduce){.beginner *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 /* The Pro shell is viewport-bound; this separate surface scrolls as a normal page. */
 html:has(body.beginner){height:auto;overflow:auto}.beginner{height:auto!important;min-height:100vh;overflow:auto!important}.beginner #main{height:auto!important;max-height:none!important;overflow:visible!important;flex:none!important}.beginner .bportrait>.player-portrait{display:block;width:100%;height:100%;max-width:none;max-height:none;border:0;border-radius:0;background:transparent}.beginner .bportrait>.player-portrait svg{display:block;width:100%;height:100%}
+
+/* Separate valuation from recurring salary on every card, at every width. */
+.beginner .bplayer-stats{flex-direction:column;gap:10px}.beginner .bplayer-stats>span{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.beginner .bplayer-stats strong{display:inline;white-space:nowrap}.beginner .bmarket-value{padding:10px 0;border-top:1px solid var(--bline);border-bottom:1px solid var(--bline)}.beginner .bmarket-value strong{color:var(--bmint);font-size:22px}.beginner .bannual-wage strong{font-size:18px}

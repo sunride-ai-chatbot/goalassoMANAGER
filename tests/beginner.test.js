@@ -2,4 +2,30 @@ const assert=require('node:assert/strict');const fs=require('fs');const {JSDOM,V
 const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const html=fs.readFileSync('beginner.html','utf8');
 const w=new JSDOM(html,{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};w.localStorage.setItem('ilm2','PRO_SENTINEL')}}).window;
-try{assert.deepEqual(errors,[]);assert.ok(w.document.querySelectorAll('[data-start]').length>40);const key=w.eval("Bdefs().find(d=>d.name==='ליברפול').key");w.BEGINNER.create(key);assert.equal(w.eval('me().name'),'ליברפול');assert.ok(w.eval('me().players.length')>=26);assert.ok(w.eval('me().players.some(p=>playerVisual(p))'));assert.equal(w.localStorage.getItem('ilm2'),'PRO_SENTINEL');assert.equal(w.eval('G.scouts.length'),0);w.eval("Btab='finance';Brender()");assert.equal(w.document.querySelectorAll('[data-sponsor-b]').length,3);w.document.querySelector('[data-sponsor-b]').click();assert.ok(w.eval('me().sponsor.annual')>0);const before=w.eval('me().money');w.BEGINNER.play();assert.equal(w.eval('Bstate().round'),1);assert.notEqual(w.eval('me().money'),before);assert.ok(w.eval('Bstate().ledger.length')>=3);assert.deepEqual(errors,[]);const saved=w.localStorage.getItem('goalasso.beginner.v1');assert.ok(saved);w.eval('G=null;Bload()');assert.equal(w.eval('Bstate().round'),1);assert.equal(w.eval('me().name'),'ליברפול');assert.equal(w.localStorage.getItem('ilm2'),'PRO_SENTINEL');console.log('beginner: club selection, shared portraits, sponsors, match engine, ledger and isolated saves passed; errors []');}finally{w.close()}
+try{assert.deepEqual(errors,[]);assert.ok(w.document.querySelectorAll('[data-start]').length>40);const key=w.eval("Bdefs().find(d=>d.name==='ליברפול').key");w.BEGINNER.create(key);assert.equal(w.eval('me().name'),'ליברפול');assert.ok(w.eval('me().players.length')>=26);assert.ok(w.eval('me().players.some(p=>playerVisual(p))'));assert.equal(w.localStorage.getItem('ilm2'),'PRO_SENTINEL');assert.equal(w.eval('G.scouts.length'),0);w.eval("Btab='finance';Brender()");assert.equal(w.document.querySelectorAll('[data-sponsor-b]').length,3);w.document.querySelector('[data-sponsor-b]').click();assert.ok(w.eval('me().sponsor.annual')>0);
+w.eval("Bcategory='europe';Bquery='';Bpos='all';Bsort='asc';Btab='market';Brender()");
+const market=JSON.parse(w.eval("JSON.stringify(BmarketPool().map(({p,c})=>({id:p.id,club:c.id,face:!!playerVisual(p),value:Bvalue(p)})))"));
+assert.ok(market.length>100,'expanded real European candidates');
+assert.ok(market.every(x=>x.face),'no portraitless European suggestions');
+const counts={};for(const x of market)counts[x.club]=(counts[x.club]||0)+1;
+assert.ok(Object.values(counts).some(n=>n===10),'ten suggestions for clubs with sufficient portraits');
+assert.ok(Object.values(counts).every(n=>n<=10),'per-club cap');
+assert.deepEqual(market.map(x=>x.value),market.map(x=>x.value).sort((a,b)=>a-b));
+const row=w.document.querySelector('.bplayer'),id=Number(row.querySelector('[data-player]').dataset.player);
+assert.equal(row.querySelector('.bmarket-value strong').textContent,w.eval('NIS(Bvalue(Bfind('+id+').p))'));
+assert.equal(row.querySelector('.bannual-wage strong').textContent,w.eval('NIS(Byear(Bfind('+id+').p))'));
+row.querySelector('[data-player]').click();
+assert.equal(Number(w.document.querySelector('#boffer').value),w.eval('Bvalue(Bfind('+id+').p)'),'card and detail use the same valuation');
+w.document.querySelector('.bdialog').remove();
+w.eval("Bpos='FW';Bsort='desc'");
+assert.ok(w.eval("BmarketPool().every(({p})=>p.pos==='FW'&&!!playerVisual(p))"));
+w.eval("Bpos='all';Bquery=fullName(Bfind("+id+").p)");
+assert.ok(w.eval("BmarketPool().some(({p})=>p.id==="+id+")"),'full-name search keeps pictured player');
+assert.ok(w.eval("BmarketPool().every(({p})=>!!playerVisual(p))"));
+w.eval("Bquery='';Bcategory='league'");
+assert.ok(w.eval("BmarketPool().every(({p})=>!!playerVisual(p))"),'European home league also shows pictured players only');
+w.eval("Bcategory='free'");
+assert.equal(w.eval('BmarketPool().length'),w.eval('G.freeAgents.length'),'free-agent category retained');
+w.eval("Bcategory='league';Bsort='asc';Btab='home';Brender()");
+
+const before=w.eval('me().money');w.BEGINNER.play();assert.equal(w.eval('Bstate().round'),1);assert.notEqual(w.eval('me().money'),before);assert.ok(w.eval('Bstate().ledger.length')>=3);assert.deepEqual(errors,[]);const saved=w.localStorage.getItem('goalasso.beginner.v1');assert.ok(saved);w.eval('G=null;Bload()');assert.equal(w.eval('Bstate().round'),1);assert.equal(w.eval('me().name'),'ליברפול');assert.equal(w.localStorage.getItem('ilm2'),'PRO_SENTINEL');console.log('beginner: club selection, shared portraits, sponsors, match engine, ledger and isolated saves passed; errors []');}finally{w.close()}
