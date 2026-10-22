@@ -178,13 +178,27 @@ def process(t, src, debug=None, key='', strict=False):
         if cb < 0.97 * H:
             flags.append('short_source')
             a *= smooth((cb - np.arange(H, dtype=np.float32)[:, None]) / (0.16 * H))
+    if strict:
+        # another detected face that the person matte kept: a second person inside the cut-out
+        for g in faces[1:]:
+            gx, gy = int(g[0] + g[2] / 2), int(g[1] + g[3] / 2)
+            if 0 <= gy < alpha.shape[0] and 0 <= gx < alpha.shape[1] and alpha[gy, gx] > 0.5:
+                return None, {'status': 'unresolved', 'reason': 'other_person_in_cutout', 'flags': flags}
     hair_top = float((EYE_Y * H - S * head_above_eye) / H)
     face_w = float(f[2] * S / W)
     out = np.dstack([fg * 255, a * 255]).round().astype(np.uint8)
     img_out = Image.fromarray(out, 'RGBA')
+    if strict:
+        # sharpness of the face (eye line to mouth) in the final frame; calibrated on the federation studio photos,
+        # 95% of which score above 217, and on the candid photos judged blurry on review (62-206)
+        fz = cv2.cvtColor(out[int(0.32 * H):int(0.5 * H), int(0.35 * W):int(0.65 * W), :3], cv2.COLOR_RGB2GRAY).astype(np.float32)
+        sharp = float(cv2.Laplacian(fz, cv2.CV_32F).var())
+        if sharp < 210:
+            return None, {'status': 'unresolved', 'reason': 'blurry', 'flags': flags, 'sharpness': round(sharp, 1)}
     if debug:
         img_out.save(os.path.join(debug, key + '.png'))
-    meas = {'status': 'ok', 'flags': flags, 'hairTop': round(hair_top, 3), 'faceW': round(face_w, 3), 'upscale': round(up, 2),
+    shoulders = float((out[int(0.70 * H), :, 3] > 128).mean())
+    meas = {'status': 'ok', 'flags': flags, 'shoulders': round(shoulders, 2), 'hairTop': round(hair_top, 3), 'faceW': round(face_w, 3), 'upscale': round(up, 2),
             'roll': round(roll, 1), 'score': round(float(f[14]), 2)}
     return img_out, meas
 
@@ -250,7 +264,9 @@ def main():
         auditp = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json'); audit = load_json(auditp)
         for f in sorted(os.listdir(os.path.join(ROOT, 'assets', 'facepacks'))):
             for key, uri in load_json(os.path.join(ROOT, 'assets', 'facepacks', f))['images'].items():
-                audit.setdefault(key, {})['skin'] = skin_tone(Image.open(io.BytesIO(base64.b64decode(uri.split(',', 1)[1]))))
+                im_ = Image.open(io.BytesIO(base64.b64decode(uri.split(',', 1)[1])))
+                audit.setdefault(key, {})['skin'] = skin_tone(im_)
+                audit[key]['shoulders'] = round(float((np.asarray(im_.convert('RGBA'))[int(0.70 * H), :, 3] > 128).mean()), 2)
         with open(auditp, 'w', encoding='utf8') as fh:
             json.dump(audit, fh, ensure_ascii=False, indent=1, sort_keys=True)
         return

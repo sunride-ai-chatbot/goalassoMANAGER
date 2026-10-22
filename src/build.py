@@ -69,8 +69,27 @@ for face in visuals['faces'].values():
 audit_path = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json')
 audit = json.loads(read(audit_path)) if os.path.isfile(audit_path) else {}
 runtime_faces = {k: {'pack': v['pack'], 'status': 'ok' if audit.get(k, {}).get('status') == 'ok' else 'unresolved',
-                     'skin': audit.get(k, {}).get('skin') or v.get('skin')} for k, v in visuals['faces'].items()}
-page = page.replace('__PLAYER_VISUALS__', enc({'names': face_names, 'faces': runtime_faces}))
+                     'skin': audit.get(k, {}).get('skin') or v.get('skin'), 'bust': 1 if audit.get(k, {}).get('shoulders', 1) >= 0.3 else 0}
+                 for k, v in visuals['faces'].items()}
+# European real squads (data/visuals/euro-players.json, written by scripts/import-commons-portraits.py): keyed by the
+# club's Hebrew name + the player's English name exactly as in data/euro; `euroEn` covers saves made before identities
+# existed and only lists English names that are unique across all European squads
+euro_path = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
+euro_v = json.loads(read(euro_path)) if os.path.isfile(euro_path) else {'players': [], 'faces': {}}
+euro_ids, en_count, en_id = {}, {}, {}
+for p in euro_v['players']:
+    euro_ids[p['club'] + '|' + p['en']] = p['visualId']
+    en_count[p['en']] = en_count.get(p['en'], 0) + 1; en_id[p['en']] = p['visualId']
+for sq in euro.values():
+    for r in sq:
+        en_count[r.get('en')] = en_count.get(r.get('en'), 0) + (0 if r.get('en') in en_id else 1)
+for k, v in euro_v['faces'].items():
+    if not os.path.isfile(os.path.join(ROOT, 'assets', 'facepacks', v['pack'] + '.json')):
+        raise ValueError('Missing portrait pack: ' + v['pack'])
+    runtime_faces[k] = {'pack': v['pack'], 'status': 'ok' if audit.get(k, {}).get('status') == 'ok' else 'unresolved', 'skin': audit.get(k, {}).get('skin'),
+                        'bust': 1 if audit.get(k, {}).get('shoulders', 1) >= 0.3 else 0}
+page = page.replace('__PLAYER_VISUALS__', enc({'names': face_names, 'faces': runtime_faces, 'euro': euro_ids,
+                                               'euroEn': {n: i for n, i in en_id.items() if en_count.get(n) == 1}}))
 out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta))
 for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__'):
     assert ph not in out, 'unfilled placeholder ' + ph

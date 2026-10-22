@@ -24,6 +24,8 @@ def bp_norm(x):
     x = unicodedata.normalize('NFKD', x or '')
     return re.sub(r'[^a-z ]', ' ', ''.join(ch for ch in x if not unicodedata.combining(ch)).lower())
 
+REJECT = {}
+ACCEPT = {}   # files accepted on visual review that the automatic strict checks refuse (title → player, reason)
 SRC_KEYS = ('title', 'page', 'author', 'license', 'licenseUrl', 'credit', 'attributionRequired', 'usageTerms', 'restrictions', 'date')
 
 def load(p, default=None):
@@ -41,7 +43,13 @@ def main():
     a = ap.parse_args()
     ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
     E = load(ep, {'schema': 1, 'players': [], 'faces': {}, 'unresolved': []})
+    global REJECT, ACCEPT
+    REJECT = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-reject-files.json'), {})   # files rejected on visual review
+    ACCEPT = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-accept-files.json'), {})   # files accepted on visual review
     t = bp.Tools()
+    # decisions per candidate file (size+mtime+pipeline version), so retries only process new files
+    cache_p = os.path.join(a.sources, '.import-cache.json'); cache = load(cache_p, {})
+    pv = os.path.getmtime(os.path.join(ROOT, 'scripts', 'build-portraits.py'))
     for key in a.clubs.split(','):
         man = load(os.path.join(a.sources, 'euro', key, 'manifest.json'))
         if not man:
@@ -63,17 +71,28 @@ def main():
             for c in pl.get('candidates', []):
                 # files from the player's Commons category must name him: a category can be shared with, or polluted
                 # by, other subjects; the Wikidata main image (P18) is trusted as the person's own picture
-                if not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
+                if not (c.get('author') or '').strip() and not str(c.get('license', '')).upper().startswith(('CC0', 'PUBLIC DOMAIN', 'PD')):
+                    tried.append(c['title'] + ': no author recorded, so the required attribution cannot be given'); continue
+                if c['title'] in REJECT:
+                    tried.append(f"{c['title']}: rejected on review ({REJECT[c['title']]['reason']})"); continue
+                acc = ACCEPT.get(c['title'])
+                if acc and acc['player'] != pl['en']:
+                    acc = None
+                if not acc and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
                     tried.append(c['title'] + ': file name does not name the player'); continue
                 path = os.path.join(a.sources, 'euro', key, c['file'])
                 try:
                     img = Image.open(path).convert('RGB')
                 except Exception as e:
                     tried.append(c['title'] + ': unreadable'); continue
-                im, meas = bp.process(t, img, key=c['file'], strict=True)
-                if im is not None:
+                ck = f"{key}/{c['file']}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if acc else '')
+                if ck not in cache:
+                    im, meas = bp.process(t, img, key=c['file'], strict=not acc)
+                    cache[ck] = 'ok' if im is not None else meas.get('reason')
+                    save(cache_p, cache, compact=True)
+                if cache[ck] == 'ok':
                     chosen = (c, img); break
-                tried.append(f"{c['title']}: {meas.get('reason')}")
+                tried.append(f"{c['title']}: {cache[ck]}")
             if not chosen:
                 why = 'no freely licensed image on Commons' if not pl.get('candidates') else 'no usable image (' + '; '.join(tried) + ')'
                 if pl.get('rejectedFiles'):
@@ -85,6 +104,8 @@ def main():
             photos[vid] = 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
             E['players'].append({**base, 'visualId': vid, 'qid': pl['qid'], 'wikidata': pl.get('wikidata'), 'match': pl.get('match')})
             E['faces'][vid] = {'pack': pack, 'source': {k: c.get(k) for k in SRC_KEYS}, 'fromP18': c.get('fromP18')}
+            if c['title'] in ACCEPT:
+                E['faces'][vid]['reviewed'] = ACCEPT[c['title']]['reason']
             print(key, pl['en'], '→', c['title'], c.get('license'), flush=True)
         save(os.path.join(ROOT, 'data', 'visuals', 'source-photos', pack + '.json'), {'schema': 1, 'images': photos}, compact=True)
         save(ep, E)

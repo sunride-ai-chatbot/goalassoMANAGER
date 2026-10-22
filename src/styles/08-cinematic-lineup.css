@@ -59,3 +59,6 @@
 .live-side{background:linear-gradient(150deg,#19303b,#0b1722);border-color:#3b5666}.xc{background:linear-gradient(150deg,#203543,#0c1924);border-color:#425c6a}.xc .nm{font-size:14px;max-width:120px}.lbtn.primary{box-shadow:0 4px 15px #baff2925}
 @media(max-width:380px){.stad-head{padding:10px}.stad-head strong{font-size:14px}.t3-nm{font-size:11px;min-height:30px}.t3 .m10b{gap:.5px}.t3 .m10b b{width:2px}.stad-footer{font-size:10px;padding:9px}.t3 .fc-pos{font-size:8px}}
 
+.pp:not([data-pp-state="ready"]) .pp-kit{display:none}
+.pp-credit{text-align:center;font-size:10.5px;line-height:1.35;margin-top:4px;overflow-wrap:anywhere}
+.pp-credit:empty{display:none}

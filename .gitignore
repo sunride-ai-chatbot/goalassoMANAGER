@@ -7,3 +7,6 @@ node_modules/
 # Original photo bytes are preserved in assets/facepacks/*.json.
 assets/faces/
 __pycache__/
+
+# European source photos are regenerated from the portrait-sources branch by scripts/import-commons-portraits.py
+data/visuals/source-photos/eu-*.json

@@ -44,7 +44,8 @@ function legacyVisualMap(){if(legacyVisualIds)return legacyVisualIds;const out={
 function playerVisualId(p){if(!p)return null;if(Object.prototype.hasOwnProperty.call(p,'visualId'))return PLAYER_VISUALS.faces[p.visualId]?p.visualId:null;
  // European squad players carry an `en` field (fromRawEuro) and are never matched by Hebrew name: Celtic's ז'וטה is not
  // Hapoel Ramat Gan's ז'וטה. Only Israeli-league identities resolve by name.
- if(Object.prototype.hasOwnProperty.call(p,'en')){p.visualId=null;return null}
+ if(Object.prototype.hasOwnProperty.call(p,'en')){if(p.visualId&&PLAYER_VISUALS.faces[p.visualId])return p.visualId;
+  const k=(PLAYER_VISUALS.euroEn||{})[p.en]||null;p.visualId=k&&PLAYER_VISUALS.faces[k]?k:null;return p.visualId}
  const name=fullName(p);const key=(p.real||legacyVisualMap()[p.id]===name)?PLAYER_VISUALS.names[name]:null;
  p.visualId=key||null;return p.visualId}
 /* Portraits: every face is a canonical 240×300 transparent cut-out produced offline by scripts/build-portraits.py
@@ -53,7 +54,7 @@ function playerVisualId(p){if(!p)return null;if(Object.prototype.hasOwnProperty.
    (lineup figure, 0 0 240 300) or its top 264 px (cards, lists, bench, live chips). Faces marked unresolved in the
    audit, generated players and failed downloads all show the same designed fallback: club kit + monogram. */
 function playerVisual(p){const f=PLAYER_VISUALS.faces[playerVisualId(p)];return f&&f.status==='ok'?f:null}
-const facePackCache=new Map(),facePackRequests=new Map(),facePackFailures=new Map();
+const facePackCache=new Map(),facePackRequests=new Map(),facePackFailures=new Map(),facePackCredits=new Map();
 function portraitState(f,key){if(!f)return 'none';if(facePackCache.get(f.pack)?.[key])return 'ready';return facePackFailures.has(f.pack)?'failed':'loading'}
 function loadFacePack(pack){if(facePackCache.has(pack)||facePackRequests.has(pack)||typeof fetch!=='function'||Date.now()-(facePackFailures.get(pack)||0)<10000)return;
  const settle=(images)=>{if(typeof document==='undefined'||!document)return;document.querySelectorAll('.pp[data-pack="'+pack+'"]').forEach(g=>{const key=g.getAttribute('data-visual-id');const src=images&&images[key];const img=g.querySelector('.pp-photo');
@@ -62,7 +63,13 @@ function loadFacePack(pack){if(facePackCache.has(pack)||facePackRequests.has(pac
   if(data.schema!==2||!data.images||typeof data.images!=='object')throw new Error('portrait_format');
   const images={};for(const [key,value] of Object.entries(data.images)){if(PLAYER_VISUALS.faces[key]?.pack===pack&&typeof value==='string'&&/^data:image\/webp;base64,[A-Za-z0-9+/=]+$/.test(value))images[key]=value}
   facePackCache.set(pack,images);facePackFailures.delete(pack);settle(images);
+  const cr={};for(const [k,v] of Object.entries(data.credits||{}))if(images[k]&&v&&typeof v==='object')cr[k]={a:String(v.a||'').slice(0,120),l:String(v.l||'').slice(0,40),u:/^https:\/\/commons\.wikimedia\.org\//.test(v.u||'')?v.u:''};
+  facePackCredits.set(pack,cr);if(typeof document!=='undefined'&&document)document.querySelectorAll('.pp-credit[data-pack="'+pack+'"]').forEach(el=>{el.outerHTML=portraitCreditHTML(null,el.getAttribute('data-visual-id'),pack)});
  }).catch(()=>{facePackFailures.set(pack,Date.now());settle(null)}).finally(()=>facePackRequests.delete(pack));facePackRequests.set(pack,request)}
+/* photo credit line (Wikimedia Commons, CC BY / BY-SA need visible attribution); empty for federation photos */
+function portraitCreditHTML(p,vk,pack){if(p){const f=playerVisual(p);if(!f)return '';vk=playerVisualId(p);pack=f.pack}if(!pack||!/^eu-/.test(pack))return '';
+ const c=facePackCredits.get(pack)?.[vk];if(!c){loadFacePack(pack);return `<div class="pp-credit muted tiny" data-pack="${esc(pack)}" data-visual-id="${esc(vk)}"></div>`}
+ return `<div class="pp-credit muted tiny" style="margin-top:4px">תמונה: <bdi>${esc(c.a)}</bdi> · <bdi>${esc(c.l)}</bdi> · ויקישיתוף${c.u?` · <a href="${esc(c.u)}" target="_blank" rel="noopener noreferrer">מקור</a>`:''}</div>`}
 function portraitInitials(p){const a=String(p.first||'').trim(),b=String(p.last||'').trim();return (a.slice(0,1)+(b&&b!==a?b.slice(0,1):'')).trim()||'?'}
 function portraitColors(p,c){c=c||{};const kit=p.pos==='GK'?'#159263':(c.c1||'#26384a');const trim=c.c2||'#d2deed';return {kit,trim:colDist(kit,trim)<60?inkFor(kit):trim}}
 /* the portrait group, in canonical frame units (240 wide); `h` = visible height (264 for busts, 300 for the full frame) */
@@ -70,8 +77,9 @@ function portraitGroup(p,c,id,o){o=o||{};const f=playerVisual(p),key=playerVisua
  const {kit,trim}=portraitColors(p,c);const ink=inkFor(kit);const h=o.h||264;
  const bg=o.bg===false?'':`<defs><radialGradient id="${id}bg" cx="50%" cy="34%" r="72%"><stop offset="0" stop-color="${esc(kit)}" stop-opacity=".62"/><stop offset="1" stop-color="${esc(kit)}" stop-opacity=".08"/></radialGradient></defs><rect width="240" height="${h}" fill="#0b1520"/><rect width="240" height="${h}" fill="url(#${id}bg)"/>`;
  const fb=`<g class="pp-fb"><path d="M14 ${h}V${h-30}Q20 ${h-66} 80 ${h-80}L120 ${h-58}L160 ${h-80}Q220 ${h-66} 226 ${h-30}V${h}Z" fill="${esc(kit)}"/><path d="M80 ${h-80}L120 ${h-58}L160 ${h-80}" fill="none" stroke="${esc(trim)}" stroke-width="9" stroke-linejoin="round"/><circle cx="120" cy="${h*.4}" r="${h*.22}" fill="${esc(kit)}" stroke="${esc(trim)}" stroke-width="7"/><text x="120" y="${h*.4}" dy=".36em" text-anchor="middle" font-family="Heebo,Arial,sans-serif" font-weight="800" font-size="${h*.2}" fill="${ink}">${esc(portraitInitials(p))}</text></g>`;
+ const kitG=f&&!f.bust?`<g class="pp-kit"><path d="M108 150H132V196H108Z" fill="${esc(f.skin||'#c99a7c')}"/><path d="M14 ${h}V${h-26}Q22 ${h-62} 84 ${h-74}L120 ${h-52}L156 ${h-74}Q218 ${h-62} 226 ${h-26}V${h}Z" fill="${esc(kit)}"/><path d="M84 ${h-74}L120 ${h-52}L156 ${h-74}" fill="none" stroke="${esc(trim)}" stroke-width="8" stroke-linejoin="round"/></g>`:'';
  const photo=f?`<image class="pp-photo" ${src?`href="${src}"`:''} x="0" y="0" width="240" height="300" preserveAspectRatio="xMidYMin meet" onerror="var g=this.closest('.pp');if(g)g.setAttribute('data-pp-state','failed')"/>`:'';
- return `<g class="pp" data-pp-state="${portraitState(f,key)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(key)}"`:''}>${bg}${photo}${fb}</g>`}
+ return `<g class="pp" data-pp-state="${portraitState(f,key)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(key)}"`:''}>${bg}${kitG}${photo}${fb}</g>`}
 function playerPortraitHTML(p,c,key){c=c||playerClub(p)||{c1:'#26384a',c2:'#d2deed'};const id='pp'+String(key||p.id).replace(/[^a-zA-Z0-9]/g,'');
  return `<span class="player-portrait" aria-hidden="true" data-portrait="${playerVisual(p)?playerVisualId(p):'fallback'}"><svg viewBox="0 0 240 264" preserveAspectRatio="xMidYMin slice">${portraitGroup(p,c,id)}</svg></span>`}
 function playerClub(p){if(!G)return null;return [...G.clubs,...G.leumit,...Object.values(G.pseudo||{}),...Object.values(G.world||{}).flatMap(l=>l.clubs||[])].find(c=>c.players.includes(p)||(c.youth||[]).includes(p))||null}
@@ -384,7 +392,7 @@ function bind(){
     const ad3=t.closest('[data-adpause]');if(ad3){AdSvc.togglePause(ad3.dataset.adpause);return render()}
     const ad4=t.closest('[data-adclick]');if(ad4&&!t.closest('[data-adpause]')){AdSvc.click(ad4.dataset.adclick);toast('פרסומת להדגמה בלבד: אין יעד אמיתי');return}
     if(id==='deleteAll')return openModal(`<h3 class="sec">מחיקת כל הנתונים</h3><p class="small">כל הקריירות במכשיר הזה${cloud.ready?' וכל השמירות שלך בענן':''} יימחקו לצמיתות. אי אפשר לבטל.</p><div class="actions"><button class="btn danger" id="delAllGo">מחק הכל</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#delAllGo')){closeModal();deleteAllData()}});
-    if(id==='exportBtn')return exportSave();if(id==='simNext')return simUntilMyMatch();if(id==='simSeason')return simSeason();
+    if(id==='exportBtn')return exportSave();if(id==='photoCreditsBtn')return showPhotoCredits();if(id==='simNext')return simUntilMyMatch();if(id==='simSeason')return simSeason();
     if(id==='retrySave'){Promise.resolve(save()).then(ok=>toast(ok?'נשמר במכשיר':'השמירה נכשלה'));return}if(id==='recoverBackup')return openModal('<h3>לשחזר את הגיבוי הקודם?</h3><p>ההתקדמות הנוכחית תוחלף בגיבוי.</p><button class="btn" id="recoverGo">שחזר</button><button class="btn sec" data-close>ביטול</button>',e=>{if(e.target.closest('#recoverGo'))recoverBackup()});if(id==='cloudSave')return cloudSave();if(id==='cloudLoad')return cloudLoad();if(id==='cloudAuto'){G.autoCloud=!G.autoCloud;save();if(G.autoCloud)cloudSave(true);return render()}
     if(id==='sellNaming')return sellNaming();
     if(id==='refreshScouts'){const c=me();if(c.money<50000)return toast('אין מספיק תקציב');c.money-=50000;refreshScoutMarket();save();return render()}
@@ -404,7 +412,7 @@ function bind(){
 }
 function playerModal(pid){
   const c=me();const p=c.players.find(x=>x.id===pid);if(!p)return;
-  openModal(`<div class="pc-big">${playerCardSVG(p,c,{big:true,full:true,k:'m'})}</div><div style="text-align:center;margin-top:6px"><h3 class="sec">${esc(fullName(p))}</h3><div class="muted small">${POSHE[p.pos]} · גיל ${p.age} · ${esc(p.nat)}${p.real?'':' · נתונים משוערים'}</div><div class="small" style="margin-top:4px">${PERS[p.pers||'professional'].icon} ${PERS[p.pers||'professional'].he}${p.listed?' · <span class="tag warn">ברשימת ההעברות</span>':''}${p.promise?' · <span class="tag info">הובטחו דקות</span>':''}</div></div>
+  openModal(`<div class="pc-big">${playerCardSVG(p,c,{big:true,full:true,k:'m'})}</div>${portraitCreditHTML(p)}<div style="text-align:center;margin-top:6px"><h3 class="sec">${esc(fullName(p))}</h3><div class="muted small">${POSHE[p.pos]} · גיל ${p.age} · ${esc(p.nat)}${p.real?'':' · נתונים משוערים'}</div><div class="small" style="margin-top:4px">${PERS[p.pers||'professional'].icon} ${PERS[p.pers||'professional'].he}${p.listed?' · <span class="tag warn">ברשימת ההעברות</span>':''}${p.promise?' · <span class="tag info">הובטחו דקות</span>':''}</div></div>
   ${attrBars(p,false)}${dossierHTML(p,c,true)}
   <dl class="kv" style="margin-top:12px"><dt>פוטנציאל</dt><dd class="num">${p.pot}</dd><dt>שווי</dt><dd class="num">${NIS(p.value)}</dd><dt>שכר לשבוע</dt><dd class="num">${NIS(p.wage)}</dd><dt>כושר</dt><dd class="num"><bdi dir="ltr">${p.form>0?'+':''}${p.form.toFixed(1)}</bdi></dd><dt>הופעות / שערים</dt><dd class="num">${p.apps} / ${p.goals}</dd><dt>צהובים</dt><dd class="num">${p.yellow}</dd><dt>חוזה</dt><dd>עד קיץ ${contractYear(p)} (${p.contract} ${p.contract===1?'עונה':'עונות'})</dd>${p.role?`<dt>הובטח לו</dt><dd>${ROLE_HE[p.role]}</dd>`:''}${p.sellon?`<dt>סעיף מכירה</dt><dd>${p.sellon.pct}% ל${esc(p.sellon.to)}</dd>`:''}${p.loan?`<dt>השאלה</dt><dd>מ${esc(p.loan.fromName)} עד סוף העונה · אופציה ${NIS(p.loan.buy)}</dd>`:''}${p.caps?`<dt>נבחרת</dt><dd class="num">${p.caps} הופעות · ${p.intGoals||0} שערים</dd>`:''}${p.inj?`<dt>פציעה</dt><dd>עוד ${p.inj} שבועות</dd>`:''}${p.susp?`<dt>הרחקה</dt><dd>${p.susp} משחקים</dd>`:''}</dl>
   ${(()=>{const d=contractDemand(p);return `<div class="small" style="margin-top:10px;padding:8px 10px;border-radius:8px;background:var(--bg2)">הארכת חוזה: ${fullName(p).split(' ')[0]} דורש <b class="num">${NIS(d.wage)}</b> לשבוע ל-${d.years} ${d.years>1?'שנים':'שנה'} נוספות ובונוס חתימה של <b class="num">${NIS(d.bonus)}</b>.${p.contract<=1?' <span style="color:var(--warn)">בלי הארכה הוא יעזוב בקיץ כשחקן חופשי.</span>':''}</div>`})()}
