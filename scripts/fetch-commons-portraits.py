@@ -40,6 +40,8 @@ CLUB_TITLES = {
 }
 OK_LICENSE = re.compile(r'^(cc0|cc[- ]zero|public domain|pd\b|pd-|cc[- ]by(-sa)?[- ]\d(\.\d)?|cc[- ]by(-sa)?$|attribution$)', re.I)
 
+DEEP = False
+
 def get(url, params=None, raw=False, tries=4):
     if params:
         url += '?' + urllib.parse.urlencode(params)
@@ -197,6 +199,19 @@ def category_files(cat, limit=8):
     r = commons({'action': 'query', 'list': 'categorymembers', 'cmtitle': 'Category:' + cat, 'cmtype': 'file', 'cmlimit': limit})
     return [m['title'] for m in r.get('query', {}).get('categorymembers', []) if re.search(r'\.(jpe?g|png|webp)$', m['title'], re.I)]
 
+def subcat_files(cat, limit=4):
+    # one level of sub-categories ("Hugo Ekitiké in 2025", "… with Liverpool F.C.")
+    r = commons({'action': 'query', 'list': 'categorymembers', 'cmtitle': 'Category:' + cat, 'cmtype': 'subcat', 'cmlimit': limit})
+    out = []
+    for m in r.get('query', {}).get('categorymembers', []):
+        out += category_files(m['title'].split(':', 1)[1], 10)
+    return out
+
+def search_files(name, limit=20):
+    # full-text search of the File namespace; import keeps only files whose title names the player
+    r = commons({'action': 'query', 'list': 'search', 'srsearch': '"' + name + '"', 'srnamespace': 6, 'srlimit': limit})
+    return [m['title'] for m in r.get('query', {}).get('search', []) if re.search(r'\.(jpe?g|png|webp)$', m['title'], re.I)]
+
 def licence_ok(i):
     if i.get('nonFree') in ('true', True):
         return False
@@ -205,9 +220,9 @@ def licence_ok(i):
     return bool(OK_LICENSE.match(i.get('license', '').strip()))
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=5); ap.add_argument('--width', type=int, default=640); ap.add_argument('--players', default=''); ap.add_argument('--cat-limit', type=int, default=8)
+    ap = argparse.ArgumentParser(); ap.add_argument('--clubs', required=True); ap.add_argument('--out', required=True); ap.add_argument('--max-candidates', type=int, default=5); ap.add_argument('--width', type=int, default=640); ap.add_argument('--players', default=''); ap.add_argument('--cat-limit', type=int, default=8); ap.add_argument('--deep', action='store_true')
     a = ap.parse_args()
-    global WIDTH, CAT_LIMIT; WIDTH = a.width; CAT_LIMIT = a.cat_limit
+    global WIDTH, CAT_LIMIT, DEEP; WIDTH = a.width; CAT_LIMIT = a.cat_limit; DEEP = a.deep
     only = {x.strip() for x in a.players.split('|') if x.strip()}
     keys = list(CLUB_TITLES) if a.clubs == 'all' else a.clubs.split(',')
     for key in keys:
@@ -231,8 +246,14 @@ def main():
                     titles = ['File:' + t for t in images(ent)]
                     for cat in claim_ids(ent, 'P373')[:1]:
                         titles += [t for t in category_files(cat) if t not in titles]
+                        if DEEP:
+                            titles += [t for t in subcat_files(cat) if t not in titles]
+                    if DEEP:
+                        for nm in {label(ent), p.get('en')}:
+                            if nm:
+                                titles += [t for t in search_files(nm) if t not in titles]
                     infos = {}
-                    for i in range(0, min(len(titles), 50), 25):
+                    for i in range(0, min(len(titles), 100), 25):
                         infos.update(file_info(titles[i:i + 25]))
                     k = 0
                     for t in titles:
@@ -260,7 +281,7 @@ def main():
             with open(mp, encoding='utf8') as fh:
                 old = json.load(fh)
             new = {e['en']: e for e in manifest['players']}
-            manifest['players'] = [new.get(e['en'], e) for e in old['players']]
+            manifest['players'] = [new.get(e['en'], e) for e in old['players']] + [e for e in manifest['players'] if e['en'] not in {o['en'] for o in old['players']}]
         with open(mp, 'w', encoding='utf8') as fh:
             json.dump(manifest, fh, ensure_ascii=False, indent=1)
 
