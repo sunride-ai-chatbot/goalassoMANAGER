@@ -37,6 +37,7 @@ async function main(){
     seller.players.forEach(p=>{p.foreign=false;p.nat='ישראל'});
     seller.players[0].foreign=true;seller.players[0].nat='זר';
     delete seller.players[1].foreign;seller.players[1].nat='Brazil';
+    change('marketPrice','all'); // the 1M price filter above would hide these 20M players
     click('[data-mcat="legionnaires"]');assert.deepEqual(ids(),[900000,900001]);
     click('[data-mcat="all"]');assert.equal(ids().length,50);
     change('marketPrice','budget');
