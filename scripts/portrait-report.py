@@ -39,7 +39,7 @@ LEAGUES = [('La Liga', ['real_madrid', 'barcelona', 'atletico']), ('Premier Leag
            ('Primeira Liga', ['benfica', 'porto', 'sporting']), ('Eredivisie', ['ajax', 'psv', 'feyenoord']), ('Belgian Pro League', ['brugge']),
            ('Scandinavia', ['copenhagen', 'bodo_glimt']), ('Eastern Europe', ['sparta_prague', 'slavia_prague', 'ferencvaros', 'ludogorets', 'shakhtar']),
            ('Balkans', ['red_star', 'dinamo_zagreb']),
-           ('European competitions only', ['celtic', 'rangers', 'fenerbahce', 'galatasaray', 'olympiacos', 'salzburg', 'young_boys'])]
+           ('Other European leagues (market tab "עוד באירופה")', ['celtic', 'rangers', 'fenerbahce', 'galatasaray', 'olympiacos', 'salzburg', 'young_boys'])]
 ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
 E = json.load(open(ep, encoding='utf8')) if os.path.isfile(ep) else {'players': [], 'faces': {}, 'unresolved': []}
 by = {(p['key'], p['en']): p for p in E['players']}

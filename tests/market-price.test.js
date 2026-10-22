@@ -33,12 +33,16 @@ async function main(){
     click('[data-mp="MF"]');assert.deepEqual(ids(),[900061]);
     click('[data-ms="price-asc"]');assert.deepEqual(ids(),[900061]);
     click('[data-mp="all"]');
-    // Current squads mark foreign players explicitly; older saves may have only nationality.
+    // Israeli legionnaires = Israeli nationals at clubs outside Israel (real squad data); foreign players at Israeli clubs never count.
     seller.players.forEach(p=>{p.foreign=false;p.nat='ישראל'});
     seller.players[0].foreign=true;seller.players[0].nat='זר';
     delete seller.players[1].foreign;seller.players[1].nat='Brazil';
-    change('marketPrice','all'); // the 1M price filter above would hide these 20M players
-    click('[data-mcat="legionnaires"]');assert.deepEqual(ids(),[900000,900001]);
+    change('marketPrice','all');
+    click('[data-mcat="legionnaires"]');
+    const leg=Array.from(d.querySelectorAll('[data-wrow]'),el=>el.textContent);
+    assert.ok(leg.some(t=>t.includes('אוסקר גלוך')&&t.includes('אייאקס')),'Oscar Gloukh (Ajax) is an Israeli legionnaire');
+    assert.ok(!ids().some(id=>id>=900000&&id<900100),'players of Israeli clubs are never legionnaires');
+    assert.ok(w.eval("[...document.querySelectorAll('[data-wrow]')].every(el=>{const f=findWorldPlayer(+el.dataset.wrow);return f&&f.p.nat==='ישראל'&&f.c.world})"),'only Israeli nationals at foreign clubs');
     click('[data-mcat="all"]');assert.equal(ids().length,50);
     change('marketPrice','budget');
     assert.deepEqual(ids(),[900060,900061,900062,900063,900065]);

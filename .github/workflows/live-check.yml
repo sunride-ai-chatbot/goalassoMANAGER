@@ -1,0 +1,39 @@
+name: Live market check
+# Manual: opens the deployed GitHub Pages game on a phone-sized viewport (iPhone 13) and records what the transfer market
+# actually shows (squads, faces, filters, suggestions, legionnaires). Screenshots + report.json go to the `live-check` branch.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'page to check'
+        required: false
+        default: 'https://sunride-ai-chatbot.github.io/goalassoMANAGER/'
+permissions:
+  contents: write
+concurrency:
+  group: live-check
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright (Chromium)
+        run: |
+          mkdir -p /tmp/pw && cd /tmp/pw && npm init -y >/dev/null && npm i playwright@1.47.2 >/dev/null
+          npx playwright install --with-deps chromium
+      - name: Check the deployed game
+        run: NODE_PATH=/tmp/pw/node_modules node scripts/live-market-check.js "${{ github.event.inputs.url }}?v=${{ github.run_id }}" /tmp/out
+      - name: Publish screenshots to the live-check branch
+        if: always()
+        run: |
+          git fetch origin live-check || true
+          if git rev-parse --verify origin/live-check >/dev/null 2>&1; then git worktree add /tmp/lc origin/live-check && git -C /tmp/lc checkout -B live-check; else git worktree add --detach /tmp/lc && git -C /tmp/lc checkout --orphan live-check && git -C /tmp/lc rm -rf . >/dev/null || true; fi
+          rm -rf /tmp/lc/latest && mkdir -p /tmp/lc/latest && cp -r /tmp/out/. /tmp/lc/latest/ || true
+          cd /tmp/lc && git config user.name "GOALASSO live check" && git config user.email "actions@users.noreply.github.com"
+          git add -A && git commit -m "Live market check ${{ github.run_id }} ($(date -u +%FT%TZ))" || echo "nothing to commit"
+          git push origin live-check

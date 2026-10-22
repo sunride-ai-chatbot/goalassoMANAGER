@@ -10,7 +10,7 @@ click(w.document.querySelector('[data-pick="hbs"]'));click($('signBtn'));click(w
 const G=w.ILM.G,c=w.ILM.me();c.money=120e6;
 G.view='market';w.ILM.render();click(w.document.querySelector('[data-mtab="world"]'));click(w.document.querySelector('[data-wl="epl"]'));
 // pick a key EPL vet
-const key=G.world.epl.clubs[0].players.find(p=>p.key)||G.world.epl.clubs[0].players[6];
+const key=G.world.epl.clubs[0].players.find(p=>p.key&&!p.nfs)||G.world.epl.clubs[0].players.find(p=>!p.nfs); // the core (p.nfs) is listed but not for sale
 click(w.document.querySelector(`[data-wrow="${key.id}"]`));click(w.document.querySelector('[data-startneg]'));
 let n=G.negs[0];console.log('EPL key player ask',w.ILM.NIS(n.ask),'key',n.key,'value',w.ILM.NIS(key.value*key.vmult));
 change($('fee'),n.ask);click($('sendClub'));console.log('full ask on key EPL:',n.stage,'|',n.log.slice(-1)[0]);

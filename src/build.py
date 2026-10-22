@@ -93,6 +93,9 @@ page = page.replace('__PLAYER_VISUALS__', enc({'names': face_names, 'faces': run
 out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta))
 for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__'):
     assert ph not in out, 'unfilled placeholder ' + ph
+# build stamp: a hash of the page content, so a live check can tell which build a server is actually serving
+import hashlib
+out = out.replace('<head>', '<head>\n<meta name="goalasso-build" content="%s">' % hashlib.sha256(out.encode('utf8')).hexdigest()[:12], 1)
 with open(os.path.join(ROOT, 'ligat-haal-manager.html'), 'w', encoding='utf8') as fh:
     fh.write(out)
 print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), 'euro clubs:', len(euro),

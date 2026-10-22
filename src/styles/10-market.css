@@ -1,0 +1,33 @@
+/* transfer market: name search with live suggestions, nationality filter, active-filter chips, full real squads */
+.msearch{position:relative;margin-top:10px}
+.msearch>label{display:block;margin-bottom:4px}
+.msearch-row{display:flex;gap:8px;align-items:center}
+.msearch-row input{flex:1;min-width:0;font-size:16px}
+.msuggest{position:absolute;inset-inline:0;top:100%;margin-top:4px;z-index:40;max-height:min(60vh,420px);overflow-y:auto;background:var(--panel);border:1px solid var(--line2);border-radius:12px;box-shadow:0 14px 34px rgba(0,0,0,.55);padding:4px}
+.msug{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;padding:6px 8px;border:0;border-radius:9px;background:transparent;color:var(--fg);text-align:start;cursor:pointer;font:inherit}
+.msug:hover,.msug.on,.msug:focus-visible{background:rgba(233,196,106,.12);outline:none}
+.msug-face{flex:0 0 34px;width:34px}
+.msug-face .player-portrait{width:34px}
+.msug-txt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.msug-txt b{font-size:14px}
+.msug-txt bdi{font-size:12px}
+.msug-txt small{font-size:12px;overflow-wrap:anywhere}
+.msug-none{padding:10px}
+.mfilters{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.mnat{display:flex;align-items:center;gap:6px}
+.mnat select{max-width:min(70vw,260px);font-size:15px}
+.mchips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+.mchip{padding:4px 10px;border-radius:999px;background:rgba(233,196,106,.12);border:1px solid rgba(233,196,106,.45);color:#f0d68f;font-size:13px;min-height:32px;cursor:pointer}
+.mchip.all{background:transparent;color:var(--muted);border-color:var(--line2)}
+.squad-note{display:flex;flex-direction:column;gap:2px;margin-top:8px;padding:8px 10px;border-radius:10px;background:var(--bg2);border:1px solid var(--line);font-size:13px}
+.tag.nfs{background:rgba(160,160,170,.16);color:#d8d3c6}
+.pl.nfs .ovr{opacity:.85}
+.nfs-note{padding:8px 10px;border-radius:8px;background:var(--bg2);color:var(--muted)}
+.tag.gen{background:rgba(120,140,170,.14);color:#aab4c4}
+.mfold{margin-top:10px;border:1px solid var(--line);border-radius:12px;padding:0 10px;background:var(--panel2)}
+.mfold>summary{cursor:pointer;padding:10px 2px;font-weight:600;min-height:44px;display:flex;align-items:center;gap:6px;list-style:none}
+.mfold>summary::-webkit-details-marker{display:none}
+.mfold>summary::before{content:'▾';transform:rotate(90deg);transition:transform .15s}
+.mfold[open]>summary::before{transform:none}
+.mfold[open]{padding-bottom:10px}
+.market-results{margin-top:8px}
