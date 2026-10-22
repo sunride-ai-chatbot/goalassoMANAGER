@@ -23,7 +23,7 @@ function npImage(st){const t=npTypeOf(st),ev=st.ev||{};
 function npShirtFor(st){const ev=st.ev||{};const id=ev.type==='sale'?ev.buyerId:ev.type==='loanOut'?ev.toId:(ev.clubId||st.team);const c=club(id);return c||null}
 function npFigure(st,lazy){const im=npImage(st);const [f,w,h]=NP_IMG[im.k];const c=im.shirt?npShirtFor(st):null;const ev=st.ev||{};
   return `<figure class="np-fig"><div class="np-ph"><picture><source srcset="${f}.webp" type="image/webp"><img src="${f}.jpg" width="${w}" height="${h}" alt="" ${lazy?'loading="lazy" ':''}decoding="async" onerror="this.closest('.np-ph').classList.add('np-noimg')"></picture>
-   ${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?`<div class="np-board"><bdi>${esc(im.board)}</bdi></div>`:''}</div>
+   ${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?`<div class="np-board">${sponsorLogoHTML(im.board)||`<bdi>${esc(im.board)}</bdi>`}</div>`:''}</div>
    <figcaption><b>${esc(im.cap.split(' · ')[0])}:</b> ${esc(im.cap.split(' · ')[1]||'')}</figcaption></figure>`}
 const yrs=n=>n==null?null:`${n} ${n>1?'עונות':'עונה'}`;
 function npFacts(st){const ev=st.ev||{},t=npTypeOf(st);const c=club(st.team)||null;const F=[];const add=(l,v)=>{if(v!=null&&v!=='')F.push([l,v])};

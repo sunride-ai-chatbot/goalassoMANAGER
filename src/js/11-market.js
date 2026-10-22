@@ -162,7 +162,7 @@ function submitClubOffer(nid,fee,inst,sellon){
   const upfront=inst===1?fee:Math.round(fee/inst);if(c.money<upfront){n.log.push(`אין לך ${NIS(upfront)} לתשלום הראשון`);n.rounds--;return}
   const eff=offerEffective(n.offer);const ratio=eff/n.ask;const noise=rnd(-.04,.04);const structF=o=>(o.inst===1?1:o.inst===2?.95:.9)*(1+(o.sellon||0)/200);
   const meetsCounter=n.counter&&eff>=n.counter*structF(n.counterStruct||{inst:1,sellon:0})-1;
-  if(n.nfs&&ratio+noise<1){n.patience--;n.log.push(`${sc.short}: "${ratio>=.8?'מתקרבים, אבל אנחנו לא חייבים למכור. '+NIS(n.ask)+' ומטה לא נשקול.':'הוא לא למכירה. הצעה כזאת לא פותחת דיון.'}"`);}
+  if(n.nfs&&!meetsCounter&&eff<n.ask-1){n.patience--;n.log.push(`${sc.short}: "${ratio>=.8?'מתקרבים, אבל אנחנו לא חייבים למכור. '+NIS(n.ask)+' היא הדרישה שלנו.':'הוא לא למכירה. הצעה כזאת לא פותחת דיון.'}"`);}
   else if(n.key&&sc.world&&sc.tier===1&&ratio<1.6&&!n.nfs){n.log.push(`${sc.short}: "הוא לא למכירה בסכום כזה."`);n.patience--;}
   else if(meetsCounter||ratio+noise>=.95){n.stage='player';n.log.push(`${sc.short} קיבלה את ההצעה: ${NIS(fee)}${inst>1?` ב-${inst} תשלומים`:''}${sellon?` + ${sellon}% ממכירה עתידית`:''}.`);n.pdemand=playerDemand(p,c,sc);n.poffer={wage:n.pdemand.wage,years:n.pdemand.years,role:n.pdemand.role,bonus:n.pdemand.bonus};n.ppatience=2;
     if(Math.random()<.12&&!n.rival){n.rival=true;n.log.push('שמועה: עוד מועדון התעניין, השחקן ידרוש יותר.')}}

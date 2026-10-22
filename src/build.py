@@ -52,6 +52,11 @@ def data_uri(name):
 shell = read(os.path.join(SRC, 'index.html'))
 assert '__CSS__' in shell and '__JS__' in shell, 'src/index.html must contain __CSS__ and __JS__'
 page = shell.replace('__CSS__', concat('styles', '.css')).replace('__JS__', concat('js', '.js'))
+catalog = json.loads(read(os.path.join(ROOT, 'data', 'sponsors', 'catalog.json')))
+assert len(catalog) == 50 and len({b['id'] for b in catalog}) == 50, 'Expected 50 unique sponsor brands'
+for b in catalog:
+    assert os.path.isfile(os.path.join(ROOT, b['logo'])), 'Missing sponsor logo: ' + b['id']
+page = page.replace('__SPONSOR_CATALOG__', enc(catalog))
 page = page.replace('__SPLASH_IMG__', data_uri('splash.webp')).replace('__LOGO_IMG__', data_uri('logo.webp'))
 
 # player portraits: identity manifest (data/visuals/players.json) + per-club packs in assets/facepacks (loaded at runtime)
@@ -100,3 +105,13 @@ with open(os.path.join(ROOT, 'ligat-haal-manager.html'), 'w', encoding='utf8') a
     fh.write(out)
 print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), 'euro clubs:', len(euro),
       'euro players:', sum(len(v) for v in euro.values()), 'size KB:', len(out.encode('utf8')) // 1024)
+
+# Separate beginner surface; source engine and player identities remain shared.
+# Replace only the boot entry, leaving the Pro output above unchanged.
+beginner = out.replace(read(os.path.join(SRC, 'js', '38-boot.js')), read(os.path.join(SRC, 'beginner', 'app.js')))
+beginner = beginner.replace('</style>', '\n' + read(os.path.join(SRC, 'beginner', 'style.css')) + '\n</style>', 1)
+beginner = beginner.replace('<title>GOALASSO</title>', '<title>GOALASSO START · מתחילים</title>')
+beginner = beginner.replace('<link rel="manifest" href="assets/manifest.webmanifest">', '')
+with open(os.path.join(ROOT, 'beginner.html'), 'w', encoding='utf8') as fh:
+    fh.write(beginner)
+print('beginner entry: beginner.html')

@@ -82,11 +82,12 @@ PX.boot=async(st)=>{const P=window.PIXI;const app=new P.Application();const disp
   // ad boards along the far touchline: club sponsors + the premium GOALASSO centre board
   const logoImg=await new Promise(res=>{const u=logoURL();if(!u)return res(null);const im=new Image();im.onload=()=>res(im);im.onerror=()=>res(null);im.src=u});
   { const [bl,bt]=pxP(-3,-2.2),[br]=pxP(108,-2.2);const bw=Math.round(br-bl),bh=Math.round(3.4*PXK);const cv=document.createElement('canvas');cv.width=bw*2;cv.height=(bh+8)*2;const g=cv.getContext('2d');g.scale(2,2);g.translate(0,8);g.fillStyle='#0d1428';g.fillRect(0,0,bw,bh);g.strokeStyle='#2a3a66';g.strokeRect(0,0,bw,bh);
-    const sl=boardSlots(st.hc,st.ac);const tot=sl.reduce((t,x)=>t+x.w,0);let x=0;g.textAlign='center';g.textBaseline='middle';try{g.direction='rtl'}catch(e){}
+    const sl=boardSlots(st.hc,st.ac);await Promise.all(sl.map(b=>!b.brand?Promise.resolve():new Promise(res=>{const im=new Image();const timer=setTimeout(()=>res(),3000);im.onload=()=>{clearTimeout(timer);b.brandImage=im;res()};im.onerror=()=>{clearTimeout(timer);res()};im.src=b.brand.logo})));const tot=sl.reduce((t,x)=>t+x.w,0);let x=0;g.textAlign='center';g.textBaseline='middle';try{g.direction='rtl'}catch(e){}
     for(const b of sl){const w=bw*b.w/tot;
       if(b.logo){const pad=3;g.fillStyle='#07080c';g.fillRect(x+pad,-6,w-pad*2,bh+10);g.strokeStyle='#d9b45a';g.lineWidth=2;g.strokeRect(x+pad,-6,w-pad*2,bh+10);
         const gr=g.createLinearGradient(x,0,x+w,0);gr.addColorStop(0,'rgba(217,180,90,0)');gr.addColorStop(.5,'rgba(217,180,90,.22)');gr.addColorStop(1,'rgba(217,180,90,0)');g.fillStyle=gr;g.fillRect(x+pad,-6,w-pad*2,bh+10);
         if(logoImg){const ih=bh+4,iw=ih*logoImg.width/logoImg.height,dw=Math.min(iw,w-14),dh=dw*logoImg.height/logoImg.width;g.drawImage(logoImg,x+(w-dw)/2,-4+(bh+6-dh)/2,dw,dh)}else{g.fillStyle='#e9c46a';g.font='900 '+Math.round(bh*.6)+'px Heebo, Arial, sans-serif';g.fillText('GOALASSO',x+w/2,bh/2+1)}}
+      else if(b.brandImage){g.fillStyle=b.brand.logoBg;g.fillRect(x+2,0,w-4,bh);const im=b.brandImage,scale=Math.min((w-12)/im.width,(bh-6)/im.height),iw=im.width*scale,ih=im.height*scale;g.drawImage(im,x+(w-iw)/2,(bh-ih)/2,iw,ih)}
       else{g.fillStyle=b.c;g.font='700 '+Math.round(bh*.55)+'px Heebo, Arial, sans-serif';g.fillText(b.t,x+w/2,bh/2+1,w-10)}
       x+=w}
     const bs=new P.Sprite(P.Texture.from(cv));bs.x=bl;bs.y=bt-bh-8;bs.width=bw;bs.height=bh+8;cam.addChild(bs)}
