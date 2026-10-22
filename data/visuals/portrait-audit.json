@@ -5549,6 +5549,20 @@
   "status": "ok",
   "upscale": 0.42
  },
+ "wd-Q105258199": {
+  "bytes": 8202,
+  "faceW": 0.343,
+  "flags": [],
+  "hairTop": 0.162,
+  "pack": "eu-dinamo_zagreb",
+  "roll": -1.3,
+  "score": 0.94,
+  "sha256": "3af85b20dfabc10a55a106359a63a7efe82ddcf8a09869ed1d8863e83fc3b3c5",
+  "shoulders": 0.75,
+  "skin": "#b77c65",
+  "status": "ok",
+  "upscale": 0.37
+ },
  "wd-Q10526787": {
   "bytes": 8566,
   "faceW": 0.297,
@@ -5749,6 +5763,22 @@
   "status": "ok",
   "upscale": 0.32
  },
+ "wd-Q106767454": {
+  "bytes": 6476,
+  "faceW": 0.328,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.182,
+  "pack": "eu-ferencvaros",
+  "roll": 3.4,
+  "score": 0.81,
+  "sha256": "b9fb2ca72fa4b549f77a7f954fd10108f71f89d02f366f5f8e644186849c1592",
+  "shoulders": 0.49,
+  "skin": "#af7c68",
+  "status": "ok",
+  "upscale": 0.17
+ },
  "wd-Q106776925": {
   "bytes": 7940,
   "faceW": 0.306,
@@ -5878,19 +5908,18 @@
   "upscale": 0.25
  },
  "wd-Q107766903": {
-  "bytes": 6082,
-  "faceW": 0.31,
-  "flags": [
-   "short_source"
-  ],
-  "hairTop": 0.2,
+  "bytes": 7184,
+  "faceW": 0.331,
+  "flags": [],
+  "hairTop": 0.139,
   "pack": "eu-chelsea",
-  "roll": 2.9,
+  "roll": 9.9,
   "score": 0.95,
-  "sha256": "6940d63be02e6a4e358caaa1039c6a6d25b1787db08e5be484e4073fc5632e96",
-  "skin": "#bb7b5b",
+  "sha256": "2f9da62c19ac7717571b8af7ba3fca12353a97ce7fd422ad33fbfe63aa1a901d",
+  "shoulders": 0.86,
+  "skin": "#ba8b7d",
   "status": "ok",
-  "upscale": 0.69
+  "upscale": 0.57
  },
  "wd-Q107985602": {
   "bytes": 21132,
@@ -6088,18 +6117,20 @@
   "upscale": 1.66
  },
  "wd-Q109282705": {
-  "bytes": 9622,
-  "faceW": 0.315,
-  "flags": [],
-  "hairTop": 0.09,
+  "bytes": 14372,
+  "faceW": 0.259,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
   "pack": "eu-fenerbahce",
-  "roll": 2.5,
-  "score": 0.93,
-  "sha256": "922c550bf91f544f398b267be75e46adb79722909a978558ebdc629ff0ce7969",
-  "shoulders": 0.32,
-  "skin": "#b98067",
+  "roll": 3.3,
+  "score": 0.83,
+  "sha256": "23e316f3241192720628972c8154c75536ff24bccf8834491fcb2494d008fe57",
+  "shoulders": 0.68,
+  "skin": "#ad7664",
   "status": "ok",
-  "upscale": 0.28
+  "upscale": 0.18
  },
  "wd-Q109594121": {
   "bytes": 7144,
@@ -6200,6 +6231,20 @@
   "skin": "#a68063",
   "status": "ok",
   "upscale": 0.28
+ },
+ "wd-Q110316852": {
+  "bytes": 6816,
+  "faceW": 0.3,
+  "flags": [],
+  "hairTop": 0.116,
+  "pack": "eu-feyenoord",
+  "roll": -3.7,
+  "score": 0.93,
+  "sha256": "f5d0ccfd5f7701ebdc13e3bb41bcb9fb54b9d7d8c86d41c0f524e568422d33a0",
+  "shoulders": 0.5,
+  "skin": "#9f7070",
+  "status": "ok",
+  "upscale": 0.39
  },
  "wd-Q110426807": {
   "bytes": 8332,
@@ -6556,6 +6601,23 @@
   "status": "ok",
   "upscale": 0.65
  },
+ "wd-Q112791108": {
+  "bytes": 12238,
+  "faceW": 0.285,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-liverpool",
+  "roll": 4.7,
+  "score": 0.91,
+  "sha256": "323896e3f7753b1450de7c094872f008f72180bc76e61118b25df89ea81dd6e8",
+  "shoulders": 0.87,
+  "skin": "#9d7f75",
+  "status": "ok",
+  "upscale": 0.19
+ },
  "wd-Q112813857": {
   "bytes": 8990,
   "faceW": 0.318,
@@ -6641,6 +6703,23 @@
   "skin": "#523f3a",
   "status": "ok",
   "upscale": 0.32
+ },
+ "wd-Q113434149": {
+  "bytes": 8894,
+  "faceW": 0.292,
+  "flags": [
+   "hair_tips_feathered",
+   "short_source"
+  ],
+  "hairTop": 0.058,
+  "pack": "eu-liverpool",
+  "roll": 4.9,
+  "score": 0.91,
+  "sha256": "825a39e422d5fb91eb25f82d608772c258e7695c215c16c2a80a0ca8ce8443c9",
+  "shoulders": 0.0,
+  "skin": "#6c4d4a",
+  "status": "ok",
+  "upscale": 0.26
  },
  "wd-Q113464781": {
   "bytes": 7786,
@@ -6894,6 +6973,22 @@
   "status": "ok",
   "upscale": 0.74
  },
+ "wd-Q115110251": {
+  "bytes": 13976,
+  "faceW": 0.372,
+  "flags": [
+   "hair_tips_feathered"
+  ],
+  "hairTop": 0.155,
+  "pack": "eu-inter",
+  "roll": -5.2,
+  "score": 0.92,
+  "sha256": "19202151fcf02f5017bb1167b82232b83c62051c18f6ebd5d2e3be0e175074fc",
+  "shoulders": 0.78,
+  "skin": "#c9c3ba",
+  "status": "ok",
+  "upscale": 0.68
+ },
  "wd-Q115332579": {
   "bytes": 8898,
   "faceW": 0.339,
@@ -7062,6 +7157,20 @@
   "status": "ok",
   "upscale": 0.28
  },
+ "wd-Q118767830": {
+  "bytes": 9066,
+  "faceW": 0.284,
+  "flags": [],
+  "hairTop": 0.113,
+  "pack": "eu-liverpool",
+  "roll": -1.1,
+  "score": 0.86,
+  "sha256": "a2fb9d91dd76ce7492f3b41f21233cfad627a7e101641b4f0742cd82e0c7dbc6",
+  "shoulders": 0.11,
+  "skin": "#906c54",
+  "status": "ok",
+  "upscale": 0.24
+ },
  "wd-Q118918006": {
   "bytes": 8894,
   "faceW": 0.333,
@@ -7207,6 +7316,37 @@
   "skin": "#b8876e",
   "status": "ok",
   "upscale": 0.27
+ },
+ "wd-Q121423143": {
+  "bytes": 9476,
+  "faceW": 0.314,
+  "flags": [],
+  "hairTop": 0.14,
+  "pack": "eu-leverkusen",
+  "roll": -3.8,
+  "score": 0.93,
+  "sha256": "6f1dd01873b071ccf654014ca12a40aa786e7017fb6c8be30d7bd8e27f147991",
+  "shoulders": 0.53,
+  "skin": "#ab9292",
+  "status": "ok",
+  "upscale": 0.29
+ },
+ "wd-Q121592857": {
+  "bytes": 1012,
+  "faceW": 0.334,
+  "flags": [
+   "greyscale_source",
+   "short_source"
+  ],
+  "hairTop": 0.306,
+  "pack": "eu-copenhagen",
+  "roll": -8.6,
+  "score": 0.82,
+  "sha256": "58ce6fea1bd39c9238715853400cd3be19b315f0c9a750675f2fb2549776e0a0",
+  "shoulders": 0.0,
+  "skin": null,
+  "status": "ok",
+  "upscale": 0.33
  },
  "wd-Q121697012": {
   "bytes": 8954,
@@ -7371,6 +7511,20 @@
   "skin": "#c8886e",
   "status": "ok",
   "upscale": 0.54
+ },
+ "wd-Q123825412": {
+  "bytes": 11776,
+  "faceW": 0.354,
+  "flags": [],
+  "hairTop": 0.13,
+  "pack": "eu-chelsea",
+  "roll": -5.4,
+  "score": 0.93,
+  "sha256": "aad344074a87ef1af29f30313c7ffe180605d1b126d0b44cde45d73310fe59ed",
+  "shoulders": 1.0,
+  "skin": "#af6361",
+  "status": "ok",
+  "upscale": 0.48
  },
  "wd-Q124175192": {
   "bytes": 7856,
@@ -7684,6 +7838,22 @@
   "status": "ok",
   "upscale": 0.2
  },
+ "wd-Q132307478": {
+  "bytes": 4608,
+  "faceW": 0.352,
+  "flags": [
+   "greyscale_source"
+  ],
+  "hairTop": 0.193,
+  "pack": "eu-man_city",
+  "roll": -0.8,
+  "score": 0.91,
+  "sha256": "3801a6293602a2d6fca1506cd565d05f4ae5d9852c86661e3b9d5ccd45e53651",
+  "shoulders": 0.15,
+  "skin": "#c5c5c5",
+  "status": "ok",
+  "upscale": 0.25
+ },
  "wd-Q13360752": {
   "bytes": 11026,
   "faceW": 0.304,
@@ -7790,6 +7960,20 @@
   "status": "ok",
   "upscale": 0.51
  },
+ "wd-Q137733792": {
+  "bytes": 13816,
+  "faceW": 0.284,
+  "flags": [],
+  "hairTop": 0.121,
+  "pack": "eu-bayern",
+  "roll": 3.7,
+  "score": 0.89,
+  "sha256": "eaad93f483d848db41a0c27e687f9ebb3eddcc6debb21ef10fa17c1b4a3fdee6",
+  "shoulders": 0.74,
+  "skin": "#4c4342",
+  "status": "ok",
+  "upscale": 0.21
+ },
  "wd-Q13780454": {
   "bytes": 10984,
   "faceW": 0.307,
@@ -7852,6 +8036,20 @@
   "skin": "#b6836c",
   "status": "ok",
   "upscale": 0.27
+ },
+ "wd-Q139785191": {
+  "bytes": 9064,
+  "faceW": 0.351,
+  "flags": [],
+  "hairTop": 0.089,
+  "pack": "eu-atletico",
+  "roll": -11.6,
+  "score": 0.93,
+  "sha256": "a2178929020d20e261edece7beb503daa077a4ee6ce2160179c938d926324439",
+  "shoulders": 0.85,
+  "skin": "#d9987a",
+  "status": "ok",
+  "upscale": 0.53
  },
  "wd-Q1401328": {
   "bytes": 9672,
@@ -8517,19 +8715,18 @@
   "upscale": 0.3
  },
  "wd-Q1730695": {
-  "bytes": 10498,
-  "faceW": 0.343,
-  "flags": [
-   "short_source"
-  ],
-  "hairTop": 0.058,
+  "bytes": 14920,
+  "faceW": 0.305,
+  "flags": [],
+  "hairTop": 0.082,
   "pack": "eu-man_utd",
-  "roll": -4.1,
-  "score": 0.95,
-  "sha256": "b938e0460bf111355a8f039f85b2d498f4b9f9ad55854514dd91c71f20b84fe6",
-  "skin": "#eb9e75",
+  "roll": 9.4,
+  "score": 0.92,
+  "sha256": "286998667141543a332ce6bedf5eb7c3fbaf2a8a0ab41149534438b5ddb1289c",
+  "shoulders": 0.66,
+  "skin": "#b7826b",
   "status": "ok",
-  "upscale": 0.39
+  "upscale": 0.51
  },
  "wd-Q17482506": {
   "bytes": 13088,
@@ -8576,20 +8773,18 @@
   "upscale": 0.48
  },
  "wd-Q17505113": {
-  "bytes": 10840,
-  "faceW": 0.335,
-  "flags": [
-   "scaled_for_hair"
-  ],
-  "hairTop": 0.045,
+  "bytes": 9630,
+  "faceW": 0.291,
+  "flags": [],
+  "hairTop": 0.122,
   "pack": "eu-liverpool",
-  "roll": 23.9,
+  "roll": -0.7,
   "score": 0.91,
-  "sha256": "b3fa39d1ad337e79f3f2ff59e48aec4adb93f8af00e7c7deb5c7353a60da4487",
-  "shoulders": 0.93,
-  "skin": "#8a5b50",
+  "sha256": "f521a3f7e959909c0deea5830cf4e8b13e84a28a836da01ae801b0216e57c05f",
+  "shoulders": 0.81,
+  "skin": "#796543",
   "status": "ok",
-  "upscale": 0.39
+  "upscale": 0.47
  },
  "wd-Q17517177": {
   "bytes": 7732,
@@ -8751,19 +8946,35 @@
   "status": "ok",
   "upscale": 0.56
  },
- "wd-Q18237361": {
-  "bytes": 14220,
-  "faceW": 0.309,
-  "flags": [],
-  "hairTop": 0.116,
-  "pack": "eu-liverpool",
-  "roll": -1.6,
-  "score": 0.93,
-  "sha256": "0b7a4df00ad30d460c5c3f99e262b2024474b1d54d9f30b1675e70e1b0fb16a3",
-  "shoulders": 0.49,
-  "skin": "#e09a89",
+ "wd-Q18217954": {
+  "bytes": 10860,
+  "faceW": 0.317,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.075,
+  "pack": "eu-galatasaray",
+  "roll": 0.8,
+  "score": 0.92,
+  "sha256": "4ec4132997f09817f1849b5deca6b1821b9c553baecffee825bd44a6bc51e918",
+  "shoulders": 1.0,
+  "skin": "#af9479",
   "status": "ok",
-  "upscale": 0.25
+  "upscale": 0.95
+ },
+ "wd-Q18237361": {
+  "bytes": 8632,
+  "faceW": 0.357,
+  "flags": [],
+  "hairTop": 0.142,
+  "pack": "eu-liverpool",
+  "roll": -1.4,
+  "score": 0.94,
+  "sha256": "0891d8cbdede481ba29df3fbedd27523a8f89fd88be6d08195d0d4f392185c21",
+  "shoulders": 0.52,
+  "skin": "#b17354",
+  "status": "ok",
+  "upscale": 0.62
  },
  "wd-Q18331623": {
   "bytes": 14964,
@@ -8796,22 +9007,18 @@
   "upscale": 0.22
  },
  "wd-Q18428483": {
-  "bytes": 5300,
-  "faceW": 0.176,
-  "flags": [
-   "multiple_faces",
-   "scaled_for_hair",
-   "short_source"
-  ],
-  "hairTop": 0.045,
+  "bytes": 12420,
+  "faceW": 0.311,
+  "flags": [],
+  "hairTop": 0.175,
   "pack": "eu-ajax",
-  "roll": -2.1,
-  "score": 0.63,
-  "sha256": "849a3fe3a7f7607a1cebc3c450eb88edd53e5e98bf282811e6e91ae42ba23815",
-  "shoulders": 0.0,
-  "skin": "#aea69c",
+  "roll": 6.4,
+  "score": 0.92,
+  "sha256": "8efca4606f87c24e401aa7f9a33e9f1c51090e89eb946bea10ee591bb36a747b",
+  "shoulders": 0.62,
+  "skin": "#ab7964",
   "status": "ok",
-  "upscale": 0.13
+  "upscale": 0.28
  },
  "wd-Q18616995": {
   "bytes": 12122,
@@ -9066,6 +9273,22 @@
   "status": "ok",
   "upscale": 0.48
  },
+ "wd-Q19610875": {
+  "bytes": 10542,
+  "faceW": 0.333,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.16,
+  "pack": "eu-galatasaray",
+  "roll": -5.4,
+  "score": 0.93,
+  "sha256": "8c70ba0982a86054452d30477f29a44105561977788ac7a15a232d3151c2e1ed",
+  "shoulders": 0.85,
+  "skin": "#cb997f",
+  "status": "ok",
+  "upscale": 0.27
+ },
  "wd-Q196219": {
   "bytes": 8906,
   "faceW": 0.294,
@@ -9262,6 +9485,20 @@
   "status": "ok",
   "upscale": 0.71
  },
+ "wd-Q20127322": {
+  "bytes": 7888,
+  "faceW": 0.329,
+  "flags": [],
+  "hairTop": 0.146,
+  "pack": "eu-liverpool",
+  "roll": -0.8,
+  "score": 0.94,
+  "sha256": "c3c3c13a070b273796403d68867b2692a8364c3169be61c352ff2736fdaae6e5",
+  "shoulders": 0.6,
+  "skin": "#9d524a",
+  "status": "ok",
+  "upscale": 0.46
+ },
  "wd-Q20204829": {
   "bytes": 6874,
   "faceW": 0.281,
@@ -9303,6 +9540,20 @@
   "skin": "#b8927a",
   "status": "ok",
   "upscale": 1.1
+ },
+ "wd-Q20435757": {
+  "bytes": 7950,
+  "faceW": 0.324,
+  "flags": [],
+  "hairTop": 0.142,
+  "pack": "eu-leverkusen",
+  "roll": -0.2,
+  "score": 0.94,
+  "sha256": "f7947809b51267544dcad9c172b2cc80dcb16d995b3a7ff47cd57eb0b2fa67da",
+  "shoulders": 0.86,
+  "skin": "#c2a28d",
+  "status": "ok",
+  "upscale": 1.13
  },
  "wd-Q20436700": {
   "bytes": 8590,
@@ -9557,6 +9808,22 @@
   "skin": "#b67e62",
   "status": "ok",
   "upscale": 0.34
+ },
+ "wd-Q21084019": {
+  "bytes": 15968,
+  "faceW": 0.307,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-feyenoord",
+  "roll": -2.8,
+  "score": 0.9,
+  "sha256": "255b02cfd80d075d8931689ef141ea7dab6a03e305c572bf8e4a259d410a9e8c",
+  "shoulders": 1.0,
+  "skin": "#7b3329",
+  "status": "ok",
+  "upscale": 1.05
  },
  "wd-Q21130285": {
   "bytes": 15384,
@@ -10078,6 +10345,22 @@
   "status": "ok",
   "upscale": 0.29
  },
+ "wd-Q24296717": {
+  "bytes": 8936,
+  "faceW": 0.314,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.077,
+  "pack": "eu-ferencvaros",
+  "roll": 3.0,
+  "score": 0.93,
+  "sha256": "abae0a95b1d18c7993bcddb0b6dacb94ab25ef28b5aac62c13317fc25a2fad90",
+  "shoulders": 0.24,
+  "skin": "#7b5a62",
+  "status": "ok",
+  "upscale": 0.42
+ },
  "wd-Q249198": {
   "bytes": 17554,
   "faceW": 0.312,
@@ -10458,6 +10741,20 @@
   "skin": "#e8bea0",
   "status": "ok",
   "upscale": 0.36
+ },
+ "wd-Q27663373": {
+  "bytes": 13626,
+  "faceW": 0.299,
+  "flags": [],
+  "hairTop": 0.068,
+  "pack": "eu-ferencvaros",
+  "roll": 5.2,
+  "score": 0.92,
+  "sha256": "47ca408643d2a6f21eed5c1a3e22c3be23ff92da4ab8e33cd7f0bc13c18d52c2",
+  "shoulders": 0.74,
+  "skin": "#d2834b",
+  "status": "ok",
+  "upscale": 0.69
  },
  "wd-Q27663808": {
   "bytes": 18006,
@@ -11054,20 +11351,18 @@
   "upscale": 0.2
  },
  "wd-Q30612091": {
-  "bytes": 10924,
-  "faceW": 0.315,
-  "flags": [
-   "multiple_faces"
-  ],
-  "hairTop": 0.172,
+  "bytes": 10900,
+  "faceW": 0.339,
+  "flags": [],
+  "hairTop": 0.148,
   "pack": "eu-ferencvaros",
-  "roll": 3.1,
-  "score": 0.93,
-  "sha256": "3ee0c9b322bd3e061900b2e560dcd8a34bd5e5a3a432e16c8dcec67bca1fea13",
-  "shoulders": 0.57,
-  "skin": "#e0b198",
+  "roll": -1.4,
+  "score": 0.95,
+  "sha256": "ff8624f87e26ca13c6a7d722907acdf709554f646acd9efb3bb9cb8c41d797e3",
+  "shoulders": 0.94,
+  "skin": "#966657",
   "status": "ok",
-  "upscale": 0.78
+  "upscale": 1.06
  },
  "wd-Q30729096": {
   "bytes": 10226,
@@ -11790,6 +12085,20 @@
   "status": "ok",
   "upscale": 0.2
  },
+ "wd-Q47477433": {
+  "bytes": 5296,
+  "faceW": 0.303,
+  "flags": [],
+  "hairTop": 0.158,
+  "pack": "eu-ferencvaros",
+  "roll": -3.2,
+  "score": 0.87,
+  "sha256": "a53e1c1bd0465816de93650cd958b927a057ef7ec6e18f10bb9ee71067e081b9",
+  "shoulders": 0.0,
+  "skin": "#8f7a69",
+  "status": "ok",
+  "upscale": 0.18
+ },
  "wd-Q4775926": {
   "bytes": 5592,
   "faceW": 0.313,
@@ -11991,18 +12300,18 @@
   "upscale": 0.31
  },
  "wd-Q52044004": {
-  "bytes": 11100,
-  "faceW": 0.284,
+  "bytes": 7938,
+  "faceW": 0.242,
   "flags": [
-   "scaled_for_hair"
+   "short_source"
   ],
-  "hairTop": 0.045,
+  "hairTop": 0.125,
   "pack": "eu-feyenoord",
-  "roll": 19.2,
-  "score": 0.85,
-  "sha256": "6dc06ac6c2d26a84c25848fc763b8309fd68a8c2d3356b48a092c27beafdf7b6",
-  "shoulders": 0.73,
-  "skin": "#4b4655",
+  "roll": 8.3,
+  "score": 0.89,
+  "sha256": "72643174ef156143c102b58352e001d4d077d8db85335a0918680bf4fce27acd",
+  "shoulders": 0.69,
+  "skin": "#6b5d6e",
   "status": "ok",
   "upscale": 0.23
  },
@@ -12096,17 +12405,20 @@
   "upscale": 0.43
  },
  "wd-Q55761514": {
-  "bytes": 5894,
-  "faceW": 0.358,
-  "flags": [],
-  "hairTop": 0.103,
+  "bytes": 3158,
+  "faceW": 0.326,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.209,
   "pack": "eu-atletico",
-  "roll": 0.8,
+  "roll": -0.2,
   "score": 0.93,
-  "sha256": "4c31e4991e174077a8b4d7652bcae42777e46bdf12d79a8c87553cc50f317b6b",
-  "skin": "#bfa49b",
+  "sha256": "6e125575a28bc56f42ed3d6f5255ed71118f43176c5d6b3e8834ef4f3677c2da",
+  "shoulders": 0.0,
+  "skin": "#e9a5ae",
   "status": "ok",
-  "upscale": 1.05
+  "upscale": 0.38
  },
  "wd-Q55956377": {
   "bytes": 9776,
@@ -12138,6 +12450,20 @@
   "status": "ok",
   "upscale": 0.22
  },
+ "wd-Q56169455": {
+  "bytes": 12888,
+  "faceW": 0.317,
+  "flags": [],
+  "hairTop": 0.163,
+  "pack": "eu-copenhagen",
+  "roll": -4.5,
+  "score": 0.92,
+  "sha256": "86276b2c3483df52a4d0db3a70d91a34310ff56435f97b6b76fabbe4d7645cda",
+  "shoulders": 0.73,
+  "skin": "#deae91",
+  "status": "ok",
+  "upscale": 0.27
+ },
  "wd-Q56222532": {
   "bytes": 14028,
   "faceW": 0.331,
@@ -12151,6 +12477,20 @@
   "skin": "#966146",
   "status": "ok",
   "upscale": 0.25
+ },
+ "wd-Q56223006": {
+  "bytes": 7006,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.111,
+  "pack": "eu-inter",
+  "roll": -0.3,
+  "score": 0.93,
+  "sha256": "1fe6642c6059eb8e82c94d70d77d90c771b5600bfa9176c96c79193e46948bc3",
+  "shoulders": 0.59,
+  "skin": "#bfa28a",
+  "status": "ok",
+  "upscale": 0.67
  },
  "wd-Q56249966": {
   "bytes": 10652,
@@ -12631,6 +12971,22 @@
   "status": "ok",
   "upscale": 0.37
  },
+ "wd-Q59915117": {
+  "bytes": 10258,
+  "faceW": 0.346,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.102,
+  "pack": "eu-monaco",
+  "roll": 0.3,
+  "score": 0.95,
+  "sha256": "bed2f26c2cd5f57add37e2855992d4fd7741f5519dcb011188f60d6b436498bf",
+  "shoulders": 0.71,
+  "skin": "#be897e",
+  "status": "ok",
+  "upscale": 1.1
+ },
  "wd-Q59938996": {
   "bytes": 15148,
   "faceW": 0.32,
@@ -12943,6 +13299,20 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q63384393": {
+  "bytes": 9220,
+  "faceW": 0.31,
+  "flags": [],
+  "hairTop": 0.174,
+  "pack": "eu-inter",
+  "roll": 1.0,
+  "score": 0.85,
+  "sha256": "5ee03c3d18e77b59a1af2cdfaae332bce230ea620f4821cb3c7418632ee93121",
+  "shoulders": 0.45,
+  "skin": "#60605e",
+  "status": "ok",
+  "upscale": 0.26
+ },
  "wd-Q63384759": {
   "bytes": 14080,
   "faceW": 0.323,
@@ -13062,17 +13432,20 @@
   "upscale": 0.33
  },
  "wd-Q65029821": {
-  "bytes": 8186,
-  "faceW": 0.304,
-  "flags": [],
-  "hairTop": 0.162,
+  "bytes": 8650,
+  "faceW": 0.266,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.086,
   "pack": "eu-chelsea",
-  "roll": -3.6,
-  "score": 0.93,
-  "sha256": "acc5e9aac61729f6bc30943cc6bc273fa916602cb61fecdba2eb75dd68d1cc83",
-  "skin": "#684b3f",
+  "roll": 0.3,
+  "score": 0.8,
+  "sha256": "6965c3594eaeda7868a62efe22568f3534e49d61a75aa9aa68a298186c3ca7eb",
+  "shoulders": 0.0,
+  "skin": "#a48157",
   "status": "ok",
-  "upscale": 0.72
+  "upscale": 0.14
  },
  "wd-Q65236095": {
   "bytes": 9188,
@@ -13104,6 +13477,20 @@
   "status": "ok",
   "upscale": 0.64
  },
+ "wd-Q655664": {
+  "bytes": 13304,
+  "faceW": 0.319,
+  "flags": [],
+  "hairTop": 0.046,
+  "pack": "eu-ferencvaros",
+  "roll": -3.8,
+  "score": 0.93,
+  "sha256": "f6db8a903c2191f44b418c5c2e6446630f3cd73b804d41f9929df219e5e5d781",
+  "shoulders": 0.96,
+  "skin": "#b57865",
+  "status": "ok",
+  "upscale": 0.81
+ },
  "wd-Q65675442": {
   "bytes": 13292,
   "faceW": 0.313,
@@ -13117,6 +13504,20 @@
   "skin": "#c88d69",
   "status": "ok",
   "upscale": 0.42
+ },
+ "wd-Q65768313": {
+  "bytes": 6992,
+  "faceW": 0.252,
+  "flags": [],
+  "hairTop": 0.182,
+  "pack": "eu-dinamo_zagreb",
+  "roll": 4.5,
+  "score": 0.91,
+  "sha256": "1831aca63ebbaef3099756f435b93f833919ec08fd16e117245cc7a6cb8131ec",
+  "shoulders": 0.38,
+  "skin": "#5e5f5a",
+  "status": "ok",
+  "upscale": 0.25
  },
  "wd-Q65925174": {
   "bytes": 16964,
@@ -13335,6 +13736,23 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q66818142": {
+  "bytes": 16626,
+  "faceW": 0.283,
+  "flags": [
+   "multiple_faces",
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-feyenoord",
+  "roll": 13.5,
+  "score": 0.91,
+  "sha256": "9556dcaa4f4a3f9b5e1f02675eb77253025fd107121487fad60032331e9731e1",
+  "shoulders": 0.96,
+  "skin": "#4e2a19",
+  "status": "ok",
+  "upscale": 0.45
+ },
  "wd-Q66818509": {
   "bytes": 14932,
   "faceW": 0.331,
@@ -13364,6 +13782,20 @@
   "skin": "#9e8985",
   "status": "ok",
   "upscale": 0.29
+ },
+ "wd-Q67198835": {
+  "bytes": 7428,
+  "faceW": 0.254,
+  "flags": [],
+  "hairTop": 0.194,
+  "pack": "eu-liverpool",
+  "roll": 10.0,
+  "score": 0.9,
+  "sha256": "45db7584b1a0697deedc317c8432e67b15899163e4a67893f7a7c485a7640990",
+  "shoulders": 0.58,
+  "skin": "#424035",
+  "status": "ok",
+  "upscale": 0.38
  },
  "wd-Q67616315": {
   "bytes": 12570,
@@ -13826,6 +14258,22 @@
   "status": "ok",
   "upscale": 0.41
  },
+ "wd-Q84077": {
+  "bytes": 3530,
+  "faceW": 0.325,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.162,
+  "pack": "eu-copenhagen",
+  "roll": 3.6,
+  "score": 0.9,
+  "sha256": "2eed532f1c36e53afad0e0af4e4c8f7891f1fe9f11dbe07169f23b2f8bfe74ec",
+  "shoulders": 0.0,
+  "skin": "#7d7765",
+  "status": "ok",
+  "upscale": 0.35
+ },
  "wd-Q84158344": {
   "bytes": 19000,
   "faceW": 0.335,
@@ -13867,6 +14315,22 @@
   "skin": "#c18d73",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q85713553": {
+  "bytes": 4958,
+  "faceW": 0.311,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.148,
+  "pack": "eu-leverkusen",
+  "roll": 1.4,
+  "score": 0.96,
+  "sha256": "df716694f1b5425e5d8a89d68dd0c46ba6cebe8245f8878fa9e56c5438d60587",
+  "shoulders": 0.0,
+  "skin": "#9e6f60",
+  "status": "ok",
+  "upscale": 0.69
  },
  "wd-Q86493810": {
   "bytes": 8326,
@@ -13952,6 +14416,20 @@
   "status": "ok",
   "upscale": 0.39
  },
+ "wd-Q91200461": {
+  "bytes": 7566,
+  "faceW": 0.386,
+  "flags": [],
+  "hairTop": 0.11,
+  "pack": "eu-ferencvaros",
+  "roll": 1.3,
+  "score": 0.94,
+  "sha256": "c57f84def979aca6d476dc8cade20fc3e4f2361544d78d0210e341b18f990a1a",
+  "shoulders": 0.71,
+  "skin": "#762f0d",
+  "status": "ok",
+  "upscale": 0.31
+ },
  "wd-Q921324": {
   "bytes": 14318,
   "faceW": 0.289,
@@ -13984,19 +14462,20 @@
   "upscale": 0.18
  },
  "wd-Q93563": {
-  "bytes": 9318,
-  "faceW": 0.288,
+  "bytes": 4220,
+  "faceW": 0.292,
   "flags": [
-   "hair_tips_feathered"
+   "short_source"
   ],
-  "hairTop": 0.157,
+  "hairTop": 0.207,
   "pack": "eu-man_utd",
-  "roll": -0.5,
-  "score": 0.93,
-  "sha256": "b5952ecfa287b0c41907f3fe1aab99f93acb3255509beffd446d29aa710c81e8",
-  "skin": "#976f5e",
+  "roll": -2.2,
+  "score": 0.9,
+  "sha256": "77c843a40c6573b299dcf3d51649ab56958f9571d208f98663f8e2f13883ad06",
+  "shoulders": 0.0,
+  "skin": "#876657",
   "status": "ok",
-  "upscale": 0.53
+  "upscale": 0.52
  },
  "wd-Q94699949": {
   "bytes": 14698,
@@ -14149,20 +14628,21 @@
   "upscale": 0.23
  },
  "wd-Q96483893": {
-  "bytes": 5708,
-  "faceW": 0.305,
+  "bytes": 5166,
+  "faceW": 0.321,
   "flags": [
+   "hair_tips_feathered",
    "short_source"
   ],
-  "hairTop": 0.145,
+  "hairTop": 0.147,
   "pack": "eu-feyenoord",
-  "roll": 2.1,
-  "score": 0.89,
-  "sha256": "8eebab988ca4779607ba2555ddc74ef1886aaf9fd9accf9b6df5dbc07d911cc7",
+  "roll": -4.4,
+  "score": 0.93,
+  "sha256": "c21b766a12af6d31c8081e31f0b8e7828844f099d94f7416e17002177b35f07d",
   "shoulders": 0.0,
-  "skin": "#66493e",
+  "skin": "#a76d5b",
   "status": "ok",
-  "upscale": 0.56
+  "upscale": 0.27
  },
  "wd-Q96755": {
   "bytes": 14002,
@@ -14177,6 +14657,22 @@
   "skin": "#89645c",
   "status": "ok",
   "upscale": 0.2
+ },
+ "wd-Q969069": {
+  "bytes": 4548,
+  "faceW": 0.297,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.184,
+  "pack": "eu-ludogorets",
+  "roll": 12.8,
+  "score": 0.89,
+  "sha256": "5a1b6d9e7466a250253e47e394ad8d8f11e5293879c2ea21e33c316eaaf17dcc",
+  "shoulders": 0.0,
+  "skin": "#bd9984",
+  "status": "ok",
+  "upscale": 0.18
  },
  "wd-Q969725": {
   "bytes": 13668,
@@ -14308,6 +14804,20 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q98509530": {
+  "bytes": 11390,
+  "faceW": 0.334,
+  "flags": [],
+  "hairTop": 0.141,
+  "pack": "eu-ajax",
+  "roll": -6.2,
+  "score": 0.94,
+  "sha256": "24013eb504481a9c8d8438a1fc5df5dac29877bf7a6bae3cb5a8b81cd1a83a77",
+  "shoulders": 0.81,
+  "skin": "#543c3c",
+  "status": "ok",
+  "upscale": 0.42
+ },
  "wd-Q98534760": {
   "bytes": 13694,
   "faceW": 0.363,
@@ -14351,6 +14861,20 @@
   "skin": "#dec6ab",
   "status": "ok",
   "upscale": 0.54
+ },
+ "wd-Q98816361": {
+  "bytes": 10748,
+  "faceW": 0.329,
+  "flags": [],
+  "hairTop": 0.109,
+  "pack": "eu-milan",
+  "roll": -1.5,
+  "score": 0.95,
+  "sha256": "fbb1c5eff11028571bdc173df54047701a52d183444ba706a2f512fd9d702cf3",
+  "shoulders": 0.82,
+  "skin": "#da967b",
+  "status": "ok",
+  "upscale": 0.67
  },
  "wd-Q98937753": {
   "bytes": 13438,
