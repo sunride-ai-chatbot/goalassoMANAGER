@@ -24,5 +24,9 @@
 {"he":"ויקטור מוניוס","en":"Víctor Muñoz","pos":"FW","age":23,"nat":"Spain","value_m":24.5},
 {"he":"קודי גאקפו","en":"Cody Gakpo","pos":"FW","age":27,"nat":"Netherlands","value_m":57.7},
 {"he":"פדריקו קייזה","en":"Federico Chiesa","pos":"FW","age":28,"nat":"Italy","value_m":14.2},
-{"he":"הוגו אקיטיקה","en":"Hugo Ekitiké","pos":"FW","age":24,"nat":"France","value_m":74.5}
+{"he":"הוגו אקיטיקה","en":"Hugo Ekitiké","pos":"FW","age":24,"nat":"France","value_m":74.5},
+{"he":"פרדי וודמן","en":"Freddie Woodman","pos":"GK","age":29,"nat":"England","value_m":2.8},
+{"he":"לוק צ'יימברס","en":"Luke Chambers","pos":"DF","age":22,"nat":"England","value_m":0.94},
+{"he":"אייזק מבאיה","en":"Isaac Mabaya","pos":"DF","age":22,"nat":"England","value_m":0.07},
+{"he":"ג'יימס מקונל","en":"James McConnell","pos":"MF","age":22,"nat":"England","value_m":1.4}
 ]}
