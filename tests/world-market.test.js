@@ -9,7 +9,7 @@ const E=JSON.parse(fs.readFileSync(path.join(root,'data/visuals/euro-players.jso
 const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'ligat-haal-manager.html'),'utf8'),{url:'https://goalasso.test/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true})}}).window;
 const d=w.document;
-const rows=()=>[...d.querySelectorAll('[data-wrow]')];
+const rows=()=>[...d.querySelectorAll('[data-wrow]')];const closeAll=()=>w.eval('closeMarketSuggest()');
 async function main(){try{
  for(const s of ['[data-pick="hbs"]','#signBtn','[data-sponsor="0"]','[data-board="none"]'])d.querySelector(s).click();
  w.eval("G.pressMode='off';G.motion='off';G.paperPop=[]");
@@ -49,10 +49,23 @@ async function main(){try{
  input().value='גלוך';input().dispatchEvent(new w.Event('input',{bubbles:true}));
  input().dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true}));d.getElementById('marketNameSearch').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));
  assert.match(d.querySelector('#modal').textContent,/אוסקר גלוך/,'choosing a suggestion opens the player');w.eval('closeModal()');
+ // the typed letters are highlighted inside the suggestion
+ input().value='glou';input().dispatchEvent(new w.Event('input',{bubbles:true}));assert.match(d.querySelector('.msug bdi').innerHTML,/<mark>Glou<\/mark>kh/);
+ input().value='גלוך';input().dispatchEvent(new w.Event('input',{bubbles:true}));assert.match(d.querySelector('.msug b').innerHTML,/<mark>גלוך<\/mark>/);closeAll();
+ // empty state names every active filter and offers a reset
+ w.eval("worldNat='ברזיל';marketSearch='Gloukh';render()");assert.ok(d.querySelector('.market-empty'));assert.ok(d.querySelector('[data-fclear="nat"]'));assert.ok(d.querySelector('[data-fclear="all"]'));
+ d.querySelector('[data-fclear="all"]').click();assert.ok(rows().length>100);assert.equal(d.querySelector('.mchips'),null);
  // Israeli legionnaires
  w.eval("marketTab='buy';render()");d.querySelector('[data-mcat="legionnaires"]').click();
  const leg=rows().map(el=>el.textContent);assert.ok(leg.some(t=>t.includes('אוסקר גלוך')&&t.includes('אייאקס')));
  assert.ok(w.eval("[...document.querySelectorAll('[data-wrow]')].every(el=>{const f=findWorldPlayer(+el.dataset.wrow);return f&&f.c.world&&f.p.real&&f.p.nat==='ישראל'})"));
+  // a bought European player keeps his face in my squad list, profile and lineup figure
+ const buy=w.eval("(()=>{const c=G.world.laliga.clubs.find(c=>c.name==='ריאל מדריד');const p=c.players.find(p=>!p.nfs&&playerVisual(p));const vid=playerVisualId(p);me().money=1e9;G.wk=0;const n={offer:{fee:1e6,inst:1,sellon:0},poffer:{wage:5e4,years:2,role:'rotation',bonus:0},log:[],loan:null};completeTransfer(n,p,c);return JSON.stringify({id:p.id,vid,en:p.en})})()");
+ const bt=JSON.parse(buy);assert.equal(w.eval(`playerVisualId(me().players.find(p=>p.id===${bt.id}))`),bt.vid,'face survives the transfer');
+ w.eval("G.view='squad';squadTab='all';render()");assert.ok(d.querySelector(`[data-pid="${bt.id}"] .pp[data-visual-id="${bt.vid}"]`),'face in my squad list');
+ assert.match(w.eval(`cinematicPlayerHTML(me(),me().players.find(p=>p.id===${bt.id}),'t')`),new RegExp(bt.vid),'face on the lineup figure');
+ w.fetch=async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,url)))});w.eval(`loadFacePack(PLAYER_VISUALS.faces['${bt.vid}'].pack)`);await Promise.all(w.eval('[...facePackRequests.values()]'));
+ w.eval(`playerModal(${bt.id})`);assert.ok(d.querySelector(`#modal .pp[data-visual-id="${bt.vid}"]`),'face in the profile');assert.match(d.querySelector('#modal').textContent,/ויקישיתוף/);w.eval('closeModal()');
  // careers saved before the European packs: 7-player lists and visualId:null are repaired by the v9 migration
  w.eval(`(()=>{const c=G.world.epl.clubs.find(c=>c.name==='ליברפול');c.players=c.players.slice(0,7);c.players.push(makeWorldPlayer('epl',WORLD_LEAGUES.epl.clubs[0],'mid',87));delete c.squadV;for(const p of c.players){p.visualId=null;delete p.from;delete p.nfs}})()`);
  const legacy=w.eval('JSON.stringify(Object.assign({},G,{v:8}))');w.eval(`installCareer(${JSON.stringify(legacy)},2)`);

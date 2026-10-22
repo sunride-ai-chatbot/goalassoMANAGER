@@ -31,7 +31,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'data', 'euro', '*.json'))):
     try:
         d = json.loads(read(f))
         if d.get('players'):
-            euro[d['name_he']] = [{k: p.get(k) for k in ('he', 'en', 'pos', 'age', 'nat', 'value_m')} for p in d['players'] if p.get('he')]
+            euro[d['name_he']] = [{k: p.get(k) for k in ('he', 'en', 'pos', 'age', 'nat', 'nat2', 'value_m') if k != 'nat2' or p.get('nat2')} for p in d['players'] if p.get('he')]
     except Exception as e:
         print('skip', f, e)
 

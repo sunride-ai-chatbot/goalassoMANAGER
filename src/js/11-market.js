@@ -239,7 +239,7 @@ function viewWorld(){
   if(marketSearch){const q=searchNorm(marketSearch);pool=pool.filter(({p})=>[fullName(p),p.en].some(h=>matchRank(searchNorm(h),q)<9))}
   pool=filterMarketPrices(pool,marketValue);
   const natHTML=natOptionsHTML('worldNatSel',pool,worldNat);
-  if(worldNat!=='all')pool=pool.filter(x=>x.p.nat===worldNat);
+  if(worldNat!=='all')pool=pool.filter(x=>hasNat(x.p,worldNat));
   const ws=worldSort==='price'?'price-asc':worldSort;
   pool.sort((a,b)=>ws==='ovr'?(isKnown(b.p)?b.p.ovr:b.p.est)-(isKnown(a.p)?a.p.ovr:a.p.est):ws==='price-asc'?marketValue(a.p)-marketValue(b.p):ws==='price-desc'?marketValue(b.p)-marketValue(a.p):a.p.age-b.p.age);
   const scoutHere=(G.scouts||[]).some(s=>REGIONS[s.region].leagues.includes(worldLg));
@@ -263,7 +263,7 @@ function worldRow(p,cl,open,showLeague){
   const n=(G.negs||[]).find(x=>x.pid===p.id&&(x.stage==='club'||x.stage==='player'));
   const btn=n?`<button class="btn sm" data-neg="${n.id}">במו"מ</button>`:`<button class="btn sm sec" data-wview="${p.id}">פרטים</button>`;
   const L=showLeague&&cl.lg?WORLD_LEAGUES[cl.lg]:null;
-  const sub=`<span class="it">${kitSVG(cl,'sm')} ${esc(cl.short)}</span>${L?`<span class="it">${L.flag} ${esc(L.name)}</span>`:''}<span class="it">גיל ${p.age}</span>${p.foreign?'':`<span class="it">${esc(p.nat)}</span>`}<span class="it">שווי <b class="num">${isKnown(p)?NIS(marketValue(p)):'~'+NIS(marketValue(p))}</b></span>${p.nfs?'<span class="it tag nfs" style="padding:0 6px">בסגל · לא למכירה</span>':''}${!p.real?'<span class="it tag gen" style="padding:0 6px" title="אין נתוני סגל אמיתיים למועדון הזה">שחקן בדוי</span>':''}${p.rep?'<span class="it tag good" style="padding:0 6px">נסקר</span>':''}`;
+  const sub=`<span class="it">${kitSVG(cl,'sm')} ${esc(cl.short)}</span>${L?`<span class="it">${L.flag} ${esc(L.name)}</span>`:''}<span class="it">גיל ${p.age}</span>${p.foreign?'':`<span class="it">${esc(p.nat)}</span>`}${p.nat2?`<span class="it">${esc(p.nat2)}</span>`:''}<span class="it">שווי <b class="num">${isKnown(p)?NIS(marketValue(p)):'~'+NIS(marketValue(p))}</b></span>${p.nfs?'<span class="it tag nfs" style="padding:0 6px">בסגל · לא למכירה</span>':''}${!p.real?'<span class="it tag gen" style="padding:0 6px" title="אין נתוני סגל אמיתיים למועדון הזה">שחקן בדוי</span>':''}${p.rep?'<span class="it tag good" style="padding:0 6px">נסקר</span>':''}`;
   return playerRow(p,btn,p.nfs?'nfs':'',sub).replace('data-pid','data-wrow');
 }
 function marketTabs(cur){const negs=(G.negs||[]).filter(n=>n.stage==='club'||n.stage==='player').length;const reps=(G.reports||[]).filter(r=>r.s===G.season&&G.wk-r.wk<4).length;

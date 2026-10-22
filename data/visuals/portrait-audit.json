@@ -6023,6 +6023,20 @@
   "status": "ok",
   "upscale": 0.9
  },
+ "wd-Q108396940": {
+  "bytes": 9758,
+  "faceW": 0.309,
+  "flags": [],
+  "hairTop": 0.103,
+  "pack": "eu-salzburg",
+  "roll": 4.2,
+  "score": 0.92,
+  "sha256": "6f3836f8a232b1a4ff17c43a379b26be1c736d8c8eda95f817982d796628c247",
+  "shoulders": 0.56,
+  "skin": "#48281b",
+  "status": "ok",
+  "upscale": 0.35
+ },
  "wd-Q108491198": {
   "bytes": 12174,
   "faceW": 0.338,
@@ -7809,6 +7823,20 @@
   "skin": "#a3805c",
   "status": "ok",
   "upscale": 0.47
+ },
+ "wd-Q131520969": {
+  "bytes": 10846,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.121,
+  "pack": "eu-porto",
+  "roll": 23.5,
+  "score": 0.93,
+  "sha256": "f19c43f8efbacb976bc3ce53810e8ca6dead14c8cbeb67d16cdbb70a8837670d",
+  "shoulders": 0.68,
+  "skin": "#b07571",
+  "status": "ok",
+  "upscale": 0.53
  },
  "wd-Q131740042": {
   "bytes": 8114,
@@ -9768,18 +9796,18 @@
   "upscale": 0.67
  },
  "wd-Q21039587": {
-  "bytes": 16230,
-  "faceW": 0.342,
+  "bytes": 11572,
+  "faceW": 0.347,
   "flags": [],
-  "hairTop": 0.067,
+  "hairTop": 0.161,
   "pack": "eu-napoli",
-  "roll": 0.5,
-  "score": 0.9,
-  "sha256": "c36d782f4f3068073aefc37a1952cd4f1f201f4b956150d7305f43fd047e5673",
-  "shoulders": 0.96,
-  "skin": "#4e3814",
+  "roll": -4.2,
+  "score": 0.91,
+  "sha256": "dd75276ff5c182b4df5e260cab120fb013cf4d4bb91fe68040d2f665aaef3b71",
+  "shoulders": 0.7,
+  "skin": "#6c4f48",
   "status": "ok",
-  "upscale": 1.1
+  "upscale": 0.66
  },
  "wd-Q21066260": {
   "bytes": 7802,
@@ -10327,6 +10355,22 @@
   "skin": "#cb9ba0",
   "status": "ok",
   "upscale": 0.19
+ },
+ "wd-Q24084212": {
+  "bytes": 7884,
+  "faceW": 0.068,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-rangers",
+  "roll": -0.5,
+  "score": 0.91,
+  "sha256": "db14f2c772b2ef4d8b32a1ca61aea21fa7dd60a81891eba34a68760bffad36f3",
+  "shoulders": 0.15,
+  "skin": "#c97b57",
+  "status": "ok",
+  "upscale": 0.38
  },
  "wd-Q24231840": {
   "bytes": 7132,
@@ -13886,15 +13930,16 @@
   "upscale": 0.53
  },
  "wd-Q69812902": {
-  "bytes": 11642,
-  "faceW": 0.341,
+  "bytes": 11782,
+  "faceW": 0.329,
   "flags": [],
   "hairTop": 0.141,
   "pack": "eu-tottenham",
-  "roll": 6.5,
+  "roll": 7.8,
   "score": 0.94,
-  "sha256": "67fc512ab6560c21c0a1e4eb435c156dd207d8d167fa5da90652078fcb74a5e0",
-  "skin": "#d4a287",
+  "sha256": "ba12941bb717e7771df16f7b154747114b254b7ac41cb3cf97feaddda3f46e5a",
+  "shoulders": 0.84,
+  "skin": "#cfa086",
   "status": "ok",
   "upscale": 0.42
  },

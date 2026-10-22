@@ -190,7 +190,7 @@ function marketPriceControls(count,limit,noCount){
 /* Israeli legionnaire = a real player whose squad data (data/euro) lists Israeli nationality, playing for a club outside
    Israel. Nationality is never inferred from a name, and generated transfer-list players are not counted. Foreign
    players at Israeli clubs are not legionnaires. */
-function isIsraeliNat(p){const nat=String(p&&p.nat||'').trim().toLocaleLowerCase();return ['israel','israeli','ישראל','ישראלי','ישראלית'].includes(nat)}
+function isIsraeliNat(p){return !!p&&playerNats(p).some(n=>['israel','israeli','ישראל','ישראלי','ישראלית'].includes(String(n).trim().toLocaleLowerCase()))}
 function isMarketLegionnaire(p,club){return !!p&&!!club&&!!club.world&&!!p.real&&!!p.en&&isIsraeliNat(p)}
 function legionnairePool(){ensureAllWorldLeagues();return worldClubs().flatMap(cl=>cl.players.filter(p=>isMarketLegionnaire(p,cl)).map(p=>({p,c:cl,cl})))}
 function marketPriceEmpty(){return `<div class="card market-empty"><p>אין שחקנים שמתאימים לחיפוש ולמסננים שבחרת.</p><div class="actions">${marketSearch?'<button type="button" class="btn sec" data-market-search-reset>נקה חיפוש</button>':''}${marketCategory!=='all'&&marketTab==='buy'?'<button type="button" class="btn sec" data-mcat="all">הצג את כל השחקנים</button>':''}${(marketTab==='world'?worldNat:marketNat)!=='all'?'<button type="button" class="btn sec" data-fclear="nat">כל הלאומים</button>':''}${marketPrice!=='all'?'<button type="button" class="btn sec" data-price-reset>נקה סינון מחיר</button>':''}</div></div>`}
@@ -210,6 +210,14 @@ function viewFreeAgents(){
 let marketNat='all',worldNat='all',worldAvail='all',marketFiltersOpen=typeof matchMedia==='function'?matchMedia('(min-width: 700px)').matches:true;
 const HEB_FINAL={'ך':'כ','ם':'מ','ן':'נ','ף':'פ','ץ':'צ'};
 function searchNorm(x){return String(x||'').normalize('NFD').replace(/[̀-֑ͯ-ׇ]/g,'').toLowerCase().replace(/ø/g,'o').replace(/ł/g,'l').replace(/ß/g,'ss').replace(/æ/g,'ae').replace(/œ/g,'oe').replace(/đ/g,'d').replace(/ı/g,'i').replace(/[ךםןףץ]/g,ch=>HEB_FINAL[ch]).replace(/["'׳״`’]/g,'').replace(/[-.]/g,' ').replace(/\s+/g,' ').trim()}
+/* highlight the typed letters inside a name: normalise character by character so accents, apostrophes and Hebrew final
+   letters do not shift the match position */
+function hlName(text,q){text=String(text||'');q=searchNorm(q);if(!q)return esc(text);const map=[];let norm='';
+  for(let i=0;i<text.length;i++){const n=searchNorm(text[i]);for(const ch of n){norm+=ch;map.push(i)}if(text[i]===' '&&!norm.endsWith(' ')){norm+=' ';map.push(i)}}
+  const at=norm.indexOf(q);if(at<0)return esc(text);const from=map[at],to=map[Math.min(at+q.length-1,map.length-1)]+1;
+  return esc(text.slice(0,from))+'<mark>'+esc(text.slice(from,to))+'</mark>'+esc(text.slice(to))}
+function playerNats(p){return [p.nat,p.nat2].filter(Boolean)}
+function hasNat(p,nat){return playerNats(p).includes(nat)}
 function marketSearchPool(){ensureAllWorldLeagues();const out=[];for(const c of [...G.clubs,...G.leumit]){if(c.id===G.me)continue;for(const p of c.players)if(!p.loanOut)out.push({p,c})}for(const c of worldClubs())for(const p of c.players)out.push({p,c});return out}
 function matchRank(hay,q){if(!hay)return 9;if(hay.startsWith(q))return 0;if((' '+hay).includes(' '+q))return 1;return hay.includes(q)?2:9}
 function searchPlayers(text,limit){const q=searchNorm(text);if(q.length<2)return [];const res=[];
@@ -221,13 +229,13 @@ function marketSearchHTML(){return `<form id="marketNameSearch" class="msearch" 
 let suggestIdx=-1,suggestItems=[];
 function updateMarketSuggest(input){const box=$('marketSuggest');if(!box)return;const v=input.value;suggestItems=searchPlayers(v,8);suggestIdx=-1;
   if(searchNorm(v).length<2){box.hidden=true;box.innerHTML='';input.setAttribute('aria-expanded','false');return}
-  box.innerHTML=suggestItems.length?suggestItems.map((x,i)=>{const L=x.c.world?WORLD_LEAGUES[x.c.lg]:null;return `<button type="button" role="option" id="msug${i}" class="msug" data-msug="${x.p.id}" aria-selected="false"><span class="msug-face">${playerPortraitHTML(x.p,x.c,'sg'+x.p.id)}</span><span class="msug-txt"><b>${esc(fullName(x.p))}</b>${x.p.en?` <bdi class="muted" dir="ltr">${esc(x.p.en)}</bdi>`:''}<small class="muted">${esc(x.c.short||x.c.name)} · ${L?`${L.flag} ${esc(L.name)}`:'ישראל'} · ${POSHE[x.p.pos]}${x.p.nfs?' · לא למכירה':''}</small></span></button>`}).join(''):'<div class="msug-none muted small">לא נמצאו שחקנים בשם הזה</div>';
+  box.innerHTML=suggestItems.length?suggestItems.map((x,i)=>{const L=x.c.world?WORLD_LEAGUES[x.c.lg]:null;return `<button type="button" role="option" id="msug${i}" class="msug" data-msug="${x.p.id}" aria-selected="false"><span class="msug-face">${playerPortraitHTML(x.p,x.c,'sg'+x.p.id)}</span><span class="msug-txt"><b>${hlName(fullName(x.p),v)}</b>${x.p.en?` <bdi class="muted" dir="ltr">${hlName(x.p.en,v)}</bdi>`:''}<small class="muted">${esc(x.c.short||x.c.name)} · ${L?`${L.flag} ${esc(L.name)}`:'ישראל'} · ${POSHE[x.p.pos]}${x.p.nfs?' · לא למכירה':''}</small></span></button>`}).join(''):'<div class="msug-none muted small">לא נמצאו שחקנים בשם הזה</div>';
   box.hidden=false;input.setAttribute('aria-expanded','true')}
 function closeMarketSuggest(){const box=$('marketSuggest');if(box){box.hidden=true}const i=$('marketNameInput');if(i)i.setAttribute('aria-expanded','false');suggestIdx=-1}
 function moveSuggest(d){const box=$('marketSuggest');if(!box||box.hidden||!suggestItems.length)return;suggestIdx=(suggestIdx+d+suggestItems.length)%suggestItems.length;
   box.querySelectorAll('.msug').forEach((b,i)=>{b.setAttribute('aria-selected',i===suggestIdx?'true':'false');b.classList.toggle('on',i===suggestIdx)});$('marketNameInput').setAttribute('aria-activedescendant','msug'+suggestIdx);const el=$('msug'+suggestIdx);if(el&&el.scrollIntoView)el.scrollIntoView({block:'nearest'})}
 function pickSuggest(pid){const x=suggestItems.find(s=>s.p.id===pid);closeMarketSuggest();const i=$('marketNameInput');if(i&&x)i.value=fullName(x.p);playerModalAny(pid)}
-function natOptionsHTML(id,pool,cur){const n={};for(const {p} of pool){const k=p.nat||'—';n[k]=(n[k]||0)+1}const keys=Object.keys(n).sort((a,b)=>n[b]-n[a]||a.localeCompare(b,'he'));
+function natOptionsHTML(id,pool,cur){const n={};for(const {p} of pool)for(const k of (playerNats(p).length?playerNats(p):['—']))n[k]=(n[k]||0)+1;const keys=Object.keys(n).sort((a,b)=>n[b]-n[a]||a.localeCompare(b,'he'));
   return `<label class="small mnat" for="${id}">לאום<select id="${id}"><option value="all">כל הלאומים (${pool.length})</option>${keys.map(k=>`<option value="${esc(k)}" ${cur===k?'selected':''}>${esc(k)} (${n[k]})</option>`).join('')}${cur!=='all'&&!n[cur]?`<option value="${esc(cur)}" selected>${esc(cur)} (0)</option>`:''}</select></label>`}
 function priceChipLabel(){return marketPrice==='budget'?'מחיר: עד התקציב':marketPrice==='custom'?`מחיר: ${marketPriceMin!==''?NIS(+marketPriceMin):'0'}–${marketPriceMax!==''?NIS(+marketPriceMax):'∞'}`:`מחיר: עד ${NIS(+marketPrice)}`}
 function activeChips(list){if(!list.length)return '';return `<div class="mchips" aria-label="מסננים פעילים"><span class="muted tiny">מסננים פעילים:</span>${list.map(([label,key])=>`<button type="button" class="mchip" data-fclear="${key}" aria-label="הסר: ${esc(label)}">${esc(label)} <span aria-hidden="true">✕</span></button>`).join('')}${list.length>1?'<button type="button" class="mchip all" data-fclear="all">נקה הכל</button>':''}</div>`}
@@ -248,7 +256,7 @@ function viewMarket(){
   if(marketSearch){const q=searchNorm(marketSearch);pool=pool.filter(({p})=>[fullName(p),p.en,(p.first||'')+' '+(p.last||'')].some(h=>matchRank(searchNorm(h),q)<9))}
   pool=filterMarketPrices(pool,valueOf);
   const natHTML=natOptionsHTML('marketNatSel',pool,marketNat);
-  if(marketNat!=='all')pool=pool.filter(x=>x.p.nat===marketNat);
+  if(marketNat!=='all')pool=pool.filter(x=>hasNat(x.p,marketNat));
   pool.sort((a,b)=>{
     if(marketSort==='ovr')return b.p.ovr-a.p.ovr;
     if(marketSort==='age')return a.p.age-b.p.age;

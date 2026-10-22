@@ -31,3 +31,4 @@
 .mfold[open]>summary::before{transform:none}
 .mfold[open]{padding-bottom:10px}
 .market-results{margin-top:8px}
+.msug mark{background:rgba(198,242,78,.28);color:inherit;border-radius:3px;padding:0 1px}
