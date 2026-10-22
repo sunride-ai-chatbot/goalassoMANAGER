@@ -244,14 +244,19 @@ def main():
                     entry['label'] = label(ent)
                     entry['birthYear'] = birth_year(ent)
                     titles = ['File:' + t for t in images(ent)]
+                    via = {t: 'p18' for t in titles}
+                    def add(ts, how):
+                        for t in ts:
+                            if t not in via:
+                                via[t] = how; titles.append(t)
                     for cat in claim_ids(ent, 'P373')[:1]:
-                        titles += [t for t in category_files(cat) if t not in titles]
+                        add(category_files(cat), 'category')
                         if DEEP:
-                            titles += [t for t in subcat_files(cat) if t not in titles]
+                            add(subcat_files(cat), 'subcat')
                     if DEEP:
                         for nm in {label(ent), p.get('en')}:
                             if nm:
-                                titles += [t for t in search_files(nm) if t not in titles]
+                                add(search_files(nm), 'search')
                     infos = {}
                     for i in range(0, min(len(titles), 100), 25):
                         infos.update(file_info(titles[i:i + 25]))
@@ -267,7 +272,7 @@ def main():
                         data = get(i['thumb'], raw=True)
                         with open(os.path.join(outdir, fn), 'wb') as fh:
                             fh.write(data)
-                        entry['candidates'].append({**i, 'file': fn, 'fromP18': t in ['File:' + x for x in images(ent)]})
+                        entry['candidates'].append({**i, 'file': fn, 'fromP18': t in ['File:' + x for x in images(ent)], 'via': via.get(t)})
                         k += 1
                         if k >= a.max_candidates:
                             break
