@@ -94,6 +94,44 @@
      "date": "2023-04-08",
      "file": "04-Q105501538-1-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:Jakub Martinec.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Jakub_Martinec.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Jakub_Martinec.jpg/1280px-Jakub_Martinec.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1325,
+     "height": 1741,
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "author": "Martin Sedláček",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2009-12-20",
+     "file": "04-Q105501538-2-w1280.jpg",
+     "fromP18": false
+    },
+    {
+     "title": "File:CzechBoysChoir.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:CzechBoysChoir.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/CzechBoysChoir.jpg/1280px-CzechBoysChoir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3264,
+     "height": 2448,
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "author": "Martin Sedláček",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2010-11-28",
+     "file": "04-Q105501538-3-w1280.jpg",
+     "fromP18": false
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",
@@ -444,7 +482,7 @@
     {
      "title": "File:2025-03-05 Adam Karabec HSV pic1.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:2025-03-05_Adam_Karabec_HSV_pic1.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/2025-03-05_Adam_Karabec_HSV_pic1.jpg/960px-2025-03-05_Adam_Karabec_HSV_pic1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/2025-03-05_Adam_Karabec_HSV_pic1.jpg/1280px-2025-03-05_Adam_Karabec_HSV_pic1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 1732,
      "height": 2681,
@@ -457,7 +495,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2025-03-05 15:05:39",
-     "file": "12-Q83695618-0.jpg",
+     "file": "12-Q83695618-0-w1280.jpg",
      "fromP18": true
     }
    ],
@@ -616,7 +654,7 @@
     {
      "title": "File:FC Liefering gegen AC Sparta Praha U23 (7. Februar 2020) 33.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:FC_Liefering_gegen_AC_Sparta_Praha_U23_(7._Februar_2020)_33.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_33.jpg/960px-FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_33.jpg/1280px-FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2526,
      "height": 2017,
@@ -629,13 +667,13 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2020-02-07 15:05:41",
-     "file": "17-Q108678838-0.jpg",
+     "file": "17-Q108678838-0-w1280.jpg",
      "fromP18": false
     },
     {
      "title": "File:FC Liefering gegen AC Sparta Praha U23 (7. Februar 2020) 34.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:FC_Liefering_gegen_AC_Sparta_Praha_U23_(7._Februar_2020)_34.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_34.jpg/960px-FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_34.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_34.jpg/1280px-FC_Liefering_gegen_AC_Sparta_Praha_U23_%287._Februar_2020%29_34.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 2773,
      "height": 1773,
@@ -648,7 +686,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2020-02-07 15:05:41",
-     "file": "17-Q108678838-1.jpg",
+     "file": "17-Q108678838-1-w1280.jpg",
      "fromP18": false
     }
    ],
@@ -888,7 +926,7 @@
     {
      "title": "File:Joao Grimaldo.jpg",
      "page": "https://commons.wikimedia.org/wiki/File:Joao_Grimaldo.jpg",
-     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Joao_Grimaldo.jpg/960px-Joao_Grimaldo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Joao_Grimaldo.jpg/1280px-Joao_Grimaldo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
      "mime": "image/jpeg",
      "width": 1440,
      "height": 1600,
@@ -901,7 +939,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2024-04-21",
-     "file": "22-Q108153171-0.jpg",
+     "file": "22-Q108153171-0-w1280.jpg",
      "fromP18": true
     }
    ],
