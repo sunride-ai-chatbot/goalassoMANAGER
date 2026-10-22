@@ -1,0 +1,502 @@
+[
+  {
+    "id": "sunride",
+    "name": "Sunride",
+    "sector": "אופניים וניידות",
+    "level": "partner",
+    "priority": true,
+    "fictional": false,
+    "logo": "assets/sponsors/sunride.png",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "friedrich-bauer",
+    "name": "Friedrich Bauer",
+    "sector": "ציוד רכיבה",
+    "level": "partner",
+    "priority": true,
+    "fictional": false,
+    "logo": "assets/sponsors/friedrich-bauer.png",
+    "logoBg": "#172033"
+  },
+  {
+    "id": "friedrich-bauer-helmets",
+    "name": "Friedrich Bauer HELMETS",
+    "sector": "קסדות",
+    "level": "partner",
+    "priority": true,
+    "fictional": false,
+    "logo": "assets/sponsors/friedrich-bauer-helmets.png",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "fastshark",
+    "name": "FastShark",
+    "sector": "ציוד רכיבה",
+    "level": "partner",
+    "priority": true,
+    "fictional": false,
+    "logo": "assets/sponsors/fastshark.png",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "blackdiamond",
+    "name": "BlackDiamond",
+    "sector": "ציוד ספורט",
+    "level": "partner",
+    "priority": true,
+    "fictional": false,
+    "logo": "assets/sponsors/blackdiamond.png",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "schulz",
+    "name": "Schulz",
+    "sector": "מנעולים ואבטחה",
+    "level": "partner",
+    "priority": true,
+    "fictional": false,
+    "logo": "assets/sponsors/schulz.png",
+    "logoBg": "#172033"
+  },
+  {
+    "id": "pitoran",
+    "name": "פיתורן",
+    "sector": "מאפייה מקומית",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/pitoran.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "galgilon",
+    "name": "גלגילון",
+    "sector": "תיקוני אופניים",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/galgilon.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "motoreli",
+    "name": "מוטורלי",
+    "sector": "מוסך שכונתי",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/motoreli.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "kafnora",
+    "name": "קפנורה",
+    "sector": "בית קפה",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/kafnora.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "pizzalto",
+    "name": "פיצלטו",
+    "sector": "פיצרייה מקומית",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/pizzalto.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "perivon",
+    "name": "פריבון",
+    "sector": "ירקנייה",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/perivon.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "sandrilo",
+    "name": "סנדרילו",
+    "sector": "כריכים וסלטים",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/sandrilo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "glidaro",
+    "name": "גלידרו",
+    "sector": "גלידרייה",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/glidaro.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "tispolo",
+    "name": "תספולו",
+    "sector": "מספרה",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/tispolo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "miftrix",
+    "name": "מפתריקס",
+    "sector": "מנעולן מקומי",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/miftrix.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "zerafit",
+    "name": "זרפית",
+    "sector": "חנות פרחים",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/zerafit.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "tzivaro",
+    "name": "ציברו",
+    "sector": "צבע ושיפוצים",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/tzivaro.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "orviko",
+    "name": "אורביקו",
+    "sector": "חשמלאי מקומי",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/orviko.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "kvisora",
+    "name": "כביסורה",
+    "sector": "מכבסה",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/kvisora.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "seferino",
+    "name": "ספרינו",
+    "sector": "ספרים וכלי כתיבה",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/seferino.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "tzalmio",
+    "name": "צלמיו",
+    "sector": "סטודיו לצילום",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/tzalmio.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "marpelon",
+    "name": "מרפלון",
+    "sector": "פיזיותרפיה",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/marpelon.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "talpasta",
+    "name": "טלפסטה",
+    "sector": "מסעדה משפחתית",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/talpasta.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "shuklina",
+    "name": "שוקלינה",
+    "sector": "מכולת שכונתית",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/shuklina.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "naalivo",
+    "name": "נעליבו",
+    "sector": "חנות נעליים",
+    "level": "local",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/naalivo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "vortiva",
+    "name": "וורטיבה",
+    "sector": "רשת חדרי כושר",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/vortiva.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "netzora",
+    "name": "נטזורה",
+    "sector": "תקשורת אזורית",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/netzora.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "mazorix",
+    "name": "מזוריקס",
+    "sector": "ציוד רפואי",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/mazorix.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "drivona",
+    "name": "דריבונה",
+    "sector": "השכרת רכב",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/drivona.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "maylora",
+    "name": "מיילורה",
+    "sector": "משקאות",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/maylora.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "sportelio",
+    "name": "ספורטליו",
+    "sector": "רשת ספורט",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/sportelio.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "bitoran",
+    "name": "ביטורן",
+    "sector": "ביטוח אזורי",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/bitoran.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "packnivo",
+    "name": "פקניבו",
+    "sector": "משלוחים",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/packnivo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "hotellio",
+    "name": "הוטליו",
+    "sector": "מלונות אזוריים",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/hotellio.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "solmira",
+    "name": "סולמירה",
+    "sector": "אנרגיה סולארית",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/solmira.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "freshnix",
+    "name": "פרשניקס",
+    "sector": "רשת מזון",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/freshnix.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "opticavo",
+    "name": "אופטיקבו",
+    "sector": "רשת אופטיקה",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/opticavo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "kodivra",
+    "name": "קודיברה",
+    "sector": "בית תוכנה",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/kodivra.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "binyora",
+    "name": "ביניורה",
+    "sector": "בנייה ותשתיות",
+    "level": "regional",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/binyora.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "veltrion",
+    "name": "ולטריון",
+    "sector": "טכנולוגיה בינלאומית",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/veltrion.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "aeronivo",
+    "name": "אירוניבו",
+    "sector": "תעופה בינלאומית",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/aeronivo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "fintravo",
+    "name": "פינטרבו",
+    "sector": "שירותים פיננסיים",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/fintravo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "enerqora",
+    "name": "אנרקורה",
+    "sector": "אנרגיה",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/enerqora.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "nexolume",
+    "name": "נקסולום",
+    "sector": "אלקטרוניקה",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/nexolume.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "oceanivo",
+    "name": "אושניבו",
+    "sector": "ספנות ולוגיסטיקה",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/oceanivo.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "stravello",
+    "name": "סטרבלו",
+    "sector": "ביגוד ספורט עולמי",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/stravello.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "cloudriva",
+    "name": "קלאודריבה",
+    "sector": "שירותי ענן",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/cloudriva.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "grandora",
+    "name": "גרנדורה",
+    "sector": "מלונאות בינלאומית",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/grandora.svg",
+    "logoBg": "#f8fafc"
+  },
+  {
+    "id": "mobilynx",
+    "name": "מובילינקס",
+    "sector": "תחבורה חכמה",
+    "level": "national",
+    "priority": false,
+    "fictional": true,
+    "logo": "assets/sponsors/mobilynx.svg",
+    "logoBg": "#f8fafc"
+  }
+]

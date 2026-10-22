@@ -91,10 +91,33 @@ function leagueRoundPlayed(){return me().P}
 /* ====================== SPONSORS ====================== */
 function sponsorBase(c){return Math.round(clamp(c.squadValue*.12*(.75+(c.fans??55)/200),1.5e6,25e6)/1e5)*1e5}
 function sponsorOffers(c){
-  const b=sponsorBase(c);const names=shuffle(SPONSORS);
-  return [
-   {name:names[0],kind:'קבוע',annual:Math.round(b*1.15/1e5)*1e5,years:1,bonusTitle:0,bonusEuro:0,desc:'סכום קבוע גבוה, בלי בונוסים'},
-   {name:names[1],kind:'ביצועים',annual:Math.round(b*.8/1e5)*1e5,years:1,bonusTitle:Math.round(b*.7/1e5)*1e5,bonusEuro:Math.round(b*.35/1e5)*1e5,desc:'בסיס נמוך, בונוס על אליפות ועל יציאה לאירופה'},
-   {name:names[2],kind:'ארוך טווח',annual:Math.round(b*1.0/1e5)*1e5,years:2,bonusTitle:Math.round(b*.25/1e5)*1e5,bonusEuro:Math.round(b*.15/1e5)*1e5,desc:'שנתיים של יציבות, בונוסים קטנים'}];
+  const brands=pickSponsorBrands(c,3,new Set((c.ads||[]).map(a=>a.brand)));
+  return brands.map((brand,i)=>{const b=sponsorBudget(c,brand),round=v=>Math.round(v/1000)*1000;
+    const terms=[{kind:'קבוע',annual:round(b),years:1,bonusTitle:0,bonusEuro:0,desc:'סכום שנתי מובטח, בלי בונוסים'},
+      {kind:'ביצועים',annual:round(b*.8),years:1,bonusTitle:round(b*.35),bonusEuro:round(b*.2),desc:'סכום שנתי בסיסי ובונוסים על הישגים'},
+      {kind:'ארוך טווח',annual:round(b*.95),years:2,bonusTitle:round(b*.15),bonusEuro:round(b*.1),desc:'חוזה לשנתיים; הסכום המוצג הוא לכל שנה'}][i];
+    return {brandId:brand.id,name:brand.name,catalogVersion:1,...terms}});
 }
+
+// Shared career sponsorship catalog: identical selection rules for every difficulty.
+// Existing signed contracts retain their names, amounts and expiry dates.
+function sponsorBrand(ref){if(!ref)return null;const name=typeof ref==='string'?ref:(ref.name||ref.brand);
+  return name?SPONSOR_CATALOG.find(b=>b.name===name)||null:SPONSOR_CATALOG.find(b=>b.id===ref.brandId)||null}
+function sponsorClubLevel(c){return c.div==='leumit'||c.tier>=3?'local':c.tier===2?'regional':'national'}
+function sponsorEligible(b,c){const level=sponsorClubLevel(c);return b.priority||b.level===level||(level==='national'&&b.level==='regional')}
+function pickSponsorBrands(c,count,excluded){excluded=excluded||new Set();const recent=c.sponsorSeen||[];
+  const byRecency=(a,b)=>{const rank=x=>{const i=recent.indexOf(x.id);return i<0?-1:i};return rank(a)-rank(b)};
+  const pool=SPONSOR_CATALOG.filter(b=>sponsorEligible(b,c)&&!excluded.has(b.name));
+  const preferred=shuffle(pool.filter(b=>b.priority)).sort(byRecency),others=shuffle(pool.filter(b=>!b.priority)).sort(byRecency);
+  const chosen=preferred.slice(0,Math.min(2,count));
+  for(const b of [...others,...preferred]){if(chosen.length>=count)break;if(!chosen.includes(b))chosen.push(b)}
+  c.sponsorSeen=[...recent.filter(id=>!chosen.some(b=>b.id===id)),...chosen.map(b=>b.id)].slice(-20);
+  return chosen;
+}
+function sponsorBudget(c,brand){const level=brand.priority?sponsorClubLevel(c):brand.level;
+  const limits={local:[180000,1500000],regional:[1500000,8000000],national:[3000000,28000000]}[level];
+  const raw=Number.isFinite(c.squadValue)?sponsorBase(c):limits[0];
+  return Math.round(clamp(raw,limits[0],limits[1])/1000)*1000;
+}
+function sponsorLevelLabel(b){return {local:'עסק מקומי',regional:'מותג אזורי',national:'מותג גדול',partner:'מותג שותף'}[b.level]||''}
 
