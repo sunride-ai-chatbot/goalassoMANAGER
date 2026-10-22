@@ -36,8 +36,9 @@ require('fs').mkdirSync(OUT,{recursive:true});
  }
  // price sorts & nationality (EPL, all clubs): open the filter panel first
  await page.evaluate(()=>{const d=document.querySelector('[data-mfold]');if(d&&!d.open){d.open=true;marketFiltersOpen=true}});
- await page.click('[data-ws="price-asc"]');R.sortAsc=await page.evaluate(()=>{const v=[...document.querySelectorAll('[data-wrow]')].map(el=>marketValue(findWorldPlayer(+el.dataset.wrow).p));return v.every((x,i)=>!i||v[i-1]<=x)});
- await page.click('[data-ws="price-desc"]');R.sortDesc=await page.evaluate(()=>{const v=[...document.querySelectorAll('[data-wrow]')].map(el=>marketValue(findWorldPlayer(+el.dataset.wrow).p));return v.every((x,i)=>!i||v[i-1]>=x)});
+const shotList=async n=>{await settle();await page.evaluate(()=>{const l=document.querySelector('[data-wrow]');window.scrollTo(0,l.getBoundingClientRect().top+window.scrollY-420)});await page.waitForTimeout(250);await page.screenshot({path:OUT+n})};
+ await page.click('[data-ws="price-asc"]');await shotList('sort-low-to-high.png');R.sortAsc=await page.evaluate(()=>{const v=[...document.querySelectorAll('[data-wrow]')].map(el=>marketValue(findWorldPlayer(+el.dataset.wrow).p));return v.every((x,i)=>!i||v[i-1]<=x)});
+ await page.click('[data-ws="price-desc"]');await shotList('sort-high-to-low.png');R.sortDesc=await page.evaluate(()=>{const v=[...document.querySelectorAll('[data-wrow]')].map(el=>marketValue(findWorldPlayer(+el.dataset.wrow).p));return v.every((x,i)=>!i||v[i-1]>=x)});
  await page.evaluate(()=>{const d=document.querySelector('[data-mfold]');if(d&&!d.open){d.open=true;marketFiltersOpen=true}});await page.selectOption('#worldNatSel','ברזיל');await settle();R.nat=await page.evaluate(()=>({rows:document.querySelectorAll('[data-wrow]').length,allBrazil:[...document.querySelectorAll('[data-wrow]')].every(el=>findWorldPlayer(+el.dataset.wrow).p.nat==='ברזיל'),chips:document.querySelector('.mchips')?.textContent}));
  await page.evaluate(()=>document.querySelector('.mfilters').scrollIntoView({block:'start'}));await page.screenshot({path:OUT+'nationality-brazil.png'});
  await page.evaluate(()=>clearMarketFilter('all'));
