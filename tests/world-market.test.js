@@ -28,7 +28,11 @@ async function main(){try{
  assert.equal(rows().length,26);assert.equal(d.querySelectorAll('.pl.nfs').length,11);
  assert.match(d.querySelector('.squad-note').textContent,/סגל מלא: 26 שחקנים/);
  const star=w.eval("G.world.laliga.clubs.find(c=>c.name==='ריאל מדריד').players.find(p=>p.nfs).id");
- w.eval(`G.wk=0;startNegotiation(${star})`);assert.equal(w.eval(`(G.negs||[]).filter(n=>n.pid===${star}).length`),0,'core players cannot be negotiated');
+ // a core player is not for sale: a market-value offer is refused outright, an exceptional one (≈2.5× value, tier 1) opens talks
+ const r=JSON.parse(w.eval(`(()=>{G.wk=0;me().money=5e9;startNegotiation(${star});closeModal();const n=G.negs.find(n=>n.pid===${star});const p=findWorldPlayer(${star}).p;const mv=marketValue(p);
+  submitClubOffer(n.id,mv,1,0);const s1=n.stage;submitClubOffer(n.id,n.ask,1,0);return JSON.stringify({nfs:n.nfs,ask:n.ask,mv,s1,s2:n.stage,log:n.log})})()`));
+ assert.ok(r.nfs);assert.ok(r.ask>=r.mv*2.5,'core asking price is exceptional: '+r.ask+' vs '+r.mv);assert.equal(r.s1,'club','market value is refused');assert.equal(r.s2,'player','the exceptional offer convinces the club');
+ w.eval("G.negs=[]");
  d.querySelector('[data-wav="buy"]').click();assert.equal(rows().length,15);assert.ok(d.querySelector('.mchips').textContent.includes('זמינים לרכישה'));
  d.querySelector('[data-fclear="all"]').click();
  // price sort, both directions

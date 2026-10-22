@@ -143,15 +143,17 @@ const ROLE_HE={starter:'שחקן הרכב',rotation:'רוטציה',prospect:'ע�
 function sellerClub(pid){const f=findWorldPlayer(pid);if(f)return f;for(const c of [...G.clubs,...G.leumit]){if(c.id===G.me)continue;const p=c.players.find(x=>x.id===pid);if(p&&!p.loanOut)return {p,c:c}}return null}
 function askingFor(p,sc){const c=sc;let ask=marketValue(p)*1.15;
   const top=c.players.slice().sort(byOvr).slice(0,c.world?3:11).map(x=>x.id);const key=top.includes(p.id)||p.key;if(key)ask*=c.world&&c.tier===1?1.9:1.45;
+  // a core player the club does not want to sell (p.nfs) only moves for an offer that makes it worth their while
+  if(p.nfs)ask*=c.tier===1?2.4:1.9;
   if(p.contract<=1)ask*=.7;if(p.age>=32)ask*=.8;if(p.age<=21&&p.pot-p.ovr>=8)ask*=1.25;
   if(c.needCash==null)c.needCash=Math.random()<.3;if(c.needCash)ask*=.85;
   return {ask:Math.round(ask/5e4)*5e4,key};
 }
 function offerEffective(o){return o.fee*(o.inst===1?1:o.inst===2?.95:.9)*(1+(o.sellon||0)/200)}
-function startNegotiation(pid){const c=me();if(!WINDOW(G.wk))return toast('חלון ההעברות סגור');const f=sellerClub(pid);if(!f)return;if(f.p.nfs)return toast('השחקן בסגל הבכיר של המועדון ואינו עומד למכירה');
+function startNegotiation(pid){const c=me();if(!WINDOW(G.wk))return toast('חלון ההעברות סגור');const f=sellerClub(pid);if(!f)return;
   if(c.players.length>=30)return toast('הסגל מלא (30)');
   G.negs=G.negs||[];let n=G.negs.find(x=>x.pid===pid&&x.stage!=='dead'&&x.stage!=='done');
-  if(!n){const {ask,key}=askingFor(f.p,f.c);n={id:uid++,pid,club:f.c.id,stage:'club',rounds:0,prounds:0,ask,key,patience:3,log:[],wk:G.wk,s:G.season,offer:{fee:Math.round(marketValue(f.p)/1e5)*1e5,inst:1,sellon:0},pofffer:null};G.negs.unshift(n)}
+  if(!n){const {ask,key}=askingFor(f.p,f.c);n={id:uid++,pid,club:f.c.id,stage:'club',rounds:0,prounds:0,ask,key,nfs:!!f.p.nfs,patience:f.p.nfs?2:3,log:f.p.nfs?[`${f.c.short}: "${fullName(f.p)} לא למכירה. אם תרצו לשכנע אותנו, תצטרכו הצעה חריגה."`]:[],wk:G.wk,s:G.season,offer:{fee:Math.round(marketValue(f.p)/1e5)*1e5,inst:1,sellon:0},pofffer:null};G.negs.unshift(n)}
   closeModal();negModal(n.id)}
 function negById(id){return (G.negs||[]).find(x=>x.id===id)}
 function submitClubOffer(nid,fee,inst,sellon){
@@ -160,7 +162,8 @@ function submitClubOffer(nid,fee,inst,sellon){
   const upfront=inst===1?fee:Math.round(fee/inst);if(c.money<upfront){n.log.push(`אין לך ${NIS(upfront)} לתשלום הראשון`);n.rounds--;return}
   const eff=offerEffective(n.offer);const ratio=eff/n.ask;const noise=rnd(-.04,.04);const structF=o=>(o.inst===1?1:o.inst===2?.95:.9)*(1+(o.sellon||0)/200);
   const meetsCounter=n.counter&&eff>=n.counter*structF(n.counterStruct||{inst:1,sellon:0})-1;
-  if(n.key&&sc.world&&sc.tier===1&&ratio<1.6){n.log.push(`${sc.short}: "הוא לא למכירה בסכום כזה."`);n.patience--;}
+  if(n.nfs&&ratio+noise<1){n.patience--;n.log.push(`${sc.short}: "${ratio>=.8?'מתקרבים, אבל אנחנו לא חייבים למכור. '+NIS(n.ask)+' ומטה לא נשקול.':'הוא לא למכירה. הצעה כזאת לא פותחת דיון.'}"`);}
+  else if(n.key&&sc.world&&sc.tier===1&&ratio<1.6&&!n.nfs){n.log.push(`${sc.short}: "הוא לא למכירה בסכום כזה."`);n.patience--;}
   else if(meetsCounter||ratio+noise>=.95){n.stage='player';n.log.push(`${sc.short} קיבלה את ההצעה: ${NIS(fee)}${inst>1?` ב-${inst} תשלומים`:''}${sellon?` + ${sellon}% ממכירה עתידית`:''}.`);n.pdemand=playerDemand(p,c,sc);n.poffer={wage:n.pdemand.wage,years:n.pdemand.years,role:n.pdemand.role,bonus:n.pdemand.bonus};n.ppatience=2;
     if(Math.random()<.12&&!n.rival){n.rival=true;n.log.push('שמועה: עוד מועדון התעניין, השחקן ידרוש יותר.')}}
   else if(ratio>=.62){const concession=Math.min(.12,.04*n.rounds);const counter=Math.ceil(n.ask*(1-concession)/structF(n.offer)/5e4)*5e4;n.counter=n.rival?Math.max(counter,n.rival.fee):counter;n.counterStruct={inst,sellon};n.patience--;
@@ -243,7 +246,7 @@ function viewWorld(){
   const ws=worldSort==='price'?'price-asc':worldSort;
   pool.sort((a,b)=>ws==='ovr'?(isKnown(b.p)?b.p.ovr:b.p.est)-(isKnown(a.p)?a.p.ovr:a.p.est):ws==='price-asc'?marketValue(a.p)-marketValue(b.p):ws==='price-desc'?marketValue(b.p)-marketValue(a.p):a.p.age-b.p.age);
   const scoutHere=(G.scouts||[]).some(s=>REGIONS[s.region].leagues.includes(worldLg));
-  const sq=club&&club.realSquad?(()=>{const n=club.players.length,nfs=club.players.filter(p=>p.nfs).length;return `<div class="squad-note"><b>${esc(club.name)} · סגל מלא: <bdi>${n}</bdi> שחקנים</b><span><bdi>${n-nfs}</bdi> זמינים לרכישה · <bdi>${nfs}</bdi> בסגל הבכיר ולא למכירה</span></div>`})():club?`<div class="squad-note"><b>${esc(club.name)}</b><span class="muted">רשימת העברות (אין למועדון הזה נתוני סגל אמיתיים)</span></div>`:'';
+  const sq=club&&club.realSquad?(()=>{const n=club.players.length,nfs=club.players.filter(p=>p.nfs).length;return `<div class="squad-note"><b>${esc(club.name)} · סגל מלא: <bdi>${n}</bdi> שחקנים</b><span><bdi>${n-nfs}</bdi> זמינים לרכישה · <bdi>${nfs}</bdi> בסגל הבכיר ולא למכירה (רק הצעה חריגה תשכנע)</span></div>`})():club?`<div class="squad-note"><b>${esc(club.name)}</b><span class="muted">רשימת העברות (אין למועדון הזה נתוני סגל אמיתיים)</span></div>`:'';
   const chips=activeChips([...(club?[[`מועדון: ${club.name}`,'club']]:[]),...(marketSearch?[[`שם: ${marketSearch}`,'search']]:[]),...(worldPos!=='all'?[[`עמדה: ${POSHE[worldPos]}`,'pos']]:[]),...(mktAge!=='all'?[[mktAge==='young'?'גיל: עד 23':'גיל: 29+','age']]:[]),...(worldAvail!=='all'?[[worldAvail==='buy'?'זמינים לרכישה':'לא למכירה','avail']]:[]),...(worldNat!=='all'?[[`לאום: ${worldNat}`,'nat']]:[]),...(marketPrice!=='all'?[[priceChipLabel(),'price']]:[])]);
   return `<div class="card">${marketTabs('world')}${tabs}
   <div class="row between wrap"><h3 class="sec">${L.flag} ${esc(L.name)}</h3><span class="tag ${scoutHere?'good':''}">${scoutHere?'יש לך סקאוט באזור':'אין סקאוט באזור'}</span></div>
@@ -300,7 +303,7 @@ function playerModalAny(pid){
   ${known?attrBars(p,false)+dossierHTML(p,sc,false):`${attrBars(p,true)}<div class="small muted" style="text-align:center;margin-top:4px">דירוג משוער ${p.kn===1?'~'+p.est:lo+'–'+hi}. ${p.kn===1?'הסקאוט לא בטוח במספר המדויק.':'שלח סקאוט כדי לראות דירוג, פוטנציאל ומאפיינים.'}</div>`}
   <dl class="kv" style="margin-top:10px">${known?`<dt>פוטנציאל</dt><dd class="num">${p.pot}</dd>`:''}<dt>שווי שוק</dt><dd class="num">${known?NIS(marketValue(p)):'~'+NIS(marketValue(p))}</dd><dt>שכר נוכחי</dt><dd class="num">${NIS(Math.round(playerWage(p)*(p.wmult||1)))}/שבוע</dd><dt>חוזה</dt><dd>עד ${contractYear(p)}</dd>${p.key?'<dt>מעמד</dt><dd>שחקן מפתח במועדון</dd>':''}</dl>
   ${p.rep?`<div class="small" style="margin-top:10px;padding:8px 10px;border-radius:8px;background:var(--bg2)"><b>דוח סקאוט (${esc(p.rep.by)}):</b> ${esc(p.rep.txt)}</div>`:''}
-  ${p.nfs?`<div class="small nfs-note" style="margin-top:10px">${esc(sc.name)}: ${esc(fullName(p))} בסגל הבכיר של המועדון ואינו עומד למכירה.</div>`:''}<div class="actions" style="margin-top:12px">${n?`<button class="btn" data-neg="${n.id}">למשא ומתן</button>`:p.nfs?`<button class="btn" disabled>לא למכירה</button>`:`<button class="btn" data-startneg="${p.id}" ${open&&c.players.length<30?'':'disabled'}>${open?'הגש הצעה':'החלון סגור'}</button>`}${!known&&p.lg?`<button class="btn sec" data-qscout="${p.id}">בדיקת סקאוט · ₪180K</button>`:''}<button class="btn sec" data-close>סגור</button></div>`);
+  ${p.nfs?`<div class="small nfs-note" style="margin-top:10px">${esc(sc.name)}: ${esc(fullName(p))} בסגל הבכיר של המועדון ואינו עומד למכירה. הצעה חריגה (בערך פי ${sc.tier===1?'2.5':'2'} משווי השוק, בלי מיקוח) עשויה לשכנע.</div>`:''}<div class="actions" style="margin-top:12px">${n?`<button class="btn" data-neg="${n.id}">למשא ומתן</button>`:`<button class="btn" data-startneg="${p.id}" ${open&&c.players.length<30?'':'disabled'}>${open?(p.nfs?'הגש הצעה חריגה':'הגש הצעה'):'החלון סגור'}</button>`}${!known&&p.lg?`<button class="btn sec" data-qscout="${p.id}">בדיקת סקאוט · ₪180K</button>`:''}<button class="btn sec" data-close>סגור</button></div>`);
 }
 function negModal(nid){
   const n=negById(nid);if(!n)return;if(n.stage==='club'&&n.loanAsked&&!n.loan&&!n.loanRequest)requestLoan(nid);const c=me();const f=sellerClub(n.pid)||(()=>{const p=c.players.find(x=>x.id===n.pid);return p?{p,c:c}:null})();if(!f)return;const {p,c:sc}=f;
@@ -327,7 +330,7 @@ function negModal(nid){
       ${nn.loanRequest?'<p class="small muted">דמי השאלה לעונה בלבד. השכר מסוכם בנפרד; אופציית רכישה אינה משולמת עכשיו.</p>':`<div class="row wrap" style="margin-top:8px"><label class="small">מבנה <select id="inst"><option value="1" ${nn.offer.inst===1?'selected':''}>מזומן</option><option value="2" ${nn.offer.inst===2?'selected':''}>2 תשלומים (−5% ערך)</option><option value="3" ${nn.offer.inst===3?'selected':''}>3 תשלומים (−10% ערך)</option></select></label>
       <label class="small">אחוז ממכירה עתידית <select id="sellon"><option value="0" ${!nn.offer.sellon?'selected':''}>0%</option><option value="10" ${nn.offer.sellon===10?'selected':''}>10% (+5% ערך)</option><option value="20" ${nn.offer.sellon===20?'selected':''}>20% (+10% ערך)</option></select></label></div>`}
       ${(nn.loanRequest?nn.loanCounter:nn.counter)?`<div class="small" style="margin-top:6px">הצעה נגדית של המועדון: <b class="num">${NIS(nn.loanRequest?nn.loanCounter:nn.counter)}</b> <button class="btn sm sec" id="useCounter">קבל את הסכום</button></div>`:''}
-      <div class="muted tiny" style="margin-top:6px">${nn.loanRequest?`דמי השאלה מבוקשים: ${NIS(nn.loanAsk)} (כ־10% משווי השחקן).`:known?`הערכה: המועדון מצפה לכ-${NIS(Math.round(nn.ask*.95/1e5)*1e5)}–${NIS(nn.ask)}.`:'בלי דוח סקאוט קשה לדעת כמה הם מצפים.'}</div>
+      <div class="muted tiny" style="margin-top:6px">${nn.loanRequest?`דמי השאלה מבוקשים: ${NIS(nn.loanAsk)} (כ־10% משווי השחקן).`:nn.nfs?`השחקן לא למכירה: המועדון לא יתמקח ויסגור את הדלת אחרי ${nn.patience} סבבים. ${known?'הערכה: רק הצעה מעל '+NIS(nn.ask)+' תשכנע.':'בלי דוח סקאוט קשה להעריך כמה צריך להציע.'}`:known?`הערכה: המועדון מצפה לכ-${NIS(Math.round(nn.ask*.95/1e5)*1e5)}–${NIS(nn.ask)}.`:'בלי דוח סקאוט קשה לדעת כמה הם מצפים.'}</div>
       <div class="actions" style="margin-top:10px"><button class="btn" id="sendClub" ${nn.loanRequest&&nn.loanRefused?'disabled':''}>${nn.loanRequest?'שלח הצעת השאלה':'שלח הצעת רכישה'}</button>${nn.loanRequest?'<button class="btn sec" id="switchPurchase">עבור לרכישה</button>':marketValue(p)<=25e6?`<button class="btn sec" id="askLoan" style="flex:0 0 auto">בקש השאלה</button>`:''}<button class="btn sec" data-close>סגור</button></div>`;
     }else if(nn.stage==='player'){
       const dm=nn.pdemand;const po=nn.poffer;const interest=playerInterest(p,c,po,nn);
