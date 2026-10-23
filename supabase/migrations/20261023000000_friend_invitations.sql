@@ -61,9 +61,7 @@ begin
  end if;
  if exists(select 1 from public.mp_members where room_id=r.id and club_key=k) then raise exception 'club_taken'; end if;
  if (select count(*) from public.mp_members where room_id=r.id)>=2 then raise exception 'room_full'; end if;
- -- Never silently remove overlapping players imported from independent careers.
- if exists(select 1 from public.mp_members m, jsonb_array_elements(m.snapshot->'club'->'players') a, jsonb_array_elements(p_snapshot->'club'->'players') b
-   where m.room_id=r.id and coalesce(a->>'networkIdentity','')<>'' and a->>'networkIdentity'=b->>'networkIdentity') then raise exception 'roster_conflict'; end if;
+ -- Rosters are independent per (room_id, owner_id). Shared real-player identities are allowed.
  insert into public.mp_members values(r.id,auth.uid(),p_snapshot->>'careerId',k,p_snapshot);
  return jsonb_build_object('id',r.id);
 end $$;

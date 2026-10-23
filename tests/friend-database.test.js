@@ -6,10 +6,10 @@ const {PGlite}=require('@electric-sql/pglite'),fs=require('fs'),assert=require('
  await user(1);const a=snap('מכבי תל אביב','host');const room=await rpc('mp_create_room',a);assert.ok(room.invitation);
  await assert.rejects(()=>db.query('select * from public.mp_members'),/permission denied/);
  await user(2);await assert.rejects(()=>rpc('mp_join_room',room.invitation,snap('מכבי תל אביב','guest')),/club_taken/);
- const overlap=snap('ברצלונה','other');overlap.club.players[0].networkIdentity='host0';await assert.rejects(()=>rpc('mp_join_room',room.invitation,overlap),/roster_conflict/);
+
  await assert.rejects(()=>rpc('mp_get_room',room.id),/not_a_member/);
- const b=snap('ברצלונה','guest');await rpc('mp_join_room',room.invitation,b);await rpc('mp_join_room',room.invitation,b);const joined=await rpc('mp_get_room',room.id);assert.equal(joined.members.length,2);assert.equal(joined.members.filter(m=>m.mine).length,1);
+ const b=snap('ברצלונה','guest');b.club.players[0].networkIdentity='host0';b.club.players[0].wage=12345;await rpc('mp_join_room',room.invitation,b);await rpc('mp_join_room',room.invitation,b);const joined=await rpc('mp_get_room',room.id);assert.equal(joined.members.length,2);assert.equal(joined.members.filter(m=>m.mine).length,1);
  await user(3);await assert.rejects(()=>rpc('mp_join_room',room.invitation,snap('ליברפול','third')),/room_full/);
  await db.exec('reset role');const data=(await db.query('select snapshot from public.mp_members order by owner_id')).rows;assert.deepEqual(data.map(x=>x.snapshot),[a,b]);await db.exec("update public.mp_rooms set expires_at=now()-interval '1 second'");await db.exec('set role anon');await assert.rejects(()=>rpc('mp_preview_invitation',room.invitation),/invitation_expired/);await assert.rejects(()=>rpc('mp_create_room',a),/permission denied/);
- console.log('database: SQL executed; grants, unique clubs, two-member capacity, idempotent join, roster overlap, snapshot preservation and expiry passed; errors []');
+ console.log('database: SQL executed; grants, unique clubs, two-member capacity, idempotent join, independent overlapping player copies, snapshot preservation and expiry passed; errors []');
  }finally{await db.close()}})().catch(e=>{console.error(e);process.exitCode=1});
