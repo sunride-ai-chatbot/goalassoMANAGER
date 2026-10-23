@@ -232,7 +232,7 @@ function foreignBuyerFor(p){const lg=p.ovr>=76?pick(['epl','laliga','bundes','se
 
 /* ---- UI: market world tab ---- */
 let worldLg='champ',worldPos='all',worldClubId=null,worldSort='ovr',mktAge='all';
-function viewWorld(){
+function viewWorld(){if(mpIsOn())return mpNoMarketHTML();
   const c=me();const open=WINDOW(G.wk);const L=WORLD_LEAGUES[worldLg];ensureWorldLeague(worldLg);const clubs=G.world[worldLg].clubs;
   if(worldClubId&&!clubs.some(cl=>cl.id===worldClubId))worldClubId=null;const club=worldClubId?clubs.find(cl=>cl.id===worldClubId):null;
   const tabs=`<div class="tabs" style="margin-bottom:8px">${Object.keys(WORLD_LEAGUES).map(k=>`<button data-wl="${k}" class="${worldLg===k?'on':''}">${WORLD_LEAGUES[k].flag} ${WORLD_LEAGUES[k].name}</button>`).join('')}</div>`;

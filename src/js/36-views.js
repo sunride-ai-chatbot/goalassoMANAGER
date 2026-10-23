@@ -117,7 +117,7 @@ function viewLineup(){
   let html=`<div class="cinematic-lineup">
   ${stadiumFieldHTML(c,slots,lay,ps,selSlot)}
   <section class="cine-dock" aria-label="ספסל מחליפים"><h3>ספסל מחליפים · ${quickBench.length}</h3><p class="cine-hint" role="status">${selSlot!=null?`<strong>${ps[selSlot]?esc(fullName(ps[selSlot])):POSHE[slots[selSlot]]}</strong> נבחר · בחר מחליף`:selPid!=null?'בחר עמדה במגרש לשחקן שבחרת':'לחץ על שחקן במגרש ובחר לו מחליף'}</p><div class="cine-bench">${quickBench.map(p=>`<button type="button" class="cine-sub ${selPid===p.id?'sel':''}" data-bench="${p.id}" ${p.inj||p.susp?'disabled':''} aria-pressed="${selPid===p.id}" aria-label="${esc(fullName(p))}, ${POSHE[p.pos]}, דירוג ${p.ovr}${p.inj?', פצוע':p.susp?', מורחק':''}"><bdi class="cine-sub-rating">${p.ovr}</bdi><bdi class="cine-sub-pos">${POSB[p.pos]}</bdi><span class="cine-portrait">${playerPortraitHTML(p,c,'bench'+p.id)}</span><span class="cine-sub-name">${esc(fullName(p))}${p.inj?' · פצוע':p.susp?' · מורחק':''}</span></button>`).join('')||'<span class="muted small">כל השחקנים בהרכב</span>'}</div></section>
-  <div class="cine-actions">${nm?'<button class="btn" id="playBtn">למשחק</button>':''}<button class="btn sec" id="autoBtn">הרכב אוטומטי</button></div>
+  <div class="cine-actions">${nm&&!mpIsOn()?'<button class="btn" id="playBtn">למשחק</button>':''}${mpIsOn()?'<button class="btn" data-view-home="1">חזרה לבית · "מוכן"</button>':''}<button class="btn sec" id="autoBtn">הרכב אוטומטי</button></div>
   ${probs.length?`<div class="cine-status">${probs.map(esc).join(' · ')}</div>`:''}
   ${sponsorName(c)?`<div class="cine-sponsor">${sponsorLogoHTML(c.sponsor,'compact')}ספונסר החולצה <b>${esc(sponsorName(c))}</b></div>`:''}
   <details class="cine-details" id="cineTactics" ${selP?'open':''}><summary>טקטיקה והכנה למשחק</summary>
@@ -132,7 +132,7 @@ function viewLineup(){
   ${probs.length?`<div class="small" style="color:var(--warn)">⚠ ${probs.map(esc).join(' · ')}</div>`:''}
   <div class="row between wrap" style="margin-top:6px"><span class="small"><span class="tag cap">C</span> קפטן: <b>${capP?esc(fullName(capP)):'—'}</b>${capP&&!inXI.has(capP.id)?' <span class="muted tiny">(לא בהרכב)</span>':''}</span>${selP&&!isCaptain(c,selP)?`<button class="btn sm sec" data-captain="${selP.id}">מנה את ${esc(selP.last||selP.first)} לקפטן</button>`:''}</div>
 
-  <div class="actions" style="margin-top:10px"><button class="btn sec" id="clearBtn">רוקן הרכב</button>${nm?'<button class="btn sec" id="skipBtn">תוצאה מיידית</button>':''}</div>
+  <div class="actions" style="margin-top:10px"><button class="btn sec" id="clearBtn">רוקן הרכב</button>${nm&&!mpIsOn()?'<button class="btn sec" id="skipBtn">תוצאה מיידית</button>':''}</div>
   ${opp?analystReportHTML(c,opp,nm):''}${chemCardHTML(c)}</div></details>
   <details class="cine-details"><summary>הסגל המלא · כושר ותפקידים</summary>
     <div class="card"><div class="row between"><h3 class="sec">ספסל · ${benchOk.length}</h3>${selSlot!=null?`<span class="tag info">מחפשים ${POSHE[slots[selSlot]]}</span>`:''}</div>
@@ -244,7 +244,7 @@ function clearMarketFilter(k){const world=marketTab==='world';const all=k==='all
   if(world){if(all||k==='nat')worldNat='all';if(all||k==='pos')worldPos='all';if(all||k==='age')mktAge='all';if(all||k==='club')worldClubId=null;if(all||k==='avail')worldAvail='all'}
   else{if(all||k==='nat')marketNat='all';if(all||k==='pos')marketPos='all';if(all||k==='cat')marketCategory='all'}
   render()}
-function viewMarket(){
+function viewMarket(){if(mpIsOn())return mpNoMarketHTML();
   if(marketTab==='free')return viewFreeAgents();
   if(marketTab==='world')return viewWorld();
   if(marketTab==='scout')return viewScouting();
@@ -377,6 +377,8 @@ function bind(){
   m.onclick=e=>{
     const t=e.target;if(!t.closest('.msearch'))closeMarketSuggest();
     const id=t.id||t.closest('button')?.id;
+    const mpb=t.closest('[data-mpa]');if(mpb)return mpUiAction(mpb.dataset.mpa,mpb);if(t.closest('[data-view-home]')){G.view='home';return render()}
+    if(mpIsOn()&&(id==='playBtn'||id==='skipBtn'||id==='simNext'))return toast('במשחק רשת השבוע רץ כששני המאמנים לוחצים "מוכן"');
     if(id==='playBtn'){const nm=myNextMatch();if(nm&&G.view==='lineup'){const M0={h:nm.h.id,a:(nm.a||nm.h).id,ctx:{kind:nm.kind,stage:currentEvent()&&currentEvent().s||currentEvent().stage}};return runPress('pre',M0,()=>startLive())}return startLive()}
     if(id==='skipBtn')return playInstant();
     const bo=t.closest('[data-board]');if(bo)return chooseBoard(bo.dataset.board);

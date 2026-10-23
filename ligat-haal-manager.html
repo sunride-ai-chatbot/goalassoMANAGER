@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="d08603f80e5d">
+<meta name="goalasso-build" content="738e415f7f8e">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -839,6 +839,13 @@ h3.sec:not(.btn){font-size:24px}
 .vols label{display:flex;align-items:center;gap:10px}
 .vols label span{min-width:64px}
 .vols input[type=range]{flex:1;accent-color:var(--gold)}
+/* multiplayer cards */
+.card.mp{border-color:rgba(198,242,78,.35)}
+.mpm{display:flex;align-items:center;gap:10px;padding:8px 10px;margin-top:8px;border-radius:10px;background:var(--bg2);border:1px solid var(--line)}
+.mpm b{flex:0 0 auto}.mpm small{flex:1;color:var(--muted);min-width:0}
+.mpm.ready{border-color:rgba(198,242,78,.5)}
+.mpm.muted{justify-content:center;color:var(--muted)}
+.card.mp input,.card.mp select{min-height:44px;font-size:16px}
 /* One logo treatment across the commercial screens, kits and press backdrops. */
 .sponsor-logo{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:min(240px,100%);height:88px;padding:10px 14px;background:var(--sponsor-bg,#f8fafc);border-radius:12px;box-sizing:border-box;overflow:hidden;margin:8px 0 12px;color:#172033}
 .sponsor-logo img{display:block;max-width:100%;width:100%;height:100%;object-fit:contain}
@@ -1265,8 +1272,10 @@ function fixedLineup(c){const slots=slotsFor(c.formation);const ps=lineupPlayers
 function autoLineups(){[...G.clubs,...G.leumit].forEach(c=>c.xi=bestXI(c).map(p=>p.id));const c=me();if(c)ensureLineup(c)}
 
 /* ====================== MATCH ENGINE (minute by minute) ====================== */
+/* a club run by a person: the user, or (on the multiplayer host while it simulates a week) the other human's club */
+function isHumanClub(id){return id===G.me||!!(typeof MP!=='undefined'&&MP.capture&&MP.capture.has(id))}
 function createMatch(h,a,ctx){
-  const mk=c=>c.id===G.me?fixedLineup(c).map(e=>({pid:e.pid,slot:e.slot,since:0,yel:0})):bestXI(c).map(p=>({pid:p.id,slot:p.pos,since:0,yel:0}));
+  const mk=c=>isHumanClub(c.id)?fixedLineup(c).map(e=>({pid:e.pid,slot:e.slot,since:0,yel:0})):bestXI(c).map(p=>({pid:p.id,slot:p.pos,since:0,yel:0}));
   const att=(h.league&&!ctx.neutral&&ctx.kind!=='friendly')?attendanceFor(h,a,ctx.kind,ctx.stage):(ctx.neutral?Math.round(28000*rnd(.7,1)):0);
   const boost={};if(G.mentalBoost&&(h.id===G.me||a.id===G.me)){boost[G.me]=(boost[G.me]||0)+G.mentalBoost;G.mentalBoost=0}if(G.nextBoost&&(G.nextBoost.team===h.id||G.nextBoost.team===a.id)&&(h.id===G.me||a.id===G.me)){boost[G.nextBoost.team]=G.nextBoost.v;G.nextBoost=null}
   const M0={h:h.id,a:a.id,ctx,m:0,gh:0,ga:0,ev:[],xi:{[h.id]:mk(h),[a.id]:mk(a)},subs:{[h.id]:0,[a.id]:0},used:{[h.id]:[],[a.id]:[]},mins:{[h.id]:{},[a.id]:{}},shots:{[h.id]:0,[a.id]:0},poss:{[h.id]:0,[a.id]:0},passes:{[h.id]:0,[a.id]:0},pm:[],ps:{[h.id]:{},[a.id]:{}},seed:(Math.random()*1e9)|0,att,boost,done:false,half:false,pens:null};
@@ -1279,13 +1288,13 @@ function createMatch(h,a,ctx){
 function aiRoleFor(p){const at=attrs(p);if(p.pos==='FW')return at[5]>=at[0]+6?'target':at[3]>=at[1]+4?'false9':'poach';
   if(p.pos==='MF')return at[2]>=at[4]+10&&at[2]>=66?'play':at[0]>=68&&at[3]>=66?'winger':at[4]>=at[2]+4?'anchor':'b2b';
   if(p.pos==='DF')return at[0]>=68&&at[3]>=62?'wingback':at[2]>=at[4]-2?'ball':'stopper';return at[0]>=62?'sweep':'stop'}
-function aiPrepare(M,h,a){for(const c of [h,a]){if(c.id===G.me)continue;for(const {p} of xiPlayers(M,c))if(!p.roleT)p.roleT=aiRoleFor(p);}
+function aiPrepare(M,h,a){for(const c of [h,a]){if(isHumanClub(c.id))continue;for(const {p} of xiPlayers(M,c))if(!p.roleT)p.roleT=aiRoleFor(p);}
   const sh=xiStrength(M,h),sa=xiStrength(M,a);M.liveMent=M.liveMent||{};
-  for(const [c,me0,op,home] of [[h,sh,sa,true],[a,sa,sh,false]]){if(c.id===G.me)continue;const d=me0-op+(home?1.5:-1.5);
+  for(const [c,me0,op,home] of [[h,sh,sa,true],[a,sa,sh,false]]){if(isHumanClub(c.id))continue;const d=me0-op+(home?1.5:-1.5);
     M.liveMent[c.id]=d>=5?'att':d<=-5?'def':(c.mentality||'bal')}}
 function xiPlayers(M,c){return M.xi[c.id].map(e=>({p:c.players.find(x=>x.id===e.pid),e})).filter(x=>x.p)}
 function slotPenalty(p,slot){if(!slot||slot===p.pos)return 0;if(p.pos2&&slot===p.pos2)return 1;if(slot==='GK'||p.pos==='GK')return 18;if((slot==='DF'&&p.pos==='FW')||(slot==='FW'&&p.pos==='DF'))return 7;return 4}
-function xiStrength(M,c){const xs=xiPlayers(M,c);if(!xs.length)return 35;const s=xs.reduce((t,{p,e})=>t+effOvr(p)-slotPenalty(p,e.slot)-minuteFatigue(M,p,e),0)/xs.length;const capP=c.captain&&xs.find(x=>x.p.id===c.captain);const cap=capP?(capP.p.pers==='leader'?1.2:.6):0;const boost=(M.boost&&M.boost[c.id])||0;let calm=0;if(c.id===G.me){calm+=chemBonus(c,M)}
+function xiStrength(M,c){const xs=xiPlayers(M,c);if(!xs.length)return 35;const s=xs.reduce((t,{p,e})=>t+effOvr(p)-slotPenalty(p,e.slot)-minuteFatigue(M,p,e),0)/xs.length;const capP=c.captain&&xs.find(x=>x.p.id===c.captain);const cap=capP?(capP.p.pers==='leader'?1.2:.6):0;const boost=(M.boost&&M.boost[c.id])||0;let calm=0;if(isHumanClub(c.id)){calm+=chemBonus(c,M)}
   // mental programme: a bonus in big matches, on top of chemistry (it used to replace it)
   if(c.id===G.me&&mentalActive()){if(M.bigC==null){try{M.bigC=isBigMatch(M)?1:0}catch(e){M.bigC=0}}calm+=M.bigC*.35}
   // training plan: tactical familiarity and opponent preparation reach the match (they were display-only before)
@@ -1357,6 +1366,7 @@ function matchRatings(M,h,a){
       if(min<20)r=6+(r-6)*.5;s.r=+clamp(r,3,10).toFixed(1);out[pid]=s}}
   M.ratings=out;return out}
 function stepMinute(M){
+  if(M.playback)return mpPlaybackStep(M); /* multiplayer: replay a recorded match, no simulation */
   const h=club(M.h),a=club(M.a);M.m++;
   if(M.m===1||M.m%15===0||M.tadjDirty){M.tadj=tacticAdj(M,h,a);M.tadjDirty=false;if(M.tadj.notes.length&&M.live&&!M.tadjNoted){M.tadjNoted=true;M.ev.push({m:M.m,t:'note',team:G.me,txt:M.tadj.notes[0]})}}
   const sh=xiStrength(M,h),sa=xiStrength(M,a);M.units={[h.id]:unitStrength(M,h),[a.id]:unitStrength(M,a)};const [lh,la]=expGoals(sh,sa,M.ctx.neutral,h,a,M);
@@ -1428,7 +1438,7 @@ function doSub(M,c,outId,inId){
   M.ev.push({m:M.m,t:'sub',team:c.id,name:fullName(inP),out:outP?fullName(outP):null,outPid:outId||null});
   return true;
 }
-function runInstant(M){while(!M.done)stepMinute(M);return M}
+function runInstant(M){while(!M.done)stepMinute(M);if(typeof MP!=='undefined'&&MP.capture&&(MP.capture.has(M.h)||MP.capture.has(M.a)))MP.captured.push(M);return M}
 function decidePens(M){const h=club(M.h),a=club(M.a);const sh=xiStrength(M,h),sa=xiStrength(M,a);M.pens=Math.random()<.5+(sh-sa)*.02?'h':'a'}
 
 /* ====================== SETTLEMENT ====================== */
@@ -1965,7 +1975,7 @@ function foreignBuyerFor(p){const lg=p.ovr>=76?pick(['epl','laliga','bundes','se
 
 /* ---- UI: market world tab ---- */
 let worldLg='champ',worldPos='all',worldClubId=null,worldSort='ovr',mktAge='all';
-function viewWorld(){
+function viewWorld(){if(mpIsOn())return mpNoMarketHTML();
   const c=me();const open=WINDOW(G.wk);const L=WORLD_LEAGUES[worldLg];ensureWorldLeague(worldLg);const clubs=G.world[worldLg].clubs;
   if(worldClubId&&!clubs.some(cl=>cl.id===worldClubId))worldClubId=null;const club=worldClubId?clubs.find(cl=>cl.id===worldClubId):null;
   const tabs=`<div class="tabs" style="margin-bottom:8px">${Object.keys(WORLD_LEAGUES).map(k=>`<button data-wl="${k}" class="${worldLg===k?'on':''}">${WORLD_LEAGUES[k].flag} ${WORLD_LEAGUES[k].name}</button>`).join('')}</div>`;
@@ -3661,6 +3671,7 @@ function render(){
   closeModal();setTimeout(()=>{try{AdSvc.observe()}catch(e){}},50);if(G&&G.paperPop&&G.paperPop.length&&G.phase==='play')setTimeout(()=>{if(G&&G.view==='home'&&!liveTimer)showPaperPop()},80);
   if(!G){renderStart();return}
   if(G.live&&!G.live.settled){startLive(G.live);return}
+  if(typeof MP!=='undefined'&&MP.watching&&!MP.watching.done&&document.querySelector('.live-view'))return;   // multiplayer playback on screen
   if(typeof AUD!=='undefined'&&AUD.matchOn)crowdStop(1.2);   // any other screen: the stadium fades out
   $('top').classList.remove('hide');renderTop();
   if(G.phase!=='play'){$('nav').classList.add('hide');const v={contract:viewContract,sponsor:viewSponsor,board:viewBoard,seasonEnd:viewSeasonEnd,fired:viewFired}[G.phase];$('main').innerHTML=`<div class="view">${v()}</div>`;bind();return}
@@ -3684,9 +3695,9 @@ function renderStart(){
   <div class="card" style="margin-top:4px"><div class="row between"><h3 class="sec">ליגה לאומית · 16 מועדונים</h3><button class="btn sm sec" id="toggleLeumit">הסתר</button></div><div class="muted small" style="margin-top:4px">התחל מלמטה: תקציב קטן, סגלים מדומים, ויעד אחד: לעלות לליגת העל.</div>
   <div class="grid" id="leumitGrid" style="margin-top:10px">${LEUMIT16.map(t=>`<button class="teamcard" data-pick="${t.id}" style="--c1:${t.c1};--c2:${t.c2}">${kitSVG(t,'lg')}<b>${esc(t.name)}</b><span class="ov num">${t.str}</span><small>${esc(t.stadium)} · ${t.cap.toLocaleString('he')}</small><small>ליגה לאומית</small></button>`).join('')}</div></div>
   ${ranked.some(r=>!openIds.has(r.id))?`<div class="card"><div class="row between"><h3 class="sec">נעולים בתחילת הקריירה</h3><span class="muted tiny">${ranked.filter(r=>!openIds.has(r.id)).length} מועדונים</span></div><div class="muted small" style="margin-top:4px">המועדונים הגדולים לא לוקחים מאמן בלי רזומה. תוצאות טובות מעלות את המוניטין שלך, ואז מגיעות הצעות עבודה באמצע העונה או בסופה.</div><div class="lockrow">${ranked.filter(r=>!openIds.has(r.id)).map(r=>defs.find(t=>t.id===r.id)).map(t=>`<button class="lockchip" data-locked="${t.id}" aria-disabled="true">${kitSVG(t)}<span>${esc((META[t.id]&&META[t.id].short)||t.name)}</span><svg class="lk" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></button>`).join('')}</div></div>`:''}
-  ${migrationNoticeHTML()}${slotsCardHTML()}${cloudBoxHTML()}
+  ${migrationNoticeHTML()}${mpStartHTML()}${slotsCardHTML()}${cloudBoxHTML()}
   <p class="muted tiny" style="text-align:center">GOALASSO מאמן כדורגל · גרסה 2.6 · סגלים ישראליים: וואלה ספורט / footballtransfers · 41 מועדונים אירופיים עם סגלים אמיתיים (footballtransfers) · דירוגים נגזרים משווי השוק</p></div>`;
-  $('main').onclick=e=>{if(e.target.closest('#cloudLoad'))return cloudLoad();const lx=e.target.closest('[data-legacyexport]');if(lx)return exportLegacy(+lx.dataset.legacyexport);const ll=e.target.closest('[data-legacyload]');if(ll)return loadLegacy(+ll.dataset.legacyload);if(e.target.closest('#migrationRetry'))return retryMigration();if(e.target.closest('#toggleLeumit')){const g=$('leumitGrid');g.classList.toggle('hide');e.target.closest('#toggleLeumit').textContent=g.classList.contains('hide')?'הצג':'הסתר';return}const sl=e.target.closest('[data-slotload]');if(sl){const n=+sl.dataset.slotload;setCurSlot(n);G=null;Promise.resolve(load(n)).then(ok=>{if(ok){cloud.meta=null;cloudRefreshMeta()}else toast('הטעינה נכשלה');render()});return}const sd=e.target.closest('[data-slotdel]');if(sd){const n=+sd.dataset.slotdel;openModal(`<h3 class="sec">למחוק את משבצת ${n}?</h3><p class="small muted">הקריירה במשבצת הזו תימחק מהדפדפן. שמירה בענן, אם יש, לא נמחקת כאן.</p><div class="actions"><button class="btn danger" id="slotDelGo">מחק</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#slotDelGo')){deleteSlot(n);closeModal();render()}});return}const ss=e.target.closest('[data-slotsel]');if(ss){setCurSlot(+ss.dataset.slotsel);cloud.meta=null;cloudRefreshMeta();render();return}
+  $('main').onclick=e=>{const mpb=e.target.closest('[data-mpa]');if(mpb)return mpUiAction(mpb.dataset.mpa,mpb);if(e.target.closest('#cloudLoad'))return cloudLoad();const lx=e.target.closest('[data-legacyexport]');if(lx)return exportLegacy(+lx.dataset.legacyexport);const ll=e.target.closest('[data-legacyload]');if(ll)return loadLegacy(+ll.dataset.legacyload);if(e.target.closest('#migrationRetry'))return retryMigration();if(e.target.closest('#toggleLeumit')){const g=$('leumitGrid');g.classList.toggle('hide');e.target.closest('#toggleLeumit').textContent=g.classList.contains('hide')?'הצג':'הסתר';return}const sl=e.target.closest('[data-slotload]');if(sl){const n=+sl.dataset.slotload;setCurSlot(n);G=null;Promise.resolve(load(n)).then(ok=>{if(ok){cloud.meta=null;cloudRefreshMeta()}else toast('הטעינה נכשלה');render()});return}const sd=e.target.closest('[data-slotdel]');if(sd){const n=+sd.dataset.slotdel;openModal(`<h3 class="sec">למחוק את משבצת ${n}?</h3><p class="small muted">הקריירה במשבצת הזו תימחק מהדפדפן. שמירה בענן, אם יש, לא נמחקת כאן.</p><div class="actions"><button class="btn danger" id="slotDelGo">מחק</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#slotDelGo')){deleteSlot(n);closeModal();render()}});return}const ss=e.target.closest('[data-slotsel]');if(ss){setCurSlot(+ss.dataset.slotsel);cloud.meta=null;cloudRefreshMeta();render();return}
     const lk=e.target.closest('[data-locked]');if(lk)return toast('מועדון גדול לא לוקח מאמן בלי רזומה. התחל בליגה הלאומית או בתחתית ליגת העל, והצעות יגיעו.');const b=e.target.closest('[data-pick]');if(b){const n=curSlot();const go=()=>{newGame(b.dataset.pick,$('mgrName')?$('mgrName').value.trim():'');G.slot=n;ensureCareerIdentity(G);save({force:true});render()};if(slotMeta(n)){openModal(`<h3 class="sec">משבצת ${n} תפוסה</h3><p class="small">קריירה חדשה תחליף את השמירה במשבצת ${n}. אפשר לבחור משבצת אחרת למעלה.</p><div class="actions"><button class="btn danger" id="ovGo">החלף</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#ovGo')){closeModal();go()}});return}go()}};
 }
 
@@ -3735,7 +3746,7 @@ function eventCard(){
   const actNegs=(G.negs||[]).filter(n=>n.stage==='club'||n.stage==='player').length;const windowTag=(WINDOW(G.wk)?'<span class="tag good">חלון העברות פתוח</span>':'<span class="tag">חלון סגור</span>')+(actNegs?` <span class="tag info">${actNegs} במו"מ</span>`:'');
   return `<div class="card${nm?' ev-hero':''}"><div class="row between wrap"><h2 class="ev-title">${esc(title)}</h2><div>${windowTag} ${c.euro&&c.euro.stage!=='out'?`<span class="tag info">${COMP_HE[c.euro.comp]}</span>`:''}</div></div>
   <div class="muted tiny">שבוע ${G.wk+1} מתוך ${G.cal.length} · עונת ${seasonLabel()}</div>${body}
-  <div class="actions" style="margin-top:8px">${nm?'<button class="btn big" id="toLineupBtn">לבחירת הרכב ולמשחק</button>':'<button class="btn big" id="playBtn">המשך לשבוע הבא</button><button class="btn sec" id="simNext" style="flex:0 0 auto">עד המשחק הבא</button>'}</div></div>`;
+  <div class="actions" style="margin-top:8px">${mpIsOn()?'<button class="btn sec" id="toLineupBtn">הרכב וטקטיקה</button>':nm?'<button class="btn big" id="toLineupBtn">לבחירת הרכב ולמשחק</button>':'<button class="btn big" id="playBtn">המשך לשבוע הבא</button><button class="btn sec" id="simNext" style="flex:0 0 auto">עד המשחק הבא</button>'}</div></div>${mpIsOn()?mpCardHTML():''}`;
 }
 function viewHome(){
   const c=me();const xi=bestXI(c);const inj=c.players.filter(p=>p.inj||p.susp);const last=G.results.filter(r=>r.h===G.me||r.a===G.me).slice(-5).reverse();
@@ -4248,6 +4259,138 @@ function matchReportModal(r,onClose){const d=openModal(`<h3 class="sec" style="t
 function fxRow(r){const mine=r.h===G.me||r.a===G.me;const idx=G.results.indexOf(r);return `<div class="fx ${mine?'me':''} ${r.ps?'clickable':''}" ${r.ps?`data-rep="${idx}"`:''} title="${r.motm?'שחקן המשחק: '+esc(r.motm.name):''}"><span class="a">${esc(r.hn)}${r.att&&mine?`<span class="muted tiny"> · ${r.att.toLocaleString('he')} צופים</span>`:''}</span><span class="s num">${r.gh}:${r.ga}${r.pens?'<small> פ</small>':''}</span><span class="h">${esc(r.an)}${r.kind!=='league'?` <span class="tag">${r.kind==='cup'?'גביע':r.kind==='euro'?'אירופה':r.kind==='toto'?'טוטו':'ידידות'}</span>`:''}</span></div>`}
 
 
+/* ====================== MULTIPLAYER v1 · two human managers in one league (Supabase) ======================
+   The host's client simulates. Both phones hold the same league state (the usual career JSON); each manager runs his own
+   club between weeks and presses "מוכן", which uploads his commands (formation, lineup, mentality, tactics, plan,
+   roles, captain). When both are ready — or the host's turn timer has expired — the host applies the guest's commands,
+   plays the whole week instantly, records the matches the humans are involved in (minute-by-minute events) and commits
+   the state. Both phones then watch the recordings at the same pace. Nothing here changes single-player code paths:
+   everything is gated on G.mp.
+   Backend: supabase/migrations/20261023120000_multiplayer.sql (tables mp_leagues / mp_members, SECURITY DEFINER
+   functions, Realtime). Only the public URL + anon key reach the client (null from .env or the Pages secrets;
+   localStorage 'goalasso_supabase' = {"url","key"} overrides for testing). */
+const SUPABASE_BUILD_CFG=null;
+const SUPABASE_CFG=(()=>{try{const o=JSON.parse(localStorage.getItem('goalasso_supabase')||'null');if(o&&o.url&&o.key)return o}catch(e){}return window.null||SUPABASE_BUILD_CFG||null})();
+const SUPABASE_JS_URL='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
+const MP={client:null,uid:null,state:'idle',chan:null,poll:null,busy:false,lastSeen:{},err:null,msg:''};
+function mpAvailable(){return !!(SUPABASE_CFG&&SUPABASE_CFG.url&&SUPABASE_CFG.key)}
+function mpLoadLib(){if(window.supabase&&window.supabase.createClient)return Promise.resolve(true);if(MP.libP)return MP.libP;
+  MP.libP=new Promise(res=>{try{const s=document.createElement('script');s.src=SUPABASE_JS_URL;s.async=true;s.crossOrigin='anonymous';s.onload=()=>res(!!(window.supabase&&window.supabase.createClient));s.onerror=()=>res(false);document.head.appendChild(s)}catch(e){res(false)}});return MP.libP}
+/* a client can be injected (tests, or a self-hosted backend) through window.__mpClientFactory */
+async function mpClient(){if(MP.client)return MP.client;if(window.__mpClientFactory){MP.client=await window.__mpClientFactory();return MP.client}
+  if(!mpAvailable()||!(await mpLoadLib()))throw new Error('משחק רשת לא מוגדר בגרסה הזו');
+  MP.client=window.supabase.createClient(SUPABASE_CFG.url,SUPABASE_CFG.key,{auth:{persistSession:true,autoRefreshToken:true},realtime:{params:{eventsPerSecond:5}}});return MP.client}
+async function mpSignIn(){const c=await mpClient();let {data}=await c.auth.getSession();if(!data||!data.session){const r=await c.auth.signInAnonymously();if(r.error)throw r.error;data=r.data}MP.uid=data.session?data.session.user.id:data.user.id;return MP.uid}
+async function mpRpc(fn,args){const c=await mpClient();const {data,error}=await c.rpc(fn,args);if(error)throw new Error(mpErrHe(error.message));return data}
+function mpErrHe(m){m=String(m||'');if(/league not found/.test(m))return 'קוד ההזמנה לא נמצא';if(/full/.test(m))return 'הליגה כבר מלאה';if(/club taken/.test(m))return 'המועדון הזה כבר תפוס';if(/already started/.test(m))return 'הליגה כבר התחילה';if(/stale revision/.test(m))return 'הליגה התקדמה בינתיים, מסנכרן…';if(/not signed in/.test(m))return 'לא מחובר';return m}
+/* ---- state packing: gzip + base64 of the career JSON (same bytes as the local save) ---- */
+async function mpPack(obj){const json=JSON.stringify(obj);const r=await packState(json);if(!r.gz)return 'J'+btoa(unescape(encodeURIComponent(r.data)));let s='';const b=new Uint8Array(r.data);for(let i=0;i<b.length;i+=0x8000)s+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));return 'G'+btoa(s)}
+async function mpUnpack(txt){if(!txt)return null;const kind=txt[0],body=txt.slice(1);if(kind==='J')return JSON.parse(decodeURIComponent(escape(atob(body))));const bin=atob(body);const u=new Uint8Array(bin.length);for(let i=0;i<u.length;i++)u[i]=bin.charCodeAt(i);return JSON.parse(await unpackState({gz:true,data:u}))}
+/* ---- commands: what a manager may change between weeks (whitelisted, applied by the host to the member's club) ---- */
+const MP_TAC_KEYS=['press','width','tempo','style'];
+function mpCommandsFor(c){ensureLineup(c);return {formation:c.formation,lineup:c.lineup.slice(),captain:c.captain||null,mentality:c.mentality||'bal',tac:c.tac?Object.fromEntries(MP_TAC_KEYS.map(k=>[k,c.tac[k]])):null,plan:c.plan?c.plan.slice():null,focus:c.focus,intensity:c.intensity,roles:Object.fromEntries(c.players.filter(p=>p.roleT).map(p=>[p.id,p.roleT])),ticket:c.ticket||null}}
+function mpApplyCommands(c,cmd){if(!c||!cmd)return;const ids=new Set(c.players.map(p=>p.id));
+  if(cmd.formation&&FORMATIONS&&FORMATIONS[cmd.formation]!==undefined||cmd.formation&&typeof slotsFor==='function'&&slotsFor(cmd.formation).length===11)c.formation=cmd.formation;
+  const slots=slotsFor(c.formation);if(Array.isArray(cmd.lineup)&&cmd.lineup.length===slots.length){const seen=new Set();c.lineup=cmd.lineup.map(id=>id!=null&&ids.has(id)&&!seen.has(id)?(seen.add(id),id):null)}else ensureLineup(c);
+  if(cmd.captain&&ids.has(cmd.captain))c.captain=cmd.captain;
+  if(['def','bal','att'].includes(cmd.mentality))c.mentality=cmd.mentality;
+  if(cmd.tac&&typeof cmd.tac==='object'){const t=Object.assign({},tacOf(c));for(const k of MP_TAC_KEYS)if(cmd.tac[k]&&TAC[k]&&TAC[k][cmd.tac[k]])t[k]=cmd.tac[k];c.tac=t}
+  if(Array.isArray(cmd.plan)&&cmd.plan.length===5)c.plan=cmd.plan.slice();if(cmd.focus)c.focus=cmd.focus;if(cmd.intensity)c.intensity=cmd.intensity;
+  if(cmd.roles)for(const [pid,r] of Object.entries(cmd.roles)){const p=c.players.find(x=>x.id===+pid);if(p&&ROLES[p.pos]&&ROLES[p.pos][r])p.roleT=r}
+  if(cmd.ticket)c.ticket=+cmd.ticket;ensureCaptain(c)}
+/* a refresh that arrived while we were busy runs as soon as we are free */
+function mpIdle(){MP.busy=false;if(MP.pending){MP.pending=false;setTimeout(()=>{if(mpIsOn())mpRefresh().catch(()=>{})},0)}}
+/* ---- lifecycle ---- */
+function mpPickSlot(){try{for(let n=1;n<=SLOTS;n++)if(!slotMeta(n)){setCurSlot(n);return n}}catch(e){}return curSlot()}
+function mpIsOn(){return !!(G&&G.mp)}
+function mpIsHost(){return !!(G&&G.mp&&G.mp.host)}
+function mpOnboard(){/* no contract/sponsor/board ceremony in multiplayer: fair defaults for both clubs */
+  for(const cid of [G.mp.clubId,G.mp.oppClub].filter(Boolean)){const c=club(cid);if(!c)continue;if(!c.sponsor&&G.sponsorOffers&&G.sponsorOffers.length){const o=G.sponsorOffers[0];c.sponsor={...o}}}
+  G.phase='play';G.view='home'}
+async function mpCreateLeague(clubId,managerName,leagueName,turnMin){MP.busy=true;try{await mpSignIn();newGame(clubId,managerName||'מנג\'ר');G.mp={clubId,host:true,rev:0,status:'lobby',turnMin:turnMin||1440,members:[]};mpOnboard();G.sponsorOffers=G.sponsorOffers||[];
+    const gz=await mpPack(G);const rows=await mpRpc('mp_create_league',{p_name:leagueName||'',p_club:clubId,p_display:managerName||'',p_state_gz:gz,p_turn_min:turnMin||1440});const r=Array.isArray(rows)?rows[0]:rows;
+    G.mp.league=r.league_id;G.mp.code=r.code;G.slot=mpPickSlot();ensureCareerIdentity(G);await Promise.resolve(save());await mpConnect();render()}catch(e){MP.err=e.message;toast(e.message);throw e}finally{mpIdle()}}
+async function mpJoinLeague(code,clubId,managerName){MP.busy=true;try{await mpSignIn();const rows=await mpRpc('mp_join',{p_code:code,p_club:clubId,p_display:managerName||''});const r=Array.isArray(rows)?rows[0]:rows;
+    const c=await mpClient();const {data:L,error}=await c.from('mp_leagues').select('id,code,status,revision,state_gz,turn_min').eq('id',r.league_id).single();if(error)throw new Error(mpErrHe(error.message));
+    const st=await mpUnpack(L.state_gz);if(!st)throw new Error('אין עדיין מצב ליגה');G=st;hydrateCareer();G.me=r.club_id;G.mp={clubId:r.club_id,host:!!r.is_host,rev:L.revision,status:L.status,league:L.id,code:L.code,turnMin:L.turn_min,members:[]};G.manager=G.manager||{};G.manager.name=managerName||G.manager.name;mpOnboard();
+    G.slot=mpPickSlot();ensureCareerIdentity(G);await Promise.resolve(save());await mpConnect();render()}catch(e){MP.err=e.message;toast(e.message);throw e}finally{mpIdle()}}
+async function mpConnect(){if(!mpIsOn())return;const c=await mpClient();await mpSignIn();await mpRefresh();if(MP.chan){try{c.removeChannel(MP.chan)}catch(e){}}
+  MP.chan=c.channel('mp:'+G.mp.league).on('postgres_changes',{event:'*',schema:'public',table:'mp_leagues',filter:'id=eq.'+G.mp.league},()=>mpRefresh()).on('postgres_changes',{event:'*',schema:'public',table:'mp_members',filter:'league_id=eq.'+G.mp.league},()=>mpRefresh()).subscribe();
+  if(MP.poll)clearInterval(MP.poll);MP.poll=setInterval(()=>{if(mpIsOn())mpRefresh().catch(()=>{})},25000);MP.state='on'}
+function mpDisconnect(){if(MP.chan&&MP.client){try{MP.client.removeChannel(MP.chan)}catch(e){}}MP.chan=null;if(MP.poll)clearInterval(MP.poll);MP.poll=null;MP.state='idle'}
+/* pull league + members; react to a new revision (guest loads state) or to readiness (host simulates) */
+async function mpRefresh(){if(!mpIsOn())return;if(MP.busy){MP.pending=true;return}const c=await mpClient();
+  const [{data:L,error:e1},{data:M,error:e2}]=await Promise.all([c.from('mp_leagues').select('id,code,status,revision,week,season,turn_due,turn_min,state_gz').eq('id',G.mp.league).single(),c.from('mp_members').select('uid,club_id,display_name,is_host,ready_rev,commands,last_seen').eq('league_id',G.mp.league)]);
+  if(e1||e2){MP.err=mpErrHe((e1||e2).message);return}
+  const prevStatus=G.mp.status;G.mp.status=L.status;G.mp.turnDue=L.turn_due;G.mp.turnMin=L.turn_min;G.mp.members=M.map(m=>({uid:m.uid,club:m.club_id,name:m.display_name,host:m.is_host,ready:m.ready_rev>=L.revision,seen:m.last_seen,me:m.uid===MP.uid}));
+  const other=G.mp.members.find(m=>!m.me);G.mp.oppClub=other?other.club:null;G.mp.oppName=other?other.name:null;G.mp.oppOnline=other?(Date.now()-new Date(other.seen).getTime()<90000):false;
+  try{await mpRpc('mp_seen',{p_league:G.mp.league})}catch(e){}
+  if(L.revision>G.mp.rev){await mpLoadRevision(L);return}
+  if(mpIsHost()&&L.status==='play'){const allReady=G.mp.members.length===2&&G.mp.members.every(m=>m.ready);const expired=L.turn_due&&Date.now()>new Date(L.turn_due).getTime();const meReady=G.mp.members.some(m=>m.me&&m.ready);
+    if(allReady||(expired&&meReady)){await mpHostSimulate(L,M);return}}
+  if(MP.watching)return;if(prevStatus!==L.status||G.view==='home')render()}
+async function mpLoadRevision(L){MP.busy=true;try{const st=await mpUnpack(L.state_gz);if(!st)return;const myClub=G.mp.clubId,keep={host:G.mp.host,league:G.mp.league,code:G.mp.code,clubId:myClub,members:G.mp.members,oppClub:G.mp.oppClub,oppName:G.mp.oppName,oppOnline:G.mp.oppOnline,turnMin:L.turn_min,turnDue:L.turn_due};
+    const slot=G.slot,careerId=G.careerId,mgr=G.manager;G=st;hydrateCareer();G.me=myClub;G.mp=Object.assign({},st.mp||{},keep,{rev:L.revision,status:L.status});G.slot=slot;if(careerId)G.careerId=careerId;if(mgr)G.manager=Object.assign({},G.manager||{},{name:mgr.name});
+    G.phase='play';G.view='home';G.live=null;await Promise.resolve(save());
+    const w=G.mp.lastWeek;if(w&&w.rev===L.revision&&w.matches&&w.matches.length&&!G.mp.watched){G.mp.watched=true;mpWatchWeek();return}render()}finally{mpIdle()}}
+/* ---- the host's turn: apply the guest's commands, play the week, record human matches, commit ---- */
+async function mpHostSimulate(L,members){if(MP.busy)return;MP.busy=true;try{
+    const guest=members.find(m=>m.uid!==MP.uid);if(guest){const gc=club(guest.club_id);if(gc){if(guest.ready_rev>=L.revision&&guest.commands&&Object.keys(guest.commands).length)mpApplyCommands(gc,guest.commands);else{ensureLineup(gc)}}}
+    const mine=club(G.mp.clubId);if(mine)ensureLineup(mine);
+    const humans=new Set([G.mp.clubId,guest?guest.club_id:null].filter(Boolean));const before=G.results.length;const wk=G.wk,season=G.season;
+    // play everything instantly; matches with a human side are recorded (events, lineups) for both phones to watch
+    const rec=[];MP.capture=humans;MP.captured=[];const M=advanceWeek();MP.capture=null;if(M){M.live=false;runInstant(M);if(M.ctx.kind!=='league'&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);rec.push(mpRecord(M,wk));afterMyMatch(M)}
+    for(const C of MP.captured)if(!rec.some(x=>x.h===C.h&&x.a===C.a))rec.push(mpRecord(C,wk));MP.captured=[];
+    G.mp.lastWeek={rev:L.revision+1,wk,season,matches:rec};G.mp.watched=false;G.view='home';G.live=null;
+    const done=G.phase!=='play';const gz=await mpPack(G);const rev=await mpRpc('mp_commit',{p_league:G.mp.league,p_from_rev:L.revision,p_state_gz:gz,p_week:G.wk,p_season:G.season,p_done:!!done});
+    G.mp.rev=rev;await Promise.resolve(save());if(rec.length){G.mp.watched=true;mpWatchWeek()}else render()}catch(e){MP.err=e.message;toast(e.message);if(/stale/.test(e.message))await mpRefresh()}finally{mpIdle()}}
+function mpRecord(M,wk){const h=club(M.h),a=club(M.a);let motm=null;try{motm=manOfMatch(M,h,a)}catch(e){}return {h:M.h,a:M.a,gh:M.gh,ga:M.ga,wk:wk==null?G.wk:wk,season:G.season,motm,label:M.ctx.label||'',ctx:{kind:M.ctx.kind,stage:M.ctx.stage,neutral:M.ctx.neutral,label:M.ctx.label},pens:M.pens||null,att:M.att,ev:M.ev.map(e=>Object.assign({},e)),xi:{[M.h]:M.xi0||null,[M.a]:null},subs:M.subs,shots:M.shots,sot:M.sot,poss:M.poss,ratings:M.ratings||null}}
+/* ---- ready / commands ---- */
+async function mpReady(){if(!mpIsOn()||MP.busy)return;const c=club(G.mp.clubId);const cmd=mpCommandsFor(c);MP.busy=true;try{await mpRpc('mp_ready',{p_league:G.mp.league,p_rev:G.mp.rev,p_commands:cmd});G.mp.readySent=G.mp.rev;await Promise.resolve(save());toast('נשלח · ממתינים ליריב')}catch(e){toast(e.message)}finally{mpIdle()}await mpRefresh()}
+async function mpUnready(){if(!mpIsOn()||MP.busy)return;MP.busy=true;try{await mpRpc('mp_ready',{p_league:G.mp.league,p_rev:-1,p_commands:{}});G.mp.readySent=-1}catch(e){toast(e.message)}finally{mpIdle()}await mpRefresh()}
+async function mpStart(){if(!mpIsHost())return;MP.busy=true;try{await mpRpc('mp_start',{p_league:G.mp.league});toast('הליגה התחילה')}catch(e){toast(e.message)}finally{mpIdle()}await mpRefresh()}
+/* ---- watching the recorded matches of the week (both phones, same recording, same pace) ---- */
+function mpPlayback(rec){const h=club(rec.h),a=club(rec.a);if(!h||!a)return null;const mk=c=>bestXI(c).map(p=>({pid:p.id,slot:p.pos,since:0,yel:0}));
+  const M={h:rec.h,a:rec.a,ctx:Object.assign({kind:'league'},rec.ctx||{},{label:rec.label}),m:0,gh:0,ga:0,ev:[],xi:{[rec.h]:mk(h),[rec.a]:mk(a)},subs:{[rec.h]:0,[rec.a]:0},used:{[rec.h]:[],[rec.a]:[]},mins:{[rec.h]:{},[rec.a]:{}},shots:{[rec.h]:0,[rec.a]:0},poss:{[rec.h]:0,[rec.a]:0},passes:{[rec.h]:0,[rec.a]:0},pm:[],ps:{[rec.h]:{},[rec.a]:{}},seed:0,att:rec.att||0,boost:{},done:false,half:false,pens:rec.pens||null,live:true,playback:{ev:rec.ev||[],i:0,final:[rec.gh,rec.ga],shots:rec.shots,sot:rec.sot,poss:rec.poss,wk:rec.wk,motm:rec.motm||null},settled:true,mp:true};return M}
+function mpPlaybackStep(M){const P=M.playback;M.m++;const src=P.ev;while(P.i<src.length&&src[P.i].m<=M.m){const e=src[P.i++];M.ev.push(e);if(e.t==='goal'||e.t==='pen'){if(e.team===M.h)M.gh++;else M.ga++}else if(e.t==='own'){if(e.team===M.h)M.gh++;else M.ga++}if(e.t==='sub'){const xi=M.xi[e.team];const i=xi.findIndex(x=>x.pid===e.outPid);if(i>=0)xi.splice(i,1);const c=club(e.team);const p=c.players.find(x=>fullName(x)===e.name);if(p)xi.push({pid:p.id,slot:p.pos,since:M.m,yel:0})}}
+  if(P.shots){M.shots[M.h]=Math.round(P.shots[M.h]*M.m/90);M.shots[M.a]=Math.round(P.shots[M.a]*M.m/90)}if(P.poss){M.poss[M.h]=Math.round(P.poss[M.h]*M.m/90);M.poss[M.a]=Math.round(P.poss[M.a]*M.m/90)}
+  if(M.m>=90){M.done=true;M.gh=P.final[0];M.ga=P.final[1]}}
+function mpWatchWeek(){const w=G.mp&&G.mp.lastWeek;if(!w||!w.matches.length)return;G.mp.queue=w.matches.filter(r=>r.h===G.me||r.a===G.me);mpWatchNext()}
+function mpWatchNext(){const q=G.mp&&G.mp.queue;if(!q||!q.length){if(G.mp)G.mp.queue=null;MP.watching=null;G.view='home';render();return}const rec=q.shift();const M=mpPlayback(rec);if(!M){mpWatchNext();return}MP.watching=M;startLive(M)}
+/* ---- UI ---- */
+function mpNoMarketHTML(){return `<div class="card"><h3 class="sec">שוק ההעברות · משחק רשת</h3><div class="muted small" style="margin-top:6px">בגרסה הראשונה של משחק הרשת שני המאמנים משחקים עם הסגלים הקיימים, בלי העברות. הרכב, טקטיקה, תפקידים, תוכנית אימונים ומחיר כרטיס נשלחים ליריב בכל "מוכן".</div></div>`}
+
+function mpTurnLeft(){if(!G.mp||!G.mp.turnDue)return '';const ms=new Date(G.mp.turnDue).getTime()-Date.now();if(ms<=0)return 'הזמן נגמר';const m=Math.round(ms/60000);return m>=120?`${Math.round(m/60)} שעות`:`${m} דק'`}
+function mpCardHTML(){if(!mpIsOn())return '';const mp=G.mp;const me0=mp.members.find(m=>m.me),opp=mp.members.find(m=>!m.me);
+  const member=m=>m?`<div class="mpm ${m.ready?'ready':''}"><b>${esc(m.name)}</b><small>${esc(club(m.club)?club(m.club).name:m.club)} · ${m.host?'מזמין':'אורח'} · ${m.me?'אתה':(mp.oppOnline?'מחובר':'לא מחובר')}</small><span class="tag ${m.ready?'good':''}">${m.ready?'מוכן':'מנהל…'}</span></div>`:'<div class="mpm muted">ממתינים לשחקן שני…</div>';
+  const link=location.origin+location.pathname+'?join='+mp.code;
+  if(mp.status==='lobby')return `<div class="card mp"><div class="row between"><h3 class="sec">משחק רשת · לובי</h3><span class="tag info">קוד <bdi>${esc(mp.code)}</bdi></span></div>
+    ${member(me0)}${member(opp)}
+    <div class="muted small" style="margin-top:6px">שלח לחבר את הקוד או את הקישור. הוא נכנס כאורח, בוחר מועדון פנוי, ואתם באותה ליגה.</div>
+    <div class="actions" style="margin-top:8px"><button class="btn sec" data-mpa="copy" data-link="${esc(link)}">העתק קישור</button>${navigator.share?`<button class="btn sec" data-mpa="share" data-link="${esc(link)}">שתף</button>`:''}${mp.host?`<button class="btn" data-mpa="start" ${mp.members.length<2?'disabled':''}>התחל ליגה</button>`:''}<button class="btn sec" data-mpa="leave">יציאה</button></div></div>`;
+  const ready=mp.readySent===mp.rev;const waitMsg=ready?(opp&&opp.ready?'שניכם מוכנים · המזמין מריץ את השבוע':'ממתינים ליריב'):'';
+  return `<div class="card mp"><div class="row between"><h3 class="sec">משחק רשת · שבוע ${G.wk+1}</h3><span class="tag ${mp.oppOnline?'good':''}">${opp?esc(opp.name):'—'} ${mp.oppOnline?'מחובר':'לא מחובר'}</span></div>
+    ${member(me0)}${member(opp)}
+    <div class="muted small" style="margin-top:6px">${mp.host?'כשאתה והיריב מוכנים (או כשהטיימר נגמר) הטלפון שלך מריץ את השבוע ושולח לשניכם.':'המזמין מריץ את השבוע כששניכם מוכנים.'} זמן לתור: <bdi>${mpTurnLeft()}</bdi>${!mp.oppOnline&&opp?' · היריב לא מחובר: אם הטיימר ייגמר, המחשב ינהל במקומו.':''}</div>
+    ${MP.err?`<div class="small" style="color:var(--bad);margin-top:6px">${esc(MP.err)}</div>`:''}
+    <div class="actions" style="margin-top:8px">${ready?`<button class="btn sec" data-mpa="unready">בטל "מוכן"</button><span class="small muted" style="align-self:center">${waitMsg}</span>`:`<button class="btn big" data-mpa="ready">מוכן לשבוע ${G.wk+1}</button>`}${mp.lastWeek&&mp.lastWeek.matches&&mp.lastWeek.matches.length?`<button class="btn sec" data-mpa="rewatch">צפה שוב במשחקי השבוע</button>`:''}</div></div>`}
+function mpStartHTML(){const defs=Object.keys(META).map(id=>{const raw=RAW.find(r=>r.id===id);const fb=FALLBACK[id];return {id,name:raw?.name_he||fb.name,c1:raw?.colors?.[0]||fb.colors[0],c2:raw?.colors?.[1]||fb.colors[1]}});
+  const joinCode=(new URLSearchParams(location.search).get('join')||'').toUpperCase();
+  return `<div class="card mp"><div class="row between"><h3 class="sec">משחק רשת · 1 נגד 1</h3>${mpAvailable()||window.__mpClientFactory?'<span class="tag good">זמין</span>':'<span class="tag">לא מוגדר</span>'}</div>
+    <div class="muted small" style="margin-top:4px">שני מאמנים באותה ליגת העל, 12 המועדונים האחרים מחשב. כל שבוע כל אחד מנהל בזמנו ולוחץ "מוכן"; המשחקים ביניכם נצפים יחד.</div>
+    <div class="row wrap" style="gap:8px;margin-top:8px"><input id="mpName" placeholder="שם המנג'ר" maxlength="24" style="flex:1;min-width:140px"><select id="mpClub">${defs.map(t=>`<option value="${t.id}">${esc(t.name)}</option>`).join('')}</select></div>
+    <div class="row wrap" style="gap:8px;margin-top:8px"><select id="mpTurn"><option value="10">תור של 10 דק'</option><option value="60">שעה</option><option value="1440" selected>24 שעות</option><option value="2880">48 שעות</option></select><button class="btn" data-mpa="create" ${mpAvailable()||window.__mpClientFactory?'':'disabled'}>צור ליגה וקבל קוד</button></div>
+    <div class="row wrap" style="gap:8px;margin-top:10px;border-top:1px solid var(--line);padding-top:10px"><input id="mpCode" placeholder="קוד הזמנה" maxlength="6" value="${esc(joinCode)}" style="width:120px;text-transform:uppercase"><button class="btn sec" data-mpa="join" ${mpAvailable()||window.__mpClientFactory?'':'disabled'}>הצטרף לליגה</button></div>
+    <div id="mpMsg" class="small muted" style="margin-top:6px">${esc(MP.msg||'')}</div></div>`}
+async function mpUiAction(k,el){try{
+  if(k==='create'){const name=$('mpName').value.trim(),clubId=$('mpClub').value,turn=+$('mpTurn').value;MP.msg='יוצר ליגה…';el.disabled=true;await mpCreateLeague(clubId,name,'',turn);return}
+  if(k==='join'){const name=$('mpName').value.trim(),clubId=$('mpClub').value,code=$('mpCode').value.trim().toUpperCase();if(code.length<6){toast('הכנס קוד הזמנה');return}MP.msg='מצטרף…';el.disabled=true;await mpJoinLeague(code,clubId,name);return}
+  if(k==='start')return mpStart();if(k==='ready')return mpReady();if(k==='unready')return mpUnready();
+  if(k==='copy'){try{await navigator.clipboard.writeText(el.dataset.link);toast('הקישור הועתק')}catch(e){prompt('העתק את הקישור',el.dataset.link)}return}
+  if(k==='share'){try{await navigator.share({title:'GOALASSO · משחק רשת',text:'בוא נשחק ליגה 1 נגד 1 ב-GOALASSO',url:el.dataset.link})}catch(e){}return}
+  if(k==='rewatch'){G.mp.watched=true;mpWatchWeek();return}
+  if(k==='leave'){if(!confirm('לצאת מהליגה? הקריירה המקומית תישמר, אבל הליגה תמשיך בלעדיך.'))return;mpDisconnect();G=null;render();return}
+  }catch(e){MP.msg=e.message;toast(e.message);render()}}
 /* ---- 3D lineup: stadium photo pitch, FIFA-style cards, fitness + morale meters ---- */
 const STADIUM_IMG={webp:'lineup-stadium.webp',jpg:'lineup-stadium.jpg',w:941,h:1672,px0:12.86,px1:87.14,py0:10.29,py1:83.25};
 function meter10(v,kind){const n=Math.round(clamp(v,0,100)/10);const lab=kind==='fit'?`כושר ${Math.round(v)}%`:`מורל ${moraleWord(v)} (${Math.round(v)})`;
@@ -4367,7 +4510,7 @@ function viewLineup(){
   let html=`<div class="cinematic-lineup">
   ${stadiumFieldHTML(c,slots,lay,ps,selSlot)}
   <section class="cine-dock" aria-label="ספסל מחליפים"><h3>ספסל מחליפים · ${quickBench.length}</h3><p class="cine-hint" role="status">${selSlot!=null?`<strong>${ps[selSlot]?esc(fullName(ps[selSlot])):POSHE[slots[selSlot]]}</strong> נבחר · בחר מחליף`:selPid!=null?'בחר עמדה במגרש לשחקן שבחרת':'לחץ על שחקן במגרש ובחר לו מחליף'}</p><div class="cine-bench">${quickBench.map(p=>`<button type="button" class="cine-sub ${selPid===p.id?'sel':''}" data-bench="${p.id}" ${p.inj||p.susp?'disabled':''} aria-pressed="${selPid===p.id}" aria-label="${esc(fullName(p))}, ${POSHE[p.pos]}, דירוג ${p.ovr}${p.inj?', פצוע':p.susp?', מורחק':''}"><bdi class="cine-sub-rating">${p.ovr}</bdi><bdi class="cine-sub-pos">${POSB[p.pos]}</bdi><span class="cine-portrait">${playerPortraitHTML(p,c,'bench'+p.id)}</span><span class="cine-sub-name">${esc(fullName(p))}${p.inj?' · פצוע':p.susp?' · מורחק':''}</span></button>`).join('')||'<span class="muted small">כל השחקנים בהרכב</span>'}</div></section>
-  <div class="cine-actions">${nm?'<button class="btn" id="playBtn">למשחק</button>':''}<button class="btn sec" id="autoBtn">הרכב אוטומטי</button></div>
+  <div class="cine-actions">${nm&&!mpIsOn()?'<button class="btn" id="playBtn">למשחק</button>':''}${mpIsOn()?'<button class="btn" data-view-home="1">חזרה לבית · "מוכן"</button>':''}<button class="btn sec" id="autoBtn">הרכב אוטומטי</button></div>
   ${probs.length?`<div class="cine-status">${probs.map(esc).join(' · ')}</div>`:''}
   ${sponsorName(c)?`<div class="cine-sponsor">${sponsorLogoHTML(c.sponsor,'compact')}ספונסר החולצה <b>${esc(sponsorName(c))}</b></div>`:''}
   <details class="cine-details" id="cineTactics" ${selP?'open':''}><summary>טקטיקה והכנה למשחק</summary>
@@ -4382,7 +4525,7 @@ function viewLineup(){
   ${probs.length?`<div class="small" style="color:var(--warn)">⚠ ${probs.map(esc).join(' · ')}</div>`:''}
   <div class="row between wrap" style="margin-top:6px"><span class="small"><span class="tag cap">C</span> קפטן: <b>${capP?esc(fullName(capP)):'—'}</b>${capP&&!inXI.has(capP.id)?' <span class="muted tiny">(לא בהרכב)</span>':''}</span>${selP&&!isCaptain(c,selP)?`<button class="btn sm sec" data-captain="${selP.id}">מנה את ${esc(selP.last||selP.first)} לקפטן</button>`:''}</div>
 
-  <div class="actions" style="margin-top:10px"><button class="btn sec" id="clearBtn">רוקן הרכב</button>${nm?'<button class="btn sec" id="skipBtn">תוצאה מיידית</button>':''}</div>
+  <div class="actions" style="margin-top:10px"><button class="btn sec" id="clearBtn">רוקן הרכב</button>${nm&&!mpIsOn()?'<button class="btn sec" id="skipBtn">תוצאה מיידית</button>':''}</div>
   ${opp?analystReportHTML(c,opp,nm):''}${chemCardHTML(c)}</div></details>
   <details class="cine-details"><summary>הסגל המלא · כושר ותפקידים</summary>
     <div class="card"><div class="row between"><h3 class="sec">ספסל · ${benchOk.length}</h3>${selSlot!=null?`<span class="tag info">מחפשים ${POSHE[slots[selSlot]]}</span>`:''}</div>
@@ -4494,7 +4637,7 @@ function clearMarketFilter(k){const world=marketTab==='world';const all=k==='all
   if(world){if(all||k==='nat')worldNat='all';if(all||k==='pos')worldPos='all';if(all||k==='age')mktAge='all';if(all||k==='club')worldClubId=null;if(all||k==='avail')worldAvail='all'}
   else{if(all||k==='nat')marketNat='all';if(all||k==='pos')marketPos='all';if(all||k==='cat')marketCategory='all'}
   render()}
-function viewMarket(){
+function viewMarket(){if(mpIsOn())return mpNoMarketHTML();
   if(marketTab==='free')return viewFreeAgents();
   if(marketTab==='world')return viewWorld();
   if(marketTab==='scout')return viewScouting();
@@ -4627,6 +4770,8 @@ function bind(){
   m.onclick=e=>{
     const t=e.target;if(!t.closest('.msearch'))closeMarketSuggest();
     const id=t.id||t.closest('button')?.id;
+    const mpb=t.closest('[data-mpa]');if(mpb)return mpUiAction(mpb.dataset.mpa,mpb);if(t.closest('[data-view-home]')){G.view='home';return render()}
+    if(mpIsOn()&&(id==='playBtn'||id==='skipBtn'||id==='simNext'))return toast('במשחק רשת השבוע רץ כששני המאמנים לוחצים "מוכן"');
     if(id==='playBtn'){const nm=myNextMatch();if(nm&&G.view==='lineup'){const M0={h:nm.h.id,a:(nm.a||nm.h).id,ctx:{kind:nm.kind,stage:currentEvent()&&currentEvent().s||currentEvent().stage}};return runPress('pre',M0,()=>startLive())}return startLive()}
     if(id==='skipBtn')return playInstant();
     const bo=t.closest('[data-board]');if(bo)return chooseBoard(bo.dataset.board);
@@ -4759,17 +4904,17 @@ function startLive(restored){
   <div class="live-lower"><div class="card" id="statsCard" style="--hc:${matchColors(h,a).h.fill};--ac:${matchColors(h,a).a.fill}"><div id="stats"></div></div>
   <div class="card"><div class="ticker" id="ticker"><div class="muted">${ml==='off'?'שריקת פתיחה':'הקבוצות בדרך למגרש'}</div></div></div></div></div>`;
   const tick=$('ticker');let paused=true,shown=0,mult=1;const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
-  if(p2d){p2d.onTap=(pid,team)=>{p2d.labels[pid]=performance.now()+2200;if(team===G.me&&!M.done&&M.subs[G.me]<MAX_SUBS){pause();openSubModal(pid)}}}
+  if(p2d){p2d.onTap=(pid,team)=>{p2d.labels[pid]=performance.now()+2200;if(team===G.me&&!M.done&&!M.playback&&M.subs[G.me]<MAX_SUBS){pause();openSubModal(pid)}}}
   M.liveMent=M.liveMent||{};M.liveMent[G.me]=M.liveMent[G.me]||me().mentality||'bal';const paintLM=()=>document.querySelectorAll('[data-lm]').forEach(b=>b.classList.toggle('on',b.dataset.lm===M.liveMent[G.me]));paintLM();
   document.querySelectorAll('[data-lm]').forEach(b=>b.onclick=()=>{M.liveMent[G.me]=b.dataset.lm;M.tadjDirty=true;save();paintLM();addLine('note',`${fm(M.m)} שינוי מנטליות: ${{def:'הגנתי',bal:'מאוזן',att:'התקפי'}[b.dataset.lm]}`)});
   const addLine=(cls,txt)=>{const prev=tick.querySelector('.latest');if(prev)prev.classList.remove('latest');const d=document.createElement('div');d.className=cls+' latest';d.textContent=txt;tick.appendChild(d);tick.scrollTop=tick.scrollHeight};
-  let replayQ=null;let restoring=!!restored;
+  let replayQ=null;let restoring=!!restored&&!restored.playback;
   const myC=me();const homeMe=M.h===G.me;
   const drawSide=()=>{const xs=xiPlayers(M,myC);const lay=slotLayout(myC.formation||'4-3-3');
     const chip=({p,e})=>{const en=liveEnergy(M,myC,p,e);const cls=en>=70?'good':en>=50?'warn':'bad';return `<button class="xc" data-xo="${p.id}" aria-label="${esc(fullName(p))}">${playerPortraitHTML(p,myC,'live'+p.id)}<span class="pos ${p.pos}">${POSB[p.pos]}</span><b class="num">${p.ovr}</b><span class="nm">${esc(p.last||p.first)}</span><i class="en ${cls}"><u style="width:${en}%"></u></i>${e.yel?'<em class="yc"></em>':''}</button>`};
     const st=$('xiStrip');if(st)st.innerHTML=xs.map(chip).join('')+`<button class="xc bench" id="benchBtn"><span>ספסל</span><b class="num">${bench(M,myC).length}</b></button>`;
     const mf=$('miniF');if(mf){mf.innerHTML=`<svg viewBox="0 0 68 90"><rect width="68" height="90" rx="3" fill="#1f5a30"/><g fill="none" stroke="rgba(255,255,255,.45)" stroke-width=".5"><rect x="2" y="2" width="64" height="86"/><line x1="2" y1="45" x2="66" y2="45"/><circle cx="34" cy="45" r="7"/><rect x="16" y="2" width="36" height="12"/><rect x="16" y="76" width="36" height="12"/></g>${xs.map(({p,e},i)=>{const li=Math.min(M.xi[myC.id].indexOf(e),lay.length-1);const L=lay[Math.max(0,li)];const x=6+L.x/100*56,y=8+L.y/100*74;const en=liveEnergy(M,myC,p,e);return `<g class="mfp" data-xo="${p.id}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><circle r="4.2" fill="${myC.c1}" stroke="${en>=70?'#3ddc84':en>=50?'#ffb547':'#ff5c6c'}" stroke-width="1.1"/><text y="1.4" text-anchor="middle" font-size="3.8" fill="${myC.c2&&myC.c2!==myC.c1?myC.c2:'#111'}" font-weight="700">${p.no||''}</text></g>`}).join('')}</svg>`}};
-  $('main').querySelector('.live-wrap').addEventListener('click',ev=>{const t=ev.target.closest('[data-xo]');if(t&&!M.done){if(M.subs[G.me]>=MAX_SUBS){toast('נגמרו החילופים');return}pause();openSubModal(+t.dataset.xo);return}if(ev.target.closest('#benchBtn')&&!M.done){pause();openSubModal()}});
+  $('main').querySelector('.live-wrap').addEventListener('click',ev=>{if(M.playback)return;const t=ev.target.closest('[data-xo]');if(t&&!M.done){if(M.subs[G.me]>=MAX_SUBS){toast('נגמרו החילופים');return}pause();openSubModal(+t.dataset.xo);return}if(ev.target.closest('#benchBtn')&&!M.done){pause();openSubModal()}});
   const flush=()=>{
     while(shown<M.ev.length){const e=M.ev[shown++];const who=club(e.team);const mine=e.team===G.me;
       if(!restoring&&(e.t==='goal'||e.t==='pen'||e.t==='own')){if(mine){SFX.goal(true);confetti(1200)}else{if(!CROWD.goal(false))SFX.groan()}if(p2d&&e.path&&(e.t==='goal'||e.t==='pen'))replayQ=e}else if(!restoring&&(e.t==='yellow'||e.t==='red'))SFX.card();else if(!restoring&&e.t==='shot'&&(e.sub==='save'||e.sub==='post')&&!e.quiet)CROWD.chance();
@@ -4780,7 +4925,7 @@ function startLive(restored){
       else if(e.t==='own')addLine('goal '+(mine?'me':''),`⚽ ${fm(e.m)} שער עצמי של ${e.name} (${club(e.ogteam).short}) · ${M.gh}:${M.ga}`);
       else if(e.t==='yellow')addLine('card',`🟨 ${fm(e.m)} צהוב ל${e.name} (${who.short})`);
       else if(e.t==='red')addLine('card',`🟥 ${fm(e.m)} אדום! ${e.name} (${who.short}) מורחק`);
-      else if(e.t==='inj'){addLine('inj',`🩹 ${fm(e.m)} ${e.name} (${who.short}) נפצע${e.injT?' ('+e.injT+')':''}, ${e.weeks} שבועות`);if(!restoring&&mine&&e.needSub){e.needSub=false;pause();openSubModal(null,true)}}
+      else if(e.t==='inj'){addLine('inj',`🩹 ${fm(e.m)} ${e.name} (${who.short}) נפצע${e.injT?' ('+e.injT+')':''}, ${e.weeks} שבועות`);if(!restoring&&mine&&e.needSub&&!M.playback){e.needSub=false;pause();openSubModal(null,true)}}
       else if(e.t==='sub'){addLine('sub',`🔁 ${fm(e.m)} ${who.short}: ${e.name} נכנס${e.out?' במקום '+e.out:''}`);if(mine&&e.outPid&&e.outPid===me().captain)addLine('muted',`סרט הקפטן עובר לשחקן הוותיק על המגרש`)}
       else if(e.t==='shot'){if(e.sub==='save')addLine('muted',`🧤 ${fm(e.m)} הצלה גדולה של ${e.name}${e.shooter?' מול '+e.shooter:''}!`);else if(e.sub==='post')addLine('muted',`${fm(e.m)} קורה! ${e.name} (${who.short}) קרוב מאוד`)}
       else if(e.t==='corner')addLine('muted',`${fm(e.m)} קרן ל${who.short}`);
@@ -4798,14 +4943,15 @@ function startLive(restored){
   const resume=()=>{paused=false;M.paused=false;M.awaitingHalf=false;CROWD.resume();$('ctrlBtn').textContent='השהה';save()};
   const finish=()=>{clearInterval(liveTimer);liveTimer=null;running=false;if(raf)cancelAnimationFrame(raf);raf=null;
     if(!M.finishPrepared){
-    if(M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);
+    if(!M.playback&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);
     if(M.gh===M.ga&&M.ctx.kind==='euro'&&M.ctx.leg===2){const E=me().euro;if(E&&E.tie&&E.tie.g1&&E.tie.g1[0]+(M.h===G.me?M.gh:M.ga)===E.tie.g1[1]+(M.h===G.me?M.ga:M.gh))decidePens(M)}
     if(p2d)M.heat=p2d.heat;
     SFX.whistleEnd();CROWD.end();const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;const wonIt=myG>opG||(M.pens&&((M.pens==='h')===(M.h===G.me)));if(wonIt&&(M.ctx.kind==='cup'&&M.ctx.stage==='F'||M.ctx.kind==='euro'&&M.ctx.stage==='F'||M.ctx.kind==='toto'&&M.ctx.stage==='F')){SFX.win();confetti(4000);recordMoment('cup',M.ctx.kind==='cup'?'גביע המדינה':M.ctx.kind==='toto'?'גביע הטוטו':(M.ctx.label||'').split('·')[0].trim()||'הגביע האירופי')}
     M.finishPrepared=true;}
     addLine('',`שריקת סיום · ${h.short} ${M.gh}:${M.ga} ${a.short}${M.pens?` · ${(M.pens==='h'?h:a).short} ניצחה בפנדלים`:''}`);
-    const mm=M.motmLive||manOfMatch(M,h,a);M.motmLive=mm;if(mm)addLine('goal '+(mm.team===G.me?'me':''),`⭐ שחקן המשחק: ${mm.name} (${mm.short}) · ציון ${mm.r}`);
+    const mm=M.motmLive||(M.playback?M.playback.motm:manOfMatch(M,h,a));M.motmLive=mm;if(mm)addLine('goal '+(mm.team===G.me?'me':''),`⭐ שחקן המשחק: ${mm.name} (${mm.short}) · ציון ${mm.r}`);
     save();$('subBtn').disabled=true;$('ctrlBtn').textContent='סיכום המשחק';$('livePill').textContent='סיום';$('livePill').classList.remove('live');$('livePill').classList.add('info');
+      if(M.playback){$('ctrlBtn').onclick=()=>{const rec=G.results.slice().reverse().find(r=>r.h===M.h&&r.a===M.a&&r.wk===M.playback.wk);if(rec)matchReportModal(rec,()=>mpWatchNext());else mpWatchNext()};return}
     $('ctrlBtn').onclick=()=>{afterMyMatch(M);G.view='home';const rec=G.results[G.results.length-1];if(rec&&rec.h===M.h&&rec.a===M.a){matchReportModal(rec,()=>runPress('post',M,()=>render()))}else runPress('post',M,()=>render())};
   };
   const period=()=>Math.round(base*1000/90/mult);
@@ -4813,7 +4959,7 @@ function startLive(restored){
     if(paused||(p2d&&p2d.hold))return;
     stepMinute(M);flush();
     if(M.m===62||M.m===76){const my=M.h===G.me?M.gh:M.ga,op=M.h===G.me?M.ga:M.gh;const oppC=M.h===G.me?a:h;const of=avgFit(M,oppC);const tip=my<op?'אנחנו מאחור. שווה לעבור להתקפי ולהכניס חלוץ.':my===op&&of<72?'הם נראים עייפים. אפשר ללחוץ עכשיו.':my>op&&M.m>=76?'מובילים בסיום. מנטליות הגנתית תסגור את המשחק.':null;if(tip)addLine('note',`🎧 העוזר: ${tip}`)}
-    if(M.m===45&&!M.half){M.half=true;M.awaitingHalf=true;CROWD.halftime();addLine('muted','מחצית · לחץ "מחצית שנייה" כדי להמשיך');halfTimeTalk(M,tick);pause();$('ctrlBtn').textContent='מחצית שנייה';if(p2d){p2d.flip=true;pitchMinute(p2d,M,h,a,[]);for(const d of [...p2d.h,...p2d.a]){d.tx=52.5;d.ty=74}}}
+    if(M.m===45&&!M.half){M.half=true;M.awaitingHalf=true;CROWD.halftime();addLine('muted','מחצית · לחץ "מחצית שנייה" כדי להמשיך');if(!M.playback)halfTimeTalk(M,tick);pause();$('ctrlBtn').textContent='מחצית שנייה';if(M.playback)setTimeout(()=>{if(M.awaitingHalf&&!M.done&&$('ctrlBtn'))resume()},4000);if(p2d){p2d.flip=true;pitchMinute(p2d,M,h,a,[]);for(const d of [...p2d.h,...p2d.a]){d.tx=52.5;d.ty=74}}}
     if(M.done)finish();else save();
   },period());if(p2d&&!p2d.snap&&!raf)raf=requestAnimationFrame(frame)};
   document.querySelectorAll('[data-spx]').forEach(b=>b.onclick=()=>{mult=+b.dataset.spx;document.querySelectorAll('[data-spx]').forEach(x=>x.classList.toggle('on',x===b));if(liveTimer)startTimer()});
@@ -4822,11 +4968,12 @@ function startLive(restored){
   const rb=$('rpBtn');if(rb)rb.onclick=()=>{G.replay=G.replay===false?true:false;rb.classList.toggle('on',G.replay!==false);save()};
   $('ctrlBtn').onclick=()=>{if(M.done)return;paused?resume():pause()};
   $('subBtn').onclick=()=>{if(M.done)return;pause();openSubModal()};
+  if(M.playback){$('subBtn').disabled=true;document.querySelectorAll('[data-lm]').forEach(b=>b.disabled=true);$('livePill').textContent=G.mp&&G.mp.oppClub&&(M.h===G.mp.oppClub||M.a===G.mp.oppClub)?'שידור משותף':'שידור';}
   drawSide();$('subCount').textContent=M.subs[G.me];
   // pre-match presentation
   const kickoff=()=>{const ov=$('arenaOver');if(ov)ov.innerHTML='';SFX.whistle();CROWD.kickoff(M.att);tick.innerHTML='<div class="muted">שריקת פתיחה</div>';paused=false;$('ctrlBtn').textContent='השהה';startTimer()};
   const ov=$('arenaOver');
-  if(restored){if(p2d){p2d.entrance=false;p2d.entranceDone=true;p2d.flip=M.m>=45}flush();restoring=false;replayQ=null;if(M.awaitingHalf&&!M.halfTalk)halfTimeTalk(M,tick);if(M.done)finish();else{pause();startTimer()}toast('המשחק שוחזר. לחצו המשך כשתהיו מוכנים.')}
+  if(restored&&!restored.playback){if(p2d){p2d.entrance=false;p2d.entranceDone=true;p2d.flip=M.m>=45}flush();restoring=false;replayQ=null;if(M.awaitingHalf&&!M.halfTalk)halfTimeTalk(M,tick);if(M.done)finish();else{pause();startTimer()}toast('המשחק שוחזר. לחצו המשך כשתהיו מוכנים.')}
   else if(ov&&ml==='full'){ov.innerHTML=`<div class="intro"><div class="comp">${esc(M.ctx.label)}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</div><div class="venue">${M.ctx.neutral?'מגרש ניטרלי':esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${M.ctx.firstLeg?` · משחק ראשון ${M.ctx.firstLeg[0]}:${M.ctx.firstLeg[1]}`:''}</div>
     <div class="vs"><div class="side" style="--c:${h.c1}"><h4>${kitSVG(h,'sm')} ${esc(h.short)}</h4><div class="xi">${xiListHTML(M,h)}</div></div><div class="vsx">VS</div><div class="side" style="--c:${a.c1}"><h4>${kitSVG(a,'sm')} ${esc(a.short)}</h4><div class="xi">${xiListHTML(M,a)}</div></div></div>
     <button class="btn big" id="kickBtn">שריקת פתיחה ▶</button></div>`;
@@ -4835,7 +4982,7 @@ function startLive(restored){
     $('ctrlBtn').textContent='לשריקת הפתיחה';$('ctrlBtn').onclick=()=>{if(M.done)return;if(!liveTimer){kickoff();$('ctrlBtn').onclick=()=>{if(M.done)return;paused?resume():pause()};return}paused?resume():pause()};
   }else{kickoff()}
   function openSubModal(preOut,forced){
-    const c=me();if(M.subs[c.id]>=MAX_SUBS){toast('נגמרו החילופים');return}
+    if(M.playback)return;const c=me();if(M.subs[c.id]>=MAX_SUBS){toast('נגמרו החילופים');return}
     const xs=xiPlayers(M,c);const b=bench(M,c);let outId=preOut||null;
     const d=openModal('',e=>{
       const o=e.target.closest('[data-out]');if(o){outId=+o.dataset.out;draw();return}
@@ -4860,7 +5007,9 @@ window.addEventListener('pagehide',()=>{if(G)save()});
 function start(){if(STORE.kind==='idb'){storageBoot().then(async()=>{if(STORE.kind==='idb'){if(!G&&!(await load())){const ls=latestSlot();if(ls){setCurSlot(ls.n);await load(ls.n)}}}else{if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}}startUI()}).catch(e=>{console.error('storage boot',e);startUI()});return}
   if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}startUI()}
 let bootResolve=null;const BOOT_READY=new Promise(r=>{bootResolve=r});
-function startUI(){if(!window.__ilmNoSplash)showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);document.addEventListener('pointerdown',function unlock(){try{const a=ac();if(a&&typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});render();if(bootResolve){bootResolve(true);bootResolve=null}try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
+function startUI(){try{const jc=new URLSearchParams(location.search).get('join');if(jc&&G&&!(G.mp&&G.mp.code===jc.toUpperCase())){G=null}}catch(e){}   // an invite link opens the start screen with the code filled in
+  if(G&&G.mp&&typeof mpConnect==='function')mpConnect().catch(e=>console.warn('mp',e));
+  if(!window.__ilmNoSplash)showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);document.addEventListener('pointerdown',function unlock(){try{const a=ac();if(a&&typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});render();if(bootResolve){bootResolve(true);bootResolve=null}try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
 if(window.claude?.hot?.snapshot)window.claude.hot.snapshot(()=>({}));
 window.ILM={get G(){return G},me,render,NIS,myPos,myDiv,standingsOf,club,myNextMatch,ready:BOOT_READY,whenSaved:()=>SV.busy&&SV.promise?SV.promise:Promise.resolve(!persistenceError),storage:STORE};
 window.claude?.hot?.ready?window.claude.hot.ready(start):start();

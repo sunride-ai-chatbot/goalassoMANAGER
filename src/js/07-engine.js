@@ -1,6 +1,8 @@
 /* ====================== MATCH ENGINE (minute by minute) ====================== */
+/* a club run by a person: the user, or (on the multiplayer host while it simulates a week) the other human's club */
+function isHumanClub(id){return id===G.me||!!(typeof MP!=='undefined'&&MP.capture&&MP.capture.has(id))}
 function createMatch(h,a,ctx){
-  const mk=c=>c.id===G.me?fixedLineup(c).map(e=>({pid:e.pid,slot:e.slot,since:0,yel:0})):bestXI(c).map(p=>({pid:p.id,slot:p.pos,since:0,yel:0}));
+  const mk=c=>isHumanClub(c.id)?fixedLineup(c).map(e=>({pid:e.pid,slot:e.slot,since:0,yel:0})):bestXI(c).map(p=>({pid:p.id,slot:p.pos,since:0,yel:0}));
   const att=(h.league&&!ctx.neutral&&ctx.kind!=='friendly')?attendanceFor(h,a,ctx.kind,ctx.stage):(ctx.neutral?Math.round(28000*rnd(.7,1)):0);
   const boost={};if(G.mentalBoost&&(h.id===G.me||a.id===G.me)){boost[G.me]=(boost[G.me]||0)+G.mentalBoost;G.mentalBoost=0}if(G.nextBoost&&(G.nextBoost.team===h.id||G.nextBoost.team===a.id)&&(h.id===G.me||a.id===G.me)){boost[G.nextBoost.team]=G.nextBoost.v;G.nextBoost=null}
   const M0={h:h.id,a:a.id,ctx,m:0,gh:0,ga:0,ev:[],xi:{[h.id]:mk(h),[a.id]:mk(a)},subs:{[h.id]:0,[a.id]:0},used:{[h.id]:[],[a.id]:[]},mins:{[h.id]:{},[a.id]:{}},shots:{[h.id]:0,[a.id]:0},poss:{[h.id]:0,[a.id]:0},passes:{[h.id]:0,[a.id]:0},pm:[],ps:{[h.id]:{},[a.id]:{}},seed:(Math.random()*1e9)|0,att,boost,done:false,half:false,pens:null};
@@ -13,13 +15,13 @@ function createMatch(h,a,ctx){
 function aiRoleFor(p){const at=attrs(p);if(p.pos==='FW')return at[5]>=at[0]+6?'target':at[3]>=at[1]+4?'false9':'poach';
   if(p.pos==='MF')return at[2]>=at[4]+10&&at[2]>=66?'play':at[0]>=68&&at[3]>=66?'winger':at[4]>=at[2]+4?'anchor':'b2b';
   if(p.pos==='DF')return at[0]>=68&&at[3]>=62?'wingback':at[2]>=at[4]-2?'ball':'stopper';return at[0]>=62?'sweep':'stop'}
-function aiPrepare(M,h,a){for(const c of [h,a]){if(c.id===G.me)continue;for(const {p} of xiPlayers(M,c))if(!p.roleT)p.roleT=aiRoleFor(p);}
+function aiPrepare(M,h,a){for(const c of [h,a]){if(isHumanClub(c.id))continue;for(const {p} of xiPlayers(M,c))if(!p.roleT)p.roleT=aiRoleFor(p);}
   const sh=xiStrength(M,h),sa=xiStrength(M,a);M.liveMent=M.liveMent||{};
-  for(const [c,me0,op,home] of [[h,sh,sa,true],[a,sa,sh,false]]){if(c.id===G.me)continue;const d=me0-op+(home?1.5:-1.5);
+  for(const [c,me0,op,home] of [[h,sh,sa,true],[a,sa,sh,false]]){if(isHumanClub(c.id))continue;const d=me0-op+(home?1.5:-1.5);
     M.liveMent[c.id]=d>=5?'att':d<=-5?'def':(c.mentality||'bal')}}
 function xiPlayers(M,c){return M.xi[c.id].map(e=>({p:c.players.find(x=>x.id===e.pid),e})).filter(x=>x.p)}
 function slotPenalty(p,slot){if(!slot||slot===p.pos)return 0;if(p.pos2&&slot===p.pos2)return 1;if(slot==='GK'||p.pos==='GK')return 18;if((slot==='DF'&&p.pos==='FW')||(slot==='FW'&&p.pos==='DF'))return 7;return 4}
-function xiStrength(M,c){const xs=xiPlayers(M,c);if(!xs.length)return 35;const s=xs.reduce((t,{p,e})=>t+effOvr(p)-slotPenalty(p,e.slot)-minuteFatigue(M,p,e),0)/xs.length;const capP=c.captain&&xs.find(x=>x.p.id===c.captain);const cap=capP?(capP.p.pers==='leader'?1.2:.6):0;const boost=(M.boost&&M.boost[c.id])||0;let calm=0;if(c.id===G.me){calm+=chemBonus(c,M)}
+function xiStrength(M,c){const xs=xiPlayers(M,c);if(!xs.length)return 35;const s=xs.reduce((t,{p,e})=>t+effOvr(p)-slotPenalty(p,e.slot)-minuteFatigue(M,p,e),0)/xs.length;const capP=c.captain&&xs.find(x=>x.p.id===c.captain);const cap=capP?(capP.p.pers==='leader'?1.2:.6):0;const boost=(M.boost&&M.boost[c.id])||0;let calm=0;if(isHumanClub(c.id)){calm+=chemBonus(c,M)}
   // mental programme: a bonus in big matches, on top of chemistry (it used to replace it)
   if(c.id===G.me&&mentalActive()){if(M.bigC==null){try{M.bigC=isBigMatch(M)?1:0}catch(e){M.bigC=0}}calm+=M.bigC*.35}
   // training plan: tactical familiarity and opponent preparation reach the match (they were display-only before)
@@ -91,6 +93,7 @@ function matchRatings(M,h,a){
       if(min<20)r=6+(r-6)*.5;s.r=+clamp(r,3,10).toFixed(1);out[pid]=s}}
   M.ratings=out;return out}
 function stepMinute(M){
+  if(M.playback)return mpPlaybackStep(M); /* multiplayer: replay a recorded match, no simulation */
   const h=club(M.h),a=club(M.a);M.m++;
   if(M.m===1||M.m%15===0||M.tadjDirty){M.tadj=tacticAdj(M,h,a);M.tadjDirty=false;if(M.tadj.notes.length&&M.live&&!M.tadjNoted){M.tadjNoted=true;M.ev.push({m:M.m,t:'note',team:G.me,txt:M.tadj.notes[0]})}}
   const sh=xiStrength(M,h),sa=xiStrength(M,a);M.units={[h.id]:unitStrength(M,h),[a.id]:unitStrength(M,a)};const [lh,la]=expGoals(sh,sa,M.ctx.neutral,h,a,M);
@@ -162,6 +165,6 @@ function doSub(M,c,outId,inId){
   M.ev.push({m:M.m,t:'sub',team:c.id,name:fullName(inP),out:outP?fullName(outP):null,outPid:outId||null});
   return true;
 }
-function runInstant(M){while(!M.done)stepMinute(M);return M}
+function runInstant(M){while(!M.done)stepMinute(M);if(typeof MP!=='undefined'&&MP.capture&&(MP.capture.has(M.h)||MP.capture.has(M.a)))MP.captured.push(M);return M}
 function decidePens(M){const h=club(M.h),a=club(M.a);const sh=xiStrength(M,h),sa=xiStrength(M,a);M.pens=Math.random()<.5+(sh-sa)*.02?'h':'a'}
 

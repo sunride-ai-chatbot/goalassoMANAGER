@@ -95,8 +95,25 @@ for k, v in euro_v['faces'].items():
                         'bust': 1 if audit.get(k, {}).get('shoulders', 1) >= 0.3 else 0}
 page = page.replace('__PLAYER_VISUALS__', enc({'names': face_names, 'faces': runtime_faces, 'euro': euro_ids,
                                                'euroEn': {n: i for n, i in en_id.items() if en_count.get(n) == 1}}))
+# Supabase (multiplayer): public URL + anon/publishable key only, from the environment or a local .env. Never the
+# service_role key. Missing values leave multiplayer switched off in the build (the client shows "לא מוגדר").
+def supabase_cfg():
+    env = dict(os.environ)
+    dotenv = os.path.join(ROOT, '.env')
+    if os.path.isfile(dotenv):
+        for line in open(dotenv, encoding='utf8'):
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                k, v = line.split('=', 1)
+                env.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+    url, key = env.get('SUPABASE_URL', ''), env.get('SUPABASE_PUBLISHABLE_KEY', '')
+    if not url or not key or 'YOUR-PROJECT' in url or key.startswith('your-'):
+        return None
+    assert 'service_role' not in key.lower(), 'never embed a service_role key'
+    return {'url': url.rstrip('/'), 'key': key}
+page = page.replace('__SUPABASE__', enc(supabase_cfg()))
 out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta))
-for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__'):
+for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE__'):
     assert ph not in out, 'unfilled placeholder ' + ph
 # build stamp: a hash of the page content, so a live check can tell which build a server is actually serving
 import hashlib

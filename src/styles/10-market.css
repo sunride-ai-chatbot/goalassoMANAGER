@@ -37,3 +37,10 @@
 .vols label{display:flex;align-items:center;gap:10px}
 .vols label span{min-width:64px}
 .vols input[type=range]{flex:1;accent-color:var(--gold)}
+/* multiplayer cards */
+.card.mp{border-color:rgba(198,242,78,.35)}
+.mpm{display:flex;align-items:center;gap:10px;padding:8px 10px;margin-top:8px;border-radius:10px;background:var(--bg2);border:1px solid var(--line)}
+.mpm b{flex:0 0 auto}.mpm small{flex:1;color:var(--muted);min-width:0}
+.mpm.ready{border-color:rgba(198,242,78,.5)}
+.mpm.muted{justify-content:center;color:var(--muted)}
+.card.mp input,.card.mp select{min-height:44px;font-size:16px}
