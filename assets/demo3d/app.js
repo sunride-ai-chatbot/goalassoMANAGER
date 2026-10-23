@@ -34,7 +34,7 @@ $('timeline').oninput=e=>{time=+e.target.value;playing=false;draw(true)};
 $('quality').onclick=()=>{quality=quality==='auto'?'high':quality==='high'?'low':'auto';applyQuality()};
 for(const b of document.querySelectorAll('[data-scenario]'))b.onclick=()=>{scenario=b.dataset.scenario;time=0;playing=true;document.querySelectorAll('[data-scenario]').forEach(el=>el.setAttribute('aria-pressed',String(el===b)));draw(true)};
 $('info').onclick=()=>{playing=false;draw();$('about').showModal()};document.querySelectorAll('.close,.close-about').forEach(b=>b.onclick=()=>$('about').close());
-$('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if($('arena').requestFullscreen)await $('arena').requestFullscreen();else{$('hint').textContent='סובב את הטלפון למצב אופקי לתצוגה רחבה';$('hint').style.opacity=1}}catch(e){$('hint').textContent='סובב את הטלפון לתצוגה רחבה';$('hint').style.opacity=1}};
+$('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else if($('app').requestFullscreen)await $('app').requestFullscreen();else{$('hint').textContent='סובב את הטלפון למצב אופקי לתצוגה רחבה';$('hint').style.opacity=1}}catch(e){$('hint').textContent='סובב את הטלפון לתצוגה רחבה';$('hint').style.opacity=1}};
 new ResizeObserver(resize).observe(host);
 document.addEventListener('visibilitychange',()=>{if(document.hidden){playing=false;draw()}last=performance.now()});window.addEventListener('pagehide',()=>{playing=false});
 host.addEventListener('pointerdown',e=>{host.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});dragLast={x:e.clientX,y:e.clientY};pinchDistance=0;$('hint').style.opacity=0});

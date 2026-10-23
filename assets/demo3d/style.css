@@ -5,3 +5,5 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.loader{animation:none}}
 
 .minute{white-space:nowrap;flex-shrink:0}.commentary h1{min-height:1.3em}.floating{display:flex;align-items:center;justify-content:center}.scene-label{pointer-events:none}
+
+#app:fullscreen{background:#09131b;max-width:none;width:100%;height:100%;display:flex;flex-direction:column;padding:12px}#app:fullscreen .top{display:none}#app:fullscreen .arena{flex:1;min-height:0;height:auto}#app:fullscreen .console{width:min(100%,1000px);flex-shrink:0;padding:12px 0 0}#app:fullscreen .bottom-note{display:none}
