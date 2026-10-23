@@ -1,0 +1,24 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#09131b"><title>GOALASSO · מגרש הניסוי בתלת־ממד</title><link rel="stylesheet" href="style.css"></head><body>
+<main id="app">
+<header class="top"><a class="brand" href="../../beginner.html" aria-label="חזרה למשחק">GOAL<span>ASSO</span><i>3D LAB</i></a><button id="info" class="icon-button" aria-label="אודות הדמו">?</button></header>
+<section class="arena" id="arena" aria-label="מגרש כדורגל בתלת־ממד">
+<div id="canvas-host"></div>
+<div class="scoreboard" aria-label="לוח התוצאות"><span class="team red">אדומים <b>RED</b></span><strong id="score">0 – 0</strong><span class="team white"><b>WHT</b> לבנים</span><span id="clock">63:10</span></div>
+<div class="scene-label"><span class="live-dot"></span><span id="view-label">מצלמת שידור</span></div>
+<button id="fullscreen" class="floating" aria-label="מסך מלא"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button>
+<div id="goal-banner" class="goal-banner" hidden><small>GOALASSO ARENA</small><strong id="outcome-title">שער!</strong><span id="outcome-note">מהלך קבוצתי. סיום מדויק.</span></div>
+<div id="loading" class="loading"><span class="loader"></span><h1>האורות נדלקים.</h1><p>מכינים את המגרש שלך</p></div>
+<div id="error" class="loading" hidden><h2>המגרש לא נטען</h2><p id="error-text">נסה לפתוח את הקישור בדפדפן Safari או Chrome מעודכן.</p><button onclick="location.reload()">נסה שוב</button></div>
+<div class="touch-hint" id="hint">גרור לשינוי זווית · צבוט לקירוב</div>
+</section>
+<section class="console">
+<div class="commentary"><span class="minute" id="phase-number">01 / 05</span><div><span class="eyebrow">מגרש הניסוי · תלת־ממד בזמן אמת</span><h1 id="commentary">המהלך מתחיל בקישור</h1></div><span class="pulse-bars" aria-hidden="true">▂▅▃▆</span></div>
+<div class="transport"><button id="play" class="primary" aria-label="הפעל מהלך">▶ <span>הפעל מהלך</span></button><button id="replay">↺ <span>מהתחלה</span></button><button id="camera">▣ <span>מצלמה</span></button><button id="speed">×1 <span>מהירות</span></button></div>
+<div class="scrub"><span id="elapsed">00:00</span><input id="timeline" type="range" min="0" max="19" step="0.02" value="0" aria-label="מיקום במהלך"><span>00:19</span></div>
+<div class="options"><div class="segmented" aria-label="בחירת מהלך"><button data-scenario="goal" aria-pressed="true">מהלך לשער</button><button data-scenario="save" aria-pressed="false">הצלת שוער</button></div><button id="quality" class="quality">איכות: אוטומטית</button></div>
+<div class="bottom-note"><span id="status">22 שחקנים · מסירה, תנועה ובעיטה</span><a href="../../beginner.html">חזרה למשחק ←</a></div>
+</section>
+</main>
+<dialog id="about"><button class="close" aria-label="סגור">×</button><span class="eyebrow">GOALASSO • DEVELOPMENT LAB</span><h2>כדורגל. מזווית חדשה.</h2><p>זהו אבטיפוס תלת־ממדי פעיל עם שתי קבוצות ודמויות מקוריות. המהלכים מתוכננים מראש לצורך בדיקת התנועה והגרפיקה; הדמו עדיין אינו מחובר לקריירה או למשחק רשת.</p><p>אפשר לעצור בכל רגע, לעבור להילוך איטי, לגרור את המצלמה ולבחור בין שער להצלה. ברקע המשחק נעצר אוטומטית.</p><p id="performance">מדידת ביצועים תופיע כאן אחרי הפעלת המהלך.</p><p>מומלץ לנסות גם כשהטלפון במצב אופקי. אין בדמו סאונד בשלב הזה.</p><button class="primary close-about">בחזרה למגרש</button></dialog>
+<script type="module" src="app.js"></script>
+</body></html>
