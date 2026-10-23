@@ -108,7 +108,7 @@ print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), '
 
 # Separate beginner surface; source engine and player identities remain shared.
 # Replace only the boot entry, leaving the Pro output above unchanged.
-beginner = out.replace(read(os.path.join(SRC, 'js', '38-boot.js')), read(os.path.join(SRC, 'beginner', 'app.js')))
+beginner = out.replace(read(os.path.join(SRC, 'js', '38-boot.js')), read(os.path.join(SRC, 'beginner', 'app.js')) + '\n' + read(os.path.join(SRC, 'beginner', 'friends.js')))
 beginner = beginner.replace('</style>', '\n' + read(os.path.join(SRC, 'beginner', 'style.css')) + '\n</style>', 1)
 beginner = beginner.replace('<title>GOALASSO</title>', '<title>GOALASSO START · מתחילים</title>')
 beginner = beginner.replace('<link rel="manifest" href="assets/manifest.webmanifest">', '')
