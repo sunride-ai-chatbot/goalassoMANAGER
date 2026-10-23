@@ -47,6 +47,7 @@ function render(){
   closeModal();setTimeout(()=>{try{AdSvc.observe()}catch(e){}},50);if(G&&G.paperPop&&G.paperPop.length&&G.phase==='play')setTimeout(()=>{if(G&&G.view==='home'&&!liveTimer)showPaperPop()},80);
   if(!G){renderStart();return}
   if(G.live&&!G.live.settled){startLive(G.live);return}
+  if(typeof AUD!=='undefined'&&AUD.matchOn)crowdStop(1.2);   // any other screen: the stadium fades out
   $('top').classList.remove('hide');renderTop();
   if(G.phase!=='play'){$('nav').classList.add('hide');const v={contract:viewContract,sponsor:viewSponsor,board:viewBoard,seasonEnd:viewSeasonEnd,fired:viewFired}[G.phase];$('main').innerHTML=`<div class="view">${v()}</div>`;bind();return}
   $('nav').classList.remove('hide');renderNav();
