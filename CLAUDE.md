@@ -21,7 +21,7 @@ Hebrew (RTL), mobile-first football management game. Single-file web build.
 - Keep saves backward compatible: `SAVE_VERSION` + `MIGRATIONS` in `src/js/22-save.js`. Careers persist in IndexedDB (gzip, one record per slot + `backup:N`, career id + revision with compare-and-set); browsers without IndexedDB and the jsdom suites use the legacy localStorage layout. `save()`/`load()`/`installCareer()` return a Promise in IndexedDB mode and a boolean otherwise — wrap with `Promise.resolve(...)` when the outcome matters.
 - UI text in natural Hebrew; isolate numbers/Latin with `<bdi>`.
 - Never put a Supabase service_role/secret key in the repo or the client.
-- Multiplayer is a future phase — do not build it.
+- User authorized multiplayer on 2026-10-23, starting with existing-career invitations. Invitation/lobby code is in src/beginner/friends.js and supabase/migrations/20261023000000_friend_invitations.sql; activation is disabled pending the owner’s Supabase connection. Network matches and human trading are not implemented. See docs/friend-invitations.md; never treat offline snapshots as authoritative money.
 - Tests use `window.__ilmNoSplash=1` (skip intro) and `window.__ilmUnlock=1` (all clubs selectable).
 
 ## Deploy
