@@ -45,11 +45,15 @@ async function main(){try{
  const code=S(H).mp.code;assert.equal(S(H).mp.host,true);assert.equal(S(H).phase,'play','no contract/sponsor/board ceremony in multiplayer');
  assert.ok(H.document.querySelector('.card.mp').textContent.includes(code),'lobby shows the invite code');
  assert.ok(!H.document.getElementById('playBtn'),'no single-player play button');
+ // Both clubs enter Q2, guaranteeing matches in each of the two observed weeks.
+ // A Q3 guest (mta) may have a random Toto bye in week one, so waiting for its
+ // playback is not a valid fixture and intermittently timed out in deployment CI.
+ assert.equal(S(H).clubs.find(c=>c.id==='bje').euro.stage,S(H).cal[0].stage);
  // guest joins
  await until(()=>Gst.document.querySelector('[data-mpa="join"]'),'guest start screen');
- Gst.document.getElementById('mpName').value='דני';Gst.document.getElementById('mpClub').value='mta';Gst.document.getElementById('mpCode').value=code;Gst.document.querySelector('[data-mpa="join"]').click();
+ Gst.document.getElementById('mpName').value='דני';Gst.document.getElementById('mpClub').value='bje';Gst.document.getElementById('mpCode').value=code;Gst.document.querySelector('[data-mpa="join"]').click();
  await until(()=>S(Gst)&&S(Gst).mp&&S(Gst).mp.league,'guest joined');
- assert.equal(S(Gst).me,'mta');assert.equal(S(Gst).mp.host,false);assert.equal(S(Gst).phase,'play');
+ assert.equal(S(Gst).me,'bje');assert.equal(S(Gst).mp.host,false);assert.equal(S(Gst).phase,'play');
  assert.equal(JSON.stringify(S(Gst).clubs.map(c=>c.id).sort()),JSON.stringify(S(H).clubs.map(c=>c.id).sort()),'guest holds the host\'s league');
  // a second guest picking the same club is refused
  const dup=await Gst.eval("mpRpc('mp_join',{p_code:'"+code+"',p_club:'hbs',p_display:'x'}).then(()=>'ok',e=>e.message)");assert.equal(dup,'ok','re-join by the same uid returns the existing row');
@@ -68,13 +72,14 @@ async function main(){try{
  await until(()=>S(H).mp.rev===1&&S(Gst).mp.rev===1,'week committed and loaded');
  assert.equal(DB.commits,1);
  assert.equal(S(H).wk,wk0+1);assert.equal(S(Gst).wk,wk0+1,'guest advanced with the host');
- assert.equal(S(Gst).me,'mta','guest keeps his club after loading the host state');
- assert.equal(S(H).clubs.find(c=>c.id==='mta').formation,'3-5-2','host applied the guest\'s formation');
- assert.equal(S(H).clubs.find(c=>c.id==='mta').mentality,'att');
+ assert.equal(S(Gst).me,'bje','guest keeps his club after loading the host state');
+ assert.equal(S(H).clubs.find(c=>c.id==='bje').formation,'3-5-2','host applied the guest\'s formation');
+ assert.equal(S(H).clubs.find(c=>c.id==='bje').mentality,'att');
  const resH=S(H).results.filter(r=>r.wk===wk0).map(r=>[r.h,r.a,r.gh,r.ga]);const resG=S(Gst).results.filter(r=>r.wk===wk0).map(r=>[r.h,r.a,r.gh,r.ga]);
  assert.equal(JSON.stringify(resG),JSON.stringify(resH),'both phones hold the same results');
  const lw=S(H).mp.lastWeek;assert.ok(lw&&lw.matches.length>=1,'human matches recorded');
- for(const r of lw.matches){assert.ok(r.h==='hbs'||r.a==='hbs'||r.h==='mta'||r.a==='mta');assert.ok(Array.isArray(r.ev));const real=resH.find(x=>x[0]===r.h&&x[1]===r.a);assert.ok(real,'recorded match is in the results');assert.equal(real[2],r.gh);assert.equal(real[3],r.ga)}
+ for(const r of lw.matches){assert.ok(r.h==='hbs'||r.a==='hbs'||r.h==='bje'||r.a==='bje');assert.ok(Array.isArray(r.ev));const real=resH.find(x=>x[0]===r.h&&x[1]===r.a);assert.ok(real,'recorded match is in the results');assert.equal(real[2],r.gh);assert.equal(real[3],r.ga)}
+ for(const cid of ['hbs','bje'])assert.ok(lw.matches.some(r=>r.h===cid||r.a===cid),'fixture supplies a recorded match for '+cid);
  // both watch their recorded match: live screen in playback mode, no subs, final score equals the record
  await until(()=>H.document.querySelector('.live-view')&&Gst.document.querySelector('.live-view'),'playback started on both');
  assert.ok(H.document.getElementById('subBtn').disabled,'no substitutions during playback');
@@ -87,7 +92,7 @@ async function main(){try{
  const finishAll=async(w,who)=>{let n=0;while(w.document.querySelector('.live-view')){await until(()=>w.document.getElementById('ctrlBtn').textContent==='סיכום המשחק',who+' playback '+n,25000);w.document.getElementById('ctrlBtn').click();const nx=w.document.getElementById('reportNext');assert.ok(nx,who+': match report after playback');nx.click();await sleep(50);n++}return n};
  const nH=await finishAll(H,'host');assert.equal(nH,lw.matches.filter(r=>r.h==='hbs'||r.a==='hbs').length,'host watched each of his matches once');
  assert.ok(H.document.querySelector('[data-mpa="ready"]'),'home again with the ready button');
- const nG=await finishAll(Gst,'guest');assert.equal(nG,lw.matches.filter(r=>r.h==='mta'||r.a==='mta').length);
+ const nG=await finishAll(Gst,'guest');assert.equal(nG,lw.matches.filter(r=>r.h==='bje'||r.a==='bje').length);
  // second week: host alone presses ready before the guest → nothing happens until the guest is ready
  H.document.querySelector('[data-mpa="ready"]').click();
  await sleep(300);assert.equal(DB.commits,1,'host waits for the guest');
