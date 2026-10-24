@@ -83,6 +83,8 @@ function matchRatings(M,h,a){
   const out={};const avg=(xiStrength(M,h)+xiStrength(M,a))/2;
   for(const c of [h,a]){const gf=c===h?M.gh:M.ga,ga=c===h?M.ga:M.gh;const opp=c===h?a:h;const res=gf>ga?.45:gf===ga?.05:-.35;
     const played=[...M.xi[c.id].map(e=>({pid:e.pid,min:Math.max(0,M.m-e.since)})),...M.used[c.id].map(pid=>({pid,min:(M.mins[c.id]||{})[pid]||0}))];
+    // Injured and sent-off players leave xi without entering the substitution list.
+    const ratedIds=new Set(played.map(x=>x.pid));for(const p of c.players)if(!ratedIds.has(p.id)&&Object.prototype.hasOwnProperty.call(M.mins[c.id]||{},p.id))played.push({pid:p.id,min:M.mins[c.id][p.id]});
     const totalMin=played.reduce((t,x)=>t+x.min,0)||1;const teamPasses=M.passes?M.passes[c.id]||0:0;
     const yel=new Set(M.ev.filter(e=>e.t==='yellow'&&e.team===c.id).map(e=>e.pid)),red=new Set(M.ev.filter(e=>e.t==='red'&&e.team===c.id).map(e=>e.pid));
     for(const {pid,min} of played){const p=c.players.find(x=>x.id===pid);if(!p)continue;const s=pstat(M,c.id,pid);s.min=min;
