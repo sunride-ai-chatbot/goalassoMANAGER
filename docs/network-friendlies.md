@@ -20,3 +20,13 @@ Room members alone can retrieve squad snapshots. Only the host can commit a resu
 ## Beginner saves
 
 Backup failure no longer blocks the primary save. On storage quota exhaustion only the beginner backup is dropped before retrying. Save revisions advance only after successful writes. Failed writes remain retryable with “שמור שוב”. Loading uses a valid backup if the primary is corrupt. Page hide/visibility events save the career even outside a live match. Already missing results cannot be reconstructed if neither stored copy contains them.
+
+## Invitation arrival and recovery (2026-10-24)
+
+Opening `?invite=<uuid>` now opens the invitation dialog after local career loading, without a splash or a new-career action. The dialog previews the inviting club and shows the loaded club, league points and games before authentication. It checks the other mode's stored career metadata and offers a link carrying the invitation to that mode. These reads do not load the host's squad into the guest's career. Legacy `?join=` links no longer clear an already-loaded Pro career.
+
+No email is sent by opening an invitation. The signup UI translates `over_email_send_rate_limit`, retains the invitation and career, and prevents repeated signup submissions for a local one-minute cooldown while keeping sign-in available. This is not a server quota reset: actual email registration still requires a working mail service / custom SMTP configuration in Supabase. Do not disable email verification or auto-confirm real users to bypass that configuration.
+
+Career data is local to each browser and mode; network authentication is not cloud career synchronization. If an invitation opens inside another app's browser, copy it and open it in the browser containing the existing career. The app cannot inspect or recover another browser's local storage.
+
+`tests/network-arrival.test.js` covers both modes with saved careers, a wrong-mode invitation, fresh-browser handling, legacy-link preservation, no automatic signup, and rate-limit behavior across reopening.
