@@ -6,6 +6,11 @@ async function until(fn){for(let i=0;i<240;i++){if(fn())return;await new Promise
 (async()=>{const h=boot('host'),g=boot('guest');try{
  h.eval("Bcreate('mta')");g.eval("Bcreate('bje')");assert.ok(h.document.querySelector('[data-room-open]'));
  await h.eval('Rooms.open()');h.document.querySelector('[data-room-action="create"]').click();await until(()=>h.eval('!!G.networkRoom'));
+ await until(()=>h.document.querySelector('[data-room-action="share"]'));let shared=null,copied=null;
+ Object.defineProperty(h.navigator,'share',{configurable:true,value:async data=>{shared=data}});
+ h.document.querySelector('[data-room-action="share"]').click();await until(()=>shared);assert.ok(shared.url.includes('invite='));
+ await new Promise(r=>setTimeout(r,0));Object.defineProperty(h.navigator,'clipboard',{configurable:true,value:{writeText:async value=>{copied=value}}});
+ h.document.querySelector('[data-room-action="copy"]').click();await until(()=>copied);assert.equal(copied,shared.url);
  const id=h.eval('G.networkRoom.id');await g.eval('Rooms.open()');g.document.querySelector('#room-invite').value=id;g.document.querySelector('[data-room-action="join"]').click();await until(()=>g.eval('!!G.networkRoom'));
  await until(()=>h.document.querySelector('[data-room-action="ready"]')&&g.document.querySelector('[data-room-action="ready"]'));h.document.querySelector('[data-room-action="ready"]').click();g.document.querySelector('[data-room-action="ready"]').click();
  await until(()=>h.document.querySelector('[data-room-action="start"]')?.disabled===false);
