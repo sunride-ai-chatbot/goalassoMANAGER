@@ -4,7 +4,7 @@ Hebrew (RTL), mobile-first football management game. Single-file web build.
 
 ## Layout
 - `src/index.html` — document shell (doctype, meta, manifest/icons, markup) with `__CSS__` / `__JS__` placeholders.
-- `src/styles/NN-*.css` — stylesheets, concatenated in file-name order. Later files override earlier ones: `07-theme-direction-a.css` is the current theme, `08-cinematic-lineup.css` the lineup screen (broadcast graphic: `pitchPerspSVG` draws a perspective pitch in the club colours, `pitchProject` places the tokens on it), `09-phone-readability.css` the mobile overrides, `10-market.css` the transfer-market search/filters.
+- `src/styles/NN-*.css` — stylesheets, concatenated in file-name order. Later files override earlier ones: `07-theme-direction-a.css` is the current theme, `08-cinematic-lineup.css` the legacy lineup base; `12-formation-board.css` adds the supplied stadium, perspective grass and round portraits in both modes, `09-phone-readability.css` the mobile overrides, `10-market.css` the transfer-market search/filters.
 - `src/js/NN-*.js` — the game, one shared script scope (no ES modules). Load order = numeric prefix: `01-data` → `02-util` → `03-players` → … → `36-views` → `37-live` → `38-boot`. Function declarations are hoisted, so views may call engine code; `const`/`let` must be declared in an earlier file than their first top-level use. Put new code in the file that owns the subject (engine in `07-engine.js`, money in `18-week-flow.js`, screens in `36-views.js`, persistence in `22-save.js`).
 - `src/build.py` — `python3 -I src/build.py` → writes `ligat-haal-manager.html` at the repo root (concatenates the modules, embeds data, splash, logo and the portrait manifest). Placeholders `__CLUBS_JSON__`, `__EURO_JSON__`, `__DATA_META__`, `__SPLASH_IMG__`, `__LOGO_IMG__`, `__PLAYER_VISUALS__` are filled by the build.
 - `data/*.json` — Israeli club squads; `data/euro/*.json` — European squads.
@@ -27,3 +27,5 @@ Hebrew (RTL), mobile-first football management game. Single-file web build.
 ## Deploy
 - Claude artifact: publish `ligat-haal-manager.html` with every file in `assets/` as supporting files.
 - GitHub Pages: `.github/workflows/pages.yml` builds and deploys on push to `main` (enable Pages → Source: GitHub Actions).
+
+- Invitation friendlies: `35c-network-rooms.js` is the production entry in beginner and Pro, using existing room RPCs and email auth. See `docs/network-friendlies.md`. Legacy league support remains for existing `G.mp` saves. Build config placeholder is `__SUPABASE_BUILD__`; the public fallback is `data/config/multiplayer-public.json`.
