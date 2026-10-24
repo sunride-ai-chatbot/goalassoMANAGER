@@ -1,0 +1,43 @@
+{
+  "environment": "Headless Chromium / software WebGL; not physical iPhone performance",
+  "checks": [
+    "lazy opt-in, 390px portrait, no horizontal overflow",
+    "WebGL context loss restores existing renderer and releases hold",
+    "real goal event DTO, pause, camera, replay and skip do not mutate authoritative match",
+    "save/miss queue, away attack and second-half orientation",
+    "red card and actual substitution UI update roster",
+    "reopening saved career retains match, no historical replay",
+    "Pro opt-in with motion off, fullscreen management controls, teardown"
+  ],
+  "errors": [],
+  "limitations": [
+    "Physical iPhone FPS and Safari behaviour unverified.",
+    "Same-tab reload after sustained software WebGL timed out in this environment; save restoration is checked in a fresh browser context."
+  ],
+  "performance": {
+    "fps": 60,
+    "frames": 386,
+    "quality": "low",
+    "drawCalls": 165,
+    "triangles": 260132,
+    "players": 22,
+    "eventId": 0,
+    "time": 1.0081000000000004,
+    "queued": 0,
+    "disposed": false
+  },
+  "landscape": {
+    "width": 844,
+    "height": 390,
+    "canvas": {
+      "x": 23,
+      "y": -272.828125,
+      "width": 798,
+      "height": 226.1875,
+      "top": -272.828125,
+      "right": 821,
+      "bottom": -46.640625,
+      "left": 23
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import * as T from './vendor/three.js';
 const skinColors=[0xc99673,0x774b35,0xe3b796,0xa76b49,0x543b2c];
 const hairColors=[0x211913,0x34241b,0x211b18,0x65442c,0x181714];
-const cloth=new T.MeshStandardMaterial({vertexColors:true,roughness:.83,metalness:0});
-function createRig(team,number,variant){
+function createRig(team,number,variant,kit=null){
+ const cloth=new T.MeshStandardMaterial({vertexColors:true,roughness:.83,metalness:0});
  const bones=[],names={};const bone=(name,parent,x,y,z)=>{const b=new T.Bone();b.name=name;b.position.set(x,y,z);if(parent)parent.add(b);names[name]=bones.length;bones.push(b);return b};
  const root=bone('hips',null,0,.97,0),spine=bone('spine',root,0,.12,0),head=bone('head',spine,0,.57,0);
  for(const [label,s] of [['L',-1],['R',1]]){const arm=bone(label+'arm',spine,s*.245,.43,0),fore=bone(label+'fore',arm,0,-.29,0);bone(label+'hand',fore,0,-.25,0);const thigh=bone(label+'thigh',root,s*.105,-.01,0),shin=bone(label+'shin',thigh,0,-.43,0);bone(label+'foot',shin,0,-.43,0)}
@@ -10,14 +10,14 @@ function createRig(team,number,variant){
  function shape(geo,scale,pos,color,name){geo.scale(...scale);geo.translate(...pos);const p=geo.attributes.position,n=geo.attributes.normal,offset=P.length/3;col.setHex(color);for(let i=0;i<p.count;i++){P.push(p.getX(i),p.getY(i),p.getZ(i));N.push(n.getX(i),n.getY(i),n.getZ(i));C.push(col.r,col.g,col.b);I.push(names[name],0,0,0);W.push(1,0,0,0)}if(geo.index)for(const a of geo.index.array)ind.push(offset+a);else for(let i=0;i<p.count;i++)ind.push(offset+i);geo.dispose()}
  const ell=(size,pos,c,b)=>shape(new T.SphereGeometry(1,10,7),size,pos,c,b);
  const taper=(rt,rb,len,pos,c,b,scale=[1,1,1])=>shape(new T.CylinderGeometry(rt,rb,len,10),scale,pos,c,b);
- const skin=skinColors[variant%skinColors.length],hair=hairColors[variant%hairColors.length];const jersey=team==='red'?0xbc1731:team==='white'?0xefeee8:team==='keeperRed'?0xe7b529:0x29a985;const trim=team==='red'?0xf0e5ce:team==='white'?0x203e65:0x172b37;
+ const skin=skinColors[variant%skinColors.length],hair=hairColors[variant%hairColors.length];const jersey=kit?new T.Color(kit.kit).getHex():team==='red'?0xbc1731:team==='white'?0xefeee8:team==='keeperRed'?0xe7b529:0x29a985;const trim=kit?new T.Color(kit.trim).getHex():team==='red'?0xf0e5ce:team==='white'?0x203e65:0x172b37;
  taper(.225,.155,.49,[0,1.325,0],jersey,'spine',[1,1,.65]);ell([.22,.16,.135],[0,1.14,0],jersey,'spine');
  taper(.085,.09,.12,[0,1.64,0],skin,'head');taper(.10,.11,.035,[0,1.58,0],trim,'spine');
  ell([.112,.145,.118],[0,1.79,.01],skin,'head');ell([.087,.078,.095],[0,1.70,.034],skin,'head');ell([.025,.035,.042],[0,1.78,.126],skin,'head');for(const s of [-1,1]){ell([.023,.037,.02],[s*.113,1.79,0],skin,'head');ell([.014,.008,.006],[s*.043,1.81,.117],0x202023,'head')}
  shape(new T.SphereGeometry(1,10,7,0,Math.PI*2,0,Math.PI*.53),[.116,.15,.125],[0,1.80,.002],hair,'head');
  // Club-neutral original kits, collar, shirt crest and central sponsor stripe.
  shape(new T.BoxGeometry(.042,.055,.007),[1,1,1],[-.105,1.47,.146],trim,'spine');shape(new T.BoxGeometry(.18,.025,.007),[1,1,1],[0,1.32,.15],trim,'spine');
- const shorts=team==='white'?0xe7e9e7:team==='red'?0x9e142a:0x18303a;
+ const shorts=kit?new T.Color(kit.trim).getHex():team==='white'?0xe7e9e7:team==='red'?0x9e142a:0x18303a;
  ell([.19,.14,.125],[0,.98,0],shorts,'hips');
  for(const [l,s] of [['L',-1],['R',1]]){
   ell([.105,.108,.105],[s*.245,1.50,0],jersey,l+'arm');taper(.092,.075,.19,[s*.245,1.405,0],jersey,l+'arm');taper(.077,.078,.025,[s*.245,1.31,0],trim,l+'arm');taper(.074,.056,.12,[s*.245,1.255,0],skin,l+'arm');ell([.058,.06,.06],[s*.245,1.23,0],skin,l+'fore');taper(.06,.044,.23,[s*.245,1.105,0],skin,l+'fore');ell([.048,.075,.038],[s*.245,.94,.008],team.startsWith('keeper')?0xe9efdb:skin,l+'hand');
@@ -38,3 +38,9 @@ export function posePlayer(actor,state,t){const {bones:b,names:n}=actor;for(cons
  if(state.celebrate){const c=state.celebrate;b[n.Larm].rotation.z=2.3*c;b[n.Rarm].rotation.z=-2.3*c;b[n.Lfore].rotation.x=-.25;b[n.Rfore].rotation.x=-.25;b[n.hips].position.y+=Math.max(0,Math.sin(t*5))*.10*c;b[n.head].rotation.x=-.12*c;}
 }
 export function makeBall(scene){const canvas=document.createElement('canvas');canvas.width=512;canvas.height=256;const c=canvas.getContext('2d');c.fillStyle='#f4f3e8';c.fillRect(0,0,512,256);for(let row=0;row<4;row++)for(let col=0;col<8;col++){const x=col*64+(row%2)*32,y=row*64+32;c.beginPath();for(let n=0;n<5;n++){const a=n*Math.PI*2/5;c.lineTo(x+19*Math.cos(a),y+19*Math.sin(a))}c.closePath();c.fillStyle='#1a2633';c.fill();c.strokeStyle='#afb4ac';c.lineWidth=2;c.stroke()}const tex=new T.CanvasTexture(canvas);tex.colorSpace=T.SRGBColorSpace;const ball=new T.Mesh(new T.SphereGeometry(.145,20,14),new T.MeshStandardMaterial({map:tex,roughness:.65}));ball.castShadow=true;scene.add(ball);const shadow=new T.Mesh(new T.CircleGeometry(.25,16),new T.MeshBasicMaterial({color:0x0c1c10,transparent:true,opacity:.4,depthWrite:false}));shadow.rotation.x=-Math.PI/2;scene.add(shadow);return {ball,shadow};}
+
+// Real roster identity and kit colours; bodies remain original generic characters.
+export function makeRosterPlayer(scene,p,index){
+ const a=createRig(p.slot==='GK'?(p.side?'keeperWhite':'keeperRed'):(p.side?'white':'red'),p.number,index,p);
+ a.pid=p.pid;a.teamId=p.team;a.index=index;scene.add(a.group,a.shadow);return a;
+}

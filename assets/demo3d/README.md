@@ -2,6 +2,8 @@
 
 Open `assets/demo3d/index.html` over HTTP. This is a separate rendering prototype; it does not read/write career saves, import the match engine, or provide multiplayer.
 
+The career screens now have a separate, opt-in **experimental 3D highlights** path through `live.js` and `event-timeline.js`. It consumes copies of real match events through `src/js/16-match3d.js`; it does not run this demo's 19-second fixtures. See [integration contract and rollout](../../docs/match3d-integration.md). The standalone page below remains a demo, not the integrated match screen.
+
 ## Included
 
 - A fully modelled pitch, terraced stadium, crowd, goals and deforming net.
@@ -27,6 +29,6 @@ npm install --prefix /tmp/goalasso-3d-tools three@0.180.0 esbuild
 
 `node tests/demo3d.test.js` checks all 22 actor positions, finite coordinates, ball continuity, seek determinism, goal and save outcomes. Browser testing additionally covers WebGL initialization, play/pause/replay, seek, cameras, quality, and 390px portrait / 844px landscape layouts.
 
-Headless Chromium here uses software rendering; its FPS does **not** establish performance on a physical iPhone. Verify that separately before claiming the 30 FPS device target is met. This prototype does not yet include motion-capture animations, collision/contact IK, football AI, sound, real player likenesses or the career integration. The timeline/renderer boundary is intended to support a future event adapter, not to replace the authoritative football simulation.
+Headless Chromium here uses software rendering; its FPS does **not** establish performance on a physical iPhone. Verify that separately before claiming the 30 FPS device target is met. This standalone prototype does not include motion-capture animations, collision/contact IK, football AI, sound, real player likenesses or career integration. The integrated highlights use the separate event adapter and retain the authoritative football simulation.
 
 GitHub Pages already copies the `assets` directory, so the isolated demo is deployed at `/goalassoMANAGER/assets/demo3d/index.html` without changing the career entry points.
