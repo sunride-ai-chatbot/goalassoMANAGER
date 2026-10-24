@@ -62,3 +62,16 @@
 .pp:not([data-pp-state="ready"]) .pp-kit{display:none}
 .pp-credit{text-align:center;font-size:10.5px;line-height:1.35;margin-top:4px;overflow-wrap:anywhere}
 .pp-credit:empty{display:none}
+
+/* broadcast lineup graphic: SVG perspective pitch in the club colours (replaces the stadium photo) */
+.cinematic-lineup .stad-pitch.persp{background:#05080c}
+.pitch-persp{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+.cine-header.broadcast{inset:2.5% 4% auto;text-align:start;text-shadow:0 2px 8px #000c}
+.cine-title{display:flex;align-items:center;gap:12px}
+.cine-kit{flex:none;width:clamp(44px,13vw,74px);filter:drop-shadow(0 4px 8px #0009)}
+.cine-kit svg{width:100%;height:auto;display:block}
+.cine-header.broadcast h2{margin:0;font:900 clamp(28px,7.5vw,58px)/1.05 var(--body);letter-spacing:-1px;color:#fff;text-shadow:0 3px 0 #0006,0 4px 16px #000}
+.cine-header.broadcast p{margin:4px 0 0;color:#ffffffd0;font-weight:600}
+.cine-header.broadcast .cine-tools{justify-content:flex-start;margin-top:8px}
+.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000a8;border-color:#ffffff66;color:#fff}
+@media(max-width:380px){.cine-header.broadcast h2{font-size:26px}.cine-kit{width:40px}}

@@ -58,7 +58,8 @@ async function mpConnect(){if(!mpIsOn())return;const c=await mpClient();await mp
   if(MP.poll)clearInterval(MP.poll);MP.poll=setInterval(()=>{if(mpIsOn())mpRefresh().catch(()=>{})},25000);MP.state='on'}
 function mpDisconnect(){if(MP.chan&&MP.client){try{MP.client.removeChannel(MP.chan)}catch(e){}}MP.chan=null;if(MP.poll)clearInterval(MP.poll);MP.poll=null;MP.state='idle'}
 /* pull league + members; react to a new revision (guest loads state) or to readiness (host simulates) */
-async function mpRefresh(){if(!mpIsOn())return;if(MP.busy){MP.pending=true;return}const c=await mpClient();
+async function mpRefresh(){if(!mpIsOn())return;if(MP.busy||MP.refreshing){MP.pending=true;return}MP.refreshing=true;try{await mpRefreshNow()}finally{MP.refreshing=false;if(MP.pending&&!MP.busy){MP.pending=false;setTimeout(()=>{if(mpIsOn())mpRefresh().catch(()=>{})},0)}}}
+async function mpRefreshNow(){const c=await mpClient();
   const [{data:L,error:e1},{data:M,error:e2}]=await Promise.all([c.from('mp_leagues').select('id,code,status,revision,week,season,turn_due,turn_min,state_gz').eq('id',G.mp.league).single(),c.from('mp_members').select('uid,club_id,display_name,is_host,ready_rev,commands,last_seen').eq('league_id',G.mp.league)]);
   if(e1||e2){MP.err=mpErrHe((e1||e2).message);return}
   const prevStatus=G.mp.status;G.mp.status=L.status;G.mp.turnDue=L.turn_due;G.mp.turnMin=L.turn_min;G.mp.members=M.map(m=>({uid:m.uid,club:m.club_id,name:m.display_name,host:m.is_host,ready:m.ready_rev>=L.revision,seen:m.last_seen,me:m.uid===MP.uid}));
@@ -68,10 +69,10 @@ async function mpRefresh(){if(!mpIsOn())return;if(MP.busy){MP.pending=true;retur
   if(mpIsHost()&&L.status==='play'){const allReady=G.mp.members.length===2&&G.mp.members.every(m=>m.ready);const expired=L.turn_due&&Date.now()>new Date(L.turn_due).getTime();const meReady=G.mp.members.some(m=>m.me&&m.ready);
     if(allReady||(expired&&meReady)){await mpHostSimulate(L,M);return}}
   if(MP.watching)return;if(prevStatus!==L.status||G.view==='home')render()}
-async function mpLoadRevision(L){MP.busy=true;try{const st=await mpUnpack(L.state_gz);if(!st)return;const myClub=G.mp.clubId,keep={host:G.mp.host,league:G.mp.league,code:G.mp.code,clubId:myClub,members:G.mp.members,oppClub:G.mp.oppClub,oppName:G.mp.oppName,oppOnline:G.mp.oppOnline,turnMin:L.turn_min,turnDue:L.turn_due};
+async function mpLoadRevision(L){if(MP.busy||L.revision<=G.mp.rev)return;MP.busy=true;try{const st=await mpUnpack(L.state_gz);if(!st)return;const myClub=G.mp.clubId,keep={watchedRev:G.mp.watchedRev,host:G.mp.host,league:G.mp.league,code:G.mp.code,clubId:myClub,members:G.mp.members,oppClub:G.mp.oppClub,oppName:G.mp.oppName,oppOnline:G.mp.oppOnline,turnMin:L.turn_min,turnDue:L.turn_due};
     const slot=G.slot,careerId=G.careerId,mgr=G.manager;G=st;hydrateCareer();G.me=myClub;G.mp=Object.assign({},st.mp||{},keep,{rev:L.revision,status:L.status});G.slot=slot;if(careerId)G.careerId=careerId;if(mgr)G.manager=Object.assign({},G.manager||{},{name:mgr.name});
     G.phase='play';G.view='home';G.live=null;await Promise.resolve(save());
-    const w=G.mp.lastWeek;if(w&&w.rev===L.revision&&w.matches&&w.matches.length&&!G.mp.watched){G.mp.watched=true;mpWatchWeek();return}render()}finally{mpIdle()}}
+    const w=G.mp.lastWeek;if(w&&w.rev===L.revision&&w.matches&&w.matches.length&&G.mp.watchedRev!==L.revision){G.mp.watchedRev=L.revision;mpWatchWeek();return}render()}finally{mpIdle()}}
 /* ---- the host's turn: apply the guest's commands, play the week, record human matches, commit ---- */
 async function mpHostSimulate(L,members){if(MP.busy)return;MP.busy=true;try{
     const guest=members.find(m=>m.uid!==MP.uid);if(guest){const gc=club(guest.club_id);if(gc){if(guest.ready_rev>=L.revision&&guest.commands&&Object.keys(guest.commands).length)mpApplyCommands(gc,guest.commands);else{ensureLineup(gc)}}}
@@ -80,9 +81,9 @@ async function mpHostSimulate(L,members){if(MP.busy)return;MP.busy=true;try{
     // play everything instantly; matches with a human side are recorded (events, lineups) for both phones to watch
     const rec=[];MP.capture=humans;MP.captured=[];const M=advanceWeek();MP.capture=null;if(M){M.live=false;runInstant(M);if(M.ctx.kind!=='league'&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);rec.push(mpRecord(M,wk));afterMyMatch(M)}
     for(const C of MP.captured)if(!rec.some(x=>x.h===C.h&&x.a===C.a))rec.push(mpRecord(C,wk));MP.captured=[];
-    G.mp.lastWeek={rev:L.revision+1,wk,season,matches:rec};G.mp.watched=false;G.view='home';G.live=null;
+    G.mp.lastWeek={rev:L.revision+1,wk,season,matches:rec};G.view='home';G.live=null;
     const done=G.phase!=='play';const gz=await mpPack(G);const rev=await mpRpc('mp_commit',{p_league:G.mp.league,p_from_rev:L.revision,p_state_gz:gz,p_week:G.wk,p_season:G.season,p_done:!!done});
-    G.mp.rev=rev;await Promise.resolve(save());if(rec.length){G.mp.watched=true;mpWatchWeek()}else render()}catch(e){MP.err=e.message;toast(e.message);if(/stale/.test(e.message))await mpRefresh()}finally{mpIdle()}}
+    G.mp.rev=rev;G.mp.watchedRev=rev;await Promise.resolve(save());if(rec.length)mpWatchWeek();else render()}catch(e){MP.err=e.message;toast(e.message);if(/stale/.test(e.message))await mpRefresh()}finally{mpIdle()}}
 function mpRecord(M,wk){const h=club(M.h),a=club(M.a);let motm=null;try{motm=manOfMatch(M,h,a)}catch(e){}return {h:M.h,a:M.a,gh:M.gh,ga:M.ga,wk:wk==null?G.wk:wk,season:G.season,motm,label:M.ctx.label||'',ctx:{kind:M.ctx.kind,stage:M.ctx.stage,neutral:M.ctx.neutral,label:M.ctx.label},pens:M.pens||null,att:M.att,ev:M.ev.map(e=>Object.assign({},e)),xi:{[M.h]:M.xi0||null,[M.a]:null},subs:M.subs,shots:M.shots,sot:M.sot,poss:M.poss,ratings:M.ratings||null}}
 /* ---- ready / commands ---- */
 async function mpReady(){if(!mpIsOn()||MP.busy)return;const c=club(G.mp.clubId);const cmd=mpCommandsFor(c);MP.busy=true;try{await mpRpc('mp_ready',{p_league:G.mp.league,p_rev:G.mp.rev,p_commands:cmd});G.mp.readySent=G.mp.rev;await Promise.resolve(save());toast('נשלח · ממתינים ליריב')}catch(e){toast(e.message)}finally{mpIdle()}await mpRefresh()}
@@ -127,6 +128,6 @@ async function mpUiAction(k,el){try{
   if(k==='start')return mpStart();if(k==='ready')return mpReady();if(k==='unready')return mpUnready();
   if(k==='copy'){try{await navigator.clipboard.writeText(el.dataset.link);toast('הקישור הועתק')}catch(e){prompt('העתק את הקישור',el.dataset.link)}return}
   if(k==='share'){try{await navigator.share({title:'GOALASSO · משחק רשת',text:'בוא נשחק ליגה 1 נגד 1 ב-GOALASSO',url:el.dataset.link})}catch(e){}return}
-  if(k==='rewatch'){G.mp.watched=true;mpWatchWeek();return}
+  if(k==='rewatch'){mpWatchWeek();return}
   if(k==='leave'){if(!confirm('לצאת מהליגה? הקריירה המקומית תישמר, אבל הליגה תמשיך בלעדיך.'))return;mpDisconnect();G=null;render();return}
   }catch(e){MP.msg=e.message;toast(e.message);render()}}

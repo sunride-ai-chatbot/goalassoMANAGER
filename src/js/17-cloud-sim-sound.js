@@ -33,21 +33,28 @@ function noise(dur,gain,when){const a=ac();if(!a)return;const buf=a.createBuffer
 /* ---- sample layer: recorded crowd/whistle cues in assets/audio (Opus), lazy-loaded on the first match, mixed through
    per-channel gains (crowd / sfx / music). The synthesized SFX below stay as the fallback when a file is missing or
    still loading, so a match never goes silent. Every cue fades; nothing is cut abruptly. ---- */
-const AUDIO_FILES={bed:'crowd-bed.opus',chance:'crowd-chance.opus',goal:'crowd-goal.opus',song:'crowd-song.opus'};
+const AUDIO_FILES={bed:'crowd-bed.opus',chance:'crowd-chance.opus',goal:'crowd-goal.opus',song:'crowd-song.opus'};   // each also as .m4a (AAC) for Safari
 const AUD={bufs:{},loading:{},bus:null,bed:null,song:null,duck:1,unlocked:false};
 function audioVol(ch){const v=G&&G.vol&&G.vol[ch];return v==null?(ch==='music'?.5:ch==='crowd'?.7:.8):v}
 function audBus(){const a=ac();if(!a)return null;if(AUD.bus&&AUD.bus.ctx===a)return AUD.bus;const mk=()=>{const g=a.createGain();g.connect(a.destination);return g};AUD.bus={ctx:a,crowd:mk(),sfx:mk(),music:mk()};audApplyVol();return AUD.bus}
 function audApplyVol(){const b=AUD.bus;if(!b)return;const t=b.ctx.currentTime;for(const ch of ['crowd','sfx','music'])b[ch].gain.setTargetAtTime(audioVol(ch),t,.05)}
 function audLoad(key){if(AUD.bufs[key])return Promise.resolve(AUD.bufs[key]);if(AUD.loading[key])return AUD.loading[key];const a=ac();if(!a||typeof fetch!=='function')return Promise.resolve(null);
-  AUD.loading[key]=fetch('assets/audio/'+AUDIO_FILES[key]).then(r=>r.ok?r.arrayBuffer():null).then(ab=>ab?a.decodeAudioData(ab):null).then(buf=>{AUD.bufs[key]=buf||null;return buf}).catch(()=>{AUD.bufs[key]=null;return null});return AUD.loading[key]}
+  // Opus first; Safari/iOS cannot always decode Ogg Opus, so the same cue is also shipped as AAC (.m4a)
+  const get=file=>fetch('assets/audio/'+file).then(r=>r.ok?r.arrayBuffer():null).then(ab=>ab?a.decodeAudioData(ab):null);
+  AUD.loading[key]=get(AUDIO_FILES[key]).catch(()=>null).then(buf=>buf||get(AUDIO_FILES[key].replace(/\.opus$/,'.m4a')).catch(()=>null)).then(buf=>{AUD.bufs[key]=buf||null;return buf}).catch(()=>{AUD.bufs[key]=null;return null});return AUD.loading[key]}
 function audPreload(){for(const k in AUDIO_FILES)audLoad(k)}
 /* one-shot cue with its own envelope; returns the gain node so it can be faded early */
 function audPlay(key,ch,vol,fadeIn){const b=audBus();const buf=b&&AUD.bufs[key];if(!buf)return null;const a=b.ctx;const s=a.createBufferSource();s.buffer=buf;const g=a.createGain();const t=a.currentTime;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol==null?1:vol,t+(fadeIn||.05));s.connect(g).connect(b[ch||'sfx']);s.start(t);s.onended=()=>{try{s.disconnect();g.disconnect()}catch(e){}};return {s,g}}
 function audFade(h,sec){if(!h||!AUD.bus)return;const a=AUD.bus.ctx,t=a.currentTime;try{h.g.gain.cancelScheduledValues(t);h.g.gain.setValueAtTime(h.g.gain.value,t);h.g.gain.linearRampToValueAtTime(0,t+(sec||1));h.s.stop(t+(sec||1)+.05)}catch(e){}}
 /* the stadium bed: loops for the whole match, volume follows attendance; ducks under goal/song cues */
-function crowdStart(att){const b=audBus();if(!b)return;audLoad('bed').then(buf=>{if(!buf||AUD.bed||!AUD.matchOn)return;const a=b.ctx;const s=a.createBufferSource();s.buffer=buf;s.loop=true;s.loopStart=1.5;s.loopEnd=buf.duration-1.5;const g=a.createGain();const base=.35+.45*clamp((att||8000)/30000,0,1);g.gain.setValueAtTime(0,a.currentTime);g.gain.linearRampToValueAtTime(base,a.currentTime+2);s.connect(g).connect(b.crowd);s.start(a.currentTime,1.5);AUD.bed={s,g,base}})}
+function crowdStart(att){const b=audBus();if(!b)return;audLoad('bed').then(buf=>{if(!buf||AUD.bed||!AUD.matchOn)return;const a=b.ctx;const g=a.createGain();const base=.35+.45*clamp((att||8000)/30000,0,1);g.gain.setValueAtTime(0,a.currentTime);g.gain.linearRampToValueAtTime(base,a.currentTime+2);g.connect(b.crowd);
+  /* Endless bed without a loop point: overlapping segments of the recording, each faded in and out over XF seconds, so
+     the seam is a crossfade (a looped BufferSource restarted audibly, and iOS cut it at the loop end). */
+  const SEG=Math.min(buf.duration-1,24),XF=3,OFF=.5;const B={g,base,srcs:[],next:a.currentTime,timer:null};
+  const schedule=()=>{if(AUD.bed!==B)return;while(B.next<a.currentTime+12){const t=B.next,s=a.createBufferSource(),sg=a.createGain();s.buffer=buf;sg.gain.setValueAtTime(0,t);sg.gain.linearRampToValueAtTime(1,t+XF);sg.gain.setValueAtTime(1,t+SEG-XF);sg.gain.linearRampToValueAtTime(0,t+SEG);s.connect(sg).connect(g);s.start(t,OFF,SEG);s.onended=()=>{try{s.disconnect();sg.disconnect()}catch(e){}B.srcs=B.srcs.filter(x=>x!==s)};B.srcs.push(s);B.next=t+SEG-XF}};
+  B.timer=setInterval(schedule,4000);schedule();AUD.bed=B})}
 function crowdDuck(level,sec){const B=AUD.bed;if(!B||!AUD.bus)return;const t=AUD.bus.ctx.currentTime;B.g.gain.cancelScheduledValues(t);B.g.gain.setValueAtTime(B.g.gain.value,t);B.g.gain.linearRampToValueAtTime(B.base*level,t+(sec||.5))}
-function crowdStop(sec){if(AUD.bed){audFade(AUD.bed,sec||2);AUD.bed=null}if(AUD.song){audFade(AUD.song,sec||2);AUD.song=null}AUD.matchOn=false}
+function crowdStop(sec){if(AUD.bed){const B=AUD.bed;AUD.bed=null;clearInterval(B.timer);try{const a=AUD.bus.ctx,t=a.currentTime;B.g.gain.cancelScheduledValues(t);B.g.gain.setValueAtTime(B.g.gain.value,t);B.g.gain.linearRampToValueAtTime(0,t+(sec||2));for(const s of B.srcs)s.stop(t+(sec||2)+.05)}catch(e){}}if(AUD.song){audFade(AUD.song,sec||2);AUD.song=null}AUD.matchOn=false}
 const CROWD={
   kickoff(att){AUD.matchOn=true;crowdStart(att)},
   chance(){const h=audPlay('chance','crowd',.9,.1);if(h)crowdDuck(.7,.3),setTimeout(()=>crowdDuck(1,1.5),2600)},

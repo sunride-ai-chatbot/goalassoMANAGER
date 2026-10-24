@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="c03b64d34836">
+<meta name="goalasso-build" content="94a1450829e5">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -234,6 +234,10 @@ h3{font-size:18px}
 @keyframes npin{from{opacity:0}to{opacity:1}}@keyframes nppaper{from{opacity:0;transform:translateY(18px) rotate(-.6deg)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.npm,.npm-scroll .np{animation:none}}
 .paper [data-npopen]{cursor:pointer}.paper [data-npopen]:hover .hl,.paper [data-npopen]:hover h4{text-decoration:underline}
+/* the presented player's own cut-out on the stage (replaces the empty shirt when a verified portrait exists) */
+.np-face{position:absolute;left:50%;bottom:26%;width:44%;transform:translateX(-50%);filter:drop-shadow(0 12px 18px rgba(0,0,0,.65))}
+.np-face svg{display:block;width:100%;height:auto}
+.np-face .pp:not([data-pp-state="ready"]){display:none}
 /* ---- brand logo ---- */
 .brandlogo{display:block;width:min(300px,72vw);height:auto;margin:0 auto 4px;aspect-ratio:547/240;background:var(--logo) center/contain no-repeat;filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
 /* ---- signing reveal ---- */
@@ -716,6 +720,19 @@ h3.sec:not(.btn){font-size:24px}
 .pp:not([data-pp-state="ready"]) .pp-kit{display:none}
 .pp-credit{text-align:center;font-size:10.5px;line-height:1.35;margin-top:4px;overflow-wrap:anywhere}
 .pp-credit:empty{display:none}
+
+/* broadcast lineup graphic: SVG perspective pitch in the club colours (replaces the stadium photo) */
+.cinematic-lineup .stad-pitch.persp{background:#05080c}
+.pitch-persp{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+.cine-header.broadcast{inset:2.5% 4% auto;text-align:start;text-shadow:0 2px 8px #000c}
+.cine-title{display:flex;align-items:center;gap:12px}
+.cine-kit{flex:none;width:clamp(44px,13vw,74px);filter:drop-shadow(0 4px 8px #0009)}
+.cine-kit svg{width:100%;height:auto;display:block}
+.cine-header.broadcast h2{margin:0;font:900 clamp(28px,7.5vw,58px)/1.05 var(--body);letter-spacing:-1px;color:#fff;text-shadow:0 3px 0 #0006,0 4px 16px #000}
+.cine-header.broadcast p{margin:4px 0 0;color:#ffffffd0;font-weight:600}
+.cine-header.broadcast .cine-tools{justify-content:flex-start;margin-top:8px}
+.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000a8;border-color:#ffffff66;color:#fff}
+@media(max-width:380px){.cine-header.broadcast h2{font-size:26px}.cine-kit{width:40px}}
 /* Phone readability: use the device viewport, readable copy and finger-sized controls. */
 .home-pitch{max-width:440px;margin:10px auto 0}
 .field.home-pitch .tok{width:16%;max-width:64px;min-height:44px}
@@ -1752,8 +1769,8 @@ function paper(kind,h,sub,body,team,ev){if(!G.paper)G.paper=[];G.paper.unshift({
 const OPENERS=['במועדון מרוצים מהמהלך.','בסביבת המועדון מספרים שהעסקה נסגרה אחרי משא ומתן קצר.','מקורבים לעסקה אומרים שההנהלה סימנה את השחקן כבר בתחילת החלון.','הסוכן של השחקן אישר את הפרטים.','האוהדים ברשת כבר הגיבו בהתלהבות.'];
 function signingStory(p,c,from,fee){const open=pick(OPENERS);
   paperMajor('העברות',`${fullName(p)} חתם ב${c.name}`,fee?`${c.short} שילמה ${NIS(fee)} ל${from.short}; חוזה ל-${p.contract} ${p.contract>1?'עונות':'עונה'}`:`הצטרף כשחקן חופשי, חוזה ל-${p.contract} ${p.contract>1?'עונות':'עונה'}`,
-  `${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}${p.foreign?' מ'+p.nat:''}${p.fromLeague?' שהגיע מ'+p.fromLeague:''}, הוא הרכש ${fee?'היקר':'החדש'} של ${c.name}. ${open} הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב, ובמועדון מאמינים שהוא ${p.age<=23?'יהפוך לאחד הנכסים הגדולים של הקבוצה':'יביא איתו ניסיון וביטחון'}.`,c.id,{type:'sign',player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:from?from.short:null,fee:fee||null,free:!from,years:p.contract||null})}
-function saleStory(p,c,to,fee){paperMajor('העברות',`${fullName(p)} עוזב את ${c.name}`,`${to.short} שילמה ${NIS(fee)}`,`${c.name} נפרדת מ${fullName(p)} (${p.age}). ${pick(['ההנהלה רואה בעסקה הזדמנות לרענן את הסגל.','המכירה תאפשר למועדון לחזק עמדות אחרות.','האוהדים חלוקים: יש שמצטערים על הפרידה ויש שמברכים על הסכום.'])} ב${to.short} מקווים שהוא ישתלב מהר.`,c.id,{type:'sale',player:fullName(p),pos:p.pos,age:p.age,club:c.name,clubId:c.id,buyer:to.short,buyerId:to.id,fee})}
+  `${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}${p.foreign?' מ'+p.nat:''}${p.fromLeague?' שהגיע מ'+p.fromLeague:''}, הוא הרכש ${fee?'היקר':'החדש'} של ${c.name}. ${open} הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב, ובמועדון מאמינים שהוא ${p.age<=23?'יהפוך לאחד הנכסים הגדולים של הקבוצה':'יביא איתו ניסיון וביטחון'}.`,c.id,{type:'sign',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:from?from.short:null,fee:fee||null,free:!from,years:p.contract||null})}
+function saleStory(p,c,to,fee){paperMajor('העברות',`${fullName(p)} עוזב את ${c.name}`,`${to.short} שילמה ${NIS(fee)}`,`${c.name} נפרדת מ${fullName(p)} (${p.age}). ${pick(['ההנהלה רואה בעסקה הזדמנות לרענן את הסגל.','המכירה תאפשר למועדון לחזק עמדות אחרות.','האוהדים חלוקים: יש שמצטערים על הפרידה ויש שמברכים על הסכום.'])} ב${to.short} מקווים שהוא ישתלב מהר.`,c.id,{type:'sale',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,club:c.name,clubId:c.id,buyer:to.short,buyerId:to.id,fee})}
 function sponsorStory(c,o){paperMajor('כספים',`${c.name} חתמה עם ${o.name}`,`חסות חולצה של ${NIS(o.annual)} לעונה ל-${o.years} ${o.years>1?'עונות':'עונה'}`,`הלוגו של ${o.name} יופיע על חולצת ${c.name} כבר במשחק הבא. ${o.bonusTitle?`החוזה כולל בונוסים על אליפות (${NIS(o.bonusTitle)}) ועל יציאה לאירופה (${NIS(o.bonusEuro)}).`:'מדובר בחוזה קבוע בלי בונוסים.'} במועדון מסבירים שהכסף יופנה לשכר השחקנים ולתשתיות.`,c.id,{type:'sponsor',sponsor:o.name,club:c.name,clubId:c.id,annual:o.annual,years:o.years})}
 function resultStory(M,h,a){
   const mineHome=h.id===G.me;const my=mineHome?h:a,opp=mineHome?a:h;const gf=mineHome?M.gh:M.ga,ga=mineHome?M.ga:M.gh;
@@ -2005,7 +2022,7 @@ function completeTransfer(n,p,sc){
   sc.players=sc.players.filter(x=>x!==p);
   p.contract=n.loan?1:po.years;p.wage=po.wage;p.role=po.role;p.form=0;p.morale=74;p.fit=95;p.kn=2;p.fromLeague=p.lg?WORLD_LEAGUES[p.lg].name:null;if(n.loan)p.loan={from:sc.id,fromName:sc.short,until:G.season,buy:n.loan.buy};delete p.lg;delete p.vmult;delete p.wmult;delete p.key;delete p.est;p.sellon=o.sellon?{pct:o.sellon,to:sc.short}:null;p.boughtFor=o.fee;finalize(p);c.players.push(p);
   n.stage='done';n.log.push(n.loan?`${fullName(p)} הגיע בהשאלה לעונה! ${NIS(po.wage)} לשבוע.`:`${fullName(p)} חתם! ${po.years} שנים, ${NIS(po.wage)} לשבוע.`);
-  news(n.loan?`${fullName(p)} הגיע בהשאלה מ${sc.short} (אופציית רכישה ${NIS(n.loan.buy)}).`:`${fullName(p)} הצטרף מ${sc.short} תמורת ${NIS(o.fee)}.`);if(!n.loan)signingStory(p,c,sc,o.fee);else paperMajor('העברות',`${fullName(p)} בהשאלה ל${c.name}`,`מ${sc.short}, לעונה אחת${n.loan.buy?', עם אופציית רכישה':''}`,`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). ${n.loan.buy?pick(['המנג\'ר מאמין שהוא ייכנס להרכב מיד.','אופציית הרכישה: '+NIS(n.loan.buy)+'.']):'המנג\'ר מאמין שהוא ייכנס להרכב מיד.'}`,c.id,{type:'loan',player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:sc.short,until:seasonLabel(),buy:n.loan.buy||null});
+  news(n.loan?`${fullName(p)} הגיע בהשאלה מ${sc.short} (אופציית רכישה ${NIS(n.loan.buy)}).`:`${fullName(p)} הצטרף מ${sc.short} תמורת ${NIS(o.fee)}.`);if(!n.loan)signingStory(p,c,sc,o.fee);else paperMajor('העברות',`${fullName(p)} בהשאלה ל${c.name}`,`מ${sc.short}, לעונה אחת${n.loan.buy?', עם אופציית רכישה':''}`,`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). ${n.loan.buy?pick(['המנג\'ר מאמין שהוא ייכנס להרכב מיד.','אופציית הרכישה: '+NIS(n.loan.buy)+'.']):'המנג\'ר מאמין שהוא ייכנס להרכב מיד.'}`,c.id,{type:'loan',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:sc.short,until:seasonLabel(),buy:n.loan.buy||null});
   if(po.role==='starter'&&p.ovr<effOvrTop(c,p.pos)-2)p.promised=true;
   autoLineups();save();recordSigning(p,c,n.loan?'loan':'perm',n.loan?{from:sc.short,buy:n.loan.buy}:{from:sc.short,fee:o.fee,inst:o.inst});
 }
@@ -3022,21 +3039,28 @@ function noise(dur,gain,when){const a=ac();if(!a)return;const buf=a.createBuffer
 /* ---- sample layer: recorded crowd/whistle cues in assets/audio (Opus), lazy-loaded on the first match, mixed through
    per-channel gains (crowd / sfx / music). The synthesized SFX below stay as the fallback when a file is missing or
    still loading, so a match never goes silent. Every cue fades; nothing is cut abruptly. ---- */
-const AUDIO_FILES={bed:'crowd-bed.opus',chance:'crowd-chance.opus',goal:'crowd-goal.opus',song:'crowd-song.opus'};
+const AUDIO_FILES={bed:'crowd-bed.opus',chance:'crowd-chance.opus',goal:'crowd-goal.opus',song:'crowd-song.opus'};   // each also as .m4a (AAC) for Safari
 const AUD={bufs:{},loading:{},bus:null,bed:null,song:null,duck:1,unlocked:false};
 function audioVol(ch){const v=G&&G.vol&&G.vol[ch];return v==null?(ch==='music'?.5:ch==='crowd'?.7:.8):v}
 function audBus(){const a=ac();if(!a)return null;if(AUD.bus&&AUD.bus.ctx===a)return AUD.bus;const mk=()=>{const g=a.createGain();g.connect(a.destination);return g};AUD.bus={ctx:a,crowd:mk(),sfx:mk(),music:mk()};audApplyVol();return AUD.bus}
 function audApplyVol(){const b=AUD.bus;if(!b)return;const t=b.ctx.currentTime;for(const ch of ['crowd','sfx','music'])b[ch].gain.setTargetAtTime(audioVol(ch),t,.05)}
 function audLoad(key){if(AUD.bufs[key])return Promise.resolve(AUD.bufs[key]);if(AUD.loading[key])return AUD.loading[key];const a=ac();if(!a||typeof fetch!=='function')return Promise.resolve(null);
-  AUD.loading[key]=fetch('assets/audio/'+AUDIO_FILES[key]).then(r=>r.ok?r.arrayBuffer():null).then(ab=>ab?a.decodeAudioData(ab):null).then(buf=>{AUD.bufs[key]=buf||null;return buf}).catch(()=>{AUD.bufs[key]=null;return null});return AUD.loading[key]}
+  // Opus first; Safari/iOS cannot always decode Ogg Opus, so the same cue is also shipped as AAC (.m4a)
+  const get=file=>fetch('assets/audio/'+file).then(r=>r.ok?r.arrayBuffer():null).then(ab=>ab?a.decodeAudioData(ab):null);
+  AUD.loading[key]=get(AUDIO_FILES[key]).catch(()=>null).then(buf=>buf||get(AUDIO_FILES[key].replace(/\.opus$/,'.m4a')).catch(()=>null)).then(buf=>{AUD.bufs[key]=buf||null;return buf}).catch(()=>{AUD.bufs[key]=null;return null});return AUD.loading[key]}
 function audPreload(){for(const k in AUDIO_FILES)audLoad(k)}
 /* one-shot cue with its own envelope; returns the gain node so it can be faded early */
 function audPlay(key,ch,vol,fadeIn){const b=audBus();const buf=b&&AUD.bufs[key];if(!buf)return null;const a=b.ctx;const s=a.createBufferSource();s.buffer=buf;const g=a.createGain();const t=a.currentTime;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol==null?1:vol,t+(fadeIn||.05));s.connect(g).connect(b[ch||'sfx']);s.start(t);s.onended=()=>{try{s.disconnect();g.disconnect()}catch(e){}};return {s,g}}
 function audFade(h,sec){if(!h||!AUD.bus)return;const a=AUD.bus.ctx,t=a.currentTime;try{h.g.gain.cancelScheduledValues(t);h.g.gain.setValueAtTime(h.g.gain.value,t);h.g.gain.linearRampToValueAtTime(0,t+(sec||1));h.s.stop(t+(sec||1)+.05)}catch(e){}}
 /* the stadium bed: loops for the whole match, volume follows attendance; ducks under goal/song cues */
-function crowdStart(att){const b=audBus();if(!b)return;audLoad('bed').then(buf=>{if(!buf||AUD.bed||!AUD.matchOn)return;const a=b.ctx;const s=a.createBufferSource();s.buffer=buf;s.loop=true;s.loopStart=1.5;s.loopEnd=buf.duration-1.5;const g=a.createGain();const base=.35+.45*clamp((att||8000)/30000,0,1);g.gain.setValueAtTime(0,a.currentTime);g.gain.linearRampToValueAtTime(base,a.currentTime+2);s.connect(g).connect(b.crowd);s.start(a.currentTime,1.5);AUD.bed={s,g,base}})}
+function crowdStart(att){const b=audBus();if(!b)return;audLoad('bed').then(buf=>{if(!buf||AUD.bed||!AUD.matchOn)return;const a=b.ctx;const g=a.createGain();const base=.35+.45*clamp((att||8000)/30000,0,1);g.gain.setValueAtTime(0,a.currentTime);g.gain.linearRampToValueAtTime(base,a.currentTime+2);g.connect(b.crowd);
+  /* Endless bed without a loop point: overlapping segments of the recording, each faded in and out over XF seconds, so
+     the seam is a crossfade (a looped BufferSource restarted audibly, and iOS cut it at the loop end). */
+  const SEG=Math.min(buf.duration-1,24),XF=3,OFF=.5;const B={g,base,srcs:[],next:a.currentTime,timer:null};
+  const schedule=()=>{if(AUD.bed!==B)return;while(B.next<a.currentTime+12){const t=B.next,s=a.createBufferSource(),sg=a.createGain();s.buffer=buf;sg.gain.setValueAtTime(0,t);sg.gain.linearRampToValueAtTime(1,t+XF);sg.gain.setValueAtTime(1,t+SEG-XF);sg.gain.linearRampToValueAtTime(0,t+SEG);s.connect(sg).connect(g);s.start(t,OFF,SEG);s.onended=()=>{try{s.disconnect();sg.disconnect()}catch(e){}B.srcs=B.srcs.filter(x=>x!==s)};B.srcs.push(s);B.next=t+SEG-XF}};
+  B.timer=setInterval(schedule,4000);schedule();AUD.bed=B})}
 function crowdDuck(level,sec){const B=AUD.bed;if(!B||!AUD.bus)return;const t=AUD.bus.ctx.currentTime;B.g.gain.cancelScheduledValues(t);B.g.gain.setValueAtTime(B.g.gain.value,t);B.g.gain.linearRampToValueAtTime(B.base*level,t+(sec||.5))}
-function crowdStop(sec){if(AUD.bed){audFade(AUD.bed,sec||2);AUD.bed=null}if(AUD.song){audFade(AUD.song,sec||2);AUD.song=null}AUD.matchOn=false}
+function crowdStop(sec){if(AUD.bed){const B=AUD.bed;AUD.bed=null;clearInterval(B.timer);try{const a=AUD.bus.ctx,t=a.currentTime;B.g.gain.cancelScheduledValues(t);B.g.gain.setValueAtTime(B.g.gain.value,t);B.g.gain.linearRampToValueAtTime(0,t+(sec||2));for(const s of B.srcs)s.stop(t+(sec||2)+.05)}catch(e){}}if(AUD.song){audFade(AUD.song,sec||2);AUD.song=null}AUD.matchOn=false}
 const CROWD={
   kickoff(att){AUD.matchOn=true;crowdStart(att)},
   chance(){const h=audPlay('chance','crowd',.9,.1);if(h)crowdDuck(.7,.3),setTimeout(()=>crowdDuck(1,1.5),2600)},
@@ -3721,7 +3745,7 @@ function doLoanOut(pid,o){const c=me();const p=c.players.find(x=>x.id===pid);if(
   p.loanOut={from:G.me,to:o.c.id,toName:o.c.short||o.c.name,until:G.season,share:o.share,role:o.role,ovr0:p.ovr,apps0:p.apps||0,goals0:p.goals||0,inj0:p.injSeqSeen||0,wk:G.wk};
   o.c.players.push(p);if(o.fee){c.money+=o.fee;addLog(`דמי השאלה: ${fullName(p)} ל${o.c.short||o.c.name}`,o.fee)}
   G.loansOut=G.loansOut||[];G.loansOut.push({pid:p.id,to:o.c.id});
-  news(`${fullName(p)} יצא בהשאלה ל${o.c.name} עד סוף העונה (${LOAN_ROLE_HE[o.role]}).`);paper('העברות',`${fullName(p)} בהשאלה ל${o.c.name}`,`עד סוף עונת ${seasonLabel()}`,`${me().name} השאילה את ${fullName(p)} (${POSHE[p.pos]}, ${p.age}) ל${o.c.name}. המטרה: דקות משחק והתפתחות.`,G.me,{type:'loanOut',player:fullName(p),pos:p.pos,age:p.age,club:me().name,clubId:G.me,to:o.c.name,toId:o.c.id,until:seasonLabel()});
+  news(`${fullName(p)} יצא בהשאלה ל${o.c.name} עד סוף העונה (${LOAN_ROLE_HE[o.role]}).`);paper('העברות',`${fullName(p)} בהשאלה ל${o.c.name}`,`עד סוף עונת ${seasonLabel()}`,`${me().name} השאילה את ${fullName(p)} (${POSHE[p.pos]}, ${p.age}) ל${o.c.name}. המטרה: דקות משחק והתפתחות.`,G.me,{type:'loanOut',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,club:me().name,clubId:G.me,to:o.c.name,toId:o.c.id,until:seasonLabel()});
   autoLineups();save();render()}
 function loanedOut(){return (G.loansOut||[]).map(l=>{const c=club(l.to);const p=c&&c.players.find(x=>x.id===l.pid);return p?{p,c}:null}).filter(Boolean)}
 function loansOutWeekly(){const mine=me();if(!G.loansOut||!G.loansOut.length)return;let cost=0;
@@ -3978,9 +4002,12 @@ function npImage(st){const t=npTypeOf(st),ev=st.ev||{};
   if(t==='sponsor')return {k:'stage',board:ev.sponsor,cap:'מעמד ההכרזה · אילוסטרציה'};
   const k=st.kind;if(k==='העברות'||k==='כספים'||k==='מסחרי')return {k:'stage',cap:'אילוסטרציה'};return {k:'manager',cap:'אילוסטרציה'}}
 function npShirtFor(st){const ev=st.ev||{};const id=ev.type==='sale'?ev.buyerId:ev.type==='loanOut'?ev.toId:(ev.clubId||st.team);const c=club(id);return c||null}
-function npFigure(st,lazy){const im=npImage(st);const [f,w,h]=NP_IMG[im.k];const c=im.shirt?npShirtFor(st):null;const ev=st.ev||{};
+function npPlayerOf(ev){if(!ev||ev.pid==null||!G)return null;const all=[...G.clubs,...G.leumit,...Object.values(G.pseudo||{}),...Object.values(G.world||{}).flatMap(l=>l.clubs||[])];for(const c of all){const p=[...c.players,...(c.youth||[])].find(x=>x.id===ev.pid);if(p)return {p,c}}return null}
+function npFaceHTML(st){const ev=st.ev||{};const hit=npPlayerOf(ev);if(!hit||!playerVisual(hit.p))return '';const c=npShirtFor(st)||hit.c;const id='npf'+String(ev.pid)+Math.random().toString(36).slice(2,5);
+  return `<div class="np-face"><svg viewBox="0 0 240 300" aria-hidden="true">${portraitGroup(hit.p,c,id,{bg:false,h:300})}</svg></div>`}
+function npFigure(st,lazy){const im=npImage(st);const [f,w,h]=NP_IMG[im.k];const ev=st.ev||{};const face=im.shirt?npFaceHTML(st):'';const c=im.shirt&&!face?npShirtFor(st):null;
   return `<figure class="np-fig"><div class="np-ph"><picture><source srcset="${f}.webp" type="image/webp"><img src="${f}.jpg" width="${w}" height="${h}" alt="" ${lazy?'loading="lazy" ':''}decoding="async" onerror="this.closest('.np-ph').classList.add('np-noimg')"></picture>
-   ${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?`<div class="np-board">${sponsorLogoHTML(im.board)||`<bdi>${esc(im.board)}</bdi>`}</div>`:''}</div>
+   ${face}${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?`<div class="np-board">${sponsorLogoHTML(im.board)||`<bdi>${esc(im.board)}</bdi>`}</div>`:''}</div>
    <figcaption><b>${esc(im.cap.split(' · ')[0])}:</b> ${esc(im.cap.split(' · ')[1]||'')}</figcaption></figure>`}
 const yrs=n=>n==null?null:`${n} ${n>1?'עונות':'עונה'}`;
 function npFacts(st){const ev=st.ev||{},t=npTypeOf(st);const c=club(st.team)||null;const F=[];const add=(l,v)=>{if(v!=null&&v!=='')F.push([l,v])};
@@ -4032,8 +4059,8 @@ function openArchiveStory(i){const st=(G.paper||[])[i];if(st)openFrontPage(st,{l
 function paperDemo(type){if(!G)return;const c=me();const base={wk:G.wk,s:G.season,team:c.id,demo:true};const other=G.clubs.find(x=>x.id!==G.me&&x.league)||c;const p=c.players.slice().sort((a,b)=>b.ovr-a.ovr)[0];
   const D={
    appoint:{kind:'מועדון',h:`${G.manager.name} חתם ב${c.name}`,sub:`חוזה לשתי עונות. המטרה: ${G.board.expectText}`,body:`${c.name} הציגה היום את המנג'ר החדש. ההנהלה הציבה יעד ברור: ${G.board.expectText}. העבודה מתחילה כבר באימון הקרוב.`,ev:{type:'appoint',manager:G.manager.name,club:c.name,clubId:c.id,years:2,goal:G.board.expectText},q:'באתי לבנות קבוצה שאנשים יתגאו בה'},
-   perm:{kind:'העברות',h:`${fullName(p)} חתם ב${c.name}`,sub:`${c.short} שילמה ${NIS(askingPrice(p))} ל${other.short}; חוזה ל-3 עונות`,body:`${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}, הוא הרכש החדש של ${c.name}. הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב.`,ev:{type:'sign',player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:other.short,fee:askingPrice(p),years:3}},
-   loan:{kind:'העברות',h:`${fullName(p)} בהשאלה ל${c.name}`,sub:`מ${other.short}, לעונה אחת`,body:`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). המנג'ר מאמין שהוא ייכנס להרכב מיד.`,ev:{type:'loan',player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:other.short,until:seasonLabel(),buy:null}},
+   perm:{kind:'העברות',h:`${fullName(p)} חתם ב${c.name}`,sub:`${c.short} שילמה ${NIS(askingPrice(p))} ל${other.short}; חוזה ל-3 עונות`,body:`${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}, הוא הרכש החדש של ${c.name}. הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב.`,ev:{type:'sign',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:other.short,fee:askingPrice(p),years:3}},
+   loan:{kind:'העברות',h:`${fullName(p)} בהשאלה ל${c.name}`,sub:`מ${other.short}, לעונה אחת`,body:`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). המנג'ר מאמין שהוא ייכנס להרכב מיד.`,ev:{type:'loan',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:other.short,until:seasonLabel(),buy:null}},
    sponsor:{kind:'כספים',h:`${c.name} חתמה עם ${SPONSORS[0]}`,sub:`חסות חולצה של ${NIS(1200000)} לעונה ל-2 עונות`,body:`הלוגו של ${SPONSORS[0]} יופיע על חולצת ${c.name} כבר במשחק הבא. במועדון מסבירים שהכסף יופנה לשכר השחקנים ולתשתיות.`,ev:{type:'sponsor',sponsor:SPONSORS[0],club:c.name,clubId:c.id,annual:1200000,years:2}},
    champ:{kind:'ליגה',h:`${c.name} אלופת המדינה ${seasonLabel()}`,sub:'העונה הסתיימה במקום הראשון',body:`${c.name} סיימה את העונה במקום הראשון. חגיגות ענק בעיר.`,ev:{type:'champ',club:c.name,clubId:c.id,season:seasonLabel(),pts:78,second:other.short}},
    cup:{kind:'גביע',h:`${c.name} זכתה בגביע המדינה!`,sub:`2:1 מול ${other.short}`,body:`חגיגות ענק בעיר אחרי השריקה. ${c.name} מניפה את הגביע.`,ev:{type:'cup',comp:'גביע המדינה',club:c.name,clubId:c.id,score:'2:1',opp:other.short,pens:false}}};
@@ -4466,7 +4493,8 @@ async function mpConnect(){if(!mpIsOn())return;const c=await mpClient();await mp
   if(MP.poll)clearInterval(MP.poll);MP.poll=setInterval(()=>{if(mpIsOn())mpRefresh().catch(()=>{})},25000);MP.state='on'}
 function mpDisconnect(){if(MP.chan&&MP.client){try{MP.client.removeChannel(MP.chan)}catch(e){}}MP.chan=null;if(MP.poll)clearInterval(MP.poll);MP.poll=null;MP.state='idle'}
 /* pull league + members; react to a new revision (guest loads state) or to readiness (host simulates) */
-async function mpRefresh(){if(!mpIsOn())return;if(MP.busy){MP.pending=true;return}const c=await mpClient();
+async function mpRefresh(){if(!mpIsOn())return;if(MP.busy||MP.refreshing){MP.pending=true;return}MP.refreshing=true;try{await mpRefreshNow()}finally{MP.refreshing=false;if(MP.pending&&!MP.busy){MP.pending=false;setTimeout(()=>{if(mpIsOn())mpRefresh().catch(()=>{})},0)}}}
+async function mpRefreshNow(){const c=await mpClient();
   const [{data:L,error:e1},{data:M,error:e2}]=await Promise.all([c.from('mp_leagues').select('id,code,status,revision,week,season,turn_due,turn_min,state_gz').eq('id',G.mp.league).single(),c.from('mp_members').select('uid,club_id,display_name,is_host,ready_rev,commands,last_seen').eq('league_id',G.mp.league)]);
   if(e1||e2){MP.err=mpErrHe((e1||e2).message);return}
   const prevStatus=G.mp.status;G.mp.status=L.status;G.mp.turnDue=L.turn_due;G.mp.turnMin=L.turn_min;G.mp.members=M.map(m=>({uid:m.uid,club:m.club_id,name:m.display_name,host:m.is_host,ready:m.ready_rev>=L.revision,seen:m.last_seen,me:m.uid===MP.uid}));
@@ -4476,10 +4504,10 @@ async function mpRefresh(){if(!mpIsOn())return;if(MP.busy){MP.pending=true;retur
   if(mpIsHost()&&L.status==='play'){const allReady=G.mp.members.length===2&&G.mp.members.every(m=>m.ready);const expired=L.turn_due&&Date.now()>new Date(L.turn_due).getTime();const meReady=G.mp.members.some(m=>m.me&&m.ready);
     if(allReady||(expired&&meReady)){await mpHostSimulate(L,M);return}}
   if(MP.watching)return;if(prevStatus!==L.status||G.view==='home')render()}
-async function mpLoadRevision(L){MP.busy=true;try{const st=await mpUnpack(L.state_gz);if(!st)return;const myClub=G.mp.clubId,keep={host:G.mp.host,league:G.mp.league,code:G.mp.code,clubId:myClub,members:G.mp.members,oppClub:G.mp.oppClub,oppName:G.mp.oppName,oppOnline:G.mp.oppOnline,turnMin:L.turn_min,turnDue:L.turn_due};
+async function mpLoadRevision(L){if(MP.busy||L.revision<=G.mp.rev)return;MP.busy=true;try{const st=await mpUnpack(L.state_gz);if(!st)return;const myClub=G.mp.clubId,keep={watchedRev:G.mp.watchedRev,host:G.mp.host,league:G.mp.league,code:G.mp.code,clubId:myClub,members:G.mp.members,oppClub:G.mp.oppClub,oppName:G.mp.oppName,oppOnline:G.mp.oppOnline,turnMin:L.turn_min,turnDue:L.turn_due};
     const slot=G.slot,careerId=G.careerId,mgr=G.manager;G=st;hydrateCareer();G.me=myClub;G.mp=Object.assign({},st.mp||{},keep,{rev:L.revision,status:L.status});G.slot=slot;if(careerId)G.careerId=careerId;if(mgr)G.manager=Object.assign({},G.manager||{},{name:mgr.name});
     G.phase='play';G.view='home';G.live=null;await Promise.resolve(save());
-    const w=G.mp.lastWeek;if(w&&w.rev===L.revision&&w.matches&&w.matches.length&&!G.mp.watched){G.mp.watched=true;mpWatchWeek();return}render()}finally{mpIdle()}}
+    const w=G.mp.lastWeek;if(w&&w.rev===L.revision&&w.matches&&w.matches.length&&G.mp.watchedRev!==L.revision){G.mp.watchedRev=L.revision;mpWatchWeek();return}render()}finally{mpIdle()}}
 /* ---- the host's turn: apply the guest's commands, play the week, record human matches, commit ---- */
 async function mpHostSimulate(L,members){if(MP.busy)return;MP.busy=true;try{
     const guest=members.find(m=>m.uid!==MP.uid);if(guest){const gc=club(guest.club_id);if(gc){if(guest.ready_rev>=L.revision&&guest.commands&&Object.keys(guest.commands).length)mpApplyCommands(gc,guest.commands);else{ensureLineup(gc)}}}
@@ -4488,9 +4516,9 @@ async function mpHostSimulate(L,members){if(MP.busy)return;MP.busy=true;try{
     // play everything instantly; matches with a human side are recorded (events, lineups) for both phones to watch
     const rec=[];MP.capture=humans;MP.captured=[];const M=advanceWeek();MP.capture=null;if(M){M.live=false;runInstant(M);if(M.ctx.kind!=='league'&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);rec.push(mpRecord(M,wk));afterMyMatch(M)}
     for(const C of MP.captured)if(!rec.some(x=>x.h===C.h&&x.a===C.a))rec.push(mpRecord(C,wk));MP.captured=[];
-    G.mp.lastWeek={rev:L.revision+1,wk,season,matches:rec};G.mp.watched=false;G.view='home';G.live=null;
+    G.mp.lastWeek={rev:L.revision+1,wk,season,matches:rec};G.view='home';G.live=null;
     const done=G.phase!=='play';const gz=await mpPack(G);const rev=await mpRpc('mp_commit',{p_league:G.mp.league,p_from_rev:L.revision,p_state_gz:gz,p_week:G.wk,p_season:G.season,p_done:!!done});
-    G.mp.rev=rev;await Promise.resolve(save());if(rec.length){G.mp.watched=true;mpWatchWeek()}else render()}catch(e){MP.err=e.message;toast(e.message);if(/stale/.test(e.message))await mpRefresh()}finally{mpIdle()}}
+    G.mp.rev=rev;G.mp.watchedRev=rev;await Promise.resolve(save());if(rec.length)mpWatchWeek();else render()}catch(e){MP.err=e.message;toast(e.message);if(/stale/.test(e.message))await mpRefresh()}finally{mpIdle()}}
 function mpRecord(M,wk){const h=club(M.h),a=club(M.a);let motm=null;try{motm=manOfMatch(M,h,a)}catch(e){}return {h:M.h,a:M.a,gh:M.gh,ga:M.ga,wk:wk==null?G.wk:wk,season:G.season,motm,label:M.ctx.label||'',ctx:{kind:M.ctx.kind,stage:M.ctx.stage,neutral:M.ctx.neutral,label:M.ctx.label},pens:M.pens||null,att:M.att,ev:M.ev.map(e=>Object.assign({},e)),xi:{[M.h]:M.xi0||null,[M.a]:null},subs:M.subs,shots:M.shots,sot:M.sot,poss:M.poss,ratings:M.ratings||null}}
 /* ---- ready / commands ---- */
 async function mpReady(){if(!mpIsOn()||MP.busy)return;const c=club(G.mp.clubId);const cmd=mpCommandsFor(c);MP.busy=true;try{await mpRpc('mp_ready',{p_league:G.mp.league,p_rev:G.mp.rev,p_commands:cmd});G.mp.readySent=G.mp.rev;await Promise.resolve(save());toast('נשלח · ממתינים ליריב')}catch(e){toast(e.message)}finally{mpIdle()}await mpRefresh()}
@@ -4535,7 +4563,7 @@ async function mpUiAction(k,el){try{
   if(k==='start')return mpStart();if(k==='ready')return mpReady();if(k==='unready')return mpUnready();
   if(k==='copy'){try{await navigator.clipboard.writeText(el.dataset.link);toast('הקישור הועתק')}catch(e){prompt('העתק את הקישור',el.dataset.link)}return}
   if(k==='share'){try{await navigator.share({title:'GOALASSO · משחק רשת',text:'בוא נשחק ליגה 1 נגד 1 ב-GOALASSO',url:el.dataset.link})}catch(e){}return}
-  if(k==='rewatch'){G.mp.watched=true;mpWatchWeek();return}
+  if(k==='rewatch'){mpWatchWeek();return}
   if(k==='leave'){if(!confirm('לצאת מהליגה? הקריירה המקומית תישמר, אבל הליגה תמשיך בלעדיך.'))return;mpDisconnect();G=null;render();return}
   }catch(e){MP.msg=e.message;toast(e.message);render()}}
 /* Invitations keep each manager's career intact. Friendlies use copied squads only. */
