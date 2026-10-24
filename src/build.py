@@ -106,14 +106,15 @@ def supabase_cfg():
             if line and not line.startswith('#') and '=' in line:
                 k, v = line.split('=', 1)
                 env.setdefault(k.strip(), v.strip().strip('"').strip("'"))
-    url, key = env.get('SUPABASE_URL', ''), env.get('SUPABASE_PUBLISHABLE_KEY', '')
+    public = json.loads(read(os.path.join(ROOT, 'data', 'config', 'multiplayer-public.json')))
+    url, key = env.get('SUPABASE_URL') or public['url'], env.get('SUPABASE_PUBLISHABLE_KEY') or public['key']
     if not url or not key or 'YOUR-PROJECT' in url or key.startswith('your-'):
         return None
-    assert 'service_role' not in key.lower(), 'never embed a service_role key'
+    assert key.startswith('sb_publishable_'), 'only a publishable key may be embedded'
     return {'url': url.rstrip('/'), 'key': key}
-page = page.replace('__SUPABASE__', enc(supabase_cfg()))
+page = page.replace('__SUPABASE_BUILD__', enc(supabase_cfg()))
 out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta))
-for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE__'):
+for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE_BUILD__'):
     assert ph not in out, 'unfilled placeholder ' + ph
 # build stamp: a hash of the page content, so a live check can tell which build a server is actually serving
 import hashlib

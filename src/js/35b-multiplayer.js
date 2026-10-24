@@ -8,7 +8,7 @@
    Backend: supabase/migrations/20261023120000_multiplayer.sql (tables mp_leagues / mp_members, SECURITY DEFINER
    functions, Realtime). Only the public URL + anon key reach the client (__SUPABASE__ from .env or the Pages secrets;
    localStorage 'goalasso_supabase' = {"url","key"} overrides for testing). */
-const SUPABASE_BUILD_CFG=__SUPABASE__;
+const SUPABASE_BUILD_CFG=__SUPABASE_BUILD__;
 const SUPABASE_CFG=(()=>{try{const o=JSON.parse(localStorage.getItem('goalasso_supabase')||'null');if(o&&o.url&&o.key)return o}catch(e){}return window.__SUPABASE__||SUPABASE_BUILD_CFG||null})();
 const SUPABASE_JS_URL='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
 const MP={client:null,uid:null,state:'idle',chan:null,poll:null,busy:false,lastSeen:{},err:null,msg:''};
@@ -113,7 +113,7 @@ function mpCardHTML(){if(!mpIsOn())return '';const mp=G.mp;const me0=mp.members.
     <div class="muted small" style="margin-top:6px">${mp.host?'כשאתה והיריב מוכנים (או כשהטיימר נגמר) הטלפון שלך מריץ את השבוע ושולח לשניכם.':'המזמין מריץ את השבוע כששניכם מוכנים.'} זמן לתור: <bdi>${mpTurnLeft()}</bdi>${!mp.oppOnline&&opp?' · היריב לא מחובר: אם הטיימר ייגמר, המחשב ינהל במקומו.':''}</div>
     ${MP.err?`<div class="small" style="color:var(--bad);margin-top:6px">${esc(MP.err)}</div>`:''}
     <div class="actions" style="margin-top:8px">${ready?`<button class="btn sec" data-mpa="unready">בטל "מוכן"</button><span class="small muted" style="align-self:center">${waitMsg}</span>`:`<button class="btn big" data-mpa="ready">מוכן לשבוע ${G.wk+1}</button>`}${mp.lastWeek&&mp.lastWeek.matches&&mp.lastWeek.matches.length?`<button class="btn sec" data-mpa="rewatch">צפה שוב במשחקי השבוע</button>`:''}</div></div>`}
-function mpStartHTML(){const defs=Object.keys(META).map(id=>{const raw=RAW.find(r=>r.id===id);const fb=FALLBACK[id];return {id,name:raw?.name_he||fb.name,c1:raw?.colors?.[0]||fb.colors[0],c2:raw?.colors?.[1]||fb.colors[1]}});
+function mpStartHTML(){if(!window.__mpClientFactory)return Rooms.intro();const defs=Object.keys(META).map(id=>{const raw=RAW.find(r=>r.id===id);const fb=FALLBACK[id];return {id,name:raw?.name_he||fb.name,c1:raw?.colors?.[0]||fb.colors[0],c2:raw?.colors?.[1]||fb.colors[1]}});
   const joinCode=(new URLSearchParams(location.search).get('join')||'').toUpperCase();
   return `<div class="card mp"><div class="row between"><h3 class="sec">משחק רשת · 1 נגד 1</h3>${mpAvailable()||window.__mpClientFactory?'<span class="tag good">זמין</span>':'<span class="tag">לא מוגדר</span>'}</div>
     <div class="muted small" style="margin-top:4px">שני מאמנים באותה ליגת העל, 12 המועדונים האחרים מחשב. כל שבוע כל אחד מנהל בזמנו ולוחץ "מוכן"; המשחקים ביניכם נצפים יחד.</div>

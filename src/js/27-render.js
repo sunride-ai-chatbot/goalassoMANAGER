@@ -50,7 +50,7 @@ function render(){
   if(typeof MP!=='undefined'&&MP.watching&&!MP.watching.done&&document.querySelector('.live-view'))return;   // multiplayer playback on screen
   Match3D.stop();
   if(typeof AUD!=='undefined'&&AUD.matchOn)crowdStop(1.2);   // any other screen: the stadium fades out
-  $('top').classList.remove('hide');renderTop();
+  $('top').classList.remove('hide');renderTop();if(!$('top').querySelector('[data-room-open]'))$('top').insertAdjacentHTML('beforeend',Rooms.entry());
   if(G.phase!=='play'){$('nav').classList.add('hide');const v={contract:viewContract,sponsor:viewSponsor,board:viewBoard,seasonEnd:viewSeasonEnd,fired:viewFired}[G.phase];$('main').innerHTML=`<div class="view">${v()}</div>`;bind();return}
   $('nav').classList.remove('hide');renderNav();
   const v={home:viewHome,lineup:viewLineup,squad:()=>viewSquad()+(squadTab==='youth'?'':loansOutCardHTML()),market:viewMarket,club:viewClub,table:viewTable,money:viewMoney}[G.view]||viewHome;
