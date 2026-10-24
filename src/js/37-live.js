@@ -4,6 +4,7 @@ let liveTimer=null;
 function ensureNumbers(c){if(!c||!c.players)return;const used=new Set(c.players.filter(p=>p.no).map(p=>p.no));const order={GK:0,DF:1,MF:2,FW:3};const ps=c.players.filter(p=>!p.no).sort((x,y)=>(order[x.pos]-order[y.pos])||(y.ovr-x.ovr));let n=1;for(const p of ps){if(p.pos==='GK'&&!used.has(1)){p.no=1;used.add(1);continue}while(used.has(n)||n===1)n++;p.no=n;used.add(n)}}
 function xiListHTML(M,c){return xiPlayers(M,c).map(({p,e})=>`<span><span>${p.no||''} ${esc(p.last||p.first)}${e.slot&&e.slot!==p.pos?' <small class="muted">('+e.slot+')</small>':''}</span><b>${p.ovr}</b></span>`).join('')}
 function startLive(restored){
+  Match3D.stop();if(liveTimer){clearInterval(liveTimer);liveTimer=null;}
   try{localStorage.setItem('ilm2_livefl',String(G.slot||curSlot()))}catch(e){}
   const M=restored||advanceWeek();if(!M){try{localStorage.removeItem('ilm2_livefl')}catch(e){}render();return}
   save();const h=club(M.h),a=club(M.a);ensureNumbers(h);ensureNumbers(a);
@@ -15,6 +16,7 @@ function startLive(restored){
     <div class="bc"><span class="clock num" id="clock">${fm(0)}</span><span class="tag live" id="livePill">LIVE</span><span class="lbl">${esc(M.ctx.label)}${M.ctx.neutral?' · מגרש ניטרלי':' · '+esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</span></div></div>
   <div class="progress"><i id="prog" style="width:0%"></i></div>
   ${ml==='off'?'':pitch2dHTML(h,a,M.att&&h.cap?M.att/h.cap:(M.ctx.kind==='friendly'?.3:.85))}
+  ${Match3D.html()}
   <div class="xistrip" id="xiStrip"></div></div>
   <aside class="live-side"><div class="row between"><h3 class="sec">ניהול משחק</h3><span class="muted tiny num">${esc(me().formation||'4-3-3')}</span></div>
     <div class="minif" id="miniF"></div>
@@ -26,7 +28,8 @@ function startLive(restored){
   </aside></div>
   <div class="live-lower"><div class="card" id="statsCard" style="--hc:${matchColors(h,a).h.fill};--ac:${matchColors(h,a).a.fill}"><div id="stats"></div></div>
   <div class="card"><div class="ticker" id="ticker"><div class="muted">${ml==='off'?'שריקת פתיחה':'הקבוצות בדרך למגרש'}</div></div></div></div></div>`;
-  const tick=$('ticker');let paused=true,shown=0,mult=1;const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
+  const p3d=Match3D.mount(M,h,a);
+  const tick=$('ticker');let paused=true,shown=0,mult=1;const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}if(!p3d?.enabled||p2d.px&&(p2d.pending||p2d.rp))pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
   if(p2d){p2d.onTap=(pid,team)=>{p2d.labels[pid]=performance.now()+2200;if(team===G.me&&!M.done&&!M.playback&&M.subs[G.me]<MAX_SUBS){pause();openSubModal(pid)}}}
   M.liveMent=M.liveMent||{};M.liveMent[G.me]=M.liveMent[G.me]||me().mentality||'bal';const paintLM=()=>document.querySelectorAll('[data-lm]').forEach(b=>b.classList.toggle('on',b.dataset.lm===M.liveMent[G.me]));paintLM();
   document.querySelectorAll('[data-lm]').forEach(b=>b.onclick=()=>{M.liveMent[G.me]=b.dataset.lm;M.tadjDirty=true;save();paintLM();addLine('note',`${fm(M.m)} שינוי מנטליות: ${{def:'הגנתי',bal:'מאוזן',att:'התקפי'}[b.dataset.lm]}`)});
@@ -40,7 +43,7 @@ function startLive(restored){
   $('main').querySelector('.live-wrap').addEventListener('click',ev=>{if(M.playback)return;const t=ev.target.closest('[data-xo]');if(t&&!M.done){if(M.subs[G.me]>=MAX_SUBS){toast('נגמרו החילופים');return}pause();openSubModal(+t.dataset.xo);return}if(ev.target.closest('#benchBtn')&&!M.done){pause();openSubModal()}});
   const flush=()=>{
     while(shown<M.ev.length){const e=M.ev[shown++];const who=club(e.team);const mine=e.team===G.me;
-      if(!restoring&&(e.t==='goal'||e.t==='pen'||e.t==='own')){if(mine){SFX.goal(true);confetti(1200)}else{if(!CROWD.goal(false))SFX.groan()}if(p2d&&e.path&&(e.t==='goal'||e.t==='pen'))replayQ=e}else if(!restoring&&(e.t==='yellow'||e.t==='red'))SFX.card();else if(!restoring&&e.t==='shot'&&(e.sub==='save'||e.sub==='post')&&!e.quiet)CROWD.chance();
+      if(!restoring&&(e.t==='goal'||e.t==='pen'||e.t==='own')){if(mine){SFX.goal(true);confetti(1200)}else{if(!CROWD.goal(false))SFX.groan()}if(!p3d?.enabled&&p2d&&e.path&&(e.t==='goal'||e.t==='pen'))replayQ=e}else if(!restoring&&(e.t==='yellow'||e.t==='red'))SFX.card();else if(!restoring&&e.t==='shot'&&(e.sub==='save'||e.sub==='post')&&!e.quiet)CROWD.chance();
       if(e.quiet)continue;
       if(e.t==='goal')addLine('goal '+(mine?'me':''),`⚽ ${fm(e.m)} שער! ${e.name} (${who.short})${e.asstName?' · בישול: '+e.asstName:''} · ${M.gh}:${M.ga}`);
       else if(e.t==='pen')addLine('goal '+(mine?'me':''),`⚽ ${fm(e.m)} שער מפנדל! ${e.name} (${who.short}) · ${M.gh}:${M.ga}`);
@@ -55,6 +58,7 @@ function startLive(restored){
       else if(e.t==='var')addLine(e.ok?'muted':'card',e.ok?`📺 ${fm(e.m)} VAR בודק... השער של ${e.name} אושר`:`📺 ${fm(e.m)} VAR: השער של ${e.name} (${who.short}) נפסל, נבדל`);
       else if(e.t==='note')addLine('note',`🎧 העוזר: ${e.txt}`);
     }
+    p3d?.update();
     if(p2d){pitchMinute(p2d,M,h,a,M.ev.filter(e=>e.m===M.m));if(p2d.snap)pitchFrame(p2d)}
     drawSide();
     $('gh').textContent=M.gh;$('ga').textContent=M.ga;$('clock').textContent=fm(M.m);$('prog').style.width=(M.m/90*100)+'%';$('subCount').textContent=M.subs[G.me];
@@ -62,39 +66,40 @@ function startLive(restored){
     $('stats').innerHTML=bar('החזקת כדור %',ph,100-ph)+bar('בעיטות',M.shots[h.id],M.shots[a.id])+bar('למסגרת',(M.sot||{})[h.id]||0,(M.sot||{})[a.id]||0)+bar('קרנות',(M.corners||{})[h.id]||0,(M.corners||{})[a.id]||0)+bar('מסירות',(M.passes||{})[h.id]||0,(M.passes||{})[a.id]||0);
     if(replayQ&&!M.done){const e=replayQ;replayQ=null;const wasPaused=paused;paused=true;playReplay(p2d,e,h,()=>{if(!wasPaused&&!M.done&&$('ctrlBtn').textContent==='השהה')paused=false})}
   };
-  const pause=()=>{paused=true;M.paused=true;CROWD.pause();$('ctrlBtn').textContent=M.awaitingHalf?'מחצית שנייה':'המשך';save()};
-  const resume=()=>{paused=false;M.paused=false;M.awaitingHalf=false;CROWD.resume();$('ctrlBtn').textContent='השהה';save()};
-  const finish=()=>{clearInterval(liveTimer);liveTimer=null;running=false;if(raf)cancelAnimationFrame(raf);raf=null;
+  const pause=()=>{paused=true;p3d?.setPaused(true);M.paused=true;CROWD.pause();$('ctrlBtn').textContent=M.awaitingHalf?'מחצית שנייה':'המשך';save()};
+  const resume=()=>{paused=false;p3d?.setPaused(false);M.paused=false;M.awaitingHalf=false;CROWD.resume();$('ctrlBtn').textContent='השהה';save()};
+  const finish=()=>{p3d?.setPaused(false);clearInterval(liveTimer);liveTimer=null;running=false;if(raf)cancelAnimationFrame(raf);raf=null;
     if(!M.finishPrepared){
     if(!M.playback&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);
-    if(M.gh===M.ga&&M.ctx.kind==='euro'&&M.ctx.leg===2){const E=me().euro;if(E&&E.tie&&E.tie.g1&&E.tie.g1[0]+(M.h===G.me?M.gh:M.ga)===E.tie.g1[1]+(M.h===G.me?M.ga:M.gh))decidePens(M)}
+    if(!M.playback&&M.gh===M.ga&&M.ctx.kind==='euro'&&M.ctx.leg===2){const E=me().euro;if(E&&E.tie&&E.tie.g1&&E.tie.g1[0]+(M.h===G.me?M.gh:M.ga)===E.tie.g1[1]+(M.h===G.me?M.ga:M.gh))decidePens(M)}
     if(p2d)M.heat=p2d.heat;
     SFX.whistleEnd();CROWD.end();const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;const wonIt=myG>opG||(M.pens&&((M.pens==='h')===(M.h===G.me)));if(wonIt&&(M.ctx.kind==='cup'&&M.ctx.stage==='F'||M.ctx.kind==='euro'&&M.ctx.stage==='F'||M.ctx.kind==='toto'&&M.ctx.stage==='F')){SFX.win();confetti(4000);recordMoment('cup',M.ctx.kind==='cup'?'גביע המדינה':M.ctx.kind==='toto'?'גביע הטוטו':(M.ctx.label||'').split('·')[0].trim()||'הגביע האירופי')}
     M.finishPrepared=true;}
     addLine('',`שריקת סיום · ${h.short} ${M.gh}:${M.ga} ${a.short}${M.pens?` · ${(M.pens==='h'?h:a).short} ניצחה בפנדלים`:''}`);
     const mm=M.motmLive||(M.playback?M.playback.motm:manOfMatch(M,h,a));M.motmLive=mm;if(mm)addLine('goal '+(mm.team===G.me?'me':''),`⭐ שחקן המשחק: ${mm.name} (${mm.short}) · ציון ${mm.r}`);
     save();$('subBtn').disabled=true;$('ctrlBtn').textContent='סיכום המשחק';$('livePill').textContent='סיום';$('livePill').classList.remove('live');$('livePill').classList.add('info');
-      if(M.playback){$('ctrlBtn').onclick=()=>{const rec=G.results.slice().reverse().find(r=>r.h===M.h&&r.a===M.a&&r.wk===M.playback.wk);if(rec)matchReportModal(rec,()=>mpWatchNext());else mpWatchNext()};return}
-    $('ctrlBtn').onclick=()=>{afterMyMatch(M);G.view='home';const rec=G.results[G.results.length-1];if(rec&&rec.h===M.h&&rec.a===M.a){matchReportModal(rec,()=>runPress('post',M,()=>render()))}else runPress('post',M,()=>render())};
+      if(M.playback){$('ctrlBtn').onclick=()=>{p3d?.dispose();const rec=G.results.slice().reverse().find(r=>r.h===M.h&&r.a===M.a&&r.wk===M.playback.wk);if(rec)matchReportModal(rec,()=>mpWatchNext());else mpWatchNext()};return}
+    $('ctrlBtn').onclick=()=>{p3d?.dispose();afterMyMatch(M);G.view='home';const rec=G.results[G.results.length-1];if(rec&&rec.h===M.h&&rec.a===M.a){matchReportModal(rec,()=>runPress('post',M,()=>render()))}else runPress('post',M,()=>render())};
   };
   const period=()=>Math.round(base*1000/90/mult);
   const startTimer=()=>{if(liveTimer)clearInterval(liveTimer);liveTimer=setInterval(()=>{if(M.m>=80&&!M.done){const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;if(myG>opG)CROWD.song()}
-    if(paused||(p2d&&p2d.hold))return;
-    stepMinute(M);flush();
+    if(document.hidden||paused||p3d?.busy||(!p3d?.enabled&&p2d&&p2d.hold))return;
+    if(M.done){finish();return;}
+    p3d?.beforeStep();stepMinute(M);flush();
     if(M.m===62||M.m===76){const my=M.h===G.me?M.gh:M.ga,op=M.h===G.me?M.ga:M.gh;const oppC=M.h===G.me?a:h;const of=avgFit(M,oppC);const tip=my<op?'אנחנו מאחור. שווה לעבור להתקפי ולהכניס חלוץ.':my===op&&of<72?'הם נראים עייפים. אפשר ללחוץ עכשיו.':my>op&&M.m>=76?'מובילים בסיום. מנטליות הגנתית תסגור את המשחק.':null;if(tip)addLine('note',`🎧 העוזר: ${tip}`)}
     if(M.m===45&&!M.half){M.half=true;M.awaitingHalf=true;CROWD.halftime();addLine('muted','מחצית · לחץ "מחצית שנייה" כדי להמשיך');if(!M.playback)halfTimeTalk(M,tick);pause();$('ctrlBtn').textContent='מחצית שנייה';if(M.playback)setTimeout(()=>{if(M.awaitingHalf&&!M.done&&$('ctrlBtn'))resume()},4000);if(p2d){p2d.flip=true;pitchMinute(p2d,M,h,a,[]);for(const d of [...p2d.h,...p2d.a]){d.tx=52.5;d.ty=74}}}
-    if(M.done)finish();else save();
+    if(M.done&&!p3d?.busy)finish();else save();
   },period());if(p2d&&!p2d.snap&&!raf)raf=requestAnimationFrame(frame)};
   document.querySelectorAll('[data-spx]').forEach(b=>b.onclick=()=>{mult=+b.dataset.spx;document.querySelectorAll('[data-spx]').forEach(x=>x.classList.toggle('on',x===b));if(liveTimer)startTimer()});
   $('muteBtn').onclick=()=>{G.sound=G.sound===false?true:false;if(G.sound===false)crowdStop(.3);else if(!M.done&&!paused)CROWD.kickoff(M.att);$('muteBtn').textContent=G.sound===false?'🔇':'🔊';$('muteBtn').classList.toggle('on',G.sound!==false);save()};
   const pb=$('pathBtn');if(pb)pb.onclick=()=>{p2d.showPaths=!p2d.showPaths;pb.classList.toggle('on',p2d.showPaths)};
   const rb=$('rpBtn');if(rb)rb.onclick=()=>{G.replay=G.replay===false?true:false;rb.classList.toggle('on',G.replay!==false);save()};
-  $('ctrlBtn').onclick=()=>{if(M.done)return;paused?resume():pause()};
+  $('ctrlBtn').onclick=()=>{if(M.done&&!p3d?.busy)return;paused?resume():pause()};
   $('subBtn').onclick=()=>{if(M.done)return;pause();openSubModal()};
   if(M.playback){$('subBtn').disabled=true;document.querySelectorAll('[data-lm]').forEach(b=>b.disabled=true);$('livePill').textContent=G.mp&&G.mp.oppClub&&(M.h===G.mp.oppClub||M.a===G.mp.oppClub)?'שידור משותף':'שידור';}
   drawSide();$('subCount').textContent=M.subs[G.me];
   // pre-match presentation
-  const kickoff=()=>{const ov=$('arenaOver');if(ov)ov.innerHTML='';SFX.whistle();CROWD.kickoff(M.att);tick.innerHTML='<div class="muted">שריקת פתיחה</div>';paused=false;$('ctrlBtn').textContent='השהה';startTimer()};
+  const kickoff=()=>{const ov=$('arenaOver');if(ov)ov.innerHTML='';SFX.whistle();CROWD.kickoff(M.att);tick.innerHTML='<div class="muted">שריקת פתיחה</div>';paused=false;p3d?.setPaused(false);$('ctrlBtn').textContent='השהה';startTimer()};
   const ov=$('arenaOver');
   if(restored&&!restored.playback){if(p2d){p2d.entrance=false;p2d.entranceDone=true;p2d.flip=M.m>=45}flush();restoring=false;replayQ=null;if(M.awaitingHalf&&!M.halfTalk)halfTimeTalk(M,tick);if(M.done)finish();else{pause();startTimer()}toast('המשחק שוחזר. לחצו המשך כשתהיו מוכנים.')}
   else if(ov&&ml==='full'){ov.innerHTML=`<div class="intro"><div class="comp">${esc(M.ctx.label)}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</div><div class="venue">${M.ctx.neutral?'מגרש ניטרלי':esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${M.ctx.firstLeg?` · משחק ראשון ${M.ctx.firstLeg[0]}:${M.ctx.firstLeg[1]}`:''}</div>
@@ -102,7 +107,7 @@ function startLive(restored){
     <button class="btn big" id="kickBtn">שריקת פתיחה ▶</button></div>`;
     if(p2d){raf=requestAnimationFrame(frame);p2d.entranceDone=false;setTimeout(()=>{p2d.entranceDone=true},1800)}
     $('kickBtn').onclick=()=>{if(p2d)p2d.entranceDone=true;kickoff()};
-    $('ctrlBtn').textContent='לשריקת הפתיחה';$('ctrlBtn').onclick=()=>{if(M.done)return;if(!liveTimer){kickoff();$('ctrlBtn').onclick=()=>{if(M.done)return;paused?resume():pause()};return}paused?resume():pause()};
+    $('ctrlBtn').textContent='לשריקת הפתיחה';$('ctrlBtn').onclick=()=>{if(M.done&&!p3d?.busy)return;if(!liveTimer){kickoff();$('ctrlBtn').onclick=()=>{if(M.done&&!p3d?.busy)return;paused?resume():pause()};return}paused?resume():pause()};
   }else{kickoff()}
   function openSubModal(preOut,forced){
     if(M.playback)return;const c=me();if(M.subs[c.id]>=MAX_SUBS){toast('נגמרו החילופים');return}
