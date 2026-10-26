@@ -120,4 +120,5 @@ function BconfirmSale(){const o=Bstate().saleOffer;if(!o)return false;const c=me
 
 Bload();if(G?.beginner?.live)G.beginner.live.paused=true;Brender();window.BEGINNER={get state(){return G},create:Bcreate,render:Brender,play:Bplay,save:Bwrite};
 
+if(!window.__ilmNoSplash&&!Rooms.arrival())showSplash();
 Rooms.boot();
