@@ -1,0 +1,72 @@
+== History
+=== Early years (1911–63)
+=== The breakthrough (1964–77)
+=== Ups and downs (1978–93)
+=== The silver generation (1994–2000)
+=== From "Gunder method" to relegation (2001–2006)
+=== A new era (2007–present)
+== Kit
+=== Kit suppliers and shirt sponsors
+== Stadiums
+== Support
+=== Rivalries
+== Players
+=== Out on loan
+=== Reserves
+=== Former players
+=== Player records
+==== Most matches played
+==== Most goals scored
+=== Player of the season
+== Club officials
+=== Coaching staff
+=== Medical and sport science staff
+== Honours
+=== Domestic
+==== Cup
+=== Doubles
+=== Non-official
+== Records
+== European history
+== Recent history
+== List of Molde managers
+== History of league positions (since 1963)
+== Footnotes
+== References
+== External links
+
+TEMPLATES 34
+{{Fs player|no=1 |nat=DEN|name=[[Mads Kikkenborg]]|pos=GK}}
+{{Fs player|no=4 |nat=NOR|name=Sivert Sira Hansen|pos=DF}}
+{{Fs player|no=5 |nat=NOR|name=[[Eirik Hestad]]|pos=FW}}
+{{fs player|no=6|nat=NOR|name=[[Niklas Ødegård]]|pos=MF}}
+{{Fs player|no=8|nat=NOR|name=[[Mathias Fjørtoft Løvik]]|pos=DF}}
+{{Fs player|no=9|nat=GHA|name=[[Jalal Abdullai]]|pos=FW}}
+{{Fs player|no=10|nat=NOR|name=[[Emil Breivik]]|pos=MF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=11|nat=CIV|name=[[Caleb Zady Sery]]|pos=FW}}
+{{Fs player|no=12|nat=NOR|name=Peder Hoel Lervik|pos=GK}}
+{{Fs player|no=15|nat=NOR|name=[[Vebjørn Hoff]]|pos=MF}}
+{{Fs player|no=16|nat=NOR|name=[[Sander Kilen]]|pos=FW}}
+{{Fs player|no=17|nat=NOR|name=[[Mats Møller Dæhli]]|pos=MF}}
+{{Fs player|no=18|nat=NOR|name=[[Halldor Stenevik]]|pos=DF}}
+{{Fs player|no=19|nat=NOR|name=[[Eirik Haugan]]|pos=DF}}
+{{Fs player|no=20|nat=NOR|name=[[Kristian Lonebu]]|pos=FW}}
+{{Fs player|no=21|nat=NOR|name=[[Oskar Spiten-Nysæter]]|pos=FW}}
+{{Fs player|no=22|nat=POL|name=[[Albert Posiadała]]|pos=GK}}
+{{Fs player|no=23|nat=NOR|name=[[Sondre Granaas]]|pos=MF}}
+{{Fs player|no=24|nat=IRL|name=[[Trent Koné-Doherty]]|pos=FW}}
+{{Fs player|no=25|nat=NOR|name=[[Martin Linnes]]|pos=DF}}
+{{Fs player|no=26|nat=RSA|name=[[Samukele Kabini]]|pos=DF}}
+{{Fs player|no=27|nat=NOR|name=[[Fredrik Kristensen Dahl]]|pos=DF}}
+{{Fs player|no=28|nat=DEN|name=Viktor Bender|pos=MF}}
+{{Fs player|no=29|nat=SEN|name=Seydina Diop|pos=FW}}
+{{Fs player|no=30|nat=NGR|name=[[Daniel Daga]]|pos=MF}}
+{{Fs player|no=32|nat=NOR|name=Mads Myklebust|pos=GK}}
+{{Fs player|no=33|nat=NOR|name=[[Birk Risa]]|pos=DF}}
+{{Fs player|no=44|nat=NOR|name=Igor Gosik|pos=FW}}
+{{Fs player|no=7|nat=NOR|name=Andreas Tveiten|pos=MF|other=at [[Brattvåg IL|Brattvåg]]}}
+{{Fs player|no=14|nat=DEN|name=[[Jacob Steen Christensen]]|pos=MF|other=at [[Sønderjyske Fodbold|Sønderjyske]]}}
+{{fs player|no=31|nat=KOS|name=[[Blerton Isufi]]|pos=MF|other=at [[HamKam]]}}
+{{Fs player|no=36|nat=NOR|name=Magnus Fjørtoft Løvik|pos=FW|other=at [[Sportsklubben Træff|Træff]]}}
+{{Fs player|no=46|nat=NOR|name=Mathias Mork|pos=MF|other=at [[Sportsklubben Træff|Træff]]}}
+{{Fs player|no=52|nat=DEN|name=[[Valdemar Lund]]|pos=DF|other=at [[Vejle Boldklub|Vejle]]}}

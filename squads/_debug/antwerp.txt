@@ -1,0 +1,79 @@
+== History
+=== Early history (1880–1999)
+=== Decline, revival, and 5th national championship (2001–present)
+== Stadium
+== Rivalries
+== Meuse/Scheldt Cup
+== Honours
+=== Continental
+== Players
+=== Out on loan
+=== Young Reds Antwerp
+== Technical staff
+== Former players
+== Manchester United Players loan partnership
+== See also
+== References
+== External links
+
+TEMPLATES 60
+{{Fs player|no= 3|nat=ESP|pos=DF|name=[[Álvaro Cortés]]}}
+{{Fs player|no= 4|nat=JPN|pos=DF|name=[[Yuto Tsunashima]]}}
+{{Fs player|no= 5|nat=BEL|pos=DF|name=[[Daam Foulon]]}}
+{{Fs player|no= 6|nat=MTN|pos=MF|name=[[Bahmed Deuff]]|other={{small|on loan from [[FC Nantes|Nantes]]}}
+{{Fs player|no= 8|nat=ARG|pos=MF|name=[[Mauricio Benítez]]}}
+{{Fs player|no= 9|nat=SUI|pos=FW|name=[[Michael Frey (footballer)|Michael Frey]]}}
+{{Fs player|no=14|nat=BEL|pos=MF|name=[[Xander Dierckx]]}}
+{{Fs player|no=15|nat=BEL|pos=GK|name=[[Yannick Thoelen]]}}
+{{Fs player|no=16|nat=BEL|pos=MF|name=Louie Van Gelder}}
+{{Fs player|no=17|nat=BEL|pos=DF|name=[[Semm Renders]]}}
+{{Fs player|no=19|nat=UZB|pos=FW|name=[[Mukhammadali Urinboev]]}}
+{{Fs player|no=20|nat=BEL|pos=DF|name=[[Rein Van Helden]]}}
+{{Fs player|no=22|nat=CIV|pos=MF|name=[[Farouck Adekami]]}}
+{{Fs player|no=23|nat=JPN|pos=FW|name=[[Koki Ando (footballer)|Koki Ando]]}}
+{{Fs player|no=24|nat=BEL|pos=DF|name=[[Thibo Somers]]}}
+{{Fs player|no=25|nat=CIV|pos=MF|name=Modibo Fofana}}
+{{Fs player|no=27|nat=BEL|pos=DF|name=Eran Tuypens}}
+{{Fs player|no=28|nat=BEL|pos=DF|name=Luca Schelfhout}}
+{{Fs player|no=29|nat=BEL|pos=FW|name=Jeff Godelaine}}
+{{Fs player|no=30|nat=GER|pos=MF|name=[[Christopher Scott (footballer, born 2002)|Christopher Scott]]}}
+{{Fs player|no=33|nat=ECU|pos=FW|name=Snayder Porozo}}
+{{Fs player|no=41|nat=JPN|pos=GK|name=[[Taishi Nozawa]]}}
+{{Fs player|no=43|nat=MAR|pos=MF|name=[[Youssef Hamdaoui]]}}
+{{Fs player|no=44|nat=BEL|pos=DF|name=[[Maxime Busi]]}}
+{{Fs player|no=48|nat=BEL|pos=MF|name=[[Arthur Vermeeren]]|other={{small|on loan from [[RB Leipzig]]}}
+{{Fs player|no=77|nat=MAR|pos=FW|name=[[Ibrahim Salah (footballer, born 2001)|Ibrahim Salah]]|other={{small|on loan from [[FC Basel|Basel]]}}
+{{Fs player|no=80|nat=ECU|pos=FW|name=Carlos Mejía}}
+{{Fs player|no=81|nat=BEL|pos=GK|name=Niels Devalckeneer}}
+{{Fs player|no=99|nat=GHA|pos=FW|name=Luis Narh}}
+{{Fs player|no=  |nat=BEL|pos=MF|name=[[Andreas Verstraeten]]|other={{small|at [[VVV-Venlo]] until 30 June 2027}}
+{{Fs player|no=  |nat=NGA|pos=FW|name=Gabriel Jesus David|other={{small|at [[SKN St. Pölten]] until 30 June 2027}}
+{{Fs player|no=  |nat=BEL|pos=FW|name=Gerard Vandeplas|other={{small|at [[FCV Dender EH|Dender EH]] until 30 June 2027}}
+{{fs player|no=47|nat=BEL|pos=DF|name=Mathijs Gielkens}}
+{{fs player|no=51|nat=BEL|pos=GK|name=Marcel Van Dijck}}
+{{fs player|no=56|nat=BEL|pos=DF|name=Eran Tuypens}}
+{{fs player|no=60|nat=BEL|pos=MF|name=Idrissa Keita}}
+{{fs player|no=61|nat=BEL|pos=GK|name=Lowie Piselé}}
+{{fs player|no=63|nat=BEL|pos=FW|name=Paco Avoki}}
+{{fs player|no=64|nat=BEL|pos=MF|name=Nano Schoenaerts}}
+{{fs player|no=66|nat=BEL|pos=MF|name=Toon Franssen}}
+{{fs player|no=67|nat=CIV|pos=DF|name=Arouna Koné}}
+{{fs player|no=68|nat=BEL|pos=FW|name=Khoi Pham Anh}}
+{{fs player|no=69|nat=BEL|pos=FW|name=Luka Vereecken}}
+{{fs player|no=70|nat=BEL|pos=DF|name=Luca Schelfhout}}
+{{fs player|no=71|nat=BEL|pos=GK|name=Matti Merckx}}
+{{fs player|no=72|nat=BEL|pos=DF|name=Dries Verdonck}}
+{{fs player|no=74|nat=BEL|pos=FW|name=Lennox Valhelmont}}
+{{fs player|no=75|nat=KEN|pos=FW|name=[[Wilkims Ochieng]]}}
+{{Fs player|no=76|nat=NGA|pos=FW|name=[[Orseer Achihi]]}}
+{{fs player|no=77|nat=BEL|pos=MF|name=Milo Horemans}}
+{{fs player|no=79|nat=BEL|pos=FW|name=Gerard Vandeplas}}
+{{fs player|no=80|nat=BEL|pos=FW|name=Richmond Fordjour}}
+{{fs player|no=81|nat=BEL|pos=GK|name=Niels Devalckeneer}}
+{{fs player|no=82|nat=BEL|pos=MF|name=Louie Van Gelder}}
+{{fs player|no=83|nat=BEL|pos=FW|name=Jeff Godelaine}}
+{{fs player|no=84|nat=BEL|pos=DF|name=Jediaél Mbambi}}
+{{fs player|no=87|nat=TOG|pos=FW|name=Abdel-Malik Aziz}}
+{{fs player|no=88|nat=BEL|pos=MF|name=Jef Luyckx}}
+{{fs player|no=93|nat=BEL|pos=MF|name=Mohamed Waki}}
+{{fs player|no=99|nat=BEL|pos=FW|name=Caua Foroni}}

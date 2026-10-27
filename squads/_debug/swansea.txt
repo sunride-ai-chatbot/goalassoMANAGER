@@ -1,0 +1,66 @@
+== History
+=== Early years (1912–1945)
+=== Post-war (1945–1970)
+=== Success and decline (1970–1986)
+=== Promotions, relegations and last years at the Vetch Field (1986–2005)
+=== Move to the Liberty Stadium and return to the top flight (2005–2016)
+=== American ownership and return to the Championship (2016–present)
+== Stadium
+== Rivalries
+== Identity
+=== Kits and crests
+=== Kit manufacturers and sponsors
+== European record
+== Players
+=== Out on loan
+=== Under-23s
+=== Retired numbers
+== Club officials and backroom staff
+=== First-team staff
+=== Academy staff
+=== Managers
+== Records and statistics
+== Honours
+== References
+== External links
+=== Independent sites
+
+TEMPLATES 38
+{{fs player|no=1|nat=ENG|pos=GK|name=[[Andy Fisher (footballer)|Andy Fisher]]}}
+{{fs player|no=2|pos=DF|nat=ENG|name=[[Joshua Key (footballer)|Joshua Key]]}}
+{{fs player|no=3|pos=DF|nat=NED|name=[[Jenson Seelt]]|other=on loan from [[Sunderland A.F.C.|Sunderland]]}}
+{{Fs player|no=4|pos=MF|nat=SCO|name=[[Jay Fulton]]}}
+{{Fs player|no=5|pos=DF|nat=WAL|name=[[Ben Cabango]]|other=[[Captain (association football)#captain|captain]]}}
+{{Fs player|no=6|nat=NZL|pos=MF|name=[[Marko Stamenić]]}}
+{{Fs player|no=7|nat=SWE|pos=MF|name=[[Melker Widell]]}}
+{{Fs player|no=8|nat=NZL|pos=MF|name=[[Elijah Just]]}}
+{{fs player|no=9|nat=SVN|pos=FW|name=[[Žan Vipotnik]]}}
+{{fs player|no=10|pos=FW|nat=KOR|name=[[Eom Ji-sung]]}}
+{{fs player|no=12|pos=FW|nat=ENG|name=[[Jeremy Monga]]|other=on loan from [[Manchester City F.C.|Manchester City]]}}
+{{Fs player|no=14|nat=ENG|pos=DF|name=[[Josh Tymon]]}}
+{{Fs player|no=15|nat=AUS|pos=DF|name=[[Cameron Burgess]]}}
+{{Fs player|no=16|nat=ENG|pos=MF|name=[[Tom Iorpenda]]}}
+{{Fs player|no=17|pos=MF|nat=POR|name=[[Gonçalo Franco]]}}
+{{Fs player|no=20|nat=POR|pos=DF|name=[[Tiago Parente (footballer, born 2006)|Tiago Parente]]|other=on loan from [[S.L. Benfica|Benfica]]}}
+{{Fs player|no=22|nat=CHI|pos=GK|name=[[Lawrence Vigouroux]]}}
+{{fs player|no=23|nat=SCO|pos=DF|name=[[Stephen Welsh]]}}
+{{fs player|no=26|nat=CZE|pos=DF|name=[[Filip Lissah]]}}
+{{Fs player|no=29|nat=ENG|pos=GK|name=[[Paul Farman]]}}
+{{fs player|no=30|nat=GHA|pos=FW|name=[[Joseph Opoku]]}}
+{{fs player|no=31|nat=SCO|pos=FW|name=[[Ross Stewart (footballer, born 1996)|Ross Stewart]]}}
+{{fs player|no=33|nat=IRL|pos=FW|name=[[Adam Idah]]}}
+{{fs player|no=35|nat=BRA|pos=FW|name=[[Ronald (footballer, born 2001)|Ronald]]}}
+{{fs player|no=46|nat=CAN|pos=MF|name=[[Stephen Eustáquio]]}}
+{{fs player|no=49|nat=MLI|pos=MF|name=[[Moussa Yeo]]}}
+{{fs player|no=|nat=WAL|pos=FW|name=Morgan Bates|other=on loan at [[Inverness Caledonian Thistle F.C.|Inverness Caledonian Thistle]] until 30 June 2027}}
+{{fs player|no=|nat=WAL|pos=DF|name=[[Sam Parker (footballer)|Sam Parker]]|other=on loan at [[Wycombe Wanderers F.C.|Wycombe Wanderers]] until 30 June 2027}}
+{{fs player|no=|nat=WAL|pos=MF|name=[[Ollie Cooper]]|other=on loan at [[Notts County F.C.|Notts County]] until 30 June 2027}}
+{{fs player|no=|nat=FIN|pos=MF|name=[[Leo Walta]]|other=on loan at [[Los Angeles F.C.|Los Angeles]] until January 2027}}
+{{fs player|no=|nat=FRA|pos=FW|name=[[Florian Bianchini]]|other=on loan at [[Clermont Foot 63|Clermont Foot]] until 30 June 2027}}
+{{fs player|no=|nat=SWE|pos=FW|name=[[Zeidane Inoussa]]|other=on loan at [[Górnik Zabrze]] until 30 June 2027}}
+{{fs player|no=|nat=ENG|pos=FW|name=Josh Pescatore|other=at [[Buxton F.C.|Buxton]] until 30 June 2027}}
+{{fs player|no=|nat=SCO|pos=DF|name=Blair McKenzie|other=at [[Waterford F.C.|Waterford]] until 31 December 2026}}
+{{fs player|no=|nat=SCO|pos=FW|name=[[Bobby Wales]]|other=at [[Dundee F.C.|Dundee]] until 30 June 2027}}
+{{fs player|no=|nat=WAL|pos=MF|name=Jacob Cook|other=at [[Hemel Hempstead Town F.C.|Hemel Hempstead]] until January 2027}}
+{{fs player|no=|nat=WAL|pos=MF|name=Daniel Watts|other=at [[Exeter City F.C.|Exeter City]] until 30 June 2027}}
+{{Fs player|no=40|pos=FW|nat=AUT|name=[[Besian Idrizaj]]|other=2009–10) – posthumous honour}}

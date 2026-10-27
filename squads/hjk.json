@@ -17,18 +17,6 @@
 "sl": 0
 },
 {
-"he": "Jesse Öst",
-"en": "Jesse Öst",
-"pos": "GK",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.07,
-"qid": null,
-"img": null,
-"no": "1",
-"sl": 0
-},
-{
 "he": "Mustafa Abdulmuttaleb",
 "en": "Mustafa Abdulmuttaleb",
 "pos": "GK",
@@ -56,25 +44,97 @@
 "he": "Matej Marković",
 "en": "Matej Marković",
 "pos": "GK",
-"age": 25,
+"age": 30,
 "nat": "Croatia",
-"value_m": 0.06,
-"qid": null,
+"value_m": 0.05,
+"qid": "Q50888201",
 "img": null,
 "no": "44",
-"sl": 0
+"sl": 2
+},
+{
+"he": "Jesse Öst",
+"en": "Jesse Öst",
+"pos": "GK",
+"age": 35,
+"nat": "Finland",
+"value_m": 0.02,
+"qid": "Q11866428",
+"img": "Jesse Öst 1.jpg",
+"no": "1",
+"sl": 5
+},
+{
+"he": "Lassi Lappalainen",
+"en": "Lassi Lappalainen",
+"pos": "FW",
+"age": 28,
+"nat": "Finland",
+"value_m": 0.2,
+"qid": "Q23699003",
+"img": null,
+"no": "26",
+"sl": 19
+},
+{
+"he": "Santeri Haarala",
+"en": "Santeri Haarala",
+"pos": "FW",
+"age": 26,
+"nat": "Finland",
+"value_m": 0.17,
+"qid": "Q54861550",
+"img": "29 HJK Santeri Haarala 02 25OCT2026.jpg",
+"no": "29",
+"sl": 9
+},
+{
+"he": "Jere Kallinen",
+"en": "Jere Kallinen",
+"pos": "MF",
+"age": 24,
+"nat": "Finland",
+"value_m": 0.13,
+"qid": "Q108004290",
+"img": null,
+"no": "15",
+"sl": 3
+},
+{
+"he": "Ville Tikkanen",
+"en": "Ville Tikkanen",
+"pos": "DF",
+"age": 27,
+"nat": "Finland",
+"value_m": 0.12,
+"qid": "Q55363881",
+"img": null,
+"no": "6",
+"sl": 4
 },
 {
 "he": "Mads Borchers",
 "en": "Mads Borchers",
 "pos": "FW",
-"age": 25,
+"age": 24,
 "nat": "Denmark",
 "value_m": 0.12,
-"qid": null,
-"img": null,
+"qid": "Q122761164",
+"img": "Danish footballer Mads Borchers (cropped).jpg",
 "no": "9",
-"sl": 0
+"sl": 3
+},
+{
+"he": "Miska Ylitolva",
+"en": "Miska Ylitolva",
+"pos": "DF",
+"age": 22,
+"nat": "Finland",
+"value_m": 0.12,
+"qid": "Q111359108",
+"img": null,
+"no": "28",
+"sl": 9
 },
 {
 "he": "Kaius Hardén",
@@ -101,28 +161,40 @@
 "sl": 0
 },
 {
-"he": "Pyry Mentu",
-"en": "Pyry Mentu",
+"he": "Alfie Cicale",
+"en": "Alfie Cicale",
 "pos": "MF",
-"age": 25,
-"nat": "Finland",
+"age": 24,
+"nat": "England",
 "value_m": 0.11,
-"qid": null,
-"img": null,
-"no": "8",
-"sl": 0
+"qid": "Q125382550",
+"img": "Mailattaret – Pesäkarhut (13.8.2025) 29.jpg",
+"no": "7",
+"sl": 3
 },
 {
-"he": "Teemu Pukki",
-"en": "Teemu Pukki",
-"pos": "FW",
-"age": 25,
+"he": "Lucas Lingman",
+"en": "Lucas Lingman",
+"pos": "MF",
+"age": 28,
 "nat": "Finland",
 "value_m": 0.11,
-"qid": null,
+"qid": "Q20914016",
+"img": "Lucas Lingman.jpg",
+"no": "10",
+"sl": 11
+},
+{
+"he": "Roni Hudd",
+"en": "Roni Hudd",
+"pos": "FW",
+"age": 21,
+"nat": "Finland",
+"value_m": 0.11,
+"qid": "Q115724797",
 "img": null,
-"no": "20",
-"sl": 0
+"no": "11",
+"sl": 4
 },
 {
 "he": "Francis Etu",
@@ -137,52 +209,40 @@
 "sl": 0
 },
 {
-"he": "Till Cissokho",
+"he": "טיל סיסוקו",
 "en": "Till Cissokho",
 "pos": "DF",
-"age": 25,
+"age": 26,
 "nat": "France",
 "value_m": 0.1,
-"qid": null,
-"img": null,
+"qid": "Q63170716",
+"img": "Till Cissokho October 2017.jpg",
 "no": "3",
-"sl": 0
+"sl": 7
 },
 {
-"he": "Roni Hudd",
-"en": "Roni Hudd",
+"he": "David Ezeh",
+"en": "David Ezeh",
 "pos": "FW",
-"age": 25,
+"age": 20,
 "nat": "Finland",
 "value_m": 0.1,
-"qid": null,
+"qid": "Q122932301",
 "img": null,
-"no": "11",
-"sl": 0
+"no": "19",
+"sl": 4
 },
 {
-"he": "Lassi Lappalainen",
-"en": "Lassi Lappalainen",
-"pos": "FW",
-"age": 25,
-"nat": "Finland",
+"he": "Mihailo Bogićević",
+"en": "Mihailo Bogićević",
+"pos": "DF",
+"age": 28,
+"nat": "Serbia",
 "value_m": 0.1,
-"qid": null,
+"qid": "Q135670442",
 "img": null,
-"no": "26",
-"sl": 0
-},
-{
-"he": "Santeri Haarala",
-"en": "Santeri Haarala",
-"pos": "FW",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.1,
-"qid": null,
-"img": null,
-"no": "29",
-"sl": 0
+"no": "31",
+"sl": 2
 },
 {
 "he": "Mouhamed Guèye",
@@ -221,54 +281,6 @@
 "sl": 0
 },
 {
-"he": "Alexander Ring",
-"en": "Alexander Ring",
-"pos": "MF",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.09,
-"qid": null,
-"img": null,
-"no": "4",
-"sl": 0
-},
-{
-"he": "Kaius Simojoki",
-"en": "Kaius Simojoki",
-"pos": "DF",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.09,
-"qid": null,
-"img": null,
-"no": "13",
-"sl": 0
-},
-{
-"he": "David Ezeh",
-"en": "David Ezeh",
-"pos": "FW",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.09,
-"qid": null,
-"img": null,
-"no": "19",
-"sl": 0
-},
-{
-"he": "Miska Ylitolva",
-"en": "Miska Ylitolva",
-"pos": "DF",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.09,
-"qid": null,
-"img": null,
-"no": "28",
-"sl": 0
-},
-{
 "he": "Lukas Kuusisto",
 "en": "Lukas Kuusisto",
 "pos": "DF",
@@ -284,13 +296,13 @@
 "he": "Nils Svensson",
 "en": "Nils Svensson",
 "pos": "DF",
-"age": 25,
+"age": 24,
 "nat": "Sweden",
 "value_m": 0.09,
-"qid": null,
+"qid": "Q130214832",
 "img": null,
 "no": "62",
-"sl": 0
+"sl": 1
 },
 {
 "he": "Alex Lietsa",
@@ -317,40 +329,16 @@
 "sl": 0
 },
 {
-"he": "Ville Tikkanen",
-"en": "Ville Tikkanen",
+"he": "Kaius Simojoki",
+"en": "Kaius Simojoki",
 "pos": "DF",
-"age": 25,
+"age": 20,
 "nat": "Finland",
 "value_m": 0.08,
-"qid": null,
+"qid": "Q123685616",
 "img": null,
-"no": "6",
-"sl": 0
-},
-{
-"he": "Lucas Lingman",
-"en": "Lucas Lingman",
-"pos": "MF",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.08,
-"qid": null,
-"img": null,
-"no": "10",
-"sl": 0
-},
-{
-"he": "Jere Kallinen",
-"en": "Jere Kallinen",
-"pos": "MF",
-"age": 25,
-"nat": "Finland",
-"value_m": 0.08,
-"qid": null,
-"img": null,
-"no": "15",
-"sl": 0
+"no": "13",
+"sl": 3
 },
 {
 "he": "Antton Nylund",
@@ -363,6 +351,18 @@
 "img": null,
 "no": "16",
 "sl": 0
+},
+{
+"he": "Liam Möller",
+"en": "Liam Möller",
+"pos": "MF",
+"age": 21,
+"nat": "Finland",
+"value_m": 0.08,
+"qid": "Q120893614",
+"img": null,
+"no": "22",
+"sl": 5
 }
 ]
 }

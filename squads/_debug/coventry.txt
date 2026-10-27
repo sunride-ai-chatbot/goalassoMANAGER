@@ -1,0 +1,84 @@
+== History
+=== Early years (1883–1919)
+=== League football and the "Old Five" (1919–1945)
+=== Rise to the First Division, Europe, and FA Cup victory (1945–1987)
+=== Recent history (1987–present)
+== Kit
+=== Kit makers and sponsorship
+== Stadium
+=== Highfield Road
+=== Coventry Building Society Arena
+== Supporters
+=== Identity
+=== Sky Blue anthem
+=== Famous supporters
+== Rivalries
+== Players
+=== Under-21 squad
+=== Out on loan
+== Management
+=== Board
+== Seasons and statistics
+=== Football Club Elo ranking
+== Notable players
+=== Official Hall of Fame
+=== Notable Academy graduates
+=== Player records
+== Managers and chairmen
+== Honours
+== Notes
+== References
+== External links
+
+TEMPLATES 51
+{{fs player|no=1|nat=SWE|pos=GK|name=[[Oliver Dovin]]}}
+{{fs player|no=2|nat=JAM|pos=DF|name=[[Ethan Pinnock]]}}
+{{fs player|no=3|nat=WAL|pos=DF|name=[[Jay Dasilva]]}}
+{{fs player|no=4|nat=ENG|pos=DF|name=[[Bobby Thomas (footballer)|Bobby Thomas]]}}
+{{fs player|no=5|nat=ENG|pos=MF|name=[[Jack Rudoni]]}}
+{{fs player|no=6|nat=ENG|pos=MF|name=[[Matt Grimes]]|other=[[Captain (association football)|captain]]}}
+{{fs player|no=7|nat=JPN|pos=FW|name=[[Tatsuhiro Sakamoto]]}}
+{{fs player|no=8|nat=GHA|pos=MF|name=[[Caleb Yirenkyi]]}}
+{{fs player|no=9|nat=ENG|pos=FW|name=[[Ellis Simms]]}}
+{{fs player|no=10|nat=JAM|pos=FW|name=[[Ephron Mason-Clark]]}}
+{{fs player|no=11|nat=USA|pos=FW|name=[[Haji Wright]]}}
+{{fs player|no=12|nat=ENG|pos=DF|name=[[Stephen Mfuni]]|other=on loan from [[Manchester City F.C.|Manchester City]]}}
+{{fs player|no=13|nat=ENG|pos=GK|name=[[Ben Wilson (footballer, born 1992)|Ben Wilson]]}}
+{{fs player|no=14|nat=NGA|pos=FW|name=[[Taiwo Awoniyi]]}}
+{{fs player|no=16|nat=NGA|pos=MF|name=[[Frank Onyeka]]}}
+{{fs player|no=17|nat=FRA|pos=FW|name=[[Loum Tchaouna]]}}
+{{fs player|no=19|nat=ENG|pos=GK|name=[[Carl Rushworth]]}}
+{{fs player|no=20|nat=ENG|pos=DF|name=[[Kaine Kesler-Hayden]]}}
+{{fs player|no=21|nat=ENG|pos=DF|name=[[Jake Bidwell]]}}
+{{fs player|no=22|nat=JAM|pos=DF|name=[[Joel Latibeaudiere]]}}
+{{fs player|no=23|nat=GHA|pos=FW|name=[[Brandon Thomas-Asante]]}}
+{{fs player|no=24|nat=SUI|pos=DF|name=[[Aurèle Amenda]]}}
+{{fs player|no=25|nat=ENG|pos=GK|name=[[Dan Bentley (footballer)|Dan Bentley]]}}
+{{fs player|no=26|nat=ENG|pos=DF|name=[[Luke Woolfenden]]}}
+{{fs player|no=27|nat=NED|pos=DF|name=[[Milan van Ewijk]]}}
+{{fs player|no=28|nat=ENG|pos=MF|name=[[Josh Eccles]]}}
+{{fs player|no=29|nat=DEN|pos=MF|name=[[Victor Torp]]}}
+{{fs player|no=34|nat=CIV|pos=FW|name=[[Yann Gboho]]}}
+{{fs player|no=38|nat=NED|pos=MF|name=[[Gustavo Hamer]]}}
+{{fs player|no=49|nat=GUI|pos=FW|name=[[Sidiki Cherif]]}}
+{{fs player|no=43|nat=ENG|pos=DF|name=Tristen Batanwi}}
+{{fs player|no=44|nat=ITA|pos=DF|name=Riccardo Di Trolio}}
+{{fs player|no=47|nat=ENG|pos=MF|name=Elliot Betjemann}}
+{{fs player|no=48|nat=ENG|pos=GK|name=Luke Bell}}
+{{fs player|no=50|nat=ENG|pos=MF|name=Joseph McCallum}}
+{{fs player|no=51|nat=ENG|pos=GK|name=Oscar Varney}}
+{{fs player|no=55|nat=ENG|pos=MF|name=Mackenzie Stretton}}
+{{fs player|no=59|nat=USA|pos=FW|name=[[Aidan Dausch]]}}
+{{fs player|no=|nat=WAL|pos=GK|name=Eliot Meredith}}
+{{fs player|no=|nat=ENG|pos=DF|name=Tionne Critchlow-Woyo}}
+{{fs player|no=|nat=ENG|pos=DF|name=Shay Dunn}}
+{{fs player|no=|nat=ENG|pos=MF|name=George Shepherd}}
+{{fs player|no=15|nat=IRL|pos=DF|name=[[Liam Kitching]]|other=at [[Sheffield United F.C.|Sheffield United]] until 30 June 2027}}
+{{fs player|no=17|nat=AUS|pos=FW|name=[[Raphael Borges Rodrigues|Raphael]]|other=at [[Burton Albion F.C.|Burton Albion]] until 30 June 2027}}
+{{fs player|no=33|nat=ESP|pos=DF|name=[[Miguel Ángel Brau]]|other=at [[Académico de Viseu F.C.|Académico de Viseu]] until 30 June 2027}}
+{{fs player|no=36|nat=ENG|pos=DF|name=[[Isaac Moore (footballer, born 2006)|Isaac Moore]]|other=at [[Walsall F.C.|Walsall]] until 30 June 2027}}
+{{fs player|no=37|nat=BEL|pos=FW|name=[[Norman Bassette]]|other=at [[KVC Westerlo|Westerlo]] until 30 June 2027}}
+{{fs player|no=41|nat=ENG|pos=DF|name=Callum Perry|other=at [[Cambridge United F.C.|Cambridge United]] until 30 June 2027}}
+{{fs player|no=49|nat=ENG|pos=DF|name=Harvey Broad|other=at [[AFC Fylde]] until 30 June 2027}}
+{{fs player|no=52|nat=ENG|pos=DF|name=David Mantle|other=at [[Maidenhead United F.C.|Maidenhead United]] until 5 December 2026}}
+{{fs player|no=54|nat=WAL|pos=MF|name=[[Kai Andrews]]|other=at [[Oxford United F.C.|Oxford United]] until 2 January 2027}}

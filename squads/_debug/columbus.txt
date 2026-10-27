@@ -1,0 +1,74 @@
+== History
+=== A new home (1999–2003)
+=== Transitions (2004–2006)
+=== The Barros Schelotto era (2007–2010)
+=== Rebuilding and Warzycha's final years (2011–2013)
+=== The Precourt era (2013–2018)
+==== Proposed relocation to Austin
+=== Haslam era and two MLS Cups (2018–present)
+== Colors and badge
+== Stadium
+== Revenue and profitability
+=== Sponsorship
+== Club culture
+=== Mascot
+=== Rivalries
+== Players and staff
+=== Current roster
+=== Out on loan
+=== Team management
+=== Head coach history
+=== General manager and sporting director history
+== Player development
+=== Academy
+== Honors
+=== Awards
+== Record
+=== International tournaments
+== Player records
+=== Appearances
+=== Goals
+=== Assists
+=== Shutouts
+=== Captains
+== Average attendance
+== References
+== External links
+
+TEMPLATES 36
+{{Fs player|no=1|pos=GK|nat=GUA|name=[[Nicholas Hagen]]}}
+{{Fs player|no=2|pos=DF|nat=ARG|name=[[Andrés Herrera (footballer)|Andrés Herrera]]|other=}}
+{{Fs player|no=3|pos=DF|nat=CIV|name=[[Eric Bailly]]}}
+{{Fs player|no=4|pos=DF|nat=FRA|name=[[Rudy Camacho]]}}
+{{Fs player|no=7|pos=MF|nat=FRA|name=[[Dylan Chambost]]}}
+{{Fs player|no=8|pos=FW|nat=URU|name=[[Santiago Rodríguez (footballer, born 2000)|Santiago Rodríguez]]|other=[[Designated Player Rule|DP]]}}
+{{Fs player|no=9|pos=FW|nat=PLE|name=[[Wessam Abou Ali]]|other=[[Designated Player Rule|DP]]}}
+{{Fs player|no=10|pos=MF|nat=ESP|name=[[Brais Méndez]]|other=[[Designated Player Rule|DP]]}}
+{{Fs player|no=11|pos=DF|nat=USA|name=[[Brooks Lennon]]}}
+{{Fs player|no=12|pos=DF|nat=USA|name=[[Cesar Ruvalcaba]]}}
+{{Fs player|no=14|pos=MF|nat=USA|name=[[Amar Sejdić]]}}
+{{Fs player|no=16|pos=FW|nat=USA|name=[[Taha Habroune]]|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=17|pos=MF|nat=GUI|name=[[Sekou Tidiany Bangoura|Sekou Bangoura]]}}
+{{Fs player|no=18|pos=DF|nat=DEN|name=[[Malte Amundsen]]}}
+{{Fs player|no=19|pos=FW|nat=SEN|name=[[Jamal Thiaré]]}}
+{{Fs player|no=20|pos=MF|nat=POR|name=[[André Gomes]]}}
+{{Fs player|no=21|pos=MF|nat=MAR|name=[[Anass Zaroury]]|other=on loan from [[Panathinaikos F.C.|Panathinaikos]]}}
+{{Fs player|no=22|pos=MF|nat=USA|name=[[Tristan Brown]]|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=23|pos=DF|nat=ALG|name=[[Mohamed Farsi]]}}
+{{Fs player|no=24|pos=GK|nat=USA|name=[[Evan Bush]]}}
+{{Fs player|no=25|pos=DF|nat=USA|name=[[Sean Zawadzki]]|other=[[Captain (association football)|captain]]; [[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=26|pos=MF|nat=ARG|name=[[Lautaro Giaccone]]|other=on loan from [[Argentinos Juniors]]}}
+{{Fs player|no=28|pos=GK|nat=USA|name=[[Patrick Schulte]]}}
+{{Fs player|no=31|pos=DF|nat=CPV|name=[[Steven Moreira]]}}
+{{Fs player|no=33|pos=FW|nat=CHI|name=[[Gonzalo Tapia]]|other=on loan from [[São Paulo FC|São Paulo]]}}
+{{Fs player|no=39|pos=FW|nat=CIV|name=Kevin Gbamblé}}
+{{Fs player|no=41|pos=GK|nat=BLR|name=[[Stanislav Lapkes]]|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=46|pos=FW|nat=USA|name=[[Chase Adams]]|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=50|pos=MF|nat=USA|name=[[Tarun Karumanchi]]}}
+{{Fs player|no=54|pos=GK|nat=USA|name=Luke Pruter}}
+{{Fs player|no=77|pos=FW|nat=VEN|name=[[Josef Martínez]]}}
+{{Fs player|no=30|pos=MF|nat=FRA|name=[[Hugo Picard]]|other=on loan to [[ES Troyes AC|Troyes]]}}
+{{Fs player|no=45|pos=DF|nat=USA|name=[[Owen Presthus]]|other=[[Homegrown Player Rule (Major League Soccer)|HG]]; on loan to [[Nashville SC]]}}
+{{Fs player|no=47|pos=DF|nat=USA|name=Quinton Elliot|other=[[Homegrown Player Rule (Major League Soccer)|HG]]; on loan to [[Monterey Bay FC]]}}
+{{Fs player|no=48|pos=MF|nat=USA|name=Zach Zengue|other=on loan to [[St. Louis City SC|St. Louis City]]}}
+{{Fs player|no=90|pos=FW|nat=AZE|name=[[Nariman Akhundzada]]|other=on loan to [[Erzurumspor F.K.|Erzurumspor]]}}

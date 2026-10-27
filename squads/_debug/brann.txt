@@ -1,0 +1,60 @@
+== History
+=== Early years (1908–1959)
+=== First league wins and long stay in the 2nd tier (1960s)
+=== Cup finals, title races and the "yo-yo" years (1970–1990)
+=== Derbies, medals and brief European success (1990s)
+=== First title in decades and an end to 44 years of waiting (2000s)
+=== Rebuilding, relegation and promotion (2010s)
+=== Relegation, cup title and silverware (2020s)
+== Players and staff
+=== Out on loan
+=== Coaching staff
+== Honours
+=== Cup
+== Recent seasons
+== In European football
+=== Results
+=== UEFA club coefficient ranking
+== Coaching history
+== Player statistics
+=== Most appearances
+=== Top goalscorers
+=== Player of the year
+== Notes
+== References
+== External links
+
+TEMPLATES 33
+{{Fs player|no=1|pos=GK|nat=NOR|name=[[Mathias Dyngeland]]}}
+{{Fs player|no=2|pos=DF|nat=NOR|name=[[Leo Cornic]]}}
+{{Fs player|no=3|pos=DF|nat=NOR|name=[[Fredrik Pallesen Knudsen]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=4|pos=DF|nat=GHA|name=[[Nana Kwame Boakye]]}}
+{{Fs player|no=5|pos=MF|nat=NOR|name=[[Sakarias Opsahl]]}}
+{{Fs player|no=7|pos=MF|nat=ISL|name=[[Kjartan Már Kjartansson]]}}
+{{Fs player|no=8|pos=MF|nat=NOR|name=[[Sondre Tronstad]]}}
+{{fs player|no=9|pos=FW|nat=CHI|name=[[Niklas Castro]]}}
+{{Fs player|no=10|pos=FW|nat=ISL|name=[[Kristall Máni Ingason]]}}
+{{Fs player|no=11|pos=FW|nat=NOR|name=[[Bård Finne]]}}
+{{Fs player|no=12|pos=GK|nat=NOR|name=[[Simen Vidtun Nilsen]]}}
+{{Fs player|no=14|pos=MF|nat=NOR|name=[[Ulrik Mathisen]]}}
+{{Fs player|no=15|pos=DF|nat=NOR|name=[[Jonas Torsvik]]}}
+{{fs player|no=16|pos=FW|nat=NOR|name=[[Kristian Eriksen]]}}
+{{Fs player|no=17|pos=DF|nat=NOR|name=[[Joachim Soltvedt]]}}
+{{Fs player|no=18|pos=MF|nat=DEN|name=[[Jacob Sørensen (footballer, born 1998)|Jacob Lungi Sørensen]]}}
+{{Fs player|no=19|pos=MF|nat=ISL|name=[[Eggert Aron Guðmundsson]]}}
+{{Fs player|no=20|pos=DF|nat=NOR|name=[[Vetle Dragsnes]]}}
+{{Fs player|no=21|pos=DF|nat=NED|name=[[Neraysho Kasanwirjo]]}}
+{{Fs player|no=22|pos=FW|nat=ISL|name=[[Sævar Atli Magnússon]]}}
+{{Fs player|no=23|pos=DF|nat=NOR|name=[[Thore Pedersen]]}}
+{{Fs player|no=25|pos=MF|nat=NOR|name=[[Niklas Jensen Wassberg]]}}
+{{Fs player|no=29|pos=FW|nat=NOR|name=[[Noah Holm]]}}
+{{Fs player|no=30|pos=FW|nat=NGA|name=[[Chinedu Cyprain Ononogbo]]}}
+{{Fs player|no=33|pos=GK|nat=NED|name=[[Tom Bramel]]}}
+{{Fs player|no=36|pos=GK|nat=NOR|name=[[Håkon Hellesøy]]}}
+{{Fs player|no=39|pos=FW|nat=NOR|name=[[Julian Lægreid]]}}
+{{Fs player|no=2|pos=DF|nat=NOR|name=[[Martin Hellan]]|other=at [[Sandefjord Fotball|Sandefjord]] until 31 December 2026}}
+{{Fs player|no=6|pos=DF|nat=SEN|name=[[Cheikh Mbacké Diop]]|other=at [[Aalesunds FK|Aalesund]] until 31 December 2026}}
+{{Fs player|no=24|pos=GK|nat=NOR|name=[[Mathias Klausen]]|other=at [[Åsane Fotball|Åsane]] until 31 December 2026}}
+{{Fs player|no=32|pos=MF|nat=NOR|name=[[Markus Haaland]]|other=at [[BK Häcken|Häcken]] until 31 December 2026}}
+{{Fs player|no=40|pos=MF|nat=NOR|name=[[Jesper Eikrem]]|other=at [[Åsane Fotball|Åsane]] until 31 December 2026}}
+{{Fs player|no=41|pos=MF|nat=NOR|name=[[Lars Remmem]]|other=at [[FK Haugesund|Haugesund]] until 31 December 2026}}

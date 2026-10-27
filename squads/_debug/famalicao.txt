@@ -1,0 +1,41 @@
+== History
+== Players
+=== Out on loan
+== Competitions
+=== Participations
+=== Season by season
+== Crest
+== References
+== External links
+
+TEMPLATES 30
+{{Fs player|no= 1|nat=RUS|name=[[Ivan Zlobin]]|pos=GK|other=<small>[[Captain (association football)|captain]]</small>}}
+{{Fs player|no= 2|nat=BRA|name=[[Gustavo Garcia (footballer, born 2002)|Gustavo Garcia]]|pos=DF}}
+{{Fs player|no= 3|nat=ECU|name=[[Leonardo Realpe|Leo Realpe]]|pos=DF}}
+{{Fs player|no= 4|nat=NED|name=[[Finn van Breemen]]|pos=DF}}
+{{Fs player|no= 5|nat=SUI|name=[[Leny Meyer]]|pos=DF}}
+{{Fs player|no= 6|nat=NED|name=[[Tom van de Looi]]|pos=MF|other=<small>[[Captain (association football)|3rd captain]]</small>}}
+{{Fs player|no= 7|nat=BRA|name=[[Sorriso (footballer, born 2001)|Sorriso]]|pos=FW}}
+{{Fs player|no= 8|nat=ESP|name=[[Marcos Peña (footballer)|Marcos Peña]]|pos=MF}}
+{{Fs player|no= 9|nat=NGR|name=[[Umar Abubakar]]|pos=FW}}
+{{Fs player|no=10|nat=POR|name=[[Pedro Santos (footballer, born 2003)|Pedro Santos]]|pos=MF}}
+{{Fs player|no=11|nat=ESP|name=[[Óscar Aranda]]|pos=FW}}
+{{Fs player|no=14|nat=POR|name=[[Mathias De Amorim]]|pos=MF}}
+{{Fs player|no=15|nat=GNB|name=[[Víctor Rofino]]|pos=DF}}
+{{Fs player|no=17|nat=POR|name=[[Rodrigo Pinheiro]]|pos=DF|other=<small>[[Captain (association football)|4th captain]]</small>}}
+{{Fs player|no=18|nat=SUI|name=[[Roméo Beney]]|pos=FW}}
+{{Fs player|no=19|nat=POR|name=[[Paulo Moreira]]|pos=MF}}
+{{Fs player|no=21|nat=HUN|name=[[Tamás Szűcs (footballer, born 2005)|Tamás Szűcs]]|pos=MF}}
+{{Fs player|no=22|nat=BRA|name=Gabriel Cabral|pos=GK}}
+{{Fs player|no=23|nat=POR|name=[[Gil Dias]]|pos=FW|other=<small>[[vice-captain (association football)|vice-captain]]</small>}}
+{{Fs player|no=24|nat=FRA|name=[[Mathis Jangéal]]|pos=MF}}
+{{Fs player|no=25|nat=MNE|name=[[Lazar Carević]]|pos=GK}}
+{{Fs player|no=28|nat=ANG|name=[[Pedro Bondo]]|pos=DF}}
+{{Fs player|no=30|nat=SRB|name=[[Vojin Serafimović]]|pos=DF}}
+{{Fs player|no=33|nat=MEX|name=[[Patricio Salas (footballer, born 2004)|Patricio Salas]]|pos=FW|other=<small>on loan from [[Club América|América]]</small>}}
+{{Fs player|no=36|nat=BRA|name=Matheus Mattara|pos=DF}}
+{{Fs player|no=70|nat=GRE|name=[[Georgios Koutsias]]|pos=FW}}
+{{Fs player|no=|nat=BRA|name=[[Riccieli]]|pos=DF|other={{small|at [[Esporte Clube Vitória|Vitória]] until 31 December 2026}}
+{{Fs player|no=|nat=GEO|name=[[Otar Mamageishvili]]|pos=MF|other={{small|at [[Wolfsberger AC|Wolfsberger]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|name=[[Gonzalo Pastor]]|pos=MF|other={{small|at [[Unionistas de Salamanca CF|Unionistas]] until 30 June 2027}}
+{{Fs player|no=|nat=POR|name=Rudi Almeida|pos=FW|other={{small|at [[Amarante F.C.|Amarante]] until 30 June 2027}}

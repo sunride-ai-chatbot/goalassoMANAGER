@@ -1,0 +1,51 @@
+== History
+=== La Liga entry and peak
+=== Decline and revival
+== Seasons
+== Players
+=== Reserve team
+=== Out on loan
+=== Current technical staff
+== Honours
+=== Regional tournaments
+=== Friendly
+=== Individual
+== European record
+== Derby of eastern Andalusia
+== Stadium
+== Kit and colours
+=== Shirt sponsors and manufacturers
+== Coaches
+== References
+== External links
+
+TEMPLATES 29
+{{Fs player|no=1|nat=ESP|pos=GK|name=[[Alberto Flores]]}}
+{{Fs player|no=2|nat=ESP|pos=DF|name=[[Pau Casadesús]]}}
+{{Fs player|no=3|nat=ESP|pos=DF|name=[[Diego Hormigo]]}}
+{{Fs player|no=4|nat=ESP|pos=MF|name=[[Rubén Alcaraz]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=5|nat=ESP|pos=DF|name=[[Manu Lama]]|other=[[Captain (association football)|vice-captain]]}}
+{{Fs player|no=6|nat=ESP|pos=MF|name=[[Gerard Gumbau]]|other=[[Captain (association football)|3rd captain]]}}
+{{Fs player|no=7|nat=ESP|pos=MF|name=[[Sergio Rodelas]]}}
+{{Fs player|no=8|nat=ESP|pos=MF|name=[[Pedro Alemañ]]}}
+{{Fs player|no=9|nat=VEN|pos=FW|name=[[Alejandro Marqués]]}}
+{{Fs player|no=10|nat=ESP|pos=FW|name=[[Jorge Pascual]]}}
+{{Fs player|no=11|nat=ESP|pos=FW|name=[[José Arnáiz]]}}
+{{Fs player|no=13|nat=ESP|pos=GK|name=[[Raúl Lizoain]]|other=[[Captain (association football)|4th captain]]}}
+{{Fs player|no=16|nat=ESP|pos=DF|name=[[Diego Pampín]]}}
+{{Fs player|no=17|nat=FRA|pos=MF|name=[[Kader Bamba]]}}
+{{Fs player|no=18|nat=ESP|pos=DF|name=[[Sergio López (footballer, born 1999)|Sergio López]]}}
+{{Fs player|no=19|nat=NGA|pos=FW|name=[[Chinaza Okonyia]]}}
+{{Fs player|no=22|nat=SEN|pos=DF|name=[[Baïla Diallo]]}}
+{{Fs player|no=23|nat=GER|pos=DF|name=[[Benedikt Gimber]]}}
+{{Fs player|no=27|nat=ESP|pos=MF|name=[[Mario Gambín]]}}
+{{Fs player|no=30|nat=ESP|pos=DF|name=[[Juanjo Flores]]}}
+{{Fs player|no=32|nat=ESP|pos=MF|name=[[Dylan Rodríguez Vellisca|Dylan Rodríguez]]}}
+{{Fs player|no=33|nat=ESP|pos=DF|name=[[Angelo García Hidalgo|Angelo García]]}}
+{{Fs player|no=35|nat=MLI|pos=DF|name=[[Bourama Dembelé]]}}
+{{Fs player|no=36|nat=ESP|pos=FW|name=[[Owen Emeka]]}}
+{{Fs player|no=34|nat=ESP|pos=MF|name=[[Manuel Maza Barranco|Manu Maza]]}}
+{{Fs player|no=37|nat=ESP|pos=GK|name=[[Íker García]]}}
+{{Fs player|no=|nat=ESP|pos=GK|name=[[Francisco Pedro Árbol Córdoba|Fran Árbol]]|other=at [[Zamora CF|Zamora]] until 30 June 2027}}
+{{Fs player|no=|nat=MAR|pos=FW|name=[[Rayan Zinebi]]|other=at [[Real Madrid C]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|pos=FW|name=[[Samu Cortés]]|other=at [[Recreativo de Huelva|Recreativo Huelva]] until 30 June 2027}}

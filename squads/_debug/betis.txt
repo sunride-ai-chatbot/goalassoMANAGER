@@ -1,0 +1,72 @@
+== History
+=== Foundation
+=== 1930s: promotion, championship and relegation
+=== Darkest period
+=== Benito Villamarín
+=== First Copa del Rey Title and European Qualification
+=== Economic crisis and Manuel Ruiz de Lopera
+=== Serra Ferrer success
+=== Centenary celebrations
+=== Relegation
+=== Lopera court action and sale
+=== La Liga return
+=== Back into UEFA competitions
+== Seville derby
+=== Statistics
+== History in European competitions
+== Team statistics
+=== Recent La Liga seasons
+== Players
+=== Reserve team
+=== Out on loan
+=== Retired numbers
+== Player records
+=== Most goals
+== Personnel
+=== Technical staff
+=== Coaching staff
+== Honours
+=== Leagues
+=== Cups
+=== European competitions
+=== Others
+== Coaches
+== Presidents
+== Records
+=== Player records
+== Stadium
+== Colours
+=== Evolution
+== References
+== External links
+
+TEMPLATES 29
+{{Fs player|no=1|pos=GK|nat=ESP|name=[[Álvaro Valles]]}}
+{{Fs player|no=2|pos=DF|nat=ESP|name=[[Héctor Bellerín]]|other=[[captain (association football)|3rd captain]]}}
+{{Fs player|no=3|pos=DF|nat=ESP|name=[[Diego Llorente]]}}
+{{Fs player|no=4|pos=DF|nat=BRA|name=[[Natan (footballer, born 2001)|Natan]]}}
+{{Fs player|no=5|pos=DF|nat=ESP|name=[[Marc Bartra]]|other=[[vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=6|pos=MF|nat=URU|name=[[Facundo Bernal]]}}
+{{Fs player|no=7|pos=FW|nat=BRA|name=[[Antony (footballer, born 2000)|Antony]]}}
+{{Fs player|no=8|pos=MF|nat=ESP|name=[[Pablo Fornals]]}}
+{{Fs player|no=9|pos=FW|nat=COL|name=[[Cucho Hernández]]}}
+{{Fs player|no=10|pos=FW|nat=MAR|name=[[Abde Ezzalzouli]]}}
+{{Fs player|no=11|pos=DF|nat=ESP|name=[[Fran García (footballer, born 1999)|Fran García]]}}
+{{Fs player|no=12|pos=DF|nat=ESP|name=[[Ángel Ortiz (footballer, born 2004)|Ángel Ortiz]]}}
+{{Fs player|no=13|pos=GK|nat=ESP|name=[[Diego Conde]]|other=on loan from [[Villarreal CF|Villarreal]]}}
+{{Fs player|no=14|pos=FW|nat=ESP|name=[[Iker Losada]]}}
+{{Fs player|no=15|pos=MF|nat=MEX|name=[[Álvaro Fidalgo]]}}
+{{Fs player|no=16|pos=DF|nat=ARG|name=[[Valentín Gómez]]}}
+{{Fs player|no=17|pos=MF|nat=ESP|name=[[Rodrigo Riquelme (footballer, born 2000)|Rodrigo Riquelme]]}}
+{{Fs player|no=18|pos=MF|nat=COL|name=[[Nelson Deossa]]}}
+{{Fs player|no=19|pos=FW|nat=IRL|name=[[Troy Parrott]]}}
+{{Fs player|no=20|pos=MF|nat=ARG|name=[[Giovanni Lo Celso]]}}
+{{Fs player|no=21|pos=MF|nat=ESP|name=[[Marc Roca]]}}
+{{Fs player|no=22|pos=MF|nat=ESP|name=[[Isco]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=23|pos=DF|nat=DOM|name=[[Junior Firpo]]}}
+{{Fs player|no=24|pos=FW|nat=ESP|name=[[Aitor Ruibal]]|other=[[captain (association football)|4th captain]]}}
+{{Fs player|no=25|pos=MF|nat=ESP|name=[[Dani Ceballos]]}}
+{{Fs player|no=27|pos=FW|nat=ESP|name=[[José Antonio Morante (footballer, born 2007)|José Antonio Morante]]}}
+{{Fs player|no=31|pos=GK|nat=ESP|name=[[Manuel González Pallarés|Manu González]]}}
+{{Fs player|no=40|pos=GK|nat=ESP|name=[[Álvaro de Pablo Casado|Álvaro de Pablo]]|other=on loan from [[Real Valladolid|Valladolid]]}}
+{{Fs player|no=|pos=FW|nat=URU|name=[[Gonzalo Petit]]|other=at [[Cádiz CF|Cádiz]] until 30 June 2027}}

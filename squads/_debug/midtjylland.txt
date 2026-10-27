@@ -1,0 +1,62 @@
+== Club history
+== Scouting and developing
+== Stadium
+== Supporters
+== Seasons
+== Honours
+== Players
+=== Current squad
+=== Out on loan
+=== Youth team
+=== Notable players
+== Personnel
+=== Management
+== Coaches
+== Midtjylland in European competitions
+=== UEFA club coefficient ranking
+== See also
+== References
+== External links
+
+TEMPLATES 41
+{{fs player|no= 1|pos=GK|nat=ISL|name=[[Elías Ólafsson]]}}
+{{fs player|no= 2|pos=DF|nat=DEN|name=[[Andreas Maxsø]]}}
+{{fs player|no= 3|pos=DF|nat=DEN|name=[[Magnus Jensen (footballer)|Magnus Jensen]]}}
+{{fs player|no= 4|pos=DF|nat=SEN|name=[[Ousmane Diao]]}}
+{{fs player|no= 5|pos=DF|nat=DEN|name=[[Rasmus Kristensen]]|other=<small>[[Captain (association football)|captain]]</small>}}
+{{Fs player|no= 6|pos=DF|nat=CRO|name=[[Martin Erlić]]}}
+{{Fs player|no= 8|pos=MF|nat=DEN|name=[[Philip Billing]]}}
+{{Fs player|no= 9|pos=FW|nat=DEN|name=[[Mileta Rajović]]|other={{small|on loan from [[Legia Warsaw]]}}
+{{Fs player|no=10|pos=FW|nat=KOR|name=[[Cho Gue-sung]]}}
+{{fs player|no=15|pos=DF|nat=CIV|name=Djé Beni}}
+{{Fs player|no=17|pos=FW|nat=DEN|name=[[Mikael Uhre]]}}
+{{fs player|no=18|pos=FW|nat=NGA|name=Stanley Iheanacho}}
+{{fs player|no=19|pos=MF|nat=COL|name=[[Pedro Bravo]]}}
+{{Fs player|no=20|pos=MF|nat=KOR|name=[[Hong Hyun-seok]]|other={{small|on loan from [[1. FSV Mainz 05|Mainz 05]]}}
+{{fs player|no=21|pos=MF|nat=ECU|name=[[Denil Castillo]]}}
+{{Fs player|no=22|pos=DF|nat=DEN|name=[[Mads Bech Sørensen]]}}
+{{Fs player|no=25|pos=GK|nat=NED|name=[[Nordin Bakker]]}}
+{{Fs player|no=27|pos=MF|nat=DEN|name=[[Sofus Johannesen]]}}
+{{fs player|no=29|pos=MF|nat=GER|name=[[Kjell Wätjen]]}}
+{{Fs player|no=30|pos=GK|nat=ENG|name=[[Ovie Ejeheri]]}}
+{{fs player|no=33|pos=MF|nat=GNB|name=Alamara Djabi}}
+{{fs player|no=34|pos=DF|nat=SEN|name=Abdou Aziz Ndiaye}}
+{{fs player|no=38|pos=FW|nat=DEN|name=[[Julius Emefile]]}}
+{{Fs player|no=41|pos=FW|nat=DEN|name=[[Mikel Gogorza]]}}
+{{fs player|no=55|pos=DF|nat=DEN|name=[[Victor Bak]]}}
+{{Fs player|no=60|pos=GK|nat=NGA|name=Mark Ugboh}}
+{{fs player|no=74|pos=FW|nat=BRA|name=[[Júnior Brumado]]}}
+{{fs player|no=90|pos=FW|nat=NGA|name=[[Friday Etim]]}}
+{{fs player|no=98|pos=FW|nat=VEN|name=[[David Martínez (footballer, born 2006)|David Martínez]]}}
+{{Fs player|no=11|pos=FW|nat=CHI|name=[[Darío Osorio]]|other=<small>at [[Crystal Palace F.C.|Crystal Palace]] until 30 June 2027</small>}}
+{{fs player|no=14|pos=FW|nat=ZAM|name=[[Edward Chilufya]]|other=<small>at [[Hapoel Jerusalem F.C.|Hapoel Jerusalem]] until 30 June 2027</small>}}
+{{fs player|no=24|pos=MF|nat=DEN|name=Jonathan Lindekilde|other=<small>at [[FC Fredericia|Fredericia]] until 30 June 2027</small>}}
+{{fs player|no=31|pos=GK|nat=SWE|name=Liam Selin|other=<small>at [[IFK Värnamo|Värnamo]] until 31 December 2026</small>}}
+{{fs player|no=35|pos=DF|nat=SWE|name=Bilal Konteh|other=<small>at [[Vendsyssel FF|Vendsyssel]] until 30 June 2027</small>}}
+{{fs player|no=80|pos=MF|nat=POR|name=[[Dani Silva]]|other=<small>at [[Widzew Łódź]] until 30 June 2027</small>}}
+{{fs player|no=— |pos=DF|nat=DEN|name=Albert Lodberg|other=<small>at [[Hillerød Fodbold|Hillerød]] until 30 June 2027</small>}}
+{{fs player|no=— |pos=MF|nat=DEN|name=Frederik Bunten|other=<small>at [[FC Fredericia|Fredericia]] until 30 June 2027</small>}}
+{{fs player|no=— |pos=DF|nat=DEN|name=Mathis Konradsen|other=<small>at [[Nykøbing FC|Nykøbing]] until 30 June 2027</small>}}
+{{fs player|no=— |pos=MF|nat=CIV|name=Yacouba Ouattara|other=<small>at [[Kolding IF|Kolding]] until 30 June 2027</small>}}
+{{fs player|no=— |pos=MF|nat=SEN|name=Papa Thome|other=<small>at [[Kolding IF]] until 30 June 2027</small>}}
+{{fs player|no=— |pos=FW|nat=CIV|name=Deme Jr.|other=<small>at [[C.D. Mafra|Mafra]] until 30 June 2027</small>}}

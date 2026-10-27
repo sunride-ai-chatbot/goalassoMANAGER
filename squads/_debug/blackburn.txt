@@ -1,0 +1,75 @@
+== History
+=== Football League commences
+=== Early 20th century
+=== Mid 20th century
+=== 1970s and 1980s
+=== 1990s
+=== 2000s
+=== 2010 onwards
+== Players
+==== Out on loan
+=== Development/Academy squad
+=== Notable players
+== Staff
+=== Senior management
+=== Club operations
+== Awards
+=== Season-by-season record
+=== European football
+== Managerial history
+== Colours
+== Badge
+== Grounds
+=== Oozehead Ground 1875–1877
+=== Pleasington Cricket Ground 1877
+=== Alexandra Meadows 1877–1881
+=== Leamington Road 1881–1890
+=== Ewood Park 1890–present
+==== 1913 terrorist incident
+== Supporters and rivalries
+== Statistics and records
+== Honours
+== Notes
+== References
+== External links
+=== Independent websites
+
+TEMPLATES 38
+{{Fs player|no=1|nat=ENG|pos=GK|name=[[Aynsley Pears]]}}
+{{Fs player|no=2|nat=NGA|pos=DF|name=[[Ryan Alebiosu]]}}
+{{fs player|no=3|nat=ENG|pos=DF|name=[[Harry Pickering (footballer)|Harry Pickering]]}}
+{{Fs player|no=4|nat=POR|pos=DF|name=[[Yuri Ribeiro]]}}
+{{Fs player|no=6|nat=NIR|pos=DF|name=[[Tom Atcheson]]}}
+{{Fs player|no=7|nat=SLE|pos=FW|name=[[Augustus Kargbo]]}}
+{{Fs player|no=8|nat=EGY|pos=MF|name=[[Sam Morsy]]}}
+{{Fs player|no=9|nat=ISL|pos=FW|name=[[Andri Guðjohnsen]]}}
+{{Fs player|no=10|nat=ENG|pos=MF|name=[[Todd Cantwell]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=11|nat=ENG|pos=MF|name=[[Jayden Fevrier]]}}
+{{Fs player|no=14|nat=BEL|pos=MF|name=[[Dion De Neve]]}}
+{{Fs player|no=15|nat=IRL|pos=DF|name=[[Sean McLoughlin (footballer)|Sean McLoughlin]]}}
+{{Fs player|no=16|nat=ENG|pos=DF|name=[[Scott Wharton]]}}
+{{Fs player|no=17|nat=ENG|pos=DF|name=[[Hayden Carter]]}}
+{{Fs player|no=21|nat=ENG|pos=FW|name=[[Dapo Afolayan]]}}
+{{Fs player|no=22|nat=HUN|pos=GK|name=[[Balázs Tóth (footballer, born 1997)|Balázs Tóth]]}}
+{{Fs player|no=23|nat=JPN|pos=FW|name=[[Yūki Ōhashi]]}}
+{{Fs player|no=24|nat=FRA|pos=MF|name=[[Moussa Baradji]]}}
+{{Fs player|no=25|nat=JPN|pos=MF|name=[[Ryōya Morishita]]}}
+{{Fs player|no=27|nat=FRA|pos=DF|name=[[Gady Beyuku]]}}
+{{Fs player|no=28|nat=ENG|pos=MF|name=[[Adam Forshaw]]}}
+{{Fs player|no=29|nat=DEN|pos=FW|name=[[Mathias Jørgensen (footballer, born 2000)|Mathias Jørgensen]]}}
+{{Fs player|no=30|nat=ENG|pos=MF|name=[[Jake Garrett]]}}
+{{Fs player|no=31|nat=SCO|pos=MF|name=[[Kristi Montgomery]]}}
+{{Fs player|no=33|nat=AUS|pos=DF|name=[[Lewis Miller (soccer)|Lewis Miller]]}}
+{{Fs player|no=34|nat=ENG|pos=GK|name=[[Jack Barrett (footballer, born 2002)|Jack Barrett]]}}
+{{Fs player|no=40|nat=ENG|pos=DF|name=[[Matty Litherland]]}}
+{{Fs player|no=45|nat=ENG|pos=FW|name=[[Harvey Higgins]]}}
+{{Fs player|no=5|nat=POR|pos=MF|name=[[Sidnei Tavares]]|other=at [[Wisła Płock]] until 30 June 2027}}
+{{Fs player|no=18|nat=SWE|pos=MF|name=[[Axel Henriksson]]|other=at [[Randers FC|Randers]] until 30 June 2027}}
+{{Fs player|no=26|nat=IRL|pos=DF|name=[[Connor O'Riordan]]|other=at [[Barnsley F.C.|Barnsley]] until 30 June 2027}}
+{{Fs player|no=35|nat=ENG|pos=GK|name=[[Nicholas Michalski]]|other=at [[Crawley Town F.C.|Crawley Town]] until 30 June 2027}}
+{{Fs player|no=43|nat=ENG|pos=DF|name=[[George Pratt (footballer)|George Pratt]]|other=at [[Bradford City A.F.C.|Bradford City]] until 30 June 2027}}
+{{Fs player|no=36|nat=ENG|pos=MF|name=[[James Edmondson (footballer)|James Edmondson]]}}
+{{Fs player|no=37|nat=ENG|pos=GK|name=[[Felix Goddard]]}}
+{{Fs player|no=39|nat=ENG|pos=DF|name=Harvey Pates}}
+{{Fs player|no=47|nat=ENG|pos=DF|name=Lucas Houghton}}
+{{Fs player|no=53|nat=ENG|pos=MF|name=Frank Vare}}

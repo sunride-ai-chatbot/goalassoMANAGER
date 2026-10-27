@@ -1,0 +1,74 @@
+== History
+=== Foundation and first steps
+=== 1928–1947: Segunda División and the top flight
+=== 1948–1957: The "Golden Decade"
+=== 1958–1973: "Elevator Team"
+=== 1974–1988: Dark times
+=== 1989–1998: Resurgence and "Súper Dépor"
+=== 1999–2006: La Liga title, "El Centenariazo", and European Glory days
+=== 2007–2015: Transition and decline
+=== 2015–present: "New Dépor", relegation to third division and return
+== Identity
+=== Kit
+=== Supporters
+== Stadium
+== Players
+=== Reserve team
+=== Out on loan
+== Technical staff
+== List of head coaches
+== Presidents
+== Honours
+=== Domestic cups
+=== Regional tournaments
+=== International tournaments
+=== Friendly tournaments
+=== Individual trophies
+== Statistics
+=== List of seasons
+== European record
+== Player records
+=== Most appearances
+=== Most goals
+== Former international players
+=== World Cup players
+== Women's team
+=== Honours
+== Reserve team
+== References
+== External links
+
+TEMPLATES 33
+{{Fs player|no=1|nat=ESP|pos=GK|name=[[Germán Parreño]]}}
+{{Fs player|no=2|nat=ESP|pos=DF|name=[[Adrià Altimira]]}}
+{{Fs player|no=3|nat=ESP|pos=DF|name=[[Arnau Comas]]}}
+{{Fs player|no=4|nat=BEL|pos=DF|name=[[Lucas Noubi]]}}
+{{Fs player|no=5|nat=ESP|pos=DF|name=[[Dani Barcia]]}}
+{{Fs player|no=6|nat=ESP|pos=MF|name=[[Marc Casadó]]|other=on loan from [[FC Barcelona|Barcelona]]}}
+{{Fs player|no=7|nat=GAB|pos=FW|name=[[Pierre-Emerick Aubameyang]]}}
+{{Fs player|no=8|nat=ESP|pos=MF|name=[[Diego Villares]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=9|nat=NED|pos=FW|name=[[Zakaria Eddahchouri]]}}
+{{Fs player|no=10|nat=ESP|pos=FW|name=[[Yeremay Hernández]]}}
+{{Fs player|no=11|nat=ESP|pos=FW|name=[[David Mella]]}}
+{{Fs player|no=12|nat=ITA|pos=DF|name=[[Giacomo Quagliata]]}}
+{{Fs player|no=13|nat=ESP|pos=GK|name=[[Leo Román]]}}
+{{Fs player|no=14|nat=ESP|pos=MF|name=[[Riki (footballer, born 1997)|Riki Rodríguez]]}}
+{{Fs player|no=15|nat=ESP|pos=DF|name=[[Miguel Loureiro]]}}
+{{Fs player|no=16|nat=ITA|pos=MF|name=[[Lorenzo Amatucci]]}}
+{{Fs player|no=17|nat=ESP|pos=DF|name=[[Angeliño]]|other=on loan from [[AS Roma|Roma]]}}
+{{Fs player|no=18|nat=DEN|pos=MF|name=[[Jonathan Asp Jensen]]}}
+{{Fs player|no=19|nat=ESP|pos=FW|name=[[Luismi Cruz]]}}
+{{Fs player|no=20|nat=URU|pos=DF|name=[[José María Giménez]]|other=on loan from [[Atlético Madrid]]}}
+{{Fs player|no=21|nat=ESP|pos=MF|name=[[Mario Soriano]]}}
+{{Fs player|no=22|nat=POL|pos=DF|name=[[Bright Ede]]}}
+{{Fs player|no=23|nat=ESP|pos=DF|name=[[Ximo Navarro (footballer, born 1990)|Ximo Navarro]]}}
+{{Fs player|no=24|nat=ESP|pos=FW|name=[[Adama Traoré (footballer, born 1996)|Adama Traoré]]}}
+{{Fs player|no=25|nat=ESP|pos=GK|name=[[Álvaro Fernández (footballer, born 1998)|Álvaro Fernández]]}}
+{{Fs player|no=32|nat=CMR|pos=FW|name=[[Bil Nsongo]]}}
+{{Fs player|no=31|nat=ESP|pos=FW|name=Martín Ochoa}}
+{{Fs player|no=33|nat=ESP|pos=FW|name=[[Kevin Sánchez]]}}
+{{Fs player|no=37|nat=ESP|pos=MF|name=[[Noé Carrillo]]}}
+{{Fs player|no=|nat=ESP|pos=GK|name=[[Eric Puerto]]|other=at [[F.C. Penafiel|Penafiel]] until 30 June 2027}}
+{{Fs player|no=|nat=NED|pos=MF|name=[[Teun Gijselhart]]|other=at [[Al Ain FC|Al Ain]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|pos=MF|name=[[Diego Gómez (footballer, born 2004)|Diego Gómez]]|other=at [[SD Huesca|Huesca]] until 30 June 2027}}
+{{Fs player|no=|nat=ENG|pos=MF|name=[[Charlie Patino]]|other=at [[VfL Bochum]] until 30 June 2027}}

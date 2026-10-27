@@ -1,0 +1,70 @@
+== History
+== Colours and badge
+=== Kit evolution
+=== Crest evolution
+== Stadium
+== Club's anthem
+== Supporters
+== Rivals
+== Honours
+=== Minor
+=== Friendly
+=== Individual
+== Awards
+=== Individual
+== Players
+=== Current squad
+=== Out on loan
+=== RSCA Futures (Reserves and Youth Academy)
+== Notable former players
+=== Other notable players
+== Club staff
+== Club presidents
+== Managers
+== Youth academy
+== Women's football team
+== Other sections
+=== Superleague Formula
+=== Futsal
+== Bibliography
+== Notes
+== References
+== External links
+
+TEMPLATES 36
+{{Fs player|no= 2|pos=DF|nat=GER|name=[[Zoumana Keita]]}}
+{{Fs player|no= 3|pos=DF|nat=DEN|name=[[Lucas Hey]]}}
+{{Fs player|no= 4|pos=DF|nat=FRA|name=[[Giulian Biancone]]}}
+{{Fs player|no= 5|pos=DF|nat=MDA|name=[[Oleg Reabciuk]]}}
+{{Fs player|no= 6|pos=DF|nat=SWE|name=[[Ludwig Augustinsson]]}}
+{{Fs player|no= 7|pos=DF|nat=SEN|name=[[Ilay Camara]]}}
+{{Fs player|no= 8|pos=MF|nat=CIV|name=[[Romeo Amane]]}}
+{{Fs player|no= 9|pos=FW|nat=SRB|name=[[Mihajlo Cvetković]]}}
+{{Fs player|no=10|pos=FW|nat=GER|name=[[Marten Winkler]]}}
+{{Fs player|no=11|pos=FW|nat=FIN|name=[[Oliver Antman]]}}
+{{fs player|no=12|pos=DF|nat=IRL|name=[[Andrew Omobamidele]]|other=<small>on loan from [[RC Strasbourg Alsace|Strasbourg]]</small>}}
+{{Fs player|no=14|pos=FW|nat=UKR|name=[[Danylo Sikan]]}}
+{{Fs player|no=18|pos=MF|nat=CZE|name=[[Lukáš Ambros]]}}
+{{fs player|no=19|pos=MF|nat=NOR|name=[[Thelo Aasgaard]]|other=<small>on loan from [[Rangers F.C.|Rangers]]</small>}}
+{{Fs player|no=21|pos=FW|nat=MAR|name=[[Tawfik Bentayeb]]}}
+{{Fs player|no=24|pos=MF|nat=NED|name=[[Enric Llansana]]}}
+{{Fs player|no=26|pos=GK|nat=BEL|name=[[Colin Coosemans]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=27|pos=DF|nat=FRA|name=[[Léo Pétrot]]}}
+{{Fs player|no=29|pos=MF|nat=COD|name=[[Mario Stroeykens]]}}
+{{Fs player|no=30|pos=MF|nat=GRE|name=[[Ilias Koutsoupias]]}}
+{{Fs player|no=32|pos=GK|nat=GER|name=[[Justin Heekeren]]}}
+{{Fs player|no=33|pos=GK|nat=BEL|name=Mattis Seghers}}
+{{Fs player|no=49|pos=FW|nat=BEL|name=[[Jayden Onia Seke]]}}
+{{Fs player|no=50|pos=DF|nat=BEL|name=Kaïs Barry}}
+{{Fs player|no=53|pos=FW|nat=BEL|name=[[Noa Ojea]]}}
+{{Fs player|no=54|pos=DF|nat=BEL|name=[[Killian Sardella]]}}
+{{Fs player|no=55|pos=MF|nat=BEL|name=[[Marco Kana]]}}
+{{Fs player|no=61|pos=FW|nat=BEL|name=[[Joshua Nga Kana]]}}
+{{Fs player|no=66|pos=GK|nat=BEL|name=Michiel Haentjens}}
+{{Fs player|no=68|pos=MF|nat=BEL|name=[[Noah Kalonji]]}}
+{{Fs player|no=79|pos=DF|nat=MAR|name=[[Ali Maamar]]}}
+{{Fs player|no=83|pos=FW|nat=BEL|name=[[Tristan Degreef]]}}
+{{fs player|no=91|pos=FW|nat=BEL|name=[[Adriano Bertaccini]]}}
+{{Fs player|no=|pos=DF|nat=SEN|name=[[Moussa N'Diaye (footballer, born 2002)|Moussa N'Diaye]]|other=at [[SV Werder Bremen|Werder Bremen]] until 30 June 2027}}
+{{Fs player|no=|pos=MF|nat=MAR|name=[[Anas Tajaouart]]|other=at [[RAAL La Louvière|La Louvière]] until 30 June 2027}}
+{{fs player|no=|pos=FW|nat=MLI|name=[[Ibrahim Kanaté]]|other=at [[1. FC Kaiserslautern]] until 30 June 2027}}

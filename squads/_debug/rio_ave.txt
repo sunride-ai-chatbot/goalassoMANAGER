@@ -1,0 +1,70 @@
+== History
+== European record
+==== Notes
+=== UEFA coefficient
+== Players
+==== Current squad
+==== Out on loan
+=== U23 squad
+== Club staff
+== Honours
+=== National competitions
+=== Regional competitions
+=== Personnel honours
+== Coaching history
+== League and cup history
+== References
+== External links
+
+TEMPLATES 51
+{{Fs player|no= 1|nat=POL|name=[[Cezary Miszta]]|pos=GK}}
+{{Fs player|no=2|nat=POR|name=[[Zé Carlos (footballer, born 1998)|Zé Carlos]]|pos=DF}}
+{{Fs player|no= 3|nat=COL|name=[[Simón García]]|pos=DF}}
+{{Fs player|no= 5|nat=GRE|name=[[Andreas Ntoi]]|pos=MF}}
+{{Fs player|no= 6|nat=ENG|name=[[Nelson Abbey]]|pos=DF}}
+{{Fs player|no= 7|nat=BRA|name=[[Diogo Bezerra]]|pos=FW}}
+{{Fs player|no= 8|nat=BRA|name=[[Ryan Guilherme]]|pos=MF}}
+{{Fs player|no= 9|nat=GNB|name=[[Tamble Monteiro]]|pos=FW}}
+{{Fs player|no=10|nat=CRC|name=[[Brandon Aguilera]]|pos=MF}}
+{{Fs player|no=11|nat=ESP|name=[[Jalen Blesa]]|pos=FW}}
+{{Fs player|no=13|nat=FRA|name=[[Julien Lomboto]]|pos=DF}}
+{{Fs player|no=14|nat=CZE|name=[[Jakub Brabec]]|pos=DF|other={{small|[[vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=17|nat=GRE|name=[[Marios Vrousai]]|pos=DF|other={{small|[[Captain (association football)|captain]]}}
+{{Fs player|no=19|nat=FRA|name=[[Malik Sellouki]]|pos=MF}}
+{{Fs player|no=20|nat=POR|name=[[João Tomé]]|pos=DF}}
+{{Fs player|no=21|nat=CZE|name=[[Radek Šiler]]|pos=FW}}
+{{Fs player|no=22|nat=CRC|name=[[Kevin Chamorro]]|pos=GK}}
+{{Fs player|no=23|nat=ARG|name=[[Francisco Petrasso]]|pos=DF|other={{small|[[captain (association football)|3rd captain]]}}
+{{Fs player|no=24|nat=POR|name=[[Pedro Amaral]]|pos=DF}}
+{{Fs player|no=27|nat=ARG|name=Tobías Medina|pos=FW}}
+{{Fs player|no=30|nat=SVK|name=[[Roland Galčík]]|pos=FW}}
+{{Fs player|no=32|nat=BRA|name=[[Vitor Hugo (footballer, born 2001)|Vitor Hugo]]|pos=GK}}
+{{Fs player|no=39|nat=BRA|name=[[Gustavo Mancha]]|pos=DF|other={{small|on loan from [[Olympiacos F.C.|Olympiacos]]}}
+{{Fs player|no=44|nat=HUN|name=[[Tamás Nikitscher]]|pos=MF}}
+{{Fs player|no=54|nat=GRE|name=[[Georgios Liavas]]|pos=MF}}
+{{Fs player|no=67|nat=BRA|name=Samuel Alves|pos=FW}}
+{{Fs player|no=68|nat=BRA|name=Caike|pos=DF}}
+{{Fs player|no=70|nat=SEN|name=Antoine Wenck|pos=MF}}
+{{Fs player|no=77|nat=CRO|name=[[Dario Špikić]]|pos=FW}}
+{{Fs player|no=79|nat=POR|name=Miguel Patrício|pos=MF}}
+{{Fs player|no=80|nat=TOG|name=[[Sebastian Clemmensen]]|pos=FW}}
+{{Fs player|no=90|nat=POR|name=[[Diogo Nascimento]]|pos=MF|other={{small|on loan from [[Olympiacos F.C.|Olympiacos]]}}
+{{Fs player|no=99|nat=NED|name=[[Ennio van der Gouw]]|pos=GK}}
+{{Fs player|no=  |nat=BRA|name=Rafael Lobato|pos=FW|other={{small|at [[AVS Futebol SAD|AVS]] until 30 June 2027}}
+{{Fs player|no=2|nat=GRE|name=Georgios Lemonakis|pos=DF}}
+{{Fs player|no=3|nat=POR|name=Fil Azevedo|pos=DF}}
+{{Fs player|no=4|nat=POR|name=Tomé Almeida|pos=DF}}
+{{Fs player|no=9|nat=SEN|name=Mamadou Sawané|pos=FW}}
+{{Fs player|no=31|nat=BRA|name=Vinicius Cressi|pos=DF}}
+{{Fs player|no=41|nat=MAR|name=Amine Rehmi|pos=FW}}
+{{Fs player|no=43|nat=POR|name=Guilherme Venâncio|pos=DF}}
+{{Fs player|no=47|nat=POR|name=Pedro Pereira|pos=MF}}
+{{Fs player|no=48|nat=POR|name=Franco Pinho|pos=FW}}
+{{Fs player|no=49|nat=POR|name=Francisco Curvelo|pos=FW}}
+{{Fs player|no=70|nat=BRA|name=Eduardo Gualberto|pos=FW}}
+{{Fs player|no=71|nat=KOS|name=Lorent Talla|pos=MF}}
+{{Fs player|no=75|nat=ALB|name=[[Dijar Ferati]]|pos=MF}}
+{{Fs player|no=83|nat=GNB|name=[[Dai Baldé]]|pos=MF}}
+{{Fs player|no=87|nat=POR|name=Francisco Brás|pos=DF}}
+{{Fs player|no=88|nat=POR|name=Alex Sousa|pos=FW}}
+{{Fs player|no=95|nat=EGY|name=Hassan Abouelmaati|pos=DF}}

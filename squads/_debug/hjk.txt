@@ -1,0 +1,87 @@
+== History
+=== 1998–1999: First Champions League appearance
+=== 2000–2018: First Europa League appearance
+=== 2019–2023: Toni Koskela era
+=== 2023–present
+== Crest and colours
+=== Badge
+=== Colours
+== Honours
+=== Women's football
+=== Ice hockey
+=== Bandy
+=== Figure skating
+== League history
+== Supporters and rivalries
+=== The Helsinki Derby and other local rivalries
+=== Helsinki-Lahti rivalry
+=== HJK-Haka rivalry
+== Stadiums
+=== Home grounds
+=== Attendances
+== Transfers
+=== Record transfers
+== Players
+=== Out on loan
+== Reserve team
+=== Klubi 04 squad
+=== Out on loan
+== Management and boardroom
+=== Performance Unit
+=== Boardroom
+== Managers and captains
+=== Managers
+=== Captains
+== Hall of Fame
+== European record
+=== Matches
+=== UEFA coefficient
+== References
+== External links
+
+TEMPLATES 45
+{{fs player | no= 1  | nat=FIN | pos=GK | name= [[Jesse Öst]]}}
+{{fs player | no= 3  | nat=FRA | pos=DF | name= [[Till Cissokho]]}}
+{{fs player | no= 4  | nat=FIN | pos=MF | name= [[Alexander Ring]]}}
+{{fs player | no= 5  | nat=ENG | pos=DF | name= [[Amara Nallo]]|other={{small|on loan from [[Liverpool F.C.|Liverpool]]}}
+{{fs player | no= 6  | nat=FIN | pos=DF | name= [[Ville Tikkanen (footballer)|Ville Tikkanen]]}}
+{{fs player | no= 7  | nat=ENG | pos=MF | name= [[Alfie Cicale]]}}
+{{fs player | no= 8  | nat=FIN | pos=MF | name= [[Pyry Mentu]]}}
+{{fs player | no= 9  | nat=DEN | pos=FW | name= [[Mads Borchers]]}}
+{{fs player | no= 10 | nat=FIN | pos=MF | name= [[Lucas Lingman]]}}
+{{fs player | no= 11 | nat=FIN | pos=FW | name= [[Roni Hudd]]}}
+{{fs player | no= 12 | nat=FIN | pos=GK | name= Mitja Haapanen}}
+{{fs player | no= 13 | nat=FIN | pos=DF | name= [[Kaius Simojoki]]}}
+{{fs player | no= 14 | nat=DEN | pos=DF | name= [[Leonel Montano]]|other={{small|on loan from [[Silkeborg IF|Silkeborg]]}}
+{{fs player | no= 15 | nat=FIN | pos=MF | name= [[Jere Kallinen]]}}
+{{fs player | no= 16 | nat=FIN | pos=MF | name= Antton Nylund}}
+{{fs player | no= 17 | nat=FIN | pos=MF | name= [[Martin Kirilov]]}}
+{{fs player | no= 19 | nat=FIN | pos=FW | name= [[David Ezeh]]}}
+{{fs player | no= 20 | nat=FIN | pos=FW | name= [[Teemu Pukki]]}}
+{{fs player | no= 22 | nat=FIN | pos=MF | name= [[Liam Möller]]}}
+{{fs player | no= 24 | nat=FIN | pos=DF | name= Emil Leveälahti}}
+{{fs player | no= 26 | nat=FIN | pos=FW | name= [[Lassi Lappalainen]]}}
+{{fs player | no= 28 | nat=FIN | pos=DF | name= [[Miska Ylitolva]]}}
+{{fs player | no= 29 | nat=FIN | pos=FW | name= [[Santeri Haarala]]}}
+{{fs player | no= 31 | nat=SRB | pos=DF | name= [[Mihailo Bogićević]]}}
+{{fs player | no= 32 | nat=SEN | pos=MF | name= Mouhamed Guèye}}
+{{fs player | no= 35 | nat=FIN | pos=DF | name= [[Eemil Toivonen]]}}
+{{fs player | no= 44 | nat=CRO | pos=GK | name= [[Matej Marković]]}}
+{{fs player | no=    | nat=FIN | pos=GK | name= [[Jasper Samooja]]|other={{small|on loan from [[US Lecce|Lecce]]}}
+{{fs player | no=    | nat=FIN | pos=DF | name= [[Nikolai Alho]]}}
+{{Fs player|no=45|nat=FIN|name=Lukas Kuusisto|pos=DF}}
+{{Fs player|no=48|nat=NGA|name=Francis Etu|pos=FW}}
+{{Fs player|no=51|nat=FIN|name=Kaius Hardén|pos=FW}}
+{{Fs player|no=62|nat=SWE|name=[[Nils Svensson]]|pos=DF}}
+{{Fs player|no=76|nat=FIN|name=Vilho Tuokkola|pos=GK}}
+{{Fs player|no=98|nat=FIN|name=Alex Lietsa|pos=DF}}
+{{Fs player|no=|nat=FIN|name=Otto Hannula|pos=MF}}
+{{Fs player|no=|nat=KVX|name=Art Berisha|pos=FW}}
+{{Fs player|no=|nat=FIN|name=Mustafa Abdulmuttaleb|pos=GK}}
+{{Fs player|no=|nat=FIN|name=Jere Kari|pos=DF}}
+{{Fs player|no=|nat=FIN|name=Marlo Hyvönen|pos=MF}}
+{{Fs player|no=|nat=FIN|name=Emil Ingman|pos=FW}}
+{{Fs player|no=|nat=FIN|name=Arop Ring|pos=DF}}
+{{Fs player|no=|nat=AUS|name=Liam Rippon|pos=FW}}
+{{Fs player|no=|nat=SWE|name=[[Hadi Noori]]|pos=MF}}
+{{Fs player|no=|nat=FIN|name=[[Salem Bouajila]]|pos=FW|other=at [[SV Ried|SV Ried II]] until 30 June 2025}}

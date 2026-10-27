@@ -1,0 +1,72 @@
+== History
+=== MLS expansion bid
+=== Inaugural season and first championship (2017–2018)
+=== De Boer era (2019–2020)
+=== Decline and subsequent rebuild (2021–2025)
+=== Return of Tata Martino (2026–present)
+== Colors and badge
+=== Symbols
+=== Kits
+==== Primary
+==== Alternate
+==== Third
+=== Sponsorship
+== Development system
+=== Youth academy
+== Stadium and team facilities
+=== Mercedes-Benz Stadium
+==== Construction delays
+=== Training facilities and team headquarters
+=== Bobby Dodd Stadium
+== Club culture
+=== Supporters
+=== Attendance
+=== Traditions
+== Ownership and management
+== Players
+=== Out on loan
+=== Reserved numbers
+=== Notable players
+== Staff
+=== Club executives
+== Honors
+=== International
+== Records
+=== Seasons
+=== International competitions
+=== Player appearances
+=== Goals
+== Footnotes
+== References
+== External links
+
+TEMPLATES 29
+{{fs player|no=1|nat=ARG|name=[[Lucas Hoyos]]|pos=GK}}
+{{fs player|no=3|nat=ARG|name=[[Elías Báez]]|pos=DF}}
+{{Fs player|no=4|nat=ALB|name=[[Enea Mihaj]]|pos=DF}}
+{{Fs player|no=6|nat=PRY|name=[[Júnior Alonso]]|pos=DF}}
+{{fs player|no=7|nat=COL|name=[[Steven Alzate]]|pos=MF}}
+{{fs player|no=8|nat=FRA|name=[[Tristan Muyumba]]|pos=MF}}
+{{fs player|no=10|nat=PAR|name=[[Miguel Almirón]]|pos=FW|other=[[Captain (association football)|captain]]; [[Designated Player Rule|DP]]}}
+{{Fs player|no=11|nat=ARG|name=[[Giuliano Galoppo]]|pos=MF|other=on loan from [[Club Atlético River Plate|River Plate]]}}
+{{Fs player|no=14|nat=URU|name=Mauricio Amaro|pos=MF}}
+{{Fs player|no=16|nat=USA|name=[[Adrian Gill (soccer)|Adrian Gill]]|pos=MF}}
+{{Fs player|no=19|nat=BRA|name=[[Sérgio Santos (footballer, born 1994)|Sérgio Santos]]|pos=FW}}
+{{Fs player|no=20|nat=USA|name=[[Luke Brennan (soccer, born 2005)|Luke Brennan]]|pos=FW|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=22|nat=HAI|name=[[Fafà Picault]]|pos=FW}}
+{{Fs player|no=27|nat=CHI|name=[[Paulo Díaz]]|pos=DF}}
+{{Fs player|no=28|nat=USA|name=[[Will Reilly]]|pos=MF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=30|nat=JPN|name=[[Cayman Togashi]]|pos=FW}}
+{{fs player|no=35|nat=TRI|name=[[Jay Fortune]]|pos=MF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=36|nat=SUI|name=[[Breel Embolo]]|pos=FW|other=[[Designated Player Rule|DP]]}}
+{{fs player|no=40|nat=VEN|name=[[Santiago Pita]]|pos=MF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=42|nat=JAM|name=[[Jayden Hibbert]]|pos=GK}}
+{{Fs player|no=47|nat=USA|name=[[Matthew Edwards (soccer)|Matthew Edwards]]|pos=DF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{fs player|no=48|nat=USA|name=[[Cooper Sanchez]]|pos=MF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{fs player|no=50|nat=USA|name=[[Dominik Chong-Qui]]|pos=DF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]}}
+{{Fs player|no=55|nat=ARG|name=[[Tomás Jacob]]|pos=MF}}
+{{Fs player|no=59|nat=RUS|name=[[Aleksei Miranchuk]]|pos=MF|other=[[Designated Player Rule|DP]]}}
+{{Fs player|no=9|nat=CIV|name=[[Emmanuel Latte Lath]]|pos=FW|other=[[Designated Player Rule|DP]]; on loan to [[1. FC Union Berlin|Union Berlin]]}}
+{{fs player|no=23|nat=PUR|name=Adyn Torres|pos=MF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]; on loan to [[FC Nõmme United|Nõmme United]]}}
+{{fs player|no=95|nat=USA|name=Kaiden Moore|pos=DF|other=[[Homegrown Player Rule (Major League Soccer)|HG]]; on loan to [[Philadelphia Union]]}}
+{{Fs player|no=  |nat=JAM|name=Ashton Gordon|pos=FW|other=on loan to [[Chattanooga FC]]}}

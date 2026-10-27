@@ -1,0 +1,65 @@
+== History
+=== 1920s: Coppa Italia final
+=== 1930s and 1940s
+=== 1950s: second place in A, and relegation back to B
+=== 1960s and 1970s
+=== 1980s: Mitropa Cup and the scandal of 1986
+=== 1990s and early 2000s: Europe
+=== Recent history
+== Colors and symbols
+=== Official symbols
+== Honours
+==== League
+==== Cups
+=== International
+=== Other Titles
+== Divisional movements
+== Stadiums
+== Players
+=== Out on loan
+== Notable players
+== Coaching staff
+== Key club figures
+== Managerial history
+== References
+== External links
+
+TEMPLATES 38
+{{Fs player|no=4|nat=SVN|pos=MF|name=[[Sandi Lovrić]]}}
+{{Fs player|no=5|nat=AUT|pos=DF|name=[[David Alaba]]}}
+{{fs player|no=6|nat=ESP|pos=MF|name=[[Oier Zarraga]]}}
+{{fs player|no=7|nat=SEN|pos=FW|name=[[Idrissa Gueye (footballer, born 2006)|Idrissa Gueye]]}}
+{{Fs player|no=8|nat=SWE|pos=MF|name=[[Jesper Karlström]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=9|nat=ENG|pos=FW|name=[[Keinan Davis]]}}
+{{Fs player|no=10|nat=ITA|pos=FW|name=[[Nicolò Zaniolo]]}}
+{{fs player|no=11|nat=CIV|pos=DF|name=[[Hassane Kamara]]}}
+{{Fs player|no=13|nat=ITA|pos=DF|name=[[Nicolò Bertola]]}}
+{{Fs player|no=14|nat=IRL|pos=DF|name=[[James Abankwah]]}}
+{{Fs player|no=15|nat=CIV|pos=FW|name=[[Vakoun Issouf Bayo|Vakoun Bayo]]}}
+{{fs player|no=16|nat=GER|pos=DF|name=[[Matteo Palma]]}}
+{{fs player|no=20|nat=COL|pos=DF|name=[[Juan David Arizala]]}}
+{{fs player|no=23|nat=KOS|pos=DF|name=[[Mërgim Vojvoda]]}}
+{{Fs player|no=24|nat=POL|pos=MF|name=[[Jakub Piotrowski]]}}
+{{Fs player|no=27|nat=BEL|pos=DF|name=[[Christian Kabasele]]}}
+{{Fs player|no=28|nat=FRA|pos=DF|name=[[Oumar Solet]]}}
+{{Fs player|no=30|nat=GEO|pos=MF|name=[[Giorgi Chakvetadze]]}}
+{{Fs player|no=32|nat=NED|pos=MF|name=[[Jurgen Ekkelenkamp]]}}
+{{fs player|no=38|nat=SCO|pos=MF|name=[[Lennon Miller]]}}
+{{fs player|no=40|nat=NGA|pos=GK|name=[[Maduka Okoye]]}}
+{{Fs player|no=41|nat=POL|pos=GK|name=[[Bartosz Mrozek]]}}
+{{fs player|no=45|nat=ITA|pos=FW|name=[[Giulio Vinciati]]}}
+{{Fs player|no=46|nat=SPA|pos=MF|name=[[Unai Gómez]]}}
+{{fs player|no=59|nat=ITA|pos=DF|name=[[Alessandro Zanoli]]}}
+{{Fs player|no=77|nat=CMR|pos=DF|name=[[Enzo Ebosse]]}}
+{{Fs player|no=91|nat=SRB|pos=FW|name=[[Lazar Jovanović (footballer, born 2006)|Lazar Jovanović]]}}
+{{fs player|no=93|nat=ITA|pos=GK|name=[[Daniele Padelli]]}}
+{{Fs player|no=|nat=ITA|pos=GK|name=[[Alessandro Nunziante (footballer)|Alessandro Nunziante]]|other=at [[Arezzo Calcio|Arezzo]] until 30 June 2027}}
+{{Fs player|no=|nat=GEO|pos=DF|name=[[Saba Goglichidze]]|other=at [[AC Monza|Monza]] until 30 June 2027}}
+{{Fs player|no=|nat=DEN|pos=DF|name=[[Thomas Thiesson Kristensen|Thomas Kristensen]]|other=at [[Atalanta BC|Atalanta]] until 30 June 2027}}
+{{fs player|no=|nat=CRO|pos=DF|name=[[Branimir Mlačić]]|other=at [[Watford FC|Watford]] until 30 June 2027}}
+{{fs player|no=|nat=ZIM|pos=DF|name=[[Jordan Zemura]]|other=at [[Watford FC|Watford]] until 30 June 2027}}
+{{Fs player|no=|nat=FRA|pos=MF|name=[[Abdoulaye Camara (footballer, born 2008)|Abdoulaye Camara]]|other=at [[AFC Ajax|Ajax]] until 30 June 2027}}
+{{Fs player|no=|nat=ITA|pos=MF|name=[[Simone Pafundi]]|other=at [[Catanzaro Calcio|Catanzaro]] until 30 June 2027}}
+{{fs player|no=|nat=SVN|pos=MF|name=[[David Pejičić]]|other=at [[FC Koper|Koper]] until 30 June 2027}}
+{{Fs player|no=|nat=POL|pos=FW|name=[[Adam Buksa]]|other=at [[RCD Mallorca|Mallorca]] until 30 June 2027}}
+{{Fs player|no=|nat=CHI|pos=FW|name=[[Damián Pizarro]]|other=at [[Audax Italiano]] until 30 June 2027}}

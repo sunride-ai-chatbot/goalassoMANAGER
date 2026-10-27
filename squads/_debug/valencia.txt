@@ -1,0 +1,78 @@
+== History
+=== 1940s: Emergence as a giant in Spanish football
+=== 1960s: European successes in the Fairs Cup
+=== 1970s to early 1980s: More domestic and European glory
+=== Mid to late 1980s: Stagnation and relegation
+=== 1990s: Re-emergence
+=== 2000s: Valencia returns to the top of Spanish and European football
+=== 2010–2014: Debt issues and stability
+=== 2014–present: Decline under Peter Lim's ownership
+== Stadium
+=== New stadium
+== Club identity
+=== Anthem
+=== Crest
+== Players
+=== Current squad
+=== Reserve team
+=== Returning from loan
+=== Out on loan
+== Coaching staff
+== Notable coaches
+=== Gallery
+== Presidents
+== Player records
+=== Transfers
+== Seasons
+== Honours
+=== Awards & recognitions
+== Valencia CF in international football
+== The Academy: Training Centre Foundation Valencia CF
+== Motorsports involvement
+== Esports involvement
+== See also
+== Sources
+== References
+== External links
+
+TEMPLATES 40
+{{Fs player|no=1|nat=MKD|pos=GK|name=[[Stole Dimitrievski]]}}
+{{Fs player|no=2|nat=ARG|pos=MF|name=[[Guido Rodríguez]]}}
+{{Fs player|no=3|nat=ESP|pos=DF|name=[[José Manuel Copete|José Copete]]}}
+{{Fs player|no=4|nat=GUI|pos=DF|name=[[Mouctar Diakhaby]]}}
+{{Fs player|no=5|nat=ESP|pos=DF|name=[[César Tárrega]]|other=[[Captain (association football)#Vice-captain|3rd captain]]}}
+{{Fs player|no=6|nat=NGA|pos=FW|name=[[Umar Sadiq]]}}
+{{Fs player|no=7|nat=NED|pos=FW|name=[[Arnaut Danjuma]]}}
+{{Fs player|no=8|nat=ESP|pos=MF|name=[[Javi Guerra (footballer, born 2003)|Javi Guerra]]}}
+{{Fs player|no=9|nat=ESP|pos=FW|name=[[Hugo Duro]]}}
+{{Fs player|no=10|nat=ENG|pos=FW|name=[[Harvey Elliott]]|other=on loan from [[Liverpool F.C.|Liverpool]]}}
+{{Fs player|no=11|nat=ESP|pos=FW|name=[[Luis Rioja]]}}
+{{Fs player|no=12|nat=NED|pos=DF|name=[[Justin de Haas]]}}
+{{Fs player|no=13|nat=ESP|pos=GK|name=[[Cristian Rivero (footballer)|Cristian Rivero]]}}
+{{Fs player|no=14|nat=ESP|pos=DF|name=[[José Gayà]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=15|nat=MLI|pos=MF|name=[[Aliou Dieng]]}}
+{{Fs player|no=16|nat=ESP|pos=FW|name=[[Diego López (footballer, born May 2002)|Diego López]]}}
+{{Fs player|no=18|nat=ESP|pos=MF|name=[[Pepelu]]|other=[[vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=19|nat=ESP|pos=FW|name=[[Dani Raba]]}}
+{{Fs player|no=20|nat=GLP|pos=DF|name=[[Dimitri Foulquier]]}}
+{{Fs player|no=21|nat=ESP|pos=DF|name=[[Jesús Vázquez (footballer, born 2003)|Jesús Vázquez]]}}
+{{Fs player|no=22|nat=ESP|pos=DF|name=[[Arnau Martínez]]}}
+{{Fs player|no=23|nat=SUI|pos=MF|name=[[Filip Ugrinić]]}}
+{{Fs player|no=24|nat=ARG|pos=DF|name=[[Pablo Maffeo]]|other=on loan from [[Olympiacos F.C.|Olympiacos]]}}
+{{Fs player|no=25|nat=NED|pos=GK|name=[[Kayne van Oevelen]]|other=on loan from [[Ipswich Town F.C.|Ipswich Town]]}}
+{{Fs player|no=39|nat=JPN|pos=MF|name=[[Ryūnosuke Satō]]}}
+{{Fs player|no=27|nat=ESP|pos=FW|name=[[David Otorbi]]}}
+{{Fs player|no=29|nat=ESP|pos=DF|name=[[Alejandro Panach Olmo|Alejandro Panach]]}}
+{{Fs player|no=31|nat=ESP|pos=DF|name=[[Rodrigo Gamón Marton|Rodrigo Gamón]]}}
+{{Fs player|no=32|nat=KEN|pos=DF|name=[[Amos Wanjala]]}}
+{{Fs player|no=33|nat=ESP|pos=MF|name=[[Aaron Mayol]]}}
+{{Fs player|no=36|nat=ESP|pos=DF|name=[[Iker Córdoba]]}}
+{{fs player|no=37|nat=ESP|pos=FW|name=[[Aimar Blázquez]]}}
+{{Fs player|no=38|nat=ESP|pos=MF|name=[[Jaume Durà i Soler|Jaume Durà]]}}
+{{Fs player|no=41|nat=ESP|pos=DF|name=[[Marcos Navarro]]}}
+{{Fs player|no=17|nat=ESP|pos=MF|name=[[Sergi Canós]]}}
+{{Fs player|no=|nat=ESP|pos=GK|name=[[Vicent Abril]]|other=at [[Gimnàstic de Tarragona|Gimnàstic]] until 30 June 2027}}
+{{Fs player|no=|nat=POR|pos=MF|name=[[André Almeida (footballer, born 2000)|André Almeida]]|other=at [[Racing de Santander|Racing Santander]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|pos=MF|name=[[Lucas Núñez]]|other=at [[SD Eibar|Eibar]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|pos=FW|name=[[Mario Domínguez (footballer, born 2004)|Mario Domínguez]]|other=at [[Excelsior Rotterdam|Excelsior]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|pos=FW|name=[[Víctor Fernández (footballer, born 2007)|Víctor Fernández]]|other=at [[Real Valladolid|Valladolid]] until 30 June 2027}}

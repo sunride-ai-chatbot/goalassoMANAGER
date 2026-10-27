@@ -1,0 +1,54 @@
+== History
+=== 2025-2026: A potential sale
+== Home stadium
+== Players
+=== Reserve squad
+=== Out on loan
+=== Retired numbers
+=== Notable former players
+== Management and staff
+=== Coaching history
+== Honours
+=== Other
+== Sponsors
+=== Kit sponsor
+== References
+== External links
+
+TEMPLATES 36
+{{Fs player|no=2|nat=TUN|name=[[Ali Abdi (footballer)|Ali Abdi]]|pos=DF}}
+{{Fs player|no=5|nat=EGY|name=[[Mohamed Abdelmonem]]|pos=DF}}
+{{Fs player|no=6|nat=ALG|name=[[Hicham Boudaoui]]|pos=MF}}
+{{Fs player|no=7|nat=FRA|name=[[Gauthier Hein]]|pos=FW}}
+{{Fs player|no=8|nat=FRA|name=[[Morgan Sanson]]|pos=MF|other=[[Captain (association football)#Vice-captain|vice-captain]]}}
+{{Fs player|no=9|nat=ALG|name=[[Mohamed Amoura]]|pos=FW|other={{small|on loan from [[VfL Wolfsburg]]}}
+{{Fs player|no=10|nat=MAR|name=[[Sofiane Diop]]|pos=FW}}
+{{Fs player|no=11|nat=CIV|name=[[Elye Wahi]]|pos=FW|other={{small|on loan from [[Eintracht Frankfurt]]}}
+{{Fs player|no=19|nat=FRA|name=[[Laurent Abergel]]|pos=MF}}
+{{Fs player|no=21|nat=SWE|name=[[Isak Jansson]]|pos=FW}}
+{{Fs player|no=22|nat=GUI|name=[[Issiaga Camara]]|pos=MF}}
+{{Fs player|no=23|nat=SEN|name=[[Yehvann Diouf]]|pos=GK}}
+{{Fs player|no=27|nat=FRA|name=[[Niels Nkounkou]]|pos=DF|other={{small|on loan from [[Eintracht Frankfurt]]}}
+{{Fs player|no=28|nat=BEL|name=[[Axel Witsel]]|pos=MF}}
+{{Fs player|no=29|nat=CMR|name=[[Nathan Ngoumou]]|pos=FW}}
+{{Fs player|no=33|nat=SEN|name=[[Antoine Mendy (footballer)|Antoine Mendy]]|pos=DF}}
+{{Fs player|no=34|nat=FRA|name=Nassim Laarej|pos=MF}}
+{{Fs player|no=35|nat=FRA|name=[[Xavier Mandza]]|pos=DF}}
+{{Fs player|no=36|nat=GHA|name=[[Alidu Seidu]]|pos=DF|other={{small|on loan from [[Stade Rennais FC|Rennes]]}}
+{{Fs player|no=39|nat=FRA|name=[[Djibril Coulibaly (footballer, born 2008)|Djibril Coulibaly]]|pos=MF}}
+{{Fs player|no=44|nat=FRA|name=[[Zoumana Diallo]]|pos=FW}}
+{{Fs player|no=55|nat=BDI|name=[[Youssouf Ndayishimiye]]|pos=DF}}
+{{Fs player|no=60|nat=FRA|name=Martin Ponsot|pos=GK}}
+{{Fs player|no=64|nat=CAN|name=[[Moïse Bombito]]|pos=DF}}
+{{Fs player|no=77|nat=ALG|name=[[Teddy Boulhendi]]|pos=GK}}
+{{Fs player|no=84|nat=MAR|name=[[Hamza Koutoune]]|pos=DF}}
+{{Fs player|no=87|nat=FRA|name=[[Everton Pereira (footballer)|Everton Pereira]]|pos=MF}}
+{{Fs player|no=92|nat=FRA|name=[[Jonathan Clauss]]|pos=DF}}
+{{Fs player|no=99|nat=GHA|name=[[Salis Abdul Samed]]|pos=MF}}
+{{Fs player|no=38|nat=MTN|name=Aboulaye Camara|pos=MF}}
+{{Fs player|no=41|nat=FRA|name=Djelan Morana|pos=FW}}
+{{Fs player|no=|nat=FRA|name=[[Melvin Bard]]|pos=DF|other={{small|at [[Leeds United F.C.|Leeds United]] until 30 June 2027}}
+{{Fs player|no=|nat=CGO|name=[[Brad Mantsounga]]|pos=DF|other={{small|at [[Royal Excelsior Virton|Virton]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|name=[[Kevin Carlos]]|pos=FW|other={{small|at [[Cagliari Calcio|Cagliari]] until 30 June 2027}}
+{{Fs player|no=|nat=NGA|name=[[Victor Orakpo]]|pos=FW|other={{small|at [[Gençlerbirliği S.K.|Gençlerbirliği]] until 30 June 2027}}
+{{fs player|no=17|nat=FRA|pos=MF|name=[[Kévin Anin]]}}

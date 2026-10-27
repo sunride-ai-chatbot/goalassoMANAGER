@@ -1,0 +1,87 @@
+== History
+=== First titles
+=== C.A. Peñarol
+=== First European tour
+=== Consolidation
+=== International success
+== Crest and colors
+=== Uniforms
+=== Inspiration for Romanian club FC Brașov
+=== Kit evolution
+=== Kit manufacturers
+== Facilities
+==== ''Las Acacias''
+==== Campeón del Siglo
+=== <span class="anchor" id="Palacio Peñarol Cr. Gastón Güelfi"></span>Palacio Peñarol
+=== Complejo Deportivo Washington Cataldi
+=== Centro de Alto Rendimiento
+=== Frank Henderson School
+== Supporters
+=== Fan club
+=== Rivalries
+=== ''Manyas: The Movie''
+=== World's Biggest flag
+== Players
+=== Out on loan
+== Managers
+=== Professional-era managers
+=== Current staff
+== Administration
+=== Presidents
+=== Board members 2020–2023
+== Statistics
+== Honours
+=== Under-20 team
+=== South American Club of the Century
+== Other sports
+=== Cycling
+=== Futsal
+=== Beach soccer
+=== Rugby
+=== Esports
+== See also
+== Notes
+== References
+== External links
+
+TEMPLATES 40
+{{Fs player|no=1|nat=URU|pos=GK|name=[[Sebastián Britos]]}}
+{{Fs player|no=2|nat=ARG|pos=DF|name=[[Germán Pezzella]]}}
+{{Fs player|no=3|nat=URU|pos=DF|name=[[Mauricio Lemos]]}}
+{{Fs player|no=4|nat=URU|pos=DF|name=[[Franco Romero (footballer, born 1995)|Franco Romero]]}}
+{{Fs player|no=5|nat=ARG|pos=MF|name=[[Eric Remedi]]}}
+{{Fs player|no=6|nat=URU|pos=DF|name=Lucas Ferreira|other=<small>on loan from [[Defensa y Justicia]]</small>}}
+{{Fs player|no=7|nat=URU|pos=FW|name=[[Javier Cabrera (footballer)|Javier Cabrera]]}}
+{{Fs player|no=8|nat=URU|pos=MF|name=[[Nicolás Fernández (footballer, born 1998)|Nicolás Fernández]]}}
+{{Fs player|no=9|nat=URU|pos=FW|name=[[Facundo Batista]]}}
+{{Fs player|no=10|nat=URU|pos=MF|name=[[Leonardo Fernández (Uruguayan footballer)|Leonardo Fernández]]}}
+{{Fs player|no=11|nat=ARG|pos=FW|name=[[Cristian Jaime|Leonel Jaime]]|other=<small>on loan from [[Club Atlético River Plate|River Plate]]</small>}}
+{{Fs player|no=12|nat=URU|pos=GK|name=Leandro Díaz}}
+{{Fs player|no=13|nat=URU|pos=MF|name=[[Eduardo Darias]]}}
+{{Fs player|no=14|nat=URU|pos=MF|name=[[Julio Daguer]]}}
+{{Fs player|no=15|nat=URU|pos=DF|name=[[Maximiliano Olivera]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=16|nat=URU|pos=MF|name=[[:es:Tomás Olase|Tomás Olase]]}}
+{{Fs player|no=18|nat=URU|pos=MF|name=[[Germán Barbas]]}}
+{{Fs player|no=19|nat=URU|pos=FW|name=[[Matías Arezo]]}}
+{{Fs player|no=20|nat=URU|pos=DF|name=Kevin Rodríguez}}
+{{Fs player|no=21|nat=URU|pos=MF|name=[[Jesús Trindade]]}}
+{{Fs player|no=22|nat=URU|pos=DF|name=Facundo Álvez}}
+{{Fs player|no=23|nat=ARG|pos=FW|name=Gonzalo Gelini|other=<small>on loan from [[Boca Juniors]]</small>}}
+{{Fs player|no=25|nat=URU|pos=DF|name=Matías González}}
+{{Fs player|no=26|nat=URU|pos=DF|name=[[Thiago Espinosa]]|other=<small>on loan from [[Club América|América]]</small>}}
+{{Fs player|no=27|nat=URU|pos=DF|name=[[Lucas Hernández (footballer, born 1992)|Lucas Hernández]]|other=[[Captain (association football)#Vice-captain|vice-captain]]}}
+{{Fs player|no=28|nat=URU|pos=DF|name=Ignacio Alegre}}
+{{Fs player|no=29|nat=URU|pos=GK|name=[[Washington Aguerre]]}}
+{{Fs player|no=30|nat=URU|pos=MF|name=Stiven Muhlethaler}}
+{{Fs player|no=32|nat=URU|pos=MF|name=[[:it:Leandro Umpiérrez|Leandro Umpiérrez]]}}
+{{Fs player|no=33|nat=URU|pos=FW|name=[[Jonathan Rodríguez (footballer, born 1993)|Jonathan Rodríguez]]}}
+{{Fs player|no=34|nat=URU|pos=DF|name=[[Nahuel Herrera]]}}
+{{Fs player|no=36|nat=URU|pos=DF|name=Brian Barboza|other=<small>on loan from [[Toluca FC|Toluca]]</small>}}
+{{Fs player|no=40|nat=URU|pos=FW|name=Brandon Álvarez}}
+{{Fs player|no=42|nat=URU|pos=FW|name=Luciano González}}
+{{Fs player|no=55|nat=URU|pos=MF|name=Lorenzo Couture}}
+{{Fs player|no=77|nat=COL|pos=FW|name=[[Luis Angulo]]|other=<small>on loan from [[Talleres de Córdoba|Talleres]]</small>}}
+{{Fs player|no=80|nat=URU|pos=MF|name=[[Franco González (footballer, born 2004)|Franco González]]}}
+{{Fs player|no=93|nat=URU|pos=DF|name=[[Diego Laxalt]]}}
+{{Fs player|no=99|nat=URU|pos=FW|name=[[Abel Hernández]]}}
+{{Fs player|no=  |nat=URU|pos=DF|name=Andrés Madruga}}

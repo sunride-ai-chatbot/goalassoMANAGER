@@ -1,0 +1,77 @@
+== History
+=== First matches
+=== Federal football
+=== Innovations
+=== First golden age
+=== Recent years
+== Meuse/Scheldt Cup
+== Youth program
+== Honours
+=== Others
+== Domestic results
+== Sparta in Europe
+== Current squad
+=== Out on loan
+=== Jong Sparta Rotterdam
+== Former players
+=== National team players
+=== National team players by Confederation
+== Players in international tournaments
+== Club staff
+== Former coaches
+== See also
+== References
+== Notes
+== External links
+
+TEMPLATES 50
+{{Fs player|no=|nat=POL|pos=GK|name=[[Filip Bednarek]]}}
+{{Fs player|no=|nat=NED|pos=GK|name=[[Michael Brouwer]]}}
+{{Fs player|no=|nat=NED|pos=GK|name={{ill|Pascal Kuiper|nl}}
+{{fs player|no=|nat=NED|pos=DF|name=[[Bas Kuipers]]}}
+{{fs player|no=|nat=NED|pos=DF|name=[[Max de Ligt]]}}
+{{fs player|no=|nat=NED|pos=DF|name=[[Lushendry Martes]]}}
+{{fs player|no=|nat=NED|pos=DF|name=[[Bruno Martins Indi]]}}
+{{fs player|no=|nat=VEN|pos=DF|name=[[Teo Quintero]]}}
+{{fs player|no=|nat=NED|pos=DF|name=[[Boyd Reith]]}}
+{{Fs player|no=|nat=NED|pos=DF|name={{ill|Nick Verschuren|de|Nick Verschuren (Fußballspieler)|es||fr||it||nl||ru|Версхюрен, Ник|uk|Нік Версхюрен}}
+{{Fs player|no=|nat=NED|pos=DF|name={{ill|Giannino Vianello|nl}}
+{{Fs player|no=|nat=NED|pos=DF|name=[[Marvin Young (footballer)|Marvin Young]]}}
+{{fs player|no=|nat=NED|pos=MF|name=[[Julian Baas]]}}
+{{fs player|no=|nat=NED|pos=MF|name=[[Isaac Babadi]]|other={{small|on loan from [[PSV Eindhoven|PSV]]}}
+{{fs player|no=|nat=NED|pos=MF|name=[[Robin van Cruijsen]]}}
+{{fs player|no=|nat=NED|pos=MF|name=[[Cedric Hatenboer]]}}
+{{fs player|no=|nat=JPN|pos=MF|name=[[Shunsuke Mito]]}}
+{{fs player|no=|nat=NOR|pos=MF|name=[[Alwande Roaldsøy]]}}
+{{fs player|no=|nat=NED|pos=MF|name=[[Jens Toornstra]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Mitchell van Bergen]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Joel Ideho]]}}
+{{fs player|no=|nat=MNE|pos=FW|name=[[Andrej Kostić]]|other={{small|on loan from [[AC Milan]]}}
+{{Fs player|no=|nat=FIN|pos=FW|name=[[Casper Terho]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Milan Zonneveld]]}}
+{{fs player|no=|nat=NED|pos=MF|name=[[Younes Jaber el Meftahi]]|other={{small|at [[FC Volendam|Volendam]] until 30 June 2027}}
+{{fs player|no=|nat=NED|pos=MF|name=[[Mike Kleijn]]|other={{small|at [[FC Volendam|Volendam]] until 30 June 2027}}
+{{fs player|no=|nat=ISL|pos=FW|name=[[Nökkvi Þeyr Þórisson]]|other={{small|at [[SC Telstar|Telstar]] until 30 June 2027}}
+{{Fs player|no=|nat=NED|pos=GK|name=[[Duncan Lindhout]]}}
+{{Fs player|no=|nat=NED|pos=GK|name=[[Rik Suur]]}}
+{{Fs player|no=|nat=NED|pos=GK|name=[[Thijs Verbaan]]}}
+{{Fs player|no=|nat=NED|pos=DF|name=[[Joshua Bogerd]]}}
+{{Fs player|no=|nat=NED|pos=DF|name=[[Timo Borrie]]}}
+{{Fs player|no=|nat=NED|pos=DF|name=[[Justice Esser]]}}
+{{Fs player|no=|nat=NED|pos=DF|name=[[Djomar Giersthove]]}}
+{{Fs player|no=|nat=NED|pos=DF|name=[[Moreno Gompel]]}}
+{{Fs player|no=|nat=MAR|pos=DF|name=[[Diyae Jermoumi]]}}
+{{Fs player|no=|nat=NED|pos=DF|name=[[Brent Leerdam]]}}
+{{Fs player|no=|nat=NED|pos=MF|name=[[Viggo Guit]]}}
+{{Fs player|no=|nat=NED|pos=MF|name=[[Daniël Hanzen]]}}
+{{Fs player|no=|nat=NED|pos=MF|name=[[Santi Laguna Burgos]]}}
+{{Fs player|no=|nat=NED|pos=MF|name=[[Noah Sandvliet]]}}
+{{Fs player|no=|nat=NED|pos=MF|name={{ill|Mohamed Oukhattou|nl}}
+{{Fs player|no=|nat=NED|pos=MF|name={{ill|Liam Oetoehganal|id}}
+{{Fs player|no=|nat=ESP|pos=FW|name=[[Gustav Arcos Sundqvist]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Shedrach Ebite]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Egeron Gorisson]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Jason Inocencio]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Luc Nieuwenhuijs]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Kenji Sallent]]}}
+{{Fs player|no=|nat=NED|pos=FW|name=[[Marlon Silva Neves]]}}

@@ -1,0 +1,45 @@
+== History
+=== Stagnation
+=== Recent history
+== Honours
+== Divisions
+== Players
+=== Out on loan
+== Records and statistics
+== Coaching staff
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no= 1|nat=CRC|pos=GK|name=[[Patrick Sequeira]]}}
+{{Fs player|no= 3|nat=ANG|pos=DF|name=[[Khaly]]}}
+{{Fs player|no= 4|nat=POR|pos=DF|name=[[João Goulart (footballer)|João Goulart]]}}
+{{Fs player|no= 5|nat=POR|pos=DF|name=[[Abdu Conté]]}}
+{{Fs player|no= 8|nat=POR|pos=MF|name=[[Gabi (footballer, born 2000)|Gabi]]}}
+{{Fs player|no= 9|nat=POR|pos=FW|name=[[Henrique Araújo]]}}
+{{Fs player|no=10|nat=POR|pos=FW|name=[[Rochinha (Portuguese footballer)|Rochinha]]}}
+{{Fs player|no=11|nat=BEL|pos=MF|name=[[Mo Salah (footballer, born 2004)|Mo Salah]]}}
+{{Fs player|no=16|nat=ESP|pos=MF|name=[[Selvi Clua]]|other={{small|on loan from [[UD Almería|Almería]]}}
+{{Fs player|no=17|nat=FRA|pos=FW|name=[[Evans Maurin]]}}
+{{Fs player|no=18|nat=POR|pos=DF|name=[[André Geraldes]]|other={{small|[[captain (association football)|captain]]}}
+{{Fs player|no=19|nat=URU|pos=DF|name=Kevin Prieto}}
+{{Fs player|no=20|nat=GAM|pos=FW|name=[[Alassana Jatta]]}}
+{{Fs player|no=21|nat=MAR|pos=FW|name=Aymen Zouin|other={{small|on loan from [[Parma Calcio 1913|Parma]]}}
+{{Fs player|no=22|nat=POR|pos=GK|name=[[Daniel Azevedo]]}}
+{{Fs player|no=24|nat=COL|pos=MF|name=[[Sebastián Pérez (footballer, born 1993)|Seba Pérez]]}}
+{{Fs player|no=27|nat=BRA|pos=DF|name=[[Kaique Rocha]]}}
+{{Fs player|no=29|nat=FRA|pos=FW|name=[[Jérémy Livolant]]}}
+{{Fs player|no=31|nat=POR|pos=GK|name=[[André Gomes (footballer, born 2004)|André Gomes]]}}
+{{Fs player|no=43|nat=BRA|pos=DF|name=[[David Sousa (footballer, born 2001)|David Sousa]]}}
+{{Fs player|no=44|nat=BRA|pos=DF|name=[[Lipe (footballer)|Lipe]]|other={{small|on loan from [[FC Porto B|Porto B]]}}
+{{Fs player|no=59|nat=POR|pos=MF|name=Abdu Dafé}}
+{{Fs player|no=70|nat=POR|pos=MF|name=[[João Rego]]|other={{small|on loan from [[S.L. Benfica|Benfica]]}}
+{{Fs player|no=75|nat=POR|pos=DF|name=[[Pedro Rosas]]}}
+{{Fs player|no=77|nat=BEL|pos=MF|name=[[Benjamin Pauwels]]|other={{small|on loan from [[CD Leganés|Leganés]]}}
+{{Fs player|no=80|nat=GHA|pos=MF|name=[[Lawrence Ofori]]}}
+{{Fs player|no=90|nat=BRA|pos=FW|name=[[Cassiano (footballer, born 1989)|Cassiano]]}}
+{{Fs player|no=95|nat=CRO|pos=GK|name=Ivan Mandić}}
+{{Fs player|no=98|nat=BRA|pos=MF|name=[[João Pedro (footballer, born 2005)|JP]]}}
+{{Fs player|no=  |nat=ANG|pos=GK|name=[[Ricardo Batista (footballer)|Ricardo Batista]]|other={{small|at [[Lusitano G.C.|Lusitano de Évora]] until 30 June 2027}}
+{{Fs player|no=  |nat=GNB|pos=FW|name=[[Claudio Mendes]]|other={{small|at [[F.C. Penafiel|Penafiel]] until 30 June 2027}}
+{{Fs player|no=  |nat=USA|pos=FW|name=[[Korede Osundina]]|other={{small|at [[Muğlaspor]] until 30 June 2027}}

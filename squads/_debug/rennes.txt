@@ -1,0 +1,58 @@
+== History
+== Stadium
+=== Training centre
+== Supporters
+== Players
+=== Out on loan
+=== Retired numbers
+=== Notable players
+== Management and coaching
+=== Coaching history
+== Honours
+=== Cups
+=== Europe
+=== U19
+== Rennes in European football
+== Notes
+== References
+== Bibliography
+== External links
+
+TEMPLATES 37
+{{Fs player|no=4|nat=ENG|pos=DF|name=[[Charlie Cresswell]]|other={{small|on loan from [[Toulouse FC|Toulouse]]}}
+{{Fs player|no=5|nat=POR|pos=DF|name=[[Gonçalo Oliveira (footballer)|Gonçalo Oliveira]]}}
+{{Fs player|no=6|nat=FRA|pos=MF|name=[[Djaoui Cissé]]}}
+{{Fs player|no=9|nat=FRA|pos=FW|name=[[Esteban Lepaul]]}}
+{{Fs player|no=10|nat=MTQ|pos=MF|name=[[Ludovic Blas]]}}
+{{Fs player|no=11|nat=JOR|pos=FW|name=[[Musa Al-Taamari]]}}
+{{Fs player|no=12|nat=ESP|pos=FW|name=[[Eliezer Mayenda]]}}
+{{Fs player|no=14|nat=USA|pos=DF|name=[[Bryan Reynolds (soccer)|Bryan Reynolds]]}}
+{{Fs player|no=16|nat=FRA|pos=GK|name=[[Nicolas Lemaître]]}}
+{{Fs player|no=17|nat=POL|pos=MF|name=[[Sebastian Szymański]]}}
+{{Fs player|no=18|nat=CMR|pos=DF|name=[[Aboubakar Nagida]]}}
+{{Fs player|no=21|nat=FRA|pos=MF|name=[[Valentin Rongier]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=22|nat=SEN|pos=FW|name=[[Boulaye Dia]]|other={{small|on loan from [[SS Lazio|Lazio]]}}
+{{Fs player|no=24|nat=FRA|pos=DF|name=[[Anthony Rouault]]}}
+{{Fs player|no=26|nat=FRA|pos=DF|name=[[Quentin Merlin]]}}
+{{Fs player|no=28|nat=FRA|pos=MF|name=[[Adrien Thomasson]]}}
+{{Fs player|no=30|nat=FRA|pos=GK|name=[[Brice Samba]]}}
+{{Fs player|no=35|nat=ECU|pos=FW|name=[[Elías Legendre]]}}
+{{Fs player|no=45|nat=FRA|pos=MF|name=[[Mahdi Camara]]}}
+{{Fs player|no=48|nat=MAR|pos=DF|name=[[Abdelhamid Aït Boudlal]]}}
+{{Fs player|no=60|nat=ALG|pos=GK|name=Kilian Belazzoug}}
+{{Fs player|no=65|nat=GAB|pos=MF|name=[[Henrick Do Marcolino]]}}
+{{Fs player|no=70|nat=FRA|pos=FW|name=[[Arnaud Nordin]]}}
+{{Fs player|no=90|nat=SEN|pos=FW|name=[[Issa Soumaré]]}}
+{{Fs player|no=95|nat=POL|pos=MF|name=[[Przemysław Frankowski]]|other={{small|on loan from [[Galatasaray S.K. (football)|Galatasaray]]}}
+{{Fs player|no=|nat=BEL|pos=MF|name=[[Ayanda Sishuba]]}}
+{{Fs player|no=|nat=FRA|pos=GK|name=[[Mathys Silistrie]]|other={{small|at [[US Quevilly-Rouen Métropole|Quevilly-Rouen]] until 30 June 2027}}
+{{Fs player|no=|nat=SEN|pos=DF|name=[[Mikayil Faye]]|other={{small|at [[1. FC Nürnberg]] until 30 June 2027}}
+{{Fs player|no=|nat=FRA|pos=DF|name=[[Rayan Bamba]]|other={{small|at [[Le Mans FC|Le Mans]] until 30 June 2027}}
+{{Fs player|no=|nat=GHA|pos=DF|name=[[Alidu Seidu]]|other={{small|at [[OGC Nice|Nice]] until 30 June 2027}}
+{{Fs player|no=|nat=CIV|pos=MF|name=[[Seko Fofana]]|other={{small|at [[FC Porto|Porto]] until 30 June 2027}}
+{{Fs player|no=|nat=WAL|pos=MF|name=[[Jordan James (footballer, born 2004)|Jordan James]]|other={{small|at [[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]] until 30 June 2027}}
+{{Fs player|no=|nat=FIN|pos=MF|name=[[Glen Kamara]]|other={{small|at [[Queens Park Rangers F.C.|Queens Park Rangers]] until 30 June 2027}}
+{{Fs player|no=|nat=FRA|pos=MF|name=Paolo Limon|other={{small|at [[FC Villefranche Beaujolais|Villefranche]] until 30 June 2027}}
+{{Fs player|no=|nat=FRA|pos=FW|name=[[Nordan Mukiele]]|other={{small|at [[Montpellier HSC|Montpellier]] until 30 June 2027}}
+{{Fs player|no=|nat=FRA|pos=FW|name=[[Lucas Rosier]]|other={{small|at [[US Concarneau|Concarneau]] until 30 June 2027}}
+{{Fs player|no=|nat=MAR|pos=FW|name=[[Yassir Zabiri]]|other={{small|at [[Racing de Santander|Racing Santander]] until 30 June 2027}}

@@ -1,0 +1,116 @@
+== History
+=== Early history (1882–1920s)
+=== Rise to prominence (1920s–1960s)
+=== The golden era (1970s)
+=== Promotions, relegations and two cup finals (1980s)
+=== The Premier League years and relegation (1990s)
+=== Relegation, promotion, financial struggles and the arrival of Bernie and Flavio (2000s)
+=== Yo-yo club (2010s)
+=== Rebuilding phase (2020s)
+=== The Nourry Era 2024–
+== Kits
+== Grounds
+== Fan base and club culture
+=== Songs and chants
+=== Mascot
+=== Famous fans
+== Records and statistics
+=== QPR in Europe
+== Players
+=== First-team squad
+=== Out on loan
+=== Development squads
+==== Under-18s squad
+=== Notable former players
+==== Retired numbers
+==== QPR Supporters' Player of the Year
+==== Queens Park Rangers FC 'All Time XI'
+== Club management
+==== Football staff
+==== Board of directors and senior management
+=== Managerial history
+=== Ownership and finances
+== Honours
+== See also
+== References
+== External links
+
+TEMPLATES 78
+{{Fs player|no=1|nat=NIR|pos=GK|name=[[Pierce Charles]]|other=<small>on loan from [[Manchester City F.C.|Manchester City]]</small>}}
+{{Fs player|no=2|nat=AUS|pos=DF|name=[[Kealey Adamson]]}}
+{{Fs player|no=3|nat=IRL|pos=DF|name=[[Jimmy Dunne (footballer, born 1997)|Jimmy Dunne]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=4|nat=SCO|pos=DF|name=[[Liam Morrison]]}}
+{{Fs player|no=5|nat=ENG|pos=DF|name=[[Ronnie Edwards (footballer)|Ronnie Edwards]]}}
+{{Fs player|no=6|nat=ENG|pos=DF|name=[[Jake Clarke-Salter]]}}
+{{Fs player|no=7|nat=ENG|pos=MF|name=[[Karamoko Dembélé]]}}
+{{Fs player|no=10|nat=MAR|pos=MF|name=[[Ilias Chair]]}}
+{{fs player|no=11|nat=NIR|pos=MF|name=[[Paul Smyth (footballer)|Paul Smyth]]}}
+{{Fs player|no=12|nat=NED|pos=DF|name=[[Boy Kemper]]|}}
+{{Fs player|no=13|nat=ENG|pos=GK|name=[[Calum Ward]]}}
+{{Fs player|no=14|nat=JPN|pos=MF|name=[[Kōki Saitō (footballer)|Kōki Saitō]]}}
+{{fs player|no=15|nat=ENG|pos=FW|name=[[Alfie Lloyd]]}}
+{{Fs player|no=16|nat=JAM|pos=FW|name=[[Rumarn Burrell]]}}
+{{Fs player|no=17|nat=GHA|pos=MF|name=[[Kwame Poku]]}}
+{{Fs player|no=18|nat=FIN|pos=MF|name=[[Glen Kamara]]|other=<small>on loan from [[Stade Rennais FC|Stade Rennais]]</small>}}
+{{Fs player|no=19|nat=LVA|pos=DF|name=[[Dennis Cirkin]]}}
+{{Fs player|no=20|nat=IRL|pos=MF|name=[[Harvey Vale]]}}
+{{Fs player|no=22|nat=CIV|pos=FW|name=[[Richard Kone]]}}
+{{Fs player|no=24|nat=DEN|pos=MF|name=[[Nicolas Madsen]]}}
+{{Fs player|no=25|nat=TRI|pos=FW|name=[[Justin Obikwu]]}}
+{{Fs player|no=26|nat=ALG|pos=FW|name=[[Rayan Kolli]]}}
+{{fs player|no=27|nat=SEN|pos=DF|name=[[Amadou Mbengue]]}}
+{{Fs player|no=32|nat=ENG|pos=GK|name=Matteo Salamon}}
+{{Fs player|no=40|nat=MTQ|pos=MF|name=[[Jonathan Varane]]}}
+{{Fs player|no=48|nat=GHA|pos=DF|name=[[Tariq Lamptey]]}}
+{{Fs player|no=21|nat=ENG|pos=MF|name=[[Kieran Morgan]]|other=at [[Bradford City A.F.C.|Bradford City]] until 31 May 2027}}
+{{Fs player|no=30|nat=RSA|pos=DF|name=[[Tylon Smith]]|other=at [[New England Revolution]] until 31 May 2027}}
+{{Fs player|no=35|nat=ENG|pos=MF|name=Philip Sanyaolu|other=at [[Bristol Rovers F.C.|Bristol Rovers]] until 31 May 2027}}
+{{Fs player|no=38|nat=FRA|pos=DF|name=[[Ziyad Larkeche]]|other=at [[Barnsley F.C.|Barnsley]] until 31 May 2027}}
+{{Fs player|no=|nat=ENG|pos=GK|name=[[Joe Walsh (footballer, born 2002)|Joe Walsh]]|other= at [[Wigan Athletic F.C.|Wigan Athletic]] until 31 May 2027}}
+{{Fs player|no=|nat=GHA|pos=DF|name=Cory Adjetey-Brew|other=at [[Worthing F.C.|Worthing]] until 3 January 2027}}
+{{Fs player|no=|nat=ENG|pos=DF|name=[[Jaiden Putman]]|other=at [[Woking F.C.|Woking]] until 31 May 2027}}
+{{Fs player|no=|nat=AUS|pos=MF|name=[[Jaylan Pearman]]|other=at [[Swindon Town F.C.|Swindon Town]] until 31 May 2027}}
+{{Fs player|no=|nat=AUS|pos=MF|name=[[Daniel Bennie]]|other=at [[Dundee United F.C.|Dundee United]] until 31 May 2027}}
+{{Fs player|no=|nat=IRL|pos=MF|name=Harvey Boddy|other=at [[Worthing F.C.|Worthing]] until 31 May 2027}}
+{{Fs player|no=|nat=ENG|pos=MF|name=[[Emmerson Sutton]]|other=at [[Worthing F.C.|Worthing]] until 25 November 2026}}
+{{Fs player|no=23|nat=SWE|pos=MF|name=[[Isak Alemayehu]]}}
+{{Fs player|no=|nat=ENG|pos=GK|name=Charlie Warren}}
+{{Fs player|no=|nat=ENG|pos=DF|name=Kobe Agbude}}
+{{Fs player|no=|nat=CZE|pos=DF|name=Timothy Akindileni}}
+{{Fs player|no=|nat=BRA|pos=DF|name=[[Esquerdinha (footballer, born 2006)|João Henrique Esquerdinha]]}}
+{{Fs player|no=|nat=SCO|pos=DF|name=Rocco Friel}}
+{{Fs player|no=|nat=IRL|pos=DF|name=Oisin McDonagh}}
+{{Fs player|no=|nat=AUS|pos=DF|name=Christian Pullella}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Kaleb Dyke}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Rico Kennedy}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Fraser Neill}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Archie O'Brien}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Amar Sanghrajka}}
+{{Fs player|no=|nat=ENG|pos=MF|name=[[Teddy Tarbotton]]}}
+{{Fs player|no=|nat=ENG|pos=FW|name=Ridwan Hassan}}
+{{Fs player|no=33|nat=WAL|pos=MF|name=Leon Scarlett}}
+{{Fs player|no=|nat=ENG|pos=GK|name=Alfie Fittall}}
+{{Fs player|no=|nat=ENG|pos=GK|name=Cian Osborne}}
+{{Fs player|no=|nat=ENG|pos=GK|name=Kasey Taylor}}
+{{Fs player|no=|nat=USA|pos=DF|name=Eddie Chadwick}}
+{{Fs player|no=|nat=ENG|pos=DF|name=Nkhai Majesty}}
+{{Fs player|no=|nat=ENG|pos=DF|name=Ruben Michaud}}
+{{Fs player|no=|nat=ENG|pos=DF|name=Izik Mitchell-Abadom}}
+{{Fs player|no=|nat=ENG|pos=DF|name=Shaquille Sandiford}}
+{{Fs player|no=|nat=WAL|pos=DF|name=Charlie Street}}
+{{Fs player|no=|nat=ENG|pos=DF|name=Jerrell Tang}}
+{{Fs player|no=|nat=BER|pos=MF|name=[[Kalen Brunson]]}}
+{{Fs player|no=|nat=WAL|pos=MF|name=Declan De-Vulgt}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Giovanni Ikoroha}}
+{{Fs player|no=|nat=SCO|pos=MF|name=James McAvoy}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Samuel McKenna}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Kyreece Moore}}
+{{Fs player|no=|nat=COL|pos=MF|name=[[Ashley Trujillo]]}}
+{{Fs player|no=|nat=ROU|pos=MF|name=Kevin Wadman}}
+{{Fs player|no=|nat=WAL|pos=MF|name=William Whitehead}}
+{{Fs player|no=|nat=ENG|pos=MF|name=Thomas Wiles}}
+{{Fs player|no=|nat=ENG|pos=FW|name=Noah Anderson}}
+{{Fs player|no=|nat=ENG|pos=FW|name=Kemuel Edouard-Marisson}}
+{{Fs player|no=|nat=ENG|pos=FW|name=Gabriel Oluwabusola}}
+{{Fs player|no=|nat=IRL|pos=FW|name=Joshua Wright}}
+{{Fs player|no=31|nat=ENG|pos=FW|name=[[Ray Jones (footballer, born 1988)|Ray Jones]]}}

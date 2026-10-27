@@ -1,0 +1,82 @@
+== History
+=== Dissolution and split (1945–1961)
+=== Restart as Union Berlin (1961–1990)
+=== 2. Bundesliga era (1990–2019)
+=== Bundesliga era and European football (2019–present)
+== Stadium
+=== World Cup living room
+=== Redevelopments of the Försterei and European Games
+== Organization
+=== Sport Management
+=== Sponsorships
+=== Organizational history
+== Players
+=== Current squad
+=== Out on loan
+=== Notable former players
+=== All-time top scorer
+=== Reserve team
+=== Women
+== Coaching staff
+=== Managerial history
+== European record
+=== Overview
+=== Matches
+=== UEFA club coefficient ranking
+== Player records
+=== Most appearances
+=== Top goalscorers
+== Club culture
+=== Rivalries
+=== Songs
+=== Christmas tradition
+=== Mascot
+=== Movies and games
+== Honours
+==== Notes
+=== Regional
+==== Notes
+=== Youth
+==== Notes
+=== Seasons
+== Further reading
+== See also
+== Explanatory notes
+== References
+== External links
+
+TEMPLATES 34
+{{Fs player|no= 1|pos=GK|nat=DEN|name=[[Frederik Rønnow]]}}
+{{Fs player|no= 2|pos=DF|nat=GER|name=[[Felix Uduokhai]]}}
+{{Fs player|no= 3|pos=DF|nat=GER|name=Andrik Markgraf}}
+{{Fs player|no= 4|pos=DF|nat=BEL|name=[[Zeno Van Den Bosch]]}}
+{{Fs player|no= 5|pos=DF|nat=GER|name=[[Marvin Friedrich]]}}
+{{Fs player|no= 6|pos=MF|nat=GER|name=[[Aljoscha Kemlein]]}}
+{{Fs player|no= 7|pos=FW|nat=SCO|name=[[Oliver Burke]]}}
+{{Fs player|no= 8|pos=MF|nat=TUN|name=[[Rani Khedira]]|other=[[vice-captain (association football)|vice-captain]]}}
+{{fs player|no= 9|pos=FW|nat=TUR|name=[[Livan Burcu]]}}
+{{Fs player|no=11|pos=MF|nat=KOR|name=[[Jeong Woo-yeong]]}}
+{{Fs player|no=13|pos=MF|nat=HUN|name=[[András Schäfer]]}}
+{{Fs player|no=14|pos=DF|nat=AUT|name=[[Leopold Querfeld]]}}
+{{Fs player|no=15|pos=DF|nat=GER|name=[[Tom Rothe]]}}
+{{Fs player|no=17|pos=DF|nat=GHA|name=[[Derrick Köhn]]}}
+{{Fs player|no=18|pos=DF|nat=CRO|name=[[Josip Juranović]]}}
+{{Fs player|no=19|pos=MF|nat=GER|name=[[Janik Haberer]]}}
+{{Fs player|no=20|pos=MF|nat=SUI|name=[[Michel Aebischer]]}}
+{{Fs player|no=21|pos=MF|nat=GER|name=[[Tim Skarke]]}}
+{{Fs player|no=23|pos=FW|nat=SRB|name=[[Andrej Ilić]]}}
+{{Fs player|no=24|pos=MF|nat=DEN|name=[[Robert Skov]]}}
+{{Fs player|no=25|pos=GK|nat=GER|name=[[Carl Klaus]]}}
+{{Fs player|no=27|pos=FW|nat=CRO|name=[[Marin Ljubičić (footballer, born 2002)|Marin Ljubičić]]}}
+{{Fs player|no=28|pos=DF|nat=AUT|name=[[Christopher Trimmel]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=29|pos=FW|nat=CIV|name=[[Emmanuel Latte Lath]]|other=on loan from [[Atlanta United FC|Atlanta United]]}}
+{{Fs player|no=30|pos=MF|nat=SUI|name=[[Kastriot Imeri]]}}
+{{fs player|no=31|pos=GK|nat=GER|name=[[Matheo Raab]]}}
+{{Fs player|no=32|pos=FW|nat=JAM|name=[[Mekhi Gray]]}}
+{{Fs player|no=34|pos=DF|nat=FRA|name=[[Stanley Nsoki]]}}
+{{Fs player|no=38|pos=FW|nat=GER|name=Julien Friedrich}}
+{{Fs player|no=49|pos=MF|nat=GER|name=[[Linus Güther]]}}
+{{Fs player|no=|pos=DF|nat=GER|name=Oluwaseun Ogbemudia|other=at [[SV Waldhof Mannheim|Waldhof Mannheim]] until 30 June 2027}}
+{{Fs player|no=|pos=DF|nat=GER|name=Leon Prosche|other=at [[FC Erzgebirge Aue|Erzgebirge Aue]] until 30 June 2027}}
+{{Fs player|no=|pos=MF|nat=GER|name=Tim Blaszczak|other=at [[FSV 63 Luckenwalde]] until 30 June 2027}}
+{{fs player|no=|pos=FW|nat=UKR|name=[[Dmytro Bohdanov]]|other=at [[FC Energie Cottbus|Energie Cottbus]] until 30 June 2027}}

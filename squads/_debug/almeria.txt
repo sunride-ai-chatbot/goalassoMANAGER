@@ -1,0 +1,50 @@
+== History
+== Season to season
+== Players
+=== Reserve team
+=== Other players under contract
+=== Out on loan
+== Technical staff
+== Notable players
+=== World Cup players
+== Uniform
+== Honours
+== See also
+== References
+== External links
+
+TEMPLATES 34
+{{fs player|no=1|nat=ESP|pos=GK|name=[[Andrés Fernández (footballer, born December 1986)|Andrés Fernández]]}}
+{{fs player|no=2|nat=ESP|pos=DF|name=[[Jorge Pulido]]}}
+{{fs player|no=3|nat=ESP|pos=DF|name=[[Álex Muñoz]]}}
+{{fs player|no=5|nat=BRA|pos=DF|name=[[Rodrigo Ely]]}}
+{{Fs player|no=7|nat=ESP|pos=FW|name=[[Jon Morcillo]]}}
+{{Fs player|no=8|nat=POR|pos=MF|name=[[Gui Guedes]]}}
+{{Fs player|no=9|nat=BRA|pos=FW|name=[[Thalys (footballer)|Thalys]]}}
+{{Fs player|no=10|nat=ESP|pos=MF|name=[[Nico Melamed]]}}
+{{Fs player|no=11|nat=ESP|pos=MF|name=[[Sergio Arribas (footballer, born 2001)|Sergio Arribas]]}}
+{{Fs player|no=12|nat=BRA|pos=FW|name=[[Léo Baptistão]]}}
+{{Fs player|no=13|nat=ESP|pos=GK|name=[[Fernando Martínez (Spanish footballer)|Fernando Martínez]]}}
+{{fs player|no=14|nat=ESP|pos=MF|name=[[Javier Muñoz (Spanish footballer)|Javi Muñoz]]}}
+{{fs player|no=15|nat=POR|pos=DF|name=[[Leonardo Lelo]]|other=on loan from [[S.C. Braga|Braga]]}}
+{{Fs player|no=16|nat=ESP|pos=DF|name=[[Marcos Luna]]}}
+{{fs player|no=17|nat=COD|pos=FW|name=[[Brian Cipenga]]}}
+{{fs player|no=18|nat=ITA|pos=DF|name=[[Federico Bonini]]}}
+{{fs player|no=19|nat=ESP|pos=MF|name=[[Mikel Vesga]]}}
+{{fs player|no=20|nat=ESP|pos=FW|name=[[Álex Sola]]}}
+{{Fs player|no=21|nat=ESP|pos=DF|name=[[Chumi]]}}
+{{fs player|no=22|nat=CUW|pos=DF|name=[[Daijiro Chirino]]}}
+{{Fs player|no=23|nat=ESP|pos=FW|name=[[Adri Embarba|Adrián Embarba]]}}
+{{Fs player|no=24|nat=ESP|pos=FW|name=[[Miguel de la Fuente]]}}
+{{fs player|no=29|nat=SRB|pos=MF|name=[[Stefan Džodić]]}}
+{{fs player|no=31|nat=HUN|pos=GK|name=[[Áron Yaakobishvili]]|other=on loan from [[FC Barcelona|Barcelona]]}}
+{{fs player|no=33|nat=ESP|pos=MF|name=[[Quim Junyent]]}}
+{{fs player|no=26|nat=FRA|pos=MF|name=[[Kassoum Kone]]}}
+{{fs player|no=30|nat=ESP|pos=GK|name=[[Jesús López Soria|Jesús López]]}}
+{{fs player|no=32|nat=SRB|pos=DF|name=[[Andrej Popović]]}}
+{{Fs player|no=|nat=MLI|pos=FW|name=[[Ibrahima Koné (footballer, born 1999)|Ibrahima Koné]]}}
+{{Fs player|no=|nat=ESP|pos=DF|name=[[Edgar González (footballer, born 1997)|Edgar González]]|other=at [[CE Sabadell FC|Sabadell]] until 30 June 2027}}
+{{fs player|no=|nat=POR|pos=DF|name=[[Nélson Monte]]|other=at [[Córdoba CF|Córdoba]] until 30 June 2027}}
+{{Fs player|no=|nat=ARG|pos=MF|name=[[Lucas Robertone]]|other=at [[Club Atlético Vélez Sarsfield|Vélez Sarsfield]] until 31 December 2026}}
+{{Fs player|no=|nat=ESP|pos=MF|name=[[Selvi Clua]]|other=at [[Casa Pia A.C.|Casa Pia]] until 30 June 2027}}
+{{fs player|no=|nat=CMR|pos=FW|name=[[Patrick Soko]]|other=at [[CD Leganés|Leganés]] until 30 June 2027}}

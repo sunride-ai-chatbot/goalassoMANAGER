@@ -1,0 +1,65 @@
+== History
+=== Professional football (1977–1987)
+=== European success (1987–1992)
+=== Rebuilding (1992–2002)
+=== The Laudrup years (2002–2006)
+=== Years of crisis (2006&ndash;2013)
+=== The Jan Bech era
+==== Zorniger and the German years (2016–2019)
+==== Frederiksen, "CV" and Superliga Champions (2019–2022)
+=== Global Football Holdings ownership (2022–present)
+== Stadium
+== Support
+== Honours
+== Players
+=== Current squad
+=== Youth players in use
+=== Out on loan
+=== Player of the year
+=== Wall of Honour
+== Coaching staff
+=== First team
+== Senior management
+== Managerial history
+== Records
+== Recent history
+== Brøndby in European competitions
+== UEFA club coefficient ranking
+== Footnotes
+== References
+=== Bibliography
+== External links
+
+TEMPLATES 32
+{{Fs player|no=1|nat=AUT|name=[[Patrick Pentz]]|pos=GK|other=}}
+{{Fs player|no=2|nat=DEN|name=[[Oliver Villadsen]]|pos=DF|other=}}
+{{Fs player|no=3|nat=AUT|name=[[Christopher Olivier]]|pos=DF|other=}}
+{{Fs player|no=4|nat=SCO|name=[[Luis Binks]]|pos=DF|other=<small>[[Captain (association football)|captain]]</small>}}
+{{Fs player|no=7|nat=DEN|name=[[Olti Hyseni]]|pos=FW|other=}}
+{{Fs player|no=9|nat=DEN|name=[[Patrick Mortensen]]|pos=FW|other=}}
+{{Fs player|no=10|nat=DEN|name=[[Daniel Wass]]|pos=MF|other=<small>[[Captain (association football)|club captain]]</small>}}
+{{Fs player|no=11|nat=DEN|name=[[Filip Bundgaard]]|pos=FW|other=}}
+{{Fs player|no=13|nat=USA|name=[[Gavin Beavers]]|pos=GK|other=}}
+{{Fs player|no=15|nat=DEN|name=[[Casper Winther]]|pos=MF|other=}}
+{{Fs player|no=16|nat=DEN|name=[[Adrian Kappenberger]]|pos=GK|other=}}
+{{Fs player|no=17|nat=NGA|name=[[Emmanuel Dennis]]|pos=FW|other=}}
+{{Fs player|no=18|nat=DEN|name=[[Max Ejdum]]|pos=MF|other=}}
+{{Fs player|no=19|nat=JPN|name=[[Shō Fukuda]]|pos=FW|other=}}
+{{Fs player|no=21|nat=AUS|name=[[Marcus Younis]]|pos=FW|other=}}
+{{Fs player|no=24|nat=CRO|name=[[Marko Divković]]|pos=DF|other=}}
+{{Fs player|no=27|nat=GER|name=[[Mats Köhlert]]|pos=DF|other=}}
+{{Fs player|no=29|nat=DEN|name=[[Mads Frøkjær-Jensen]]|pos=MF|other=}}
+{{Fs player|no=30|nat=BEL|name=[[Jordi Vanlerberghe]]|pos=DF|other=}}
+{{Fs player|no=32|nat=DEN|name=[[Frederik Alves]]|pos=DF|other=}}
+{{Fs player|no=34|nat=DEN|name=[[Lukas Larsen]]|pos=DF|other=}}
+{{Fs player|no=36|nat=DEN|name=[[Viggo Poulsen]]|pos=MF|other=}}
+{{Fs player|no=37|nat=DEN|name=[[Raphael Canut]]|pos=DF|other=}}
+{{Fs player|no=38|nat=DEN|name=[[Jacob Ambæk]]|pos=FW|other=}}
+{{Fs player|no=50|nat=DEN|name=[[William Sonne-Schmidt]]|pos=GK|other=}}
+{{Fs player|no=51|nat=DEN|name=[[Oskar Fenger]]|pos=FW|other=}}
+{{Fs player|no=99|nat=POL|name=[[Bartosz Slisz]]|pos=MF|other=<small>[[Captain (association football)#Vice-captain|vice-captain]]</small>}}
+{{Fs player|no=43|nat=DEN|name=[[Ali Al-Najar]]|pos=MF|other=}}
+{{Fs player|no= |nat=DEN|name=[[André Escobar Jensen]]|pos=MF|other=<small>at [[Thisted FC|Thisted]] until 31 December 2026</small>}}
+{{Fs player|no= |nat=BIH|name=[[Benjamin Tahirović]]|pos=MF|other=<small>at [[KRC Genk|Genk]] until 30 June 2027</small>}}
+{{Fs player|no= |nat=JPN|name=[[Kōtarō Uchino]]|pos=FW|other=<small>at [[Mito HollyHock]] until 30 June 2027</small>}}
+{{Fs player|no= |nat=SEN|name=[[Ousmane Sow (footballer)|Ousmane Sow]]|pos=FW|other=<small>at [[Jagiellonia Białystok|Jagiellonia]] until 30 June 2027</small>}}

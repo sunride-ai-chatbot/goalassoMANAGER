@@ -1,0 +1,77 @@
+== History
+=== Early years
+=== First years in the Allsvenskan and early achievements
+=== Successful 1970s, European Cup 1979, 1980s and 1990s
+=== Start of the 2000s to the present
+== Colours and crest
+=== Kit evolution
+=== Crest evolution
+== Supporters
+=== Rivalries
+=== Average attendances
+== Stadia
+== European record
+=== Overall record by competition
+=== UEFA Coefficient
+== Ownership and finances
+== Media coverage
+== Players
+=== Out on loan
+=== Retired numbers
+=== Notable players
+== Management
+=== Technical staff
+=== Notable coaches
+== Statistics
+== Honours
+=== Domestic
+==== League
+==== Cups
+=== European
+=== Worldwide
+=== Doubles
+== Footnotes
+== References
+== External links
+
+TEMPLATES 40
+{{Fs player|no=1|nat=SWE|pos=GK|name=[[Robin Olsen]]}}
+{{Fs player|no=2|nat=NOR|pos=DF|name=[[Stian Gregersen]]}}
+{{Fs player|no=4|nat=SWE|pos=DF|name=[[Bleon Kurtulus]]}}
+{{Fs player|no=5|nat=MNE|pos=DF|name=[[Andrej Đurić]]}}
+{{Fs player|no=6|nat=BUL|pos=MF|name=[[Yanis Karabelyov]]}}
+{{Fs player|no=7|nat=SWE|pos=MF|name=[[Otto Rosengren]]}}
+{{Fs player|no=9|nat=ESP|pos=FW|name=[[Diego García (footballer, born 2000)|Diego García]]}}
+{{Fs player|no=10|nat=DEN|pos=MF|name=[[Anders Christiansen]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=11|nat=SWE|pos=FW|name=[[Emmanuel Ekong]]}}
+{{Fs player|no=14|nat=NOR|pos=DF|name=[[Warren Kamanzi]]}}
+{{Fs player|no=15|nat=SWE|pos=FW|name=[[Mayckel Lahdo]]}}
+{{Fs player|no=17|nat=DEN|pos=DF|name=[[Jens Stryger]]}}
+{{Fs player|no=18|nat=SWE|pos=DF|name=[[Pontus Jansson]]}}
+{{Fs player|no=23|nat=SWE|pos=DF|name=[[Noah John]]}}
+{{Fs player|no=24|nat=SWE|pos=MF|name=[[Oscar Sjöstrand]]}}
+{{Fs player|no=25|nat=BRA|pos=DF|name=[[Gabriel Busanello]]}}
+{{Fs player|no=27|nat=SWE|pos=GK|name=[[Johan Dahlin]]}}
+{{Fs player|no=28|nat=SRB|pos=MF|name=[[Jovan Milosavljević]]}}
+{{Fs player|no=29|nat=MNE|pos=FW|name=[[Sead Hakšabanović]]}}
+{{Fs player|no=32|nat=ISL|pos=FW|name=[[Daníel Guðjohnsen]]}}
+{{Fs player|no=33|nat=MNE|pos=FW|name=Omar Krajina}}
+{{Fs player|no=37|nat=SWE|pos=DF|name=[[Adrian Skogmar]]}}
+{{Fs player|no=39|nat=GHA|pos=FW|name=[[Isaac Assibu]]}}
+{{Fs player|no=40|nat=BIH|pos=MF|name=[[Kenan Busuladžić]]}}
+{{Fs player|no=42|nat=SWE|pos=MF|name=[[Viggo Jeppsson]]}}
+{{Fs player|no=43|nat=SWE|pos=MF|name=Gentian Lajqi}}
+{{Fs player|no=44|nat=SWE|pos=DF|name=[[Malte Frejd]]}}
+{{Fs player|no=45|nat=SWE|pos=MF|name=[[Anton Höög]]}}
+{{Fs player|no=46|nat=CRO|pos=MF|name=Antonio Palac}}
+{{Fs player|no=47|nat=SWE|pos=MF|name=[[Theodor Lundbergh]]}}
+{{Fs player|no=50|nat=SWE|pos=GK|name=[[William Nieroth]]}}
+{{Fs player|no=–|nat=GHA|pos=DF|name=Israel Anum}}
+{{Fs player|no=–|nat=KOS|pos=MF|name=Medjen Llumnica}}
+{{Fs player|no=34|nat=SWE|pos=MF|name=[[Zakaria Loukili]]|other=to [[Landskrona BoIS]] until 31 December 2026}}
+{{Fs player|no=50|nat=SWE|pos=GK|name=Joakim Persson|other=to [[BK Olympic]] until 31 December 2026}}
+{{Fs player|no=–|nat=DEN|pos=DF|name=[[Sashwat Rana]]|other=to [[Hellerup IK]] until 30 June 2027}}
+{{Fs player|no=–|nat=SWE|pos=DF|name=William Åkesson|other=to [[Landskrona BoIS]] until 31 December 2026}}
+{{Fs player|no=–|nat=SWE|pos=MF|name=Viggo Karlsson|other=to [[Trelleborgs FF]] until 31 December 2026}}
+{{Fs player|no=–|nat=GUI|pos=MF|name=[[Salifou Soumah]]|other=to [[Panetolikos F.C.|Panetolikos]]  until 30 June 2027}}
+{{Fs player|no=–|nat=GHA|pos=FW|name=Yassin Mohammed|other=to [[KAA Gent|Jong Gent]] until 30 June 2027}}

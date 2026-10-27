@@ -8,12 +8,838 @@
   "img": 21
  },
  {
+  "key": "aston_villa",
+  "ok": true,
+  "n": 26,
+  "qid": 26,
+  "he": 21,
+  "img": 21
+ },
+ {
+  "key": "brighton",
+  "ok": true,
+  "n": 29,
+  "qid": 29,
+  "he": 22,
+  "img": 23
+ },
+ {
+  "key": "west_ham",
+  "ok": true,
+  "n": 24,
+  "qid": 24,
+  "he": 13,
+  "img": 16
+ },
+ {
+  "key": "everton",
+  "ok": true,
+  "n": 20,
+  "qid": 20,
+  "he": 13,
+  "img": 15
+ },
+ {
+  "key": "crystal_palace",
+  "ok": true,
+  "n": 24,
+  "qid": 24,
+  "he": 20,
+  "img": 23
+ },
+ {
+  "key": "sheffield_wed",
+  "ok": true,
+  "n": 26,
+  "qid": 25,
+  "he": 2,
+  "img": 20
+ },
+ {
+  "key": "middlesbrough",
+  "ok": true,
+  "n": 27,
+  "qid": 27,
+  "he": 9,
+  "img": 22
+ },
+ {
+  "key": "norwich",
+  "ok": true,
+  "n": 30,
+  "qid": 29,
+  "he": 7,
+  "img": 12
+ },
+ {
+  "key": "west_brom",
+  "ok": true,
+  "n": 22,
+  "qid": 22,
+  "he": 3,
+  "img": 14
+ },
+ {
+  "key": "coventry",
+  "ok": true,
+  "n": 29,
+  "qid": 29,
+  "he": 9,
+  "img": 24
+ },
+ {
+  "key": "bristol_city",
+  "ok": true,
+  "n": 27,
+  "qid": 26,
+  "he": 2,
+  "img": 21
+ },
+ {
+  "key": "hull",
+  "ok": true,
+  "n": 30,
+  "qid": 30,
+  "he": 17,
+  "img": 18
+ },
+ {
+  "key": "stoke",
+  "ok": true,
+  "n": 26,
+  "qid": 26,
+  "he": 8,
+  "img": 21
+ },
+ {
+  "key": "qpr",
+  "ok": true,
+  "n": 30,
+  "qid": 22,
+  "he": 2,
+  "img": 21
+ },
+ {
+  "key": "blackburn",
+  "ok": true,
+  "n": 28,
+  "qid": 28,
+  "he": 3,
+  "img": 19
+ },
+ {
+  "key": "swansea",
+  "ok": true,
+  "n": 23,
+  "qid": 23,
+  "he": 9,
+  "img": 13
+ },
+ {
+  "key": "millwall",
+  "ok": true,
+  "n": 30,
+  "qid": 30,
+  "he": 1,
+  "img": 27
+ },
+ {
   "key": "sevilla",
   "ok": true,
   "n": 22,
   "qid": 19,
   "he": 14,
   "img": 7
+ },
+ {
+  "key": "villarreal",
+  "ok": true,
+  "n": 24,
+  "qid": 24,
+  "he": 21,
+  "img": 16
+ },
+ {
+  "key": "athletic",
+  "ok": true,
+  "n": 28,
+  "qid": 28,
+  "he": 21,
+  "img": 16
+ },
+ {
+  "key": "real_sociedad",
+  "ok": true,
+  "n": 23,
+  "qid": 23,
+  "he": 22,
+  "img": 19
+ },
+ {
+  "key": "betis",
+  "ok": true,
+  "n": 24,
+  "qid": 23,
+  "he": 20,
+  "img": 17
+ },
+ {
+  "key": "valencia",
+  "ok": true,
+  "n": 22,
+  "qid": 22,
+  "he": 19,
+  "img": 11
+ },
+ {
+  "key": "celta",
+  "ok": true,
+  "n": 23,
+  "qid": 23,
+  "he": 19,
+  "img": 13
+ },
+ {
+  "key": "osasuna",
+  "ok": true,
+  "n": 24,
+  "qid": 23,
+  "he": 19,
+  "img": 13
+ },
+ {
+  "key": "getafe",
+  "ok": true,
+  "n": 20,
+  "qid": 19,
+  "he": 15,
+  "img": 11
+ },
+ {
+  "key": "zaragoza",
+  "ok": true,
+  "n": 23,
+  "qid": 21,
+  "he": 2,
+  "img": 5
+ },
+ {
+  "key": "sporting_gijon",
+  "ok": true,
+  "n": 20,
+  "qid": 18,
+  "he": 4,
+  "img": 8
+ },
+ {
+  "key": "racing_santander",
+  "ok": true,
+  "n": 20,
+  "qid": 19,
+  "he": 7,
+  "img": 6
+ },
+ {
+  "key": "deportivo",
+  "ok": true,
+  "n": 23,
+  "qid": 23,
+  "he": 5,
+  "img": 11
+ },
+ {
+  "key": "malaga",
+  "ok": true,
+  "n": 23,
+  "qid": 22,
+  "he": 5,
+  "img": 2
+ },
+ {
+  "key": "almeria",
+  "ok": true,
+  "n": 24,
+  "qid": 24,
+  "he": 8,
+  "img": 10
+ },
+ {
+  "key": "granada",
+  "ok": true,
+  "n": 24,
+  "qid": 21,
+  "he": 3,
+  "img": 4
+ },
+ {
+  "key": "cadiz",
+  "ok": true,
+  "n": 21,
+  "qid": 17,
+  "he": 1,
+  "img": 4
+ },
+ {
+  "key": "las_palmas",
+  "ok": true,
+  "n": 28,
+  "qid": 26,
+  "he": 4,
+  "img": 3
+ },
+ {
+  "key": "eibar",
+  "ok": true,
+  "n": 23,
+  "qid": 22,
+  "he": 3,
+  "img": 7
+ },
+ {
+  "key": "braga",
+  "ok": true,
+  "n": 27,
+  "qid": 27,
+  "he": 9,
+  "img": 14
+ },
+ {
+  "key": "guimaraes",
+  "ok": true,
+  "n": 27,
+  "qid": 23,
+  "he": 2,
+  "img": 2
+ },
+ {
+  "key": "famalicao",
+  "ok": true,
+  "n": 25,
+  "qid": 23,
+  "he": 2,
+  "img": 4
+ },
+ {
+  "key": "rio_ave",
+  "ok": true,
+  "n": 30,
+  "qid": 25,
+  "he": 1,
+  "img": 5
+ },
+ {
+  "key": "boavista",
+  "ok": false,
+  "why": "only 1 parsed players (Boavista F.C.)"
+ },
+ {
+  "key": "estoril",
+  "ok": true,
+  "n": 29,
+  "qid": 25,
+  "he": 4,
+  "img": 7
+ },
+ {
+  "key": "casa_pia",
+  "ok": true,
+  "n": 24,
+  "qid": 20,
+  "he": 5,
+  "img": 5
+ },
+ {
+  "key": "leipzig",
+  "ok": true,
+  "n": 26,
+  "qid": 25,
+  "he": 20,
+  "img": 17
+ },
+ {
+  "key": "stuttgart",
+  "ok": true,
+  "n": 30,
+  "qid": 29,
+  "he": 19,
+  "img": 19
+ },
+ {
+  "key": "frankfurt",
+  "ok": true,
+  "n": 25,
+  "qid": 23,
+  "he": 15,
+  "img": 11
+ },
+ {
+  "key": "freiburg",
+  "ok": true,
+  "n": 27,
+  "qid": 26,
+  "he": 19,
+  "img": 14
+ },
+ {
+  "key": "wolfsburg",
+  "ok": true,
+  "n": 29,
+  "qid": 26,
+  "he": 16,
+  "img": 17
+ },
+ {
+  "key": "mainz",
+  "ok": true,
+  "n": 26,
+  "qid": 25,
+  "he": 19,
+  "img": 18
+ },
+ {
+  "key": "union_berlin",
+  "ok": true,
+  "n": 29,
+  "qid": 27,
+  "he": 20,
+  "img": 19
+ },
+ {
+  "key": "hoffenheim",
+  "ok": true,
+  "n": 27,
+  "qid": 25,
+  "he": 12,
+  "img": 14
+ },
+ {
+  "key": "bremen",
+  "ok": true,
+  "n": 28,
+  "qid": 25,
+  "he": 11,
+  "img": 11
+ },
+ {
+  "key": "atalanta",
+  "ok": true,
+  "n": 22,
+  "qid": 21,
+  "he": 19,
+  "img": 17
+ },
+ {
+  "key": "roma",
+  "ok": true,
+  "n": 26,
+  "qid": 25,
+  "he": 20,
+  "img": 17
+ },
+ {
+  "key": "lazio",
+  "ok": true,
+  "n": 30,
+  "qid": 25,
+  "he": 11,
+  "img": 14
+ },
+ {
+  "key": "fiorentina",
+  "ok": true,
+  "n": 22,
+  "qid": 18,
+  "he": 10,
+  "img": 15
+ },
+ {
+  "key": "bologna",
+  "ok": true,
+  "n": 24,
+  "qid": 24,
+  "he": 12,
+  "img": 15
+ },
+ {
+  "key": "torino",
+  "ok": true,
+  "n": 26,
+  "qid": 21,
+  "he": 15,
+  "img": 18
+ },
+ {
+  "key": "udinese",
+  "ok": true,
+  "n": 28,
+  "qid": 27,
+  "he": 10,
+  "img": 19
+ },
+ {
+  "key": "genoa",
+  "ok": true,
+  "n": 30,
+  "qid": 26,
+  "he": 10,
+  "img": 12
+ },
+ {
+  "key": "lille",
+  "ok": true,
+  "n": 24,
+  "qid": 23,
+  "he": 14,
+  "img": 17
+ },
+ {
+  "key": "marseille",
+  "ok": true,
+  "n": 22,
+  "qid": 21,
+  "he": 16,
+  "img": 18
+ },
+ {
+  "key": "lyon",
+  "ok": true,
+  "n": 24,
+  "qid": 24,
+  "he": 16,
+  "img": 17
+ },
+ {
+  "key": "nice",
+  "ok": true,
+  "n": 25,
+  "qid": 23,
+  "he": 10,
+  "img": 16
+ },
+ {
+  "key": "lens",
+  "ok": true,
+  "n": 26,
+  "qid": 25,
+  "he": 15,
+  "img": 19
+ },
+ {
+  "key": "rennes",
+  "ok": true,
+  "n": 23,
+  "qid": 22,
+  "he": 9,
+  "img": 14
+ },
+ {
+  "key": "strasbourg",
+  "ok": true,
+  "n": 26,
+  "qid": 25,
+  "he": 12,
+  "img": 10
+ },
+ {
+  "key": "toulouse",
+  "ok": true,
+  "n": 22,
+  "qid": 20,
+  "he": 3,
+  "img": 13
+ },
+ {
+  "key": "az",
+  "ok": true,
+  "n": 28,
+  "qid": 28,
+  "he": 8,
+  "img": 16
+ },
+ {
+  "key": "twente",
+  "ok": true,
+  "n": 27,
+  "qid": 25,
+  "he": 6,
+  "img": 21
+ },
+ {
+  "key": "utrecht",
+  "ok": true,
+  "n": 26,
+  "qid": 22,
+  "he": 4,
+  "img": 17
+ },
+ {
+  "key": "go_ahead",
+  "ok": true,
+  "n": 29,
+  "qid": 21,
+  "he": 3,
+  "img": 15
+ },
+ {
+  "key": "sparta_rotterdam",
+  "ok": true,
+  "n": 30,
+  "qid": 15,
+  "he": 3,
+  "img": 6
+ },
+ {
+  "key": "heerenveen",
+  "ok": true,
+  "n": 25,
+  "qid": 21,
+  "he": 3,
+  "img": 10
+ },
+ {
+  "key": "nac",
+  "ok": true,
+  "n": 25,
+  "qid": 21,
+  "he": 3,
+  "img": 8
+ },
+ {
+  "key": "anderlecht",
+  "ok": true,
+  "n": 30,
+  "qid": 27,
+  "he": 9,
+  "img": 21
+ },
+ {
+  "key": "antwerp",
+  "ok": true,
+  "n": 30,
+  "qid": 12,
+  "he": 3,
+  "img": 9
+ },
+ {
+  "key": "genk",
+  "ok": true,
+  "n": 30,
+  "qid": 19,
+  "he": 2,
+  "img": 5
+ },
+ {
+  "key": "union_sg",
+  "ok": true,
+  "n": 25,
+  "qid": 20,
+  "he": 9,
+  "img": 12
+ },
+ {
+  "key": "gent",
+  "ok": true,
+  "n": 30,
+  "qid": 18,
+  "he": 6,
+  "img": 11
+ },
+ {
+  "key": "standard",
+  "ok": true,
+  "n": 30,
+  "qid": 19,
+  "he": 6,
+  "img": 8
+ },
+ {
+  "key": "charleroi",
+  "ok": true,
+  "n": 30,
+  "qid": 13,
+  "he": 1,
+  "img": 3
+ },
+ {
+  "key": "mechelen",
+  "ok": true,
+  "n": 30,
+  "qid": 21,
+  "he": 4,
+  "img": 7
+ },
+ {
+  "key": "stvv",
+  "ok": true,
+  "n": 23,
+  "qid": 17,
+  "he": 4,
+  "img": 7
+ },
+ {
+  "key": "midtjylland",
+  "ok": true,
+  "n": 27,
+  "qid": 22,
+  "he": 7,
+  "img": 9
+ },
+ {
+  "key": "brondby",
+  "ok": true,
+  "n": 27,
+  "qid": 25,
+  "he": 3,
+  "img": 13
+ },
+ {
+  "key": "molde",
+  "ok": true,
+  "n": 28,
+  "qid": 21,
+  "he": 1,
+  "img": 7
+ },
+ {
+  "key": "brann",
+  "ok": false,
+  "why": "only 0 parsed players (SK Brann)"
+ },
+ {
+  "key": "malmo",
+  "ok": true,
+  "n": 30,
+  "qid": 24,
+  "he": 3,
+  "img": 9
+ },
+ {
+  "key": "djurgarden",
+  "ok": true,
+  "n": 26,
+  "qid": 17,
+  "he": 0,
+  "img": 7
+ },
+ {
+  "key": "hammarby",
+  "ok": true,
+  "n": 24,
+  "qid": 18,
+  "he": 2,
+  "img": 6
+ },
+ {
+  "key": "hjk",
+  "ok": true,
+  "n": 30,
+  "qid": 17,
+  "he": 1,
+  "img": 6
+ },
+ {
+  "key": "legia",
+  "ok": true,
+  "n": 26,
+  "qid": 19,
+  "he": 3,
+  "img": 11
+ },
+ {
+  "key": "lech",
+  "ok": true,
+  "n": 30,
+  "qid": 21,
+  "he": 5,
+  "img": 16
+ },
+ {
+  "key": "plzen",
+  "ok": true,
+  "n": 28,
+  "qid": 25,
+  "he": 6,
+  "img": 7
+ },
+ {
+  "key": "fcsb",
+  "ok": true,
+  "n": 29,
+  "qid": 26,
+  "he": 3,
+  "img": 16
+ },
+ {
+  "key": "dynamo_kyiv",
+  "ok": true,
+  "n": 30,
+  "qid": 21,
+  "he": 12,
+  "img": 20
+ },
+ {
+  "key": "partizan",
+  "ok": true,
+  "n": 29,
+  "qid": 18,
+  "he": 4,
+  "img": 3
+ },
+ {
+  "key": "hajduk",
+  "ok": true,
+  "n": 30,
+  "qid": 23,
+  "he": 6,
+  "img": 9
+ },
+ {
+  "key": "rijeka",
+  "ok": true,
+  "n": 30,
+  "qid": 20,
+  "he": 2,
+  "img": 4
+ },
+ {
+  "key": "olimpija",
+  "ok": true,
+  "n": 28,
+  "qid": 18,
+  "he": 0,
+  "img": 1
+ },
+ {
+  "key": "maribor",
+  "ok": true,
+  "n": 26,
+  "qid": 14,
+  "he": 2,
+  "img": 7
+ },
+ {
+  "key": "zrinjski",
+  "ok": true,
+  "n": 28,
+  "qid": 13,
+  "he": 1,
+  "img": 3
+ },
+ {
+  "key": "vojvodina",
+  "ok": true,
+  "n": 30,
+  "qid": 23,
+  "he": 3,
+  "img": 8
+ },
+ {
+  "key": "osijek",
+  "ok": true,
+  "n": 30,
+  "qid": 14,
+  "he": 1,
+  "img": 3
  },
  {
   "key": "al_ahly",
@@ -24,11 +850,279 @@
   "img": 17
  },
  {
+  "key": "zamalek",
+  "ok": true,
+  "n": 30,
+  "qid": 18,
+  "he": 4,
+  "img": 4
+ },
+ {
+  "key": "pyramids",
+  "ok": true,
+  "n": 30,
+  "qid": 23,
+  "he": 2,
+  "img": 11
+ },
+ {
+  "key": "wydad",
+  "ok": true,
+  "n": 30,
+  "qid": 14,
+  "he": 2,
+  "img": 5
+ },
+ {
+  "key": "raja",
+  "ok": true,
+  "n": 28,
+  "qid": 19,
+  "he": 1,
+  "img": 8
+ },
+ {
+  "key": "esperance",
+  "ok": true,
+  "n": 30,
+  "qid": 14,
+  "he": 6,
+  "img": 4
+ },
+ {
+  "key": "sundowns",
+  "ok": true,
+  "n": 30,
+  "qid": 28,
+  "he": 3,
+  "img": 4
+ },
+ {
+  "key": "pirates",
+  "ok": true,
+  "n": 30,
+  "qid": 17,
+  "he": 0,
+  "img": 1
+ },
+ {
+  "key": "chiefs",
+  "ok": true,
+  "n": 30,
+  "qid": 20,
+  "he": 1,
+  "img": 1
+ },
+ {
+  "key": "enyimba",
+  "ok": true,
+  "n": 26,
+  "qid": 1,
+  "he": 0,
+  "img": 0
+ },
+ {
+  "key": "mazembe",
+  "ok": true,
+  "n": 30,
+  "qid": 5,
+  "he": 1,
+  "img": 1
+ },
+ {
+  "key": "kotoko",
+  "ok": true,
+  "n": 29,
+  "qid": 3,
+  "he": 1,
+  "img": 0
+ },
+ {
+  "key": "simba",
+  "ok": true,
+  "n": 24,
+  "qid": 8,
+  "he": 3,
+  "img": 0
+ },
+ {
+  "key": "yanga",
+  "ok": false,
+  "why": "only 0 parsed players (Young Africans S.C.)"
+ },
+ {
   "key": "flamengo",
   "ok": true,
   "n": 27,
   "qid": 26,
   "he": 17,
+  "img": 21
+ },
+ {
+  "key": "palmeiras",
+  "ok": true,
+  "n": 25,
+  "qid": 24,
+  "he": 11,
+  "img": 20
+ },
+ {
+  "key": "sao_paulo",
+  "ok": true,
+  "n": 30,
+  "qid": 22,
+  "he": 7,
+  "img": 9
+ },
+ {
+  "key": "corinthians",
+  "ok": true,
+  "n": 30,
+  "qid": 29,
+  "he": 8,
+  "img": 26
+ },
+ {
+  "key": "fluminense",
+  "ok": true,
+  "n": 30,
+  "qid": 28,
+  "he": 5,
+  "img": 16
+ },
+ {
+  "key": "boca",
+  "ok": true,
+  "n": 30,
+  "qid": 28,
+  "he": 11,
+  "img": 11
+ },
+ {
+  "key": "river",
+  "ok": true,
+  "n": 30,
+  "qid": 27,
+  "he": 12,
+  "img": 11
+ },
+ {
+  "key": "racing_club",
+  "ok": true,
+  "n": 23,
+  "qid": 18,
+  "he": 5,
+  "img": 8
+ },
+ {
+  "key": "independiente",
+  "ok": true,
+  "n": 22,
+  "qid": 15,
+  "he": 5,
+  "img": 6
+ },
+ {
+  "key": "penarol",
+  "ok": true,
+  "n": 30,
+  "qid": 18,
+  "he": 6,
+  "img": 10
+ },
+ {
+  "key": "nacional",
+  "ok": true,
+  "n": 22,
+  "qid": 14,
+  "he": 3,
+  "img": 9
+ },
+ {
+  "key": "atletico_nacional",
+  "ok": true,
+  "n": 28,
+  "qid": 17,
+  "he": 5,
+  "img": 7
+ },
+ {
+  "key": "colo_colo",
+  "ok": false,
+  "why": "only 6 parsed players (Colo-Colo)"
+ },
+ {
+  "key": "inter_miami",
+  "ok": true,
+  "n": 28,
+  "qid": 24,
+  "he": 10,
+  "img": 19
+ },
+ {
+  "key": "lafc",
+  "ok": true,
+  "n": 26,
+  "qid": 21,
+  "he": 8,
+  "img": 14
+ },
+ {
+  "key": "la_galaxy",
+  "ok": true,
+  "n": 26,
+  "qid": 24,
+  "he": 8,
+  "img": 14
+ },
+ {
+  "key": "atlanta_utd",
+  "ok": true,
+  "n": 24,
+  "qid": 22,
+  "he": 3,
+  "img": 18
+ },
+ {
+  "key": "seattle",
+  "ok": true,
+  "n": 26,
+  "qid": 24,
+  "he": 5,
+  "img": 21
+ },
+ {
+  "key": "columbus",
+  "ok": true,
+  "n": 28,
+  "qid": 25,
+  "he": 6,
+  "img": 21
+ },
+ {
+  "key": "philadelphia",
+  "ok": false,
+  "why": "only 0 parsed players (Philadelphia Union)"
+ },
+ {
+  "key": "cincinnati",
+  "ok": true,
+  "n": 28,
+  "qid": 25,
+  "he": 5,
+  "img": 21
+ },
+ {
+  "key": "nycfc",
+  "ok": false,
+  "why": "only 0 parsed players (New York City FC)"
+ },
+ {
+  "key": "orlando",
+  "ok": true,
+  "n": 27,
+  "qid": 23,
+  "he": 3,
   "img": 21
  }
 ]

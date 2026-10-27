@@ -1,0 +1,41 @@
+== History
+== Honours
+== European record
+== Current squad
+=== Out on loan
+== Coaching and medical staff
+== Managers
+== References
+== External links
+
+TEMPLATES 30
+{{Fs player|pos=DF|no= 3|nat=JPN|name=[[Taiga Hata]]}}
+{{Fs player|pos=DF|no= 4|nat=JPN|name=[[Kōta Takai]]|other={{small|on loan from [[Tottenham Hotspur F.C.|Tottenham Hotspur]]}}
+{{Fs player|pos=DF|no= 5|nat=JPN|name=[[Shōgo Taniguchi]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|pos=FW|no= 7|nat=ALB|name=[[Arbnor Muja]]}}
+{{fs player|pos=MF|no= 8|nat=UGA|name=[[Abdoulaye Sissako]]}}
+{{Fs player|pos=FW|no= 9|nat=BIH|name=[[Samed Baždar]]}}
+{{Fs player|pos=FW|no=10|nat=MAR|name=[[Ilias Sebaoui]]}}
+{{Fs player|pos=FW|no=11|nat=DRC|name=[[Nathanaël Mbuku]]|other={{small|on loan from [[FC Augsburg|Augsburg]]}}
+{{fs player|pos=MF|no=14|nat=FRA|name=[[Ryan Merlen]]}}
+{{Fs player|pos=GK|no=16|nat=JPN|name=[[Leo Kokubo]]}}
+{{Fs player|pos=MF|no=18|nat=JPN|name=[[Nelson Ishiwatari]]}}
+{{Fs player|pos=FW|no=19|nat=BEL|name=Frédéric Soèllé Soèllé}}
+{{Fs player|pos=GK|no=21|nat=BEL|name=Matt Lendfers}}
+{{Fs player|pos=DF|no=22|nat=BEL|name=[[Wolke Janssens]]}}
+{{Fs player|pos=DF|no=23|nat=BEL|name=[[Joedrick Pupe]]}}
+{{Fs player|pos=GK|no=25|nat=KSA|name=Ahmad Abu Rasen}}
+{{Fs player|pos=DF|no=26|nat=MKD|name=[[Visar Musliu]]}}
+{{Fs player|pos=DF|no=27|nat=BEL|name=Jeremy Mbambi|other={{small|on loan from [[Pisa SC|Pisa]]}}
+{{Fs player|pos=MF|no=31|nat=MAR|name=Illyès Benachour}}
+{{Fs player|pos=MF|no=33|nat=BEL|name=Alouis Diriken}}
+{{Fs player|pos=FW|no=38|nat=JPN|name=[[Kaito Matsuzawa]]}}
+{{Fs player|pos=DF|no=39|nat=BEL|name=Rune Verheyden}}
+{{Fs player|pos=DF|no=60|nat=BEL|name=[[Robert-Jan Vanwesemael]]}}
+{{Fs player|pos=MF|no=71|nat=JPN|name=[[Ryōtarō Araki]]}}
+{{Fs player|pos=FW|no=77|nat=SEN|name=[[Oumar Diouf]]}}
+{{Fs player|pos=FW|no=99|nat=JPN|name=[[Shion Shinkawa]]}}
+{{Fs player|pos=DF|no=|nat=BEL|name=Hugo Lambotte|other={{small|at [[Royal Excelsior Virton|Virton]] until 30 June 2027}}
+{{Fs player|pos=MF|no=|nat=BEL|name=Adam Nhaili|other={{small|at [[FCV Dender EH|Dender EH]] until 30 June 2027}}
+{{Fs player|pos=FW|no=|nat=URU|name=[[Andrés Ferrari]]|other={{small|at [[Sporting de Gijón|Sporting Gijón]] until 30 June 2027}}
+{{Fs player|pos=FW|no=|nat=BEL|name=Jay-David Mbalanda|other={{small|at [[Olympic Charleroi]] until 30 June 2027}}

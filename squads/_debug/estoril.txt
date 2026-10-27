@@ -1,0 +1,50 @@
+== History
+=== Decline and revival
+=== 21st century
+== Stadium
+== European cup history
+== Players
+=== Out on loan
+=== Former players
+== Honours
+=== Domestic honours
+=== Personnel honours
+== Coaching staff
+== Coaching history
+== League and cup history
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no= 1|nat=ESP|name=[[Joel Robles]]|pos=GK}}
+{{Fs player|no= 2|nat=ESP|name=[[Ricard Sánchez]]|pos=DF}}
+{{Fs player|no= 3|nat=ESP|name=[[Fernando Medrano (footballer)|Fernando Medrano]]|pos=DF}}
+{{Fs player|no= 4|nat=POR|name=[[Ferro (footballer)|Ferro]]|pos=DF}}
+{{Fs player|no= 5|nat=BEL|name=[[Antef Tsoungui]]|pos=DF}}
+{{Fs player|no= 6|nat=ESP|name=[[Xavi Sintes]]|pos=DF}}
+{{Fs player|no= 7|nat=POR|name=[[André Lacximicant]]|pos=FW}}
+{{Fs player|no= 8|nat=POR|name=[[Xeka]]|pos=MF}}
+{{Fs player|no= 9|nat=FRA|name=[[Axel Camblan]]|pos=FW}}
+{{Fs player|no=10|nat=SCO|name=[[Jordan Holsgrove]]|pos=MF}}
+{{Fs player|no=11|nat=BIH|name=[[Nail Omerović]]|pos=FW}}
+{{Fs player|no=12|nat=POR|name=[[João Carvalho (footballer, born 1997)|João Carvalho]]|pos=MF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=14|nat=MAR|name=[[Yanis Begraoui]]|pos=FW}}
+{{Fs player|no=15|nat=ESP|name=[[Ismael Sierra]]|pos=DF}}
+{{Fs player|no=16|nat=SVN|name=[[Martin Turk]]|pos=GK}}
+{{Fs player|no=17|nat=POR|name=[[Peixinho (Portuguese footballer)|Peixinho]]|pos=FW}}
+{{Fs player|no=19|nat=POR|name=[[Tiago Parente (footballer, born 2004)|Tiago Parente]]|pos=DF}}
+{{Fs player|no=21|nat=CRO|name=[[Roko Jurišić]]|pos=DF}}
+{{Fs player|no=22|nat=POR|name=[[Pedro Carvalho (footballer)|Pedro Carvalho]]|pos=DF}}
+{{Fs player|no=23|nat=POR|name=Diogo Dias|pos=GK}}
+{{Fs player|no=25|nat=CYP|name=[[Stelios Andreou]]|pos=DF|other=on loan from [[Widzew Łódź]]}}
+{{Fs player|no=35|nat=ENG|name=[[Samuel Amissah]]|pos=DF|other=on loan from [[Fulham F.C. Under-21s and Academy|Fulham U21]]}}
+{{Fs player|no=38|nat=ESP|name=[[Israel Salazar (footballer)|Israel Salazar]]|pos=FW}}
+{{Fs player|no=42|nat=POR|name=Jordan Arnolin|pos=DF}}
+{{Fs player|no=43|nat=RSA|name=[[Fletcher Smythe-Lowe]]|pos=GK}}
+{{Fs player|no=44|nat=FRA|name=[[Milan Robin]]|pos=MF}}
+{{Fs player|no=80|nat=POR|name=Luís Gomes|pos=MF}}
+{{Fs player|no=90|nat=POR|name=[[Tiago Brito (footballer)|Tiago Brito]]|pos=MF}}
+{{Fs player|no=98|nat=CPV|name=[[Fabrício Garcia]]|pos=DF}}
+{{Fs player|no=99|nat=ALG|name=[[Rafik Guitane]]|pos=FW}}
+{{Fs player|no=  |nat=ENG|name=[[Khayon Edwards]]|pos=FW}}
+{{Fs player|no=18|nat=POR|name=[[Gonçalo Costa]]|pos=DF|other=at [[HNK Gorica|Gorica]] until 30 June 2027}}

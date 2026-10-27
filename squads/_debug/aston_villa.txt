@@ -1,0 +1,95 @@
+== History
+=== Formation and rise to prominence (1874−1886)
+=== Victorian and Edwardian golden age (1886–1914)
+=== Relative decline and first relegation (1920–1939)
+=== Mediocrity and discontent (1945–1961)
+=== Deep malaise and revival (1961–1974)
+=== Back among the elite (1974–1992)
+=== 24 years in the Premier League (1992–2016)
+=== Championship to Champions League (2016–present)
+== Colours and badge
+=== Kit manufacturers and sponsors
+== Stadium
+== Ownership
+== Social responsibility
+=== Aston Villa Foundation
+== Supporters and rivalries
+== Records and statistics
+== Honours
+=== Domestic
+=== European
+== Players
+=== Out on loan
+=== Under-21s and Academy
+=== Out on loan
+=== Club captains
+=== Notable players
+== Non-playing staff
+=== Management hierarchy
+=== Notable managers
+== In popular culture
+== Aston Villa Women
+== Footnotes
+== References
+== External links
+=== Independent websites
+
+TEMPLATES 58
+{{Fs player|no=1|nat=JPN|pos=GK|name=[[Zion Suzuki]]}}
+{{fs player|no=2|nat=POL|pos=DF|name=[[Matty Cash]]}}
+{{fs player|no=3|nat=SWE|pos=DF|name=[[Victor Lindelöf]]}}
+{{fs player|no=4|nat=ENG|pos=DF|name=[[Taylor Harwood-Bellis]]}}
+{{fs player|no=5|nat=ENG|pos=DF|name=[[Tyrone Mings]]}}
+{{fs player|no=6|nat=ENG|pos=MF|name=[[Ross Barkley]]}}
+{{fs player|no=7|nat=SCO|pos=MF|name=[[John McGinn]]|other=[[Captain (association football)|captain]]}}
+{{fs player|no=8|nat=FRA|pos=MF|name=[[Boubacar Kamara]]}}
+{{fs player|no=10|nat=ARG|pos=MF|name=[[Emiliano Buendía]]}}
+{{fs player|no=11|nat=SEN|pos=FW|name=[[Nicolas Jackson]]}}
+{{Fs player|no=13|nat=ITA|pos=DF|name=[[Matteo Ruggeri]]}}
+{{fs player|no=14|nat=ESP|pos=DF|name=[[Pau Torres]]}}
+{{fs player|no=17|nat=ARG|pos=FW|name=[[Alejandro Garnacho]]|other=on loan from [[Chelsea F.C.|Chelsea]]}}
+{{fs player|no=18|nat=ENG|pos=FW|name=[[Tammy Abraham]]}}
+{{fs player|no=19|nat=SEN|pos=FW|name=[[Ibrahim Mbaye]]}}
+{{fs player|no=22|nat=NED|pos=DF|name=[[Ian Maatsen]]}}
+{{fs player|no=24|nat=BEL|pos=MF|name=[[Amadou Onana]]}}
+{{fs player|no=26|nat=NED|pos=MF|name=[[Lamare Bogarde]]}}
+{{fs player|no=27|nat=GER|pos=MF|name=[[Leon Goretzka]]}}
+{{fs player|no=29|nat=COD|pos=DF|name=[[Aaron Wan-Bissaka]]|other=on loan from [[West Ham United F.C.|West Ham United]]}}
+{{fs player|no=35|nat=BRA|pos=MF|name=[[João Gomes (footballer, born 2001)|João Gomes]]}}
+{{Fs player|no=39|nat=ENG|pos=FW|name=[[Brian Madjo]]}}
+{{fs player|no=40|nat=NED|pos=GK|name=[[Marco Bizot]]}}
+{{Fs player|no=42|nat=ENG|pos=GK|name=[[James Wright (footballer)|James Wright]]}}
+{{fs player|no=44|nat=SUI|pos=MF|name=[[Johan Manzambi]]}}
+{{fs player|no=47|nat=BRA|pos=FW|name=[[Alysson (footballer, born 2006)|Alysson]]}}
+{{fs player|no=48|nat=SEN|pos=DF|name=[[Modou Kéba Cissé]]}}
+{{fs player|no=53|nat=ENG|pos=MF|name=[[George Hemmings]]}}
+{{fs player|no=16|nat=ESP|pos=DF|name=[[Andrés García (footballer, born 2003)|Andrés García]]|other=at [[Getafe CF|Getafe]] until 30 June 2027}}
+{{fs player|no=28|nat=NED|pos=FW|name=[[Zépiqueno Redmond]]|other=at [[FC Annecy|Annecy]] until 30 June 2027}}
+{{fs player|no=29|nat=CIV|pos=FW|name=[[Evann Guessand]]|other=at [[Crystal Palace F.C.|Crystal Palace]] until 30 June 2027}}
+{{fs player|no=32|nat=SRB|pos=DF|name=[[Kosta Nedeljković]]|other=at [[Rangers F.C.|Rangers]] until 30 June 2027}}
+{{fs player|no=33|nat=ENG|pos=FW|name=[[Samuel Iling-Junior]]|other=at [[Bolton Wanderers F.C.|Bolton Wanderers]] until 30 June 2027}}
+{{fs player|no=46|nat=AUS|pos=GK|name=[[Joe Gauci]]|other=at [[Lincoln City F.C.|Lincoln City]] until 30 June 2027}}
+{{fs player|no=48|nat=POL|pos=GK|name=[[Oliwier Zych]]|other=at [[Vitória S.C.|Vitória de Guimarães]] until 30 June 2027}}
+{{Fs player|no=58|nat=TUR|pos=DF|name=[[Yasin Özcan]]|other=at [[Beşiktaş J.K.|Beşiktaş]] until 27 January 2027}}
+{{Fs player|no=20|nat=ENG|pos=MF|name=[[Jamaldeen Jimoh-Aloba]]}}
+{{Fs player|no=55|nat=ENG|pos=DF|name=[[Travis Patterson]]}}
+{{Fs player|no=57|nat=SCO|pos=FW|name=[[Rory Wilson]]}}
+{{Fs player|no=65|nat=ENG|pos=GK|name=Sam Lewis}}
+{{Fs player|no=67|nat=ENG|pos=FW|name=[[Mason Cotcher]]}}
+{{Fs player|no=68|nat=ENG|pos=MF|name=Trai-Varn Mulley}}
+{{Fs player|no=69|nat=NIR|pos=MF|name=Cole Brannigan}}
+{{Fs player|no=71|nat=ENG|pos=DF|name=TJ Carroll}}
+{{Fs player|no=79|nat=SCO|pos=MF|name=[[Fletcher Boyd]]}}
+{{Fs player|no=95|nat=ENG|pos=GK|name=Rhys Oakley}}
+{{Fs player|no=28|nat=NED|pos=FW|name=[[Zépiqueno Redmond]]|other=at [[FC Annecy|Annecy]] until 30 June 2027}}
+{{Fs player|no=45|nat=ENG|pos=DF|name=[[Triston Rowe]]|other=at [[Royal Charleroi SC|Sporting De Charleroi]] until 30 June 2027}}
+{{Fs player|no=49|nat=ENG|pos=MF|name=[[Bradley Burrowes]]|other=at [[Wigan Athletic F.C.|Wigan Athletic]] until 30 June 2027}}
+{{Fs player|no=51|nat=ENG|pos=MF|name=[[Kadan Young]]|other=at [[FC Annecy|Annecy]] until 30 June 2027}}
+{{Fs player|no=52|nat=ENG|pos=GK|name=Sam Proctor|other=at [[Shrewsbury Town F.C.|Shrewsbury Town]] until 30 June 2027}}
+{{Fs player|no=54|nat=SCO|pos=MF|name=[[Aidan Borland]]|other=at [[Accrington Stanley F.C.|Accrington Stanley]] until 30 June 2027}}
+{{Fs player|no=56|nat=ENG|pos=DF|name=[[Lino Sousa]]|other=at [[Shrewsbury Town F.C.|Shrewsbury Town]] until 30 June 2027}}
+{{Fs player|no=58|nat=ENG|pos=MF|name=[[Tommi O'Reilly]]|other=at [[Doncaster Rovers F.C.|Doncaster Rovers]] until 30 June 2027}}
+{{fs player|no=59|nat=SCO|pos=DF|name=[[Josh Feeney]]|other=at [[Peterborough United F.C.|Peterborough United]] until 30 June 2027}}
+{{Fs player|no=62|nat=ENG|pos=MF|name=[[Ben Broggio]]|other=at [[Stevenage F.C.|Stevenage]] until 30 June 2027}}
+{{Fs player|no=64|nat=ENG|pos=MF|name=Kane Taylor|other=at [[Rochdale A.F.C.|Rochdale]] until 31 December 2026}}
+{{Fs player|no=74|nat=ENG|pos=MF|name=[[Luka Lynch]]|other=at [[Oxford United F.C.|Oxford United]] until 2 January 2027}}

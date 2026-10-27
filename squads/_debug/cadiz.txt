@@ -1,0 +1,57 @@
+== History
+== Culture
+== Individual records
+=== Top goalscorers
+== Season to season
+== Current squad
+=== Reserve team
+=== Other players under contract
+=== Out on loan
+=== Current technical staff
+== Honours
+== Stadium information
+== Famous players
+== Coaches
+== Kit suppliers and shirt sponsors
+== References
+== External links
+
+TEMPLATES 38
+{{Fs player|pos=GK|no=1|nat=ESP|name=[[David Gil (footballer)|David Gil]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|pos=DF|no=2|nat=ESP|name=[[Beñat de Jesús]]}}
+{{Fs player|pos=DF|no=3|nat=ESP|name=[[Sergio Arribas (footballer, born 2003)|Sergio Arribas]]}}
+{{Fs player|pos=DF|no=4|nat=ESP|name=[[Javier Castro (footballer, born 2000)|Javi Castro]]}}
+{{Fs player|pos=MF|no=5|nat=FRA|name=[[Marc-Olivier Doué]]}}
+{{Fs player|pos=DF|no=6|nat=ESP|name=[[Manu Fernández (footballer, born 2001)|Manu Fernández]]}}
+{{Fs player|pos=FW|no=7|nat=GEO|name=[[Iuri Tabatadze]]}}
+{{Fs player|pos=FW|no=8|nat=NGA|name=[[Efe Aghama]]}}
+{{Fs player|pos=FW|no=9|nat=ESP|name=[[Álvaro García Pascual]]}}
+{{Fs player|pos=FW|no=10|nat=ESP|name=[[Javier Ontiveros|Javi Ontiveros]]}}
+{{Fs player|pos=MF|no=11|nat=ESP|name=[[José Antonio de la Rosa]]}}
+{{fs player|pos=DF|no=12|nat=GEO|name=[[Giorgi Gocholeishvili]]|other=on loan from [[FC Shakhtar Donetsk|Shakhtar Donetsk]]}}
+{{Fs player|pos=GK|no=13|nat=ESP|name=[[Jokin Ezkieta]]|other=on loan from [[Racing de Santander|Racing Santander]]}}
+{{Fs player|pos=DF|no=14|nat=SRB|name=[[Bojan Kovačević]]}}
+{{Fs player|pos=DF|no=15|nat=COM|name=[[Kenan Toibibou]]}}
+{{Fs player|pos=MF|no=16|nat=ESP|name=[[Antonio Cordero]]|other=on loan from [[Newcastle United F.C.|Newcastle United]]}}
+{{Fs player|pos=MF|no=17|nat=MAR|name=[[Aïmen Moueffek]]|other=on loan from [[AS Saint-Étienne|Saint-Étienne]]}}
+{{Fs player|pos=MF|no=18|nat=ESP|name=[[Jandro Orellana]]}}
+{{Fs player|pos=FW|no=19|nat=ESP|name=[[Urko Izeta]]}}
+{{Fs player|pos=FW|no=20|nat=ESP|name=[[Borja Vázquez]]}}
+{{Fs player|pos=FW|no=21|nat=UKR|name=[[Vladyslav Kopotun|Vladys Kopotun]]}}
+{{Fs player|pos=DF|no=22|nat=ESP|name=[[Cristian Gutiérrez (footballer, born 2000)|Cristian Gutiérrez]]|other=on loan from [[UD Las Palmas|Las Palmas]]}}
+{{Fs player|pos=MF|no=23|nat=ESP|name=[[Damián Rodríguez (footballer, born 2003)|Damián Rodríguez]]|other=on loan from [[RC Celta de Vigo|Celta]]}}
+{{Fs player|pos=MF|no=24|nat=ESP|name=[[Ibon Sánchez]]}}
+{{Fs player|pos=FW|no=25|nat=URU|name=[[Gonzalo Petit]]|other=on loan from [[Real Betis|Betis]]}}
+{{Fs player|pos=GK|no=26|nat=ESP|name=[[Rubén Domínguez Cayuela|Rubén Domínguez]]}}
+{{Fs player|pos=DF|no=27|nat=ESP|name=[[Juan Díaz Peregrina|Juan Díaz]]}}
+{{Fs player|pos=MF|no=28|nat=ESP|name=[[Dilan Zárate]]|other=on loan from [[Inter Milan]]}}
+{{Fs player|pos=DF|no=30|nat=ESP|name=[[César Díaz Camacho|César Díaz]]}}
+{{Fs player|pos=DF|no=31|nat=FRA|name=[[Noah Obioma Ukwuije|Noah Ukwuije]]}}
+{{Fs player|pos=DF|no=32|nat=ESP|name=[[Roberto Rosado Márquez|Robe Rosado]]}}
+{{Fs player|pos=DF|no=33|nat=ESP|name=[[Manuel Rivera Domínguez|Manu Rivera]]}}
+{{Fs player|pos=MF|no=|nat=ESP|name=[[José Andújar Berenguer|José Andújar]]}}
+{{Fs player|pos=MF|no=|nat=ESP|name=[[Joaquín González (footballer)|Joaquín González]]|other=at [[AD Ceuta FC|Ceuta]] until 30 June 2027}}
+{{Fs player|pos=MF|no=|nat=MLI|name=[[Moussa Diakité (footballer, born 2003)|Moussa Diakité]]|other=at [[Çaykur Rizespor]] until 30 June 2027}}
+{{Fs player|pos=MF|no=|nat=MLI|name=[[Youssouf Diarra|Yussi Diarra]]|other=at [[Córdoba CF|Córdoba]] until 30 June 2027}}
+{{Fs player|pos=FW|no=|nat=ESP|name=[[Ismael Álvarez (footballer)|Ismael Álvarez]]|other=at [[CF Rayo Majadahonda|Rayo Majadahonda]] until 30 June 2027}}
+{{Fs player|pos=FW|no=|nat=ARG|name=[[Jerónimo Dómina]]|other=at [[Club Atlético Tigre|Tigre]] until 30 June 2027}}

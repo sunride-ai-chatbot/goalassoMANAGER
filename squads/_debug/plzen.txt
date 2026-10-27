@@ -1,0 +1,55 @@
+== History
+=== Recent history
+== Historical names
+== Players
+=== Out on loan
+=== Notable former players
+== Player records in the Czech First League
+=== Most appearances
+=== Most goals
+=== Most clean sheets
+== Managers
+== History in domestic competitions
+=== Czech Republic
+== History in European competitions
+== Honours
+== Club records
+== References
+== External links
+
+TEMPLATES 35
+{{Fs player|no= 1|nat=SVK|pos=GK|name=[[Dominik Ťapaj]]}}
+{{Fs player|no= 2|nat=SVK|pos=DF|name=[[Tobiáš Pališčák]]}}
+{{Fs player|no= 3|nat=SVK|pos=DF|name=[[Denis Vavro]]}}
+{{Fs player|no= 5|nat=CZE|pos=DF|name=[[Karel Spáčil]]}}
+{{Fs player|no= 6|nat=CZE|pos=MF|name=[[Lukáš Červ]]}}
+{{Fs player|no= 7|nat=NGA|pos=FW|name=[[Salim Fago Lawal]]}}
+{{Fs player|no= 9|nat=CZE|pos=MF|name=[[Denis Višinský]]}}
+{{Fs player|no=10|nat=GUI|pos=FW|name=[[Mohamed Toure (footballer, born 2005)|Mohamed Toure]]}}
+{{Fs player|no=11|nat=CZE|pos=FW|name=[[Matěj Vydra]]}}
+{{Fs player|no=12|nat=CZE|pos=MF|name=[[Alexandr Sojka]]}}
+{{Fs player|no=13|nat=SVK|pos=GK|name=[[Marián Tvrdoň]]}}
+{{Fs player|no=14|nat=IRQ|pos=DF|name=[[Merchas Doski]]}}
+{{Fs player|no=17|nat=SVK|pos=MF|name=[[Patrik Hrošovský]]}}
+{{Fs player|no=18|nat=CZE|pos=MF|name=[[Tomáš Ladra]]}}
+{{Fs player|no=19|nat=FRA|pos=MF|name=[[Cheick Souaré]]}}
+{{Fs player|no=20|nat=CZE|pos=MF|name=[[Jiří Panoš]]}}
+{{Fs player|no=21|nat=CZE|pos=DF|name=[[Václav Jemelka]]}}
+{{Fs player|no=22|nat=CZE|pos=DF|name=Jan Paluska}}
+{{Fs player|no=23|nat=GAM|pos=FW|name=[[Baboucarr Faal]]}}
+{{Fs player|no=25|nat=CZE|pos=FW|name=[[Christophe Kabongo]]}}
+{{Fs player|no=29|nat=CZE|pos=DF|name=[[Adam Gabriel]]}}
+{{Fs player|no=30|nat=CZE|pos=GK|name=[[Viktor Baier]]}}
+{{Fs player|no=36|nat=SRB|pos=MF|name=Stefan Pirgić}}
+{{Fs player|no=40|nat=LBR|pos=DF|name=[[Sampson Dweh]]}}
+{{Fs player|no=44|nat=AUT|pos=GK|name=[[Florian Wiegele]]}}
+{{Fs player|no=80|nat=GHA|pos=FW|name=[[Prince Kwabena Adu]]}}
+{{Fs player|no=98|nat=CZE|pos=MF|name=[[Filip Prebsl]]}}
+{{Fs player|no=99|nat=BIH|pos=MF|name=[[Amar Memić]]}}
+{{Fs player|no=  |nat=SVN|pos=MF|name=[[Adrian Zeljković]]|other=at [[MTK Budapest FC|MTK Budapest]]}}
+{{Fs player|no=  |nat=TGO|pos=FW|name=[[Idjessi Metsoko]]|other=at [[Dundee United F.C.|Dundee United]]}}
+{{Fs player|no=  |nat=CZE|pos=DF|name=Adam Kadlec|other=at [[FK Mladá Boleslav|Mladá Boleslav]]}}
+{{Fs player|no=  |nat=NGA|pos=FW|name=James Bello|other=at [[MFK Karviná|Karviná]]}}
+{{Fs player|no=  |nat=CZE|pos=MF|name=Jakub Chalupa|other=at [[SK Kladno|Kladno]]}}
+{{Fs player|no=  |nat=CZE|pos=FW|name=Filip Růžička|other=at Kladno}}
+{{Fs player|no=  |nat=CZE|pos=MF|name=Daniel Suchý|other=at [[1. FC Tatran Prešov|Tatran Prešov]]}}

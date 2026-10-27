@@ -1,0 +1,73 @@
+== History
+=== Club origins
+=== National champions and European Cup finalists
+=== Founding member of the Bundesliga
+=== Cup successes
+=== Mid-80s struggles and 1988 DFB-Pokal
+=== Title challenges in the early 90s and first relegation
+=== Turbulent years
+=== DFB Pokal and Europa League winners, participation in European competitions
+== Colours, crest and nicknames
+== Honours
+=== National
+=== Continental
+=== Pre-season
+=== Regional
+== League results
+==== Recent seasons
+==== All time
+=== European
+==== UEFA club coefficient ranking
+== Players
+=== Players out on loan
+== Kit history
+=== Sponsoring
+== Current club staff
+== Club presidents
+== Coaches
+== Records
+== Stadium
+== Reserve team
+== Rivalries and friendships
+== Other sections within the club
+== See also
+== References
+== External links
+
+TEMPLATES 36
+{{Fs player|no=1|nat=GER|pos=GK|name=[[Noah Atubolu]]|other={{small|on loan from [[SC Freiburg]]}}
+{{Fs player|no=2|nat=GER|pos=DF|name=[[Elias Baum]]}}
+{{Fs player|no=3|nat=FRA|pos=DF|name=[[Lilian Brassier]]}}
+{{Fs player|no=4|nat=GER|pos=DF|name=[[Robin Koch]]|other={{small|[[Captain (association football)|captain]]}}
+{{Fs player|no=5|nat=BRA|pos=DF|name=[[Otávio (footballer, born November 2005)|Otávio]]}}
+{{Fs player|no=6|nat=DEN|pos=MF|name=[[Oscar Højlund]]}}
+{{Fs player|no=7|nat=GER|pos=FW|name=[[Ansgar Knauff]]}}
+{{Fs player|no=8|nat=ALG|pos=MF|name=[[Farès Chaïbi]]}}
+{{Fs player|no=9|nat=GER|pos=FW|name=[[Jonathan Burkardt]]}}
+{{Fs player|no=11|nat=GER|pos=FW|name=[[Younes Ebnoutalib]]}}
+{{Fs player|no=15|nat=GER|pos=MF|name=[[Noël Aséko]]}}
+{{Fs player|no=20|nat=JPN|pos=FW|name=[[Ritsu Dōan]]}}
+{{Fs player|no=22|nat=USA|pos=DF|name=[[Timothy Chandler]]}}
+{{Fs player|no=25|nat=NGA|pos=MF|name=[[Raphael Onyedika]]}}
+{{Fs player|no=26|nat=JPN|pos=DF|name=[[Keita Kosugi]]}}
+{{Fs player|no=27|nat=GER|pos=MF|name=[[Mario Götze]]|other={{small|[[Captain (association football)#Vice-captain|vice-captain]]}}
+{{Fs player|no=29|nat=MAR|pos=FW|name=[[Ayoube Amaimouni]]}}
+{{Fs player|no=31|nat=SWE|pos=MF|name=[[Love Arrhov]]}}
+{{Fs player|no=33|nat=GER|pos=GK|name=[[Jens Grahl]]}}
+{{Fs player|no=34|nat=GER|pos=DF|name=[[Nnamdi Collins]]}}
+{{fs player|no=35|nat=DEN|pos=FW|name=[[Malik Pimpong]]}}
+{{fs player|no=37|nat=GER|pos=DF|name=[[Jeremiaha Maluze]]}}
+{{Fs player|no=39|nat=BIH|pos=GK|name=Amil Šiljević}}
+{{Fs player|no=40|nat=BRA|pos=GK|name=[[Kauã Santos]]}}
+{{Fs player|no=42|nat=TUR|pos=FW|name=[[Can Uzun]]}}
+{{Fs player|no=44|nat=GER|pos=FW|name=[[Jessic Ngankam]]}}
+{{Fs player|no=|nat=MLI|pos=DF|name=Fousseny Doumbia|other=at [[FC Energie Cottbus|Energie Cottbus]] until 30 June 2027}}
+{{fs player|no=|nat=GER|pos=DF|name=Ouassim Karada|other=at [[FC Hansa Rostock|Hansa Rostock]] until 30 June 2027}}
+{{Fs player|no=|nat=FRA|pos=DF|name=[[Niels Nkounkou]]|other=at [[OGC Nice|Nice]] until 30 June 2027}}
+{{Fs player|no=|nat=BEL|pos=DF|name=[[Arthur Theate]]|other=at [[Bologna FC 1909|Bologna]] until 30 June 2027}}
+{{Fs player|no=|nat=SWE|pos=MF|name=[[Hugo Larsson (footballer)|Hugo Larsson]]|other=at [[Fulham F.C.|Fulham]] until 30 June 2027}}
+{{Fs player|no=|nat=HUN|pos=MF|name=[[Krisztián Lisztes (footballer, born 2005)|Krisztián Lisztes]]|other=at [[Ferencvárosi TC|Ferencváros]] until 30 June 2027}}
+{{Fs player|no=|nat=FRA|pos=FW|name=[[Jean-Mattéo Bahoya]]|other=at [[Leeds United F.C.|Leeds United]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=FW|name=[[Noel Futkeu]]|other=at [[SV Elversberg]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=FW|name=[[Alexander Staff]]|other=at [[1. FC Saarbrücken]] until 30 June 2027}}
+{{Fs player|no=|nat=CIV|pos=FW|name=[[Elye Wahi]]|other=at [[OGC Nice|Nice]] until 30 June 2027}}

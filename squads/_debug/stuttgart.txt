@@ -1,0 +1,88 @@
+== History
+==== FV Stuttgart
+==== Kronenclub Cannstatt
+=== 1930s and 1940s
+=== Successes through the 1950s
+=== Original Bundesligist
+=== 1975–2000: Era of president MV
+=== 2000–2007: The post-MV-era return to success
+==== 2003–04 Champions League
+==== Bundesliga champions 2006–07
+=== 2007 to 2018: Decline and two relegations
+==== Post-championship seasons 2008–12
+=== 2019–present: Re-emergence
+== Kits
+=== Kit suppliers and shirt sponsors
+== Crest
+== Stadium
+== Rivalries, friendships and cooperations
+== Honours
+=== International
+=== Pre-season
+=== Regional
+=== Reserve team
+=== Youth
+== European record
+== Club management
+== Players
+=== Current squad
+=== Reserves and Youth Sector
+=== Out on loan
+== Past players
+=== Notable former players
+=== Records
+== Coaches
+=== Management since 1920
+== Bundesliga positions
+== References
+== External links
+
+TEMPLATES 48
+{{Fs player|no=1|nat=GER|pos=GK|name=[[Fabian Bredlow]]}}
+{{Fs player|no=2|nat=BEL|pos=DF|name=[[Ameen Al-Dakhil]]}}
+{{Fs player|no=3|nat=NED|pos=DF|name=[[Ramon Hendriks]]}}
+{{Fs player|no=4|nat=GER|pos=DF|name=[[Josha Vagnoman]]}}
+{{Fs player|no=6|nat=GER|pos=MF|name=[[Angelo Stiller]]}}
+{{Fs player|no=7|nat=GER|pos=DF|name=[[Maximilian Mittelstädt]]}}
+{{Fs player|no=8|nat=POR|pos=FW|name=[[Tiago Tomás]]}}
+{{Fs player|no=9|nat=BIH|pos=FW|name=[[Ermedin Demirović]]}}
+{{Fs player|no=10|nat=GER|pos=MF|name=[[Chris Führich]]}}
+{{Fs player|no=11|nat=MAR|pos=MF|name=[[Bilal El Khannouss]]}}
+{{Fs player|no=14|nat=SUI|pos=DF|name=[[Luca Jaquez]]}}
+{{Fs player|no=16|nat=TUR|pos=MF|name=[[Atakan Karazor]]}}
+{{Fs player|no=17|nat=GER|pos=FW|name=[[Dženan Pejčinović]]}}
+{{Fs player|no=18|nat=GER|pos=FW|name=[[Jamie Leweling]]}}
+{{Fs player|no=20|nat=SUI|pos=DF|name=[[Leonidas Stergiou]]}}
+{{Fs player|no=21|nat=GER|pos=MF|name=[[Grischa Prömel]]}}
+{{Fs player|no=22|nat=FRA|pos=DF|name=[[Lorenz Assignon]]}}
+{{Fs player|no=23|nat=FRA|pos=DF|name=[[Dan-Axel Zagadou]]}}
+{{Fs player|no=24|nat=GER|pos=DF|name=[[Jeff Chabot]]}}
+{{Fs player|no=26|nat=GER|pos=FW|name=[[Deniz Undav]]|other={{small|[[Captain (association football)|captain]]}}
+{{Fs player|no=28|nat=DEN|pos=MF|name=[[Nikolas Nartey]]}}
+{{Fs player|no=29|nat=GER|pos=DF|name=[[Finn Jeltsch]]}}
+{{Fs player|no=31|nat=GER|pos=FW|name=[[Justin Diehl]]}}
+{{Fs player|no=33|nat=GER|pos=GK|name=[[Marius Funk]]}}
+{{Fs player|no=39|nat=GER|pos=MF|name=Ertuğrul Yiğit}}
+{{Fs player|no=41|nat=GER|pos=GK|name=[[Dennis Seimen]]}}
+{{Fs player|no=43|nat=GER|pos=FW|name=[[Jarzinho Malanga]]}}
+{{Fs player|no=44|nat=SVK|pos=FW|name=[[Leo Sauer]]}}
+{{Fs player|no=46|nat=GER|pos=GK|name=[[Stefan Drljača]]}}
+{{Fs player|no=47|nat=AUT|pos=MF|name=[[Yanik Spalt]]}}
+{{Fs player|no=|nat=GER|pos=GK|name=Florian Hellstern|other={{small|at [[SpVgg Greuther Fürth|Greuther Fürth]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=MF|name=[[Mirza Catovic]]|other={{small|at [[FC Barcelona Atlètic|Barcelona B]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=MF|name=[[Noah Darvich]]|other={{small|at [[SV Elversberg]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=MF|name=[[Yannik Keitel]]|other={{small|at [[FC Augsburg]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=MF|name=[[Laurin Ulrich]]|other={{small|at [[SC Paderborn 07|SC Paderborn]] until 30 June 2027}}
+{{Fs player|no=|nat=ECU|pos=FW|name=[[Jeremy Arévalo]]|other={{small|at [[C.F. Estrela da Amadora|Estrela da Amadora]] until 30 June 2027}}
+{{Fs player|no=|nat=ALG|pos=FW|name=[[Badredine Bouanani]]|other={{small|at [[Rangers F.C.|Rangers]] until 30 June 2027}}
+{{Fs player|pos=GK|nat=GER|name=[[Timo Hildebrand]]}}
+{{Fs player|pos=DF|nat=GER|name=[[Karlheinz Förster]]}}
+{{Fs player|pos=DF|nat=GER|name=[[Günther Schäfer]]}}
+{{Fs player|pos=DF|nat=BRA|name=[[Marcelo Bordon]]}}
+{{Fs player|pos=MF|nat=BUL|name=[[Krasimir Balakov]]}}
+{{Fs player|pos=MF|nat=GER|name=[[Guido Buchwald]]}}
+{{Fs player|pos=MF|nat=GER|name=[[Karl Allgöwer]]}}
+{{Fs player|pos=MF|nat=GER|name=[[Sami Khedira]]}}
+{{Fs player|pos=MF|nat=GER|name=[[Robert Schlienz]]}}
+{{Fs player|pos=FW|nat=GER|name=[[Jürgen Klinsmann]]}}
+{{Fs player|pos=FW|nat=BRA|name=[[Giovane Élber]]}}

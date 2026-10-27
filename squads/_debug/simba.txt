@@ -1,0 +1,39 @@
+== Honours
+=== Continental
+== Colours and badge
+== Players
+== Performance in CAF competitions
+== Club Ranking
+=== World
+=== CAF
+=== Domestic
+== Kit Sponsorship
+== Notes
+== References
+== External links
+
+TEMPLATES 24
+{{Fs player|no= 3 |pos=DF |nat=TAN |name=[[Nickson Kibabage]]}}
+{{Fs player|no= 4 |pos=DF |nat=TAN |name=Vedastus Masinde}}
+{{Fs player|no= 5 |pos=DF |nat=TAN |name=Antony Mligo}}
+{{Fs player|no=10 |pos=FW |nat=CGO |name=Inno Loemba}}
+{{Fs player|no=12 |pos=DF |nat=TAN |name=[[Shomari Kapombe]]|other=[[captain (association football)|Captain]]}}
+{{Fs player|no=14 |pos=DF |nat=TAN |name=Abdulrazack Hamza}}
+{{Fs player|no=15 |pos=DF |nat=TAN |name=David Kameta}}
+{{Fs player|no=17 |pos=FW |nat=KEN |name=[[Mohammed Bajaber]]}}
+{{Fs player|no=18 |pos=MF |nat=TAN |name=[[Morice Abraham]]}}
+{{Fs player|no=21 |pos=MF |nat=TAN |name=Yusuph Kagoma}}
+{{Fs player|no=22 |pos=GK |nat=TAN |name=Yakoub Suleiman Ali}}
+{{Fs player|no=23 |pos=DF |nat=RSA |name=[[Rushine De Reuck]]|other=[[Vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=24 |pos=FW |nat=ZAM |name=[[Clatous Chama]]}}
+{{Fs player|no=26 |pos=DF |nat=TAN |name=Nathaniel Chilambo}}
+{{Fs player|no=28 |pos=GK |nat=TAN |name=Hussein Abel}}
+{{Fs player|no=29 |pos=FW |nat=SEN |name=Libasse Gueye}}
+{{Fs player|no=31 |pos=DF |nat=TAN |name=Wilson Nangu}}
+{{Fs player|no=34 |pos=FW |nat=DRC |name=Elie Mpanzu}}
+{{Fs player|no=36 |pos=DF |nat=TAN |name=Ladaki Chasambi}}
+{{Fs player|no=37 |pos=MF |nat=TAN |name=Hussein Semfuko}}
+{{Fs player|no=39 |pos=GK |nat=NIG |name=Djibrilla Kassali}}
+{{Fs player|no=-  |pos=MF |nat=RSA |name=[[Keletso Makgalwa]]}}
+{{Fs player|no=-  |pos=MF |nat=NGR |name=[[Ibraheem Jabaar]]}}
+{{Fs player|no=-  |pos=MF |nat=TAN |name=Kelvin Nashon}}

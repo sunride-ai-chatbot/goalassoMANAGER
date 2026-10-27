@@ -1,0 +1,71 @@
+== History
+=== Early years
+=== Since 1937
+=== The Ghost
+=== The Soweto derby
+== Honours
+=== Amateur Era (1937-1960)
+=== Cup Competitions (unofficial)
+== Performance in CAF Competitions
+=== Overall matches
+== Crest and colours
+== Club ranking
+== Notable former coaches
+== Club records
+=== Premiership record
+== Coaching staff
+== Players
+=== Players out on loan
+== Jersey number retirement
+== References
+== External links
+
+TEMPLATES 47
+{{Fs player | no= 3 | pos=DF | nat=RSA | name=Nkosikhona Ndaba}}
+{{Fs player | no= 4 | pos=MF | nat=MLI | name=Abdoulaye Fousseyni Mariko}}
+{{Fs player | no= 5 | pos=DF | nat=RSA | name=[[Nkosinathi Sibisi]]|other=[[Captain (association football)|captain]]}}
+{{Fs player | no= 6 | pos=DF | nat=RSA | name=[[Lebone Seema]]}}
+{{Fs player | no= 7 | pos=DF | nat=NAM | name=[[Deon Hotto]]}}
+{{Fs player | no= 8 | pos=MF | nat=RSA | name=[[Makhehleni Makhaula]]}}
+{{Fs player | no= 9 | pos=FW | nat=RSA | name=[[Yanela Mbuthuma ]]}}
+{{Fs player | no=11 | pos=FW | nat=RSA | name=[[Tshepang Moremi]]}}
+{{Fs player | no=12 | pos=MF | nat=RSA | name=[[Oswin Appollis]]}}
+{{Fs player | no=14 | pos=FW | nat=NZL | name=[[Andre de Jong]]}}
+{{Fs player | no=15 | pos=MF | nat=RSA | name=Masindi Nemtajela}}
+{{Fs player | no=16 | pos=MF | nat=RSA | name=[[Thalente Mbatha]]}}
+{{Fs player | no=17 | pos=FW | nat=RSA | name=[[Evidence Makgopa]]}}
+{{Fs player | no=18 | pos=FW | nat=RSA | name=[[Kabelo Dlamini]]}}
+{{Fs player | no=19 | pos=DF | nat=RSA | name=[[Neo Rapoo]]}}
+{{Fs player | no=20 | pos=MF | nat=RSA | name=[[Simphiwe Selepe]]}}
+{{Fs player | no=23 | pos=FW | nat=ZAM | name=[[Gamphani Lungu]]}}
+{{Fs player | no=24 | pos=GK | nat=RSA | name=[[Sipho Chaine]]}}
+{{Fs player | no=25 | pos=FW | nat=RSA | name=[[Boitumelo Radiopane]]}}
+{{Fs player | no=26 | pos=MF | nat=RSA | name=[[Matome Mmolai]]}}
+{{Fs player | no=27 | pos=DF | nat=RSA | name=[[Tapelo Xoki]]|other=[[Vice-captain (association football)|vice-captain]]}}
+{{Fs player | no=29 | pos=MF | nat=RSA | name=[[Mthetheleli Mthiyane]]}}
+{{Fs player | no=30 | pos=MF | nat=RSA | name=[[Sihle Nduli]]}}
+{{Fs player | no=31 | pos=FW | nat=NOR | name= [[Sebastian Pedersen]]}}
+{{Fs player | no=32 | pos=GK | nat=RSA | name=[[Siyabonga Dladla]]}}
+{{Fs player | no=33 | pos=MF | nat=RSA | name=[[Thapelo Mokobodi]]}}
+{{Fs player | no=36 | pos=FW | nat=RSA | name=[[Kamogelo Sebelebele]]}}
+{{Fs player | no=37 | pos=DF | nat=RSA | name=[[Sbangani Zulu]]}}
+{{Fs player | no=38 | pos=FW | nat=RSA | name=[[Mpho Phadime]]}}
+{{Fs player | no=39 | pos=FW | nat=RSA | name=[[Sfiso Luthuli]]}}
+{{Fs player | no=40 | pos=GK | nat=RSA | name=[[Zoey Monyepao]]}}
+{{Fs player | no=41 | pos=DF | nat=RSA | name=[[Reece Braithwaite]]}}
+{{Fs player | no=43 | pos=DF | nat=RSA | name=[[Mpho Chabatsane]]}}
+{{Fs player | no=44 | pos=DF | nat=RSA | name=[[Christian Derbyshire]]}}
+{{Fs player | no=45 | pos=MF | nat=ZIM | name= [[Daniel Msendami]]}}
+{{Fs player | no=46 | pos=MF | nat=RSA | name=[[Cemran Dansin]]}}
+{{Fs player | no=47 | pos=FW | nat=RSA | name=[[Bohlale Ngwato]]}}
+{{Fs player | no=48 | pos=MF | nat=RSA | name=[[Simphiwe Masilela]]}}
+{{Fs player | no=49 | pos=FW | nat=RSA | name=[[Kabelo Kgositsile]]}}
+{{Fs player  |no=   | pos=GK | nat=NZL | name=Dublin Boon}}
+{{Fs player | Orbit College | pos=MF | nat=RSA | name=Thuso Moleleki|other=on loan at [[Orbit College F.C.]]}}
+{{Fs player | Orbit college | pos=DF | nat=RSA | name=Yanga Madiba|other=on loan at [[Orbit College F.C.]]}}
+{{Fs player | Chippa | pos=MF | nat=RSA | name=[[Goodman Mosele]]|other=on loan at [[Chippa United]]}}
+{{Fs player | Chippa | pos=MF | nat=MLI | name=Abdoulaye Dine Mariko|other=on loan at [[Chippa United]]}}
+{{Fs player | Baroka | pos=FW | nat=RSA 
+| name=Tshepo Mashiloane|other=on loan at [[Sekhukhune United F.C.]]}}
+{{Fs player | Orbit College | pos=FW | nat=RSA | name=Sifiso Luthuli|other=on loan at [[Magesi F.C.]]}}
+{{Fs player | Orbit College | pos=DF | nat=RSA | name=Siyabonga Ndlozi|other=on loan at [[Magesi F.C.]]}}

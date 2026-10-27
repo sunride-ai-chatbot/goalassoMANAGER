@@ -1,0 +1,71 @@
+== History
+=== United Soccer League era (2016–2018)
+=== Major League Soccer expansion
+=== Major League Soccer era (2019–present)
+== Stadium
+=== Training facilities
+== Colors & crest
+=== Sponsorship
+== Supporters & club culture
+=== The march
+=== Supporter-driven media
+=== Mascot
+=== Nicknames
+== Rivalries
+=== Louisville City FC
+=== Pittsburgh Riverhounds
+== Ownership
+== Media
+== Players and staff
+=== Roster
+=== Out on loan
+=== Technical staff
+=== Head coaches
+=== Club captains
+== Records
+== Player records
+=== Appearances
+=== Goals
+=== Clean sheets
+== Honors
+==== [[USL Championship|United Soccer League]]{{efn|Known since 2019 as the [[USL Championship]]}}
+== Affiliated clubs
+== Notes
+== References
+== External links
+
+TEMPLATES 34
+{{Fs player|no=2|nat=JAM|name=[[Alvas Powell]]|pos=DF}}
+{{Fs player|no=3|nat=NED|name=[[Tyrell Malacia]]|pos=DF}}
+{{Fs player|no=4|nat=USA|name=[[Nick Hagglund]]|pos=DF}}
+{{Fs player|no=5|nat=NGR|name=[[Obinna Nwobodo]]|pos=MF}}
+{{Fs player|no=6|nat=ARG|name=[[Julián Malatini]]|pos=DF|other=on loan from [[SV Werder Bremen|Werder Bremen]]}}
+{{Fs player|no= 8|nat=VEN|name=[[José Andrés Martínez|José  Martínez]]|pos=MF}}
+{{Fs player|no=9|nat=TOG|name=[[Kévin Denkey]]|pos=FW}}
+{{Fs player|no=10|nat=BRA|name=[[Evander (footballer)|Evander]]|pos=MF}}
+{{Fs player|no=11|nat=SVK|name=[[Samuel Gidi]]|pos=MF}}
+{{Fs player|no=12|nat=USA|name=[[Miles Robinson (soccer)|Miles Robinson]]|pos=DF}}
+{{Fs player|no=13|nat=USA|name=[[Evan Louro]]|pos=GK}}
+{{Fs player|no=14|nat=USA|name=[[Kristian Fletcher]]|pos=FW}}
+{{Fs player|no=15|nat=ZIM|name=[[Teenage Hadebe]]|pos=DF}}
+{{Fs player|no=16|nat=USA|name=[[Tom Barlow (American soccer)|Tom Barlow]]|pos=FW}}
+{{Fs player|no=17|nat=FRA|name=[[Kenji Mboma Dem]]|pos=FW}}
+{{Fs player|no=18|nat=USA|name=[[Roman Celentano]]|pos=GK}}
+{{Fs player|no=19|nat=ROU|name=[[Ștefan Chirilă]]|pos=FW}}
+{{Fs player|no=20|nat=CZE|name=[[Pavel Bucha]]|pos=MF}}
+{{Fs player|no=22|nat=USA|name=[[Gerardo Valenzuela]]|pos=MF}}
+{{Fs player|no=23|nat=CZE|name=[[David Douděra]]|pos=MF}}
+{{Fs player|no=24|nat=USA|name=[[Kyle Smith (soccer, born 1992)|Kyle Smith]]|pos=DF}}
+{{Fs player|no=27|nat=CMR|pos=MF|name=[[Brian Anunga]]}}
+{{Fs player|no=29|nat=ECU|name=[[Bryan Ramírez]]|pos=FW}}
+{{Fs player|no=30|nat=MEX|name=Ademar Chávez|pos=MF}}
+{{Fs player|no=55|nat=LBY|name=Ayoub Lajhar|pos=DF}}
+{{Fs player|no=66|nat=VEN|name=[[Ender Echenique]]|pos=FW}}
+{{Fs player|no=88|nat=USA|name=[[Andrei Chirilă]]|pos=DF}}
+{{Fs player|no=89|nat=USA|name=Connor Dale|pos=GK}}
+{{Fs player|no=93|nat=POL|name=[[Fabian Mrozek]]|pos=GK|other=on loan from [[Liverpool F.C.|Liverpool]]}}
+{{Fs player|no=99|nat=MAR|name=[[Ayoub Jabbari]]|pos=FW}}
+{{Fs player|no=25|nat=USA|name=[[Paul Walters (soccer)|Paul Walters]]|pos=GK|other=on loan to [[Bohemian F.C.|Bohemians]]}}
+{{Fs player|no=37|nat=USA|name=[[Stiven Jimenez]]|pos=MF|other=on loan to [[Fluminense FC|Fluminense]]}}
+{{Fs player|no=38|nat=USA|name=[[Brian Schaefer]]|pos=DF|other=on loan to [[Tampa Bay Rowdies]]}}
+{{Fs player|no=  |nat=PAR|name=[[Gilberto Flores (footballer, born 2003)|Gilberto Flores]]|pos=DF|other=on loan to [[Club Libertad|Libertad]]}}

@@ -1,0 +1,66 @@
+== History
+== Colours and badge
+== Stadium
+== Honours
+== European record
+=== Matches
+== Current squad
+=== On loan
+=== Retired numbers
+=== Zebra Elites (Second team)
+== Club officials
+== Coaches
+== References
+== External links
+
+TEMPLATES 50
+{{Fs player|no= 1|nat=BEL|pos=GK|name=[[Martin Delavallée]]}}
+{{Fs player|no= 2|nat=ENG|pos=DF|name=[[Triston Rowe]]|other=on loan from [[Aston Villa F.C.|Aston Villa U21]]}}
+{{Fs player|no= 3|nat=ALG|pos=DF|name=[[Kevin Van Den Kerkhof]]}}
+{{Fs player|no= 4|nat=SYR|pos=DF|name=[[Aiham Ousou]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no= 6|nat=MAR|pos=MF|name=Amine Boukamir}}
+{{Fs player|no= 8|nat=NOR|pos=MF|name=[[Jakob Napoleon Romsaas|Jakob Romsaas]]}}
+{{Fs player|no= 9|nat=GAM|pos=FW|name=[[Adama Bojang]]|other=on loan from [[Stade de Reims|Reims]]}}
+{{Fs player|no=13|nat=JPN|pos=FW|name=[[Gaku Nawata]]|other=on loan from [[Gamba Osaka]]}}
+{{Fs player|no=14|nat=GER|pos=MF|name=[[Patrick Pflücke]]}}
+{{Fs player|no=16|nat=BEL|pos=GK|name=Arthur Cremer}}
+{{Fs player|no=17|nat=BEL|pos=FW|name=[[Antoine Bernier]]}}
+{{Fs player|no=18|nat=MAR|pos=MF|name=[[Yassine Khalifi]]}}
+{{Fs player|no=19|nat=CIV|pos=MF|name=Isaac Cissé}}
+{{Fs player|no=20|nat=CGO|pos=FW|name=[[Freddy Mbemba]]}}
+{{Fs player|no=21|nat=FRA|pos=FW|name=[[Aurélien Scheidler]]}}
+{{Fs player|no=23|nat=FRA|pos=MF|name=Boubakar Dembaga}}
+{{Fs player|no=24|nat=BEL|pos=DF|name=[[Mardochee Nzita]]}}
+{{Fs player|no=25|nat=BEL|pos=MF|name=[[Antoine Colassin]]}}
+{{Fs player|no=30|nat=CIV|pos=GK|name=[[Mohamed Koné (footballer, born 2002)|Mohamed Koné]]}}
+{{Fs player|no=33|nat=BEL|pos=DF|name=Noah Solheid}}
+{{Fs player|no=44|nat=FRA|pos=DF|name=Massamba Sow}}
+{{Fs player|no=51|nat=BEL|pos=MF|name=Mory Kera}}
+{{Fs player|no=54|nat=BEL|pos=DF|name=Naël Piron}}
+{{Fs player|no=65|nat=BEL|pos=DF|name=Rafaël Teugels}}
+{{Fs player|no=95|nat=MLI|pos=DF|name=[[Cheick Keita (footballer, born 2003)|Cheick Keita]]}}
+{{Fs player|no=|nat=MAR|pos=DF|name=[[Mehdi Boukamir]]|other={{small|at [[RAAL La Louvière]] until 30 June 2027}}
+{{Fs player|no=|nat=GHA|pos=FW|name=[[Raymond Asante]]|other={{small|at [[Francs Borains]] until 30 June 2027}}
+{{Fs player|no=|nat=CIV|pos=FW|name=Severin Nioule|other={{small|at [[Francs Borains]] until 30 June 2027}}
+{{Fs player|no=|nat=BEL|pos=FW|name=[[Anthony Descotte]]|other={{small|at [[Fortuna Sittard]] until 30 June 2027}}
+{{Fs player|no=41|nat=BEL|pos=FW|name=Léandro Diaz}}
+{{Fs player|no=42|nat=BEL|pos=MF|name=Thomas Lutte}}
+{{Fs player|no=45|nat=FRA|pos=MF|name=Yoann Cissé}}
+{{Fs player|no=46|nat=BEL|pos=MF|name=Tristan Hermans}}
+{{Fs player|no=48|nat=BEL|pos=GK|name=Arthur Mathot}}
+{{Fs player|no=49|nat=BEL|pos=FW|name=Yoan Apo}}
+{{Fs player|no=53|nat=BEL|pos=MF|name=Sami Kolgjini}}
+{{Fs player|no=54|nat=BEL|pos=DF|name=Naël Piron}}
+{{Fs player|no=57|nat=BEL|pos=DF|name=Dylan Deves}}
+{{Fs player|no=58|nat=BEL|pos=GK|name=Ugo Decerf}}
+{{Fs player|no=59|nat=BEL|pos=DF|name=Yann Sikorski}}
+{{Fs player|no=62|nat=BEL|pos=FW|name=Nathan Okumu Monkoy}}
+{{Fs player|no=65|nat=BEL|pos=DF|name=Rafaël Teugels}}
+{{Fs player|no=66|nat=BEL|pos=MF|name=Oscar Latteur}}
+{{Fs player|no=77|nat=BEL|pos=MF|name=Matteo Noto}}
+{{Fs player|no=81|nat=MAR|pos=DF|name=Naïm Marzouk}}
+{{Fs player|no=82|nat=BEL|pos=MF|name=Sacha Miantezila}}
+{{Fs player|no=83|nat=BEL|pos=FW|name=Ahmed Mulumba}}
+{{Fs player|no=88|nat=FRA|pos=GK|name=Lucas Degeye}}
+{{Fs player|no=92|nat=FRA|pos=DF|name=Djulys Gomis}}
+{{Fs player|no=93|nat=FRA|pos=DF|name=Ryan George}}

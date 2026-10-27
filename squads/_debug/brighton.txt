@@ -1,0 +1,66 @@
+== History
+=== Formation and early years (1901–1972)
+=== Mike Bamber years (1972–1987)
+=== Relegation, last years, and saved by Knight (1987–1997)
+=== Withdean era and Bloom takeover (1997–2011)
+=== Move to new stadium and promotion under Hughton (2011–2017)
+=== Back in the top division, and in European competitions (2017–present)
+== Stadium
+=== Withdean Stadium
+=== Falmer Stadium
+== Colours and kits
+=== Kit manufacturers and sponsors
+== Rivalries
+== Players
+=== Out on loan
+=== Under 21s and academy
+== Managers
+=== Timeline
+== Management
+== Honours
+== References
+== External links
+
+TEMPLATES 42
+{{Fs player|no=1|nat=NED|pos=GK|name=[[Bart Verbruggen]]}}
+{{Fs player|no=3|nat=ALG|pos=DF|name=[[Jaouen Hadjam]]}}
+{{Fs player|no=4|nat=NED|pos=DF|name=[[Pascal Struijk]]}}
+{{Fs player|no=5|nat=ENG|pos=DF|name=[[Lewis Dunk]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=7|nat=JPN|pos=MF|name=[[Kaoru Mitoma]]}}
+{{Fs player|no=8|nat=ENG|pos=MF|name=[[Jack Hinshelwood]]}}
+{{Fs player|no=9|nat=GRE|pos=FW|name=[[Stefanos Tzimas]]}}
+{{Fs player|no=10|nat=FRA|pos=FW|name=[[Georginio Rutter]]}}
+{{Fs player|no=11|nat=GAM|pos=MF|name=[[Yankuba Minteh]]}}
+{{Fs player|no=12|nat=CAN|pos=FW|name=[[Promise David]]|other=on loan from [[Royale Union Saint-Gilloise|Union Saint-Gilloise]]}}
+{{Fs player|no=13|nat=GER|pos=MF|name=[[Pascal Groß]]|other=[[vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=14|nat=ESP|pos=MF|name=[[Chema Andrés]]}}
+{{Fs player|no=15|nat=GHA|pos=MF|name=[[Ibrahim Osman (footballer, born 2004)|Ibrahim Osman]]}}
+{{Fs player|no=19|nat=GRE|pos=FW|name=[[Charalampos Kostoulas]]}}
+{{Fs player|no=20|nat=POR|pos=DF|name=[[Costinha (footballer, born 2000)|Costinha]]}}
+{{Fs player|no=21|nat=FRA|pos=DF|name=[[Olivier Boscagli]]}}
+{{Fs player|no=23|nat=ENG|pos=GK|name=[[Jason Steele (footballer)|Jason Steele]]}}
+{{Fs player|no=24|nat=TUR|pos=DF|name=[[Ferdi Kadıoğlu]]}}
+{{Fs player|no=25|nat=PAR|pos=MF|name=[[Diego Gómez (Paraguayan footballer)|Diego Gómez]]}}
+{{Fs player|no=26|nat=SWE|pos=MF|name=[[Yasin Ayari]]}}
+{{Fs player|no=27|nat=NED|pos=DF|name=[[Mats Wieffer]]}}
+{{Fs player|no=28|nat=IRL|pos=FW|name=[[Evan Ferguson]]}}
+{{Fs player|no=29|nat=BEL|pos=DF|name=[[Maxim De Cuyper]]}}
+{{Fs player|no=30|nat=AUT|pos=DF|name=[[Michael Svoboda]]}}
+{{Fs player|no=33|nat=DEN|pos=MF|name=[[Matt O'Riley]]}}
+{{Fs player|no=35|nat=CIV|pos=MF|name=[[Malick Yalcouyé]]}}
+{{Fs player|no=36|nat=NGA|pos=MF|name=[[Zadok Yohanna]]}}
+{{Fs player|no=38|nat=CAN|pos=GK|name=[[Tom McGill]]}}
+{{Fs player|no=39|nat=NGA|pos=MF|name=[[Femi Azeez]]}}
+{{Fs player|no=44|nat=CRO|pos=DF|name=[[Luka Vušković]]}}
+{{Fs player|no=16|nat=IRL|pos=DF|name=[[Eiran Cashin]]|other=at [[Derby County F.C.|Derby County]] until 30 June 2027}}
+{{Fs player|no=22|nat=ENG|pos=MF|name=[[Amario Cozier-Duberry]]|other=at [[Middlesbrough F.C.|Middlesbrough]] until 30 June 2027}}
+{{Fs player|no=|nat=ARG|pos=MF|name=[[Facundo Buonanotte]]|other=at [[Elche CF|Elche]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=MF|name=[[Brajan Gruda]]|other=at [[RB Leipzig]] until 30 June 2027}}
+{{Fs player|no=|nat=POR|pos=MF|name=[[Rodrigo Rêgo (footballer, born 2005)|Rodrigo Rêgo]]|other=at [[CD Castellón|Castellón]] until 30 June 2027}}
+{{Fs player|no=|nat=ENG|pos=MF|name=[[Tommy Watson (footballer, born 2006)|Tommy Watson]]|other=at [[Leicester City F.C.|Leicester City]] until 30 June 2027}}
+{{Fs player|no=41|nat=ENG|pos=DF|name=[[Freddie Simmonds]]}}
+{{Fs player|no=43|nat=ENG|pos=MF|name=Josh Robertson}}
+{{Fs player|no=49|nat=NGA|pos=MF|name=[[Nehemiah Oriola]]}}
+{{Fs player|no=50|nat=MAS|pos=MF|name=Shane Nti}}
+{{Fs player|no=59|nat=EGY|pos=MF|name=[[Younes Ibrahim]]}}
+{{Fs player|no=61|nat=AUS|pos=GK|name=[[Steven Hall (soccer)|Steven Hall]]}}

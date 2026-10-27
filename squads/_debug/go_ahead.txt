@@ -1,0 +1,48 @@
+== History
+=== Professionalism and Europe
+=== Recent seasons
+== Honours
+== Domestic results
+== European record
+== Rivalries
+== Current squad
+== Former players
+=== National team players
+=== National team players by Confederation
+== Players in international tournaments
+== Coaching staff
+== Coaching history
+== See also
+== References
+== External links
+
+TEMPLATES 29
+{{Fs player|no= 1|nat=NOR|pos=GK|name=[[Kjetil Haug]]}}
+{{Fs player|no= 2|nat=ISL|pos=DF|name=[[Alfons Sampsted]]}}
+{{Fs player|no= 3|nat=GER|pos=DF|name=[[Gerrit Nauber]]}}
+{{Fs player|no= 4|nat=NED|pos=DF|name=[[Joris Kramer]]}}
+{{Fs player|no= 5|nat=IDN|pos=DF|name=[[Dean James (footballer)|Dean James]]}}
+{{Fs player|no= 6|nat=CRO|pos=DF|name={{ill|Tino Jukić|it||nl}}
+{{Fs player|no= 8|nat=NED|pos=MF|name=[[Evert Linthorst]]}}
+{{Fs player|no= 9|nat=ISL|pos=FW|name=[[Stefán Ingi Sigurðarson]]}}
+{{Fs player|no=10|nat=DEN|pos=FW|name=[[Søren Tengstedt]]}}
+{{Fs player|no=11|nat=NOR|pos=FW|name=[[Oskar Sivertsen]]}}
+{{Fs player|no=15|nat=NED|pos=MF|name=[[Robbin Weijenberg]]}}
+{{Fs player|no=16|nat=SWE|pos=FW|name=[[Victor Edvardsen]]}}
+{{Fs player|no=17|nat=BEL|pos=MF|name=[[Mathis Suray]]}}
+{{Fs player|no=18|nat=SUR|pos=FW|name=[[Richonell Margaret]]}}
+{{Fs player|no=20|nat=NED|pos=DF|name={{ill|Eus Waayers|nl||uk|Ейс Ваєрс}}
+{{Fs player|no=21|nat=NED|pos=MF|name=[[Melle Meulensteen]]}}
+{{Fs player|no=22|nat=NED|pos=GK|name=[[Nick Marsman]]}}
+{{Fs player|no=23|nat=BEL|pos=FW|name=[[Thibo Baeten]]}}
+{{Fs player|no=25|nat=NED|pos=DF|name=[[Giovanni van Zwam]]}}
+{{Fs player|no=26|nat=NED|pos=DF|name=[[Julius Dirksen]]}}
+{{Fs player|no=27|nat=FIN|pos=DF|name=[[Tomas Galvez]]}}
+{{Fs player|no=28|nat=NED|pos=DF|name=[[Pim Saathof]]}}
+{{fs player|no=29|nat=NOR|pos=FW|name=[[Erik Flataker]]}}
+{{Fs player|no=30|nat=NED|pos=GK|name=[[Thomas Hulleman]]}}
+{{Fs player|no=31|nat=NED|pos=DF|name=[[Dani Tijman]]}}
+{{Fs player|no=32|nat=GHA|pos=FW|name={{ill|Ofosu Boakye|nl}}
+{{Fs player|no=33|nat=NED|pos=GK|name=[[Nando Verdoni]]}}
+{{Fs player|no=34|nat=NED|pos=MF|name={{ill|Yassir Salah Rahmouni|it||nl}}
+{{Fs player|no=35|nat=NED|pos=DF|name=[[Terence Lantveld]]}}

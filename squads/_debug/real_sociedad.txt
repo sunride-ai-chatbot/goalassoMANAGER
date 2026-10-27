@@ -1,0 +1,62 @@
+== History
+=== The success of the 1980s
+=== 21st century
+== Stadium and facility
+== Name and colours
+== Fanbase
+== Honours
+==== League
+==== Cup
+==== Regional competition
+=== Notes
+== Players
+=== Reserve team
+=== Out on loan
+== Seasons
+=== Season to season
+== History in European competitions
+=== Overall record
+== Coaching staff
+== Managers
+== Player statistics
+=== Most appearances
+=== Top scorers
+== Notable former players
+== Presidents
+== See also
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no=1|pos=GK|nat=ESP|name=[[Álex Remiro]]}}
+{{Fs player|no=2|pos=DF|nat=VEN|name=[[Jon Aramburu]]}}
+{{Fs player|no=3|pos=DF|nat=ESP|name=[[Aihen Muñoz]]}}
+{{Fs player|no=4|pos=MF|nat=ESP|name=[[Jon Gorrotxategi]]}}
+{{Fs player|no=5|pos=DF|nat=ESP|name=[[Igor Zubeldia]]|other=[[Captain (association football)|vice captain]]}}
+{{Fs player|no=6|pos=DF|nat=ESP|name=[[Jon Martín]]}}
+{{Fs player|no=7|pos=FW|nat=ESP|name=[[Ander Barrenetxea (footballer)|Ander Barrenetxea]]}}
+{{Fs player|no=8|pos=MF|nat=ESP|name=[[Beñat Turrientes]]}}
+{{Fs player|no=9|pos=FW|nat=ISL|name=[[Orri Óskarsson]]}}
+{{Fs player|no=10|pos=FW|nat=ESP|name=[[Mikel Oyarzabal]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=11|pos=FW|nat=POR|name=[[Gonçalo Guedes]]}}
+{{Fs player|no=12|pos=FW|nat=KEN|name=[[Job Ochieng]]}}
+{{Fs player|no=13|pos=GK|nat=ESP|name=[[Unai Marrero]]}}
+{{Fs player|no=14|pos=MF|nat=JPN|name=[[Takefusa Kubo]]}}
+{{Fs player|no=15|pos=MF|nat=ESP|name=[[Pablo Marín (footballer, born 2003)|Pablo Marín]]}}
+{{Fs player|no=16|pos=DF|nat=ESP|name=[[Jon Pacheco]]}}
+{{Fs player|no=17|pos=MF|nat=ESP|name=[[Sergio Gómez (footballer, born 2000)|Sergio Gómez]]}}
+{{Fs player|no=18|pos=MF|nat=ESP|name=[[Carlos Soler]]}}
+{{Fs player|no=19|pos=DF|nat=SEN|name=[[Mamadou Sarr]]|other=on loan from [[Chelsea F.C.|Chelsea]]}}
+{{Fs player|no=20|pos=DF|nat=ESP|name=[[Álvaro Odriozola]]}}
+{{Fs player|no=21|pos=MF|nat=VEN|name=[[Yangel Herrera]]}}
+{{Fs player|no=22|pos=DF|nat=ESP|name=[[Héctor Fort]]}}
+{{Fs player|no=23|pos=MF|nat=RUS|name=[[Arsen Zakharyan]]}}
+{{Fs player|no=24|pos=MF|nat=CRO|name=[[Luka Sučić]]}}
+{{fs player|no=26|pos=MF|nat=ESP|name=[[Ibai Aguirre]]}}
+{{Fs player|no=27|nat=ESP|pos=FW|name=[[Gorka Carrera]]}}
+{{Fs player|no=28|nat=FRA|pos=MF|name=[[Alex Lebarbier]]}}
+{{Fs player|no=29|nat=ESP|pos=FW|name=[[Alex Marchal]]}}
+{{Fs player|no=34|nat=ESP|pos=DF|name=[[Luken Beitia]]}}
+{{fs player|no=44|nat=FRA|pos=GK|name=[[Theo Mickael Kevin Folgado|Theo Folgado]]}}
+{{Fs player|no=|pos=DF|nat=ESP|name=[[Javi López (footballer, born 2002)|Javi López]]|other=at [[Feyenoord]] until 30 June 2027}}
+{{Fs player|no=|pos=MF|nat=ESP|name=[[Mikel Goti]]|other=at [[Real Oviedo|Oviedo]] until 30 June 2027}}
