@@ -2,25 +2,65 @@
  {
   "key": "newcastle",
   "ok": true,
-  "n": 27,
-  "he": 16,
-  "img": 18
+  "n": 26,
+  "qid": 0,
+  "he": 0,
+  "img": 0
  },
  {
   "key": "sevilla",
   "ok": true,
-  "n": 27,
-  "he": 11,
-  "img": 14
+  "n": 22,
+  "qid": 0,
+  "he": 0,
+  "img": 0
+ },
+ {
+  "key": "hjk",
+  "ok": true,
+  "n": 30,
+  "qid": 0,
+  "he": 0,
+  "img": 0
+ },
+ {
+  "key": "fcsb",
+  "ok": true,
+  "n": 29,
+  "qid": 0,
+  "he": 0,
+  "img": 0
  },
  {
   "key": "hajduk",
-  "ok": false,
-  "why": "error: HTTP Error 504: Gateway Timeout"
+  "ok": true,
+  "n": 30,
+  "qid": 0,
+  "he": 0,
+  "img": 0
+ },
+ {
+  "key": "al_ahly",
+  "ok": true,
+  "n": 30,
+  "qid": 0,
+  "he": 0,
+  "img": 0
  },
  {
   "key": "flamengo",
-  "ok": false,
-  "why": "error: HTTP Error 504: Gateway Timeout"
+  "ok": true,
+  "n": 27,
+  "qid": 0,
+  "he": 0,
+  "img": 0
+ },
+ {
+  "key": "inter_miami",
+  "ok": true,
+  "n": 28,
+  "qid": 0,
+  "he": 0,
+  "img": 0
  }
 ]
