@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="b3819ed536e9">
+<meta name="goalasso-build" content="c468614233f9">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -738,34 +738,46 @@ h3.sec:not(.btn){font-size:24px}
 .pp-credit{text-align:center;font-size:10.5px;line-height:1.35;margin-top:4px;overflow-wrap:anywhere}
 .pp-credit:empty{display:none}
 
-/* lineup on the stadium photo: player cards (face, rating, position, name, fitness bar) projected onto the grass */
-.cinematic-lineup .stad-pitch.arena{aspect-ratio:1/2;background:#05080c}
-.arena-bg{position:absolute;inset:0;z-index:0}.arena-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block}
-.cine-header.broadcast{inset:2.5% 4% auto;text-align:start;text-shadow:0 2px 8px #000c}
-.cine-title{display:flex;align-items:center;gap:12px}
-.cine-kit{flex:none;width:clamp(40px,11vw,64px);filter:drop-shadow(0 4px 8px #0009)}
-.cine-kit svg{width:100%;height:auto;display:block}
-.cine-header.broadcast h2{margin:0;font:900 clamp(24px,6.5vw,48px)/1.05 var(--body);letter-spacing:-.5px;color:#fff;text-shadow:0 3px 0 #0006,0 4px 16px #000}
-.cine-header.broadcast p{margin:4px 0 0;color:#ffffffd0;font-weight:600}
-.cine-header.broadcast .cine-tools{justify-content:flex-start;margin-top:8px}
-.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000b0;border-color:#ffffff66;color:#fff}
+/* TV pre-match graphic on the stadium photo: opponent board over the stands, my XI as cards on the grass */
+.cinematic-lineup .stad-pitch.arena{aspect-ratio:9/20;background:#05080c}
+.arena-bg{position:absolute;inset:0;z-index:0}.arena-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%;display:block}
+.stad-pitch.arena::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#000a 0,#0006 12%,#0000 30%,#0000 55%,#0003 100%);pointer-events:none;z-index:0}
+.cinematic-lineup .stad-pitch.arena .cine-header.broadcast{inset:1.6% 3% auto;text-align:start;text-shadow:0 2px 8px #000c;display:flex;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap}
+.cine-title{display:flex;align-items:center;gap:8px;min-width:0;flex:1}.cine-title>div{min-width:0}
+.cine-kit{flex:none;width:clamp(34px,9vw,52px);filter:drop-shadow(0 4px 8px #0009)}
+.cine-kit svg,.cine-kit .kit{width:100%!important;height:auto!important;display:block;position:static}
+.cinematic-lineup .cine-header.broadcast h2{margin:0;font:900 clamp(17px,4.6vw,30px)/1.1 var(--body);letter-spacing:-.4px;color:#fff;text-shadow:0 2px 0 #0006,0 4px 14px #000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cine-header.broadcast p{margin:2px 0 0;color:#ffffffc8;font-weight:600;font-size:clamp(10px,2.6vw,13px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cinematic-lineup .cine-header.broadcast .cine-tools{justify-content:flex-end;margin:0;gap:6px;flex:none}
+.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000b0;border-color:#ffffff66;color:#fff;min-height:34px;padding:3px 9px;font-size:12px}
+.cine-header.broadcast .cine-tools select{font-size:15px;min-width:78px}
+.opp-board{position:absolute;inset:11.5% 3% auto;height:31%;line-height:1.3;z-index:1;border-radius:14px;background:linear-gradient(180deg,#0a1420d8,#05090fd8);border:1px solid #ffffff2a;box-shadow:0 10px 30px #000a;backdrop-filter:blur(6px)}
+.opp-head{position:absolute;inset:0 0 auto;display:grid;grid-template-columns:auto 1fr;column-gap:8px;align-items:center;padding:5px 10px;border-bottom:1px solid #ffffff1f;font-size:clamp(11px,3vw,14px);color:#fff;white-space:nowrap;overflow:hidden}
+.opp-head b{font-weight:800;overflow:hidden;text-overflow:ellipsis}.opp-head .muted{grid-column:2;color:#b9c4cf;overflow:hidden;text-overflow:ellipsis;font-size:clamp(10px,2.6vw,12px)}.opp-head .opp-kit{grid-row:span 2}
+.opp-kit{flex:none;width:22px}.opp-kit svg{width:100%;height:auto;display:block}
+.ot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:2px;width:13%}
+.ot-face{display:block;width:clamp(30px,8.5vw,46px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:2px solid #ffffffd0;background:#0b1520;box-shadow:0 3px 8px #0009}
+.ot-face .player-portrait{width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.ot-face .player-portrait svg{transform:scale(1.25);transform-origin:50% 25%}
+.ot-name{display:block;max-width:150%;padding:1px 6px;border-radius:4px;background:var(--c1,#183c72);color:var(--ink,#fff);font:800 clamp(9px,2.5vw,12px)/1.3 var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 2px 5px #0008}
+.ot-name bdi{display:inline-block;min-width:1.9em;margin-inline-end:3px;padding:0 3px;border-radius:3px;background:#0b1726;color:#ffe08a;font-weight:900}
 .cinematic-lineup .t3.lc{width:16.5%;transform:translate(-50%,-100%)}
-.lc-card{display:flex;flex-direction:column;align-items:center;gap:2px;width:100%;padding:4px 3px 5px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#e9edf3);border:1px solid #ffffffcc;box-shadow:0 8px 18px #0008,0 1px 0 #fff inset;color:#0d1a26;position:relative}
+.lc-card{display:flex;flex-direction:column;align-items:center;gap:1px;width:100%;padding:2px 3px 3px;border-radius:10px;background:linear-gradient(180deg,#16263aee,#070d15f2);border:1px solid #ffffff45;box-shadow:0 8px 18px #000a,0 1px 0 #ffffff20 inset;color:#fff;position:relative}
 .lc-top{display:flex;align-items:center;gap:4px;width:100%;justify-content:space-between;padding:0 2px}
-.lc-ovr{font:900 clamp(13px,3.6vw,18px)/1 var(--body);color:#0d1a26;direction:ltr}
-.lc-pos{font:700 9px/1 var(--body);padding:2px 4px;border-radius:5px;color:#fff;letter-spacing:.3px;background:#223a2d}.lc-pos.GK{background:#6b5118}.lc-pos.DF{background:#1f4a73}.lc-pos.MF{background:#2a6a3a}.lc-pos.FW{background:#7a2f3a}
+.lc-ovr{font:900 clamp(13px,3.6vw,18px)/1 var(--body);color:#ffe08a;direction:ltr}
+.lc-pos{font:700 9px/1 var(--body);padding:2px 4px;border-radius:4px;color:#fff;letter-spacing:.3px;background:#223a2d}.lc-pos.GK{background:#6b5118}.lc-pos.DF{background:#1f4a73}.lc-pos.MF{background:#2a6a3a}.lc-pos.FW{background:#7a2f3a}
 .lc-cap{position:absolute;top:-7px;inset-inline-start:-6px;width:18px;height:18px;border-radius:50%;background:#efd78b;color:#142115;font:800 11px/18px var(--body);text-align:center;box-shadow:0 2px 5px #0007}
-.lc-face{display:block;width:64%;aspect-ratio:240/264;border-radius:9px;overflow:hidden;background:#0b1520}
+.lc-face{display:block;width:58%;aspect-ratio:240/264;border-radius:7px;overflow:hidden;background:#0b1520;border:1px solid #ffffff30}
 .lc-face .player-portrait{width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
-.lc-name{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:800 clamp(10px,2.9vw,14px)/1.2 var(--body);color:#0d1a26}
-.lc-en{display:block;width:88%;height:5px;border-radius:3px;background:#c9d2dc;overflow:hidden}.lc-en u{display:block;height:100%;border-radius:3px}
-.lc-flag{position:absolute;top:30%;inset-inline:0;text-align:center;font:800 10px/1.4 var(--body);color:#fff;background:#c0392bdd;padding:1px 0}
+.lc-name{display:block;width:100%;box-sizing:border-box;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;padding:1px 3px;border-radius:4px;background:var(--c1,#183c72);color:var(--ink,#fff);font:800 clamp(10px,2.8vw,13px)/1.3 var(--body)}
+.lc-en{display:block;width:88%;height:4px;border-radius:3px;background:#ffffff33;overflow:hidden}.lc-en u{display:block;height:100%;border-radius:3px}
+.lc-flag{position:absolute;top:34%;inset-inline:0;text-align:center;font:800 10px/1.4 var(--body);color:#fff;background:#c0392bdd;padding:1px 0}
 .lc-card.lc-empty{background:#0d1a26cc;color:#e2ff9e;border-color:#dce8b899;border-style:dashed;min-height:70px;justify-content:center}
-.lc-card.lc-empty .lc-name{color:#e2ff9e}.lc-card.lc-empty .cine-empty{height:auto;width:auto;border:0;background:none;font-size:24px;margin:0}
+.lc-card.lc-empty .lc-name{color:#e2ff9e;background:none}.lc-card.lc-empty .cine-empty{height:auto;width:auto;border:0;background:none;font-size:24px;margin:0}
 .cinematic-lineup .t3.sel .lc-card{outline:3px solid #d7ff57;box-shadow:0 0 0 2px #0008,0 0 18px #d2ff40}
-.cinematic-lineup .t3.bad .lc-card{border-color:#ff6976}.cinematic-lineup .t3.oop .lc-card{border-color:#ffbe5b;background:linear-gradient(180deg,#fff7e6,#f3e6cc)}
+.cinematic-lineup .t3.bad .lc-card{border-color:#ff6976}.cinematic-lineup .t3.oop .lc-card{border-color:#ffbe5b}
 .cinematic-lineup .t3.sel .t3-in{transform:none}
-@media(max-width:380px){.cine-header.broadcast h2{font-size:24px}.cine-kit{width:38px}.cinematic-lineup .t3.lc{width:18.5%}.lc-face{width:62%}}
+@media(max-width:380px){.cinematic-lineup .t3.lc{width:17.5%}.lc-face{width:60%}}
 /* Phone readability: use the device viewport, readable copy and finger-sized controls. */
 .home-pitch{max-width:440px;margin:10px auto 0}
 .field.home-pitch .tok{width:16%;max-width:64px;min-height:44px}
@@ -1806,8 +1818,8 @@ function paper(kind,h,sub,body,team,ev){if(!G.paper)G.paper=[];G.paper.unshift({
 const OPENERS=['במועדון מרוצים מהמהלך.','בסביבת המועדון מספרים שהעסקה נסגרה אחרי משא ומתן קצר.','מקורבים לעסקה אומרים שההנהלה סימנה את השחקן כבר בתחילת החלון.','הסוכן של השחקן אישר את הפרטים.','האוהדים ברשת כבר הגיבו בהתלהבות.'];
 function signingStory(p,c,from,fee){const open=pick(OPENERS);
   paperMajor('העברות',`${fullName(p)} חתם ב${c.name}`,fee?`${c.short} שילמה ${NIS(fee)} ל${from.short}; חוזה ל-${p.contract} ${p.contract>1?'עונות':'עונה'}`:`הצטרף כשחקן חופשי, חוזה ל-${p.contract} ${p.contract>1?'עונות':'עונה'}`,
-  `${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}${p.foreign?' מ'+p.nat:''}${p.fromLeague?' שהגיע מ'+p.fromLeague:''}, הוא הרכש ${fee?'היקר':'החדש'} של ${c.name}. ${open} הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב, ובמועדון מאמינים שהוא ${p.age<=23?'יהפוך לאחד הנכסים הגדולים של הקבוצה':'יביא איתו ניסיון וביטחון'}.`,c.id,{type:'sign',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:from?from.short:null,fee:fee||null,free:!from,years:p.contract||null})}
-function saleStory(p,c,to,fee){paperMajor('העברות',`${fullName(p)} עוזב את ${c.name}`,`${to.short} שילמה ${NIS(fee)}`,`${c.name} נפרדת מ${fullName(p)} (${p.age}). ${pick(['ההנהלה רואה בעסקה הזדמנות לרענן את הסגל.','המכירה תאפשר למועדון לחזק עמדות אחרות.','האוהדים חלוקים: יש שמצטערים על הפרידה ויש שמברכים על הסכום.'])} ב${to.short} מקווים שהוא ישתלב מהר.`,c.id,{type:'sale',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,club:c.name,clubId:c.id,buyer:to.short,buyerId:to.id,fee})}
+  `${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}${p.foreign?' מ'+p.nat:''}${p.fromLeague?' שהגיע מ'+p.fromLeague:''}, הוא הרכש ${fee?'היקר':'החדש'} של ${c.name}. ${open} הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב, ובמועדון מאמינים שהוא ${p.age<=23?'יהפוך לאחד הנכסים הגדולים של הקבוצה':'יביא איתו ניסיון וביטחון'}.`,c.id,{type:'sign',pid:p.id,vid:playerVisualId(p)||null,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:from?from.short:null,fee:fee||null,free:!from,years:p.contract||null})}
+function saleStory(p,c,to,fee){paperMajor('העברות',`${fullName(p)} עוזב את ${c.name}`,`${to.short} שילמה ${NIS(fee)}`,`${c.name} נפרדת מ${fullName(p)} (${p.age}). ${pick(['ההנהלה רואה בעסקה הזדמנות לרענן את הסגל.','המכירה תאפשר למועדון לחזק עמדות אחרות.','האוהדים חלוקים: יש שמצטערים על הפרידה ויש שמברכים על הסכום.'])} ב${to.short} מקווים שהוא ישתלב מהר.`,c.id,{type:'sale',pid:p.id,vid:playerVisualId(p)||null,player:fullName(p),pos:p.pos,age:p.age,club:c.name,clubId:c.id,buyer:to.short,buyerId:to.id,fee})}
 function sponsorStory(c,o){paperMajor('כספים',`${c.name} חתמה עם ${o.name}`,`חסות חולצה של ${NIS(o.annual)} לעונה ל-${o.years} ${o.years>1?'עונות':'עונה'}`,`הלוגו של ${o.name} יופיע על חולצת ${c.name} כבר במשחק הבא. ${o.bonusTitle?`החוזה כולל בונוסים על אליפות (${NIS(o.bonusTitle)}) ועל יציאה לאירופה (${NIS(o.bonusEuro)}).`:'מדובר בחוזה קבוע בלי בונוסים.'} במועדון מסבירים שהכסף יופנה לשכר השחקנים ולתשתיות.`,c.id,{type:'sponsor',sponsor:o.name,club:c.name,clubId:c.id,annual:o.annual,years:o.years})}
 function resultStory(M,h,a){
   const mineHome=h.id===G.me;const my=mineHome?h:a,opp=mineHome?a:h;const gf=mineHome?M.gh:M.ga,ga=mineHome?M.ga:M.gh;
@@ -2059,7 +2071,7 @@ function completeTransfer(n,p,sc){
   sc.players=sc.players.filter(x=>x!==p);
   p.contract=n.loan?1:po.years;p.wage=po.wage;p.role=po.role;p.form=0;p.morale=74;p.fit=95;p.kn=2;p.fromLeague=p.lg?WORLD_LEAGUES[p.lg].name:null;if(n.loan)p.loan={from:sc.id,fromName:sc.short,until:G.season,buy:n.loan.buy};delete p.lg;delete p.vmult;delete p.wmult;delete p.key;delete p.est;p.sellon=o.sellon?{pct:o.sellon,to:sc.short}:null;p.boughtFor=o.fee;finalize(p);c.players.push(p);
   n.stage='done';n.log.push(n.loan?`${fullName(p)} הגיע בהשאלה לעונה! ${NIS(po.wage)} לשבוע.`:`${fullName(p)} חתם! ${po.years} שנים, ${NIS(po.wage)} לשבוע.`);
-  news(n.loan?`${fullName(p)} הגיע בהשאלה מ${sc.short} (אופציית רכישה ${NIS(n.loan.buy)}).`:`${fullName(p)} הצטרף מ${sc.short} תמורת ${NIS(o.fee)}.`);if(!n.loan)signingStory(p,c,sc,o.fee);else paperMajor('העברות',`${fullName(p)} בהשאלה ל${c.name}`,`מ${sc.short}, לעונה אחת${n.loan.buy?', עם אופציית רכישה':''}`,`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). ${n.loan.buy?pick(['המנג\'ר מאמין שהוא ייכנס להרכב מיד.','אופציית הרכישה: '+NIS(n.loan.buy)+'.']):'המנג\'ר מאמין שהוא ייכנס להרכב מיד.'}`,c.id,{type:'loan',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:sc.short,until:seasonLabel(),buy:n.loan.buy||null});
+  news(n.loan?`${fullName(p)} הגיע בהשאלה מ${sc.short} (אופציית רכישה ${NIS(n.loan.buy)}).`:`${fullName(p)} הצטרף מ${sc.short} תמורת ${NIS(o.fee)}.`);if(!n.loan)signingStory(p,c,sc,o.fee);else paperMajor('העברות',`${fullName(p)} בהשאלה ל${c.name}`,`מ${sc.short}, לעונה אחת${n.loan.buy?', עם אופציית רכישה':''}`,`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). ${n.loan.buy?pick(['המנג\'ר מאמין שהוא ייכנס להרכב מיד.','אופציית הרכישה: '+NIS(n.loan.buy)+'.']):'המנג\'ר מאמין שהוא ייכנס להרכב מיד.'}`,c.id,{type:'loan',pid:p.id,vid:playerVisualId(p)||null,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:sc.short,until:seasonLabel(),buy:n.loan.buy||null});
   if(po.role==='starter'&&p.ovr<effOvrTop(c,p.pos)-2)p.promised=true;
   autoLineups();save();recordSigning(p,c,n.loan?'loan':'perm',n.loan?{from:sc.short,buy:n.loan.buy}:{from:sc.short,fee:o.fee,inst:o.inst});
 }
@@ -3776,7 +3788,7 @@ function doLoanOut(pid,o){const c=me();const p=c.players.find(x=>x.id===pid);if(
   p.loanOut={from:G.me,to:o.c.id,toName:o.c.short||o.c.name,until:G.season,share:o.share,role:o.role,ovr0:p.ovr,apps0:p.apps||0,goals0:p.goals||0,inj0:p.injSeqSeen||0,wk:G.wk};
   o.c.players.push(p);if(o.fee){c.money+=o.fee;addLog(`דמי השאלה: ${fullName(p)} ל${o.c.short||o.c.name}`,o.fee)}
   G.loansOut=G.loansOut||[];G.loansOut.push({pid:p.id,to:o.c.id});
-  news(`${fullName(p)} יצא בהשאלה ל${o.c.name} עד סוף העונה (${LOAN_ROLE_HE[o.role]}).`);paper('העברות',`${fullName(p)} בהשאלה ל${o.c.name}`,`עד סוף עונת ${seasonLabel()}`,`${me().name} השאילה את ${fullName(p)} (${POSHE[p.pos]}, ${p.age}) ל${o.c.name}. המטרה: דקות משחק והתפתחות.`,G.me,{type:'loanOut',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,club:me().name,clubId:G.me,to:o.c.name,toId:o.c.id,until:seasonLabel()});
+  news(`${fullName(p)} יצא בהשאלה ל${o.c.name} עד סוף העונה (${LOAN_ROLE_HE[o.role]}).`);paper('העברות',`${fullName(p)} בהשאלה ל${o.c.name}`,`עד סוף עונת ${seasonLabel()}`,`${me().name} השאילה את ${fullName(p)} (${POSHE[p.pos]}, ${p.age}) ל${o.c.name}. המטרה: דקות משחק והתפתחות.`,G.me,{type:'loanOut',pid:p.id,vid:playerVisualId(p)||null,player:fullName(p),pos:p.pos,age:p.age,club:me().name,clubId:G.me,to:o.c.name,toId:o.c.id,until:seasonLabel()});
   autoLineups();save();render()}
 function loanedOut(){return (G.loansOut||[]).map(l=>{const c=club(l.to);const p=c&&c.players.find(x=>x.id===l.pid);return p?{p,c}:null}).filter(Boolean)}
 function loansOutWeekly(){const mine=me();if(!G.loansOut||!G.loansOut.length)return;let cost=0;
@@ -4029,12 +4041,15 @@ function npTypeOf(st){if(st.ev&&st.ev.type)return st.ev.type;const h=st.h||'';if
 function npImage(st){const t=npTypeOf(st),ev=st.ev||{};
   if(t==='champ')return {k:'champ',cap:'חגיגות האליפות · אילוסטרציה'};if(t==='cup')return {k:'cup',cap:'הגביע מונף · אילוסטרציה'};
   if(t==='appoint')return ev.clubId==='l_ash'?{k:'ashdod',cap:'רגע החתימה · אילוסטרציה'}:{k:'manager',cap:'בדרך אל הדשא · אילוסטרציה'};
-  if(t==='sign'||t==='loan'||t==='sale'||t==='loanOut')return {k:'stage',shirt:true,cap:t==='sale'?'במה ריקה · אילוסטרציה':'במת ההצגה · אילוסטרציה'};
+  if(t==='sign'||t==='loan'||t==='sale'||t==='loanOut')return {k:'stage',shirt:true,cap:t==='sale'||t==='loanOut'?'רגע הפרידה · אילוסטרציה':'במת ההצגה · אילוסטרציה'};
   if(t==='sponsor')return {k:'stage',board:ev.sponsor,cap:'מעמד ההכרזה · אילוסטרציה'};
   const k=st.kind;if(k==='העברות'||k==='כספים'||k==='מסחרי')return {k:'stage',cap:'אילוסטרציה'};return {k:'manager',cap:'אילוסטרציה'}}
 function npShirtFor(st){const ev=st.ev||{};const id=ev.type==='sale'?ev.buyerId:ev.type==='loanOut'?ev.toId:(ev.clubId||st.team);const c=club(id);return c||null}
 function npPlayerOf(ev){if(!ev||ev.pid==null||!G)return null;const all=[...G.clubs,...G.leumit,...Object.values(G.pseudo||{}),...Object.values(G.world||{}).flatMap(l=>l.clubs||[])];for(const c of all){const p=[...c.players,...(c.youth||[])].find(x=>x.id===ev.pid);if(p)return {p,c}}return null}
-function npFaceHTML(st){const ev=st.ev||{};const hit=npPlayerOf(ev);if(!hit||!playerVisual(hit.p))return '';const c=npShirtFor(st)||hit.c;const id='npf'+String(ev.pid)+Math.random().toString(36).slice(2,5);
+function npFaceHTML(st){const ev=st.ev||{};let hit=npPlayerOf(ev);
+  // a sold / loaned-out player may no longer exist in any club: the story keeps his own visual id, never another's
+  if(!hit&&ev.vid&&PLAYER_VISUALS.faces[ev.vid])hit={p:{id:ev.pid,first:ev.player||'',last:'',pos:ev.pos||'MF',visualId:ev.vid},c:null};
+  if(!hit||!playerVisual(hit.p))return '';const c=npShirtFor(st)||hit.c||club(st.team)||me();const id='npf'+String(ev.pid)+Math.random().toString(36).slice(2,5);
   return `<div class="np-face"><svg viewBox="0 0 240 300" aria-hidden="true">${portraitGroup(hit.p,c,id,{bg:false,h:300})}</svg></div>`}
 function npFigure(st,lazy){const im=npImage(st);const [f,w,h]=NP_IMG[im.k];const ev=st.ev||{};const face=im.shirt?npFaceHTML(st):'';const c=im.shirt&&!face?npShirtFor(st):null;
   return `<figure class="np-fig"><div class="np-ph"><picture><source srcset="${f}.webp" type="image/webp"><img src="${f}.jpg" width="${w}" height="${h}" alt="" ${lazy?'loading="lazy" ':''}decoding="async" onerror="this.closest('.np-ph').classList.add('np-noimg')"></picture>
@@ -4090,8 +4105,8 @@ function openArchiveStory(i){const st=(G.paper||[])[i];if(st)openFrontPage(st,{l
 function paperDemo(type){if(!G)return;const c=me();const base={wk:G.wk,s:G.season,team:c.id,demo:true};const other=G.clubs.find(x=>x.id!==G.me&&x.league)||c;const p=c.players.slice().sort((a,b)=>b.ovr-a.ovr)[0];
   const D={
    appoint:{kind:'מועדון',h:`${G.manager.name} חתם ב${c.name}`,sub:`חוזה לשתי עונות. המטרה: ${G.board.expectText}`,body:`${c.name} הציגה היום את המנג'ר החדש. ההנהלה הציבה יעד ברור: ${G.board.expectText}. העבודה מתחילה כבר באימון הקרוב.`,ev:{type:'appoint',manager:G.manager.name,club:c.name,clubId:c.id,years:2,goal:G.board.expectText},q:'באתי לבנות קבוצה שאנשים יתגאו בה'},
-   perm:{kind:'העברות',h:`${fullName(p)} חתם ב${c.name}`,sub:`${c.short} שילמה ${NIS(askingPrice(p))} ל${other.short}; חוזה ל-3 עונות`,body:`${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}, הוא הרכש החדש של ${c.name}. הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב.`,ev:{type:'sign',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:other.short,fee:askingPrice(p),years:3}},
-   loan:{kind:'העברות',h:`${fullName(p)} בהשאלה ל${c.name}`,sub:`מ${other.short}, לעונה אחת`,body:`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). המנג'ר מאמין שהוא ייכנס להרכב מיד.`,ev:{type:'loan',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:other.short,until:seasonLabel(),buy:null}},
+   perm:{kind:'העברות',h:`${fullName(p)} חתם ב${c.name}`,sub:`${c.short} שילמה ${NIS(askingPrice(p))} ל${other.short}; חוזה ל-3 עונות`,body:`${fullName(p)}, ${POSHE[p.pos]} בן ${p.age}, הוא הרכש החדש של ${c.name}. הוא צפוי להתחרות על מקום בהרכב כבר במחזור הקרוב.`,ev:{type:'sign',pid:p.id,vid:playerVisualId(p)||null,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,from:other.short,fee:askingPrice(p),years:3}},
+   loan:{kind:'העברות',h:`${fullName(p)} בהשאלה ל${c.name}`,sub:`מ${other.short}, לעונה אחת`,body:`${c.name} סגרה השאלה של ${fullName(p)} (${POSHE[p.pos]}, ${p.age}). המנג'ר מאמין שהוא ייכנס להרכב מיד.`,ev:{type:'loan',pid:p.id,vid:playerVisualId(p)||null,player:fullName(p),pos:p.pos,age:p.age,no:p.no||null,club:c.name,clubId:c.id,parent:other.short,until:seasonLabel(),buy:null}},
    sponsor:{kind:'כספים',h:`${c.name} חתמה עם ${SPONSORS[0]}`,sub:`חסות חולצה של ${NIS(1200000)} לעונה ל-2 עונות`,body:`הלוגו של ${SPONSORS[0]} יופיע על חולצת ${c.name} כבר במשחק הבא. במועדון מסבירים שהכסף יופנה לשכר השחקנים ולתשתיות.`,ev:{type:'sponsor',sponsor:SPONSORS[0],club:c.name,clubId:c.id,annual:1200000,years:2}},
    champ:{kind:'ליגה',h:`${c.name} אלופת המדינה ${seasonLabel()}`,sub:'העונה הסתיימה במקום הראשון',body:`${c.name} סיימה את העונה במקום הראשון. חגיגות ענק בעיר.`,ev:{type:'champ',club:c.name,clubId:c.id,season:seasonLabel(),pts:78,second:other.short}},
    cup:{kind:'גביע',h:`${c.name} זכתה בגביע המדינה!`,sub:`2:1 מול ${other.short}`,body:`חגיגות ענק בעיר אחרי השריקה. ${c.name} מניפה את הגביע.`,ev:{type:'cup',comp:'גביע המדינה',club:c.name,clubId:c.id,score:'2:1',opp:other.short,pens:false}}};
@@ -4760,16 +4775,24 @@ function cinematicPlayerHTML(c,p,key){const f=playerVisual(p),gk=p.pos==='GK',co
  const src=f?facePackCache.get(f.pack)?.[vk]:null;if(f&&!src)loadFacePack(f.pack);const {trim}=portraitColors(p,c);
  const head=`<g class="pp" data-pp-state="${portraitState(f,vk)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(vk)}"`:''}>${f?`<g clip-path="url(#${id}neck)"><image class="pp-photo" ${src?`href="${src}"`:''} x="${CINE_HEAD.x}" y="${CINE_HEAD.y}" width="${CINE_HEAD.w}" height="${CINE_HEAD.h}" preserveAspectRatio="xMidYMin meet" onerror="var g=this.closest('.pp');if(g)g.setAttribute('data-pp-state','failed')"/></g>`:''}<g class="pp-fb"><circle cx="512" cy="118" r="104" fill="${esc(color)}" stroke="${esc(trim)}" stroke-width="16"/><text x="512" y="118" dy=".36em" text-anchor="middle" font-family="Heebo,Arial,sans-serif" font-weight="800" font-size="92" fill="${inkFor(color)}">${esc(portraitInitials(p))}</text></g></g>`;
  return `<span class="player-figure" aria-hidden="true" data-player-visual="${f?vk:'fallback'}"><svg viewBox="0 0 1024 1536"><defs><clipPath id="${id}neck"><path d="${CINE_NECK}"/></clipPath><clipPath id="${id}clip"><path d="${jersey}"/></clipPath><clipPath id="${id}skin"><path d="M284 450L370 468L327 680L309 716L321 790L289 866L227 827L238 746Z M655 467L737 449L780 746L783 827L726 860L696 784L706 713L688 675Z M352 925L487 940L435 1054L345 1045Z M551 940L674 926L680 1046L596 1054Z"/></clipPath><filter id="${id}skinTint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${tone[0]*.6} ${tone[0]*1.1} ${tone[0]*.3} 0 0 ${tone[1]*.6} ${tone[1]*1.1} ${tone[1]*.3} 0 0 ${tone[2]*.6} ${tone[2]*1.1} ${tone[2]*.3} 0 0 0 0 0 1 0"/></filter><clipPath id="${id}body"><rect x="0" y="250" width="1024" height="1286"/></clipPath><filter id="${id}tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${rgb[0]/255} 0 0 0 0 0 ${rgb[1]/255} 0 0 0 0 0 ${rgb[2]/255} 0 0 0 0 0 1 0"/></filter></defs>${head}<image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}body)"/><image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}clip)" filter="url(#${id}tint)"/><image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}skin)" filter="url(#${id}skinTint)"/><g clip-path="url(#${id}clip)" opacity=".85"><path d="M440 229Q512 283 586 229" fill="none" stroke="${esc(c.c2||'#17233b')}" stroke-width="23"/><path d="M309 438L374 452M651 452L722 438" stroke="${esc(c.c2||'#17233b')}" stroke-width="17"/></g><path d="M578 354l20 -9 20 9v24l-20 14-20-14z" fill="${esc(c.c2||'#16273b')}" opacity=".85"/>${brand?(sponsorLogoSVG(c.sponsor,392,450,240,66,'kit-contract-sponsor')||`<text class="kit-contract-sponsor" x="512" y="490" text-anchor="middle" direction="rtl" fill="${inkFor(color)}" font-family="Heebo,Arial,sans-serif" font-weight="900" font-size="37" textLength="225" lengthAdjust="spacingAndGlyphs">${esc(brand)}</text>`):''}</svg></span>`}
-/* Lineup on the stadium photo (assets/lineup-arena.*, a night stadium seen from behind the goal). ARENA maps pitch
-   coordinates (u across −1..1, v 0 = far goal, 1 = own goal) to the stage: rows converge towards the far goal. */
-const ARENA={top:40,bot:95,halfTop:40,halfBot:50,pow:1.05};
+/* Lineup on the stadium photo (assets/lineup-arena.*, a night stadium seen from behind the goal): a TV pre-match
+   graphic. The opponent's expected XI sits on a glass board over the stands; my XI stands on the grass as cards.
+   ARENA maps my layout (u across −1..1, v 0 = attack, 1 = own goal) to the stage. */
+const ARENA={top:50,bot:97,halfTop:40,halfBot:50,pow:1};
 function pitchProject(u,v){const P=ARENA;const t=Math.pow(v,P.pow);const y=P.top+(P.bot-P.top)*t;const hw=P.halfTop+(P.halfBot-P.halfTop)*t;return [50+u*hw,y]}
 function token3dHTML(c,p,slot,i,o){const cls=['t3','lc'];if(!p)cls.push('empty');if(o.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');
- const [X0,Y]=pitchProject(clamp((o.x-50)/50*1.15,-1,1),o.y/100);const X=clamp(X0,9,91);const fit=p?clamp(Math.round(p.fit??100),0,100):0;const hue=Math.round(fit*1.2);
- const body=p?`<span class="lc-card"><span class="lc-top"><bdi class="lc-ovr">${p.ovr}</bdi><span class="lc-pos ${p.pos}">${POSB[p.pos]}</span>${isCaptain(c,p)?'<span class="lc-cap">C</span>':''}</span><span class="lc-face">${playerPortraitHTML(p,c,'lc'+i)}</span><span class="lc-name">${esc(p.last||p.first)}</span><i class="lc-en" title="כושר ${fit}%"><u style="width:${fit}%;background:hsl(${hue} 80% 48%)"></u></i>${p.inj||p.susp?`<span class="lc-flag">${p.inj?'פצוע':'מורחק'}</span>`:''}</span>`
+ // rows spread evenly from the attack (layout y 23) to the keeper (y 91)
+ const [X0,Y]=pitchProject(clamp((o.x-50)/50*1.15,-1,1),.1+.85*clamp((o.y-23)/68,0,1));const X=clamp(X0,9,91);const fit=p?clamp(Math.round(p.fit??100),0,100):0;const hue=Math.round(fit*1.2);
+ const body=p?`<span class="lc-card"><span class="lc-top"><bdi class="lc-ovr">${p.ovr}</bdi><span class="lc-pos ${p.pos}">${POSB[p.pos]}</span>${isCaptain(c,p)?'<span class="lc-cap">C</span>':''}</span><span class="lc-face">${playerPortraitHTML(p,c,'lc'+i)}</span><span class="lc-name" style="--c1:${c.c1};--ink:${inkFor(c.c1)}">${esc(p.last||p.first)}</span><i class="lc-en" title="כושר ${fit}%"><u style="width:${fit}%;background:hsl(${hue} 80% 48%)"></u></i>${p.inj||p.susp?`<span class="lc-flag">${p.inj?'פצוע':'מורחק'}</span>`:''}</span>`
   :`<span class="lc-card lc-empty"><span class="cine-empty">+</span><span class="lc-name">${POSHE[slot]}</span></span>`;
  return `<button type="button" class="${cls.join(' ')}" style="left:${X.toFixed(2)}%;top:${Y.toFixed(2)}%;z-index:${Math.round(Y)}" data-slot="${i}" aria-pressed="${!!o.sel}" aria-label="${p?esc(fullName(p))+', '+POSHE[p.pos]+', דירוג '+p.ovr+', כושר '+fit+'%':'מקום ריק, '+POSHE[slot]}">${body}</button>`}
-function stadiumFieldHTML(c,slots,lay,ps,selSlot){return `<section class="stad" aria-label="מגרש בחירת הרכב"><div class="stad-pitch arena"><picture class="arena-bg"><source srcset="lineup-arena.webp" type="image/webp"><img src="lineup-arena.jpg" width="900" height="1998" alt="" decoding="async"></picture><header class="cine-header broadcast"><div class="cine-title"><span class="cine-kit">${kitSVG(c,'lg')}</span><h2>${esc(c.name)}</h2></div><p>${esc(c.stadium||'אצטדיון הבית')} · ${esc(c.formation||'4-3-3')}</p><div class="cine-tools"><label><span class="hide">מערך</span><select id="formSel" aria-label="מערך">${Object.keys(FORMATIONS).map(f=>`<option ${f===c.formation?'selected':''}>${f}</option>`).join('')}</select></label><button type="button" id="cineTacticsBtn">טקטיקה ⚙</button></div></header>${slots.map((sl,i)=>token3dHTML(c,ps[i],sl,i,{x:lay[i].x,y:lay[i].y,sel:selSlot===i})).join('')}</div></section>`}
+/* the opponent's probable XI (what the AI would field today) on a board over the stands; their goalkeeper at the top */
+function oppBoardHTML(opp,nm){if(!opp)return '';const f=opp.formation||'4-3-3';const xi=bestXI(opp,f);const lay=slotLayout(f);const slots=slotsFor(f);
+  const toks=xi.map((p,i)=>{const l=lay[i]||{x:50,y:50};const x=clamp(50+(l.x-50)*1.1,8,92),y=20+(100-l.y)/100*72;return `<span class="ot" style="left:${x.toFixed(1)}%;top:${y.toFixed(1)}%"><span class="ot-face">${playerPortraitHTML(p,opp,'ot'+i)}</span><span class="ot-name" style="--c1:${opp.c1};--ink:${inkFor(opp.c1)}"><bdi>${p.ovr}</bdi> ${esc(p.last||p.first)}</span></span>`}).join('');
+  const venue=nm?(nm.neutral?'מגרש ניטרלי':nm.h.id===G.me?'בית':'חוץ'):'';
+  return `<div class="opp-board" aria-label="ההרכב המשוער של היריבה"><div class="opp-head"><span class="opp-kit">${kitSVG(opp,'sm').replace(/id="kg"/,'id="kgopp"').replace(/url\(#kg\)/g,'url(#kgopp)')}</span><b>${esc(opp.name)}</b><span class="muted">היריבה · ${esc(f)} · הרכב משוער${venue?' · '+venue:''}${nm&&nm.label?' · '+esc(nm.label):''}</span></div>${toks}</div>`}
+function stadiumFieldHTML(c,slots,lay,ps,selSlot){const nm=(()=>{try{return myNextMatch()}catch(e){return null}})();const opp=nm&&nm.a?(nm.h.id===G.me?nm.a:nm.h):null;
+  return `<section class="stad" aria-label="מגרש בחירת הרכב"><div class="stad-pitch arena${opp?' with-opp':''}"><picture class="arena-bg"><source srcset="lineup-arena.webp" type="image/webp"><img src="lineup-arena.jpg" width="900" height="1998" alt="" decoding="async"></picture><header class="cine-header broadcast"><div class="cine-title"><span class="cine-kit">${kitSVG(c,'lg')}</span><div><h2>${esc(c.name)}</h2><p>ההרכב שלי · ${esc(c.formation||'4-3-3')} · ${esc(c.stadium||'אצטדיון הבית')}</p></div></div><div class="cine-tools"><label><span class="hide">מערך</span><select id="formSel" aria-label="מערך">${Object.keys(FORMATIONS).map(f=>`<option ${f===c.formation?'selected':''}>${f}</option>`).join('')}</select></label><button type="button" id="cineTacticsBtn">טקטיקה ⚙</button></div></header>${oppBoardHTML(opp,nm)}${slots.map((sl,i)=>token3dHTML(c,ps[i],sl,i,{x:lay[i].x,y:lay[i].y,sel:selSlot===i})).join('')}</div></section>`}
 function formationPortraitHTML(c,p,key){return `<span class="formation-face"><svg viewBox="0 0 240 280" aria-hidden="true">${portraitGroup(p,c,'formation'+key,{bg:false,h:280})}</svg></span>`}
 let lineupSel=null;
 function pitchLines(){return `<svg class="lines" viewBox="0 0 100 133" preserveAspectRatio="none"><g fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".7"><rect x="3" y="3" width="94" height="127" rx="1"/><line x1="3" y1="66.5" x2="97" y2="66.5"/><circle cx="50" cy="66.5" r="10"/><circle cx="50" cy="66.5" r=".9" fill="rgba(255,255,255,.6)"/><rect x="22" y="3" width="56" height="20"/><rect x="36" y="3" width="28" height="7"/><rect x="22" y="110" width="56" height="20"/><rect x="36" y="123" width="28" height="7"/><path d="M38 23 a12 12 0 0 0 24 0"/><path d="M38 110 a12 12 0 0 1 24 0"/></g></svg>`}

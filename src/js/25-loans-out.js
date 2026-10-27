@@ -17,7 +17,7 @@ function doLoanOut(pid,o){const c=me();const p=c.players.find(x=>x.id===pid);if(
   p.loanOut={from:G.me,to:o.c.id,toName:o.c.short||o.c.name,until:G.season,share:o.share,role:o.role,ovr0:p.ovr,apps0:p.apps||0,goals0:p.goals||0,inj0:p.injSeqSeen||0,wk:G.wk};
   o.c.players.push(p);if(o.fee){c.money+=o.fee;addLog(`דמי השאלה: ${fullName(p)} ל${o.c.short||o.c.name}`,o.fee)}
   G.loansOut=G.loansOut||[];G.loansOut.push({pid:p.id,to:o.c.id});
-  news(`${fullName(p)} יצא בהשאלה ל${o.c.name} עד סוף העונה (${LOAN_ROLE_HE[o.role]}).`);paper('העברות',`${fullName(p)} בהשאלה ל${o.c.name}`,`עד סוף עונת ${seasonLabel()}`,`${me().name} השאילה את ${fullName(p)} (${POSHE[p.pos]}, ${p.age}) ל${o.c.name}. המטרה: דקות משחק והתפתחות.`,G.me,{type:'loanOut',pid:p.id,player:fullName(p),pos:p.pos,age:p.age,club:me().name,clubId:G.me,to:o.c.name,toId:o.c.id,until:seasonLabel()});
+  news(`${fullName(p)} יצא בהשאלה ל${o.c.name} עד סוף העונה (${LOAN_ROLE_HE[o.role]}).`);paper('העברות',`${fullName(p)} בהשאלה ל${o.c.name}`,`עד סוף עונת ${seasonLabel()}`,`${me().name} השאילה את ${fullName(p)} (${POSHE[p.pos]}, ${p.age}) ל${o.c.name}. המטרה: דקות משחק והתפתחות.`,G.me,{type:'loanOut',pid:p.id,vid:playerVisualId(p)||null,player:fullName(p),pos:p.pos,age:p.age,club:me().name,clubId:G.me,to:o.c.name,toId:o.c.id,until:seasonLabel()});
   autoLineups();save();render()}
 function loanedOut(){return (G.loansOut||[]).map(l=>{const c=club(l.to);const p=c&&c.players.find(x=>x.id===l.pid);return p?{p,c}:null}).filter(Boolean)}
 function loansOutWeekly(){const mine=me();if(!G.loansOut||!G.loansOut.length)return;let cost=0;
