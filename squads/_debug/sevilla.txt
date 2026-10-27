@@ -1,0 +1,78 @@
+== History
+=== First successes
+=== Crisis and stability
+=== Successes in the 21st century
+=== Unai Emery era
+=== Post-Emery era
+== Board and finances
+=== Ownership
+== Symbols
+=== Crest
+=== Flag
+=== Kit
+=== Media
+== Players
+=== Current squad
+=== Reserve squad
+=== Out on loan
+== Current technical staff
+== Former coaches
+== Presidents
+== Facilities
+=== Training facilities
+== League record
+== European competitions record
+=== UEFA club coefficient ranking
+== Honours
+=== Friendly tournament
+=== Other awards, records, and recognitions
+=== Individual trophies
+== Team records
+=== General information
+=== Most goals scored in a league match
+=== Most goals conceded in a league match
+=== Statistics in UEFA competitions
+== Player records
+== Affiliated teams
+== Support
+=== Fan clubs
+=== Ultras
+=== Rivalries
+== References
+== External links
+
+TEMPLATES 34
+{{Fs player|no=1|nat=GRE|pos=GK|name=[[Odysseas Vlachodimos]]|other=on loan from [[Newcastle United F.C.|Newcastle]]}}
+{{Fs player|no=2|nat=ESP|pos=DF|name=[[Juan Iglesias]]}}
+{{Fs player|no=3|nat=ESP|pos=DF|name=[[Julio Díaz (footballer, born 2005)|Julio Díaz]]}}
+{{Fs player|no=4|nat=ESP|pos=DF|name=[[Kike Salas]]|other=[[Vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=5|nat=ESP|pos=DF|name=[[Andrés Castrín]]}}
+{{Fs player|no=6|nat=FRA|pos=MF|name=[[Lucien Agoumé]]|other=[[Vice-captain (association football)|3rd captain]]}}
+{{Fs player|no=7|nat=ESP|pos=FW|name=[[Alfon González]]}}
+{{Fs player|no=8|nat=GEO|pos=MF|name=[[Giorgi Kochorashvili]]}}
+{{Fs player|no=9|nat=SCO|pos=FW|name=[[Robbie Ure]]}}
+{{Fs player|no=10|nat=ESP|pos=MF|name=[[Peque Fernández]]}}
+{{Fs player|no=11|nat=SUI|pos=FW|name=[[Rubén Vargas]]}}
+{{Fs player|no=12|nat=SEN|pos=DF|name=[[Arouna Sangante]]}}
+{{Fs player|no=13|nat=ESP|pos=GK|name=[[Fran González (footballer, born 2005)|Fran González]]}}
+{{Fs player|no=14|nat=ESP|pos=MF|name=[[Manu Bueno]]}}
+{{Fs player|no=15|nat=POR|pos=DF|name=[[Fábio Cardoso]]}}
+{{Fs player|no=16|nat=ESP|pos=FW|name=[[Isaac Romero]]}}
+{{Fs player|no=17|nat=CHI|pos=DF|name=[[Gabriel Suazo]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=18|nat=ESP|pos=MF|name=[[Jon Guridi]]}}
+{{Fs player|no=19|nat=BEL|pos=FW|name=[[Lucas Stassin]]|other=on loan from [[AS Saint-Étienne|Saint-Étienne]]}}
+{{Fs player|no=20|nat=POR|pos=FW|name=[[Félix Correia]]|other=on loan from [[Lille OSC|Lille]]}}
+{{Fs player|no=21|nat=NGA|pos=FW|name=[[Chidera Ejuke]]}}
+{{Fs player|no=22|nat=ESP|pos=DF|name=[[José Ángel Carmona]]}}
+{{Fs player|no=23|nat=BRA|pos=DF|name=[[Marcão (footballer, born 1996)|Marcão]]|other=[[Vice-captain (association football)|4th captain]]}}
+{{Fs player|no=24|nat=FRA|pos=MF|name=[[Youssouf Fofana (footballer, born 1999)|Youssouf Fofana]]|other=on loan from [[AC Milan|Milan]]}}
+{{Fs player|no=30|nat=ESP|pos=FW|name=[[Miguel Sierra (footballer)|Miguel Sierra]]}}
+{{Fs player|no=33|nat=ESP|pos=GK|name=[[Rafael Romero Morilla|Rafa Romero]]}}
+{{Fs player|no=26|nat=ESP|pos=FW|name=[[Manuel Ángel Castillo|Manuel Ángel]]}}
+{{Fs player|no=27|nat=ESP|pos=MF|name=[[Nico Guillén]]}}
+{{Fs player|no=29|nat=ESP|pos=MF|name=[[Jesús Cruz Morales|Jesús Cruz]]}}
+{{Fs player|no=34|nat=ESP|pos=DF|name=[[Iker Ortín Muñoz|Iker Muñoz]]}}
+{{Fs player|no=37|nat=SEN|pos=FW|name=[[Ibrahima Sow|Ibra Sow]]}}
+{{Fs player|no=39|nat=ESP|pos=MF|name=[[Eduardo Altozano Agudo|Edu Altozano]]}}
+{{Fs player|no=|nat=ESP|pos=DF|name=[[Adrià Pedrosa]]|other=at [[Rayo Vallecano]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|pos=FW|name=[[Rafa Mir]]|other=at [[Aris Thessaloniki F.C.|Aris]] until 30 June 2027}}

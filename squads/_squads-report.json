@@ -3,64 +3,32 @@
   "key": "newcastle",
   "ok": true,
   "n": 26,
-  "qid": 0,
-  "he": 0,
-  "img": 0
+  "qid": 25,
+  "he": 24,
+  "img": 21
  },
  {
   "key": "sevilla",
   "ok": true,
   "n": 22,
-  "qid": 0,
-  "he": 0,
-  "img": 0
- },
- {
-  "key": "hjk",
-  "ok": true,
-  "n": 30,
-  "qid": 0,
-  "he": 0,
-  "img": 0
- },
- {
-  "key": "fcsb",
-  "ok": true,
-  "n": 29,
-  "qid": 0,
-  "he": 0,
-  "img": 0
- },
- {
-  "key": "hajduk",
-  "ok": true,
-  "n": 30,
-  "qid": 0,
-  "he": 0,
-  "img": 0
+  "qid": 19,
+  "he": 14,
+  "img": 7
  },
  {
   "key": "al_ahly",
   "ok": true,
   "n": 30,
-  "qid": 0,
-  "he": 0,
-  "img": 0
+  "qid": 28,
+  "he": 5,
+  "img": 17
  },
  {
   "key": "flamengo",
   "ok": true,
   "n": 27,
-  "qid": 0,
-  "he": 0,
-  "img": 0
- },
- {
-  "key": "inter_miami",
-  "ok": true,
-  "n": 28,
-  "qid": 0,
-  "he": 0,
-  "img": 0
+  "qid": 26,
+  "he": 17,
+  "img": 21
  }
 ]

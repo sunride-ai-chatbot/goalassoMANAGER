@@ -1,0 +1,76 @@
+== History
+=== 1881–1903: Formation and early history
+=== 1903–1937: First glory years and war years
+=== 1937–1969: Post-war success
+=== 1969–1992: Bouncing between divisions
+=== 1993–2007: Into the Premier League
+=== 2007–2021: Mike Ashley era
+=== 2021–present: PIF era
+== Club identity
+=== Kit suppliers and shirt sponsors
+== Stadium
+== Ownership
+=== Saudi-led takeover
+== Social responsibility
+== Supporters and rivalries
+== Records
+== Players
+=== Out on loan
+=== Under-21s and Academy
+=== Notable players
+=== Player of the Year
+== Staff
+=== Executive leadership
+=== Football leadership
+=== Department heads
+=== Recruitment staff
+=== First team staff
+=== Under-21s and Academy staff
+== Honours
+=== Domestic
+=== European
+== References
+== External links
+
+TEMPLATES 41
+{{Fs player|no=1|nat=ENG|pos=GK|name=[[Nick Pope (footballer)|Nick Pope]]}}
+{{Fs player|no=2|nat=ENG|pos=DF|name=[[Tino Livramento]]}}
+{{Fs player|no=3|nat=ENG|pos=DF|name=[[Lewis Hall (footballer)|Lewis Hall]]}}
+{{Fs player|no=4|nat=NED|pos=DF|name=[[Sven Botman]]}}
+{{Fs player|no=5|nat=SUI|pos=DF|name=[[Fabian Schär]]}}
+{{Fs player|no=6|nat=ESP|pos=MF|name=[[Nico González (footballer, born 2002)|Nico González]]}}
+{{Fs player|no=7|nat=BRA|pos=FW|name=[[Joelinton]]|other=[[Captain (association football)|vice-captain]]}}
+{{Fs player|no=8|nat=FRA|pos=MF|name=[[Aladji Bamba]]}}
+{{Fs player|no=9|nat=COD|pos=FW|name=[[Yoane Wissa]]}}
+{{Fs player|no=10|nat=DEN|pos=FW|name=[[William Osula]]}}
+{{Fs player|no=11|nat=ENG|pos=FW|name=[[Harvey Barnes]]}}
+{{Fs player|no=12|nat=GER|pos=DF|name=[[Malick Thiaw]]|other=[[Captain (association football)|vice-captain]]}}
+{{Fs player|no=14|nat=NED|pos=MF|name=[[Sean Steur]]}}
+{{Fs player|no=17|nat=CIV|pos=FW|name=[[Bazoumana Touré]]}}
+{{Fs player|no=19|nat=SWE|pos=FW|name=[[Anthony Elanga]]}}
+{{Fs player|no=20|nat=BEL|pos=FW|name=[[Matias Fernandez-Pardo]]}}
+{{Fs player|no=21|nat=CZE|pos=GK|name=[[Lukáš Horníček]]}}
+{{Fs player|no=23|nat=ENG|pos=MF|name=[[Jacob Murphy]]}}
+{{Fs player|no=24|nat=FRA|pos=GK|name=[[Ewen Jaouen]]}}
+{{Fs player|no=28|nat=ENG|pos=MF|name=[[Joe Willock]]}}
+{{Fs player|no=29|nat=ENG|pos=GK|name=[[Mark Gillespie (footballer)|Mark Gillespie]]}}
+{{Fs player|no=31|nat=ENG|pos=GK|name=Aidan Harris}}
+{{Fs player|no=33|nat=ENG|pos=DF|name=[[Dan Burn]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=37|nat=BIH|pos=DF|name=[[Amar Dedić]]}}
+{{Fs player|no=41|nat=ENG|pos=MF|name=[[Jacob Ramsey]]}}
+{{Fs player|no=67|nat=ENG|pos=MF|name=[[Lewis Miley]]}}
+{{Fs player|no=27|nat=GER|pos=FW|name=[[Nick Woltemade]]|other=at [[Juventus FC|Juventus]] until 30 June 2027}}
+{{Fs player|no=30|nat=SCO|pos=DF|name=[[Harrison Ashby]]|other=at [[Luton Town F.C.|Luton Town]] until 30 June 2027}}
+{{fs player|no=62|nat=ENG|pos=FW|name=[[Sean Neave]]|other=at [[Wolverhampton Wanderers F.C.|Wolverhampton Wanderers]] until 30 June 2027}}
+{{Fs player|no=|nat=GRE|pos=GK|name=[[Odysseas Vlachodimos]]|other=at [[Sevilla FC|Sevilla]] until 30 June 2027}}
+{{Fs player|no=|nat=IRL|pos=DF|name=[[Alex Murphy (footballer)|Alex Murphy]]|other=at [[1. FC Kaiserslautern|FC Kaiserslautern]] until 30 June 2027}}
+{{Fs player|no=|nat=ESP|pos=MF|name=[[Antonio Cordero]]|other=at [[Cádiz CF|Cádiz]] until 30 June 2027}}
+{{fs player|no=44|nat=ENG|pos=FW|name=Kyran Thompson}}
+{{fs player|no=47|nat=KOR|pos=MF|name=[[Park Seung-soo]]}}
+{{fs player|no=48|nat=SRB|pos=DF|name=[[Miodrag Pivaš]]}}
+{{fs player|no=49|nat=GEO|pos=FW|name=[[Vakhtang Salia]]}}
+{{fs player|no=50|nat=ENG|pos=MF|name=[[Trevan Sanusi]]}}
+{{fs player|no=51|nat=ENG|pos=DF|name=[[Leo Shahar]]}}
+{{fs player|no=70|nat=ENG|pos=MF|name=[[Sam Alabi]]}}
+{{fs player|no=76|nat=ENG|pos=MF|name=Mason Miley}}
+{{fs player|no=77|nat=ENG|pos=FW|name=Michael Mills}}
