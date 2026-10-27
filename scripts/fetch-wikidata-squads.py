@@ -1,128 +1,164 @@
 #!/usr/bin/env python3
-"""Pull real current squads from Wikidata for the clubs that still have invented players (runs in GitHub Actions).
+"""Pull real current squads from Wikipedia + Wikidata for the clubs that still have invented players (GitHub Actions).
 
-For every club in data/config/world-clubs-wiki.json (world leagues and the Israeli second tier):
-  1. resolve the club item from its English Wikipedia title
-  2. SPARQL: association football players (P106=Q937857) with a "member of sports team" (P54) statement for the
-     club that has no end time (or an end time in the future), plus their English/Hebrew labels, date of birth,
-     position (P413), citizenship (P27) and Commons image (P18)
+For every club in data/config/world-clubs-wiki.json:
+  1. read the club's English Wikipedia article and parse the maintained "current squad" templates
+     ({{Fs player|no=|nat=|pos=|name=[[...]]}} and the football squad variants) in the first-team sections only
+     (sections about loans, reserves, youth, academy, women, staff or former players are skipped)
+  2. resolve every linked player on Wikidata (one batch request per 50 titles): item id, Hebrew label, date of
+     birth, Commons image (P18) and the number of Wikipedia articles (fame proxy)
   3. write data/euro/<key>.json in the schema the game already reads ({key, name_he, players:[{he,en,pos,age,
-     nat,value_m,qid}]}). The Hebrew name is the Hebrew Wikidata label when there is one, otherwise the Latin name
-     (the game isolates Latin text with <bdi>). Nobody is invented: a club with fewer than 14 identified players is
-     reported and left on its generated squad.
-Market values are not on Wikidata, so value_m is an estimate from the club's strength, the player's age and position
-(the game normalises a real squad's ratings to the club's strength anyway: only the spread inside the squad matters).
+     nat,value_m,qid,no}]}). The Hebrew name is the Hebrew Wikidata label when there is one, otherwise the Latin
+     name (the game isolates Latin text with <bdi>). Nobody is invented: a club with fewer than 14 parsed players
+     is reported and keeps its generated squad.
+Market values are not public data here, so value_m is an estimate from the club's strength, the player's age,
+position and fame (the game normalises a real squad's ratings to the club's strength: only the spread matters).
 The `qid` lets scripts/fetch-commons-portraits.py identify the exact person (no name matching).
 
 Usage: python3 scripts/fetch-wikidata-squads.py --group world --out data/euro [--only key1,key2]
-Standard library only; one SPARQL request per club with a User-Agent, sequential, per Wikimedia policy.
+Standard library only; sequential requests with a User-Agent, per Wikimedia policy.
 """
-import argparse, hashlib, json, os, re, sys, time, urllib.parse, urllib.request
+import argparse, hashlib, html, json, os, re, sys, time, urllib.parse, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-UA = 'GOALASSO-squad-fetch/1.0 (https://github.com/sunride-ai-chatbot/goalassoMANAGER; football management game)'
+UA = 'GOALASSO-squad-fetch/2.0 (https://github.com/sunride-ai-chatbot/goalassoMANAGER; football management game)'
 SEASON_YEAR = 2026
-SPARQL = 'https://query.wikidata.org/sparql'
-API = 'https://www.wikidata.org/w/api.php'
+WP_API = 'https://en.wikipedia.org/w/api.php'
+WD_API = 'https://www.wikidata.org/w/api.php'
 
-NAT_FIX = {'Kingdom of the Netherlands': 'Netherlands', 'Kingdom of Denmark': 'Denmark', 'United Kingdom': 'England', "People's Republic of China": 'China',
-           'Republic of Ireland': 'Ireland', 'Democratic Republic of the Congo': 'DR Congo', 'Republic of the Congo': 'Congo', 'United States of America': 'United States'}
-POS_MAP = [
-    (('goalkeeper',), 'GK'),
-    (('defender', 'centre-back', 'center-back', 'full-back', 'left-back', 'right-back', 'wing-back', 'sweeper', 'libero'), 'DF'),
-    (('midfielder', 'defensive midfielder', 'attacking midfielder', 'central midfielder', 'playmaker'), 'MF'),
-    (('forward', 'striker', 'winger', 'centre forward', 'attacker', 'second striker'), 'FW'),
-]
+# FIFA / IOC style codes used by the squad templates → country names as the game's data already spells them
+NAT = {'ENG': 'England', 'SCO': 'Scotland', 'WAL': 'Wales', 'NIR': 'Northern Ireland', 'IRL': 'Ireland', 'ESP': 'Spain', 'POR': 'Portugal',
+       'FRA': 'France', 'GER': 'Germany', 'ITA': 'Italy', 'NED': 'Netherlands', 'BEL': 'Belgium', 'SUI': 'Switzerland', 'AUT': 'Austria',
+       'DEN': 'Denmark', 'SWE': 'Sweden', 'NOR': 'Norway', 'FIN': 'Finland', 'ISL': 'Iceland', 'POL': 'Poland', 'CZE': 'Czech Republic',
+       'SVK': 'Slovakia', 'HUN': 'Hungary', 'ROU': 'Romania', 'BUL': 'Bulgaria', 'GRE': 'Greece', 'TUR': 'Turkey', 'CRO': 'Croatia',
+       'SRB': 'Serbia', 'BIH': 'Bosnia-Herzegovina', 'SVN': 'Slovenia', 'MKD': 'North Macedonia', 'MNE': 'Montenegro', 'ALB': 'Albania',
+       'KOS': 'Kosovo', 'UKR': 'Ukraine', 'RUS': 'Russia', 'BLR': 'Belarus', 'LTU': 'Lithuania', 'LVA': 'Latvia', 'EST': 'Estonia',
+       'GEO': 'Georgia', 'ARM': 'Armenia', 'AZE': 'Azerbaijan', 'ISR': 'Israel', 'CYP': 'Cyprus', 'MLT': 'Malta', 'LUX': 'Luxembourg',
+       'BRA': 'Brazil', 'ARG': 'Argentina', 'URU': 'Uruguay', 'COL': 'Colombia', 'CHI': 'Chile', 'PER': 'Peru', 'ECU': 'Ecuador',
+       'PAR': 'Paraguay', 'BOL': 'Bolivia', 'VEN': 'Venezuela', 'MEX': 'Mexico', 'USA': 'United States', 'CAN': 'Canada', 'CRC': 'Costa Rica',
+       'PAN': 'Panama', 'HON': 'Honduras', 'GUA': 'Guatemala', 'SLV': 'El Salvador', 'JAM': 'Jamaica', 'TRI': 'Trinidad and Tobago',
+       'HAI': 'Haiti', 'DOM': 'Dominican Republic', 'CUB': 'Cuba', 'MAR': 'Morocco', 'ALG': 'Algeria', 'TUN': 'Tunisia', 'EGY': 'Egypt',
+       'LBY': 'Libya', 'SEN': 'Senegal', 'CIV': "Côte d'Ivoire", 'GHA': 'Ghana', 'NGA': 'Nigeria', 'CMR': 'Cameroon', 'MLI': 'Mali',
+       'BFA': 'Burkina Faso', 'GUI': 'Guinea', 'GNB': 'Guinea-Bissau', 'CPV': 'Cape Verde', 'GAB': 'Gabon', 'CGO': 'Congo', 'COD': 'DR Congo',
+       'ANG': 'Angola', 'ZAM': 'Zambia', 'ZIM': 'Zimbabwe', 'RSA': 'South Africa', 'MOZ': 'Mozambique', 'TAN': 'Tanzania', 'KEN': 'Kenya',
+       'UGA': 'Uganda', 'ETH': 'Ethiopia', 'SUD': 'Sudan', 'BEN': 'Benin', 'TOG': 'Togo', 'NIG': 'Niger', 'GAM': 'Gambia', 'SLE': 'Sierra Leone',
+       'LBR': 'Liberia', 'MTN': 'Mauritania', 'MAD': 'Madagascar', 'COM': 'Comoros', 'BDI': 'Burundi', 'RWA': 'Rwanda', 'EQG': 'Equatorial Guinea',
+       'CTA': 'Central African Republic', 'CHA': 'Chad', 'NAM': 'Namibia', 'BOT': 'Botswana', 'MWI': 'Malawi', 'ESW': 'Eswatini', 'LES': 'Lesotho',
+       'JPN': 'Japan', 'KOR': 'South Korea', 'CHN': 'China', 'AUS': 'Australia', 'NZL': 'New Zealand', 'IRN': 'Iran', 'IRQ': 'Iraq', 'KSA': 'Saudi Arabia',
+       'UAE': 'United Arab Emirates', 'QAT': 'Qatar', 'JOR': 'Jordan', 'SYR': 'Syria', 'LBN': 'Lebanon', 'UZB': 'Uzbekistan', 'KAZ': 'Kazakhstan',
+       'IND': 'India', 'THA': 'Thailand', 'VIE': 'Vietnam', 'IDN': 'Indonesia', 'PHI': 'Philippines', 'MAS': 'Malaysia', 'PRK': 'North Korea',
+       'CUW': 'Curaçao', 'SUR': 'Suriname', 'GUY': 'Guyana', 'PUR': 'Puerto Rico', 'MTQ': 'Martinique', 'GLP': 'Guadeloupe', 'GUF': 'French Guiana',
+       'FRO': 'Faroe Islands', 'AND': 'Andorra', 'LIE': 'Liechtenstein', 'MDA': 'Moldova', 'GIB': 'Gibraltar', 'SMR': 'San Marino', 'TJK': 'Tajikistan',
+       'KGZ': 'Kyrgyzstan', 'TKM': 'Turkmenistan', 'PLE': 'Palestine', 'BHR': 'Bahrain', 'OMA': 'Oman', 'KUW': 'Kuwait', 'YEM': 'Yemen'}
+POS = {'GK': 'GK', 'DF': 'DF', 'MF': 'MF', 'FW': 'FW', 'G': 'GK', 'D': 'DF', 'M': 'MF', 'F': 'FW'}
+SKIP_HEAD = re.compile(r'loan|reserve|youth|academy|women|staff|former|notable|\bb\s*team|under[- ]?\d|u-?\d|retired|captain|coach|manage|board|honour|kit|stadium|record|rival|support', re.I)
 
 
-def get(url, params=None, accept='application/json', tries=4):
-    if params:
-        url += ('&' if '?' in url else '?') + urllib.parse.urlencode(params)
-    req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': accept})
+def get(url, params, tries=4):
+    url += '?' + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/json'})
     for i in range(tries):
         try:
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=90) as r:
                 return json.loads(r.read().decode('utf8'))
-        except Exception as e:  # noqa: BLE001 - retry on any transport error, then give up
+        except Exception:  # noqa: BLE001
             if i == tries - 1:
                 raise
             time.sleep(3 * (i + 1))
 
 
-def club_qid(title):
-    d = get(API, {'action': 'wbgetentities', 'sites': 'enwiki', 'titles': title, 'props': 'info', 'format': 'json', 'normalize': 1})
-    ents = d.get('entities', {})
-    for q in ents:
-        if q.startswith('Q'):
-            return q
-    return None
+def wikitext(title):
+    d = get(WP_API, {'action': 'parse', 'page': title, 'prop': 'wikitext', 'redirects': 1, 'format': 'json', 'formatversion': 2})
+    return d['parse']['wikitext'], d['parse']['title']
 
 
-QUERY = '''
-SELECT ?p ?pLabel ?heLabel ?dob ?posLabel ?natLabel ?img ?start ?latest ?sl WHERE {
-  ?p wdt:P106 wd:Q937857 ; wdt:P21 wd:Q6581097 ; wikibase:sitelinks ?sl .
-  ?p p:P54 ?m . ?m ps:P54 wd:%s .
-  OPTIONAL { ?m pq:P582 ?end . }
-  OPTIONAL { ?m pq:P580 ?start . }
-  FILTER(!BOUND(?end) || ?end >= "%d-07-01T00:00:00Z"^^xsd:dateTime)
-  OPTIONAL { SELECT ?p (MAX(?s2) AS ?latest) WHERE { ?p p:P54 ?m2 . ?m2 pq:P580 ?s2 . } GROUP BY ?p }
-  OPTIONAL { ?p wdt:P569 ?dob . }
-  OPTIONAL { ?p wdt:P413 ?pos . ?pos rdfs:label ?posLabel FILTER(LANG(?posLabel)="en") }
-  OPTIONAL { ?p wdt:P27 ?nat . ?nat rdfs:label ?natLabel FILTER(LANG(?natLabel)="en") }
-  OPTIONAL { ?p wdt:P18 ?img . }
-  OPTIONAL { ?p rdfs:label ?heLabel FILTER(LANG(?heLabel)="he") }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-}'''
+FS = re.compile(r'\{\{\s*(?:fs player|fs player2|football squad player|football squad player2|fs2 player)\s*\|(.*?)\}\}', re.I | re.S)
+LINK = re.compile(r'\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]')
 
 
-def squad(qid):
-    d = get(SPARQL, {'query': QUERY % (qid, SEASON_YEAR), 'format': 'json'}, accept='application/sparql-results+json')
-    rows = {}
-    for b in d['results']['bindings']:
-        pid = b['p']['value'].rsplit('/', 1)[1]
-        r = rows.setdefault(pid, {'qid': pid, 'en': b.get('pLabel', {}).get('value', ''), 'he': None, 'dob': None, 'pos': set(), 'nat': set(), 'img': None, 'start': None, 'latest': None, 'sl': int(b.get('sl', {}).get('value', '0') or 0)})
-        if 'heLabel' in b:
-            r['he'] = b['heLabel']['value']
-        if 'dob' in b and not r['dob']:
-            r['dob'] = b['dob']['value'][:10]
-        if 'posLabel' in b:
-            r['pos'].add(b['posLabel']['value'].lower())
-        if 'natLabel' in b:
-            r['nat'].add(b['natLabel']['value'])
-        if 'img' in b and not r['img']:
-            r['img'] = b['img']['value']
-        if 'start' in b and (not r['start'] or b['start']['value'] > r['start']):
-            r['start'] = b['start']['value'][:10]
-        if 'latest' in b:
-            r['latest'] = b['latest']['value'][:10]
-    return list(rows.values())
+def parse_squad(text):
+    """Players from the first-team squad sections, in article order, with number / nat / pos / name / title."""
+    out, seen = [], set()
+    parts = re.split(r'\n(={2,4})\s*(.*?)\s*\1\s*\n', '\n' + text)
+    sections = [(parts[i + 1], parts[i + 2]) for i in range(1, len(parts) - 2, 3)]   # the lead never holds a squad
+    for head, body in sections:
+        if SKIP_HEAD.search(head):
+            continue
+        if not re.search(r'squad|players|roster|team', head, re.I) and not FS.search(body):
+            continue
+        for m in FS.finditer(body):
+            f = {}
+            for part in re.split(r'\|(?=\s*\w+\s*=)', m.group(1)):
+                if '=' in part:
+                    k, v = part.split('=', 1)
+                    f[k.strip().lower()] = v.strip()
+            name = f.get('name', '')
+            lm = LINK.search(name)
+            title = lm.group(1).strip() if lm else None
+            disp = (lm.group(2) or lm.group(1)).strip() if lm else re.sub(r'<[^>]+>|\{\{[^}]*\}\}', '', name).strip()
+            disp = html.unescape(re.sub(r"''+", '', disp))
+            if not disp or disp in seen:
+                continue
+            seen.add(disp)
+            out.append({'no': f.get('no', '').strip() or None, 'pos': POS.get(f.get('pos', '').strip().upper()), 'nat': NAT.get(f.get('nat', '').strip().upper()),
+                        'en': disp, 'title': title, 'loan': bool(re.search(r'loan', f.get('other', ''), re.I))})
+    return out
 
 
-def map_pos(labels):
-    text = ' '.join(sorted(labels))
-    for words, code in POS_MAP:
-        if any(w in text for w in words):
-            return code
-    return None
+def wd_lookup(titles):
+    """enwiki title → {qid, he, dob, img, sl} (batches of 50)."""
+    res = {}
+    titles = [t for t in titles if t]
+    for i in range(0, len(titles), 50):
+        chunk = titles[i:i + 50]
+        d = get(WD_API, {'action': 'wbgetentities', 'sites': 'enwiki', 'titles': '|'.join(chunk), 'props': 'labels|claims|sitelinks', 'languages': 'he|en',
+                         'format': 'json', 'normalize': 1, 'redirects': 'yes'})
+        norm = {n['from']: n['to'] for n in d.get('normalized', [])}
+        by_title = {}
+        for q, e in d.get('entities', {}).items():
+            if not q.startswith('Q'):
+                continue
+            t = e.get('sitelinks', {}).get('enwiki', {}).get('title')
+            if t:
+                by_title[t] = (q, e)
+        for t in chunk:
+            hit = by_title.get(norm.get(t, t)) or by_title.get(t)
+            if not hit:
+                continue
+            q, e = hit
+            cl = e.get('claims', {})
+            if 'P106' in cl and not any(c.get('mainsnak', {}).get('datavalue', {}).get('value', {}).get('id') == 'Q937857' for c in cl['P106']):
+                continue   # the linked article is not a footballer (disambiguation, namesake)
+            dob = None
+            for c in cl.get('P569', []):
+                v = c.get('mainsnak', {}).get('datavalue', {}).get('value', {})
+                if v.get('time') and v.get('precision', 0) >= 9:
+                    dob = v['time'][1:11]; break
+            img = None
+            for c in cl.get('P18', []):
+                v = c.get('mainsnak', {}).get('datavalue', {}).get('value')
+                if isinstance(v, str):
+                    img = v; break
+            res[t] = {'qid': q, 'he': e.get('labels', {}).get('he', {}).get('value'), 'dob': dob, 'img': img, 'sl': len(e.get('sitelinks', {}))}
+        time.sleep(.6)
+    return res
 
 
 def age_of(dob):
-    if not dob or not re.match(r'^\d{4}-\d{2}-\d{2}$', dob):
+    if not dob or not re.match(r'^\d{4}-\d{2}-\d{2}$', dob) or dob[5:7] == '00':
         return None
     y, m = int(dob[:4]), int(dob[5:7])
     return SEASON_YEAR - y - (1 if m > 8 else 0)
 
 
 def est_value(club_str, age, pos, seed, sitelinks=0):
-    """Relative market value, millions: club tier × age curve × position × fame (Wikipedia sitelinks) × a stable per-player spread."""
-    base = 0.08 * (1.12 ** max(0, club_str - 50))          # str 60 → 0.25M, 75 → 1.4M, 88 → 6M
+    base = 0.08 * (1.12 ** max(0, club_str - 50))
     agef = {17: .35, 18: .45, 19: .6, 20: .75, 21: .9, 22: 1.0, 23: 1.1, 24: 1.2, 25: 1.25, 26: 1.25, 27: 1.2, 28: 1.1, 29: 1.0,
             30: .85, 31: .7, 32: .55, 33: .45, 34: .35, 35: .28}.get(age if age is not None else 26, .25)
     posf = {'GK': .8, 'DF': .9, 'MF': 1.0, 'FW': 1.15}.get(pos, 1.0)
     h = int(hashlib.sha1(seed.encode('utf8')).hexdigest()[:8], 16) / 0xffffffff
-    spread = 0.8 + 0.4 * h
-    fame = 0.45 + 0.55 * min(1.0, (sitelinks / 25.0) ** 0.6)   # 0 articles → 0.45×, 25+ articles → 1×
-    return round(base * agef * posf * spread * fame, 2)
+    fame = 0.45 + 0.55 * min(1.0, (sitelinks / 25.0) ** 0.6)
+    return round(base * agef * posf * (0.8 + 0.4 * h) * fame, 2)
 
 
 def club_strength(name_he):
@@ -153,39 +189,30 @@ def main():
             if only and key not in only:
                 continue
             try:
-                qid = club_qid(info['en'])
-                if not qid:
-                    report.append({'key': key, 'ok': False, 'why': 'club not found on Wikidata: ' + info['en']}); print(report[-1]); continue
-                rows = squad(qid)
+                text, title = wikitext(info['en'])
+                rows = [r for r in parse_squad(text) if not r['loan']]
+                wd = wd_lookup([r['title'] for r in rows])
                 cs = club_strength(name_he)
                 players = []
                 for r in rows:
-                    pos = map_pos(r['pos']) or 'MF'
-                    age = age_of(r['dob'])
-                    if age is None or age < 16 or age > 40 or not r['en'] or r['en'].startswith('Q'):
-                        continue
-                    # a membership without an end date is often stale: skip players whose latest dated contract is elsewhere
-                    if r['latest'] and ((r['start'] and r['latest'] > r['start']) or (not r['start'] and r['latest'] >= '%d-01-01' % (SEASON_YEAR - 2))):
-                        continue
-                    if r['start'] and int(r['start'][:4]) < SEASON_YEAR - 12:
-                        continue
-                    nat = NAT_FIX.get(sorted(r['nat'])[0], sorted(r['nat'])[0]) if r['nat'] else None
-                    players.append({'he': r['he'] or r['en'], 'en': r['en'], 'pos': pos, 'age': age, 'nat': nat,
-                                    'value_m': est_value(cs, age, pos, r['qid'], r['sl']), 'qid': r['qid'], 'img': r['img'], 'since': r['start'], 'sl': r['sl']})
-                # keep a realistic squad size: the most valuable 27 plus at least two keepers
-                players.sort(key=lambda p: (-p['value_m'], p['since'] or ''))
-                gks = [p for p in players if p['pos'] == 'GK'][:2]
-                players = gks + [p for p in players if p not in gks][:27 - len(gks)]
-                # a real squad needs at least two keepers; otherwise the club keeps its generated list
-                if len(players) < a.min or sum(1 for p in players if p['pos'] == 'GK') < 1:
-                    report.append({'key': key, 'ok': False, 'why': 'only %d identified players' % len(players), 'qid': qid}); print(report[-1]); continue
-                out = {'key': key, 'name_he': name_he, 'source': 'wikidata', 'club_qid': qid, 'fetched': time.strftime('%Y-%m-%d'),
-                       'players': players}
+                    w = wd.get(r['title']) if r['title'] else None
+                    age = age_of(w['dob']) if w else None
+                    pos = r['pos'] or 'MF'
+                    if age is None:
+                        age = 25   # real player without an article / birth date: a typical age, no portrait
+                    players.append({'he': (w and w['he']) or r['en'], 'en': r['en'], 'pos': pos, 'age': age, 'nat': r['nat'],
+                                    'value_m': est_value(cs, age, pos, (w and w['qid']) or r['en'], (w and w['sl']) or 0),
+                                    'qid': w['qid'] if w else None, 'img': w['img'] if w else None, 'no': r['no'], 'sl': (w and w['sl']) or 0})
+                if len(players) < a.min or not any(p['pos'] == 'GK' for p in players):
+                    report.append({'key': key, 'ok': False, 'why': 'only %d parsed players (%s)' % (len(players), title)}); print(report[-1]); continue
+                players.sort(key=lambda p: (p['pos'] != 'GK', -p['value_m']))
+                out = {'key': key, 'name_he': name_he, 'source': 'enwiki:' + title, 'fetched': time.strftime('%Y-%m-%d'), 'players': players[:30]}
                 with open(os.path.join(a.out, key + '.json'), 'w', encoding='utf8') as fh:
                     json.dump(out, fh, ensure_ascii=False, indent=0)
-                report.append({'key': key, 'ok': True, 'n': len(players), 'he': sum(1 for p in players if p['he'] != p['en']), 'img': sum(1 for p in players if p['img'])})
+                report.append({'key': key, 'ok': True, 'n': len(out['players']), 'qid': sum(1 for p in out['players'] if p['qid']),
+                               'he': sum(1 for p in out['players'] if p['he'] != p['en']), 'img': sum(1 for p in out['players'] if p['img'])})
                 print(report[-1])
-                time.sleep(1.2)
+                time.sleep(.8)
             except Exception as e:  # noqa: BLE001
                 report.append({'key': key, 'ok': False, 'why': 'error: %s' % e}); print(report[-1])
     with open(os.path.join(a.out, '_squads-report.json'), 'w', encoding='utf8') as fh:
