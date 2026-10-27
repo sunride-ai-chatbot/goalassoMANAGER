@@ -1,0 +1,32 @@
+== History
+== Current squad
+== International former players
+== Managers
+== Honours
+=== Cups
+== European record
+== References
+== External links
+
+TEMPLATES 21
+{{Fs player|no= 1|nat=ISR|name=Shahar Amsalem|pos=GK}}
+{{Fs player|no= 5|nat=ISR|name=Shavit Elgabi|pos=DF}}
+{{Fs player|no= 8|nat=ISR|name=Tom Berkovic|pos=MF}}
+{{Fs player|no= 9|nat=ISR|name=Yehuda Balay|pos=FW}}
+{{Fs player|no=10|nat=NGR|name=[[Ezekiel Henty]]|pos=FW}}
+{{Fs player|no=11|nat=ISR|name=[[Roey Ben Shimon]]|pos=FW}}
+{{Fs player|no=14|nat=ISR|name=Daniel Bohadana|pos=MF}}
+{{Fs player|no=15|nat=ISR|name=Liel Chane|pos=MF}}
+{{Fs player|no=17|nat=LIT|name=[[Eligijus Jankauskas]]|pos=FW}}
+{{Fs player|no=20|nat=ISR|name=[[Dolev Azulay]]|pos=DF}}
+{{Fs player|no=21|nat=ISR|name=Liam Levi|pos=DF}}
+{{Fs player|no=24|nat=ISR|name=Yosef Balata|pos=MF}}
+{{Fs player|no=27|nat=ISR|name=Hisham Taha|pos=FW}}
+{{Fs player|no=30|nat=ISR|name=Ido Davidovich|pos=MF}}
+{{Fs player|no=31|nat=ISR|name=Peleg Daudi|pos=DF}}
+{{Fs player|no=33|nat=ISR|name=Ori Tzaadon|pos=DF}}
+{{Fs player|no=35|nat=ISR|name=Roei Yaron|pos=MF}}
+{{Fs player|no=36|nat=ISR|name=[[Shay Konstantini]]|pos=DF}}
+{{Fs player|no=55|nat=ISR|name=Eliran Gomalski|pos=GK}}
+{{Fs player|no=77|nat=ISR|name=Ronen Peretz|pos=MF}}
+{{Fs player|no=99|nat=ISR|name=Haroun Shapso|pos=DF}}

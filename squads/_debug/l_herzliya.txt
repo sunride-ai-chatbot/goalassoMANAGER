@@ -1,0 +1,29 @@
+== History
+== Current squad
+== Honours
+== Notable managers
+== References
+== External links
+
+TEMPLATES 21
+{{Fs player|no= 1|nat=ISR|name=Matan Zalmanovic|pos=GK}}
+{{Fs player|no= 3|nat=ISR|name=Ido David|pos=DF}}
+{{Fs player|no= 4|nat=ISR|name=Liam Shahar|pos=DF}}
+{{Fs player|no= 5|nat=ISR|name=Alon Ginat|pos=DF}}
+{{Fs player|no= 6|nat=ISR|name=[[Shay Ayzen]]|pos=MF}}
+{{Fs player|no= 7|nat=ISR|name=Shay Balahssan|pos=MF}}
+{{Fs player|no= 8|nat=ISR|name=Amit Yeverbaum|pos=MF}}
+{{Fs player|no= 9|nat=GHA|name=[[Emmanuel Apeh]]|pos=FW}}
+{{Fs player|no=10|nat=ISR|name=[[Idan Dahan]]|pos=FW}}
+{{Fs player|no=11|nat=ISR|name=[[Sagi Genis]]|pos=FW}}
+{{Fs player|no=14|nat=ISR|name=Ali Kayal|pos=DF}}
+{{Fs player|no=15|nat=ISR|name=Idan Rabinovich|pos=MF}}
+{{Fs player|no=18|nat=ISR|name=Avi Turgeman|pos=DF}}
+{{Fs player|no=19|nat=ISR|name=Roy Hazan|pos=DF}}
+{{Fs player|no=20|nat=ISR|name=Ofek Mishan|pos=MF}}
+{{Fs player|no=22|nat=ISR|name=Shon Ben Nesher|pos=GK}}
+{{Fs player|no=23|nat=ISR|name=Mohammed Abu Fani|pos=MF}}
+{{Fs player|no=25|nat=ISR|name=Ziv Leigh|pos=DF}}
+{{Fs player|no=27|nat=BUL|name=[[Iliyan Stefanov]]|pos=MF}}
+{{Fs player|no=28|nat=ISR|name=Amit Ben Kish|pos=MF}}
+{{Fs player|no=30|nat=GAM|name=Ansumana Sanyang|pos=FW}}

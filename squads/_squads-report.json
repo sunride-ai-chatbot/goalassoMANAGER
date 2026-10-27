@@ -1,62 +1,111 @@
 [
  {
-  "key": "boavista",
-  "ok": false,
-  "why": "only 1 parsed players (Boavista F.C.)"
- },
- {
-  "key": "brann",
-  "ok": true,
-  "n": 27,
-  "qid": 25,
-  "he": 1,
-  "img": 13
- },
- {
-  "key": "yanga",
-  "ok": false,
-  "why": "only 0 parsed players (Young Africans S.C.)"
- },
- {
-  "key": "colo_colo",
-  "ok": false,
-  "why": "only 6 parsed players (Colo-Colo)"
- },
- {
-  "key": "philadelphia",
-  "ok": false,
-  "why": "only 0 parsed players (Philadelphia Union)"
- },
- {
-  "key": "nycfc",
-  "ok": true,
-  "n": 30,
-  "qid": 23,
-  "he": 6,
-  "img": 23
- },
- {
   "key": "l_ashdod",
   "ok": true,
-  "n": 30,
-  "qid": 9,
-  "he": 9,
-  "img": 3
+  "n": 23,
+  "qid": 13,
+  "he": 23,
+  "img": 4,
+  "src": "hewiki"
  },
  {
   "key": "l_bnei_yehuda",
   "ok": true,
-  "n": 23,
-  "qid": 1,
-  "he": 1,
-  "img": 0
+  "n": 30,
+  "qid": 7,
+  "he": 30,
+  "img": 1,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_rishon",
+  "ok": true,
+  "n": 21,
+  "qid": 5,
+  "he": 5,
+  "img": 2
+ },
+ {
+  "key": "l_kiryat_yam",
+  "ok": false,
+  "why": "error: 'parse'"
  },
  {
   "key": "l_afula",
   "ok": true,
+  "n": 15,
+  "qid": 0,
+  "he": 15,
+  "img": 0,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_kfar_shalem",
+  "ok": true,
   "n": 22,
-  "qid": 2,
-  "he": 1,
+  "qid": 5,
+  "he": 22,
+  "img": 1,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_raanana",
+  "ok": true,
+  "n": 25,
+  "qid": 3,
+  "he": 25,
+  "img": 1,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_kafr_qasim",
+  "ok": true,
+  "n": 22,
+  "qid": 0,
+  "he": 22,
+  "img": 0,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_reineh",
+  "ok": true,
+  "n": 24,
+  "qid": 15,
+  "he": 24,
+  "img": 6,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_modiin",
+  "ok": true,
+  "n": 25,
+  "qid": 6,
+  "he": 5,
+  "img": 3
+ },
+ {
+  "key": "l_kiryat_gat",
+  "ok": true,
+  "n": 20,
+  "qid": 5,
+  "he": 3,
+  "img": 0
+ },
+ {
+  "key": "l_ahi_nazareth",
+  "ok": true,
+  "n": 16,
+  "qid": 1,
+  "he": 16,
+  "img": 0,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_herzliya",
+  "ok": true,
+  "n": 21,
+  "qid": 5,
+  "he": 5,
   "img": 1
  },
  {
@@ -66,5 +115,23 @@
   "qid": 2,
   "he": 2,
   "img": 0
+ },
+ {
+  "key": "l_jaffa",
+  "ok": true,
+  "n": 20,
+  "qid": 1,
+  "he": 20,
+  "img": 1,
+  "src": "hewiki"
+ },
+ {
+  "key": "l_acre",
+  "ok": true,
+  "n": 18,
+  "qid": 1,
+  "he": 18,
+  "img": 0,
+  "src": "hewiki"
  }
 ]

@@ -1,0 +1,33 @@
+== History
+== Current Squad
+== Honours
+== Notable managers
+== External links
+== References
+
+TEMPLATES 25
+{{Fs player|no= 1|nat=ISR|name=[[Mikel Taytel]]|pos=GK}}
+{{Fs player|no= 2|nat=ISR|name=[[Shalev Samareli]]|pos=DF}}
+{{Fs player|no= 3|nat=ISR|name=[[Ofek Geller]]|pos=DF}}
+{{Fs player|no= 6|nat=ISR|name=[[Eli Magar]]|pos=MF}}
+{{Fs player|no= 7|nat=ISR|name=[[Guy Amsalem]]|pos=FW}}
+{{Fs player|no= 8|nat=ISR|name=[[Sean Buskila]]|pos=MF}}
+{{Fs player|no= 9|nat=SLO|name=[[Luka Štor]]|pos=FW}}
+{{Fs player|no=10|nat=ISR|name=[[Tomer Benbeinshti]]|pos=MF}}
+{{Fs player|no=11|nat=ISR|name=[[Maor Biton]]|pos=DF}}
+{{Fs player|no=14|nat=ISR|name=[[Shahar Hirsh]]|pos=FW}}
+{{Fs player|no=15|nat=ISR|name=[[Nir Lax]]|pos=MF}}
+{{Fs player|no=17|nat=ISR|name=[[Aleksander Sotaskov]]|pos=MF}}
+{{Fs player|no=18|nat=ISR|name=[[Roy Beigel]]|pos=GK}}
+{{Fs player|no=19|nat=ISR|name=[[Avihay Wodaje]]|pos=MF}}
+{{Fs player|no=20|nat=ISR|name=[[Amir Sabag]]|pos=MF}}
+{{Fs player|no=21|nat=ISR|name=[[Georgi Kopraba]]|pos=DF}}
+{{Fs player|no=22|nat=ISR|name=[[Itamar Israeli]]|pos=GK}}
+{{Fs player|no=23|nat=ISR|name=[[Yarin Machluf]]|pos=FW}}
+{{Fs player|no=24|nat=CRO|name=[[Arian Mršulja]]|pos=DF}}
+{{Fs player|no=26|nat=ISR|name=[[Adir Maya]]|pos=MF}}
+{{Fs player|no=28|nat=ISR|name=[[Oz Zigler]]|pos=DF}}
+{{Fs player|no=30|nat=ISR|name=[[Mohammed Adam Mahamid]]|pos=MF}}
+{{Fs player|no=77|nat=ISR|name=[[Omer Senior]]|pos=MF}}
+{{Fs player|no=88|nat=ISR|name=[[Idan Avitov]]|pos=DF}}
+{{Fs player|no=99|nat=ISR|name=[[Michael Ben Ami]]|pos=MF}}

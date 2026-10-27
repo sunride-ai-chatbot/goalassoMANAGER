@@ -1,0 +1,32 @@
+== History
+== Players
+=== Notable former players
+=== Notable former coaches
+== Women's section
+== Honours
+==== League
+== See also
+== External links
+== References
+
+TEMPLATES 20
+{{Fs player|no= 2|nat=ISR|name=[[Tomer Dorazi]]|pos=DF}}
+{{Fs player|no= 3|nat=ISR|name=[[Amir Ella]]|pos=DF}}
+{{Fs player|no= 4|nat=ISR|name=[[Or Zahavi]]|pos=DF}}
+{{Fs player|no= 5|nat=ISR|name=[[Elad Ashram]]|pos=DF}}
+{{Fs player|no= 6|nat=ISR|name=[[Omer Ifrah]]|pos=MF}}
+{{Fs player|no= 8|nat=ISR|name=[[Sali Ganon]]|pos=MF}}
+{{Fs player|no= 9|nat=ISR|name=[[Guy Dahan]]|pos=FW}}
+{{Fs player|no=11|nat=ISR|name=[[Amir Altoury]]|pos=FW}}
+{{Fs player|no=12|nat=ISR|name=[[Or Daabul]]|pos=DF}}
+{{Fs player|no=15|nat=BLR|name=[[Denis Kozlovskiy]]|pos=MF}}
+{{Fs player|no=16|nat=ISR|name=[[Bar Cohen]]|pos=DF}}
+{{Fs player|no=17|nat=ISR|name=[[Erez Shifman]]|pos=DF}}
+{{Fs player|no=19|nat=ISR|name=[[Elvis Spikner]]|pos=FW}}
+{{Fs player|no=20|nat=NGR|name=[[Paul Emmanuel (footballer)|Paul Emmanuel]]|pos=MF}}
+{{Fs player|no=23|nat=ISR|name=[[Arad Bar]]|pos=MF}}
+{{Fs player|no=27|nat=ISR|name=[[Zahi Itzhak]]|pos=MF}}
+{{Fs player|no=28|nat=BLR|name=[[Pavel Zabelin]]|pos=MF}}
+{{Fs player|no=32|nat=ISR|name=[[Ilay Sakuri]]|pos=DF}}
+{{Fs player|no=33|nat=ISR|name=[[Re'em Golan]]|pos=GK}}
+{{Fs player|no=99|nat=ISR|name=[[Guy Herman]]|pos=GK}}
