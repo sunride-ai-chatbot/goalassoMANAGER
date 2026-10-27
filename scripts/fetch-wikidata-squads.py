@@ -51,7 +51,8 @@ NAT = {'ENG': 'England', 'SCO': 'Scotland', 'WAL': 'Wales', 'NIR': 'Northern Ire
        'FRO': 'Faroe Islands', 'AND': 'Andorra', 'LIE': 'Liechtenstein', 'MDA': 'Moldova', 'GIB': 'Gibraltar', 'SMR': 'San Marino', 'TJK': 'Tajikistan',
        'KGZ': 'Kyrgyzstan', 'TKM': 'Turkmenistan', 'PLE': 'Palestine', 'BHR': 'Bahrain', 'OMA': 'Oman', 'KUW': 'Kuwait', 'YEM': 'Yemen'}
 POS = {'GK': 'GK', 'DF': 'DF', 'MF': 'MF', 'FW': 'FW', 'G': 'GK', 'D': 'DF', 'M': 'MF', 'F': 'FW'}
-SKIP_HEAD = re.compile(r'loan|reserve|youth|academy|women|staff|former|notable|\bb\s*team|under[- ]?\d|u-?\d|retired|captain|coach|manage|board|honour|kit|stadium|record|rival|support', re.I)
+SKIP_HEAD = re.compile(r'loan|reserve|youth|academy|women|former|notable|\bb\s*team|under[- ]?\d|\bu-?\d|retired|captain|coach|manage|board|honour|kit|stadium|record|rival|support|legend|hall of fame', re.I)
+SQUAD_HEAD = re.compile(r'squad|players|roster|team', re.I)
 
 
 def get(url, params, tries=4):
@@ -82,9 +83,11 @@ def parse_squad(text):
     parts = re.split(r'\n(={2,4})\s*(.*?)\s*\1\s*\n', '\n' + text)
     sections = [(parts[i + 1], parts[i + 2]) for i in range(1, len(parts) - 2, 3)]   # the lead never holds a squad
     for head, body in sections:
-        if SKIP_HEAD.search(head):
+        if SKIP_HEAD.search(head) and not (SQUAD_HEAD.search(head) and re.search(r'current|first', head, re.I)):
             continue
-        if not re.search(r'squad|players|roster|team', head, re.I) and not FS.search(body):
+        if not SQUAD_HEAD.search(head) and not FS.search(body):
+            continue
+        if 'staff' in head.lower() and not FS.search(body):
             continue
         for m in FS.finditer(body):
             f = {}
@@ -194,6 +197,14 @@ def main():
                 continue
             try:
                 text, title = wikitext(info['en'])
+                if a.debug and info.get('he_title'):   # Hebrew Wikipedia squad lists use their own templates: dump them for a parser
+                    try:
+                        hd = get('https://he.wikipedia.org/w/api.php', {'action': 'parse', 'page': info['he_title'], 'prop': 'wikitext', 'redirects': 1, 'format': 'json', 'formatversion': 2})
+                        os.makedirs(os.path.join(a.out, '_debug'), exist_ok=True)
+                        with open(os.path.join(a.out, '_debug', key + '-he.txt'), 'w', encoding='utf8') as fh:
+                            fh.write(hd['parse']['wikitext'])
+                    except Exception as e:  # noqa: BLE001
+                        print('hewiki', key, e)
                 rows = [r for r in parse_squad(text) if not r['loan']]
                 if a.debug:
                     os.makedirs(os.path.join(a.out, '_debug'), exist_ok=True)

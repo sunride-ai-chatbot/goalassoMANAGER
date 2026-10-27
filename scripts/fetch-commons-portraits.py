@@ -63,8 +63,18 @@ def wd(params):
 def commons(params):
     return get('https://commons.wikimedia.org/w/api.php', {**params, 'format': 'json'})
 
+def club_title(key):
+    if key in CLUB_TITLES:
+        return CLUB_TITLES[key]
+    cfg = json.load(open(os.path.join(ROOT, 'data', 'config', 'world-clubs-wiki.json'), encoding='utf8'))
+    for grp in ('world', 'leumit'):
+        for info in cfg.get(grp, {}).values():
+            if info['key'] == key:
+                return info['en']
+    raise SystemExit('no Wikipedia title for club ' + key)
+
 def club_qid(key):
-    r = get('https://en.wikipedia.org/w/api.php', {'action': 'query', 'titles': CLUB_TITLES[key], 'prop': 'pageprops', 'redirects': 1, 'format': 'json'})
+    r = get('https://en.wikipedia.org/w/api.php', {'action': 'query', 'titles': club_title(key), 'prop': 'pageprops', 'redirects': 1, 'format': 'json'})
     for p in r['query']['pages'].values():
         if 'pageprops' in p and 'wikibase_item' in p['pageprops']:
             return p['pageprops']['wikibase_item']
@@ -149,6 +159,13 @@ def identify(player, club_q):
     name = player.get('en') or ''
     if not name:
         return None, 'no_english_name'
+    # squads fetched from Wikipedia carry the exact Wikidata item: no name matching at all
+    if player.get('qid'):
+        r = wd({'action': 'wbgetentities', 'ids': player['qid'], 'props': 'claims|labels|aliases|sitelinks', 'languages': 'en|mul'})
+        ent = (r.get('entities') or {}).get(player['qid'])
+        if ent and 'missing' not in ent:
+            return ent, 'squad_qid'
+        return None, 'qid_missing'
     found = candidates_for(name)
     cands = [e for e in found if name_matches(e, name)]
     age = player.get('age')
@@ -224,7 +241,7 @@ def main():
     a = ap.parse_args()
     global WIDTH, CAT_LIMIT, DEEP; WIDTH = a.width; CAT_LIMIT = a.cat_limit; DEEP = a.deep
     only = {x.strip() for x in a.players.split('|') if x.strip()}
-    keys = list(CLUB_TITLES) if a.clubs == 'all' else a.clubs.split(',')
+    keys = sorted(os.path.splitext(f)[0] for f in os.listdir(os.path.join(ROOT, 'data', 'euro')) if f.endswith('.json') and not f.startswith('_')) if a.clubs == 'all' else a.clubs.split(',')
     for key in keys:
         with open(os.path.join(ROOT, 'data', 'euro', key + '.json'), encoding='utf8') as fh:
             squad = json.load(fh)
