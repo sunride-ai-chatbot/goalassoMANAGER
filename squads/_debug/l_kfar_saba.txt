@@ -1,0 +1,40 @@
+== History
+== Players
+=== Out on loan
+=== Foreigners 2023–24
+=== Former players
+== Staff
+== Honours
+=== Cup competitions
+== Managers
+== See also
+== References
+== External links
+
+TEMPLATES 26
+{{Fs player|no= 1|nat=ISR|name=Benjamin Macini|pos=GK}}
+{{Fs player|no= 2|nat=ISR|name=Eliran Zadok|pos=DF}}
+{{Fs player|no= 4|nat=ISR|name=Adir Waheb|pos=DF|other=on loan from [[Maccabi Haifa F.C.|Maccabi Haifa]]}}
+{{Fs player|no= 5|nat=GHA|name=[[Konadu Yiadom]]|pos=DF}}
+{{Fs player|no= 6|nat=ISR|name=Yishay Brosh|pos=MF}}
+{{Fs player|no= 7|nat=ISR|name=Or Roizman|pos=FW|other=on loan from [[Maccabi Tel Aviv F.C.|Maccabi Tel Aviv]]}}
+{{Fs player|no= 8|nat=ISR|name=Adi Tzur|pos=MF|other=on loan from [[Maccabi Haifa F.C.|Maccabi Haifa]]}}
+{{Fs player|no= 9|nat=CIV|name=Clovis Yao|pos=FW}}
+{{Fs player|no=10|nat=ISR|name=Roy Harel|pos=MF}}
+{{Fs player|no=11|nat=ISR|name=Roy Buganim|pos=FW}}
+{{Fs player|no=14|nat=ISR|name=Yuval Ben Hemo|pos=MF|other=on loan from [[Maccabi Haifa F.C.|Maccabi Haifa]]}}
+{{Fs player|no=15|nat=CIV|name=Gilbert Bandama|pos=MF}}
+{{Fs player|no=16|nat=ISR|name=Ofek Peretz|pos=MF}}
+{{Fs player|no=17|nat=ISR|name=Daniel Darzi|pos=MF|other=on loan from [[Maccabi Haifa F.C.|Maccabi Haifa]]}}
+{{Fs player|no=18|nat=ISR|name=Sarel Cohen|pos=MF|other=on loan from [[Maccabi Haifa F.C.|Maccabi Haifa]]}}
+{{Fs player|no=19|nat=ISR|name=Lion Caro|pos=FW}}
+{{Fs player|no=22|nat=ISR|name=Shahar Mark|pos=GK}}
+{{Fs player|no=23|nat=ISR|name=[[Niv Fliter]]|pos=GK}}
+{{Fs player|no=31|nat=ISR|name=Amit Arazi|pos=MF|other=on loan from [[Maccabi Haifa F.C.|Maccabi Haifa]]}}
+{{Fs player|no=44|nat=ISR|name=Hadar Fuchs|pos=DF|other=on loan from [[Maccabi Petah Tikva F.C.|Maccabi Petah Tikva]]}}
+{{Fs player|no=47|nat=ISR|name=Ravid Olitsky|pos=MF|other=on loan from [[Hapoel Tel Aviv F.C.|Hapoel Tel Aviv]]}}
+{{Fs player|no=64|nat=ISR|name=Yanir Nimni|pos=GK}}
+{{Fs player|no=77|nat=ISR|name=Niv Vaknin|pos=FW|other=on loan from [[Hapoel Be'er Sheva F.C.|Hapoel Be'er Sheva]]}}
+{{Fs player|no=  |nat=ISR|name=Liad Shmueli|pos=MF}}
+{{Fs player|no=|nat=ISR|name=[[Shon Krendi]]|pos=DF|other=at [[Maccabi Sha'arayim F.C.|Maccabi Sha'arayim]] until 30 June 2022}}
+{{Fs player|no=|nat=ISR|name=[[Yahav Afriat]]|pos=FW|other=at [[F.C. Tira]] until 30 June 2022}}

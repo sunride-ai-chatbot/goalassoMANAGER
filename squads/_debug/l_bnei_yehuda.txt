@@ -1,0 +1,39 @@
+== History
+== Fans
+== Stadium
+== European record
+== Players
+=== Loaned players
+== Titles
+=== Cup competitions
+== Managers
+== See also
+== References
+== External links
+
+TEMPLATES 25
+{{Fs player|no= 3|nat=ISR|name=Michael Pistiner|pos=DF}}
+{{Fs player|no= 4|nat=ISR|name=Jonatan Agiyapong|pos=DF}}
+{{Fs player|no= 5|nat=ISR|name=Matan Levi|pos=DF}}
+{{Fs player|no= 7|nat=ISR|name=Dani Amer|pos=FW}}
+{{Fs player|no= 8|nat=ISR|name=Golan Beni|pos=MF}}
+{{Fs player|no= 9|nat=ISR|name=[[Stav Nachmani]]|pos=FW}}
+{{Fs player|no=10|nat=ISR|name=Sagi Dror|pos=MF}}
+{{Fs player|no=11|nat=ISR|name=Ben Hadadi|pos=FW}}
+{{Fs player|no=12|nat=ISR|name=Sahar Dabach|pos=DF}}
+{{Fs player|no=14|nat=NGR|name=Ofoeke Emmanuel|pos=MF}}
+{{Fs player|no=15|nat=ISR|name=Raz Nachmias|pos=DF}}
+{{Fs player|no=17|nat=ISR|name=Shahar Mizrahi|pos=DF}}
+{{Fs player|no=18|nat=ISR|name=Noam Gissim|pos=FW}}
+{{Fs player|no=20|nat=BRA|name=Zé Flores|pos=FW}}
+{{Fs player|no=26|nat=ISR|name=Ori Hassan|pos=MF}}
+{{Fs player|no=27|nat=ISR|name=Sahar Hershkovitz|pos=FW}}
+{{Fs player|no=30|nat=ISR|name=Yuval Piven|pos=MF}}
+{{Fs player|no=33|nat=ISR|name=Or Yitzhak|pos=GK}}
+{{Fs player|no=55|nat=ISR|name=Nehoray Uzana|pos=MF}}
+{{Fs player|no=66|nat=GHA|name=Joel Nyrako|pos=DF}}
+{{Fs player|no=67|nat=ISR|name=Guy Sivilia|pos=MF}}
+{{Fs player|no=96|nat=ISR|name=[[Nir Bardea]]|pos=DF}}
+{{Fs player|no=98|nat=ISR|name=Tomer Litvinov|pos=GK}}
+{{Fs player|no=|nat=ISR|name=Nehoray Kariv|pos=FW|other=at [[Shimshon Tel Aviv F.C.|Shimshon Tel Aviv]] until 30 June 2026}}
+{{Fs player|no=|nat=ISR|name=Tamir Haimovich|pos=DF|other=at [[Hapoel Jerusalem F.C.]] until 30 June 2026}}

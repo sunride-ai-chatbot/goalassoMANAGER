@@ -1,0 +1,46 @@
+== History
+== Players
+=== Out on loan
+=== Other players under contract
+=== Notable former players
+=== Foreigners 2023–24
+== Managers
+== European cup history
+== Club personnel
+== Kit makers
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no= 1|nat=ISR|name=Roy Shohat|pos=GK}}
+{{Fs player|no= 2|nat=ISR|name=Ahmad Abu Much|pos=DF}}
+{{Fs player|no= 3|nat=CIV|name=[[Ibrahim Diakité (footballer, born 2004)|Ibrahim Diakité]]|pos=DF}}
+{{Fs player|no= 5|nat=ISR|name=Maor Yashilirmak|pos=DF}}
+{{Fs player|no= 6|nat=NGA|name=Victor Ochayi|pos=MF}}
+{{Fs player|no= 7|nat=ISR|name=[[Nehoray Dabush]]|pos=FW}}
+{{Fs player|no= 8|nat=ISR|name=[[Roei Gordana]]|pos=MF}}
+{{Fs player|no= 9|nat=ISR|name=[[Shalev Harush]]|pos=MF}}
+{{Fs player|no=10|nat=ISR|name=[[Ilay Tamam]]|pos=MF}}
+{{Fs player|no=15|nat=ISR|name=[[Tom Ben Zaken]]|pos=DF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=17|nat=ISR|name=Asaf Arania|pos=DF}}
+{{Fs player|no=18|nat=ISR|name=Maor Kuba|pos=MF}}
+{{Fs player|no=19|nat=ISR|name=Amitay Yamin|pos=MF}}
+{{Fs player|no=20|nat=ISR|name=Reem Tal|pos=DF}}
+{{Fs player|no=21|nat=ISR|name=Elia Gethon|pos=FW}}
+{{Fs player|no=23|nat=ISR|name=[[Dor Micha]]|pos=MF}}
+{{Fs player|no=27|nat=ISR|name=Ran Vaturi|pos=DF}}
+{{Fs player|no=28|nat=GHA|name=Ebenezer Mamatah|pos=FW}}
+{{Fs player|no=29|nat=ISR|name=Idan Peretz|pos=FW}}
+{{Fs player|no=46|nat=ISR|name=Razi Abu Hamdan|pos=GK}}
+{{Fs player|no=47|nat=ISR|name=Mesirh Abu Bilal|pos=FW}}
+{{Fs player|no=55|nat=ISR|name=[[Raz Meir]]|pos=DF}}
+{{Fs player|no=71|nat=ISR|name=Amit Denzinger|pos=DF}}
+{{Fs player|no=72|nat=ISR|name=[[Osama Khalaila]]|pos=FW}}
+{{Fs player|no=73|nat=ISR|name=[[Max Grechkin]]|pos=DF}}
+{{Fs player|no=77|nat=GHA|name=Hayford Boahen|pos=MF}}
+{{Fs player|no=80|nat=ISR|name=Ben Levy|pos=FW}}
+{{Fs player|no=87|nat=ISR|name=Mohammed Amer|pos=MF}}
+{{Fs player|no=99|nat=ISR|name=Ori Malka|pos=FW}}
+{{Fs player|no=  |nat=ISR|name=Ori Edri|pos=MF}}
+{{Fs player|no=  |nat=ISR|name=[[Itay Hazut]]|other={{small|on loan from [[Hapoel Be'er Sheva F.C.|Hapoel Be'er Sheva]]}}
+{{Fs player|no=|nat=ISR|name=[[Tomer Amar]]|pos=GK}}

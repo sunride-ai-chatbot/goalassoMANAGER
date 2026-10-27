@@ -1,0 +1,31 @@
+== History
+== Current squad
+== Honours
+=== Cups
+== Managers
+== External links
+== References
+
+TEMPLATES 22
+{{Fs player|no= 1|nat=ISR|name=Netanel Daloya|pos=GK}}
+{{Fs player|no= 4|nat=GHA|name=[[Mohammed Adams]]|pos=DF}}
+{{Fs player|no= 6|nat=ISR|name=Roei Rabinovich|pos=MF}}
+{{Fs player|no= 7|nat=ISR|name=Yaniv Brik|pos=MF}}
+{{Fs player|no= 8|nat=ISR|name=Raz Twizer|pos=MF}}
+{{Fs player|no= 9|nat=ISR|name=Ahmed Khalaila|pos=FW}}
+{{Fs player|no=10|nat=ISR|name=Eilon Elimelech|pos=MF}}
+{{Fs player|no=11|nat=ISR|name=Ilay Azar|pos=MF}}
+{{Fs player|no=12|nat=ISR|name=Shalev Desta|pos=DF}}
+{{Fs player|no=14|nat=ISR|name=Itay Turgeman|pos=MF}}
+{{Fs player|no=15|nat=ISR|name=Noam Shemesh|pos=MF}}
+{{Fs player|no=17|nat=NGR|name=Innocent Kingsley|pos=MF}}
+{{Fs player|no=20|nat=ISR|name=Snir Talias|pos=MF}}
+{{Fs player|no=21|nat=ISR|name=Orel Danan|pos=MF}}
+{{Fs player|no=23|nat=ISR|name=Noam Ben Hemo|pos=MF}}
+{{Fs player|no=26|nat=ISR|name=Niv Tubul|pos=FW}}
+{{Fs player|no=27|nat=ISR|name=Eliya Ifrach|pos=MF}}
+{{Fs player|no=30|nat=ISR|name=Idan Rata|pos=DF}}
+{{Fs player|no=32|nat=ISR|name=[[Ben Vehava]]|pos=DF}}
+{{Fs player|no=47|nat=ISR|name=Orel Yehuda|pos=FW}}
+{{Fs player|no=55|nat=ISR|name=Roy Shedo|pos=GK}}
+{{Fs player|no=99|nat=ISR|name=Yahli Malka|pos=FW}}
