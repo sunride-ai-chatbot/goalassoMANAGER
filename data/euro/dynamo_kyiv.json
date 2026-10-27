@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 0.39,
+"value_m": 1.33,
 "qid": "Q100165433",
 "no": "35"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.32,
+"value_m": 1.09,
 "qid": null,
 "no": "51"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.29,
+"value_m": 0.99,
 "qid": null,
 "no": "71"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.27,
+"value_m": 0.92,
 "qid": null,
 "no": "43"
 },
@@ -50,7 +50,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.24,
+"value_m": 0.82,
 "qid": null,
 "no": "74"
 },
@@ -60,7 +60,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Ukraine",
-"value_m": 0.88,
+"value_m": 3.0,
 "qid": "Q19972577",
 "no": "10"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 0.79,
+"value_m": 2.69,
 "qid": "Q113585239",
 "no": "6"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.76,
+"value_m": 2.59,
 "qid": "Q107647344",
 "no": "91"
 },
@@ -90,7 +90,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Panama",
-"value_m": 0.75,
+"value_m": 2.55,
 "qid": "Q48359321",
 "no": "39"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Suriname",
-"value_m": 0.73,
+"value_m": 2.49,
 "qid": "Q28925148",
 "no": "21"
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Ukraine",
-"value_m": 0.71,
+"value_m": 2.42,
 "qid": "Q56524763",
 "no": "4"
 },
@@ -120,7 +120,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 0.55,
+"value_m": 1.87,
 "qid": "Q113452564",
 "no": "15"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 0.54,
+"value_m": 1.84,
 "qid": "Q113314320",
 "no": "2"
 },
@@ -140,7 +140,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Ukraine",
-"value_m": 0.53,
+"value_m": 1.8,
 "qid": "Q117486689",
 "no": "11"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Ukraine",
-"value_m": 0.52,
+"value_m": 1.77,
 "qid": "Q27768803",
 "no": "18"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Ukraine",
-"value_m": 0.47,
+"value_m": 1.6,
 "qid": "Q30099692",
 "no": "8"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.46,
+"value_m": 1.57,
 "qid": "Q88466926",
 "no": "5"
 },
@@ -180,7 +180,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Ukraine",
-"value_m": 0.46,
+"value_m": 1.57,
 "qid": "Q122780706",
 "no": "23"
 },
@@ -190,7 +190,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.46,
+"value_m": 1.57,
 "qid": "Q107643039",
 "no": "40"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Ukraine",
-"value_m": 0.45,
+"value_m": 1.53,
 "qid": "Q113585017",
 "no": "9"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Ukraine",
-"value_m": 0.44,
+"value_m": 1.5,
 "qid": "Q121865675",
 "no": "32"
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Nigeria",
-"value_m": 0.42,
+"value_m": 1.43,
 "qid": "Q131194303",
 "no": "16"
 },
@@ -230,7 +230,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.37,
+"value_m": 1.26,
 "qid": null,
 "no": "34"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Ukraine",
-"value_m": 0.37,
+"value_m": 1.26,
 "qid": "Q60677522",
 "no": "44"
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Senegal",
-"value_m": 0.37,
+"value_m": 1.26,
 "qid": null,
 "no": "66"
 },
@@ -260,7 +260,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.37,
+"value_m": 1.26,
 "qid": null,
 "no": "70"
 },
@@ -270,7 +270,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.36,
+"value_m": 1.23,
 "qid": null,
 "no": "42"
 },
@@ -280,7 +280,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Ukraine",
-"value_m": 0.34,
+"value_m": 1.16,
 "qid": "Q17721891",
 "no": "22"
 },
@@ -290,7 +290,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Ukraine",
-"value_m": 0.29,
+"value_m": 0.99,
 "qid": "Q12086108",
 "no": "29"
 },
@@ -300,9 +300,10 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.28,
+"value_m": 0.95,
 "qid": null,
 "no": "13"
 }
-]
+],
+"rescaled": 1
 }

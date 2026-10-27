@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Greece",
-"value_m": 1.06,
+"value_m": 6.4,
 "qid": "Q47088449",
 "no": "35"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Italy",
-"value_m": 0.79,
+"value_m": 4.77,
 "qid": "Q130545737",
 "no": "55"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "Italy",
-"value_m": 0.67,
+"value_m": 4.04,
 "qid": "Q137906799",
 "no": "40"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Italy",
-"value_m": 0.61,
+"value_m": 3.68,
 "qid": null,
 "no": "59"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Italy",
-"value_m": 2.07,
+"value_m": 12.49,
 "qid": "Q27981508",
 "no": "9"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Italy",
-"value_m": 2.06,
+"value_m": 12.43,
 "qid": "Q108312337",
 "no": "22"
 },
@@ -70,7 +70,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Portugal",
-"value_m": 1.92,
+"value_m": 11.58,
 "qid": "Q60676459",
 "no": "17"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Italy",
-"value_m": 1.76,
+"value_m": 10.62,
 "qid": "Q74105143",
 "no": "6"
 },
@@ -90,7 +90,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Netherlands",
-"value_m": 1.75,
+"value_m": 10.56,
 "qid": "Q108783669",
 "no": "14"
 },
@@ -100,7 +100,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Denmark",
-"value_m": 1.66,
+"value_m": 10.01,
 "qid": "Q70007561",
 "no": "11"
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Italy",
-"value_m": 1.6,
+"value_m": 9.65,
 "qid": "Q56754409",
 "no": "3"
 },
@@ -120,7 +120,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Netherlands",
-"value_m": 1.53,
+"value_m": 9.23,
 "qid": "Q57457130",
 "no": "24"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Portugal",
-"value_m": 1.43,
+"value_m": 8.63,
 "qid": "Q38218627",
 "no": "2"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Nigeria",
-"value_m": 1.34,
+"value_m": 8.08,
 "qid": "Q98959093",
 "no": "7"
 },
@@ -150,7 +150,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Morocco",
-"value_m": 1.33,
+"value_m": 8.02,
 "qid": "Q116972162",
 "no": "21"
 },
@@ -160,7 +160,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Italy",
-"value_m": 1.29,
+"value_m": 7.78,
 "qid": "Q105268643",
 "no": "15"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Denmark",
-"value_m": 1.27,
+"value_m": 7.66,
 "qid": "Q113787260",
 "no": "25"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Netherlands",
-"value_m": 1.25,
+"value_m": 7.54,
 "qid": "Q23817858",
 "no": "5"
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Italy",
-"value_m": 1.24,
+"value_m": 7.48,
 "qid": "Q28968068",
 "no": "10"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Spain",
-"value_m": 1.14,
+"value_m": 6.88,
 "qid": "Q19871936",
 "no": "23"
 },
@@ -210,7 +210,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Italy",
-"value_m": 0.95,
+"value_m": 5.73,
 "qid": "Q15951287",
 "no": "32"
 },
@@ -220,7 +220,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Algeria",
-"value_m": 0.94,
+"value_m": 5.67,
 "qid": "Q18719399",
 "no": null
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Italy",
-"value_m": 0.88,
+"value_m": 5.31,
 "qid": null,
 "no": "71"
 },
@@ -240,7 +240,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Italy",
-"value_m": 0.85,
+"value_m": 5.13,
 "qid": null,
 "no": "63"
 },
@@ -250,7 +250,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Italy",
-"value_m": 0.81,
+"value_m": 4.89,
 "qid": "Q29558961",
 "no": "29"
 },
@@ -260,7 +260,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Poland",
-"value_m": 0.73,
+"value_m": 4.4,
 "qid": "Q121549185",
 "no": "28"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.72,
+"value_m": 4.34,
 "qid": null,
 "no": "33"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Brazil",
-"value_m": 0.7,
+"value_m": 4.22,
 "qid": "Q130416078",
 "no": "76"
 },
@@ -290,7 +290,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Montenegro",
-"value_m": 0.7,
+"value_m": 4.22,
 "qid": "Q16234793",
 "no": "77"
 },
@@ -300,9 +300,10 @@
 "pos": "MF",
 "age": 25,
 "nat": "Italy",
-"value_m": 0.7,
+"value_m": 4.22,
 "qid": null,
 "no": null
 }
-]
+],
+"rescaled": 1
 }

@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Colombia",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q112155207",
 "no": "25"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "44"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 39,
 "nat": "Argentina",
-"value_m": 0.04,
+"value_m": 0.08,
 "qid": "Q5484508",
 "no": "34"
 },
@@ -40,7 +40,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Colombia",
-"value_m": 0.32,
+"value_m": 0.61,
 "qid": "Q60884779",
 "no": "99"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Colombia",
-"value_m": 0.31,
+"value_m": 0.6,
 "qid": "Q20994192",
 "no": "7"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Colombia",
-"value_m": 0.27,
+"value_m": 0.52,
 "qid": "Q16301176",
 "no": "9"
 },
@@ -70,7 +70,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q96625376",
 "no": "4"
 },
@@ -80,7 +80,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Colombia",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q60661790",
 "no": "15"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Colombia",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q122625114",
 "no": "80"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Colombia",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q44196376",
 "no": "21"
 },
@@ -110,7 +110,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": null,
 "no": "26"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Colombia",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q60831751",
 "no": "29"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Colombia",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q124313311",
 "no": "33"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": null,
 "no": "14"
 },
@@ -150,7 +150,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": null,
 "no": "30"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "35"
 },
@@ -170,7 +170,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "24"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "27"
 },
@@ -190,7 +190,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "31"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Colombia",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q2053161",
 "no": "10"
 },
@@ -210,7 +210,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "19"
 },
@@ -220,7 +220,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "37"
 },
@@ -230,7 +230,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "3"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Colombia",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": "Q28343305",
 "no": "6"
 },
@@ -250,7 +250,7 @@
 "pos": "MF",
 "age": 35,
 "nat": "Colombia",
-"value_m": 0.08,
+"value_m": 0.15,
 "qid": "Q20017202",
 "no": "8"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 38,
 "nat": "Argentina",
-"value_m": 0.06,
+"value_m": 0.12,
 "qid": "Q5676549",
 "no": "20"
 },
@@ -270,7 +270,7 @@
 "pos": "MF",
 "age": 35,
 "nat": "Colombia",
-"value_m": 0.06,
+"value_m": 0.12,
 "qid": "Q368441",
 "no": "23"
 },
@@ -280,9 +280,10 @@
 "pos": "DF",
 "age": 36,
 "nat": "Colombia",
-"value_m": 0.05,
+"value_m": 0.1,
 "qid": "Q6167739",
 "no": "16"
 }
-]
+],
+"rescaled": 1
 }

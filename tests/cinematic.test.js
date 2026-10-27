@@ -11,11 +11,14 @@ async function main(){try{
  w.eval("G.pressMode='off';G.paperPop=[];G.view='lineup';render()");
  const brand=w.eval('me().sponsor.name');
  assert.ok(brand);assert.ok(w.document.querySelector('.cine-sponsor').textContent.includes(brand),'shirt sponsor named under the lineup');
- // stadium-photo lineup: eleven cards with a face, rating, position and fitness bar on the arena picture
+ // stadium-photo lineup: eleven round portraits with a club-colour name plate on the arena picture
  assert.ok(w.document.querySelector('.stad-pitch.arena .arena-bg img'));
- assert.equal(w.document.querySelectorAll('.stad .lc-card .lc-face .player-portrait').length,11);
- assert.equal(w.document.querySelectorAll('.stad .lc-card .lc-en u').length,11);
- for(const n of w.document.querySelectorAll('.stad .lc-ovr'))assert.match(n.textContent,/^\d{2}$/);
+ assert.equal(w.document.querySelectorAll('.stad .t3.rt .rt-face .player-portrait').length,11);
+ for(const n of w.document.querySelectorAll('.stad .rt-ovr'))assert.match(n.textContent,/^\d{2}$/);
+ // pre-match presentation: my page, then the opponent's probable XI, then kick-off
+ w.__ilmPrematch=1;w.document.querySelector('#playBtn').click();assert.ok(w.document.querySelector('#prematch .pm-page'));assert.equal(w.document.querySelectorAll('#prematch .t3.rt').length,11);
+ w.document.querySelector('#pmNext').click();assert.ok(w.document.querySelector('#pmGo'));assert.equal(w.document.querySelectorAll('#prematch .t3.rt').length,11);
+ w.document.querySelector('#prematch').remove();w.__ilmPrematch=0;w.eval("G.view='lineup';render()");
  assert.equal(w.document.querySelectorAll('#formSel').length,1);
  assert.equal(w.document.querySelectorAll('.stad [data-slot]').length,11);
  w.document.querySelector('#autoBtn').click();

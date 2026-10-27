@@ -1,0 +1,159 @@
+{
+"key": "l_afula",
+"name_he": "הפועל עפולה",
+"source": "hewiki:הפועל עפולה (כדורגל)",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "רוי שדו",
+"en": "רוי שדו",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "סהר חסון",
+"en": "סהר חסון",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "41"
+},
+{
+"he": "רבינוביץ",
+"en": "רבינוביץ",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": "6"
+},
+{
+"he": "בריק",
+"en": "בריק",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": "7"
+},
+{
+"he": "אלימלך",
+"en": "אלימלך",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": "10"
+},
+{
+"he": "מור נעמן",
+"en": "מור נעמן",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "26"
+},
+{
+"he": "רז טויזר",
+"en": "רז טויזר",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "קינגסלי",
+"en": "קינגסלי",
+"pos": "MF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "ניב טובול",
+"en": "ניב טובול",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "נועם שמש",
+"en": "נועם שמש",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "פישלר",
+"en": "פישלר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "5"
+},
+{
+"he": "מזרחי",
+"en": "מזרחי",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "8"
+},
+{
+"he": "דראושה",
+"en": "דראושה",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "9"
+},
+{
+"he": "אפיק כהן",
+"en": "אפיק כהן",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "77"
+},
+{
+"he": "בן ווהבה",
+"en": "בן ווהבה",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": null
+}
+],
+"rescaled": 1
+}

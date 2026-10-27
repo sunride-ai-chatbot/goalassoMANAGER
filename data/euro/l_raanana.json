@@ -1,0 +1,259 @@
+{
+"key": "l_raanana",
+"name_he": "הפועל רעננה",
+"source": "hewiki:הפועל רעננה",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "יהלי נימני",
+"en": "יהלי נימני",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.094,
+"qid": null,
+"no": "22"
+},
+{
+"he": "תמיר סטולר",
+"en": "תמיר סטולר",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": "19"
+},
+{
+"he": "טמיר סטולר",
+"en": "טמיר סטולר",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.067,
+"qid": null,
+"no": null
+},
+{
+"he": "ניוטון ויליאמס",
+"en": "Newton Williams",
+"pos": "FW",
+"age": 25,
+"nat": "פנמה",
+"value_m": 0.175,
+"qid": "Q106620081",
+"no": "70"
+},
+{
+"he": "וסלי דקאס",
+"en": "Wesly Decas",
+"pos": "DF",
+"age": 27,
+"nat": "הונדורס",
+"value_m": 0.161,
+"qid": "Q38429053",
+"no": "2"
+},
+{
+"he": "רועי פדידה",
+"en": "רועי פדידה",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.134,
+"qid": null,
+"no": "24"
+},
+{
+"he": "אודי פאפו",
+"en": "אודי פאפו",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.121,
+"qid": null,
+"no": null
+},
+{
+"he": "עבדי פרחאת",
+"en": "עבדי פרחאת",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "4"
+},
+{
+"he": "אביב לין",
+"en": "אביב לין",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "5"
+},
+{
+"he": "פיטר מייקל",
+"en": "פיטר מייקל",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "9"
+},
+{
+"he": "אברהם רדה",
+"en": "אברהם רדה",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "11"
+},
+{
+"he": "אביב",
+"en": "אביב",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "20"
+},
+{
+"he": "ג'ואד קדאח",
+"en": "ג'ואד קדאח",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "77"
+},
+{
+"he": "אוראל חביב",
+"en": "אוראל חביב",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": null
+},
+{
+"he": "נתנאל חגאני",
+"en": "נתנאל חגאני",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": null
+},
+{
+"he": "פז בלאנדר",
+"en": "פז בלאנדר",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.094,
+"qid": null,
+"no": "6"
+},
+{
+"he": "רועי הר",
+"en": "רועי הר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.094,
+"qid": null,
+"no": "16"
+},
+{
+"he": "אמיר ברקוביץ'",
+"en": "אמיר ברקוביץ'",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.094,
+"qid": null,
+"no": "17"
+},
+{
+"he": "הראל ליכטנשטיין",
+"en": "הראל ליכטנשטיין",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.094,
+"qid": null,
+"no": null
+},
+{
+"he": "עילאי קריספיל",
+"en": "עילאי קריספיל",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": "3"
+},
+{
+"he": "יובל טיטלמן",
+"en": "יובל טיטלמן",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": "7"
+},
+{
+"he": "איתמר גואטה",
+"en": "איתמר גואטה",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": "12"
+},
+{
+"he": "מג'ד אגבאריה",
+"en": "מג'ד אגבאריה",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": "21"
+},
+{
+"he": "רון ודנר",
+"en": "רון ודנר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": null
+},
+{
+"he": "שניר שוקר",
+"en": "Snir Shuker",
+"pos": "MF",
+"age": 37,
+"nat": "Israel",
+"value_m": 0.027,
+"qid": "Q19758718",
+"no": "8"
+}
+],
+"rescaled": 1
+}

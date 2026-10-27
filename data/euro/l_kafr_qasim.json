@@ -1,0 +1,229 @@
+{
+"key": "l_kafr_qasim",
+"name_he": "מ.ס. כפר קאסם",
+"source": "hewiki:מ.ס. כפר קאסם",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "מתן גלנטי",
+"en": "מתן גלנטי",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "77"
+},
+{
+"he": "מאור ארליך",
+"en": "מאור ארליך",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "78"
+},
+{
+"he": "איסמאעיל בחאש",
+"en": "איסמאעיל בחאש",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.063,
+"qid": null,
+"no": "1"
+},
+{
+"he": "אבראהים בדיר",
+"en": "אבראהים בדיר",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.113,
+"qid": null,
+"no": "99"
+},
+{
+"he": "פדרו פטראצי",
+"en": "פדרו פטראצי",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.1,
+"qid": null,
+"no": "6"
+},
+{
+"he": "אנס דבור",
+"en": "אנס דבור",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": "7"
+},
+{
+"he": "איהאב אבו אלשיך",
+"en": "איהאב אבו אלשיך",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": "9"
+},
+{
+"he": "אסיל כנאני",
+"en": "אסיל כנאני",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": "97"
+},
+{
+"he": "סאמח מרעב",
+"en": "סאמח מרעב",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "10"
+},
+{
+"he": "מוחמד חטיב",
+"en": "מוחמד חטיב",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "11"
+},
+{
+"he": "רועי דיין",
+"en": "רועי דיין",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "18"
+},
+{
+"he": "אחמד טאהא",
+"en": "אחמד טאהא",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "20"
+},
+{
+"he": "ריאן אשמוז",
+"en": "ריאן אשמוז",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "70"
+},
+{
+"he": "נור בדיר",
+"en": "נור בדיר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "15"
+},
+{
+"he": "עומרי עאמר",
+"en": "עומרי עאמר",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "3"
+},
+{
+"he": "מאלה דוגאוי",
+"en": "מאלה דוגאוי",
+"pos": "DF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.075,
+"qid": null,
+"no": "4"
+},
+{
+"he": "מוחמד עאמר",
+"en": "מוחמד עאמר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "8"
+},
+{
+"he": "שי גולן",
+"en": "שי גולן",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "24"
+},
+{
+"he": "מוחמד סרסור",
+"en": "מוחמד סרסור",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "42"
+},
+{
+"he": "עלאא ג'עפר",
+"en": "עלאא ג'עפר",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.063,
+"qid": null,
+"no": "2"
+},
+{
+"he": "פאדי נג׳אר",
+"en": "פאדי נג׳אר",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.063,
+"qid": null,
+"no": "5"
+},
+{
+"he": "כרם עאמר",
+"en": "כרם עאמר",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.063,
+"qid": null,
+"no": "25"
+}
+],
+"rescaled": 1
+}

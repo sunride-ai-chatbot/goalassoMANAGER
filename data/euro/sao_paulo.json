@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Paraguay",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q21518688",
 "no": "31"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "41"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "52"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Brazil",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q126709594",
 "no": "50"
 },
@@ -50,7 +50,7 @@
 "pos": "GK",
 "age": 37,
 "nat": "Brazil",
-"value_m": 0.04,
+"value_m": 0.08,
 "qid": "Q3928964",
 "no": "23"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Brazil",
-"value_m": 0.27,
+"value_m": 0.52,
 "qid": "Q77896856",
 "no": "11"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Brazil",
-"value_m": 0.26,
+"value_m": 0.5,
 "qid": "Q60497160",
 "no": "8"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Paraguay",
-"value_m": 0.26,
+"value_m": 0.5,
 "qid": "Q116223348",
 "no": "16"
 },
@@ -90,7 +90,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Portugal",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q26251755",
 "no": "20"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Brazil",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q110914598",
 "no": "29"
 },
@@ -110,7 +110,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Brazil",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q123925160",
 "no": "28"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q61776748",
 "no": "17"
 },
@@ -130,7 +130,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": null,
 "no": "45"
 },
@@ -140,7 +140,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q61594859",
 "no": "35"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Portugal",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q18205836",
 "no": "22"
 },
@@ -160,7 +160,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "34"
 },
@@ -170,7 +170,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Brazil",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q22342742",
 "no": "27"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": null
 },
@@ -190,7 +190,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Argentina",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q16298050",
 "no": "9"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Argentina",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q58303243",
 "no": "13"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": null
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Brazil",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q141893539",
 "no": "43"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "46"
 },
@@ -240,7 +240,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": null
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Brazil",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": "Q15131398",
 "no": "18"
 },
@@ -260,7 +260,7 @@
 "pos": "FW",
 "age": 33,
 "nat": "Brazil",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q15966749",
 "no": "10"
 },
@@ -270,7 +270,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Brazil",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q55364035",
 "no": "94"
 },
@@ -280,7 +280,7 @@
 "pos": "MF",
 "age": 34,
 "nat": "Brazil",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q312886",
 "no": "7"
 },
@@ -290,7 +290,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Brazil",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q138478867",
 "no": "48"
 },
@@ -300,9 +300,10 @@
 "pos": "FW",
 "age": 19,
 "nat": "Brazil",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q124663099",
 "no": "49"
 }
-]
+],
+"rescaled": 1
 }

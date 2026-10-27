@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Brazil",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q64577950",
 "no": "1"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "Brazil",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q132859105",
 "no": "40"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": null,
 "no": "51"
 },
@@ -40,7 +40,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.33,
+"value_m": 0.63,
 "qid": "Q43252427",
 "no": "9"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.3,
+"value_m": 0.58,
 "qid": "Q63699796",
 "no": "18"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Brazil",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q126936258",
 "no": "31"
 },
@@ -70,7 +70,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q59656516",
 "no": "2"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Brazil",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q124357073",
 "no": "7"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Argentina",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q61609728",
 "no": "8"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q106714098",
 "no": "14"
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Uruguay",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q86588880",
 "no": "20"
 },
@@ -120,7 +120,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Brazil",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q61749236",
 "no": "35"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q110761622",
 "no": "46"
 },
@@ -140,7 +140,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Netherlands",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q1894",
 "no": "10"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Brazil",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q126710363",
 "no": "4"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Brazil",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q14584722",
 "no": "11"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Brazil",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q97355375",
 "no": "21"
 },
@@ -180,7 +180,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Brazil",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q136393833",
 "no": "49"
 },
@@ -190,7 +190,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Brazil",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q134884860",
 "no": "56"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Brazil",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": "Q27836019",
 "no": "80"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Brazil",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q5621422",
 "no": "13"
 },
@@ -220,7 +220,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Argentina",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q28059275",
 "no": "26"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Morocco",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q144616",
 "no": "52"
 },
@@ -240,7 +240,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Brazil",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q122641625",
 "no": "54"
 },
@@ -250,7 +250,7 @@
 "pos": "FW",
 "age": 18,
 "nat": "Brazil",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q135439519",
 "no": "61"
 },
@@ -260,7 +260,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "England",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q6186603",
 "no": "77"
 },
@@ -270,7 +270,7 @@
 "pos": "MF",
 "age": 35,
 "nat": "Peru",
-"value_m": 0.08,
+"value_m": 0.15,
 "qid": "Q1155889",
 "no": "19"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 34,
 "nat": "Brazil",
-"value_m": 0.06,
+"value_m": 0.12,
 "qid": "Q522418",
 "no": "5"
 },
@@ -290,7 +290,7 @@
 "pos": "DF",
 "age": 35,
 "nat": "Brazil",
-"value_m": 0.05,
+"value_m": 0.1,
 "qid": "Q14602686",
 "no": "3"
 },
@@ -300,9 +300,10 @@
 "pos": "DF",
 "age": 17,
 "nat": "Brazil",
-"value_m": 0.05,
+"value_m": 0.1,
 "qid": "Q141448192",
 "no": "55"
 }
-]
+],
+"rescaled": 1
 }

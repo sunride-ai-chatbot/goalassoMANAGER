@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q130508822",
 "no": "1"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "22"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "32"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 30,
 "nat": "Morocco",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q135431481",
 "no": "12"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Jordan",
-"value_m": 0.31,
+"value_m": 0.6,
 "qid": "Q83787036",
 "no": "27"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Morocco",
-"value_m": 0.29,
+"value_m": 0.56,
 "qid": "Q58494974",
 "no": "70"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Morocco",
-"value_m": 0.28,
+"value_m": 0.54,
 "qid": "Q27892157",
 "no": "6"
 },
@@ -80,7 +80,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Morocco",
-"value_m": 0.24,
+"value_m": 0.46,
 "qid": "Q16069521",
 "no": "45"
 },
@@ -90,7 +90,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Portugal",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q61140246",
 "no": "2"
 },
@@ -100,7 +100,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Morocco",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q121157838",
 "no": "5"
 },
@@ -110,7 +110,7 @@
 "pos": "FW",
 "age": 27,
 "nat": null,
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q111283432",
 "no": "99"
 },
@@ -120,7 +120,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Morocco",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q34085897",
 "no": "24"
 },
@@ -130,7 +130,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Ghana",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q106599547",
 "no": "30"
 },
@@ -140,7 +140,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.19,
+"value_m": 0.37,
 "qid": null,
 "no": "10"
 },
@@ -150,7 +150,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": null,
 "no": "11"
 },
@@ -160,7 +160,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Morocco",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q105955785",
 "no": "7"
 },
@@ -170,7 +170,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Tunisia",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q67629721",
 "no": "21"
 },
@@ -180,7 +180,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "16"
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "8"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "19"
 },
@@ -210,7 +210,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "18"
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Morocco",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q19544518",
 "no": "77"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Morocco",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q101071921",
 "no": "23"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "3"
 },
@@ -250,7 +250,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Morocco",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": "Q102113484",
 "no": "9"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Morocco",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": "Q41559810",
 "no": "13"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Morocco",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q100909530",
 "no": "4"
 },
@@ -280,9 +280,10 @@
 "pos": "DF",
 "age": 32,
 "nat": "Morocco",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q53828737",
 "no": "17"
 }
-]
+],
+"rescaled": 1
 }

@@ -1,0 +1,169 @@
+{
+"key": "l_ahi_nazareth",
+"name_he": "מכבי אחי נצרת",
+"source": "hewiki:מכבי אחי נצרת",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "עומר נחפאוי",
+"en": "עומר נחפאוי",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "שגיא מלול",
+"en": "שגיא מלול",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": null
+},
+{
+"he": "מוסטפא נדאף",
+"en": "מוסטפא נדאף",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": null
+},
+{
+"he": "אמג'ד סולימאן",
+"en": "אמג'ד סולימאן",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": null
+},
+{
+"he": "וואיל סלאם",
+"en": "וואיל סלאם",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": null
+},
+{
+"he": "מוסטפא גדבאן",
+"en": "מוסטפא גדבאן",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": null
+},
+{
+"he": "ספואן חילו",
+"en": "ספואן חילו",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": null
+},
+{
+"he": "סאלח חוסין",
+"en": "סאלח חוסין",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "גיל סלם",
+"en": "גיל סלם",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "אוהד חזוט",
+"en": "אוהד חזוט",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "תומר לבנון",
+"en": "תומר לבנון",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "אנדרשה מולה",
+"en": "אנדרשה מולה",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "עלאא בכר",
+"en": "עלאא בכר",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": null
+},
+{
+"he": "טארק בושנאק",
+"en": "טארק בושנאק",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": null
+},
+{
+"he": "עומאר בה",
+"en": "עומאר בה",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.063,
+"qid": null,
+"no": null
+},
+{
+"he": "אנס דבור",
+"en": "Anas Dabour",
+"pos": "MF",
+"age": 35,
+"nat": "Israel",
+"value_m": 0.025,
+"qid": "Q16885508",
+"no": null
+}
+],
+"rescaled": 1
+}

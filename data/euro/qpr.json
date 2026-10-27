@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 0.21,
+"value_m": 0.5,
 "qid": "Q107387838",
 "no": "13"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 0.18,
+"value_m": 0.43,
 "qid": null,
 "no": null
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 0.15,
+"value_m": 0.36,
 "qid": null,
 "no": "32"
 },
@@ -40,7 +40,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Japan",
-"value_m": 0.48,
+"value_m": 1.14,
 "qid": "Q56349862",
 "no": "14"
 },
@@ -50,7 +50,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "England",
-"value_m": 0.4,
+"value_m": 0.95,
 "qid": "Q23688811",
 "no": "6"
 },
@@ -60,7 +60,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Ireland",
-"value_m": 0.36,
+"value_m": 0.86,
 "qid": "Q110242738",
 "no": "20"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Martinique",
-"value_m": 0.36,
+"value_m": 0.86,
 "qid": "Q110045820",
 "no": "40"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Morocco",
-"value_m": 0.34,
+"value_m": 0.81,
 "qid": "Q21514646",
 "no": "10"
 },
@@ -90,7 +90,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Jamaica",
-"value_m": 0.34,
+"value_m": 0.81,
 "qid": "Q104764485",
 "no": "16"
 },
@@ -100,7 +100,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Côte d'Ivoire",
-"value_m": 0.34,
+"value_m": 0.81,
 "qid": "Q124080277",
 "no": "22"
 },
@@ -110,7 +110,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Denmark",
-"value_m": 0.34,
+"value_m": 0.81,
 "qid": "Q70007795",
 "no": "24"
 },
@@ -120,7 +120,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.34,
+"value_m": 0.81,
 "qid": "Q80197171",
 "no": "48"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Netherlands",
-"value_m": 0.33,
+"value_m": 0.79,
 "qid": "Q40353735",
 "no": "12"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "England",
-"value_m": 0.32,
+"value_m": 0.76,
 "qid": "Q27628154",
 "no": "7"
 },
@@ -150,7 +150,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Northern Ireland",
-"value_m": 0.32,
+"value_m": 0.76,
 "qid": "Q47476880",
 "no": "11"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.32,
+"value_m": 0.76,
 "qid": "Q67163903",
 "no": "17"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "England",
-"value_m": 0.29,
+"value_m": 0.69,
 "qid": "Q98971989",
 "no": "5"
 },
@@ -180,7 +180,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Trinidad and Tobago",
-"value_m": 0.27,
+"value_m": 0.64,
 "qid": "Q124285669",
 "no": "25"
 },
@@ -190,7 +190,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Ireland",
-"value_m": 0.26,
+"value_m": 0.62,
 "qid": "Q48812485",
 "no": "3"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Latvia",
-"value_m": 0.26,
+"value_m": 0.62,
 "qid": "Q108094274",
 "no": "19"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Scotland",
-"value_m": 0.23,
+"value_m": 0.55,
 "qid": "Q107723107",
 "no": "4"
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "England",
-"value_m": 0.23,
+"value_m": 0.55,
 "qid": "Q128926617",
 "no": "15"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.23,
+"value_m": 0.55,
 "qid": null,
 "no": null
 },
@@ -240,7 +240,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Algeria",
-"value_m": 0.22,
+"value_m": 0.52,
 "qid": "Q121537987",
 "no": "26"
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Senegal",
-"value_m": 0.21,
+"value_m": 0.5,
 "qid": "Q108784648",
 "no": "27"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Czech Republic",
-"value_m": 0.21,
+"value_m": 0.5,
 "qid": null,
 "no": null
 },
@@ -270,7 +270,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.2,
+"value_m": 0.48,
 "qid": null,
 "no": null
 },
@@ -280,7 +280,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.19,
+"value_m": 0.45,
 "qid": null,
 "no": null
 },
@@ -290,7 +290,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.19,
+"value_m": 0.45,
 "qid": null,
 "no": null
 },
@@ -300,9 +300,10 @@
 "pos": "FW",
 "age": 25,
 "nat": "England",
-"value_m": 0.19,
+"value_m": 0.45,
 "qid": null,
 "no": null
 }
-]
+],
+"rescaled": 1
 }

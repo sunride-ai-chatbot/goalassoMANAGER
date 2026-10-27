@@ -1,0 +1,249 @@
+{
+"key": "l_reineh",
+"name_he": "מכבי בני ריינה",
+"source": "hewiki:מכבי בני ריינה",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "גיא הרמן",
+"en": "גיא הרמן",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.115,
+"qid": null,
+"no": "1"
+},
+{
+"he": "ליאור גליקליך",
+"en": "Lior Gliklich",
+"pos": "GK",
+"age": 23,
+"nat": "Israel",
+"value_m": 0.101,
+"qid": "Q118198690",
+"no": "31"
+},
+{
+"he": "בראא אמארה",
+"en": "בראא אמארה",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.087,
+"qid": null,
+"no": "22"
+},
+{
+"he": "אנטוניו ספר",
+"en": "Antonio Sefer",
+"pos": "MF",
+"age": 26,
+"nat": "Romania",
+"value_m": 0.274,
+"qid": "Q106439441",
+"no": "7"
+},
+{
+"he": "אווסו קוואבנה",
+"en": "Owusu Kwabena",
+"pos": "FW",
+"age": 29,
+"nat": "Ghana",
+"value_m": 0.274,
+"qid": "Q38794518",
+"no": "11"
+},
+{
+"he": "זה טורבו",
+"en": "Zé Turbo",
+"pos": "FW",
+"age": 29,
+"nat": "גינאה ביסאו",
+"value_m": 0.231,
+"qid": "Q26704553",
+"no": "9"
+},
+{
+"he": "אלכסה פייץ'",
+"en": "Aleksa Pejić",
+"pos": "MF",
+"age": 27,
+"nat": "Serbia",
+"value_m": 0.202,
+"qid": "Q97924457",
+"no": "30"
+},
+{
+"he": "עילאי אלמקייס",
+"en": "Ilay Elmkies",
+"pos": "MF",
+"age": 26,
+"nat": "Israel",
+"value_m": 0.188,
+"qid": "Q71142658",
+"no": "8"
+},
+{
+"he": "מתן גושה",
+"en": "Matan Gosha",
+"pos": "DF",
+"age": 27,
+"nat": "Israel",
+"value_m": 0.159,
+"qid": "Q138018202",
+"no": "5"
+},
+{
+"he": "אסיל כנעאני",
+"en": "אסיל כנעאני",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.159,
+"qid": null,
+"no": "17"
+},
+{
+"he": "עידן גורן",
+"en": "עידן גורן",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.159,
+"qid": null,
+"no": "77"
+},
+{
+"he": "איאד חלאילי",
+"en": "איאד חלאילי",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.144,
+"qid": null,
+"no": "25"
+},
+{
+"he": "עלי איבראהים",
+"en": "עלי איבראהים",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.144,
+"qid": null,
+"no": "33"
+},
+{
+"he": "מילאדין סטבנוביץ'",
+"en": "Miladin Stevanović",
+"pos": "DF",
+"age": 30,
+"nat": "Serbia",
+"value_m": 0.144,
+"qid": "Q18344839",
+"no": "66"
+},
+{
+"he": "איהם מטר",
+"en": "איהם מטר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.144,
+"qid": null,
+"no": null
+},
+{
+"he": "מור ברמי",
+"en": "מור ברמי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.13,
+"qid": null,
+"no": "3"
+},
+{
+"he": "איהאב גנאים",
+"en": "Ihab Ganaem",
+"pos": "MF",
+"age": 30,
+"nat": "Israel",
+"value_m": 0.13,
+"qid": "Q63201355",
+"no": "6"
+},
+{
+"he": "סער פדידה",
+"en": "Sa'ar Fadida",
+"pos": "MF",
+"age": 29,
+"nat": "Israel",
+"value_m": 0.13,
+"qid": "Q55958766",
+"no": "10"
+},
+{
+"he": "מוחמד שכר",
+"en": "Mohamad shaker",
+"pos": "FW",
+"age": 29,
+"nat": "Israel",
+"value_m": 0.13,
+"qid": "Q47002545",
+"no": "16"
+},
+{
+"he": "איאד אבו עביד",
+"en": "Eyad Abu Abaid",
+"pos": "DF",
+"age": 31,
+"nat": "Israel",
+"value_m": 0.115,
+"qid": "Q18421889",
+"no": "4"
+},
+{
+"he": "נבו שדו",
+"en": "נבו שדו",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.101,
+"qid": null,
+"no": "91"
+},
+{
+"he": "עאיד חבשי",
+"en": "Ayid Habshi",
+"pos": "DF",
+"age": 31,
+"nat": "Israel",
+"value_m": 0.087,
+"qid": "Q16840349",
+"no": "5"
+},
+{
+"he": "עבדאללה ג'אבר",
+"en": "Abdallah Jaber",
+"pos": "DF",
+"age": 33,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": "Q18705306",
+"no": "14"
+},
+{
+"he": "איאד ח'וטבא",
+"en": "Eyad Hutba",
+"pos": "DF",
+"age": 38,
+"nat": "Israel",
+"value_m": 0.029,
+"qid": "Q2892222",
+"no": "29"
+}
+],
+"rescaled": 1
+}

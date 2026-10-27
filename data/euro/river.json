@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Argentina",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q65975161",
 "no": "33"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "Argentina",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q137882031",
 "no": "41"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "Argentina",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q124569494",
 "no": "57"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Argentina",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": null
 },
@@ -50,7 +50,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Argentina",
-"value_m": 0.3,
+"value_m": 0.58,
 "qid": "Q57293140",
 "no": "23"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Colombia",
-"value_m": 0.29,
+"value_m": 0.56,
 "qid": "Q18719633",
 "no": "19"
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Argentina",
-"value_m": 0.28,
+"value_m": 0.54,
 "qid": "Q11640549",
 "no": "9"
 },
@@ -80,7 +80,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Argentina",
-"value_m": 0.26,
+"value_m": 0.5,
 "qid": "Q26255087",
 "no": "29"
 },
@@ -90,7 +90,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Argentina",
-"value_m": 0.25,
+"value_m": 0.48,
 "qid": "Q54328289",
 "no": "3"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Argentina",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q107345687",
 "no": "26"
 },
@@ -110,7 +110,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Argentina",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q123421122",
 "no": "32"
 },
@@ -120,7 +120,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Argentina",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q60842143",
 "no": "6"
 },
@@ -130,7 +130,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Uruguay",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q17124713",
 "no": "8"
 },
@@ -140,7 +140,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Argentina",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q10855654",
 "no": "10"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Argentina",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q102429814",
 "no": "5"
 },
@@ -160,7 +160,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Argentina",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q20669464",
 "no": "28"
 },
@@ -170,7 +170,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Argentina",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q136297420",
 "no": null
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Argentina",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q127857199",
 "no": "13"
 },
@@ -190,7 +190,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Uruguay",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q20172066",
 "no": "20"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Argentina",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q136959742",
 "no": null
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Argentina",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": null
 },
@@ -220,7 +220,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "Argentina",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q123506704",
 "no": "2"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Argentina",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q139899761",
 "no": "44"
 },
@@ -240,7 +240,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Argentina",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": "Q135485000",
 "no": "50"
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Argentina",
-"value_m": 0.1,
+"value_m": 0.19,
 "qid": null,
 "no": null
 },
@@ -260,7 +260,7 @@
 "pos": "FW",
 "age": 18,
 "nat": "Argentina",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q139899759",
 "no": "25"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Argentina",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q137978658",
 "no": "31"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 34,
 "nat": "Argentina",
-"value_m": 0.07,
+"value_m": 0.13,
 "qid": "Q17462635",
 "no": "21"
 },
@@ -290,7 +290,7 @@
 "pos": "MF",
 "age": 18,
 "nat": "Argentina",
-"value_m": 0.07,
+"value_m": 0.13,
 "qid": "Q135312428",
 "no": "24"
 },
@@ -300,9 +300,10 @@
 "pos": "DF",
 "age": 38,
 "nat": "Argentina",
-"value_m": 0.06,
+"value_m": 0.12,
 "qid": "Q182063",
 "no": "30"
 }
-]
+],
+"rescaled": 1
 }

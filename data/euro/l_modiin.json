@@ -1,0 +1,259 @@
+{
+"key": "l_modiin",
+"name_he": "עירוני מודיעין",
+"source": "enwiki:Ironi Modi'in F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Mikel Taytel",
+"en": "Mikel Taytel",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Roy Beigel",
+"en": "Roy Beigel",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "18"
+},
+{
+"he": "איתמר ישראלי",
+"en": "Itamar Israeli",
+"pos": "GK",
+"age": 34,
+"nat": "Israel",
+"value_m": 0.023,
+"qid": "Q89559569",
+"no": "22"
+},
+{
+"he": "לוקה שטור",
+"en": "Luka Štor",
+"pos": "FW",
+"age": 28,
+"nat": "Israel",
+"value_m": 0.116,
+"qid": "Q72975529",
+"no": "9"
+},
+{
+"he": "Arian Mršulja",
+"en": "Arian Mršulja",
+"pos": "DF",
+"age": 28,
+"nat": "Croatia",
+"value_m": 0.093,
+"qid": "Q97200102",
+"no": "24"
+},
+{
+"he": "עומר סניור",
+"en": "Omer Senior",
+"pos": "MF",
+"age": 23,
+"nat": "Israel",
+"value_m": 0.093,
+"qid": "Q110241932",
+"no": "77"
+},
+{
+"he": "Eli Magar",
+"en": "Eli Magar",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Sean Buskila",
+"en": "Sean Buskila",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Aleksander Sotaskov",
+"en": "Aleksander Sotaskov",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Amir Sabag",
+"en": "Amir Sabag",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Adir Maya",
+"en": "Adir Maya",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Guy Amsalem",
+"en": "Guy Amsalem",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Maor Biton",
+"en": "Maor Biton",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Avihay Wodaje",
+"en": "Avihay Wodaje",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Yarin Machluf",
+"en": "Yarin Machluf",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Oz Zigler",
+"en": "Oz Zigler",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Mohammed Adam Mahamid",
+"en": "Mohammed Adam Mahamid",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Idan Avitov",
+"en": "Idan Avitov",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "88"
+},
+{
+"he": "Michael Ben Ami",
+"en": "Michael Ben Ami",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Shalev Samareli",
+"en": "Shalev Samareli",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Ofek Geller",
+"en": "Ofek Geller",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Tomer Benbeinshti",
+"en": "Tomer Benbeinshti",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "10"
+},
+{
+"he": "שחר הירש",
+"en": "Shahar Hirsh",
+"pos": "FW",
+"age": 33,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": "Q16235442",
+"no": "14"
+},
+{
+"he": "ניר לקס",
+"en": "Nir Lax",
+"pos": "MF",
+"age": 32,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": "Q7039828",
+"no": "15"
+},
+{
+"he": "Georgi Kopraba",
+"en": "Georgi Kopraba",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "21"
+}
+],
+"rescaled": 1
+}

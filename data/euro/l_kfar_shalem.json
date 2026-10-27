@@ -1,0 +1,229 @@
+{
+"key": "l_kfar_shalem",
+"name_he": "הפועל כפר שלם",
+"source": "hewiki:הפועל כפר שלם",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "תומר צרפתי",
+"en": "Tomer Tzarfati",
+"pos": "GK",
+"age": 22,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": "Q118206693",
+"no": null
+},
+{
+"he": "עומר קבילו",
+"en": "עומר קבילו",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "55"
+},
+{
+"he": "גל חיים וייס",
+"en": "גל חיים וייס",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.063,
+"qid": null,
+"no": null
+},
+{
+"he": "אור רויזמן",
+"en": "Or Roizman",
+"pos": "FW",
+"age": 24,
+"nat": "Israel",
+"value_m": 0.138,
+"qid": "Q121028839",
+"no": "11"
+},
+{
+"he": "בן יחזקאל",
+"en": "בן יחזקאל",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.125,
+"qid": null,
+"no": "23"
+},
+{
+"he": "אבנעזר ממאטה",
+"en": "Ebenezer Mamatah",
+"pos": "FW",
+"age": 24,
+"nat": "Ghana",
+"value_m": 0.113,
+"qid": "Q115789299",
+"no": "28"
+},
+{
+"he": "נועם שחר",
+"en": "נועם שחר",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.113,
+"qid": null,
+"no": "99"
+},
+{
+"he": "עידו עוולי",
+"en": "עידו עוולי",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.1,
+"qid": null,
+"no": "25"
+},
+{
+"he": "דומיניק בראון",
+"en": "דומיניק בראון",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.088,
+"qid": null,
+"no": "3"
+},
+{
+"he": "אוהד חזוט",
+"en": "אוהד חזוט",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "7"
+},
+{
+"he": "ליאל צאנה",
+"en": "ליאל צאנה",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "8"
+},
+{
+"he": "ניר חסון",
+"en": "ניר חסון",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "26"
+},
+{
+"he": "רם לוי",
+"en": "רם לוי",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "29"
+},
+{
+"he": "איבה רנסום ג'ידצ'וקוו",
+"en": "Ibeh Ransom",
+"pos": "FW",
+"age": 23,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": "Q126723612",
+"no": null
+},
+{
+"he": "אבי סאלם",
+"en": "אבי סאלם",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.088,
+"qid": null,
+"no": "70"
+},
+{
+"he": "איתי מלמה",
+"en": "איתי מלמה",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "4"
+},
+{
+"he": "איתן אהרון",
+"en": "איתן אהרון",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "5"
+},
+{
+"he": "ליאור משנסקי",
+"en": "ליאור משנסקי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": "6"
+},
+{
+"he": "מתן בית יעקב",
+"en": "מתן בית יעקב",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.075,
+"qid": null,
+"no": null
+},
+{
+"he": "עבאס סמארי",
+"en": "עבאס סמארי",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.075,
+"qid": null,
+"no": "17"
+},
+{
+"he": "עמית קרדי",
+"en": "עמית קרדי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.063,
+"qid": null,
+"no": "21"
+},
+{
+"he": "יובל אשכנזי",
+"en": "Yuval Ashkenazi",
+"pos": "MF",
+"age": 34,
+"nat": "Israel",
+"value_m": 0.038,
+"qid": "Q50289899",
+"no": "1"
+}
+],
+"rescaled": 1
+}

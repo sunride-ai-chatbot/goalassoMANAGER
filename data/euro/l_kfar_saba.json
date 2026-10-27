@@ -1,0 +1,149 @@
+{
+"key": "l_kfar_saba",
+"name_he": "הפועל כפר סבא",
+"source": "enwiki:Hapoel Kfar Saba F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "ניב פליטר",
+"en": "Niv Fliter",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.121,
+"qid": "Q120065316",
+"no": "23"
+},
+{
+"he": "Shahar Mark",
+"en": "Shahar Mark",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Yanir Nimni",
+"en": "Yanir Nimni",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.081,
+"qid": null,
+"no": "64"
+},
+{
+"he": "Benjamin Macini",
+"en": "Benjamin Macini",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.067,
+"qid": null,
+"no": "1"
+},
+{
+"he": "קונאדו יאדום",
+"en": "Konadu Yiadom",
+"pos": "DF",
+"age": 26,
+"nat": "Ghana",
+"value_m": 0.175,
+"qid": "Q107420401",
+"no": "5"
+},
+{
+"he": "Lion Caro",
+"en": "Lion Caro",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.148,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Clovis Yao",
+"en": "Clovis Yao",
+"pos": "FW",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.134,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Yishay Brosh",
+"en": "Yishay Brosh",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.121,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Liad Shmueli",
+"en": "Liad Shmueli",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.121,
+"qid": null,
+"no": null
+},
+{
+"he": "Eliran Zadok",
+"en": "Eliran Zadok",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Roy Buganim",
+"en": "Roy Buganim",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Gilbert Bandama",
+"en": "Gilbert Bandama",
+"pos": "MF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.108,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Ofek Peretz",
+"en": "Ofek Peretz",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.108,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Roy Harel",
+"en": "Roy Harel",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.094,
+"qid": null,
+"no": "10"
+}
+],
+"rescaled": 1
+}

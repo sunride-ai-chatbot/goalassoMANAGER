@@ -1,0 +1,189 @@
+{
+"key": "l_acre",
+"name_he": "הפועל עכו",
+"source": "hewiki:הפועל עכו",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "רון אפפלד",
+"en": "רון אפפלד",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "1"
+},
+{
+"he": "עמרי זוארץ",
+"en": "עמרי זוארץ",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "22"
+},
+{
+"he": "ספיר רזון",
+"en": "ספיר רזון",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.093,
+"qid": null,
+"no": "7"
+},
+{
+"he": "מוחמד ח'טיב",
+"en": "מוחמד ח'טיב",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.093,
+"qid": null,
+"no": "11"
+},
+{
+"he": "סלאח חוסיין",
+"en": "סלאח חוסיין",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.093,
+"qid": null,
+"no": "17"
+},
+{
+"he": "ריאן אשמוז",
+"en": "ריאן אשמוז",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.093,
+"qid": null,
+"no": "70"
+},
+{
+"he": "מידו בדארנה",
+"en": "מידו בדארנה",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "10"
+},
+{
+"he": "מיכאל מרנשטיין",
+"en": "מיכאל מרנשטיין",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "13"
+},
+{
+"he": "ליעד לוי",
+"en": "ליעד לוי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.082,
+"qid": null,
+"no": "15"
+},
+{
+"he": "ריף אמסלם",
+"en": "ריף אמסלם",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "5"
+},
+{
+"he": "שלום אובניש",
+"en": "שלום אובניש",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "9"
+},
+{
+"he": "ליאם ורטמכטר",
+"en": "ליאם ורטמכטר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "14"
+},
+{
+"he": "ריאן מריח",
+"en": "ריאן מריח",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"no": "21"
+},
+{
+"he": "יוני אלמאלם",
+"en": "יוני אלמאלם",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "2"
+},
+{
+"he": "עילאי איבגי",
+"en": "עילאי איבגי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "4"
+},
+{
+"he": "קרלוס סרנטה",
+"en": "Carlos Sarante",
+"pos": "FW",
+"age": 20,
+"nat": "הרפובליקה הדומיניקנית",
+"value_m": 0.058,
+"qid": "Q141726680",
+"no": "19"
+},
+{
+"he": "מור נעמן",
+"en": "מור נעמן",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "26"
+},
+{
+"he": "טומי צוציאשווילי",
+"en": "טומי צוציאשווילי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.058,
+"qid": null,
+"no": "77"
+}
+],
+"rescaled": 1
+}

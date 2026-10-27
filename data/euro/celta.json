@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Romania",
-"value_m": 0.79,
+"value_m": 3.58,
 "qid": "Q26857965",
 "no": "13"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Spain",
-"value_m": 0.65,
+"value_m": 2.95,
 "qid": "Q29943739",
 "no": "25"
 },
@@ -30,7 +30,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Spain",
-"value_m": 1.33,
+"value_m": 6.03,
 "qid": "Q110070377",
 "no": "9"
 },
@@ -40,7 +40,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Spain",
-"value_m": 1.25,
+"value_m": 5.67,
 "qid": "Q114906705",
 "no": "11"
 },
@@ -50,7 +50,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Guinea",
-"value_m": 1.23,
+"value_m": 5.57,
 "qid": "Q65205090",
 "no": "6"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Sweden",
-"value_m": 1.13,
+"value_m": 5.12,
 "qid": "Q107485012",
 "no": "19"
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Spain",
-"value_m": 1.06,
+"value_m": 4.8,
 "qid": "Q109250855",
 "no": "23"
 },
@@ -80,7 +80,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Morocco",
-"value_m": 1.04,
+"value_m": 4.71,
 "qid": "Q99485151",
 "no": "24"
 },
@@ -90,7 +90,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.97,
+"value_m": 4.4,
 "qid": "Q106878319",
 "no": "15"
 },
@@ -100,7 +100,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Uruguay",
-"value_m": 0.93,
+"value_m": 4.21,
 "qid": "Q58011140",
 "no": "21"
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Spain",
-"value_m": 0.91,
+"value_m": 4.12,
 "qid": "Q100529585",
 "no": "5"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Spain",
-"value_m": 0.89,
+"value_m": 4.03,
 "qid": "Q121610335",
 "no": "16"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Spain",
-"value_m": 0.82,
+"value_m": 3.72,
 "qid": "Q123352800",
 "no": "20"
 },
@@ -140,7 +140,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Morocco",
-"value_m": 0.75,
+"value_m": 3.4,
 "qid": "Q113574233",
 "no": "39"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Sweden",
-"value_m": 0.73,
+"value_m": 3.31,
 "qid": "Q16633442",
 "no": "2"
 },
@@ -160,7 +160,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Spain",
-"value_m": 0.68,
+"value_m": 3.08,
 "qid": "Q116872162",
 "no": "17"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Spain",
-"value_m": 0.65,
+"value_m": 2.95,
 "qid": "Q126143747",
 "no": "18"
 },
@@ -180,7 +180,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Spain",
-"value_m": 0.62,
+"value_m": 2.81,
 "qid": "Q124377511",
 "no": "8"
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Spain",
-"value_m": 0.58,
+"value_m": 2.63,
 "qid": "Q20100549",
 "no": "14"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Spain",
-"value_m": 0.55,
+"value_m": 2.49,
 "qid": "Q27662868",
 "no": "22"
 },
@@ -210,7 +210,7 @@
 "pos": "FW",
 "age": 33,
 "nat": "Spain",
-"value_m": 0.42,
+"value_m": 1.9,
 "qid": "Q18719485",
 "no": "7"
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 39,
 "nat": "Spain",
-"value_m": 0.3,
+"value_m": 1.36,
 "qid": "Q26380",
 "no": "10"
 },
@@ -230,9 +230,10 @@
 "pos": "DF",
 "age": 35,
 "nat": "Spain",
-"value_m": 0.21,
+"value_m": 0.95,
 "qid": "Q442838",
 "no": "3"
 }
-]
+],
+"rescaled": 1
 }

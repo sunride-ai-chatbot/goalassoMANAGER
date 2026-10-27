@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 22,
 "nat": "Croatia",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": "Q123179576",
 "no": "33"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 31,
 "nat": "Croatia",
-"value_m": 0.21,
+"value_m": 0.54,
 "qid": "Q18165034",
 "no": "1"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "Ukraine",
-"value_m": 0.15,
+"value_m": 0.38,
 "qid": "Q134230246",
 "no": "99"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.15,
+"value_m": 0.38,
 "qid": null,
 "no": "41"
 },
@@ -50,7 +50,7 @@
 "pos": "GK",
 "age": 35,
 "nat": "Croatia",
-"value_m": 0.05,
+"value_m": 0.13,
 "qid": "Q5221201",
 "no": "44"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Gambia",
-"value_m": 0.48,
+"value_m": 1.23,
 "qid": "Q72163710",
 "no": "7"
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Croatia",
-"value_m": 0.48,
+"value_m": 1.23,
 "qid": "Q55238219",
 "no": "11"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Albania",
-"value_m": 0.4,
+"value_m": 1.02,
 "qid": "Q108305104",
 "no": "4"
 },
@@ -90,7 +90,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Belgium",
-"value_m": 0.38,
+"value_m": 0.97,
 "qid": "Q66735647",
 "no": "5"
 },
@@ -100,7 +100,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Austria",
-"value_m": 0.37,
+"value_m": 0.95,
 "qid": "Q29342281",
 "no": "15"
 },
@@ -110,7 +110,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.34,
+"value_m": 0.87,
 "qid": "Q112477983",
 "no": "20"
 },
@@ -120,7 +120,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.32,
+"value_m": 0.82,
 "qid": "Q27654739",
 "no": "6"
 },
@@ -130,7 +130,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.3,
+"value_m": 0.77,
 "qid": null,
 "no": "18"
 },
@@ -140,7 +140,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Kosovo",
-"value_m": 0.26,
+"value_m": 0.67,
 "qid": "Q134778102",
 "no": "14"
 },
@@ -150,7 +150,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Albania",
-"value_m": 0.26,
+"value_m": 0.67,
 "qid": "Q133308057",
 "no": "19"
 },
@@ -160,7 +160,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Croatia",
-"value_m": 0.26,
+"value_m": 0.67,
 "qid": "Q125337993",
 "no": "32"
 },
@@ -170,7 +170,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "France",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": "Q113510074",
 "no": "8"
 },
@@ -180,7 +180,7 @@
 "pos": "FW",
 "age": 33,
 "nat": "Croatia",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": "Q591443",
 "no": "10"
 },
@@ -190,7 +190,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Nigeria",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": null,
 "no": "42"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Belgium",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": "Q14852383",
 "no": "18"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Madagascar",
-"value_m": 0.22,
+"value_m": 0.56,
 "qid": "Q109373986",
 "no": "22"
 },
@@ -220,7 +220,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.22,
+"value_m": 0.56,
 "qid": null,
 "no": "3"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Croatia",
-"value_m": 0.21,
+"value_m": 0.54,
 "qid": "Q116949731",
 "no": "28"
 },
@@ -240,7 +240,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.18,
+"value_m": 0.46,
 "qid": null,
 "no": "16"
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.17,
+"value_m": 0.43,
 "qid": null,
 "no": "20"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.16,
+"value_m": 0.41,
 "qid": null,
 "no": "29"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Croatia",
-"value_m": 0.14,
+"value_m": 0.36,
 "qid": "Q136445897",
 "no": "38"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "Croatia",
-"value_m": 0.12,
+"value_m": 0.31,
 "qid": "Q136445545",
 "no": "36"
 },
@@ -290,7 +290,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Croatia",
-"value_m": 0.11,
+"value_m": 0.28,
 "qid": "Q18350265",
 "no": "17"
 },
@@ -300,9 +300,10 @@
 "pos": "MF",
 "age": 17,
 "nat": "Ukraine",
-"value_m": 0.09,
+"value_m": 0.23,
 "qid": "Q141053643",
 "no": "26"
 }
-]
+],
+"rescaled": 1
 }

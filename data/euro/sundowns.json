@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 32,
 "nat": "South Africa",
-"value_m": 0.08,
+"value_m": 0.15,
 "qid": "Q58796031",
 "no": "31"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 34,
 "nat": "South Africa",
-"value_m": 0.06,
+"value_m": 0.12,
 "qid": "Q7366080",
 "no": "30"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 41,
 "nat": "Uganda",
-"value_m": 0.05,
+"value_m": 0.1,
 "qid": "Q740847",
 "no": "1"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 34,
 "nat": "South Africa",
-"value_m": 0.04,
+"value_m": 0.08,
 "qid": "Q10555408",
 "no": "26"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Brazil",
-"value_m": 0.27,
+"value_m": 0.52,
 "qid": "Q107445349",
 "no": "9"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "South Africa",
-"value_m": 0.27,
+"value_m": 0.52,
 "qid": "Q100565190",
 "no": "13"
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.25,
+"value_m": 0.48,
 "qid": "Q61741145",
 "no": "17"
 },
@@ -80,7 +80,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "South Africa",
-"value_m": 0.25,
+"value_m": 0.48,
 "qid": "Q127324870",
 "no": "22"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "South Africa",
-"value_m": 0.24,
+"value_m": 0.46,
 "qid": "Q58790870",
 "no": "4"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Chile",
-"value_m": 0.24,
+"value_m": 0.46,
 "qid": "Q21336655",
 "no": "11"
 },
@@ -110,7 +110,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "South Africa",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q115609344",
 "no": "14"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "South Africa",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q119350421",
 "no": "29"
 },
@@ -130,7 +130,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q115366581",
 "no": "33"
 },
@@ -140,7 +140,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q119350829",
 "no": "37"
 },
@@ -150,7 +150,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Portugal",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q41225921",
 "no": "10"
 },
@@ -160,7 +160,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q119846323",
 "no": "12"
 },
@@ -170,7 +170,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Argentina",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q84577999",
 "no": null
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "South Africa",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q137299823",
 "no": "3"
 },
@@ -190,7 +190,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "South Africa",
-"value_m": 0.19,
+"value_m": 0.37,
 "qid": "Q26260234",
 "no": "35"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "South Africa",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q26405966",
 "no": "6"
 },
@@ -210,7 +210,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "South Africa",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q141520292",
 "no": "38"
 },
@@ -220,7 +220,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "South Africa",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q58414998",
 "no": "24"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "South Africa",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q33083442",
 "no": "19"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "South Africa",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q125217895",
 "no": "28"
 },
@@ -250,7 +250,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "South Africa",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q111023530",
 "no": "34"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "45"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "South Africa",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q58810793",
 "no": "25"
 },
@@ -280,7 +280,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "South Africa",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q121055461",
 "no": "15"
 },
@@ -290,7 +290,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "46"
 },
@@ -300,9 +300,10 @@
 "pos": "DF",
 "age": 29,
 "nat": "South Africa",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q137714683",
 "no": "47"
 }
-]
+],
+"rescaled": 1
 }

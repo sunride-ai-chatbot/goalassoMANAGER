@@ -202,7 +202,7 @@ def age_of(dob):
 
 
 def est_value(club_str, age, pos, seed, sitelinks=0):
-    base = 0.08 * (1.12 ** max(0, club_str - 50))
+    base = 2 ** ((club_str - 64) / 3.75)          # the game's euroRating(value) lands on the club's strength
     agef = {17: .35, 18: .45, 19: .6, 20: .75, 21: .9, 22: 1.0, 23: 1.1, 24: 1.2, 25: 1.25, 26: 1.25, 27: 1.2, 28: 1.1, 29: 1.0,
             30: .85, 31: .7, 32: .55, 33: .45, 34: .35, 35: .28}.get(age if age is not None else 26, .25)
     posf = {'GK': .8, 'DF': .9, 'MF': 1.0, 'FW': 1.15}.get(pos, 1.0)

@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 22,
 "nat": "Tunisia",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q126231513",
 "no": "1"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": null,
 "no": "22"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 33,
 "nat": "Tunisia",
-"value_m": 0.07,
+"value_m": 0.13,
 "qid": "Q104440763",
 "no": "32"
 },
@@ -40,7 +40,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Peru",
-"value_m": 0.32,
+"value_m": 0.61,
 "qid": "Q110321491",
 "no": "16"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "France",
-"value_m": 0.3,
+"value_m": 0.58,
 "qid": "Q38429432",
 "no": "7"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Brazil",
-"value_m": 0.29,
+"value_m": 0.56,
 "qid": "Q97941158",
 "no": "10"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Tunisia",
-"value_m": 0.27,
+"value_m": 0.52,
 "qid": "Q108653548",
 "no": "20"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Tunisia",
-"value_m": 0.25,
+"value_m": 0.48,
 "qid": "Q64736331",
 "no": "8"
 },
@@ -90,7 +90,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "France",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q124649916",
 "no": "9"
 },
@@ -100,7 +100,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Tunisia",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q139816192",
 "no": "25"
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Tunisia",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q40272807",
 "no": "13"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Tunisia",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q134699960",
 "no": "27"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Sweden",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q113272697",
 "no": null
 },
@@ -140,7 +140,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": null,
 "no": "19"
 },
@@ -150,7 +150,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": null,
 "no": "23"
 },
@@ -160,7 +160,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": null,
 "no": "24"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Algeria",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q72939814",
 "no": "28"
 },
@@ -180,7 +180,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": null,
 "no": null
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": null,
 "no": "15"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": null,
 "no": "18"
 },
@@ -210,7 +210,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "36"
 },
@@ -220,7 +220,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": null
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "31"
 },
@@ -240,7 +240,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": null
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "12"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "3"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Tunisia",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q29052504",
 "no": "4"
 },
@@ -280,7 +280,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "14"
 },
@@ -290,7 +290,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "17"
 },
@@ -300,9 +300,10 @@
 "pos": "MF",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "21"
 }
-]
+],
+"rescaled": 1
 }

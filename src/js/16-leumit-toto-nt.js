@@ -18,9 +18,17 @@ const LEUMIT16=[
  {id:'l_ako',name:'הפועל עכו',short:'עכו',city:'עכו',stadium:'אצטדיון עכו',cap:5000,c1:'#1d4ed8',c2:'#ffffff',str:53},
 ];
 const ALEF_POOL=[['הפועל אום אל-פחם','אום אל-פחם','#1f8a3a','#ffffff'],['מ.ס. טירה','טירה','#1d4ed8','#ffffff'],['הפועל נוף הגליל','נוף הגליל','#d81e1e','#ffffff'],['שמשון תל אביב','תל אביב','#1d4ed8','#ffffff'],['הפועל הרצליה','הרצליה','#d81e1e','#ffffff'],['מכבי כפר כנא','כפר כנא','#f5d000','#1d4ed8'],['הפועל בית שאן','בית שאן','#d81e1e','#ffffff'],['עירוני נשר','נשר','#1d4ed8','#ffffff'],['הפועל מרמורק','רחובות','#d81e1e','#ffffff'],['בית"ר תל אביב רמלה','רמלה','#f5d000','#111111'],['הפועל ניר רמת השרון','רמת השרון','#d81e1e','#ffffff'],['מכבי שעריים','רחובות','#1d4ed8','#f5d000']];
-function buildLeumitClub(def){const c={...def,league:false,div:'leumit',players:makeSquad(def.str||55),youth:makeYouth(7),formation:'4-4-2',P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0,group:null,euro:null,sponsor:null,build:null,ticket:45,academy:1,training:1,money:Math.round(rnd(1.5e6,4e6)/1e5)*1e5,tier:4,prestige:0,realSquad:false,fans:40+ri(-5,8),focus:'bal',intensity:'mid',scouting:1};return c}
+/* a Leumit club with a real squad in data/euro (l_*.json, from Hebrew Wikipedia) fields it; positions short of a playable
+   minimum are topped up by realEuroSquad, otherwise the designed generated squad */
+function leumitSquadFor(def){const real=typeof realEuroSquad==='function'?realEuroSquad(def.name,def.str||55):null;if(!real)return makeSquad(def.str||55);for(const p of real){p.nat=p.nat||'ישראל';if(p.nat==='ישראל')p.foreign=false;p.contract=p.contract||ri(1,3)}return real}
+function buildLeumitClub(def){const c={...def,league:false,div:'leumit',players:leumitSquadFor(def),youth:makeYouth(7),formation:'4-4-2',P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0,group:null,euro:null,sponsor:null,build:null,ticket:45,academy:1,training:1,money:Math.round(rnd(1.5e6,4e6)/1e5)*1e5,tier:4,prestige:0,realSquad:false,fans:40+ri(-5,8),focus:'bal',intensity:'mid',scouting:1};return c}
 function alefClub(){const d=pick(ALEF_POOL.filter(x=>!G.leumit.some(c=>c.name===x[0])&&!G.clubs.some(c=>c.name===x[0]))||ALEF_POOL);return buildLeumitClub({id:'l'+(uid++),name:d[0],short:d[0].replace(/^(הפועל|מכבי|מ\.ס\.|עירוני|בית"ר) /,''),city:d[1],stadium:'אצטדיון '+d[1],cap:3500,c1:d[2],c2:d[3],str:52})}
 function leumitClubs(){return G.leumit}
+/* existing careers: AI clubs in the Leumit swap their invented squads for the real ones (the manager's own club keeps its
+   squad: his signings, contracts and lineup are his). Players in an open negotiation or on loan are kept. */
+function migrateLeumitSquads(){for(const c of G.leumit||[]){if(c.id===G.me||c.realSquad)continue;const real=typeof realEuroSquad==='function'?realEuroSquad(c.name,c.str||55):null;if(!real)continue;
+  const keep=new Set([...(G.negs||[]).map(n=>n.pid),...(c.players||[]).filter(p=>p.loanOut||p.loan).map(p=>p.id)]);c.players=[...c.players.filter(p=>keep.has(p.id)),...real];for(const p of c.players){p.nat=p.nat||'ישראל';if(p.nat==='ישראל')p.foreign=false}
+  c.realSquad=true;c.lineup=null;c.captain=null;c.xi=null}}
 function myDiv(){const c=me();return c&&c.league?'top':'leumit'}
 function divClubs(div){return div==='leumit'?G.leumit:leagueClubs()}
 function standingsOf(div){return divClubs(div).slice().sort((a,b)=>b.pts-a.pts||(b.GF-b.GA)-(a.GF-a.GA)||b.GF-a.GF||a.name.localeCompare(b.name))}

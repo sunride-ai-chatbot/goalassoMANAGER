@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Serbia",
-"value_m": 0.13,
+"value_m": 0.22,
 "qid": "Q29478762",
 "no": "12"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Serbia",
-"value_m": 0.09,
+"value_m": 0.15,
 "qid": "Q122831280",
 "no": "1"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.08,
+"value_m": 0.13,
 "qid": null,
 "no": "71"
 },
@@ -40,7 +40,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Serbia",
-"value_m": 0.18,
+"value_m": 0.3,
 "qid": "Q106916749",
 "no": "20"
 },
@@ -50,7 +50,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.18,
+"value_m": 0.3,
 "qid": "Q121139950",
 "no": "35"
 },
@@ -60,7 +60,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Serbia",
-"value_m": 0.18,
+"value_m": 0.3,
 "qid": "Q55935603",
 "no": "77"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.17,
+"value_m": 0.28,
 "qid": "Q62616469",
 "no": "10"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Serbia",
-"value_m": 0.17,
+"value_m": 0.28,
 "qid": "Q26838727",
 "no": "18"
 },
@@ -90,7 +90,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.17,
+"value_m": 0.28,
 "qid": "Q50845648",
 "no": "99"
 },
@@ -100,7 +100,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Serbia",
-"value_m": 0.16,
+"value_m": 0.27,
 "qid": "Q23008168",
 "no": "15"
 },
@@ -110,7 +110,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Serbia",
-"value_m": 0.16,
+"value_m": 0.27,
 "qid": "Q139771768",
 "no": "19"
 },
@@ -120,7 +120,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Brazil",
-"value_m": 0.16,
+"value_m": 0.27,
 "qid": "Q69883189",
 "no": "23"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Romania",
-"value_m": 0.14,
+"value_m": 0.23,
 "qid": "Q35977612",
 "no": "16"
 },
@@ -140,7 +140,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Serbia",
-"value_m": 0.13,
+"value_m": 0.22,
 "qid": "Q133833457",
 "no": "6"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Serbia",
-"value_m": 0.13,
+"value_m": 0.22,
 "qid": "Q59914681",
 "no": "22"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.13,
+"value_m": 0.22,
 "qid": null,
 "no": "24"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Hungary",
-"value_m": 0.13,
+"value_m": 0.22,
 "qid": "Q96059450",
 "no": "26"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.12,
+"value_m": 0.2,
 "qid": null,
 "no": "3"
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Serbia",
-"value_m": 0.12,
+"value_m": 0.2,
 "qid": "Q126485850",
 "no": "8"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Serbia",
-"value_m": 0.12,
+"value_m": 0.2,
 "qid": "Q105958228",
 "no": "13"
 },
@@ -210,7 +210,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Serbia",
-"value_m": 0.12,
+"value_m": 0.2,
 "qid": "Q138168535",
 "no": "21"
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Serbia",
-"value_m": 0.11,
+"value_m": 0.18,
 "qid": "Q138332553",
 "no": "33"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.11,
+"value_m": 0.18,
 "qid": null,
 "no": "70"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Cameroon",
-"value_m": 0.1,
+"value_m": 0.17,
 "qid": "Q135526872",
 "no": "2"
 },
@@ -250,7 +250,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Serbia",
-"value_m": 0.1,
+"value_m": 0.17,
 "qid": "Q129559918",
 "no": "27"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.1,
+"value_m": 0.17,
 "qid": null,
 "no": "28"
 },
@@ -270,7 +270,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.1,
+"value_m": 0.17,
 "qid": null,
 "no": "32"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.09,
+"value_m": 0.15,
 "qid": null,
 "no": "66"
 },
@@ -290,7 +290,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Serbia",
-"value_m": 0.08,
+"value_m": 0.13,
 "qid": "Q6771231",
 "no": "4"
 },
@@ -300,9 +300,10 @@
 "pos": "DF",
 "age": 32,
 "nat": "Serbia",
-"value_m": 0.07,
+"value_m": 0.12,
 "qid": "Q16728266",
 "no": "5"
 }
-]
+],
+"rescaled": 1
 }

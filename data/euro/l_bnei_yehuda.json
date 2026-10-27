@@ -1,0 +1,309 @@
+{
+"key": "l_bnei_yehuda",
+"name_he": "בני יהודה",
+"source": "hewiki:בני יהודה תל אביב",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "תומר ליטבינוב",
+"en": "תומר ליטבינוב",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.124,
+"qid": null,
+"no": "98"
+},
+{
+"he": "אור יצחק",
+"en": "אור יצחק",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.109,
+"qid": null,
+"no": "33"
+},
+{
+"he": "יואב זז'ה",
+"en": "יואב זז'ה",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.093,
+"qid": null,
+"no": "1"
+},
+{
+"he": "סתיו נחמני",
+"en": "Stav Nahmani",
+"pos": "FW",
+"age": 23,
+"nat": "Israel",
+"value_m": 0.248,
+"qid": "Q57587652",
+"no": "9"
+},
+{
+"he": "עילאי אלמקייס",
+"en": "Ilay Elmkies",
+"pos": "MF",
+"age": 26,
+"nat": "Israel",
+"value_m": 0.217,
+"qid": "Q71142658",
+"no": "41"
+},
+{
+"he": "עילאי טרוסט",
+"en": "Ilay Trost",
+"pos": "MF",
+"age": 27,
+"nat": "Israel",
+"value_m": 0.202,
+"qid": "Q124054832",
+"no": "6"
+},
+{
+"he": "גולן בני",
+"en": "Golan Beni",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.202,
+"qid": "Q125025858",
+"no": "8"
+},
+{
+"he": "דני אעמר",
+"en": "דני אעמר",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.186,
+"qid": null,
+"no": "7"
+},
+{
+"he": "סהר הרקובץ",
+"en": "סהר הרקובץ",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.186,
+"qid": null,
+"no": "27"
+},
+{
+"he": "מתן לוי",
+"en": "מתן לוי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.171,
+"qid": null,
+"no": "5"
+},
+{
+"he": "בן הדדי",
+"en": "בן הדדי",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.171,
+"qid": null,
+"no": "11"
+},
+{
+"he": "נהוראי אוזנה",
+"en": "נהוראי אוזנה",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.171,
+"qid": null,
+"no": "55"
+},
+{
+"he": "ג'ואל אבקה",
+"en": "ג'ואל אבקה",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.171,
+"qid": null,
+"no": "66"
+},
+{
+"he": "ג'ונתן אגיאפונג",
+"en": "ג'ונתן אגיאפונג",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.155,
+"qid": null,
+"no": "4"
+},
+{
+"he": "נועם גיסין",
+"en": "נועם גיסין",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.155,
+"qid": null,
+"no": "18"
+},
+{
+"he": "גלעד מנצר",
+"en": "גלעד מנצר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.155,
+"qid": null,
+"no": "24"
+},
+{
+"he": "ז׳ה פלורס",
+"en": "ז׳ה פלורס",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.155,
+"qid": null,
+"no": "20"
+},
+{
+"he": "ג'ונתאס אבימאל דה סילבה קונסייסאו",
+"en": "ג'ונתאס אבימאל דה סילבה קונסייסאו",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.155,
+"qid": null,
+"no": "99"
+},
+{
+"he": "סהר דבח",
+"en": "סהר דבח",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.14,
+"qid": null,
+"no": "12"
+},
+{
+"he": "שחר מזרחי",
+"en": "שחר מזרחי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.14,
+"qid": null,
+"no": "17"
+},
+{
+"he": "יובל פיבן",
+"en": "יובל פיבן",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.14,
+"qid": null,
+"no": "30"
+},
+{
+"he": "עומר שרזי",
+"en": "עומר שרזי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.14,
+"qid": null,
+"no": "23"
+},
+{
+"he": "אורי חסאן",
+"en": "אורי חסאן",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.14,
+"qid": null,
+"no": "26"
+},
+{
+"he": "רווה אסייג",
+"en": "רווה אסייג",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.14,
+"qid": null,
+"no": "90"
+},
+{
+"he": "ניר ברדע",
+"en": "Nir Bardea",
+"pos": "DF",
+"age": 30,
+"nat": "Israel",
+"value_m": 0.14,
+"qid": "Q63200944",
+"no": "96"
+},
+{
+"he": "שגיא דרור",
+"en": "Sagi Dror",
+"pos": "MF",
+"age": 31,
+"nat": "Israel",
+"value_m": 0.124,
+"qid": "Q65677758",
+"no": "10"
+},
+{
+"he": "רז נחמיאס",
+"en": "Raz Nachmias",
+"pos": "DF",
+"age": 30,
+"nat": "Israel",
+"value_m": 0.124,
+"qid": "Q89242761",
+"no": "15"
+},
+{
+"he": "גיא סביליה",
+"en": "גיא סביליה",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.124,
+"qid": null,
+"no": "67"
+},
+{
+"he": "גיא דביר",
+"en": "גיא דביר",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.124,
+"qid": null,
+"no": "80"
+},
+{
+"he": "עמנואל אפואקה",
+"en": "עמנואל אפואקה",
+"pos": "MF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.124,
+"qid": null,
+"no": "14"
+}
+],
+"rescaled": 1
+}

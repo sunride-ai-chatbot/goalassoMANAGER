@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Senegal",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q110836923",
 "no": "33"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "DR Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q112490407",
 "no": "21"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Nigeria",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "22"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Senegal",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "22"
 },
@@ -50,7 +50,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": null,
 "no": null
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Niger",
-"value_m": 0.24,
+"value_m": 0.46,
 "qid": "Q107540791",
 "no": "15"
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": null,
 "no": null
 },
@@ -80,7 +80,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": null,
 "no": "23"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "DR Congo",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q98181746",
 "no": null
 },
@@ -100,7 +100,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Mali",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": null,
 "no": "39"
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "5"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "14"
 },
@@ -130,7 +130,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "10"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "24"
 },
@@ -150,7 +150,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "26"
 },
@@ -160,7 +160,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "34"
 },
@@ -170,7 +170,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Mali",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "35"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "6"
 },
@@ -190,7 +190,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Senegal",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "23"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "DR Congo",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q105939113",
 "no": "30"
 },
@@ -210,7 +210,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "32"
 },
@@ -220,7 +220,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "37"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "11"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Niger",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "23"
 },
@@ -250,7 +250,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "27"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "29"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "31"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "35"
 },
@@ -290,7 +290,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "12"
 },
@@ -300,9 +300,10 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "4"
 }
-]
+],
+"rescaled": 1
 }

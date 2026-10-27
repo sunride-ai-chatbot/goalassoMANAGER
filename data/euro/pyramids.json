@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Egypt",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q100260803",
 "no": "28"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "31"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 35,
 "nat": "Egypt",
-"value_m": 0.05,
+"value_m": 0.1,
 "qid": "Q2736249",
 "no": "1"
 },
@@ -40,7 +40,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Algeria",
-"value_m": 0.38,
+"value_m": 0.73,
 "qid": "Q112654639",
 "no": "13"
 },
@@ -50,7 +50,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.35,
+"value_m": 0.67,
 "qid": "Q117035133",
 "no": "8"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Egypt",
-"value_m": 0.28,
+"value_m": 0.54,
 "qid": "Q121537482",
 "no": "30"
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Egypt",
-"value_m": 0.26,
+"value_m": 0.5,
 "qid": "Q61998292",
 "no": "20"
 },
@@ -80,7 +80,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Egypt",
-"value_m": 0.22,
+"value_m": 0.42,
 "qid": "Q108525623",
 "no": "9"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Egypt",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q41023561",
 "no": "14"
 },
@@ -100,7 +100,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Egypt",
-"value_m": 0.19,
+"value_m": 0.37,
 "qid": "Q77351007",
 "no": "6"
 },
@@ -110,7 +110,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Egypt",
-"value_m": 0.19,
+"value_m": 0.37,
 "qid": "Q128210256",
 "no": "23"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Egypt",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q16728929",
 "no": "11"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Egypt",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": "Q18225149",
 "no": "29"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q28540574",
 "no": "32"
 },
@@ -150,7 +150,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Jordan",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q130508829",
 "no": "25"
 },
@@ -160,7 +160,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": null,
 "no": "39"
 },
@@ -170,7 +170,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "17"
 },
@@ -180,7 +180,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Egypt",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q47158846",
 "no": "27"
 },
@@ -190,7 +190,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Egypt",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q28846367",
 "no": "3"
 },
@@ -200,7 +200,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "35"
 },
@@ -210,7 +210,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "37"
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "38"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Egypt",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "40"
 },
@@ -240,7 +240,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Egypt",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q18171057",
 "no": "7"
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Egypt",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q22278109",
 "no": "21"
 },
@@ -260,7 +260,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Morocco",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": "Q16236644",
 "no": "18"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Morocco",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q99085185",
 "no": "15"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 34,
 "nat": "Egypt",
-"value_m": 0.06,
+"value_m": 0.12,
 "qid": "Q27942672",
 "no": "4"
 },
@@ -290,7 +290,7 @@
 "pos": "DF",
 "age": 37,
 "nat": "Egypt",
-"value_m": 0.05,
+"value_m": 0.1,
 "qid": "Q17180607",
 "no": "5"
 },
@@ -300,9 +300,10 @@
 "pos": "DF",
 "age": 34,
 "nat": "Egypt",
-"value_m": 0.05,
+"value_m": 0.1,
 "qid": "Q4696039",
 "no": "12"
 }
-]
+],
+"rescaled": 1
 }

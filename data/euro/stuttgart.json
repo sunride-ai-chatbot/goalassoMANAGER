@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Germany",
-"value_m": 0.91,
+"value_m": 5.49,
 "qid": "Q104520730",
 "no": "46"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 30,
 "nat": "Germany",
-"value_m": 0.9,
+"value_m": 5.43,
 "qid": "Q20743348",
 "no": "33"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 31,
 "nat": "Germany",
-"value_m": 0.72,
+"value_m": 4.34,
 "qid": "Q16519559",
 "no": "1"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 20,
 "nat": "Germany",
-"value_m": 0.7,
+"value_m": 4.22,
 "qid": "Q114825196",
 "no": "41"
 },
@@ -50,7 +50,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Germany",
-"value_m": 2.17,
+"value_m": 13.09,
 "qid": "Q68676722",
 "no": "6"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Germany",
-"value_m": 2.01,
+"value_m": 12.13,
 "qid": "Q65964628",
 "no": "18"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Denmark",
-"value_m": 1.99,
+"value_m": 12.01,
 "qid": "Q43780652",
 "no": "28"
 },
@@ -80,7 +80,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Portugal",
-"value_m": 1.7,
+"value_m": 10.26,
 "qid": "Q96793422",
 "no": "8"
 },
@@ -90,7 +90,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Germany",
-"value_m": 1.68,
+"value_m": 10.14,
 "qid": "Q50384596",
 "no": "4"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Morocco",
-"value_m": 1.68,
+"value_m": 10.14,
 "qid": "Q105955374",
 "no": "11"
 },
@@ -110,7 +110,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Bosnia-Herzegovina",
-"value_m": 1.66,
+"value_m": 10.01,
 "qid": "Q47067481",
 "no": "9"
 },
@@ -120,7 +120,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Germany",
-"value_m": 1.57,
+"value_m": 9.47,
 "qid": "Q22998602",
 "no": "7"
 },
@@ -130,7 +130,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Turkey",
-"value_m": 1.52,
+"value_m": 9.17,
 "qid": "Q47487632",
 "no": "16"
 },
@@ -140,7 +140,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Belgium",
-"value_m": 1.47,
+"value_m": 8.87,
 "qid": "Q98546080",
 "no": "2"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Germany",
-"value_m": 1.45,
+"value_m": 8.75,
 "qid": "Q39082971",
 "no": "24"
 },
@@ -160,7 +160,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Germany",
-"value_m": 1.42,
+"value_m": 8.57,
 "qid": "Q116294228",
 "no": "31"
 },
@@ -170,7 +170,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Germany",
-"value_m": 1.4,
+"value_m": 8.45,
 "qid": "Q45369082",
 "no": "10"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Switzerland",
-"value_m": 1.4,
+"value_m": 8.45,
 "qid": "Q122160785",
 "no": "14"
 },
@@ -190,7 +190,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Germany",
-"value_m": 1.39,
+"value_m": 8.39,
 "qid": "Q114868096",
 "no": "17"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Switzerland",
-"value_m": 1.38,
+"value_m": 8.33,
 "qid": "Q64009619",
 "no": "20"
 },
@@ -210,7 +210,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Germany",
-"value_m": 1.38,
+"value_m": 8.33,
 "qid": "Q55955918",
 "no": "26"
 },
@@ -220,7 +220,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "France",
-"value_m": 1.35,
+"value_m": 8.14,
 "qid": "Q30131952",
 "no": "23"
 },
@@ -230,7 +230,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 1.34,
+"value_m": 8.08,
 "qid": "Q56306162",
 "no": "3"
 },
@@ -240,7 +240,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Germany",
-"value_m": 1.14,
+"value_m": 6.88,
 "qid": "Q20436216",
 "no": "21"
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "France",
-"value_m": 1.11,
+"value_m": 6.7,
 "qid": "Q108199499",
 "no": "22"
 },
@@ -260,7 +260,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Slovakia",
-"value_m": 1.05,
+"value_m": 6.33,
 "qid": "Q118515513",
 "no": "44"
 },
@@ -270,7 +270,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Germany",
-"value_m": 0.96,
+"value_m": 5.79,
 "qid": null,
 "no": "39"
 },
@@ -280,7 +280,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Germany",
-"value_m": 0.93,
+"value_m": 5.61,
 "qid": "Q118611564",
 "no": "43"
 },
@@ -290,7 +290,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Germany",
-"value_m": 0.8,
+"value_m": 4.83,
 "qid": "Q118859259",
 "no": "29"
 },
@@ -300,9 +300,10 @@
 "pos": "MF",
 "age": 18,
 "nat": "Austria",
-"value_m": 0.41,
+"value_m": 2.47,
 "qid": "Q136384878",
 "no": "47"
 }
-]
+],
+"rescaled": 1
 }

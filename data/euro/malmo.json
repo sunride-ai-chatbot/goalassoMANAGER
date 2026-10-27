@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 20,
 "nat": "Sweden",
-"value_m": 0.16,
+"value_m": 0.41,
 "qid": "Q139892070",
 "no": "50"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 39,
 "nat": "Sweden",
-"value_m": 0.09,
+"value_m": 0.23,
 "qid": "Q1372325",
 "no": "27"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 36,
 "nat": "Sweden",
-"value_m": 0.06,
+"value_m": 0.15,
 "qid": "Q6799321",
 "no": "1"
 },
@@ -40,7 +40,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Montenegro",
-"value_m": 0.52,
+"value_m": 1.33,
 "qid": "Q19904159",
 "no": "29"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Sweden",
-"value_m": 0.45,
+"value_m": 1.15,
 "qid": "Q113971462",
 "no": "11"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Sweden",
-"value_m": 0.41,
+"value_m": 1.05,
 "qid": "Q105620373",
 "no": "15"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Sweden",
-"value_m": 0.35,
+"value_m": 0.9,
 "qid": "Q109819466",
 "no": "7"
 },
@@ -80,7 +80,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.34,
+"value_m": 0.87,
 "qid": "Q107014245",
 "no": "9"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Bulgaria",
-"value_m": 0.28,
+"value_m": 0.72,
 "qid": "Q16239593",
 "no": "6"
 },
@@ -100,7 +100,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Norway",
-"value_m": 0.28,
+"value_m": 0.72,
 "qid": "Q108124587",
 "no": "14"
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Brazil",
-"value_m": 0.27,
+"value_m": 0.69,
 "qid": "Q105641906",
 "no": "25"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Montenegro",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": null,
 "no": "33"
 },
@@ -130,7 +130,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Sweden",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": null,
 "no": "43"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": null,
 "no": "46"
 },
@@ -150,7 +150,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Montenegro",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": "Q105627782",
 "no": "5"
 },
@@ -160,7 +160,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Sweden",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": "Q118383504",
 "no": "23"
 },
@@ -170,7 +170,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Iceland",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": "Q116733009",
 "no": "32"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": null,
 "no": "–"
 },
@@ -190,7 +190,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Norway",
-"value_m": 0.21,
+"value_m": 0.54,
 "qid": "Q29169607",
 "no": "2"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Sweden",
-"value_m": 0.19,
+"value_m": 0.49,
 "qid": "Q120201242",
 "no": "37"
 },
@@ -210,7 +210,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.19,
+"value_m": 0.49,
 "qid": "Q125491355",
 "no": "40"
 },
@@ -220,7 +220,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Kosovo",
-"value_m": 0.19,
+"value_m": 0.49,
 "qid": null,
 "no": "–"
 },
@@ -230,7 +230,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Serbia",
-"value_m": 0.18,
+"value_m": 0.46,
 "qid": "Q136677207",
 "no": "28"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Sweden",
-"value_m": 0.18,
+"value_m": 0.46,
 "qid": null,
 "no": "44"
 },
@@ -250,7 +250,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Sweden",
-"value_m": 0.17,
+"value_m": 0.43,
 "qid": "Q136002142",
 "no": "24"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "Sweden",
-"value_m": 0.15,
+"value_m": 0.38,
 "qid": "Q125709370",
 "no": "4"
 },
@@ -270,7 +270,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Sweden",
-"value_m": 0.15,
+"value_m": 0.38,
 "qid": "Q141484984",
 "no": "42"
 },
@@ -280,7 +280,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Sweden",
-"value_m": 0.14,
+"value_m": 0.36,
 "qid": "Q140523269",
 "no": "45"
 },
@@ -290,7 +290,7 @@
 "pos": "FW",
 "age": 18,
 "nat": "Ghana",
-"value_m": 0.11,
+"value_m": 0.28,
 "qid": "Q140681263",
 "no": "39"
 },
@@ -300,9 +300,10 @@
 "pos": "MF",
 "age": 36,
 "nat": "Denmark",
-"value_m": 0.09,
+"value_m": 0.23,
 "qid": "Q490858",
 "no": "10"
 }
-]
+],
+"rescaled": 1
 }

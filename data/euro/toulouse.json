@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "France",
-"value_m": 0.55,
+"value_m": 2.01,
 "qid": "Q121423825",
 "no": "16"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "Comoros",
-"value_m": 0.3,
+"value_m": 1.1,
 "qid": "Q139464119",
 "no": "30"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 19,
 "nat": "France",
-"value_m": 0.17,
+"value_m": 0.62,
 "qid": "Q118900557",
 "no": "60"
 },
@@ -40,7 +40,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Venezuela",
-"value_m": 0.88,
+"value_m": 3.22,
 "qid": "Q43380621",
 "no": "23"
 },
@@ -50,7 +50,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Denmark",
-"value_m": 0.72,
+"value_m": 2.63,
 "qid": "Q99345848",
 "no": "20"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Canada",
-"value_m": 0.7,
+"value_m": 2.56,
 "qid": "Q78637933",
 "no": "13"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Canada",
-"value_m": 0.7,
+"value_m": 2.56,
 "qid": "Q117830854",
 "no": "14"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Norway",
-"value_m": 0.69,
+"value_m": 2.52,
 "qid": "Q35314083",
 "no": "15"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.54,
+"value_m": 1.97,
 "qid": "Q65559585",
 "no": "17"
 },
@@ -100,7 +100,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Argentina",
-"value_m": 0.53,
+"value_m": 1.94,
 "qid": "Q114356315",
 "no": "9"
 },
@@ -110,7 +110,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Germany",
-"value_m": 0.51,
+"value_m": 1.87,
 "qid": "Q26838064",
 "no": "31"
 },
@@ -120,7 +120,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Denmark",
-"value_m": 0.46,
+"value_m": 1.68,
 "qid": "Q30513763",
 "no": "2"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Algeria",
-"value_m": 0.43,
+"value_m": 1.57,
 "qid": "Q132126910",
 "no": "22"
 },
@@ -140,7 +140,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "France",
-"value_m": 0.38,
+"value_m": 1.39,
 "qid": null,
 "no": "94"
 },
@@ -150,7 +150,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Denmark",
-"value_m": 0.33,
+"value_m": 1.21,
 "qid": "Q127260116",
 "no": "8"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "France",
-"value_m": 0.33,
+"value_m": 1.21,
 "qid": null,
 "no": "49"
 },
@@ -170,7 +170,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Argentina",
-"value_m": 0.32,
+"value_m": 1.17,
 "qid": "Q134499516",
 "no": "7"
 },
@@ -180,7 +180,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Côte d'Ivoire",
-"value_m": 0.3,
+"value_m": 1.1,
 "qid": "Q140855622",
 "no": "12"
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 18,
 "nat": "France",
-"value_m": 0.27,
+"value_m": 0.99,
 "qid": "Q135935620",
 "no": "6"
 },
@@ -200,7 +200,7 @@
 "pos": "FW",
 "age": 18,
 "nat": "France",
-"value_m": 0.26,
+"value_m": 0.95,
 "qid": "Q134570389",
 "no": "37"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "France",
-"value_m": 0.25,
+"value_m": 0.91,
 "qid": "Q136309589",
 "no": "5"
 },
@@ -220,9 +220,10 @@
 "pos": "FW",
 "age": 18,
 "nat": "Sweden",
-"value_m": 0.25,
+"value_m": 0.91,
 "qid": "Q136497613",
 "no": "11"
 }
-]
+],
+"rescaled": 1
 }

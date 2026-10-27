@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.2,
+"value_m": 0.51,
 "qid": null,
 "no": null
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.17,
+"value_m": 0.43,
 "qid": null,
 "no": null
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.17,
+"value_m": 0.43,
 "qid": null,
 "no": null
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.15,
+"value_m": 0.38,
 "qid": null,
 "no": null
 },
@@ -50,7 +50,7 @@
 "pos": "GK",
 "age": 33,
 "nat": "Poland",
-"value_m": 0.13,
+"value_m": 0.33,
 "qid": "Q602659",
 "no": null
 },
@@ -60,7 +60,7 @@
 "pos": "GK",
 "age": 33,
 "nat": "Netherlands",
-"value_m": 0.12,
+"value_m": 0.31,
 "qid": "Q56787668",
 "no": null
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Netherlands",
-"value_m": 0.52,
+"value_m": 1.33,
 "qid": "Q21774847",
 "no": null
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Japan",
-"value_m": 0.46,
+"value_m": 1.18,
 "qid": "Q105258272",
 "no": null
 },
@@ -90,7 +90,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Finland",
-"value_m": 0.41,
+"value_m": 1.05,
 "qid": "Q106730310",
 "no": null
 },
@@ -100,7 +100,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 0.32,
+"value_m": 0.82,
 "qid": "Q122460666",
 "no": null
 },
@@ -110,7 +110,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Venezuela",
-"value_m": 0.31,
+"value_m": 0.79,
 "qid": "Q113374899",
 "no": null
 },
@@ -120,7 +120,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Netherlands",
-"value_m": 0.31,
+"value_m": 0.79,
 "qid": "Q98846968",
 "no": null
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Netherlands",
-"value_m": 0.28,
+"value_m": 0.72,
 "qid": "Q101627186",
 "no": null
 },
@@ -140,7 +140,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.27,
+"value_m": 0.69,
 "qid": "Q137770347",
 "no": null
 },
@@ -150,7 +150,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.27,
+"value_m": 0.69,
 "qid": null,
 "no": null
 },
@@ -160,7 +160,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.26,
+"value_m": 0.67,
 "qid": null,
 "no": null
 },
@@ -170,7 +170,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.26,
+"value_m": 0.67,
 "qid": null,
 "no": null
 },
@@ -180,7 +180,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Norway",
-"value_m": 0.25,
+"value_m": 0.64,
 "qid": "Q117307798",
 "no": null
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.25,
+"value_m": 0.64,
 "qid": null,
 "no": null
 },
@@ -200,7 +200,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.25,
+"value_m": 0.64,
 "qid": null,
 "no": null
 },
@@ -210,7 +210,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": "Q111609874",
 "no": null
 },
@@ -220,7 +220,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.24,
+"value_m": 0.61,
 "qid": null,
 "no": null
 },
@@ -230,7 +230,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": "Q135616215",
 "no": null
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": null,
 "no": null
 },
@@ -250,7 +250,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": null,
 "no": null
 },
@@ -260,7 +260,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Spain",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": null,
 "no": null
 },
@@ -270,7 +270,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.23,
+"value_m": 0.59,
 "qid": null,
 "no": null
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Morocco",
-"value_m": 0.22,
+"value_m": 0.56,
 "qid": "Q110583269",
 "no": null
 },
@@ -290,7 +290,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Netherlands",
-"value_m": 0.21,
+"value_m": 0.54,
 "qid": "Q130809319",
 "no": null
 },
@@ -300,9 +300,10 @@
 "pos": "MF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.21,
+"value_m": 0.54,
 "qid": null,
 "no": null
 }
-]
+],
+"rescaled": 1
 }

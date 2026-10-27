@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 28,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q58009185",
 "no": "1"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 28,
 "nat": "England",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q59913936",
 "no": "32"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 22,
 "nat": "Chile",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": "Q97657245",
 "no": "34"
 },
@@ -40,7 +40,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "40"
 },
@@ -50,7 +50,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Panama",
-"value_m": 0.3,
+"value_m": 0.58,
 "qid": "Q108543955",
 "no": "33"
 },
@@ -60,7 +60,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tunisia",
-"value_m": 0.29,
+"value_m": 0.56,
 "qid": "Q85410990",
 "no": "20"
 },
@@ -70,7 +70,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Canada",
-"value_m": 0.26,
+"value_m": 0.5,
 "qid": "Q111741178",
 "no": "37"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Denmark",
-"value_m": 0.25,
+"value_m": 0.48,
 "qid": "Q65230161",
 "no": "7"
 },
@@ -90,7 +90,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.25,
+"value_m": 0.48,
 "qid": "Q64009780",
 "no": "22"
 },
@@ -100,7 +100,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Croatia",
-"value_m": 0.24,
+"value_m": 0.46,
 "qid": "Q112224322",
 "no": "17"
 },
@@ -110,7 +110,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Australia",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q84593316",
 "no": "21"
 },
@@ -120,7 +120,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Denmark",
-"value_m": 0.23,
+"value_m": 0.44,
 "qid": "Q97002409",
 "no": "30"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Cameroon",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q68867694",
 "no": "13"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "England",
-"value_m": 0.2,
+"value_m": 0.38,
 "qid": "Q24691038",
 "no": "26"
 },
@@ -150,7 +150,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.19,
+"value_m": 0.37,
 "qid": "Q113359203",
 "no": "25"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Jamaica",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": "Q116938905",
 "no": "11"
 },
@@ -170,7 +170,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Northern Ireland",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q130942212",
 "no": "15"
 },
@@ -180,7 +180,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "England",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q124218890",
 "no": "16"
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Senegal",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q116889134",
 "no": "19"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "England",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": "Q121539093",
 "no": "35"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "England",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q36403348",
 "no": "6"
 },
@@ -220,7 +220,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "England",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": "Q113488928",
 "no": "24"
 },
@@ -230,7 +230,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "England",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q18128311",
 "no": "3"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "England",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q66547875",
 "no": "14"
 },
@@ -250,7 +250,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Denmark",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": "Q113134376",
 "no": "29"
 },
@@ -260,7 +260,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "England",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": "Q138610193",
 "no": "46"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "England",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": "Q131820603",
 "no": "12"
 },
@@ -280,7 +280,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Scotland",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q129358813",
 "no": "41"
 },
@@ -290,7 +290,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Wales",
-"value_m": 0.09,
+"value_m": 0.17,
 "qid": "Q131863084",
 "no": "44"
 },
@@ -300,9 +300,10 @@
 "pos": "MF",
 "age": 34,
 "nat": "Scotland",
-"value_m": 0.08,
+"value_m": 0.15,
 "qid": "Q6391158",
 "no": "23"
 }
-]
+],
+"rescaled": 1
 }

@@ -10,7 +10,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Ghana",
-"value_m": 0.21,
+"value_m": 0.4,
 "qid": "Q84558005",
 "no": "31"
 },
@@ -20,7 +20,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "22"
 },
@@ -30,7 +30,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "1"
 },
@@ -40,7 +40,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Ghana",
-"value_m": 0.24,
+"value_m": 0.46,
 "qid": "Q106033184",
 "no": "14"
 },
@@ -50,7 +50,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Ghana",
-"value_m": 0.19,
+"value_m": 0.37,
 "qid": "Q106421732",
 "no": "6"
 },
@@ -60,7 +60,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.19,
+"value_m": 0.37,
 "qid": null,
 "no": "19"
 },
@@ -70,7 +70,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Guinea",
-"value_m": 0.18,
+"value_m": 0.35,
 "qid": null,
 "no": "9"
 },
@@ -80,7 +80,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.17,
+"value_m": 0.33,
 "qid": null,
 "no": "13"
 },
@@ -90,7 +90,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.16,
+"value_m": 0.31,
 "qid": null,
 "no": "18"
 },
@@ -100,7 +100,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "7"
 },
@@ -110,7 +110,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "8"
 },
@@ -120,7 +120,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "15"
 },
@@ -130,7 +130,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "27"
 },
@@ -140,7 +140,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.15,
+"value_m": 0.29,
 "qid": null,
 "no": "40"
 },
@@ -150,7 +150,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "29"
 },
@@ -160,7 +160,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.14,
+"value_m": 0.27,
 "qid": null,
 "no": "44"
 },
@@ -170,7 +170,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "10"
 },
@@ -180,7 +180,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "11"
 },
@@ -190,7 +190,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.13,
+"value_m": 0.25,
 "qid": null,
 "no": "25"
 },
@@ -200,7 +200,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "5"
 },
@@ -210,7 +210,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "17"
 },
@@ -220,7 +220,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "20"
 },
@@ -230,7 +230,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.12,
+"value_m": 0.23,
 "qid": null,
 "no": "43"
 },
@@ -240,7 +240,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "2"
 },
@@ -250,7 +250,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "4"
 },
@@ -260,7 +260,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "12"
 },
@@ -270,7 +270,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "16"
 },
@@ -280,7 +280,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Burkina Faso",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "24"
 },
@@ -290,9 +290,10 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.11,
+"value_m": 0.21,
 "qid": null,
 "no": "26"
 }
-]
+],
+"rescaled": 1
 }
