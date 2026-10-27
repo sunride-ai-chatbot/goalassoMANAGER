@@ -36,7 +36,7 @@ jobs:
             git worktree add --detach /tmp/wt && git -C /tmp/wt checkout --orphan squad-sources && git -C /tmp/wt rm -rf . >/dev/null || true
           fi
       - name: Fetch squads
-        run: python3 scripts/fetch-wikidata-squads.py --group "${{ github.event.inputs.group }}" --only "${{ github.event.inputs.only }}" --out /tmp/wt/squads
+        run: python3 scripts/fetch-wikidata-squads.py --group "${{ github.event.inputs.group }}" --only "${{ github.event.inputs.only }}" --out /tmp/wt/squads --debug
       - name: Commit to squad-sources
         run: |
           cd /tmp/wt

@@ -111,9 +111,12 @@ def wd_lookup(titles):
     titles = [t for t in titles if t]
     for i in range(0, len(titles), 50):
         chunk = titles[i:i + 50]
+        chunk = [t[0].upper() + t[1:] for t in chunk]   # link titles may start lower-case; `normalize` only works for one title
         d = get(WD_API, {'action': 'wbgetentities', 'sites': 'enwiki', 'titles': '|'.join(chunk), 'props': 'labels|claims|sitelinks', 'languages': 'he|en',
-                         'format': 'json', 'normalize': 1, 'redirects': 'yes'})
-        norm = {n['from']: n['to'] for n in d.get('normalized', [])}
+                         'format': 'json', 'redirects': 'yes'})
+        if 'error' in d:
+            raise RuntimeError('wikidata: ' + d['error'].get('info', '?'))
+        norm = {}
         by_title = {}
         for q, e in d.get('entities', {}).items():
             if not q.startswith('Q'):
@@ -122,7 +125,7 @@ def wd_lookup(titles):
             if t:
                 by_title[t] = (q, e)
         for t in chunk:
-            hit = by_title.get(norm.get(t, t)) or by_title.get(t)
+            hit = by_title.get(t) or by_title.get(t.replace('_', ' '))
             if not hit:
                 continue
             q, e = hit
@@ -177,6 +180,7 @@ def main():
     ap.add_argument('--out', default=os.path.join(ROOT, 'data', 'euro'))
     ap.add_argument('--only', default='')
     ap.add_argument('--min', type=int, default=14)
+    ap.add_argument('--debug', action='store_true')
     a = ap.parse_args()
     cfg = json.load(open(os.path.join(ROOT, 'data', 'config', 'world-clubs-wiki.json'), encoding='utf8'))
     groups = ['world', 'leumit'] if a.group == 'all' else [a.group]
@@ -191,11 +195,16 @@ def main():
             try:
                 text, title = wikitext(info['en'])
                 rows = [r for r in parse_squad(text) if not r['loan']]
+                if a.debug:
+                    os.makedirs(os.path.join(a.out, '_debug'), exist_ok=True)
+                    heads = re.findall(r'\n(={2,4})\s*(.*?)\s*\1\s*\n', '\n' + text)
+                    with open(os.path.join(a.out, '_debug', key + '.txt'), 'w', encoding='utf8') as fh:
+                        fh.write('\n'.join('%s %s' % (h[0], h[1]) for h in heads) + '\n\nTEMPLATES %d\n' % len(FS.findall(text)) + '\n'.join(m.group(0)[:200] for m in FS.finditer(text)))
                 wd = wd_lookup([r['title'] for r in rows])
                 cs = club_strength(name_he)
                 players = []
                 for r in rows:
-                    w = wd.get(r['title']) if r['title'] else None
+                    w = (wd.get(r['title'][0].upper() + r['title'][1:]) or wd.get(r['title'])) if r['title'] else None
                     age = age_of(w['dob']) if w else None
                     pos = r['pos'] or 'MF'
                     if age is None:
