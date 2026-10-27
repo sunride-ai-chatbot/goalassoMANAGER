@@ -25,6 +25,8 @@ SEASON_YEAR = 2026
 SPARQL = 'https://query.wikidata.org/sparql'
 API = 'https://www.wikidata.org/w/api.php'
 
+NAT_FIX = {'Kingdom of the Netherlands': 'Netherlands', 'Kingdom of Denmark': 'Denmark', 'United Kingdom': 'England', "People's Republic of China": 'China',
+           'Republic of Ireland': 'Ireland', 'Democratic Republic of the Congo': 'DR Congo', 'Republic of the Congo': 'Congo', 'United States of America': 'United States'}
 POS_MAP = [
     (('goalkeeper',), 'GK'),
     (('defender', 'centre-back', 'center-back', 'full-back', 'left-back', 'right-back', 'wing-back', 'sweeper', 'libero'), 'DF'),
@@ -57,12 +59,13 @@ def club_qid(title):
 
 
 QUERY = '''
-SELECT ?p ?pLabel ?heLabel ?dob ?posLabel ?natLabel ?img ?start WHERE {
-  ?p wdt:P106 wd:Q937857 .
+SELECT ?p ?pLabel ?heLabel ?dob ?posLabel ?natLabel ?img ?start ?latest ?sl WHERE {
+  ?p wdt:P106 wd:Q937857 ; wdt:P21 wd:Q6581097 ; wikibase:sitelinks ?sl .
   ?p p:P54 ?m . ?m ps:P54 wd:%s .
   OPTIONAL { ?m pq:P582 ?end . }
   OPTIONAL { ?m pq:P580 ?start . }
   FILTER(!BOUND(?end) || ?end >= "%d-07-01T00:00:00Z"^^xsd:dateTime)
+  OPTIONAL { SELECT ?p (MAX(?s2) AS ?latest) WHERE { ?p p:P54 ?m2 . ?m2 pq:P580 ?s2 . } GROUP BY ?p }
   OPTIONAL { ?p wdt:P569 ?dob . }
   OPTIONAL { ?p wdt:P413 ?pos . ?pos rdfs:label ?posLabel FILTER(LANG(?posLabel)="en") }
   OPTIONAL { ?p wdt:P27 ?nat . ?nat rdfs:label ?natLabel FILTER(LANG(?natLabel)="en") }
@@ -77,7 +80,7 @@ def squad(qid):
     rows = {}
     for b in d['results']['bindings']:
         pid = b['p']['value'].rsplit('/', 1)[1]
-        r = rows.setdefault(pid, {'qid': pid, 'en': b.get('pLabel', {}).get('value', ''), 'he': None, 'dob': None, 'pos': set(), 'nat': set(), 'img': None, 'start': None})
+        r = rows.setdefault(pid, {'qid': pid, 'en': b.get('pLabel', {}).get('value', ''), 'he': None, 'dob': None, 'pos': set(), 'nat': set(), 'img': None, 'start': None, 'latest': None, 'sl': int(b.get('sl', {}).get('value', '0') or 0)})
         if 'heLabel' in b:
             r['he'] = b['heLabel']['value']
         if 'dob' in b and not r['dob']:
@@ -90,6 +93,8 @@ def squad(qid):
             r['img'] = b['img']['value']
         if 'start' in b and (not r['start'] or b['start']['value'] > r['start']):
             r['start'] = b['start']['value'][:10]
+        if 'latest' in b:
+            r['latest'] = b['latest']['value'][:10]
     return list(rows.values())
 
 
@@ -108,15 +113,16 @@ def age_of(dob):
     return SEASON_YEAR - y - (1 if m > 8 else 0)
 
 
-def est_value(club_str, age, pos, seed):
-    """Relative market value, millions: club tier × age curve × position × a stable per-player spread."""
+def est_value(club_str, age, pos, seed, sitelinks=0):
+    """Relative market value, millions: club tier × age curve × position × fame (Wikipedia sitelinks) × a stable per-player spread."""
     base = 0.08 * (1.12 ** max(0, club_str - 50))          # str 60 → 0.25M, 75 → 1.4M, 88 → 6M
     agef = {17: .35, 18: .45, 19: .6, 20: .75, 21: .9, 22: 1.0, 23: 1.1, 24: 1.2, 25: 1.25, 26: 1.25, 27: 1.2, 28: 1.1, 29: 1.0,
             30: .85, 31: .7, 32: .55, 33: .45, 34: .35, 35: .28}.get(age if age is not None else 26, .25)
     posf = {'GK': .8, 'DF': .9, 'MF': 1.0, 'FW': 1.15}.get(pos, 1.0)
     h = int(hashlib.sha1(seed.encode('utf8')).hexdigest()[:8], 16) / 0xffffffff
-    spread = 0.5 + 1.3 * (h ** 1.6)                          # most players near the club's level, a few stars
-    return round(base * agef * posf * spread, 2)
+    spread = 0.8 + 0.4 * h
+    fame = 0.45 + 0.55 * min(1.0, (sitelinks / 25.0) ** 0.6)   # 0 articles → 0.45×, 25+ articles → 1×
+    return round(base * agef * posf * spread * fame, 2)
 
 
 def club_strength(name_he):
@@ -156,14 +162,20 @@ def main():
                 for r in rows:
                     pos = map_pos(r['pos']) or 'MF'
                     age = age_of(r['dob'])
-                    if age is None or age < 16 or age > 42 or not r['en'] or r['en'].startswith('Q'):
+                    if age is None or age < 16 or age > 40 or not r['en'] or r['en'].startswith('Q'):
                         continue
-                    nat = sorted(r['nat'])[0] if r['nat'] else None
+                    # a membership without an end date is often stale: skip players whose latest dated contract is elsewhere
+                    if r['latest'] and ((r['start'] and r['latest'] > r['start']) or (not r['start'] and r['latest'] >= '%d-01-01' % (SEASON_YEAR - 2))):
+                        continue
+                    if r['start'] and int(r['start'][:4]) < SEASON_YEAR - 12:
+                        continue
+                    nat = NAT_FIX.get(sorted(r['nat'])[0], sorted(r['nat'])[0]) if r['nat'] else None
                     players.append({'he': r['he'] or r['en'], 'en': r['en'], 'pos': pos, 'age': age, 'nat': nat,
-                                    'value_m': est_value(cs, age, pos, r['qid']), 'qid': r['qid'], 'img': r['img'], 'since': r['start']})
-                # keep a realistic squad size: the most valuable 28 (newest contracts break ties)
+                                    'value_m': est_value(cs, age, pos, r['qid'], r['sl']), 'qid': r['qid'], 'img': r['img'], 'since': r['start'], 'sl': r['sl']})
+                # keep a realistic squad size: the most valuable 27 plus at least two keepers
                 players.sort(key=lambda p: (-p['value_m'], p['since'] or ''))
-                players = players[:28]
+                gks = [p for p in players if p['pos'] == 'GK'][:2]
+                players = gks + [p for p in players if p not in gks][:27 - len(gks)]
                 # a real squad needs at least two keepers; otherwise the club keeps its generated list
                 if len(players) < a.min or sum(1 for p in players if p['pos'] == 'GK') < 1:
                     report.append({'key': key, 'ok': False, 'why': 'only %d identified players' % len(players), 'qid': qid}); print(report[-1]); continue
