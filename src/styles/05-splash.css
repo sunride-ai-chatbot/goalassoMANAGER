@@ -48,3 +48,12 @@
 .intro .vsx{font-family:var(--display);font-size:22px;color:var(--muted);align-self:center}
 .intro .btn{pointer-events:auto}
 @media (max-width:420px){.intro .side .xi{max-height:112px;font-size:10.5px}}
+
+/* Animated launch artwork; real mode buttons remain available throughout playback. */
+.splash .sp-card{width:min(100vw,460px);background:#090a0c;display:flex;flex-direction:column}
+.splash .sp-launch{position:relative;flex:1;min-height:0;overflow:hidden;background:#090a0c}
+.splash .sp-launch video{width:100%;height:100%;object-fit:contain;object-position:center top}
+.splash .sp-ui{position:relative;flex-shrink:0;padding:16px 7% max(22px,calc(env(safe-area-inset-bottom) + 18px));background:#090a0c;gap:12px}
+.splash .sp-glow,.splash .sp-ver{display:none}
+.splash .sp-tag{letter-spacing:0;font-size:14px}
+@media (max-height:500px) and (orientation:landscape){.splash .sp-card{width:min(100vw,900px);flex-direction:row}.splash .sp-launch{width:50%}.splash .sp-ui{width:50%;justify-content:center;padding:20px}}

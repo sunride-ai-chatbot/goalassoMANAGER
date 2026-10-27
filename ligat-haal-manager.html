@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="dbfb18da113e">
+<meta name="goalasso-build" content="b3819ed536e9">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -360,6 +360,15 @@ h3{font-size:18px}
 .intro .vsx{font-family:var(--display);font-size:22px;color:var(--muted);align-self:center}
 .intro .btn{pointer-events:auto}
 @media (max-width:420px){.intro .side .xi{max-height:112px;font-size:10.5px}}
+
+/* Animated launch artwork; real mode buttons remain available throughout playback. */
+.splash .sp-card{width:min(100vw,460px);background:#090a0c;display:flex;flex-direction:column}
+.splash .sp-launch{position:relative;flex:1;min-height:0;overflow:hidden;background:#090a0c}
+.splash .sp-launch video{width:100%;height:100%;object-fit:contain;object-position:center top}
+.splash .sp-ui{position:relative;flex-shrink:0;padding:16px 7% max(22px,calc(env(safe-area-inset-bottom) + 18px));background:#090a0c;gap:12px}
+.splash .sp-glow,.splash .sp-ver{display:none}
+.splash .sp-tag{letter-spacing:0;font-size:14px}
+@media (max-height:500px) and (orientation:landscape){.splash .sp-card{width:min(100vw,900px);flex-direction:row}.splash .sp-launch{width:50%}.splash .sp-ui{width:50%;justify-content:center;padding:20px}}
 /* M3f: paper pop-up, stories, goals */
 .papercard{background:#f3ecdc!important;padding:10px!important}
 .paper.pp{box-shadow:none}.pp-hl{font-family:"Frank Ruhl Libre",serif;font-weight:900;font-size:28px;line-height:1.1;margin:4px 0 6px;color:#1c1915}
@@ -918,6 +927,40 @@ h3.sec:not(.btn){font-size:24px}
 #arena[hidden],[data-m3-panel][hidden]{display:none!important}
 @media(max-width:600px){.m3-switch{gap:8px}.m3-switch span{font-size:13px}.m3-controls button{flex:1 1 42%;font-size:15px}}
 @media(max-height:500px) and (orientation:landscape){.m3-stage{height:58vh}.m3-controls button{flex:initial}.match3d{margin:6px 0}}
+/* Broadcast-style team sheet: original portraits on a perspective pitch. */
+.formation-board,.cinematic-lineup .stad-pitch.formation-board{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(#07101830,#03110c60),url('assets/lineup-reference-stadium.jpg') center/cover;aspect-ratio:2/3;border:1px solid #b4c9b466;border-radius:18px}
+.formation-grass{position:absolute;z-index:-1;inset:28% 3% 4%;clip-path:polygon(18% 0,82% 0,100% 100%,0 100%);background:repeating-linear-gradient(0deg,#25813ed9 0 10%,#309448d9 10% 20%);border-bottom:3px solid var(--club-color)}
+.formation-grass .lines{position:absolute;inset:2%;width:96%;height:96%;transform:perspective(500px) rotateX(18deg);transform-origin:center bottom}
+.formation-face{display:block;width:clamp(44px,12vw,94px);aspect-ratio:1;border:3px solid #edf4f1;border-radius:50%;background:linear-gradient(#fff,#dbe8e0);overflow:hidden;margin:auto;box-shadow:0 3px 8px #0008}
+.formation-face svg{width:100%;height:100%;display:block}
+.cinematic-lineup .t3{width:16%;transform:translate(-50%,-50%)}
+.cinematic-lineup .t3-in{display:block}
+.cinematic-lineup .t3-in::before{display:none}
+.cinematic-lineup .t3-nm{position:static;width:100%;margin:3px 0 0;border-radius:2px;background:var(--club-color,#183c72);color:var(--club-ink,#fff);border:1px solid #fff6;padding:4px 2px;font-size:clamp(11px,2.6vw,16px);min-height:24px}
+.cinematic-lineup .t3-nm .cine-rating{color:inherit;font-size:12px}
+.cinematic-lineup .cine-header h2{font-size:clamp(27px,6vw,48px);margin:4px 0}
+.cinematic-lineup .cine-brand{font-size:12px;letter-spacing:3px}.cinematic-lineup .cine-brand svg{display:none}
+.cinematic-lineup .cine-header{inset:3% 3% auto}.cinematic-lineup .cine-tools{margin-top:6px}
+.beginner .bformation.formation-board{padding:0;aspect-ratio:2/3;background:linear-gradient(#07101820,#03110c40),url('assets/lineup-reference-stadium.jpg') center/cover;border-radius:14px}
+.beginner .bformation .formation-grass{top:16%}
+.beginner .bformation-player{position:absolute;transform:translate(-50%,-50%);width:16%;max-width:none;padding:0;min-height:44px}
+.beginner .bformation-player strong{background:var(--club-color,#183c72);color:var(--club-ink,#fff);border:1px solid #fff6;border-radius:2px;margin:3px 0 0;padding:4px 1px;font-size:clamp(11px,2.7vw,16px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.beginner .bformation-player small{display:block;font-size:10px;line-height:1.2;text-shadow:0 1px 3px #000}
+.formation-board button:focus-visible,.formation-board button.sel .formation-face{outline:3px solid #ffdd55;outline-offset:2px}
+@media(min-width:700px){.bformation.formation-board{max-width:560px;margin:auto}}
+
+.formation-board .t3-nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.formation-board .formation-face{max-width:100%;box-sizing:border-box}.beginner .bformation-player small{font-size:9px;white-space:nowrap}
+.room-entry{min-height:44px!important;background:#227365!important;color:#fff!important;border:1px solid #89e4cc!important;font:700 15px Heebo,Arial!important;padding:10px 15px!important;border-radius:12px!important;white-space:normal;cursor:pointer}
+#top>.room-entry{margin:5px}.btop:has(.room-entry){flex-wrap:wrap;padding:14px 0}.btop>.room-entry{margin-inline-start:auto}
+.room-overlay{position:fixed;inset:0;z-index:12000;background:#020a12dc;display:flex;align-items:center;justify-content:center;padding:15px;direction:rtl;backdrop-filter:blur(8px)}
+.room-dialog{position:relative;background:#12283b;color:#f3f8fc;border:1px solid #638192;border-radius:20px;width:min(560px,100%);max-height:90dvh;overflow:auto;padding:26px;font:16px/1.6 Heebo,Arial;box-shadow:0 15px 80px #0008}
+.room-dialog h2{font-size:25px;margin:10px 0}.room-dialog h3{font-size:20px}.room-dialog p{color:#c5d6e1}.room-dialog label{display:block;margin:14px 0;font-size:16px}.room-dialog input{display:block;width:100%;box-sizing:border-box;min-height:48px;background:#081925;color:white;border:1px solid #7998a8;border-radius:8px;padding:10px;font:16px Arial}
+.room-close{position:sticky;top:0;float:left;width:44px;height:44px;background:#324e60;color:white;border:0;border-radius:50%;font-size:28px;cursor:pointer;z-index:2}
+.room-dialog .btn{font:700 16px Heebo,Arial;min-height:48px;padding:10px 17px;border-radius:10px;cursor:pointer;background:#8de4c8;color:#102a26;border:1px solid #a6edd6}.room-dialog .btn.sec{background:#284459;color:#fff;border-color:#6b889b}.room-dialog .btn:disabled{opacity:.5;cursor:default}
+.room-actions{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}.room-member{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #3b5365;padding:12px 0}.room-member span{color:#a3e4c7}.room-match{text-align:center;background:linear-gradient(#112c40e8,#07251fdf),url('assets/lineup-reference-stadium.jpg') center/cover;border-radius:16px;padding:15px}.room-match>strong{display:block;font:800 50px Arial;margin:20px 0}#room-events{min-height:110px}#room-status{font-weight:700;color:#ffe8a2}
+@media(max-width:600px){.btop>.room-entry{width:100%;margin:0}.room-dialog{padding:18px}.room-member{font-size:14px}}
+.room-career{padding:12px;border:1px solid #7ab9a4;border-radius:12px;background:#153e35}.room-dialog .small{font-size:14px;line-height:1.6}.room-auth-warning{padding:12px;background:#614a1c;border-radius:10px}.room-dialog a.btn{text-decoration:none;display:inline-flex;align-items:center;white-space:normal}
+.room-storage-help{margin:14px 0;padding:10px;border:1px solid #557185;border-radius:10px}.room-storage-help summary{cursor:pointer;font-weight:700;min-height:32px}.room-storage-help:not([open]){background:#1d3547}
 </style>
 </head>
 <body>
@@ -1413,6 +1456,8 @@ function matchRatings(M,h,a){
   const out={};const avg=(xiStrength(M,h)+xiStrength(M,a))/2;
   for(const c of [h,a]){const gf=c===h?M.gh:M.ga,ga=c===h?M.ga:M.gh;const opp=c===h?a:h;const res=gf>ga?.45:gf===ga?.05:-.35;
     const played=[...M.xi[c.id].map(e=>({pid:e.pid,min:Math.max(0,M.m-e.since)})),...M.used[c.id].map(pid=>({pid,min:(M.mins[c.id]||{})[pid]||0}))];
+    // Injured and sent-off players leave xi without entering the substitution list.
+    const ratedIds=new Set(played.map(x=>x.pid));for(const p of c.players)if(!ratedIds.has(p.id)&&Object.prototype.hasOwnProperty.call(M.mins[c.id]||{},p.id))played.push({pid:p.id,min:M.mins[c.id][p.id]});
     const totalMin=played.reduce((t,x)=>t+x.min,0)||1;const teamPasses=M.passes?M.passes[c.id]||0:0;
     const yel=new Set(M.ev.filter(e=>e.t==='yellow'&&e.team===c.id).map(e=>e.pid)),red=new Set(M.ev.filter(e=>e.t==='red'&&e.team===c.id).map(e=>e.pid));
     for(const {pid,min} of played){const p=c.players.find(x=>x.id===pid);if(!p)continue;const s=pstat(M,c.id,pid);s.min=min;
@@ -3595,31 +3640,23 @@ let toastT;function toast(t){const el=$('toast');el.textContent=t;el.classList.a
 function latestSlot(){let best=null;for(let n=1;n<=SLOTS;n++){const m=slotMeta(n);if(m&&(!best||(m.t||0)>(best.m.t||0)))best={n,m}}return best}
 function emptySlot(){const c=curSlot();if(!slotMeta(c)&&!G)return c;for(let n=1;n<=SLOTS;n++)if(!slotMeta(n))return n;return 0}
 function splashMetaLine(m){if(!m)return '';const bits=[m.club,m.season,m.wk!=null?'שבוע '+(m.wk+1):''].filter(Boolean);return bits.map(esc).join(' · ')}
-function renderSplash(){const ui=$('spUI');if(!ui)return;const has=!!G;const m=has?slotMeta(G.slot||curSlot()):null;const cloudOnly=!has&&cloud.ready&&cloud.meta;const free=emptySlot();
-  const chev='<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-  ui.innerHTML=`<button class="sp-btn sp-new" id="spNew">${chev}התחל קריירה</button>
-  ${has?`<button class="sp-btn sp-cont" id="spCont">המשך משחק<small>${splashMetaLine(m)||esc(me()?me().name:'')}</small></button>`:cloudOnly?`<button class="sp-btn sp-cont" id="spCloud">המשך מהענן<small>${splashMetaLine(cloud.meta)}</small></button>`:''}
-  ${has&&free?`<div class="sp-note">קריירה חדשה תיפתח במשבצת ${free}, השמירה הקיימת לא תימחק</div>`:has&&!free?`<div class="sp-note">כל ${SLOTS} המשבצות תפוסות, תתבקש לבחור איזו להחליף</div>`:''}
-  <div class="sp-tag">הקבוצה שלך. הדרך שלך.</div>`;
+function renderSplash(){const ui=$('spUI');if(!ui)return;
+ ui.innerHTML=`<button type="button" class="sp-btn sp-new" id="spRegular">משחק רגיל</button><button type="button" class="sp-btn sp-cont" id="spNetwork">משחק רשת</button><div class="sp-tag">${G?'הקריירה שלך מחכה לך':'הקבוצה שלך. הדרך שלך.'}</div>`;
 }
-
-/* ---- launch intro video (with sound when the browser allows it) → still title screen with real buttons ---- */
-const INTRO={mp4:'intro.mp4',webm:'intro.webm',poster:'intro-poster.jpg'};let INTRO_R=null;
-function playIntro(sp){const card=sp.querySelector('.sp-card');if(!card||(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))return;
-  sp.classList.add('sp-introing');const box=document.createElement('div');box.className='sp-intro';
-  box.innerHTML=`<video playsinline webkit-playsinline preload="auto" poster="${INTRO.poster}" aria-hidden="true"><source src="${INTRO.mp4}" type="video/mp4"><source src="${INTRO.webm}" type="video/webm"></video><span class="sp-ifade"></span>
-   <button type="button" class="sp-isound" hidden aria-label="הפעל צליל"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z" fill="currentColor"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>הפעל צליל</span></button>
-   <button type="button" class="sp-iskip">דלג</button>`;
-  card.appendChild(box);const v=box.querySelector('video');const snd=box.querySelector('.sp-isound');const R={box,v,sp,done:false,t:0};INTRO_R=R;
-  const fallback=()=>endIntro();v.addEventListener('ended',fallback);box.querySelector('source:last-of-type').addEventListener('error',fallback);v.addEventListener('error',fallback);
-  box.addEventListener('click',e=>{if(e.target.closest('.sp-iskip'))return endIntro();if(v.muted){v.muted=false;snd.hidden=true;try{v.currentTime=0;v.play()}catch(_){}}});
-  R.t=setTimeout(()=>{if(!(v.currentTime>0))endIntro()},4000);
-  v.muted=false;v.volume=1;const pr=v.play();if(pr&&pr.catch)pr.catch(()=>{v.muted=true;snd.hidden=false;const p2=v.play();if(p2&&p2.catch)p2.catch(fallback)})}
-function endIntro(instant){const R=INTRO_R;if(!R||R.done)return;R.done=true;INTRO_R=null;clearTimeout(R.t);try{R.v.pause()}catch(e){}
-  R.sp.classList.remove('sp-introing');const go=()=>{try{R.v.removeAttribute('src');R.v.querySelectorAll('source').forEach(x=>x.remove());R.v.load()}catch(e){}R.box.remove()};
-  if(instant)return go();R.box.classList.add('out');setTimeout(go,650);setTimeout(()=>{const b=$('spCont')||$('spNew');try{b&&b.focus({preventScroll:true})}catch(e){}},700)}
+const INTRO={mp4:'assets/launch.mp4',poster:'assets/launch-poster.jpg'};let INTRO_R=null;
+function playIntro(sp){endIntro(true);const card=sp.querySelector('.sp-card');if(!card)return;
+ const box=document.createElement('div');box.className='sp-launch';
+ box.innerHTML=`<video muted loop playsinline preload="metadata" poster="${INTRO.poster}" aria-hidden="true" src="${INTRO.mp4}"></video>`;
+ card.prepend(box);const v=box.querySelector('video');v.muted=true;INTRO_R={box,v};
+ if(!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches){const p=v.play();p?.catch(()=>{});}
+}
+function endIntro(){const r=INTRO_R;if(!r)return;INTRO_R=null;r.v.pause();r.v.removeAttribute('src');r.v.load();r.box.remove()}
 function showSplash(){const sp=$('splash');if(!sp)return;sp.classList.remove('hide','out');document.body.style.overflow='hidden';renderSplash();playIntro(sp);
-  sp.onclick=e=>{const t=e.target;if(t.closest('#spCont'))return hideSplash();if(t.closest('#spCloud')){hideSplash();return cloudLoad()}if(t.closest('#spNew'))return splashNew();const ow=t.closest('[data-spover]');if(ow){const n=+ow.dataset.spover;closeModal();return startFreshIn(n)}}}
+ sp.onclick=e=>{if(e.target.closest('#spNetwork')){hideSplash();void Rooms.open();return}
+ if(e.target.closest('#spRegular')){if(window.BEGINNER||G){hideSplash();return}if(cloud.ready&&cloud.meta){hideSplash();return cloudLoad()}splashNew()}};
+ $('spRegular')?.focus({preventScroll:true});
+}
+document.addEventListener('visibilitychange',()=>{const r=INTRO_R;if(!r)return;if(document.hidden)r.v.pause();else if(!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)r.v.play()?.catch(()=>{})});
 function hideSplash(){const sp=$('splash');if(!sp||sp.classList.contains('hide'))return;endIntro(true);sp.classList.add('out');document.body.style.overflow='';setTimeout(()=>{sp.classList.add('hide')},460);SFX&&SFX.tap&&SFX.tap()}
 function splashOpen(){const sp=$('splash');return !!(sp&&!sp.classList.contains('hide')&&!sp.classList.contains('out'))}
 function startFreshIn(n){setCurSlot(n);G=null;cloud.meta=null;try{cloudRefreshMeta()}catch(e){}hideSplash();render();window.scrollTo(0,0)}
@@ -3838,7 +3875,7 @@ function render(){
   if(typeof MP!=='undefined'&&MP.watching&&!MP.watching.done&&document.querySelector('.live-view'))return;   // multiplayer playback on screen
   Match3D.stop();
   if(typeof AUD!=='undefined'&&AUD.matchOn)crowdStop(1.2);   // any other screen: the stadium fades out
-  $('top').classList.remove('hide');renderTop();
+  $('top').classList.remove('hide');renderTop();if(!$('top').querySelector('[data-room-open]'))$('top').insertAdjacentHTML('beforeend',Rooms.entry());
   if(G.phase!=='play'){$('nav').classList.add('hide');const v={contract:viewContract,sponsor:viewSponsor,board:viewBoard,seasonEnd:viewSeasonEnd,fired:viewFired}[G.phase];$('main').innerHTML=`<div class="view">${v()}</div>`;bind();return}
   $('nav').classList.remove('hide');renderNav();
   const v={home:viewHome,lineup:viewLineup,squad:()=>viewSquad()+(squadTab==='youth'?'':loansOutCardHTML()),market:viewMarket,club:viewClub,table:viewTable,money:viewMoney}[G.view]||viewHome;
@@ -4435,10 +4472,10 @@ function fxRow(r){const mine=r.h===G.me||r.a===G.me;const idx=G.results.indexOf(
    the state. Both phones then watch the recordings at the same pace. Nothing here changes single-player code paths:
    everything is gated on G.mp.
    Backend: supabase/migrations/20261023120000_multiplayer.sql (tables mp_leagues / mp_members, SECURITY DEFINER
-   functions, Realtime). Only the public URL + anon key reach the client (null from .env or the Pages secrets;
+   functions, Realtime). Only the public URL + anon key reach the client (__SUPABASE__ from .env or the Pages secrets;
    localStorage 'goalasso_supabase' = {"url","key"} overrides for testing). */
-const SUPABASE_BUILD_CFG=null;
-const SUPABASE_CFG=(()=>{try{const o=JSON.parse(localStorage.getItem('goalasso_supabase')||'null');if(o&&o.url&&o.key)return o}catch(e){}return window.null||SUPABASE_BUILD_CFG||null})();
+const SUPABASE_BUILD_CFG={"url":"https://vllkxhavwcdyceqakvwe.supabase.co","key":"sb_publishable_fB3tQyokXqcY026G7C6lzA_FO8msKgQ"};
+const SUPABASE_CFG=(()=>{try{const o=JSON.parse(localStorage.getItem('goalasso_supabase')||'null');if(o&&o.url&&o.key)return o}catch(e){}return window.__SUPABASE__||SUPABASE_BUILD_CFG||null})();
 const SUPABASE_JS_URL='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
 const MP={client:null,uid:null,state:'idle',chan:null,poll:null,busy:false,lastSeen:{},err:null,msg:''};
 function mpAvailable(){return !!(SUPABASE_CFG&&SUPABASE_CFG.url&&SUPABASE_CFG.key)}
@@ -4543,7 +4580,7 @@ function mpCardHTML(){if(!mpIsOn())return '';const mp=G.mp;const me0=mp.members.
     <div class="muted small" style="margin-top:6px">${mp.host?'כשאתה והיריב מוכנים (או כשהטיימר נגמר) הטלפון שלך מריץ את השבוע ושולח לשניכם.':'המזמין מריץ את השבוע כששניכם מוכנים.'} זמן לתור: <bdi>${mpTurnLeft()}</bdi>${!mp.oppOnline&&opp?' · היריב לא מחובר: אם הטיימר ייגמר, המחשב ינהל במקומו.':''}</div>
     ${MP.err?`<div class="small" style="color:var(--bad);margin-top:6px">${esc(MP.err)}</div>`:''}
     <div class="actions" style="margin-top:8px">${ready?`<button class="btn sec" data-mpa="unready">בטל "מוכן"</button><span class="small muted" style="align-self:center">${waitMsg}</span>`:`<button class="btn big" data-mpa="ready">מוכן לשבוע ${G.wk+1}</button>`}${mp.lastWeek&&mp.lastWeek.matches&&mp.lastWeek.matches.length?`<button class="btn sec" data-mpa="rewatch">צפה שוב במשחקי השבוע</button>`:''}</div></div>`}
-function mpStartHTML(){const defs=Object.keys(META).map(id=>{const raw=RAW.find(r=>r.id===id);const fb=FALLBACK[id];return {id,name:raw?.name_he||fb.name,c1:raw?.colors?.[0]||fb.colors[0],c2:raw?.colors?.[1]||fb.colors[1]}});
+function mpStartHTML(){if(!window.__mpClientFactory)return Rooms.intro();const defs=Object.keys(META).map(id=>{const raw=RAW.find(r=>r.id===id);const fb=FALLBACK[id];return {id,name:raw?.name_he||fb.name,c1:raw?.colors?.[0]||fb.colors[0],c2:raw?.colors?.[1]||fb.colors[1]}});
   const joinCode=(new URLSearchParams(location.search).get('join')||'').toUpperCase();
   return `<div class="card mp"><div class="row between"><h3 class="sec">משחק רשת · 1 נגד 1</h3>${mpAvailable()||window.__mpClientFactory?'<span class="tag good">זמין</span>':'<span class="tag">לא מוגדר</span>'}</div>
     <div class="muted small" style="margin-top:4px">שני מאמנים באותה ליגת העל, 12 המועדונים האחרים מחשב. כל שבוע כל אחד מנהל בזמנו ולוחץ "מוכן"; המשחקים ביניכם נצפים יחד.</div>
@@ -4560,6 +4597,74 @@ async function mpUiAction(k,el){try{
   if(k==='rewatch'){mpWatchWeek();return}
   if(k==='leave'){if(!confirm('לצאת מהליגה? הקריירה המקומית תישמר, אבל הליגה תמשיך בלעדיך.'))return;mpDisconnect();G=null;render();return}
   }catch(e){MP.msg=e.message;toast(e.message);render()}}
+/* Invitations keep each manager's career intact. Friendlies use copied squads only. */
+const Rooms=(()=>{
+ let client=null,modal=null,poll=null,generation=0,busy=false,last=null,playTimer=null;
+ const pending=()=>{try{return new URL(location.href).searchParams.get('invite')||localStorage.getItem('goalasso.room.pending')||''}catch(e){return ''}};
+ let signupUntil=0;try{signupUntil=+localStorage.getItem('goalasso.room.signupUntil')||0}catch(e){}
+ const arrival=()=>{try{const u=new URL(location.href);return u.searchParams.has('invite')||u.searchParams.get('network')==='1'}catch(e){return false}};
+ const switchLink=mode=>{const u=new URL(mode==='beginner'?'beginner.html':'./',location.href);if(pending())u.searchParams.set('invite',pending());u.searchParams.set('network','1');return u.href};
+ function clearPending(){try{localStorage.removeItem('goalasso.room.pending');const u=new URL(location.href);u.searchParams.delete('invite');history.replaceState(null,'',u.href)}catch(e){}}
+ async function careerContext(gen){
+  const beginner=location.pathname.endsWith('beginner.html'),links=[];let savedBeginner=null,pro=[];
+  for(const key of ['goalasso.beginner.v1','goalasso.beginner.v1.backup'])try{const d=JSON.parse(localStorage.getItem(key)||'null');if(d?.G?.beginner&&d.G.clubs?.some(c=>c.id===d.G.me)){savedBeginner=d.G;break}}catch(e){}
+  try{if(STORE.kind==='idb')pro=(await idbGetAll()).filter(r=>/^slot:[1-3]$/.test(r.key)&&r.meta).map(r=>r.meta.club);for(let n=1;n<=SLOTS;n++){const raw=localStorage.getItem(slotKey(n));if(raw){const g=JSON.parse(raw);if(g?.clubs)pro.push(g.clubs.find(c=>c.id===g.me)?.name||'קריירה שמורה')}}}catch(e){}
+  if(gen!==generation||!modal)return;
+  if(beginner)links.push(`<a class="btn sec" href="${esc(switchLink('pro'))}">${pro.length?'נמצאה קריירה במשחק המלא: '+esc([...new Set(pro)].join(', ')):'הקריירה שלי במשחק המלא'}</a>`);
+  else links.push(`<a class="btn sec" href="${esc(switchLink('beginner'))}">${savedBeginner?'נמצאה קריירה במתחילים: '+esc(savedBeginner.clubs.find(c=>c.id===savedBeginner.me).name):'הקריירה שלי במתחילים'}</a>`);
+  document.getElementById('room-context').innerHTML=`${pending()?'<h3>התקבלה הזמנה למשחק</h3><p id="room-preview">אפשר להצטרף עם הקריירה שלך.</p>':''}${G?`<p class="room-career"><strong>${esc(me().name)}</strong> · ${me().pts||0} נקודות · ${me().P||0} משחקי ליגה<br>הסגל וההתקדמות הקיימים יישמרו.</p>`:'<p class="room-career">לא נטענה קריירה במצב הזה. השמירות נשמרות בנפרד בכל דפדפן ובכל מצב משחק.</p>'}<details class="room-storage-help" ${G?'':'open'}><summary>לא רואה את הקריירה שלך?</summary><div class="room-actions">${links.join('')}</div><p class="small">כבר שיחקת בטלפון הזה? פתח את ההזמנה באותו דפדפן שבו שיחקת. אפשר להעתיק את הקישור, לפתוח את הקריירה הקיימת ולהדביק אותו ב״משחק רשת״. אל תמחק נתוני דפדפן.</p>${pending()?`<label>קישור הזמנה להעברה לדפדפן שבו שיחקת<input id="room-arrival-link" readonly dir="ltr" value="${esc(switchLink(beginner?'beginner':'pro'))}"></label><button class="btn sec" data-room-action="copy-arrival">העתק את ההזמנה</button>`:''}</details>`;
+ }
+ async function preview(gen){if(!pending())return;try{const data=await rpc('mp_preview_invitation',{p_invitation:inviteId(pending())});if(gen!==generation)return;const el=document.getElementById('room-preview');if(el)el.textContent=`הזמנה מ${data.club} · ${data.full?'החדר מלא':'משחק ידידות עם הסגל שלך'}`}catch(e){if(gen===generation){const el=document.getElementById('room-preview');if(el)el.textContent=err(e)}}}
+ function boot(){if(arrival())void open()}
+
+ const entry=()=>'<button type="button" class="btn room-entry" data-room-open>משחק רשת · הזמן חבר</button>';
+ const intro=()=>`<section class="card room-intro"><h3>משחק רשת עם חבר</h3><p>הזמנה עם המועדון והסגל הקיימים · משחק ידידות בין שני מנהלים</p>${entry()}</section>`;
+ const api=async()=>client||(client=await (window.__roomClientFactory?window.__roomClientFactory():mpClient()));
+ async function rpc(name,args){const c=await api(),r=await c.rpc(name,args);if(r.error)throw r.error;return r.data}
+ function snapshot(){if(!G||G.live&&!G.live.done||G.beginner?.live)throw Error('finish_match');ensureCareerIdentity(G);const c=me();ensureLineup(c);return JSON.parse(JSON.stringify({careerId:G.careerId,season:G.beginner?.season||G.season,round:G.beginner?.round??G.wk,club:{...c,country:c.country||'ישראל',youth:[]}}))}
+ function close(){generation++;clearTimeout(poll);clearInterval(playTimer);poll=playTimer=null;modal?.remove();modal=null;busy=false;last=null}
+ function message(s){const el=document.getElementById('room-status');if(el)el.textContent=s}
+ function err(e){const m=String(e.message||e);if(e.code==='over_email_send_rate_limit'||/email.*rate.*limit/i.test(m))return 'שירות האימייל הגיע למכסת השליחה. ההרשמה לא הושלמה; ניסיונות חוזרים לא יפתרו זאת. אם כבר אישרת חשבון, לחץ התחבר. יש להמתין לחידוש המכסה או לתיקון שירות ההרשמה.';if(e.status===429||/rate.limit/i.test(m))return 'יותר מדי ניסיונות כרגע. המתן לפני ניסיון נוסף; הקריירה וההזמנה נשמרות.';if(e.code==='email_not_confirmed')return 'החשבון עדיין לא אושר. פתח את אימייל האישור שכבר קיבלת וחזור להתחבר.';if(e.code==='invalid_credentials')return 'האימייל או הסיסמה אינם נכונים. אם ההרשמה נכשלה, ייתכן שעדיין לא נוצר חשבון.';return ({club_taken:'החבר כבר מנהל את המועדון הזה. הצטרף עם קריירה של מועדון אחר.',different_career:'כבר הצטרפת לחדר עם קריירה אחרת.',invitation_expired:'ההזמנה פגה או אינה תקינה.',room_full:'בחדר הזה כבר יש שני מנהלים.',finish_match:'סיים קודם את המשחק הפעיל ושמור את הקריירה.',not_ready:'שני המנהלים צריכים ללחוץ מוכנים.',not_a_member:'אין לחשבון הזה גישה לחדר.',login_required:'יש להתחבר לפני ההזמנה.'})[m]||m}
+ async function open(){close();const gen=generation;modal=document.createElement('div');modal.className='room-overlay';modal.innerHTML=`<section class="room-dialog" role="dialog" aria-modal="true" aria-label="משחק רשת"><button type="button" class="room-close" data-room-action="close" aria-label="סגור">×</button><h2>משחק רשת · הזמן חבר</h2><p>כל אחד ממשיך עם המועדון והסגל שלו. משחק הידידות אינו משנה את נקודות הליגה, הכסף או השמירה המקומית.</p><div id="room-context"></div><div id="room-body">מתחבר לשירות…</div><p id="room-status" role="status" aria-live="polite"></p></section>`;document.body.appendChild(modal);
+  try{await careerContext(gen);if(gen!==generation)return;void preview(gen);const c=await api(),r=await c.auth.getSession();if(gen!==generation)return;if(r.error)throw r.error;if(!r.data?.session){authForm();return}await showHome(gen)}catch(e){message(err(e))}
+ }
+ function authForm(){const cooling=signupUntil>Date.now();document.getElementById('room-body').innerHTML=`<p>התחברות שומרת את הגישה לחדרי הרשת. שמירת הקריירה נשארת בדפדפן שבו שיחקת; היא אינה מסתנכרנת בין דפדפנים דרך החשבון.</p><label>אימייל<input id="room-email" type="email" autocomplete="email" dir="ltr"></label><label>סיסמה<input id="room-password" type="password" autocomplete="current-password" minlength="8" dir="ltr"></label><div class="room-actions"><button class="btn" data-room-action="login">התחבר</button><button class="btn sec" data-room-action="signup" ${cooling?'disabled':''}>צור חשבון</button></div>${cooling?'<p class="room-auth-warning">שליחת בקשת הרשמה נוספת מושהית כרגע. אפשר להתחבר לחשבון שכבר אושר. חלוף ההשהיה אינו מבטיח שמכסת שירות האימייל התחדשה.</p>':''}<p class="small">בהרשמה חדשה נשלח אימייל לאישור. אחרי האישור חזור לכאן והתחבר. אין צורך לפתוח קריירה חדשה.</p>`}
+ async function showHome(gen=generation){if(gen!==generation||!modal)return;const body=document.getElementById('room-body');if(!G){body.innerHTML='<p>ההזמנה שמורה. כדי להצטרף, פתח קודם את הקריירה הקיימת במצב ובדפדפן שבהם שיחקת. אין צורך לפתוח קבוצה חדשה.</p><button class="btn sec" data-room-action="close">חזרה לקריירה</button>';return}
+  ensureCareerIdentity(G);const ref=G.networkRoom;if(ref&&ref.careerId===G.careerId&&(!pending()||ref.invitation===pending())){try{await refresh(gen)}catch(e){if(gen===generation){body.innerHTML='<p>לא ניתן לפתוח את החדר השמור.</p><button class="btn" data-room-action="new">חזרה להזמנות</button>';message(err(e))}}return}
+  body.innerHTML=`<h3>${esc(me().name)}</h3><p>הסגל וההרכב הנוכחיים יצורפו להזמנה.</p><button class="btn" data-room-action="create">צור הזמנה לחבר</button><hr><label>קישור או קוד הזמנה<input id="room-invite" dir="ltr" value="${esc(pending())}" placeholder="הדבק כאן את ההזמנה"></label><button class="btn" data-room-action="join">הצטרף עם המועדון שלי</button>`;
+ }
+ function inviteId(value){try{value=new URL(value).searchParams.get('invite')||value}catch(e){}if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value))throw Error('invitation_expired');return value}
+ function inviteLink(){const u=new URL(location.href);u.search='';u.hash='';u.searchParams.set('invite',G.networkRoom.invitation);return u.href}
+ async function refresh(gen=generation){const ref=G?.networkRoom;if(!ref||!modal||gen!==generation)return;clearTimeout(poll);const state=await rpc('mp_friendly_state',{p_room:ref.id});if(gen!==generation||!modal||G?.networkRoom?.id!==ref.id)return;last=state;const body=document.getElementById('room-body');
+  if(!playTimer)body.innerHTML=`<h3>חדר המשחק</h3>${state.members.map(m=>`<div class="room-member"><strong>${esc(m.snapshot.club.name)}${m.mine?' · אתה':''}</strong><span>${m.ready?'מוכן ✓':'מנהל את ההרכב'}</span></div>`).join('')}${state.members.length<2?'<p>ממתינים לחבר שיצטרף להזמנה.</p>':''}${ref.invitation?`<label>קישור ההזמנה<input id="room-share-link" readonly dir="ltr" value="${esc(inviteLink())}"></label><div class="room-actions"><button class="btn" data-room-action="share">שתף הזמנה</button><button class="btn sec" data-room-action="copy">העתק קישור</button></div>`:''}<div class="room-actions">${state.result?'<button class="btn" data-room-action="watch">צפה במשחק</button>':`<button class="btn" data-room-action="ready" ${state.members.find(m=>m.mine)?.ready?'disabled':''}>אני מוכן למשחק</button>${state.host?`<button class="btn" data-room-action="start" ${state.members.length===2&&state.members.every(m=>m.ready)?'':'disabled'}>התחל משחק ידידות</button>`:'<p>כשתהיו מוכנים, המזמין יתחיל את המשחק.</p>'}`}</div><button class="btn sec" data-room-action="new">חזרה להזמנות</button>`;
+  if(!state.result)poll=setTimeout(()=>refresh(gen).catch(e=>message(err(e))),3000);
+ }
+ function simulate(members){if(members.length!==2)throw Error('not_ready');const original=G,oldCapture=MP.capture,oldCaptured=MP.captured,oldUid=uid;
+  try{const clubs=members.map((m,k)=>{const c=JSON.parse(JSON.stringify(m.snapshot.club)),map=new Map();c.id='room'+k;c.players.forEach((p,i)=>{map.set(p.id,900000+k*1000+i);p.id=900000+k*1000+i});c.lineup=(c.lineup||[]).map(id=>map.get(id)||null);c.captain=map.get(c.captain)||null;c.youth=[];return c});
+   G={...JSON.parse(JSON.stringify(original)),me:clubs[0].id,clubs,leumit:[],pseudo:{},world:{},live:null,mp:null,mentalBoost:0,nextBoost:null};MP.capture=new Set(clubs.map(c=>c.id));MP.captured=[];
+   const M=createMatch(clubs[0],clubs[1],{kind:'friendly',neutral:true,label:'ידידות ברשת'});runInstant(M);
+   return {home:{name:clubs[0].name,color:clubs[0].c1},away:{name:clubs[1].name,color:clubs[1].c1},gh:M.gh,ga:M.ga,events:M.ev.map(e=>({m:e.m,t:e.t,team:e.team,name:e.name||'',sub:e.sub||''})),minutes:90};
+  }finally{G=original;MP.capture=oldCapture;MP.captured=oldCaptured;uid=oldUid}
+ }
+ function watch(){if(!last?.result)return;clearTimeout(poll);clearInterval(playTimer);const r=last.result;let minute=0;document.getElementById('room-body').innerHTML=`<div class="room-match"><h3>${esc(r.home.name)} · ${esc(r.away.name)}</h3><strong id="room-score" dir="ltr">0 : 0</strong><p id="room-minute">שריקת פתיחה</p><div id="room-events"></div><button class="btn sec" data-room-action="skip">לתוצאה הסופית</button></div>`;
+  const paint=()=>{let h=0,a=0;const events=r.events.filter(e=>e.m<=minute);for(const e of events)if(['goal','pen','own'].includes(e.t)){if(e.team==='room0')h++;else a++}document.getElementById('room-score').textContent=minute===90?`${r.gh} : ${r.ga}`:`${h} : ${a}`;document.getElementById('room-minute').textContent=minute===90?'סיום · התוצאה משותפת לשני המנהלים':`דקה ${minute}`;document.getElementById('room-events').innerHTML=events.filter(e=>['goal','pen','own','red','shot'].includes(e.t)).slice(-5).reverse().map(e=>`<p>${e.m}′ ${['goal','pen','own'].includes(e.t)?'⚽ שער':e.t==='red'?'🟥 הרחקה':e.sub==='save'?'🧤 הדיפה':'בעיטה'} · ${esc(e.name)}</p>`).join('');if(minute>=90){clearInterval(playTimer);playTimer=null}};
+  playTimer=setInterval(()=>{if(!modal){clearInterval(playTimer);playTimer=null;return}minute=Math.min(90,minute+1);paint()},220);modal.querySelector('[data-room-action="skip"]').onclick=()=>{minute=90;paint()};
+ }
+ document.addEventListener('click',async e=>{if(e.target.closest('[data-room-open]')){void open();return}const btn=e.target.closest('[data-room-action]');if(!btn)return;const action=btn.dataset.roomAction;if(action==='close'){close();return}if(action==='skip')return;if(action==='copy-arrival'){const input=document.getElementById('room-arrival-link');try{await navigator.clipboard.writeText(input.value);message('ההזמנה הועתקה. הדבק אותה בדפדפן שבו הקריירה שמורה.')}catch(e){input.select();message('סמן והעתק את קישור ההזמנה.')}return;}if(busy)return;busy=true;btn.disabled=true;const gen=generation;
+  try{message('');const c=await api();
+   if(action==='login'||action==='signup'){if(action==='signup'&&signupUntil>Date.now())throw Error('שליחת הרשמה נוספת מושהית. אפשר להתחבר לחשבון שכבר אושר.');const email=document.getElementById('room-email').value.trim(),password=document.getElementById('room-password').value;if(!email.includes('@')||password.length<8)throw Error('הכנס אימייל וסיסמה של 8 תווים לפחות.');const r=action==='login'?await c.auth.signInWithPassword({email,password}):await c.auth.signUp({email,password,options:{emailRedirectTo:switchLink(location.pathname.endsWith('beginner.html')?'beginner':'pro')}});if(r.error)throw r.error;if(gen!==generation)return;if(r.data?.session)await showHome(gen);else message('נשלח אימייל לאישור החשבון. אשר אותו, חזור לכאן ולחץ התחבר.');}
+   if(action==='create'||action==='join'){const snap=snapshot();if(!(await Promise.resolve(save())))throw Error('יש לשמור את הקריירה בהצלחה לפני יצירת הזמנה.');const args=action==='create'?{p_snapshot:snap,p_capacity:2}:{p_snapshot:snap,p_invitation:inviteId(document.getElementById('room-invite').value.trim())};const r=await rpc(action==='create'?'mp_create_room':'mp_join_room',args);if(gen!==generation)return;G.networkRoom={id:r.id,invitation:r.invitation||(action==='join'?args.p_invitation:null),careerId:G.careerId};await Promise.resolve(save());clearPending();await refresh(gen);}
+   if(action==='ready'){await rpc('mp_friendly_ready',{p_room:G.networkRoom.id});await refresh(gen)}
+   if(action==='start'){const result=simulate(last.members);await rpc('mp_friendly_commit',{p_room:G.networkRoom.id,p_result:result});await refresh(gen);watch()}
+   if(action==='watch')watch();
+   if(action==='new'){clearTimeout(poll);clearInterval(playTimer);playTimer=null;delete G.networkRoom;await Promise.resolve(save());await showHome(gen)}
+   if(action==='share'||action==='copy'){const url=inviteLink();if(action==='share'&&navigator.share)await navigator.share({title:'GOALASSO · הזמנה למשחק',text:'בוא לשחק עם המועדון שלך',url});else{try{await navigator.clipboard.writeText(url);message('הקישור הועתק')}catch(e){document.getElementById('room-share-link').select();message('סמן והעתק את הקישור שמופיע כאן')}}}
+  }catch(e){if(gen===generation){if(action==='signup'&&(e.status===429||/rate.limit/i.test(String(e.message)))){signupUntil=Date.now()+60*1000;try{localStorage.setItem('goalasso.room.signupUntil',String(signupUntil))}catch(e){}authForm()}message(err(e))}}finally{if(gen===generation){busy=false;if(btn.isConnected)btn.disabled=action==='signup'&&signupUntil>Date.now()}}
+ });
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal)close()});
+ try{const id=new URL(location.href).searchParams.get('invite');if(id)localStorage.setItem('goalasso.room.pending',inviteId(id))}catch(e){}
+ return {entry,intro,open,close,snapshot,simulate,boot,arrival};
+})();
 /* ---- 3D lineup: stadium photo pitch, FIFA-style cards, fitness + morale meters ---- */
 const STADIUM_IMG={webp:'lineup-stadium.webp',jpg:'lineup-stadium.jpg',w:941,h:1672,px0:12.86,px1:87.14,py0:10.29,py1:83.25};
 function meter10(v,kind){const n=Math.round(clamp(v,0,100)/10);const lab=kind==='fit'?`כושר ${Math.round(v)}%`:`מורל ${moraleWord(v)} (${Math.round(v)})`;
@@ -4665,6 +4770,7 @@ function token3dHTML(c,p,slot,i,o){const cls=['t3','lc'];if(!p)cls.push('empty')
   :`<span class="lc-card lc-empty"><span class="cine-empty">+</span><span class="lc-name">${POSHE[slot]}</span></span>`;
  return `<button type="button" class="${cls.join(' ')}" style="left:${X.toFixed(2)}%;top:${Y.toFixed(2)}%;z-index:${Math.round(Y)}" data-slot="${i}" aria-pressed="${!!o.sel}" aria-label="${p?esc(fullName(p))+', '+POSHE[p.pos]+', דירוג '+p.ovr+', כושר '+fit+'%':'מקום ריק, '+POSHE[slot]}">${body}</button>`}
 function stadiumFieldHTML(c,slots,lay,ps,selSlot){return `<section class="stad" aria-label="מגרש בחירת הרכב"><div class="stad-pitch arena"><picture class="arena-bg"><source srcset="lineup-arena.webp" type="image/webp"><img src="lineup-arena.jpg" width="900" height="1998" alt="" decoding="async"></picture><header class="cine-header broadcast"><div class="cine-title"><span class="cine-kit">${kitSVG(c,'lg')}</span><h2>${esc(c.name)}</h2></div><p>${esc(c.stadium||'אצטדיון הבית')} · ${esc(c.formation||'4-3-3')}</p><div class="cine-tools"><label><span class="hide">מערך</span><select id="formSel" aria-label="מערך">${Object.keys(FORMATIONS).map(f=>`<option ${f===c.formation?'selected':''}>${f}</option>`).join('')}</select></label><button type="button" id="cineTacticsBtn">טקטיקה ⚙</button></div></header>${slots.map((sl,i)=>token3dHTML(c,ps[i],sl,i,{x:lay[i].x,y:lay[i].y,sel:selSlot===i})).join('')}</div></section>`}
+function formationPortraitHTML(c,p,key){return `<span class="formation-face"><svg viewBox="0 0 240 280" aria-hidden="true">${portraitGroup(p,c,'formation'+key,{bg:false,h:280})}</svg></span>`}
 let lineupSel=null;
 function pitchLines(){return `<svg class="lines" viewBox="0 0 100 133" preserveAspectRatio="none"><g fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".7"><rect x="3" y="3" width="94" height="127" rx="1"/><line x1="3" y1="66.5" x2="97" y2="66.5"/><circle cx="50" cy="66.5" r="10"/><circle cx="50" cy="66.5" r=".9" fill="rgba(255,255,255,.6)"/><rect x="22" y="3" width="56" height="20"/><rect x="36" y="3" width="28" height="7"/><rect x="22" y="110" width="56" height="20"/><rect x="36" y="123" width="28" height="7"/><path d="M38 23 a12 12 0 0 0 24 0"/><path d="M38 110 a12 12 0 0 1 24 0"/></g></svg>`}
 function tokenHTML(c,p,slot,i,opts){const cls=['tok'];if(!p)cls.push('empty');if(opts&&opts.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');
@@ -5187,9 +5293,9 @@ window.addEventListener('pagehide',()=>{if(G)save()});
 function start(){if(STORE.kind==='idb'){storageBoot().then(async()=>{if(STORE.kind==='idb'){if(!G&&!(await load())){const ls=latestSlot();if(ls){setCurSlot(ls.n);await load(ls.n)}}}else{if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}}startUI()}).catch(e=>{console.error('storage boot',e);startUI()});return}
   if(!G&&!load()){const ls=latestSlot();if(ls){setCurSlot(ls.n);load(ls.n)}}startUI()}
 let bootResolve=null;const BOOT_READY=new Promise(r=>{bootResolve=r});
-function startUI(){try{const jc=new URLSearchParams(location.search).get('join');if(jc&&G&&!(G.mp&&G.mp.code===jc.toUpperCase())){G=null}}catch(e){}   // an invite link opens the start screen with the code filled in
+function startUI(){
   if(G&&G.mp&&typeof mpConnect==='function')mpConnect().catch(e=>console.warn('mp',e));
-  if(!window.__ilmNoSplash)showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);document.addEventListener('pointerdown',function unlock(){try{const a=ac();if(a&&typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});render();if(bootResolve){bootResolve(true);bootResolve=null}try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
+  if(!window.__ilmNoSplash&&!Rooms.arrival())showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);document.addEventListener('pointerdown',function unlock(){try{const a=ac();if(a&&typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});render();Rooms.boot();if(bootResolve){bootResolve(true);bootResolve=null}try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
 if(window.claude?.hot?.snapshot)window.claude.hot.snapshot(()=>({}));
 window.ILM={get G(){return G},me,render,NIS,myPos,myDiv,standingsOf,club,myNextMatch,ready:BOOT_READY,whenSaved:()=>SV.busy&&SV.promise?SV.promise:Promise.resolve(!persistenceError),storage:STORE};
 window.claude?.hot?.ready?window.claude.hot.ready(start):start();
