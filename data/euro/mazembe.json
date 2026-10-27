@@ -1,0 +1,308 @@
+{
+"key": "mazembe",
+"name_he": "טי.פי מאזמבה",
+"source": "enwiki:TP Mazembe",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "אליון בדארה פאטי",
+"en": "Alioune Badara Faty",
+"pos": "GK",
+"age": 27,
+"nat": "Senegal",
+"value_m": 0.18,
+"qid": "Q110836923",
+"no": "33"
+},
+{
+"he": "Baggio Siadi",
+"en": "Baggio Siadi",
+"pos": "GK",
+"age": 29,
+"nat": "DR Congo",
+"value_m": 0.15,
+"qid": "Q112490407",
+"no": "21"
+},
+{
+"he": "Suleman Shaibu",
+"en": "Suleman Shaibu",
+"pos": "GK",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.12,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Marc Diouf",
+"en": "Marc Diouf",
+"pos": "GK",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.11,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Ikie Utshudi",
+"en": "Ikie Utshudi",
+"pos": "GK",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.09,
+"qid": null,
+"no": null
+},
+{
+"he": "Boubacar Haïnikoye",
+"en": "Boubacar Haïnikoye",
+"pos": "FW",
+"age": 28,
+"nat": "Niger",
+"value_m": 0.24,
+"qid": "Q107540791",
+"no": "15"
+},
+{
+"he": "Obed Mukokiani",
+"en": "Obed Mukokiani",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.18,
+"qid": null,
+"no": null
+},
+{
+"he": "Meschack Tshimanga",
+"en": "Meschack Tshimanga",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.17,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Merveille Kikasa",
+"en": "Merveille Kikasa",
+"pos": "MF",
+"age": 27,
+"nat": "DR Congo",
+"value_m": 0.16,
+"qid": "Q98181746",
+"no": null
+},
+{
+"he": "Fily Traore",
+"en": "Fily Traore",
+"pos": "FW",
+"age": 25,
+"nat": "Mali",
+"value_m": 0.16,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Josué Mwimba Isala",
+"en": "Josué Mwimba Isala",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.15,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Bingi Belo",
+"en": "Bingi Belo",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.15,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Wilfrid Nkaya",
+"en": "Wilfrid Nkaya",
+"pos": "FW",
+"age": 25,
+"nat": "Congo",
+"value_m": 0.15,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Sozé Zemanga",
+"en": "Sozé Zemanga",
+"pos": "MF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.15,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Étienne Mayombo",
+"en": "Étienne Mayombo",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.15,
+"qid": null,
+"no": "26"
+},
+{
+"he": "John Bakata",
+"en": "John Bakata",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.15,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Cheick Fofana",
+"en": "Cheick Fofana",
+"pos": "FW",
+"age": 25,
+"nat": "Mali",
+"value_m": 0.15,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Othniel Mawawu",
+"en": "Othniel Mawawu",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.14,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Mor Mbaye",
+"en": "Mor Mbaye",
+"pos": "DF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.14,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Serge Mukoko",
+"en": "Serge Mukoko",
+"pos": "MF",
+"age": 30,
+"nat": "DR Congo",
+"value_m": 0.14,
+"qid": "Q105939113",
+"no": "30"
+},
+{
+"he": "Josué Mungwengi",
+"en": "Josué Mungwengi",
+"pos": "MF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.14,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Patient Mwamba",
+"en": "Patient Mwamba",
+"pos": "MF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.14,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Merceil Ngimbi",
+"en": "Merceil Ngimbi",
+"pos": "MF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.13,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Adamou Ibrahim Djibo",
+"en": "Adamou Ibrahim Djibo",
+"pos": "DF",
+"age": 25,
+"nat": "Niger",
+"value_m": 0.13,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Gloire Mujaya",
+"en": "Gloire Mujaya",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.13,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Ernest Luzolo",
+"en": "Ernest Luzolo",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.13,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Magloire Ntambwe",
+"en": "Magloire Ntambwe",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.13,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Dieu Bénit Ndongala",
+"en": "Dieu Bénit Ndongala",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.12,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Elie Madinda",
+"en": "Elie Madinda",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.12,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Johnson Atibu",
+"en": "Johnson Atibu",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.12,
+"qid": null,
+"no": "4"
+}
+]
+}

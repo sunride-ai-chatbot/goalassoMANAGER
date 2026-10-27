@@ -1,0 +1,268 @@
+{
+"key": "stoke",
+"name_he": "סטוק סיטי",
+"source": "enwiki:Stoke City F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "ויקטור יוהנסון",
+"en": "Viktor Johansson",
+"pos": "GK",
+"age": 27,
+"nat": "Sweden",
+"value_m": 0.4,
+"qid": "Q101249011",
+"no": "1"
+},
+{
+"he": "ג'וש גריפית'ס",
+"en": "Josh Griffiths",
+"pos": "GK",
+"age": 24,
+"nat": "England",
+"value_m": 0.29,
+"qid": "Q98959149",
+"no": "24"
+},
+{
+"he": "Frank Fielding",
+"en": "Frank Fielding",
+"pos": "GK",
+"age": 38,
+"nat": "England",
+"value_m": 0.07,
+"qid": "Q458223",
+"no": "34"
+},
+{
+"he": "רוברט בוז'ניק",
+"en": "Róbert Boženík",
+"pos": "FW",
+"age": 26,
+"nat": "Slovakia",
+"value_m": 0.52,
+"qid": "Q55819815",
+"no": "9"
+},
+{
+"he": "אית'ן גלבריית'",
+"en": "Ethan Galbraith",
+"pos": "MF",
+"age": 25,
+"nat": "Northern Ireland",
+"value_m": 0.47,
+"qid": "Q67165839",
+"no": "8"
+},
+{
+"he": "Tomáš Rigo",
+"en": "Tomáš Rigo",
+"pos": "MF",
+"age": 24,
+"nat": "Slovakia",
+"value_m": 0.47,
+"qid": "Q106061737",
+"no": "19"
+},
+{
+"he": "George Hirst",
+"en": "George Hirst",
+"pos": "FW",
+"age": 27,
+"nat": "Scotland",
+"value_m": 0.45,
+"qid": "Q27914873",
+"no": "15"
+},
+{
+"he": "מיליון מנהוף",
+"en": "Million Manhoef",
+"pos": "FW",
+"age": 24,
+"nat": "Netherlands",
+"value_m": 0.44,
+"qid": "Q99677254",
+"no": "42"
+},
+{
+"he": "Jack McGlynn",
+"en": "Jack McGlynn",
+"pos": "MF",
+"age": 23,
+"nat": "United States",
+"value_m": 0.35,
+"qid": "Q87365909",
+"no": "7"
+},
+{
+"he": "Bae Jun-ho",
+"en": "Bae Jun-ho",
+"pos": "MF",
+"age": 23,
+"nat": "South Korea",
+"value_m": 0.35,
+"qid": "Q118978780",
+"no": "10"
+},
+{
+"he": "Svante Ingelsson",
+"en": "Svante Ingelsson",
+"pos": "MF",
+"age": 28,
+"nat": "Sweden",
+"value_m": 0.33,
+"qid": "Q21606682",
+"no": "6"
+},
+{
+"he": "Ben Wilmot",
+"en": "Ben Wilmot",
+"pos": "DF",
+"age": 26,
+"nat": "England",
+"value_m": 0.33,
+"qid": "Q41573175",
+"no": "16"
+},
+{
+"he": "מקסים טלוברוב",
+"en": "Maksym Talovierov",
+"pos": "DF",
+"age": 26,
+"nat": "Ukraine",
+"value_m": 0.33,
+"qid": "Q105093396",
+"no": "40"
+},
+{
+"he": "Bosun Lawal",
+"en": "Bosun Lawal",
+"pos": "MF",
+"age": 23,
+"nat": "Ireland",
+"value_m": 0.32,
+"qid": "Q115860965",
+"no": "18"
+},
+{
+"he": "Lamine Cissé",
+"en": "Lamine Cissé",
+"pos": "FW",
+"age": 23,
+"nat": "France",
+"value_m": 0.31,
+"qid": "Q106677244",
+"no": "11"
+},
+{
+"he": "Eric Bocat",
+"en": "Eric Bocat",
+"pos": "DF",
+"age": 27,
+"nat": "France",
+"value_m": 0.31,
+"qid": "Q101518768",
+"no": "17"
+},
+{
+"he": "Sam Gallagher",
+"en": "Sam Gallagher",
+"pos": "FW",
+"age": 30,
+"nat": "England",
+"value_m": 0.3,
+"qid": "Q15715799",
+"no": "20"
+},
+{
+"he": "Justin Devenny",
+"en": "Justin Devenny",
+"pos": "MF",
+"age": 22,
+"nat": "Northern Ireland",
+"value_m": 0.29,
+"qid": "Q122089959",
+"no": "13"
+},
+{
+"he": "ז'וניור צ'מאדו",
+"en": "Junior Tchamadeu",
+"pos": "DF",
+"age": 22,
+"nat": "Cameroon",
+"value_m": 0.29,
+"qid": "Q104012990",
+"no": "22"
+},
+{
+"he": "Djibril Soumaré",
+"en": "Djibril Soumaré",
+"pos": "MF",
+"age": 23,
+"nat": "Senegal",
+"value_m": 0.28,
+"qid": "Q121484420",
+"no": "27"
+},
+{
+"he": "Luke Graham",
+"en": "Luke Graham",
+"pos": "DF",
+"age": 22,
+"nat": "Scotland",
+"value_m": 0.26,
+"qid": "Q128987322",
+"no": "5"
+},
+{
+"he": "Ben Pearson",
+"en": "Ben Pearson",
+"pos": "MF",
+"age": 31,
+"nat": "England",
+"value_m": 0.23,
+"qid": "Q19594178",
+"no": "4"
+},
+{
+"he": "Ato Ampah",
+"en": "Ato Ampah",
+"pos": "FW",
+"age": 20,
+"nat": "England",
+"value_m": 0.21,
+"qid": "Q131431658",
+"no": "14"
+},
+{
+"he": "Luca Bombino",
+"en": "Luca Bombino",
+"pos": "DF",
+"age": 20,
+"nat": "United States",
+"value_m": 0.17,
+"qid": "Q133234082",
+"no": "21"
+},
+{
+"he": "Ben Gibson",
+"en": "Ben Gibson",
+"pos": "DF",
+"age": 33,
+"nat": "England",
+"value_m": 0.14,
+"qid": "Q2895436",
+"no": "23"
+},
+{
+"he": "ארון קרסוול",
+"en": "Aaron Cresswell",
+"pos": "DF",
+"age": 36,
+"nat": "England",
+"value_m": 0.1,
+"qid": "Q3603066",
+"no": "3"
+}
+]
+}

@@ -1,0 +1,248 @@
+{
+"key": "crystal_palace",
+"name_he": "קריסטל פאלאס",
+"source": "enwiki:Crystal Palace F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "דין הנדרסון",
+"en": "Dean Henderson",
+"pos": "GK",
+"age": 29,
+"nat": "England",
+"value_m": 1.04,
+"qid": "Q28059260",
+"no": "1"
+},
+{
+"he": "וולטר בניטס",
+"en": "Walter Benítez",
+"pos": "GK",
+"age": 33,
+"nat": "Argentina",
+"value_m": 0.5,
+"qid": "Q17064018",
+"no": "44"
+},
+{
+"he": "Remi Matthews",
+"en": "Remi Matthews",
+"pos": "GK",
+"age": 32,
+"nat": "England",
+"value_m": 0.35,
+"qid": "Q21061926",
+"no": "31"
+},
+{
+"he": "יורגן סטרנד לארסן",
+"en": "Jørgen Strand Larsen",
+"pos": "FW",
+"age": 26,
+"nat": "Norway",
+"value_m": 1.92,
+"qid": "Q28933132",
+"no": "22"
+},
+{
+"he": "דווייט מקניל",
+"en": "Dwight McNeil",
+"pos": "FW",
+"age": 26,
+"nat": "England",
+"value_m": 1.89,
+"qid": "Q53652291",
+"no": "11"
+},
+{
+"he": "אסמאעילה סאר",
+"en": "Ismaïla Sarr",
+"pos": "FW",
+"age": 28,
+"nat": "Senegal",
+"value_m": 1.56,
+"qid": "Q26924482",
+"no": "7"
+},
+{
+"he": "אדי נקטיה",
+"en": "Eddie Nketiah",
+"pos": "FW",
+"age": 27,
+"nat": "England",
+"value_m": 1.52,
+"qid": "Q41259115",
+"no": "9"
+},
+{
+"he": "שייק דוקורה",
+"en": "Cheick Doucouré",
+"pos": "MF",
+"age": 26,
+"nat": "Mali",
+"value_m": 1.47,
+"qid": "Q47490408",
+"no": "28"
+},
+{
+"he": "ירמי פינו",
+"en": "Yeremy Pino",
+"pos": "FW",
+"age": 23,
+"nat": "Spain",
+"value_m": 1.45,
+"qid": "Q100735281",
+"no": "10"
+},
+{
+"he": "ז'אן-פיליפ מטטה",
+"en": "Jean-Philippe Mateta",
+"pos": "FW",
+"age": 29,
+"nat": "France",
+"value_m": 1.43,
+"qid": "Q26964668",
+"no": "14"
+},
+{
+"he": "טאקהירו טומיאסו",
+"en": "Takehiro Tomiyasu",
+"pos": "DF",
+"age": 27,
+"nat": "Japan",
+"value_m": 1.4,
+"qid": "Q21286402",
+"no": "17"
+},
+{
+"he": "כריס ריצ'רדס",
+"en": "Chris Richards",
+"pos": "DF",
+"age": 26,
+"nat": "United States",
+"value_m": 1.39,
+"qid": "Q60839691",
+"no": "26"
+},
+{
+"he": "אדם וורטון",
+"en": "Adam Wharton",
+"pos": "MF",
+"age": 22,
+"nat": "England",
+"value_m": 1.35,
+"qid": "Q113488911",
+"no": "20"
+},
+{
+"he": "אוסקר מינגסה",
+"en": "Óscar Mingueza",
+"pos": "DF",
+"age": 27,
+"nat": "Spain",
+"value_m": 1.33,
+"qid": "Q102292155",
+"no": "30"
+},
+{
+"he": "קוינטן טימבר",
+"en": "Quinten Timber",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 1.3,
+"qid": "Q53996595",
+"no": "23"
+},
+{
+"he": "טייריק מיטשל",
+"en": "Tyrick Mitchell",
+"pos": "DF",
+"age": 26,
+"nat": "England",
+"value_m": 1.26,
+"qid": "Q96943831",
+"no": "3"
+},
+{
+"he": "שאדי ריאד",
+"en": "Chadi Riad",
+"pos": "DF",
+"age": 23,
+"nat": "Morocco",
+"value_m": 1.15,
+"qid": "Q104784108",
+"no": "4"
+},
+{
+"he": "בן צ'ילוול",
+"en": "Ben Chilwell",
+"pos": "DF",
+"age": 29,
+"nat": "England",
+"value_m": 1.1,
+"qid": "Q21621029",
+"no": "33"
+},
+{
+"he": "ג'פרסון לרמה",
+"en": "Jefferson Lerma",
+"pos": "MF",
+"age": 31,
+"nat": "Colombia",
+"value_m": 0.89,
+"qid": "Q16300824",
+"no": "8"
+},
+{
+"he": "דייצ'י קמאדה",
+"en": "Daichi Kamada",
+"pos": "MF",
+"age": 30,
+"nat": "Japan",
+"value_m": 0.86,
+"qid": "Q20039495",
+"no": "18"
+},
+{
+"he": "ענאן ח'לאילי",
+"en": "Anan Khalaili",
+"pos": "DF",
+"age": 21,
+"nat": "Israel",
+"value_m": 0.86,
+"qid": "Q118206666",
+"no": "25"
+},
+{
+"he": "Will Hughes",
+"en": "Will Hughes",
+"pos": "MF",
+"age": 31,
+"nat": "England",
+"value_m": 0.78,
+"qid": "Q133920",
+"no": "19"
+},
+{
+"he": "Jaydee Canvot",
+"en": "Jaydee Canvot",
+"pos": "DF",
+"age": 20,
+"nat": "France",
+"value_m": 0.72,
+"qid": "Q129404148",
+"no": "6"
+},
+{
+"he": "Zavier Gozo",
+"en": "Zavier Gozo",
+"pos": "FW",
+"age": 19,
+"nat": "United States",
+"value_m": 0.52,
+"qid": "Q123090257",
+"no": "12"
+}
+]
+}

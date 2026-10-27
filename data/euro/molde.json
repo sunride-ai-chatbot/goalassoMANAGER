@@ -1,0 +1,288 @@
+{
+"key": "molde",
+"name_he": "מולדה",
+"source": "enwiki:Molde FK",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Mads Kikkenborg",
+"en": "Mads Kikkenborg",
+"pos": "GK",
+"age": 26,
+"nat": "Denmark",
+"value_m": 0.26,
+"qid": "Q62060108",
+"no": "1"
+},
+{
+"he": "Albert Posiadała",
+"en": "Albert Posiadała",
+"pos": "GK",
+"age": 23,
+"nat": "Poland",
+"value_m": 0.21,
+"qid": "Q124364933",
+"no": "22"
+},
+{
+"he": "Peder Hoel Lervik",
+"en": "Peder Hoel Lervik",
+"pos": "GK",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.12,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Mads Myklebust",
+"en": "Mads Myklebust",
+"pos": "GK",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.12,
+"qid": null,
+"no": "32"
+},
+{
+"he": "סאמוקלה קאביני",
+"en": "Samukele Kabini",
+"pos": "DF",
+"age": 22,
+"nat": "South Africa",
+"value_m": 0.32,
+"qid": "Q133794425",
+"no": "26"
+},
+{
+"he": "Emil Breivik",
+"en": "Emil Breivik",
+"pos": "MF",
+"age": 26,
+"nat": "Norway",
+"value_m": 0.27,
+"qid": "Q64740431",
+"no": "10"
+},
+{
+"he": "Caleb Zady Sery",
+"en": "Caleb Zady Sery",
+"pos": "FW",
+"age": 26,
+"nat": "Côte d'Ivoire",
+"value_m": 0.27,
+"qid": "Q58494979",
+"no": "11"
+},
+{
+"he": "Jalal Abdullai",
+"en": "Jalal Abdullai",
+"pos": "FW",
+"age": 21,
+"nat": "Ghana",
+"value_m": 0.26,
+"qid": "Q120542607",
+"no": "9"
+},
+{
+"he": "Halldor Stenevik",
+"en": "Halldor Stenevik",
+"pos": "DF",
+"age": 26,
+"nat": "Norway",
+"value_m": 0.26,
+"qid": "Q28717853",
+"no": "18"
+},
+{
+"he": "Niklas Ødegård",
+"en": "Niklas Ødegård",
+"pos": "MF",
+"age": 22,
+"nat": "Norway",
+"value_m": 0.25,
+"qid": "Q111977359",
+"no": "6"
+},
+{
+"he": "Sander Kilen",
+"en": "Sander Kilen",
+"pos": "FW",
+"age": 21,
+"nat": "Norway",
+"value_m": 0.23,
+"qid": "Q127015704",
+"no": "16"
+},
+{
+"he": "Birk Risa",
+"en": "Birk Risa",
+"pos": "DF",
+"age": 28,
+"nat": "Norway",
+"value_m": 0.21,
+"qid": "Q30333035",
+"no": "33"
+},
+{
+"he": "Fredrik Kristensen Dahl",
+"en": "Fredrik Kristensen Dahl",
+"pos": "DF",
+"age": 27,
+"nat": "Norway",
+"value_m": 0.2,
+"qid": "Q101195699",
+"no": "27"
+},
+{
+"he": "Seydina Diop",
+"en": "Seydina Diop",
+"pos": "FW",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.2,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Vebjørn Hoff",
+"en": "Vebjørn Hoff",
+"pos": "MF",
+"age": 30,
+"nat": "Norway",
+"value_m": 0.19,
+"qid": "Q20740959",
+"no": "15"
+},
+{
+"he": "Eirik Hestad",
+"en": "Eirik Hestad",
+"pos": "FW",
+"age": 31,
+"nat": "Norway",
+"value_m": 0.18,
+"qid": "Q15527283",
+"no": "5"
+},
+{
+"he": "Eirik Haugan",
+"en": "Eirik Haugan",
+"pos": "DF",
+"age": 29,
+"nat": "Norway",
+"value_m": 0.18,
+"qid": "Q19372660",
+"no": "19"
+},
+{
+"he": "Viktor Bender",
+"en": "Viktor Bender",
+"pos": "MF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.18,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Igor Gosik",
+"en": "Igor Gosik",
+"pos": "FW",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.18,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Mats Møller Dæhli",
+"en": "Mats Møller Dæhli",
+"pos": "MF",
+"age": 31,
+"nat": "Norway",
+"value_m": 0.17,
+"qid": "Q6572982",
+"no": "17"
+},
+{
+"he": "Oskar Spiten-Nysæter",
+"en": "Oskar Spiten-Nysæter",
+"pos": "FW",
+"age": 19,
+"nat": "Norway",
+"value_m": 0.16,
+"qid": "Q124371740",
+"no": "21"
+},
+{
+"he": "Kristian Lonebu",
+"en": "Kristian Lonebu",
+"pos": "FW",
+"age": 20,
+"nat": "Norway",
+"value_m": 0.15,
+"qid": "Q137040761",
+"no": "20"
+},
+{
+"he": "Trent Koné-Doherty",
+"en": "Trent Koné-Doherty",
+"pos": "FW",
+"age": 20,
+"nat": "Ireland",
+"value_m": 0.15,
+"qid": "Q115208014",
+"no": "24"
+},
+{
+"he": "Sivert Sira Hansen",
+"en": "Sivert Sira Hansen",
+"pos": "DF",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.13,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Mathias Fjørtoft Løvik",
+"en": "Mathias Fjørtoft Løvik",
+"pos": "DF",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.13,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Sondre Granaas",
+"en": "Sondre Granaas",
+"pos": "MF",
+"age": 20,
+"nat": "Norway",
+"value_m": 0.13,
+"qid": "Q122311541",
+"no": "23"
+},
+{
+"he": "Daniel Daga",
+"en": "Daniel Daga",
+"pos": "MF",
+"age": 19,
+"nat": null,
+"value_m": 0.13,
+"qid": "Q119170408",
+"no": "30"
+},
+{
+"he": "Martin Linnes",
+"en": "Martin Linnes",
+"pos": "DF",
+"age": 34,
+"nat": "Norway",
+"value_m": 0.11,
+"qid": "Q3431011",
+"no": "25"
+}
+]
+}

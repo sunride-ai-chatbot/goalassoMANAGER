@@ -1,0 +1,208 @@
+{
+"key": "getafe",
+"name_he": "חטאפה",
+"source": "enwiki:Getafe CF",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "יזי לטאצ'ק",
+"en": "Jiří Letáček",
+"pos": "GK",
+"age": 27,
+"nat": "Czech Republic",
+"value_m": 0.65,
+"qid": "Q123335821",
+"no": "1"
+},
+{
+"he": "דויד סוריה",
+"en": "David Soria",
+"pos": "GK",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.24,
+"qid": "Q22166596",
+"no": "13"
+},
+{
+"he": "Martín Satriano",
+"en": "Martín Satriano",
+"pos": "FW",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.97,
+"qid": "Q108198513",
+"no": "10"
+},
+{
+"he": "עבד אל-אבקאר",
+"en": "Abdel Abqar",
+"pos": "DF",
+"age": 27,
+"nat": "Morocco",
+"value_m": 0.91,
+"qid": "Q56600183",
+"no": "5"
+},
+{
+"he": "בורחה מיוראל",
+"en": "Borja Mayoral",
+"pos": "FW",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.91,
+"qid": "Q18649709",
+"no": "9"
+},
+{
+"he": "רמון טראטס",
+"en": "Ramon Terrats",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.88,
+"qid": "Q101156112",
+"no": "11"
+},
+{
+"he": "כריסטנטוס אוצ'ה",
+"en": "Christantus Uche",
+"pos": "MF",
+"age": 23,
+"nat": "Nigeria",
+"value_m": 0.76,
+"qid": "Q125131571",
+"no": "18"
+},
+{
+"he": "אנס אונאל",
+"en": "Enes Ünal",
+"pos": "FW",
+"age": 29,
+"nat": "Turkey",
+"value_m": 0.76,
+"qid": "Q14637461",
+"no": "19"
+},
+{
+"he": "Francho Serrano",
+"en": "Francho Serrano",
+"pos": "MF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.7,
+"qid": "Q101073910",
+"no": "16"
+},
+{
+"he": "מריו מרטין",
+"en": "Mario Martín",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.67,
+"qid": "Q115152735",
+"no": "6"
+},
+{
+"he": "סאבה סזונוב",
+"en": "Saba Sazonov",
+"pos": "DF",
+"age": 24,
+"nat": "Georgia",
+"value_m": 0.65,
+"qid": "Q106860450",
+"no": "4"
+},
+{
+"he": "Zaid Romero",
+"en": "Zaid Romero",
+"pos": "DF",
+"age": 26,
+"nat": "Argentina",
+"value_m": 0.64,
+"qid": "Q92550871",
+"no": "24"
+},
+{
+"he": "Sebastián Boselli",
+"en": "Sebastián Boselli",
+"pos": "DF",
+"age": 22,
+"nat": "Uruguay",
+"value_m": 0.56,
+"qid": "Q116790173",
+"no": "15"
+},
+{
+"he": "Dakonam Djené",
+"en": "Dakonam Djené",
+"pos": "DF",
+"age": 25,
+"nat": "Togo",
+"value_m": 0.41,
+"qid": null,
+"no": "2"
+},
+{
+"he": "חואנמי חימנס",
+"en": "Juanmi",
+"pos": "FW",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.39,
+"qid": "Q649788",
+"no": "7"
+},
+{
+"he": "נמניה גודל",
+"en": "Nemanja Gudelj",
+"pos": "MF",
+"age": 34,
+"nat": "Serbia",
+"value_m": 0.26,
+"qid": "Q644989",
+"no": "8"
+},
+{
+"he": "דאווינצ'י",
+"en": "Davinchi",
+"pos": "DF",
+"age": 18,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": "Q135206724",
+"no": "3"
+},
+{
+"he": "יוהאן מוחיקה",
+"en": "Johan Mojica",
+"pos": "DF",
+"age": 34,
+"nat": "Colombia",
+"value_m": 0.22,
+"qid": "Q5932872",
+"no": "22"
+},
+{
+"he": "דניאל קרבחאל",
+"en": "Dani Carvajal",
+"pos": "DF",
+"age": 34,
+"nat": "Spain",
+"value_m": 0.21,
+"qid": "Q127452",
+"no": "14"
+},
+{
+"he": "קיקו פמנייה",
+"en": "Kiko Femenía",
+"pos": "DF",
+"age": 35,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": "Q2269948",
+"no": "17"
+}
+]
+}

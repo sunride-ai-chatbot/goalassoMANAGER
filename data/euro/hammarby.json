@@ -1,0 +1,248 @@
+{
+"key": "hammarby",
+"name_he": "האמרבי",
+"source": "enwiki:Hammarby Fotboll",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Felix Jakobsson",
+"en": "Felix Jakobsson",
+"pos": "GK",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.14,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Elton Fischerström",
+"en": "Elton Fischerström",
+"pos": "GK",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.1,
+"qid": null,
+"no": "25"
+},
+{
+"he": "ורנר האהן",
+"en": "Warner Hahn",
+"pos": "GK",
+"age": 34,
+"nat": "Suriname",
+"value_m": 0.07,
+"qid": "Q13033770",
+"no": "1"
+},
+{
+"he": "Paulos Abraham",
+"en": "Paulos Abraham",
+"pos": "FW",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.29,
+"qid": "Q87818743",
+"no": "7"
+},
+{
+"he": "Victor Eriksson",
+"en": "Victor Eriksson",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.26,
+"qid": "Q109381652",
+"no": "4"
+},
+{
+"he": "Victor Lind",
+"en": "Victor Lind",
+"pos": "FW",
+"age": 23,
+"nat": "Denmark",
+"value_m": 0.26,
+"qid": "Q107985699",
+"no": "9"
+},
+{
+"he": "Ibrahima Breze Fofana",
+"en": "Ibrahima Breze Fofana",
+"pos": "DF",
+"age": 24,
+"nat": "Guinea",
+"value_m": 0.25,
+"qid": "Q105892434",
+"no": "6"
+},
+{
+"he": "Noah Persson",
+"en": "Noah Persson",
+"pos": "DF",
+"age": 23,
+"nat": "Sweden",
+"value_m": 0.25,
+"qid": "Q108134433",
+"no": "16"
+},
+{
+"he": "Tesfaldet Tekie",
+"en": "Tesfaldet Tekie",
+"pos": "MF",
+"age": 29,
+"nat": null,
+"value_m": 0.24,
+"qid": "Q19819192",
+"no": "5"
+},
+{
+"he": "מונתזר מאג'ד",
+"en": "Montader Madjed",
+"pos": "FW",
+"age": 21,
+"nat": "Iraq",
+"value_m": 0.24,
+"qid": "Q107420356",
+"no": "26"
+},
+{
+"he": "Frederik Winther",
+"en": "Frederik Winther",
+"pos": "DF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.21,
+"qid": "Q55748646",
+"no": "3"
+},
+{
+"he": "Amin Boudri",
+"en": "Amin Boudri",
+"pos": "MF",
+"age": 21,
+"nat": "Sweden",
+"value_m": 0.21,
+"qid": "Q124328865",
+"no": "17"
+},
+{
+"he": "Markus Karlsson",
+"en": "Markus Karlsson",
+"pos": "MF",
+"age": 22,
+"nat": "Sweden",
+"value_m": 0.2,
+"qid": "Q117184189",
+"no": "8"
+},
+{
+"he": "Frank Adjei",
+"en": "Frank Adjei",
+"pos": "MF",
+"age": 22,
+"nat": "Ghana",
+"value_m": 0.2,
+"qid": "Q113192310",
+"no": "28"
+},
+{
+"he": "Hampus Skoglund",
+"en": "Hampus Skoglund",
+"pos": "DF",
+"age": 22,
+"nat": "Sweden",
+"value_m": 0.19,
+"qid": "Q125316794",
+"no": "2"
+},
+{
+"he": "Oliver Jordan Hagen",
+"en": "Oliver Jordan Hagen",
+"pos": "FW",
+"age": 20,
+"nat": "Norway",
+"value_m": 0.18,
+"qid": "Q137661160",
+"no": "15"
+},
+{
+"he": "Sourou Koné",
+"en": "Sourou Koné",
+"pos": "MF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.17,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Suwaibou Kebbeh",
+"en": "Suwaibou Kebbeh",
+"pos": "FW",
+"age": 25,
+"nat": "Gambia",
+"value_m": 0.17,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Oscar Johansson Schellhas",
+"en": "Oscar Johansson Schellhas",
+"pos": "MF",
+"age": 31,
+"nat": "Sweden",
+"value_m": 0.13,
+"qid": "Q26211836",
+"no": "11"
+},
+{
+"he": "Essayas Lwampindy Bofua",
+"en": "Essayas Lwampindy Bofua",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.12,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Björn Hedlöf",
+"en": "Björn Hedlöf",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.12,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Waylon Renecke",
+"en": "Waylon Renecke",
+"pos": "DF",
+"age": 20,
+"nat": "South Africa",
+"value_m": 0.11,
+"qid": "Q135013117",
+"no": "24"
+},
+{
+"he": "Oscar Steinke",
+"en": "Oscar Steinke",
+"pos": "DF",
+"age": 20,
+"nat": "Sweden",
+"value_m": 0.1,
+"qid": "Q138855490",
+"no": "31"
+},
+{
+"he": "Nahir Besara",
+"en": "Nahir Besara",
+"pos": "MF",
+"age": 35,
+"nat": "Sweden",
+"value_m": 0.06,
+"qid": "Q5574644",
+"no": "20"
+}
+]
+}

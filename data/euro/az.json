@@ -1,0 +1,288 @@
+{
+"key": "az",
+"name_he": "א.ז. אלקמאר",
+"source": "enwiki:AZ Alkmaar",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Jari De Busser",
+"en": "Jari De Busser",
+"pos": "GK",
+"age": 26,
+"nat": "Belgium",
+"value_m": 0.75,
+"qid": "Q56257938",
+"no": "28"
+},
+{
+"he": "רום-ג'יידן אווסו-אדורו",
+"en": "Rome-Jayden Owusu-Oduro",
+"pos": "GK",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.47,
+"qid": "Q113628059",
+"no": "1"
+},
+{
+"he": "Hobie Verhulst",
+"en": "Hobie Verhulst",
+"pos": "GK",
+"age": 33,
+"nat": "Netherlands",
+"value_m": 0.24,
+"qid": "Q19280573",
+"no": "12"
+},
+{
+"he": "ירואן זואט",
+"en": "Jeroen Zoet",
+"pos": "GK",
+"age": 35,
+"nat": "Netherlands",
+"value_m": 0.22,
+"qid": "Q721572",
+"no": "41"
+},
+{
+"he": "מקס מרדינק",
+"en": "Mexx Meerdink",
+"pos": "FW",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 1.09,
+"qid": "Q111845115",
+"no": "9"
+},
+{
+"he": "Calvin Stengs",
+"en": "Calvin Stengs",
+"pos": "FW",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 1.03,
+"qid": "Q28849190",
+"no": "14"
+},
+{
+"he": "Denso Kasius",
+"en": "Denso Kasius",
+"pos": "DF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.9,
+"qid": "Q76735102",
+"no": "30"
+},
+{
+"he": "סייאה מאיקומה",
+"en": "Seiya Maikuma",
+"pos": "DF",
+"age": 28,
+"nat": "Japan",
+"value_m": 0.89,
+"qid": "Q85584053",
+"no": "2"
+},
+{
+"he": "Stije Resink",
+"en": "Stije Resink",
+"pos": "MF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.86,
+"qid": "Q105574125",
+"no": "16"
+},
+{
+"he": "Peer Koopmeiners",
+"en": "Peer Koopmeiners",
+"pos": "MF",
+"age": 26,
+"nat": "Netherlands",
+"value_m": 0.85,
+"qid": "Q47510521",
+"no": "6"
+},
+{
+"he": "Jizz Hornkamp",
+"en": "Jizz Hornkamp",
+"pos": "FW",
+"age": 28,
+"nat": "Netherlands",
+"value_m": 0.81,
+"qid": "Q53252728",
+"no": "19"
+},
+{
+"he": "Ro-Zangelo Daal",
+"en": "Ro-Zangelo Daal",
+"pos": "FW",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.8,
+"qid": "Q113574281",
+"no": "11"
+},
+{
+"he": "מתאו צ'אבס",
+"en": "Mateo Chávez",
+"pos": "DF",
+"age": 22,
+"nat": "Mexico",
+"value_m": 0.79,
+"qid": "Q124420330",
+"no": "5"
+},
+{
+"he": "וסלי פטאצ'י",
+"en": "Weslley Patati",
+"pos": "FW",
+"age": 22,
+"nat": "Brazil",
+"value_m": 0.79,
+"qid": "Q113130088",
+"no": "7"
+},
+{
+"he": "Lewis Schouten",
+"en": "Lewis Schouten",
+"pos": "DF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.72,
+"qid": "Q111845112",
+"no": "4"
+},
+{
+"he": "קייס סמיט",
+"en": "Kees Smit",
+"pos": "MF",
+"age": 20,
+"nat": "Netherlands",
+"value_m": 0.71,
+"qid": "Q117317225",
+"no": "10"
+},
+{
+"he": "Dave Kwakman",
+"en": "Dave Kwakman",
+"pos": "MF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.69,
+"qid": "Q113741645",
+"no": "21"
+},
+{
+"he": "Wouter Goes",
+"en": "Wouter Goes",
+"pos": "DF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.6,
+"qid": "Q110935258",
+"no": "3"
+},
+{
+"he": "Mees de Wit",
+"en": "Mees de Wit",
+"pos": "DF",
+"age": 28,
+"nat": "Netherlands",
+"value_m": 0.59,
+"qid": "Q40452277",
+"no": "34"
+},
+{
+"he": "Rion Ichihara",
+"en": "Rion Ichihara",
+"pos": "DF",
+"age": 21,
+"nat": "Japan",
+"value_m": 0.57,
+"qid": "Q123405326",
+"no": "31"
+},
+{
+"he": "Valdemar Byskov",
+"en": "Valdemar Byskov",
+"pos": "MF",
+"age": 21,
+"nat": "Denmark",
+"value_m": 0.55,
+"qid": "Q115046294",
+"no": "17"
+},
+{
+"he": "Ayoub Oufkir",
+"en": "Ayoub Oufkir",
+"pos": "FW",
+"age": 20,
+"nat": "Netherlands",
+"value_m": 0.55,
+"qid": "Q130899492",
+"no": "24"
+},
+{
+"he": "Wassim Bouziane",
+"en": "Wassim Bouziane",
+"pos": "FW",
+"age": 19,
+"nat": "Netherlands",
+"value_m": 0.5,
+"qid": "Q133269607",
+"no": "27"
+},
+{
+"he": "Elijah Dijkstra",
+"en": "Elijah Dijkstra",
+"pos": "DF",
+"age": 20,
+"nat": "Netherlands",
+"value_m": 0.49,
+"qid": "Q133857440",
+"no": "22"
+},
+{
+"he": "Wesley Hoedt",
+"en": "Wesley Hoedt",
+"pos": "DF",
+"age": 32,
+"nat": "Netherlands",
+"value_m": 0.49,
+"qid": "Q15303013",
+"no": "29"
+},
+{
+"he": "Bendegúz Kovács",
+"en": "Bendegúz Kovács",
+"pos": "FW",
+"age": 19,
+"nat": "Hungary",
+"value_m": 0.37,
+"qid": "Q138496273",
+"no": "18"
+},
+{
+"he": "Andrea Natali",
+"en": "Andrea Natali",
+"pos": "DF",
+"age": 18,
+"nat": "Italy",
+"value_m": 0.28,
+"qid": "Q124199427",
+"no": "20"
+},
+{
+"he": "יורדי קלאסי",
+"en": "Jordy Clasie",
+"pos": "MF",
+"age": 35,
+"nat": "Netherlands",
+"value_m": 0.23,
+"qid": "Q198068",
+"no": "8"
+}
+]
+}

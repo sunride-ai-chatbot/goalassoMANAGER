@@ -1,0 +1,308 @@
+{
+"key": "penarol",
+"name_he": "פניארול",
+"source": "enwiki:Peñarol",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Leandro Díaz",
+"en": "Leandro Díaz",
+"pos": "GK",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.11,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Washington Aguerre",
+"en": "Washington Aguerre",
+"pos": "GK",
+"age": 33,
+"nat": "Uruguay",
+"value_m": 0.07,
+"qid": "Q6166485",
+"no": "29"
+},
+{
+"he": "Sebastián Britos",
+"en": "Sebastián Britos",
+"pos": "GK",
+"age": 38,
+"nat": "Uruguay",
+"value_m": 0.03,
+"qid": "Q5402129",
+"no": "1"
+},
+{
+"he": "מתיאס ארסו",
+"en": "Matías Arezo",
+"pos": "FW",
+"age": 23,
+"nat": "Uruguay",
+"value_m": 0.29,
+"qid": "Q66628533",
+"no": "19"
+},
+{
+"he": "Leonardo Fernández",
+"en": "Leonardo Fernández",
+"pos": "MF",
+"age": 27,
+"nat": "Uruguay",
+"value_m": 0.25,
+"qid": "Q20801692",
+"no": "10"
+},
+{
+"he": "Facundo Batista",
+"en": "Facundo Batista",
+"pos": "FW",
+"age": 27,
+"nat": "Uruguay",
+"value_m": 0.24,
+"qid": "Q60842160",
+"no": "9"
+},
+{
+"he": "פרנקו גונזלס",
+"en": "Franco González",
+"pos": "MF",
+"age": 22,
+"nat": "Uruguay",
+"value_m": 0.22,
+"qid": "Q115158203",
+"no": "80"
+},
+{
+"he": "Mauricio Lemos",
+"en": "Mauricio Lemos",
+"pos": "DF",
+"age": 30,
+"nat": "Uruguay",
+"value_m": 0.2,
+"qid": "Q15696639",
+"no": "3"
+},
+{
+"he": "Eduardo Darias",
+"en": "Eduardo Darias",
+"pos": "MF",
+"age": 28,
+"nat": "Uruguay",
+"value_m": 0.2,
+"qid": "Q105393047",
+"no": "13"
+},
+{
+"he": "Nicolás Fernández",
+"en": "Nicolás Fernández",
+"pos": "MF",
+"age": 28,
+"nat": "Uruguay",
+"value_m": 0.18,
+"qid": "Q21515113",
+"no": "8"
+},
+{
+"he": "Brandon Álvarez",
+"en": "Brandon Álvarez",
+"pos": "FW",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.18,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Matías González",
+"en": "Matías González",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.15,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Ignacio Alegre",
+"en": "Ignacio Alegre",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.15,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Luciano González",
+"en": "Luciano González",
+"pos": "FW",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.15,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Tomás Olase",
+"en": "Tomás Olase",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Kevin Rodríguez",
+"en": "Kevin Rodríguez",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Facundo Álvez",
+"en": "Facundo Álvez",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Lorenzo Couture",
+"en": "Lorenzo Couture",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": null,
+"no": "55"
+},
+{
+"he": "Andrés Madruga",
+"en": "Andrés Madruga",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": null,
+"no": null
+},
+{
+"he": "Stiven Muhlethaler",
+"en": "Stiven Muhlethaler",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.13,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Leandro Umpiérrez",
+"en": "Leandro Umpiérrez",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.12,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Eric Remedi",
+"en": "Eric Remedi",
+"pos": "MF",
+"age": 31,
+"nat": "Argentina",
+"value_m": 0.11,
+"qid": "Q29259617",
+"no": "5"
+},
+{
+"he": "ג'ונתן רודריגס",
+"en": "Jonathan Rodríguez",
+"pos": "FW",
+"age": 33,
+"nat": "Uruguay",
+"value_m": 0.11,
+"qid": "Q5934050",
+"no": "33"
+},
+{
+"he": "Nahuel Herrera",
+"en": "Nahuel Herrera",
+"pos": "DF",
+"age": 21,
+"nat": "Uruguay",
+"value_m": 0.11,
+"qid": "Q123503684",
+"no": "34"
+},
+{
+"he": "Franco Romero",
+"en": "Franco Romero",
+"pos": "DF",
+"age": 31,
+"nat": "Uruguay",
+"value_m": 0.1,
+"qid": "Q18617055",
+"no": "4"
+},
+{
+"he": "דייגו לאקסאלט",
+"en": "Diego Laxalt",
+"pos": "DF",
+"age": 33,
+"nat": "Uruguay",
+"value_m": 0.1,
+"qid": "Q6999245",
+"no": "93"
+},
+{
+"he": "Javier Cabrera",
+"en": "Javier Cabrera",
+"pos": "FW",
+"age": 34,
+"nat": "Uruguay",
+"value_m": 0.09,
+"qid": "Q16937621",
+"no": "7"
+},
+{
+"he": "חסוס טרינדאדה",
+"en": "Jesús Trindade",
+"pos": "MF",
+"age": 33,
+"nat": "Uruguay",
+"value_m": 0.09,
+"qid": "Q60828173",
+"no": "21"
+},
+{
+"he": "חרמן פסלה",
+"en": "Germán Pezzella",
+"pos": "DF",
+"age": 35,
+"nat": "Argentina",
+"value_m": 0.07,
+"qid": "Q3761173",
+"no": "2"
+},
+{
+"he": "Julio Daguer",
+"en": "Julio Daguer",
+"pos": "MF",
+"age": 18,
+"nat": "Uruguay",
+"value_m": 0.07,
+"qid": "Q136479106",
+"no": "14"
+}
+]
+}

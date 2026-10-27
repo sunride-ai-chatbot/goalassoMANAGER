@@ -1,0 +1,308 @@
+{
+"key": "qpr",
+"name_he": "קווינס פארק ריינג'רס",
+"source": "enwiki:Queens Park Rangers F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Calum Ward",
+"en": "Calum Ward",
+"pos": "GK",
+"age": 25,
+"nat": "England",
+"value_m": 0.21,
+"qid": "Q107387838",
+"no": "13"
+},
+{
+"he": "Charlie Warren",
+"en": "Charlie Warren",
+"pos": "GK",
+"age": 25,
+"nat": "England",
+"value_m": 0.18,
+"qid": null,
+"no": null
+},
+{
+"he": "Matteo Salamon",
+"en": "Matteo Salamon",
+"pos": "GK",
+"age": 25,
+"nat": "England",
+"value_m": 0.15,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Kōki Saitō",
+"en": "Kōki Saitō",
+"pos": "MF",
+"age": 25,
+"nat": "Japan",
+"value_m": 0.48,
+"qid": "Q56349862",
+"no": "14"
+},
+{
+"he": "Jake Clarke-Salter",
+"en": "Jake Clarke-Salter",
+"pos": "DF",
+"age": 28,
+"nat": "England",
+"value_m": 0.4,
+"qid": "Q23688811",
+"no": "6"
+},
+{
+"he": "Harvey Vale",
+"en": "Harvey Vale",
+"pos": "MF",
+"age": 22,
+"nat": "Ireland",
+"value_m": 0.36,
+"qid": "Q110242738",
+"no": "20"
+},
+{
+"he": "Jonathan Varane",
+"en": "Jonathan Varane",
+"pos": "MF",
+"age": 24,
+"nat": "Martinique",
+"value_m": 0.36,
+"qid": "Q110045820",
+"no": "40"
+},
+{
+"he": "אליאס שאער",
+"en": "Ilias Chair",
+"pos": "MF",
+"age": 28,
+"nat": "Morocco",
+"value_m": 0.34,
+"qid": "Q21514646",
+"no": "10"
+},
+{
+"he": "Rumarn Burrell",
+"en": "Rumarn Burrell",
+"pos": "FW",
+"age": 25,
+"nat": "Jamaica",
+"value_m": 0.34,
+"qid": "Q104764485",
+"no": "16"
+},
+{
+"he": "Richard Kone",
+"en": "Richard Kone",
+"pos": "FW",
+"age": 23,
+"nat": "Côte d'Ivoire",
+"value_m": 0.34,
+"qid": "Q124080277",
+"no": "22"
+},
+{
+"he": "Nicolas Madsen",
+"en": "Nicolas Madsen",
+"pos": "MF",
+"age": 26,
+"nat": "Denmark",
+"value_m": 0.34,
+"qid": "Q70007795",
+"no": "24"
+},
+{
+"he": "טאריק למפטי",
+"en": "Tariq Lamptey",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.34,
+"qid": "Q80197171",
+"no": "48"
+},
+{
+"he": "Boy Kemper",
+"en": "Boy Kemper",
+"pos": "DF",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 0.33,
+"qid": "Q40353735",
+"no": "12"
+},
+{
+"he": "Karamoko Dembélé",
+"en": "Karamoko Dembélé",
+"pos": "MF",
+"age": 23,
+"nat": "England",
+"value_m": 0.32,
+"qid": "Q27628154",
+"no": "7"
+},
+{
+"he": "Paul Smyth",
+"en": "Paul Smyth",
+"pos": "MF",
+"age": 28,
+"nat": "Northern Ireland",
+"value_m": 0.32,
+"qid": "Q47476880",
+"no": "11"
+},
+{
+"he": "Kwame Poku",
+"en": "Kwame Poku",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.32,
+"qid": "Q67163903",
+"no": "17"
+},
+{
+"he": "Ronnie Edwards",
+"en": "Ronnie Edwards",
+"pos": "DF",
+"age": 23,
+"nat": "England",
+"value_m": 0.29,
+"qid": "Q98971989",
+"no": "5"
+},
+{
+"he": "Justin Obikwu",
+"en": "Justin Obikwu",
+"pos": "FW",
+"age": 22,
+"nat": "Trinidad and Tobago",
+"value_m": 0.27,
+"qid": "Q124285669",
+"no": "25"
+},
+{
+"he": "Jimmy Dunne",
+"en": "Jimmy Dunne",
+"pos": "DF",
+"age": 28,
+"nat": "Ireland",
+"value_m": 0.26,
+"qid": "Q48812485",
+"no": "3"
+},
+{
+"he": "Dennis Cirkin",
+"en": "Dennis Cirkin",
+"pos": "DF",
+"age": 24,
+"nat": "Latvia",
+"value_m": 0.26,
+"qid": "Q108094274",
+"no": "19"
+},
+{
+"he": "Liam Morrison",
+"en": "Liam Morrison",
+"pos": "DF",
+"age": 23,
+"nat": "Scotland",
+"value_m": 0.23,
+"qid": "Q107723107",
+"no": "4"
+},
+{
+"he": "Alfie Lloyd",
+"en": "Alfie Lloyd",
+"pos": "FW",
+"age": 23,
+"nat": "England",
+"value_m": 0.23,
+"qid": "Q128926617",
+"no": "15"
+},
+{
+"he": "Rico Kennedy",
+"en": "Rico Kennedy",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 0.23,
+"qid": null,
+"no": null
+},
+{
+"he": "Rayan Kolli",
+"en": "Rayan Kolli",
+"pos": "FW",
+"age": 21,
+"nat": "Algeria",
+"value_m": 0.22,
+"qid": "Q121537987",
+"no": "26"
+},
+{
+"he": "Amadou Mbengue",
+"en": "Amadou Mbengue",
+"pos": "DF",
+"age": 24,
+"nat": "Senegal",
+"value_m": 0.21,
+"qid": "Q108784648",
+"no": "27"
+},
+{
+"he": "Timothy Akindileni",
+"en": "Timothy Akindileni",
+"pos": "DF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.21,
+"qid": null,
+"no": null
+},
+{
+"he": "Amar Sanghrajka",
+"en": "Amar Sanghrajka",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 0.2,
+"qid": null,
+"no": null
+},
+{
+"he": "Kaleb Dyke",
+"en": "Kaleb Dyke",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 0.19,
+"qid": null,
+"no": null
+},
+{
+"he": "Fraser Neill",
+"en": "Fraser Neill",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 0.19,
+"qid": null,
+"no": null
+},
+{
+"he": "Ridwan Hassan",
+"en": "Ridwan Hassan",
+"pos": "FW",
+"age": 25,
+"nat": "England",
+"value_m": 0.19,
+"qid": null,
+"no": null
+}
+]
+}

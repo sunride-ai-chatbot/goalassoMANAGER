@@ -1,0 +1,278 @@
+{
+"key": "hoffenheim",
+"name_he": "הופנהיים",
+"source": "enwiki:TSG 1899 Hoffenheim",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Lúkas Petersson",
+"en": "Lúkas Petersson",
+"pos": "GK",
+"age": 22,
+"nat": "Iceland",
+"value_m": 0.38,
+"qid": "Q124670649",
+"no": "36"
+},
+{
+"he": "Luca Philipp",
+"en": "Luca Philipp",
+"pos": "GK",
+"age": 25,
+"nat": "Germany",
+"value_m": 0.35,
+"qid": null,
+"no": "37"
+},
+{
+"he": "אוליבר באומן",
+"en": "Oliver Baumann",
+"pos": "GK",
+"age": 36,
+"nat": "Germany",
+"value_m": 0.19,
+"qid": "Q129116",
+"no": "1"
+},
+{
+"he": "Fisnik Asllani",
+"en": "Fisnik Asllani",
+"pos": "FW",
+"age": 24,
+"nat": "Kosovo",
+"value_m": 1.22,
+"qid": "Q109653419",
+"no": "11"
+},
+{
+"he": "אלכסנדר פראס",
+"en": "Alexander Prass",
+"pos": "MF",
+"age": 25,
+"nat": "Austria",
+"value_m": 1.17,
+"qid": "Q62006510",
+"no": "22"
+},
+{
+"he": "אדם הלוז'ק",
+"en": "Adam Hložek",
+"pos": "FW",
+"age": 24,
+"nat": "Czech Republic",
+"value_m": 1.13,
+"qid": "Q59782306",
+"no": "10"
+},
+{
+"he": "פטריק וימר",
+"en": "Patrick Wimmer",
+"pos": "MF",
+"age": 25,
+"nat": "Austria",
+"value_m": 1.02,
+"qid": "Q65948837",
+"no": "8"
+},
+{
+"he": "אוזאן קאבאק",
+"en": "Ozan Kabak",
+"pos": "DF",
+"age": 26,
+"nat": "Turkey",
+"value_m": 1.01,
+"qid": "Q53280628",
+"no": "5"
+},
+{
+"he": "רובין הרנאץ'",
+"en": "Robin Hranáč",
+"pos": "DF",
+"age": 26,
+"nat": "Czech Republic",
+"value_m": 0.91,
+"qid": "Q107647351",
+"no": "2"
+},
+{
+"he": "Wouter Burger",
+"en": "Wouter Burger",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.87,
+"qid": "Q53998229",
+"no": "18"
+},
+{
+"he": "טים למפרלה",
+"en": "Tim Lemperle",
+"pos": "FW",
+"age": 24,
+"nat": "Germany",
+"value_m": 0.82,
+"qid": "Q96678433",
+"no": "19"
+},
+{
+"he": "Leon Avdullahu",
+"en": "Leon Avdullahu",
+"pos": "MF",
+"age": 22,
+"nat": "Kosovo",
+"value_m": 0.73,
+"qid": "Q123575103",
+"no": "7"
+},
+{
+"he": "קוקי מצ'ידה",
+"en": "Kōki Machida",
+"pos": "DF",
+"age": 29,
+"nat": "Japan",
+"value_m": 0.7,
+"qid": "Q22910803",
+"no": "28"
+},
+{
+"he": "Valentin Gendrey",
+"en": "Valentin Gendrey",
+"pos": "DF",
+"age": 26,
+"nat": "France",
+"value_m": 0.69,
+"qid": "Q60050172",
+"no": "15"
+},
+{
+"he": "Adam Daghim",
+"en": "Adam Daghim",
+"pos": "FW",
+"age": 20,
+"nat": "Denmark",
+"value_m": 0.63,
+"qid": "Q112970825",
+"no": "14"
+},
+{
+"he": "Albian Hajdari",
+"en": "Albian Hajdari",
+"pos": "DF",
+"age": 23,
+"nat": "Kosovo",
+"value_m": 0.63,
+"qid": "Q99694316",
+"no": "21"
+},
+{
+"he": "במבסה קונטה",
+"en": "Bambasé Conté",
+"pos": "MF",
+"age": 23,
+"nat": "Germany",
+"value_m": 0.6,
+"qid": "Q123409527",
+"no": "20"
+},
+{
+"he": "Bernardo",
+"en": "Bernardo",
+"pos": "DF",
+"age": 31,
+"nat": "Brazil",
+"value_m": 0.57,
+"qid": "Q22675674",
+"no": "13"
+},
+{
+"he": "Max Moerstedt",
+"en": "Max Moerstedt",
+"pos": "FW",
+"age": 20,
+"nat": "Germany",
+"value_m": 0.55,
+"qid": "Q113510031",
+"no": "9"
+},
+{
+"he": "Cajetan Lenz",
+"en": "Cajetan Lenz",
+"pos": "MF",
+"age": 20,
+"nat": "Germany",
+"value_m": 0.39,
+"qid": "Q135678341",
+"no": "32"
+},
+{
+"he": "Natnael Abraha",
+"en": "Natnael Abraha",
+"pos": "DF",
+"age": 25,
+"nat": "Germany",
+"value_m": 0.38,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Mats Rots",
+"en": "Mats Rots",
+"pos": "DF",
+"age": 20,
+"nat": "Netherlands",
+"value_m": 0.37,
+"qid": "Q121746385",
+"no": "39"
+},
+{
+"he": "Sean Dulic",
+"en": "Sean Dulic",
+"pos": "DF",
+"age": 21,
+"nat": "Germany",
+"value_m": 0.36,
+"qid": "Q131983290",
+"no": "4"
+},
+{
+"he": "Luis Engelns",
+"en": "Luis Engelns",
+"pos": "MF",
+"age": 19,
+"nat": "Germany",
+"value_m": 0.35,
+"qid": "Q135875446",
+"no": "16"
+},
+{
+"he": "נתן דה קאט",
+"en": "Nathan De Cat",
+"pos": "MF",
+"age": 18,
+"nat": "Belgium",
+"value_m": 0.31,
+"qid": "Q124416502",
+"no": "17"
+},
+{
+"he": "אנדריי קרמאריץ'",
+"en": "Andrej Kramarić",
+"pos": "FW",
+"age": 35,
+"nat": "Croatia",
+"value_m": 0.27,
+"qid": "Q502898",
+"no": "27"
+},
+{
+"he": "ולדימיר צופאל",
+"en": "Vladimír Coufal",
+"pos": "DF",
+"age": 34,
+"nat": "Czech Republic",
+"value_m": 0.23,
+"qid": "Q15113326",
+"no": "34"
+}
+]
+}

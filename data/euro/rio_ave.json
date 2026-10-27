@@ -1,0 +1,308 @@
+{
+"key": "rio_ave",
+"name_he": "ריו אבה",
+"source": "enwiki:Rio Ave F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Cezary Miszta",
+"en": "Cezary Miszta",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.28,
+"qid": "Q65159287",
+"no": "1"
+},
+{
+"he": "Kevin Chamorro",
+"en": "Kevin Chamorro",
+"pos": "GK",
+"age": 26,
+"nat": "Costa Rica",
+"value_m": 0.24,
+"qid": "Q60679163",
+"no": "22"
+},
+{
+"he": "Ennio van der Gouw",
+"en": "Ennio van der Gouw",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.19,
+"qid": "Q114000545",
+"no": "99"
+},
+{
+"he": "Vitor Hugo",
+"en": "Vitor Hugo",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": "Q141830935",
+"no": "32"
+},
+{
+"he": "דאריו שפיקיץ'",
+"en": "Dario Špikić",
+"pos": "FW",
+"age": 27,
+"nat": "Croatia",
+"value_m": 0.4,
+"qid": "Q100319774",
+"no": "77"
+},
+{
+"he": "Brandon Aguilera",
+"en": "Brandon Aguilera",
+"pos": "MF",
+"age": 23,
+"nat": "Costa Rica",
+"value_m": 0.36,
+"qid": "Q96116141",
+"no": "10"
+},
+{
+"he": "Roland Galčík",
+"en": "Roland Galčík",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.35,
+"qid": "Q62387419",
+"no": "30"
+},
+{
+"he": "Tamás Nikitscher",
+"en": "Tamás Nikitscher",
+"pos": "MF",
+"age": 26,
+"nat": "Hungary",
+"value_m": 0.35,
+"qid": "Q130256806",
+"no": "44"
+},
+{
+"he": "Malik Sellouki",
+"en": "Malik Sellouki",
+"pos": "MF",
+"age": 26,
+"nat": "France",
+"value_m": 0.33,
+"qid": "Q105550892",
+"no": "19"
+},
+{
+"he": "Sebastian Clemmensen",
+"en": "Sebastian Clemmensen",
+"pos": "FW",
+"age": 22,
+"nat": "Togo",
+"value_m": 0.32,
+"qid": "Q130741333",
+"no": "80"
+},
+{
+"he": "Georgios Liavas",
+"en": "Georgios Liavas",
+"pos": "MF",
+"age": 25,
+"nat": "Greece",
+"value_m": 0.31,
+"qid": "Q56877022",
+"no": "54"
+},
+{
+"he": "Andreas Ntoi",
+"en": "Andreas Ntoi",
+"pos": "MF",
+"age": 23,
+"nat": "Greece",
+"value_m": 0.3,
+"qid": "Q109497193",
+"no": "5"
+},
+{
+"he": "Marios Vrousai",
+"en": "Marios Vrousai",
+"pos": "DF",
+"age": 28,
+"nat": "Greece",
+"value_m": 0.29,
+"qid": "Q56752569",
+"no": "17"
+},
+{
+"he": "Tamble Monteiro",
+"en": "Tamble Monteiro",
+"pos": "FW",
+"age": 25,
+"nat": "Guinea-Bissau",
+"value_m": 0.28,
+"qid": "Q125547966",
+"no": "9"
+},
+{
+"he": "Ryan Guilherme",
+"en": "Ryan Guilherme",
+"pos": "MF",
+"age": 23,
+"nat": "Brazil",
+"value_m": 0.26,
+"qid": "Q136306881",
+"no": "8"
+},
+{
+"he": "Jalen Blesa",
+"en": "Jalen Blesa",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.25,
+"qid": "Q124684547",
+"no": "11"
+},
+{
+"he": "Tobías Medina",
+"en": "Tobías Medina",
+"pos": "FW",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.25,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Pedro Amaral",
+"en": "Pedro Amaral",
+"pos": "DF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.24,
+"qid": "Q26869299",
+"no": "24"
+},
+{
+"he": "Samuel Alves",
+"en": "Samuel Alves",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.24,
+"qid": null,
+"no": "67"
+},
+{
+"he": "Diogo Bezerra",
+"en": "Diogo Bezerra",
+"pos": "FW",
+"age": 24,
+"nat": "Brazil",
+"value_m": 0.23,
+"qid": "Q135472126",
+"no": "7"
+},
+{
+"he": "Nelson Abbey",
+"en": "Nelson Abbey",
+"pos": "DF",
+"age": 23,
+"nat": "England",
+"value_m": 0.22,
+"qid": "Q99395704",
+"no": "6"
+},
+{
+"he": "Zé Carlos",
+"en": "Zé Carlos",
+"pos": "DF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.21,
+"qid": "Q104840449",
+"no": "2"
+},
+{
+"he": "Radek Šiler",
+"en": "Radek Šiler",
+"pos": "FW",
+"age": 21,
+"nat": "Czech Republic",
+"value_m": 0.21,
+"qid": "Q137271826",
+"no": "21"
+},
+{
+"he": "Julien Lomboto",
+"en": "Julien Lomboto",
+"pos": "DF",
+"age": 24,
+"nat": "France",
+"value_m": 0.2,
+"qid": "Q121439100",
+"no": "13"
+},
+{
+"he": "João Tomé",
+"en": "João Tomé",
+"pos": "DF",
+"age": 23,
+"nat": "Portugal",
+"value_m": 0.2,
+"qid": "Q113535241",
+"no": "20"
+},
+{
+"he": "Francisco Petrasso",
+"en": "Francisco Petrasso",
+"pos": "DF",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.19,
+"qid": "Q126365808",
+"no": "23"
+},
+{
+"he": "Antoine Wenck",
+"en": "Antoine Wenck",
+"pos": "MF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.19,
+"qid": null,
+"no": "70"
+},
+{
+"he": "Miguel Patrício",
+"en": "Miguel Patrício",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.19,
+"qid": null,
+"no": "79"
+},
+{
+"he": "Simón García",
+"en": "Simón García",
+"pos": "DF",
+"age": 21,
+"nat": "Colombia",
+"value_m": 0.18,
+"qid": "Q132129914",
+"no": "3"
+},
+{
+"he": "Caike",
+"en": "Caike",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.16,
+"qid": null,
+"no": "68"
+}
+]
+}

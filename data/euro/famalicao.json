@@ -1,0 +1,258 @@
+{
+"key": "famalicao",
+"name_he": "פאמליקאו",
+"source": "enwiki:F.C. Famalicão",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "לזאר צארביץ'",
+"en": "Lazar Carević",
+"pos": "GK",
+"age": 27,
+"nat": "Montenegro",
+"value_m": 0.34,
+"qid": "Q57315510",
+"no": "25"
+},
+{
+"he": "איוואן זלובין",
+"en": "Ivan Zlobin",
+"pos": "GK",
+"age": 29,
+"nat": "Russia",
+"value_m": 0.27,
+"qid": "Q27927825",
+"no": "1"
+},
+{
+"he": "Gabriel Cabral",
+"en": "Gabriel Cabral",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.17,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Sorriso",
+"en": "Sorriso",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.45,
+"qid": "Q107062526",
+"no": "7"
+},
+{
+"he": "Georgios Koutsias",
+"en": "Georgios Koutsias",
+"pos": "FW",
+"age": 22,
+"nat": "Greece",
+"value_m": 0.4,
+"qid": "Q99461452",
+"no": "70"
+},
+{
+"he": "Óscar Aranda",
+"en": "Óscar Aranda",
+"pos": "FW",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.39,
+"qid": "Q115492548",
+"no": "11"
+},
+{
+"he": "Leo Realpe",
+"en": "Leo Realpe",
+"pos": "DF",
+"age": 25,
+"nat": "Ecuador",
+"value_m": 0.36,
+"qid": "Q81405188",
+"no": "3"
+},
+{
+"he": "Pedro Santos",
+"en": "Pedro Santos",
+"pos": "MF",
+"age": 23,
+"nat": "Portugal",
+"value_m": 0.35,
+"qid": "Q111962626",
+"no": "10"
+},
+{
+"he": "Gil Dias",
+"en": "Gil Dias",
+"pos": "FW",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.33,
+"qid": "Q17501954",
+"no": "23"
+},
+{
+"he": "Roméo Beney",
+"en": "Roméo Beney",
+"pos": "FW",
+"age": 21,
+"nat": "Switzerland",
+"value_m": 0.32,
+"qid": "Q123743037",
+"no": "18"
+},
+{
+"he": "Tom van de Looi",
+"en": "Tom van de Looi",
+"pos": "MF",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 0.29,
+"qid": "Q47487018",
+"no": "6"
+},
+{
+"he": "Gustavo Garcia",
+"en": "Gustavo Garcia",
+"pos": "DF",
+"age": 24,
+"nat": "Brazil",
+"value_m": 0.28,
+"qid": "Q81826968",
+"no": "2"
+},
+{
+"he": "Paulo Moreira",
+"en": "Paulo Moreira",
+"pos": "MF",
+"age": 26,
+"nat": "Portugal",
+"value_m": 0.28,
+"qid": "Q106281631",
+"no": "19"
+},
+{
+"he": "Rodrigo Pinheiro",
+"en": "Rodrigo Pinheiro",
+"pos": "DF",
+"age": 24,
+"nat": "Portugal",
+"value_m": 0.26,
+"qid": "Q66859295",
+"no": "17"
+},
+{
+"he": "Umar Abubakar",
+"en": "Umar Abubakar",
+"pos": "FW",
+"age": 20,
+"nat": null,
+"value_m": 0.25,
+"qid": "Q135616267",
+"no": "9"
+},
+{
+"he": "Mathias De Amorim",
+"en": "Mathias De Amorim",
+"pos": "MF",
+"age": 21,
+"nat": "Portugal",
+"value_m": 0.25,
+"qid": "Q124093284",
+"no": "14"
+},
+{
+"he": "Finn van Breemen",
+"en": "Finn van Breemen",
+"pos": "DF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.23,
+"qid": "Q113639422",
+"no": "4"
+},
+{
+"he": "Matheus Mattara",
+"en": "Matheus Mattara",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.23,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Marcos Peña",
+"en": "Marcos Peña",
+"pos": "MF",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.22,
+"qid": "Q125125381",
+"no": "8"
+},
+{
+"he": "Víctor Rofino",
+"en": "Víctor Rofino",
+"pos": "DF",
+"age": 24,
+"nat": "Guinea-Bissau",
+"value_m": 0.22,
+"qid": "Q121363993",
+"no": "15"
+},
+{
+"he": "Tamás Szűcs",
+"en": "Tamás Szűcs",
+"pos": "MF",
+"age": 21,
+"nat": "Hungary",
+"value_m": 0.21,
+"qid": "Q113414660",
+"no": "21"
+},
+{
+"he": "Pedro Bondo",
+"en": "Pedro Bondo",
+"pos": "DF",
+"age": 21,
+"nat": "Angola",
+"value_m": 0.21,
+"qid": "Q109553241",
+"no": "28"
+},
+{
+"he": "Leny Meyer",
+"en": "Leny Meyer",
+"pos": "DF",
+"age": 22,
+"nat": "Switzerland",
+"value_m": 0.18,
+"qid": "Q123142569",
+"no": "5"
+},
+{
+"he": "Vojin Serafimović",
+"en": "Vojin Serafimović",
+"pos": "DF",
+"age": 20,
+"nat": "Serbia",
+"value_m": 0.18,
+"qid": "Q122664562",
+"no": "30"
+},
+{
+"he": "Mathis Jangéal",
+"en": "Mathis Jangéal",
+"pos": "MF",
+"age": 18,
+"nat": "France",
+"value_m": 0.12,
+"qid": "Q136388980",
+"no": "24"
+}
+]
+}

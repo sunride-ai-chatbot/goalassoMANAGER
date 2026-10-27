@@ -1,0 +1,308 @@
+{
+"key": "osijek",
+"name_he": "אוסייק",
+"source": "enwiki:NK Osijek",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Nikola Ćurčija",
+"en": "Nikola Ćurčija",
+"pos": "GK",
+"age": 25,
+"nat": "Canada",
+"value_m": 0.11,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Jan Hlapčić",
+"en": "Jan Hlapčić",
+"pos": "GK",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.08,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Marko Malenica",
+"en": "Marko Malenica",
+"pos": "GK",
+"age": 32,
+"nat": "Croatia",
+"value_m": 0.05,
+"qid": "Q25496269",
+"no": "31"
+},
+{
+"he": "Ivan Dolček",
+"en": "Ivan Dolček",
+"pos": "FW",
+"age": 26,
+"nat": "Croatia",
+"value_m": 0.25,
+"qid": "Q61900852",
+"no": "7"
+},
+{
+"he": "Alejandro Cantero",
+"en": "Alejandro Cantero",
+"pos": "FW",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.24,
+"qid": "Q106666178",
+"no": "21"
+},
+{
+"he": "Luka Tunjić",
+"en": "Luka Tunjić",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.21,
+"qid": "Q131928248",
+"no": "11"
+},
+{
+"he": "Armando León",
+"en": "Armando León",
+"pos": "FW",
+"age": 26,
+"nat": "Mexico",
+"value_m": 0.2,
+"qid": "Q98476425",
+"no": "79"
+},
+{
+"he": "Justice Ohajunwa",
+"en": "Justice Ohajunwa",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.17,
+"qid": null,
+"no": null
+},
+{
+"he": "Niko Farkaš",
+"en": "Niko Farkaš",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.16,
+"qid": "Q137645356",
+"no": "18"
+},
+{
+"he": "Luka Vrbančić",
+"en": "Luka Vrbančić",
+"pos": "MF",
+"age": 21,
+"nat": "Croatia",
+"value_m": 0.16,
+"qid": "Q124810988",
+"no": "23"
+},
+{
+"he": "Ivan Barić",
+"en": "Ivan Barić",
+"pos": "FW",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.15,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Oleksandr Petrusenko",
+"en": "Oleksandr Petrusenko",
+"pos": "MF",
+"age": 28,
+"nat": "Ukraine",
+"value_m": 0.15,
+"qid": "Q106555046",
+"no": "16"
+},
+{
+"he": "Domagoj Bukvić",
+"en": "Domagoj Bukvić",
+"pos": "FW",
+"age": 22,
+"nat": "Croatia",
+"value_m": 0.15,
+"qid": "Q122310259",
+"no": "39"
+},
+{
+"he": "Jona Ježić",
+"en": "Jona Ježić",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.14,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Jay Kruiver",
+"en": "Jay Kruiver",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.13,
+"qid": "Q106675988",
+"no": "22"
+},
+{
+"he": "Luka Jelenić",
+"en": "Luka Jelenić",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.13,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Admir Ljatifi",
+"en": "Admir Ljatifi",
+"pos": "FW",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.13,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Emin Hasić",
+"en": "Emin Hasić",
+"pos": "DF",
+"age": 23,
+"nat": "Sweden",
+"value_m": 0.13,
+"qid": "Q74223009",
+"no": "33"
+},
+{
+"he": "Izak Ježić",
+"en": "Izak Ježić",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.13,
+"qid": null,
+"no": "98"
+},
+{
+"he": "David Mejía",
+"en": "David Mejía",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.12,
+"qid": null,
+"no": "6"
+},
+{
+"he": "David Kalem",
+"en": "David Kalem",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.12,
+"qid": null,
+"no": "47"
+},
+{
+"he": "Balelo",
+"en": "Balelo",
+"pos": "FW",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.12,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Vito Čaić",
+"en": "Vito Čaić",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.11,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Anton Matković",
+"en": "Anton Matković",
+"pos": "FW",
+"age": 20,
+"nat": "Croatia",
+"value_m": 0.11,
+"qid": "Q124218527",
+"no": "34"
+},
+{
+"he": "Ivano Kolarik",
+"en": "Ivano Kolarik",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.11,
+"qid": null,
+"no": "49"
+},
+{
+"he": "Šimun Mikolčić",
+"en": "Šimun Mikolčić",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.1,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Balázs Bakti",
+"en": "Balázs Bakti",
+"pos": "MF",
+"age": 21,
+"nat": "Hungary",
+"value_m": 0.1,
+"qid": "Q135988700",
+"no": "67"
+},
+{
+"he": "Senad Mustafić",
+"en": "Senad Mustafić",
+"pos": "DF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.1,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Luka Posavec",
+"en": "Luka Posavec",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.09,
+"qid": null,
+"no": "24"
+},
+{
+"he": "מרסל הייסטר",
+"en": "Marcel Heister",
+"pos": "DF",
+"age": 34,
+"nat": "Germany",
+"value_m": 0.05,
+"qid": "Q1731820",
+"no": "2"
+}
+]
+}

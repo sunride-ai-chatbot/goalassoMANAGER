@@ -1,0 +1,238 @@
+{
+"key": "racing_club",
+"name_he": "ראסינג קלוב",
+"source": "enwiki:Racing Club de Avellaneda",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Francisco Gómez",
+"en": "Francisco Gómez",
+"pos": "GK",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.18,
+"qid": "Q1441992",
+"no": "1"
+},
+{
+"he": "Matías Tagliamonte",
+"en": "Matías Tagliamonte",
+"pos": "GK",
+"age": 28,
+"nat": "Argentina",
+"value_m": 0.15,
+"qid": "Q105992648",
+"no": "30"
+},
+{
+"he": "פקונדו קמבסס",
+"en": "Facundo Cambeses",
+"pos": "GK",
+"age": 29,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q30881099",
+"no": "25"
+},
+{
+"he": "Matko Miljević",
+"en": "Matko Miljević",
+"pos": "MF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.26,
+"qid": "Q63379115",
+"no": "10"
+},
+{
+"he": "Marco Di Césare",
+"en": "Marco Di Césare",
+"pos": "DF",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.22,
+"qid": "Q104015123",
+"no": "3"
+},
+{
+"he": "Matías Zaracho",
+"en": "Matías Zaracho",
+"pos": "MF",
+"age": 28,
+"nat": "Argentina",
+"value_m": 0.22,
+"qid": "Q28485651",
+"no": "11"
+},
+{
+"he": "Gastón Lodico",
+"en": "Gastón Lodico",
+"pos": "MF",
+"age": 28,
+"nat": "Argentina",
+"value_m": 0.21,
+"qid": "Q52418807",
+"no": "20"
+},
+{
+"he": "Matías Pérez",
+"en": "Matías Pérez",
+"pos": "DF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.2,
+"qid": "Q96392291",
+"no": "2"
+},
+{
+"he": "תומאס קונצ'ני",
+"en": "Tomás Conechny",
+"pos": "FW",
+"age": 28,
+"nat": "Argentina",
+"value_m": 0.2,
+"qid": "Q19343196",
+"no": "17"
+},
+{
+"he": "Duván Vergara",
+"en": "Duván Vergara",
+"pos": "FW",
+"age": 29,
+"nat": "Colombia",
+"value_m": 0.19,
+"qid": "Q25842194",
+"no": "7"
+},
+{
+"he": "Ulises Ortegoza",
+"en": "Ulises Ortegoza",
+"pos": "MF",
+"age": 29,
+"nat": "Chile",
+"value_m": 0.19,
+"qid": "Q116785475",
+"no": "16"
+},
+{
+"he": "Ignacio Rodríguez",
+"en": "Ignacio Rodríguez",
+"pos": "DF",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.19,
+"qid": "Q116937501",
+"no": "19"
+},
+{
+"he": "Nazareno Colombo",
+"en": "Nazareno Colombo",
+"pos": "DF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.18,
+"qid": "Q65786123",
+"no": "23"
+},
+{
+"he": "Alan Forneris",
+"en": "Alan Forneris",
+"pos": "MF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.17,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Elías Torres",
+"en": "Elías Torres",
+"pos": "FW",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.17,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Adrián Fernández",
+"en": "Adrián Fernández",
+"pos": "MF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.17,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Alejandro Tello",
+"en": "Alejandro Tello",
+"pos": "MF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": null,
+"no": "46"
+},
+{
+"he": "Mateo Martínez",
+"en": "Mateo Martínez",
+"pos": "DF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.11,
+"qid": null,
+"no": "38"
+},
+{
+"he": "מתיאס קראנוויטר",
+"en": "Matías Kranevitter",
+"pos": "MF",
+"age": 33,
+"nat": "Argentina",
+"value_m": 0.09,
+"qid": "Q3559484",
+"no": "5"
+},
+{
+"he": "Adrián Martínez",
+"en": "Adrián Martínez",
+"pos": "FW",
+"age": 34,
+"nat": "Argentina",
+"value_m": 0.08,
+"qid": "Q62064989",
+"no": "9"
+},
+{
+"he": "אלפונסו אספינו",
+"en": "Alfonso Espino",
+"pos": "DF",
+"age": 34,
+"nat": "Uruguay",
+"value_m": 0.07,
+"qid": "Q16594121",
+"no": "18"
+},
+{
+"he": "Gonzalo Escudero",
+"en": "Gonzalo Escudero",
+"pos": "DF",
+"age": 19,
+"nat": "Argentina",
+"value_m": 0.07,
+"qid": "Q119463587",
+"no": "43"
+},
+{
+"he": "מרקוס רוחו",
+"en": "Marcos Rojo",
+"pos": "DF",
+"age": 36,
+"nat": "Argentina",
+"value_m": 0.06,
+"qid": "Q507890",
+"no": "6"
+}
+]
+}

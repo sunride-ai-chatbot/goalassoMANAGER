@@ -1,0 +1,228 @@
+{
+"key": "fiorentina",
+"name_he": "פיורנטינה",
+"source": "enwiki:ACF Fiorentina",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "אוליבר כריסטנסן",
+"en": "Oliver Christensen",
+"pos": "GK",
+"age": 27,
+"nat": "Denmark",
+"value_m": 1.23,
+"qid": "Q51128205",
+"no": "53"
+},
+{
+"he": "Luca Lezzerini",
+"en": "Luca Lezzerini",
+"pos": "GK",
+"age": 31,
+"nat": "Italy",
+"value_m": 0.62,
+"qid": "Q18812080",
+"no": "19"
+},
+{
+"he": "דויד דה חאה",
+"en": "David de Gea",
+"pos": "GK",
+"age": 35,
+"nat": "Spain",
+"value_m": 0.36,
+"qid": "Q150268",
+"no": "43"
+},
+{
+"he": "בטו",
+"en": "Beto",
+"pos": "FW",
+"age": 28,
+"nat": "Guinea-Bissau",
+"value_m": 1.88,
+"qid": "Q66363735",
+"no": "23"
+},
+{
+"he": "ניקולו פג'ולי",
+"en": "Nicolò Fagioli",
+"pos": "MF",
+"age": 25,
+"nat": "Italy",
+"value_m": 1.87,
+"qid": "Q56810114",
+"no": "44"
+},
+{
+"he": "ריקרדו סוטיל",
+"en": "Riccardo Sottil",
+"pos": "FW",
+"age": 27,
+"nat": "Italy",
+"value_m": 1.83,
+"qid": "Q58174760",
+"no": null
+},
+{
+"he": "Dodô",
+"en": "Dodô",
+"pos": "DF",
+"age": 27,
+"nat": "Brazil",
+"value_m": 1.65,
+"qid": "Q24084221",
+"no": "2"
+},
+{
+"he": "Marco Brescianini",
+"en": "Marco Brescianini",
+"pos": "MF",
+"age": 26,
+"nat": "Italy",
+"value_m": 1.47,
+"qid": "Q63117980",
+"no": "4"
+},
+{
+"he": "מתאו פז'גרינו",
+"en": "Mateo Pellegrino",
+"pos": "FW",
+"age": 24,
+"nat": "Spain",
+"value_m": 1.23,
+"qid": "Q106308522",
+"no": "32"
+},
+{
+"he": "פביאנו פאריזי",
+"en": "Fabiano Parisi",
+"pos": "DF",
+"age": 25,
+"nat": "Italy",
+"value_m": 1.18,
+"qid": "Q83643499",
+"no": "65"
+},
+{
+"he": "ארתור אטה",
+"en": "Arthur Atta",
+"pos": "MF",
+"age": 23,
+"nat": "France",
+"value_m": 1.15,
+"qid": "Q117208045",
+"no": "14"
+},
+{
+"he": "מרין פונגרצ'יץ'",
+"en": "Marin Pongračić",
+"pos": "DF",
+"age": 28,
+"nat": "Croatia",
+"value_m": 1.09,
+"qid": "Q29427316",
+"no": "5"
+},
+{
+"he": "Luca Ranieri",
+"en": "Luca Ranieri",
+"pos": "DF",
+"age": 27,
+"nat": "Italy",
+"value_m": 1.08,
+"qid": "Q58010154",
+"no": "6"
+},
+{
+"he": "Jacopo Tarantino",
+"en": "Jacopo Tarantino",
+"pos": "FW",
+"age": 25,
+"nat": "Italy",
+"value_m": 1.04,
+"qid": null,
+"no": null
+},
+{
+"he": "Cher Ndour",
+"en": "Cher Ndour",
+"pos": "MF",
+"age": 22,
+"nat": "Italy",
+"value_m": 1.03,
+"qid": "Q106691309",
+"no": "27"
+},
+{
+"he": "Brando Mazzeo",
+"en": "Brando Mazzeo",
+"pos": "FW",
+"age": 25,
+"nat": "Italy",
+"value_m": 1.0,
+"qid": null,
+"no": "72"
+},
+{
+"he": "Viery",
+"en": "Viery",
+"pos": "DF",
+"age": 21,
+"nat": "Brazil",
+"value_m": 0.9,
+"qid": "Q133801098",
+"no": "33"
+},
+{
+"he": "Sulayman Jallow",
+"en": "Sulayman Jallow",
+"pos": "FW",
+"age": 25,
+"nat": "Gambia",
+"value_m": 0.85,
+"qid": null,
+"no": "71"
+},
+{
+"he": "כריסט אינאו אולאי",
+"en": "Christ Inao Oulaï",
+"pos": "MF",
+"age": 20,
+"nat": "Côte d'Ivoire",
+"value_m": 0.8,
+"qid": "Q136038808",
+"no": "42"
+},
+{
+"he": "Víctor Valdepeñas",
+"en": "Víctor Valdepeñas",
+"pos": "DF",
+"age": 19,
+"nat": "Spain",
+"value_m": 0.69,
+"qid": "Q133818258",
+"no": "21"
+},
+{
+"he": "Antonio Pirrò",
+"en": "Antonio Pirrò",
+"pos": "MF",
+"age": 25,
+"nat": "Italy",
+"value_m": 0.62,
+"qid": null,
+"no": "73"
+},
+{
+"he": "Federico Croci",
+"en": "Federico Croci",
+"pos": "FW",
+"age": 16,
+"nat": "Italy",
+"value_m": 0.22,
+"qid": "Q140065551",
+"no": "70"
+}
+]
+}

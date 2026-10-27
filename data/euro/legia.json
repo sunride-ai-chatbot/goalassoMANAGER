@@ -1,0 +1,268 @@
+{
+"key": "legia",
+"name_he": "לגיה ורשה",
+"source": "enwiki:Legia Warsaw",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Otto Hindrich",
+"en": "Otto Hindrich",
+"pos": "GK",
+"age": 24,
+"nat": null,
+"value_m": 0.32,
+"qid": "Q97028500",
+"no": "89"
+},
+{
+"he": "Ivan Brkić",
+"en": "Ivan Brkić",
+"pos": "GK",
+"age": 31,
+"nat": "Croatia",
+"value_m": 0.24,
+"qid": "Q17524991",
+"no": "1"
+},
+{
+"he": "Jan Bienduga",
+"en": "Jan Bienduga",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.23,
+"qid": null,
+"no": "59"
+},
+{
+"he": "קמיל פיאטקובסקי",
+"en": "Kamil Piątkowski",
+"pos": "DF",
+"age": 26,
+"nat": "Poland",
+"value_m": 0.6,
+"qid": "Q73502784",
+"no": "91"
+},
+{
+"he": "Łukasz Zjawiński",
+"en": "Łukasz Zjawiński",
+"pos": "FW",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.55,
+"qid": "Q106872142",
+"no": "79"
+},
+{
+"he": "Rafał Adamski",
+"en": "Rafał Adamski",
+"pos": "FW",
+"age": 24,
+"nat": "Poland",
+"value_m": 0.54,
+"qid": "Q114357407",
+"no": "9"
+},
+{
+"he": "ברטוש קפוסטקה",
+"en": "Bartosz Kapustka",
+"pos": "MF",
+"age": 29,
+"nat": "Poland",
+"value_m": 0.53,
+"qid": "Q17386152",
+"no": "67"
+},
+{
+"he": "Rúben Vinagre",
+"en": "Rúben Vinagre",
+"pos": "DF",
+"age": 27,
+"nat": "Portugal",
+"value_m": 0.5,
+"qid": "Q26255539",
+"no": "19"
+},
+{
+"he": "Kacper Chodyna",
+"en": "Kacper Chodyna",
+"pos": "MF",
+"age": 27,
+"nat": "Poland",
+"value_m": 0.49,
+"qid": "Q106873357",
+"no": "11"
+},
+{
+"he": "ואהאן ביצ'אחצ'יאן",
+"en": "Vahan Bichakhchyan",
+"pos": "MF",
+"age": 27,
+"nat": "Armenia",
+"value_m": 0.45,
+"qid": "Q26250893",
+"no": "21"
+},
+{
+"he": "Damian Szymański",
+"en": "Damian Szymański",
+"pos": "MF",
+"age": 31,
+"nat": "Poland",
+"value_m": 0.37,
+"qid": "Q20640303",
+"no": "4"
+},
+{
+"he": "Samuel Kováčik",
+"en": "Samuel Kováčik",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.36,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Wojciech Urbański",
+"en": "Wojciech Urbański",
+"pos": "MF",
+"age": 21,
+"nat": "Poland",
+"value_m": 0.34,
+"qid": "Q130300411",
+"no": "53"
+},
+{
+"he": "Jakub Żewłakow",
+"en": "Jakub Żewłakow",
+"pos": "FW",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.31,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Henrique Arreiol",
+"en": "Henrique Arreiol",
+"pos": "MF",
+"age": 21,
+"nat": "Portugal",
+"value_m": 0.3,
+"qid": "Q132910475",
+"no": "6"
+},
+{
+"he": "Arkadiusz Reca",
+"en": "Arkadiusz Reca",
+"pos": "DF",
+"age": 31,
+"nat": "Poland",
+"value_m": 0.3,
+"qid": "Q22162746",
+"no": "13"
+},
+{
+"he": "Filip Przybyłko",
+"en": "Filip Przybyłko",
+"pos": "MF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.3,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Robert Deziel Jr.",
+"en": "Robert Deziel Jr.",
+"pos": "DF",
+"age": 21,
+"nat": "United States",
+"value_m": 0.28,
+"qid": "Q136695886",
+"no": "5"
+},
+{
+"he": "Bartosz Korżyński",
+"en": "Bartosz Korżyński",
+"pos": "DF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.28,
+"qid": null,
+"no": "81"
+},
+{
+"he": "Erik Mikanovich",
+"en": "Erik Mikanovich",
+"pos": "MF",
+"age": 25,
+"nat": "Belarus",
+"value_m": 0.28,
+"qid": null,
+"no": "97"
+},
+{
+"he": "Antonio Čolak",
+"en": "Antonio Čolak",
+"pos": "FW",
+"age": 32,
+"nat": "Croatia",
+"value_m": 0.26,
+"qid": "Q15431979",
+"no": "14"
+},
+{
+"he": "Mateusz Lauryn",
+"en": "Mateusz Lauryn",
+"pos": "DF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.23,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Mateusz Szczepaniak",
+"en": "Mateusz Szczepaniak",
+"pos": "MF",
+"age": 19,
+"nat": "Poland",
+"value_m": 0.22,
+"qid": "Q131362848",
+"no": "17"
+},
+{
+"he": "Rafał Augustyniak",
+"en": "Rafał Augustyniak",
+"pos": "MF",
+"age": 32,
+"nat": "Poland",
+"value_m": 0.19,
+"qid": "Q17544445",
+"no": "8"
+},
+{
+"he": "Paweł Wszołek",
+"en": "Paweł Wszołek",
+"pos": "MF",
+"age": 34,
+"nat": "Poland",
+"value_m": 0.17,
+"qid": "Q1342989",
+"no": "22"
+},
+{
+"he": "Zoran Arsenić",
+"en": "Zoran Arsenić",
+"pos": "DF",
+"age": 32,
+"nat": "Croatia",
+"value_m": 0.16,
+"qid": "Q21064577",
+"no": "24"
+}
+]
+}

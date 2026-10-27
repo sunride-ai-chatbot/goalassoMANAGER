@@ -1,0 +1,208 @@
+{
+"key": "sporting_gijon",
+"name_he": "ספורטינג חיחון",
+"source": "enwiki:Sporting de Gijón",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Egoitz Arana",
+"en": "Egoitz Arana",
+"pos": "GK",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.21,
+"qid": "Q114991881",
+"no": "13"
+},
+{
+"he": "רובן יאנייס",
+"en": "Rubén Yáñez",
+"pos": "GK",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.18,
+"qid": "Q15916807",
+"no": "1"
+},
+{
+"he": "קונרד דה לה פואנטה",
+"en": "Konrad de la Fuente",
+"pos": "FW",
+"age": 25,
+"nat": "United States",
+"value_m": 0.56,
+"qid": "Q62456204",
+"no": "11"
+},
+{
+"he": "Nikita Iosifov",
+"en": "Nikita Iosifov",
+"pos": "MF",
+"age": 25,
+"nat": "Russia",
+"value_m": 0.41,
+"qid": "Q98277792",
+"no": "20"
+},
+{
+"he": "הוגו גייאמון",
+"en": "Hugo Guillamón",
+"pos": "MF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.37,
+"qid": "Q30346426",
+"no": "22"
+},
+{
+"he": "Guille Rosas",
+"en": "Guille Rosas",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.31,
+"qid": "Q100307901",
+"no": "2"
+},
+{
+"he": "Nacho Martín",
+"en": "Nacho Martín",
+"pos": "MF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.31,
+"qid": "Q115057117",
+"no": "6"
+},
+{
+"he": "César Gelabert",
+"en": "César Gelabert",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.29,
+"qid": "Q30345104",
+"no": "10"
+},
+{
+"he": "ממאדו לום",
+"en": "Mamadou Loum",
+"pos": "MF",
+"age": 29,
+"nat": "Senegal",
+"value_m": 0.29,
+"qid": "Q29462457",
+"no": "21"
+},
+{
+"he": "Pablo García",
+"en": "Pablo García",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.25,
+"qid": "Q99263745",
+"no": "3"
+},
+{
+"he": "Gaspar Campos",
+"en": "Gaspar Campos",
+"pos": "MF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.25,
+"qid": "Q96646856",
+"no": "7"
+},
+{
+"he": "Juan Otero",
+"en": "Juan Otero",
+"pos": "FW",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.25,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Jorge Sáenz",
+"en": "Jorge Sáenz",
+"pos": "DF",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.25,
+"qid": "Q18808639",
+"no": "23"
+},
+{
+"he": "Manu Rodríguez",
+"en": "Manu Rodríguez",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Álex Corredera",
+"en": "Álex Corredera",
+"pos": "MF",
+"age": 30,
+"nat": "Spain",
+"value_m": 0.22,
+"qid": "Q42306189",
+"no": "14"
+},
+{
+"he": "Aimar Duñabeitia",
+"en": "Aimar Duñabeitia",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.22,
+"qid": "Q121364104",
+"no": "24"
+},
+{
+"he": "Alejo Sarco",
+"en": "Alejo Sarco",
+"pos": "FW",
+"age": 20,
+"nat": "Argentina",
+"value_m": 0.21,
+"qid": "Q125812845",
+"no": "16"
+},
+{
+"he": "Diego Sánchez",
+"en": "Diego Sánchez",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": "Q112567287",
+"no": "5"
+},
+{
+"he": "Pablo Vázquez",
+"en": "Pablo Vázquez",
+"pos": "DF",
+"age": 31,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": "Q27662869",
+"no": "15"
+},
+{
+"he": "Iker Martínez",
+"en": "Iker Martínez",
+"pos": "DF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": "Q130271281",
+"no": "26"
+}
+]
+}

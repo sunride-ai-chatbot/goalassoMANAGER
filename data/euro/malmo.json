@@ -1,0 +1,308 @@
+{
+"key": "malmo",
+"name_he": "מאלמו",
+"source": "enwiki:Malmö FF",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "William Nieroth",
+"en": "William Nieroth",
+"pos": "GK",
+"age": 20,
+"nat": "Sweden",
+"value_m": 0.16,
+"qid": "Q139892070",
+"no": "50"
+},
+{
+"he": "Johan Dahlin",
+"en": "Johan Dahlin",
+"pos": "GK",
+"age": 39,
+"nat": "Sweden",
+"value_m": 0.09,
+"qid": "Q1372325",
+"no": "27"
+},
+{
+"he": "רובין אולסן",
+"en": "Robin Olsen",
+"pos": "GK",
+"age": 36,
+"nat": "Sweden",
+"value_m": 0.06,
+"qid": "Q6799321",
+"no": "1"
+},
+{
+"he": "Sead Hakšabanović",
+"en": "Sead Hakšabanović",
+"pos": "FW",
+"age": 27,
+"nat": "Montenegro",
+"value_m": 0.52,
+"qid": "Q19904159",
+"no": "29"
+},
+{
+"he": "Emmanuel Ekong",
+"en": "Emmanuel Ekong",
+"pos": "FW",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.45,
+"qid": "Q113971462",
+"no": "11"
+},
+{
+"he": "Mayckel Lahdo",
+"en": "Mayckel Lahdo",
+"pos": "FW",
+"age": 23,
+"nat": "Sweden",
+"value_m": 0.41,
+"qid": "Q105620373",
+"no": "15"
+},
+{
+"he": "Otto Rosengren",
+"en": "Otto Rosengren",
+"pos": "MF",
+"age": 23,
+"nat": "Sweden",
+"value_m": 0.35,
+"qid": "Q109819466",
+"no": "7"
+},
+{
+"he": "Diego García",
+"en": "Diego García",
+"pos": "FW",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.34,
+"qid": "Q107014245",
+"no": "9"
+},
+{
+"he": "Yanis Karabelyov",
+"en": "Yanis Karabelyov",
+"pos": "MF",
+"age": 30,
+"nat": "Bulgaria",
+"value_m": 0.28,
+"qid": "Q16239593",
+"no": "6"
+},
+{
+"he": "Warren Kamanzi",
+"en": "Warren Kamanzi",
+"pos": "DF",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.28,
+"qid": "Q108124587",
+"no": "14"
+},
+{
+"he": "Gabriel Busanello",
+"en": "Gabriel Busanello",
+"pos": "DF",
+"age": 27,
+"nat": "Brazil",
+"value_m": 0.27,
+"qid": "Q105641906",
+"no": "25"
+},
+{
+"he": "Omar Krajina",
+"en": "Omar Krajina",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.24,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Gentian Lajqi",
+"en": "Gentian Lajqi",
+"pos": "MF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.24,
+"qid": null,
+"no": "43"
+},
+{
+"he": "Antonio Palac",
+"en": "Antonio Palac",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.24,
+"qid": null,
+"no": "46"
+},
+{
+"he": "Andrej Đurić",
+"en": "Andrej Đurić",
+"pos": "DF",
+"age": 22,
+"nat": "Montenegro",
+"value_m": 0.23,
+"qid": "Q105627782",
+"no": "5"
+},
+{
+"he": "Noah John",
+"en": "Noah John",
+"pos": "DF",
+"age": 22,
+"nat": "Sweden",
+"value_m": 0.23,
+"qid": "Q118383504",
+"no": "23"
+},
+{
+"he": "דניאל גודיונסן",
+"en": "Daníel Guðjohnsen",
+"pos": "FW",
+"age": 20,
+"nat": "Iceland",
+"value_m": 0.23,
+"qid": "Q116733009",
+"no": "32"
+},
+{
+"he": "Israel Anum",
+"en": "Israel Anum",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.23,
+"qid": null,
+"no": "–"
+},
+{
+"he": "Stian Gregersen",
+"en": "Stian Gregersen",
+"pos": "DF",
+"age": 31,
+"nat": "Norway",
+"value_m": 0.21,
+"qid": "Q29169607",
+"no": "2"
+},
+{
+"he": "Adrian Skogmar",
+"en": "Adrian Skogmar",
+"pos": "DF",
+"age": 20,
+"nat": "Sweden",
+"value_m": 0.19,
+"qid": "Q120201242",
+"no": "37"
+},
+{
+"he": "Kenan Busuladžić",
+"en": "Kenan Busuladžić",
+"pos": "MF",
+"age": 19,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.19,
+"qid": "Q125491355",
+"no": "40"
+},
+{
+"he": "Medjen Llumnica",
+"en": "Medjen Llumnica",
+"pos": "MF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.19,
+"qid": null,
+"no": "–"
+},
+{
+"he": "Jovan Milosavljević",
+"en": "Jovan Milosavljević",
+"pos": "MF",
+"age": 19,
+"nat": "Serbia",
+"value_m": 0.18,
+"qid": "Q136677207",
+"no": "28"
+},
+{
+"he": "Malte Frejd",
+"en": "Malte Frejd",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.18,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Oscar Sjöstrand",
+"en": "Oscar Sjöstrand",
+"pos": "MF",
+"age": 21,
+"nat": "Sweden",
+"value_m": 0.17,
+"qid": "Q136002142",
+"no": "24"
+},
+{
+"he": "Bleon Kurtulus",
+"en": "Bleon Kurtulus",
+"pos": "DF",
+"age": 19,
+"nat": "Sweden",
+"value_m": 0.15,
+"qid": "Q125709370",
+"no": "4"
+},
+{
+"he": "Viggo Jeppsson",
+"en": "Viggo Jeppsson",
+"pos": "MF",
+"age": 20,
+"nat": "Sweden",
+"value_m": 0.15,
+"qid": "Q141484984",
+"no": "42"
+},
+{
+"he": "Anton Höög",
+"en": "Anton Höög",
+"pos": "MF",
+"age": 19,
+"nat": "Sweden",
+"value_m": 0.14,
+"qid": "Q140523269",
+"no": "45"
+},
+{
+"he": "Isaac Assibu",
+"en": "Isaac Assibu",
+"pos": "FW",
+"age": 18,
+"nat": "Ghana",
+"value_m": 0.11,
+"qid": "Q140681263",
+"no": "39"
+},
+{
+"he": "אנדרס כריסטיאנסן",
+"en": "Anders Christiansen",
+"pos": "MF",
+"age": 36,
+"nat": "Denmark",
+"value_m": 0.09,
+"qid": "Q490858",
+"no": "10"
+}
+]
+}

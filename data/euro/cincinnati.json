@@ -1,0 +1,288 @@
+{
+"key": "cincinnati",
+"name_he": "סינסינטי",
+"source": "enwiki:FC Cincinnati",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Roman Celentano",
+"en": "Roman Celentano",
+"pos": "GK",
+"age": 25,
+"nat": "United States",
+"value_m": 0.38,
+"qid": "Q110733715",
+"no": "18"
+},
+{
+"he": "Evan Louro",
+"en": "Evan Louro",
+"pos": "GK",
+"age": 30,
+"nat": "United States",
+"value_m": 0.21,
+"qid": "Q28528653",
+"no": "13"
+},
+{
+"he": "Connor Dale",
+"en": "Connor Dale",
+"pos": "GK",
+"age": 25,
+"nat": "United States",
+"value_m": 0.17,
+"qid": null,
+"no": "89"
+},
+{
+"he": "קווין דנקי",
+"en": "Kévin Denkey",
+"pos": "FW",
+"age": 25,
+"nat": "Togo",
+"value_m": 0.6,
+"qid": "Q57078974",
+"no": "9"
+},
+{
+"he": "טיירל מלסיה",
+"en": "Tyrell Malacia",
+"pos": "DF",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 0.53,
+"qid": "Q44845374",
+"no": "3"
+},
+{
+"he": "דויד דואודרה",
+"en": "David Douděra",
+"pos": "MF",
+"age": 28,
+"nat": "Czech Republic",
+"value_m": 0.51,
+"qid": "Q96613620",
+"no": "23"
+},
+{
+"he": "Ayoub Jabbari",
+"en": "Ayoub Jabbari",
+"pos": "FW",
+"age": 26,
+"nat": "Morocco",
+"value_m": 0.49,
+"qid": "Q114436180",
+"no": "99"
+},
+{
+"he": "Evander",
+"en": "Evander",
+"pos": "MF",
+"age": 28,
+"nat": "Brazil",
+"value_m": 0.45,
+"qid": "Q30091456",
+"no": "10"
+},
+{
+"he": "Bryan Ramírez",
+"en": "Bryan Ramírez",
+"pos": "FW",
+"age": 26,
+"nat": "Ecuador",
+"value_m": 0.44,
+"qid": "Q116004047",
+"no": "29"
+},
+{
+"he": "Ender Echenique",
+"en": "Ender Echenique",
+"pos": "FW",
+"age": 22,
+"nat": "Venezuela",
+"value_m": 0.42,
+"qid": "Q126175055",
+"no": "66"
+},
+{
+"he": "מילס רובינסון",
+"en": "Miles Robinson",
+"pos": "DF",
+"age": 29,
+"nat": "United States",
+"value_m": 0.41,
+"qid": "Q30122953",
+"no": "12"
+},
+{
+"he": "Kenji Mboma Dem",
+"en": "Kenji Mboma Dem",
+"pos": "FW",
+"age": 24,
+"nat": "France",
+"value_m": 0.36,
+"qid": "Q132860783",
+"no": "17"
+},
+{
+"he": "Obinna Nwobodo",
+"en": "Obinna Nwobodo",
+"pos": "MF",
+"age": 29,
+"nat": null,
+"value_m": 0.34,
+"qid": "Q26251610",
+"no": "5"
+},
+{
+"he": "Gerardo Valenzuela",
+"en": "Gerardo Valenzuela",
+"pos": "MF",
+"age": 21,
+"nat": "United States",
+"value_m": 0.31,
+"qid": "Q119860562",
+"no": "22"
+},
+{
+"he": "Tom Barlow",
+"en": "Tom Barlow",
+"pos": "FW",
+"age": 31,
+"nat": "United States",
+"value_m": 0.3,
+"qid": "Q55375240",
+"no": "16"
+},
+{
+"he": "Samuel Gidi",
+"en": "Samuel Gidi",
+"pos": "MF",
+"age": 22,
+"nat": "Slovakia",
+"value_m": 0.29,
+"qid": "Q113644456",
+"no": "11"
+},
+{
+"he": "Pavel Bucha",
+"en": "Pavel Bucha",
+"pos": "MF",
+"age": 28,
+"nat": "Czech Republic",
+"value_m": 0.29,
+"qid": "Q49163401",
+"no": "20"
+},
+{
+"he": "Kristian Fletcher",
+"en": "Kristian Fletcher",
+"pos": "FW",
+"age": 21,
+"nat": "United States",
+"value_m": 0.28,
+"qid": "Q113668661",
+"no": "14"
+},
+{
+"he": "טינאייג' האדבה",
+"en": "Teenage Hadebe",
+"pos": "DF",
+"age": 30,
+"nat": "Zimbabwe",
+"value_m": 0.28,
+"qid": "Q24451811",
+"no": "15"
+},
+{
+"he": "Brian Anunga",
+"en": "Brian Anunga",
+"pos": "MF",
+"age": 30,
+"nat": "Cameroon",
+"value_m": 0.28,
+"qid": "Q21004843",
+"no": "27"
+},
+{
+"he": "Ademar Chávez",
+"en": "Ademar Chávez",
+"pos": "MF",
+"age": 25,
+"nat": "Mexico",
+"value_m": 0.24,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Ayoub Lajhar",
+"en": "Ayoub Lajhar",
+"pos": "DF",
+"age": 25,
+"nat": "Libya",
+"value_m": 0.24,
+"qid": null,
+"no": "55"
+},
+{
+"he": "José  Martínez",
+"en": "José  Martínez",
+"pos": "MF",
+"age": 32,
+"nat": "Venezuela",
+"value_m": 0.23,
+"qid": "Q79634899",
+"no": "8"
+},
+{
+"he": "Ștefan Chirilă",
+"en": "Ștefan Chirilă",
+"pos": "FW",
+"age": 19,
+"nat": "Romania",
+"value_m": 0.22,
+"qid": "Q132860773",
+"no": "19"
+},
+{
+"he": "Alvas Powell",
+"en": "Alvas Powell",
+"pos": "DF",
+"age": 32,
+"nat": "Jamaica",
+"value_m": 0.18,
+"qid": "Q4737924",
+"no": "2"
+},
+{
+"he": "Nick Hagglund",
+"en": "Nick Hagglund",
+"pos": "DF",
+"age": 33,
+"nat": "United States",
+"value_m": 0.16,
+"qid": "Q16224951",
+"no": "4"
+},
+{
+"he": "Andrei Chirilă",
+"en": "Andrei Chirilă",
+"pos": "DF",
+"age": 18,
+"nat": "United States",
+"value_m": 0.11,
+"qid": "Q138684800",
+"no": "88"
+},
+{
+"he": "Kyle Smith",
+"en": "Kyle Smith",
+"pos": "DF",
+"age": 34,
+"nat": "United States",
+"value_m": 0.08,
+"qid": "Q24005542",
+"no": "24"
+}
+]
+}

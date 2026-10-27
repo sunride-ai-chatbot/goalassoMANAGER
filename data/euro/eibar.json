@@ -1,0 +1,238 @@
+{
+"key": "eibar",
+"name_he": "אייבר",
+"source": "enwiki:SD Eibar",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Luis López",
+"en": "Luis López",
+"pos": "GK",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.21,
+"qid": "Q112609508",
+"no": "1"
+},
+{
+"he": "Jonmi Magunagoitia",
+"en": "Jonmi Magunagoitia",
+"pos": "GK",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.21,
+"qid": "Q117774627",
+"no": "13"
+},
+{
+"he": "Javi Martón",
+"en": "Javi Martón",
+"pos": "FW",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.31,
+"qid": "Q107605559",
+"no": "20"
+},
+{
+"he": "Adu Ares",
+"en": "Adu Ares",
+"pos": "FW",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.28,
+"qid": "Q112108197",
+"no": "7"
+},
+{
+"he": "Jon Magunazelaia",
+"en": "Jon Magunazelaia",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.28,
+"qid": "Q108665872",
+"no": "11"
+},
+{
+"he": "Jon Guruzeta",
+"en": "Jon Guruzeta",
+"pos": "FW",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.27,
+"qid": "Q107207940",
+"no": "10"
+},
+{
+"he": "Imanol García de Albéniz",
+"en": "Imanol García de Albéniz",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.26,
+"qid": "Q106643331",
+"no": "3"
+},
+{
+"he": "Peru Nolaskoain",
+"en": "Peru Nolaskoain",
+"pos": "DF",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.26,
+"qid": "Q54657180",
+"no": "5"
+},
+{
+"he": "Aleix Garrido",
+"en": "Aleix Garrido",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.26,
+"qid": "Q116872826",
+"no": "30"
+},
+{
+"he": "Ander Madariaga",
+"en": "Ander Madariaga",
+"pos": "MF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.24,
+"qid": "Q124332291",
+"no": "8"
+},
+{
+"he": "Iván Gil",
+"en": "Iván Gil",
+"pos": "MF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": "Q112263915",
+"no": "21"
+},
+{
+"he": "Jon Bautista",
+"en": "Jon Bautista",
+"pos": "FW",
+"age": 31,
+"nat": "Spain",
+"value_m": 0.2,
+"qid": "Q19947838",
+"no": "9"
+},
+{
+"he": "Sergio Cubero",
+"en": "Sergio Cubero",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": "Q79142091",
+"no": "2"
+},
+{
+"he": "Pejiño",
+"en": "Pejiño",
+"pos": "FW",
+"age": 30,
+"nat": "Spain",
+"value_m": 0.18,
+"qid": "Q47769891",
+"no": "17"
+},
+{
+"he": "Markel Arana",
+"en": "Markel Arana",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.18,
+"qid": "Q115487040",
+"no": "18"
+},
+{
+"he": "Eric Pérez",
+"en": "Eric Pérez",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.15,
+"qid": null,
+"no": "19"
+},
+{
+"he": "אונאי אלגסבאל",
+"en": "Unai Elgezabal",
+"pos": "DF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.09,
+"qid": "Q23907858",
+"no": "4"
+},
+{
+"he": "Lander Olaetxea",
+"en": "Lander Olaetxea",
+"pos": "MF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.09,
+"qid": "Q21428541",
+"no": "14"
+},
+{
+"he": "חואן ברנאט",
+"en": "Juan Bernat",
+"pos": "DF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.09,
+"qid": "Q19367",
+"no": "24"
+},
+{
+"he": "Sergio Álvarez",
+"en": "Sergio Álvarez",
+"pos": "MF",
+"age": 34,
+"nat": "Spain",
+"value_m": 0.08,
+"qid": "Q1997792",
+"no": "6"
+},
+{
+"he": "Álvaro Rodríguez",
+"en": "Álvaro Rodríguez",
+"pos": "DF",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.08,
+"qid": "Q108107922",
+"no": "22"
+},
+{
+"he": "Anaitz Arbilla",
+"en": "Anaitz Arbilla",
+"pos": "DF",
+"age": 39,
+"nat": "Spain",
+"value_m": 0.06,
+"qid": "Q4750948",
+"no": "23"
+},
+{
+"he": "ז'איר אמאדור",
+"en": "Jair Amador",
+"pos": "DF",
+"age": 37,
+"nat": "Portugal",
+"value_m": 0.04,
+"qid": "Q24279006",
+"no": "15"
+}
+]
+}

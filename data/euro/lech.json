@@ -1,0 +1,308 @@
+{
+"key": "lech",
+"name_he": "לך פוזנן",
+"source": "enwiki:Lech Poznań",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Mateusz Lis",
+"en": "Mateusz Lis",
+"pos": "GK",
+"age": 29,
+"nat": "Poland",
+"value_m": 0.26,
+"qid": "Q22006328",
+"no": "1"
+},
+{
+"he": "Aleks Olsztyn",
+"en": "Aleks Olsztyn",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.21,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Wiktor Obremski",
+"en": "Wiktor Obremski",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.2,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Mateusz Pruchniewski",
+"en": "Mateusz Pruchniewski",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.15,
+"qid": null,
+"no": "33"
+},
+{
+"he": "אללהייאר סייאדמנש",
+"en": "Allahyar Sayyadmanesh",
+"pos": "FW",
+"age": 25,
+"nat": "Iran",
+"value_m": 0.61,
+"qid": "Q47199479",
+"no": "17"
+},
+{
+"he": "פטריק ולמארק",
+"en": "Patrik Wålemark",
+"pos": "FW",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.45,
+"qid": "Q96012717",
+"no": "10"
+},
+{
+"he": "Daniel Håkans",
+"en": "Daniel Håkans",
+"pos": "FW",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.44,
+"qid": "Q104912131",
+"no": "11"
+},
+{
+"he": "לואיס פלמה",
+"en": "Luis Palma",
+"pos": "FW",
+"age": 26,
+"nat": "Honduras",
+"value_m": 0.44,
+"qid": "Q62268160",
+"no": "77"
+},
+{
+"he": "Pablo Rodríguez",
+"en": "Pablo Rodríguez",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.42,
+"qid": "Q99845020",
+"no": "21"
+},
+{
+"he": "עלי קולי-זאדה",
+"en": "Ali Gholizadeh",
+"pos": "FW",
+"age": 30,
+"nat": "Iran",
+"value_m": 0.36,
+"qid": "Q17859780",
+"no": "8"
+},
+{
+"he": "Yannick Agnero",
+"en": "Yannick Agnero",
+"pos": "FW",
+"age": 23,
+"nat": "Côte d'Ivoire",
+"value_m": 0.35,
+"qid": "Q109199140",
+"no": "7"
+},
+{
+"he": "Mateusz Skrzypczak",
+"en": "Mateusz Skrzypczak",
+"pos": "DF",
+"age": 26,
+"nat": "Poland",
+"value_m": 0.35,
+"qid": "Q64010058",
+"no": "72"
+},
+{
+"he": "Leo Bengtsson",
+"en": "Leo Bengtsson",
+"pos": "MF",
+"age": 28,
+"nat": "Sweden",
+"value_m": 0.32,
+"qid": "Q28800889",
+"no": "14"
+},
+{
+"he": "Filip Jagiełło",
+"en": "Filip Jagiełło",
+"pos": "MF",
+"age": 29,
+"nat": "Poland",
+"value_m": 0.32,
+"qid": "Q16240042",
+"no": "24"
+},
+{
+"he": "Antoni Kozubal",
+"en": "Antoni Kozubal",
+"pos": "MF",
+"age": 22,
+"nat": "Poland",
+"value_m": 0.32,
+"qid": "Q106752685",
+"no": "43"
+},
+{
+"he": "רוברט גומני",
+"en": "Robert Gumny",
+"pos": "DF",
+"age": 28,
+"nat": "Poland",
+"value_m": 0.31,
+"qid": "Q24452152",
+"no": "20"
+},
+{
+"he": "Gustav Berggren",
+"en": "Gustav Berggren",
+"pos": "MF",
+"age": 28,
+"nat": "Sweden",
+"value_m": 0.3,
+"qid": "Q26994740",
+"no": "5"
+},
+{
+"he": "Wojciech Szymczak",
+"en": "Wojciech Szymczak",
+"pos": "FW",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.29,
+"qid": null,
+"no": "56"
+},
+{
+"he": "Joel Pereira",
+"en": "Joel Pereira",
+"pos": "DF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.28,
+"qid": "Q21622350",
+"no": "2"
+},
+{
+"he": "Alex Douglas",
+"en": "Alex Douglas",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.27,
+"qid": "Q125406607",
+"no": "3"
+},
+{
+"he": "Kamil Jakóbczyk",
+"en": "Kamil Jakóbczyk",
+"pos": "FW",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.27,
+"qid": null,
+"no": "54"
+},
+{
+"he": "Karol Delikat",
+"en": "Karol Delikat",
+"pos": "MF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.25,
+"qid": null,
+"no": "53"
+},
+{
+"he": "João Moutinho",
+"en": "João Moutinho",
+"pos": "DF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.24,
+"qid": "Q48851834",
+"no": "4"
+},
+{
+"he": "Terry Yegbe",
+"en": "Terry Yegbe",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.24,
+"qid": "Q122924919",
+"no": "59"
+},
+{
+"he": "Hubert Janyszka",
+"en": "Hubert Janyszka",
+"pos": "DF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.23,
+"qid": null,
+"no": "90"
+},
+{
+"he": "Piotr Bartczak",
+"en": "Piotr Bartczak",
+"pos": "DF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.21,
+"qid": null,
+"no": "55"
+},
+{
+"he": "Michał Gurgul",
+"en": "Michał Gurgul",
+"pos": "DF",
+"age": 20,
+"nat": "Poland",
+"value_m": 0.19,
+"qid": "Q121643993",
+"no": "15"
+},
+{
+"he": "Radosław Murawski",
+"en": "Radosław Murawski",
+"pos": "MF",
+"age": 32,
+"nat": "Poland",
+"value_m": 0.19,
+"qid": "Q7281648",
+"no": "22"
+},
+{
+"he": "Eryk Śledziński",
+"en": "Eryk Śledziński",
+"pos": "MF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.18,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Mikael Ishak",
+"en": "Mikael Ishak",
+"pos": "FW",
+"age": 33,
+"nat": "Sweden",
+"value_m": 0.16,
+"qid": "Q1334135",
+"no": "9"
+}
+]
+}

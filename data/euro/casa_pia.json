@@ -1,0 +1,248 @@
+{
+"key": "casa_pia",
+"name_he": "קאזה פיה",
+"source": "enwiki:Casa Pia A.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Patrick Sequeira",
+"en": "Patrick Sequeira",
+"pos": "GK",
+"age": 27,
+"nat": "Costa Rica",
+"value_m": 0.31,
+"qid": "Q24282656",
+"no": "1"
+},
+{
+"he": "Daniel Azevedo",
+"en": "Daniel Azevedo",
+"pos": "GK",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.19,
+"qid": "Q64740083",
+"no": "22"
+},
+{
+"he": "Ivan Mandić",
+"en": "Ivan Mandić",
+"pos": "GK",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.16,
+"qid": null,
+"no": "95"
+},
+{
+"he": "André Gomes",
+"en": "André Gomes",
+"pos": "GK",
+"age": 21,
+"nat": "Portugal",
+"value_m": 0.14,
+"qid": "Q116745209",
+"no": "31"
+},
+{
+"he": "הנריקה אראוז'ו",
+"en": "Henrique Araújo",
+"pos": "FW",
+"age": 24,
+"nat": "Portugal",
+"value_m": 0.37,
+"qid": "Q102355655",
+"no": "9"
+},
+{
+"he": "Alassana Jatta",
+"en": "Alassana Jatta",
+"pos": "FW",
+"age": 27,
+"nat": "Gambia",
+"value_m": 0.37,
+"qid": "Q65262790",
+"no": "20"
+},
+{
+"he": "Evans Maurin",
+"en": "Evans Maurin",
+"pos": "FW",
+"age": 25,
+"nat": "France",
+"value_m": 0.28,
+"qid": "Q132861790",
+"no": "17"
+},
+{
+"he": "ז'רמי ליבולאן",
+"en": "Jérémy Livolant",
+"pos": "FW",
+"age": 28,
+"nat": "France",
+"value_m": 0.28,
+"qid": "Q22006336",
+"no": "29"
+},
+{
+"he": "Abdu Conté",
+"en": "Abdu Conté",
+"pos": "DF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.25,
+"qid": "Q28595234",
+"no": "5"
+},
+{
+"he": "Rochinha",
+"en": "Rochinha",
+"pos": "FW",
+"age": 31,
+"nat": "Portugal",
+"value_m": 0.22,
+"qid": "Q17523818",
+"no": "10"
+},
+{
+"he": "David Sousa",
+"en": "David Sousa",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.21,
+"qid": "Q97176079",
+"no": "43"
+},
+{
+"he": "לורנס אופורי",
+"en": "Lawrence Ofori",
+"pos": "MF",
+"age": 28,
+"nat": "Ghana",
+"value_m": 0.2,
+"qid": "Q61957797",
+"no": "80"
+},
+{
+"he": "João Goulart",
+"en": "João Goulart",
+"pos": "DF",
+"age": 26,
+"nat": "Portugal",
+"value_m": 0.19,
+"qid": "Q130212432",
+"no": "4"
+},
+{
+"he": "Kevin Prieto",
+"en": "Kevin Prieto",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.19,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Kaique Rocha",
+"en": "Kaique Rocha",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.19,
+"qid": "Q66685929",
+"no": "27"
+},
+{
+"he": "JP",
+"en": "JP",
+"pos": "MF",
+"age": 21,
+"nat": "Brazil",
+"value_m": 0.19,
+"qid": "Q125759181",
+"no": "98"
+},
+{
+"he": "Gabi",
+"en": "Gabi",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.18,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Pedro Rosas",
+"en": "Pedro Rosas",
+"pos": "DF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.17,
+"qid": "Q138007021",
+"no": "75"
+},
+{
+"he": "Khaly",
+"en": "Khaly",
+"pos": "DF",
+"age": 22,
+"nat": "Angola",
+"value_m": 0.16,
+"qid": "Q134460087",
+"no": "3"
+},
+{
+"he": "Mo Salah",
+"en": "Mo Salah",
+"pos": "MF",
+"age": 22,
+"nat": "Belgium",
+"value_m": 0.16,
+"qid": "Q113463035",
+"no": "11"
+},
+{
+"he": "Abdu Dafé",
+"en": "Abdu Dafé",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.15,
+"qid": null,
+"no": "59"
+},
+{
+"he": "סבסטיאן פרס",
+"en": "Seba Pérez",
+"pos": "MF",
+"age": 33,
+"nat": "Colombia",
+"value_m": 0.12,
+"qid": "Q13495921",
+"no": "24"
+},
+{
+"he": "Cassiano",
+"en": "Cassiano",
+"pos": "FW",
+"age": 37,
+"nat": "Brazil",
+"value_m": 0.07,
+"qid": "Q16337102",
+"no": "90"
+},
+{
+"he": "אנדרה ז'ראלדש",
+"en": "André Geraldes",
+"pos": "DF",
+"age": 35,
+"nat": "Portugal",
+"value_m": 0.06,
+"qid": "Q518780",
+"no": "18"
+}
+]
+}

@@ -1,0 +1,298 @@
+{
+"key": "partizan",
+"name_he": "פרטיזן בלגרד",
+"source": "enwiki:FK Partizan",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Miloš Krunić",
+"en": "Miloš Krunić",
+"pos": "GK",
+"age": 29,
+"nat": "Serbia",
+"value_m": 0.23,
+"qid": "Q110045571",
+"no": "31"
+},
+{
+"he": "Tarik Banjić",
+"en": "Tarik Banjić",
+"pos": "GK",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.21,
+"qid": null,
+"no": "41"
+},
+{
+"he": "Marko Milošević",
+"en": "Marko Milošević",
+"pos": "GK",
+"age": 35,
+"nat": "Serbia",
+"value_m": 0.06,
+"qid": "Q19664396",
+"no": "1"
+},
+{
+"he": "דמבה סק",
+"en": "Demba Seck",
+"pos": "MF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.35,
+"qid": "Q105492486",
+"no": "19"
+},
+{
+"he": "Nikola Čumić",
+"en": "Nikola Čumić",
+"pos": "MF",
+"age": 27,
+"nat": "Serbia",
+"value_m": 0.33,
+"qid": "Q26405691",
+"no": "27"
+},
+{
+"he": "Nemanja Trifunović",
+"en": "Nemanja Trifunović",
+"pos": "MF",
+"age": 22,
+"nat": "Serbia",
+"value_m": 0.33,
+"qid": "Q122184822",
+"no": "32"
+},
+{
+"he": "אידריסו באבא",
+"en": "Iddrisu Baba",
+"pos": "MF",
+"age": 30,
+"nat": "Ghana",
+"value_m": 0.32,
+"qid": "Q56223995",
+"no": "14"
+},
+{
+"he": "Vukašin Đurđević",
+"en": "Vukašin Đurđević",
+"pos": "DF",
+"age": 22,
+"nat": "Serbia",
+"value_m": 0.28,
+"qid": "Q124302114",
+"no": "24"
+},
+{
+"he": "Ibrahim Zubairu",
+"en": "Ibrahim Zubairu",
+"pos": "MF",
+"age": 22,
+"nat": "Ghana",
+"value_m": 0.28,
+"qid": "Q126004638",
+"no": "39"
+},
+{
+"he": "Milan Vukotić",
+"en": "Milan Vukotić",
+"pos": "MF",
+"age": 23,
+"nat": "Montenegro",
+"value_m": 0.27,
+"qid": "Q116730468",
+"no": "11"
+},
+{
+"he": "Stefan Milić",
+"en": "Stefan Milić",
+"pos": "DF",
+"age": 26,
+"nat": "Montenegro",
+"value_m": 0.27,
+"qid": "Q98101445",
+"no": "44"
+},
+{
+"he": "Milan Lazarević",
+"en": "Milan Lazarević",
+"pos": "DF",
+"age": 29,
+"nat": "Serbia",
+"value_m": 0.27,
+"qid": "Q27922541",
+"no": "50"
+},
+{
+"he": "Mateja Milovanović",
+"en": "Mateja Milovanović",
+"pos": "DF",
+"age": 22,
+"nat": "Serbia",
+"value_m": 0.26,
+"qid": "Q113513038",
+"no": "5"
+},
+{
+"he": "Chaka Traorè",
+"en": "Chaka Traorè",
+"pos": "MF",
+"age": 21,
+"nat": "Côte d'Ivoire",
+"value_m": 0.26,
+"qid": "Q104990433",
+"no": "7"
+},
+{
+"he": "Zoran Alilović",
+"en": "Zoran Alilović",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.26,
+"qid": null,
+"no": "90"
+},
+{
+"he": "Dušan Jovanović",
+"en": "Dušan Jovanović",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.23,
+"qid": null,
+"no": "79"
+},
+{
+"he": "Mihajlo Petković",
+"en": "Mihajlo Petković",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.23,
+"qid": null,
+"no": "—"
+},
+{
+"he": "Samson Nwulu",
+"en": "Samson Nwulu",
+"pos": "DF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.22,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Matija Ninić",
+"en": "Matija Ninić",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.22,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Mario Jurčević",
+"en": "Mario Jurčević",
+"pos": "DF",
+"age": 31,
+"nat": "Slovenia",
+"value_m": 0.21,
+"qid": "Q17306117",
+"no": "4"
+},
+{
+"he": "Marko Lekić",
+"en": "Marko Lekić",
+"pos": "FW",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.21,
+"qid": null,
+"no": "46"
+},
+{
+"he": "Dušan Makević",
+"en": "Dušan Makević",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.19,
+"qid": null,
+"no": "88"
+},
+{
+"he": "Aleks Zeković",
+"en": "Aleks Zeković",
+"pos": "MF",
+"age": 19,
+"nat": "Montenegro",
+"value_m": 0.18,
+"qid": "Q140626969",
+"no": "8"
+},
+{
+"he": "Vojin Marinković",
+"en": "Vojin Marinković",
+"pos": "DF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.18,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Stefan Petrović",
+"en": "Stefan Petrović",
+"pos": "DF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.17,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Vanja Đorđević",
+"en": "Vanja Đorđević",
+"pos": "DF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.16,
+"qid": null,
+"no": "—"
+},
+{
+"he": "ניקולה סימיץ'",
+"en": "Nikola Simić",
+"pos": "DF",
+"age": 19,
+"nat": "Serbia",
+"value_m": 0.14,
+"qid": "Q132734634",
+"no": "40"
+},
+{
+"he": "Bogdan Kostić",
+"en": "Bogdan Kostić",
+"pos": "MF",
+"age": 19,
+"nat": "Serbia",
+"value_m": 0.13,
+"qid": "Q135275240",
+"no": "99"
+},
+{
+"he": "סטפן מיטרוביץ'",
+"en": "Stefan Mitrović",
+"pos": "DF",
+"age": 36,
+"nat": "Serbia",
+"value_m": 0.09,
+"qid": "Q2185245",
+"no": "23"
+}
+]
+}

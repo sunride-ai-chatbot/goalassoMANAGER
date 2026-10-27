@@ -1,0 +1,288 @@
+{
+"key": "athletic",
+"name_he": "אתלטיק בילבאו",
+"source": "enwiki:Athletic Bilbao",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "אונאי סימון",
+"en": "Unai Simón",
+"pos": "GK",
+"age": 29,
+"nat": "Spain",
+"value_m": 1.83,
+"qid": "Q23908113",
+"no": "1"
+},
+{
+"he": "Álex Padilla",
+"en": "Álex Padilla",
+"pos": "GK",
+"age": 22,
+"nat": "Mexico",
+"value_m": 1.32,
+"qid": "Q114271394",
+"no": "13"
+},
+{
+"he": "ניקו ויליאמס",
+"en": "Nico Williams",
+"pos": "FW",
+"age": 24,
+"nat": "Spain",
+"value_m": 2.96,
+"qid": "Q104414736",
+"no": "10"
+},
+{
+"he": "רוברט נבארו",
+"en": "Robert Navarro",
+"pos": "FW",
+"age": 24,
+"nat": "Spain",
+"value_m": 2.57,
+"qid": "Q60050053",
+"no": "23"
+},
+{
+"he": "ניקו סראנו",
+"en": "Nico Serrano",
+"pos": "FW",
+"age": 23,
+"nat": "Spain",
+"value_m": 2.52,
+"qid": "Q106644525",
+"no": "22"
+},
+{
+"he": "בניאט פראדוס",
+"en": "Beñat Prados",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 2.47,
+"qid": "Q106694910",
+"no": "6"
+},
+{
+"he": "דניאל ויוויאן",
+"en": "Dani Vivian",
+"pos": "DF",
+"age": 27,
+"nat": "Spain",
+"value_m": 2.38,
+"qid": "Q63368196",
+"no": "3"
+},
+{
+"he": "גורקה גורוזטה",
+"en": "Gorka Guruzeta",
+"pos": "FW",
+"age": 29,
+"nat": "Spain",
+"value_m": 2.37,
+"qid": "Q22004701",
+"no": "11"
+},
+{
+"he": "אויהאן סאנסט",
+"en": "Oihan Sancet",
+"pos": "MF",
+"age": 26,
+"nat": "Spain",
+"value_m": 1.99,
+"qid": "Q66466886",
+"no": "8"
+},
+{
+"he": "אלברו ג'אלו",
+"en": "Álvaro Djaló",
+"pos": "FW",
+"age": 27,
+"nat": "Guinea-Bissau",
+"value_m": 1.95,
+"qid": "Q113688253",
+"no": "25"
+},
+{
+"he": "אייטור פארדס",
+"en": "Aitor Paredes",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 1.91,
+"qid": "Q100386793",
+"no": "4"
+},
+{
+"he": "אלחנדרו רגו",
+"en": "Alejandro Rego",
+"pos": "MF",
+"age": 23,
+"nat": "Spain",
+"value_m": 1.91,
+"qid": "Q114628070",
+"no": "20"
+},
+{
+"he": "חסוס ארסו",
+"en": "Jesús Areso",
+"pos": "DF",
+"age": 27,
+"nat": "Spain",
+"value_m": 1.9,
+"qid": "Q64006699",
+"no": "12"
+},
+{
+"he": "מרואן סנאדי",
+"en": "Maroan Sannadi",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 1.88,
+"qid": "Q123439972",
+"no": "21"
+},
+{
+"he": "מיקל חאורחיסר",
+"en": "Mikel Jauregizar",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 1.82,
+"qid": "Q123698330",
+"no": "18"
+},
+{
+"he": "אלכס ברנגר",
+"en": "Álex Berenguer",
+"pos": "FW",
+"age": 31,
+"nat": "Spain",
+"value_m": 1.78,
+"qid": "Q18022026",
+"no": "7"
+},
+{
+"he": "הוגו רינקון",
+"en": "Hugo Rincón",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 1.48,
+"qid": "Q107297831",
+"no": "15"
+},
+{
+"he": "Beñat Gerenabarrena",
+"en": "Beñat Gerenabarrena",
+"pos": "MF",
+"age": 23,
+"nat": "Spain",
+"value_m": 1.42,
+"qid": "Q112159292",
+"no": "24"
+},
+{
+"he": "יראי אלברס",
+"en": "Yeray Álvarez",
+"pos": "DF",
+"age": 31,
+"nat": "Spain",
+"value_m": 1.4,
+"qid": "Q20492429",
+"no": "5"
+},
+{
+"he": "Peio Canales",
+"en": "Peio Canales",
+"pos": "MF",
+"age": 21,
+"nat": "Spain",
+"value_m": 1.4,
+"qid": "Q123825008",
+"no": "28"
+},
+{
+"he": "Unai Egiluz",
+"en": "Unai Egiluz",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 1.4,
+"qid": "Q114627806",
+"no": null
+},
+{
+"he": "איניאקי ויליאמס",
+"en": "Iñaki Williams",
+"pos": "FW",
+"age": 32,
+"nat": "Ghana",
+"value_m": 1.1,
+"qid": "Q18608497",
+"no": "9"
+},
+{
+"he": "Txus Vizcay",
+"en": "Txus Vizcay",
+"pos": "FW",
+"age": 21,
+"nat": "Spain",
+"value_m": 1.05,
+"qid": "Q133968745",
+"no": "34"
+},
+{
+"he": "Johaneko Louis-Jean",
+"en": "Johaneko Louis-Jean",
+"pos": "DF",
+"age": 22,
+"nat": "France",
+"value_m": 0.95,
+"qid": "Q110395360",
+"no": "31"
+},
+{
+"he": "איימריק לאפורט",
+"en": "Aymeric Laporte",
+"pos": "DF",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.78,
+"qid": "Q3855340",
+"no": "14"
+},
+{
+"he": "איניגו רואיס דה גלארטה",
+"en": "Iñigo Ruiz de Galarreta",
+"pos": "MF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.73,
+"qid": "Q3751255",
+"no": "16"
+},
+{
+"he": "Christian Imga",
+"en": "Christian Imga",
+"pos": "FW",
+"age": 17,
+"nat": "Spain",
+"value_m": 0.49,
+"qid": "Q136481124",
+"no": "33"
+},
+{
+"he": "יורי ברצ'יצ'ה",
+"en": "Yuri Berchiche",
+"pos": "DF",
+"age": 36,
+"nat": "Spain",
+"value_m": 0.44,
+"qid": "Q4118260",
+"no": "17"
+}
+]
+}

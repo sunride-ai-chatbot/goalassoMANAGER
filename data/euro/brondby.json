@@ -1,0 +1,278 @@
+{
+"key": "brondby",
+"name_he": "ברונדבי",
+"source": "enwiki:Brøndby IF",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "פטריק פנץ",
+"en": "Patrick Pentz",
+"pos": "GK",
+"age": 29,
+"nat": "Austria",
+"value_m": 0.29,
+"qid": "Q24068400",
+"no": "1"
+},
+{
+"he": "William Sonne-Schmidt",
+"en": "William Sonne-Schmidt",
+"pos": "GK",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.17,
+"qid": "Q140796974",
+"no": "50"
+},
+{
+"he": "Gavin Beavers",
+"en": "Gavin Beavers",
+"pos": "GK",
+"age": 21,
+"nat": "United States",
+"value_m": 0.14,
+"qid": "Q107355008",
+"no": "13"
+},
+{
+"he": "Adrian Kappenberger",
+"en": "Adrian Kappenberger",
+"pos": "GK",
+"age": 30,
+"nat": "Denmark",
+"value_m": 0.12,
+"qid": "Q61786963",
+"no": "16"
+},
+{
+"he": "Shō Fukuda",
+"en": "Shō Fukuda",
+"pos": "FW",
+"age": 25,
+"nat": "Japan",
+"value_m": 0.42,
+"qid": "Q89449266",
+"no": "19"
+},
+{
+"he": "Bartosz Slisz",
+"en": "Bartosz Slisz",
+"pos": "MF",
+"age": 27,
+"nat": "Poland",
+"value_m": 0.41,
+"qid": "Q63247177",
+"no": "99"
+},
+{
+"he": "עמנואל דניס",
+"en": "Emmanuel Dennis",
+"pos": "FW",
+"age": 28,
+"nat": "Nigeria",
+"value_m": 0.36,
+"qid": "Q26007180",
+"no": "17"
+},
+{
+"he": "Frederik Alves",
+"en": "Frederik Alves",
+"pos": "DF",
+"age": 26,
+"nat": "Denmark",
+"value_m": 0.34,
+"qid": "Q65230166",
+"no": "32"
+},
+{
+"he": "Filip Bundgaard",
+"en": "Filip Bundgaard",
+"pos": "FW",
+"age": 22,
+"nat": "Denmark",
+"value_m": 0.3,
+"qid": "Q97097365",
+"no": "11"
+},
+{
+"he": "Mads Frøkjær-Jensen",
+"en": "Mads Frøkjær-Jensen",
+"pos": "MF",
+"age": 27,
+"nat": "Denmark",
+"value_m": 0.28,
+"qid": "Q63183717",
+"no": "29"
+},
+{
+"he": "Mats Köhlert",
+"en": "Mats Köhlert",
+"pos": "DF",
+"age": 28,
+"nat": "Germany",
+"value_m": 0.27,
+"qid": "Q41701855",
+"no": "27"
+},
+{
+"he": "Oliver Villadsen",
+"en": "Oliver Villadsen",
+"pos": "DF",
+"age": 24,
+"nat": "Denmark",
+"value_m": 0.26,
+"qid": "Q67000543",
+"no": "2"
+},
+{
+"he": "Casper Winther",
+"en": "Casper Winther",
+"pos": "MF",
+"age": 23,
+"nat": "Denmark",
+"value_m": 0.26,
+"qid": "Q106427251",
+"no": "15"
+},
+{
+"he": "Marko Divković",
+"en": "Marko Divković",
+"pos": "DF",
+"age": 27,
+"nat": "Croatia",
+"value_m": 0.26,
+"qid": "Q37814597",
+"no": "24"
+},
+{
+"he": "Luis Binks",
+"en": "Luis Binks",
+"pos": "DF",
+"age": 24,
+"nat": "Scotland",
+"value_m": 0.25,
+"qid": "Q86339190",
+"no": "4"
+},
+{
+"he": "Marcus Younis",
+"en": "Marcus Younis",
+"pos": "FW",
+"age": 21,
+"nat": "Australia",
+"value_m": 0.24,
+"qid": "Q131824409",
+"no": "21"
+},
+{
+"he": "Max Ejdum",
+"en": "Max Ejdum",
+"pos": "MF",
+"age": 21,
+"nat": "Denmark",
+"value_m": 0.18,
+"qid": "Q113708750",
+"no": "18"
+},
+{
+"he": "Jordi Vanlerberghe",
+"en": "Jordi Vanlerberghe",
+"pos": "DF",
+"age": 30,
+"nat": "Belgium",
+"value_m": 0.16,
+"qid": "Q2681814",
+"no": "30"
+},
+{
+"he": "Lukas Larsen",
+"en": "Lukas Larsen",
+"pos": "DF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.16,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Olti Hyseni",
+"en": "Olti Hyseni",
+"pos": "FW",
+"age": 19,
+"nat": "Denmark",
+"value_m": 0.15,
+"qid": "Q123552335",
+"no": "7"
+},
+{
+"he": "Viggo Poulsen",
+"en": "Viggo Poulsen",
+"pos": "MF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.15,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Christopher Olivier",
+"en": "Christopher Olivier",
+"pos": "DF",
+"age": 20,
+"nat": "Austria",
+"value_m": 0.14,
+"qid": "Q129782573",
+"no": "3"
+},
+{
+"he": "Jacob Ambæk",
+"en": "Jacob Ambæk",
+"pos": "FW",
+"age": 18,
+"nat": "Denmark",
+"value_m": 0.1,
+"qid": "Q133255410",
+"no": "38"
+},
+{
+"he": "Oskar Fenger",
+"en": "Oskar Fenger",
+"pos": "FW",
+"age": 18,
+"nat": "Denmark",
+"value_m": 0.1,
+"qid": "Q139459602",
+"no": "51"
+},
+{
+"he": "דני וואס",
+"en": "Daniel Wass",
+"pos": "MF",
+"age": 37,
+"nat": "Denmark",
+"value_m": 0.09,
+"qid": "Q316854",
+"no": "10"
+},
+{
+"he": "Patrick Mortensen",
+"en": "Patrick Mortensen",
+"pos": "FW",
+"age": 37,
+"nat": "Denmark",
+"value_m": 0.08,
+"qid": "Q7147260",
+"no": "9"
+},
+{
+"he": "Raphael Canut",
+"en": "Raphael Canut",
+"pos": "DF",
+"age": 17,
+"nat": "Denmark",
+"value_m": 0.07,
+"qid": "Q139571248",
+"no": "37"
+}
+]
+}

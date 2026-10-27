@@ -1,0 +1,308 @@
+{
+"key": "norwich",
+"name_he": "נוריץ' סיטי",
+"source": "enwiki:Norwich City F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "ולאדן קובאצ'ביץ'",
+"en": "Vladan Kovačević",
+"pos": "GK",
+"age": 28,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.21,
+"qid": "Q58009185",
+"no": "1"
+},
+{
+"he": "Daniel Grimshaw",
+"en": "Daniel Grimshaw",
+"pos": "GK",
+"age": 28,
+"nat": "England",
+"value_m": 0.16,
+"qid": "Q59913936",
+"no": "32"
+},
+{
+"he": "Vicente Reyes",
+"en": "Vicente Reyes",
+"pos": "GK",
+"age": 22,
+"nat": "Chile",
+"value_m": 0.12,
+"qid": "Q97657245",
+"no": "34"
+},
+{
+"he": "Caleb Ansen",
+"en": "Caleb Ansen",
+"pos": "GK",
+"age": 25,
+"nat": "England",
+"value_m": 0.11,
+"qid": null,
+"no": "40"
+},
+{
+"he": "חוסה קורדובה",
+"en": "José Córdoba",
+"pos": "DF",
+"age": 25,
+"nat": "Panama",
+"value_m": 0.3,
+"qid": "Q108543955",
+"no": "33"
+},
+{
+"he": "אניס בן סלימאן",
+"en": "Anis Ben Slimane",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.29,
+"qid": "Q85410990",
+"no": "20"
+},
+{
+"he": "עלי אחמד",
+"en": "Ali Ahmed",
+"pos": "MF",
+"age": 25,
+"nat": "Canada",
+"value_m": 0.26,
+"qid": "Q111741178",
+"no": "37"
+},
+{
+"he": "Pelle Mattsson",
+"en": "Pelle Mattsson",
+"pos": "MF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.25,
+"qid": "Q65230161",
+"no": "7"
+},
+{
+"he": "Mirko Topić",
+"en": "Mirko Topić",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.25,
+"qid": "Q64009780",
+"no": "22"
+},
+{
+"he": "Ante Crnac",
+"en": "Ante Crnac",
+"pos": "FW",
+"age": 22,
+"nat": "Croatia",
+"value_m": 0.24,
+"qid": "Q112224322",
+"no": "17"
+},
+{
+"he": "מוחמד טורה",
+"en": "Mohamed Touré",
+"pos": "FW",
+"age": 22,
+"nat": "Australia",
+"value_m": 0.23,
+"qid": "Q84593316",
+"no": "21"
+},
+{
+"he": "מתיאס קוויסטגורן",
+"en": "Mathias Kvistgaarden",
+"pos": "FW",
+"age": 24,
+"nat": "Denmark",
+"value_m": 0.23,
+"qid": "Q97002409",
+"no": "30"
+},
+{
+"he": "דרלין יונגווה",
+"en": "Darlin Yongwa",
+"pos": "DF",
+"age": 25,
+"nat": "Cameroon",
+"value_m": 0.21,
+"qid": "Q68867694",
+"no": "13"
+},
+{
+"he": "Sam Field",
+"en": "Sam Field",
+"pos": "MF",
+"age": 28,
+"nat": "England",
+"value_m": 0.2,
+"qid": "Q24691038",
+"no": "26"
+},
+{
+"he": "Paris Maghoma",
+"en": "Paris Maghoma",
+"pos": "MF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.19,
+"qid": "Q113359203",
+"no": "25"
+},
+{
+"he": "Andre Brooks",
+"en": "Andre Brooks",
+"pos": "MF",
+"age": 23,
+"nat": "Jamaica",
+"value_m": 0.17,
+"qid": "Q116938905",
+"no": "11"
+},
+{
+"he": "Ruairi McConville",
+"en": "Ruairi McConville",
+"pos": "DF",
+"age": 21,
+"nat": "Northern Ireland",
+"value_m": 0.16,
+"qid": "Q130942212",
+"no": "15"
+},
+{
+"he": "Jacob Wright",
+"en": "Jacob Wright",
+"pos": "MF",
+"age": 20,
+"nat": "England",
+"value_m": 0.16,
+"qid": "Q124218890",
+"no": "16"
+},
+{
+"he": "Papa Amadou Diallo",
+"en": "Papa Amadou Diallo",
+"pos": "MF",
+"age": 22,
+"nat": "Senegal",
+"value_m": 0.16,
+"qid": "Q116889134",
+"no": "19"
+},
+{
+"he": "Kellen Fisher",
+"en": "Kellen Fisher",
+"pos": "DF",
+"age": 22,
+"nat": "England",
+"value_m": 0.16,
+"qid": "Q121539093",
+"no": "35"
+},
+{
+"he": "Harry Darling",
+"en": "Harry Darling",
+"pos": "DF",
+"age": 27,
+"nat": "England",
+"value_m": 0.15,
+"qid": "Q36403348",
+"no": "6"
+},
+{
+"he": "Jovon Makama",
+"en": "Jovon Makama",
+"pos": "FW",
+"age": 22,
+"nat": "England",
+"value_m": 0.15,
+"qid": "Q113488928",
+"no": "24"
+},
+{
+"he": "Jack Stacey",
+"en": "Jack Stacey",
+"pos": "DF",
+"age": 30,
+"nat": "England",
+"value_m": 0.14,
+"qid": "Q18128311",
+"no": "3"
+},
+{
+"he": "Ben Chrisene",
+"en": "Ben Chrisene",
+"pos": "DF",
+"age": 22,
+"nat": "England",
+"value_m": 0.14,
+"qid": "Q66547875",
+"no": "14"
+},
+{
+"he": "Oscar Schwartau",
+"en": "Oscar Schwartau",
+"pos": "MF",
+"age": 20,
+"nat": "Denmark",
+"value_m": 0.14,
+"qid": "Q113134376",
+"no": "29"
+},
+{
+"he": "Errol Mundle-Smith",
+"en": "Errol Mundle-Smith",
+"pos": "FW",
+"age": 20,
+"nat": "England",
+"value_m": 0.13,
+"qid": "Q138610193",
+"no": "46"
+},
+{
+"he": "Lucien Mahovo",
+"en": "Lucien Mahovo",
+"pos": "DF",
+"age": 21,
+"nat": "England",
+"value_m": 0.11,
+"qid": "Q131820603",
+"no": "12"
+},
+{
+"he": "Gabriel Forsyth",
+"en": "Gabriel Forsyth",
+"pos": "MF",
+"age": 20,
+"nat": "Scotland",
+"value_m": 0.09,
+"qid": "Q129358813",
+"no": "41"
+},
+{
+"he": "Elliot Myles",
+"en": "Elliot Myles",
+"pos": "MF",
+"age": 19,
+"nat": "Wales",
+"value_m": 0.09,
+"qid": "Q131863084",
+"no": "44"
+},
+{
+"he": "Kenny McLean",
+"en": "Kenny McLean",
+"pos": "MF",
+"age": 34,
+"nat": "Scotland",
+"value_m": 0.08,
+"qid": "Q6391158",
+"no": "23"
+}
+]
+}

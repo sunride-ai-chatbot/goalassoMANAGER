@@ -108,8 +108,10 @@ function showConflict(){if($('modal')||!SV.blocked)return;const st=SV.blocked.st
 function saveSync(){try{
   const slot=G.slot||curSlot(),key=slotKey(slot),previous=localStorage.getItem(key),stamp=Date.now();ensureCareerIdentity(G);
   const json=JSON.stringify({...G,slot,v:SAVE_VERSION,savedAt:stamp,rev:(G.rev||0)+1});
-  if(previous&&previous!==json){let recoverable=false;try{validateCareer(JSON.parse(previous));recoverable=true}catch(e){}if(recoverable)localStorage.setItem(key+'_backup',previous);}
-  localStorage.setItem(key,json);G.slot=slot;G.v=SAVE_VERSION;G.savedAt=stamp;G.rev=(G.rev||0)+1;
+  // the legacy localStorage layout has a ~5 MB quota: a career with every world league materialised is ~2.4 MB, so the
+  // backup copy is kept only while it fits, and a quota error drops the backup and retries once
+  if(previous&&previous!==json&&json.length<1e6){let recoverable=false;try{validateCareer(JSON.parse(previous));recoverable=true}catch(e){}if(recoverable)localStorage.setItem(key+'_backup',previous);}
+  try{localStorage.setItem(key,json)}catch(e){for(const k of Object.keys(localStorage))if(/_backup$|^ilm2_backup$/.test(k))localStorage.removeItem(k);localStorage.setItem(key,json)}G.slot=slot;G.v=SAVE_VERSION;G.savedAt=stamp;G.rev=(G.rev||0)+1;
   try{localStorage.setItem('ilm2_meta_'+slot,JSON.stringify(metaOf(G,stamp)))}catch(e){}
   storageNotice('');saveIndicator('saved');return true;
 }catch(e){saveIndicator('error');storageNotice('השמירה נכשלה. ההתקדמות נמצאת בזיכרון בלבד — פנו מקום ונסו לשמור שוב, או ייצאו גיבוי.');return false}}

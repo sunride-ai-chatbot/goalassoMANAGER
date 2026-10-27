@@ -1,0 +1,308 @@
+{
+"key": "rijeka",
+"name_he": "רייקה",
+"source": "enwiki:HNK Rijeka",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Igor Vekić",
+"en": "Igor Vekić",
+"pos": "GK",
+"age": 28,
+"nat": "Slovenia",
+"value_m": 0.19,
+"qid": "Q105975690",
+"no": "13"
+},
+{
+"he": "Domagoj Ivan Marić",
+"en": "Domagoj Ivan Marić",
+"pos": "GK",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.13,
+"qid": null,
+"no": "12"
+},
+{
+"he": "David Nwolokor",
+"en": "David Nwolokor",
+"pos": "GK",
+"age": 30,
+"nat": "Nigeria",
+"value_m": 0.13,
+"qid": "Q21622243",
+"no": "31"
+},
+{
+"he": "Aleksa Todorović",
+"en": "Aleksa Todorović",
+"pos": "GK",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.12,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Vito Kovač",
+"en": "Vito Kovač",
+"pos": "GK",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.12,
+"qid": null,
+"no": "1"
+},
+{
+"he": "מוחמד מוחבי",
+"en": "Mohammad Mohebi",
+"pos": "FW",
+"age": 27,
+"nat": "Iran",
+"value_m": 0.37,
+"qid": "Q65515898",
+"no": "9"
+},
+{
+"he": "טוני פרוק",
+"en": "Toni Fruk",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.36,
+"qid": "Q109587383",
+"no": "10"
+},
+{
+"he": "Justas Lasickas",
+"en": "Justas Lasickas",
+"pos": "MF",
+"age": 28,
+"nat": "Lithuania",
+"value_m": 0.33,
+"qid": "Q25499351",
+"no": "23"
+},
+{
+"he": "Tiago Dantas",
+"en": "Tiago Dantas",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.33,
+"qid": "Q56289644",
+"no": "26"
+},
+{
+"he": "Amer Gojak",
+"en": "Amer Gojak",
+"pos": "MF",
+"age": 29,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.3,
+"qid": "Q16466011",
+"no": "14"
+},
+{
+"he": "Samuele Vignato",
+"en": "Samuele Vignato",
+"pos": "MF",
+"age": 22,
+"nat": "Italy",
+"value_m": 0.28,
+"qid": "Q106702093",
+"no": "19"
+},
+{
+"he": "Niko Janković",
+"en": "Niko Janković",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.27,
+"qid": "Q111795630",
+"no": "4"
+},
+{
+"he": "Mladen Devetak",
+"en": "Mladen Devetak",
+"pos": "DF",
+"age": 27,
+"nat": "Serbia",
+"value_m": 0.25,
+"qid": "Q30036606",
+"no": "34"
+},
+{
+"he": "Alfonso Barco",
+"en": "Alfonso Barco",
+"pos": "MF",
+"age": 24,
+"nat": "Peru",
+"value_m": 0.22,
+"qid": "Q94730375",
+"no": "5"
+},
+{
+"he": "Daniel Adu-Adjei",
+"en": "Daniel Adu-Adjei",
+"pos": "FW",
+"age": 21,
+"nat": "England",
+"value_m": 0.22,
+"qid": "Q124171260",
+"no": "18"
+},
+{
+"he": "Anel Husić",
+"en": "Anel Husić",
+"pos": "DF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.21,
+"qid": "Q107695296",
+"no": "51"
+},
+{
+"he": "Ante Matej Jurić",
+"en": "Ante Matej Jurić",
+"pos": "FW",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.2,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Simon Karshe Cletus",
+"en": "Simon Karshe Cletus",
+"pos": "MF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.2,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Ante Oreč",
+"en": "Ante Oreč",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.19,
+"qid": "Q133893275",
+"no": "22"
+},
+{
+"he": "Teo Barišić",
+"en": "Teo Barišić",
+"pos": "DF",
+"age": 21,
+"nat": "Croatia",
+"value_m": 0.19,
+"qid": "Q113017720",
+"no": "28"
+},
+{
+"he": "Alasana Samateh",
+"en": "Alasana Samateh",
+"pos": "MF",
+"age": 25,
+"nat": "Gambia",
+"value_m": 0.19,
+"qid": null,
+"no": null
+},
+{
+"he": "Ivan Ćubelić",
+"en": "Ivan Ćubelić",
+"pos": "MF",
+"age": 23,
+"nat": "Croatia",
+"value_m": 0.18,
+"qid": "Q108327478",
+"no": "8"
+},
+{
+"he": "Goran Grulović",
+"en": "Goran Grulović",
+"pos": "FW",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.18,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Roko Valinčić",
+"en": "Roko Valinčić",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.18,
+"qid": null,
+"no": null
+},
+{
+"he": "Florent Shehu",
+"en": "Florent Shehu",
+"pos": "MF",
+"age": 24,
+"nat": "Albania",
+"value_m": 0.18,
+"qid": "Q123182196",
+"no": null
+},
+{
+"he": "Moreno Živković",
+"en": "Moreno Živković",
+"pos": "DF",
+"age": 22,
+"nat": "Croatia",
+"value_m": 0.16,
+"qid": "Q118131445",
+"no": "3"
+},
+{
+"he": "Noel Bodetić",
+"en": "Noel Bodetić",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.14,
+"qid": null,
+"no": "91"
+},
+{
+"he": "Viktor Vešligaj",
+"en": "Viktor Vešligaj",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.13,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Branko Pavić",
+"en": "Branko Pavić",
+"pos": "MF",
+"age": 19,
+"nat": "Croatia",
+"value_m": 0.12,
+"qid": "Q126041977",
+"no": "6"
+},
+{
+"he": "Ante Majstorović",
+"en": "Ante Majstorović",
+"pos": "DF",
+"age": 32,
+"nat": "Croatia",
+"value_m": 0.12,
+"qid": "Q21621904",
+"no": "45"
+}
+]
+}

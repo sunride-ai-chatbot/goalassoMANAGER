@@ -1,0 +1,268 @@
+{
+"key": "djurgarden",
+"name_he": "יורגורדן",
+"source": "enwiki:Djurgårdens IF Fotboll",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Jacob Rinne",
+"en": "Jacob Rinne",
+"pos": "GK",
+"age": 33,
+"nat": "Sweden",
+"value_m": 0.09,
+"qid": "Q16945484",
+"no": "35"
+},
+{
+"he": "Max Croon",
+"en": "Max Croon",
+"pos": "GK",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.09,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Lukas Jonsson",
+"en": "Lukas Jonsson",
+"pos": "GK",
+"age": 33,
+"nat": "Sweden",
+"value_m": 0.06,
+"qid": "Q56521003",
+"no": "30"
+},
+{
+"he": "Jeppe Okkels",
+"en": "Jeppe Okkels",
+"pos": "MF",
+"age": 27,
+"nat": "Denmark",
+"value_m": 0.26,
+"qid": "Q27049424",
+"no": "19"
+},
+{
+"he": "Oskar Fallenius",
+"en": "Oskar Fallenius",
+"pos": "FW",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.23,
+"qid": "Q63124092",
+"no": "11"
+},
+{
+"he": "Kristian Lien",
+"en": "Kristian Lien",
+"pos": "FW",
+"age": 24,
+"nat": "Norway",
+"value_m": 0.21,
+"qid": "Q114983069",
+"no": "9"
+},
+{
+"he": "Peter Langhoff",
+"en": "Peter Langhoff",
+"pos": "MF",
+"age": 22,
+"nat": "Denmark",
+"value_m": 0.19,
+"qid": "Q126927599",
+"no": "6"
+},
+{
+"he": "Bo Hegland",
+"en": "Bo Hegland",
+"pos": "FW",
+"age": 22,
+"nat": "Norway",
+"value_m": 0.19,
+"qid": "Q125396622",
+"no": "16"
+},
+{
+"he": "Sander Ringberg",
+"en": "Sander Ringberg",
+"pos": "FW",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.19,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Patric Åslund",
+"en": "Patric Åslund",
+"pos": "MF",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.18,
+"qid": "Q110558761",
+"no": "8"
+},
+{
+"he": "Abdul Abdulmalik",
+"en": "Abdul Abdulmalik",
+"pos": "FW",
+"age": 23,
+"nat": "England",
+"value_m": 0.18,
+"qid": "Q140985493",
+"no": "10"
+},
+{
+"he": "Mikael Marqués",
+"en": "Mikael Marqués",
+"pos": "DF",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.17,
+"qid": "Q96942955",
+"no": "21"
+},
+{
+"he": "Angelo Agbejoye",
+"en": "Angelo Agbejoye",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.16,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Daniel Stensson",
+"en": "Daniel Stensson",
+"pos": "MF",
+"age": 29,
+"nat": "Sweden",
+"value_m": 0.15,
+"qid": "Q19758275",
+"no": "13"
+},
+{
+"he": "Lucca Gentil",
+"en": "Lucca Gentil",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": null,
+"no": null
+},
+{
+"he": "Piotr Johansson",
+"en": "Piotr Johansson",
+"pos": "DF",
+"age": 31,
+"nat": "Sweden",
+"value_m": 0.14,
+"qid": "Q17356810",
+"no": "2"
+},
+{
+"he": "Christos Almyras",
+"en": "Christos Almyras",
+"pos": "MF",
+"age": 25,
+"nat": "Greece",
+"value_m": 0.14,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Max Larsson",
+"en": "Max Larsson",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.14,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Daryl Tschoumy Nana",
+"en": "Daryl Tschoumy Nana",
+"pos": "DF",
+"age": 25,
+"nat": "Germany",
+"value_m": 0.14,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Miro Tenho",
+"en": "Miro Tenho",
+"pos": "DF",
+"age": 31,
+"nat": "Finland",
+"value_m": 0.13,
+"qid": "Q16990842",
+"no": "5"
+},
+{
+"he": "Charlie Rosenqvist",
+"en": "Charlie Rosenqvist",
+"pos": "FW",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.13,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Adam Ståhl",
+"en": "Adam Ståhl",
+"pos": "DF",
+"age": 31,
+"nat": "Finland",
+"value_m": 0.13,
+"qid": "Q37007691",
+"no": "18"
+},
+{
+"he": "Alexander Johansson",
+"en": "Alexander Johansson",
+"pos": "MF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.13,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Matias Siltanen",
+"en": "Matias Siltanen",
+"pos": "MF",
+"age": 19,
+"nat": "Finland",
+"value_m": 0.12,
+"qid": "Q123244620",
+"no": "20"
+},
+{
+"he": "Jacob Une",
+"en": "Jacob Une",
+"pos": "DF",
+"age": 32,
+"nat": "Sweden",
+"value_m": 0.11,
+"qid": "Q6219808",
+"no": "4"
+},
+{
+"he": "Alexander Andersson",
+"en": "Alexander Andersson",
+"pos": "MF",
+"age": 16,
+"nat": "Sweden",
+"value_m": 0.04,
+"qid": "Q134529167",
+"no": "28"
+}
+]
+}

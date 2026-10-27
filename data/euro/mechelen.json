@@ -1,0 +1,308 @@
+{
+"key": "mechelen",
+"name_he": "מכלן",
+"source": "enwiki:KV Mechelen",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "אורטווין דה וולף",
+"en": "Ortwin De Wolf",
+"pos": "GK",
+"age": 29,
+"nat": "Belgium",
+"value_m": 0.26,
+"qid": "Q35497504",
+"no": "1"
+},
+{
+"he": "Nacho Miras",
+"en": "Nacho Miras",
+"pos": "GK",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": "Q112816954",
+"no": "13"
+},
+{
+"he": "Tijn Van Ingelgom",
+"en": "Tijn Van Ingelgom",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.17,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Axel Willockx",
+"en": "Axel Willockx",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.17,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Myron van Brederode",
+"en": "Myron van Brederode",
+"pos": "FW",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.38,
+"qid": "Q104521867",
+"no": "9"
+},
+{
+"he": "Bill Antonio",
+"en": "Bill Antonio",
+"pos": "FW",
+"age": 23,
+"nat": "Zimbabwe",
+"value_m": 0.38,
+"qid": "Q110272698",
+"no": "29"
+},
+{
+"he": "Ryan Teague",
+"en": "Ryan Teague",
+"pos": "MF",
+"age": 24,
+"nat": "Australia",
+"value_m": 0.35,
+"qid": "Q77669999",
+"no": "43"
+},
+{
+"he": "Tommy St. Jago",
+"en": "Tommy St. Jago",
+"pos": "DF",
+"age": 26,
+"nat": "Curaçao",
+"value_m": 0.32,
+"qid": "Q63164158",
+"no": "33"
+},
+{
+"he": "לאו היילדה",
+"en": "Leo Hjelde",
+"pos": "DF",
+"age": 23,
+"nat": "Norway",
+"value_m": 0.31,
+"qid": "Q105046386",
+"no": "5"
+},
+{
+"he": "Fredrik Hammar",
+"en": "Fredrik Hammar",
+"pos": "MF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.31,
+"qid": "Q56300322",
+"no": "6"
+},
+{
+"he": "Keano Vanrafelghem",
+"en": "Keano Vanrafelghem",
+"pos": "FW",
+"age": 23,
+"nat": "Belgium",
+"value_m": 0.31,
+"qid": "Q100547106",
+"no": "27"
+},
+{
+"he": "José Marsà",
+"en": "José Marsà",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.29,
+"qid": "Q112043053",
+"no": "3"
+},
+{
+"he": "Dikeni Salifou",
+"en": "Dikeni Salifou",
+"pos": "MF",
+"age": 23,
+"nat": "Germany",
+"value_m": 0.29,
+"qid": "Q116733026",
+"no": "8"
+},
+{
+"he": "Benito Raman",
+"en": "Benito Raman",
+"pos": "FW",
+"age": 31,
+"nat": "Belgium",
+"value_m": 0.27,
+"qid": "Q2749549",
+"no": "14"
+},
+{
+"he": "Malcolm Lohunanu-Mbasi",
+"en": "Malcolm Lohunanu-Mbasi",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.26,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Luc Marijnissen",
+"en": "Luc Marijnissen",
+"pos": "DF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.25,
+"qid": "Q101628205",
+"no": "2"
+},
+{
+"he": "מקסים קירייב",
+"en": "Maksim Kireev",
+"pos": "MF",
+"age": 22,
+"nat": "Belarus",
+"value_m": 0.25,
+"qid": "Q122830464",
+"no": "10"
+},
+{
+"he": "Halil Özdemir",
+"en": "Halil Özdemir",
+"pos": "FW",
+"age": 21,
+"nat": "Turkey",
+"value_m": 0.25,
+"qid": "Q135914303",
+"no": "21"
+},
+{
+"he": "Mike Eerdhuijzen",
+"en": "Mike Eerdhuijzen",
+"pos": "DF",
+"age": 26,
+"nat": "Netherlands",
+"value_m": 0.25,
+"qid": "Q63241641",
+"no": "44"
+},
+{
+"he": "Simion Michez",
+"en": "Simion Michez",
+"pos": "MF",
+"age": 24,
+"nat": "Cameroon",
+"value_m": 0.24,
+"qid": "Q113516870",
+"no": "23"
+},
+{
+"he": "Bilal Bafdili",
+"en": "Bilal Bafdili",
+"pos": "MF",
+"age": 22,
+"nat": "Belgium",
+"value_m": 0.23,
+"qid": "Q117314361",
+"no": "11"
+},
+{
+"he": "Thérence Koudou",
+"en": "Thérence Koudou",
+"pos": "DF",
+"age": 21,
+"nat": "France",
+"value_m": 0.22,
+"qid": "Q121383956",
+"no": "7"
+},
+{
+"he": "דניס פראט",
+"en": "Dennis Praet",
+"pos": "MF",
+"age": 32,
+"nat": "Belgium",
+"value_m": 0.22,
+"qid": "Q1189443",
+"no": "26"
+},
+{
+"he": "Yanis Asghir",
+"en": "Yanis Asghir",
+"pos": "MF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.22,
+"qid": null,
+"no": "-"
+},
+{
+"he": "Cedric Van Meirvenne",
+"en": "Cedric Van Meirvenne",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.21,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Kobe Corbanie",
+"en": "Kobe Corbanie",
+"pos": "DF",
+"age": 21,
+"nat": "Belgium",
+"value_m": 0.21,
+"qid": "Q116250253",
+"no": "20"
+},
+{
+"he": "Bouke Boersma",
+"en": "Bouke Boersma",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.21,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Amine Ouahabi",
+"en": "Amine Ouahabi",
+"pos": "MF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.21,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Mats Van Helden",
+"en": "Mats Van Helden",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.21,
+"qid": null,
+"no": "49"
+},
+{
+"he": "Marco Decherf",
+"en": "Marco Decherf",
+"pos": "MF",
+"age": 25,
+"nat": "France",
+"value_m": 0.2,
+"qid": null,
+"no": "30"
+}
+]
+}

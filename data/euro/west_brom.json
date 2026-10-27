@@ -1,0 +1,228 @@
+{
+"key": "west_brom",
+"name_he": "ווסט ברומיץ'",
+"source": "enwiki:West Bromwich Albion F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Max O'Leary",
+"en": "Max O'Leary",
+"pos": "GK",
+"age": 29,
+"nat": "Ireland",
+"value_m": 0.16,
+"qid": "Q22007218",
+"no": "1"
+},
+{
+"he": "Matt Ingram",
+"en": "Matt Ingram",
+"pos": "GK",
+"age": 32,
+"nat": "England",
+"value_m": 0.08,
+"qid": "Q10557783",
+"no": "13"
+},
+{
+"he": "Aune Heggebø",
+"en": "Aune Heggebø",
+"pos": "FW",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.33,
+"qid": "Q66973691",
+"no": "19"
+},
+{
+"he": "כריס מפאם",
+"en": "Chris Mepham",
+"pos": "DF",
+"age": 28,
+"nat": "Wales",
+"value_m": 0.27,
+"qid": "Q40351320",
+"no": "2"
+},
+{
+"he": "נתניאל פיליפס",
+"en": "Nat Phillips",
+"pos": "DF",
+"age": 29,
+"nat": "England",
+"value_m": 0.27,
+"qid": "Q66385776",
+"no": "3"
+},
+{
+"he": "מייקי ג'ונסטון",
+"en": "Mikey Johnston",
+"pos": "FW",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.24,
+"qid": "Q30122674",
+"no": "10"
+},
+{
+"he": "Callum Styles",
+"en": "Callum Styles",
+"pos": "DF",
+"age": 26,
+"nat": "Hungary",
+"value_m": 0.23,
+"qid": "Q24061178",
+"no": "4"
+},
+{
+"he": "Ousmane Diakité",
+"en": "Ousmane Diakité",
+"pos": "MF",
+"age": 26,
+"nat": "Mali",
+"value_m": 0.22,
+"qid": "Q55775073",
+"no": "17"
+},
+{
+"he": "Tammer Bany",
+"en": "Tammer Bany",
+"pos": "FW",
+"age": 22,
+"nat": "Jordan",
+"value_m": 0.22,
+"qid": "Q132782170",
+"no": "23"
+},
+{
+"he": "Jayson Molumby",
+"en": "Jayson Molumby",
+"pos": "MF",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.21,
+"qid": "Q40617840",
+"no": "8"
+},
+{
+"he": "Toby Collyer",
+"en": "Toby Collyer",
+"pos": "MF",
+"age": 22,
+"nat": "England",
+"value_m": 0.21,
+"qid": "Q121437419",
+"no": "15"
+},
+{
+"he": "Brayann Pereira",
+"en": "Brayann Pereira",
+"pos": "DF",
+"age": 23,
+"nat": "France",
+"value_m": 0.21,
+"qid": "Q110651524",
+"no": "18"
+},
+{
+"he": "Felix Horn Myhre",
+"en": "Felix Horn Myhre",
+"pos": "MF",
+"age": 27,
+"nat": "Norway",
+"value_m": 0.2,
+"qid": "Q29347681",
+"no": "7"
+},
+{
+"he": "George Campbell",
+"en": "George Campbell",
+"pos": "DF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.19,
+"qid": "Q62111213",
+"no": "6"
+},
+{
+"he": "Isaac Price",
+"en": "Isaac Price",
+"pos": "MF",
+"age": 22,
+"nat": "Northern Ireland",
+"value_m": 0.19,
+"qid": "Q111089621",
+"no": "21"
+},
+{
+"he": "Barney Stewart",
+"en": "Barney Stewart",
+"pos": "FW",
+"age": 22,
+"nat": "Scotland",
+"value_m": 0.16,
+"qid": "Q137993698",
+"no": "9"
+},
+{
+"he": "Kareem Tunde",
+"en": "Kareem Tunde",
+"pos": "FW",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.14,
+"qid": "Q137546046",
+"no": "26"
+},
+{
+"he": "Nolan Galves",
+"en": "Nolan Galves",
+"pos": "DF",
+"age": 23,
+"nat": "France",
+"value_m": 0.13,
+"qid": "Q135916505",
+"no": "25"
+},
+{
+"he": "Rabby Nzingoula",
+"en": "Rabby Nzingoula",
+"pos": "MF",
+"age": 20,
+"nat": "France",
+"value_m": 0.12,
+"qid": "Q124902174",
+"no": "20"
+},
+{
+"he": "Jimmy-Jay Morgan",
+"en": "Jimmy-Jay Morgan",
+"pos": "FW",
+"age": 20,
+"nat": "England",
+"value_m": 0.1,
+"qid": "Q116060686",
+"no": "11"
+},
+{
+"he": "Harry Whitwell",
+"en": "Harry Whitwell",
+"pos": "MF",
+"age": 20,
+"nat": "England",
+"value_m": 0.09,
+"qid": "Q124340482",
+"no": "29"
+},
+{
+"he": "Conor Townsend",
+"en": "Conor Townsend",
+"pos": "DF",
+"age": 33,
+"nat": "England",
+"value_m": 0.07,
+"qid": "Q5162304",
+"no": "22"
+}
+]
+}

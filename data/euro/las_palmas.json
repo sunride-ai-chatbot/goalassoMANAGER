@@ -1,0 +1,288 @@
+{
+"key": "las_palmas",
+"name_he": "לאס פאלמאס",
+"source": "enwiki:UD Las Palmas",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Adri Suárez",
+"en": "Adri Suárez",
+"pos": "GK",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.17,
+"qid": "Q134979739",
+"no": "35"
+},
+{
+"he": "José Antonio Caro",
+"en": "José Antonio Caro",
+"pos": "GK",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.14,
+"qid": "Q24827182",
+"no": "13"
+},
+{
+"he": "Taisei Miyashiro",
+"en": "Taisei Miyashiro",
+"pos": "FW",
+"age": 26,
+"nat": "Japan",
+"value_m": 0.58,
+"qid": "Q52320157",
+"no": "11"
+},
+{
+"he": "מרווין פארק",
+"en": "Marvin Park",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.39,
+"qid": "Q99518956",
+"no": "2"
+},
+{
+"he": "Viti Rozada",
+"en": "Viti Rozada",
+"pos": "MF",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.39,
+"qid": "Q24451672",
+"no": "17"
+},
+{
+"he": "סנדרו רמירס",
+"en": "Sandro Ramírez",
+"pos": "FW",
+"age": 31,
+"nat": "Spain",
+"value_m": 0.36,
+"qid": "Q18112619",
+"no": "19"
+},
+{
+"he": "Enrique Clemente",
+"en": "Enrique Clemente",
+"pos": "DF",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.35,
+"qid": "Q66829804",
+"no": "5"
+},
+{
+"he": "Edward Cedeño",
+"en": "Edward Cedeño",
+"pos": "MF",
+"age": 23,
+"nat": "Panama",
+"value_m": 0.35,
+"qid": "Q122971931",
+"no": "18"
+},
+{
+"he": "Enzo Loiodice",
+"en": "Enzo Loiodice",
+"pos": "MF",
+"age": 25,
+"nat": "France",
+"value_m": 0.33,
+"qid": "Q52730245",
+"no": "12"
+},
+{
+"he": "Jeremía Recoba",
+"en": "Jeremía Recoba",
+"pos": "MF",
+"age": 22,
+"nat": "Uruguay",
+"value_m": 0.32,
+"qid": "Q124286804",
+"no": "9"
+},
+{
+"he": "Nicholas Opoku",
+"en": "Nicholas Opoku",
+"pos": "DF",
+"age": 29,
+"nat": "Ghana",
+"value_m": 0.3,
+"qid": "Q42907654",
+"no": "3"
+},
+{
+"he": "Kirian Rodríguez",
+"en": "Kirian Rodríguez",
+"pos": "MF",
+"age": 30,
+"nat": "Spain",
+"value_m": 0.28,
+"qid": "Q64745093",
+"no": "20"
+},
+{
+"he": "Manu Fuster",
+"en": "Manu Fuster",
+"pos": "MF",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.27,
+"qid": "Q67888419",
+"no": "14"
+},
+{
+"he": "Ale García",
+"en": "Ale García",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.26,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Iñaki González",
+"en": "Iñaki González",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": "Q124295566",
+"no": "6"
+},
+{
+"he": "Andrés Rodríguez",
+"en": "Andrés Rodríguez",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Adam Arvelo",
+"en": "Adam Arvelo",
+"pos": "FW",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": "Q134964729",
+"no": "31"
+},
+{
+"he": "חואנמה הרצוג",
+"en": "Juanma Herzog",
+"pos": "DF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.22,
+"qid": "Q124209495",
+"no": "15"
+},
+{
+"he": "Aboubacar Bassinga",
+"en": "Aboubacar Bassinga",
+"pos": "MF",
+"age": 21,
+"nat": "Burkina Faso",
+"value_m": 0.22,
+"qid": "Q124179501",
+"no": "26"
+},
+{
+"he": "Iván Medina",
+"en": "Iván Medina",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.22,
+"qid": "Q141593061",
+"no": "30"
+},
+{
+"he": "Elías Romero",
+"en": "Elías Romero",
+"pos": "FW",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.21,
+"qid": "Q141106382",
+"no": "29"
+},
+{
+"he": "Sergio Ruiz",
+"en": "Sergio Ruiz",
+"pos": "MF",
+"age": 31,
+"nat": "Spain",
+"value_m": 0.2,
+"qid": "Q66528992",
+"no": "8"
+},
+{
+"he": "חסה רודריגס",
+"en": "Jesé",
+"pos": "FW",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.18,
+"qid": "Q513911",
+"no": "10"
+},
+{
+"he": "Jefté Betancor",
+"en": "Jefté Betancor",
+"pos": "FW",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.16,
+"qid": "Q6176406",
+"no": "7"
+},
+{
+"he": "Mateo Aćimović",
+"en": "Mateo Aćimović",
+"pos": "MF",
+"age": 18,
+"nat": "Slovenia",
+"value_m": 0.13,
+"qid": "Q138609428",
+"no": "16"
+},
+{
+"he": "Álex Suárez",
+"en": "Álex Suárez",
+"pos": "DF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.11,
+"qid": "Q64877117",
+"no": "4"
+},
+{
+"he": "Valentín Pezzolesi",
+"en": "Valentín Pezzolesi",
+"pos": "DF",
+"age": 19,
+"nat": "Spain",
+"value_m": 0.11,
+"qid": "Q131396231",
+"no": "25"
+},
+{
+"he": "Rafa Cruz",
+"en": "Rafa Cruz",
+"pos": "MF",
+"age": 16,
+"nat": "Spain",
+"value_m": 0.05,
+"qid": "Q141106444",
+"no": "32"
+}
+]
+}

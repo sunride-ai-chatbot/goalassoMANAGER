@@ -1,0 +1,298 @@
+{
+"key": "estoril",
+"name_he": "אסטוריל",
+"source": "enwiki:G.D. Estoril Praia",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Martin Turk",
+"en": "Martin Turk",
+"pos": "GK",
+"age": 23,
+"nat": "Slovenia",
+"value_m": 0.22,
+"qid": "Q107138021",
+"no": "16"
+},
+{
+"he": "Diogo Dias",
+"en": "Diogo Dias",
+"pos": "GK",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.17,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Fletcher Smythe-Lowe",
+"en": "Fletcher Smythe-Lowe",
+"pos": "GK",
+"age": 19,
+"nat": "South Africa",
+"value_m": 0.08,
+"qid": "Q136444170",
+"no": "43"
+},
+{
+"he": "ג'ואל רובלס",
+"en": "Joel Robles",
+"pos": "GK",
+"age": 36,
+"nat": "Spain",
+"value_m": 0.06,
+"qid": "Q547296",
+"no": "1"
+},
+{
+"he": "יאניס בקראווי",
+"en": "Yanis Begraoui",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.48,
+"qid": "Q51868085",
+"no": "14"
+},
+{
+"he": "André Lacximicant",
+"en": "André Lacximicant",
+"pos": "FW",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.36,
+"qid": "Q124732708",
+"no": "7"
+},
+{
+"he": "Ricard Sánchez",
+"en": "Ricard Sánchez",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.35,
+"qid": "Q83894000",
+"no": "2"
+},
+{
+"he": "Ferro",
+"en": "Ferro",
+"pos": "DF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.32,
+"qid": "Q22959121",
+"no": "4"
+},
+{
+"he": "Rafik Guitane",
+"en": "Rafik Guitane",
+"pos": "FW",
+"age": 27,
+"nat": "Algeria",
+"value_m": 0.31,
+"qid": "Q41547628",
+"no": "99"
+},
+{
+"he": "נאיל אומרוביץ'",
+"en": "Nail Omerović",
+"pos": "FW",
+"age": 23,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.3,
+"qid": "Q124475069",
+"no": "11"
+},
+{
+"he": "ז'ואאו קרבאליו",
+"en": "João Carvalho",
+"pos": "MF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.3,
+"qid": "Q18763924",
+"no": "12"
+},
+{
+"he": "Jordan Holsgrove",
+"en": "Jordan Holsgrove",
+"pos": "MF",
+"age": 26,
+"nat": "Scotland",
+"value_m": 0.29,
+"qid": "Q104684591",
+"no": "10"
+},
+{
+"he": "Fernando Medrano",
+"en": "Fernando Medrano",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.27,
+"qid": "Q110730110",
+"no": "3"
+},
+{
+"he": "Axel Camblan",
+"en": "Axel Camblan",
+"pos": "FW",
+"age": 23,
+"nat": "France",
+"value_m": 0.27,
+"qid": "Q114565945",
+"no": "9"
+},
+{
+"he": "Israel Salazar",
+"en": "Israel Salazar",
+"pos": "FW",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.27,
+"qid": "Q114577440",
+"no": "38"
+},
+{
+"he": "Antef Tsoungui",
+"en": "Antef Tsoungui",
+"pos": "DF",
+"age": 23,
+"nat": "Belgium",
+"value_m": 0.25,
+"qid": "Q108258085",
+"no": "5"
+},
+{
+"he": "Roko Jurišić",
+"en": "Roko Jurišić",
+"pos": "DF",
+"age": 24,
+"nat": "Croatia",
+"value_m": 0.24,
+"qid": "Q115929671",
+"no": "21"
+},
+{
+"he": "Milan Robin",
+"en": "Milan Robin",
+"pos": "MF",
+"age": 26,
+"nat": "France",
+"value_m": 0.24,
+"qid": "Q134435740",
+"no": "44"
+},
+{
+"he": "Khayon Edwards",
+"en": "Khayon Edwards",
+"pos": "FW",
+"age": 22,
+"nat": "England",
+"value_m": 0.24,
+"qid": "Q124540930",
+"no": null
+},
+{
+"he": "Xavi Sintes",
+"en": "Xavi Sintes",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.21,
+"qid": "Q118645392",
+"no": "6"
+},
+{
+"he": "Pedro Carvalho",
+"en": "Pedro Carvalho",
+"pos": "DF",
+"age": 23,
+"nat": "Portugal",
+"value_m": 0.21,
+"qid": "Q130214626",
+"no": "22"
+},
+{
+"he": "Luís Gomes",
+"en": "Luís Gomes",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.2,
+"qid": null,
+"no": "80"
+},
+{
+"he": "Tiago Brito",
+"en": "Tiago Brito",
+"pos": "MF",
+"age": 22,
+"nat": "Portugal",
+"value_m": 0.2,
+"qid": "Q134489103",
+"no": "90"
+},
+{
+"he": "Xeka",
+"en": "Xeka",
+"pos": "MF",
+"age": 31,
+"nat": "Portugal",
+"value_m": 0.19,
+"qid": "Q16235171",
+"no": "8"
+},
+{
+"he": "Ismael Sierra",
+"en": "Ismael Sierra",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": "Q140855461",
+"no": "15"
+},
+{
+"he": "Peixinho",
+"en": "Peixinho",
+"pos": "FW",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.19,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Fabrício Garcia",
+"en": "Fabrício Garcia",
+"pos": "DF",
+"age": 25,
+"nat": "Cape Verde",
+"value_m": 0.19,
+"qid": "Q125395891",
+"no": "98"
+},
+{
+"he": "Tiago Parente",
+"en": "Tiago Parente",
+"pos": "DF",
+"age": 22,
+"nat": "Portugal",
+"value_m": 0.17,
+"qid": "Q136198303",
+"no": "19"
+},
+{
+"he": "Jordan Arnolin",
+"en": "Jordan Arnolin",
+"pos": "DF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.15,
+"qid": null,
+"no": "42"
+}
+]
+}

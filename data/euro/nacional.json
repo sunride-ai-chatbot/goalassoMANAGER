@@ -1,0 +1,228 @@
+{
+"key": "nacional",
+"name_he": "נסיונל",
+"source": "enwiki:Club Nacional de Football",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Ignacio Suárez",
+"en": "Ignacio Suárez",
+"pos": "GK",
+"age": 24,
+"nat": "Uruguay",
+"value_m": 0.17,
+"qid": "Q123734977",
+"no": "25"
+},
+{
+"he": "Luis Mejía",
+"en": "Luis Mejía",
+"pos": "GK",
+"age": 35,
+"nat": "Panama",
+"value_m": 0.06,
+"qid": "Q2465298",
+"no": "1"
+},
+{
+"he": "Alexis Martín Arias",
+"en": "Alexis Martín Arias",
+"pos": "GK",
+"age": 34,
+"nat": "Argentina",
+"value_m": 0.05,
+"qid": "Q27493785",
+"no": "22"
+},
+{
+"he": "מקסי גומס",
+"en": "Maxi Gómez",
+"pos": "FW",
+"age": 30,
+"nat": "Uruguay",
+"value_m": 0.25,
+"qid": "Q20994107",
+"no": "9"
+},
+{
+"he": "אגוסטין רוחל",
+"en": "Agustín Rogel",
+"pos": "DF",
+"age": 28,
+"nat": "Uruguay",
+"value_m": 0.2,
+"qid": "Q28816035",
+"no": "2"
+},
+{
+"he": "Pavel Núñez",
+"en": "Pavel Núñez",
+"pos": "FW",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.19,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Maximiliano Silvera",
+"en": "Maximiliano Silvera",
+"pos": "FW",
+"age": 28,
+"nat": "Uruguay",
+"value_m": 0.18,
+"qid": "Q28110022",
+"no": "11"
+},
+{
+"he": "Luciano Boggio",
+"en": "Luciano Boggio",
+"pos": "MF",
+"age": 27,
+"nat": "Uruguay",
+"value_m": 0.17,
+"qid": "Q88094314",
+"no": "6"
+},
+{
+"he": "Agustín Dos Santos",
+"en": "Agustín Dos Santos",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.15,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Lucas Rodríguez",
+"en": "Lucas Rodríguez",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.15,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Tomás Viera",
+"en": "Tomás Viera",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.15,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Emiliano Ancheta",
+"en": "Emiliano Ancheta",
+"pos": "DF",
+"age": 27,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": "Q60660034",
+"no": "13"
+},
+{
+"he": "Rodrigo Martínez",
+"en": "Rodrigo Martínez",
+"pos": "FW",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Juan Ignacio García",
+"en": "Juan Ignacio García",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.14,
+"qid": null,
+"no": "56"
+},
+{
+"he": "Camilo Cándido",
+"en": "Camilo Cándido",
+"pos": "DF",
+"age": 31,
+"nat": "Uruguay",
+"value_m": 0.13,
+"qid": "Q20171373",
+"no": "21"
+},
+{
+"he": "Bruno Zuculini",
+"en": "Bruno Zuculini",
+"pos": "MF",
+"age": 33,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q3645977",
+"no": "36"
+},
+{
+"he": "Luciano González",
+"en": "Luciano González",
+"pos": "MF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.13,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Benjamín Núñez",
+"en": "Benjamín Núñez",
+"pos": "DF",
+"age": 25,
+"nat": "Uruguay",
+"value_m": 0.12,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Francisco Calvo",
+"en": "Francisco Calvo",
+"pos": "DF",
+"age": 34,
+"nat": "Costa Rica",
+"value_m": 0.09,
+"qid": "Q1100867",
+"no": "5"
+},
+{
+"he": "סבסטיאן קואטס",
+"en": "Sebastián Coates",
+"pos": "DF",
+"age": 35,
+"nat": "Uruguay",
+"value_m": 0.07,
+"qid": "Q311941",
+"no": "4"
+},
+{
+"he": "Rubén Botta",
+"en": "Rubén Botta",
+"pos": "MF",
+"age": 36,
+"nat": "Argentina",
+"value_m": 0.07,
+"qid": "Q6396836",
+"no": "20"
+},
+{
+"he": "Nicolás Rodríguez",
+"en": "Nicolás Rodríguez",
+"pos": "DF",
+"age": 35,
+"nat": "Uruguay",
+"value_m": 0.04,
+"qid": "Q7030325",
+"no": "7"
+}
+]
+}

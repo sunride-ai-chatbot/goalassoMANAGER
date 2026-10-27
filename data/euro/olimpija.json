@@ -1,0 +1,288 @@
+{
+"key": "olimpija",
+"name_he": "אולימפיה ליובליאנה",
+"source": "enwiki:NK Olimpija Ljubljana",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Matevž Vidovšek",
+"en": "Matevž Vidovšek",
+"pos": "GK",
+"age": 26,
+"nat": "Slovenia",
+"value_m": 0.21,
+"qid": "Q113552495",
+"no": "26"
+},
+{
+"he": "Matevž Dajčar",
+"en": "Matevž Dajčar",
+"pos": "GK",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.13,
+"qid": null,
+"no": "52"
+},
+{
+"he": "Denis Pintol",
+"en": "Denis Pintol",
+"pos": "GK",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.1,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Alex Tamm",
+"en": "Alex Tamm",
+"pos": "FW",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.33,
+"qid": "Q113414646",
+"no": "24"
+},
+{
+"he": "Yayah Kallon",
+"en": "Yayah Kallon",
+"pos": "FW",
+"age": 25,
+"nat": "Sierra Leone",
+"value_m": 0.31,
+"qid": "Q108094939",
+"no": "79"
+},
+{
+"he": "Indrit Tuci",
+"en": "Indrit Tuci",
+"pos": "FW",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.26,
+"qid": "Q88459665",
+"no": "19"
+},
+{
+"he": "Nemanja Motika",
+"en": "Nemanja Motika",
+"pos": "FW",
+"age": 23,
+"nat": "Serbia",
+"value_m": 0.26,
+"qid": "Q106367324",
+"no": "20"
+},
+{
+"he": "Antonio Marin",
+"en": "Antonio Marin",
+"pos": "FW",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.26,
+"qid": "Q55604075",
+"no": "99"
+},
+{
+"he": "Xande",
+"en": "Xande",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.23,
+"qid": "Q118470998",
+"no": "77"
+},
+{
+"he": "Luis Perea",
+"en": "Luis Perea",
+"pos": "MF",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.22,
+"qid": "Q32245279",
+"no": "6"
+},
+{
+"he": "Dimitar Mitrovski",
+"en": "Dimitar Mitrovski",
+"pos": "FW",
+"age": 27,
+"nat": "North Macedonia",
+"value_m": 0.2,
+"qid": "Q110221623",
+"no": "10"
+},
+{
+"he": "Bruno Lourenço",
+"en": "Bruno Lourenço",
+"pos": "MF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.19,
+"qid": "Q64736752",
+"no": "8"
+},
+{
+"he": "Jan Gorenc",
+"en": "Jan Gorenc",
+"pos": "DF",
+"age": 27,
+"nat": "Slovenia",
+"value_m": 0.19,
+"qid": "Q47088742",
+"no": "30"
+},
+{
+"he": "Jordi Govea",
+"en": "Jordi Govea",
+"pos": "DF",
+"age": 27,
+"nat": "Ecuador",
+"value_m": 0.19,
+"qid": "Q113557797",
+"no": "33"
+},
+{
+"he": "Federico Rose",
+"en": "Federico Rose",
+"pos": "FW",
+"age": 22,
+"nat": "Canada",
+"value_m": 0.18,
+"qid": "Q139374568",
+"no": "11"
+},
+{
+"he": "Marko Brest",
+"en": "Marko Brest",
+"pos": "FW",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.18,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Jošt Urbančič",
+"en": "Jošt Urbančič",
+"pos": "DF",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.17,
+"qid": "Q115922508",
+"no": "3"
+},
+{
+"he": "Dino Kojić",
+"en": "Dino Kojić",
+"pos": "FW",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.16,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Davit Kobouri",
+"en": "Davit Kobouri",
+"pos": "DF",
+"age": 28,
+"nat": "Georgia",
+"value_m": 0.16,
+"qid": "Q71984889",
+"no": "23"
+},
+{
+"he": "Inas Kukavica",
+"en": "Inas Kukavica",
+"pos": "MF",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.16,
+"qid": null,
+"no": "56"
+},
+{
+"he": "Marko Ristić",
+"en": "Marko Ristić",
+"pos": "DF",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.15,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Tien Goga",
+"en": "Tien Goga",
+"pos": "MF",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.15,
+"qid": null,
+"no": "71"
+},
+{
+"he": "Jan Jurgec",
+"en": "Jan Jurgec",
+"pos": "MF",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.14,
+"qid": null,
+"no": "54"
+},
+{
+"he": "Diogo Almeida",
+"en": "Diogo Almeida",
+"pos": "DF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.13,
+"qid": "Q50070564",
+"no": "28"
+},
+{
+"he": "Veljko Jelenković",
+"en": "Veljko Jelenković",
+"pos": "DF",
+"age": 23,
+"nat": "Bulgaria",
+"value_m": 0.12,
+"qid": "Q116772665",
+"no": "4"
+},
+{
+"he": "Kristjan Bendra",
+"en": "Kristjan Bendra",
+"pos": "DF",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.12,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Agustín Doffo",
+"en": "Agustín Doffo",
+"pos": "MF",
+"age": 31,
+"nat": "Argentina",
+"value_m": 0.1,
+"qid": "Q21207868",
+"no": "34"
+},
+{
+"he": "Matej Henjak",
+"en": "Matej Henjak",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.1,
+"qid": null,
+"no": "55"
+}
+]
+}

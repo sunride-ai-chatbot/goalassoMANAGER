@@ -1,0 +1,288 @@
+{
+"key": "inter_miami",
+"name_he": "אינטר מיאמי",
+"source": "enwiki:Inter Miami CF",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "דיין סנט קלייר",
+"en": "Dayne St. Clair",
+"pos": "GK",
+"age": 29,
+"nat": "Canada",
+"value_m": 0.56,
+"qid": "Q60583915",
+"no": "97"
+},
+{
+"he": "Rocco Ríos Novo",
+"en": "Rocco Ríos Novo",
+"pos": "GK",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.53,
+"qid": "Q83753402",
+"no": "34"
+},
+{
+"he": "Luis Barraza",
+"en": "Luis Barraza",
+"pos": "GK",
+"age": 29,
+"nat": "United States",
+"value_m": 0.36,
+"qid": "Q86344884",
+"no": "13"
+},
+{
+"he": "חרמאן ברטראמה",
+"en": "Germán Berterame",
+"pos": "FW",
+"age": 27,
+"nat": "Mexico",
+"value_m": 0.89,
+"qid": "Q19347095",
+"no": "19"
+},
+{
+"he": "טלאסקו סגוביה",
+"en": "Telasco Segovia",
+"pos": "MF",
+"age": 23,
+"nat": "Venezuela",
+"value_m": 0.64,
+"qid": "Q106645526",
+"no": "8"
+},
+{
+"he": "טדאו איינדה",
+"en": "Tadeo Allende",
+"pos": "FW",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.62,
+"qid": "Q117833940",
+"no": "21"
+},
+{
+"he": "Gonzalo Luján",
+"en": "Gonzalo Luján",
+"pos": "DF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.61,
+"qid": "Q109937760",
+"no": "2"
+},
+{
+"he": "Yannick Bright",
+"en": "Yannick Bright",
+"pos": "MF",
+"age": 24,
+"nat": "Italy",
+"value_m": 0.58,
+"qid": "Q125149730",
+"no": "42"
+},
+{
+"he": "David Ayala",
+"en": "David Ayala",
+"pos": "MF",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.57,
+"qid": "Q78651410",
+"no": "22"
+},
+{
+"he": "סרחיו רגילון",
+"en": "Sergio Reguilón",
+"pos": "DF",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.54,
+"qid": "Q24258610",
+"no": "3"
+},
+{
+"he": "Maximiliano Falcón",
+"en": "Maximiliano Falcón",
+"pos": "DF",
+"age": 29,
+"nat": "Uruguay",
+"value_m": 0.49,
+"qid": "Q89274392",
+"no": "37"
+},
+{
+"he": "פקונדו מורה",
+"en": "Facundo Mura",
+"pos": "DF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.48,
+"qid": "Q60842138",
+"no": "4"
+},
+{
+"he": "Mateo Silvetti",
+"en": "Mateo Silvetti",
+"pos": "FW",
+"age": 20,
+"nat": "Argentina",
+"value_m": 0.48,
+"qid": "Q129234104",
+"no": "24"
+},
+{
+"he": "Ian Fray",
+"en": "Ian Fray",
+"pos": "DF",
+"age": 24,
+"nat": "Jamaica",
+"value_m": 0.47,
+"qid": "Q97574464",
+"no": "17"
+},
+{
+"he": "Israel Boatwright",
+"en": "Israel Boatwright",
+"pos": "DF",
+"age": 21,
+"nat": "Dominican Republic",
+"value_m": 0.36,
+"qid": "Q119985116",
+"no": "62"
+},
+{
+"he": "Lovend's Delinois",
+"en": "Lovend's Delinois",
+"pos": "FW",
+"age": 25,
+"nat": "Haiti",
+"value_m": 0.35,
+"qid": null,
+"no": "54"
+},
+{
+"he": "רודריגו דה פול",
+"en": "Rodrigo De Paul",
+"pos": "MF",
+"age": 32,
+"nat": "Argentina",
+"value_m": 0.32,
+"qid": "Q6110670",
+"no": "7"
+},
+{
+"he": "Alexander Shaw",
+"en": "Alexander Shaw",
+"pos": "MF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.31,
+"qid": null,
+"no": "88"
+},
+{
+"he": "Santiago Morales",
+"en": "Santiago Morales",
+"pos": "MF",
+"age": 19,
+"nat": "United States",
+"value_m": 0.29,
+"qid": "Q132307717",
+"no": "20"
+},
+{
+"he": "Cesar Abadia",
+"en": "Cesar Abadia",
+"pos": "DF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.28,
+"qid": null,
+"no": "76"
+},
+{
+"he": "Dániel Pintér",
+"en": "Dániel Pintér",
+"pos": "FW",
+"age": 19,
+"nat": "United States",
+"value_m": 0.26,
+"qid": "Q136276663",
+"no": "56"
+},
+{
+"he": "Daniel Sumalla",
+"en": "Daniel Sumalla",
+"pos": "DF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.25,
+"qid": null,
+"no": "70"
+},
+{
+"he": "Preston Plambeck",
+"en": "Preston Plambeck",
+"pos": "MF",
+"age": 20,
+"nat": "United States",
+"value_m": 0.24,
+"qid": "Q139564818",
+"no": "59"
+},
+{
+"he": "קאסמירו",
+"en": "Casemiro",
+"pos": "MF",
+"age": 34,
+"nat": "Brazil",
+"value_m": 0.23,
+"qid": "Q616664",
+"no": "5"
+},
+{
+"he": "Tyler Hall",
+"en": "Tyler Hall",
+"pos": "DF",
+"age": 20,
+"nat": "United States",
+"value_m": 0.23,
+"qid": "Q122413395",
+"no": "26"
+},
+{
+"he": "Riquelme Fillipi",
+"en": "Riquelme Fillipi",
+"pos": "FW",
+"age": 19,
+"nat": "Brazil",
+"value_m": 0.21,
+"qid": "Q119152074",
+"no": "11"
+},
+{
+"he": "לואיס אלברטו סוארס",
+"en": "Luis Suárez",
+"pos": "FW",
+"age": 39,
+"nat": "Uruguay",
+"value_m": 0.2,
+"qid": "Q26517",
+"no": "9"
+},
+{
+"he": "ליונל מסי",
+"en": "Lionel Messi",
+"pos": "FW",
+"age": 39,
+"nat": "Argentina",
+"value_m": 0.17,
+"qid": "Q615",
+"no": "10"
+}
+]
+}

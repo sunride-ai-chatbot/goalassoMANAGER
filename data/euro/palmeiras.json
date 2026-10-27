@@ -1,0 +1,258 @@
+{
+"key": "palmeiras",
+"name_he": "פלמייראס",
+"source": "enwiki:SE Palmeiras",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Carlos Miguel",
+"en": "Carlos Miguel",
+"pos": "GK",
+"age": 27,
+"nat": null,
+"value_m": 0.18,
+"qid": "Q115518500",
+"no": "1"
+},
+{
+"he": "Bruno Bertinato",
+"en": "Bruno Bertinato",
+"pos": "GK",
+"age": 28,
+"nat": null,
+"value_m": 0.13,
+"qid": "Q116815357",
+"no": "21"
+},
+{
+"he": "Marcelo Lomba",
+"en": "Marcelo Lomba",
+"pos": "GK",
+"age": 39,
+"nat": null,
+"value_m": 0.04,
+"qid": "Q6756582",
+"no": "14"
+},
+{
+"he": "פאוליניו",
+"en": "Paulinho",
+"pos": "FW",
+"age": 26,
+"nat": null,
+"value_m": 0.4,
+"qid": "Q39079181",
+"no": "10"
+},
+{
+"he": "Ramón Sosa",
+"en": "Ramón Sosa",
+"pos": "FW",
+"age": 27,
+"nat": null,
+"value_m": 0.35,
+"qid": "Q110160871",
+"no": "19"
+},
+{
+"he": "מאוריסיו",
+"en": "Maurício",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.32,
+"qid": "Q65718498",
+"no": "18"
+},
+{
+"he": "Emiliano Martínez",
+"en": "Emiliano Martínez",
+"pos": "MF",
+"age": 27,
+"nat": null,
+"value_m": 0.32,
+"qid": "Q97608024",
+"no": "32"
+},
+{
+"he": "חוסה מנואל לופס",
+"en": "José Manuel López",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.3,
+"qid": "Q104903216",
+"no": "42"
+},
+{
+"he": "ויטור רוקה",
+"en": "Vitor Roque",
+"pos": "FW",
+"age": 21,
+"nat": null,
+"value_m": 0.28,
+"qid": "Q111016177",
+"no": "9"
+},
+{
+"he": "Jhon Arias",
+"en": "Jhon Arias",
+"pos": "FW",
+"age": 28,
+"nat": null,
+"value_m": 0.27,
+"qid": "Q65378670",
+"no": "11"
+},
+{
+"he": "Bruno Fuchs",
+"en": "Bruno Fuchs",
+"pos": "DF",
+"age": 27,
+"nat": null,
+"value_m": 0.24,
+"qid": "Q66685601",
+"no": "3"
+},
+{
+"he": "מורילו סרקיירה",
+"en": "Murilo",
+"pos": "DF",
+"age": 29,
+"nat": null,
+"value_m": 0.24,
+"qid": "Q32984822",
+"no": "26"
+},
+{
+"he": "קלבן דוגלאס סילבה אוליביירה",
+"en": "Khellven",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.23,
+"qid": "Q65718617",
+"no": "12"
+},
+{
+"he": "אגוסטין ג'יי",
+"en": "Agustín Giay",
+"pos": "DF",
+"age": 22,
+"nat": null,
+"value_m": 0.21,
+"qid": "Q112854266",
+"no": "4"
+},
+{
+"he": "אנדראס פריירה",
+"en": "Andreas Pereira",
+"pos": "MF",
+"age": 30,
+"nat": null,
+"value_m": 0.21,
+"qid": "Q17619350",
+"no": "8"
+},
+{
+"he": "חואקין פיקרס",
+"en": "Joaquín Piquerez",
+"pos": "DF",
+"age": 28,
+"nat": null,
+"value_m": 0.21,
+"qid": "Q35066458",
+"no": "22"
+},
+{
+"he": "Jefté",
+"en": "Jefté",
+"pos": "DF",
+"age": 22,
+"nat": null,
+"value_m": 0.2,
+"qid": "Q123463461",
+"no": "6"
+},
+{
+"he": "Lucas Evangelista",
+"en": "Lucas Evangelista",
+"pos": "MF",
+"age": 31,
+"nat": null,
+"value_m": 0.16,
+"qid": "Q14755607",
+"no": "30"
+},
+{
+"he": "Marlon Freitas",
+"en": "Marlon Freitas",
+"pos": "MF",
+"age": 31,
+"nat": null,
+"value_m": 0.14,
+"qid": "Q19866008",
+"no": "17"
+},
+{
+"he": "Alexander Barboza",
+"en": "Alexander Barboza",
+"pos": "DF",
+"age": 31,
+"nat": null,
+"value_m": 0.13,
+"qid": "Q20872721",
+"no": "2"
+},
+{
+"he": "Larson",
+"en": "Larson",
+"pos": "MF",
+"age": 21,
+"nat": null,
+"value_m": 0.13,
+"qid": "Q137216942",
+"no": "48"
+},
+{
+"he": "Arthur Gabriel",
+"en": "Arthur Gabriel",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.13,
+"qid": null,
+"no": "56"
+},
+{
+"he": "גוסטבו גומס",
+"en": "Gustavo Gómez",
+"pos": "DF",
+"age": 33,
+"nat": null,
+"value_m": 0.12,
+"qid": "Q1033783",
+"no": "15"
+},
+{
+"he": "פליפה אנדרסון",
+"en": "Felipe Anderson",
+"pos": "MF",
+"age": 33,
+"nat": null,
+"value_m": 0.09,
+"qid": "Q794628",
+"no": "7"
+},
+{
+"he": "Luiz Benedetti",
+"en": "Luiz Benedetti",
+"pos": "DF",
+"age": 20,
+"nat": null,
+"value_m": 0.09,
+"qid": "Q132173087",
+"no": "43"
+}
+]
+}

@@ -1,0 +1,228 @@
+{
+"key": "valencia",
+"name_he": "ולנסיה",
+"source": "enwiki:Valencia CF",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Cristian Rivero",
+"en": "Cristian Rivero",
+"pos": "GK",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.59,
+"qid": "Q99539115",
+"no": "13"
+},
+{
+"he": "סטולה דימיטרייבסקי",
+"en": "Stole Dimitrievski",
+"pos": "GK",
+"age": 32,
+"nat": "North Macedonia",
+"value_m": 0.39,
+"qid": "Q3973800",
+"no": "1"
+},
+{
+"he": "דייגו לופס (כדורגלן, 2002)",
+"en": "Diego López",
+"pos": "FW",
+"age": 24,
+"nat": "Spain",
+"value_m": 1.47,
+"qid": "Q113648535",
+"no": "16"
+},
+{
+"he": "ארנו דנג'ומה",
+"en": "Arnaut Danjuma",
+"pos": "FW",
+"age": 29,
+"nat": "Netherlands",
+"value_m": 1.29,
+"qid": "Q22001795",
+"no": "7"
+},
+{
+"he": "עומאר סאדיק",
+"en": "Umar Sadiq",
+"pos": "FW",
+"age": 29,
+"nat": "Nigeria",
+"value_m": 1.22,
+"qid": "Q21584736",
+"no": "6"
+},
+{
+"he": "הוגו דורו",
+"en": "Hugo Duro",
+"pos": "FW",
+"age": 26,
+"nat": "Spain",
+"value_m": 1.08,
+"qid": "Q42332208",
+"no": "9"
+},
+{
+"he": "Aliou Dieng",
+"en": "Aliou Dieng",
+"pos": "MF",
+"age": 28,
+"nat": "Mali",
+"value_m": 1.06,
+"qid": "Q22958979",
+"no": "15"
+},
+{
+"he": "מוכתר דיאקאבי",
+"en": "Mouctar Diakhaby",
+"pos": "DF",
+"age": 29,
+"nat": "Guinea",
+"value_m": 1.03,
+"qid": "Q26897360",
+"no": "4"
+},
+{
+"he": "חאבי גרה (2003)",
+"en": "Javi Guerra",
+"pos": "MF",
+"age": 23,
+"nat": "Spain",
+"value_m": 1.01,
+"qid": "Q110603901",
+"no": "8"
+},
+{
+"he": "חוסה מנואל קופטה",
+"en": "José Copete",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.96,
+"qid": "Q107585778",
+"no": "3"
+},
+{
+"he": "דני ראבה",
+"en": "Dani Raba",
+"pos": "FW",
+"age": 30,
+"nat": "Spain",
+"value_m": 0.95,
+"qid": "Q42332999",
+"no": "19"
+},
+{
+"he": "חסוס ואסקס",
+"en": "Jesús Vázquez",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.93,
+"qid": "Q107585775",
+"no": "21"
+},
+{
+"he": "פפלו",
+"en": "Pepelu",
+"pos": "MF",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.92,
+"qid": "Q22007369",
+"no": "18"
+},
+{
+"he": "פיליפ אוגריניץ'",
+"en": "Filip Ugrinić",
+"pos": "MF",
+"age": 27,
+"nat": "Switzerland",
+"value_m": 0.84,
+"qid": "Q27922041",
+"no": "23"
+},
+{
+"he": "ארנאו מרטינס",
+"en": "Arnau Martínez",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.83,
+"qid": "Q104439000",
+"no": "22"
+},
+{
+"he": "ססאר טארגה",
+"en": "César Tárrega",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.82,
+"qid": "Q110268348",
+"no": "5"
+},
+{
+"he": "Justin de Haas",
+"en": "Justin de Haas",
+"pos": "DF",
+"age": 26,
+"nat": "Netherlands",
+"value_m": 0.76,
+"qid": "Q57457070",
+"no": "12"
+},
+{
+"he": "גידו רודריגס",
+"en": "Guido Rodríguez",
+"pos": "MF",
+"age": 32,
+"nat": "Argentina",
+"value_m": 0.61,
+"qid": "Q18224850",
+"no": "2"
+},
+{
+"he": "חוסה לואיס גאיה",
+"en": "José Gayà",
+"pos": "DF",
+"age": 31,
+"nat": "Spain",
+"value_m": 0.58,
+"qid": "Q15396247",
+"no": "14"
+},
+{
+"he": "לואיס ריוחה",
+"en": "Luis Rioja",
+"pos": "FW",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.48,
+"qid": "Q56223387",
+"no": "11"
+},
+{
+"he": "ריונוסוקה סאטו",
+"en": "Ryūnosuke Satō",
+"pos": "MF",
+"age": 19,
+"nat": "Japan",
+"value_m": 0.42,
+"qid": "Q111188721",
+"no": "39"
+},
+{
+"he": "דימיטרי פולקייר",
+"en": "Dimitri Foulquier",
+"pos": "DF",
+"age": 33,
+"nat": "Guadeloupe",
+"value_m": 0.4,
+"qid": "Q376902",
+"no": "20"
+}
+]
+}

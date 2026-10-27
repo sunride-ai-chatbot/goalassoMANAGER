@@ -1,0 +1,288 @@
+{
+"key": "udinese",
+"name_he": "אודינזה",
+"source": "enwiki:Udinese Calcio",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "מאדוקה אוקויה",
+"en": "Maduka Okoye",
+"pos": "GK",
+"age": 27,
+"nat": "Nigeria",
+"value_m": 0.63,
+"qid": "Q66700393",
+"no": "40"
+},
+{
+"he": "Bartosz Mrozek",
+"en": "Bartosz Mrozek",
+"pos": "GK",
+"age": 26,
+"nat": "Poland",
+"value_m": 0.46,
+"qid": "Q113170833",
+"no": "41"
+},
+{
+"he": "Daniele Padelli",
+"en": "Daniele Padelli",
+"pos": "GK",
+"age": 40,
+"nat": "Italy",
+"value_m": 0.18,
+"qid": "Q941852",
+"no": "93"
+},
+{
+"he": "ניקולו זניולו",
+"en": "Nicolò Zaniolo",
+"pos": "FW",
+"age": 27,
+"nat": "Italy",
+"value_m": 1.25,
+"qid": "Q28974273",
+"no": "10"
+},
+{
+"he": "יורגן אקלנקאמפ",
+"en": "Jurgen Ekkelenkamp",
+"pos": "MF",
+"age": 26,
+"nat": "Netherlands",
+"value_m": 1.05,
+"qid": "Q51796228",
+"no": "32"
+},
+{
+"he": "Sandi Lovrić",
+"en": "Sandi Lovrić",
+"pos": "MF",
+"age": 28,
+"nat": "Slovenia",
+"value_m": 1.01,
+"qid": "Q19862001",
+"no": "4"
+},
+{
+"he": "Giorgi Chakvetadze",
+"en": "Giorgi Chakvetadze",
+"pos": "MF",
+"age": 27,
+"nat": "Georgia",
+"value_m": 0.99,
+"qid": "Q36641637",
+"no": "30"
+},
+{
+"he": "אוייר סראגה",
+"en": "Oier Zarraga",
+"pos": "MF",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.95,
+"qid": "Q99231391",
+"no": "6"
+},
+{
+"he": "Vakoun Bayo",
+"en": "Vakoun Bayo",
+"pos": "FW",
+"age": 29,
+"nat": "Côte d'Ivoire",
+"value_m": 0.91,
+"qid": "Q51339710",
+"no": "15"
+},
+{
+"he": "Keinan Davis",
+"en": "Keinan Davis",
+"pos": "FW",
+"age": 28,
+"nat": "England",
+"value_m": 0.79,
+"qid": "Q28465214",
+"no": "9"
+},
+{
+"he": "אנזו אבוסה",
+"en": "Enzo Ebosse",
+"pos": "DF",
+"age": 27,
+"nat": "Cameroon",
+"value_m": 0.71,
+"qid": "Q30103130",
+"no": "77"
+},
+{
+"he": "אונאי גומס",
+"en": "Unai Gómez",
+"pos": "MF",
+"age": 23,
+"nat": null,
+"value_m": 0.7,
+"qid": "Q115186979",
+"no": "46"
+},
+{
+"he": "עומר סולה",
+"en": "Oumar Solet",
+"pos": "DF",
+"age": 26,
+"nat": "France",
+"value_m": 0.67,
+"qid": "Q42907495",
+"no": "28"
+},
+{
+"he": "Jakub Piotrowski",
+"en": "Jakub Piotrowski",
+"pos": "MF",
+"age": 28,
+"nat": "Poland",
+"value_m": 0.66,
+"qid": "Q28059306",
+"no": "24"
+},
+{
+"he": "Jesper Karlström",
+"en": "Jesper Karlström",
+"pos": "MF",
+"age": 31,
+"nat": "Sweden",
+"value_m": 0.64,
+"qid": "Q16633144",
+"no": "8"
+},
+{
+"he": "Alessandro Zanoli",
+"en": "Alessandro Zanoli",
+"pos": "DF",
+"age": 26,
+"nat": "Italy",
+"value_m": 0.63,
+"qid": "Q108616460",
+"no": "59"
+},
+{
+"he": "Nicolò Bertola",
+"en": "Nicolò Bertola",
+"pos": "DF",
+"age": 23,
+"nat": "Italy",
+"value_m": 0.6,
+"qid": "Q110984652",
+"no": "13"
+},
+{
+"he": "James Abankwah",
+"en": "James Abankwah",
+"pos": "DF",
+"age": 22,
+"nat": "Ireland",
+"value_m": 0.56,
+"qid": "Q110714297",
+"no": "14"
+},
+{
+"he": "Mërgim Vojvoda",
+"en": "Mërgim Vojvoda",
+"pos": "DF",
+"age": 31,
+"nat": "Kosovo",
+"value_m": 0.55,
+"qid": "Q18589243",
+"no": "23"
+},
+{
+"he": "לנון מילר",
+"en": "Lennon Miller",
+"pos": "MF",
+"age": 20,
+"nat": "Scotland",
+"value_m": 0.53,
+"qid": "Q118414966",
+"no": "38"
+},
+{
+"he": "Giulio Vinciati",
+"en": "Giulio Vinciati",
+"pos": "FW",
+"age": 25,
+"nat": "Italy",
+"value_m": 0.51,
+"qid": null,
+"no": "45"
+},
+{
+"he": "Idrissa Gueye",
+"en": "Idrissa Gueye",
+"pos": "FW",
+"age": 19,
+"nat": "Senegal",
+"value_m": 0.38,
+"qid": "Q122874530",
+"no": "7"
+},
+{
+"he": "Juan David Arizala",
+"en": "Juan David Arizala",
+"pos": "DF",
+"age": 20,
+"nat": "Colombia",
+"value_m": 0.37,
+"qid": "Q122037096",
+"no": "20"
+},
+{
+"he": "Lazar Jovanović",
+"en": "Lazar Jovanović",
+"pos": "FW",
+"age": 19,
+"nat": "Serbia",
+"value_m": 0.34,
+"qid": "Q121086658",
+"no": "91"
+},
+{
+"he": "Hassane Kamara",
+"en": "Hassane Kamara",
+"pos": "DF",
+"age": 32,
+"nat": "Côte d'Ivoire",
+"value_m": 0.32,
+"qid": "Q18044346",
+"no": "11"
+},
+{
+"he": "דויד אלאבה",
+"en": "David Alaba",
+"pos": "DF",
+"age": 34,
+"nat": "Austria",
+"value_m": 0.29,
+"qid": "Q31981",
+"no": "5"
+},
+{
+"he": "כריסטיאן קבאסלה",
+"en": "Christian Kabasele",
+"pos": "DF",
+"age": 35,
+"nat": "Belgium",
+"value_m": 0.23,
+"qid": "Q2057994",
+"no": "27"
+},
+{
+"he": "Matteo Palma",
+"en": "Matteo Palma",
+"pos": "DF",
+"age": 18,
+"nat": "Germany",
+"value_m": 0.2,
+"qid": "Q130385243",
+"no": "16"
+}
+]
+}

@@ -1,0 +1,278 @@
+{
+"key": "twente",
+"name_he": "טוונטה",
+"source": "enwiki:FC Twente",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "שוער הולנדי",
+"en": "Joël Drommel",
+"pos": "GK",
+"age": 29,
+"nat": "Netherlands",
+"value_m": 0.56,
+"qid": "Q19882813",
+"no": "16"
+},
+{
+"he": "Yannick Gerritsen",
+"en": "Yannick Gerritsen",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.28,
+"qid": null,
+"no": "31"
+},
+{
+"he": "רמקו פספיר",
+"en": "Remko Pasveer",
+"pos": "GK",
+"age": 42,
+"nat": "Netherlands",
+"value_m": 0.18,
+"qid": "Q392434",
+"no": "22"
+},
+{
+"he": "Lars Unnerstall",
+"en": "Lars Unnerstall",
+"pos": "GK",
+"age": 36,
+"nat": "Germany",
+"value_m": 0.15,
+"qid": "Q136599",
+"no": "1"
+},
+{
+"he": "Daan Rots",
+"en": "Daan Rots",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 1.02,
+"qid": "Q104762691",
+"no": "11"
+},
+{
+"he": "Bart van Rooij",
+"en": "Bart van Rooij",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.8,
+"qid": "Q62075473",
+"no": "28"
+},
+{
+"he": "ראמז זרוקי",
+"en": "Ramiz Zerrouki",
+"pos": "MF",
+"age": 28,
+"nat": "Algeria",
+"value_m": 0.74,
+"qid": "Q73149048",
+"no": "6"
+},
+{
+"he": "Naci Ünüvar",
+"en": "Naci Ünüvar",
+"pos": "FW",
+"age": 23,
+"nat": "Turkey",
+"value_m": 0.72,
+"qid": "Q64224438",
+"no": "37"
+},
+{
+"he": "Thomas van den Belt",
+"en": "Thomas van den Belt",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.7,
+"qid": "Q99677252",
+"no": "20"
+},
+{
+"he": "מרקו פיאצה",
+"en": "Marko Pjaca",
+"pos": "FW",
+"age": 31,
+"nat": "Croatia",
+"value_m": 0.69,
+"qid": "Q15039855",
+"no": "7"
+},
+{
+"he": "Younes Taha",
+"en": "Younes Taha",
+"pos": "FW",
+"age": 23,
+"nat": "Morocco",
+"value_m": 0.69,
+"qid": "Q113463914",
+"no": "10"
+},
+{
+"he": "Daouda Weidmann",
+"en": "Daouda Weidmann",
+"pos": "MF",
+"age": 23,
+"nat": "France",
+"value_m": 0.61,
+"qid": "Q123036242",
+"no": "8"
+},
+{
+"he": "Aske Adelgaard",
+"en": "Aske Adelgaard",
+"pos": "DF",
+"age": 22,
+"nat": "Denmark",
+"value_m": 0.61,
+"qid": "Q113710068",
+"no": "29"
+},
+{
+"he": "Gijs Besselink",
+"en": "Gijs Besselink",
+"pos": "MF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.6,
+"qid": "Q123147186",
+"no": "41"
+},
+{
+"he": "Filip Thorvaldsen",
+"en": "Filip Thorvaldsen",
+"pos": "FW",
+"age": 20,
+"nat": "Norway",
+"value_m": 0.58,
+"qid": "Q117408847",
+"no": "17"
+},
+{
+"he": "Kristian Hlynsson",
+"en": "Kristian Hlynsson",
+"pos": "MF",
+"age": 22,
+"nat": "Iceland",
+"value_m": 0.56,
+"qid": "Q83788689",
+"no": "14"
+},
+{
+"he": "סתיו למקין",
+"en": "Stav Lemkin",
+"pos": "DF",
+"age": 23,
+"nat": "Israel",
+"value_m": 0.55,
+"qid": "Q112862568",
+"no": "23"
+},
+{
+"he": "Lucas Vennegoor of Hesselink",
+"en": "Lucas Vennegoor of Hesselink",
+"pos": "FW",
+"age": 20,
+"nat": "Netherlands",
+"value_m": 0.54,
+"qid": "Q124964065",
+"no": "25"
+},
+{
+"he": "Max Bruns",
+"en": "Max Bruns",
+"pos": "DF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.53,
+"qid": "Q105339563",
+"no": "38"
+},
+{
+"he": "Sondre Ørjasæter",
+"en": "Sondre Ørjasæter",
+"pos": "MF",
+"age": 22,
+"nat": "Norway",
+"value_m": 0.47,
+"qid": "Q111977453",
+"no": "27"
+},
+{
+"he": "Juliën Mesbahi",
+"en": "Juliën Mesbahi",
+"pos": "MF",
+"age": 20,
+"nat": "Morocco",
+"value_m": 0.45,
+"qid": "Q124423950",
+"no": "44"
+},
+{
+"he": "{{ill|Jordy Bawuah|nl||uk|Йорді Бавуа",
+"en": "{{ill|Jordy Bawuah|nl||uk|Йорді Бавуа",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.35,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Krzysztof Kurowski",
+"en": "Krzysztof Kurowski",
+"pos": "DF",
+"age": 20,
+"nat": "Poland",
+"value_m": 0.33,
+"qid": "Q122070428",
+"no": "24"
+},
+{
+"he": "Robin Pröpper",
+"en": "Robin Pröpper",
+"pos": "DF",
+"age": 32,
+"nat": "Netherlands",
+"value_m": 0.31,
+"qid": "Q5187800",
+"no": "3"
+},
+{
+"he": "Michał Rosiak",
+"en": "Michał Rosiak",
+"pos": "DF",
+"age": 20,
+"nat": "Poland",
+"value_m": 0.27,
+"qid": "Q134454865",
+"no": "2"
+},
+{
+"he": "Ruud Nijstad",
+"en": "Ruud Nijstad",
+"pos": "DF",
+"age": 18,
+"nat": "Netherlands",
+"value_m": 0.27,
+"qid": "Q136294994",
+"no": "4"
+},
+{
+"he": "ואוט וחהורסט",
+"en": "Wout Weghorst",
+"pos": "FW",
+"age": 34,
+"nat": "Netherlands",
+"value_m": 0.26,
+"qid": "Q2210473",
+"no": "9"
+}
+]
+}

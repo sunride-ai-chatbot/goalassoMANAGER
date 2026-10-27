@@ -1,0 +1,308 @@
+{
+"key": "hjk",
+"name_he": "ה.י.ק הלסינקי",
+"source": "enwiki:Helsingin Jalkapalloklubi",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Vilho Tuokkola",
+"en": "Vilho Tuokkola",
+"pos": "GK",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.08,
+"qid": null,
+"no": "76"
+},
+{
+"he": "Mustafa Abdulmuttaleb",
+"en": "Mustafa Abdulmuttaleb",
+"pos": "GK",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.07,
+"qid": null,
+"no": null
+},
+{
+"he": "Mitja Haapanen",
+"en": "Mitja Haapanen",
+"pos": "GK",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.06,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Matej Marković",
+"en": "Matej Marković",
+"pos": "GK",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.05,
+"qid": "Q50888201",
+"no": "44"
+},
+{
+"he": "Jesse Öst",
+"en": "Jesse Öst",
+"pos": "GK",
+"age": 35,
+"nat": "Finland",
+"value_m": 0.02,
+"qid": "Q11866428",
+"no": "1"
+},
+{
+"he": "Lassi Lappalainen",
+"en": "Lassi Lappalainen",
+"pos": "FW",
+"age": 28,
+"nat": "Finland",
+"value_m": 0.2,
+"qid": "Q23699003",
+"no": "26"
+},
+{
+"he": "Santeri Haarala",
+"en": "Santeri Haarala",
+"pos": "FW",
+"age": 26,
+"nat": "Finland",
+"value_m": 0.17,
+"qid": "Q54861550",
+"no": "29"
+},
+{
+"he": "Jere Kallinen",
+"en": "Jere Kallinen",
+"pos": "MF",
+"age": 24,
+"nat": "Finland",
+"value_m": 0.13,
+"qid": "Q108004290",
+"no": "15"
+},
+{
+"he": "Ville Tikkanen",
+"en": "Ville Tikkanen",
+"pos": "DF",
+"age": 27,
+"nat": "Finland",
+"value_m": 0.12,
+"qid": "Q55363881",
+"no": "6"
+},
+{
+"he": "Mads Borchers",
+"en": "Mads Borchers",
+"pos": "FW",
+"age": 24,
+"nat": "Denmark",
+"value_m": 0.12,
+"qid": "Q122761164",
+"no": "9"
+},
+{
+"he": "Miska Ylitolva",
+"en": "Miska Ylitolva",
+"pos": "DF",
+"age": 22,
+"nat": "Finland",
+"value_m": 0.12,
+"qid": "Q111359108",
+"no": "28"
+},
+{
+"he": "Kaius Hardén",
+"en": "Kaius Hardén",
+"pos": "FW",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.12,
+"qid": null,
+"no": "51"
+},
+{
+"he": "Emil Ingman",
+"en": "Emil Ingman",
+"pos": "FW",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.12,
+"qid": null,
+"no": null
+},
+{
+"he": "Alfie Cicale",
+"en": "Alfie Cicale",
+"pos": "MF",
+"age": 24,
+"nat": "England",
+"value_m": 0.11,
+"qid": "Q125382550",
+"no": "7"
+},
+{
+"he": "Lucas Lingman",
+"en": "Lucas Lingman",
+"pos": "MF",
+"age": 28,
+"nat": "Finland",
+"value_m": 0.11,
+"qid": "Q20914016",
+"no": "10"
+},
+{
+"he": "Roni Hudd",
+"en": "Roni Hudd",
+"pos": "FW",
+"age": 21,
+"nat": "Finland",
+"value_m": 0.11,
+"qid": "Q115724797",
+"no": "11"
+},
+{
+"he": "Francis Etu",
+"en": "Francis Etu",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.11,
+"qid": null,
+"no": "48"
+},
+{
+"he": "טיל סיסוקו",
+"en": "Till Cissokho",
+"pos": "DF",
+"age": 26,
+"nat": "France",
+"value_m": 0.1,
+"qid": "Q63170716",
+"no": "3"
+},
+{
+"he": "David Ezeh",
+"en": "David Ezeh",
+"pos": "FW",
+"age": 20,
+"nat": "Finland",
+"value_m": 0.1,
+"qid": "Q122932301",
+"no": "19"
+},
+{
+"he": "Mihailo Bogićević",
+"en": "Mihailo Bogićević",
+"pos": "DF",
+"age": 28,
+"nat": "Serbia",
+"value_m": 0.1,
+"qid": "Q135670442",
+"no": "31"
+},
+{
+"he": "Mouhamed Guèye",
+"en": "Mouhamed Guèye",
+"pos": "MF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.1,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Marlo Hyvönen",
+"en": "Marlo Hyvönen",
+"pos": "MF",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.1,
+"qid": null,
+"no": null
+},
+{
+"he": "Liam Rippon",
+"en": "Liam Rippon",
+"pos": "FW",
+"age": 25,
+"nat": "Australia",
+"value_m": 0.1,
+"qid": null,
+"no": null
+},
+{
+"he": "Lukas Kuusisto",
+"en": "Lukas Kuusisto",
+"pos": "DF",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.09,
+"qid": null,
+"no": "45"
+},
+{
+"he": "Nils Svensson",
+"en": "Nils Svensson",
+"pos": "DF",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.09,
+"qid": "Q130214832",
+"no": "62"
+},
+{
+"he": "Alex Lietsa",
+"en": "Alex Lietsa",
+"pos": "DF",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.09,
+"qid": null,
+"no": "98"
+},
+{
+"he": "Art Berisha",
+"en": "Art Berisha",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.09,
+"qid": null,
+"no": null
+},
+{
+"he": "Kaius Simojoki",
+"en": "Kaius Simojoki",
+"pos": "DF",
+"age": 20,
+"nat": "Finland",
+"value_m": 0.08,
+"qid": "Q123685616",
+"no": "13"
+},
+{
+"he": "Antton Nylund",
+"en": "Antton Nylund",
+"pos": "MF",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.08,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Liam Möller",
+"en": "Liam Möller",
+"pos": "MF",
+"age": 21,
+"nat": "Finland",
+"value_m": 0.08,
+"qid": "Q120893614",
+"no": "22"
+}
+]
+}

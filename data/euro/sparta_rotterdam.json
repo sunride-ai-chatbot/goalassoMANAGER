@@ -1,0 +1,308 @@
+{
+"key": "sparta_rotterdam",
+"name_he": "ספרטה רוטרדם",
+"source": "enwiki:Sparta Rotterdam",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Thijs Verbaan",
+"en": "Thijs Verbaan",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.2,
+"qid": null,
+"no": null
+},
+{
+"he": "{{ill|Pascal Kuiper|nl",
+"en": "{{ill|Pascal Kuiper|nl",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.17,
+"qid": null,
+"no": null
+},
+{
+"he": "Duncan Lindhout",
+"en": "Duncan Lindhout",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.17,
+"qid": null,
+"no": null
+},
+{
+"he": "Rik Suur",
+"en": "Rik Suur",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.15,
+"qid": null,
+"no": null
+},
+{
+"he": "Filip Bednarek",
+"en": "Filip Bednarek",
+"pos": "GK",
+"age": 33,
+"nat": "Poland",
+"value_m": 0.13,
+"qid": "Q602659",
+"no": null
+},
+{
+"he": "Michael Brouwer",
+"en": "Michael Brouwer",
+"pos": "GK",
+"age": 33,
+"nat": "Netherlands",
+"value_m": 0.12,
+"qid": "Q56787668",
+"no": null
+},
+{
+"he": "מיטשל ואן ברגן",
+"en": "Mitchell van Bergen",
+"pos": "FW",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 0.52,
+"qid": "Q21774847",
+"no": null
+},
+{
+"he": "שונסוקה מיטו",
+"en": "Shunsuke Mito",
+"pos": "MF",
+"age": 23,
+"nat": "Japan",
+"value_m": 0.46,
+"qid": "Q105258272",
+"no": null
+},
+{
+"he": "קספר טרהו",
+"en": "Casper Terho",
+"pos": "FW",
+"age": 23,
+"nat": "Finland",
+"value_m": 0.41,
+"qid": "Q106730310",
+"no": null
+},
+{
+"he": "Joel Ideho",
+"en": "Joel Ideho",
+"pos": "FW",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.32,
+"qid": "Q122460666",
+"no": null
+},
+{
+"he": "Teo Quintero",
+"en": "Teo Quintero",
+"pos": "DF",
+"age": 27,
+"nat": "Venezuela",
+"value_m": 0.31,
+"qid": "Q113374899",
+"no": null
+},
+{
+"he": "Julian Baas",
+"en": "Julian Baas",
+"pos": "MF",
+"age": 24,
+"nat": "Netherlands",
+"value_m": 0.31,
+"qid": "Q98846968",
+"no": null
+},
+{
+"he": "Boyd Reith",
+"en": "Boyd Reith",
+"pos": "DF",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 0.28,
+"qid": "Q101627186",
+"no": null
+},
+{
+"he": "Lushendry Martes",
+"en": "Lushendry Martes",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.27,
+"qid": "Q137770347",
+"no": null
+},
+{
+"he": "Luc Nieuwenhuijs",
+"en": "Luc Nieuwenhuijs",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.27,
+"qid": null,
+"no": null
+},
+{
+"he": "Shedrach Ebite",
+"en": "Shedrach Ebite",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.26,
+"qid": null,
+"no": null
+},
+{
+"he": "Egeron Gorisson",
+"en": "Egeron Gorisson",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.26,
+"qid": null,
+"no": null
+},
+{
+"he": "Alwande Roaldsøy",
+"en": "Alwande Roaldsøy",
+"pos": "MF",
+"age": 22,
+"nat": "Norway",
+"value_m": 0.25,
+"qid": "Q117307798",
+"no": null
+},
+{
+"he": "Santi Laguna Burgos",
+"en": "Santi Laguna Burgos",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.25,
+"qid": null,
+"no": null
+},
+{
+"he": "Jason Inocencio",
+"en": "Jason Inocencio",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.25,
+"qid": null,
+"no": null
+},
+{
+"he": "Milan Zonneveld",
+"en": "Milan Zonneveld",
+"pos": "FW",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.24,
+"qid": "Q111609874",
+"no": null
+},
+{
+"he": "{{ill|Mohamed Oukhattou|nl",
+"en": "{{ill|Mohamed Oukhattou|nl",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.24,
+"qid": null,
+"no": null
+},
+{
+"he": "Max de Ligt",
+"en": "Max de Ligt",
+"pos": "DF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.23,
+"qid": "Q135616215",
+"no": null
+},
+{
+"he": "Moreno Gompel",
+"en": "Moreno Gompel",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.23,
+"qid": null,
+"no": null
+},
+{
+"he": "Daniël Hanzen",
+"en": "Daniël Hanzen",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.23,
+"qid": null,
+"no": null
+},
+{
+"he": "Gustav Arcos Sundqvist",
+"en": "Gustav Arcos Sundqvist",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": null,
+"no": null
+},
+{
+"he": "Kenji Sallent",
+"en": "Kenji Sallent",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.23,
+"qid": null,
+"no": null
+},
+{
+"he": "Diyae Jermoumi",
+"en": "Diyae Jermoumi",
+"pos": "DF",
+"age": 22,
+"nat": "Morocco",
+"value_m": 0.22,
+"qid": "Q110583269",
+"no": null
+},
+{
+"he": "Marvin Young",
+"en": "Marvin Young",
+"pos": "DF",
+"age": 20,
+"nat": "Netherlands",
+"value_m": 0.21,
+"qid": "Q130809319",
+"no": null
+},
+{
+"he": "Noah Sandvliet",
+"en": "Noah Sandvliet",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.21,
+"qid": null,
+"no": null
+}
+]
+}

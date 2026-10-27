@@ -1,0 +1,308 @@
+{
+"key": "genoa",
+"name_he": "ג'נואה",
+"source": "enwiki:Genoa CFC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "יוסטין ביילו",
+"en": "Justin Bijlow",
+"pos": "GK",
+"age": 28,
+"nat": "Netherlands",
+"value_m": 0.24,
+"qid": "Q36318897",
+"no": "1"
+},
+{
+"he": "Daniele Sommariva",
+"en": "Daniele Sommariva",
+"pos": "GK",
+"age": 29,
+"nat": "Italy",
+"value_m": 0.15,
+"qid": "Q64009408",
+"no": "39"
+},
+{
+"he": "Franz Stolz",
+"en": "Franz Stolz",
+"pos": "GK",
+"age": 25,
+"nat": "Austria",
+"value_m": 0.15,
+"qid": "Q64224732",
+"no": "99"
+},
+{
+"he": "Rendijs Mihelsons",
+"en": "Rendijs Mihelsons",
+"pos": "GK",
+"age": 25,
+"nat": "Latvia",
+"value_m": 0.1,
+"qid": null,
+"no": "93"
+},
+{
+"he": "לורנצו קולומבו",
+"en": "Lorenzo Colombo",
+"pos": "FW",
+"age": 24,
+"nat": "Italy",
+"value_m": 0.38,
+"qid": "Q64896366",
+"no": "29"
+},
+{
+"he": "Morten Frendrup",
+"en": "Morten Frendrup",
+"pos": "MF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.29,
+"qid": "Q52158000",
+"no": "32"
+},
+{
+"he": "ז'והאן ואסקס",
+"en": "Johan Vásquez",
+"pos": "DF",
+"age": 27,
+"nat": "Mexico",
+"value_m": 0.26,
+"qid": "Q39161128",
+"no": "22"
+},
+{
+"he": "ויטור אוליביירה",
+"en": "Vitinha",
+"pos": "FW",
+"age": 26,
+"nat": "Portugal",
+"value_m": 0.24,
+"qid": "Q106200290",
+"no": "9"
+},
+{
+"he": "לאו אסטיגור",
+"en": "Leo Østigård",
+"pos": "DF",
+"age": 26,
+"nat": "Norway",
+"value_m": 0.23,
+"qid": "Q30330390",
+"no": "5"
+},
+{
+"he": "Milutin Osmajić",
+"en": "Milutin Osmajić",
+"pos": "FW",
+"age": 27,
+"nat": "Montenegro",
+"value_m": 0.23,
+"qid": "Q57315517",
+"no": "18"
+},
+{
+"he": "Elias Havel",
+"en": "Elias Havel",
+"pos": "FW",
+"age": 23,
+"nat": "Austria",
+"value_m": 0.22,
+"qid": "Q105591986",
+"no": "17"
+},
+{
+"he": "Mikael Egill Ellertsson",
+"en": "Mikael Egill Ellertsson",
+"pos": "MF",
+"age": 24,
+"nat": "Iceland",
+"value_m": 0.22,
+"qid": "Q108297713",
+"no": "77"
+},
+{
+"he": "ג'יבריל סו",
+"en": "Djibril Sow",
+"pos": "MF",
+"age": 29,
+"nat": "Switzerland",
+"value_m": 0.2,
+"qid": "Q27995699",
+"no": "97"
+},
+{
+"he": "קודי דראמה",
+"en": "Cody Drameh",
+"pos": "DF",
+"age": 24,
+"nat": "England",
+"value_m": 0.19,
+"qid": "Q98815258",
+"no": "16"
+},
+{
+"he": "Ethan Meichtry",
+"en": "Ethan Meichtry",
+"pos": "MF",
+"age": 21,
+"nat": "Switzerland",
+"value_m": 0.17,
+"qid": "Q138328477",
+"no": "11"
+},
+{
+"he": "Alessandro Marcandalli",
+"en": "Alessandro Marcandalli",
+"pos": "DF",
+"age": 23,
+"nat": "Italy",
+"value_m": 0.17,
+"qid": "Q125925137",
+"no": "27"
+},
+{
+"he": "Sebastian Otoa",
+"en": "Sebastian Otoa",
+"pos": "DF",
+"age": 22,
+"nat": "Denmark",
+"value_m": 0.16,
+"qid": "Q114390965",
+"no": "34"
+},
+{
+"he": "Alex Amorim",
+"en": "Alex Amorim",
+"pos": "MF",
+"age": 21,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": "Q135395465",
+"no": "4"
+},
+{
+"he": "Mamedi Doucouré",
+"en": "Mamedi Doucouré",
+"pos": "DF",
+"age": 25,
+"nat": "France",
+"value_m": 0.15,
+"qid": null,
+"no": "74"
+},
+{
+"he": "Kingsley Ehizibue",
+"en": "Kingsley Ehizibue",
+"pos": "DF",
+"age": 31,
+"nat": "Netherlands",
+"value_m": 0.14,
+"qid": "Q18426157",
+"no": "3"
+},
+{
+"he": "לורנצו ונטורינו",
+"en": "Lorenzo Venturino",
+"pos": "FW",
+"age": 20,
+"nat": "Italy",
+"value_m": 0.14,
+"qid": "Q131796025",
+"no": "76"
+},
+{
+"he": "David Puczka",
+"en": "David Puczka",
+"pos": "DF",
+"age": 21,
+"nat": "Austria",
+"value_m": 0.13,
+"qid": "Q118347581",
+"no": "31"
+},
+{
+"he": "סטפן שעראווי",
+"en": "Stephan El Shaarawy",
+"pos": "FW",
+"age": 33,
+"nat": "Italy",
+"value_m": 0.13,
+"qid": "Q12984",
+"no": "92"
+},
+{
+"he": "Gaël Lafont",
+"en": "Gaël Lafont",
+"pos": "MF",
+"age": 20,
+"nat": "France",
+"value_m": 0.12,
+"qid": "Q125522252",
+"no": "75"
+},
+{
+"he": "Marcelo Vaz",
+"en": "Marcelo Vaz",
+"pos": "DF",
+"age": 25,
+"nat": "Guinea-Bissau",
+"value_m": 0.11,
+"qid": null,
+"no": "85"
+},
+{
+"he": "ז'וניור מסיאס",
+"en": "Júnior Messias",
+"pos": "FW",
+"age": 35,
+"nat": "Brazil",
+"value_m": 0.1,
+"qid": "Q69691627",
+"no": "10"
+},
+{
+"he": "Lukas Klišys",
+"en": "Lukas Klišys",
+"pos": "DF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.1,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Joi Nuredini",
+"en": "Joi Nuredini",
+"pos": "FW",
+"age": 19,
+"nat": "Albania",
+"value_m": 0.09,
+"qid": "Q137807910",
+"no": "19"
+},
+{
+"he": "Stefano Sabelli",
+"en": "Stefano Sabelli",
+"pos": "DF",
+"age": 33,
+"nat": "Italy",
+"value_m": 0.07,
+"qid": "Q7606487",
+"no": "20"
+},
+{
+"he": "Samuel Wiafe",
+"en": "Samuel Wiafe",
+"pos": "MF",
+"age": 18,
+"nat": "Italy",
+"value_m": 0.05,
+"qid": "Q139244033",
+"no": "71"
+}
+]
+}

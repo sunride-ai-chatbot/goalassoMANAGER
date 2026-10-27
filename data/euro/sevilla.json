@@ -1,0 +1,228 @@
+{
+"key": "sevilla",
+"name_he": "סביליה",
+"source": "enwiki:Sevilla FC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "פראן גונזלס",
+"en": "Fran González",
+"pos": "GK",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.99,
+"qid": "Q122724434",
+"no": "13"
+},
+{
+"he": "Rafa Romero",
+"en": "Rafa Romero",
+"pos": "GK",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.61,
+"qid": null,
+"no": "33"
+},
+{
+"he": "רובן ורגאס",
+"en": "Rubén Vargas",
+"pos": "FW",
+"age": 28,
+"nat": "Switzerland",
+"value_m": 1.83,
+"qid": "Q38053896",
+"no": "11"
+},
+{
+"he": "לוסיאן אגומה",
+"en": "Lucien Agoumé",
+"pos": "MF",
+"age": 24,
+"nat": "France",
+"value_m": 1.53,
+"qid": "Q58494963",
+"no": "6"
+},
+{
+"he": "איסאק רומרו",
+"en": "Isaac Romero",
+"pos": "FW",
+"age": 26,
+"nat": "Spain",
+"value_m": 1.52,
+"qid": "Q124256126",
+"no": "16"
+},
+{
+"he": "גיורגי כוצ'וראשווילי",
+"en": "Giorgi Kochorashvili",
+"pos": "MF",
+"age": 27,
+"nat": "Georgia",
+"value_m": 1.5,
+"qid": "Q97303836",
+"no": "8"
+},
+{
+"he": "צ'ידרה אג'וקה",
+"en": "Chidera Ejuke",
+"pos": "FW",
+"age": 28,
+"nat": "Nigeria",
+"value_m": 1.5,
+"qid": "Q37850911",
+"no": "21"
+},
+{
+"he": "חוסה אנחל קרמונה",
+"en": "José Ángel Carmona",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 1.49,
+"qid": "Q111220958",
+"no": "22"
+},
+{
+"he": "Robbie Ure",
+"en": "Robbie Ure",
+"pos": "FW",
+"age": 22,
+"nat": "Scotland",
+"value_m": 1.33,
+"qid": "Q115181709",
+"no": "9"
+},
+{
+"he": "קיקה סאלאס",
+"en": "Kike Salas",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 1.22,
+"qid": "Q113894431",
+"no": "4"
+},
+{
+"he": "חואן איגלסיאס",
+"en": "Juan Iglesias",
+"pos": "DF",
+"age": 28,
+"nat": "Spain",
+"value_m": 1.19,
+"qid": "Q104602884",
+"no": "2"
+},
+{
+"he": "גבריאל סואסו",
+"en": "Gabriel Suazo",
+"pos": "DF",
+"age": 29,
+"nat": "Chile",
+"value_m": 1.17,
+"qid": "Q21044405",
+"no": "17"
+},
+{
+"he": "Arouna Sangante",
+"en": "Arouna Sangante",
+"pos": "DF",
+"age": 24,
+"nat": "Senegal",
+"value_m": 1.14,
+"qid": "Q106860345",
+"no": "12"
+},
+{
+"he": "Andrés Castrín",
+"en": "Andrés Castrín",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 1.12,
+"qid": "Q110156344",
+"no": "5"
+},
+{
+"he": "Manu Bueno",
+"en": "Manu Bueno",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 1.07,
+"qid": "Q118744483",
+"no": "14"
+},
+{
+"he": "מרקאו",
+"en": "Marcão",
+"pos": "DF",
+"age": 30,
+"nat": "Brazil",
+"value_m": 1.03,
+"qid": "Q27825292",
+"no": "23"
+},
+{
+"he": "יון גורידי",
+"en": "Jon Guridi",
+"pos": "MF",
+"age": 31,
+"nat": "Spain",
+"value_m": 1.01,
+"qid": "Q28966437",
+"no": "18"
+},
+{
+"he": "Miguel Sierra",
+"en": "Miguel Sierra",
+"pos": "FW",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.97,
+"qid": "Q137393350",
+"no": "30"
+},
+{
+"he": "חוליו דיאס",
+"en": "Julio Díaz",
+"pos": "DF",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.89,
+"qid": "Q128123377",
+"no": "3"
+},
+{
+"he": "Peque Fernández",
+"en": "Peque Fernández",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.76,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Alfon González",
+"en": "Alfon González",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.71,
+"qid": null,
+"no": "7"
+},
+{
+"he": "פאביו קרדוסו",
+"en": "Fábio Cardoso",
+"pos": "DF",
+"age": 32,
+"nat": "Portugal",
+"value_m": 0.51,
+"qid": "Q5511325",
+"no": "15"
+}
+]
+}

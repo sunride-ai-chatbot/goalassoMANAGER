@@ -1,0 +1,228 @@
+{
+"key": "marseille",
+"name_he": "מארסיי",
+"source": "enwiki:Olympique de Marseille",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "ג'פרי דה לנגה",
+"en": "Jeffrey de Lange",
+"pos": "GK",
+"age": 28,
+"nat": "Netherlands",
+"value_m": 1.16,
+"qid": "Q100951617",
+"no": "1"
+},
+{
+"he": "Jelle Van Neck",
+"en": "Jelle Van Neck",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 1.1,
+"qid": "Q111476586",
+"no": "40"
+},
+{
+"he": "Théo Vermot",
+"en": "Théo Vermot",
+"pos": "GK",
+"age": 25,
+"nat": "France",
+"value_m": 0.69,
+"qid": null,
+"no": "92"
+},
+{
+"he": "טימותי ואה",
+"en": "Timothy Weah",
+"pos": "FW",
+"age": 26,
+"nat": "United States",
+"value_m": 2.39,
+"qid": "Q31871265",
+"no": "22"
+},
+{
+"he": "איגור פאישאו",
+"en": "Igor Paixão",
+"pos": "FW",
+"age": 26,
+"nat": "Brazil",
+"value_m": 2.34,
+"qid": "Q65548497",
+"no": "14"
+},
+{
+"he": "אמין גואירי",
+"en": "Amine Gouiri",
+"pos": "FW",
+"age": 26,
+"nat": "Algeria",
+"value_m": 2.19,
+"qid": "Q30045780",
+"no": "9"
+},
+{
+"he": "פאריס מומבניה",
+"en": "Faris Moumbagna",
+"pos": "FW",
+"age": 26,
+"nat": "Cameroon",
+"value_m": 1.89,
+"qid": "Q55820199",
+"no": "29"
+},
+{
+"he": "אנז'ל גומש",
+"en": "Angel Gomes",
+"pos": "MF",
+"age": 26,
+"nat": "England",
+"value_m": 1.79,
+"qid": "Q29988852",
+"no": "7"
+},
+{
+"he": "ניל מופה",
+"en": "Neal Maupay",
+"pos": "FW",
+"age": 30,
+"nat": "France",
+"value_m": 1.74,
+"qid": "Q1101455",
+"no": "11"
+},
+{
+"he": "אמין חארית",
+"en": "Amine Harit",
+"pos": "MF",
+"age": 29,
+"nat": "Morocco",
+"value_m": 1.65,
+"qid": "Q26034345",
+"no": "77"
+},
+{
+"he": "סי. ג'יי. איגן-ריילי",
+"en": "CJ Egan-Riley",
+"pos": "DF",
+"age": 23,
+"nat": "England",
+"value_m": 1.63,
+"qid": "Q108665573",
+"no": "4"
+},
+{
+"he": "דרק קורנליוס",
+"en": "Derek Cornelius",
+"pos": "DF",
+"age": 28,
+"nat": "Canada",
+"value_m": 1.62,
+"qid": "Q29901014",
+"no": "13"
+},
+{
+"he": "חימאד עבדלי",
+"en": "Himad Abdelli",
+"pos": "MF",
+"age": 26,
+"nat": "Algeria",
+"value_m": 1.59,
+"qid": "Q58303150",
+"no": "8"
+},
+{
+"he": "Bamo Meïté",
+"en": "Bamo Meïté",
+"pos": "DF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 1.53,
+"qid": "Q116838606",
+"no": "18"
+},
+{
+"he": "פייר-אמיל הויביאו",
+"en": "Pierre-Emile Højbjerg",
+"pos": "MF",
+"age": 31,
+"nat": "Denmark",
+"value_m": 1.4,
+"qid": "Q11059683",
+"no": "23"
+},
+{
+"he": "נייף אגר",
+"en": "Nayef Aguerd",
+"pos": "DF",
+"age": 30,
+"nat": "Morocco",
+"value_m": 1.34,
+"qid": "Q28872567",
+"no": "21"
+},
+{
+"he": "Tochukwu Nnadi",
+"en": "Tochukwu Nnadi",
+"pos": "MF",
+"age": 23,
+"nat": "Nigeria",
+"value_m": 1.32,
+"qid": "Q119855051",
+"no": "6"
+},
+{
+"he": "אוליסס גרסיה",
+"en": "Ulisses Garcia",
+"pos": "DF",
+"age": 30,
+"nat": "Switzerland",
+"value_m": 1.14,
+"qid": "Q17579981",
+"no": "25"
+},
+{
+"he": "Keyliane Abdallah",
+"en": "Keyliane Abdallah",
+"pos": "MF",
+"age": 20,
+"nat": "France",
+"value_m": 0.97,
+"qid": "Q125520705",
+"no": "48"
+},
+{
+"he": "Tadjidine Mmadi",
+"en": "Tadjidine Mmadi",
+"pos": "MF",
+"age": 19,
+"nat": "France",
+"value_m": 0.82,
+"qid": "Q136709731",
+"no": "43"
+},
+{
+"he": "ג'פרי קונדוגביה",
+"en": "Geoffrey Kondogbia",
+"pos": "MF",
+"age": 33,
+"nat": "Central African Republic",
+"value_m": 0.79,
+"qid": "Q724147",
+"no": "19"
+},
+{
+"he": "אמרסון פאלמיירי",
+"en": "Emerson Palmieri",
+"pos": "DF",
+"age": 32,
+"nat": "Italy",
+"value_m": 0.7,
+"qid": "Q5370912",
+"no": "33"
+}
+]
+}

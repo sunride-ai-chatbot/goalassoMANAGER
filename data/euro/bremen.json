@@ -1,0 +1,288 @@
+{
+"key": "bremen",
+"name_he": "ורדר ברמן",
+"source": "enwiki:SV Werder Bremen",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "קרל יקוב היין",
+"en": "Karl Hein",
+"pos": "GK",
+"age": 24,
+"nat": "Estonia",
+"value_m": 0.92,
+"qid": "Q98918607",
+"no": "1"
+},
+{
+"he": "אלכסנדר שלאגר",
+"en": "Alexander Schlager",
+"pos": "GK",
+"age": 30,
+"nat": "Austria",
+"value_m": 0.54,
+"qid": "Q20745286",
+"no": "30"
+},
+{
+"he": "Stefan Smarkalev",
+"en": "Stefan Smarkalev",
+"pos": "GK",
+"age": 19,
+"nat": "Bulgaria",
+"value_m": 0.25,
+"qid": "Q134442870",
+"no": "37"
+},
+{
+"he": "Markus Kolke",
+"en": "Markus Kolke",
+"pos": "GK",
+"age": 36,
+"nat": "Germany",
+"value_m": 0.12,
+"qid": "Q15834084",
+"no": "25"
+},
+{
+"he": "לודוביט רייס",
+"en": "Ludovit Reis",
+"pos": "MF",
+"age": 26,
+"nat": "Netherlands",
+"value_m": 1.05,
+"qid": "Q41779982",
+"no": "15"
+},
+{
+"he": "מרקו גרול",
+"en": "Marco Grüll",
+"pos": "FW",
+"age": 28,
+"nat": "Austria",
+"value_m": 1.04,
+"qid": "Q61869848",
+"no": "17"
+},
+{
+"he": "סנה לינן",
+"en": "Senne Lynen",
+"pos": "MF",
+"age": 27,
+"nat": "Belgium",
+"value_m": 0.98,
+"qid": "Q48291946",
+"no": "14"
+},
+{
+"he": "סדריק איטן",
+"en": "Cedric Itten",
+"pos": "FW",
+"age": 29,
+"nat": "Switzerland",
+"value_m": 0.85,
+"qid": "Q22965497",
+"no": "26"
+},
+{
+"he": "מרקו פרידל",
+"en": "Marco Friedl",
+"pos": "DF",
+"age": 28,
+"nat": "Austria",
+"value_m": 0.84,
+"qid": "Q28692516",
+"no": "32"
+},
+{
+"he": "Justin Njinmah",
+"en": "Justin Njinmah",
+"pos": "FW",
+"age": 25,
+"nat": "Germany",
+"value_m": 0.83,
+"qid": "Q110610689",
+"no": "11"
+},
+{
+"he": "אוליבייה דמאן",
+"en": "Olivier Deman",
+"pos": "DF",
+"age": 26,
+"nat": "Belgium",
+"value_m": 0.79,
+"qid": "Q69496466",
+"no": "2"
+},
+{
+"he": "אמוס פיפר",
+"en": "Amos Pieper",
+"pos": "DF",
+"age": 28,
+"nat": "Germany",
+"value_m": 0.78,
+"qid": "Q61640976",
+"no": "5"
+},
+{
+"he": "Felix Agu",
+"en": "Felix Agu",
+"pos": "DF",
+"age": 26,
+"nat": "Nigeria",
+"value_m": 0.76,
+"qid": "Q52357690",
+"no": "27"
+},
+{
+"he": "Jens Stage",
+"en": "Jens Stage",
+"pos": "MF",
+"age": 29,
+"nat": "Denmark",
+"value_m": 0.75,
+"qid": "Q24901052",
+"no": "6"
+},
+{
+"he": "Oskar Wójcik",
+"en": "Oskar Wójcik",
+"pos": "DF",
+"age": 23,
+"nat": "Poland",
+"value_m": 0.67,
+"qid": "Q135811091",
+"no": "3"
+},
+{
+"he": "Keke Topp",
+"en": "Keke Topp",
+"pos": "FW",
+"age": 22,
+"nat": "Germany",
+"value_m": 0.67,
+"qid": "Q109925006",
+"no": "9"
+},
+{
+"he": "Skelly Alvero",
+"en": "Skelly Alvero",
+"pos": "MF",
+"age": 24,
+"nat": "France",
+"value_m": 0.62,
+"qid": "Q114842149",
+"no": "28"
+},
+{
+"he": "Kenny Quetant",
+"en": "Kenny Quetant",
+"pos": "FW",
+"age": 20,
+"nat": "Haiti",
+"value_m": 0.61,
+"qid": "Q137970998",
+"no": "19"
+},
+{
+"he": "Chuki",
+"en": "Chuki",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.55,
+"qid": "Q130223651",
+"no": "20"
+},
+{
+"he": "Salim Musah",
+"en": "Salim Musah",
+"pos": "FW",
+"age": 20,
+"nat": "Germany",
+"value_m": 0.53,
+"qid": "Q135393007",
+"no": "29"
+},
+{
+"he": "מיטשל וייזר",
+"en": "Mitchell Weiser",
+"pos": "DF",
+"age": 32,
+"nat": "Germany",
+"value_m": 0.51,
+"qid": "Q694852",
+"no": "8"
+},
+{
+"he": "Dariusz Stalmach",
+"en": "Dariusz Stalmach",
+"pos": "MF",
+"age": 20,
+"nat": "Poland",
+"value_m": 0.51,
+"qid": "Q110890452",
+"no": "23"
+},
+{
+"he": "Luca Höcker",
+"en": "Luca Höcker",
+"pos": "DF",
+"age": 25,
+"nat": "Germany",
+"value_m": 0.48,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Darwin Soylu",
+"en": "Darwin Soylu",
+"pos": "MF",
+"age": 25,
+"nat": "Turkey",
+"value_m": 0.46,
+"qid": null,
+"no": "34"
+},
+{
+"he": "ניקלאס שטארק",
+"en": "Niklas Stark",
+"pos": "DF",
+"age": 31,
+"nat": "Germany",
+"value_m": 0.45,
+"qid": "Q3341549",
+"no": "4"
+},
+{
+"he": "Mats Heitmann",
+"en": "Mats Heitmann",
+"pos": "DF",
+"age": 25,
+"nat": "Germany",
+"value_m": 0.43,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Paul Erevbenagie",
+"en": "Paul Erevbenagie",
+"pos": "FW",
+"age": 19,
+"nat": "Germany",
+"value_m": 0.4,
+"qid": "Q140855166",
+"no": "38"
+},
+{
+"he": "Mick Schmetgens",
+"en": "Mick Schmetgens",
+"pos": "DF",
+"age": 18,
+"nat": "Germany",
+"value_m": 0.27,
+"qid": "Q135393092",
+"no": "33"
+}
+]
+}

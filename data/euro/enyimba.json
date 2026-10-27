@@ -1,0 +1,268 @@
+{
+"key": "enyimba",
+"name_he": "אנימבה",
+"source": "enwiki:Enyimba F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Nathaniel Asibe",
+"en": "Nathaniel Asibe",
+"pos": "GK",
+"age": 25,
+"nat": null,
+"value_m": 0.13,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Henry Ani",
+"en": "Henry Ani",
+"pos": "GK",
+"age": 25,
+"nat": null,
+"value_m": 0.12,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Emeka Onyekachi",
+"en": "Emeka Onyekachi",
+"pos": "GK",
+"age": 25,
+"nat": null,
+"value_m": 0.09,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Jeremy Olatunji",
+"en": "Jeremy Olatunji",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.19,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Austin Onyemaechi",
+"en": "Austin Onyemaechi",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.19,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Chukwudi Nwaodu",
+"en": "Chukwudi Nwaodu",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.18,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Alade Balogun",
+"en": "Alade Balogun",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.18,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Ekwutoziam Eze",
+"en": "Ekwutoziam Eze",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.17,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Akanni Elijah",
+"en": "Akanni Elijah",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.17,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Nweke Kalu",
+"en": "Nweke Kalu",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.17,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Ekene Awazie",
+"en": "Ekene Awazie",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.17,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Ifeanyi Ihemekwele",
+"en": "Ifeanyi Ihemekwele",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.17,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Odinaka Obichere",
+"en": "Odinaka Obichere",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.14,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Gabriel Innocent",
+"en": "Gabriel Innocent",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.14,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Chukwuemeka Obioma",
+"en": "Chukwuemeka Obioma",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.14,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Nzondiegwu Nonso",
+"en": "Nzondiegwu Nonso",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.13,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Ismail Sarki",
+"en": "Ismail Sarki",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.13,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Somiari Alalibo",
+"en": "Somiari Alalibo",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.13,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Imo Obot",
+"en": "Imo Obot",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.13,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Adiele Eriugo",
+"en": "Adiele Eriugo",
+"pos": "FW",
+"age": 20,
+"nat": null,
+"value_m": 0.13,
+"qid": "Q123158159",
+"no": "38"
+},
+{
+"he": "Fatai Abdullahi",
+"en": "Fatai Abdullahi",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.12,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Pascal Eze",
+"en": "Pascal Eze",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.11,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Asuquo Uwana",
+"en": "Asuquo Uwana",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.11,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Chinedu Ufere",
+"en": "Chinedu Ufere",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.11,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Odita Okechukwu",
+"en": "Odita Okechukwu",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.11,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Francis Odinaka",
+"en": "Francis Odinaka",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.1,
+"qid": null,
+"no": "16"
+}
+]
+}

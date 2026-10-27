@@ -1,0 +1,288 @@
+{
+"key": "raja",
+"name_he": "ראג'ה קזבלנקה",
+"source": "enwiki:Raja CA",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "El Mehdi Al Harrar",
+"en": "El Mehdi Al Harrar",
+"pos": "GK",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.15,
+"qid": "Q130508822",
+"no": "1"
+},
+{
+"he": "Saad Antra",
+"en": "Saad Antra",
+"pos": "GK",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.12,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Yassine Zoubir",
+"en": "Yassine Zoubir",
+"pos": "GK",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.12,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Khalid Kbiri Alaoui",
+"en": "Khalid Kbiri Alaoui",
+"pos": "GK",
+"age": 30,
+"nat": "Morocco",
+"value_m": 0.1,
+"qid": "Q135431481",
+"no": "12"
+},
+{
+"he": "Sharara",
+"en": "Sharara",
+"pos": "FW",
+"age": 28,
+"nat": "Jordan",
+"value_m": 0.31,
+"qid": "Q83787036",
+"no": "27"
+},
+{
+"he": "Mounaïm El Idrissy",
+"en": "Mounaïm El Idrissy",
+"pos": "FW",
+"age": 27,
+"nat": "Morocco",
+"value_m": 0.29,
+"qid": "Q58494974",
+"no": "70"
+},
+{
+"he": "איימן ברקוק",
+"en": "Aymen Barkok",
+"pos": "MF",
+"age": 28,
+"nat": "Morocco",
+"value_m": 0.28,
+"qid": "Q27892157",
+"no": "6"
+},
+{
+"he": "Bilal Ould-Chikh",
+"en": "Bilal Ould-Chikh",
+"pos": "FW",
+"age": 29,
+"nat": "Morocco",
+"value_m": 0.24,
+"qid": "Q16069521",
+"no": "45"
+},
+{
+"he": "Marian Huja",
+"en": "Marian Huja",
+"pos": "DF",
+"age": 27,
+"nat": "Portugal",
+"value_m": 0.23,
+"qid": "Q61140246",
+"no": "2"
+},
+{
+"he": "Bouchaib Arrassi",
+"en": "Bouchaib Arrassi",
+"pos": "DF",
+"age": 26,
+"nat": "Morocco",
+"value_m": 0.23,
+"qid": "Q121157838",
+"no": "5"
+},
+{
+"he": "Mathias Oyewusi",
+"en": "Mathias Oyewusi",
+"pos": "FW",
+"age": 27,
+"nat": null,
+"value_m": 0.21,
+"qid": "Q111283432",
+"no": "99"
+},
+{
+"he": "Amine Khammas",
+"en": "Amine Khammas",
+"pos": "DF",
+"age": 27,
+"nat": "Morocco",
+"value_m": 0.2,
+"qid": "Q34085897",
+"no": "24"
+},
+{
+"he": "Michael Agbekpornu",
+"en": "Michael Agbekpornu",
+"pos": "MF",
+"age": 28,
+"nat": "Ghana",
+"value_m": 0.2,
+"qid": "Q106599547",
+"no": "30"
+},
+{
+"he": "Felipinho",
+"en": "Felipinho",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.19,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Youness Dahmani",
+"en": "Youness Dahmani",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.18,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Mohamed Boulacsoute",
+"en": "Mohamed Boulacsoute",
+"pos": "DF",
+"age": 27,
+"nat": "Morocco",
+"value_m": 0.17,
+"qid": "Q105955785",
+"no": "7"
+},
+{
+"he": "Adel Bettaieb",
+"en": "Adel Bettaieb",
+"pos": "FW",
+"age": 29,
+"nat": "Tunisia",
+"value_m": 0.17,
+"qid": "Q67629721",
+"no": "21"
+},
+{
+"he": "Anas Benomar",
+"en": "Anas Benomar",
+"pos": "MF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.15,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Ishak Zidani",
+"en": "Ishak Zidani",
+"pos": "MF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.14,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Othmane Chraibi",
+"en": "Othmane Chraibi",
+"pos": "MF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.14,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Yahya Iguiz",
+"en": "Yahya Iguiz",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.13,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Adam Ennafati",
+"en": "Adam Ennafati",
+"pos": "FW",
+"age": 32,
+"nat": "Morocco",
+"value_m": 0.13,
+"qid": "Q19544518",
+"no": "77"
+},
+{
+"he": "Mohamed Al Makahasi",
+"en": "Mohamed Al Makahasi",
+"pos": "MF",
+"age": 31,
+"nat": "Morocco",
+"value_m": 0.12,
+"qid": "Q101071921",
+"no": "23"
+},
+{
+"he": "Chemseddine Knaidil",
+"en": "Chemseddine Knaidil",
+"pos": "DF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.11,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Ismail Khafi",
+"en": "Ismail Khafi",
+"pos": "FW",
+"age": 31,
+"nat": "Morocco",
+"value_m": 0.11,
+"qid": "Q102113484",
+"no": "9"
+},
+{
+"he": "Badr Benoun",
+"en": "Badr Benoun",
+"pos": "DF",
+"age": 32,
+"nat": "Morocco",
+"value_m": 0.11,
+"qid": "Q41559810",
+"no": "13"
+},
+{
+"he": "Ismael Mokadem",
+"en": "Ismael Mokadem",
+"pos": "DF",
+"age": 31,
+"nat": "Morocco",
+"value_m": 0.1,
+"qid": "Q100909530",
+"no": "4"
+},
+{
+"he": "Ayoub El Amloud",
+"en": "Ayoub El Amloud",
+"pos": "DF",
+"age": 32,
+"nat": "Morocco",
+"value_m": 0.1,
+"qid": "Q53828737",
+"no": "17"
+}
+]
+}

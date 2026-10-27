@@ -1,0 +1,288 @@
+{
+"key": "blackburn",
+"name_he": "בלקבורן",
+"source": "enwiki:Blackburn Rovers F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Jack Barrett",
+"en": "Jack Barrett",
+"pos": "GK",
+"age": 24,
+"nat": "England",
+"value_m": 0.24,
+"qid": "Q125923948",
+"no": "34"
+},
+{
+"he": "Aynsley Pears",
+"en": "Aynsley Pears",
+"pos": "GK",
+"age": 28,
+"nat": "England",
+"value_m": 0.21,
+"qid": "Q66103985",
+"no": "1"
+},
+{
+"he": "Balázs Tóth",
+"en": "Balázs Tóth",
+"pos": "GK",
+"age": 28,
+"nat": "Hungary",
+"value_m": 0.21,
+"qid": "Q96373033",
+"no": "22"
+},
+{
+"he": "Todd Cantwell",
+"en": "Todd Cantwell",
+"pos": "MF",
+"age": 28,
+"nat": "England",
+"value_m": 0.44,
+"qid": "Q47484996",
+"no": "10"
+},
+{
+"he": "Mathias Jørgensen",
+"en": "Mathias Jørgensen",
+"pos": "FW",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.43,
+"qid": "Q55622426",
+"no": "29"
+},
+{
+"he": "אנדרי גודיונסן",
+"en": "Andri Guðjohnsen",
+"pos": "FW",
+"age": 24,
+"nat": "Iceland",
+"value_m": 0.41,
+"qid": "Q96036411",
+"no": "9"
+},
+{
+"he": "Yūki Ōhashi",
+"en": "Yūki Ōhashi",
+"pos": "FW",
+"age": 30,
+"nat": "Japan",
+"value_m": 0.39,
+"qid": "Q59460677",
+"no": "23"
+},
+{
+"he": "Dapo Afolayan",
+"en": "Dapo Afolayan",
+"pos": "FW",
+"age": 28,
+"nat": "England",
+"value_m": 0.34,
+"qid": "Q59924705",
+"no": "21"
+},
+{
+"he": "Yuri Ribeiro",
+"en": "Yuri Ribeiro",
+"pos": "DF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.32,
+"qid": "Q20641388",
+"no": "4"
+},
+{
+"he": "Hayden Carter",
+"en": "Hayden Carter",
+"pos": "DF",
+"age": 26,
+"nat": "England",
+"value_m": 0.31,
+"qid": "Q97486156",
+"no": "17"
+},
+{
+"he": "Augustus Kargbo",
+"en": "Augustus Kargbo",
+"pos": "FW",
+"age": 27,
+"nat": "Sierra Leone",
+"value_m": 0.3,
+"qid": "Q61694519",
+"no": "7"
+},
+{
+"he": "ריויה מורישיטה",
+"en": "Ryōya Morishita",
+"pos": "MF",
+"age": 29,
+"nat": "Japan",
+"value_m": 0.29,
+"qid": "Q85585203",
+"no": "25"
+},
+{
+"he": "Dion De Neve",
+"en": "Dion De Neve",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.27,
+"qid": "Q107955308",
+"no": "14"
+},
+{
+"he": "Ryan Alebiosu",
+"en": "Ryan Alebiosu",
+"pos": "DF",
+"age": 24,
+"nat": "Nigeria",
+"value_m": 0.26,
+"qid": "Q110802388",
+"no": "2"
+},
+{
+"he": "Lewis Miller",
+"en": "Lewis Miller",
+"pos": "DF",
+"age": 26,
+"nat": "Australia",
+"value_m": 0.26,
+"qid": "Q62268032",
+"no": "33"
+},
+{
+"he": "Scott Wharton",
+"en": "Scott Wharton",
+"pos": "DF",
+"age": 28,
+"nat": "England",
+"value_m": 0.25,
+"qid": "Q26704514",
+"no": "16"
+},
+{
+"he": "Harry Pickering",
+"en": "Harry Pickering",
+"pos": "DF",
+"age": 27,
+"nat": "England",
+"value_m": 0.24,
+"qid": "Q30122432",
+"no": "3"
+},
+{
+"he": "Jayden Fevrier",
+"en": "Jayden Fevrier",
+"pos": "MF",
+"age": 23,
+"nat": "England",
+"value_m": 0.24,
+"qid": "Q116661034",
+"no": "11"
+},
+{
+"he": "Jake Garrett",
+"en": "Jake Garrett",
+"pos": "MF",
+"age": 23,
+"nat": "England",
+"value_m": 0.24,
+"qid": "Q115188810",
+"no": "30"
+},
+{
+"he": "Sean McLoughlin",
+"en": "Sean McLoughlin",
+"pos": "DF",
+"age": 29,
+"nat": "Ireland",
+"value_m": 0.23,
+"qid": "Q57210827",
+"no": "15"
+},
+{
+"he": "Kristi Montgomery",
+"en": "Kristi Montgomery",
+"pos": "MF",
+"age": 22,
+"nat": "Scotland",
+"value_m": 0.23,
+"qid": "Q133883907",
+"no": "31"
+},
+{
+"he": "Moussa Baradji",
+"en": "Moussa Baradji",
+"pos": "MF",
+"age": 25,
+"nat": "France",
+"value_m": 0.22,
+"qid": "Q134467097",
+"no": "24"
+},
+{
+"he": "Matty Litherland",
+"en": "Matty Litherland",
+"pos": "DF",
+"age": 20,
+"nat": "England",
+"value_m": 0.14,
+"qid": "Q137548697",
+"no": "40"
+},
+{
+"he": "Tom Atcheson",
+"en": "Tom Atcheson",
+"pos": "DF",
+"age": 19,
+"nat": "Northern Ireland",
+"value_m": 0.13,
+"qid": "Q137554603",
+"no": "6"
+},
+{
+"he": "Gady Beyuku",
+"en": "Gady Beyuku",
+"pos": "DF",
+"age": 20,
+"nat": "France",
+"value_m": 0.12,
+"qid": "Q136342245",
+"no": "27"
+},
+{
+"he": "אדם פורשו",
+"en": "Adam Forshaw",
+"pos": "MF",
+"age": 34,
+"nat": "England",
+"value_m": 0.12,
+"qid": "Q4492089",
+"no": "28"
+},
+{
+"he": "Sam Morsy",
+"en": "Sam Morsy",
+"pos": "MF",
+"age": 34,
+"nat": "Egypt",
+"value_m": 0.11,
+"qid": "Q7407943",
+"no": "8"
+},
+{
+"he": "Harvey Higgins",
+"en": "Harvey Higgins",
+"pos": "FW",
+"age": 17,
+"nat": "England",
+"value_m": 0.08,
+"qid": "Q141601186",
+"no": "45"
+}
+]
+}

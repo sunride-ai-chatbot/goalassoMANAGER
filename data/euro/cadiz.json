@@ -1,0 +1,218 @@
+{
+"key": "cadiz",
+"name_he": "קאדיס",
+"source": "enwiki:Cádiz CF",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "David Gil",
+"en": "David Gil",
+"pos": "GK",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.11,
+"qid": "Q36989661",
+"no": "1"
+},
+{
+"he": "Rubén Domínguez",
+"en": "Rubén Domínguez",
+"pos": "GK",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.11,
+"qid": null,
+"no": "26"
+},
+{
+"he": "אורקו איסטה",
+"en": "Urko Izeta",
+"pos": "FW",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.34,
+"qid": "Q113900920",
+"no": "19"
+},
+{
+"he": "Iuri Tabatadze",
+"en": "Iuri Tabatadze",
+"pos": "FW",
+"age": 26,
+"nat": "Georgia",
+"value_m": 0.31,
+"qid": "Q134393608",
+"no": "7"
+},
+{
+"he": "Javi Ontiveros",
+"en": "Javi Ontiveros",
+"pos": "FW",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.31,
+"qid": "Q21622270",
+"no": "10"
+},
+{
+"he": "Jandro Orellana",
+"en": "Jandro Orellana",
+"pos": "MF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.31,
+"qid": "Q30345821",
+"no": "18"
+},
+{
+"he": "Álvaro García Pascual",
+"en": "Álvaro García Pascual",
+"pos": "FW",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.3,
+"qid": "Q131448567",
+"no": "9"
+},
+{
+"he": "Manu Fernández",
+"en": "Manu Fernández",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.28,
+"qid": "Q134974603",
+"no": "6"
+},
+{
+"he": "Beñat de Jesús",
+"en": "Beñat de Jesús",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.25,
+"qid": "Q140533453",
+"no": "2"
+},
+{
+"he": "Bojan Kovačević",
+"en": "Bojan Kovačević",
+"pos": "DF",
+"age": 22,
+"nat": "Serbia",
+"value_m": 0.24,
+"qid": "Q110047578",
+"no": "14"
+},
+{
+"he": "Vladys Kopotun",
+"en": "Vladys Kopotun",
+"pos": "FW",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.23,
+"qid": "Q134591631",
+"no": "21"
+},
+{
+"he": "Efe Aghama",
+"en": "Efe Aghama",
+"pos": "FW",
+"age": 22,
+"nat": "Nigeria",
+"value_m": 0.22,
+"qid": "Q135853051",
+"no": "8"
+},
+{
+"he": "Javi Castro",
+"en": "Javi Castro",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.21,
+"qid": "Q85770975",
+"no": "4"
+},
+{
+"he": "Juan Díaz",
+"en": "Juan Díaz",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.19,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Kenan Toibibou",
+"en": "Kenan Toibibou",
+"pos": "DF",
+"age": 21,
+"nat": "Comoros",
+"value_m": 0.18,
+"qid": "Q136171134",
+"no": "15"
+},
+{
+"he": "José Andújar",
+"en": "José Andújar",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.18,
+"qid": null,
+"no": null
+},
+{
+"he": "José Antonio de la Rosa",
+"en": "José Antonio de la Rosa",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.17,
+"qid": "Q118209525",
+"no": "11"
+},
+{
+"he": "Ibon Sánchez",
+"en": "Ibon Sánchez",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.16,
+"qid": "Q136437813",
+"no": "24"
+},
+{
+"he": "Sergio Arribas",
+"en": "Sergio Arribas",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.15,
+"qid": "Q131905182",
+"no": "3"
+},
+{
+"he": "Marc-Olivier Doué",
+"en": "Marc-Olivier Doué",
+"pos": "MF",
+"age": 25,
+"nat": "France",
+"value_m": 0.14,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Borja Vázquez",
+"en": "Borja Vázquez",
+"pos": "FW",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.14,
+"qid": "Q126142007",
+"no": "20"
+}
+]
+}

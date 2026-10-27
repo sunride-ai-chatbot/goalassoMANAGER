@@ -1,0 +1,308 @@
+{
+"key": "corinthians",
+"name_he": "קורינתיאנס",
+"source": "enwiki:SC Corinthians Paulista",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Hugo Souza",
+"en": "Hugo Souza",
+"pos": "GK",
+"age": 27,
+"nat": "Brazil",
+"value_m": 0.22,
+"qid": "Q64577950",
+"no": "1"
+},
+{
+"he": "Felipe Longo",
+"en": "Felipe Longo",
+"pos": "GK",
+"age": 21,
+"nat": "Brazil",
+"value_m": 0.12,
+"qid": "Q132859105",
+"no": "40"
+},
+{
+"he": "Kauê",
+"en": "Kauê",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.09,
+"qid": null,
+"no": "51"
+},
+{
+"he": "יורי אלברטו",
+"en": "Yuri Alberto",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.33,
+"qid": "Q43252427",
+"no": "9"
+},
+{
+"he": "Pedro Raul",
+"en": "Pedro Raul",
+"pos": "FW",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.3,
+"qid": "Q63699796",
+"no": "18"
+},
+{
+"he": "Kayke",
+"en": "Kayke",
+"pos": "FW",
+"age": 22,
+"nat": "Brazil",
+"value_m": 0.22,
+"qid": "Q126936258",
+"no": "31"
+},
+{
+"he": "מתאוזיניו (2000)",
+"en": "Matheuzinho",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.2,
+"qid": "Q59656516",
+"no": "2"
+},
+{
+"he": "ברנו בידון",
+"en": "Breno Bidon",
+"pos": "MF",
+"age": 21,
+"nat": "Brazil",
+"value_m": 0.2,
+"qid": "Q124357073",
+"no": "7"
+},
+{
+"he": "Rodrigo Garro",
+"en": "Rodrigo Garro",
+"pos": "MF",
+"age": 28,
+"nat": "Argentina",
+"value_m": 0.18,
+"qid": "Q61609728",
+"no": "8"
+},
+{
+"he": "Raniele",
+"en": "Raniele",
+"pos": "MF",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.18,
+"qid": "Q106714098",
+"no": "14"
+},
+{
+"he": "Pedro Milans",
+"en": "Pedro Milans",
+"pos": "DF",
+"age": 24,
+"nat": "Uruguay",
+"value_m": 0.18,
+"qid": "Q86588880",
+"no": "20"
+},
+{
+"he": "Charles",
+"en": "Charles",
+"pos": "MF",
+"age": 30,
+"nat": "Brazil",
+"value_m": 0.17,
+"qid": "Q61749236",
+"no": "35"
+},
+{
+"he": "Hugo Farias",
+"en": "Hugo Farias",
+"pos": "DF",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.17,
+"qid": "Q110761622",
+"no": "46"
+},
+{
+"he": "ממפיס דפאי",
+"en": "Memphis Depay",
+"pos": "FW",
+"age": 32,
+"nat": "Netherlands",
+"value_m": 0.16,
+"qid": "Q1894",
+"no": "10"
+},
+{
+"he": "João Pedro",
+"en": "João Pedro",
+"pos": "DF",
+"age": 22,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": "Q126710363",
+"no": "4"
+},
+{
+"he": "Vitinho",
+"en": "Vitinho",
+"pos": "MF",
+"age": 32,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": "Q14584722",
+"no": "11"
+},
+{
+"he": "Matheus Bidu",
+"en": "Matheus Bidu",
+"pos": "DF",
+"age": 27,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": "Q97355375",
+"no": "21"
+},
+{
+"he": "André",
+"en": "André",
+"pos": "MF",
+"age": 20,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": "Q136393833",
+"no": "49"
+},
+{
+"he": "Gui Negão",
+"en": "Gui Negão",
+"pos": "FW",
+"age": 19,
+"nat": "Brazil",
+"value_m": 0.13,
+"qid": "Q134884860",
+"no": "56"
+},
+{
+"he": "Alex Santana",
+"en": "Alex Santana",
+"pos": "MF",
+"age": 31,
+"nat": "Brazil",
+"value_m": 0.11,
+"qid": "Q27836019",
+"no": "80"
+},
+{
+"he": "Gustavo Henrique",
+"en": "Gustavo Henrique",
+"pos": "DF",
+"age": 33,
+"nat": "Brazil",
+"value_m": 0.1,
+"qid": "Q5621422",
+"no": "13"
+},
+{
+"he": "Fabrizio Angileri",
+"en": "Fabrizio Angileri",
+"pos": "DF",
+"age": 32,
+"nat": "Argentina",
+"value_m": 0.09,
+"qid": "Q28059275",
+"no": "26"
+},
+{
+"he": "Zakaria Labyad",
+"en": "Zakaria Labyad",
+"pos": "MF",
+"age": 33,
+"nat": "Morocco",
+"value_m": 0.09,
+"qid": "Q144616",
+"no": "52"
+},
+{
+"he": "Luiz Gustavo",
+"en": "Luiz Gustavo",
+"pos": "MF",
+"age": 20,
+"nat": "Brazil",
+"value_m": 0.09,
+"qid": "Q122641625",
+"no": "54"
+},
+{
+"he": "Dieguinho",
+"en": "Dieguinho",
+"pos": "FW",
+"age": 18,
+"nat": "Brazil",
+"value_m": 0.09,
+"qid": "Q135439519",
+"no": "61"
+},
+{
+"he": "ג'סי לינגארד",
+"en": "Jesse Lingard",
+"pos": "MF",
+"age": 33,
+"nat": "England",
+"value_m": 0.09,
+"qid": "Q6186603",
+"no": "77"
+},
+{
+"he": "אנדרה קרייו",
+"en": "André Carrillo",
+"pos": "MF",
+"age": 35,
+"nat": "Peru",
+"value_m": 0.08,
+"qid": "Q1155889",
+"no": "19"
+},
+{
+"he": "אנדרה רמאליו",
+"en": "André Ramalho",
+"pos": "DF",
+"age": 34,
+"nat": "Brazil",
+"value_m": 0.06,
+"qid": "Q522418",
+"no": "5"
+},
+{
+"he": "גבריאל פאוליסטה",
+"en": "Gabriel Paulista",
+"pos": "DF",
+"age": 35,
+"nat": "Brazil",
+"value_m": 0.05,
+"qid": "Q14602686",
+"no": "3"
+},
+{
+"he": "Iago Machado",
+"en": "Iago Machado",
+"pos": "DF",
+"age": 17,
+"nat": "Brazil",
+"value_m": 0.05,
+"qid": "Q141448192",
+"no": "55"
+}
+]
+}

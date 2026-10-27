@@ -108,14 +108,58 @@ def parse_squad(text):
     return out
 
 
-def wd_lookup(titles):
+FS_HE = re.compile(r'\{\{\s*שחקן סגל\s*\|(.*?)\}\}', re.S)
+POS_HE = {'שוער': 'GK', 'בלם': 'DF', 'מגן': 'DF', 'הגנה': 'DF', 'מגן שמאלי': 'DF', 'מגן ימני': 'DF', 'קשר': 'MF', 'קישור': 'MF', 'קשר הגנתי': 'MF',
+          'קשר התקפי': 'MF', 'חלוץ': 'FW', 'כנף': 'FW', 'התקפה': 'FW', 'מקשר': 'MF'}
+NAT_HE2EN = {'ישראל': 'Israel', 'גאנה': 'Ghana', 'חוף השנהב': "Côte d'Ivoire", 'ניגריה': 'Nigeria', 'ברזיל': 'Brazil', 'ארגנטינה': 'Argentina',
+             'סרביה': 'Serbia', 'קרואטיה': 'Croatia', 'סלובניה': 'Slovenia', 'בוסניה והרצגובינה': 'Bosnia-Herzegovina', 'צרפת': 'France',
+             'ספרד': 'Spain', 'פורטוגל': 'Portugal', 'אוקראינה': 'Ukraine', 'רוסיה': 'Russia', 'גאורגיה': 'Georgia', 'קמרון': 'Cameroon',
+             'סנגל': 'Senegal', 'מאלי': 'Mali', 'גינאה': 'Guinea', 'קונגו': 'Congo', 'הרפובליקה הדמוקרטית של קונגו': 'DR Congo', 'אורוגוואי': 'Uruguay',
+             'קולומביה': 'Colombia', 'צ\'ילה': 'Chile', 'מולדובה': 'Moldova', 'רומניה': 'Romania', 'בולגריה': 'Bulgaria', 'יוון': 'Greece', 'קפריסין': 'Cyprus',
+             'הולנד': 'Netherlands', 'בלגיה': 'Belgium', 'גרמניה': 'Germany', 'איטליה': 'Italy', 'אנגליה': 'England', 'ארצות הברית': 'United States',
+             'קנדה': 'Canada', 'אוסטרליה': 'Australia', 'ליטא': 'Lithuania', 'לטביה': 'Latvia', 'אסטוניה': 'Estonia', 'פולין': 'Poland', 'הונגריה': 'Hungary',
+             'צ\'כיה': 'Czech Republic', 'סלובקיה': 'Slovakia', 'אלבניה': 'Albania', 'קוסובו': 'Kosovo', 'מקדוניה הצפונית': 'North Macedonia',
+             'מונטנגרו': 'Montenegro', 'ארמניה': 'Armenia', 'אזרבייג\'ן': 'Azerbaijan', 'קזחסטן': 'Kazakhstan', 'אוזבקיסטן': 'Uzbekistan', 'יפן': 'Japan',
+             'דרום קוריאה': 'South Korea', 'ניו זילנד': 'New Zealand', 'טוגו': 'Togo', 'בנין': 'Benin', 'בורקינה פאסו': 'Burkina Faso', 'אנגולה': 'Angola',
+             'זימבבואה': 'Zimbabwe', 'דרום אפריקה': 'South Africa', 'אתיופיה': 'Ethiopia', 'מרוקו': 'Morocco', 'טוניסיה': 'Tunisia', 'מצרים': 'Egypt',
+             'גמביה': 'Gambia', 'סיירה לאון': 'Sierra Leone', 'ליבריה': 'Liberia', 'גבון': 'Gabon', 'זמביה': 'Zambia', 'מוזמביק': 'Mozambique',
+             'כף ורדה': 'Cape Verde', 'אלג\'יריה': 'Algeria', 'סקוטלנד': 'Scotland', 'אירלנד': 'Ireland', 'שוודיה': 'Sweden', 'נורווגיה': 'Norway',
+             'דנמרק': 'Denmark', 'פינלנד': 'Finland', 'אוסטריה': 'Austria', 'שווייץ': 'Switzerland', 'טורקיה': 'Turkey', 'מקסיקו': 'Mexico', 'פרו': 'Peru',
+             'פרגוואי': 'Paraguay', 'ונצואלה': 'Venezuela', 'אקוודור': 'Ecuador', 'בוליביה': 'Bolivia'}
+
+
+def parse_squad_he(text):
+    """Players from the Hebrew Wikipedia squad template ({{שחקן סגל|מס=|ארץ=|עמדה=|שם=[[...]]}})."""
+    out, seen = [], set()
+    for m in FS_HE.finditer(text):
+        f = {}
+        for part in re.split(r'\|(?=\s*[א-ת]+\s*=)', m.group(1)):
+            if '=' in part:
+                k, v = part.split('=', 1)
+                f[k.strip()] = v.strip()
+        name = f.get('שם', '')
+        lm = LINK.search(name)
+        title = lm.group(1).strip() if lm else None
+        disp = (lm.group(2) or lm.group(1)).strip() if lm else re.sub(r'<[^>]+>|\{\{[^}]*\}\}', '', name).strip()
+        disp = html.unescape(re.sub(r"''+", '', disp))
+        if not disp or disp in seen:
+            continue
+        seen.add(disp)
+        pos_he = re.sub(r'[\[\]]', '', f.get('עמדה', '')).split('|')[-1].strip()
+        nat_he = re.sub(r'[\[\]]', '', f.get('ארץ', '')).split('|')[-1].strip()
+        out.append({'no': f.get('מס', '').strip() or None, 'pos': POS_HE.get(pos_he), 'nat': NAT_HE2EN.get(nat_he, nat_he or None),
+                    'he': disp, 'title': title, 'loan': 'השאלה' in f.get('הערות', '') + f.get('אחר', '')})
+    return out
+
+
+def wd_lookup(titles, site='enwiki'):
     """enwiki title → {qid, he, dob, img, sl} (batches of 50)."""
     res = {}
     titles = [t for t in titles if t]
     for i in range(0, len(titles), 50):
         chunk = titles[i:i + 50]
         chunk = [t[0].upper() + t[1:] for t in chunk]   # link titles may start lower-case; `normalize` only works for one title
-        d = get(WD_API, {'action': 'wbgetentities', 'sites': 'enwiki', 'titles': '|'.join(chunk), 'props': 'labels|claims|sitelinks', 'languages': 'he|en',
+        d = get(WD_API, {'action': 'wbgetentities', 'sites': site, 'titles': '|'.join(chunk), 'props': 'labels|claims|sitelinks', 'languages': 'he|en',
                          'format': 'json', 'redirects': 'yes'})
         if 'error' in d:
             raise RuntimeError('wikidata: ' + d['error'].get('info', '?'))
@@ -124,7 +168,7 @@ def wd_lookup(titles):
         for q, e in d.get('entities', {}).items():
             if not q.startswith('Q'):
                 continue
-            t = e.get('sitelinks', {}).get('enwiki', {}).get('title')
+            t = e.get('sitelinks', {}).get(site, {}).get('title')
             if t:
                 by_title[t] = (q, e)
         for t in chunk:
@@ -145,7 +189,7 @@ def wd_lookup(titles):
                 v = c.get('mainsnak', {}).get('datavalue', {}).get('value')
                 if isinstance(v, str):
                     img = v; break
-            res[t] = {'qid': q, 'he': e.get('labels', {}).get('he', {}).get('value'), 'dob': dob, 'img': img, 'sl': len(e.get('sitelinks', {}))}
+            res[t] = {'qid': q, 'he': e.get('labels', {}).get('he', {}).get('value'), 'en': e.get('labels', {}).get('en', {}).get('value'), 'dob': dob, 'img': img, 'sl': len(e.get('sitelinks', {}))}
         time.sleep(.6)
     return res
 
@@ -177,6 +221,35 @@ def club_strength(name_he):
     return int(m.group(1)) if m else 60
 
 
+def leumit_squad(info, name_he, a):
+    """Israeli second tier: the Hebrew Wikipedia article carries the squad with Hebrew names; Wikidata adds the Latin name, age, face."""
+    try:
+        hd = get('https://he.wikipedia.org/w/api.php', {'action': 'parse', 'page': info['he_title'], 'prop': 'wikitext', 'redirects': 1, 'format': 'json', 'formatversion': 2})
+    except Exception as e:  # noqa: BLE001
+        print('hewiki', info['he_title'], e); return None
+    text = hd['parse']['wikitext']
+    rows = [r for r in parse_squad_he(text) if not r['loan'] and r['he']]
+    if not rows:
+        return None
+    wd = wd_lookup([r['title'] for r in rows], site='hewiki')
+    cs = club_strength(name_he)
+    players = []
+    for r in rows:
+        w = wd.get(r['title']) if r['title'] else None
+        age = age_of(w['dob']) if w else None
+        pos = r['pos'] or 'MF'
+        if age is None:
+            age = 25
+        en = (w and w['en']) or r['he']
+        players.append({'he': r['he'], 'en': en, 'pos': pos, 'age': age, 'nat': r['nat'] or 'Israel',
+                        'value_m': est_value(cs, age, pos, (w and w['qid']) or r['he'], (w and w['sl']) or 0),
+                        'qid': w['qid'] if w else None, 'img': w['img'] if w else None, 'no': r['no'], 'sl': (w and w['sl']) or 0})
+    if not any(p['pos'] == 'GK' for p in players):
+        return None
+    players.sort(key=lambda p: (p['pos'] != 'GK', -p['value_m']))
+    return players
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--group', default='world', choices=['world', 'leumit', 'all'])
@@ -196,6 +269,17 @@ def main():
             if only and key not in only:
                 continue
             try:
+                if g == 'leumit' and info.get('he_title'):
+                    players = leumit_squad(info, name_he, a)
+                    if players is None or len(players) < a.min:
+                        print('hewiki squad thin for', key, '- trying enwiki')
+                    else:
+                        out = {'key': key, 'name_he': name_he, 'source': 'hewiki:' + info['he_title'], 'fetched': time.strftime('%Y-%m-%d'), 'players': players[:30]}
+                        with open(os.path.join(a.out, key + '.json'), 'w', encoding='utf8') as fh:
+                            json.dump(out, fh, ensure_ascii=False, indent=0)
+                        report.append({'key': key, 'ok': True, 'n': len(out['players']), 'qid': sum(1 for p in out['players'] if p['qid']),
+                                       'he': len(out['players']), 'img': sum(1 for p in out['players'] if p['img']), 'src': 'hewiki'})
+                        print(report[-1]); time.sleep(.8); continue
                 text, title = wikitext(info['en'])
                 if a.debug and info.get('he_title'):   # Hebrew Wikipedia squad lists use their own templates: dump them for a parser
                     try:

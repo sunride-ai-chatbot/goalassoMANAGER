@@ -1,0 +1,208 @@
+{
+"key": "racing_santander",
+"name_he": "ראסינג סנטנדר",
+"source": "enwiki:Racing de Santander",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "יולן אגירסבאלה",
+"en": "Julen Agirrezabala",
+"pos": "GK",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.35,
+"qid": "Q106637226",
+"no": "13"
+},
+{
+"he": "Simon Eriksson",
+"en": "Simon Eriksson",
+"pos": "GK",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.16,
+"qid": null,
+"no": "1"
+},
+{
+"he": "אסייר ויאליברה",
+"en": "Asier Villalibre",
+"pos": "FW",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.44,
+"qid": "Q20492762",
+"no": "12"
+},
+{
+"he": "אארון מרטין",
+"en": "Aarón Martín",
+"pos": "DF",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.38,
+"qid": "Q27107030",
+"no": "3"
+},
+{
+"he": "Andrés Martín",
+"en": "Andrés Martín",
+"pos": "FW",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.38,
+"qid": "Q56599951",
+"no": "11"
+},
+{
+"he": "Juan Carlos Arana",
+"en": "Juan Carlos Arana",
+"pos": "FW",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.37,
+"qid": "Q111756912",
+"no": "9"
+},
+{
+"he": "איוואן מרטין",
+"en": "Iván Martín",
+"pos": "MF",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.37,
+"qid": "Q60667184",
+"no": "23"
+},
+{
+"he": "גיורגי גוליאשווילי",
+"en": "Giorgi Guliashvili",
+"pos": "FW",
+"age": 24,
+"nat": "Georgia",
+"value_m": 0.34,
+"qid": "Q110192429",
+"no": "7"
+},
+{
+"he": "Álvaro Mantilla",
+"en": "Álvaro Mantilla",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.29,
+"qid": "Q111819079",
+"no": "2"
+},
+{
+"he": "Íñigo Sainz-Maza",
+"en": "Íñigo Sainz-Maza",
+"pos": "MF",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.28,
+"qid": "Q111765559",
+"no": "6"
+},
+{
+"he": "פקונדו גונסאלס",
+"en": "Facundo González",
+"pos": "DF",
+"age": 23,
+"nat": "Uruguay",
+"value_m": 0.28,
+"qid": "Q114060630",
+"no": "16"
+},
+{
+"he": "Pablo Ramón",
+"en": "Pablo Ramón",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.27,
+"qid": "Q58100368",
+"no": "5"
+},
+{
+"he": "Iñigo Vicente",
+"en": "Iñigo Vicente",
+"pos": "MF",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.26,
+"qid": "Q54656757",
+"no": "10"
+},
+{
+"he": "Pablo García",
+"en": "Pablo García",
+"pos": "FW",
+"age": 20,
+"nat": "Spain",
+"value_m": 0.26,
+"qid": "Q131905115",
+"no": "15"
+},
+{
+"he": "Maguette Gueye",
+"en": "Maguette Gueye",
+"pos": "MF",
+"age": 23,
+"nat": "Senegal",
+"value_m": 0.24,
+"qid": "Q123312727",
+"no": "14"
+},
+{
+"he": "Manu Hernando",
+"en": "Manu Hernando",
+"pos": "DF",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.23,
+"qid": "Q83685262",
+"no": "4"
+},
+{
+"he": "Iker Luque",
+"en": "Iker Luque",
+"pos": "FW",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.22,
+"qid": "Q139666472",
+"no": "19"
+},
+{
+"he": "Pedro Felipe",
+"en": "Pedro Felipe",
+"pos": "DF",
+"age": 22,
+"nat": "Brazil",
+"value_m": 0.2,
+"qid": "Q134697354",
+"no": "22"
+},
+{
+"he": "Jorge Salinas",
+"en": "Jorge Salinas",
+"pos": "DF",
+"age": 19,
+"nat": "Spain",
+"value_m": 0.15,
+"qid": "Q131538274",
+"no": "17"
+},
+{
+"he": "סרחיו קנאלס",
+"en": "Sergio Canales",
+"pos": "MF",
+"age": 35,
+"nat": "Spain",
+"value_m": 0.13,
+"qid": "Q19422",
+"no": "20"
+}
+]
+}

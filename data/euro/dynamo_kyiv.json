@@ -1,0 +1,308 @@
+{
+"key": "dynamo_kyiv",
+"name_he": "דינמו קייב",
+"source": "enwiki:FC Dynamo Kyiv",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Ruslan Neshcheret",
+"en": "Ruslan Neshcheret",
+"pos": "GK",
+"age": 24,
+"nat": "Ukraine",
+"value_m": 0.39,
+"qid": "Q100165433",
+"no": "35"
+},
+{
+"he": "Valentyn Morhun",
+"en": "Valentyn Morhun",
+"pos": "GK",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.32,
+"qid": null,
+"no": "51"
+},
+{
+"he": "Vyacheslav Surkis",
+"en": "Vyacheslav Surkis",
+"pos": "GK",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.29,
+"qid": null,
+"no": "71"
+},
+{
+"he": "Illya Olkhovyi",
+"en": "Illya Olkhovyi",
+"pos": "GK",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.27,
+"qid": null,
+"no": "43"
+},
+{
+"he": "Denys Ihnatenko",
+"en": "Denys Ihnatenko",
+"pos": "GK",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.24,
+"qid": null,
+"no": "74"
+},
+{
+"he": "מיקולה שפרנקו",
+"en": "Mykola Shaparenko",
+"pos": "MF",
+"age": 27,
+"nat": "Ukraine",
+"value_m": 0.88,
+"qid": "Q19972577",
+"no": "10"
+},
+{
+"he": "וולודימיר בראז'קו",
+"en": "Volodymyr Brazhko",
+"pos": "MF",
+"age": 24,
+"nat": "Ukraine",
+"value_m": 0.79,
+"qid": "Q113585239",
+"no": "6"
+},
+{
+"he": "מיקולה מיכאילנקו",
+"en": "Mykola Mykhaylenko",
+"pos": "MF",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.76,
+"qid": "Q107647344",
+"no": "91"
+},
+{
+"he": "אדוארדו גררו",
+"en": "Eduardo Guerrero",
+"pos": "FW",
+"age": 26,
+"nat": "Panama",
+"value_m": 0.75,
+"qid": "Q48359321",
+"no": "39"
+},
+{
+"he": "Justin Lonwijk",
+"en": "Justin Lonwijk",
+"pos": "MF",
+"age": 26,
+"nat": "Suriname",
+"value_m": 0.73,
+"qid": "Q28925148",
+"no": "21"
+},
+{
+"he": "דניס פופוב",
+"en": "Denys Popov",
+"pos": "DF",
+"age": 27,
+"nat": "Ukraine",
+"value_m": 0.71,
+"qid": "Q56524763",
+"no": "4"
+},
+{
+"he": "ולנטין רובצ'ינסקי",
+"en": "Valentyn Rubchynskyi",
+"pos": "MF",
+"age": 24,
+"nat": "Ukraine",
+"value_m": 0.55,
+"qid": "Q113452564",
+"no": "15"
+},
+{
+"he": "Kostyantyn Vivcharenko",
+"en": "Kostyantyn Vivcharenko",
+"pos": "DF",
+"age": 24,
+"nat": "Ukraine",
+"value_m": 0.54,
+"qid": "Q113314320",
+"no": "2"
+},
+{
+"he": "מטביי פונומרנקו",
+"en": "Matviy Ponomarenko",
+"pos": "FW",
+"age": 20,
+"nat": "Ukraine",
+"value_m": 0.53,
+"qid": "Q117486689",
+"no": "11"
+},
+{
+"he": "אולכסנדר טימצ'יק",
+"en": "Oleksandr Tymchyk",
+"pos": "DF",
+"age": 29,
+"nat": "Ukraine",
+"value_m": 0.52,
+"qid": "Q27768803",
+"no": "18"
+},
+{
+"he": "אולכסנדר פיחאליונוק",
+"en": "Oleksandr Pikhalyonok",
+"pos": "MF",
+"age": 29,
+"nat": "Ukraine",
+"value_m": 0.47,
+"qid": "Q30099692",
+"no": "8"
+},
+{
+"he": "אולכסיי סיץ'",
+"en": "Oleksiy Sych",
+"pos": "DF",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.46,
+"qid": "Q88466926",
+"no": "5"
+},
+{
+"he": "Navin Malysh",
+"en": "Navin Malysh",
+"pos": "MF",
+"age": 23,
+"nat": "Ukraine",
+"value_m": 0.46,
+"qid": "Q122780706",
+"no": "23"
+},
+{
+"he": "Kristian Bilovar",
+"en": "Kristian Bilovar",
+"pos": "DF",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.46,
+"qid": "Q107643039",
+"no": "40"
+},
+{
+"he": "Nazar Voloshyn",
+"en": "Nazar Voloshyn",
+"pos": "MF",
+"age": 23,
+"nat": "Ukraine",
+"value_m": 0.45,
+"qid": "Q113585017",
+"no": "9"
+},
+{
+"he": "טאראס מיחאבקו",
+"en": "Taras Mykhavko",
+"pos": "DF",
+"age": 21,
+"nat": "Ukraine",
+"value_m": 0.44,
+"qid": "Q121865675",
+"no": "32"
+},
+{
+"he": "Shola Ogundana",
+"en": "Shola Ogundana",
+"pos": "FW",
+"age": 21,
+"nat": "Nigeria",
+"value_m": 0.42,
+"qid": "Q131194303",
+"no": "16"
+},
+{
+"he": "Vladyslav Zakharchenko",
+"en": "Vladyslav Zakharchenko",
+"pos": "DF",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.37,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Vladyslav Dubinchak",
+"en": "Vladyslav Dubinchak",
+"pos": "DF",
+"age": 28,
+"nat": "Ukraine",
+"value_m": 0.37,
+"qid": "Q60677522",
+"no": "44"
+},
+{
+"he": "Aliou Thiaré",
+"en": "Aliou Thiaré",
+"pos": "DF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.37,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Bohdan Redushko",
+"en": "Bohdan Redushko",
+"pos": "FW",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.37,
+"qid": null,
+"no": "70"
+},
+{
+"he": "Keasse Bah",
+"en": "Keasse Bah",
+"pos": "MF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.36,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Vladyslav Kabayev",
+"en": "Vladyslav Kabayev",
+"pos": "MF",
+"age": 30,
+"nat": "Ukraine",
+"value_m": 0.34,
+"qid": "Q17721891",
+"no": "22"
+},
+{
+"he": "ויטלי בויאלסקי",
+"en": "Vitaliy Buyalskyi",
+"pos": "MF",
+"age": 33,
+"nat": "Ukraine",
+"value_m": 0.29,
+"qid": "Q12086108",
+"no": "29"
+},
+{
+"he": "Maksym Korobov",
+"en": "Maksym Korobov",
+"pos": "DF",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.28,
+"qid": null,
+"no": "13"
+}
+]
+}

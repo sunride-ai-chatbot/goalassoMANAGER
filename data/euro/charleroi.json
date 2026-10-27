@@ -1,0 +1,308 @@
+{
+"key": "charleroi",
+"name_he": "שרלרואה",
+"source": "enwiki:Royal Charleroi SC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Mohamed Koné",
+"en": "Mohamed Koné",
+"pos": "GK",
+"age": 24,
+"nat": "Côte d'Ivoire",
+"value_m": 0.25,
+"qid": "Q126365092",
+"no": "30"
+},
+{
+"he": "Arthur Cremer",
+"en": "Arthur Cremer",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.17,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Lucas Degeye",
+"en": "Lucas Degeye",
+"pos": "GK",
+"age": 25,
+"nat": "France",
+"value_m": 0.17,
+"qid": null,
+"no": "88"
+},
+{
+"he": "Martin Delavallée",
+"en": "Martin Delavallée",
+"pos": "GK",
+"age": 22,
+"nat": "Belgium",
+"value_m": 0.15,
+"qid": "Q112653393",
+"no": "1"
+},
+{
+"he": "Arthur Mathot",
+"en": "Arthur Mathot",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.13,
+"qid": null,
+"no": "48"
+},
+{
+"he": "Ugo Decerf",
+"en": "Ugo Decerf",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.13,
+"qid": null,
+"no": "58"
+},
+{
+"he": "איהם אוסו",
+"en": "Aiham Ousou",
+"pos": "DF",
+"age": 26,
+"nat": "Syria",
+"value_m": 0.32,
+"qid": "Q100328348",
+"no": "4"
+},
+{
+"he": "Antoine Bernier",
+"en": "Antoine Bernier",
+"pos": "FW",
+"age": 28,
+"nat": "Belgium",
+"value_m": 0.28,
+"qid": "Q65938771",
+"no": "17"
+},
+{
+"he": "Antoine Colassin",
+"en": "Antoine Colassin",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.27,
+"qid": "Q83191252",
+"no": "25"
+},
+{
+"he": "Jakob Romsaas",
+"en": "Jakob Romsaas",
+"pos": "MF",
+"age": 22,
+"nat": "Norway",
+"value_m": 0.26,
+"qid": "Q111908509",
+"no": "8"
+},
+{
+"he": "Aurélien Scheidler",
+"en": "Aurélien Scheidler",
+"pos": "FW",
+"age": 28,
+"nat": "France",
+"value_m": 0.26,
+"qid": "Q66180094",
+"no": "21"
+},
+{
+"he": "Mardochee Nzita",
+"en": "Mardochee Nzita",
+"pos": "DF",
+"age": 26,
+"nat": "Belgium",
+"value_m": 0.26,
+"qid": "Q69994855",
+"no": "24"
+},
+{
+"he": "Yoan Apo",
+"en": "Yoan Apo",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.26,
+"qid": null,
+"no": "49"
+},
+{
+"he": "Ahmed Mulumba",
+"en": "Ahmed Mulumba",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.26,
+"qid": null,
+"no": "83"
+},
+{
+"he": "Nathan Okumu Monkoy",
+"en": "Nathan Okumu Monkoy",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.25,
+"qid": null,
+"no": "62"
+},
+{
+"he": "Kevin Van Den Kerkhof",
+"en": "Kevin Van Den Kerkhof",
+"pos": "DF",
+"age": 30,
+"nat": "Algeria",
+"value_m": 0.24,
+"qid": "Q113393909",
+"no": "3"
+},
+{
+"he": "Patrick Pflücke",
+"en": "Patrick Pflücke",
+"pos": "MF",
+"age": 29,
+"nat": "Germany",
+"value_m": 0.23,
+"qid": "Q18026672",
+"no": "14"
+},
+{
+"he": "Yassine Khalifi",
+"en": "Yassine Khalifi",
+"pos": "MF",
+"age": 21,
+"nat": "Morocco",
+"value_m": 0.23,
+"qid": "Q117026604",
+"no": "18"
+},
+{
+"he": "Freddy Mbemba",
+"en": "Freddy Mbemba",
+"pos": "FW",
+"age": 23,
+"nat": "Congo",
+"value_m": 0.22,
+"qid": "Q121333954",
+"no": "20"
+},
+{
+"he": "Mory Kera",
+"en": "Mory Kera",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.22,
+"qid": null,
+"no": "51"
+},
+{
+"he": "Cheick Keita",
+"en": "Cheick Keita",
+"pos": "DF",
+"age": 23,
+"nat": "Mali",
+"value_m": 0.22,
+"qid": "Q114951053",
+"no": "95"
+},
+{
+"he": "Thomas Lutte",
+"en": "Thomas Lutte",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.22,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Oscar Latteur",
+"en": "Oscar Latteur",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.22,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Noah Solheid",
+"en": "Noah Solheid",
+"pos": "DF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.21,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Léandro Diaz",
+"en": "Léandro Diaz",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.21,
+"qid": null,
+"no": "41"
+},
+{
+"he": "Boubakar Dembaga",
+"en": "Boubakar Dembaga",
+"pos": "MF",
+"age": 25,
+"nat": "France",
+"value_m": 0.2,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Massamba Sow",
+"en": "Massamba Sow",
+"pos": "DF",
+"age": 25,
+"nat": "France",
+"value_m": 0.2,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Tristan Hermans",
+"en": "Tristan Hermans",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.2,
+"qid": null,
+"no": "46"
+},
+{
+"he": "Sami Kolgjini",
+"en": "Sami Kolgjini",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.2,
+"qid": null,
+"no": "53"
+},
+{
+"he": "Naïm Marzouk",
+"en": "Naïm Marzouk",
+"pos": "DF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.2,
+"qid": null,
+"no": "81"
+}
+]
+}

@@ -1,0 +1,278 @@
+{
+"key": "freiburg",
+"name_he": "פרייבורג",
+"source": "enwiki:SC Freiburg",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "פלוריאן מילר",
+"en": "Florian Müller",
+"pos": "GK",
+"age": 28,
+"nat": "Germany",
+"value_m": 1.04,
+"qid": "Q24061542",
+"no": "21"
+},
+{
+"he": "מיו בקהאוס",
+"en": "Mio Backhaus",
+"pos": "GK",
+"age": 22,
+"nat": "Germany",
+"value_m": 0.69,
+"qid": "Q120763210",
+"no": "1"
+},
+{
+"he": "יאניק הות",
+"en": "Jannik Huth",
+"pos": "GK",
+"age": 32,
+"nat": "Germany",
+"value_m": 0.53,
+"qid": "Q18626179",
+"no": "24"
+},
+{
+"he": "יואיטו סוזוקי",
+"en": "Yuito Suzuki",
+"pos": "MF",
+"age": 24,
+"nat": "Japan",
+"value_m": 1.48,
+"qid": "Q85884126",
+"no": "14"
+},
+{
+"he": "Rihito Yamamoto",
+"en": "Rihito Yamamoto",
+"pos": "MF",
+"age": 24,
+"nat": "Japan",
+"value_m": 1.35,
+"qid": "Q60990665",
+"no": "20"
+},
+{
+"he": "איגור מטנוביץ'",
+"en": "Igor Matanović",
+"pos": "FW",
+"age": 23,
+"nat": "Croatia",
+"value_m": 1.2,
+"qid": "Q102399064",
+"no": "31"
+},
+{
+"he": "מקסימיליאן אגשטיין",
+"en": "Maximilian Eggestein",
+"pos": "MF",
+"age": 29,
+"nat": "Germany",
+"value_m": 1.11,
+"qid": "Q18580880",
+"no": "8"
+},
+{
+"he": "יאניק אנגלהרדט",
+"en": "Yannik Engelhardt",
+"pos": "MF",
+"age": 25,
+"nat": "Germany",
+"value_m": 1.08,
+"qid": "Q66725015",
+"no": "16"
+},
+{
+"he": "Jordy Makengo",
+"en": "Jordy Makengo",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 1.05,
+"qid": "Q107723702",
+"no": "33"
+},
+{
+"he": "יאן-ניקלאס בסטה",
+"en": "Niklas Beste",
+"pos": "MF",
+"age": 27,
+"nat": "Germany",
+"value_m": 0.97,
+"qid": "Q36391177",
+"no": "19"
+},
+{
+"he": "דרי שרהאנט",
+"en": "Derry Scherhant",
+"pos": "FW",
+"age": 23,
+"nat": "Germany",
+"value_m": 0.96,
+"qid": "Q113532157",
+"no": "7"
+},
+{
+"he": "מקס רוזנפלדר",
+"en": "Max Rosenfelder",
+"pos": "DF",
+"age": 23,
+"nat": "Germany",
+"value_m": 0.96,
+"qid": "Q107723629",
+"no": "37"
+},
+{
+"he": "קייסוקה גוטו",
+"en": "Keisuke Gotō",
+"pos": "FW",
+"age": 21,
+"nat": "Japan",
+"value_m": 0.94,
+"qid": "Q114736627",
+"no": "42"
+},
+{
+"he": "פטריק אוסטרהאגה",
+"en": "Patrick Osterhage",
+"pos": "MF",
+"age": 26,
+"nat": "Germany",
+"value_m": 0.88,
+"qid": "Q66432974",
+"no": "6"
+},
+{
+"he": "Florent Muslija",
+"en": "Florent Muslija",
+"pos": "MF",
+"age": 28,
+"nat": null,
+"value_m": 0.86,
+"qid": "Q30006877",
+"no": "23"
+},
+{
+"he": "פיליפ לינהארט",
+"en": "Philipp Lienhart",
+"pos": "DF",
+"age": 30,
+"nat": "Austria",
+"value_m": 0.85,
+"qid": "Q20078774",
+"no": "3"
+},
+{
+"he": "פיליפ טרוי",
+"en": "Philipp Treu",
+"pos": "DF",
+"age": 25,
+"nat": "Germany",
+"value_m": 0.8,
+"qid": "Q108114740",
+"no": "29"
+},
+{
+"he": "סיריאק אירייה",
+"en": "Cyriaque Irié",
+"pos": "FW",
+"age": 21,
+"nat": "Burkina Faso",
+"value_m": 0.76,
+"qid": "Q133808438",
+"no": "22"
+},
+{
+"he": "Berkay Yılmaz",
+"en": "Berkay Yılmaz",
+"pos": "DF",
+"age": 21,
+"nat": "Turkey",
+"value_m": 0.7,
+"qid": "Q123510066",
+"no": "27"
+},
+{
+"he": "Rouven Tarnutzer",
+"en": "Rouven Tarnutzer",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.58,
+"qid": null,
+"no": "39"
+},
+{
+"he": "לוקאס הלר",
+"en": "Lucas Höler",
+"pos": "FW",
+"age": 32,
+"nat": "Germany",
+"value_m": 0.53,
+"qid": "Q20871889",
+"no": "9"
+},
+{
+"he": "מתיאס גינטר",
+"en": "Matthias Ginter",
+"pos": "DF",
+"age": 32,
+"nat": "Germany",
+"value_m": 0.47,
+"qid": "Q129109",
+"no": "28"
+},
+{
+"he": "וינצ'נצו גריפו",
+"en": "Vincenzo Grifo",
+"pos": "MF",
+"age": 33,
+"nat": "Italy",
+"value_m": 0.44,
+"qid": "Q1756602",
+"no": "32"
+},
+{
+"he": "Bruno Ogbus",
+"en": "Bruno Ogbus",
+"pos": "DF",
+"age": 20,
+"nat": "Switzerland",
+"value_m": 0.44,
+"qid": "Q123505973",
+"no": "43"
+},
+{
+"he": "כריסטיאן גונטר",
+"en": "Christian Günter",
+"pos": "DF",
+"age": 33,
+"nat": "Germany",
+"value_m": 0.43,
+"qid": "Q2668870",
+"no": "30"
+},
+{
+"he": "Anthony Jung",
+"en": "Anthony Jung",
+"pos": "DF",
+"age": 34,
+"nat": "Germany",
+"value_m": 0.32,
+"qid": "Q573461",
+"no": "5"
+},
+{
+"he": "Lukas Kübler",
+"en": "Lukas Kübler",
+"pos": "DF",
+"age": 34,
+"nat": "Germany",
+"value_m": 0.29,
+"qid": "Q4419904",
+"no": "17"
+}
+]
+}

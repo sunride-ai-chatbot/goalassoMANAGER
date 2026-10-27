@@ -1,0 +1,298 @@
+{
+"key": "go_ahead",
+"name_he": "חו אהד איגלס",
+"source": "enwiki:Go Ahead Eagles",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Kjetil Haug",
+"en": "Kjetil Haug",
+"pos": "GK",
+"age": 28,
+"nat": "Norway",
+"value_m": 0.29,
+"qid": "Q54070132",
+"no": "1"
+},
+{
+"he": "Nando Verdoni",
+"en": "Nando Verdoni",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.21,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Thomas Hulleman",
+"en": "Thomas Hulleman",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.17,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Nick Marsman",
+"en": "Nick Marsman",
+"pos": "GK",
+"age": 35,
+"nat": "Netherlands",
+"value_m": 0.09,
+"qid": "Q1855688",
+"no": "22"
+},
+{
+"he": "טיבו באטן",
+"en": "Thibo Baeten",
+"pos": "FW",
+"age": 24,
+"nat": "Belgium",
+"value_m": 0.45,
+"qid": "Q100546785",
+"no": "23"
+},
+{
+"he": "Richonell Margaret",
+"en": "Richonell Margaret",
+"pos": "FW",
+"age": 26,
+"nat": "Suriname",
+"value_m": 0.44,
+"qid": "Q60677520",
+"no": "18"
+},
+{
+"he": "דין ג'יימס",
+"en": "Dean James",
+"pos": "DF",
+"age": 26,
+"nat": "Indonesia",
+"value_m": 0.41,
+"qid": "Q101458735",
+"no": "5"
+},
+{
+"he": "Stefán Ingi Sigurðarson",
+"en": "Stefán Ingi Sigurðarson",
+"pos": "FW",
+"age": 25,
+"nat": "Iceland",
+"value_m": 0.41,
+"qid": "Q131321942",
+"no": "9"
+},
+{
+"he": "Oskar Sivertsen",
+"en": "Oskar Sivertsen",
+"pos": "FW",
+"age": 22,
+"nat": "Norway",
+"value_m": 0.4,
+"qid": "Q104629337",
+"no": "11"
+},
+{
+"he": "Evert Linthorst",
+"en": "Evert Linthorst",
+"pos": "MF",
+"age": 26,
+"nat": "Netherlands",
+"value_m": 0.39,
+"qid": "Q52160293",
+"no": "8"
+},
+{
+"he": "Søren Tengstedt",
+"en": "Søren Tengstedt",
+"pos": "FW",
+"age": 26,
+"nat": "Denmark",
+"value_m": 0.39,
+"qid": "Q66394462",
+"no": "10"
+},
+{
+"he": "Alfons Sampsted",
+"en": "Alfons Sampsted",
+"pos": "DF",
+"age": 28,
+"nat": "Iceland",
+"value_m": 0.38,
+"qid": "Q30586199",
+"no": "2"
+},
+{
+"he": "Victor Edvardsen",
+"en": "Victor Edvardsen",
+"pos": "FW",
+"age": 30,
+"nat": "Sweden",
+"value_m": 0.34,
+"qid": "Q97386372",
+"no": "16"
+},
+{
+"he": "Erik Flataker",
+"en": "Erik Flataker",
+"pos": "FW",
+"age": 21,
+"nat": "Norway",
+"value_m": 0.31,
+"qid": "Q112123592",
+"no": "29"
+},
+{
+"he": "Melle Meulensteen",
+"en": "Melle Meulensteen",
+"pos": "MF",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 0.3,
+"qid": "Q47510522",
+"no": "21"
+},
+{
+"he": "{{ill|Ofosu Boakye|nl",
+"en": "{{ill|Ofosu Boakye|nl",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.3,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Mathis Suray",
+"en": "Mathis Suray",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.28,
+"qid": "Q102792890",
+"no": "17"
+},
+{
+"he": "Julius Dirksen",
+"en": "Julius Dirksen",
+"pos": "DF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.28,
+"qid": "Q114137119",
+"no": "26"
+},
+{
+"he": "תומאס גאלבס",
+"en": "Tomas Galvez",
+"pos": "DF",
+"age": 21,
+"nat": "Finland",
+"value_m": 0.28,
+"qid": "Q116161685",
+"no": "27"
+},
+{
+"he": "Giovanni van Zwam",
+"en": "Giovanni van Zwam",
+"pos": "DF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.27,
+"qid": "Q122839843",
+"no": "25"
+},
+{
+"he": "Pim Saathof",
+"en": "Pim Saathof",
+"pos": "DF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.27,
+"qid": "Q113471266",
+"no": "28"
+},
+{
+"he": "Robbin Weijenberg",
+"en": "Robbin Weijenberg",
+"pos": "MF",
+"age": 21,
+"nat": "Netherlands",
+"value_m": 0.25,
+"qid": "Q129644996",
+"no": "15"
+},
+{
+"he": "{{ill|Yassir Salah Rahmouni|it||nl",
+"en": "{{ill|Yassir Salah Rahmouni|it||nl",
+"pos": "MF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.25,
+"qid": null,
+"no": "34"
+},
+{
+"he": "{{ill|Tino Jukić|it||nl",
+"en": "{{ill|Tino Jukić|it||nl",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.22,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Terence Lantveld",
+"en": "Terence Lantveld",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.22,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Joris Kramer",
+"en": "Joris Kramer",
+"pos": "DF",
+"age": 30,
+"nat": "Netherlands",
+"value_m": 0.2,
+"qid": "Q27893964",
+"no": "4"
+},
+{
+"he": "{{ill|Eus Waayers|nl||uk|Ейс Ваєрс",
+"en": "{{ill|Eus Waayers|nl||uk|Ейс Ваєрс",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.2,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Dani Tijman",
+"en": "Dani Tijman",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.2,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Gerrit Nauber",
+"en": "Gerrit Nauber",
+"pos": "DF",
+"age": 34,
+"nat": "Germany",
+"value_m": 0.09,
+"qid": "Q16679793",
+"no": "3"
+}
+]
+}

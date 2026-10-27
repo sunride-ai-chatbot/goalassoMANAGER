@@ -1,0 +1,308 @@
+{
+"key": "boca",
+"name_he": "בוקה ג'וניורס",
+"source": "enwiki:Boca Juniors",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Leandro Brey",
+"en": "Leandro Brey",
+"pos": "GK",
+"age": 23,
+"nat": "Argentina",
+"value_m": 0.17,
+"qid": "Q106687895",
+"no": "12"
+},
+{
+"he": "אלברו מונטרו",
+"en": "Álvaro Montero",
+"pos": "GK",
+"age": 31,
+"nat": "Colombia",
+"value_m": 0.12,
+"qid": "Q20645743",
+"no": "1"
+},
+{
+"he": "אגוסטין מרצ'סין",
+"en": "Agustín Marchesín",
+"pos": "GK",
+"age": 81,
+"nat": "Argentina",
+"value_m": 0.05,
+"qid": "Q2479934",
+"no": null
+},
+{
+"he": "Javier García",
+"en": "Javier García",
+"pos": "GK",
+"age": 39,
+"nat": "Argentina",
+"value_m": 0.04,
+"qid": "Q2733986",
+"no": "13"
+},
+{
+"he": "Williams Alarcón",
+"en": "Williams Alarcón",
+"pos": "MF",
+"age": 25,
+"nat": "Chile",
+"value_m": 0.3,
+"qid": "Q63345496",
+"no": "15"
+},
+{
+"he": "לאוטרו בלנקו",
+"en": "Lautaro Blanco",
+"pos": "DF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.26,
+"qid": "Q101208823",
+"no": "3"
+},
+{
+"he": "סנטיאגו ליאונל אסקאסיבר",
+"en": "Santiago Ascacíbar",
+"pos": "MF",
+"age": 29,
+"nat": "Argentina",
+"value_m": 0.24,
+"qid": "Q23927885",
+"no": "25"
+},
+{
+"he": "Tomás Belmonte",
+"en": "Tomás Belmonte",
+"pos": "MF",
+"age": 28,
+"nat": "Argentina",
+"value_m": 0.23,
+"qid": "Q30881095",
+"no": "8"
+},
+{
+"he": "Carlos Palacios",
+"en": "Carlos Palacios",
+"pos": "MF",
+"age": 26,
+"nat": "Chile",
+"value_m": 0.22,
+"qid": "Q56248486",
+"no": "7"
+},
+{
+"he": "אלן ולסקו",
+"en": "Alan Velasco",
+"pos": "MF",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.22,
+"qid": "Q64358831",
+"no": "20"
+},
+{
+"he": "Adam Bareiro",
+"en": "Adam Bareiro",
+"pos": "FW",
+"age": 30,
+"nat": "Paraguay",
+"value_m": 0.22,
+"qid": "Q60286902",
+"no": "28"
+},
+{
+"he": "Ayrton Costa",
+"en": "Ayrton Costa",
+"pos": "DF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.22,
+"qid": "Q103967727",
+"no": "32"
+},
+{
+"he": "מילטון דלגאדו",
+"en": "Milton Delgado",
+"pos": "MF",
+"age": 21,
+"nat": "Argentina",
+"value_m": 0.19,
+"qid": "Q126672677",
+"no": "18"
+},
+{
+"he": "לאוטרו די לוליו",
+"en": "Lautaro Di Lollo",
+"pos": "DF",
+"age": 22,
+"nat": "Argentina",
+"value_m": 0.18,
+"qid": "Q116196701",
+"no": "2"
+},
+{
+"he": "Milton Giménez",
+"en": "Milton Giménez",
+"pos": "FW",
+"age": 30,
+"nat": "Argentina",
+"value_m": 0.18,
+"qid": "Q63384958",
+"no": "9"
+},
+{
+"he": "Miguel Merentiel",
+"en": "Miguel Merentiel",
+"pos": "FW",
+"age": 30,
+"nat": "Uruguay",
+"value_m": 0.18,
+"qid": "Q35066509",
+"no": "16"
+},
+{
+"he": "Marco Pellegrino",
+"en": "Marco Pellegrino",
+"pos": "DF",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.18,
+"qid": "Q121477371",
+"no": "26"
+},
+{
+"he": "Leandro Lozano",
+"en": "Leandro Lozano",
+"pos": "DF",
+"age": 27,
+"nat": "Uruguay",
+"value_m": 0.17,
+"qid": "Q88094345",
+"no": "17"
+},
+{
+"he": "Malcom Braida",
+"en": "Malcom Braida",
+"pos": "MF",
+"age": 29,
+"nat": "Argentina",
+"value_m": 0.17,
+"qid": "Q61607620",
+"no": "27"
+},
+{
+"he": "לאנדרו פארדס",
+"en": "Leandro Paredes",
+"pos": "MF",
+"age": 32,
+"nat": "Argentina",
+"value_m": 0.16,
+"qid": "Q630170",
+"no": "5"
+},
+{
+"he": "Tomás Aranda",
+"en": "Tomás Aranda",
+"pos": "MF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.15,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Agustín Heredia",
+"en": "Agustín Heredia",
+"pos": "DF",
+"age": 29,
+"nat": "Argentina",
+"value_m": 0.15,
+"qid": "Q44606399",
+"no": null
+},
+{
+"he": "Sebastián Villa",
+"en": "Sebastián Villa",
+"pos": "MF",
+"age": 30,
+"nat": "Colombia",
+"value_m": 0.14,
+"qid": "Q47494583",
+"no": "22"
+},
+{
+"he": "Walter Molas",
+"en": "Walter Molas",
+"pos": "DF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.14,
+"qid": null,
+"no": null
+},
+{
+"he": "לאונל פלורס",
+"en": "Leonel Flores",
+"pos": "FW",
+"age": 19,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q140799546",
+"no": "19"
+},
+{
+"he": "Camilo Rey Domenech",
+"en": "Camilo Rey Domenech",
+"pos": "MF",
+"age": 20,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q131933630",
+"no": "23"
+},
+{
+"he": "Dylan Gorosito",
+"en": "Dylan Gorosito",
+"pos": "DF",
+"age": 20,
+"nat": "Argentina",
+"value_m": 0.12,
+"qid": "Q123457501",
+"no": "24"
+},
+{
+"he": "Nicolás Figal",
+"en": "Nicolás Figal",
+"pos": "DF",
+"age": 32,
+"nat": "Argentina",
+"value_m": 0.09,
+"qid": "Q17635436",
+"no": "4"
+},
+{
+"he": "אנחל רומרו",
+"en": "Ángel Romero",
+"pos": "FW",
+"age": 34,
+"nat": "Paraguay",
+"value_m": 0.09,
+"qid": "Q15960510",
+"no": "11"
+},
+{
+"he": "אנר ולנסיה",
+"en": "Enner Valencia",
+"pos": "FW",
+"age": 36,
+"nat": "Ecuador",
+"value_m": 0.08,
+"qid": "Q2843080",
+"no": "30"
+}
+]
+}

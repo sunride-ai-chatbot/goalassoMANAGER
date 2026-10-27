@@ -1,0 +1,308 @@
+{
+"key": "sao_paulo",
+"name_he": "סאו פאולו",
+"source": "enwiki:São Paulo FC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Carlos Coronel",
+"en": "Carlos Coronel",
+"pos": "GK",
+"age": 29,
+"nat": "Paraguay",
+"value_m": 0.14,
+"qid": "Q21518688",
+"no": "31"
+},
+{
+"he": "João Pedro",
+"en": "João Pedro",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.13,
+"qid": null,
+"no": "41"
+},
+{
+"he": "Felipe Preis",
+"en": "Felipe Preis",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.13,
+"qid": null,
+"no": "52"
+},
+{
+"he": "Young",
+"en": "Young",
+"pos": "GK",
+"age": 24,
+"nat": "Brazil",
+"value_m": 0.12,
+"qid": "Q126709594",
+"no": "50"
+},
+{
+"he": "רפאל פירס מונטיירו",
+"en": "Rafael",
+"pos": "GK",
+"age": 37,
+"nat": "Brazil",
+"value_m": 0.04,
+"qid": "Q3928964",
+"no": "23"
+},
+{
+"he": "Ferreira",
+"en": "Ferreira",
+"pos": "FW",
+"age": 28,
+"nat": "Brazil",
+"value_m": 0.27,
+"qid": "Q77896856",
+"no": "11"
+},
+{
+"he": "Marcos Antônio",
+"en": "Marcos Antônio",
+"pos": "MF",
+"age": 26,
+"nat": "Brazil",
+"value_m": 0.26,
+"qid": "Q60497160",
+"no": "8"
+},
+{
+"he": "דמיאן בובאדייה",
+"en": "Damián Bobadilla",
+"pos": "MF",
+"age": 25,
+"nat": "Paraguay",
+"value_m": 0.26,
+"qid": "Q116223348",
+"no": "16"
+},
+{
+"he": "אאורליו בוטה",
+"en": "Aurélio Buta",
+"pos": "DF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.22,
+"qid": "Q26251755",
+"no": "20"
+},
+{
+"he": "פבלו מאיה",
+"en": "Pablo Maia",
+"pos": "MF",
+"age": 24,
+"nat": "Brazil",
+"value_m": 0.21,
+"qid": "Q110914598",
+"no": "29"
+},
+{
+"he": "Newton",
+"en": "Newton",
+"pos": "MF",
+"age": 26,
+"nat": "Brazil",
+"value_m": 0.2,
+"qid": "Q123925160",
+"no": "28"
+},
+{
+"he": "André Silva",
+"en": "André Silva",
+"pos": "FW",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.18,
+"qid": "Q61776748",
+"no": "17"
+},
+{
+"he": "Lucca Marques",
+"en": "Lucca Marques",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.17,
+"qid": null,
+"no": "45"
+},
+{
+"he": "Sabino",
+"en": "Sabino",
+"pos": "DF",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.16,
+"qid": "Q61594859",
+"no": "35"
+},
+{
+"he": "דומינגוש דוארטה",
+"en": "Domingos Duarte",
+"pos": "DF",
+"age": 31,
+"nat": "Portugal",
+"value_m": 0.15,
+"qid": "Q18205836",
+"no": "22"
+},
+{
+"he": "Tetê",
+"en": "Tetê",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.15,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Victor Sá",
+"en": "Victor Sá",
+"pos": "FW",
+"age": 32,
+"nat": "Brazil",
+"value_m": 0.14,
+"qid": "Q22342742",
+"no": "27"
+},
+{
+"he": "Marques Rickelme <!-- {{citation needed",
+"en": "Marques Rickelme <!-- {{citation needed",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.14,
+"qid": null,
+"no": null
+},
+{
+"he": "Jonathan Calleri",
+"en": "Jonathan Calleri",
+"pos": "FW",
+"age": 32,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q16298050",
+"no": "9"
+},
+{
+"he": "Enzo Díaz",
+"en": "Enzo Díaz",
+"pos": "DF",
+"age": 30,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q58303243",
+"no": "13"
+},
+{
+"he": "Matheus Belém",
+"en": "Matheus Belém",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.13,
+"qid": null,
+"no": null
+},
+{
+"he": "Gustavo Santana",
+"en": "Gustavo Santana",
+"pos": "FW",
+"age": 20,
+"nat": "Brazil",
+"value_m": 0.12,
+"qid": "Q141893539",
+"no": "43"
+},
+{
+"he": "Pedro Ferreira",
+"en": "Pedro Ferreira",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.12,
+"qid": null,
+"no": "46"
+},
+{
+"he": "Mateus Manso",
+"en": "Mateus Manso",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.12,
+"qid": null,
+"no": null
+},
+{
+"he": "ונדל",
+"en": "Wendell",
+"pos": "DF",
+"age": 33,
+"nat": "Brazil",
+"value_m": 0.11,
+"qid": "Q15131398",
+"no": "18"
+},
+{
+"he": "Luciano",
+"en": "Luciano",
+"pos": "FW",
+"age": 33,
+"nat": "Brazil",
+"value_m": 0.1,
+"qid": "Q15966749",
+"no": "10"
+},
+{
+"he": "Danielzinho",
+"en": "Danielzinho",
+"pos": "MF",
+"age": 31,
+"nat": "Brazil",
+"value_m": 0.1,
+"qid": "Q55364035",
+"no": "94"
+},
+{
+"he": "לוקאס מורה",
+"en": "Lucas Moura",
+"pos": "MF",
+"age": 34,
+"nat": "Brazil",
+"value_m": 0.09,
+"qid": "Q312886",
+"no": "7"
+},
+{
+"he": "Djhordney",
+"en": "Djhordney",
+"pos": "MF",
+"age": 19,
+"nat": "Brazil",
+"value_m": 0.09,
+"qid": "Q138478867",
+"no": "48"
+},
+{
+"he": "Ryan Francisco",
+"en": "Ryan Francisco",
+"pos": "FW",
+"age": 19,
+"nat": "Brazil",
+"value_m": 0.09,
+"qid": "Q124663099",
+"no": "49"
+}
+]
+}

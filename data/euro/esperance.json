@@ -1,0 +1,308 @@
+{
+"key": "esperance",
+"name_he": "אספראנס טוניס",
+"source": "enwiki:Espérance Sportive de Tunis",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Amenallah Memmiche",
+"en": "Amenallah Memmiche",
+"pos": "GK",
+"age": 22,
+"nat": "Tunisia",
+"value_m": 0.14,
+"qid": "Q126231513",
+"no": "1"
+},
+{
+"he": "Montasser Essid",
+"en": "Montasser Essid",
+"pos": "GK",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.09,
+"qid": null,
+"no": "22"
+},
+{
+"he": "בשיר בן סעיד",
+"en": "Bechir Ben Saïd",
+"pos": "GK",
+"age": 33,
+"nat": "Tunisia",
+"value_m": 0.07,
+"qid": "Q104440763",
+"no": "32"
+},
+{
+"he": "חסוס קסטילו",
+"en": "Jesús Castillo",
+"pos": "MF",
+"age": 25,
+"nat": "Peru",
+"value_m": 0.32,
+"qid": "Q110321491",
+"no": "16"
+},
+{
+"he": "Imad Faraj",
+"en": "Imad Faraj",
+"pos": "FW",
+"age": 27,
+"nat": "France",
+"value_m": 0.3,
+"qid": "Q38429432",
+"no": "7"
+},
+{
+"he": "Lucas Ribeiro",
+"en": "Lucas Ribeiro",
+"pos": "FW",
+"age": 27,
+"nat": "Brazil",
+"value_m": 0.29,
+"qid": "Q97941158",
+"no": "10"
+},
+{
+"he": "חאג' מחמוד",
+"en": "Mohamed Belhadj Mahmoud",
+"pos": "MF",
+"age": 26,
+"nat": "Tunisia",
+"value_m": 0.27,
+"qid": "Q108653548",
+"no": "20"
+},
+{
+"he": "חמזה רפיעה",
+"en": "Hamza Rafia",
+"pos": "MF",
+"age": 27,
+"nat": "Tunisia",
+"value_m": 0.25,
+"qid": "Q64736331",
+"no": "8"
+},
+{
+"he": "Florian Danho",
+"en": "Florian Danho",
+"pos": "FW",
+"age": 25,
+"nat": "France",
+"value_m": 0.23,
+"qid": "Q124649916",
+"no": "9"
+},
+{
+"he": "ראאד א-שיח'אוי",
+"en": "Raed Chikhaoui",
+"pos": "DF",
+"age": 22,
+"nat": "Tunisia",
+"value_m": 0.23,
+"qid": "Q139816192",
+"no": "25"
+},
+{
+"he": "מוחמד דראגר",
+"en": "Mohamed Dräger",
+"pos": "DF",
+"age": 30,
+"nat": "Tunisia",
+"value_m": 0.22,
+"qid": "Q40272807",
+"no": "13"
+},
+{
+"he": "Hazem Mastouri",
+"en": "Hazem Mastouri",
+"pos": "FW",
+"age": 29,
+"nat": "Tunisia",
+"value_m": 0.2,
+"qid": "Q134699960",
+"no": "27"
+},
+{
+"he": "Elyas Bouzaiene",
+"en": "Elyas Bouzaiene",
+"pos": "DF",
+"age": 28,
+"nat": "Sweden",
+"value_m": 0.2,
+"qid": "Q113272697",
+"no": null
+},
+{
+"he": "Achref Jabri",
+"en": "Achref Jabri",
+"pos": "FW",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.18,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Namory Keita",
+"en": "Namory Keita",
+"pos": "FW",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.18,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Youssef Becha",
+"en": "Youssef Becha",
+"pos": "FW",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.17,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Adem Alilet",
+"en": "Adem Alilet",
+"pos": "DF",
+"age": 27,
+"nat": "Algeria",
+"value_m": 0.17,
+"qid": "Q72939814",
+"no": "28"
+},
+{
+"he": "Salmen Trabelsi",
+"en": "Salmen Trabelsi",
+"pos": "FW",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.17,
+"qid": null,
+"no": null
+},
+{
+"he": "Khalil Guenichi",
+"en": "Khalil Guenichi",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.16,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Moez Hadj Ali",
+"en": "Moez Hadj Ali",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.16,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Arkem Taboubi",
+"en": "Arkem Taboubi",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.15,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Koussay Smiri",
+"en": "Koussay Smiri",
+"pos": "DF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.15,
+"qid": null,
+"no": null
+},
+{
+"he": "Chiheb Jebali",
+"en": "Chiheb Jebali",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.14,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Aziz Fellah",
+"en": "Aziz Fellah",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.14,
+"qid": null,
+"no": null
+},
+{
+"he": "Nidhal Laifi",
+"en": "Nidhal Laifi",
+"pos": "DF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.13,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Elies Araar",
+"en": "Elies Araar",
+"pos": "DF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.12,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Marouane Sahraoui",
+"en": "Marouane Sahraoui",
+"pos": "DF",
+"age": 30,
+"nat": "Tunisia",
+"value_m": 0.12,
+"qid": "Q29052504",
+"no": "4"
+},
+{
+"he": "Khairi Meddaoui",
+"en": "Khairi Meddaoui",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.12,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Haytham Dhaou",
+"en": "Haytham Dhaou",
+"pos": "MF",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.12,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Abdramane Konaté",
+"en": "Abdramane Konaté",
+"pos": "MF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.12,
+"qid": null,
+"no": "21"
+}
+]
+}

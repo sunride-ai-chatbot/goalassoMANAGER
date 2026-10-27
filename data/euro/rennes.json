@@ -1,0 +1,238 @@
+{
+"key": "rennes",
+"name_he": "רן",
+"source": "enwiki:Stade Rennais FC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Nicolas Lemaître",
+"en": "Nicolas Lemaître",
+"pos": "GK",
+"age": 29,
+"nat": "France",
+"value_m": 0.62,
+"qid": "Q49030166",
+"no": "16"
+},
+{
+"he": "ברייס סמבה",
+"en": "Brice Samba",
+"pos": "GK",
+"age": 32,
+"nat": "France",
+"value_m": 0.42,
+"qid": "Q15627817",
+"no": "30"
+},
+{
+"he": "Kilian Belazzoug",
+"en": "Kilian Belazzoug",
+"pos": "GK",
+"age": 25,
+"nat": "Algeria",
+"value_m": 0.37,
+"qid": null,
+"no": "60"
+},
+{
+"he": "Issa Soumaré",
+"en": "Issa Soumaré",
+"pos": "FW",
+"age": 25,
+"nat": "Senegal",
+"value_m": 1.26,
+"qid": "Q73456589",
+"no": "90"
+},
+{
+"he": "Arnaud Nordin",
+"en": "Arnaud Nordin",
+"pos": "FW",
+"age": 28,
+"nat": "France",
+"value_m": 1.23,
+"qid": "Q27049316",
+"no": "70"
+},
+{
+"he": "אסטבן לפול",
+"en": "Esteban Lepaul",
+"pos": "FW",
+"age": 26,
+"nat": "France",
+"value_m": 1.21,
+"qid": "Q124357777",
+"no": "9"
+},
+{
+"he": "סבסטיאן שימאנסקי",
+"en": "Sebastian Szymański",
+"pos": "MF",
+"age": 27,
+"nat": "Poland",
+"value_m": 1.13,
+"qid": "Q25935553",
+"no": "17"
+},
+{
+"he": "Mahdi Camara",
+"en": "Mahdi Camara",
+"pos": "MF",
+"age": 28,
+"nat": "France",
+"value_m": 1.11,
+"qid": "Q56064757",
+"no": "45"
+},
+{
+"he": "לודביק בלאס",
+"en": "Ludovic Blas",
+"pos": "MF",
+"age": 28,
+"nat": "Martinique",
+"value_m": 1.1,
+"qid": "Q22003400",
+"no": "10"
+},
+{
+"he": "Anthony Rouault",
+"en": "Anthony Rouault",
+"pos": "DF",
+"age": 25,
+"nat": "France",
+"value_m": 1.07,
+"qid": "Q69949474",
+"no": "24"
+},
+{
+"he": "מוסא א-תעמרי",
+"en": "Musa Al-Taamari",
+"pos": "FW",
+"age": 29,
+"nat": "Jordan",
+"value_m": 0.98,
+"qid": "Q27909473",
+"no": "11"
+},
+{
+"he": "Bryan Reynolds",
+"en": "Bryan Reynolds",
+"pos": "DF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.96,
+"qid": "Q62653604",
+"no": "14"
+},
+{
+"he": "דז'אווי סיסה",
+"en": "Djaoui Cissé",
+"pos": "MF",
+"age": 22,
+"nat": "France",
+"value_m": 0.88,
+"qid": "Q125353864",
+"no": "6"
+},
+{
+"he": "אליעזר מאיינדה",
+"en": "Eliezer Mayenda",
+"pos": "FW",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.85,
+"qid": "Q110186586",
+"no": "12"
+},
+{
+"he": "Quentin Merlin",
+"en": "Quentin Merlin",
+"pos": "DF",
+"age": 24,
+"nat": "France",
+"value_m": 0.85,
+"qid": "Q105426428",
+"no": "26"
+},
+{
+"he": "Valentin Rongier",
+"en": "Valentin Rongier",
+"pos": "MF",
+"age": 31,
+"nat": "France",
+"value_m": 0.74,
+"qid": "Q18395205",
+"no": "21"
+},
+{
+"he": "Ayanda Sishuba",
+"en": "Ayanda Sishuba",
+"pos": "MF",
+"age": 21,
+"nat": "Belgium",
+"value_m": 0.61,
+"qid": "Q120835128",
+"no": null
+},
+{
+"he": "עבד אל-חמיד אית בודלאל",
+"en": "Abdelhamid Aït Boudlal",
+"pos": "DF",
+"age": 20,
+"nat": "Morocco",
+"value_m": 0.6,
+"qid": "Q118582849",
+"no": "48"
+},
+{
+"he": "Adrien Thomasson",
+"en": "Adrien Thomasson",
+"pos": "MF",
+"age": 32,
+"nat": "France",
+"value_m": 0.56,
+"qid": "Q18938815",
+"no": "28"
+},
+{
+"he": "אבובקאר נגידה",
+"en": "Aboubakar Nagida",
+"pos": "DF",
+"age": 21,
+"nat": "Cameroon",
+"value_m": 0.55,
+"qid": "Q123594157",
+"no": "18"
+},
+{
+"he": "Henrick Do Marcolino",
+"en": "Henrick Do Marcolino",
+"pos": "MF",
+"age": 20,
+"nat": "Gabon",
+"value_m": 0.48,
+"qid": "Q138428379",
+"no": "65"
+},
+{
+"he": "Gonçalo Oliveira",
+"en": "Gonçalo Oliveira",
+"pos": "DF",
+"age": 20,
+"nat": "Portugal",
+"value_m": 0.47,
+"qid": "Q134993647",
+"no": "5"
+},
+{
+"he": "Elías Legendre",
+"en": "Elías Legendre",
+"pos": "FW",
+"age": 18,
+"nat": "Ecuador",
+"value_m": 0.36,
+"qid": "Q134544926",
+"no": "35"
+}
+]
+}

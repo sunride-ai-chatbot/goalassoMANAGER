@@ -1,0 +1,308 @@
+{
+"key": "river",
+"name_he": "ריבר פלייט",
+"source": "enwiki:Club Atlético River Plate",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Ezequiel Centurión",
+"en": "Ezequiel Centurión",
+"pos": "GK",
+"age": 29,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q65975161",
+"no": "33"
+},
+{
+"he": "Santiago Beltrán",
+"en": "Santiago Beltrán",
+"pos": "GK",
+"age": 21,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q137882031",
+"no": "41"
+},
+{
+"he": "Jeremías Martinet",
+"en": "Jeremías Martinet",
+"pos": "GK",
+"age": 21,
+"nat": "Argentina",
+"value_m": 0.12,
+"qid": "Q124569494",
+"no": "57"
+},
+{
+"he": "Franco Jaroszewicz",
+"en": "Franco Jaroszewicz",
+"pos": "GK",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.12,
+"qid": null,
+"no": null
+},
+{
+"he": "טיאגו אלמדה",
+"en": "Thiago Almada",
+"pos": "MF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.3,
+"qid": "Q57293140",
+"no": "23"
+},
+{
+"he": "רפאל סנטוס בורה",
+"en": "Rafael Santos Borré",
+"pos": "FW",
+"age": 30,
+"nat": "Colombia",
+"value_m": 0.29,
+"qid": "Q18719633",
+"no": "19"
+},
+{
+"he": "סבסטיאן דריוסי",
+"en": "Sebastián Driussi",
+"pos": "FW",
+"age": 30,
+"nat": "Argentina",
+"value_m": 0.28,
+"qid": "Q11640549",
+"no": "9"
+},
+{
+"he": "גונסאלו מונטיאל",
+"en": "Gonzalo Montiel",
+"pos": "DF",
+"age": 29,
+"nat": "Argentina",
+"value_m": 0.26,
+"qid": "Q26255087",
+"no": "29"
+},
+{
+"he": "פרנסיסקו אורטגה",
+"en": "Francisco Ortega",
+"pos": "DF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.25,
+"qid": "Q54328289",
+"no": "3"
+},
+{
+"he": "Tomás Galván",
+"en": "Tomás Galván",
+"pos": "MF",
+"age": 26,
+"nat": "Argentina",
+"value_m": 0.21,
+"qid": "Q107345687",
+"no": "26"
+},
+{
+"he": "Agustín Ruberto",
+"en": "Agustín Ruberto",
+"pos": "FW",
+"age": 20,
+"nat": "Argentina",
+"value_m": 0.21,
+"qid": "Q123421122",
+"no": "32"
+},
+{
+"he": "Aníbal Moreno",
+"en": "Aníbal Moreno",
+"pos": "MF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.2,
+"qid": "Q60842143",
+"no": "6"
+},
+{
+"he": "מאורו ארמבארי",
+"en": "Mauro Arambarri",
+"pos": "MF",
+"age": 30,
+"nat": "Uruguay",
+"value_m": 0.17,
+"qid": "Q17124713",
+"no": "8"
+},
+{
+"he": "אנחל קוריאה",
+"en": "Ángel Correa",
+"pos": "FW",
+"age": 31,
+"nat": "Argentina",
+"value_m": 0.17,
+"qid": "Q10855654",
+"no": "10"
+},
+{
+"he": "Juan Carlos Portillo",
+"en": "Juan Carlos Portillo",
+"pos": "DF",
+"age": 26,
+"nat": "Argentina",
+"value_m": 0.16,
+"qid": "Q102429814",
+"no": "5"
+},
+{
+"he": "לוקאס מרטינס קוארטה",
+"en": "Lucas Martínez Quarta",
+"pos": "DF",
+"age": 30,
+"nat": "Argentina",
+"value_m": 0.16,
+"qid": "Q20669464",
+"no": "28"
+},
+{
+"he": "Alexis González",
+"en": "Alexis González",
+"pos": "FW",
+"age": 21,
+"nat": "Argentina",
+"value_m": 0.16,
+"qid": "Q136297420",
+"no": null
+},
+{
+"he": "לאוטרו ריברו",
+"en": "Lautaro Rivero",
+"pos": "DF",
+"age": 22,
+"nat": "Argentina",
+"value_m": 0.14,
+"qid": "Q127857199",
+"no": "13"
+},
+{
+"he": "ג'ובאני גונסאלס",
+"en": "Giovanni González",
+"pos": "DF",
+"age": 31,
+"nat": "Uruguay",
+"value_m": 0.13,
+"qid": "Q20172066",
+"no": "20"
+},
+{
+"he": "Thiago Acosta",
+"en": "Thiago Acosta",
+"pos": "MF",
+"age": 21,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q136959742",
+"no": null
+},
+{
+"he": "Agustín Obregón",
+"en": "Agustín Obregón",
+"pos": "DF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.12,
+"qid": null,
+"no": null
+},
+{
+"he": "Tobías Ramírez",
+"en": "Tobías Ramírez",
+"pos": "DF",
+"age": 19,
+"nat": "Argentina",
+"value_m": 0.1,
+"qid": "Q123506704",
+"no": "2"
+},
+{
+"he": "Lucas Silva",
+"en": "Lucas Silva",
+"pos": "MF",
+"age": 19,
+"nat": "Argentina",
+"value_m": 0.1,
+"qid": "Q139899761",
+"no": "44"
+},
+{
+"he": "Tobías Andrada",
+"en": "Tobías Andrada",
+"pos": "MF",
+"age": 19,
+"nat": "Argentina",
+"value_m": 0.1,
+"qid": "Q135485000",
+"no": "50"
+},
+{
+"he": "Lisandro Bajú",
+"en": "Lisandro Bajú",
+"pos": "DF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.1,
+"qid": null,
+"no": null
+},
+{
+"he": "Lautaro Pereyra",
+"en": "Lautaro Pereyra",
+"pos": "FW",
+"age": 18,
+"nat": "Argentina",
+"value_m": 0.09,
+"qid": "Q139899759",
+"no": "25"
+},
+{
+"he": "Facundo González",
+"en": "Facundo González",
+"pos": "DF",
+"age": 20,
+"nat": "Argentina",
+"value_m": 0.09,
+"qid": "Q137978658",
+"no": "31"
+},
+{
+"he": "מרקוס אקוניה",
+"en": "Marcos Acuña",
+"pos": "DF",
+"age": 34,
+"nat": "Argentina",
+"value_m": 0.07,
+"qid": "Q17462635",
+"no": "21"
+},
+{
+"he": "Juan Cruz Meza",
+"en": "Juan Cruz Meza",
+"pos": "MF",
+"age": 18,
+"nat": "Argentina",
+"value_m": 0.07,
+"qid": "Q135312428",
+"no": "24"
+},
+{
+"he": "ניקולאס אוטמנדי",
+"en": "Nicolás Otamendi",
+"pos": "DF",
+"age": 38,
+"nat": "Argentina",
+"value_m": 0.06,
+"qid": "Q182063",
+"no": "30"
+}
+]
+}

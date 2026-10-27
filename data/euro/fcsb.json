@@ -1,0 +1,298 @@
+{
+"key": "fcsb",
+"name_he": "פ.צ.ס.ב בוקרשט",
+"source": "enwiki:FCSB",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Ștefan Târnovanu",
+"en": "Ștefan Târnovanu",
+"pos": "GK",
+"age": 26,
+"nat": "Romania",
+"value_m": 0.4,
+"qid": "Q61484290",
+"no": "32"
+},
+{
+"he": "Mihai Udrea",
+"en": "Mihai Udrea",
+"pos": "GK",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.23,
+"qid": "Q97487849",
+"no": "34"
+},
+{
+"he": "Rareș Andrei",
+"en": "Rareș Andrei",
+"pos": "GK",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.19,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Matei Popa",
+"en": "Matei Popa",
+"pos": "GK",
+"age": 19,
+"nat": "Romania",
+"value_m": 0.12,
+"qid": "Q138027335",
+"no": "13"
+},
+{
+"he": "דניס דראגוש",
+"en": "Denis Drăguș",
+"pos": "FW",
+"age": 27,
+"nat": "Romania",
+"value_m": 0.5,
+"qid": "Q40126643",
+"no": "10"
+},
+{
+"he": "Aymen Boutoutaou",
+"en": "Aymen Boutoutaou",
+"pos": "FW",
+"age": 25,
+"nat": "Algeria",
+"value_m": 0.45,
+"qid": "Q78410700",
+"no": "28"
+},
+{
+"he": "Dennis Politic",
+"en": "Dennis Politic",
+"pos": "FW",
+"age": 26,
+"nat": "Romania",
+"value_m": 0.4,
+"qid": "Q66104786",
+"no": "20"
+},
+{
+"he": "João Paulo",
+"en": "João Paulo",
+"pos": "MF",
+"age": 28,
+"nat": "Cape Verde",
+"value_m": 0.39,
+"qid": "Q107334828",
+"no": "18"
+},
+{
+"he": "Meriton Korenica",
+"en": "Meriton Korenica",
+"pos": "FW",
+"age": 29,
+"nat": "Kosovo",
+"value_m": 0.38,
+"qid": "Q56044735",
+"no": "7"
+},
+{
+"he": "David Miculescu",
+"en": "David Miculescu",
+"pos": "FW",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.37,
+"qid": "Q85525678",
+"no": "11"
+},
+{
+"he": "עופרי ארד",
+"en": "Ofri Arad",
+"pos": "MF",
+"age": 27,
+"nat": "Israel",
+"value_m": 0.36,
+"qid": "Q68147959",
+"no": "15"
+},
+{
+"he": "Siyabonga Ngezana",
+"en": "Siyabonga Ngezana",
+"pos": "DF",
+"age": 28,
+"nat": "South Africa",
+"value_m": 0.31,
+"qid": "Q58580035",
+"no": "30"
+},
+{
+"he": "דילן בטוביניסקה",
+"en": "Dylan Batubinsika",
+"pos": "DF",
+"age": 30,
+"nat": "DR Congo",
+"value_m": 0.3,
+"qid": "Q34360045",
+"no": "21"
+},
+{
+"he": "Karlo Muhar",
+"en": "Karlo Muhar",
+"pos": "MF",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.29,
+"qid": "Q64745020",
+"no": "73"
+},
+{
+"he": "David Avram",
+"en": "David Avram",
+"pos": "FW",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.27,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Ronny Labonne",
+"en": "Ronny Labonne",
+"pos": "DF",
+"age": 28,
+"nat": "Martinique",
+"value_m": 0.27,
+"qid": "Q115492471",
+"no": "97"
+},
+{
+"he": "Joyskim Dawa",
+"en": "Joyskim Dawa",
+"pos": "DF",
+"age": 30,
+"nat": "Cameroon",
+"value_m": 0.25,
+"qid": "Q55956285",
+"no": "5"
+},
+{
+"he": "André Duarte",
+"en": "André Duarte",
+"pos": "DF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.23,
+"qid": "Q114435945",
+"no": "3"
+},
+{
+"he": "Andrei Dăncuș",
+"en": "Andrei Dăncuș",
+"pos": "DF",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.21,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Eddy Gnahoré",
+"en": "Eddy Gnahoré",
+"pos": "MF",
+"age": 32,
+"nat": "France",
+"value_m": 0.19,
+"qid": "Q5336652",
+"no": "8"
+},
+{
+"he": "Luca Stancu",
+"en": "Luca Stancu",
+"pos": "DF",
+"age": 21,
+"nat": "Romania",
+"value_m": 0.17,
+"qid": "Q136806628",
+"no": "77"
+},
+{
+"he": "Mihai Toma",
+"en": "Mihai Toma",
+"pos": "MF",
+"age": 19,
+"nat": "Romania",
+"value_m": 0.16,
+"qid": "Q125725363",
+"no": "22"
+},
+{
+"he": "Ricardo Pădurariu",
+"en": "Ricardo Pădurariu",
+"pos": "DF",
+"age": 19,
+"nat": "Romania",
+"value_m": 0.13,
+"qid": "Q126198683",
+"no": "4"
+},
+{
+"he": "Alexandru Stoian",
+"en": "Alexandru Stoian",
+"pos": "FW",
+"age": 18,
+"nat": "Romania",
+"value_m": 0.13,
+"qid": "Q114905597",
+"no": "90"
+},
+{
+"he": "David Popa",
+"en": "David Popa",
+"pos": "FW",
+"age": 19,
+"nat": "Romania",
+"value_m": 0.13,
+"qid": "Q126285064",
+"no": "98"
+},
+{
+"he": "Mihai Popescu",
+"en": "Mihai Popescu",
+"pos": "DF",
+"age": 33,
+"nat": "Romania",
+"value_m": 0.12,
+"qid": "Q27830783",
+"no": "17"
+},
+{
+"he": "Juri Cisotti",
+"en": "Juri Cisotti",
+"pos": "MF",
+"age": 33,
+"nat": "Italy",
+"value_m": 0.11,
+"qid": "Q16887647",
+"no": "31"
+},
+{
+"he": "Risto Radunović",
+"en": "Risto Radunović",
+"pos": "DF",
+"age": 34,
+"nat": "Montenegro",
+"value_m": 0.09,
+"qid": "Q3937086",
+"no": "33"
+},
+{
+"he": "Valentin Crețu",
+"en": "Valentin Crețu",
+"pos": "DF",
+"age": 37,
+"nat": "Romania",
+"value_m": 0.07,
+"qid": "Q4007648",
+"no": "2"
+}
+]
+}

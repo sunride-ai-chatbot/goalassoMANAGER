@@ -1,0 +1,298 @@
+{
+"key": "kotoko",
+"name_he": "אסאנטה קוטוקו",
+"source": "enwiki:Asante Kotoko S.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "אבראהים דנלאד",
+"en": "Ibrahim Danlad",
+"pos": "GK",
+"age": 23,
+"nat": "Ghana",
+"value_m": 0.21,
+"qid": "Q84558005",
+"no": "31"
+},
+{
+"he": "Mourad Abdelwadie",
+"en": "Mourad Abdelwadie",
+"pos": "GK",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.13,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Dari Aziz Haruna",
+"en": "Dari Aziz Haruna",
+"pos": "GK",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.11,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Isaac Opoku Agyemang",
+"en": "Isaac Opoku Agyemang",
+"pos": "FW",
+"age": 27,
+"nat": "Ghana",
+"value_m": 0.24,
+"qid": "Q106033184",
+"no": "14"
+},
+{
+"he": "Richard Boadu",
+"en": "Richard Boadu",
+"pos": "MF",
+"age": 28,
+"nat": "Ghana",
+"value_m": 0.19,
+"qid": "Q106421732",
+"no": "6"
+},
+{
+"he": "Inusah Adam",
+"en": "Inusah Adam",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.19,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Morifing Donzo",
+"en": "Morifing Donzo",
+"pos": "FW",
+"age": 25,
+"nat": "Guinea",
+"value_m": 0.18,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Walid Fuseini",
+"en": "Walid Fuseini",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.17,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Emmanuel Mamah",
+"en": "Emmanuel Mamah",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.16,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Philip Amoh",
+"en": "Philip Amoh",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.15,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Lord Hilary Adabo",
+"en": "Lord Hilary Adabo",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.15,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Aristote Tamuzi",
+"en": "Aristote Tamuzi",
+"pos": "DF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.15,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Lord Amoah",
+"en": "Lord Amoah",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.15,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Emmanuel Antwi",
+"en": "Emmanuel Antwi",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.15,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Jordan Amissah",
+"en": "Jordan Amissah",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.14,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Prince Badu",
+"en": "Prince Badu",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.14,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Hubert Gyau",
+"en": "Hubert Gyau",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.13,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Eric Gbetta",
+"en": "Eric Gbetta",
+"pos": "FW",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.13,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Andrews Ntim",
+"en": "Andrews Ntim",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.13,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Musa Hamzata",
+"en": "Musa Hamzata",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.12,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Patrick Asiedu",
+"en": "Patrick Asiedu",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.12,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Seth Kwadwo",
+"en": "Seth Kwadwo",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.12,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Emmanuel Kotei",
+"en": "Emmanuel Kotei",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.12,
+"qid": null,
+"no": "43"
+},
+{
+"he": "Shayibu Abubakari",
+"en": "Shayibu Abubakari",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.11,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Koffi Bini",
+"en": "Koffi Bini",
+"pos": "DF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.11,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Emmanuel Sanja",
+"en": "Emmanuel Sanja",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.11,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Yakubu Dogo",
+"en": "Yakubu Dogo",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.11,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Tarnagda Abdoul Kader",
+"en": "Tarnagda Abdoul Kader",
+"pos": "DF",
+"age": 25,
+"nat": "Burkina Faso",
+"value_m": 0.11,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Joseph Amoah",
+"en": "Joseph Amoah",
+"pos": "DF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.11,
+"qid": null,
+"no": "26"
+}
+]
+}

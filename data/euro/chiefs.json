@@ -1,0 +1,308 @@
+{
+"key": "chiefs",
+"name_he": "קייזר צ'יפס",
+"source": "enwiki:Kaizer Chiefs F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Brandon Peterson",
+"en": "Brandon Peterson",
+"pos": "GK",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.13,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Renaldo Leaner",
+"en": "Renaldo Leaner",
+"pos": "GK",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.12,
+"qid": "Q138847878",
+"no": "16"
+},
+{
+"he": "Bruce Bvuma",
+"en": "Bruce Bvuma",
+"pos": "GK",
+"age": 31,
+"nat": "South Africa",
+"value_m": 0.08,
+"qid": "Q58578949",
+"no": "44"
+},
+{
+"he": "Reeve Frosler",
+"en": "Reeve Frosler",
+"pos": "DF",
+"age": 28,
+"nat": "South Africa",
+"value_m": 0.23,
+"qid": "Q29962454",
+"no": "39"
+},
+{
+"he": "בראדלי קרוס",
+"en": "Bradley Cross",
+"pos": "DF",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.22,
+"qid": "Q117790110",
+"no": "48"
+},
+{
+"he": "Mduduzi Shabalala",
+"en": "Mduduzi Shabalala",
+"pos": "FW",
+"age": 22,
+"nat": "South Africa",
+"value_m": 0.19,
+"qid": "Q125542070",
+"no": "7"
+},
+{
+"he": "Nkosingiphile Ngcobo",
+"en": "Nkosingiphile Ngcobo",
+"pos": "MF",
+"age": 26,
+"nat": "South Africa",
+"value_m": 0.19,
+"qid": "Q58579696",
+"no": "12"
+},
+{
+"he": "Thabiso Monyane",
+"en": "Thabiso Monyane",
+"pos": "DF",
+"age": 26,
+"nat": "South Africa",
+"value_m": 0.18,
+"qid": "Q97578621",
+"no": "2"
+},
+{
+"he": "Khanyisa Mayo",
+"en": "Khanyisa Mayo",
+"pos": "FW",
+"age": 28,
+"nat": "South Africa",
+"value_m": 0.18,
+"qid": "Q114379756",
+"no": "3"
+},
+{
+"he": "Thabo Moloisane",
+"en": "Thabo Moloisane",
+"pos": "DF",
+"age": 27,
+"nat": "South Africa",
+"value_m": 0.18,
+"qid": "Q64167439",
+"no": "42"
+},
+{
+"he": "Ethan Chislett",
+"en": "Ethan Chislett",
+"pos": "MF",
+"age": 28,
+"nat": "South Africa",
+"value_m": 0.17,
+"qid": "Q98831804",
+"no": "23"
+},
+{
+"he": "Naledi Hlongwane",
+"en": "Naledi Hlongwane",
+"pos": "FW",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.17,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Wandile Duba",
+"en": "Wandile Duba",
+"pos": "FW",
+"age": 22,
+"nat": "South Africa",
+"value_m": 0.17,
+"qid": "Q125679700",
+"no": "47"
+},
+{
+"he": "Siphesihle Ndlovu",
+"en": "Siphesihle Ndlovu",
+"pos": "MF",
+"age": 29,
+"nat": "South Africa",
+"value_m": 0.16,
+"qid": "Q50821401",
+"no": "8"
+},
+{
+"he": "Asanele Velebayi",
+"en": "Asanele Velebayi",
+"pos": "MF",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.16,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Thabo Cele",
+"en": "Thabo Cele",
+"pos": "MF",
+"age": 29,
+"nat": "South Africa",
+"value_m": 0.16,
+"qid": "Q33083442",
+"no": "21"
+},
+{
+"he": "Thulani Mabaso",
+"en": "Thulani Mabaso",
+"pos": "MF",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.16,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Flávio Silva",
+"en": "Flávio Silva",
+"pos": "FW",
+"age": 30,
+"nat": "Guinea-Bissau",
+"value_m": 0.16,
+"qid": "Q19577866",
+"no": "77"
+},
+{
+"he": "Inácio Miguel",
+"en": "Inácio Miguel",
+"pos": "DF",
+"age": 30,
+"nat": "Angola",
+"value_m": 0.16,
+"qid": "Q28555322",
+"no": "84"
+},
+{
+"he": "Luke Baartman",
+"en": "Luke Baartman",
+"pos": "FW",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.15,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Rushwin Dortley",
+"en": "Rushwin Dortley",
+"pos": "DF",
+"age": 24,
+"nat": "South Africa",
+"value_m": 0.15,
+"qid": "Q123997857",
+"no": "14"
+},
+{
+"he": "Adolf Bitegeko",
+"en": "Adolf Bitegeko",
+"pos": "MF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.15,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Mfundo Vilakazi",
+"en": "Mfundo Vilakazi",
+"pos": "MF",
+"age": 20,
+"nat": "South Africa",
+"value_m": 0.14,
+"qid": "Q136432483",
+"no": "28"
+},
+{
+"he": "Etiosa Ighodaro",
+"en": "Etiosa Ighodaro",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.14,
+"qid": null,
+"no": "50"
+},
+{
+"he": "Langelihle Phili",
+"en": "Langelihle Phili",
+"pos": "FW",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.14,
+"qid": null,
+"no": "70"
+},
+{
+"he": "Nkanyiso Shinga",
+"en": "Nkanyiso Shinga",
+"pos": "DF",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.13,
+"qid": null,
+"no": "74"
+},
+{
+"he": "Faiz Abrahams",
+"en": "Faiz Abrahams",
+"pos": "MF",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.13,
+"qid": null,
+"no": null
+},
+{
+"he": "Lebohang Maboe",
+"en": "Lebohang Maboe",
+"pos": "MF",
+"age": 31,
+"nat": "South Africa",
+"value_m": 0.12,
+"qid": "Q58494664",
+"no": "6"
+},
+{
+"he": "Dillan Solomons",
+"en": "Dillan Solomons",
+"pos": "DF",
+"age": 30,
+"nat": "South Africa",
+"value_m": 0.11,
+"qid": "Q125342498",
+"no": "18"
+},
+{
+"he": "Sibongiseni Mthethwa",
+"en": "Sibongiseni Mthethwa",
+"pos": "MF",
+"age": 31,
+"nat": "South Africa",
+"value_m": 0.09,
+"qid": "Q119349881",
+"no": "5"
+}
+]
+}

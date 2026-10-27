@@ -1,0 +1,248 @@
+{
+"key": "simba",
+"name_he": "סימבה",
+"source": "enwiki:Simba S.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Djibrilla Kassali",
+"en": "Djibrilla Kassali",
+"pos": "GK",
+"age": 25,
+"nat": "Niger",
+"value_m": 0.11,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Yakoub Suleiman Ali",
+"en": "Yakoub Suleiman Ali",
+"pos": "GK",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.1,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Hussein Abel",
+"en": "Hussein Abel",
+"pos": "GK",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.09,
+"qid": null,
+"no": "28"
+},
+{
+"he": "מוריס אברהם (כדורגלן)",
+"en": "Morice Abraham",
+"pos": "MF",
+"age": 23,
+"nat": "Tanzania",
+"value_m": 0.2,
+"qid": "Q110040174",
+"no": "18"
+},
+{
+"he": "אבראהים ג'באר",
+"en": "Ibraheem Jabaar",
+"pos": "MF",
+"age": 23,
+"nat": null,
+"value_m": 0.2,
+"qid": "Q106456478",
+"no": "-"
+},
+{
+"he": "Mohammed Bajaber",
+"en": "Mohammed Bajaber",
+"pos": "FW",
+"age": 23,
+"nat": "Kenya",
+"value_m": 0.18,
+"qid": "Q112571791",
+"no": "17"
+},
+{
+"he": "Inno Loemba",
+"en": "Inno Loemba",
+"pos": "FW",
+"age": 25,
+"nat": "Congo",
+"value_m": 0.16,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Nickson Kibabage",
+"en": "Nickson Kibabage",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.15,
+"qid": "Q106213946",
+"no": "3"
+},
+{
+"he": "David Kameta",
+"en": "David Kameta",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.15,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Yusuph Kagoma",
+"en": "Yusuph Kagoma",
+"pos": "MF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.15,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Libasse Gueye",
+"en": "Libasse Gueye",
+"pos": "FW",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.15,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Elie Mpanzu",
+"en": "Elie Mpanzu",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.15,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Hussein Semfuko",
+"en": "Hussein Semfuko",
+"pos": "MF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.15,
+"qid": null,
+"no": "37"
+},
+{
+"he": "ראשין דה רוק",
+"en": "Rushine De Reuck",
+"pos": "DF",
+"age": 30,
+"nat": "South Africa",
+"value_m": 0.13,
+"qid": "Q58583657",
+"no": "23"
+},
+{
+"he": "Keletso Makgalwa",
+"en": "Keletso Makgalwa",
+"pos": "MF",
+"age": 29,
+"nat": "South Africa",
+"value_m": 0.13,
+"qid": "Q58583219",
+"no": "-"
+},
+{
+"he": "Antony Mligo",
+"en": "Antony Mligo",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.12,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Nathaniel Chilambo",
+"en": "Nathaniel Chilambo",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.12,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Ladaki Chasambi",
+"en": "Ladaki Chasambi",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.12,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Vedastus Masinde",
+"en": "Vedastus Masinde",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.11,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Abdulrazack Hamza",
+"en": "Abdulrazack Hamza",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.11,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Wilson Nangu",
+"en": "Wilson Nangu",
+"pos": "DF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.11,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Kelvin Nashon",
+"en": "Kelvin Nashon",
+"pos": "MF",
+"age": 25,
+"nat": "Tanzania",
+"value_m": 0.11,
+"qid": null,
+"no": "-"
+},
+{
+"he": "Shomari Kapombe",
+"en": "Shomari Kapombe",
+"pos": "DF",
+"age": 34,
+"nat": "Tanzania",
+"value_m": 0.06,
+"qid": "Q14625721",
+"no": "12"
+},
+{
+"he": "Clatous Chama",
+"en": "Clatous Chama",
+"pos": "FW",
+"age": 35,
+"nat": "Zambia",
+"value_m": 0.06,
+"qid": "Q22958757",
+"no": "24"
+}
+]
+}

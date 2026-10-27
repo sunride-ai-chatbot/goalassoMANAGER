@@ -1,0 +1,268 @@
+{
+"key": "newcastle",
+"name_he": "ניוקאסל",
+"source": "enwiki:Newcastle United F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "לוקאש הורניצ'ק",
+"en": "Lukáš Horníček",
+"pos": "GK",
+"age": 24,
+"nat": "Czech Republic",
+"value_m": 2.29,
+"qid": "Q100271491",
+"no": "21"
+},
+{
+"he": "Aidan Harris",
+"en": "Aidan Harris",
+"pos": "GK",
+"age": 25,
+"nat": "England",
+"value_m": 1.08,
+"qid": null,
+"no": "31"
+},
+{
+"he": "אוון ז'אוואן",
+"en": "Ewen Jaouen",
+"pos": "GK",
+"age": 20,
+"nat": "France",
+"value_m": 0.95,
+"qid": "Q133248014",
+"no": "24"
+},
+{
+"he": "ניק פופ",
+"en": "Nick Pope",
+"pos": "GK",
+"age": 34,
+"nat": "England",
+"value_m": 0.8,
+"qid": "Q15999945",
+"no": "1"
+},
+{
+"he": "Mark Gillespie",
+"en": "Mark Gillespie",
+"pos": "GK",
+"age": 34,
+"nat": "England",
+"value_m": 0.57,
+"qid": "Q6767750",
+"no": "29"
+},
+{
+"he": "אנתוני אלנגה",
+"en": "Anthony Elanga",
+"pos": "FW",
+"age": 24,
+"nat": "Sweden",
+"value_m": 3.93,
+"qid": "Q106805131",
+"no": "19"
+},
+{
+"he": "הארווי בארנס",
+"en": "Harvey Barnes",
+"pos": "FW",
+"age": 28,
+"nat": "England",
+"value_m": 3.5,
+"qid": "Q27974879",
+"no": "11"
+},
+{
+"he": "ג'ייקוב ראמזי",
+"en": "Jacob Ramsey",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 2.98,
+"qid": "Q63228677",
+"no": "41"
+},
+{
+"he": "עמאר דדיץ'",
+"en": "Amar Dedić",
+"pos": "DF",
+"age": 24,
+"nat": "Bosnia-Herzegovina",
+"value_m": 2.94,
+"qid": "Q65948595",
+"no": "37"
+},
+{
+"he": "מליק צ'או",
+"en": "Malick Thiaw",
+"pos": "DF",
+"age": 25,
+"nat": "Germany",
+"value_m": 2.69,
+"qid": "Q87268125",
+"no": "12"
+},
+{
+"he": "ג'ו וילוק",
+"en": "Joe Willock",
+"pos": "MF",
+"age": 27,
+"nat": "England",
+"value_m": 2.65,
+"qid": "Q40471152",
+"no": "28"
+},
+{
+"he": "סוון בוטמן",
+"en": "Sven Botman",
+"pos": "DF",
+"age": 26,
+"nat": "Netherlands",
+"value_m": 2.64,
+"qid": "Q56183905",
+"no": "4"
+},
+{
+"he": "ניקו גונסאלס",
+"en": "Nico González",
+"pos": "MF",
+"age": 24,
+"nat": "Spain",
+"value_m": 2.55,
+"qid": "Q106625792",
+"no": "6"
+},
+{
+"he": "ויליאם אוסולה",
+"en": "William Osula",
+"pos": "FW",
+"age": 23,
+"nat": "Denmark",
+"value_m": 2.51,
+"qid": "Q111464601",
+"no": "10"
+},
+{
+"he": "לואיס הול",
+"en": "Lewis Hall",
+"pos": "DF",
+"age": 21,
+"nat": "England",
+"value_m": 2.33,
+"qid": "Q110487162",
+"no": "3"
+},
+{
+"he": "בזומאנה טורה",
+"en": "Bazoumana Touré",
+"pos": "FW",
+"age": 20,
+"nat": "Côte d'Ivoire",
+"value_m": 2.29,
+"qid": "Q125805788",
+"no": "17"
+},
+{
+"he": "יואן ויסה",
+"en": "Yoane Wissa",
+"pos": "FW",
+"age": 29,
+"nat": "DR Congo",
+"value_m": 2.21,
+"qid": "Q28101965",
+"no": "9"
+},
+{
+"he": "ז'ואלינטון",
+"en": "Joelinton",
+"pos": "FW",
+"age": 30,
+"nat": "Brazil",
+"value_m": 2.16,
+"qid": "Q20047360",
+"no": "7"
+},
+{
+"he": "מתיאס פרננדס-פארדו",
+"en": "Matias Fernandez-Pardo",
+"pos": "FW",
+"age": 21,
+"nat": "Belgium",
+"value_m": 2.13,
+"qid": "Q117041294",
+"no": "20"
+},
+{
+"he": "טינו ליברמנטו",
+"en": "Tino Livramento",
+"pos": "DF",
+"age": 23,
+"nat": "England",
+"value_m": 1.97,
+"qid": "Q107930811",
+"no": "2"
+},
+{
+"he": "ג'ייקוב מרפי",
+"en": "Jacob Murphy",
+"pos": "MF",
+"age": 31,
+"nat": "England",
+"value_m": 1.89,
+"qid": "Q15622117",
+"no": "23"
+},
+{
+"he": "אלאדג'י במבה",
+"en": "Aladji Bamba",
+"pos": "MF",
+"age": 20,
+"nat": "France",
+"value_m": 1.46,
+"qid": "Q135891358",
+"no": "8"
+},
+{
+"he": "לואיס מיילי",
+"en": "Lewis Miley",
+"pos": "MF",
+"age": 20,
+"nat": "England",
+"value_m": 1.37,
+"qid": "Q118780753",
+"no": "67"
+},
+{
+"he": "שון סטור",
+"en": "Sean Steur",
+"pos": "MF",
+"age": 18,
+"nat": "Netherlands",
+"value_m": 1.02,
+"qid": "Q129887028",
+"no": "14"
+},
+{
+"he": "פביאן שר",
+"en": "Fabian Schär",
+"pos": "DF",
+"age": 34,
+"nat": "Switzerland",
+"value_m": 0.86,
+"qid": "Q673691",
+"no": "5"
+},
+{
+"he": "דן ברן",
+"en": "Dan Burn",
+"pos": "DF",
+"age": 34,
+"nat": "England",
+"value_m": 0.72,
+"qid": "Q5213217",
+"no": "33"
+}
+]
+}

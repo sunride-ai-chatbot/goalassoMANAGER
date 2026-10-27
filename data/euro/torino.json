@@ -1,0 +1,268 @@
+{
+"key": "torino",
+"name_he": "טורינו",
+"source": "enwiki:Torino FC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "פרנקו ישראל",
+"en": "Franco Israel",
+"pos": "GK",
+"age": 26,
+"nat": "Uruguay",
+"value_m": 0.64,
+"qid": "Q60842316",
+"no": "81"
+},
+{
+"he": "Diego Mascardi",
+"en": "Diego Mascardi",
+"pos": "GK",
+"age": 25,
+"nat": "Italy",
+"value_m": 0.44,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Lapo Siviero",
+"en": "Lapo Siviero",
+"pos": "GK",
+"age": 25,
+"nat": "Italy",
+"value_m": 0.35,
+"qid": null,
+"no": "76"
+},
+{
+"he": "זקאריה אבוכלאל",
+"en": "Zakaria Aboukhlal",
+"pos": "FW",
+"age": 26,
+"nat": "Morocco",
+"value_m": 1.23,
+"qid": "Q56257819",
+"no": "7"
+},
+{
+"he": "פייטרו פלגרי",
+"en": "Pietro Pellegri",
+"pos": "FW",
+"age": 25,
+"nat": "Italy",
+"value_m": 1.21,
+"qid": "Q28051511",
+"no": "9"
+},
+{
+"he": "ניקולה ולאשיץ'",
+"en": "Nikola Vlašić",
+"pos": "MF",
+"age": 28,
+"nat": "Croatia",
+"value_m": 1.07,
+"qid": "Q17501875",
+"no": "10"
+},
+{
+"he": "סנדרו קולנוביץ'",
+"en": "Sandro Kulenović",
+"pos": "FW",
+"age": 26,
+"nat": "Croatia",
+"value_m": 1.03,
+"qid": "Q56539556",
+"no": "17"
+},
+{
+"he": "ניית'ן פאטרסון",
+"en": "Nathan Patterson",
+"pos": "DF",
+"age": 24,
+"nat": "Scotland",
+"value_m": 1.0,
+"qid": "Q83264648",
+"no": "2"
+},
+{
+"he": "רפיק בלגאלי",
+"en": "Rafik Belghali",
+"pos": "DF",
+"age": 24,
+"nat": "Algeria",
+"value_m": 0.98,
+"qid": "Q106030853",
+"no": "45"
+},
+{
+"he": "צ'זארה קזאדיי",
+"en": "Cesare Casadei",
+"pos": "MF",
+"age": 23,
+"nat": "Italy",
+"value_m": 0.86,
+"qid": "Q112081015",
+"no": "22"
+},
+{
+"he": "Ardian Ismajli",
+"en": "Ardian Ismajli",
+"pos": "DF",
+"age": 29,
+"nat": "Albania",
+"value_m": 0.85,
+"qid": "Q26251753",
+"no": "44"
+},
+{
+"he": "אראי ג'ומרט",
+"en": "Eray Cömert",
+"pos": "DF",
+"age": 28,
+"nat": "Switzerland",
+"value_m": 0.81,
+"qid": "Q24052364",
+"no": "5"
+},
+{
+"he": "Rolando Mandragora",
+"en": "Rolando Mandragora",
+"pos": "MF",
+"age": 29,
+"nat": "Italy",
+"value_m": 0.76,
+"qid": "Q18402294",
+"no": "8"
+},
+{
+"he": "צ'ה אדמס",
+"en": "Ché Adams",
+"pos": "FW",
+"age": 30,
+"nat": "Scotland",
+"value_m": 0.73,
+"qid": "Q18683792",
+"no": "19"
+},
+{
+"he": "קיאן פיץ-ג'ים",
+"en": "Kian Fitz-Jim",
+"pos": "MF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.73,
+"qid": "Q104602629",
+"no": "28"
+},
+{
+"he": "Gvidas Gineitis",
+"en": "Gvidas Gineitis",
+"pos": "MF",
+"age": 22,
+"nat": "Lithuania",
+"value_m": 0.73,
+"qid": "Q115300322",
+"no": "66"
+},
+{
+"he": "סאול קוקו",
+"en": "Saúl Coco",
+"pos": "DF",
+"age": 27,
+"nat": "Equatorial Guinea",
+"value_m": 0.72,
+"qid": "Q38977285",
+"no": "23"
+},
+{
+"he": "Emirhan İlkhan",
+"en": "Emirhan İlkhan",
+"pos": "MF",
+"age": 22,
+"nat": "Turkey",
+"value_m": 0.69,
+"qid": "Q110486415",
+"no": "6"
+},
+{
+"he": "ג'ובאני סימאונה",
+"en": "Giovanni Simeone",
+"pos": "FW",
+"age": 31,
+"nat": "Argentina",
+"value_m": 0.67,
+"qid": "Q6439494",
+"no": "18"
+},
+{
+"he": "Andrea Luongo",
+"en": "Andrea Luongo",
+"pos": "MF",
+"age": 25,
+"nat": "Italy",
+"value_m": 0.53,
+"qid": null,
+"no": "79"
+},
+{
+"he": "Zalán Kugyela",
+"en": "Zalán Kugyela",
+"pos": "MF",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.43,
+"qid": null,
+"no": "94"
+},
+{
+"he": "Manuel Carrascosa",
+"en": "Manuel Carrascosa",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.39,
+"qid": null,
+"no": "63"
+},
+{
+"he": "Cristiano Biraghi",
+"en": "Cristiano Biraghi",
+"pos": "DF",
+"age": 33,
+"nat": "Italy",
+"value_m": 0.32,
+"qid": "Q824938",
+"no": "3"
+},
+{
+"he": "Alessio Cacciamani",
+"en": "Alessio Cacciamani",
+"pos": "MF",
+"age": 19,
+"nat": "Italy",
+"value_m": 0.31,
+"qid": "Q53450103",
+"no": "77"
+},
+{
+"he": "דובאן ספאטה",
+"en": "Duván Zapata",
+"pos": "FW",
+"age": 35,
+"nat": "Colombia",
+"value_m": 0.29,
+"qid": "Q577481",
+"no": "91"
+},
+{
+"he": "ריקרדו רודריגס",
+"en": "Ricardo Rodriguez",
+"pos": "DF",
+"age": 34,
+"nat": "Switzerland",
+"value_m": 0.26,
+"qid": "Q666506",
+"no": "13"
+}
+]
+}

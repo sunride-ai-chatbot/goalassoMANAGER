@@ -1,0 +1,308 @@
+{
+"key": "vojvodina",
+"name_he": "וויבודינה",
+"source": "enwiki:FK Vojvodina",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Dragan Rosić",
+"en": "Dragan Rosić",
+"pos": "GK",
+"age": 29,
+"nat": "Serbia",
+"value_m": 0.13,
+"qid": "Q29478762",
+"no": "12"
+},
+{
+"he": "Matija Gočmanac",
+"en": "Matija Gočmanac",
+"pos": "GK",
+"age": 23,
+"nat": "Serbia",
+"value_m": 0.09,
+"qid": "Q122831280",
+"no": "1"
+},
+{
+"he": "Bogdan Bogdanović",
+"en": "Bogdan Bogdanović",
+"pos": "GK",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.08,
+"qid": null,
+"no": "71"
+},
+{
+"he": "Dragan Kokanović",
+"en": "Dragan Kokanović",
+"pos": "MF",
+"age": 24,
+"nat": "Serbia",
+"value_m": 0.18,
+"qid": "Q106916749",
+"no": "20"
+},
+{
+"he": "Ifet Đakovac",
+"en": "Ifet Đakovac",
+"pos": "MF",
+"age": 28,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.18,
+"qid": "Q121139950",
+"no": "35"
+},
+{
+"he": "Lazar Ranđelović",
+"en": "Lazar Ranđelović",
+"pos": "MF",
+"age": 29,
+"nat": "Serbia",
+"value_m": 0.18,
+"qid": "Q55935603",
+"no": "77"
+},
+{
+"he": "Dejan Zukić",
+"en": "Dejan Zukić",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.17,
+"qid": "Q62616469",
+"no": "10"
+},
+{
+"he": "Njegoš Petrović",
+"en": "Njegoš Petrović",
+"pos": "MF",
+"age": 27,
+"nat": "Serbia",
+"value_m": 0.17,
+"qid": "Q26838727",
+"no": "18"
+},
+{
+"he": "נרדין מולאחוסיינוביץ'",
+"en": "Nardin Mulahusejnović",
+"pos": "FW",
+"age": 28,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.17,
+"qid": "Q50845648",
+"no": "99"
+},
+{
+"he": "ארהאן מאשוביץ'",
+"en": "Erhan Mašović",
+"pos": "DF",
+"age": 27,
+"nat": "Serbia",
+"value_m": 0.16,
+"qid": "Q23008168",
+"no": "15"
+},
+{
+"he": "Stefan Stanisavljević",
+"en": "Stefan Stanisavljević",
+"pos": "FW",
+"age": 24,
+"nat": "Serbia",
+"value_m": 0.16,
+"qid": "Q139771768",
+"no": "19"
+},
+{
+"he": "לוקאס בארוס",
+"en": "Lucas Barros",
+"pos": "DF",
+"age": 27,
+"nat": "Brazil",
+"value_m": 0.16,
+"qid": "Q69883189",
+"no": "23"
+},
+{
+"he": "Mihai Butean",
+"en": "Mihai Butean",
+"pos": "DF",
+"age": 29,
+"nat": "Romania",
+"value_m": 0.14,
+"qid": "Q35977612",
+"no": "16"
+},
+{
+"he": "Siniša Tanjga",
+"en": "Siniša Tanjga",
+"pos": "DF",
+"age": 22,
+"nat": "Serbia",
+"value_m": 0.13,
+"qid": "Q133833457",
+"no": "6"
+},
+{
+"he": "Lazar Nikolić",
+"en": "Lazar Nikolić",
+"pos": "DF",
+"age": 27,
+"nat": "Serbia",
+"value_m": 0.13,
+"qid": "Q59914681",
+"no": "22"
+},
+{
+"he": "Jovan Ostojić",
+"en": "Jovan Ostojić",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.13,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Kornél Szűcs",
+"en": "Kornél Szűcs",
+"pos": "DF",
+"age": 24,
+"nat": "Hungary",
+"value_m": 0.13,
+"qid": "Q96059450",
+"no": "26"
+},
+{
+"he": "Dušan Cupara",
+"en": "Dušan Cupara",
+"pos": "DF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.12,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Marko Veličković",
+"en": "Marko Veličković",
+"pos": "MF",
+"age": 21,
+"nat": "Serbia",
+"value_m": 0.12,
+"qid": "Q126485850",
+"no": "8"
+},
+{
+"he": "Vladan Novevski",
+"en": "Vladan Novevski",
+"pos": "DF",
+"age": 24,
+"nat": "Serbia",
+"value_m": 0.12,
+"qid": "Q105958228",
+"no": "13"
+},
+{
+"he": "Milan Kolarević",
+"en": "Milan Kolarević",
+"pos": "FW",
+"age": 22,
+"nat": "Serbia",
+"value_m": 0.12,
+"qid": "Q138168535",
+"no": "21"
+},
+{
+"he": "Vuk Boškan",
+"en": "Vuk Boškan",
+"pos": "FW",
+"age": 20,
+"nat": "Serbia",
+"value_m": 0.11,
+"qid": "Q138332553",
+"no": "33"
+},
+{
+"he": "Andrej Pivaš",
+"en": "Andrej Pivaš",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.11,
+"qid": null,
+"no": "70"
+},
+{
+"he": "Kufre Eta",
+"en": "Kufre Eta",
+"pos": "DF",
+"age": 22,
+"nat": "Cameroon",
+"value_m": 0.1,
+"qid": "Q135526872",
+"no": "2"
+},
+{
+"he": "Petar Sukačev",
+"en": "Petar Sukačev",
+"pos": "MF",
+"age": 21,
+"nat": "Serbia",
+"value_m": 0.1,
+"qid": "Q129559918",
+"no": "27"
+},
+{
+"he": "Vukašin Davidov",
+"en": "Vukašin Davidov",
+"pos": "DF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.1,
+"qid": null,
+"no": "28"
+},
+{
+"he": "David Milovanović",
+"en": "David Milovanović",
+"pos": "FW",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.1,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Mateja Gašić",
+"en": "Mateja Gašić",
+"pos": "DF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.09,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Marko Poletanović",
+"en": "Marko Poletanović",
+"pos": "MF",
+"age": 33,
+"nat": "Serbia",
+"value_m": 0.08,
+"qid": "Q6771231",
+"no": "4"
+},
+{
+"he": "Đorđe Crnomarković",
+"en": "Đorđe Crnomarković",
+"pos": "DF",
+"age": 32,
+"nat": "Serbia",
+"value_m": 0.07,
+"qid": "Q16728266",
+"no": "5"
+}
+]
+}

@@ -1,0 +1,278 @@
+{
+"key": "bristol_city",
+"name_he": "בריסטול סיטי",
+"source": "enwiki:Bristol City F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Sam Tickle",
+"en": "Sam Tickle",
+"pos": "GK",
+"age": 24,
+"nat": "England",
+"value_m": 0.28,
+"qid": "Q108808331",
+"no": "1"
+},
+{
+"he": "Lewis Thomas",
+"en": "Lewis Thomas",
+"pos": "GK",
+"age": 25,
+"nat": "Wales",
+"value_m": 0.27,
+"qid": "Q66732355",
+"no": "32"
+},
+{
+"he": "Bradley Collins",
+"en": "Bradley Collins",
+"pos": "GK",
+"age": 29,
+"nat": "England",
+"value_m": 0.24,
+"qid": "Q34637598",
+"no": "40"
+},
+{
+"he": "Elijah Adebayo",
+"en": "Elijah Adebayo",
+"pos": "FW",
+"age": 28,
+"nat": "England",
+"value_m": 0.54,
+"qid": "Q47476974",
+"no": "45"
+},
+{
+"he": "יו הירקאווה",
+"en": "Yū Hirakawa",
+"pos": "FW",
+"age": 25,
+"nat": "Japan",
+"value_m": 0.53,
+"qid": "Q109947455",
+"no": "7"
+},
+{
+"he": "Tomi Horvat",
+"en": "Tomi Horvat",
+"pos": "MF",
+"age": 27,
+"nat": "Slovenia",
+"value_m": 0.49,
+"qid": "Q105976535",
+"no": "14"
+},
+{
+"he": "Jason Knight",
+"en": "Jason Knight",
+"pos": "MF",
+"age": 25,
+"nat": "Ireland",
+"value_m": 0.46,
+"qid": "Q66305702",
+"no": "12"
+},
+{
+"he": "Adam Randell",
+"en": "Adam Randell",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 0.41,
+"qid": "Q58975091",
+"no": "4"
+},
+{
+"he": "Sam Bell",
+"en": "Sam Bell",
+"pos": "FW",
+"age": 24,
+"nat": "England",
+"value_m": 0.4,
+"qid": "Q104833453",
+"no": "11"
+},
+{
+"he": "Noah Eile",
+"en": "Noah Eile",
+"pos": "DF",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.4,
+"qid": "Q108184693",
+"no": "38"
+},
+{
+"he": "Lorent Tolaj",
+"en": "Lorent Tolaj",
+"pos": "FW",
+"age": 24,
+"nat": "Switzerland",
+"value_m": 0.39,
+"qid": "Q110796217",
+"no": "9"
+},
+{
+"he": "Scott Twine",
+"en": "Scott Twine",
+"pos": "MF",
+"age": 27,
+"nat": "England",
+"value_m": 0.39,
+"qid": "Q29633758",
+"no": "10"
+},
+{
+"he": "George Tanner",
+"en": "George Tanner",
+"pos": "DF",
+"age": 26,
+"nat": "England",
+"value_m": 0.36,
+"qid": "Q66688699",
+"no": "19"
+},
+{
+"he": "Gibson Yah",
+"en": "Gibson Yah",
+"pos": "MF",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 0.36,
+"qid": "Q104732108",
+"no": "27"
+},
+{
+"he": "Sam Greenwood",
+"en": "Sam Greenwood",
+"pos": "MF",
+"age": 24,
+"nat": "England",
+"value_m": 0.35,
+"qid": "Q104772533",
+"no": "20"
+},
+{
+"he": "Dom Ballard",
+"en": "Dom Ballard",
+"pos": "FW",
+"age": 21,
+"nat": "England",
+"value_m": 0.35,
+"qid": "Q113586548",
+"no": "23"
+},
+{
+"he": "Cameron Pring",
+"en": "Cameron Pring",
+"pos": "DF",
+"age": 28,
+"nat": "England",
+"value_m": 0.31,
+"qid": "Q56599812",
+"no": "3"
+},
+{
+"he": "Luke McNally",
+"en": "Luke McNally",
+"pos": "DF",
+"age": 26,
+"nat": "Ireland",
+"value_m": 0.31,
+"qid": "Q108106462",
+"no": "15"
+},
+{
+"he": "Robert Atkinson",
+"en": "Robert Atkinson",
+"pos": "DF",
+"age": 28,
+"nat": "England",
+"value_m": 0.29,
+"qid": "Q104833415",
+"no": "5"
+},
+{
+"he": "ליסב עיסאת",
+"en": "Lisav Eissat",
+"pos": "DF",
+"age": 21,
+"nat": "Romania",
+"value_m": 0.27,
+"qid": "Q131840182",
+"no": "2"
+},
+{
+"he": "Joe Williams",
+"en": "Joe Williams",
+"pos": "MF",
+"age": 29,
+"nat": "England",
+"value_m": 0.27,
+"qid": "Q39078766",
+"no": "8"
+},
+{
+"he": "Daniel Ezendu",
+"en": "Daniel Ezendu",
+"pos": "MF",
+"age": 25,
+"nat": "Italy",
+"value_m": 0.25,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Jed Wallace",
+"en": "Jed Wallace",
+"pos": "MF",
+"age": 32,
+"nat": "England",
+"value_m": 0.21,
+"qid": "Q6172641",
+"no": "17"
+},
+{
+"he": "Rob Dickie",
+"en": "Rob Dickie",
+"pos": "DF",
+"age": 30,
+"nat": "England",
+"value_m": 0.2,
+"qid": "Q24679288",
+"no": "16"
+},
+{
+"he": "Seb Naylor",
+"en": "Seb Naylor",
+"pos": "DF",
+"age": 20,
+"nat": "England",
+"value_m": 0.15,
+"qid": "Q139374528",
+"no": "24"
+},
+{
+"he": "Elijah Morrison",
+"en": "Elijah Morrison",
+"pos": "DF",
+"age": 20,
+"nat": "England",
+"value_m": 0.13,
+"qid": "Q125679692",
+"no": "31"
+},
+{
+"he": "Leo Pecover",
+"en": "Leo Pecover",
+"pos": "MF",
+"age": 18,
+"nat": "England",
+"value_m": 0.09,
+"qid": "Q136736037",
+"no": "29"
+}
+]
+}

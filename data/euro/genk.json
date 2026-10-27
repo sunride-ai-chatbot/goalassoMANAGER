@@ -1,0 +1,308 @@
+{
+"key": "genk",
+"name_he": "גנק",
+"source": "enwiki:KRC Genk",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Tobias Lawal",
+"en": "Tobias Lawal",
+"pos": "GK",
+"age": 26,
+"nat": "Austria",
+"value_m": 0.61,
+"qid": "Q55841485",
+"no": "26"
+},
+{
+"he": "Lucca Brughmans",
+"en": "Lucca Brughmans",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.54,
+"qid": "Q131828146",
+"no": "28"
+},
+{
+"he": "Tobe Leysen",
+"en": "Tobe Leysen",
+"pos": "GK",
+"age": 24,
+"nat": "Belgium",
+"value_m": 0.52,
+"qid": "Q74682140",
+"no": "1"
+},
+{
+"he": "Kenan Haroun",
+"en": "Kenan Haroun",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.36,
+"qid": null,
+"no": "86"
+},
+{
+"he": "Mariyan Boev",
+"en": "Mariyan Boev",
+"pos": "GK",
+"age": 25,
+"nat": null,
+"value_m": 0.35,
+"qid": null,
+"no": "87"
+},
+{
+"he": "Vic Debusschere",
+"en": "Vic Debusschere",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.34,
+"qid": null,
+"no": "81"
+},
+{
+"he": "Emile Doucouré",
+"en": "Emile Doucouré",
+"pos": "GK",
+"age": 25,
+"nat": "Mali",
+"value_m": 0.29,
+"qid": null,
+"no": "97"
+},
+{
+"he": "Daan Van Laere",
+"en": "Daan Van Laere",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.26,
+"qid": null,
+"no": "61"
+},
+{
+"he": "Jerry Afriyie",
+"en": "Jerry Afriyie",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.65,
+"qid": "Q126279173",
+"no": "33"
+},
+{
+"he": "Victory Beniangba",
+"en": "Victory Beniangba",
+"pos": "FW",
+"age": 23,
+"nat": "Nigeria",
+"value_m": 0.64,
+"qid": "Q113460192",
+"no": "90"
+},
+{
+"he": "Nikolas Sattlberger",
+"en": "Nikolas Sattlberger",
+"pos": "MF",
+"age": 22,
+"nat": "Austria",
+"value_m": 0.61,
+"qid": "Q101242938",
+"no": "24"
+},
+{
+"he": "Ayumu Yokoyama",
+"en": "Ayumu Yokoyama",
+"pos": "FW",
+"age": 23,
+"nat": null,
+"value_m": 0.6,
+"qid": "Q105722914",
+"no": "30"
+},
+{
+"he": "Daan Heymans",
+"en": "Daan Heymans",
+"pos": "MF",
+"age": 27,
+"nat": "Belgium",
+"value_m": 0.6,
+"qid": "Q26271405",
+"no": "38"
+},
+{
+"he": "Jeppe Erenbjerg",
+"en": "Jeppe Erenbjerg",
+"pos": "MF",
+"age": 26,
+"nat": "Denmark",
+"value_m": 0.58,
+"qid": "Q131543134",
+"no": "11"
+},
+{
+"he": "Christiaan Ravych",
+"en": "Christiaan Ravych",
+"pos": "DF",
+"age": 24,
+"nat": "Belgium",
+"value_m": 0.53,
+"qid": "Q113367245",
+"no": "5"
+},
+{
+"he": "Bryan Heynen",
+"en": "Bryan Heynen",
+"pos": "MF",
+"age": 29,
+"nat": "Belgium",
+"value_m": 0.53,
+"qid": "Q20730963",
+"no": "8"
+},
+{
+"he": "רפיו דורוסינמי",
+"en": "Rafiu Durosinmi",
+"pos": "FW",
+"age": 23,
+"nat": "Nigeria",
+"value_m": 0.53,
+"qid": "Q116059342",
+"no": "17"
+},
+{
+"he": "Kevin Amaro",
+"en": "Kevin Amaro",
+"pos": "DF",
+"age": 22,
+"nat": "Uruguay",
+"value_m": 0.52,
+"qid": "Q125694499",
+"no": "20"
+},
+{
+"he": "יאימר מדינה",
+"en": "Yaimar Medina",
+"pos": "DF",
+"age": 21,
+"nat": "Ecuador",
+"value_m": 0.51,
+"qid": "Q116235098",
+"no": "19"
+},
+{
+"he": "Saif Eddien Lazar",
+"en": "Saif Eddien Lazar",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.51,
+"qid": null,
+"no": "60"
+},
+{
+"he": "Ibrahima Sory Bangoura",
+"en": "Ibrahima Sory Bangoura",
+"pos": "MF",
+"age": 22,
+"nat": "Guinea",
+"value_m": 0.5,
+"qid": "Q113515016",
+"no": "21"
+},
+{
+"he": "Elie Mpungu Kongolo",
+"en": "Elie Mpungu Kongolo",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.5,
+"qid": null,
+"no": "80"
+},
+{
+"he": "Ken Nkuba",
+"en": "Ken Nkuba",
+"pos": "DF",
+"age": 24,
+"nat": "Belgium",
+"value_m": 0.49,
+"qid": "Q58010374",
+"no": "27"
+},
+{
+"he": "Noah Adedeji-Sternberg",
+"en": "Noah Adedeji-Sternberg",
+"pos": "FW",
+"age": 21,
+"nat": "Belgium",
+"value_m": 0.48,
+"qid": "Q121746392",
+"no": "32"
+},
+{
+"he": "Jonathan Coenen",
+"en": "Jonathan Coenen",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.48,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Adrián Palacios",
+"en": "Adrián Palacios",
+"pos": "DF",
+"age": 22,
+"nat": "Venezuela",
+"value_m": 0.47,
+"qid": "Q126940882",
+"no": "34"
+},
+{
+"he": "Mustapha Koma",
+"en": "Mustapha Koma",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.46,
+"qid": null,
+"no": "57"
+},
+{
+"he": "Wout Willemsen",
+"en": "Wout Willemsen",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.44,
+"qid": null,
+"no": "64"
+},
+{
+"he": "Matte Smets",
+"en": "Matte Smets",
+"pos": "DF",
+"age": 22,
+"nat": "Belgium",
+"value_m": 0.43,
+"qid": "Q115902866",
+"no": "6"
+},
+{
+"he": "Moussa Koné",
+"en": "Moussa Koné",
+"pos": "MF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.42,
+"qid": null,
+"no": "50"
+}
+]
+}

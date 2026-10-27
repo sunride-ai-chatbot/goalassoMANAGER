@@ -1,0 +1,278 @@
+{
+"key": "flamengo",
+"name_he": "פלמנגו",
+"source": "enwiki:CR Flamengo",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "אגוסטין רוסי",
+"en": "Agustín Rossi",
+"pos": "GK",
+"age": 31,
+"nat": null,
+"value_m": 0.15,
+"qid": "Q20736318",
+"no": "1"
+},
+{
+"he": "Andrew",
+"en": "Andrew",
+"pos": "GK",
+"age": 25,
+"nat": null,
+"value_m": 0.1,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Dyogo Alves",
+"en": "Dyogo Alves",
+"pos": "GK",
+"age": 22,
+"nat": null,
+"value_m": 0.1,
+"qid": "Q136379066",
+"no": "49"
+},
+{
+"he": "סמואל לינו",
+"en": "Samuel Lino",
+"pos": "FW",
+"age": 26,
+"nat": null,
+"value_m": 0.42,
+"qid": "Q67222776",
+"no": "16"
+},
+{
+"he": "גונסאלו פלאטה",
+"en": "Gonzalo Plata",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.35,
+"qid": "Q60842120",
+"no": "19"
+},
+{
+"he": "Jorge Carrascal",
+"en": "Jorge Carrascal",
+"pos": "MF",
+"age": 28,
+"nat": null,
+"value_m": 0.3,
+"qid": "Q19362872",
+"no": "15"
+},
+{
+"he": "Anthony Valencia",
+"en": "Anthony Valencia",
+"pos": "FW",
+"age": 23,
+"nat": null,
+"value_m": 0.28,
+"qid": "Q101247266",
+"no": "14"
+},
+{
+"he": "אמרסון רויאל",
+"en": "Emerson Royal",
+"pos": "DF",
+"age": 27,
+"nat": null,
+"value_m": 0.28,
+"qid": "Q30123152",
+"no": "22"
+},
+{
+"he": "פדרו (כדורגלן יליד 1997)",
+"en": "Pedro",
+"pos": "FW",
+"age": 29,
+"nat": null,
+"value_m": 0.26,
+"qid": "Q47491410",
+"no": "9"
+},
+{
+"he": "Luiz Araújo",
+"en": "Luiz Araújo",
+"pos": "FW",
+"age": 30,
+"nat": null,
+"value_m": 0.23,
+"qid": "Q25175962",
+"no": "7"
+},
+{
+"he": "לוקאס פאקטה",
+"en": "Lucas Paquetá",
+"pos": "MF",
+"age": 29,
+"nat": null,
+"value_m": 0.23,
+"qid": "Q30089624",
+"no": "11"
+},
+{
+"he": "סאול ניגס",
+"en": "Saúl Ñíguez",
+"pos": "MF",
+"age": 31,
+"nat": null,
+"value_m": 0.2,
+"qid": "Q912172",
+"no": "8"
+},
+{
+"he": "ניקולס דה לה קרוז",
+"en": "Nicolás de la Cruz",
+"pos": "MF",
+"age": 29,
+"nat": null,
+"value_m": 0.2,
+"qid": "Q20994037",
+"no": "18"
+},
+{
+"he": "Vitão",
+"en": "Vitão",
+"pos": "DF",
+"age": 26,
+"nat": null,
+"value_m": 0.2,
+"qid": "Q60841629",
+"no": "44"
+},
+{
+"he": "לאו פריירה",
+"en": "Léo Pereira",
+"pos": "DF",
+"age": 30,
+"nat": null,
+"value_m": 0.19,
+"qid": "Q18199184",
+"no": "4"
+},
+{
+"he": "איירטון לוקאס",
+"en": "Ayrton Lucas",
+"pos": "DF",
+"age": 29,
+"nat": null,
+"value_m": 0.17,
+"qid": "Q23638974",
+"no": "6"
+},
+{
+"he": "Evertton Araújo",
+"en": "Evertton Araújo",
+"pos": "MF",
+"age": 23,
+"nat": null,
+"value_m": 0.17,
+"qid": "Q126365061",
+"no": "52"
+},
+{
+"he": "Léo Ortiz",
+"en": "Léo Ortiz",
+"pos": "DF",
+"age": 30,
+"nat": "Brazil",
+"value_m": 0.16,
+"qid": "Q55816003",
+"no": "3"
+},
+{
+"he": "ג'יורג'יאן דה ארסקאטה",
+"en": "Giorgian de Arrascaeta",
+"pos": "MF",
+"age": 32,
+"nat": null,
+"value_m": 0.15,
+"qid": "Q13578003",
+"no": "10"
+},
+{
+"he": "Joaquín Freitas",
+"en": "Joaquín Freitas",
+"pos": "FW",
+"age": 19,
+"nat": null,
+"value_m": 0.14,
+"qid": "Q138975313",
+"no": "30"
+},
+{
+"he": "אריק פולגאר",
+"en": "Erick Pulgar",
+"pos": "MF",
+"age": 32,
+"nat": null,
+"value_m": 0.12,
+"qid": "Q16911636",
+"no": "5"
+},
+{
+"he": "גיז'רמו וארלה",
+"en": "Guillermo Varela",
+"pos": "DF",
+"age": 33,
+"nat": null,
+"value_m": 0.11,
+"qid": "Q13422031",
+"no": "2"
+},
+{
+"he": "ברונו הנריקה",
+"en": "Bruno Henrique",
+"pos": "FW",
+"age": 35,
+"nat": null,
+"value_m": 0.09,
+"qid": "Q19956526",
+"no": "27"
+},
+{
+"he": "João Victor",
+"en": "João Victor",
+"pos": "DF",
+"age": 19,
+"nat": null,
+"value_m": 0.09,
+"qid": "Q131516105",
+"no": "61"
+},
+{
+"he": "דנילו לואיס דה סילבה",
+"en": "Danilo",
+"pos": "DF",
+"age": 35,
+"nat": null,
+"value_m": 0.08,
+"qid": "Q437329",
+"no": "13"
+},
+{
+"he": "ז'ורז'יניו (כדורגלן איטלקי)",
+"en": "Jorginho",
+"pos": "MF",
+"age": 34,
+"nat": null,
+"value_m": 0.08,
+"qid": "Q3810078",
+"no": "21"
+},
+{
+"he": "אלכס סנדרו",
+"en": "Alex Sandro",
+"pos": "DF",
+"age": 35,
+"nat": null,
+"value_m": 0.07,
+"qid": "Q551192",
+"no": "26"
+}
+]
+}

@@ -1,0 +1,248 @@
+{
+"key": "osasuna",
+"name_he": "אוסאסונה",
+"source": "enwiki:CA Osasuna",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "סרחיו הררה",
+"en": "Sergio Herrera",
+"pos": "GK",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.25,
+"qid": "Q24279005",
+"no": "1"
+},
+{
+"he": "אייטור פרננדס",
+"en": "Aitor Fernández",
+"pos": "GK",
+"age": 35,
+"nat": "Spain",
+"value_m": 0.16,
+"qid": "Q3754541",
+"no": "13"
+},
+{
+"he": "איימר אורוס",
+"en": "Aimar Oroz",
+"pos": "MF",
+"age": 24,
+"nat": "Spain",
+"value_m": 1.21,
+"qid": "Q64735295",
+"no": "10"
+},
+{
+"he": "ראול גרסיה (2000)",
+"en": "Raúl García",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 1.04,
+"qid": "Q68499016",
+"no": "9"
+},
+{
+"he": "קיקה בארחה",
+"en": "Kike Barja",
+"pos": "FW",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.96,
+"qid": "Q32236556",
+"no": "11"
+},
+{
+"he": "יון מונקאיולה",
+"en": "Jon Moncayola",
+"pos": "MF",
+"age": 28,
+"nat": "Spain",
+"value_m": 0.93,
+"qid": "Q66528894",
+"no": "7"
+},
+{
+"he": "ראול מורו",
+"en": "Raúl Moro",
+"pos": "FW",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.89,
+"qid": "Q97573236",
+"no": "18"
+},
+{
+"he": "אבל ברטונס",
+"en": "Abel Bretones",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.8,
+"qid": "Q113576903",
+"no": "23"
+},
+{
+"he": "חורחה אראנדו",
+"en": "Jorge Herrando",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.73,
+"qid": "Q114136986",
+"no": "5"
+},
+{
+"he": "רומן דל קסטיו",
+"en": "Romain Del Castillo",
+"pos": "FW",
+"age": 30,
+"nat": "France",
+"value_m": 0.71,
+"qid": "Q21584345",
+"no": "20"
+},
+{
+"he": "איקר מוניוס",
+"en": "Iker Muñoz",
+"pos": "MF",
+"age": 23,
+"nat": "Spain",
+"value_m": 0.7,
+"qid": "Q116603156",
+"no": "8"
+},
+{
+"he": "אנזו בויומו",
+"en": "Enzo Boyomo",
+"pos": "DF",
+"age": 24,
+"nat": "Cameroon",
+"value_m": 0.7,
+"qid": "Q99659218",
+"no": "22"
+},
+{
+"he": "ולנטין רוזייה",
+"en": "Valentin Rosier",
+"pos": "DF",
+"age": 30,
+"nat": "France",
+"value_m": 0.63,
+"qid": "Q30317774",
+"no": "19"
+},
+{
+"he": "Jonathan Dubasin",
+"en": "Jonathan Dubasin",
+"pos": "MF",
+"age": 26,
+"nat": "Belgium",
+"value_m": 0.63,
+"qid": "Q113154245",
+"no": "21"
+},
+{
+"he": "Asier Osambela",
+"en": "Asier Osambela",
+"pos": "MF",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.6,
+"qid": "Q122417337",
+"no": "29"
+},
+{
+"he": "Mauro Echegoyen",
+"en": "Mauro Echegoyen",
+"pos": "MF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.57,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Iñigo Arguibide",
+"en": "Iñigo Arguibide",
+"pos": "DF",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.49,
+"qid": "Q124659098",
+"no": "27"
+},
+{
+"he": "לוקאס טורו",
+"en": "Lucas Torró",
+"pos": "MF",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.47,
+"qid": "Q15494540",
+"no": "6"
+},
+{
+"he": "Rockson Yeboah",
+"en": "Rockson Yeboah",
+"pos": "DF",
+"age": 22,
+"nat": "Ghana",
+"value_m": 0.46,
+"qid": "Q130617648",
+"no": "48"
+},
+{
+"he": "מוי גומס",
+"en": "Moi Gómez",
+"pos": "MF",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.45,
+"qid": "Q3884280",
+"no": "16"
+},
+{
+"he": "רובן גרסיה",
+"en": "Rubén García",
+"pos": "MF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.43,
+"qid": "Q1438885",
+"no": "14"
+},
+{
+"he": "אלחנדרו קטנה",
+"en": "Alejandro Catena",
+"pos": "DF",
+"age": 32,
+"nat": "Spain",
+"value_m": 0.35,
+"qid": "Q55640535",
+"no": "24"
+},
+{
+"he": "דייגו ריקו",
+"en": "Diego Rico",
+"pos": "DF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.33,
+"qid": "Q15696580",
+"no": "15"
+},
+{
+"he": "אנטה בודימיר",
+"en": "Ante Budimir",
+"pos": "FW",
+"age": 35,
+"nat": "Croatia",
+"value_m": 0.26,
+"qid": "Q17505049",
+"no": "17"
+}
+]
+}

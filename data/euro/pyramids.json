@@ -1,0 +1,308 @@
+{
+"key": "pyramids",
+"name_he": "פירמידס",
+"source": "enwiki:Pyramids FC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Mahmoud Gad",
+"en": "Mahmoud Gad",
+"pos": "GK",
+"age": 27,
+"nat": "Egypt",
+"value_m": 0.22,
+"qid": "Q100260803",
+"no": "28"
+},
+{
+"he": "Hazem Gamal",
+"en": "Hazem Gamal",
+"pos": "GK",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.13,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Ahmed El Shenawy",
+"en": "Ahmed El Shenawy",
+"pos": "GK",
+"age": 35,
+"nat": "Egypt",
+"value_m": 0.05,
+"qid": "Q2736249",
+"no": "1"
+},
+{
+"he": "Nadhir Benbouali",
+"en": "Nadhir Benbouali",
+"pos": "FW",
+"age": 26,
+"nat": "Algeria",
+"value_m": 0.38,
+"qid": "Q112654639",
+"no": "13"
+},
+{
+"he": "Mahmoud Saber",
+"en": "Mahmoud Saber",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.35,
+"qid": "Q117035133",
+"no": "8"
+},
+{
+"he": "מוסטפא זיקו",
+"en": "Mostafa Ziko",
+"pos": "FW",
+"age": 29,
+"nat": "Egypt",
+"value_m": 0.28,
+"qid": "Q121537482",
+"no": "30"
+},
+{
+"he": "Abdel Rahman Magdy",
+"en": "Abdel Rahman Magdy",
+"pos": "FW",
+"age": 28,
+"nat": "Egypt",
+"value_m": 0.26,
+"qid": "Q61998292",
+"no": "20"
+},
+{
+"he": "Ahmed Kader",
+"en": "Ahmed Kader",
+"pos": "FW",
+"age": 27,
+"nat": "Egypt",
+"value_m": 0.22,
+"qid": "Q108525623",
+"no": "9"
+},
+{
+"he": "Mohanad Lasheen",
+"en": "Mohanad Lasheen",
+"pos": "MF",
+"age": 30,
+"nat": "Egypt",
+"value_m": 0.21,
+"qid": "Q41023561",
+"no": "14"
+},
+{
+"he": "Osama Galal",
+"en": "Osama Galal",
+"pos": "DF",
+"age": 28,
+"nat": "Egypt",
+"value_m": 0.19,
+"qid": "Q77351007",
+"no": "6"
+},
+{
+"he": "Otta",
+"en": "Otta",
+"pos": "MF",
+"age": 23,
+"nat": "Egypt",
+"value_m": 0.19,
+"qid": "Q128210256",
+"no": "23"
+},
+{
+"he": "Mostafa Fathi",
+"en": "Mostafa Fathi",
+"pos": "FW",
+"age": 31,
+"nat": "Egypt",
+"value_m": 0.18,
+"qid": "Q16728929",
+"no": "11"
+},
+{
+"he": "Karim Hafez",
+"en": "Karim Hafez",
+"pos": "DF",
+"age": 31,
+"nat": "Egypt",
+"value_m": 0.18,
+"qid": "Q18225149",
+"no": "29"
+},
+{
+"he": "Ewerton",
+"en": "Ewerton",
+"pos": "MF",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.17,
+"qid": "Q28540574",
+"no": "32"
+},
+{
+"he": "עודה אל-פאח'ורי",
+"en": "Odeh Al-Fakhouri",
+"pos": "FW",
+"age": 20,
+"nat": "Jordan",
+"value_m": 0.16,
+"qid": "Q130508829",
+"no": "25"
+},
+{
+"he": "Mesho",
+"en": "Mesho",
+"pos": "FW",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.16,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Zalaka",
+"en": "Zalaka",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.15,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Nasser Maher",
+"en": "Nasser Maher",
+"pos": "MF",
+"age": 29,
+"nat": "Egypt",
+"value_m": 0.15,
+"qid": "Q47158846",
+"no": "27"
+},
+{
+"he": "Mahmoud Marei",
+"en": "Mahmoud Marei",
+"pos": "DF",
+"age": 28,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": "Q28846367",
+"no": "3"
+},
+{
+"he": "Ahmed Fawzi",
+"en": "Ahmed Fawzi",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Hassan Tarek",
+"en": "Hassan Tarek",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Ali Hamouda",
+"en": "Ali Hamouda",
+"pos": "FW",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "38"
+},
+{
+"he": "Ziad Saoudi",
+"en": "Ziad Saoudi",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Youssef Obama",
+"en": "Youssef Obama",
+"pos": "MF",
+"age": 31,
+"nat": "Egypt",
+"value_m": 0.12,
+"qid": "Q18171057",
+"no": "7"
+},
+{
+"he": "Mohamed Hamdy",
+"en": "Mohamed Hamdy",
+"pos": "DF",
+"age": 31,
+"nat": "Egypt",
+"value_m": 0.12,
+"qid": "Q22278109",
+"no": "21"
+},
+{
+"he": "Walid El Karti",
+"en": "Walid El Karti",
+"pos": "MF",
+"age": 32,
+"nat": "Morocco",
+"value_m": 0.11,
+"qid": "Q16236644",
+"no": "18"
+},
+{
+"he": "Mohamed Chibi",
+"en": "Mohamed Chibi",
+"pos": "DF",
+"age": 33,
+"nat": "Morocco",
+"value_m": 0.09,
+"qid": "Q99085185",
+"no": "15"
+},
+{
+"he": "Ahmed Samy",
+"en": "Ahmed Samy",
+"pos": "DF",
+"age": 34,
+"nat": "Egypt",
+"value_m": 0.06,
+"qid": "Q27942672",
+"no": "4"
+},
+{
+"he": "Ali Gabr",
+"en": "Ali Gabr",
+"pos": "DF",
+"age": 37,
+"nat": "Egypt",
+"value_m": 0.05,
+"qid": "Q17180607",
+"no": "5"
+},
+{
+"he": "Ahmed Tawfik",
+"en": "Ahmed Tawfik",
+"pos": "DF",
+"age": 34,
+"nat": "Egypt",
+"value_m": 0.05,
+"qid": "Q4696039",
+"no": "12"
+}
+]
+}

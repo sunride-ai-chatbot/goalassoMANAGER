@@ -1,0 +1,278 @@
+{
+"key": "middlesbrough",
+"name_he": "מידלסברו",
+"source": "enwiki:Middlesbrough F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Radek Vítek",
+"en": "Radek Vítek",
+"pos": "GK",
+"age": 22,
+"nat": "Czech Republic",
+"value_m": 0.39,
+"qid": "Q123995390",
+"no": "1"
+},
+{
+"he": "Sol Brynn",
+"en": "Sol Brynn",
+"pos": "GK",
+"age": 25,
+"nat": "England",
+"value_m": 0.28,
+"qid": "Q113376011",
+"no": "31"
+},
+{
+"he": "Jon McLaughlin",
+"en": "Jon McLaughlin",
+"pos": "GK",
+"age": 38,
+"nat": "Scotland",
+"value_m": 0.09,
+"qid": "Q10469718",
+"no": "33"
+},
+{
+"he": "דויד סטרלץ",
+"en": "David Strelec",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.74,
+"qid": "Q56043497",
+"no": "13"
+},
+{
+"he": "Sebastian Berhalter",
+"en": "Sebastian Berhalter",
+"pos": "MF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.67,
+"qid": "Q86301356",
+"no": "6"
+},
+{
+"he": "Aidan Morris",
+"en": "Aidan Morris",
+"pos": "MF",
+"age": 24,
+"nat": "United States",
+"value_m": 0.64,
+"qid": "Q80212149",
+"no": "10"
+},
+{
+"he": "Tommy Conway",
+"en": "Tommy Conway",
+"pos": "FW",
+"age": 24,
+"nat": "Scotland",
+"value_m": 0.59,
+"qid": "Q106388613",
+"no": "9"
+},
+{
+"he": "ז'רמי סרמיינטו",
+"en": "Jeremy Sarmiento",
+"pos": "MF",
+"age": 24,
+"nat": "Ecuador",
+"value_m": 0.59,
+"qid": "Q108659564",
+"no": "16"
+},
+{
+"he": "Riley McGree",
+"en": "Riley McGree",
+"pos": "MF",
+"age": 27,
+"nat": "Australia",
+"value_m": 0.57,
+"qid": "Q23771429",
+"no": "8"
+},
+{
+"he": "מקסימיליאן ארפסטן",
+"en": "Max Arfsten",
+"pos": "DF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.55,
+"qid": "Q117309867",
+"no": "17"
+},
+{
+"he": "אלפי ג'ונס",
+"en": "Alfie Jones",
+"pos": "DF",
+"age": 28,
+"nat": "Canada",
+"value_m": 0.52,
+"qid": "Q56222105",
+"no": "5"
+},
+{
+"he": "Neto Borges",
+"en": "Neto Borges",
+"pos": "DF",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.5,
+"qid": "Q46351173",
+"no": "30"
+},
+{
+"he": "מייקה המילטון",
+"en": "Micah Hamilton",
+"pos": "MF",
+"age": 22,
+"nat": "England",
+"value_m": 0.5,
+"qid": "Q123785557",
+"no": null
+},
+{
+"he": "רוקאס פוקסטאס",
+"en": "Rokas Pukštas",
+"pos": "MF",
+"age": 22,
+"nat": "United States",
+"value_m": 0.49,
+"qid": "Q111771229",
+"no": "21"
+},
+{
+"he": "אלכס באנגורה",
+"en": "Alex Bangura",
+"pos": "DF",
+"age": 27,
+"nat": "Sierra Leone",
+"value_m": 0.47,
+"qid": "Q62075478",
+"no": "24"
+},
+{
+"he": "Kyle Joseph",
+"en": "Kyle Joseph",
+"pos": "FW",
+"age": 24,
+"nat": "Scotland",
+"value_m": 0.44,
+"qid": "Q104694079",
+"no": "22"
+},
+{
+"he": "Leo Castledine",
+"en": "Leo Castledine",
+"pos": "MF",
+"age": 21,
+"nat": "England",
+"value_m": 0.43,
+"qid": "Q115903153",
+"no": "19"
+},
+{
+"he": "Adilson Malanda",
+"en": "Adilson Malanda",
+"pos": "DF",
+"age": 24,
+"nat": "France",
+"value_m": 0.41,
+"qid": "Q104443739",
+"no": "29"
+},
+{
+"he": "Ashley Phillips",
+"en": "Ashley Phillips",
+"pos": "DF",
+"age": 21,
+"nat": "England",
+"value_m": 0.4,
+"qid": "Q113547044",
+"no": "4"
+},
+{
+"he": "Myles Peart-Harris",
+"en": "Myles Peart-Harris",
+"pos": "MF",
+"age": 23,
+"nat": "England",
+"value_m": 0.38,
+"qid": "Q108653513",
+"no": "14"
+},
+{
+"he": "ויל לנקשיר",
+"en": "Will Lankshear",
+"pos": "FW",
+"age": 21,
+"nat": "England",
+"value_m": 0.35,
+"qid": "Q123001113",
+"no": "7"
+},
+{
+"he": "Callum Brittain",
+"en": "Callum Brittain",
+"pos": "DF",
+"age": 28,
+"nat": "England",
+"value_m": 0.34,
+"qid": "Q28147551",
+"no": "2"
+},
+{
+"he": "George Edmundson",
+"en": "George Edmundson",
+"pos": "DF",
+"age": 29,
+"nat": "England",
+"value_m": 0.34,
+"qid": "Q21005715",
+"no": "25"
+},
+{
+"he": "Sam Byram",
+"en": "Sam Byram",
+"pos": "DF",
+"age": 32,
+"nat": "England",
+"value_m": 0.25,
+"qid": "Q5591335",
+"no": "3"
+},
+{
+"he": "Law McCabe",
+"en": "Law McCabe",
+"pos": "MF",
+"age": 20,
+"nat": "England",
+"value_m": 0.18,
+"qid": "Q123923163",
+"no": "28"
+},
+{
+"he": "לוק איילינג",
+"en": "Luke Ayling",
+"pos": "DF",
+"age": 35,
+"nat": "England",
+"value_m": 0.15,
+"qid": "Q10502548",
+"no": "12"
+},
+{
+"he": "Cruz Ibeh",
+"en": "Cruz Ibeh",
+"pos": "MF",
+"age": 17,
+"nat": "England",
+"value_m": 0.1,
+"qid": "Q140626548",
+"no": "44"
+}
+]
+}

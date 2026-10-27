@@ -1,0 +1,288 @@
+{
+"key": "atletico_nacional",
+"name_he": "אתלטיקו נסיונל",
+"source": "enwiki:Atlético Nacional",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Luis Marquinez",
+"en": "Luis Marquinez",
+"pos": "GK",
+"age": 23,
+"nat": "Colombia",
+"value_m": 0.14,
+"qid": "Q112155207",
+"no": "25"
+},
+{
+"he": "Edimer Zea",
+"en": "Edimer Zea",
+"pos": "GK",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.12,
+"qid": null,
+"no": "44"
+},
+{
+"he": "פרנקו ארמני",
+"en": "Franco Armani",
+"pos": "GK",
+"age": 39,
+"nat": "Argentina",
+"value_m": 0.04,
+"qid": "Q5484508",
+"no": "34"
+},
+{
+"he": "Ian Poveda",
+"en": "Ian Poveda",
+"pos": "FW",
+"age": 26,
+"nat": "Colombia",
+"value_m": 0.32,
+"qid": "Q60884779",
+"no": "99"
+},
+{
+"he": "Marlos Moreno",
+"en": "Marlos Moreno",
+"pos": "FW",
+"age": 29,
+"nat": "Colombia",
+"value_m": 0.31,
+"qid": "Q20994192",
+"no": "7"
+},
+{
+"he": "Alfredo Morelos",
+"en": "Alfredo Morelos",
+"pos": "FW",
+"age": 30,
+"nat": "Colombia",
+"value_m": 0.27,
+"qid": "Q16301176",
+"no": "9"
+},
+{
+"he": "César Haydar",
+"en": "César Haydar",
+"pos": "DF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.22,
+"qid": "Q96625376",
+"no": "4"
+},
+{
+"he": "Andrés Reyes",
+"en": "Andrés Reyes",
+"pos": "DF",
+"age": 26,
+"nat": "Colombia",
+"value_m": 0.21,
+"qid": "Q60661790",
+"no": "15"
+},
+{
+"he": "Juan Manuel Zapata",
+"en": "Juan Manuel Zapata",
+"pos": "MF",
+"age": 26,
+"nat": "Colombia",
+"value_m": 0.2,
+"qid": "Q122625114",
+"no": "80"
+},
+{
+"he": "Jorman Campuzano",
+"en": "Jorman Campuzano",
+"pos": "MF",
+"age": 30,
+"nat": "Colombia",
+"value_m": 0.18,
+"qid": "Q44196376",
+"no": "21"
+},
+{
+"he": "Elkin Rivero",
+"en": "Elkin Rivero",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.17,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Andrés Sarmiento",
+"en": "Andrés Sarmiento",
+"pos": "FW",
+"age": 28,
+"nat": "Colombia",
+"value_m": 0.17,
+"qid": "Q60831751",
+"no": "29"
+},
+{
+"he": "Samuel Velásquez",
+"en": "Samuel Velásquez",
+"pos": "DF",
+"age": 23,
+"nat": "Colombia",
+"value_m": 0.17,
+"qid": "Q124313311",
+"no": "33"
+},
+{
+"he": "Felipe Marín",
+"en": "Felipe Marín",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.16,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Kevin Parra",
+"en": "Kevin Parra",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.16,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Matías Lozano",
+"en": "Matías Lozano",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.15,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Juan Rosa",
+"en": "Juan Rosa",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.14,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Yeicar Perlaza",
+"en": "Yeicar Perlaza",
+"pos": "DF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.14,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Xavi Ríos",
+"en": "Xavi Ríos",
+"pos": "DF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.14,
+"qid": null,
+"no": "31"
+},
+{
+"he": "אדווין קרדונה",
+"en": "Edwin Cardona",
+"pos": "MF",
+"age": 33,
+"nat": "Colombia",
+"value_m": 0.13,
+"qid": "Q2053161",
+"no": "10"
+},
+{
+"he": "Juan Rengifo",
+"en": "Juan Rengifo",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.13,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Luis Landázuri",
+"en": "Luis Landázuri",
+"pos": "MF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.13,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Néider Parra",
+"en": "Néider Parra",
+"pos": "DF",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.12,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Andrés Román",
+"en": "Andrés Román",
+"pos": "DF",
+"age": 30,
+"nat": "Colombia",
+"value_m": 0.11,
+"qid": "Q28343305",
+"no": "6"
+},
+{
+"he": "מתאוס אוריבה",
+"en": "Mateus Uribe",
+"pos": "MF",
+"age": 35,
+"nat": "Colombia",
+"value_m": 0.08,
+"qid": "Q20017202",
+"no": "8"
+},
+{
+"he": "Milton Casco",
+"en": "Milton Casco",
+"pos": "DF",
+"age": 38,
+"nat": "Argentina",
+"value_m": 0.06,
+"qid": "Q5676549",
+"no": "20"
+},
+{
+"he": "חאמס רודריגס",
+"en": "James Rodríguez",
+"pos": "MF",
+"age": 35,
+"nat": "Colombia",
+"value_m": 0.06,
+"qid": "Q368441",
+"no": "23"
+},
+{
+"he": "וויליאם טסייו",
+"en": "William Tesillo",
+"pos": "DF",
+"age": 36,
+"nat": "Colombia",
+"value_m": 0.05,
+"qid": "Q6167739",
+"no": "16"
+}
+]
+}

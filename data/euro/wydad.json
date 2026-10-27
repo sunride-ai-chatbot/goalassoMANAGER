@@ -1,0 +1,308 @@
+{
+"key": "wydad",
+"name_he": "וידאד קזבלנקה",
+"source": "enwiki:Wydad AC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Rachid Ghanimi",
+"en": "Rachid Ghanimi",
+"pos": "GK",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.22,
+"qid": "Q120645895",
+"no": null
+},
+{
+"he": "Mehdi Benabid",
+"en": "Mehdi Benabid",
+"pos": "GK",
+"age": 28,
+"nat": "Morocco",
+"value_m": 0.14,
+"qid": "Q101113732",
+"no": "16"
+},
+{
+"he": "Omar Aqzdaou",
+"en": "Omar Aqzdaou",
+"pos": "GK",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.13,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Abderrazak El Wadi",
+"en": "Abderrazak El Wadi",
+"pos": "GK",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.11,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Soufiane Hetli",
+"en": "Soufiane Hetli",
+"pos": "FW",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.3,
+"qid": "Q134506447",
+"no": null
+},
+{
+"he": "Nizar Al-Rashdan",
+"en": "Nizar Al-Rashdan",
+"pos": "MF",
+"age": 27,
+"nat": "Jordan",
+"value_m": 0.25,
+"qid": "Q124302622",
+"no": "18"
+},
+{
+"he": "Walid Nassi",
+"en": "Walid Nassi",
+"pos": "FW",
+"age": 26,
+"nat": "Morocco",
+"value_m": 0.24,
+"qid": "Q116692232",
+"no": "28"
+},
+{
+"he": "Mohamed Moufid",
+"en": "Mohamed Moufid",
+"pos": "DF",
+"age": 26,
+"nat": "Morocco",
+"value_m": 0.21,
+"qid": "Q111927077",
+"no": "2"
+},
+{
+"he": "Oussama Zemraoui",
+"en": "Oussama Zemraoui",
+"pos": "MF",
+"age": 24,
+"nat": "Morocco",
+"value_m": 0.21,
+"qid": "Q126788252",
+"no": "23"
+},
+{
+"he": "Silvère Ganvoula",
+"en": "Silvère Ganvoula",
+"pos": "FW",
+"age": 30,
+"nat": "Congo",
+"value_m": 0.2,
+"qid": "Q18811995",
+"no": "15"
+},
+{
+"he": "Mouad Enzo",
+"en": "Mouad Enzo",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.19,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Yassine Jabrane",
+"en": "Yassine Jabrane",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.19,
+"qid": null,
+"no": "91"
+},
+{
+"he": "Hamza Hannouri",
+"en": "Hamza Hannouri",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.18,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Moises Paniagua",
+"en": "Moises Paniagua",
+"pos": "FW",
+"age": 25,
+"nat": "Bolivia",
+"value_m": 0.17,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Guilherme Ferreira",
+"en": "Guilherme Ferreira",
+"pos": "DF",
+"age": 26,
+"nat": "Brazil",
+"value_m": 0.17,
+"qid": "Q135206195",
+"no": null
+},
+{
+"he": "Zacarías Ghailán",
+"en": "Zacarías Ghailán",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.17,
+"qid": null,
+"no": null
+},
+{
+"he": "Haitam Hamani",
+"en": "Haitam Hamani",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.16,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Adil Khalloufi",
+"en": "Adil Khalloufi",
+"pos": "MF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.16,
+"qid": null,
+"no": "33"
+},
+{
+"he": "איימן אל-ואפי",
+"en": "Ayman El Wafi",
+"pos": "DF",
+"age": 22,
+"nat": "Morocco",
+"value_m": 0.16,
+"qid": "Q120373298",
+"no": null
+},
+{
+"he": "Hamza Jananallah",
+"en": "Hamza Jananallah",
+"pos": "DF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.15,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Naïm Byar",
+"en": "Naïm Byar",
+"pos": "MF",
+"age": 21,
+"nat": "Morocco",
+"value_m": 0.15,
+"qid": "Q112194851",
+"no": "6"
+},
+{
+"he": "יחיא עטיית אללה",
+"en": "Yahya Attiyat Allah",
+"pos": "DF",
+"age": 31,
+"nat": "Morocco",
+"value_m": 0.15,
+"qid": "Q80020069",
+"no": "14"
+},
+{
+"he": "Rayane Mahtou",
+"en": "Rayane Mahtou",
+"pos": "MF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.15,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Sallah Moussaddaq",
+"en": "Sallah Moussaddaq",
+"pos": "DF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.14,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Ayman El Hassouni",
+"en": "Ayman El Hassouni",
+"pos": "MF",
+"age": 31,
+"nat": "Morocco",
+"value_m": 0.13,
+"qid": "Q50345469",
+"no": "10"
+},
+{
+"he": "Joseph Bakasu",
+"en": "Joseph Bakasu",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.13,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Pedrinho",
+"en": "Pedrinho",
+"pos": "MF",
+"age": 22,
+"nat": "Brazil",
+"value_m": 0.13,
+"qid": "Q135206181",
+"no": null
+},
+{
+"he": "Ahmed Rhailouf",
+"en": "Ahmed Rhailouf",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.13,
+"qid": null,
+"no": null
+},
+{
+"he": "Salaheddine Cofi",
+"en": "Salaheddine Cofi",
+"pos": "DF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.11,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Walid Atik",
+"en": "Walid Atik",
+"pos": "DF",
+"age": 25,
+"nat": "Morocco",
+"value_m": 0.11,
+"qid": null,
+"no": null
+}
+]
+}

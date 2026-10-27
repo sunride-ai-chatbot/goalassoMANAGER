@@ -1,0 +1,298 @@
+{
+"key": "coventry",
+"name_he": "קובנטרי",
+"source": "enwiki:Coventry City F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "קרל ראשוורת'",
+"en": "Carl Rushworth",
+"pos": "GK",
+"age": 25,
+"nat": "England",
+"value_m": 0.4,
+"qid": "Q107985580",
+"no": "19"
+},
+{
+"he": "אוליבר דובין",
+"en": "Oliver Dovin",
+"pos": "GK",
+"age": 24,
+"nat": "Sweden",
+"value_m": 0.38,
+"qid": "Q96834825",
+"no": "1"
+},
+{
+"he": "Dan Bentley",
+"en": "Dan Bentley",
+"pos": "GK",
+"age": 33,
+"nat": "England",
+"value_m": 0.18,
+"qid": "Q5216541",
+"no": "25"
+},
+{
+"he": "Ben Wilson",
+"en": "Ben Wilson",
+"pos": "GK",
+"age": 34,
+"nat": "England",
+"value_m": 0.08,
+"qid": "Q16000020",
+"no": "13"
+},
+{
+"he": "יאן גבוהו",
+"en": "Yann Gboho",
+"pos": "FW",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.72,
+"qid": "Q66107406",
+"no": "34"
+},
+{
+"he": "ברנדון תומאס-אסאנטה",
+"en": "Brandon Thomas-Asante",
+"pos": "FW",
+"age": 27,
+"nat": "Ghana",
+"value_m": 0.63,
+"qid": "Q26251815",
+"no": "23"
+},
+{
+"he": "טאיוו אווניי",
+"en": "Taiwo Awoniyi",
+"pos": "FW",
+"age": 29,
+"nat": "Nigeria",
+"value_m": 0.6,
+"qid": "Q20932574",
+"no": "14"
+},
+{
+"he": "Loum Tchaouna",
+"en": "Loum Tchaouna",
+"pos": "FW",
+"age": 22,
+"nat": "France",
+"value_m": 0.57,
+"qid": "Q108703725",
+"no": "17"
+},
+{
+"he": "Ephron Mason-Clark",
+"en": "Ephron Mason-Clark",
+"pos": "FW",
+"age": 27,
+"nat": "Jamaica",
+"value_m": 0.56,
+"qid": "Q27107132",
+"no": "10"
+},
+{
+"he": "Joel Latibeaudiere",
+"en": "Joel Latibeaudiere",
+"pos": "DF",
+"age": 26,
+"nat": "Jamaica",
+"value_m": 0.54,
+"qid": "Q30729099",
+"no": "22"
+},
+{
+"he": "אורל אמנדה",
+"en": "Aurèle Amenda",
+"pos": "DF",
+"age": 23,
+"nat": "Switzerland",
+"value_m": 0.54,
+"qid": "Q111805882",
+"no": "24"
+},
+{
+"he": "האג'י רייט",
+"en": "Haji Wright",
+"pos": "FW",
+"age": 28,
+"nat": "United States",
+"value_m": 0.53,
+"qid": "Q19787021",
+"no": "11"
+},
+{
+"he": "Josh Eccles",
+"en": "Josh Eccles",
+"pos": "MF",
+"age": 26,
+"nat": "England",
+"value_m": 0.51,
+"qid": "Q58754102",
+"no": "28"
+},
+{
+"he": "Ellis Simms",
+"en": "Ellis Simms",
+"pos": "FW",
+"age": 25,
+"nat": "England",
+"value_m": 0.5,
+"qid": "Q105062238",
+"no": "9"
+},
+{
+"he": "Gustavo Hamer",
+"en": "Gustavo Hamer",
+"pos": "MF",
+"age": 29,
+"nat": "Netherlands",
+"value_m": 0.49,
+"qid": "Q27995477",
+"no": "38"
+},
+{
+"he": "Victor Torp",
+"en": "Victor Torp",
+"pos": "MF",
+"age": 27,
+"nat": "Denmark",
+"value_m": 0.47,
+"qid": "Q100144433",
+"no": "29"
+},
+{
+"he": "Tatsuhiro Sakamoto",
+"en": "Tatsuhiro Sakamoto",
+"pos": "FW",
+"age": 29,
+"nat": "Japan",
+"value_m": 0.46,
+"qid": "Q62085112",
+"no": "7"
+},
+{
+"he": "פרנק אוניקה",
+"en": "Frank Onyeka",
+"pos": "MF",
+"age": 28,
+"nat": "Nigeria",
+"value_m": 0.46,
+"qid": "Q56292818",
+"no": "16"
+},
+{
+"he": "Luke Woolfenden",
+"en": "Luke Woolfenden",
+"pos": "DF",
+"age": 27,
+"nat": "England",
+"value_m": 0.46,
+"qid": "Q35554570",
+"no": "26"
+},
+{
+"he": "Jack Rudoni",
+"en": "Jack Rudoni",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 0.41,
+"qid": "Q78488478",
+"no": "5"
+},
+{
+"he": "Jay Dasilva",
+"en": "Jay Dasilva",
+"pos": "DF",
+"age": 28,
+"nat": "Wales",
+"value_m": 0.37,
+"qid": "Q21572868",
+"no": "3"
+},
+{
+"he": "Bobby Thomas",
+"en": "Bobby Thomas",
+"pos": "DF",
+"age": 25,
+"nat": "England",
+"value_m": 0.37,
+"qid": "Q97059250",
+"no": "4"
+},
+{
+"he": "Milan van Ewijk",
+"en": "Milan van Ewijk",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.37,
+"qid": "Q66124842",
+"no": "27"
+},
+{
+"he": "קיילב ירנקי",
+"en": "Caleb Yirenkyi",
+"pos": "MF",
+"age": 20,
+"nat": "Ghana",
+"value_m": 0.34,
+"qid": "Q130337999",
+"no": "8"
+},
+{
+"he": "Kaine Kesler-Hayden",
+"en": "Kaine Kesler-Hayden",
+"pos": "DF",
+"age": 23,
+"nat": "England",
+"value_m": 0.33,
+"qid": "Q104733764",
+"no": "20"
+},
+{
+"he": "Matt Grimes",
+"en": "Matt Grimes",
+"pos": "MF",
+"age": 31,
+"nat": "England",
+"value_m": 0.29,
+"qid": "Q16236759",
+"no": "6"
+},
+{
+"he": "Sidiki Cherif",
+"en": "Sidiki Cherif",
+"pos": "FW",
+"age": 19,
+"nat": "Guinea",
+"value_m": 0.23,
+"qid": "Q124219755",
+"no": "49"
+},
+{
+"he": "Ethan Pinnock",
+"en": "Ethan Pinnock",
+"pos": "DF",
+"age": 33,
+"nat": "Jamaica",
+"value_m": 0.19,
+"qid": "Q36999329",
+"no": "2"
+},
+{
+"he": "Jake Bidwell",
+"en": "Jake Bidwell",
+"pos": "DF",
+"age": 33,
+"nat": "England",
+"value_m": 0.18,
+"qid": "Q1678818",
+"no": "21"
+}
+]
+}

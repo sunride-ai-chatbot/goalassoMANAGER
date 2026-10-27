@@ -1,0 +1,308 @@
+{
+"key": "antwerp",
+"name_he": "רויאל אנטוורפן",
+"source": "enwiki:Royal Antwerp FC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "טאישי ברנדון נוזאווה",
+"en": "Taishi Nozawa",
+"pos": "GK",
+"age": 23,
+"nat": "Japan",
+"value_m": 0.58,
+"qid": "Q64747450",
+"no": "41"
+},
+{
+"he": "Lowie Piselé",
+"en": "Lowie Piselé",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.36,
+"qid": null,
+"no": "61"
+},
+{
+"he": "Matti Merckx",
+"en": "Matti Merckx",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.33,
+"qid": null,
+"no": "71"
+},
+{
+"he": "Niels Devalckeneer",
+"en": "Niels Devalckeneer",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.31,
+"qid": null,
+"no": "81"
+},
+{
+"he": "Marcel Van Dijck",
+"en": "Marcel Van Dijck",
+"pos": "GK",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.31,
+"qid": null,
+"no": "51"
+},
+{
+"he": "Yannick Thoelen",
+"en": "Yannick Thoelen",
+"pos": "GK",
+"age": 36,
+"nat": "Belgium",
+"value_m": 0.09,
+"qid": "Q2353698",
+"no": "15"
+},
+{
+"he": "Christopher Scott",
+"en": "Christopher Scott",
+"pos": "MF",
+"age": 24,
+"nat": "Germany",
+"value_m": 0.76,
+"qid": "Q104519873",
+"no": "30"
+},
+{
+"he": "Maxime Busi",
+"en": "Maxime Busi",
+"pos": "DF",
+"age": 26,
+"nat": "Belgium",
+"value_m": 0.71,
+"qid": "Q61741070",
+"no": "44"
+},
+{
+"he": "Daam Foulon",
+"en": "Daam Foulon",
+"pos": "DF",
+"age": 27,
+"nat": "Belgium",
+"value_m": 0.65,
+"qid": "Q55357077",
+"no": "5"
+},
+{
+"he": "יוטו צונאשימה",
+"en": "Yuto Tsunashima",
+"pos": "DF",
+"age": 26,
+"nat": "Japan",
+"value_m": 0.6,
+"qid": "Q118696545",
+"no": "4"
+},
+{
+"he": "Wilkims Ochieng",
+"en": "Wilkims Ochieng",
+"pos": "FW",
+"age": 23,
+"nat": "Kenya",
+"value_m": 0.6,
+"qid": "Q100546915",
+"no": "75"
+},
+{
+"he": "Thibo Somers",
+"en": "Thibo Somers",
+"pos": "DF",
+"age": 27,
+"nat": "Belgium",
+"value_m": 0.55,
+"qid": "Q72888946",
+"no": "24"
+},
+{
+"he": "Mukhammadali Urinboev",
+"en": "Mukhammadali Urinboev",
+"pos": "FW",
+"age": 21,
+"nat": "Uzbekistan",
+"value_m": 0.53,
+"qid": "Q124396752",
+"no": "19"
+},
+{
+"he": "Mauricio Benítez",
+"en": "Mauricio Benítez",
+"pos": "MF",
+"age": 22,
+"nat": "Argentina",
+"value_m": 0.52,
+"qid": "Q124434103",
+"no": "8"
+},
+{
+"he": "Carlos Mejía",
+"en": "Carlos Mejía",
+"pos": "FW",
+"age": 25,
+"nat": "Ecuador",
+"value_m": 0.51,
+"qid": null,
+"no": "80"
+},
+{
+"he": "Luka Vereecken",
+"en": "Luka Vereecken",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.51,
+"qid": null,
+"no": "69"
+},
+{
+"he": "Rein Van Helden",
+"en": "Rein Van Helden",
+"pos": "DF",
+"age": 24,
+"nat": "Belgium",
+"value_m": 0.5,
+"qid": "Q113660683",
+"no": "20"
+},
+{
+"he": "Lennox Valhelmont",
+"en": "Lennox Valhelmont",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.49,
+"qid": null,
+"no": "74"
+},
+{
+"he": "Orseer Achihi",
+"en": "Orseer Achihi",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.49,
+"qid": null,
+"no": "76"
+},
+{
+"he": "Khoi Pham Anh",
+"en": "Khoi Pham Anh",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.48,
+"qid": null,
+"no": "68"
+},
+{
+"he": "Luis Narh",
+"en": "Luis Narh",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.46,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Milo Horemans",
+"en": "Milo Horemans",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.46,
+"qid": null,
+"no": "77"
+},
+{
+"he": "אלברו קורטס",
+"en": "Álvaro Cortés",
+"pos": "DF",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.45,
+"qid": "Q121944083",
+"no": "3"
+},
+{
+"he": "Modibo Fofana",
+"en": "Modibo Fofana",
+"pos": "MF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.44,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Gerard Vandeplas",
+"en": "Gerard Vandeplas",
+"pos": "FW",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.44,
+"qid": null,
+"no": "79"
+},
+{
+"he": "Abdel-Malik Aziz",
+"en": "Abdel-Malik Aziz",
+"pos": "FW",
+"age": 25,
+"nat": "Togo",
+"value_m": 0.44,
+"qid": null,
+"no": "87"
+},
+{
+"he": "Nano Schoenaerts",
+"en": "Nano Schoenaerts",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.43,
+"qid": null,
+"no": "64"
+},
+{
+"he": "Toon Franssen",
+"en": "Toon Franssen",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.43,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Mohamed Waki",
+"en": "Mohamed Waki",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.43,
+"qid": null,
+"no": "93"
+},
+{
+"he": "Louie Van Gelder",
+"en": "Louie Van Gelder",
+"pos": "MF",
+"age": 25,
+"nat": "Belgium",
+"value_m": 0.42,
+"qid": null,
+"no": "16"
+}
+]
+}

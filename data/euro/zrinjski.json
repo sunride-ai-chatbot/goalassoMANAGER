@@ -1,0 +1,288 @@
+{
+"key": "zrinjski",
+"name_he": "זרינסקי מוסטאר",
+"source": "enwiki:HŠK Zrinjski Mostar",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Matej Bogdan",
+"en": "Matej Bogdan",
+"pos": "GK",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.07,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Goran Karačić",
+"en": "Goran Karačić",
+"pos": "GK",
+"age": 30,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.07,
+"qid": "Q25478314",
+"no": "18"
+},
+{
+"he": "Zvonimir Šubarić",
+"en": "Zvonimir Šubarić",
+"pos": "GK",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.06,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Antonio Đaković",
+"en": "Antonio Đaković",
+"pos": "GK",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.06,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Marijan Ćavar",
+"en": "Marijan Ćavar",
+"pos": "MF",
+"age": 28,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.16,
+"qid": "Q47462023",
+"no": "42"
+},
+{
+"he": "Mario Čuić",
+"en": "Mario Čuić",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.14,
+"qid": "Q98153228",
+"no": "10"
+},
+{
+"he": "Mario Ćuže",
+"en": "Mario Ćuže",
+"pos": "FW",
+"age": 27,
+"nat": "Croatia",
+"value_m": 0.13,
+"qid": "Q66262383",
+"no": "25"
+},
+{
+"he": "Neven Đurasek",
+"en": "Neven Đurasek",
+"pos": "MF",
+"age": 28,
+"nat": "Croatia",
+"value_m": 0.13,
+"qid": "Q55386790",
+"no": "30"
+},
+{
+"he": "Igor Savić",
+"en": "Igor Savić",
+"pos": "MF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.12,
+"qid": "Q113564811",
+"no": "6"
+},
+{
+"he": "Karlo Abramović",
+"en": "Karlo Abramović",
+"pos": "FW",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.11,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Hamza Ljukovac",
+"en": "Hamza Ljukovac",
+"pos": "FW",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.11,
+"qid": null,
+"no": "80"
+},
+{
+"he": "Niko Gajzler",
+"en": "Niko Gajzler",
+"pos": "FW",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.1,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Stefan Cvetković",
+"en": "Stefan Cvetković",
+"pos": "FW",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.1,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Petar Mamić",
+"en": "Petar Mamić",
+"pos": "DF",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.09,
+"qid": "Q16239645",
+"no": "12"
+},
+{
+"he": "Antonio Ilić",
+"en": "Antonio Ilić",
+"pos": "MF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.09,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Marko Vranjković",
+"en": "Marko Vranjković",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.09,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Antonio Arapović",
+"en": "Antonio Arapović",
+"pos": "FW",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.09,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Dan Lagumdžija",
+"en": "Dan Lagumdžija",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.08,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Karlo Stapić",
+"en": "Karlo Stapić",
+"pos": "DF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.08,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Viktor Grbić",
+"en": "Viktor Grbić",
+"pos": "DF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.08,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Toma Palić",
+"en": "Toma Palić",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.08,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Darick Kobie Morris",
+"en": "Darick Kobie Morris",
+"pos": "DF",
+"age": 31,
+"nat": "Croatia",
+"value_m": 0.07,
+"qid": "Q22342678",
+"no": "37"
+},
+{
+"he": "Branko Ćurdo",
+"en": "Branko Ćurdo",
+"pos": "DF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.06,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Tomi Jurić",
+"en": "Tomi Jurić",
+"pos": "FW",
+"age": 35,
+"nat": "Australia",
+"value_m": 0.05,
+"qid": "Q7818846",
+"no": "11"
+},
+{
+"he": "Antonio Ivančić",
+"en": "Antonio Ivančić",
+"pos": "MF",
+"age": 31,
+"nat": "Croatia",
+"value_m": 0.05,
+"qid": "Q80704943",
+"no": "20"
+},
+{
+"he": "נמניה בילביה",
+"en": "Nemanja Bilbija",
+"pos": "FW",
+"age": 35,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.05,
+"qid": "Q2072702",
+"no": "99"
+},
+{
+"he": "Hrvoje Barišić",
+"en": "Hrvoje Barišić",
+"pos": "DF",
+"age": 35,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.02,
+"qid": "Q41447914",
+"no": "4"
+},
+{
+"he": "Slobodan Jakovljević",
+"en": "Slobodan Jakovljević",
+"pos": "DF",
+"age": 37,
+"nat": "Serbia",
+"value_m": 0.02,
+"qid": "Q7541150",
+"no": "27"
+}
+]
+}

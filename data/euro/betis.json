@@ -1,0 +1,248 @@
+{
+"key": "betis",
+"name_he": "ריאל בטיס",
+"source": "enwiki:Real Betis",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "אלבארו ואיאס",
+"en": "Álvaro Valles",
+"pos": "GK",
+"age": 29,
+"nat": "Spain",
+"value_m": 1.11,
+"qid": "Q71333269",
+"no": "1"
+},
+{
+"he": "קוצ'ו הרננדס",
+"en": "Cucho Hernández",
+"pos": "FW",
+"age": 27,
+"nat": "Colombia",
+"value_m": 1.84,
+"qid": "Q27037962",
+"no": "9"
+},
+{
+"he": "עבדה א-זלזולי",
+"en": "Abde Ezzalzouli",
+"pos": "FW",
+"age": 24,
+"nat": "Morocco",
+"value_m": 1.79,
+"qid": "Q109327842",
+"no": "10"
+},
+{
+"he": "פראן גרסיה",
+"en": "Fran García",
+"pos": "DF",
+"age": 27,
+"nat": "Spain",
+"value_m": 1.71,
+"qid": "Q98872225",
+"no": "11"
+},
+{
+"he": "אנטוני",
+"en": "Antony",
+"pos": "FW",
+"age": 26,
+"nat": "Brazil",
+"value_m": 1.67,
+"qid": "Q59205608",
+"no": "7"
+},
+{
+"he": "רודריגו ריקלמה",
+"en": "Rodrigo Riquelme",
+"pos": "MF",
+"age": 26,
+"nat": "Spain",
+"value_m": 1.63,
+"qid": "Q67085348",
+"no": "17"
+},
+{
+"he": "טרוי פארוט",
+"en": "Troy Parrott",
+"pos": "FW",
+"age": 24,
+"nat": "Ireland",
+"value_m": 1.53,
+"qid": "Q67243168",
+"no": "19"
+},
+{
+"he": "נלסון דאוסה",
+"en": "Nelson Deossa",
+"pos": "MF",
+"age": 26,
+"nat": "Colombia",
+"value_m": 1.45,
+"qid": "Q113330923",
+"no": "18"
+},
+{
+"he": "איקר לוסאדה",
+"en": "Iker Losada",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 1.42,
+"qid": "Q66499365",
+"no": "14"
+},
+{
+"he": "נתן",
+"en": "Natan",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 1.41,
+"qid": "Q99738875",
+"no": "4"
+},
+{
+"he": "פבלו פורנאלס",
+"en": "Pablo Fornals",
+"pos": "MF",
+"age": 30,
+"nat": "Spain",
+"value_m": 1.38,
+"qid": "Q21027331",
+"no": "8"
+},
+{
+"he": "Álvaro Fidalgo",
+"en": "Álvaro Fidalgo",
+"pos": "MF",
+"age": 29,
+"nat": "Mexico",
+"value_m": 1.36,
+"qid": "Q98092491",
+"no": "15"
+},
+{
+"he": "מארק רוקה",
+"en": "Marc Roca",
+"pos": "MF",
+"age": 29,
+"nat": "Spain",
+"value_m": 1.32,
+"qid": "Q26708753",
+"no": "21"
+},
+{
+"he": "אייטור רויבאל",
+"en": "Aitor Ruibal",
+"pos": "FW",
+"age": 30,
+"nat": "Spain",
+"value_m": 1.24,
+"qid": "Q46748781",
+"no": "24"
+},
+{
+"he": "ג'וניור פירפו",
+"en": "Junior Firpo",
+"pos": "DF",
+"age": 30,
+"nat": "Dominican Republic",
+"value_m": 1.21,
+"qid": "Q48568974",
+"no": "23"
+},
+{
+"he": "דייגו גומס",
+"en": "Valentín Gómez",
+"pos": "DF",
+"age": 23,
+"nat": "Argentina",
+"value_m": 1.1,
+"qid": "Q111914282",
+"no": "16"
+},
+{
+"he": "Facundo Bernal",
+"en": "Facundo Bernal",
+"pos": "MF",
+"age": 23,
+"nat": "Uruguay",
+"value_m": 1.01,
+"qid": "Q111070073",
+"no": "6"
+},
+{
+"he": "דני סבאיוס",
+"en": "Dani Ceballos",
+"pos": "MF",
+"age": 30,
+"nat": "Spain",
+"value_m": 0.95,
+"qid": "Q16972254",
+"no": "25"
+},
+{
+"he": "Ángel Ortiz",
+"en": "Ángel Ortiz",
+"pos": "DF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.87,
+"qid": "Q131905954",
+"no": "12"
+},
+{
+"he": "Giovanni Lo Celso",
+"en": "Giovanni Lo Celso",
+"pos": "MF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.82,
+"qid": null,
+"no": "20"
+},
+{
+"he": "הקטור ביירין",
+"en": "Héctor Bellerín",
+"pos": "DF",
+"age": 31,
+"nat": "Spain",
+"value_m": 0.72,
+"qid": "Q14947422",
+"no": "2"
+},
+{
+"he": "דייגו יורנטה",
+"en": "Diego Llorente",
+"pos": "DF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.65,
+"qid": "Q13382434",
+"no": "3"
+},
+{
+"he": "איסקו",
+"en": "Isco",
+"pos": "MF",
+"age": 34,
+"nat": "Spain",
+"value_m": 0.48,
+"qid": "Q80892",
+"no": "22"
+},
+{
+"he": "מארק ברטרה",
+"en": "Marc Bartra",
+"pos": "DF",
+"age": 35,
+"nat": "Spain",
+"value_m": 0.38,
+"qid": "Q310625",
+"no": "5"
+}
+]
+}

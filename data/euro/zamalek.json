@@ -1,0 +1,308 @@
+{
+"key": "zamalek",
+"name_he": "זמאלק",
+"source": "enwiki:Zamalek SC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Mohamed Sobhy",
+"en": "Mohamed Sobhy",
+"pos": "GK",
+"age": 27,
+"nat": "Egypt",
+"value_m": 0.2,
+"qid": "Q66013203",
+"no": "16"
+},
+{
+"he": "Mahmoud Ashraf",
+"en": "Mahmoud Ashraf",
+"pos": "GK",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.1,
+"qid": null,
+"no": "46"
+},
+{
+"he": "Omar AbdulAziz",
+"en": "Omar AbdulAziz",
+"pos": "GK",
+"age": 18,
+"nat": "Egypt",
+"value_m": 0.06,
+"qid": "Q130303692",
+"no": "38"
+},
+{
+"he": "El Mahdy Soliman",
+"en": "El Mahdy Soliman",
+"pos": "GK",
+"age": 39,
+"nat": "Egypt",
+"value_m": 0.05,
+"qid": "Q4702779",
+"no": "37"
+},
+{
+"he": "Mohamed Awad",
+"en": "Mohamed Awad",
+"pos": "GK",
+"age": 34,
+"nat": "Egypt",
+"value_m": 0.05,
+"qid": "Q17150398",
+"no": "99"
+},
+{
+"he": "עודאי א-דבאח",
+"en": "Oday Dabbagh",
+"pos": "FW",
+"age": 27,
+"nat": "Palestine",
+"value_m": 0.36,
+"qid": "Q58008560",
+"no": "98"
+},
+{
+"he": "צ'יקו באנזה",
+"en": "Chico Banza",
+"pos": "FW",
+"age": 27,
+"nat": "Angola",
+"value_m": 0.28,
+"qid": "Q52423198",
+"no": "81"
+},
+{
+"he": "Mohamed Shehata",
+"en": "Mohamed Shehata",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.25,
+"qid": "Q124420106",
+"no": "17"
+},
+{
+"he": "Nasser Mansi",
+"en": "Nasser Mansi",
+"pos": "FW",
+"age": 29,
+"nat": "Egypt",
+"value_m": 0.23,
+"qid": "Q61998720",
+"no": "9"
+},
+{
+"he": "אדם כאיד",
+"en": "Adam Kaied",
+"pos": "MF",
+"age": 24,
+"nat": "Palestine",
+"value_m": 0.23,
+"qid": "Q108043464",
+"no": "18"
+},
+{
+"he": "Ahmed Sherif",
+"en": "Ahmed Sherif",
+"pos": "FW",
+"age": 23,
+"nat": "Egypt",
+"value_m": 0.21,
+"qid": "Q98814072",
+"no": "31"
+},
+{
+"he": "Hossam Ashraf",
+"en": "Hossam Ashraf",
+"pos": "FW",
+"age": 24,
+"nat": "Egypt",
+"value_m": 0.2,
+"qid": "Q98400382",
+"no": "7"
+},
+{
+"he": "Mahmoud Bentayg",
+"en": "Mahmoud Bentayg",
+"pos": "DF",
+"age": 26,
+"nat": "Morocco",
+"value_m": 0.17,
+"qid": "Q114569937",
+"no": "3"
+},
+{
+"he": "Mohamed Ismail",
+"en": "Mohamed Ismail",
+"pos": "DF",
+"age": 27,
+"nat": "Egypt",
+"value_m": 0.17,
+"qid": "Q137699179",
+"no": "24"
+},
+{
+"he": "Ahmed Jafeli",
+"en": "Ahmed Jafeli",
+"pos": "FW",
+"age": 25,
+"nat": "Tunisia",
+"value_m": 0.16,
+"qid": null,
+"no": "21"
+},
+{
+"he": "מחמוד חמדי",
+"en": "Mahmoud Hamdy",
+"pos": "DF",
+"age": 31,
+"nat": "Egypt",
+"value_m": 0.16,
+"qid": "Q28923557",
+"no": "28"
+},
+{
+"he": "Mohamed El Sayed",
+"en": "Mohamed El Sayed",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.16,
+"qid": "Q124540929",
+"no": "39"
+},
+{
+"he": "Youssef Wael",
+"en": "Youssef Wael",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.16,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Muhammad Hamad",
+"en": "Muhammad Hamad",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.16,
+"qid": null,
+"no": "55"
+},
+{
+"he": "Adham Hasseib",
+"en": "Adham Hasseib",
+"pos": "FW",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.16,
+"qid": null,
+"no": "57"
+},
+{
+"he": "Ahmed Abdel Rahim",
+"en": "Ahmed Abdel Rahim",
+"pos": "FW",
+"age": 23,
+"nat": "Egypt",
+"value_m": 0.15,
+"qid": "Q122830472",
+"no": "11"
+},
+{
+"he": "Ahmed Rabie",
+"en": "Ahmed Rabie",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.15,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Mostafa El Zenary",
+"en": "Mostafa El Zenary",
+"pos": "DF",
+"age": 27,
+"nat": "Egypt",
+"value_m": 0.15,
+"qid": "Q114049498",
+"no": "20"
+},
+{
+"he": "Amr Nasser",
+"en": "Amr Nasser",
+"pos": "FW",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.15,
+"qid": null,
+"no": "90"
+},
+{
+"he": "Ahmed Abou El Fotouh",
+"en": "Ahmed Abou El Fotouh",
+"pos": "DF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Seif Gaafar",
+"en": "Seif Gaafar",
+"pos": "MF",
+"age": 26,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": "Q106921008",
+"no": "14"
+},
+{
+"he": "Mohamed Ebrahim",
+"en": "Mohamed Ebrahim",
+"pos": "DF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "52"
+},
+{
+"he": "Ahmad Safwat",
+"en": "Ahmad Safwat",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "56"
+},
+{
+"he": "Mohamed Faraj",
+"en": "Mohamed Faraj",
+"pos": "DF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.14,
+"qid": null,
+"no": "58"
+},
+{
+"he": "Mahmoud Gehad",
+"en": "Mahmoud Gehad",
+"pos": "MF",
+"age": 25,
+"nat": "Egypt",
+"value_m": 0.12,
+"qid": null,
+"no": "6"
+}
+]
+}

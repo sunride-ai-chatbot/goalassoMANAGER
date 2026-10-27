@@ -1,0 +1,208 @@
+{
+"key": "everton",
+"name_he": "אברטון",
+"source": "enwiki:Everton F.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Mark Travers",
+"en": "Mark Travers",
+"pos": "GK",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.84,
+"qid": "Q59913688",
+"no": "12"
+},
+{
+"he": "Tom King",
+"en": "Tom King",
+"pos": "GK",
+"age": 31,
+"nat": "Wales",
+"value_m": 0.41,
+"qid": "Q27139397",
+"no": "31"
+},
+{
+"he": "ג'ורדן פיקפורד",
+"en": "Jordan Pickford",
+"pos": "GK",
+"age": 32,
+"nat": "England",
+"value_m": 0.4,
+"qid": "Q13014035",
+"no": "1"
+},
+{
+"he": "ברנן ג'ונסון",
+"en": "Brennan Johnson",
+"pos": "FW",
+"age": 25,
+"nat": "Wales",
+"value_m": 1.55,
+"qid": "Q66108160",
+"no": "22"
+},
+{
+"he": "תיירנו בארי (2002)",
+"en": "Thierno Barry",
+"pos": "FW",
+"age": 23,
+"nat": "France",
+"value_m": 1.32,
+"qid": "Q116860945",
+"no": "11"
+},
+{
+"he": "ג'יימס גארנר (כדורגלן)",
+"en": "James Garner",
+"pos": "MF",
+"age": 25,
+"nat": "England",
+"value_m": 1.21,
+"qid": "Q61908191",
+"no": "37"
+},
+{
+"he": "ויטלי מיקולנקו",
+"en": "Vitalii Mykolenko",
+"pos": "DF",
+"age": 27,
+"nat": "Ukraine",
+"value_m": 1.15,
+"qid": "Q37875995",
+"no": "16"
+},
+{
+"he": "ג'ראד ברנת'וויט",
+"en": "Jarrad Branthwaite",
+"pos": "DF",
+"age": 24,
+"nat": "England",
+"value_m": 1.08,
+"qid": "Q70780349",
+"no": "4"
+},
+{
+"he": "Jake O'Brien",
+"en": "Jake O'Brien",
+"pos": "DF",
+"age": 25,
+"nat": "Ireland",
+"value_m": 1.02,
+"qid": "Q110565461",
+"no": "15"
+},
+{
+"he": "קרלוס אלקרס (כדורגלן)",
+"en": "Charly Alcaraz",
+"pos": "MF",
+"age": 23,
+"nat": "Argentina",
+"value_m": 0.99,
+"qid": "Q88130791",
+"no": "24"
+},
+{
+"he": "קירנן דוסברי-הול",
+"en": "Kiernan Dewsbury-Hall",
+"pos": "MF",
+"age": 27,
+"nat": "England",
+"value_m": 0.94,
+"qid": "Q83632882",
+"no": "8"
+},
+{
+"he": "Hayden Hackney",
+"en": "Hayden Hackney",
+"pos": "MF",
+"age": 24,
+"nat": "England",
+"value_m": 0.92,
+"qid": "Q104764328",
+"no": "30"
+},
+{
+"he": "איינסלי מייטלנד-ניילס",
+"en": "Ainsley Maitland-Niles",
+"pos": "DF",
+"age": 29,
+"nat": "England",
+"value_m": 0.82,
+"qid": "Q18614641",
+"no": "2"
+},
+{
+"he": "טייריק ג'ורג'",
+"en": "Tyrique George",
+"pos": "FW",
+"age": 20,
+"nat": "England",
+"value_m": 0.82,
+"qid": "Q123002942",
+"no": "19"
+},
+{
+"he": "Tyler Dibling",
+"en": "Tyler Dibling",
+"pos": "FW",
+"age": 20,
+"nat": "England",
+"value_m": 0.82,
+"qid": "Q115973966",
+"no": "20"
+},
+{
+"he": "Merlin Röhl",
+"en": "Merlin Röhl",
+"pos": "MF",
+"age": 24,
+"nat": "Germany",
+"value_m": 0.82,
+"qid": "Q99752352",
+"no": "34"
+},
+{
+"he": "כריסטיאן נורגור",
+"en": "Christian Nørgaard",
+"pos": "MF",
+"age": 32,
+"nat": "Denmark",
+"value_m": 0.62,
+"qid": "Q5109980",
+"no": "23"
+},
+{
+"he": "ג'יימס טרקובסקי",
+"en": "James Tarkowski",
+"pos": "DF",
+"age": 33,
+"nat": "England",
+"value_m": 0.46,
+"qid": "Q6144020",
+"no": "6"
+},
+{
+"he": "Harrison Armstrong",
+"en": "Harrison Armstrong",
+"pos": "MF",
+"age": 19,
+"nat": "England",
+"value_m": 0.46,
+"qid": "Q129702132",
+"no": "45"
+},
+{
+"he": "מייקל קיין",
+"en": "Michael Keane",
+"pos": "DF",
+"age": 33,
+"nat": "England",
+"value_m": 0.32,
+"qid": "Q80712",
+"no": "5"
+}
+]
+}

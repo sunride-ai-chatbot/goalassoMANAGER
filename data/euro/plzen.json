@@ -1,0 +1,288 @@
+{
+"key": "plzen",
+"name_he": "ויקטוריה פלזן",
+"source": "enwiki:FC Viktoria Plzeň",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Florian Wiegele",
+"en": "Florian Wiegele",
+"pos": "GK",
+"age": 25,
+"nat": "Austria",
+"value_m": 0.38,
+"qid": "Q123335801",
+"no": "44"
+},
+{
+"he": "Dominik Ťapaj",
+"en": "Dominik Ťapaj",
+"pos": "GK",
+"age": 22,
+"nat": "Slovakia",
+"value_m": 0.21,
+"qid": "Q116811992",
+"no": "1"
+},
+{
+"he": "Viktor Baier",
+"en": "Viktor Baier",
+"pos": "GK",
+"age": 21,
+"nat": "Czech Republic",
+"value_m": 0.21,
+"qid": "Q123764188",
+"no": "30"
+},
+{
+"he": "Marián Tvrdoň",
+"en": "Marián Tvrdoň",
+"pos": "GK",
+"age": 32,
+"nat": "Slovakia",
+"value_m": 0.13,
+"qid": "Q114408098",
+"no": "13"
+},
+{
+"he": "לוקאש צ'רב",
+"en": "Lukáš Červ",
+"pos": "MF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.67,
+"qid": "Q97312966",
+"no": "6"
+},
+{
+"he": "עמאר ממיץ'",
+"en": "Amar Memić",
+"pos": "MF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.62,
+"qid": "Q124051749",
+"no": "99"
+},
+{
+"he": "אלכסנדר סויקה",
+"en": "Alexandr Sojka",
+"pos": "MF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.58,
+"qid": "Q131432595",
+"no": "12"
+},
+{
+"he": "Merchas Doski",
+"en": "Merchas Doski",
+"pos": "DF",
+"age": 26,
+"nat": "Iraq",
+"value_m": 0.55,
+"qid": "Q100774865",
+"no": "14"
+},
+{
+"he": "Salim Fago Lawal",
+"en": "Salim Fago Lawal",
+"pos": "FW",
+"age": 23,
+"nat": "Nigeria",
+"value_m": 0.54,
+"qid": "Q124331034",
+"no": "7"
+},
+{
+"he": "Prince Kwabena Adu",
+"en": "Prince Kwabena Adu",
+"pos": "FW",
+"age": 22,
+"nat": "Ghana",
+"value_m": 0.53,
+"qid": "Q97356007",
+"no": "80"
+},
+{
+"he": "Adam Gabriel",
+"en": "Adam Gabriel",
+"pos": "DF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.52,
+"qid": "Q108040971",
+"no": "29"
+},
+{
+"he": "דניס וישינסקי",
+"en": "Denis Višinský",
+"pos": "MF",
+"age": 23,
+"nat": "Czech Republic",
+"value_m": 0.51,
+"qid": "Q106061470",
+"no": "9"
+},
+{
+"he": "Christophe Kabongo",
+"en": "Christophe Kabongo",
+"pos": "FW",
+"age": 23,
+"nat": "Czech Republic",
+"value_m": 0.51,
+"qid": "Q104906208",
+"no": "25"
+},
+{
+"he": "Baboucarr Faal",
+"en": "Baboucarr Faal",
+"pos": "FW",
+"age": 23,
+"nat": "Gambia",
+"value_m": 0.48,
+"qid": "Q133545694",
+"no": "23"
+},
+{
+"he": "Filip Prebsl",
+"en": "Filip Prebsl",
+"pos": "MF",
+"age": 23,
+"nat": "Czech Republic",
+"value_m": 0.44,
+"qid": "Q124062049",
+"no": "98"
+},
+{
+"he": "Cheick Souaré",
+"en": "Cheick Souaré",
+"pos": "MF",
+"age": 23,
+"nat": "France",
+"value_m": 0.39,
+"qid": "Q97347130",
+"no": "19"
+},
+{
+"he": "Tomáš Ladra",
+"en": "Tomáš Ladra",
+"pos": "MF",
+"age": 29,
+"nat": "Czech Republic",
+"value_m": 0.37,
+"qid": "Q56516658",
+"no": "18"
+},
+{
+"he": "דניס ואוורו",
+"en": "Denis Vavro",
+"pos": "DF",
+"age": 30,
+"nat": "Slovakia",
+"value_m": 0.35,
+"qid": "Q12015613",
+"no": "3"
+},
+{
+"he": "Mohamed Toure",
+"en": "Mohamed Toure",
+"pos": "FW",
+"age": 25,
+"nat": "Guinea",
+"value_m": 0.34,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Sampson Dweh",
+"en": "Sampson Dweh",
+"pos": "DF",
+"age": 24,
+"nat": "Liberia",
+"value_m": 0.34,
+"qid": "Q111252274",
+"no": "40"
+},
+{
+"he": "Václav Jemelka",
+"en": "Václav Jemelka",
+"pos": "DF",
+"age": 31,
+"nat": "Czech Republic",
+"value_m": 0.3,
+"qid": "Q54624070",
+"no": "21"
+},
+{
+"he": "Karel Spáčil",
+"en": "Karel Spáčil",
+"pos": "DF",
+"age": 23,
+"nat": "Czech Republic",
+"value_m": 0.28,
+"qid": "Q127867860",
+"no": "5"
+},
+{
+"he": "Jan Paluska",
+"en": "Jan Paluska",
+"pos": "DF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.28,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Stefan Pirgić",
+"en": "Stefan Pirgić",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.24,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Jiří Panoš",
+"en": "Jiří Panoš",
+"pos": "MF",
+"age": 19,
+"nat": "Czech Republic",
+"value_m": 0.23,
+"qid": "Q128807982",
+"no": "20"
+},
+{
+"he": "מתיי וידרה",
+"en": "Matěj Vydra",
+"pos": "FW",
+"age": 34,
+"nat": "Czech Republic",
+"value_m": 0.19,
+"qid": "Q10735",
+"no": "11"
+},
+{
+"he": "Patrik Hrošovský",
+"en": "Patrik Hrošovský",
+"pos": "MF",
+"age": 34,
+"nat": "Slovakia",
+"value_m": 0.15,
+"qid": "Q7147912",
+"no": "17"
+},
+{
+"he": "Tobiáš Pališčák",
+"en": "Tobiáš Pališčák",
+"pos": "DF",
+"age": 18,
+"nat": "Slovakia",
+"value_m": 0.12,
+"qid": "Q138006860",
+"no": "2"
+}
+]
+}

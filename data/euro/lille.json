@@ -1,0 +1,248 @@
+{
+"key": "lille",
+"name_he": "ליל",
+"source": "enwiki:Lille OSC",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Berke Özer",
+"en": "Berke Özer",
+"pos": "GK",
+"age": 26,
+"nat": "Turkey",
+"value_m": 1.45,
+"qid": "Q30111941",
+"no": "1"
+},
+{
+"he": "אורלנדו חיל",
+"en": "Orlando Gill",
+"pos": "GK",
+"age": 26,
+"nat": "Paraguay",
+"value_m": 1.25,
+"qid": "Q60842077",
+"no": "12"
+},
+{
+"he": "אוסאמה סחראווי",
+"en": "Osame Sahraoui",
+"pos": "FW",
+"age": 25,
+"nat": "Morocco",
+"value_m": 2.44,
+"qid": "Q96679651",
+"no": "11"
+},
+{
+"he": "איאסה אואדה",
+"en": "Ayase Ueda",
+"pos": "FW",
+"age": 28,
+"nat": "Japan",
+"value_m": 1.92,
+"qid": "Q62085431",
+"no": "18"
+},
+{
+"he": "טאנגי ניאנזו",
+"en": "Tanguy Nianzou",
+"pos": "DF",
+"age": 24,
+"nat": "France",
+"value_m": 1.87,
+"qid": "Q67070943",
+"no": "23"
+},
+{
+"he": "חמזה איגמאן",
+"en": "Hamza Igamane",
+"pos": "FW",
+"age": 23,
+"nat": "Morocco",
+"value_m": 1.8,
+"qid": "Q119960944",
+"no": "29"
+},
+{
+"he": "נתן אנגוי",
+"en": "Nathan Ngoy",
+"pos": "DF",
+"age": 23,
+"nat": "Belgium",
+"value_m": 1.72,
+"qid": "Q107094087",
+"no": "3"
+},
+{
+"he": "מאוריץ קרגור",
+"en": "Maurits Kjærgaard",
+"pos": "MF",
+"age": 23,
+"nat": "Denmark",
+"value_m": 1.7,
+"qid": "Q65230266",
+"no": "14"
+},
+{
+"he": "האקון ארנר האראלדסון",
+"en": "Hákon Haraldsson",
+"pos": "MF",
+"age": 23,
+"nat": "Iceland",
+"value_m": 1.62,
+"qid": "Q108542081",
+"no": "10"
+},
+{
+"he": "אנגאלאייל מוקאו",
+"en": "Ngal'ayel Mukau",
+"pos": "MF",
+"age": 21,
+"nat": "DR Congo",
+"value_m": 1.57,
+"qid": "Q116151074",
+"no": "17"
+},
+{
+"he": "רומן פרו",
+"en": "Romain Perraud",
+"pos": "DF",
+"age": 28,
+"nat": "France",
+"value_m": 1.47,
+"qid": "Q28962661",
+"no": "15"
+},
+{
+"he": "Tiago Santos",
+"en": "Tiago Santos",
+"pos": "DF",
+"age": 24,
+"nat": "Portugal",
+"value_m": 1.34,
+"qid": "Q113955589",
+"no": "22"
+},
+{
+"he": "Calvin Verdonk",
+"en": "Calvin Verdonk",
+"pos": "DF",
+"age": 29,
+"nat": "Indonesia",
+"value_m": 1.33,
+"qid": "Q19509874",
+"no": "24"
+},
+{
+"he": "אלכסנדרו",
+"en": "Alexsandro",
+"pos": "DF",
+"age": 27,
+"nat": "Brazil",
+"value_m": 1.21,
+"qid": "Q113427641",
+"no": "4"
+},
+{
+"he": "Başar Önal",
+"en": "Başar Önal",
+"pos": "FW",
+"age": 22,
+"nat": "Turkey",
+"value_m": 1.2,
+"qid": "Q112731441",
+"no": "19"
+},
+{
+"he": "Gaëtan Perrin",
+"en": "Gaëtan Perrin",
+"pos": "FW",
+"age": 30,
+"nat": "France",
+"value_m": 1.18,
+"qid": "Q23762797",
+"no": "28"
+},
+{
+"he": "נביל בן טאלב",
+"en": "Nabil Bentaleb",
+"pos": "MF",
+"age": 31,
+"nat": "Algeria",
+"value_m": 1.11,
+"qid": "Q15410320",
+"no": "6"
+},
+{
+"he": "איתן אמבפה",
+"en": "Ethan Mbappé",
+"pos": "FW",
+"age": 19,
+"nat": "France",
+"value_m": 0.9,
+"qid": "Q110995393",
+"no": "8"
+},
+{
+"he": "Loun Srdanovic",
+"en": "Loun Srdanovic",
+"pos": "DF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.89,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Soriba Diaoune",
+"en": "Soriba Diaoune",
+"pos": "FW",
+"age": 19,
+"nat": "France",
+"value_m": 0.66,
+"qid": "Q136204055",
+"no": "35"
+},
+{
+"he": "Isaac Cossier",
+"en": "Isaac Cossier",
+"pos": "DF",
+"age": 19,
+"nat": "France",
+"value_m": 0.5,
+"qid": "Q140596530",
+"no": "26"
+},
+{
+"he": "Maxima Goffi",
+"en": "Maxima Goffi",
+"pos": "DF",
+"age": 18,
+"nat": "France",
+"value_m": 0.48,
+"qid": "Q136654507",
+"no": "38"
+},
+{
+"he": "אוליבייה ז'ירו",
+"en": "Olivier Giroud",
+"pos": "FW",
+"age": 39,
+"nat": "France",
+"value_m": 0.36,
+"qid": "Q1911",
+"no": "9"
+},
+{
+"he": "Benjamin André",
+"en": "Benjamin André",
+"pos": "MF",
+"age": 36,
+"nat": "France",
+"value_m": 0.35,
+"qid": "Q2475780",
+"no": "21"
+}
+]
+}

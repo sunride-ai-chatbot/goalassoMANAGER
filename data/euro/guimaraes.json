@@ -1,0 +1,278 @@
+{
+"key": "guimaraes",
+"name_he": "ויטוריה גימראיש",
+"source": "enwiki:Vitória S.C.",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Juan Castillo",
+"en": "Juan Castillo",
+"pos": "GK",
+"age": 23,
+"nat": "Colombia",
+"value_m": 0.39,
+"qid": "Q118984745",
+"no": "22"
+},
+{
+"he": "Lucas Furtado",
+"en": "Lucas Furtado",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.23,
+"qid": null,
+"no": "98"
+},
+{
+"he": "Telmo Arcanjo",
+"en": "Telmo Arcanjo",
+"pos": "FW",
+"age": 25,
+"nat": "Cape Verde",
+"value_m": 0.67,
+"qid": "Q97580948",
+"no": "18"
+},
+{
+"he": "אלאן (כדורגלן, 2000)",
+"en": "Alan",
+"pos": "MF",
+"age": 26,
+"nat": "Brazil",
+"value_m": 0.59,
+"qid": "Q42685672",
+"no": "10"
+},
+{
+"he": "בני מוקנדי",
+"en": "Beni Mukendi",
+"pos": "MF",
+"age": 24,
+"nat": "Angola",
+"value_m": 0.54,
+"qid": "Q116681385",
+"no": "16"
+},
+{
+"he": "Alioune Ndoye",
+"en": "Alioune Ndoye",
+"pos": "FW",
+"age": 24,
+"nat": "Senegal",
+"value_m": 0.54,
+"qid": "Q112988045",
+"no": "24"
+},
+{
+"he": "Lohann Doucet",
+"en": "Lohann Doucet",
+"pos": "MF",
+"age": 23,
+"nat": "Burkina Faso",
+"value_m": 0.52,
+"qid": "Q111554243",
+"no": "44"
+},
+{
+"he": "Arnel Jakupović",
+"en": "Arnel Jakupović",
+"pos": "FW",
+"age": 28,
+"nat": "Austria",
+"value_m": 0.49,
+"qid": "Q26836963",
+"no": "9"
+},
+{
+"he": "Miguel Maga",
+"en": "Miguel Maga",
+"pos": "DF",
+"age": 23,
+"nat": "Portugal",
+"value_m": 0.47,
+"qid": "Q111326777",
+"no": "2"
+},
+{
+"he": "Gustavo Silva",
+"en": "Gustavo Silva",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.44,
+"qid": "Q130540172",
+"no": "11"
+},
+{
+"he": "Matija Mitrović",
+"en": "Matija Mitrović",
+"pos": "MF",
+"age": 21,
+"nat": "Serbia",
+"value_m": 0.41,
+"qid": "Q120641426",
+"no": "6"
+},
+{
+"he": "João Mendes",
+"en": "João Mendes",
+"pos": "DF",
+"age": 26,
+"nat": "Portugal",
+"value_m": 0.41,
+"qid": "Q108133635",
+"no": "13"
+},
+{
+"he": "Rica Rocha",
+"en": "Rica Rocha",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.4,
+"qid": null,
+"no": "80"
+},
+{
+"he": "Óscar Rivas",
+"en": "Óscar Rivas",
+"pos": "DF",
+"age": 26,
+"nat": "Spain",
+"value_m": 0.39,
+"qid": "Q110150572",
+"no": "4"
+},
+{
+"he": "Victor Andersson",
+"en": "Victor Andersson",
+"pos": "MF",
+"age": 21,
+"nat": "Sweden",
+"value_m": 0.39,
+"qid": "Q114402797",
+"no": "19"
+},
+{
+"he": "Samu",
+"en": "Samu",
+"pos": "MF",
+"age": 30,
+"nat": "Portugal",
+"value_m": 0.39,
+"qid": "Q19344500",
+"no": "20"
+},
+{
+"he": "Gonçalo Nogueira",
+"en": "Gonçalo Nogueira",
+"pos": "MF",
+"age": 22,
+"nat": "Portugal",
+"value_m": 0.36,
+"qid": "Q134451615",
+"no": "8"
+},
+{
+"he": "Fabio Blanco",
+"en": "Fabio Blanco",
+"pos": "MF",
+"age": 22,
+"nat": "Spain",
+"value_m": 0.35,
+"qid": "Q110367868",
+"no": "35"
+},
+{
+"he": "Miguel Nogueira",
+"en": "Miguel Nogueira",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.33,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Tony Strata",
+"en": "Tony Strata",
+"pos": "DF",
+"age": 21,
+"nat": "Romania",
+"value_m": 0.33,
+"qid": "Q122750893",
+"no": "23"
+},
+{
+"he": "Thiago Balieiro",
+"en": "Thiago Balieiro",
+"pos": "DF",
+"age": 23,
+"nat": "Brazil",
+"value_m": 0.3,
+"qid": "Q127606063",
+"no": "28"
+},
+{
+"he": "Francisco Dias",
+"en": "Francisco Dias",
+"pos": "DF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.3,
+"qid": null,
+"no": "82"
+},
+{
+"he": "Patrick Ouotro",
+"en": "Patrick Ouotro",
+"pos": "FW",
+"age": 20,
+"nat": "Côte d'Ivoire",
+"value_m": 0.28,
+"qid": "Q131617874",
+"no": "29"
+},
+{
+"he": "Marco Cruz",
+"en": "Marco Cruz",
+"pos": "MF",
+"age": 22,
+"nat": "Portugal",
+"value_m": 0.28,
+"qid": "Q137212197",
+"no": "45"
+},
+{
+"he": "Oumar Camara",
+"en": "Oumar Camara",
+"pos": "FW",
+"age": 19,
+"nat": "France",
+"value_m": 0.27,
+"qid": "Q135395766",
+"no": "7"
+},
+{
+"he": "Yeimar Mosquera",
+"en": "Yeimar Mosquera",
+"pos": "DF",
+"age": 21,
+"nat": "Colombia",
+"value_m": 0.25,
+"qid": "Q129521751",
+"no": "15"
+},
+{
+"he": "Santiago Verdi",
+"en": "Santiago Verdi",
+"pos": "MF",
+"age": 18,
+"nat": "Portugal",
+"value_m": 0.18,
+"qid": "Q134725481",
+"no": "56"
+}
+]
+}

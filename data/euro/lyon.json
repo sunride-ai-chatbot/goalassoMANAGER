@@ -1,0 +1,248 @@
+{
+"key": "lyon",
+"name_he": "ליון",
+"source": "enwiki:Olympique Lyonnais",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "דומיניק גרייף",
+"en": "Dominik Greif",
+"pos": "GK",
+"age": 29,
+"nat": "Slovakia",
+"value_m": 1.21,
+"qid": "Q24254392",
+"no": "1"
+},
+{
+"he": "לאסינה דיארה",
+"en": "Lassine Diarra",
+"pos": "GK",
+"age": 23,
+"nat": "Mali",
+"value_m": 1.03,
+"qid": "Q127789124",
+"no": "50"
+},
+{
+"he": "Rémy Descamps",
+"en": "Rémy Descamps",
+"pos": "GK",
+"age": 30,
+"nat": "France",
+"value_m": 0.75,
+"qid": "Q26262081",
+"no": "40"
+},
+{
+"he": "Justin Bengui",
+"en": "Justin Bengui",
+"pos": "GK",
+"age": 21,
+"nat": "France",
+"value_m": 0.52,
+"qid": "Q108187044",
+"no": "25"
+},
+{
+"he": "קייטו נקמורה",
+"en": "Keito Nakamura",
+"pos": "FW",
+"age": 26,
+"nat": "Japan",
+"value_m": 1.96,
+"qid": "Q45819496",
+"no": "11"
+},
+{
+"he": "ארנסט נואמה",
+"en": "Ernest Nuamah",
+"pos": "FW",
+"age": 22,
+"nat": "Ghana",
+"value_m": 1.73,
+"qid": "Q111584129",
+"no": "7"
+},
+{
+"he": "מאדס בידסטרופ",
+"en": "Mads Bidstrup",
+"pos": "MF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 1.62,
+"qid": "Q66433337",
+"no": "2"
+},
+{
+"he": "טאנר טסמן",
+"en": "Tanner Tessmann",
+"pos": "MF",
+"age": 24,
+"nat": "United States",
+"value_m": 1.49,
+"qid": "Q64009852",
+"no": "6"
+},
+{
+"he": "Ruben Kluivert",
+"en": "Ruben Kluivert",
+"pos": "DF",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 1.38,
+"qid": "Q83779164",
+"no": "21"
+},
+{
+"he": "פאבל שולץ",
+"en": "Pavel Šulc",
+"pos": "MF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 1.37,
+"qid": "Q60791524",
+"no": "10"
+},
+{
+"he": "אבנר ויניסיוס",
+"en": "Abner",
+"pos": "DF",
+"age": 26,
+"nat": "Brazil",
+"value_m": 1.24,
+"qid": "Q66651898",
+"no": "16"
+},
+{
+"he": "טיילר מורטון",
+"en": "Tyler Morton",
+"pos": "MF",
+"age": 23,
+"nat": "England",
+"value_m": 1.18,
+"qid": "Q108653507",
+"no": "23"
+},
+{
+"he": "מוחמד ודראוגו",
+"en": "Mohamed Ouédraogo",
+"pos": "DF",
+"age": 23,
+"nat": "Burkina Faso",
+"value_m": 1.13,
+"qid": "Q124478403",
+"no": "76"
+},
+{
+"he": "Felix Bacher",
+"en": "Felix Bacher",
+"pos": "DF",
+"age": 25,
+"nat": "Austria",
+"value_m": 0.99,
+"qid": "Q55846973",
+"no": "20"
+},
+{
+"he": "ז'וליאן דורנביל",
+"en": "Julien Duranville",
+"pos": "FW",
+"age": 20,
+"nat": "Belgium",
+"value_m": 0.97,
+"qid": "Q112112991",
+"no": "24"
+},
+{
+"he": "Kaïl Boudache",
+"en": "Kaïl Boudache",
+"pos": "FW",
+"age": 20,
+"nat": "Algeria",
+"value_m": 0.96,
+"qid": "Q137972427",
+"no": "26"
+},
+{
+"he": "מוסא ניאחאטה",
+"en": "Moussa Niakhaté",
+"pos": "DF",
+"age": 30,
+"nat": "Senegal",
+"value_m": 0.84,
+"qid": "Q18637804",
+"no": "19"
+},
+{
+"he": "נואה נארטי",
+"en": "Noah Nartey",
+"pos": "MF",
+"age": 20,
+"nat": "Denmark",
+"value_m": 0.81,
+"qid": "Q124980282",
+"no": "99"
+},
+{
+"he": "נוהאם קמארה",
+"en": "Noham Kamara",
+"pos": "DF",
+"age": 19,
+"nat": "France",
+"value_m": 0.7,
+"qid": "Q134311556",
+"no": "85"
+},
+{
+"he": "Khalis Merah",
+"en": "Khalis Merah",
+"pos": "MF",
+"age": 19,
+"nat": "France",
+"value_m": 0.66,
+"qid": "Q135514874",
+"no": "18"
+},
+{
+"he": "קורנטן טוליסו",
+"en": "Corentin Tolisso",
+"pos": "MF",
+"age": 32,
+"nat": "France",
+"value_m": 0.63,
+"qid": "Q15406583",
+"no": "8"
+},
+{
+"he": "Rémi Himbert",
+"en": "Rémi Himbert",
+"pos": "FW",
+"age": 18,
+"nat": "France",
+"value_m": 0.61,
+"qid": "Q134608562",
+"no": "45"
+},
+{
+"he": "Clinton Mata",
+"en": "Clinton Mata",
+"pos": "DF",
+"age": 33,
+"nat": "Angola",
+"value_m": 0.58,
+"qid": "Q18637707",
+"no": "22"
+},
+{
+"he": "ניקולאס טליאפיקו",
+"en": "Nicolás Tagliafico",
+"pos": "DF",
+"age": 34,
+"nat": "Argentina",
+"value_m": 0.42,
+"qid": "Q3876530",
+"no": "3"
+}
+]
+}

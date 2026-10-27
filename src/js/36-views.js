@@ -171,11 +171,11 @@ function viewSquad(){
   const c=me();
   if(squadTab==='youth')return viewYouth();
   let ps=c.players.slice();if(squadTab!=='all')ps=ps.filter(p=>p.pos===squadTab);
-  ps.sort(squadSort==='pos'?(a,b)=>POS.indexOf(a.pos)-POS.indexOf(b.pos)||b.ovr-a.ovr:squadSort==='age'?(a,b)=>a.age-b.age:(a,b)=>b.value-a.value);
+  ps.sort(squadSort==='pos'?(a,b)=>POS.indexOf(a.pos)-POS.indexOf(b.pos)||b.ovr-a.ovr:squadSort==='age'?(a,b)=>a.age-b.age:squadSort==='ovr-desc'?(a,b)=>b.ovr-a.ovr||b.value-a.value:squadSort==='ovr-asc'?(a,b)=>a.ovr-b.ovr||a.value-b.value:(a,b)=>b.value-a.value);
   const xi=new Set(bestXI(c).map(p=>p.id));
   return `<div class="card"><div class="row between"><h3 class="sec">הסגל · ${c.players.length} שחקנים</h3><span class="muted small">שכר/שבוע ${NIS(c.players.reduce((t,p)=>t+p.wage,0))}</span></div>
   <div class="tabs" style="margin-top:10px"><button data-st="all" class="${squadTab==='all'?'on':''}">הכל</button>${POS.map(p=>`<button data-st="${p}" class="${squadTab===p?'on':''}">${POSHE[p]}</button>`).join('')}<button data-st="youth">נוער (${c.youth.length})</button></div>
-  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ss="pos" class="${squadSort==='pos'?'on':''}">עמדה</button><button data-ss="value" class="${squadSort==='value'?'on':''}">שווי</button><button data-ss="age" class="${squadSort==='age'?'on':''}">גיל</button></div></div>
+  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ss="pos" class="${squadSort==='pos'?'on':''}">עמדה</button><button data-ss="ovr-desc" class="${squadSort==='ovr-desc'?'on':''}">דירוג: גבוה לנמוך</button><button data-ss="ovr-asc" class="${squadSort==='ovr-asc'?'on':''}">דירוג: נמוך לגבוה</button><button data-ss="value" class="${squadSort==='value'?'on':''}">שווי</button><button data-ss="age" class="${squadSort==='age'?'on':''}">גיל</button></div></div>
   <div class="list">${ps.map((p,i)=>{const hdr=squadSort==='pos'&&squadTab==='all'&&(i===0||ps[i-1].pos!==p.pos)?`<div class="grp"><span class="pos ${p.pos}">${POSB[p.pos]}</span> ${POSHE[p.pos]} · ${ps.filter(x=>x.pos===p.pos).length}</div>`:'';const fit=Math.round(p.fit??100),sh=Math.round(p.sharp??70);const r=p.rn?(p.rsum/p.rn).toFixed(1):'—';
     return hdr+playerRow(p,'',xi.has(p.id)?'starter':'',`<span class="it">${esc((ROLES[p.pos]||{})[roleOf(p)]||'')}</span><span class="it">גיל ${p.age}</span><span class="it">כושר <span class="num" style="color:var(--${fitClass(fit)});font-weight:700">${fit}%</span></span><span class="it">חדות <span class="num" style="font-weight:700">${sh}</span></span><span class="it">${p.apps||0} הופ' · ציון ${r}</span>${p.adapt!=null&&p.adapt<100?`<span class="it">🌍 ${Math.round(p.adapt)}%</span>`:''}`)}).join('')}</div><p class="muted tiny" style="text-align:center">לחיצה על שחקן: פרטים ומכירה · מסגרת ירוקה = בהרכב · עד ${MAX_FOREIGN_XI} זרים בהרכב</p>`;
 }
@@ -273,7 +273,7 @@ function viewMarket(){if(mpIsOn())return mpNoMarketHTML();
   const natHTML=natOptionsHTML('marketNatSel',pool,marketNat);
   if(marketNat!=='all')pool=pool.filter(x=>hasNat(x.p,marketNat));
   pool.sort((a,b)=>{
-    if(marketSort==='ovr')return b.p.ovr-a.p.ovr;
+    if(marketSort==='ovr')return b.p.ovr-a.p.ovr;if(marketSort==='ovr-asc')return a.p.ovr-b.p.ovr;
     if(marketSort==='age')return a.p.age-b.p.age;
     const d=priceOf(a.p)-priceOf(b.p);
     return (marketSort==='price-desc'?-d:d)||fullName(a.p).localeCompare(fullName(b.p),'he');
@@ -288,7 +288,7 @@ function viewMarket(){if(mpIsOn())return mpNoMarketHTML();
   <details class="mfold" data-mfold ${marketFiltersOpen?'open':''}><summary>סינון ומיון <span class="muted tiny">(עמדה, לאום, מחיר)</span></summary>
   <div class="tabs" style="margin-top:8px"><span class="muted tiny" style="align-self:center">עמדה:</span><button data-mp="all" class="${marketPos==='all'?'on':''}">הכל</button>${POS.map(p=>`<button data-mp="${p}" class="${marketPos===p?'on':''}">${POSHE[p]}</button>`).join('')}</div>
   <div class="mfilters">${natHTML}</div>
-  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ms="ovr" class="${marketSort==='ovr'?'on':''}">דירוג</button><button data-ms="price-asc" class="${marketSort==='price-asc'?'on':''}">מחיר: נמוך לגבוה</button><button data-ms="price-desc" class="${marketSort==='price-desc'?'on':''}">מחיר: גבוה לנמוך</button><button data-ms="age" class="${marketSort==='age'?'on':''}">גיל</button></div>
+  <div class="tabs" style="margin-top:6px"><span class="muted tiny" style="align-self:center">מיון:</span><button data-ms="ovr" class="${marketSort==='ovr'?'on':''}">דירוג: גבוה לנמוך</button><button data-ms="ovr-asc" class="${marketSort==='ovr-asc'?'on':''}">דירוג: נמוך לגבוה</button><button data-ms="price-asc" class="${marketSort==='price-asc'?'on':''}">מחיר: נמוך לגבוה</button><button data-ms="price-desc" class="${marketSort==='price-desc'?'on':''}">מחיר: גבוה לנמוך</button><button data-ms="age" class="${marketSort==='age'?'on':''}">גיל</button></div>
   ${marketPriceControls(pool.length,50,true)}</details><div class="market-results" role="status" aria-live="polite">${pool.length>50?`מוצגים 50 מתוך ${pool.length} שחקנים בסינון`:`${pool.length} שחקנים בסינון`}</div>${chips}</div>
   ${(G.tlog||[]).length&&!leg?`<div class="card"><h3 class="sec">חדשות העברות</h3>${G.tlog.filter(t=>t.s===G.season).slice(0,8).map(t=>`<div class="small tl ${t.big?'big':''}"><span class="muted tiny">שבוע ${t.wk+1}</span> ${esc(t.txt)}</div>`).join('')}</div>`:''}
   <div class="list">${pool.slice(0,50).map(({p,c:x})=>{if(leg)return worldRow(p,x,open,true);const n=(G.negs||[]).find(z=>z.pid===p.id&&(z.stage==='club'||z.stage==='player'));return playerRow(p,n?`<button class="btn sm" data-neg="${n.id}">במו"מ</button>`:`<button class="btn sm sec" data-wview="${p.id}">פרטים</button>`,'',`<span class="it">${kitSVG(x,'sm')} ${esc(x.short)}</span><span class="it">גיל ${p.age}</span><span class="it">חוזה עד ${contractYear(p)}</span><span class="it">שווי <b class="num">${NIS(p.value)}</b></span>`).replace('data-pid','data-wrow')}).join('')||marketPriceEmpty()}</div>`;

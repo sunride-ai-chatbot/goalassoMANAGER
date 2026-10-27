@@ -1,0 +1,268 @@
+{
+"key": "la_galaxy",
+"name_he": "אל.איי גלאקסי",
+"source": "enwiki:LA Galaxy",
+"fetched": "2026-10-27",
+"players": [
+{
+"he": "Novak Mićović",
+"en": "Novak Mićović",
+"pos": "GK",
+"age": 24,
+"nat": "Serbia",
+"value_m": 0.18,
+"qid": "Q110879228",
+"no": "1"
+},
+{
+"he": "Brady Scott",
+"en": "Brady Scott",
+"pos": "GK",
+"age": 27,
+"nat": "United States",
+"value_m": 0.14,
+"qid": "Q58932401",
+"no": "31"
+},
+{
+"he": "JT Marcinkowski",
+"en": "JT Marcinkowski",
+"pos": "GK",
+"age": 29,
+"nat": "United States",
+"value_m": 0.13,
+"qid": "Q44856714",
+"no": "12"
+},
+{
+"he": "ג'וזף פנסטיל",
+"en": "Joseph Paintsil",
+"pos": "FW",
+"age": 28,
+"nat": "Ghana",
+"value_m": 0.33,
+"qid": "Q38367203",
+"no": "28"
+},
+{
+"he": "ריקי פוץ'",
+"en": "Riqui Puig",
+"pos": "MF",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.32,
+"qid": "Q50315237",
+"no": "10"
+},
+{
+"he": "João Klauss",
+"en": "João Klauss",
+"pos": "FW",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.27,
+"qid": "Q51754954",
+"no": "99"
+},
+{
+"he": "Pablo Ruiz",
+"en": "Pablo Ruiz",
+"pos": "MF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 0.25,
+"qid": "Q19345854",
+"no": "17"
+},
+{
+"he": "חוליאן אאודה",
+"en": "Julián Aude",
+"pos": "DF",
+"age": 23,
+"nat": "Argentina",
+"value_m": 0.23,
+"qid": "Q83746538",
+"no": "3"
+},
+{
+"he": "Isaiah Parente",
+"en": "Isaiah Parente",
+"pos": "MF",
+"age": 26,
+"nat": "United States",
+"value_m": 0.21,
+"qid": "Q106515728",
+"no": "16"
+},
+{
+"he": "קיוגו פורוהאשי",
+"en": "Kyōgo Furuhashi",
+"pos": "FW",
+"age": 31,
+"nat": "Japan",
+"value_m": 0.2,
+"qid": "Q28690600",
+"no": "7"
+},
+{
+"he": "Lucas Calegari",
+"en": "Lucas Calegari",
+"pos": "DF",
+"age": 24,
+"nat": "Brazil",
+"value_m": 0.18,
+"qid": "Q98696683",
+"no": "2"
+},
+{
+"he": "John Nelson",
+"en": "John Nelson",
+"pos": "DF",
+"age": 28,
+"nat": "United States",
+"value_m": 0.18,
+"qid": "Q62267833",
+"no": "14"
+},
+{
+"he": "רוברט טיילור",
+"en": "Robert Taylor",
+"pos": "FW",
+"age": 31,
+"nat": "Finland",
+"value_m": 0.18,
+"qid": "Q16990830",
+"no": "21"
+},
+{
+"he": "Troy Elgersma",
+"en": "Troy Elgersma",
+"pos": "FW",
+"age": 25,
+"nat": "United States",
+"value_m": 0.18,
+"qid": null,
+"no": "76"
+},
+{
+"he": "Elijah Wynder",
+"en": "Elijah Wynder",
+"pos": "MF",
+"age": 23,
+"nat": "United States",
+"value_m": 0.17,
+"qid": "Q97669746",
+"no": "22"
+},
+{
+"he": "Carlos Garcés",
+"en": "Carlos Garcés",
+"pos": "DF",
+"age": 24,
+"nat": "Colombia",
+"value_m": 0.17,
+"qid": "Q116539321",
+"no": "25"
+},
+{
+"he": "Justin Haak",
+"en": "Justin Haak",
+"pos": "MF",
+"age": 23,
+"nat": "United States",
+"value_m": 0.16,
+"qid": "Q64748396",
+"no": "15"
+},
+{
+"he": "Lucas Sanabria",
+"en": "Lucas Sanabria",
+"pos": "MF",
+"age": 22,
+"nat": "Uruguay",
+"value_m": 0.15,
+"qid": "Q124633047",
+"no": "8"
+},
+{
+"he": "Chris Rindov",
+"en": "Chris Rindov",
+"pos": "DF",
+"age": 24,
+"nat": "United States",
+"value_m": 0.13,
+"qid": "Q117834389",
+"no": "20"
+},
+{
+"he": "Riley Dalgado",
+"en": "Riley Dalgado",
+"pos": "DF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.13,
+"qid": null,
+"no": "50"
+},
+{
+"he": "Jakob Glesnes",
+"en": "Jakob Glesnes",
+"pos": "DF",
+"age": 32,
+"nat": "Norway",
+"value_m": 0.11,
+"qid": "Q17093565",
+"no": "5"
+},
+{
+"he": "Erik Thommy",
+"en": "Erik Thommy",
+"pos": "MF",
+"age": 32,
+"nat": "Germany",
+"value_m": 0.11,
+"qid": "Q15735586",
+"no": "27"
+},
+{
+"he": "סרג'י רוברטו",
+"en": "Sergi Roberto",
+"pos": "DF",
+"age": 34,
+"nat": "Spain",
+"value_m": 0.09,
+"qid": "Q703269",
+"no": "6"
+},
+{
+"he": "Harbor Miller",
+"en": "Harbor Miller",
+"pos": "DF",
+"age": 19,
+"nat": "United States",
+"value_m": 0.08,
+"qid": "Q132891315",
+"no": "26"
+},
+{
+"he": "מרקו רויס",
+"en": "Marco Reus",
+"pos": "FW",
+"age": 37,
+"nat": "Germany",
+"value_m": 0.07,
+"qid": "Q152377",
+"no": "18"
+},
+{
+"he": "מאיה יושידה",
+"en": "Maya Yoshida",
+"pos": "DF",
+"age": 38,
+"nat": "Japan",
+"value_m": 0.06,
+"qid": "Q248141",
+"no": "4"
+}
+]
+}
