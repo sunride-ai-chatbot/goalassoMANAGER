@@ -10,8 +10,12 @@ async function main(){try{
  w.document.querySelector('[data-sponsor="0"]').click();w.document.querySelector('[data-board="none"]').click();
  w.eval("G.pressMode='off';G.paperPop=[];G.view='lineup';render()");
  const brand=w.eval('me().sponsor.name');
- assert.ok(brand);assert.ok(w.document.querySelector('.kit-contract-sponsor'));
- for(const n of w.document.querySelectorAll('.kit-contract-sponsor'))assert.equal(n.textContent,brand);
+ assert.ok(brand);assert.ok(w.document.querySelector('.cine-sponsor').textContent.includes(brand),'shirt sponsor named under the lineup');
+ // stadium-photo lineup: eleven cards with a face, rating, position and fitness bar on the arena picture
+ assert.ok(w.document.querySelector('.stad-pitch.arena .arena-bg img'));
+ assert.equal(w.document.querySelectorAll('.stad .lc-card .lc-face .player-portrait').length,11);
+ assert.equal(w.document.querySelectorAll('.stad .lc-card .lc-en u').length,11);
+ for(const n of w.document.querySelectorAll('.stad .lc-ovr'))assert.match(n.textContent,/^\d{2}$/);
  assert.equal(w.document.querySelectorAll('#formSel').length,1);
  assert.equal(w.document.querySelectorAll('.stad [data-slot]').length,11);
  w.document.querySelector('#autoBtn').click();
@@ -30,8 +34,9 @@ async function main(){try{
  }
  // Updated and expired contracts must not leave a baked-in sponsor on clothes.
  w.eval("me().sponsor.name='מותג חדש';render()");
- for(const n of w.document.querySelectorAll('.kit-contract-sponsor'))assert.equal(n.textContent,'מותג חדש');
- w.eval("me().sponsor=null;render()");assert.equal(w.document.querySelectorAll('.kit-contract-sponsor').length,0);
+ assert.ok(w.document.querySelector('.cine-sponsor').textContent.includes('מותג חדש'));
+ assert.equal(w.eval("cinematicPlayerHTML(me(),me().players[0],'t2').includes('מותג חדש')"),true,'the kit figure still carries the contract sponsor');
+ w.eval("me().sponsor=null;render()");assert.equal(w.document.querySelectorAll('.cine-sponsor').length,0);assert.equal(w.document.querySelectorAll('.kit-contract-sponsor').length,0);
  assert.deepEqual(errors,[]);console.log('cinematic lineup, substitution, formations and sponsor lifecycle passed; errors []');
 }finally{await new Promise(resolve=>setImmediate(resolve));w.close()}}
 main().catch(e=>{console.error(e);process.exitCode=1});

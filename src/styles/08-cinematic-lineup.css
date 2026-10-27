@@ -63,15 +63,31 @@
 .pp-credit{text-align:center;font-size:10.5px;line-height:1.35;margin-top:4px;overflow-wrap:anywhere}
 .pp-credit:empty{display:none}
 
-/* broadcast lineup graphic: SVG perspective pitch in the club colours (replaces the stadium photo) */
-.cinematic-lineup .stad-pitch.persp{background:#05080c}
-.pitch-persp{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+/* lineup on the stadium photo: player cards (face, rating, position, name, fitness bar) projected onto the grass */
+.cinematic-lineup .stad-pitch.arena{aspect-ratio:1/2;background:#05080c}
+.arena-bg{position:absolute;inset:0;z-index:0}.arena-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block}
 .cine-header.broadcast{inset:2.5% 4% auto;text-align:start;text-shadow:0 2px 8px #000c}
 .cine-title{display:flex;align-items:center;gap:12px}
-.cine-kit{flex:none;width:clamp(44px,13vw,74px);filter:drop-shadow(0 4px 8px #0009)}
+.cine-kit{flex:none;width:clamp(40px,11vw,64px);filter:drop-shadow(0 4px 8px #0009)}
 .cine-kit svg{width:100%;height:auto;display:block}
-.cine-header.broadcast h2{margin:0;font:900 clamp(28px,7.5vw,58px)/1.05 var(--body);letter-spacing:-1px;color:#fff;text-shadow:0 3px 0 #0006,0 4px 16px #000}
+.cine-header.broadcast h2{margin:0;font:900 clamp(24px,6.5vw,48px)/1.05 var(--body);letter-spacing:-.5px;color:#fff;text-shadow:0 3px 0 #0006,0 4px 16px #000}
 .cine-header.broadcast p{margin:4px 0 0;color:#ffffffd0;font-weight:600}
 .cine-header.broadcast .cine-tools{justify-content:flex-start;margin-top:8px}
-.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000a8;border-color:#ffffff66;color:#fff}
-@media(max-width:380px){.cine-header.broadcast h2{font-size:26px}.cine-kit{width:40px}}
+.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000b0;border-color:#ffffff66;color:#fff}
+.cinematic-lineup .t3.lc{width:16.5%;transform:translate(-50%,-100%)}
+.lc-card{display:flex;flex-direction:column;align-items:center;gap:2px;width:100%;padding:4px 3px 5px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#e9edf3);border:1px solid #ffffffcc;box-shadow:0 8px 18px #0008,0 1px 0 #fff inset;color:#0d1a26;position:relative}
+.lc-top{display:flex;align-items:center;gap:4px;width:100%;justify-content:space-between;padding:0 2px}
+.lc-ovr{font:900 clamp(13px,3.6vw,18px)/1 var(--body);color:#0d1a26;direction:ltr}
+.lc-pos{font:700 9px/1 var(--body);padding:2px 4px;border-radius:5px;color:#fff;letter-spacing:.3px;background:#223a2d}.lc-pos.GK{background:#6b5118}.lc-pos.DF{background:#1f4a73}.lc-pos.MF{background:#2a6a3a}.lc-pos.FW{background:#7a2f3a}
+.lc-cap{position:absolute;top:-7px;inset-inline-start:-6px;width:18px;height:18px;border-radius:50%;background:#efd78b;color:#142115;font:800 11px/18px var(--body);text-align:center;box-shadow:0 2px 5px #0007}
+.lc-face{display:block;width:64%;aspect-ratio:240/264;border-radius:9px;overflow:hidden;background:#0b1520}
+.lc-face .player-portrait{width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.lc-name{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:800 clamp(10px,2.9vw,14px)/1.2 var(--body);color:#0d1a26}
+.lc-en{display:block;width:88%;height:5px;border-radius:3px;background:#c9d2dc;overflow:hidden}.lc-en u{display:block;height:100%;border-radius:3px}
+.lc-flag{position:absolute;top:30%;inset-inline:0;text-align:center;font:800 10px/1.4 var(--body);color:#fff;background:#c0392bdd;padding:1px 0}
+.lc-card.lc-empty{background:#0d1a26cc;color:#e2ff9e;border-color:#dce8b899;border-style:dashed;min-height:70px;justify-content:center}
+.lc-card.lc-empty .lc-name{color:#e2ff9e}.lc-card.lc-empty .cine-empty{height:auto;width:auto;border:0;background:none;font-size:24px;margin:0}
+.cinematic-lineup .t3.sel .lc-card{outline:3px solid #d7ff57;box-shadow:0 0 0 2px #0008,0 0 18px #d2ff40}
+.cinematic-lineup .t3.bad .lc-card{border-color:#ff6976}.cinematic-lineup .t3.oop .lc-card{border-color:#ffbe5b;background:linear-gradient(180deg,#fff7e6,#f3e6cc)}
+.cinematic-lineup .t3.sel .t3-in{transform:none}
+@media(max-width:380px){.cine-header.broadcast h2{font-size:24px}.cine-kit{width:38px}.cinematic-lineup .t3.lc{width:18.5%}.lc-face{width:62%}}

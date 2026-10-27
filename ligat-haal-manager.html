@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="722873c7d2b4">
+<meta name="goalasso-build" content="dbfb18da113e">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -302,6 +302,14 @@ h3{font-size:18px}
 .mo-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;min-height:58px;border:0;border-radius:16px;background:linear-gradient(180deg,#d8ff5c,#b6f03c);color:#0b1004;font-family:var(--display);font-size:clamp(19px,5.8vw,26px);cursor:pointer;box-shadow:0 8px 28px rgba(182,240,60,.35),inset 0 1px 0 rgba(255,255,255,.6)}
 .mo-btn svg{width:22px;height:22px;flex:0 0 auto}
 .mo .rv-demo{top:max(10px,env(safe-area-inset-top))}
+
+/* the presented player's cut-out on the stage; the shirt moves down and shrinks under it */
+.rv-facewrap{width:min(62%,260px);margin-top:4px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.75))}
+.rv-facewrap svg{width:100%;height:auto;display:block}
+.rv-facewrap .pp:not([data-pp-state="ready"]){display:none}
+.rv-shirtwrap.withface{width:min(26%,110px);margin-top:2%}
+.rv-p1 .rv-facewrap{animation:rvlift .9s cubic-bezier(.2,.8,.2,1) both}
+@media (prefers-reduced-motion:reduce){.rv-p1 .rv-facewrap{animation:none}}
 /* ---- splash / title screen ---- */
 .lockrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.lockchip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px 5px 8px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line2);color:var(--muted);font-size:12.5px;cursor:not-allowed}.lockchip .kit{width:20px;height:20px;filter:grayscale(.7);opacity:.7}.lockchip .lk{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.2}
 .teamcard.locked{opacity:.5;filter:grayscale(.75);cursor:not-allowed;position:relative}.teamcard.locked:hover{transform:none}.teamcard .lock{position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;background:rgba(5,8,22,.85);display:grid;place-items:center;border:1px solid rgba(255,255,255,.25)}.teamcard .lock svg{width:14px;height:14px;fill:none;stroke:#fff;stroke-width:2.2}
@@ -721,18 +729,34 @@ h3.sec:not(.btn){font-size:24px}
 .pp-credit{text-align:center;font-size:10.5px;line-height:1.35;margin-top:4px;overflow-wrap:anywhere}
 .pp-credit:empty{display:none}
 
-/* broadcast lineup graphic: SVG perspective pitch in the club colours (replaces the stadium photo) */
-.cinematic-lineup .stad-pitch.persp{background:#05080c}
-.pitch-persp{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+/* lineup on the stadium photo: player cards (face, rating, position, name, fitness bar) projected onto the grass */
+.cinematic-lineup .stad-pitch.arena{aspect-ratio:1/2;background:#05080c}
+.arena-bg{position:absolute;inset:0;z-index:0}.arena-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block}
 .cine-header.broadcast{inset:2.5% 4% auto;text-align:start;text-shadow:0 2px 8px #000c}
 .cine-title{display:flex;align-items:center;gap:12px}
-.cine-kit{flex:none;width:clamp(44px,13vw,74px);filter:drop-shadow(0 4px 8px #0009)}
+.cine-kit{flex:none;width:clamp(40px,11vw,64px);filter:drop-shadow(0 4px 8px #0009)}
 .cine-kit svg{width:100%;height:auto;display:block}
-.cine-header.broadcast h2{margin:0;font:900 clamp(28px,7.5vw,58px)/1.05 var(--body);letter-spacing:-1px;color:#fff;text-shadow:0 3px 0 #0006,0 4px 16px #000}
+.cine-header.broadcast h2{margin:0;font:900 clamp(24px,6.5vw,48px)/1.05 var(--body);letter-spacing:-.5px;color:#fff;text-shadow:0 3px 0 #0006,0 4px 16px #000}
 .cine-header.broadcast p{margin:4px 0 0;color:#ffffffd0;font-weight:600}
 .cine-header.broadcast .cine-tools{justify-content:flex-start;margin-top:8px}
-.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000a8;border-color:#ffffff66;color:#fff}
-@media(max-width:380px){.cine-header.broadcast h2{font-size:26px}.cine-kit{width:40px}}
+.cine-header.broadcast .cine-tools select,.cine-header.broadcast .cine-tools button{background:#000000b0;border-color:#ffffff66;color:#fff}
+.cinematic-lineup .t3.lc{width:16.5%;transform:translate(-50%,-100%)}
+.lc-card{display:flex;flex-direction:column;align-items:center;gap:2px;width:100%;padding:4px 3px 5px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#e9edf3);border:1px solid #ffffffcc;box-shadow:0 8px 18px #0008,0 1px 0 #fff inset;color:#0d1a26;position:relative}
+.lc-top{display:flex;align-items:center;gap:4px;width:100%;justify-content:space-between;padding:0 2px}
+.lc-ovr{font:900 clamp(13px,3.6vw,18px)/1 var(--body);color:#0d1a26;direction:ltr}
+.lc-pos{font:700 9px/1 var(--body);padding:2px 4px;border-radius:5px;color:#fff;letter-spacing:.3px;background:#223a2d}.lc-pos.GK{background:#6b5118}.lc-pos.DF{background:#1f4a73}.lc-pos.MF{background:#2a6a3a}.lc-pos.FW{background:#7a2f3a}
+.lc-cap{position:absolute;top:-7px;inset-inline-start:-6px;width:18px;height:18px;border-radius:50%;background:#efd78b;color:#142115;font:800 11px/18px var(--body);text-align:center;box-shadow:0 2px 5px #0007}
+.lc-face{display:block;width:64%;aspect-ratio:240/264;border-radius:9px;overflow:hidden;background:#0b1520}
+.lc-face .player-portrait{width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.lc-name{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:800 clamp(10px,2.9vw,14px)/1.2 var(--body);color:#0d1a26}
+.lc-en{display:block;width:88%;height:5px;border-radius:3px;background:#c9d2dc;overflow:hidden}.lc-en u{display:block;height:100%;border-radius:3px}
+.lc-flag{position:absolute;top:30%;inset-inline:0;text-align:center;font:800 10px/1.4 var(--body);color:#fff;background:#c0392bdd;padding:1px 0}
+.lc-card.lc-empty{background:#0d1a26cc;color:#e2ff9e;border-color:#dce8b899;border-style:dashed;min-height:70px;justify-content:center}
+.lc-card.lc-empty .lc-name{color:#e2ff9e}.lc-card.lc-empty .cine-empty{height:auto;width:auto;border:0;background:none;font-size:24px;margin:0}
+.cinematic-lineup .t3.sel .lc-card{outline:3px solid #d7ff57;box-shadow:0 0 0 2px #0008,0 0 18px #d2ff40}
+.cinematic-lineup .t3.bad .lc-card{border-color:#ff6976}.cinematic-lineup .t3.oop .lc-card{border-color:#ffbe5b;background:linear-gradient(180deg,#fff7e6,#f3e6cc)}
+.cinematic-lineup .t3.sel .t3-in{transform:none}
+@media(max-width:380px){.cine-header.broadcast h2{font-size:24px}.cine-kit{width:38px}.cinematic-lineup .t3.lc{width:18.5%}.lc-face{width:62%}}
 /* Phone readability: use the device viewport, readable copy and finger-sized controls. */
 .home-pitch{max-width:440px;margin:10px auto 0}
 .field.home-pitch .tok{width:16%;max-width:64px;min-height:44px}
@@ -3636,13 +3660,15 @@ function txTerms(tx){const t=[];
 function openReveal(tx){const c=club(tx.club)||me();if(!c)return;closeReveal(true);revealOpen=true;
   const reduced=revealReduced();const root=document.createElement('div');root.id='reveal';root.className='rv'+(reduced?' rv-final':' rv-p0');root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',`חתימה: ${tx.name}`);
   root.style.setProperty('--k1',c.c1);root.style.setProperty('--k2',c.c2||'#ffffff');
+  // the player's own verified cut-out (never another player's face) stands on the stage when the pack has one
+  const hit=typeof npPlayerOf==='function'?npPlayerOf({pid:tx.pid}):null;const face=hit&&playerVisual(hit.p)?`<svg viewBox="0 0 240 300" aria-hidden="true">${portraitGroup(hit.p,c,'rvface'+tx.pid,{bg:false,h:300})}</svg>`:'';
   const facts=txFacts(tx).map(([l,v])=>`<div class="rv-fact"><small>${l}</small><b>${esc(v)}</b></div>`).join('');const terms=txTerms(tx).map(s=>`<li>${s}</li>`).join('');
   root.innerHTML=`<div class="rv-bg" style="background-image:url(${REVEAL_ASSETS.poster})"></div>
   <div class="rv-stage"><div class="rv-media" style="background-image:url(${REVEAL_ASSETS.poster})"></div><div class="rv-shade"></div>
     ${tx.demo?'<div class="rv-demo">הדגמה · לא בוצעה העברה</div>':''}
     <button class="rv-skip" id="rvSkip" type="button">דלג</button>
     <div class="rv-layer rv-l0"><div class="rv-brand">GOALASSO</div><div class="rv-club"><span class="rv-bar"></span><b>${esc(tx.clubName)}</b><span class="rv-bar"></span></div></div>
-    <div class="rv-layer rv-l1"><div class="rv-name">${esc(tx.name)}</div><div class="rv-shirtwrap">${shirtSVG(c,tx.no,'a')}</div></div>
+    <div class="rv-layer rv-l1"><div class="rv-name">${esc(tx.name)}</div>${face?`<div class="rv-facewrap">${face}</div>`:''}<div class="rv-shirtwrap${face?' withface':''}">${shirtSVG(c,tx.no,'a')}</div></div>
     <div class="rv-layer rv-l2"><div class="rv-kind rv-${tx.kind}">${SIGN_KIND[tx.kind]}</div><div class="rv-facts">${facts}</div><ul class="rv-terms">${terms}</ul></div>
     <div class="rv-layer rv-l3"><div class="rv-official">רשמי</div><div class="rv-head">${SIGN_HEAD[tx.kind]}</div><div class="rv-sub"><bdi>${esc(tx.name)}</bdi> · <bdi>${esc(tx.clubName)}</bdi></div></div>
     <div class="rv-card" id="rvCard" aria-live="polite"><div class="rv-official sm">רשמי</div><div class="rv-cardtop"><div class="rv-shirtwrap sm">${shirtSVG(c,tx.no,'b')}</div><div><div class="rv-cardhead">${SIGN_HEAD[tx.kind]}</div><div class="rv-cardname">${esc(tx.name)}</div><div class="rv-cardclub">${esc(tx.clubName)} · ${SIGN_KIND[tx.kind]}</div></div></div>
@@ -4629,36 +4655,16 @@ function cinematicPlayerHTML(c,p,key){const f=playerVisual(p),gk=p.pos==='GK',co
  const src=f?facePackCache.get(f.pack)?.[vk]:null;if(f&&!src)loadFacePack(f.pack);const {trim}=portraitColors(p,c);
  const head=`<g class="pp" data-pp-state="${portraitState(f,vk)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(vk)}"`:''}>${f?`<g clip-path="url(#${id}neck)"><image class="pp-photo" ${src?`href="${src}"`:''} x="${CINE_HEAD.x}" y="${CINE_HEAD.y}" width="${CINE_HEAD.w}" height="${CINE_HEAD.h}" preserveAspectRatio="xMidYMin meet" onerror="var g=this.closest('.pp');if(g)g.setAttribute('data-pp-state','failed')"/></g>`:''}<g class="pp-fb"><circle cx="512" cy="118" r="104" fill="${esc(color)}" stroke="${esc(trim)}" stroke-width="16"/><text x="512" y="118" dy=".36em" text-anchor="middle" font-family="Heebo,Arial,sans-serif" font-weight="800" font-size="92" fill="${inkFor(color)}">${esc(portraitInitials(p))}</text></g></g>`;
  return `<span class="player-figure" aria-hidden="true" data-player-visual="${f?vk:'fallback'}"><svg viewBox="0 0 1024 1536"><defs><clipPath id="${id}neck"><path d="${CINE_NECK}"/></clipPath><clipPath id="${id}clip"><path d="${jersey}"/></clipPath><clipPath id="${id}skin"><path d="M284 450L370 468L327 680L309 716L321 790L289 866L227 827L238 746Z M655 467L737 449L780 746L783 827L726 860L696 784L706 713L688 675Z M352 925L487 940L435 1054L345 1045Z M551 940L674 926L680 1046L596 1054Z"/></clipPath><filter id="${id}skinTint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${tone[0]*.6} ${tone[0]*1.1} ${tone[0]*.3} 0 0 ${tone[1]*.6} ${tone[1]*1.1} ${tone[1]*.3} 0 0 ${tone[2]*.6} ${tone[2]*1.1} ${tone[2]*.3} 0 0 0 0 0 1 0"/></filter><clipPath id="${id}body"><rect x="0" y="250" width="1024" height="1286"/></clipPath><filter id="${id}tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${rgb[0]/255} 0 0 0 0 0 ${rgb[1]/255} 0 0 0 0 0 ${rgb[2]/255} 0 0 0 0 0 1 0"/></filter></defs>${head}<image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}body)"/><image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}clip)" filter="url(#${id}tint)"/><image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}skin)" filter="url(#${id}skinTint)"/><g clip-path="url(#${id}clip)" opacity=".85"><path d="M440 229Q512 283 586 229" fill="none" stroke="${esc(c.c2||'#17233b')}" stroke-width="23"/><path d="M309 438L374 452M651 452L722 438" stroke="${esc(c.c2||'#17233b')}" stroke-width="17"/></g><path d="M578 354l20 -9 20 9v24l-20 14-20-14z" fill="${esc(c.c2||'#16273b')}" opacity=".85"/>${brand?(sponsorLogoSVG(c.sponsor,392,450,240,66,'kit-contract-sponsor')||`<text class="kit-contract-sponsor" x="512" y="490" text-anchor="middle" direction="rtl" fill="${inkFor(color)}" font-family="Heebo,Arial,sans-serif" font-weight="900" font-size="37" textLength="225" lengthAdjust="spacingAndGlyphs">${esc(brand)}</text>`):''}</svg></span>`}
-function token3dHTML(c,p,slot,i,o){const cls=['t3'];if(!p)cls.push('empty');if(o.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');
- // layout y: 0 = attack (far goal), 100 = own goal (near); projected onto the perspective pitch with a margin so a token never crosses the touchline
- const [X,Y]=pitchProject((o.x-50)/50*.9,.05+o.y/100*.9);
- return `<button type="button" class="${cls.join(' ')}" style="left:${X.toFixed(2)}%;top:${Y.toFixed(2)}%;z-index:${Math.round(Y)}" data-slot="${i}" aria-pressed="${!!o.sel}" aria-label="${p?esc(fullName(p))+', '+POSHE[p.pos]+', דירוג '+p.ovr+', כושר '+Math.round(p.fit??100)+'%':'מקום ריק, '+POSHE[slot]}"><span class="t3-in">${p?cinematicPlayerHTML(c,p,'slot'+i):'<span class="cine-empty">+</span>'}${p&&isCaptain(c,p)?'<span class="capb">C</span>':''}<span class="t3-nm"><span class="t3-nmt">${p?esc(p.last||p.first):POSHE[slot]}</span>${p?`<bdi class="cine-rating">${p.ovr}</bdi>`:''}</span></span></button>`}
-/* Broadcast-style lineup graphic: a perspective pitch (trapezoid, drawn in SVG) on a background in the club's colours,
-   the club name and kit as a title. PITCH_PERSP projects pitch coordinates (u across −1..1, v 0 = far goal, 1 = near
-   goal) to the 100×150 stage; the tokens use the same projection so they sit on the grass. */
-const PITCH_PERSP={top:31,bot:97,halfTop:27,halfBot:55,pow:1.2};   // percentages of the stage (y) and half-widths (x)
-function pitchProject(u,v){const P=PITCH_PERSP;const t=Math.pow(v,P.pow);const y=P.top+(P.bot-P.top)*t;const hw=P.halfTop+(P.halfBot-P.halfTop)*t;return [50+u*hw,y]}
-function pitchPerspSVG(c){const P=PITCH_PERSP;const pt=(u,v)=>pitchProject(u,v).map(n=>n.toFixed(2)).join(',');const poly=(pts)=>pts.map(([u,v])=>pt(u,v)).join(' ');
-  const outline=poly([[-1,0],[1,0],[1,1],[-1,1]]);
-  const stripes=[];for(let i=0;i<10;i++){const a=i/10,b=(i+1)/10;if(i%2)stripes.push(`<polygon points="${poly([[-1,a],[1,a],[1,b],[-1,b]])}" fill="#000" opacity=".09"/>`)}
-  const box=(v0,v1,w)=>`<polyline points="${poly([[-w,v0],[-w,v1],[w,v1],[w,v0]])}" />`;
-  const circle=(v,r)=>{const pts=[];for(let i=0;i<=40;i++){const a=i/40*Math.PI*2;pts.push([Math.cos(a)*r*2/68*34/50,v+Math.sin(a)*r/105])}return `<polygon points="${poly(pts)}"/>`};
-  const goal=(v,dir)=>`<polyline points="${poly([[-.108,v],[-.108,v+dir*.022],[.108,v+dir*.022],[.108,v]])}" stroke-width=".5"/>`;
-  const [cx,cy]=pitchProject(0,.5);
-  return `<svg class="pitch-persp" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-  <defs><linearGradient id="ppGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f8a46"/><stop offset="1" stop-color="#1f6a34"/></linearGradient>
-  <linearGradient id="ppBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${esc(c.c1)}"/><stop offset=".55" stop-color="${esc(shadeHex(c.c1,-.45))}"/><stop offset="1" stop-color="#05080c"/></linearGradient>
-  <radialGradient id="ppGlow" cx="50%" cy="20%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
-  <rect width="100" height="100" fill="url(#ppBg)"/><rect width="100" height="100" fill="url(#ppGlow)"/>
-  <polygon points="0,${P.top+8} 100,${P.top-4} 100,${P.top+3} 0,${P.top+15}" fill="${esc(c.c2||'#fff')}" opacity=".18"/>
-  <polygon points="-6,${P.bot+2} 106,${P.bot+2} 50,${P.bot-18}" fill="${esc(c.c1)}" opacity=".35"/>
-  <polygon points="${outline}" fill="url(#ppGrass)" stroke="${esc(c.c2||'#fff')}" stroke-width=".9" stroke-opacity=".55"/>
-  ${stripes.join('')}
-  <g fill="none" stroke="#fff" stroke-width=".55" stroke-opacity=".9" stroke-linejoin="round">
-    <polygon points="${outline}"/><line x1="${pt(-1,.5).split(',')[0]}" y1="${pt(-1,.5).split(',')[1]}" x2="${pt(1,.5).split(',')[0]}" y2="${pt(1,.5).split(',')[1]}"/>
-    ${circle(.5,9.15)}${box(0,.157,.593)}${box(0,.052,.269)}${box(1,1-.157,.593)}${box(1,1-.052,.269)}${goal(0,-1)}${goal(1,1)}
-  </g><circle cx="${cx.toFixed(2)}" cy="${cy.toFixed(2)}" r=".7" fill="#fff"/></svg>`}
-function stadiumFieldHTML(c,slots,lay,ps,selSlot){return `<section class="stad" aria-label="מגרש בחירת הרכב"><div class="stad-pitch persp" style="--c1:${c.c1};--c2:${c.c2||'#fff'}">${pitchPerspSVG(c)}<header class="cine-header broadcast"><div class="cine-title"><span class="cine-kit">${kitSVG(c,'lg')}</span><h2>${esc(c.name)}</h2></div><p>${esc(c.stadium||'אצטדיון הבית')} · ${esc(c.formation||'4-3-3')}</p><div class="cine-tools"><label><span class="hide">מערך</span><select id="formSel" aria-label="מערך">${Object.keys(FORMATIONS).map(f=>`<option ${f===c.formation?'selected':''}>${f}</option>`).join('')}</select></label><button type="button" id="cineTacticsBtn">טקטיקה ⚙</button></div></header>${slots.map((sl,i)=>token3dHTML(c,ps[i],sl,i,{x:lay[i].x,y:lay[i].y,sel:selSlot===i})).join('')}</div></section>`}
+/* Lineup on the stadium photo (assets/lineup-arena.*, a night stadium seen from behind the goal). ARENA maps pitch
+   coordinates (u across −1..1, v 0 = far goal, 1 = own goal) to the stage: rows converge towards the far goal. */
+const ARENA={top:40,bot:95,halfTop:40,halfBot:50,pow:1.05};
+function pitchProject(u,v){const P=ARENA;const t=Math.pow(v,P.pow);const y=P.top+(P.bot-P.top)*t;const hw=P.halfTop+(P.halfBot-P.halfTop)*t;return [50+u*hw,y]}
+function token3dHTML(c,p,slot,i,o){const cls=['t3','lc'];if(!p)cls.push('empty');if(o.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');
+ const [X0,Y]=pitchProject(clamp((o.x-50)/50*1.15,-1,1),o.y/100);const X=clamp(X0,9,91);const fit=p?clamp(Math.round(p.fit??100),0,100):0;const hue=Math.round(fit*1.2);
+ const body=p?`<span class="lc-card"><span class="lc-top"><bdi class="lc-ovr">${p.ovr}</bdi><span class="lc-pos ${p.pos}">${POSB[p.pos]}</span>${isCaptain(c,p)?'<span class="lc-cap">C</span>':''}</span><span class="lc-face">${playerPortraitHTML(p,c,'lc'+i)}</span><span class="lc-name">${esc(p.last||p.first)}</span><i class="lc-en" title="כושר ${fit}%"><u style="width:${fit}%;background:hsl(${hue} 80% 48%)"></u></i>${p.inj||p.susp?`<span class="lc-flag">${p.inj?'פצוע':'מורחק'}</span>`:''}</span>`
+  :`<span class="lc-card lc-empty"><span class="cine-empty">+</span><span class="lc-name">${POSHE[slot]}</span></span>`;
+ return `<button type="button" class="${cls.join(' ')}" style="left:${X.toFixed(2)}%;top:${Y.toFixed(2)}%;z-index:${Math.round(Y)}" data-slot="${i}" aria-pressed="${!!o.sel}" aria-label="${p?esc(fullName(p))+', '+POSHE[p.pos]+', דירוג '+p.ovr+', כושר '+fit+'%':'מקום ריק, '+POSHE[slot]}">${body}</button>`}
+function stadiumFieldHTML(c,slots,lay,ps,selSlot){return `<section class="stad" aria-label="מגרש בחירת הרכב"><div class="stad-pitch arena"><picture class="arena-bg"><source srcset="lineup-arena.webp" type="image/webp"><img src="lineup-arena.jpg" width="900" height="1998" alt="" decoding="async"></picture><header class="cine-header broadcast"><div class="cine-title"><span class="cine-kit">${kitSVG(c,'lg')}</span><h2>${esc(c.name)}</h2></div><p>${esc(c.stadium||'אצטדיון הבית')} · ${esc(c.formation||'4-3-3')}</p><div class="cine-tools"><label><span class="hide">מערך</span><select id="formSel" aria-label="מערך">${Object.keys(FORMATIONS).map(f=>`<option ${f===c.formation?'selected':''}>${f}</option>`).join('')}</select></label><button type="button" id="cineTacticsBtn">טקטיקה ⚙</button></div></header>${slots.map((sl,i)=>token3dHTML(c,ps[i],sl,i,{x:lay[i].x,y:lay[i].y,sel:selSlot===i})).join('')}</div></section>`}
 let lineupSel=null;
 function pitchLines(){return `<svg class="lines" viewBox="0 0 100 133" preserveAspectRatio="none"><g fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".7"><rect x="3" y="3" width="94" height="127" rx="1"/><line x1="3" y1="66.5" x2="97" y2="66.5"/><circle cx="50" cy="66.5" r="10"/><circle cx="50" cy="66.5" r=".9" fill="rgba(255,255,255,.6)"/><rect x="22" y="3" width="56" height="20"/><rect x="36" y="3" width="28" height="7"/><rect x="22" y="110" width="56" height="20"/><rect x="36" y="123" width="28" height="7"/><path d="M38 23 a12 12 0 0 0 24 0"/><path d="M38 110 a12 12 0 0 1 24 0"/></g></svg>`}
 function tokenHTML(c,p,slot,i,opts){const cls=['tok'];if(!p)cls.push('empty');if(opts&&opts.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');

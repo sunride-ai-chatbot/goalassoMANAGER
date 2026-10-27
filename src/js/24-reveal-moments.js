@@ -30,13 +30,15 @@ function txTerms(tx){const t=[];
 function openReveal(tx){const c=club(tx.club)||me();if(!c)return;closeReveal(true);revealOpen=true;
   const reduced=revealReduced();const root=document.createElement('div');root.id='reveal';root.className='rv'+(reduced?' rv-final':' rv-p0');root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',`חתימה: ${tx.name}`);
   root.style.setProperty('--k1',c.c1);root.style.setProperty('--k2',c.c2||'#ffffff');
+  // the player's own verified cut-out (never another player's face) stands on the stage when the pack has one
+  const hit=typeof npPlayerOf==='function'?npPlayerOf({pid:tx.pid}):null;const face=hit&&playerVisual(hit.p)?`<svg viewBox="0 0 240 300" aria-hidden="true">${portraitGroup(hit.p,c,'rvface'+tx.pid,{bg:false,h:300})}</svg>`:'';
   const facts=txFacts(tx).map(([l,v])=>`<div class="rv-fact"><small>${l}</small><b>${esc(v)}</b></div>`).join('');const terms=txTerms(tx).map(s=>`<li>${s}</li>`).join('');
   root.innerHTML=`<div class="rv-bg" style="background-image:url(${REVEAL_ASSETS.poster})"></div>
   <div class="rv-stage"><div class="rv-media" style="background-image:url(${REVEAL_ASSETS.poster})"></div><div class="rv-shade"></div>
     ${tx.demo?'<div class="rv-demo">הדגמה · לא בוצעה העברה</div>':''}
     <button class="rv-skip" id="rvSkip" type="button">דלג</button>
     <div class="rv-layer rv-l0"><div class="rv-brand">GOALASSO</div><div class="rv-club"><span class="rv-bar"></span><b>${esc(tx.clubName)}</b><span class="rv-bar"></span></div></div>
-    <div class="rv-layer rv-l1"><div class="rv-name">${esc(tx.name)}</div><div class="rv-shirtwrap">${shirtSVG(c,tx.no,'a')}</div></div>
+    <div class="rv-layer rv-l1"><div class="rv-name">${esc(tx.name)}</div>${face?`<div class="rv-facewrap">${face}</div>`:''}<div class="rv-shirtwrap${face?' withface':''}">${shirtSVG(c,tx.no,'a')}</div></div>
     <div class="rv-layer rv-l2"><div class="rv-kind rv-${tx.kind}">${SIGN_KIND[tx.kind]}</div><div class="rv-facts">${facts}</div><ul class="rv-terms">${terms}</ul></div>
     <div class="rv-layer rv-l3"><div class="rv-official">רשמי</div><div class="rv-head">${SIGN_HEAD[tx.kind]}</div><div class="rv-sub"><bdi>${esc(tx.name)}</bdi> · <bdi>${esc(tx.clubName)}</bdi></div></div>
     <div class="rv-card" id="rvCard" aria-live="polite"><div class="rv-official sm">רשמי</div><div class="rv-cardtop"><div class="rv-shirtwrap sm">${shirtSVG(c,tx.no,'b')}</div><div><div class="rv-cardhead">${SIGN_HEAD[tx.kind]}</div><div class="rv-cardname">${esc(tx.name)}</div><div class="rv-cardclub">${esc(tx.clubName)} · ${SIGN_KIND[tx.kind]}</div></div></div>

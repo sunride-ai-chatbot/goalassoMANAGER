@@ -62,3 +62,11 @@
 .mo-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;min-height:58px;border:0;border-radius:16px;background:linear-gradient(180deg,#d8ff5c,#b6f03c);color:#0b1004;font-family:var(--display);font-size:clamp(19px,5.8vw,26px);cursor:pointer;box-shadow:0 8px 28px rgba(182,240,60,.35),inset 0 1px 0 rgba(255,255,255,.6)}
 .mo-btn svg{width:22px;height:22px;flex:0 0 auto}
 .mo .rv-demo{top:max(10px,env(safe-area-inset-top))}
+
+/* the presented player's cut-out on the stage; the shirt moves down and shrinks under it */
+.rv-facewrap{width:min(62%,260px);margin-top:4px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.75))}
+.rv-facewrap svg{width:100%;height:auto;display:block}
+.rv-facewrap .pp:not([data-pp-state="ready"]){display:none}
+.rv-shirtwrap.withface{width:min(26%,110px);margin-top:2%}
+.rv-p1 .rv-facewrap{animation:rvlift .9s cubic-bezier(.2,.8,.2,1) both}
+@media (prefers-reduced-motion:reduce){.rv-p1 .rv-facewrap{animation:none}}
