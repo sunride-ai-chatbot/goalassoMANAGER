@@ -1,0 +1,47 @@
+name: Fetch real squads (Wikidata)
+# Manual: pulls the current squads of the clubs listed in data/config/world-clubs-wiki.json from Wikidata and commits
+# them to the `squad-sources` branch (data/euro/<key>.json + _squads-report.json). Nothing ships from here: the
+# files are reviewed and merged on main, then the portrait workflow fetches their faces by Wikidata id.
+on:
+  workflow_dispatch:
+    inputs:
+      group:
+        description: 'world | leumit | all'
+        required: true
+        default: 'world'
+      only:
+        description: 'optional: comma-separated keys'
+        required: false
+        default: ''
+permissions:
+  contents: write
+concurrency:
+  group: squad-sources
+  cancel-in-progress: false
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check out squad-sources
+        run: |
+          git fetch origin squad-sources || true
+          if git rev-parse --verify origin/squad-sources >/dev/null 2>&1; then
+            git worktree add /tmp/wt origin/squad-sources && git -C /tmp/wt checkout -B squad-sources
+          else
+            git worktree add --detach /tmp/wt && git -C /tmp/wt checkout --orphan squad-sources && git -C /tmp/wt rm -rf . >/dev/null || true
+          fi
+      - name: Fetch squads
+        run: python3 scripts/fetch-wikidata-squads.py --group "${{ github.event.inputs.group }}" --only "${{ github.event.inputs.only }}" --out /tmp/wt/squads
+      - name: Commit to squad-sources
+        run: |
+          cd /tmp/wt
+          git config user.name "GOALASSO squads bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A squads
+          git commit -m "Wikidata squads: ${{ github.event.inputs.group }} ${{ github.event.inputs.only }}" || echo "nothing new"
+          git push origin squad-sources
