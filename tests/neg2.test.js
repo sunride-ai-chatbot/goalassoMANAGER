@@ -16,7 +16,7 @@ let n=G.negs[0];console.log('EPL key player ask',w.ILM.NIS(n.ask),'key',n.key,'v
 change($('fee'),n.ask);click($('sendClub'));console.log('full ask on key EPL:',n.stage,'|',n.log.slice(-1)[0]);
 click(w.document.querySelector('[data-close]'));
 // installments on a championship player
-click(w.document.querySelector('[data-wl="champ"]'));const cp=G.world.champ.clubs[0].players.find(p=>!p.key);
+click(w.document.querySelector('[data-wl="champ"]'));const cp=G.world.champ.clubs[0].players.find(p=>!p.key&&!p.nfs)||G.world.champ.clubs[0].players.find(p=>!p.nfs);   // never one of the not-for-sale core
 click(w.document.querySelector(`[data-wrow="${cp.id}"]`));click(w.document.querySelector('[data-startneg]'));n=G.negs[0];
 change($('fee'),Math.round(n.ask*0.8));change($('inst'),'3');click($('sendClub'));console.log('80% in 3 inst:',n.stage,'|',n.log.slice(-1)[0],'counter',n.counter);
 if(n.stage==='club'){change($('fee'),n.counter||n.ask);change($('inst'),'3');click($('sendClub'));console.log('counter accepted?',n.stage,'|',n.log.slice(-1)[0])}
