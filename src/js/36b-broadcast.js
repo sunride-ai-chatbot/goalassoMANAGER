@@ -36,9 +36,11 @@ function bcPlateFor(M,e){const key=e.t==='shot'?e.sub:e.t;const K=BC_KIND[key];i
   else if(key==='save')sub=e.shooter?'עצר את '+esc(e.shooter):'';
   else if(key==='post')sub='סנטימטרים מהשער';
   else if(key==='yellow')sub=p?esc(POSHE[p.pos]||''):'';
-  return {cls:K[1],pri:K[2],tag:K[0],m:e.m,c,p,name:p?fullName(p):(e.name||''),sub}}
+  return {cls:K[1],pri:K[2],tag:K[0],m:e.m,c,p,name:p?fullName(p):(e.name||''),sub,p2:key==='sub'&&e.outPid?bcPlayer(cid,e.outPid,e.out):null}}
 function bcPlateHTML(pl){const c=pl.c;const face=pl.p?playerPortraitHTML(pl.p,c,'bc'+(++BC.seq)):`<span class="bc-mono">${esc(String(c.short||c.name||'').slice(0,2))}</span>`;
-  return `<div class="bc-l3 ${pl.cls}" style="--c1:${c.c1};--c2:${c.c2&&c.c2!==c.c1?c.c2:inkFor(c.c1)};--ink:${inkFor(c.c1)}"><span class="bc-flag"></span><span class="bc-face" style="${faceFrameStyle(pl.p)}">${face}</span>
+  /* a substitution shows both players: the one coming on in the club flag (green ring), the one going off at the far end (red ring) */
+  const off=pl.p2?`<span class="bc-face off" style="${faceFrameStyle(pl.p2)}">${playerPortraitHTML(pl.p2,c,'bc'+(++BC.seq))}</span>`:'';
+  return `<div class="bc-l3 ${pl.cls}${off?' two':''}" style="--c1:${c.c1};--c2:${c.c2&&c.c2!==c.c1?c.c2:inkFor(c.c1)};--ink:${inkFor(c.c1)}"><span class="bc-flag"></span><span class="bc-face" style="${faceFrameStyle(pl.p)}">${face}</span>${off}
     <span class="bc-tx"><span class="bc-top"><b class="bc-tag">${esc(pl.tag)}</b><bdi class="bc-min">${pl.m}'</bdi><span class="bc-club">${esc(c.short||c.name)}</span></span>
     <strong class="bc-name">${esc(pl.name)}</strong>${pl.sub?`<span class="bc-sub">${pl.sub}</span>`:''}</span></div>`}
 function bcEvent(M,e){const L=bcLayer();if(!L||!e||e.quiet)return;if(L.classList.contains('flat'))return;   /* match graphics off: the ticker carries the events; only the slates show */

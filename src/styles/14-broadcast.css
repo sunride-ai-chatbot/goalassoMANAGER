@@ -119,3 +119,9 @@
 .bc-mom i{position:absolute;width:7px;height:7px;margin-right:-3.5px;border-radius:50%;background:#f6f2e7;box-shadow:0 0 0 1.5px #0a0e14}
 .bc-mom i.h{top:2px}.bc-mom i.a{bottom:2px}
 @media(min-width:900px){.bc-mom{height:38px}}
+
+/* substitution: on (green ring, in the flag) and off (red ring, at the far end) */
+.bc-l3.sub .bc-face:not(.off){border-color:#3ddc84}
+.bc-l3.two{padding-inline-end:66px}
+.bc-l3 .bc-face.off{inset-inline-start:auto;inset-inline-end:10px;bottom:auto;top:50%;transform:translateY(-50%);width:44px;height:44px;border-color:#ff4658;filter:saturate(.55) brightness(.9)}
+@media(min-width:900px){.bc-l3.two{padding-inline-end:92px}.bc-l3 .bc-face.off{width:60px;height:60px;inset-inline-end:16px}}

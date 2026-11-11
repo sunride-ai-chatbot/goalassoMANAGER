@@ -46,6 +46,8 @@ const {JSDOM,VirtualConsole}=require('jsdom');
    w.eval('stepMinute=window.oldStep;window.setInterval=window.realInterval;bcReset();G.live=null;G.view="home";render()');
    assert.ok(!$('#top').classList.contains('hide'),'the header returns with the next screen');assert.equal($('#bcLayer'),null);
   }
+  // a substitution shows the player coming on and the player going off
+  assert.equal(w.eval(`(()=>{const c=me(),ps=c.players;const M={h:G.me,a:'x',ev:[],xi:{},ctx:{kind:'league'},gh:0,ga:0};const h=bcPlateHTML(bcPlateFor(M,{t:'sub',team:G.me,m:60,inPid:ps[0].id,name:fullName(ps[0]),out:fullName(ps[1]),outPid:ps[1].id}));const d=document.createElement('div');d.innerHTML=h;return d.querySelectorAll('.bc-face').length+':'+d.querySelectorAll('.bc-face.off').length+':'+d.querySelector('.bc-name').textContent===('2:1:'+fullName(ps[0]))})()`),true);
   // events without a graphic, and a recorded (network) event whose player is unknown
   assert.equal(w.eval(`bcPlateFor({h:G.me,a:'x',ev:[],xi:{},ctx:{kind:'league'},gh:0,ga:0},{t:'corner',team:G.me,m:3})`),null);
   assert.equal(w.eval(`bcPlateFor({h:G.me,a:'x',ev:[],xi:{},ctx:{kind:'league'},gh:0,ga:0},{t:'shot',sub:'save',team:G.me,m:3,xg:.05,name:'x'})`),null,'routine saves get no plate');
