@@ -1,0 +1,27 @@
+== History
+== Current Squad
+== Honours
+== External links
+== References
+
+TEMPLATES 20
+{{Fs player|no= 1|nat=ISR|name=Itay Hemi|pos=GK}}
+{{Fs player|no= 2|nat=ISR|name=Razi Khalifa|pos=DF}}
+{{Fs player|no= 3|nat=ISR|name=Fares Agbaria|pos=DF}}
+{{Fs player|no= 4|nat=ISR|name=Ofek Atias|pos=DF}}
+{{Fs player|no= 5|nat=CMR|name=[[Thierry Etoungou]]|pos=DF}}
+{{Fs player|no= 7|nat=BLR|name=Ilya Potkin|pos=FW}}
+{{Fs player|no= 8|nat=ISR|name=Artur Alyenikov|pos=MF}}
+{{Fs player|no= 9|nat=ISR|name=Itay Buganim|pos=FW}}
+{{Fs player|no=10|nat=ISR|name=Gilad Avramov|pos=MF}}
+{{Fs player|no=11|nat=ISR|name=Yuval Cohen|pos=MF}}
+{{Fs player|no=15|nat=ISR|name=Yinon Ohana|pos=MF}}
+{{Fs player|no=17|nat=ISR|name=Itay Solomon|pos=FW}}
+{{Fs player|no=18|nat=ISR|name=Liav Farada|pos=MF}}
+{{Fs player|no=20|nat=ISR|name=Liran Turgeman|pos=MF}}
+{{Fs player|no=26|nat=ISR|name=[[Nehorai Ifrach]]|pos=MF}}
+{{Fs player|no=29|nat=RSA|name=[[Ashley Cupido]]|pos=MF}}
+{{Fs player|no=30|nat=PLE|name=Omar Nahfaoui|pos=GK}}
+{{Fs player|no=55|nat=ISR|name=Ran Meir|pos=MF}}
+{{Fs player|no=77|nat=ISR|name=Tomer Lannes Arbel|pos=DF}}
+{{Fs player|no=99|nat=GUI|name=Sekou Sylla|pos=FW}}

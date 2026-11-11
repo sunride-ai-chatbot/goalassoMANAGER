@@ -1,13 +1,5 @@
 [
  {
-  "key": "boavista",
-  "ok": true,
-  "n": 21,
-  "qid": 21,
-  "he": 7,
-  "img": 12
- },
- {
   "key": "yanga",
   "ok": false,
   "why": "only 0 parsed players (Young Africans S.C.)"
@@ -18,41 +10,11 @@
   "why": "only 6 parsed players (Colo-Colo)"
  },
  {
-  "key": "philadelphia",
-  "ok": true,
-  "n": 24,
-  "qid": 24,
-  "he": 3,
-  "img": 18
- },
- {
-  "key": "l_rishon",
-  "ok": true,
-  "n": 22,
-  "qid": 6,
-  "he": 22,
-  "img": 1,
-  "src": "hewiki"
- },
- {
   "key": "l_kiryat_yam",
-  "ok": false,
-  "why": "error: 'parse'"
- },
- {
-  "key": "l_modiin",
   "ok": true,
-  "n": 25,
-  "qid": 6,
-  "he": 5,
-  "img": 3
- },
- {
-  "key": "l_herzliya",
-  "ok": true,
-  "n": 21,
-  "qid": 5,
-  "he": 5,
-  "img": 1
+  "n": 20,
+  "qid": 3,
+  "he": 1,
+  "img": 0
  }
 ]
