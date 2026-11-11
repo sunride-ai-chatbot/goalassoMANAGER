@@ -1,0 +1,191 @@
+{
+ "club": "l_kiryat_yam",
+ "clubName": "מ.ס. קריית ים",
+ "clubQid": "Q124487430",
+ "players": [
+  {
+   "he": "Omar Nahfaoui",
+   "en": "Omar Nahfaoui",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q131829712:1998"
+  },
+  {
+   "he": "Itay Hemi",
+   "en": "Itay Hemi",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ilya Potkin",
+   "en": "Ilya Potkin",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נהוראי יפרח",
+   "en": "Nehorai Ifrach",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q107426689",
+   "wikidata": "https://www.wikidata.org/wiki/Q107426689",
+   "label": "Nehorai Ifrah",
+   "birthYear": 2003
+  },
+  {
+   "he": "Sekou Sylla",
+   "en": "Sekou Sylla",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q103825202",
+   "wikidata": "https://www.wikidata.org/wiki/Q103825202",
+   "label": "Sekou Sylla",
+   "birthYear": 2001
+  },
+  {
+   "he": "Thierry Etoungou",
+   "en": "Thierry Etoungou",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q117124047",
+   "wikidata": "https://www.wikidata.org/wiki/Q117124047",
+   "label": "Thierry Etoungou",
+   "birthYear": 1999
+  },
+  {
+   "he": "Itay Buganim",
+   "en": "Itay Buganim",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q110551175",
+   "wikidata": "https://www.wikidata.org/wiki/Q110551175",
+   "label": "Itay Buganim",
+   "birthYear": 2001
+  },
+  {
+   "he": "Gilad Avramov",
+   "en": "Gilad Avramov",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q107479087",
+   "wikidata": "https://www.wikidata.org/wiki/Q107479087",
+   "label": "Gilad Avramov",
+   "birthYear": 2000
+  },
+  {
+   "he": "Yinon Ohana",
+   "en": "Yinon Ohana",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Liav Farada",
+   "en": "Liav Farada",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q131824627:2002"
+  },
+  {
+   "he": "Ashley Cupido",
+   "en": "Ashley Cupido",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q126923904",
+   "wikidata": "https://www.wikidata.org/wiki/Q126923904",
+   "label": "Ashley Cupido",
+   "birthYear": 2001
+  },
+  {
+   "he": "Yuval Cohen",
+   "en": "Yuval Cohen",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Itay Solomon",
+   "en": "Itay Solomon",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Razi Khalifa",
+   "en": "Razi Khalifa",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q124842058:Mohammed Barakat)"
+  },
+  {
+   "he": "Fares Agbaria",
+   "en": "Fares Agbaria",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ofek Atias",
+   "en": "Ofek Atias",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Artur Alyenikov",
+   "en": "Artur Alyenikov",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Liran Turgeman",
+   "en": "Liran Turgeman",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ran Meir",
+   "en": "Ran Meir",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q131748083:2004"
+  },
+  {
+   "he": "Tomer Lannes Arbel",
+   "en": "Tomer Lannes Arbel",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}
