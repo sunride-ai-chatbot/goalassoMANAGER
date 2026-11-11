@@ -21,5 +21,5 @@ setTimeout(()=>{const d=w.document;const run=c=>w.eval(c);
   const store={};for(let i=0;i<w.localStorage.length;i++){const k=w.localStorage.key(i);store[k]=w.localStorage.getItem(k)}
   const w2=mk(store);setTimeout(()=>{out.reload={open:!!w2.document.getElementById('reveal'),signings:w2.eval('G.signings.length')};
    // free agent + loan record shapes
-   out.free=w2.eval(`(()=>{G.wk=0;const p=G.freeAgents[0];me().money+=5e6;signFreeAgent(p.id);const t=G.signings[G.signings.length-1];return {kind:t.kind,years:t.years,fee:t.fee,from:t.from}})()`);
+   out.free=w2.eval(`(()=>{G.wk=0;const from=G.clubs.find(c=>c.id!==G.me);const p=from.players.pop();p.contract=0;G.freeAgents.push(p);/* the list starts empty: only released real players are on it */me().money+=5e6;signFreeAgent(p.id);const t=G.signings[G.signings.length-1];return {kind:t.kind,years:t.years,fee:t.fee,from:t.from}})()`);
    setTimeout(()=>{out.freeRevealText=(w2.document.querySelector('#reveal .rv-card')||{}).textContent;console.log(JSON.stringify(out,null,1));console.log('errs',errs);process.exit(0)},600)},700)},500)},700);

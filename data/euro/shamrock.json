@@ -1,0 +1,309 @@
+{
+"key": "shamrock",
+"name_he": "שמרוק רוברס",
+"source": "enwiki:Shamrock Rovers F.C.",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Edward McGinty",
+"en": "Edward McGinty",
+"pos": "GK",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.158,
+"qid": "Q113486754",
+"no": "1"
+},
+{
+"he": "Lee Steacy",
+"en": "Lee Steacy",
+"pos": "GK",
+"age": 25,
+"nat": "Ireland",
+"value_m": 0.106,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Todd Bazunu",
+"en": "Todd Bazunu",
+"pos": "GK",
+"age": 25,
+"nat": "Ireland",
+"value_m": 0.106,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Jonathan Afolabi",
+"en": "Jonathan Afolabi",
+"pos": "FW",
+"age": 26,
+"nat": "Ireland",
+"value_m": 0.299,
+"qid": "Q84494340",
+"no": "18"
+},
+{
+"he": "Danny Mandroiu",
+"en": "Danny Mandroiu",
+"pos": "MF",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.246,
+"qid": "Q64689833",
+"no": "14"
+},
+{
+"he": "Connor Malley",
+"en": "Connor Malley",
+"pos": "MF",
+"age": 26,
+"nat": "England",
+"value_m": 0.229,
+"qid": "Q96777176",
+"no": "23"
+},
+{
+"he": "Dylan Watts",
+"en": "Dylan Watts",
+"pos": "MF",
+"age": 29,
+"nat": "Ireland",
+"value_m": 0.211,
+"qid": "Q98806893",
+"no": "7"
+},
+{
+"he": "Jack Byrne",
+"en": "Jack Byrne",
+"pos": "MF",
+"age": 30,
+"nat": "Ireland",
+"value_m": 0.211,
+"qid": "Q21130217",
+"no": "29"
+},
+{
+"he": "Matt Healy",
+"en": "Matt Healy",
+"pos": "MF",
+"age": 24,
+"nat": "Ireland",
+"value_m": 0.193,
+"qid": "Q122203928",
+"no": "8"
+},
+{
+"he": "Jake Mulraney",
+"en": "Jake Mulraney",
+"pos": "FW",
+"age": 30,
+"nat": "Ireland",
+"value_m": 0.193,
+"qid": "Q21621563",
+"no": "11"
+},
+{
+"he": "John McGovern",
+"en": "John McGovern",
+"pos": "FW",
+"age": 23,
+"nat": "Northern Ireland",
+"value_m": 0.193,
+"qid": "Q135650279",
+"no": "88"
+},
+{
+"he": "Tunmise Sobowale",
+"en": "Tunmise Sobowale",
+"pos": "DF",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.176,
+"qid": "Q121330702",
+"no": "22"
+},
+{
+"he": "Daniel Cleary",
+"en": "Daniel Cleary",
+"pos": "DF",
+"age": 30,
+"nat": "Ireland",
+"value_m": 0.158,
+"qid": "Q100271683",
+"no": "6"
+},
+{
+"he": "Danny Grant",
+"en": "Danny Grant",
+"pos": "MF",
+"age": 25,
+"nat": "Ireland",
+"value_m": 0.158,
+"qid": "Q104413071",
+"no": "21"
+},
+{
+"he": "Will Fitzgerald",
+"en": "Will Fitzgerald",
+"pos": "MF",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.158,
+"qid": "Q140739798",
+"no": "24"
+},
+{
+"he": "Graham Burke",
+"en": "Graham Burke",
+"pos": "FW",
+"age": 32,
+"nat": "Ireland",
+"value_m": 0.141,
+"qid": "Q5592700",
+"no": "10"
+},
+{
+"he": "Cory O'Sullivan",
+"en": "Cory O'Sullivan",
+"pos": "DF",
+"age": 20,
+"nat": "Ireland",
+"value_m": 0.141,
+"qid": "Q133405357",
+"no": "27"
+},
+{
+"he": "Cian Barrett",
+"en": "Cian Barrett",
+"pos": "MF",
+"age": 21,
+"nat": "Ireland",
+"value_m": 0.141,
+"qid": "Q127352580",
+"no": "33"
+},
+{
+"he": "Luke O'Regan",
+"en": "Luke O'Regan",
+"pos": "DF",
+"age": 21,
+"nat": "Ireland",
+"value_m": 0.123,
+"qid": "Q140792309",
+"no": "17"
+},
+{
+"he": "John O'Sullivan",
+"en": "John O'Sullivan",
+"pos": "MF",
+"age": 20,
+"nat": "Ireland",
+"value_m": 0.123,
+"qid": "Q97268667",
+"no": "26"
+},
+{
+"he": "Naj Razi",
+"en": "Naj Razi",
+"pos": "MF",
+"age": 19,
+"nat": "Ireland",
+"value_m": 0.123,
+"qid": "Q122811342",
+"no": "28"
+},
+{
+"he": "Pico Lopes",
+"en": "Pico Lopes",
+"pos": "DF",
+"age": 34,
+"nat": "Cape Verde",
+"value_m": 0.106,
+"qid": "Q85797565",
+"no": "4"
+},
+{
+"he": "Adam Brennan",
+"en": "Adam Brennan",
+"pos": "MF",
+"age": 19,
+"nat": "Ireland",
+"value_m": 0.106,
+"qid": "Q138641385",
+"no": "19"
+},
+{
+"he": "Michael Noonan",
+"en": "Michael Noonan",
+"pos": "FW",
+"age": 18,
+"nat": "Ireland",
+"value_m": 0.106,
+"qid": "Q131305169",
+"no": "31"
+},
+{
+"he": "אדם מת'יוס",
+"en": "Adam Matthews",
+"pos": "DF",
+"age": 34,
+"nat": "Wales",
+"value_m": 0.088,
+"qid": "Q350383",
+"no": "2"
+},
+{
+"he": "Gary O'Neill",
+"en": "Gary O'Neill",
+"pos": "MF",
+"age": 31,
+"nat": "Ireland",
+"value_m": 0.088,
+"qid": "Q5525686",
+"no": "16"
+},
+{
+"he": "Max Kovalevskis",
+"en": "Max Kovalevskis",
+"pos": "MF",
+"age": 18,
+"nat": "Ireland",
+"value_m": 0.07,
+"qid": "Q136812886",
+"no": "38"
+},
+{
+"he": "Enda Stevens",
+"en": "Enda Stevens",
+"pos": "DF",
+"age": 36,
+"nat": "Ireland",
+"value_m": 0.053,
+"qid": "Q218987",
+"no": "3"
+},
+{
+"he": "Lee Grace",
+"en": "Lee Grace",
+"pos": "DF",
+"age": 33,
+"nat": "Ireland",
+"value_m": 0.053,
+"qid": "Q98845501",
+"no": "5"
+},
+{
+"he": "Aaron Greene",
+"en": "Aaron Greene",
+"pos": "FW",
+"age": 36,
+"nat": "Ireland",
+"value_m": 0.053,
+"qid": "Q102247458",
+"no": "9"
+}
+]
+}

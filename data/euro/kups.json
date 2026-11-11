@@ -1,0 +1,309 @@
+{
+"key": "kups",
+"name_he": "קופ\"ס קואופיו",
+"source": "enwiki:Kuopion Palloseura",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Hemmo Riihimäki",
+"en": "Hemmo Riihimäki",
+"pos": "GK",
+"age": 23,
+"nat": "Finland",
+"value_m": 0.148,
+"qid": "Q124614553",
+"no": "12"
+},
+{
+"he": "Johannes Kreidl",
+"en": "Johannes Kreidl",
+"pos": "GK",
+"age": 30,
+"nat": "Austria",
+"value_m": 0.131,
+"qid": "Q23783060",
+"no": "1"
+},
+{
+"he": "Kasperi Silen",
+"en": "Kasperi Silen",
+"pos": "GK",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.115,
+"qid": null,
+"no": "37"
+},
+{
+"he": "סייקו טוראי",
+"en": "Saikou Touray",
+"pos": "MF",
+"age": 26,
+"nat": "Gambia",
+"value_m": 0.246,
+"qid": "Q104872845",
+"no": "22"
+},
+{
+"he": "Julius Eskesen",
+"en": "Julius Eskesen",
+"pos": "MF",
+"age": 27,
+"nat": "Denmark",
+"value_m": 0.246,
+"qid": "Q33112671",
+"no": "34"
+},
+{
+"he": "Arttu Heinonen",
+"en": "Arttu Heinonen",
+"pos": "MF",
+"age": 27,
+"nat": "Finland",
+"value_m": 0.23,
+"qid": "Q73802169",
+"no": "17"
+},
+{
+"he": "Clinton Antwi",
+"en": "Clinton Antwi",
+"pos": "DF",
+"age": 26,
+"nat": "Ghana",
+"value_m": 0.23,
+"qid": "Q57408658",
+"no": "25"
+},
+{
+"he": "Taneli Hämäläinen",
+"en": "Taneli Hämäläinen",
+"pos": "DF",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.23,
+"qid": "Q109591494",
+"no": "33"
+},
+{
+"he": "Gustav Engvall",
+"en": "Gustav Engvall",
+"pos": "FW",
+"age": 30,
+"nat": "Sweden",
+"value_m": 0.213,
+"qid": "Q15114032",
+"no": "9"
+},
+{
+"he": "Tommi Jyry",
+"en": "Tommi Jyry",
+"pos": "MF",
+"age": 27,
+"nat": "Finland",
+"value_m": 0.213,
+"qid": "Q42370632",
+"no": "16"
+},
+{
+"he": "Calvin Kabuye",
+"en": "Calvin Kabuye",
+"pos": "FW",
+"age": 23,
+"nat": "Uganda",
+"value_m": 0.213,
+"qid": "Q131290889",
+"no": "19"
+},
+{
+"he": "Joslyn Luyeye-Lutumba",
+"en": "Joslyn Luyeye-Lutumba",
+"pos": "FW",
+"age": 23,
+"nat": "Finland",
+"value_m": 0.213,
+"qid": "Q123239693",
+"no": "21"
+},
+{
+"he": "Ayman Aiki",
+"en": "Ayman Aiki",
+"pos": "MF",
+"age": 21,
+"nat": "France",
+"value_m": 0.164,
+"qid": "Q112192579",
+"no": "15"
+},
+{
+"he": "Saku Heiskanen",
+"en": "Saku Heiskanen",
+"pos": "DF",
+"age": 24,
+"nat": "Finland",
+"value_m": 0.148,
+"qid": "Q61122040",
+"no": "3"
+},
+{
+"he": "Jaime Moreno",
+"en": "Jaime Moreno",
+"pos": "FW",
+"age": 31,
+"nat": "Venezuela",
+"value_m": 0.148,
+"qid": "Q17306302",
+"no": "11"
+},
+{
+"he": "Piotr Parzyszek",
+"en": "Piotr Parzyszek",
+"pos": "FW",
+"age": 32,
+"nat": "Poland",
+"value_m": 0.148,
+"qid": "Q59747",
+"no": "20"
+},
+{
+"he": "Arttu Lötjönen",
+"en": "Arttu Lötjönen",
+"pos": "DF",
+"age": 22,
+"nat": "Finland",
+"value_m": 0.148,
+"qid": "Q123004316",
+"no": "23"
+},
+{
+"he": "Kasim Nuhu",
+"en": "Kasim Nuhu",
+"pos": "DF",
+"age": 31,
+"nat": "Ghana",
+"value_m": 0.131,
+"qid": "Q18387214",
+"no": "4"
+},
+{
+"he": "Valentín Gasc",
+"en": "Valentín Gasc",
+"pos": "MF",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.131,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Bob Nii Armah",
+"en": "Bob Nii Armah",
+"pos": "DF",
+"age": 22,
+"nat": "Ghana",
+"value_m": 0.131,
+"qid": "Q134577857",
+"no": "24"
+},
+{
+"he": "Aaro Toivonen",
+"en": "Aaro Toivonen",
+"pos": "MF",
+"age": 21,
+"nat": "Finland",
+"value_m": 0.131,
+"qid": "Q116176379",
+"no": "26"
+},
+{
+"he": "Jorginho",
+"en": "Jorginho",
+"pos": "DF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.131,
+"qid": "Q30053828",
+"no": "30"
+},
+{
+"he": "Saku Savolainen",
+"en": "Saku Savolainen",
+"pos": "DF",
+"age": 30,
+"nat": "Finland",
+"value_m": 0.115,
+"qid": "Q18633688",
+"no": "6"
+},
+{
+"he": "Jerry Voutilainen",
+"en": "Jerry Voutilainen",
+"pos": "MF",
+"age": 31,
+"nat": "Finland",
+"value_m": 0.115,
+"qid": "Q11866392",
+"no": "7"
+},
+{
+"he": "Niilo Kujasalo",
+"en": "Niilo Kujasalo",
+"pos": "MF",
+"age": 22,
+"nat": "Finland",
+"value_m": 0.115,
+"qid": "Q124337477",
+"no": "13"
+},
+{
+"he": "Brahima Magassa",
+"en": "Brahima Magassa",
+"pos": "DF",
+"age": 29,
+"nat": "France",
+"value_m": 0.115,
+"qid": "Q138925610",
+"no": "28"
+},
+{
+"he": "Akseli Puukko",
+"en": "Akseli Puukko",
+"pos": "DF",
+"age": 20,
+"nat": "Finland",
+"value_m": 0.115,
+"qid": "Q122909381",
+"no": "29"
+},
+{
+"he": "Samuel Pasanen",
+"en": "Samuel Pasanen",
+"pos": "MF",
+"age": 20,
+"nat": "Finland",
+"value_m": 0.098,
+"qid": "Q122910214",
+"no": "14"
+},
+{
+"he": "Eemil Tanninen",
+"en": "Eemil Tanninen",
+"pos": "MF",
+"age": 19,
+"nat": "Finland",
+"value_m": 0.098,
+"qid": "Q131328646",
+"no": "18"
+},
+{
+"he": "Rasmus Tikkanen",
+"en": "Rasmus Tikkanen",
+"pos": "DF",
+"age": 19,
+"nat": "Finland",
+"value_m": 0.082,
+"qid": "Q133862408",
+"no": "32"
+}
+]
+}

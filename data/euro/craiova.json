@@ -1,0 +1,259 @@
+{
+"key": "craiova",
+"name_he": "אוניברסיטאטה קראיובה",
+"source": "enwiki:CS Universitatea Craiova",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Răzvan Sava",
+"en": "Răzvan Sava",
+"pos": "GK",
+"age": 24,
+"nat": "Romania",
+"value_m": 0.532,
+"qid": "Q112349548",
+"no": "90"
+},
+{
+"he": "Laurențiu Popescu",
+"en": "Laurențiu Popescu",
+"pos": "GK",
+"age": 29,
+"nat": "Romania",
+"value_m": 0.385,
+"qid": "Q24451823",
+"no": "21"
+},
+{
+"he": "Pavlo Isenko",
+"en": "Pavlo Isenko",
+"pos": "GK",
+"age": 23,
+"nat": "Ukraine",
+"value_m": 0.345,
+"qid": "Q96634142",
+"no": "77"
+},
+{
+"he": "קרלוס מורה",
+"en": "Carlos Mora",
+"pos": "MF",
+"age": 25,
+"nat": "Costa Rica",
+"value_m": 0.678,
+"qid": "Q111932304",
+"no": "17"
+},
+{
+"he": "אסד אל-חמלאווי",
+"en": "Assad Al Hamlawi",
+"pos": "FW",
+"age": 25,
+"nat": "Palestine",
+"value_m": 0.664,
+"qid": "Q97400347",
+"no": "9"
+},
+{
+"he": "Tudor Băluță",
+"en": "Tudor Băluță",
+"pos": "MF",
+"age": 27,
+"nat": "Romania",
+"value_m": 0.651,
+"qid": "Q27107068",
+"no": "8"
+},
+{
+"he": "Simon Elisor",
+"en": "Simon Elisor",
+"pos": "FW",
+"age": 27,
+"nat": "France",
+"value_m": 0.638,
+"qid": "Q98745860",
+"no": "22"
+},
+{
+"he": "Alexandru Cicâldău",
+"en": "Alexandru Cicâldău",
+"pos": "MF",
+"age": 29,
+"nat": "Romania",
+"value_m": 0.611,
+"qid": "Q27107072",
+"no": "20"
+},
+{
+"he": "Oleksandr Romanchuk",
+"en": "Oleksandr Romanchuk",
+"pos": "DF",
+"age": 26,
+"nat": "Ukraine",
+"value_m": 0.598,
+"qid": "Q101246164",
+"no": "3"
+},
+{
+"he": "Ștefan Baiaram",
+"en": "Ștefan Baiaram",
+"pos": "FW",
+"age": 23,
+"nat": "Romania",
+"value_m": 0.598,
+"qid": "Q65558382",
+"no": "10"
+},
+{
+"he": "João Lameira",
+"en": "João Lameira",
+"pos": "MF",
+"age": 27,
+"nat": "Portugal",
+"value_m": 0.598,
+"qid": "Q59209576",
+"no": "16"
+},
+{
+"he": "Vladimir Screciu",
+"en": "Vladimir Screciu",
+"pos": "MF",
+"age": 26,
+"nat": "Romania",
+"value_m": 0.571,
+"qid": "Q27979053",
+"no": "6"
+},
+{
+"he": "Nikola Stevanović",
+"en": "Nikola Stevanović",
+"pos": "DF",
+"age": 27,
+"nat": "Serbia",
+"value_m": 0.571,
+"qid": "Q24005530",
+"no": "24"
+},
+{
+"he": "הריברטו טבארש",
+"en": "Heri Tavares",
+"pos": "FW",
+"age": 29,
+"nat": "Cape Verde",
+"value_m": 0.558,
+"qid": "Q26251754",
+"no": "19"
+},
+{
+"he": "Baptiste Roux",
+"en": "Baptiste Roux",
+"pos": "DF",
+"age": 26,
+"nat": "France",
+"value_m": 0.478,
+"qid": "Q104674493",
+"no": "5"
+},
+{
+"he": "Steven Nsimba",
+"en": "Steven Nsimba",
+"pos": "FW",
+"age": 30,
+"nat": "France",
+"value_m": 0.452,
+"qid": "Q115664752",
+"no": "7"
+},
+{
+"he": "Monday Etim",
+"en": "Monday Etim",
+"pos": "FW",
+"age": 27,
+"nat": "Nigeria",
+"value_m": 0.438,
+"qid": "Q29858894",
+"no": "12"
+},
+{
+"he": "Samuel Teles",
+"en": "Samuel Teles",
+"pos": "MF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.438,
+"qid": "Q120855917",
+"no": "23"
+},
+{
+"he": "Adrian Rus",
+"en": "Adrian Rus",
+"pos": "DF",
+"age": 30,
+"nat": "Romania",
+"value_m": 0.438,
+"qid": "Q33296389",
+"no": "28"
+},
+{
+"he": "Ronaldo Webster",
+"en": "Ronaldo Webster",
+"pos": "DF",
+"age": 25,
+"nat": "Jamaica",
+"value_m": 0.425,
+"qid": "Q117207310",
+"no": "31"
+},
+{
+"he": "Alexandru Iamandache",
+"en": "Alexandru Iamandache",
+"pos": "MF",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.359,
+"qid": null,
+"no": "14"
+},
+{
+"he": "David Matei",
+"en": "David Matei",
+"pos": "MF",
+"age": 20,
+"nat": "Romania",
+"value_m": 0.345,
+"qid": "Q136407806",
+"no": "30"
+},
+{
+"he": "Luca Băsceanu",
+"en": "Luca Băsceanu",
+"pos": "MF",
+"age": 20,
+"nat": "Romania",
+"value_m": 0.306,
+"qid": "Q134065093",
+"no": "29"
+},
+{
+"he": "Nicușor Bancu",
+"en": "Nicușor Bancu",
+"pos": "DF",
+"age": 33,
+"nat": "Romania",
+"value_m": 0.252,
+"qid": "Q18637140",
+"no": "11"
+},
+{
+"he": "Alexandru Crețu",
+"en": "Alexandru Crețu",
+"pos": "MF",
+"age": 34,
+"nat": "Romania",
+"value_m": 0.173,
+"qid": "Q4721122",
+"no": "4"
+}
+]
+}

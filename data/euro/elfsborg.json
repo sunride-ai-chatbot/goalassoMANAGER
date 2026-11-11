@@ -1,0 +1,259 @@
+{
+"key": "elfsborg",
+"name_he": "אלפסבורג",
+"source": "enwiki:IF Elfsborg",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Isak Pettersson",
+"en": "Isak Pettersson",
+"pos": "GK",
+"age": 29,
+"nat": "Sweden",
+"value_m": 0.381,
+"qid": "Q29246543",
+"no": "31"
+},
+{
+"he": "Theo Sander",
+"en": "Theo Sander",
+"pos": "GK",
+"age": 21,
+"nat": "Denmark",
+"value_m": 0.238,
+"qid": "Q113861529",
+"no": "12"
+},
+{
+"he": "Lucas Hägg-Johansson",
+"en": "Lucas Hägg-Johansson",
+"pos": "GK",
+"age": 32,
+"nat": "Sweden",
+"value_m": 0.175,
+"qid": "Q26994782",
+"no": "30"
+},
+{
+"he": "Rasmus Wikström",
+"en": "Rasmus Wikström",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.492,
+"qid": "Q66845364",
+"no": "6"
+},
+{
+"he": "Dion Krasniqi",
+"en": "Dion Krasniqi",
+"pos": "FW",
+"age": 23,
+"nat": "Kosovo",
+"value_m": 0.492,
+"qid": "Q113161515",
+"no": "22"
+},
+{
+"he": "Simon Olsson",
+"en": "Simon Olsson",
+"pos": "MF",
+"age": 28,
+"nat": "Sweden",
+"value_m": 0.476,
+"qid": "Q28800878",
+"no": "10"
+},
+{
+"he": "Júlíus Magnússon",
+"en": "Júlíus Magnússon",
+"pos": "MF",
+"age": 28,
+"nat": "Iceland",
+"value_m": 0.476,
+"qid": "Q56542992",
+"no": "18"
+},
+{
+"he": "Taylor Silverholt",
+"en": "Taylor Silverholt",
+"pos": "FW",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.46,
+"qid": "Q77524380",
+"no": "11"
+},
+{
+"he": "Ari Sigurpálsson",
+"en": "Ari Sigurpálsson",
+"pos": "MF",
+"age": 23,
+"nat": "Iceland",
+"value_m": 0.428,
+"qid": "Q113487400",
+"no": "25"
+},
+{
+"he": "Leo Östman",
+"en": "Leo Östman",
+"pos": "FW",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.413,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Thomas Isherwood",
+"en": "Thomas Isherwood",
+"pos": "DF",
+"age": 28,
+"nat": "Sweden",
+"value_m": 0.381,
+"qid": "Q27300005",
+"no": "4"
+},
+{
+"he": "Arbër Zeneli",
+"en": "Arbër Zeneli",
+"pos": "MF",
+"age": 31,
+"nat": "Kosovo",
+"value_m": 0.365,
+"qid": "Q16467589",
+"no": "9"
+},
+{
+"he": "Alexander Jensen",
+"en": "Alexander Jensen",
+"pos": "DF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.365,
+"qid": "Q118491715",
+"no": "16"
+},
+{
+"he": "Julius Beck",
+"en": "Julius Beck",
+"pos": "MF",
+"age": 21,
+"nat": "Denmark",
+"value_m": 0.365,
+"qid": "Q110113878",
+"no": "19"
+},
+{
+"he": "Ossian Nordvall",
+"en": "Ossian Nordvall",
+"pos": "MF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.349,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Abdulmuiz Oluwatimil Oladimeji",
+"en": "Abdulmuiz Oluwatimil Oladimeji",
+"pos": "MF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.349,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Viggo Elfström",
+"en": "Viggo Elfström",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.302,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Momoh Kamara",
+"en": "Momoh Kamara",
+"pos": "MF",
+"age": 21,
+"nat": "Sierra Leone",
+"value_m": 0.286,
+"qid": "Q134523962",
+"no": "29"
+},
+{
+"he": "Jonathan Esenga",
+"en": "Jonathan Esenga",
+"pos": "DF",
+"age": 25,
+"nat": "England",
+"value_m": 0.238,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Simon Hedlund",
+"en": "Simon Hedlund",
+"pos": "MF",
+"age": 33,
+"nat": "Sweden",
+"value_m": 0.206,
+"qid": "Q3555193",
+"no": "15"
+},
+{
+"he": "Gabríel Gunnarsson",
+"en": "Gabríel Gunnarsson",
+"pos": "FW",
+"age": 18,
+"nat": "Iceland",
+"value_m": 0.175,
+"qid": "Q137342403",
+"no": "14"
+},
+{
+"he": "Per Frick",
+"en": "Per Frick",
+"pos": "FW",
+"age": 34,
+"nat": "Sweden",
+"value_m": 0.143,
+"qid": "Q5743578",
+"no": "17"
+},
+{
+"he": "Sebastian Holmén",
+"en": "Sebastian Holmén",
+"pos": "DF",
+"age": 34,
+"nat": "Sweden",
+"value_m": 0.127,
+"qid": "Q15742572",
+"no": "8"
+},
+{
+"he": "Niklas Hult",
+"en": "Niklas Hult",
+"pos": "DF",
+"age": 36,
+"nat": "Sweden",
+"value_m": 0.127,
+"qid": "Q691136",
+"no": "23"
+},
+{
+"he": "מרקוס רוהדן",
+"en": "Marcus Rohdén",
+"pos": "MF",
+"age": 35,
+"nat": "Sweden",
+"value_m": 0.111,
+"qid": "Q6076905",
+"no": "7"
+}
+]
+}

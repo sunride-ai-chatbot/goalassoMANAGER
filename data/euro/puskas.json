@@ -1,0 +1,289 @@
+{
+"key": "puskas",
+"name_he": "פושקאש אקדמיה",
+"source": "enwiki:Puskás Akadémia FC",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Mirkó Bozó",
+"en": "Mirkó Bozó",
+"pos": "GK",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.292,
+"qid": null,
+"no": "61"
+},
+{
+"he": "Bendegúz Lehoczki",
+"en": "Bendegúz Lehoczki",
+"pos": "GK",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.275,
+"qid": null,
+"no": "72"
+},
+{
+"he": "Tamás Markek",
+"en": "Tamás Markek",
+"pos": "GK",
+"age": 35,
+"nat": "Hungary",
+"value_m": 0.069,
+"qid": "Q124595961",
+"no": "1"
+},
+{
+"he": "לארוס דוארטה",
+"en": "Laros Duarte",
+"pos": "MF",
+"age": 29,
+"nat": "Cape Verde",
+"value_m": 0.602,
+"qid": "Q20676495",
+"no": "6"
+},
+{
+"he": "Palkó Dárdai",
+"en": "Palkó Dárdai",
+"pos": "MF",
+"age": 27,
+"nat": "Hungary",
+"value_m": 0.516,
+"qid": "Q42573690",
+"no": "10"
+},
+{
+"he": "Mikael Soisalo",
+"en": "Mikael Soisalo",
+"pos": "FW",
+"age": 28,
+"nat": "Finland",
+"value_m": 0.516,
+"qid": "Q23731491",
+"no": "20"
+},
+{
+"he": "András Németh",
+"en": "András Németh",
+"pos": "FW",
+"age": 23,
+"nat": "Hungary",
+"value_m": 0.516,
+"qid": "Q85741648",
+"no": "90"
+},
+{
+"he": "Zoárd Nagy",
+"en": "Zoárd Nagy",
+"pos": "FW",
+"age": 26,
+"nat": "Hungary",
+"value_m": 0.447,
+"qid": "Q137866747",
+"no": "99"
+},
+{
+"he": "גאורגי ארוטיוניאן",
+"en": "Georgy Arutyunyan",
+"pos": "DF",
+"age": 22,
+"nat": "Armenia",
+"value_m": 0.43,
+"qid": "Q117303998",
+"no": "21"
+},
+{
+"he": "Zalán Kerezsi",
+"en": "Zalán Kerezsi",
+"pos": "FW",
+"age": 23,
+"nat": "Hungary",
+"value_m": 0.413,
+"qid": "Q102423356",
+"no": "11"
+},
+{
+"he": "Urho Nissilä",
+"en": "Urho Nissilä",
+"pos": "MF",
+"age": 30,
+"nat": "Finland",
+"value_m": 0.395,
+"qid": "Q20249517",
+"no": "16"
+},
+{
+"he": "Dániel Lukács",
+"en": "Dániel Lukács",
+"pos": "FW",
+"age": 30,
+"nat": "Hungary",
+"value_m": 0.378,
+"qid": "Q45108303",
+"no": "8"
+},
+{
+"he": "Michael Okeke",
+"en": "Michael Okeke",
+"pos": "MF",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.361,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Brandon Ormonde-Ottewill",
+"en": "Brandon Ormonde-Ottewill",
+"pos": "DF",
+"age": 30,
+"nat": "England",
+"value_m": 0.361,
+"qid": "Q20979675",
+"no": "33"
+},
+{
+"he": "Zsombor Varga",
+"en": "Zsombor Varga",
+"pos": "MF",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.344,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Pál Barna",
+"en": "Pál Barna",
+"pos": "DF",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.327,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Martin Kern",
+"en": "Martin Kern",
+"pos": "MF",
+"age": 20,
+"nat": "Hungary",
+"value_m": 0.327,
+"qid": "Q123507794",
+"no": "74"
+},
+{
+"he": "Szabolcs Dusinszki",
+"en": "Szabolcs Dusinszki",
+"pos": "MF",
+"age": 21,
+"nat": "Hungary",
+"value_m": 0.309,
+"qid": "Q135712304",
+"no": "34"
+},
+{
+"he": "Dániel Brügger",
+"en": "Dániel Brügger",
+"pos": "MF",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.292,
+"qid": null,
+"no": "68"
+},
+{
+"he": "Bendegúz Farkas",
+"en": "Bendegúz Farkas",
+"pos": "DF",
+"age": 22,
+"nat": "Hungary",
+"value_m": 0.292,
+"qid": "Q138571744",
+"no": "88"
+},
+{
+"he": "Bence Vékony",
+"en": "Bence Vékony",
+"pos": "MF",
+"age": 20,
+"nat": "Hungary",
+"value_m": 0.258,
+"qid": "Q137998263",
+"no": "18"
+},
+{
+"he": "Artem Favorov",
+"en": "Artem Favorov",
+"pos": "MF",
+"age": 32,
+"nat": "Ukraine",
+"value_m": 0.258,
+"qid": "Q15629095",
+"no": "19"
+},
+{
+"he": "Kevin Mondovics",
+"en": "Kevin Mondovics",
+"pos": "FW",
+"age": 19,
+"nat": "Hungary",
+"value_m": 0.258,
+"qid": "Q138003910",
+"no": "77"
+},
+{
+"he": "Roland Orján",
+"en": "Roland Orján",
+"pos": "DF",
+"age": 25,
+"nat": "Hungary",
+"value_m": 0.241,
+"qid": null,
+"no": "96"
+},
+{
+"he": "Lamin Colley",
+"en": "Lamin Colley",
+"pos": "FW",
+"age": 33,
+"nat": "Gambia",
+"value_m": 0.189,
+"qid": "Q106729586",
+"no": "9"
+},
+{
+"he": "Zsolt Nagy",
+"en": "Zsolt Nagy",
+"pos": "DF",
+"age": 33,
+"nat": "Hungary",
+"value_m": 0.189,
+"qid": "Q16235674",
+"no": "25"
+},
+{
+"he": "Wojciech Golla",
+"en": "Wojciech Golla",
+"pos": "DF",
+"age": 34,
+"nat": "Poland",
+"value_m": 0.155,
+"qid": "Q8029117",
+"no": "14"
+},
+{
+"he": "Roland Szolnoki",
+"en": "Roland Szolnoki",
+"pos": "DF",
+"age": 34,
+"nat": "Hungary",
+"value_m": 0.138,
+"qid": "Q1299790",
+"no": "22"
+}
+]
+}

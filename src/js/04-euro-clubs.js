@@ -36,7 +36,7 @@ const EURO_CLUBS=[
  ['פרנצווארוש','הונגריה','בודפשט','גרופמה ארנה','#0a7c3e','#ffffff',66],['פושקאש אקדמיה','הונגריה','פלצ\'וט','פאנצ\'ו ארנה','#1d4ed8','#ffd200',58],
  // רומניה, מולדובה ובולגריה
  ['פ.צ.ס.ב בוקרשט','רומניה','בוקרשט','ארנה נציונלה','#e31b23','#1d4ed8',64],['צ.פ.ר. קלוז\'','רומניה','קלוז\'','ד"ר קונסטנטין רדולסקו','#8b0000','#ffffff',62],['אוניברסיטאטה קראיובה','רומניה','קראיובה','יון אובלמנקו','#1d4ed8','#ffffff',60],
- ['שריף טיראספול','מולדובה','טיראספול','שריף','#ffd200','#000000',58],['פטרוקוב','מולדובה','הינצ\'שט','האצטדיון העירוני','#ffd200','#e31b23',50],
+ ['שריף טיראספול','מולדובה','טיראספול','שריף','#ffd200','#000000',58],
  ['לודוגורץ ראזגרד','בולגריה','ראזגרד','הובה ארנה','#0a7c3e','#ffffff',64],['לבסקי סופיה','בולגריה','סופיה','גאורגי אספארוחוב','#1d4ed8','#ffffff',58],['צ.ס.ק.א. סופיה','בולגריה','סופיה','הצבא הבולגרי','#e31b23','#ffffff',57],
  // הבלקן
  ['הכוכב האדום בלגרד','סרביה','בלגרד','ראיקו מיטיץ\'','#e31b23','#ffffff',70],['פרטיזן בלגרד','סרביה','בלגרד','פרטיזן','#000000','#ffffff',64],
@@ -109,10 +109,13 @@ function fromRawEuro(r,fallback,club){const age=r.age??ri(20,31);const nat=r.nat
 /* shift a real squad so its best-14 average matches the club's designed strength (keeps the within-squad order from real market values) */
 function rawSquad(name,str){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)return null;const ps=raw.map(r=>fromRawEuro(r,str,name));const top=ps.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const mean=top.reduce((a,b)=>a+b,0)/top.length;const shift=clamp(Math.round(str+1-mean),-7,7);
   if(shift)for(const p of ps){p.ovr=clamp(p.ovr+shift,46,94);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.value=playerValue(p);p.wage=playerWage(p)}return ps}
-/* A real squad is not padded with invented players: a thin position group is covered by the line-up picker (bestXI
-   fills from the rest of the squad). Only a squad too small to field a side with a bench (under 16) gets reserves. */
-function realEuroSquad(name,str){const ps=rawSquad(name,str);if(!ps)return null;
-  if(ps.length<16)for(const pos of POS){const min={GK:2,DF:5,MF:5,FW:3}[pos];while(ps.filter(p=>p.pos===pos).length<min)ps.push(makeEuroPlayer(pos,str-4,'',str))}return ps}
+/* A real squad is never padded with invented players: a thin position group is covered by the line-up picker (bestXI
+   fills from the rest of the squad). */
+function realEuroSquad(name,str){return rawSquad(name,str)}
+/* A player the game made up (generator names): no English name from the squad data and no Israeli identity. Such players
+   exist only where the game needs bodies (academy prospects, clubs promoted from the amateur leagues); they are never
+   offered on the market or as free agents. */
+function inventedPlayer(p){if(!p)return false;if(p.en)return false;if(p.real===true)return false;const N=(typeof PLAYER_VISUALS!=='undefined'&&PLAYER_VISUALS.names)||{};return !N[fullName(p)]}
 function pickEuroClub(lo,hi,strong){
   if(!G.euroUsed)G.euroUsed={};
   let cands=EURO_CLUBS.filter(c=>c[6]>=lo-3&&c[6]<=hi+3&&!G.euroUsed[c[0]]);

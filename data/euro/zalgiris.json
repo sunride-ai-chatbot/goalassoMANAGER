@@ -1,0 +1,299 @@
+{
+"key": "zalgiris",
+"name_he": "ז'לגיריס וילנה",
+"source": "enwiki:FK Žalgiris",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Carlos Olses",
+"en": "Carlos Olses",
+"pos": "GK",
+"age": 25,
+"nat": "Venezuela",
+"value_m": 0.096,
+"qid": "Q38195739",
+"no": "1"
+},
+{
+"he": "Vincentas Šarkauskas",
+"en": "Vincentas Šarkauskas",
+"pos": "GK",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.064,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Dominykas Čekavičius",
+"en": "Dominykas Čekavičius",
+"pos": "GK",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.064,
+"qid": null,
+"no": "95"
+},
+{
+"he": "סטניסלב בילינקי",
+"en": "Stanislav Bilenkyi",
+"pos": "FW",
+"age": 28,
+"nat": "Ukraine",
+"value_m": 0.208,
+"qid": "Q30101525",
+"no": "19"
+},
+{
+"he": "Bryan Teixeira",
+"en": "Bryan Teixeira",
+"pos": "FW",
+"age": 25,
+"nat": "Cape Verde",
+"value_m": 0.192,
+"qid": "Q80632180",
+"no": "70"
+},
+{
+"he": "Paulius Golubickas",
+"en": "Paulius Golubickas",
+"pos": "MF",
+"age": 27,
+"nat": "Lithuania",
+"value_m": 0.16,
+"qid": "Q62421095",
+"no": "10"
+},
+{
+"he": "Dominik Franke",
+"en": "Dominik Franke",
+"pos": "DF",
+"age": 27,
+"nat": "Germany",
+"value_m": 0.144,
+"qid": "Q66124553",
+"no": "21"
+},
+{
+"he": "Giedrius Matulevičius",
+"en": "Giedrius Matulevičius",
+"pos": "MF",
+"age": 29,
+"nat": "Lithuania",
+"value_m": 0.128,
+"qid": "Q41884645",
+"no": "17"
+},
+{
+"he": "Ivan Lytvynenko",
+"en": "Ivan Lytvynenko",
+"pos": "MF",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 0.128,
+"qid": "Q75598933",
+"no": "20"
+},
+{
+"he": "Matas Vareika",
+"en": "Matas Vareika",
+"pos": "FW",
+"age": 26,
+"nat": "Lithuania",
+"value_m": 0.128,
+"qid": "Q65261008",
+"no": "27"
+},
+{
+"he": "Danny Lupano",
+"en": "Danny Lupano",
+"pos": "DF",
+"age": 26,
+"nat": "Belgium",
+"value_m": 0.112,
+"qid": "Q110610873",
+"no": "4"
+},
+{
+"he": "Marko Capan",
+"en": "Marko Capan",
+"pos": "MF",
+"age": 22,
+"nat": "Croatia",
+"value_m": 0.112,
+"qid": "Q117171091",
+"no": "6"
+},
+{
+"he": "Nemanja Mihajlović",
+"en": "Nemanja Mihajlović",
+"pos": "MF",
+"age": 30,
+"nat": "Serbia",
+"value_m": 0.112,
+"qid": "Q16239675",
+"no": "7"
+},
+{
+"he": "Gustas Jarusevičius",
+"en": "Gustas Jarusevičius",
+"pos": "MF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.112,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Nikola Petković",
+"en": "Nikola Petković",
+"pos": "FW",
+"age": 29,
+"nat": "Serbia",
+"value_m": 0.112,
+"qid": "Q65197745",
+"no": "11"
+},
+{
+"he": "Martynas Šetkus",
+"en": "Martynas Šetkus",
+"pos": "DF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.112,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Petar Bosančić",
+"en": "Petar Bosančić",
+"pos": "DF",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.112,
+"qid": "Q19956345",
+"no": "15"
+},
+{
+"he": "Deividas Šešplaukis",
+"en": "Deividas Šešplaukis",
+"pos": "MF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.112,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Saba Mamatsashvili",
+"en": "Saba Mamatsashvili",
+"pos": "DF",
+"age": 24,
+"nat": "Georgia",
+"value_m": 0.112,
+"qid": "Q128980571",
+"no": "23"
+},
+{
+"he": "Dariuš Stankevičius",
+"en": "Dariuš Stankevičius",
+"pos": "MF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.112,
+"qid": null,
+"no": "88"
+},
+{
+"he": "Vytis Pavilonis",
+"en": "Vytis Pavilonis",
+"pos": "DF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.096,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Nedas Klimavičius",
+"en": "Nedas Klimavičius",
+"pos": "MF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.096,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Patrik Matyžonok",
+"en": "Patrik Matyžonok",
+"pos": "DF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.096,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Grigore Turda",
+"en": "Grigore Turda",
+"pos": "DF",
+"age": 29,
+"nat": "Romania",
+"value_m": 0.08,
+"qid": "Q65660889",
+"no": "5"
+},
+{
+"he": "Klaudijus Upstas",
+"en": "Klaudijus Upstas",
+"pos": "DF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.08,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Kajus Bička",
+"en": "Kajus Bička",
+"pos": "MF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.08,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Ovidijus Verbickas",
+"en": "Ovidijus Verbickas",
+"pos": "MF",
+"age": 33,
+"nat": "Lithuania",
+"value_m": 0.064,
+"qid": "Q4107394",
+"no": "22"
+},
+{
+"he": "ליביו אנטל",
+"en": "Liviu Antal",
+"pos": "FW",
+"age": 37,
+"nat": "Romania",
+"value_m": 0.048,
+"qid": "Q981409",
+"no": "8"
+},
+{
+"he": "Yury Kendysh",
+"en": "Yury Kendysh",
+"pos": "DF",
+"age": 36,
+"nat": "Belarus",
+"value_m": 0.016,
+"qid": "Q8061792",
+"no": "77"
+}
+]
+}

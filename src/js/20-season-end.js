@@ -41,7 +41,7 @@ function endSeason(){
       else{x.players=x.players.filter(q=>q!==p);if(p.age<34)G.freeAgents.push(p)}}
     x.lineup=null;
   }
-  for(let i=0;i<6;i++){const p=makePlayer(pick(['DF','MF','MF','FW','GK']),58);p.age=ri(26,33);p.contract=0;finalize(p);G.freeAgents.push(p)}
+  G.freeAgents=(G.freeAgents||[]).filter(p=>!inventedPlayer(p));   /* released academy products do not linger as free agents */
   // ageing & intake
   for(const x of [...G.clubs,...G.leumit]){
     x.players.forEach(p=>{if(p.apps>0){p.hist=p.hist||[];p.hist.unshift({s:seasonLabel(),club:x.short,apps:p.apps,mins:p.mins||0,g:p.goals,a:p.assists||0,cs:p.cs||0,sv:p.saves||0,motm:p.motm||0,r:p.rn?+(p.rsum/p.rn).toFixed(2):null});p.hist=p.hist.slice(0,12)}

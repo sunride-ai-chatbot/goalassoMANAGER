@@ -1,0 +1,279 @@
+{
+"key": "omonia",
+"name_he": "אומוניה",
+"source": "enwiki:AC Omonia",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Pantelis Michael",
+"en": "Pantelis Michael",
+"pos": "GK",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.307,
+"qid": null,
+"no": "78"
+},
+{
+"he": "תומאס קמינסקי",
+"en": "Thomas Kaminski",
+"pos": "GK",
+"age": 33,
+"nat": "Belgium",
+"value_m": 0.219,
+"qid": "Q956961",
+"no": "1"
+},
+{
+"he": "Fabiano",
+"en": "Fabiano",
+"pos": "GK",
+"age": 38,
+"nat": "Cyprus",
+"value_m": 0.146,
+"qid": "Q5427726",
+"no": "40"
+},
+{
+"he": "Jaden Montnor",
+"en": "Jaden Montnor",
+"pos": "FW",
+"age": 24,
+"nat": "Suriname",
+"value_m": 0.848,
+"qid": "Q109771543",
+"no": "7"
+},
+{
+"he": "אנדרוניקוס קאקוליס",
+"en": "Andronikos Kakoullis",
+"pos": "FW",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.789,
+"qid": "Q55314877",
+"no": "9"
+},
+{
+"he": "Luuk Brouwers",
+"en": "Luuk Brouwers",
+"pos": "MF",
+"age": 28,
+"nat": "Netherlands",
+"value_m": 0.643,
+"qid": "Q19882808",
+"no": "20"
+},
+{
+"he": "ז'אן-קווין דוברן",
+"en": "Jean-Kévin Duverne",
+"pos": "DF",
+"age": 29,
+"nat": "Haiti",
+"value_m": 0.628,
+"qid": "Q26251605",
+"no": "93"
+},
+{
+"he": "Mateo Marić",
+"en": "Mateo Marić",
+"pos": "MF",
+"age": 28,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.585,
+"qid": "Q53870775",
+"no": "14"
+},
+{
+"he": "מיהלאלי מייאמבלה",
+"en": "Mihlali Mayambela",
+"pos": "FW",
+"age": 30,
+"nat": "South Africa",
+"value_m": 0.585,
+"qid": "Q23008172",
+"no": "21"
+},
+{
+"he": "Ľubomír Šatka",
+"en": "Ľubomír Šatka",
+"pos": "DF",
+"age": 30,
+"nat": "Slovakia",
+"value_m": 0.585,
+"qid": "Q17505907",
+"no": "37"
+},
+{
+"he": "Carel Eiting",
+"en": "Carel Eiting",
+"pos": "MF",
+"age": 28,
+"nat": "Netherlands",
+"value_m": 0.555,
+"qid": "Q26271407",
+"no": "6"
+},
+{
+"he": "David Akintola",
+"en": "David Akintola",
+"pos": "FW",
+"age": 30,
+"nat": "Nigeria",
+"value_m": 0.497,
+"qid": "Q27671136",
+"no": "8"
+},
+{
+"he": "Muamer Tanković",
+"en": "Muamer Tanković",
+"pos": "MF",
+"age": 31,
+"nat": "Sweden",
+"value_m": 0.497,
+"qid": "Q15718503",
+"no": "22"
+},
+{
+"he": "Stefan Simić",
+"en": "Stefan Simić",
+"pos": "DF",
+"age": 31,
+"nat": "Czech Republic",
+"value_m": 0.468,
+"qid": "Q19602715",
+"no": "27"
+},
+{
+"he": "Ewandro",
+"en": "Ewandro",
+"pos": "MF",
+"age": 30,
+"nat": "Brazil",
+"value_m": 0.453,
+"qid": "Q15830998",
+"no": "11"
+},
+{
+"he": "Jure Balkovec",
+"en": "Jure Balkovec",
+"pos": "DF",
+"age": 31,
+"nat": "Slovenia",
+"value_m": 0.453,
+"qid": "Q3811381",
+"no": "29"
+},
+{
+"he": "Angelos Neophytou",
+"en": "Angelos Neophytou",
+"pos": "FW",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.453,
+"qid": null,
+"no": "85"
+},
+{
+"he": "Florin Tănase",
+"en": "Florin Tănase",
+"pos": "FW",
+"age": 31,
+"nat": "Romania",
+"value_m": 0.409,
+"qid": "Q17180989",
+"no": "17"
+},
+{
+"he": "Senou Coulibaly",
+"en": "Senou Coulibaly",
+"pos": "DF",
+"age": 31,
+"nat": "Mali",
+"value_m": 0.395,
+"qid": "Q56065705",
+"no": "5"
+},
+{
+"he": "Fotis Kitsos",
+"en": "Fotis Kitsos",
+"pos": "DF",
+"age": 23,
+"nat": "Greece",
+"value_m": 0.38,
+"qid": "Q109497195",
+"no": "3"
+},
+{
+"he": "Christos Constantinides",
+"en": "Christos Constantinides",
+"pos": "DF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.38,
+"qid": null,
+"no": "90"
+},
+{
+"he": "Giorgos Victoros",
+"en": "Giorgos Victoros",
+"pos": "DF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.365,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Andreas Christou",
+"en": "Andreas Christou",
+"pos": "MF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.365,
+"qid": null,
+"no": "82"
+},
+{
+"he": "Panagiotis Andreou",
+"en": "Panagiotis Andreou",
+"pos": "MF",
+"age": 20,
+"nat": "Cyprus",
+"value_m": 0.336,
+"qid": "Q124460510",
+"no": "74"
+},
+{
+"he": "Loïs Diony",
+"en": "Loïs Diony",
+"pos": "FW",
+"age": 33,
+"nat": "France",
+"value_m": 0.307,
+"qid": "Q19630216",
+"no": "99"
+},
+{
+"he": "Moses Odubajo",
+"en": "Moses Odubajo",
+"pos": "DF",
+"age": 33,
+"nat": "England",
+"value_m": 0.248,
+"qid": "Q6915907",
+"no": "28"
+},
+{
+"he": "Loïc Négo",
+"en": "Loïc Négo",
+"pos": "DF",
+"age": 35,
+"nat": "Hungary",
+"value_m": 0.205,
+"qid": "Q2017857",
+"no": "77"
+}
+]
+}

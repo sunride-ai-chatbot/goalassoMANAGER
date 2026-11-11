@@ -1,0 +1,269 @@
+{
+"key": "shkendija",
+"name_he": "שקנדיה",
+"source": "enwiki:KF Shkëndija",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "בבוקאר גאייה",
+"en": "Baboucarr Gaye",
+"pos": "GK",
+"age": 28,
+"nat": "Gambia",
+"value_m": 0.162,
+"qid": "Q29034390",
+"no": "24"
+},
+{
+"he": "Ferat Ramani",
+"en": "Ferat Ramani",
+"pos": "GK",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.129,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Astrit Amzai",
+"en": "Astrit Amzai",
+"pos": "GK",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.113,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Rinor Ceka",
+"en": "Rinor Ceka",
+"pos": "GK",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.113,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Fahd Ndzengue",
+"en": "Fahd Ndzengue",
+"pos": "FW",
+"age": 26,
+"nat": "Gabon",
+"value_m": 0.323,
+"qid": "Q102021640",
+"no": "9"
+},
+{
+"he": "Jovan Manev",
+"en": "Jovan Manev",
+"pos": "DF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.243,
+"qid": "Q113495759",
+"no": "55"
+},
+{
+"he": "Marko Gjorgjievski",
+"en": "Marko Gjorgjievski",
+"pos": "FW",
+"age": 26,
+"nat": "North Macedonia",
+"value_m": 0.243,
+"qid": "Q72324119",
+"no": "99"
+},
+{
+"he": "Sebastjan Spahiu",
+"en": "Sebastjan Spahiu",
+"pos": "MF",
+"age": 26,
+"nat": "Albania",
+"value_m": 0.21,
+"qid": "Q56249925",
+"no": "49"
+},
+{
+"he": "Drilon Islami",
+"en": "Drilon Islami",
+"pos": "MF",
+"age": 26,
+"nat": "Kosovo",
+"value_m": 0.194,
+"qid": "Q135036489",
+"no": "5"
+},
+{
+"he": "Bojan Dimoski",
+"en": "Bojan Dimoski",
+"pos": "DF",
+"age": 24,
+"nat": "North Macedonia",
+"value_m": 0.194,
+"qid": "Q112426069",
+"no": "23"
+},
+{
+"he": "Arbin Zejnullai",
+"en": "Arbin Zejnullai",
+"pos": "MF",
+"age": 27,
+"nat": "Albania",
+"value_m": 0.178,
+"qid": "Q64576503",
+"no": "17"
+},
+{
+"he": "Flori Ilazi",
+"en": "Flori Ilazi",
+"pos": "FW",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.178,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Lirian Xheladini",
+"en": "Lirian Xheladini",
+"pos": "MF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.162,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Armir Isa",
+"en": "Armir Isa",
+"pos": "MF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.162,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Fabrice Tamba",
+"en": "Fabrice Tamba",
+"pos": "FW",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.162,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Florent Ramadani",
+"en": "Florent Ramadani",
+"pos": "MF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.162,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Aleksandër Trumçi",
+"en": "Aleksandër Trumçi",
+"pos": "DF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.146,
+"qid": "Q115775180",
+"no": "2"
+},
+{
+"he": "Endrit Krasniqi",
+"en": "Endrit Krasniqi",
+"pos": "MF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.146,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Almir Kryeziu",
+"en": "Almir Kryeziu",
+"pos": "MF",
+"age": 27,
+"nat": "Kosovo",
+"value_m": 0.146,
+"qid": "Q125779089",
+"no": "11"
+},
+{
+"he": "Vane Krstevski",
+"en": "Vane Krstevski",
+"pos": "FW",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.146,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Anes Abdurahmani",
+"en": "Anes Abdurahmani",
+"pos": "DF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.146,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Rafa",
+"en": "Rafa",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.129,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Nazif Ceka",
+"en": "Nazif Ceka",
+"pos": "DF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.113,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Mevlan Murati",
+"en": "Mevlan Murati",
+"pos": "DF",
+"age": 32,
+"nat": "North Macedonia",
+"value_m": 0.097,
+"qid": "Q16236377",
+"no": "16"
+},
+{
+"he": "Anes Meliqi",
+"en": "Anes Meliqi",
+"pos": "DF",
+"age": 20,
+"nat": "North Macedonia",
+"value_m": 0.081,
+"qid": "Q141734906",
+"no": "26"
+},
+{
+"he": "Besart Ibraimi",
+"en": "Besart Ibraimi",
+"pos": "FW",
+"age": 39,
+"nat": "North Macedonia",
+"value_m": 0.049,
+"qid": "Q829448",
+"no": "7"
+}
+]
+}

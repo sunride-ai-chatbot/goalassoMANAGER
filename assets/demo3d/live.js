@@ -38,7 +38,18 @@ export function createLiveView(host,{onError}){
     for(let i=0;i<2;i++)animateNet(world.goals[i],clip&&i===(clip.direction>0?1:0)?state.netTime:-1,clip?.path.at(-1).z||0);
     const b=state.ball,d=clip?.direction||1,portrait=camera.aspect<1;
     target.set(T.MathUtils.clamp(b.x,-43,43),.8,b.z*.45);
-    let offset=cameraMode===0?new T.Vector3(-12*d,portrait?24:21,portrait?43:35):cameraMode===1?new T.Vector3(-9*d,5,15):new T.Vector3(22*d,12,18);
+    // first person (modes 3 and 4): the camera sits at the eyes of the shooter or of the keeper facing him and follows
+    // the ball; his own body is hidden so the view is clear. Without a running clip it falls back to the broadcast view.
+    const fpPid=clip&&cameraMode>=3?(cameraMode===3?clip.shooter:clip.keeper):null;
+    const fp=fpPid!=null?state.players.find(p=>p.pid===fpPid&&(p.team===clip.team)===(cameraMode===3)):null;
+    for(const [key,a] of actors)a.group.visible=!(fp&&key===fp.team+':'+fp.pid);
+    if(fp){const end=clip.path.at(-1),eye=new T.Vector3(fp.x,1.68,fp.z),look=new T.Vector3(b.x,Math.max(.5,b.y),b.z);
+      if(eye.distanceTo(look)<2.6)look.set(end.x,1.1,end.z);   // the ball at his feet: he looks where he is about to send it
+      const dir=look.clone().sub(eye).setY(0).normalize();camera.position.copy(eye).addScaledVector(dir,.22);
+      if(camera.fov!==72){camera.fov=72;camera.updateProjectionMatrix()}camera.lookAt(look);
+      renderer.render(scene,camera);stats.frames++;stats.drawCalls=renderer.info.render.calls;stats.triangles=renderer.info.render.triangles;return}
+    if(camera.fov!==48){camera.fov=48;camera.updateProjectionMatrix()}
+    let offset=cameraMode===0||cameraMode>=3?new T.Vector3(-12*d,portrait?24:21,portrait?43:35):cameraMode===1?new T.Vector3(-9*d,5,15):new T.Vector3(22*d,12,18);
     offset.multiplyScalar(zoom).applyAxisAngle(new T.Vector3(0,1,0),yaw);camera.position.copy(target).add(offset);camera.lookAt(target);
     renderer.render(scene,camera);stats.frames++;stats.drawCalls=renderer.info.render.calls;stats.triangles=renderer.info.render.triangles;
   }
@@ -67,7 +78,7 @@ export function createLiveView(host,{onError}){
     observer=new ResizeObserver(()=>guarded(resize));observer.observe(stage);
     host.addEventListener('click',e=>guarded(()=>{
       const action=e.target.closest('button')?.dataset.action;
-      if(action==='camera'){cameraMode=(cameraMode+1)%3;yaw=0;zoom=1;e.target.textContent=['מצלמת שידור','קו המגרש','מאחורי המהלך'][cameraMode];draw();}
+      if(action==='camera'){cameraMode=(cameraMode+1)%5;yaw=0;zoom=1;e.target.textContent=['מצלמת שידור','קו המגרש','מאחורי המהלך','עיני הבועט','עיני השוער'][cameraMode];draw();}
       if(action==='replay'&&lastClip&&!clip){clip=lastClip;time=0;activeMs=0;replay.disabled=true;setCaption(true);draw();schedule();}
       if(action==='skip'){queue=[];clip=null;cancelAnimationFrame(raf);raf=0;next();}
       if(action==='quality'){quality=quality==='auto'?'low':quality==='low'?'high':'auto';e.target.textContent='איכות: '+({auto:'אוטומטית',low:'חסכונית',high:'גבוהה'})[quality];applyQuality();}

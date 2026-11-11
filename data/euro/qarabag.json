@@ -1,0 +1,259 @@
+{
+"key": "qarabag",
+"name_he": "קרבאח אגדם",
+"source": "enwiki:Qarabağ FK",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "מרטין זלומיסליץ'",
+"en": "Martin Zlomislić",
+"pos": "GK",
+"age": 28,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.954,
+"qid": "Q83795769",
+"no": "23"
+},
+{
+"he": "סאחרודין מגומדאלאייב",
+"en": "Shakhruddin Magomedaliyev",
+"pos": "GK",
+"age": 32,
+"nat": "Azerbaijan",
+"value_m": 0.433,
+"qid": "Q18015360",
+"no": "1"
+},
+{
+"he": "Zakaria Sawo",
+"en": "Zakaria Sawo",
+"pos": "FW",
+"age": 26,
+"nat": "Sweden",
+"value_m": 1.21,
+"qid": "Q115621819",
+"no": "9"
+},
+{
+"he": "מוסא קורבנלי",
+"en": "Musa Qurbanlı",
+"pos": "FW",
+"age": 24,
+"nat": "Azerbaijan",
+"value_m": 1.17,
+"qid": "Q74683680",
+"no": "22"
+},
+{
+"he": "רנאלדו קפאס",
+"en": "Renaldo Cephas",
+"pos": "FW",
+"age": 26,
+"nat": "Jamaica",
+"value_m": 1.13,
+"qid": "Q121378572",
+"no": "29"
+},
+{
+"he": "Joni Montiel",
+"en": "Joni Montiel",
+"pos": "MF",
+"age": 27,
+"nat": "Spain",
+"value_m": 1.12,
+"qid": "Q22006981",
+"no": "10"
+},
+{
+"he": "Bruno Langa",
+"en": "Bruno Langa",
+"pos": "DF",
+"age": 28,
+"nat": "Mozambique",
+"value_m": 1.02,
+"qid": "Q85016758",
+"no": "5"
+},
+{
+"he": "Taofeek Ismaheel",
+"en": "Taofeek Ismaheel",
+"pos": "FW",
+"age": 26,
+"nat": "Nigeria",
+"value_m": 1.02,
+"qid": "Q107746109",
+"no": "19"
+},
+{
+"he": "אולכסיי קאשצ'וק",
+"en": "Oleksiy Kashchuk",
+"pos": "MF",
+"age": 26,
+"nat": "Ukraine",
+"value_m": 0.992,
+"qid": "Q64031864",
+"no": "21"
+},
+{
+"he": "Samuel Lobato",
+"en": "Samuel Lobato",
+"pos": "MF",
+"age": 24,
+"nat": "Portugal",
+"value_m": 0.992,
+"qid": "Q115105532",
+"no": "88"
+},
+{
+"he": "Pedro Bicalho",
+"en": "Pedro Bicalho",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.942,
+"qid": "Q96361581",
+"no": "35"
+},
+{
+"he": "Matheus Silva",
+"en": "Matheus Silva",
+"pos": "DF",
+"age": 28,
+"nat": "Brazil",
+"value_m": 0.929,
+"qid": "Q100552599",
+"no": "2"
+},
+{
+"he": "Čebrails Makreckis",
+"en": "Čebrails Makreckis",
+"pos": "DF",
+"age": 26,
+"nat": "Latvia",
+"value_m": 0.929,
+"qid": "Q105604996",
+"no": "25"
+},
+{
+"he": "Reda Khadra",
+"en": "Reda Khadra",
+"pos": "MF",
+"age": 25,
+"nat": "Lebanon",
+"value_m": 0.852,
+"qid": "Q104814097",
+"no": "11"
+},
+{
+"he": "Jaly Mouaddib",
+"en": "Jaly Mouaddib",
+"pos": "MF",
+"age": 25,
+"nat": "France",
+"value_m": 0.827,
+"qid": "Q129640914",
+"no": "7"
+},
+{
+"he": "Elvin Cafarguliyev",
+"en": "Elvin Cafarguliyev",
+"pos": "DF",
+"age": 25,
+"nat": "Azerbaijan",
+"value_m": 0.802,
+"qid": "Q99337064",
+"no": "44"
+},
+{
+"he": "Diego Rosa",
+"en": "Diego Rosa",
+"pos": "MF",
+"age": 23,
+"nat": "Brazil",
+"value_m": 0.763,
+"qid": "Q76376134",
+"no": "33"
+},
+{
+"he": "מרקו יאנקוביץ'",
+"en": "Marko Janković",
+"pos": "MF",
+"age": 31,
+"nat": "Montenegro",
+"value_m": 0.725,
+"qid": "Q17811642",
+"no": "8"
+},
+{
+"he": "Behlul Mustafazade",
+"en": "Behlul Mustafazade",
+"pos": "DF",
+"age": 29,
+"nat": "Azerbaijan",
+"value_m": 0.662,
+"qid": "Q31296035",
+"no": "13"
+},
+{
+"he": "Hikmat Jabrayilzade",
+"en": "Hikmat Jabrayilzade",
+"pos": "MF",
+"age": 25,
+"nat": "Azerbaijan",
+"value_m": 0.649,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Bence Várkonyi",
+"en": "Bence Várkonyi",
+"pos": "DF",
+"age": 24,
+"nat": "Hungary",
+"value_m": 0.636,
+"qid": "Q140420403",
+"no": "4"
+},
+{
+"he": "קאדי (כדורגלן)",
+"en": "Kady Borges",
+"pos": "MF",
+"age": 30,
+"nat": "Brazil",
+"value_m": 0.611,
+"qid": "Q52252223",
+"no": "20"
+},
+{
+"he": "Jérémie Gnali",
+"en": "Jérémie Gnali",
+"pos": "DF",
+"age": 25,
+"nat": "France",
+"value_m": 0.547,
+"qid": null,
+"no": "39"
+},
+{
+"he": "עבאס חוסיינוב",
+"en": "Abbas Hüseynov",
+"pos": "DF",
+"age": 31,
+"nat": "Azerbaijan",
+"value_m": 0.445,
+"qid": "Q21094795",
+"no": "30"
+},
+{
+"he": "Badavi Guseynov",
+"en": "Badavi Guseynov",
+"pos": "DF",
+"age": 35,
+"nat": "Azerbaijan",
+"value_m": 0.204,
+"qid": "Q4152768",
+"no": "55"
+}
+]
+}

@@ -1,0 +1,239 @@
+{
+"key": "flora",
+"name_he": "פלורה טאלין",
+"source": "enwiki:FC Flora",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Andero Tatrik",
+"en": "Andero Tatrik",
+"pos": "GK",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Evert Grünvald",
+"en": "Evert Grünvald",
+"pos": "GK",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Kaur Kivila",
+"en": "Kaur Kivila",
+"pos": "GK",
+"age": 22,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": "Q113572623",
+"no": "99"
+},
+{
+"he": "Danil Kuraksin",
+"en": "Danil Kuraksin",
+"pos": "FW",
+"age": 23,
+"nat": "Estonia",
+"value_m": 0.181,
+"qid": "Q109733407",
+"no": "7"
+},
+{
+"he": "Vladislav Kreida",
+"en": "Vladislav Kreida",
+"pos": "MF",
+"age": 26,
+"nat": "Estonia",
+"value_m": 0.162,
+"qid": "Q64569607",
+"no": "32"
+},
+{
+"he": "Erik Sorga",
+"en": "Erik Sorga",
+"pos": "FW",
+"age": 27,
+"nat": "Estonia",
+"value_m": 0.162,
+"qid": "Q64605847",
+"no": "50"
+},
+{
+"he": "Remo Valdmets",
+"en": "Remo Valdmets",
+"pos": "MF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.101,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Matvei Jekimov",
+"en": "Matvei Jekimov",
+"pos": "DF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Tristan Toomas Teeväli",
+"en": "Tristan Toomas Teeväli",
+"pos": "MF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Tony Varjund",
+"en": "Tony Varjund",
+"pos": "FW",
+"age": 19,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": "Q131450466",
+"no": "14"
+},
+{
+"he": "Taaniel Usta",
+"en": "Taaniel Usta",
+"pos": "FW",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Mihhail Kolobov",
+"en": "Mihhail Kolobov",
+"pos": "DF",
+"age": 21,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": "Q131450410",
+"no": "23"
+},
+{
+"he": "Oscar Pihela",
+"en": "Oscar Pihela",
+"pos": "DF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Sander Alamaa",
+"en": "Sander Alamaa",
+"pos": "FW",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Maksim Kalimullin",
+"en": "Maksim Kalimullin",
+"pos": "MF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.081,
+"qid": null,
+"no": "89"
+},
+{
+"he": "Nikita Kalmõkov",
+"en": "Nikita Kalmõkov",
+"pos": "DF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Airon Kollo",
+"en": "Airon Kollo",
+"pos": "DF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Robert Veering",
+"en": "Robert Veering",
+"pos": "DF",
+"age": 20,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": "Q124328054",
+"no": "6"
+},
+{
+"he": "Sander Tovstik",
+"en": "Sander Tovstik",
+"pos": "DF",
+"age": 20,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": "Q138849819",
+"no": "26"
+},
+{
+"he": "Ilja Antonov",
+"en": "Ilja Antonov",
+"pos": "MF",
+"age": 33,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": "Q778957",
+"no": "67"
+},
+{
+"he": "Mark Hendrik Kukk",
+"en": "Mark Hendrik Kukk",
+"pos": "DF",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.06,
+"qid": null,
+"no": "78"
+},
+{
+"he": "Rauno Alliku",
+"en": "Rauno Alliku",
+"pos": "FW",
+"age": 36,
+"nat": "Estonia",
+"value_m": 0.041,
+"qid": "Q444921",
+"no": "9"
+},
+{
+"he": "Sergei Zenjov",
+"en": "Sergei Zenjov",
+"pos": "FW",
+"age": 37,
+"nat": "Estonia",
+"value_m": 0.041,
+"qid": "Q929773",
+"no": "20"
+}
+]
+}

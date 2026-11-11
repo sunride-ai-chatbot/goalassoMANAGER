@@ -1,0 +1,309 @@
+{
+"key": "paok",
+"name_he": "פאוק",
+"source": "enwiki:PAOK FC",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Konstantinos Balomenos",
+"en": "Konstantinos Balomenos",
+"pos": "GK",
+"age": 24,
+"nat": "Greece",
+"value_m": 2.22,
+"qid": "Q111459638",
+"no": "54"
+},
+{
+"he": "Antonis Tsiftsis",
+"en": "Antonis Tsiftsis",
+"pos": "GK",
+"age": 27,
+"nat": "Greece",
+"value_m": 2.22,
+"qid": "Q88390903",
+"no": "99"
+},
+{
+"he": "Dimitrios Monastirlis",
+"en": "Dimitrios Monastirlis",
+"pos": "GK",
+"age": 22,
+"nat": "Greece",
+"value_m": 1.36,
+"qid": "Q115973971",
+"no": "41"
+},
+{
+"he": "ייז'י פבלנקה",
+"en": "Jiří Pavlenka",
+"pos": "GK",
+"age": 34,
+"nat": "Czech Republic",
+"value_m": 1.04,
+"qid": "Q15124046",
+"no": "1"
+},
+{
+"he": "פיודור צ'אלוב",
+"en": "Fyodor Chalov",
+"pos": "FW",
+"age": 28,
+"nat": "Russia",
+"value_m": 4.42,
+"qid": "Q27049164",
+"no": "9"
+},
+{
+"he": "Shola Shoretire",
+"en": "Shola Shoretire",
+"pos": "MF",
+"age": 22,
+"nat": "England",
+"value_m": 4.33,
+"qid": "Q105622926",
+"no": "47"
+},
+{
+"he": "Cherif Ndiaye",
+"en": "Cherif Ndiaye",
+"pos": "FW",
+"age": 30,
+"nat": "Senegal",
+"value_m": 4.15,
+"qid": "Q28811942",
+"no": "27"
+},
+{
+"he": "Greg Taylor",
+"en": "Greg Taylor",
+"pos": "DF",
+"age": 28,
+"nat": "Scotland",
+"value_m": 4.07,
+"qid": "Q24688832",
+"no": "32"
+},
+{
+"he": "Mady Camara",
+"en": "Mady Camara",
+"pos": "MF",
+"age": 29,
+"nat": "Guinea",
+"value_m": 3.86,
+"qid": "Q30122316",
+"no": "2"
+},
+{
+"he": "Kiril Despodov",
+"en": "Kiril Despodov",
+"pos": "MF",
+"age": 29,
+"nat": "Bulgaria",
+"value_m": 3.82,
+"qid": "Q6415174",
+"no": "77"
+},
+{
+"he": "Taha Ali",
+"en": "Taha Ali",
+"pos": "MF",
+"age": 28,
+"nat": "Sweden",
+"value_m": 3.81,
+"qid": "Q109906009",
+"no": "22"
+},
+{
+"he": "Jonjoe Kenny",
+"en": "Jonjoe Kenny",
+"pos": "DF",
+"age": 29,
+"nat": "England",
+"value_m": 3.78,
+"qid": "Q18015191",
+"no": "3"
+},
+{
+"he": "Giannis Michailidis",
+"en": "Giannis Michailidis",
+"pos": "DF",
+"age": 26,
+"nat": "Greece",
+"value_m": 3.73,
+"qid": "Q94730449",
+"no": "5"
+},
+{
+"he": "חריסטוס זפייריס",
+"en": "Christos Zafeiris",
+"pos": "MF",
+"age": 23,
+"nat": "Greece",
+"value_m": 3.57,
+"qid": "Q108938309",
+"no": "20"
+},
+{
+"he": "כריסטיאן יאקיץ'",
+"en": "Kristijan Jakić",
+"pos": "MF",
+"age": 29,
+"nat": "Croatia",
+"value_m": 3.44,
+"qid": "Q27106995",
+"no": "18"
+},
+{
+"he": "סימון באנזה",
+"en": "Simon Banza",
+"pos": "FW",
+"age": 30,
+"nat": "DR Congo",
+"value_m": 3.42,
+"qid": "Q23887828",
+"no": "24"
+},
+{
+"he": "Diego Costa",
+"en": "Diego Costa",
+"pos": "DF",
+"age": 27,
+"nat": "Brazil",
+"value_m": 3.18,
+"qid": "Q96376358",
+"no": "19"
+},
+{
+"he": "Tom Louchet",
+"en": "Tom Louchet",
+"pos": "MF",
+"age": 23,
+"nat": "France",
+"value_m": 3.16,
+"qid": "Q123863201",
+"no": "23"
+},
+{
+"he": "אנדרייה ז'יבקוביץ'",
+"en": "Andrija Živković",
+"pos": "MF",
+"age": 30,
+"nat": "Serbia",
+"value_m": 3.05,
+"qid": "Q12808967",
+"no": "14"
+},
+{
+"he": "פאנטליס חצידיאקוס",
+"en": "Pantelis Chatzidiakos",
+"pos": "DF",
+"age": 29,
+"nat": "Greece",
+"value_m": 2.75,
+"qid": "Q21725506",
+"no": "4"
+},
+{
+"he": "בטיסט סנטמריה",
+"en": "Baptiste Santamaria",
+"pos": "MF",
+"age": 31,
+"nat": "France",
+"value_m": 2.75,
+"qid": "Q17778052",
+"no": "7"
+},
+{
+"he": "Dimitris Giannoulis",
+"en": "Dimitris Giannoulis",
+"pos": "DF",
+"age": 30,
+"nat": "Greece",
+"value_m": 2.26,
+"qid": "Q18978014",
+"no": "13"
+},
+{
+"he": "Dimitrios Pelkas",
+"en": "Dimitrios Pelkas",
+"pos": "MF",
+"age": 32,
+"nat": "Greece",
+"value_m": 2.18,
+"qid": "Q5277658",
+"no": "10"
+},
+{
+"he": "Soualiho Meïté",
+"en": "Soualiho Meïté",
+"pos": "MF",
+"age": 32,
+"nat": "France",
+"value_m": 2.1,
+"qid": "Q7564054",
+"no": "8"
+},
+{
+"he": "Ognjen Ugrešić",
+"en": "Ognjen Ugrešić",
+"pos": "MF",
+"age": 20,
+"nat": "Serbia",
+"value_m": 2.05,
+"qid": "Q133930896",
+"no": "16"
+},
+{
+"he": "Dimitris Chatsidis",
+"en": "Dimitris Chatsidis",
+"pos": "MF",
+"age": 20,
+"nat": "Greece",
+"value_m": 1.87,
+"qid": "Q138685634",
+"no": "52"
+},
+{
+"he": "אריץ אלוסטונדו",
+"en": "Aritz Elustondo",
+"pos": "DF",
+"age": 32,
+"nat": "Spain",
+"value_m": 1.8,
+"qid": "Q16516257",
+"no": "6"
+},
+{
+"he": "באבא רחמן",
+"en": "Abdul Rahman Baba",
+"pos": "DF",
+"age": 32,
+"nat": "Ghana",
+"value_m": 1.58,
+"qid": "Q317389",
+"no": "21"
+},
+{
+"he": "Anestis Mythou",
+"en": "Anestis Mythou",
+"pos": "FW",
+"age": 19,
+"nat": "Greece",
+"value_m": 1.46,
+"qid": "Q137528202",
+"no": "56"
+},
+{
+"he": "טייסון",
+"en": "Taison",
+"pos": "MF",
+"age": 38,
+"nat": "Brazil",
+"value_m": 1.17,
+"qid": "Q303108",
+"no": "11"
+}
+]
+}

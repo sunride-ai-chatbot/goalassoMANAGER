@@ -67,8 +67,10 @@ def club_title(key):
     if key in CLUB_TITLES:
         return CLUB_TITLES[key]
     cfg = json.load(open(os.path.join(ROOT, 'data', 'config', 'world-clubs-wiki.json'), encoding='utf8'))
-    for grp in ('world', 'leumit'):
-        for info in cfg.get(grp, {}).values():
+    for grp, clubs in cfg.items():
+        if not isinstance(clubs, dict):
+            continue
+        for info in clubs.values():
             if info['key'] == key:
                 return info['en']
     raise SystemExit('no Wikipedia title for club ' + key)

@@ -1,0 +1,309 @@
+{
+"key": "dinamo_batumi",
+"name_he": "דינמו באטומי",
+"source": "enwiki:FC Dinamo Batumi",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Nodari Kalichava",
+"en": "Nodari Kalichava",
+"pos": "GK",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.111,
+"qid": "Q62091851",
+"no": "13"
+},
+{
+"he": "לזאר קופטדזה",
+"en": "Lazare Kupatadze",
+"pos": "GK",
+"age": 30,
+"nat": "Georgia",
+"value_m": 0.083,
+"qid": "Q63451341",
+"no": "1"
+},
+{
+"he": "Saba Ismailov",
+"en": "Saba Ismailov",
+"pos": "GK",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.07,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Mate Turmanidze",
+"en": "Mate Turmanidze",
+"pos": "GK",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.056,
+"qid": null,
+"no": "30"
+},
+{
+"he": "סנדרו אלתונאשווילי",
+"en": "Sandro Altunashvili",
+"pos": "MF",
+"age": 29,
+"nat": "Georgia",
+"value_m": 0.153,
+"qid": "Q66736183",
+"no": "8"
+},
+{
+"he": "Uerdi Mara",
+"en": "Uerdi Mara",
+"pos": "MF",
+"age": 27,
+"nat": "Albania",
+"value_m": 0.153,
+"qid": "Q24451671",
+"no": "10"
+},
+{
+"he": "Paulo Vítor",
+"en": "Paulo Vítor",
+"pos": "FW",
+"age": 27,
+"nat": "Brazil",
+"value_m": 0.153,
+"qid": "Q30087944",
+"no": "11"
+},
+{
+"he": "עימראן ולאד עומר",
+"en": "Imran Oulad Omar",
+"pos": "MF",
+"age": 28,
+"nat": "Netherlands",
+"value_m": 0.153,
+"qid": "Q27863539",
+"no": "18"
+},
+{
+"he": "Levan Shengelia",
+"en": "Levan Shengelia",
+"pos": "FW",
+"age": 30,
+"nat": "Georgia",
+"value_m": 0.153,
+"qid": "Q16371681",
+"no": "27"
+},
+{
+"he": "Artem Mylchenko",
+"en": "Artem Mylchenko",
+"pos": "MF",
+"age": 26,
+"nat": "Ukraine",
+"value_m": 0.139,
+"qid": "Q108758037",
+"no": "6"
+},
+{
+"he": "Dirk Carlson",
+"en": "Dirk Carlson",
+"pos": "DF",
+"age": 28,
+"nat": "Luxembourg",
+"value_m": 0.139,
+"qid": "Q27955737",
+"no": "24"
+},
+{
+"he": "Yahya Kalley",
+"en": "Yahya Kalley",
+"pos": "DF",
+"age": 25,
+"nat": "Gambia",
+"value_m": 0.125,
+"qid": "Q99955319",
+"no": "5"
+},
+{
+"he": "Ivan Turitsov",
+"en": "Ivan Turitsov",
+"pos": "DF",
+"age": 27,
+"nat": "Bulgaria",
+"value_m": 0.125,
+"qid": "Q61775066",
+"no": "29"
+},
+{
+"he": "Luka Kapianidze",
+"en": "Luka Kapianidze",
+"pos": "DF",
+"age": 27,
+"nat": "Georgia",
+"value_m": 0.111,
+"qid": "Q133830997",
+"no": "4"
+},
+{
+"he": "Dmitri Mandrîcenco",
+"en": "Dmitri Mandrîcenco",
+"pos": "FW",
+"age": 29,
+"nat": "Moldova",
+"value_m": 0.111,
+"qid": "Q110642008",
+"no": "7"
+},
+{
+"he": "Luka Lakvekheliani",
+"en": "Luka Lakvekheliani",
+"pos": "DF",
+"age": 27,
+"nat": "Georgia",
+"value_m": 0.111,
+"qid": "Q99671063",
+"no": "12"
+},
+{
+"he": "אנס מחמוטוביץ'",
+"en": "Enes Mahmutović",
+"pos": "DF",
+"age": 29,
+"nat": "Luxembourg",
+"value_m": 0.111,
+"qid": "Q28058586",
+"no": "15"
+},
+{
+"he": "Nika Kalandarishvili",
+"en": "Nika Kalandarishvili",
+"pos": "DF",
+"age": 27,
+"nat": "Georgia",
+"value_m": 0.111,
+"qid": "Q140520108",
+"no": "19"
+},
+{
+"he": "Giorgi Kokhreidze",
+"en": "Giorgi Kokhreidze",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.097,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Awaka Eshata",
+"en": "Awaka Eshata",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.097,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Alika Getiashvili",
+"en": "Alika Getiashvili",
+"pos": "DF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.083,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Luka Tsulukidze",
+"en": "Luka Tsulukidze",
+"pos": "FW",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.083,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Tornike Kirkitadze",
+"en": "Tornike Kirkitadze",
+"pos": "FW",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.083,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Zura Tedoradze",
+"en": "Zura Tedoradze",
+"pos": "DF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.083,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Nika Baladze",
+"en": "Nika Baladze",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.083,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Guram Japaridze",
+"en": "Guram Japaridze",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.083,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Maurides",
+"en": "Maurides",
+"pos": "FW",
+"age": 32,
+"nat": "Brazil",
+"value_m": 0.07,
+"qid": "Q3852462",
+"no": "9"
+},
+{
+"he": "Giorgi Putkaradze",
+"en": "Giorgi Putkaradze",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.07,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Revaz Chiteishvili",
+"en": "Revaz Chiteishvili",
+"pos": "DF",
+"age": 32,
+"nat": "Georgia",
+"value_m": 0.042,
+"qid": "Q133836241",
+"no": "35"
+},
+{
+"he": "ממוקה קובאחידזה",
+"en": "Mamuka Kobakhidze",
+"pos": "DF",
+"age": 34,
+"nat": "Georgia",
+"value_m": 0.028,
+"qid": "Q3932862",
+"no": "23"
+}
+]
+}

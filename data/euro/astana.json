@@ -1,0 +1,279 @@
+{
+"key": "astana",
+"name_he": "אסטנה",
+"source": "enwiki:FC Astana",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Mukhammedzhan Seysen",
+"en": "Mukhammedzhan Seysen",
+"pos": "GK",
+"age": 27,
+"nat": "Kazakhstan",
+"value_m": 0.322,
+"qid": "Q70667769",
+"no": "74"
+},
+{
+"he": "Danila Karpikov",
+"en": "Danila Karpikov",
+"pos": "GK",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.225,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Josip Čondrić",
+"en": "Josip Čondrić",
+"pos": "GK",
+"age": 33,
+"nat": "Croatia",
+"value_m": 0.129,
+"qid": "Q59656292",
+"no": "93"
+},
+{
+"he": "Ivan Bašić",
+"en": "Ivan Bašić",
+"pos": "MF",
+"age": 24,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.692,
+"qid": "Q111536418",
+"no": "8"
+},
+{
+"he": "Ramazan Karimov",
+"en": "Ramazan Karimov",
+"pos": "FW",
+"age": 27,
+"nat": "Kazakhstan",
+"value_m": 0.531,
+"qid": "Q58196938",
+"no": "81"
+},
+{
+"he": "קיפראס קאז'וקולובאס",
+"en": "Kipras Kažukolovas",
+"pos": "DF",
+"age": 25,
+"nat": "Lithuania",
+"value_m": 0.467,
+"qid": "Q111283385",
+"no": "5"
+},
+{
+"he": "Nnamdi Ahanonu",
+"en": "Nnamdi Ahanonu",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.418,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Stanislav Basmanov",
+"en": "Stanislav Basmanov",
+"pos": "FW",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.418,
+"qid": "Q111032969",
+"no": "72"
+},
+{
+"he": "Alibek Kasym",
+"en": "Alibek Kasym",
+"pos": "DF",
+"age": 28,
+"nat": "Kazakhstan",
+"value_m": 0.402,
+"qid": "Q107120177",
+"no": "6"
+},
+{
+"he": "Yan Vorogovsky",
+"en": "Yan Vorogovsky",
+"pos": "DF",
+"age": 30,
+"nat": "Kazakhstan",
+"value_m": 0.386,
+"qid": "Q22342849",
+"no": "11"
+},
+{
+"he": "Nikola Burić",
+"en": "Nikola Burić",
+"pos": "FW",
+"age": 29,
+"nat": "Croatia",
+"value_m": 0.386,
+"qid": "Q108800280",
+"no": "29"
+},
+{
+"he": "Branimir Kalaica",
+"en": "Branimir Kalaica",
+"pos": "DF",
+"age": 28,
+"nat": "Croatia",
+"value_m": 0.338,
+"qid": "Q24943900",
+"no": "3"
+},
+{
+"he": "Maksat Abrayev",
+"en": "Maksat Abrayev",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.338,
+"qid": null,
+"no": "47"
+},
+{
+"he": "Karlo Bartolec",
+"en": "Karlo Bartolec",
+"pos": "DF",
+"age": 31,
+"nat": "Croatia",
+"value_m": 0.322,
+"qid": "Q18125262",
+"no": "2"
+},
+{
+"he": "Dinmukhamed Karaman",
+"en": "Dinmukhamed Karaman",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.322,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Sanzhar Anuarov",
+"en": "Sanzhar Anuarov",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.306,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Damir Marat",
+"en": "Damir Marat",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.306,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Ruslan Valikhan",
+"en": "Ruslan Valikhan",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.306,
+"qid": null,
+"no": "82"
+},
+{
+"he": "Timur Tokenov",
+"en": "Timur Tokenov",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.29,
+"qid": null,
+"no": "52"
+},
+{
+"he": "Akhmetali Kaltanov",
+"en": "Akhmetali Kaltanov",
+"pos": "FW",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.29,
+"qid": null,
+"no": "57"
+},
+{
+"he": "באורג'ן איסלאמחאן",
+"en": "Bauyrzhan Islamkhan",
+"pos": "MF",
+"age": 33,
+"nat": "Kazakhstan",
+"value_m": 0.241,
+"qid": "Q4120867",
+"no": "9"
+},
+{
+"he": "Aytuar Token",
+"en": "Aytuar Token",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.225,
+"qid": null,
+"no": "91"
+},
+{
+"he": "Ivan Miladinović",
+"en": "Ivan Miladinović",
+"pos": "DF",
+"age": 32,
+"nat": "Serbia",
+"value_m": 0.209,
+"qid": "Q20745051",
+"no": "45"
+},
+{
+"he": "אלכסנדר מרקל",
+"en": "Aleksandr Merkel",
+"pos": "MF",
+"age": 34,
+"nat": "Kazakhstan",
+"value_m": 0.193,
+"qid": "Q327205",
+"no": "21"
+},
+{
+"he": "מארין טומאסוב",
+"en": "Marin Tomasov",
+"pos": "MF",
+"age": 39,
+"nat": "Croatia",
+"value_m": 0.129,
+"qid": "Q1353908",
+"no": "10"
+},
+{
+"he": "Abzal Beysebekov",
+"en": "Abzal Beysebekov",
+"pos": "DF",
+"age": 33,
+"nat": "Kazakhstan",
+"value_m": 0.129,
+"qid": "Q14866852",
+"no": "15"
+},
+{
+"he": "Dmitry Shomko",
+"en": "Dmitry Shomko",
+"pos": "DF",
+"age": 36,
+"nat": "Kazakhstan",
+"value_m": 0.097,
+"qid": "Q964931",
+"no": "77"
+}
+]
+}

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       group:
-        description: 'world | leumit | all'
+        description: 'world | euro | leumit | all'
         required: true
         default: 'world'
       only:

@@ -1,0 +1,57 @@
+name: Generate first-person clips (xAI video)
+# Manual. Sends the prompts of data/config/video-prompts.json to the xAI video API and commits the clips to the
+# `video-sources` branch for review. Needs the repository secret XAI_API_KEY. Every clip costs API credit: list the
+# clips you want in `only`, or leave it empty for all of them. Nothing ships from here.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'comma-separated clip ids (empty = all)'
+        required: false
+        default: ''
+      model:
+        description: 'grok-imagine-video-1.5 | grok-imagine-video-1.5-lite | grok-imagine-video'
+        required: false
+        default: 'grok-imagine-video-1.5'
+      resolution:
+        description: '480p | 720p | 1080p'
+        required: false
+        default: '720p'
+      audio:
+        description: 'generate audio (the game has its own sound)'
+        required: false
+        default: 'false'
+permissions:
+  contents: write
+concurrency:
+  group: video-sources
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check out video-sources
+        run: |
+          git fetch origin video-sources || true
+          if git rev-parse --verify origin/video-sources >/dev/null 2>&1; then
+            git worktree add /tmp/wt origin/video-sources && git -C /tmp/wt checkout -B video-sources
+          else
+            git worktree add --detach /tmp/wt && git -C /tmp/wt checkout --orphan video-sources && git -C /tmp/wt rm -rf . >/dev/null || true
+          fi
+      - name: Generate
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: python3 scripts/grok-video.py --out /tmp/wt/fpv --only "${{ github.event.inputs.only }}" --model "${{ github.event.inputs.model }}" --resolution "${{ github.event.inputs.resolution }}" ${{ github.event.inputs.audio == 'true' && '--audio' || '' }}
+      - name: Commit to video-sources
+        run: |
+          cd /tmp/wt
+          git config user.name "GOALASSO video bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A fpv
+          git commit -m "First-person clips: ${{ github.event.inputs.only }} (${{ github.event.inputs.model }}, ${{ github.event.inputs.resolution }})" || echo "nothing new"
+          git push origin video-sources

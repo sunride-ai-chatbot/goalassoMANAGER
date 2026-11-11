@@ -1,0 +1,309 @@
+{
+"key": "slovan_bratislava",
+"name_he": "סלובאן ברטיסלבה",
+"source": "enwiki:ŠK Slovan Bratislava",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Aleksandar Popović",
+"en": "Aleksandar Popović",
+"pos": "GK",
+"age": 26,
+"nat": "Serbia",
+"value_m": 0.705,
+"qid": "Q56253795",
+"no": "1"
+},
+{
+"he": "דומיניק טקץ'",
+"en": "Dominik Takáč",
+"pos": "GK",
+"age": 27,
+"nat": "Slovakia",
+"value_m": 0.667,
+"qid": "Q97362633",
+"no": "71"
+},
+{
+"he": "Matúš Macík",
+"en": "Matúš Macík",
+"pos": "GK",
+"age": 33,
+"nat": "Slovakia",
+"value_m": 0.231,
+"qid": "Q20745003",
+"no": "44"
+},
+{
+"he": "Mykola Kukharevych",
+"en": "Mykola Kukharevych",
+"pos": "FW",
+"age": 25,
+"nat": "Ukraine",
+"value_m": 1.01,
+"qid": "Q99543656",
+"no": "9"
+},
+{
+"he": "Svetozar Marković",
+"en": "Svetozar Marković",
+"pos": "DF",
+"age": 26,
+"nat": "Serbia",
+"value_m": 0.975,
+"qid": "Q48968594",
+"no": "15"
+},
+{
+"he": "Peter Pokorný",
+"en": "Peter Pokorný",
+"pos": "MF",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.962,
+"qid": "Q55944900",
+"no": "3"
+},
+{
+"he": "Daiki Matsuoka",
+"en": "Daiki Matsuoka",
+"pos": "MF",
+"age": 25,
+"nat": "Japan",
+"value_m": 0.911,
+"qid": "Q62085569",
+"no": "88"
+},
+{
+"he": "Suleiman Camara",
+"en": "Suleiman Camara",
+"pos": "FW",
+"age": 24,
+"nat": "Gambia",
+"value_m": 0.898,
+"qid": "Q110117647",
+"no": "21"
+},
+{
+"he": "Rahim Ibrahim",
+"en": "Rahim Ibrahim",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.872,
+"qid": "Q107806488",
+"no": "5"
+},
+{
+"he": "Alen Mustafić",
+"en": "Alen Mustafić",
+"pos": "MF",
+"age": 27,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.834,
+"qid": "Q50625711",
+"no": "20"
+},
+{
+"he": "ססאר בלקמן",
+"en": "César Blackman",
+"pos": "DF",
+"age": 28,
+"nat": "Panama",
+"value_m": 0.821,
+"qid": "Q51331558",
+"no": "28"
+},
+{
+"he": "נינו מרצ'לי",
+"en": "Nino Marcelli",
+"pos": "FW",
+"age": 21,
+"nat": "Slovakia",
+"value_m": 0.808,
+"qid": "Q121262256",
+"no": "10"
+},
+{
+"he": "Sahmkou Camara",
+"en": "Sahmkou Camara",
+"pos": "DF",
+"age": 25,
+"nat": "Guinea",
+"value_m": 0.808,
+"qid": "Q125472573",
+"no": "49"
+},
+{
+"he": "Sandro Cruz",
+"en": "Sandro Cruz",
+"pos": "DF",
+"age": 25,
+"nat": "Angola",
+"value_m": 0.77,
+"qid": "Q105714142",
+"no": "57"
+},
+{
+"he": "Roman Čerepkai",
+"en": "Roman Čerepkai",
+"pos": "FW",
+"age": 24,
+"nat": "Slovakia",
+"value_m": 0.744,
+"qid": "Q112006000",
+"no": "13"
+},
+{
+"he": "Adam Griger",
+"en": "Adam Griger",
+"pos": "FW",
+"age": 22,
+"nat": "Slovakia",
+"value_m": 0.718,
+"qid": "Q98265808",
+"no": "30"
+},
+{
+"he": "כריסטיאן מרטינס",
+"en": "Cristian Martínez",
+"pos": "MF",
+"age": 29,
+"nat": "Panama",
+"value_m": 0.718,
+"qid": "Q24688826",
+"no": "70"
+},
+{
+"he": "Manasse Kianga",
+"en": "Manasse Kianga",
+"pos": "FW",
+"age": 24,
+"nat": "England",
+"value_m": 0.693,
+"qid": "Q140877580",
+"no": "19"
+},
+{
+"he": "Danylo Ihnatenko",
+"en": "Danylo Ihnatenko",
+"pos": "MF",
+"age": 29,
+"nat": "Ukraine",
+"value_m": 0.693,
+"qid": "Q20036987",
+"no": "77"
+},
+{
+"he": "Samuel Kozlovský",
+"en": "Samuel Kozlovský",
+"pos": "DF",
+"age": 26,
+"nat": "Slovakia",
+"value_m": 0.68,
+"qid": "Q65215042",
+"no": "2"
+},
+{
+"he": "Alasana Yirajang",
+"en": "Alasana Yirajang",
+"pos": "FW",
+"age": 21,
+"nat": "Gambia",
+"value_m": 0.667,
+"qid": "Q124459952",
+"no": "14"
+},
+{
+"he": "Artur Gajdoš",
+"en": "Artur Gajdoš",
+"pos": "MF",
+"age": 22,
+"nat": "Slovakia",
+"value_m": 0.654,
+"qid": "Q101766034",
+"no": "8"
+},
+{
+"he": "Matúš Tomáško",
+"en": "Matúš Tomáško",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.577,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Andraž Šporar",
+"en": "Andraž Šporar",
+"pos": "FW",
+"age": 32,
+"nat": "Slovenia",
+"value_m": 0.577,
+"qid": "Q4754719",
+"no": "99"
+},
+{
+"he": "Alexej Maroš",
+"en": "Alexej Maroš",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.551,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Jurij Medveděv",
+"en": "Jurij Medveděv",
+"pos": "DF",
+"age": 30,
+"nat": "Czech Republic",
+"value_m": 0.513,
+"qid": "Q46712710",
+"no": "17"
+},
+{
+"he": "Leo Hofstädter",
+"en": "Leo Hofstädter",
+"pos": "MF",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.449,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Tigran Barseghyan",
+"en": "Tigran Barseghyan",
+"pos": "MF",
+"age": 32,
+"nat": "Armenia",
+"value_m": 0.449,
+"qid": "Q26838085",
+"no": "11"
+},
+{
+"he": "קווין וימר",
+"en": "Kevin Wimmer",
+"pos": "DF",
+"age": 33,
+"nat": "Austria",
+"value_m": 0.385,
+"qid": "Q10552708",
+"no": "6"
+},
+{
+"he": "Kenan Bajrić",
+"en": "Kenan Bajrić",
+"pos": "DF",
+"age": 31,
+"nat": "Slovenia",
+"value_m": 0.385,
+"qid": "Q16730715",
+"no": "12"
+}
+]
+}

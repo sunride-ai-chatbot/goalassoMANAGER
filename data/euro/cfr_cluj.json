@@ -1,0 +1,309 @@
+{
+"key": "cfr_cluj",
+"name_he": "צ.פ.ר. קלוז'",
+"source": "enwiki:CFR Cluj",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Árpád Tordai",
+"en": "Árpád Tordai",
+"pos": "GK",
+"age": 29,
+"nat": "Romania",
+"value_m": 0.612,
+"qid": "Q24579252",
+"no": "96"
+},
+{
+"he": "Rareș Gal",
+"en": "Rareș Gal",
+"pos": "GK",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.499,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Cătălin Pușcaș",
+"en": "Cătălin Pușcaș",
+"pos": "GK",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.467,
+"qid": null,
+"no": "81"
+},
+{
+"he": "Marc Filip",
+"en": "Marc Filip",
+"pos": "GK",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.467,
+"qid": null,
+"no": "93"
+},
+{
+"he": "Octavian Vâlceanu",
+"en": "Octavian Vâlceanu",
+"pos": "GK",
+"age": 29,
+"nat": "Romania",
+"value_m": 0.451,
+"qid": "Q61964463",
+"no": "31"
+},
+{
+"he": "Andrei Cordea",
+"en": "Andrei Cordea",
+"pos": "FW",
+"age": 27,
+"nat": "Romania",
+"value_m": 1.3,
+"qid": "Q64842515",
+"no": "11"
+},
+{
+"he": "Ovidiu Perianu",
+"en": "Ovidiu Perianu",
+"pos": "MF",
+"age": 24,
+"nat": "Romania",
+"value_m": 1.06,
+"qid": "Q65643535",
+"no": "6"
+},
+{
+"he": "Alin Fică",
+"en": "Alin Fică",
+"pos": "MF",
+"age": 25,
+"nat": "Romania",
+"value_m": 1.06,
+"qid": "Q88540941",
+"no": "8"
+},
+{
+"he": "Simão Rocha",
+"en": "Simão Rocha",
+"pos": "DF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.934,
+"qid": "Q126490894",
+"no": "14"
+},
+{
+"he": "Iva Gelashvili",
+"en": "Iva Gelashvili",
+"pos": "DF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.918,
+"qid": "Q110378503",
+"no": "3"
+},
+{
+"he": "Ervin Omić",
+"en": "Ervin Omić",
+"pos": "MF",
+"age": 23,
+"nat": "Austria",
+"value_m": 0.902,
+"qid": "Q111269387",
+"no": "18"
+},
+{
+"he": "Adi Nalić",
+"en": "Adi Nalić",
+"pos": "MF",
+"age": 28,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.885,
+"qid": "Q56072730",
+"no": "7"
+},
+{
+"he": "Amin Ziblim",
+"en": "Amin Ziblim",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.821,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Alexandru Țîrlea",
+"en": "Alexandru Țîrlea",
+"pos": "DF",
+"age": 26,
+"nat": "Romania",
+"value_m": 0.773,
+"qid": "Q110191175",
+"no": "20"
+},
+{
+"he": "Denis Crișan",
+"en": "Denis Crișan",
+"pos": "MF",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.741,
+"qid": null,
+"no": "70"
+},
+{
+"he": "Andres Sfait",
+"en": "Andres Sfait",
+"pos": "FW",
+"age": 21,
+"nat": "Romania",
+"value_m": 0.676,
+"qid": "Q130239193",
+"no": "77"
+},
+{
+"he": "Francisco Barrios",
+"en": "Francisco Barrios",
+"pos": "MF",
+"age": 24,
+"nat": "Uruguay",
+"value_m": 0.66,
+"qid": "Q111906308",
+"no": "5"
+},
+{
+"he": "Nicolae Sula",
+"en": "Nicolae Sula",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.66,
+"qid": null,
+"no": "98"
+},
+{
+"he": "כריסטיאן דויד",
+"en": "Cristian Perea",
+"pos": "MF",
+"age": 21,
+"nat": "Spain",
+"value_m": 0.644,
+"qid": "Q124691823",
+"no": "66"
+},
+{
+"he": "אדריאן פאון",
+"en": "Adrian Păun",
+"pos": "MF",
+"age": 31,
+"nat": "Romania",
+"value_m": 0.628,
+"qid": "Q20745197",
+"no": "10"
+},
+{
+"he": "Cristian Ignat",
+"en": "Cristian Ignat",
+"pos": "DF",
+"age": 23,
+"nat": "Romania",
+"value_m": 0.612,
+"qid": "Q108551856",
+"no": "21"
+},
+{
+"he": "Renato Pantalon",
+"en": "Renato Pantalon",
+"pos": "DF",
+"age": 28,
+"nat": "Croatia",
+"value_m": 0.596,
+"qid": "Q113639474",
+"no": "42"
+},
+{
+"he": "David Avram",
+"en": "David Avram",
+"pos": "DF",
+"age": 25,
+"nat": "Romania",
+"value_m": 0.596,
+"qid": null,
+"no": "85"
+},
+{
+"he": "Lorenzo Biliboc",
+"en": "Lorenzo Biliboc",
+"pos": "FW",
+"age": 19,
+"nat": "Romania",
+"value_m": 0.58,
+"qid": "Q136009131",
+"no": "17"
+},
+{
+"he": "Jelani Trevisan",
+"en": "Jelani Trevisan",
+"pos": "FW",
+"age": 21,
+"nat": "Belgium",
+"value_m": 0.58,
+"qid": "Q141375404",
+"no": "99"
+},
+{
+"he": "Ilija Mašić",
+"en": "Ilija Mašić",
+"pos": "DF",
+"age": 27,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.547,
+"qid": "Q137842139",
+"no": "4"
+},
+{
+"he": "Anton Krešić",
+"en": "Anton Krešić",
+"pos": "DF",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.531,
+"qid": "Q29002213",
+"no": "41"
+},
+{
+"he": "בילאל עומראני",
+"en": "Billel Omrani",
+"pos": "FW",
+"age": 33,
+"nat": "Algeria",
+"value_m": 0.483,
+"qid": "Q4272457",
+"no": "29"
+},
+{
+"he": "Sergiu Buș",
+"en": "Sergiu Buș",
+"pos": "FW",
+"age": 33,
+"nat": "Romania",
+"value_m": 0.467,
+"qid": "Q2273244",
+"no": "19"
+},
+{
+"he": "Rion Zejnullahu",
+"en": "Rion Zejnullahu",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.467,
+"qid": null,
+"no": "33"
+}
+]
+}

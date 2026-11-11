@@ -1,0 +1,279 @@
+{
+"key": "zilina",
+"name_he": "ז'ילינה",
+"source": "enwiki:MŠK Žilina",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Dávid Šípoš",
+"en": "Dávid Šípoš",
+"pos": "GK",
+"age": 28,
+"nat": "Slovakia",
+"value_m": 0.376,
+"qid": "Q50330304",
+"no": "31"
+},
+{
+"he": "Jakub Badžgoň",
+"en": "Jakub Badžgoň",
+"pos": "GK",
+"age": 21,
+"nat": "Slovakia",
+"value_m": 0.244,
+"qid": "Q137965195",
+"no": "1"
+},
+{
+"he": "Tamás Tarcsi",
+"en": "Tamás Tarcsi",
+"pos": "GK",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.226,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Patrik Iľko",
+"en": "Patrik Iľko",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.508,
+"qid": "Q86347251",
+"no": "16"
+},
+{
+"he": "Xavier Adang",
+"en": "Xavier Adang",
+"pos": "MF",
+"age": 22,
+"nat": "Cameroon",
+"value_m": 0.451,
+"qid": "Q120362480",
+"no": "6"
+},
+{
+"he": "Lukáš Juliš",
+"en": "Lukáš Juliš",
+"pos": "FW",
+"age": 31,
+"nat": "Czech Republic",
+"value_m": 0.451,
+"qid": "Q14435264",
+"no": "39"
+},
+{
+"he": "Dani Homet",
+"en": "Dani Homet",
+"pos": "FW",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.451,
+"qid": null,
+"no": "90"
+},
+{
+"he": "Samuel Ďatko",
+"en": "Samuel Ďatko",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.432,
+"qid": "Q98398346",
+"no": "24"
+},
+{
+"he": "Miroslav Káčer",
+"en": "Miroslav Káčer",
+"pos": "MF",
+"age": 30,
+"nat": "Slovakia",
+"value_m": 0.432,
+"qid": "Q797771",
+"no": "66"
+},
+{
+"he": "Patrik Baleja",
+"en": "Patrik Baleja",
+"pos": "FW",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.395,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Krisztián Bari",
+"en": "Krisztián Bari",
+"pos": "DF",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.395,
+"qid": "Q112875263",
+"no": "20"
+},
+{
+"he": "Ján Minárik",
+"en": "Ján Minárik",
+"pos": "DF",
+"age": 29,
+"nat": "Slovakia",
+"value_m": 0.376,
+"qid": "Q61828895",
+"no": "17"
+},
+{
+"he": "Marko Roginić",
+"en": "Marko Roginić",
+"pos": "FW",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.376,
+"qid": "Q104451611",
+"no": "95"
+},
+{
+"he": "Kenan Bilalović",
+"en": "Kenan Bilalović",
+"pos": "FW",
+"age": 21,
+"nat": "Sweden",
+"value_m": 0.376,
+"qid": "Q117756721",
+"no": "99"
+},
+{
+"he": "Matúš Pavlík",
+"en": "Matúš Pavlík",
+"pos": "DF",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.357,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Timotej Hranica",
+"en": "Timotej Hranica",
+"pos": "DF",
+"age": 21,
+"nat": "Slovakia",
+"value_m": 0.357,
+"qid": "Q137778290",
+"no": "21"
+},
+{
+"he": "Andrei Florea",
+"en": "Andrei Florea",
+"pos": "MF",
+"age": 21,
+"nat": "Romania",
+"value_m": 0.338,
+"qid": "Q139846137",
+"no": "10"
+},
+{
+"he": "Michal Svoboda",
+"en": "Michal Svoboda",
+"pos": "DF",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.32,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Johan Albin",
+"en": "Johan Albin",
+"pos": "DF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.32,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Róbert Petruška",
+"en": "Róbert Petruška",
+"pos": "MF",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.32,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Michal Faško",
+"en": "Michal Faško",
+"pos": "FW",
+"age": 32,
+"nat": "Slovakia",
+"value_m": 0.282,
+"qid": "Q6835733",
+"no": "23"
+},
+{
+"he": "František Kóša",
+"en": "František Kóša",
+"pos": "FW",
+"age": 20,
+"nat": "Slovakia",
+"value_m": 0.263,
+"qid": "Q135321714",
+"no": "7"
+},
+{
+"he": "Marcus Arnold Traoré",
+"en": "Marcus Arnold Traoré",
+"pos": "DF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.263,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Aleksandre Narimanidze",
+"en": "Aleksandre Narimanidze",
+"pos": "DF",
+"age": 21,
+"nat": "Georgia",
+"value_m": 0.263,
+"qid": "Q134276722",
+"no": "28"
+},
+{
+"he": "Filip Kaša",
+"en": "Filip Kaša",
+"pos": "DF",
+"age": 32,
+"nat": "Czech Republic",
+"value_m": 0.207,
+"qid": "Q12008635",
+"no": null
+},
+{
+"he": "Fabian Bzdyl",
+"en": "Fabian Bzdyl",
+"pos": "MF",
+"age": 18,
+"nat": "Poland",
+"value_m": 0.15,
+"qid": "Q134691754",
+"no": "11"
+},
+{
+"he": "Marek Okál",
+"en": "Marek Okál",
+"pos": "DF",
+"age": 17,
+"nat": "Slovakia",
+"value_m": 0.094,
+"qid": "Q138717582",
+"no": "2"
+}
+]
+}

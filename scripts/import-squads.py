@@ -33,6 +33,10 @@ def club_strength(name_he):
     m = re.search(r"\['%s','(?:[^'\\]|\\.)*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)[,\]]" % re.escape(name_he.replace("'", "\\'")), src)
     if m:
         return int(m.group(1))
+    src3 = open(os.path.join(ROOT, 'src', 'js', '04-euro-clubs.js'), encoding='utf8').read()   # European opponents: ['name','country','city','stadium','#c1','#c2',str,…]
+    m = re.search(r"\['%s','(?:[^'\\]|\\.)*','(?:[^'\\]|\\.)*','(?:[^'\\]|\\.)*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)[,\]]" % re.escape(name_he.replace("'", "\\'")), src3)
+    if m:
+        return int(m.group(1))
     src2 = open(os.path.join(ROOT, 'src', 'js', '16-leumit-toto-nt.js'), encoding='utf8').read()
     m = re.search(r"name:'%s'[^}]*?str:(\d+)" % re.escape(name_he.replace("'", "\\'")), src2)
     return int(m.group(1)) if m else None
@@ -47,11 +51,31 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--sources'); ap.add_argument('--clubs', required=True); ap.add_argument('--check', action='store_true'); ap.add_argument('--rescale', action='store_true', help='re-apply the strength rule to squads already in data/euro')
     ap.add_argument('--merge', action='store_true', help='add the players a newer fetch lists and the squad in data/euro lacks; nobody is removed')
     ap.add_argument('--sync-identities', action='store_true', help='list every data/euro player that euro-players.json does not know as unresolved')
+    ap.add_argument('--names', action='store_true', help='apply the Hebrew spellings of data/config/leumit-names-he.json')
     ap.add_argument('--added', help='with --merge: write {key: [English names added]} here')
     a = ap.parse_args()
     ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
     E = json.load(open(ep, encoding='utf8'))
     keys = sorted(f[:-5] for f in os.listdir(os.path.join(ROOT, 'data', 'euro'))) if a.clubs == 'all' else a.clubs.split(',')
+    if a.names:   # Hebrew spellings from data/config/leumit-names-he.json for players the sources only give in Latin letters
+        names = json.load(open(os.path.join(ROOT, 'data', 'config', 'leumit-names-he.json'), encoding='utf8')); n = 0
+        for key in keys:
+            mp = names.get(key)
+            if not mp:
+                continue
+            dst = os.path.join(ROOT, 'data', 'euro', key + '.json'); d = json.load(open(dst, encoding='utf8'))
+            for p in d['players']:
+                if p.get('en') in mp and p['he'] != mp[p['en']]:
+                    p['he'] = mp[p['en']]; n += 1
+            with open(dst, 'w', encoding='utf8') as fh:
+                json.dump(d, fh, ensure_ascii=False, indent=0)
+            for lst in (E['players'], E['unresolved']):
+                for p in lst:
+                    if p['key'] == key and p.get('en') in mp:
+                        p['he'] = mp[p['en']]
+        with open(ep, 'w', encoding='utf8') as fh:
+            json.dump(E, fh, ensure_ascii=False, indent=1, sort_keys=True)
+        print('Hebrew names applied:', n); return
     if a.sync_identities:
         known = {(p['key'], p['en']) for p in E['players']} | {(p['key'], p['en']) for p in E['unresolved']}
         n = 0

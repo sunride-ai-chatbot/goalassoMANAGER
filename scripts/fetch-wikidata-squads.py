@@ -320,6 +320,10 @@ def club_strength(name_he):
     m = re.search(r"\['%s','(?:[^'\\]|\\.)*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)[,\]]" % re.escape(name_he.replace("'", "\\'")), src)
     if m:
         return int(m.group(1))
+    src3 = open(os.path.join(ROOT, 'src', 'js', '04-euro-clubs.js'), encoding='utf8').read()   # European opponents: ['name','country','city','stadium','#c1','#c2',str,…]
+    m = re.search(r"\['%s','(?:[^'\\]|\\.)*','(?:[^'\\]|\\.)*','(?:[^'\\]|\\.)*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)[,\]]" % re.escape(name_he.replace("'", "\\'")), src3)
+    if m:
+        return int(m.group(1))
     src2 = open(os.path.join(ROOT, 'src', 'js', '16-leumit-toto-nt.js'), encoding='utf8').read()
     m = re.search(r"name:'%s'[^}]*?str:(\d+)" % re.escape(name_he.replace("'", "\\'")), src2)
     return int(m.group(1)) if m else 60
@@ -378,14 +382,14 @@ def leumit_squad(info, name_he, a):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--group', default='world', choices=['world', 'leumit', 'all'])
+    ap.add_argument('--group', default='world', choices=['world', 'euro', 'leumit', 'all'])
     ap.add_argument('--out', default=os.path.join(ROOT, 'data', 'euro'))
     ap.add_argument('--only', default='')
     ap.add_argument('--min', type=int, default=14)
     ap.add_argument('--debug', action='store_true')
     a = ap.parse_args()
     cfg = json.load(open(os.path.join(ROOT, 'data', 'config', 'world-clubs-wiki.json'), encoding='utf8'))
-    groups = ['world', 'leumit'] if a.group == 'all' else [a.group]
+    groups = ['world', 'euro', 'leumit'] if a.group == 'all' else [a.group]
     only = set(filter(None, a.only.split(',')))
     os.makedirs(a.out, exist_ok=True)
     report = []

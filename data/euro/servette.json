@@ -1,0 +1,309 @@
+{
+"key": "servette",
+"name_he": "סרווט ז'נבה",
+"source": "enwiki:Servette FC",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "אדווינאס גרטמונאס",
+"en": "Edvinas Gertmonas",
+"pos": "GK",
+"age": 30,
+"nat": "Lithuania",
+"value_m": 0.699,
+"qid": "Q16636551",
+"no": "1"
+},
+{
+"he": "Léo Besson",
+"en": "Léo Besson",
+"pos": "GK",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.48,
+"qid": null,
+"no": "78"
+},
+{
+"he": "Louis Rieder",
+"en": "Louis Rieder",
+"pos": "GK",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.425,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Jérémy Frick",
+"en": "Jérémy Frick",
+"pos": "GK",
+"age": 33,
+"nat": "Switzerland",
+"value_m": 0.247,
+"qid": "Q65948559",
+"no": "32"
+},
+{
+"he": "דטרו פופאנה",
+"en": "David Datro Fofana",
+"pos": "FW",
+"age": 23,
+"nat": "Côte d'Ivoire",
+"value_m": 1.66,
+"qid": "Q105575806",
+"no": "27"
+},
+{
+"he": "Jesper Karlsson",
+"en": "Jesper Karlsson",
+"pos": "FW",
+"age": 28,
+"nat": "Sweden",
+"value_m": 1.4,
+"qid": "Q24701050",
+"no": "21"
+},
+{
+"he": "אבליה ג'אלו",
+"en": "Ablie Jallow",
+"pos": "MF",
+"age": 27,
+"nat": "Gambia",
+"value_m": 1.23,
+"qid": "Q33183524",
+"no": "30"
+},
+{
+"he": "Samuel Mráz",
+"en": "Samuel Mráz",
+"pos": "FW",
+"age": 29,
+"nat": "Slovakia",
+"value_m": 1.18,
+"qid": "Q16516050",
+"no": "90"
+},
+{
+"he": "Timothé Cognat",
+"en": "Timothé Cognat",
+"pos": "MF",
+"age": 28,
+"nat": "France",
+"value_m": 1.12,
+"qid": "Q20666445",
+"no": "8"
+},
+{
+"he": "הובולאנז' מנדש",
+"en": "Houboulang Mendes",
+"pos": "DF",
+"age": 28,
+"nat": "Guinea-Bissau",
+"value_m": 1.1,
+"qid": "Q30320323",
+"no": "17"
+},
+{
+"he": "Marco Burch",
+"en": "Marco Burch",
+"pos": "DF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.04,
+"qid": "Q87138083",
+"no": "15"
+},
+{
+"he": "Lamine Fomba",
+"en": "Lamine Fomba",
+"pos": "MF",
+"age": 28,
+"nat": "France",
+"value_m": 1.01,
+"qid": "Q29412269",
+"no": "11"
+},
+{
+"he": "Kingstone Mutandwa",
+"en": "Kingstone Mutandwa",
+"pos": "FW",
+"age": 23,
+"nat": "Zambia",
+"value_m": 0.961,
+"qid": "Q124727629",
+"no": "7"
+},
+{
+"he": "Lilian Njoh",
+"en": "Lilian Njoh",
+"pos": "DF",
+"age": 24,
+"nat": "Cameroon",
+"value_m": 0.864,
+"qid": "Q135831125",
+"no": "14"
+},
+{
+"he": "Benoît Sida",
+"en": "Benoît Sida",
+"pos": "FW",
+"age": 25,
+"nat": "France",
+"value_m": 0.864,
+"qid": null,
+"no": "38"
+},
+{
+"he": "Tiemoko Ouattara",
+"en": "Tiemoko Ouattara",
+"pos": "FW",
+"age": 21,
+"nat": "Switzerland",
+"value_m": 0.85,
+"qid": "Q134564125",
+"no": "77"
+},
+{
+"he": "Yoan Severin",
+"en": "Yoan Severin",
+"pos": "DF",
+"age": 29,
+"nat": "France",
+"value_m": 0.809,
+"qid": "Q29016862",
+"no": "19"
+},
+{
+"he": "Jarell Simo",
+"en": "Jarell Simo",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.74,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Ivan Izquierdo",
+"en": "Ivan Izquierdo",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.713,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Bradley Mazikou",
+"en": "Bradley Mazikou",
+"pos": "DF",
+"age": 30,
+"nat": "Congo",
+"value_m": 0.699,
+"qid": "Q66685087",
+"no": "18"
+},
+{
+"he": "דילן ברון",
+"en": "Dylan Bronn",
+"pos": "DF",
+"age": 31,
+"nat": "Tunisia",
+"value_m": 0.699,
+"qid": "Q26405549",
+"no": "25"
+},
+{
+"he": "Tristan Nunez",
+"en": "Tristan Nunez",
+"pos": "FW",
+"age": 25,
+"nat": "France",
+"value_m": 0.699,
+"qid": null,
+"no": "41"
+},
+{
+"he": "Pedro Naressi",
+"en": "Pedro Naressi",
+"pos": "MF",
+"age": 28,
+"nat": "Brazil",
+"value_m": 0.686,
+"qid": "Q65029716",
+"no": "6"
+},
+{
+"he": "Mathis Lambourde",
+"en": "Mathis Lambourde",
+"pos": "FW",
+"age": 20,
+"nat": "France",
+"value_m": 0.686,
+"qid": "Q118747110",
+"no": "22"
+},
+{
+"he": "Alonzo Vincent",
+"en": "Alonzo Vincent",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.686,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Quentin Maceiras",
+"en": "Quentin Maceiras",
+"pos": "DF",
+"age": 30,
+"nat": "Switzerland",
+"value_m": 0.603,
+"qid": "Q33296888",
+"no": "23"
+},
+{
+"he": "Thomas Lopes",
+"en": "Thomas Lopes",
+"pos": "MF",
+"age": 25,
+"nat": "France",
+"value_m": 0.535,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Sylvain Djoho",
+"en": "Sylvain Djoho",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.535,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Téo Allix",
+"en": "Téo Allix",
+"pos": "DF",
+"age": 25,
+"nat": "France",
+"value_m": 0.466,
+"qid": null,
+"no": "34"
+},
+{
+"he": "David Douline",
+"en": "David Douline",
+"pos": "MF",
+"age": 33,
+"nat": "France",
+"value_m": 0.398,
+"qid": "Q41767128",
+"no": "28"
+}
+]
+}

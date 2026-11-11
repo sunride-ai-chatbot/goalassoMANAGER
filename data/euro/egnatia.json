@@ -1,0 +1,289 @@
+{
+"key": "egnatia",
+"name_he": "אגנטיה",
+"source": "enwiki:KF Egnatia",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Bruno Puja",
+"en": "Bruno Puja",
+"pos": "GK",
+"age": 26,
+"nat": "Albania",
+"value_m": 0.124,
+"qid": "Q23762822",
+"no": "12"
+},
+{
+"he": "Mario Dajsinani",
+"en": "Mario Dajsinani",
+"pos": "GK",
+"age": 27,
+"nat": "Albania",
+"value_m": 0.124,
+"qid": "Q21621110",
+"no": "98"
+},
+{
+"he": "Levan Tandilashvili",
+"en": "Levan Tandilashvili",
+"pos": "GK",
+"age": 23,
+"nat": "Georgia",
+"value_m": 0.093,
+"qid": "Q131549114",
+"no": "1"
+},
+{
+"he": "Alessandro Albanese",
+"en": "Alessandro Albanese",
+"pos": "FW",
+"age": 26,
+"nat": "Belgium",
+"value_m": 0.155,
+"qid": "Q100544827",
+"no": "10"
+},
+{
+"he": "Altin Kryeziu",
+"en": "Altin Kryeziu",
+"pos": "MF",
+"age": 24,
+"nat": "Kosovo",
+"value_m": 0.155,
+"qid": "Q98908633",
+"no": "17"
+},
+{
+"he": "אילדי גרודה",
+"en": "Ildi Gruda",
+"pos": "FW",
+"age": 26,
+"nat": "Albania",
+"value_m": 0.155,
+"qid": "Q97739856",
+"no": "77"
+},
+{
+"he": "Soumaila Bakayoko",
+"en": "Soumaila Bakayoko",
+"pos": "FW",
+"age": 24,
+"nat": "Côte d'Ivoire",
+"value_m": 0.14,
+"qid": "Q128198174",
+"no": "9"
+},
+{
+"he": "Karim Loukili",
+"en": "Karim Loukili",
+"pos": "FW",
+"age": 29,
+"nat": "Morocco",
+"value_m": 0.14,
+"qid": "Q28527561",
+"no": "20"
+},
+{
+"he": "Redi Kasa",
+"en": "Redi Kasa",
+"pos": "FW",
+"age": 24,
+"nat": "Albania",
+"value_m": 0.14,
+"qid": "Q99519630",
+"no": "82"
+},
+{
+"he": "Jurguens Montenegro",
+"en": "Jurguens Montenegro",
+"pos": "FW",
+"age": 25,
+"nat": "Costa Rica",
+"value_m": 0.14,
+"qid": "Q58338885",
+"no": "99"
+},
+{
+"he": "Guillem Jaime",
+"en": "Guillem Jaime",
+"pos": "DF",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.124,
+"qid": "Q98731760",
+"no": "22"
+},
+{
+"he": "Ledio Beqja",
+"en": "Ledio Beqja",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.124,
+"qid": "Q95982799",
+"no": "80"
+},
+{
+"he": "Daniel Adjessa",
+"en": "Daniel Adjessa",
+"pos": "FW",
+"age": 25,
+"nat": "Cameroon",
+"value_m": 0.109,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Fernando Medeiros",
+"en": "Fernando Medeiros",
+"pos": "MF",
+"age": 30,
+"nat": "Brazil",
+"value_m": 0.109,
+"qid": "Q22004329",
+"no": "7"
+},
+{
+"he": "Ibrahim Diabaté",
+"en": "Ibrahim Diabaté",
+"pos": "FW",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.109,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Eljon Sota",
+"en": "Eljon Sota",
+"pos": "DF",
+"age": 28,
+"nat": "Albania",
+"value_m": 0.109,
+"qid": "Q98832224",
+"no": "28"
+},
+{
+"he": "Reis Bakalli",
+"en": "Reis Bakalli",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.109,
+"qid": null,
+"no": "30"
+},
+{
+"he": "אנאו ביטרי",
+"en": "Eneo Bitri",
+"pos": "DF",
+"age": 30,
+"nat": "Albania",
+"value_m": 0.109,
+"qid": "Q59179939",
+"no": "33"
+},
+{
+"he": "Geralb Smajli",
+"en": "Geralb Smajli",
+"pos": "DF",
+"age": 24,
+"nat": "Albania",
+"value_m": 0.109,
+"qid": "Q110700866",
+"no": "55"
+},
+{
+"he": "Deivid Hoxha",
+"en": "Deivid Hoxha",
+"pos": "FW",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.093,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Numan Ajeti",
+"en": "Numan Ajeti",
+"pos": "DF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.093,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Andrey Yago",
+"en": "Andrey Yago",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.093,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Zamiq Əliyev",
+"en": "Zamiq Əliyev",
+"pos": "DF",
+"age": 25,
+"nat": "Azerbaijan",
+"value_m": 0.078,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Alessandro Kacbufi",
+"en": "Alessandro Kacbufi",
+"pos": "DF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.078,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Bjorni Duka",
+"en": "Bjorni Duka",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.078,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Zyber Çullhaj",
+"en": "Zyber Çullhaj",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.078,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Edison Ndreca",
+"en": "Edison Ndreca",
+"pos": "DF",
+"age": 32,
+"nat": "Albania",
+"value_m": 0.062,
+"qid": "Q16236390",
+"no": "16"
+},
+{
+"he": "Albano Aleksi",
+"en": "Albano Aleksi",
+"pos": "MF",
+"age": 33,
+"nat": "Albania",
+"value_m": 0.047,
+"qid": "Q24450510",
+"no": "6"
+}
+]
+}

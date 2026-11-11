@@ -1,0 +1,309 @@
+{
+"key": "besiktas",
+"name_he": "בשיקטאש",
+"source": "enwiki:Beşiktaş J.K.",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "אלכסנדר נובל",
+"en": "Alexander Nübel",
+"pos": "GK",
+"age": 29,
+"nat": "Germany",
+"value_m": 4.12,
+"qid": "Q20435178",
+"no": "1"
+},
+{
+"he": "דואן אלמדאר",
+"en": "Doğan Alemdar",
+"pos": "GK",
+"age": 23,
+"nat": "Turkey",
+"value_m": 3.87,
+"qid": "Q66817415",
+"no": "80"
+},
+{
+"he": "Emir Yaşar",
+"en": "Emir Yaşar",
+"pos": "GK",
+"age": 25,
+"nat": "Turkey",
+"value_m": 2.18,
+"qid": null,
+"no": "96"
+},
+{
+"he": "או היון-גיו",
+"en": "Oh Hyeon-gyu",
+"pos": "FW",
+"age": 25,
+"nat": "South Korea",
+"value_m": 6.55,
+"qid": "Q63344470",
+"no": "9"
+},
+{
+"he": "דושאן ולאחוביץ'",
+"en": "Dušan Vlahović",
+"pos": "FW",
+"age": 26,
+"nat": "Serbia",
+"value_m": 6.28,
+"qid": "Q23762815",
+"no": "28"
+},
+{
+"he": "סליח אוזג'אן",
+"en": "Salih Özcan",
+"pos": "MF",
+"age": 28,
+"nat": "Turkey",
+"value_m": 6.14,
+"qid": "Q26965570",
+"no": "6"
+},
+{
+"he": "טיאגו ג'אלו",
+"en": "Tiago Djaló",
+"pos": "DF",
+"age": 26,
+"nat": "Portugal",
+"value_m": 6.01,
+"qid": "Q50349931",
+"no": "35"
+},
+{
+"he": "סמיח קיליצ'סוי",
+"en": "Semih Kılıçsoy",
+"pos": "FW",
+"age": 21,
+"nat": "Turkey",
+"value_m": 5.81,
+"qid": "Q116920755",
+"no": "90"
+},
+{
+"he": "רידוואן יילמאז",
+"en": "Rıdvan Yılmaz",
+"pos": "DF",
+"age": 25,
+"nat": "Turkey",
+"value_m": 5.78,
+"qid": "Q63073360",
+"no": "33"
+},
+{
+"he": "אורקון קקצ'י",
+"en": "Orkun Kökçü",
+"pos": "MF",
+"age": 25,
+"nat": "Turkey",
+"value_m": 5.65,
+"qid": "Q56788302",
+"no": "10"
+},
+{
+"he": "Can Keleş",
+"en": "Can Keleş",
+"pos": "FW",
+"age": 24,
+"nat": "Austria",
+"value_m": 5.61,
+"qid": "Q96207443",
+"no": "77"
+},
+{
+"he": "ואצלב צ'רני",
+"en": "Václav Černý",
+"pos": "MF",
+"age": 28,
+"nat": "Czech Republic",
+"value_m": 5.48,
+"qid": "Q19588392",
+"no": "18"
+},
+{
+"he": "וילפרד נדידי",
+"en": "Wilfred Ndidi",
+"pos": "MF",
+"age": 29,
+"nat": "Nigeria",
+"value_m": 4.94,
+"qid": "Q19587938",
+"no": "4"
+},
+{
+"he": "Kartal Yılmaz",
+"en": "Kartal Yılmaz",
+"pos": "MF",
+"age": 25,
+"nat": "Turkey",
+"value_m": 4.72,
+"qid": "Q72414471",
+"no": "8"
+},
+{
+"he": "Junior Olaitan",
+"en": "Junior Olaitan",
+"pos": "MF",
+"age": 24,
+"nat": "Benin",
+"value_m": 4.6,
+"qid": "Q111475349",
+"no": "15"
+},
+{
+"he": "מילוט ראשיצה",
+"en": "Milot Rashica",
+"pos": "FW",
+"age": 30,
+"nat": "Kosovo",
+"value_m": 4.57,
+"qid": "Q20744140",
+"no": "7"
+},
+{
+"he": "ארנסט פוקו",
+"en": "Ernest Poku",
+"pos": "FW",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 4.53,
+"qid": "Q106955899",
+"no": "17"
+},
+{
+"he": "פאביו מירטי",
+"en": "Fabio Miretti",
+"pos": "MF",
+"age": 23,
+"nat": "Italy",
+"value_m": 4.4,
+"qid": "Q105477844",
+"no": "21"
+},
+{
+"he": "Emirhan Topçu",
+"en": "Emirhan Topçu",
+"pos": "DF",
+"age": 25,
+"nat": "Turkey",
+"value_m": 4.12,
+"qid": "Q55200567",
+"no": "53"
+},
+{
+"he": "Ümit Akdağ",
+"en": "Ümit Akdağ",
+"pos": "DF",
+"age": 22,
+"nat": "Romania",
+"value_m": 4.05,
+"qid": "Q123182314",
+"no": "50"
+},
+{
+"he": "לאונרדו טרוסארד",
+"en": "Leandro Trossard",
+"pos": "MF",
+"age": 31,
+"nat": "Belgium",
+"value_m": 3.87,
+"qid": "Q6509762",
+"no": "19"
+},
+{
+"he": "Emmanuel Agbadou",
+"en": "Emmanuel Agbadou",
+"pos": "DF",
+"age": 29,
+"nat": "Côte d'Ivoire",
+"value_m": 3.84,
+"qid": "Q69523791",
+"no": "12"
+},
+{
+"he": "קסום וואטרה",
+"en": "Kassoum Ouattara",
+"pos": "DF",
+"age": 21,
+"nat": "Côte d'Ivoire",
+"value_m": 3.58,
+"qid": "Q118353095",
+"no": "11"
+},
+{
+"he": "מייקל אמיר מורייו",
+"en": "Amir Murillo",
+"pos": "DF",
+"age": 30,
+"nat": "Panama",
+"value_m": 3.44,
+"qid": "Q27805413",
+"no": "62"
+},
+{
+"he": "Sami Bircan",
+"en": "Sami Bircan",
+"pos": "FW",
+"age": 25,
+"nat": "Turkey",
+"value_m": 3.09,
+"qid": null,
+"no": "70"
+},
+{
+"he": "İlhan Fakılı",
+"en": "İlhan Fakılı",
+"pos": "FW",
+"age": 25,
+"nat": "Turkey",
+"value_m": 2.63,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Azem Yortaç",
+"en": "Azem Yortaç",
+"pos": "DF",
+"age": 25,
+"nat": "Turkey",
+"value_m": 2.41,
+"qid": null,
+"no": "63"
+},
+{
+"he": "Mustafa Hekimoğlu",
+"en": "Mustafa Hekimoğlu",
+"pos": "FW",
+"age": 19,
+"nat": "Turkey",
+"value_m": 2.33,
+"qid": "Q123851951",
+"no": "23"
+},
+{
+"he": "Ozan Sevim",
+"en": "Ozan Sevim",
+"pos": "MF",
+"age": 25,
+"nat": "Turkey",
+"value_m": 2.25,
+"qid": null,
+"no": "66"
+},
+{
+"he": "יאסין אזג'אן",
+"en": "Yasin Özcan",
+"pos": "DF",
+"age": 20,
+"nat": "Turkey",
+"value_m": 2.14,
+"qid": "Q115688303",
+"no": "58"
+}
+]
+}

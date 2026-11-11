@@ -1,0 +1,259 @@
+{
+"key": "decic",
+"name_he": "דצ'יץ'",
+"source": "enwiki:FK Dečić",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Andrej Camaj",
+"en": "Andrej Camaj",
+"pos": "GK",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Danilo Radošević",
+"en": "Danilo Radošević",
+"pos": "GK",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Miloš Dragojević",
+"en": "Miloš Dragojević",
+"pos": "GK",
+"age": 37,
+"nat": "Montenegro",
+"value_m": 0.02,
+"qid": "Q18043763",
+"no": "33"
+},
+{
+"he": "Balša Radusinović",
+"en": "Balša Radusinović",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.124,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Aleksa Ćetković",
+"en": "Aleksa Ćetković",
+"pos": "MF",
+"age": 22,
+"nat": "Montenegro",
+"value_m": 0.103,
+"qid": "Q109453289",
+"no": "8"
+},
+{
+"he": "Matija Božanović",
+"en": "Matija Božanović",
+"pos": "MF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.103,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Siniša Stanisavić",
+"en": "Siniša Stanisavić",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.103,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Davor Kontić",
+"en": "Davor Kontić",
+"pos": "MF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.103,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Petar Pavlićević",
+"en": "Petar Pavlićević",
+"pos": "DF",
+"age": 26,
+"nat": "Montenegro",
+"value_m": 0.103,
+"qid": "Q101204565",
+"no": "74"
+},
+{
+"he": "Dardan Lulgjuraj",
+"en": "Dardan Lulgjuraj",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Mario Gjolaj",
+"en": "Mario Gjolaj",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Ilir Camaj",
+"en": "Ilir Camaj",
+"pos": "FW",
+"age": 30,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": "Q134621140",
+"no": "9"
+},
+{
+"he": "Leon Ujkaj",
+"en": "Leon Ujkaj",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Jonathan Dreshaj",
+"en": "Jonathan Dreshaj",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Jovan Mugoša",
+"en": "Jovan Mugoša",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "50"
+},
+{
+"he": "Romario Camaj",
+"en": "Romario Camaj",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "55"
+},
+{
+"he": "Demir Krkanović",
+"en": "Demir Krkanović",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Petar Ivanović",
+"en": "Petar Ivanović",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "72"
+},
+{
+"he": "Halil Kajoshaj",
+"en": "Halil Kajoshaj",
+"pos": "MF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Medo Juković",
+"en": "Medo Juković",
+"pos": "MF",
+"age": 21,
+"nat": "Montenegro",
+"value_m": 0.082,
+"qid": "Q135708229",
+"no": "88"
+},
+{
+"he": "Uroš Đuranović",
+"en": "Uroš Đuranović",
+"pos": "FW",
+"age": 32,
+"nat": "Montenegro",
+"value_m": 0.062,
+"qid": "Q39398561",
+"no": "11"
+},
+{
+"he": "Pjetër Lulgjuraj",
+"en": "Pjetër Lulgjuraj",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.062,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Lazar Maraš",
+"en": "Lazar Maraš",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.062,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Nikola Braunović",
+"en": "Nikola Braunović",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.062,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Aldin Adžović",
+"en": "Aldin Adžović",
+"pos": "MF",
+"age": 32,
+"nat": "Montenegro",
+"value_m": 0.042,
+"qid": "Q23799460",
+"no": "14"
+}
+]
+}

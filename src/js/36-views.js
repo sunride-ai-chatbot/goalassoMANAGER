@@ -235,7 +235,7 @@ function applyMarketPriceRange(){
   marketPriceMin=min===''?'':String(Number(min));marketPriceMax=max===''?'':String(Number(max));render();
 }
 function viewFreeAgents(){
-  const c=me();const open=WINDOW(G.wk);const fa=(G.freeAgents||[]).slice().sort(byOvr);
+  const c=me();const open=WINDOW(G.wk);const fa=(G.freeAgents||[]).filter(p=>!inventedPlayer(p)).sort(byOvr);
   return `<div class="card">${marketTabs('free')}
   <div class="muted small" style="margin-top:8px">שחקנים בלי מועדון. אין דמי העברה, רק בונוס חתימה ושכר. ${open?'':'אפשר לחתום רק כשהחלון פתוח.'}</div></div>
   <div class="list">${fa.map(p=>{const d=contractDemand(p);return playerRow(p,`<button class="btn sm" data-sign="${p.id}" ${open&&c.money>=d.bonus?'':'disabled'}>חתום</button>`,'',`${POSHE[p.pos]} · ${p.age} · דורש <b class="num">${NIS(d.wage)}</b>/שבוע ל-${d.years} שנים · בונוס ${NIS(d.bonus)}`)}).join('')||'<div class="muted small" style="text-align:center">אין שחקנים חופשיים כרגע</div>'}</div>`;
@@ -252,7 +252,7 @@ function hlName(text,q){text=String(text||'');q=searchNorm(q);if(!q)return esc(t
   return esc(text.slice(0,from))+'<mark>'+esc(text.slice(from,to))+'</mark>'+esc(text.slice(to))}
 function playerNats(p){return [p.nat,p.nat2].filter(Boolean)}
 function hasNat(p,nat){return playerNats(p).includes(nat)}
-function marketSearchPool(){ensureAllWorldLeagues();const out=[];for(const c of [...G.clubs,...G.leumit]){if(c.id===G.me)continue;for(const p of c.players)if(!p.loanOut)out.push({p,c})}for(const c of worldClubs())for(const p of c.players)out.push({p,c});return out}
+function marketSearchPool(){ensureAllWorldLeagues();const out=[];for(const c of [...G.clubs,...G.leumit]){if(c.id===G.me)continue;for(const p of c.players)if(!p.loanOut&&!inventedPlayer(p))out.push({p,c})}for(const c of worldClubs())for(const p of c.players)out.push({p,c});return out}
 /* a first name and a surname that start with the query rank the same: with thousands of real players the well-known
    one (by value) should come first, not everybody whose first name happens to match */
 function matchRank(hay,q){if(!hay)return 9;if((' '+hay).includes(' '+q))return 0;return hay.includes(q)?2:9}
@@ -286,7 +286,7 @@ function viewMarket(){if(mpIsOn())return mpNoMarketHTML();
   if(marketTab==='scout')return viewScouting();
   if(marketTab==='negs')return viewNegs();
   const c=me();const open=WINDOW(G.wk);const leg=marketCategory==='legionnaires';
-  let pool=leg?legionnairePool():[...G.clubs,...G.leumit].filter(x=>x.id!==G.me).flatMap(x=>x.players.map(p=>({p,c:x})));
+  let pool=leg?legionnairePool():[...G.clubs,...G.leumit].filter(x=>x.id!==G.me).flatMap(x=>x.players.filter(p=>!inventedPlayer(p)).map(p=>({p,c:x})));   /* only real players are offered */
   const valueOf=leg?marketValue:(p=>p.value),priceOf=leg?marketValue:askingPrice;
   if(marketPos!=='all')pool=pool.filter(x=>x.p.pos===marketPos);
   if(marketSearch){const q=searchNorm(marketSearch);pool=pool.filter(({p})=>[fullName(p),p.en,(p.first||'')+' '+(p.last||'')].some(h=>matchRank(searchNorm(h),q)<9))}

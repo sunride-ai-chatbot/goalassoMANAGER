@@ -37,7 +37,7 @@ function newGame(teamId,managerName){
   clubs.forEach(c=>{c.money=Math.round(clamp(c.squadValue*.3,3e6,50e6)/1e5)*1e5;c.training=c.tier===1?3:c.tier===2?2:1;c.academy=c.training;c.ticket=c.tier===1?90:c.tier===2?70:55;c.fans=(c.tier===1?70:c.tier===2?55:42)+ri(-4,4);c.focus='bal';c.intensity='mid';c.attRecord=null;c.scouting=1;
     const s=EURO_SEEDS[c.id];c.euro=s?{comp:s[0],stage:s[1],lp:null,tie:null,prize:0,history:[]}:null;
     if(c.id!==teamId)c.sponsor=sponsorOffers(c)[0]});
-  for(let i=0;i<8;i++){const p=makePlayer(pick(['DF','MF','MF','FW','GK']),58);p.age=ri(26,33);p.contract=0;finalize(p);G.freeAgents.push(p)}
+  /* the free-agent list starts empty: only real players who are released during the career appear on it */
   startSeasonStructures();
   setContractTerms();migrateM2();ensureStaff();seedChem();
   save();

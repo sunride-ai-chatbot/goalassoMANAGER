@@ -1,0 +1,309 @@
+{
+"key": "ballkani",
+"name_he": "באלקאני",
+"source": "enwiki:FC Ballkani",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Gentian Selmani",
+"en": "Gentian Selmani",
+"pos": "GK",
+"age": 28,
+"nat": "Albania",
+"value_m": 0.171,
+"qid": "Q19972575",
+"no": "44"
+},
+{
+"he": "Art Miftari",
+"en": "Art Miftari",
+"pos": "GK",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.119,
+"qid": null,
+"no": "93"
+},
+{
+"he": "Ardit Nika",
+"en": "Ardit Nika",
+"pos": "GK",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.102,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Ideal Bytyqi",
+"en": "Ideal Bytyqi",
+"pos": "GK",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.085,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Kaan Karagöz",
+"en": "Kaan Karagöz",
+"pos": "GK",
+"age": 25,
+"nat": "Turkey",
+"value_m": 0.085,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Anel Šabanadžović",
+"en": "Anel Šabanadžović",
+"pos": "MF",
+"age": 27,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.205,
+"qid": "Q38088280",
+"no": "5"
+},
+{
+"he": "Toni Domgjoni",
+"en": "Toni Domgjoni",
+"pos": "MF",
+"age": 27,
+"nat": "Kosovo",
+"value_m": 0.205,
+"qid": "Q52766070",
+"no": "8"
+},
+{
+"he": "Albin Berisha",
+"en": "Albin Berisha",
+"pos": "FW",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.205,
+"qid": "Q124428908",
+"no": "99"
+},
+{
+"he": "Walid Hamidi",
+"en": "Walid Hamidi",
+"pos": "FW",
+"age": 29,
+"nat": "Algeria",
+"value_m": 0.171,
+"qid": "Q29976902",
+"no": "11"
+},
+{
+"he": "Jetmir Topalli",
+"en": "Jetmir Topalli",
+"pos": "FW",
+"age": 28,
+"nat": "Kosovo",
+"value_m": 0.171,
+"qid": "Q88555126",
+"no": "98"
+},
+{
+"he": "Giovanni",
+"en": "Giovanni",
+"pos": "MF",
+"age": 24,
+"nat": "Brazil",
+"value_m": 0.154,
+"qid": "Q98970158",
+"no": "10"
+},
+{
+"he": "Diar Vokrri",
+"en": "Diar Vokrri",
+"pos": "DF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.136,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Valentin Serebe",
+"en": "Valentin Serebe",
+"pos": "FW",
+"age": 23,
+"nat": "Côte d'Ivoire",
+"value_m": 0.136,
+"qid": "Q124467002",
+"no": "9"
+},
+{
+"he": "Ardi Maksutaj",
+"en": "Ardi Maksutaj",
+"pos": "FW",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.136,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Dijar Nikqi",
+"en": "Dijar Nikqi",
+"pos": "FW",
+"age": 21,
+"nat": "Albania",
+"value_m": 0.136,
+"qid": "Q111552581",
+"no": "27"
+},
+{
+"he": "Albert Diène",
+"en": "Albert Diène",
+"pos": "MF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.136,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Almedin Klinaku",
+"en": "Almedin Klinaku",
+"pos": "MF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.136,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Arens Mateli",
+"en": "Arens Mateli",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.136,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Adonis Hoti",
+"en": "Adonis Hoti",
+"pos": "MF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.136,
+"qid": null,
+"no": "45"
+},
+{
+"he": "Leart Popaj",
+"en": "Leart Popaj",
+"pos": "MF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.136,
+"qid": null,
+"no": "88"
+},
+{
+"he": "Engjëll Ajazaj",
+"en": "Engjëll Ajazaj",
+"pos": "MF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.119,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Leonis Murseli",
+"en": "Leonis Murseli",
+"pos": "MF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.119,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Abou Dosso",
+"en": "Abou Dosso",
+"pos": "DF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.102,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Redon Zekaj",
+"en": "Redon Zekaj",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.102,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Erlis Xhemajli",
+"en": "Erlis Xhemajli",
+"pos": "MF",
+"age": 23,
+"nat": "Kosovo",
+"value_m": 0.102,
+"qid": "Q134702099",
+"no": "16"
+},
+{
+"he": "Lendrit Shala",
+"en": "Lendrit Shala",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.102,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Ivica Batarelo",
+"en": "Ivica Batarelo",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.102,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Merlind Kodra",
+"en": "Merlind Kodra",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.102,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Gentrit Halili",
+"en": "Gentrit Halili",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.085,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Edvin Kuč",
+"en": "Edvin Kuč",
+"pos": "MF",
+"age": 32,
+"nat": "Montenegro",
+"value_m": 0.085,
+"qid": "Q115056581",
+"no": "20"
+}
+]
+}

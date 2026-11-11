@@ -1,0 +1,299 @@
+{
+"key": "aek_athens",
+"name_he": "א.א.ק. אתונה",
+"source": "enwiki:AEK Athens F.C.",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "תומאס סטרקושה",
+"en": "Thomas Strakosha",
+"pos": "GK",
+"age": 31,
+"nat": "Albania",
+"value_m": 1.49,
+"qid": "Q17399584",
+"no": "1"
+},
+{
+"he": "Marios Balamotis",
+"en": "Marios Balamotis",
+"pos": "GK",
+"age": 25,
+"nat": "Greece",
+"value_m": 0.958,
+"qid": null,
+"no": "41"
+},
+{
+"he": "Alberto Brignoli",
+"en": "Alberto Brignoli",
+"pos": "GK",
+"age": 35,
+"nat": "Italy",
+"value_m": 0.402,
+"qid": "Q16524787",
+"no": "91"
+},
+{
+"he": "Kaan Kairinen",
+"en": "Kaan Kairinen",
+"pos": "MF",
+"age": 27,
+"nat": "Finland",
+"value_m": 3.36,
+"qid": "Q18632885",
+"no": "6"
+},
+{
+"he": "זיני",
+"en": "Zini",
+"pos": "FW",
+"age": 24,
+"nat": "Angola",
+"value_m": 3.28,
+"qid": "Q108451955",
+"no": "90"
+},
+{
+"he": "לוברו מאייר",
+"en": "Lovro Majer",
+"pos": "MF",
+"age": 28,
+"nat": "Croatia",
+"value_m": 3.19,
+"qid": "Q28137504",
+"no": "14"
+},
+{
+"he": "אבובקרי קויטה",
+"en": "Aboubakary Koïta",
+"pos": "FW",
+"age": 27,
+"nat": "Mauritania",
+"value_m": 2.85,
+"qid": "Q39336454",
+"no": "11"
+},
+{
+"he": "לוקה יוביץ'",
+"en": "Luka Jović",
+"pos": "FW",
+"age": 28,
+"nat": "Serbia",
+"value_m": 2.76,
+"qid": "Q16979983",
+"no": "9"
+},
+{
+"he": "קרווין אריאגה",
+"en": "Kervin Arriaga",
+"pos": "MF",
+"age": 28,
+"nat": "Honduras",
+"value_m": 2.45,
+"qid": "Q55590317",
+"no": "16"
+},
+{
+"he": "Dereck Kutesa",
+"en": "Dereck Kutesa",
+"pos": "MF",
+"age": 28,
+"nat": "Switzerland",
+"value_m": 2.4,
+"qid": "Q19960240",
+"no": "7"
+},
+{
+"he": "ברנבאש ורגה",
+"en": "Barnabás Varga",
+"pos": "FW",
+"age": 31,
+"nat": "Hungary",
+"value_m": 2.38,
+"qid": "Q27000690",
+"no": "19"
+},
+{
+"he": "אולכסנדר זובקוב",
+"en": "Oleksandr Zubkov",
+"pos": "MF",
+"age": 30,
+"nat": "Ukraine",
+"value_m": 2.34,
+"qid": "Q24085024",
+"no": "10"
+},
+{
+"he": "Stavros Pilios",
+"en": "Stavros Pilios",
+"pos": "DF",
+"age": 25,
+"nat": "Albania",
+"value_m": 2.29,
+"qid": "Q88225845",
+"no": "3"
+},
+{
+"he": "הרולד מוקודי",
+"en": "Harold Moukoudi",
+"pos": "DF",
+"age": 28,
+"nat": "Cameroon",
+"value_m": 2.21,
+"qid": "Q28077976",
+"no": "2"
+},
+{
+"he": "Lazaros Rota",
+"en": "Lazaros Rota",
+"pos": "DF",
+"age": 29,
+"nat": "Greece",
+"value_m": 2.14,
+"qid": "Q56043421",
+"no": "12"
+},
+{
+"he": "רזבאן מארין",
+"en": "Răzvan Marin",
+"pos": "MF",
+"age": 30,
+"nat": "Romania",
+"value_m": 2.08,
+"qid": "Q20745021",
+"no": "18"
+},
+{
+"he": "חכים סהאבו",
+"en": "Hakim Sahabo",
+"pos": "MF",
+"age": 21,
+"nat": "Rwanda",
+"value_m": 1.82,
+"qid": "Q114314882",
+"no": "80"
+},
+{
+"he": "Milán Vitális",
+"en": "Milán Vitális",
+"pos": "MF",
+"age": 24,
+"nat": "Hungary",
+"value_m": 1.81,
+"qid": "Q134527459",
+"no": "27"
+},
+{
+"he": "פרנזי פיירו",
+"en": "Frantzdy Pierrot",
+"pos": "FW",
+"age": 31,
+"nat": "Haiti",
+"value_m": 1.69,
+"qid": "Q55820193",
+"no": null
+},
+{
+"he": "מיאט גאצ'ינוביץ'",
+"en": "Mijat Gaćinović",
+"pos": "MF",
+"age": 31,
+"nat": "Serbia",
+"value_m": 1.67,
+"qid": "Q14432450",
+"no": "8"
+},
+{
+"he": "Filipe Relvas",
+"en": "Filipe Relvas",
+"pos": "DF",
+"age": 27,
+"nat": "Portugal",
+"value_m": 1.62,
+"qid": "Q108332550",
+"no": "44"
+},
+{
+"he": "Dimitris Kaloskamis",
+"en": "Dimitris Kaloskamis",
+"pos": "MF",
+"age": 21,
+"nat": "Greece",
+"value_m": 1.45,
+"qid": "Q114271272",
+"no": "17"
+},
+{
+"he": "Martin Georgiev",
+"en": "Martin Georgiev",
+"pos": "DF",
+"age": 20,
+"nat": "Bulgaria",
+"value_m": 1.42,
+"qid": "Q110590124",
+"no": "15"
+},
+{
+"he": "Zois Karargyris",
+"en": "Zois Karargyris",
+"pos": "FW",
+"age": 25,
+"nat": "Greece",
+"value_m": 1.29,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Charalampos Lykogiannis",
+"en": "Charalampos Lykogiannis",
+"pos": "DF",
+"age": 32,
+"nat": "Greece",
+"value_m": 1.25,
+"qid": "Q2961319",
+"no": "22"
+},
+{
+"he": "Christos Alexiou",
+"en": "Christos Alexiou",
+"pos": "DF",
+"age": 21,
+"nat": "Greece",
+"value_m": 0.994,
+"qid": "Q134381077",
+"no": "5"
+},
+{
+"he": "ז'ואאו מריו",
+"en": "João Mário",
+"pos": "MF",
+"age": 33,
+"nat": "Portugal",
+"value_m": 0.934,
+"qid": "Q6298271",
+"no": "23"
+},
+{
+"he": "Petros Mantalos",
+"en": "Petros Mantalos",
+"pos": "MF",
+"age": 35,
+"nat": "Greece",
+"value_m": 0.662,
+"qid": "Q7179088",
+"no": "20"
+},
+{
+"he": "דומאגויה וידה",
+"en": "Domagoj Vida",
+"pos": "DF",
+"age": 37,
+"nat": "Croatia",
+"value_m": 0.509,
+"qid": "Q314227",
+"no": "21"
+}
+]
+}

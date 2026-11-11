@@ -477,10 +477,6 @@
       "key": "simba",
       "en": "Simba S.C."
     },
-    "יאנג אפריקנס": {
-      "key": "yanga",
-      "en": "Young Africans S.C."
-    },
     "פלמנגו": {
       "key": "flamengo",
       "en": "CR Flamengo"
@@ -572,6 +568,220 @@
     "אורלנדו סיטי": {
       "key": "orlando",
       "en": "Orlando City SC"
+    }
+  },
+  "euro": {
+    "שמרוק רוברס": {
+      "key": "shamrock",
+      "en": "Shamrock Rovers F.C."
+    },
+    "דה ניו סיינטס": {
+      "key": "tns",
+      "en": "The New Saints F.C."
+    },
+    "בשיקטאש": {
+      "key": "besiktas",
+      "en": "Beşiktaş J.K."
+    },
+    "טרבזונספור": {
+      "key": "trabzonspor",
+      "en": "Trabzonspor"
+    },
+    "פאוק": {
+      "key": "paok",
+      "en": "PAOK FC"
+    },
+    "א.א.ק. אתונה": {
+      "key": "aek_athens",
+      "en": "AEK Athens F.C."
+    },
+    "פנאתינייקוס": {
+      "key": "panathinaikos",
+      "en": "Panathinaikos F.C."
+    },
+    "אפואל": {
+      "key": "apoel",
+      "en": "APOEL FC"
+    },
+    "פאפוס": {
+      "key": "pafos",
+      "en": "Pafos FC"
+    },
+    "אומוניה": {
+      "key": "omonia",
+      "en": "AC Omonia"
+    },
+    "שטורם גראץ": {
+      "key": "sturm_graz",
+      "en": "SK Sturm Graz"
+    },
+    "ראפיד וינה": {
+      "key": "rapid_wien",
+      "en": "SK Rapid Wien"
+    },
+    "לאסק לינץ": {
+      "key": "lask",
+      "en": "LASK"
+    },
+    "באזל": {
+      "key": "basel",
+      "en": "FC Basel"
+    },
+    "סרווט ז'נבה": {
+      "key": "servette",
+      "en": "Servette FC"
+    },
+    "לוגאנו": {
+      "key": "lugano",
+      "en": "FC Lugano"
+    },
+    "באניק אוסטרבה": {
+      "key": "banik_ostrava",
+      "en": "FC Baník Ostrava"
+    },
+    "סלובאן ברטיסלבה": {
+      "key": "slovan_bratislava",
+      "en": "ŠK Slovan Bratislava"
+    },
+    "ז'ילינה": {
+      "key": "zilina",
+      "en": "MŠK Žilina"
+    },
+    "ראקוב צ'נסטוחובה": {
+      "key": "rakow",
+      "en": "Raków Częstochowa"
+    },
+    "יאגילוניה ביאליסטוק": {
+      "key": "jagiellonia",
+      "en": "Jagiellonia Białystok"
+    },
+    "פושקאש אקדמיה": {
+      "key": "puskas",
+      "en": "Puskás Akadémia FC"
+    },
+    "צ.פ.ר. קלוז'": {
+      "key": "cfr_cluj",
+      "en": "CFR Cluj"
+    },
+    "אוניברסיטאטה קראיובה": {
+      "key": "craiova",
+      "en": "CS Universitatea Craiova"
+    },
+    "שריף טיראספול": {
+      "key": "sheriff",
+      "en": "FC Sheriff Tiraspol"
+    },
+    "לבסקי סופיה": {
+      "key": "levski",
+      "en": "PFC Levski Sofia"
+    },
+    "צ.ס.ק.א. סופיה": {
+      "key": "cska_sofia",
+      "en": "PFC CSKA Sofia"
+    },
+    "צלייה": {
+      "key": "celje",
+      "en": "NK Celje"
+    },
+    "בוראץ באניה לוקה": {
+      "key": "borac",
+      "en": "FK Borac Banja Luka"
+    },
+    "סוטייסקה ניקשיץ'": {
+      "key": "sutjeska",
+      "en": "FK Sutjeska Nikšić"
+    },
+    "דצ'יץ'": {
+      "key": "decic",
+      "en": "FK Dečić"
+    },
+    "שקנדיה": {
+      "key": "shkendija",
+      "en": "KF Shkëndija"
+    },
+    "סטרוגה": {
+      "key": "struga",
+      "en": "FC Struga"
+    },
+    "אגנטיה": {
+      "key": "egnatia",
+      "en": "KF Egnatia"
+    },
+    "טירנה": {
+      "key": "tirana",
+      "en": "KF Tirana"
+    },
+    "באלקאני": {
+      "key": "ballkani",
+      "en": "FC Ballkani"
+    },
+    "דריטה": {
+      "key": "drita",
+      "en": "FC Drita"
+    },
+    "קרבאח אגדם": {
+      "key": "qarabag",
+      "en": "Qarabağ FK"
+    },
+    "אסטנה": {
+      "key": "astana",
+      "en": "FC Astana"
+    },
+    "קאיראט אלמטי": {
+      "key": "kairat",
+      "en": "FC Kairat"
+    },
+    "פיוניק ירוואן": {
+      "key": "pyunik",
+      "en": "FC Pyunik"
+    },
+    "דינמו טביליסי": {
+      "key": "dinamo_tbilisi",
+      "en": "FC Dinamo Tbilisi"
+    },
+    "דינמו באטומי": {
+      "key": "dinamo_batumi",
+      "en": "FC Dinamo Batumi"
+    },
+    "אלפסבורג": {
+      "key": "elfsborg",
+      "en": "IF Elfsborg"
+    },
+    "קופ\"ס קואופיו": {
+      "key": "kups",
+      "en": "Kuopion Palloseura"
+    },
+    "ויקינגור רייקיאוויק": {
+      "key": "vikingur",
+      "en": "Knattspyrnufélagið Víkingur"
+    },
+    "ברייתאבליק": {
+      "key": "breidablik",
+      "en": "Breiðablik (men's football)"
+    },
+    "ז'לגיריס וילנה": {
+      "key": "zalgiris",
+      "en": "FK Žalgiris"
+    },
+    "ר.פ.ס ריגה": {
+      "key": "rfs",
+      "en": "FK RFS"
+    },
+    "פלורה טאלין": {
+      "key": "flora",
+      "en": "FC Flora"
+    },
+    "לבדיה טאלין": {
+      "key": "levadia",
+      "en": "FCI Levadia Tallinn"
+    },
+    "דיפרדנז'": {
+      "key": "differdange",
+      "en": "FC Differdange 03"
+    },
+    "חמרון ספרטנס": {
+      "key": "hamrun",
+      "en": "Ħamrun Spartans F.C."
     }
   },
   "leumit": {

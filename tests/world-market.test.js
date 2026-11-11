@@ -90,6 +90,19 @@ async function main(){try{
  assert.equal(a11.n,v11.n0,'the players the squad gained are added');assert.equal(a11.dup,0,'a re-valued player is not duplicated');
  assert.ok(Math.abs(a11.mean-(v11.str+1))<=1.5,'the squad is back on the club strength: '+a11.mean+' vs '+v11.str);
  assert.equal(a11.brReal,v11.brData,'a club that gained real data shows its real squad');assert.equal(a11.brFake,0);assert.equal(a11.v,w.eval('SAVE_VERSION'));
- assert.deepEqual(errors,[]);console.log('world market: full squads, not-for-sale core, faces after migration, v11 squad refresh, legionnaires, suggestions, nationality and price sorts passed; errors []');
+ // v12: a club without a real squad leaves old careers with the talks about its players; invented free agents and the
+ // invented reserves of a real second-tier squad go; a player whose Hebrew spelling was added to the data gets it
+ const v12=JSON.parse(w.eval(`(()=>{const lg=Object.keys(WORLD_LEAGUES).find(k=>WORLD_LEAGUES[k].clubs.some(d=>d[0]==='סימבה'));ensureWorldLeague(lg);
+   const def=['יאנג אפריקנס','דאר א-סלאם','#0a7c3e','#ffd200',57,'af','טנזניה'];const gone=Object.assign(JSON.parse(JSON.stringify(G.world[lg].clubs[0])),{id:'w'+(uid++),name:def[0],short:def[0],str:57,players:[],realSquad:false});delete gone.squadV;for(const k of ['young','mid','vet'])gone.players.push(makeWorldPlayer(lg,def,k,57));G.world[lg].clubs.push(gone);
+   G.negs=(G.negs||[]).concat([{pid:gone.players[0].id,stage:'club',log:[]}]);G.freeAgents.push(makePlayer('MF',58));
+   const hz=G.leumit.find(c=>c.name==='מכבי הרצליה');const p=hz.players.find(p=>p.en==='Roy Hazan');p.first='Roy';p.last='Hazan';hz.players.push(makePlayer('DF',50));
+   return JSON.stringify({lg,pid:p.id,gonePid:gone.players[0].id,clubs:G.world[lg].clubs.length,hz:hz.players.length})})()`));
+ const v11save=w.eval('JSON.stringify(Object.assign({},G,{v:11}))');w.eval(`installCareer(${JSON.stringify(v11save)},2)`);
+ const a12=JSON.parse(w.eval(`JSON.stringify((()=>{const hz=G.leumit.find(c=>c.name==='מכבי הרצליה');return {clubs:G.world['${v12.lg}'].clubs.length,gone:G.world['${v12.lg}'].clubs.some(c=>c.name==='יאנג אפריקנס'),neg:(G.negs||[]).some(n=>n.pid===${v12.gonePid}),freeFake:G.freeAgents.filter(inventedPlayer).length,name:fullName(hz.players.find(p=>p.id===${v12.pid})),hz:hz.players.length,hzFake:hz.players.filter(inventedPlayer).length,v:G.v}})())`));
+ assert.equal(a12.gone,false,'the club without real players is gone');assert.equal(a12.clubs,v12.clubs-1);assert.equal(a12.neg,false,'and the talks about its player');
+ assert.equal(a12.freeFake,0,'no invented free agents');assert.equal(a12.name,'רוי חזן','Hebrew spelling from the data');assert.equal(a12.hzFake,0);assert.equal(a12.hz,v12.hz-1);assert.equal(a12.v,w.eval('SAVE_VERSION'));
+ // only real players are offered: the Israeli market, the search and the free-agent list
+ assert.equal(w.eval("(()=>{const c=G.clubs.find(c=>c.id!==G.me);c.players.push(makePlayer('FW',80));marketTab='buy';marketCategory='all';marketSearch='';G.view='market';render();return marketSearchPool().filter(x=>inventedPlayer(x.p)).length})()"),0);
+ assert.deepEqual(errors,[]);console.log('world market: real players only (v12), full squads, not-for-sale core, faces after migration, v11 squad refresh, legionnaires, suggestions, nationality and price sorts passed; errors []');
 }finally{await new Promise(r=>setImmediate(r));w.close()}}
 main().catch(e=>{console.error(e);process.exitCode=1});
