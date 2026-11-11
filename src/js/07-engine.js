@@ -99,7 +99,8 @@ function stepMinute(M){
   const h=club(M.h),a=club(M.a);M.m++;
   if(M.m===1||M.m%15===0||M.tadjDirty){M.tadj=tacticAdj(M,h,a);M.tadjDirty=false;if(M.tadj.notes.length&&M.live&&!M.tadjNoted){M.tadjNoted=true;M.ev.push({m:M.m,t:'note',team:G.me,txt:M.tadj.notes[0]})}}
   const sh=xiStrength(M,h),sa=xiStrength(M,a);M.units={[h.id]:unitStrength(M,h),[a.id]:unitStrength(M,a)};const [lh,la]=expGoals(sh,sa,M.ctx.neutral,h,a,M);
-  const homeHas=Math.random()<.5+(sh-sa)*.015+(mentalityAdj(h,M)[0]-mentalityAdj(a,M)[0])*.4+(M.tadj?M.tadj.poss:0);if(homeHas)M.poss[h.id]++;else M.poss[a.id]++;
+  /* possession share: strength gap, mentality and style move it, inside the range real matches show (about 27-73%) */
+  const homeHas=Math.random()<clamp(.5+(sh-sa)*.015+(mentalityAdj(h,M)[0]-mentalityAdj(a,M)[0])*.4+(M.tadj?M.tadj.poss:0),.27,.73);if(homeHas)M.poss[h.id]++;else M.poss[a.id]++;
   M.pm=M.pm||[];M.pm.push(homeHas?1:0);M.passes=M.passes||{[h.id]:0,[a.id]:0};const tt=tacOf(homeHas?h:a);M.passes[homeHas?h.id:a.id]+=ri(5,11)+(tt&&tt.tempo==='slow'?2:0)-(tt&&tt.style==='direct'?2:0);
   M.sot=M.sot||{[h.id]:0,[a.id]:0};M.corners=M.corners||{[h.id]:0,[a.id]:0};
   /* Chances. Every minute each side may create a chance (rate ∝ expected goals). The chance gets a location from the
@@ -164,7 +165,7 @@ function doSub(M,c,outId,inId){
   if(M.xi[c.id].length>=11)return false;
   M.xi[c.id].push({pid:inId,slot,since:M.m,yel:0});M.subs[c.id]++;
   const outP=outId?c.players.find(p=>p.id===outId):null;
-  M.ev.push({m:M.m,t:'sub',team:c.id,name:fullName(inP),out:outP?fullName(outP):null,outPid:outId||null});
+  M.ev.push({m:M.m,t:'sub',team:c.id,inPid:inP.id,name:fullName(inP),out:outP?fullName(outP):null,outPid:outId||null});
   return true;
 }
 function runInstant(M){while(!M.done)stepMinute(M);if(typeof MP!=='undefined'&&MP.capture&&(MP.capture.has(M.h)||MP.capture.has(M.a)))MP.captured.push(M);return M}
