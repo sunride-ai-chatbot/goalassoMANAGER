@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="ab59f6755269">
+<meta name="goalasso-build" content="bfea973019a1">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -3674,7 +3674,8 @@ async function writeJob(job){if(jobFenced(job))return false;try{const packed=awa
     SV.retry=job;saveIndicator('error');const quota=e&&(e.name==='QuotaExceededError'||/quota/i.test(String(e.message||e)));
     storageNotice(quota?'אין מקום באחסון של הדפדפן. ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי עכשיו, פנה מקום (מחק קריירה ישנה) ונסה לשמור שוב.':'השמירה נכשלה ('+(e&&e.name||'שגיאה')+'). ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי ונסה לשמור שוב.');return false}}
 function askPersistence(){if(SV.persistAsked)return;SV.persistAsked=true;try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{})}catch(e){}}
-function showConflict(){if($('modal')||!SV.blocked)return;const st=SV.blocked.stored||{};const m=st.meta||{};
+function showConflict(){if(typeof document==='undefined'||!document||!document.body)return;   /* a write that finishes while the page is closing has nobody to ask */
+  if($('modal')||!SV.blocked)return;const st=SV.blocked.stored||{};const m=st.meta||{};
   openModal(`<h3 class="sec">הקריירה נשמרה ממקום אחר</h3><p class="small">${SV.blocked.remote?'לשונית או חלון אחר של המשחק שמרו גרסה חדשה יותר של הקריירה הזאת.':'באחסון יש גרסה חדשה יותר של הקריירה (כנראה מלשונית אחרת).'}<br>שם: ${esc(m.club||'')} · ${esc(m.season||'')} · שבוע ${(m.wk||0)+1} · גרסה ${st.rev||'?'}<br>כאן: ${esc(me()?me().name:'')} · ${seasonLabel()} · שבוע ${G.wk+1} · גרסה ${G.rev||0}</p><p class="muted tiny">כדי לא לאבד התקדמות, המשחק הזה לא ישמור עד שתבחר.</p><div class="actions"><button class="btn" id="conflictLoad">טען את הגרסה החדשה</button><button class="btn danger" id="conflictForce">דרוס אותה בגרסה שכאן</button></div>`,
    e=>{if(e.target.closest('#conflictLoad')){closeModal();const n=G.slot||curSlot();SV.blocked=null;G=null;Promise.resolve(load(n)).then(ok=>{if(!ok)toast('הטעינה נכשלה');render()})}
        else if(e.target.closest('#conflictForce')){closeModal();G.rev=Math.max(G.rev||0,(SV.blocked.stored&&SV.blocked.stored.rev)||0)+1;SV.blocked=null;save({force:true})}})}
