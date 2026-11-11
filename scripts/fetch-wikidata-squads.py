@@ -108,6 +108,96 @@ def parse_squad(text):
     return out
 
 
+NB = re.compile(r'\{\{\s*(?:football squad2 player|football squad player2|fs2 player|fs player2)\s*\|(.*?)\}\}', re.I | re.S)
+
+
+def parse_navbox(text):
+    """Players of a current-squad navigation template ({{football squad2 player|no=|name=[[...]]}}): number + linked name only."""
+    out, seen = [], set()
+    for m in NB.finditer(text):
+        f = {}
+        for part in re.split(r'\|(?=\s*\w+\s*=)', m.group(1)):
+            if '=' in part:
+                k, v = part.split('=', 1)
+                f[k.strip().lower()] = v.strip()
+        lm = LINK.search(f.get('name', ''))
+        if not lm:
+            continue
+        title = lm.group(1).strip()
+        full = re.sub(r'\s*\([^)]*\)$', '', title)          # the display text is usually the surname only
+        if full in seen:
+            continue
+        seen.add(full)
+        out.append({'no': f.get('no', '').strip() or None, 'pos': None, 'nat': None, 'en': full, 'title': title, 'loan': False})
+    return out
+
+
+def navbox_squad(title):
+    """Fallback for articles whose squad is a table or a transclusion: Template:<club> squad, kept current by the same editors."""
+    names = [title, re.sub(r'\s+(?:A\.?F\.?C\.?|F\.?C\.?|S\.?C\.?|C\.?F\.?)$', '', title)]
+    for t in dict.fromkeys(names):
+        for suffix in (' squad', ' current squad', ' roster'):
+            try:
+                text, real = wikitext('Template:' + t + suffix)
+            except Exception:  # noqa: BLE001
+                continue
+            rows = parse_navbox(text)
+            if len(rows) >= 14:
+                return rows, real
+            time.sleep(.4)
+    return [], None
+
+
+WD_NAT = {'United States of America': 'United States', 'Democratic Republic of the Congo': 'DR Congo', 'Republic of the Congo': 'Congo',
+          'Ivory Coast': "Côte d'Ivoire", 'Kingdom of the Netherlands': 'Netherlands', "People's Republic of China": 'China',
+          'Bosnia and Herzegovina': 'Bosnia-Herzegovina', 'Czechia': 'Czech Republic', 'Republic of Ireland': 'Ireland', 'The Gambia': 'Gambia',
+          'Kingdom of Denmark': 'Denmark', 'Türkiye': 'Turkey', 'United Kingdom': None}
+
+
+def wd_fill_pos_nat(rows, wd):
+    """Position (P413) and country (P1532, else P27) from Wikidata for rows the article gave no position / nationality."""
+    need = set()
+    for r in rows:
+        w = wd.get(r.get('wkey'))
+        if not w:
+            continue
+        if not r['pos']:
+            need.update(w.get('p413') or [])
+        if not r['nat'] and w.get('country'):
+            need.add(w['country'])
+    labels = {}
+    ids = sorted(need)
+    for i in range(0, len(ids), 50):
+        d = get(WD_API, {'action': 'wbgetentities', 'ids': '|'.join(ids[i:i + 50]), 'props': 'labels', 'languages': 'en', 'format': 'json'})
+        for q, e in d.get('entities', {}).items():
+            labels[q] = e.get('labels', {}).get('en', {}).get('value', '')
+        time.sleep(.5)
+
+    def pos_of(label):
+        l = label.lower()
+        if 'goalkeeper' in l:
+            return 'GK'
+        if re.search(r'back|defender|sweeper|libero', l):
+            return 'DF'
+        if 'midfield' in l:
+            return 'MF'
+        if re.search(r'forward|wing|striker|attack', l):
+            return 'FW'
+        return None
+    for r in rows:
+        w = wd.get(r.get('wkey'))
+        if not w:
+            continue
+        if not r['pos']:
+            ps = [pos_of(labels.get(q, '')) for q in (w.get('p413') or [])]
+            ps = [x for x in ps if x]
+            if ps:
+                r['pos'] = max(set(ps), key=ps.count)
+        if not r['nat'] and w.get('country'):
+            lab = labels.get(w['country'], '')
+            r['nat'] = WD_NAT.get(lab, lab) or None
+
+
 FS_HE = re.compile(r'\{\{\s*שחקן סגל\s*\|(.*?)\}\}', re.S)
 POS_HE = {'שוער': 'GK', 'בלם': 'DF', 'מגן': 'DF', 'הגנה': 'DF', 'מגן שמאלי': 'DF', 'מגן ימני': 'DF', 'קשר': 'MF', 'קישור': 'MF', 'קשר הגנתי': 'MF',
           'קשר התקפי': 'MF', 'חלוץ': 'FW', 'כנף': 'FW', 'התקפה': 'FW', 'מקשר': 'MF'}
@@ -189,7 +279,10 @@ def wd_lookup(titles, site='enwiki'):
                 v = c.get('mainsnak', {}).get('datavalue', {}).get('value')
                 if isinstance(v, str):
                     img = v; break
-            res[t] = {'qid': q, 'he': e.get('labels', {}).get('he', {}).get('value'), 'en': e.get('labels', {}).get('en', {}).get('value'), 'dob': dob, 'img': img, 'sl': len(e.get('sitelinks', {}))}
+            ids = lambda prop: [c.get('mainsnak', {}).get('datavalue', {}).get('value', {}).get('id') for c in cl.get(prop, []) if c.get('rank') != 'deprecated']   # noqa: E731
+            country = next((x for x in ids('P1532') + ids('P27') if x), None)
+            res[t] = {'qid': q, 'he': e.get('labels', {}).get('he', {}).get('value'), 'en': e.get('labels', {}).get('en', {}).get('value'), 'dob': dob, 'img': img,
+                      'sl': len(e.get('sitelinks', {})), 'p413': [x for x in ids('P413') if x], 'country': country}
         time.sleep(.6)
     return res
 
@@ -223,12 +316,33 @@ def club_strength(name_he):
 
 def leumit_squad(info, name_he, a):
     """Israeli second tier: the Hebrew Wikipedia article carries the squad with Hebrew names; Wikidata adds the Latin name, age, face."""
-    try:
-        hd = get('https://he.wikipedia.org/w/api.php', {'action': 'parse', 'page': info['he_title'], 'prop': 'wikitext', 'redirects': 1, 'format': 'json', 'formatversion': 2})
-    except Exception as e:  # noqa: BLE001
-        print('hewiki', info['he_title'], e); return None
-    text = hd['parse']['wikitext']
-    rows = [r for r in parse_squad_he(text) if not r['loan'] and r['he']]
+    HE_API = 'https://he.wikipedia.org/w/api.php'
+
+    def he_rows(title):
+        try:
+            hd = get(HE_API, {'action': 'parse', 'page': title, 'prop': 'wikitext', 'redirects': 1, 'format': 'json', 'formatversion': 2})
+            return [r for r in parse_squad_he(hd['parse']['wikitext']) if not r['loan'] and r['he']]
+        except Exception as e:  # noqa: BLE001
+            print('hewiki', title, e); return []
+    rows = he_rows(info['he_title'])
+    if len(rows) < a.min:   # wrong / ambiguous title: let Hebrew Wikipedia's own search find the club's football article
+        tried = {info['he_title']}
+        cands = [name_he + ' (כדורגל)', name_he]
+        try:
+            sr = get(HE_API, {'action': 'query', 'list': 'search', 'srsearch': name_he + ' כדורגל', 'srlimit': 5, 'format': 'json'})
+            cands += [x['title'] for x in sr.get('query', {}).get('search', [])]
+        except Exception as e:  # noqa: BLE001
+            print('hewiki search', name_he, e)
+        words = name_he.split()
+        prefix, place = words[0], ' '.join(words[1:])
+        same_club = lambda t: place in t and (prefix in t or (prefix == 'מ.ס.' and ('מועדון ספורט' in t or 'מ"ס' in t)))   # noqa: E731  never another club of the town
+        for t in cands:
+            if t in tried or not same_club(t):
+                continue
+            tried.add(t); time.sleep(.5)
+            alt = he_rows(t)
+            if len(alt) >= a.min:
+                rows = alt; info['he_title'] = t; print('hewiki title found by search:', t); break
     if not rows:
         return None
     wd = wd_lookup([r['title'] for r in rows], site='hewiki')
@@ -290,12 +404,23 @@ def main():
                     except Exception as e:  # noqa: BLE001
                         print('hewiki', key, e)
                 rows = [r for r in parse_squad(text) if not r['loan']]
+                src_title = title
+                if len(rows) < a.min:
+                    nb, nb_title = navbox_squad(title)
+                    if nb:
+                        rows, src_title = nb, nb_title
+                        print(key, 'squad from', nb_title, len(rows))
                 if a.debug:
                     os.makedirs(os.path.join(a.out, '_debug'), exist_ok=True)
                     heads = re.findall(r'\n(={2,4})\s*(.*?)\s*\1\s*\n', '\n' + text)
                     with open(os.path.join(a.out, '_debug', key + '.txt'), 'w', encoding='utf8') as fh:
                         fh.write('\n'.join('%s %s' % (h[0], h[1]) for h in heads) + '\n\nTEMPLATES %d\n' % len(FS.findall(text)) + '\n'.join(m.group(0)[:200] for m in FS.finditer(text)))
                 wd = wd_lookup([r['title'] for r in rows])
+                for r in rows:
+                    t = r['title']
+                    r['wkey'] = (t[0].upper() + t[1:] if t and (t[0].upper() + t[1:]) in wd else t) if t else None
+                if any(not r['pos'] or not r['nat'] for r in rows):
+                    wd_fill_pos_nat(rows, wd)
                 cs = club_strength(name_he)
                 players = []
                 for r in rows:
@@ -308,9 +433,15 @@ def main():
                                     'value_m': est_value(cs, age, pos, (w and w['qid']) or r['en'], (w and w['sl']) or 0),
                                     'qid': w['qid'] if w else None, 'img': w['img'] if w else None, 'no': r['no'], 'sl': (w and w['sl']) or 0})
                 if len(players) < a.min or not any(p['pos'] == 'GK' for p in players):
+                    if a.debug:   # keep the raw squad sections so the next parser fix does not need another blind run
+                        parts = re.split(r'\n(={2,4})\s*(.*?)\s*\1\s*\n', '\n' + text)
+                        with open(os.path.join(a.out, '_debug', key + '-body.txt'), 'w', encoding='utf8') as fh:
+                            for i in range(1, len(parts) - 2, 3):
+                                if SQUAD_HEAD.search(parts[i + 1]) and not SKIP_HEAD.search(parts[i + 1]):
+                                    fh.write('##### %s\n%s\n\n' % (parts[i + 1], parts[i + 2][:5000]))
                     report.append({'key': key, 'ok': False, 'why': 'only %d parsed players (%s)' % (len(players), title)}); print(report[-1]); continue
                 players.sort(key=lambda p: (p['pos'] != 'GK', -p['value_m']))
-                out = {'key': key, 'name_he': name_he, 'source': 'enwiki:' + title, 'fetched': time.strftime('%Y-%m-%d'), 'players': players[:30]}
+                out = {'key': key, 'name_he': name_he, 'source': 'enwiki:' + src_title, 'fetched': time.strftime('%Y-%m-%d'), 'players': players[:30]}
                 with open(os.path.join(a.out, key + '.json'), 'w', encoding='utf8') as fh:
                     json.dump(out, fh, ensure_ascii=False, indent=0)
                 report.append({'key': key, 'ok': True, 'n': len(out['players']), 'qid': sum(1 for p in out['players'] if p['qid']),
