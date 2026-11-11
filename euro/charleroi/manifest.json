@@ -1,0 +1,362 @@
+{
+ "club": "charleroi",
+ "clubName": "שרלרואה",
+ "clubQid": "Q19585",
+ "players": [
+  {
+   "he": "Mohamed Koné",
+   "en": "Mohamed Koné",
+   "pos": "GK",
+   "age": 24,
+   "candidates": [
+    {
+     "title": "File:Mohamed Kone Cote D'Ivoire v Ecuador 14 June 2026-13.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Mohamed_Kone_Cote_D%27Ivoire_v_Ecuador_14_June_2026-13.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Mohamed_Kone_Cote_D%27Ivoire_v_Ecuador_14_June_2026-13.jpg/960px-Mohamed_Kone_Cote_D%27Ivoire_v_Ecuador_14_June_2026-13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3333,
+     "height": 5000,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Bryan Berlin",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-06-14 18:16:47",
+     "file": "00-Q126365092-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q126365092",
+   "wikidata": "https://www.wikidata.org/wiki/Q126365092",
+   "label": "Mohamed Koné",
+   "birthYear": 2002
+  },
+  {
+   "he": "Arthur Cremer",
+   "en": "Arthur Cremer",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Lucas Degeye",
+   "en": "Lucas Degeye",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Martin Delavallée",
+   "en": "Martin Delavallée",
+   "pos": "GK",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q112653393",
+   "wikidata": "https://www.wikidata.org/wiki/Q112653393",
+   "label": "Martin Delavallée",
+   "birthYear": 2004
+  },
+  {
+   "he": "Arthur Mathot",
+   "en": "Arthur Mathot",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ugo Decerf",
+   "en": "Ugo Decerf",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "איהם אוסו",
+   "en": "Aiham Ousou",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q100328348",
+   "wikidata": "https://www.wikidata.org/wiki/Q100328348",
+   "label": "Aiham Ousou",
+   "birthYear": 2000
+  },
+  {
+   "he": "Antoine Bernier",
+   "en": "Antoine Bernier",
+   "pos": "FW",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q65938771",
+   "wikidata": "https://www.wikidata.org/wiki/Q65938771",
+   "label": "Antoine Bernier",
+   "birthYear": 1997
+  },
+  {
+   "he": "Antoine Colassin",
+   "en": "Antoine Colassin",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q83191252",
+   "wikidata": "https://www.wikidata.org/wiki/Q83191252",
+   "label": "Antoine Colassin",
+   "birthYear": 2001
+  },
+  {
+   "he": "Jakob Romsaas",
+   "en": "Jakob Romsaas",
+   "pos": "MF",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q111908509",
+   "wikidata": "https://www.wikidata.org/wiki/Q111908509",
+   "label": "Jakob Napoleon Romsaas",
+   "birthYear": 2004
+  },
+  {
+   "he": "Aurélien Scheidler",
+   "en": "Aurélien Scheidler",
+   "pos": "FW",
+   "age": 28,
+   "candidates": [
+    {
+     "title": "File:RC Lens - US Orléans (17-05-2019) 16.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_US_Orl%C3%A9ans_(17-05-2019)_16.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/RC_Lens_-_US_Orl%C3%A9ans_%2817-05-2019%29_16.jpg/960px-RC_Lens_-_US_Orl%C3%A9ans_%2817-05-2019%29_16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2592,
+     "height": 3456,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Supporterhéninois",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-05-17 20:02:17",
+     "file": "10-Q66180094-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q66180094",
+   "wikidata": "https://www.wikidata.org/wiki/Q66180094",
+   "label": "Aurélien Scheidler",
+   "birthYear": 1998
+  },
+  {
+   "he": "Mardochee Nzita",
+   "en": "Mardochee Nzita",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q69994855",
+   "wikidata": "https://www.wikidata.org/wiki/Q69994855",
+   "label": "Mardochée Nzita",
+   "birthYear": 2000
+  },
+  {
+   "he": "Yoan Apo",
+   "en": "Yoan Apo",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ahmed Mulumba",
+   "en": "Ahmed Mulumba",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Nathan Okumu Monkoy",
+   "en": "Nathan Okumu Monkoy",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Kevin Van Den Kerkhof",
+   "en": "Kevin Van Den Kerkhof",
+   "pos": "DF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q113393909",
+   "wikidata": "https://www.wikidata.org/wiki/Q113393909",
+   "label": "Kevin Van Den Kerkhof",
+   "birthYear": 1996
+  },
+  {
+   "he": "Patrick Pflücke",
+   "en": "Patrick Pflücke",
+   "pos": "MF",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18026672",
+   "wikidata": "https://www.wikidata.org/wiki/Q18026672",
+   "label": "Patrick Pflücke",
+   "birthYear": 1996
+  },
+  {
+   "he": "Yassine Khalifi",
+   "en": "Yassine Khalifi",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q117026604",
+   "wikidata": "https://www.wikidata.org/wiki/Q117026604",
+   "label": "Yassine Khalifi",
+   "birthYear": 2005
+  },
+  {
+   "he": "Freddy Mbemba",
+   "en": "Freddy Mbemba",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [
+    {
+     "title": "File:RC Lens - USL Dunkerque (08-07-2023) 46.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_USL_Dunkerque_(08-07-2023)_46.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/RC_Lens_-_USL_Dunkerque_%2808-07-2023%29_46.jpg/960px-RC_Lens_-_USL_Dunkerque_%2808-07-2023%29_46.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2257,
+     "height": 2822,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Supporterhéninois",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-07-08 12:06:47",
+     "file": "18-Q121333954-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q121333954",
+   "wikidata": "https://www.wikidata.org/wiki/Q121333954",
+   "label": "Freddy Mbemba",
+   "birthYear": 2002
+  },
+  {
+   "he": "Mory Kera",
+   "en": "Mory Kera",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Cheick Keita",
+   "en": "Cheick Keita",
+   "pos": "DF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q114951053",
+   "wikidata": "https://www.wikidata.org/wiki/Q114951053",
+   "label": "Check Keita",
+   "birthYear": 2003
+  },
+  {
+   "he": "Thomas Lutte",
+   "en": "Thomas Lutte",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q17163:Johan Cruyff, Q2036160:Thomas Meunier)"
+  },
+  {
+   "he": "Oscar Latteur",
+   "en": "Oscar Latteur",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Noah Solheid",
+   "en": "Noah Solheid",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q119851171:2003"
+  },
+  {
+   "he": "Léandro Diaz",
+   "en": "Léandro Diaz",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q105763585:1999, Q3829255:1992, Q11688573:1986, Q18341560:1990"
+  },
+  {
+   "he": "Boubakar Dembaga",
+   "en": "Boubakar Dembaga",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Massamba Sow",
+   "en": "Massamba Sow",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q131004997:2004"
+  },
+  {
+   "he": "Tristan Hermans",
+   "en": "Tristan Hermans",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Sami Kolgjini",
+   "en": "Sami Kolgjini",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Naïm Marzouk",
+   "en": "Naïm Marzouk",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}
