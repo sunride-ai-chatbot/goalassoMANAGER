@@ -134,7 +134,7 @@ def parse_navbox(text):
 
 def navbox_squad(title):
     """Fallback for articles whose squad is a table or a transclusion: Template:<club> squad, kept current by the same editors."""
-    names = [title, re.sub(r'\s+(?:A\.?F\.?C\.?|F\.?C\.?|S\.?C\.?|C\.?F\.?)$', '', title)]
+    names = [title, re.sub(r'\s+(?:A\.?F\.?C\.?|F\.?C\.?|S\.?C\.?|C\.?F\.?)$', '', title), title.replace('.', '')]
     for t in dict.fromkeys(names):
         for suffix in (' squad', ' current squad', ' roster'):
             try:
@@ -142,6 +142,8 @@ def navbox_squad(title):
             except Exception:  # noqa: BLE001
                 continue
             rows = parse_navbox(text)
+            if len(rows) < 14:   # squad templates with a table format hold ordinary {{Fs player}} rows
+                rows = [r for r in parse_squad('\n== Current squad ==\n' + text) if not r['loan']]
             if len(rows) >= 14:
                 return rows, real
             time.sleep(.4)
@@ -331,6 +333,7 @@ def leumit_squad(info, name_he, a):
         try:
             sr = get(HE_API, {'action': 'query', 'list': 'search', 'srsearch': name_he + ' כדורגל', 'srlimit': 5, 'format': 'json'})
             cands += [x['title'] for x in sr.get('query', {}).get('search', [])]
+            info['_cands'] = ['he:' + t for t in cands]
         except Exception as e:  # noqa: BLE001
             print('hewiki search', name_he, e)
         words = name_he.split()
@@ -394,7 +397,23 @@ def main():
                         report.append({'key': key, 'ok': True, 'n': len(out['players']), 'qid': sum(1 for p in out['players'] if p['qid']),
                                        'he': len(out['players']), 'img': sum(1 for p in out['players'] if p['img']), 'src': 'hewiki'})
                         print(report[-1]); time.sleep(.8); continue
-                text, title = wikitext(info['en'])
+                try:
+                    text, title = wikitext(info['en'])
+                except KeyError:   # no such article: ask the search for the club's page (same place name, a football club)
+                    place = re.sub(r"^(?:Maccabi|Hapoel|Beitar|Ironi|F\.C\.|M\.S\.|Bnei)\s+|\s+(?:A\.?F\.?C\.?|F\.?C\.?)$", '', info['en']).strip()
+                    sr = get(WP_API, {'action': 'query', 'list': 'search', 'srsearch': place + ' football club', 'srlimit': 6, 'format': 'json'})
+                    found = [x['title'] for x in sr.get('query', {}).get('search', [])]
+                    info['_cands'] = info.get('_cands', []) + ['en:' + t for t in found]
+                    text = title = None
+                    for t in found:
+                        if place.split()[-1] not in t:
+                            continue
+                        tx, tt = wikitext(t)
+                        if len([r for r in parse_squad(tx) if not r['loan']]) >= a.min:
+                            text, title = tx, tt; break
+                        time.sleep(.4)
+                    if text is None:
+                        raise RuntimeError('no article with a squad; search gave ' + ' | '.join(info['_cands']))
                 if a.debug and info.get('he_title'):   # Hebrew Wikipedia squad lists use their own templates: dump them for a parser
                     try:
                         hd = get('https://he.wikipedia.org/w/api.php', {'action': 'parse', 'page': info['he_title'], 'prop': 'wikitext', 'redirects': 1, 'format': 'json', 'formatversion': 2})
