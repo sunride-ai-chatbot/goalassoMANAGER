@@ -37,6 +37,7 @@ const {JSDOM,VirtualConsole}=require('jsdom');
    let slate=$('.bc-slate');assert.ok(slate&&slate.classList.contains('half'),'half-time slate');assert.equal($$('.bc-l3').length,0,'the slate replaces the plate');
    assert.equal(slate.querySelector('.bc-s-title').textContent,'מחצית');assert.deepEqual([...slate.querySelectorAll('.bc-s-score bdi')].map(b=>b.textContent),['1','0']);
    assert.ok(slate.querySelector('.bc-s-scorers .h').textContent.includes("10'"),'scorer with the minute');assert.equal(slate.querySelectorAll('.bc-row').length,4);
+   const mom=$('#bcMom');assert.equal(mom.querySelectorAll('rect').length,45,'one momentum bar per minute played');assert.equal(mom.querySelectorAll('i.h').length,1,'the goal is marked on the home side of the strip');
    assert.equal($('#ctrlBtn').textContent,'מחצית שנייה');$('#ctrlBtn').click();assert.equal($('.bc-slate'),null,'the slate leaves when play resumes');
    // full time
    w.eval('G.live.m=89;matchTick();matchTick()');

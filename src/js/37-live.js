@@ -14,7 +14,7 @@ function startLive(restored){
   <div class="live-wrap"><div class="live-main">
   <div class="bug"><div class="bt h" style="--c:${h.c1};--c2:${h.c2||h.c1};--ink:${inkFor(h.c1)}"><i></i><b><span class="nf">${esc(h.name)}</span><span class="ns">${esc(h.short||h.name)}</span></b><span class="rc"></span></div><div class="bs num"><span id="gh">0</span><span class="muted">:</span><span id="ga">0</span></div><div class="bt a" style="--c:${a.c1};--c2:${a.c2||a.c1};--ink:${inkFor(a.c1)}"><span class="rc"></span><b><span class="nf">${esc(a.name)}</span><span class="ns">${esc(a.short||a.name)}</span></b><i></i></div>
     <div class="bc"><span class="clock num" id="clock">${fm(0)}</span><span class="tag live" id="livePill">LIVE</span><span class="lbl">${esc(M.ctx.label)}${M.ctx.neutral?' · מגרש ניטרלי':' · '+esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</span></div></div>
-  <div class="progress"><i id="prog" style="width:0%"></i></div>
+  <div class="progress"><i id="prog" style="width:0%"></i></div><div class="bc-mom" id="bcMom" aria-hidden="true"></div>
   ${ml==='off'?'':pitch2dHTML(h,a,M.att&&h.cap?M.att/h.cap:(M.ctx.kind==='friendly'?.3:.85))}
   ${Match3D.html()}
   <div class="xistrip" id="xiStrip"></div></div>
@@ -28,7 +28,7 @@ function startLive(restored){
   </aside></div>
   <div class="live-lower"><div class="card" id="statsCard" style="--hc:${matchColors(h,a).h.fill};--ac:${matchColors(h,a).a.fill}"><div id="stats"></div></div>
   <div class="card"><div class="ticker" id="ticker"><div class="muted">${ml==='off'?'שריקת פתיחה':'הקבוצות בדרך למגרש'}</div></div></div></div></div>`;
-  $('top').classList.add('hide');bcMount();
+  $('top').classList.add('hide');bcMount();bcMomentum(M,h,a);
   const p3d=Match3D.mount(M,h,a);
   const tick=$('ticker');let paused=true,shown=0,mult=1;const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}if(!p3d?.enabled||p2d.px&&(p2d.pending||p2d.rp))pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
   if(p2d){p2d.onTap=(pid,team)=>{p2d.labels[pid]=performance.now()+2200;if(team===G.me&&!M.done&&!M.playback&&M.subs[G.me]<MAX_SUBS){pause();openSubModal(pid)}}}
@@ -63,7 +63,7 @@ function startLive(restored){
     p3d?.update();
     if(p2d){pitchMinute(p2d,M,h,a,M.ev.filter(e=>e.m===M.m));if(p2d.snap)pitchFrame(p2d)}
     drawSide();
-    $('gh').textContent=M.gh;$('ga').textContent=M.ga;$('clock').textContent=fm(M.m);$('prog').style.width=(M.m/90*100)+'%';$('subCount').textContent=M.subs[G.me];bcScore(M,h,a);
+    $('gh').textContent=M.gh;$('ga').textContent=M.ga;$('clock').textContent=fm(M.m);$('prog').style.width=(M.m/90*100)+'%';$('subCount').textContent=M.subs[G.me];bcScore(M,h,a);bcMomentum(M,h,a);
     const tp=M.poss[h.id]+M.poss[a.id]||1;const ph=Math.round(M.poss[h.id]/tp*100);const bar=(l,x,y)=>{const t=x+y||1;return `<div class="mstat"><span class="num">${x}</span><div class="bars"><i class="h" style="width:${x/t*100}%"></i><i class="a" style="width:${y/t*100}%"></i></div><span class="num">${y}</span><span class="muted tiny" style="grid-column:1/-1;text-align:center;margin-top:-4px">${l}</span></div>`};
     $('stats').innerHTML=bar('החזקת כדור %',ph,100-ph)+bar('בעיטות',M.shots[h.id],M.shots[a.id])+bar('למסגרת',(M.sot||{})[h.id]||0,(M.sot||{})[a.id]||0)+bar('קרנות',(M.corners||{})[h.id]||0,(M.corners||{})[a.id]||0)+bar('מסירות',(M.passes||{})[h.id]||0,(M.passes||{})[a.id]||0);
     if(replayQ&&!M.done){const e=replayQ;replayQ=null;const wasPaused=paused;paused=true;playReplay(p2d,e,h,()=>{if(!wasPaused&&!M.done&&$('ctrlBtn').textContent==='השהה')paused=false})}

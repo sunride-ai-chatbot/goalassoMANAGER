@@ -111,3 +111,11 @@
  .bc-row{grid-template-columns:74px minmax(0,1fr) 74px}.bc-row .v{font-size:24px}.bc-mid .l{font-size:14px}.bc-bars{height:8px}.bc-rows{gap:8px}
  .bc-s-scorers{font-size:14px}.bc-motm{font-size:15px;margin-top:8px}.bc-motm strong{font-size:30px}.bc-motm bdi{font-size:22px}.bc-face.sm{width:42px;height:42px}
 }
+
+/* momentum strip (replaces the plain progress bar on the live screen) */
+.live-view .progress{display:none}
+.bc-mom{position:relative;height:30px;margin:6px 0 8px;border-radius:6px;background:#0a0e14;overflow:hidden;direction:rtl}
+.bc-mom svg{display:block;width:100%;height:100%}
+.bc-mom i{position:absolute;width:7px;height:7px;margin-right:-3.5px;border-radius:50%;background:#f6f2e7;box-shadow:0 0 0 1.5px #0a0e14}
+.bc-mom i.h{top:2px}.bc-mom i.a{bottom:2px}
+@media(min-width:900px){.bc-mom{height:38px}}

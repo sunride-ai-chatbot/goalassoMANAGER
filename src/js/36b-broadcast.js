@@ -4,6 +4,7 @@
                    queued so plates never overlap; a goal or a red card clears minor plates that are still waiting
    · score bug     goal pulse in the scoring club's colour and sent-off markers beside the club name (bcScore)
    · slate         the half-time / full-time board over the pitch: score, scorers, possession, shots, expected goals
+   · momentum      the strip under the score bug: who is on top, minute by minute (bcMomentum)
    The layer is #bcLayer inside the arena. With match graphics switched off it is a flat strip under the score bug that
    only shows the slates (plates would make the page jump).
    The ticker below the pitch still carries every line as text, so the layer itself is aria-hidden. */
@@ -78,3 +79,16 @@ function bcSlate(M,h,a,kind){const L=bcLayer();if(!L)return;bcSlateHide();bcRese
     <div class="bc-s-scorers"><div class="h">${bcScorers(M,h.id)}</div><div class="a">${bcScorers(M,a.id)}</div></div>
     <div class="bc-rows">${row('אחזקת כדור',ph+'%',(100-ph)+'%',ph,100-ph)}${row('בעיטות',M.shots[h.id],M.shots[a.id],M.shots[h.id],M.shots[a.id])}${row('למסגרת',sot[h.id]||0,sot[a.id]||0,sot[h.id]||0,sot[a.id]||0)}${row('שערים צפויים',xh.toFixed(2),xa.toFixed(2),xh,xa)}</div>
     ${mm?`<div class="bc-motm"><span class="bc-face sm" style="${faceFrameStyle(mp)}">${mp?playerPortraitHTML(mp,club(mm.team),'bcm'+(++BC.seq)):''}</span><span>שחקן המשחק</span><strong>${esc(mm.name)}</strong><bdi>${esc(String(mm.r))}</bdi></div>`:''}</div>`)}
+/* momentum strip under the score bug: one bar per minute, up for the home side and down for the away side. A minute's
+   weight is who had the ball plus what happened (shots by their xG, corners, goals), smoothed over three minutes; dots
+   mark the goals. Minute 0 is at the right, like the rest of the right-to-left screen. */
+function bcMomentum(M,h,a){const el=document.getElementById('bcMom');if(!el)return;const n=Math.min(90,M.m);const v=new Array(92).fill(0);
+  for(let i=1;i<=n;i++)if(M.pm&&M.pm[i-1]!=null)v[i]=(M.pm[i-1]?1:-1)*.3;
+  const goals=[];
+  for(const e of M.ev){if(!(e.m>=1&&e.m<=90))continue;const s=e.team===h.id?1:e.team===a.id?-1:0;if(!s)continue;
+    if(e.t==='goal'||e.t==='pen'||e.t==='own'){v[e.m]+=s*1.5;goals.push(`<i class="${s>0?'h':'a'}" style="right:${(e.m/90*100).toFixed(1)}%"></i>`)}
+    else if(e.t==='shot'||e.t==='penmiss')v[e.m]+=s*(.5+2*(e.xg||0));else if(e.t==='corner')v[e.m]+=s*.3}
+  const col=matchColors(h,a);let bars='';
+  for(let i=1;i<=n;i++){const s=clamp((v[i]*.5+v[i-1]*.3+(i>1?v[i-2]:0)*.2)/1.1,-1,1);const hh=Math.max(.5,Math.abs(s)*8.8);
+    bars+=`<rect x="${90-i}" y="${s>=0?(10-hh).toFixed(2):10}" width=".74" height="${hh.toFixed(2)}" fill="${s>=0?col.h.fill:col.a.fill}"/>`}
+  el.innerHTML=`<svg viewBox="0 0 90 20" preserveAspectRatio="none"><line x1="0" y1="10" x2="90" y2="10" stroke="#ffffff26" stroke-width=".25"/><line x1="45" y1="0" x2="45" y2="20" stroke="#ffffff3d" stroke-width=".3" stroke-dasharray="1.2 1.2"/>${bars}</svg>${goals.join('')}`}
