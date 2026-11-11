@@ -4,7 +4,8 @@
                    queued so plates never overlap; a goal or a red card clears minor plates that are still waiting
    · score bug     goal pulse in the scoring club's colour and sent-off markers beside the club name (bcScore)
    · slate         the half-time / full-time board over the pitch: score, scorers, possession, shots, expected goals
-   The layer is #bcLayer inside the arena, or a flat strip under the score bug when match graphics are switched off.
+   The layer is #bcLayer inside the arena. With match graphics switched off it is a flat strip under the score bug that
+   only shows the slates (plates would make the page jump).
    The ticker below the pitch still carries every line as text, so the layer itself is aria-hidden. */
 const BC={q:[],cur:null,timer:null,seq:0};
 const BC_KIND={goal:['שער','goal',3],pen:['שער מפנדל','goal',3],own:['שער עצמי','own',3],red:['כרטיס אדום','red',2],penmiss:['פנדל הוחמץ','red',2],
@@ -39,7 +40,8 @@ function bcPlateHTML(pl){const c=pl.c;const face=pl.p?playerPortraitHTML(pl.p,c,
   return `<div class="bc-l3 ${pl.cls}" style="--c1:${c.c1};--c2:${c.c2&&c.c2!==c.c1?c.c2:inkFor(c.c1)};--ink:${inkFor(c.c1)}"><span class="bc-flag"></span><span class="bc-face" style="${faceFrameStyle(pl.p)}">${face}</span>
     <span class="bc-tx"><span class="bc-top"><b class="bc-tag">${esc(pl.tag)}</b><bdi class="bc-min">${pl.m}'</bdi><span class="bc-club">${esc(c.short||c.name)}</span></span>
     <strong class="bc-name">${esc(pl.name)}</strong>${pl.sub?`<span class="bc-sub">${pl.sub}</span>`:''}</span></div>`}
-function bcEvent(M,e){if(!bcLayer()||!e||e.quiet)return;let pl=null;try{pl=bcPlateFor(M,e)}catch(err){pl=null}if(!pl)return;
+function bcEvent(M,e){const L=bcLayer();if(!L||!e||e.quiet)return;if(L.classList.contains('flat'))return;   /* match graphics off: the ticker carries the events; only the slates show */
+  let pl=null;try{pl=bcPlateFor(M,e)}catch(err){pl=null}if(!pl)return;
   if(pl.pri>=2)BC.q=BC.q.filter(x=>x.pri>=2);
   if(BC.q.length>=3){const i=BC.q.findIndex(x=>x.pri<=pl.pri);if(i<0)return;BC.q.splice(i,1)}
   BC.q.push(pl);if(!BC.cur)bcNext()}

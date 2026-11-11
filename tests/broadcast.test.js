@@ -19,7 +19,10 @@ const {JSDOM,VirtualConsole}=require('jsdom');
        if(M.m===12){const c=club(M.a),x=xiPlayers(M,c).find(x=>x.p.pos==='DF');M.xi[c.id]=M.xi[c.id].filter(e=>e!==x.e);M.ev.push({m:M.m,t:'red',team:c.id,pid:x.p.id,name:fullName(x.p)});window.sentOff=fullName(x.p)}
        if(M.m===13){const c=club(M.h),x=xiPlayers(M,c).find(x=>x.p.pos==='MF');M.ev.push({m:M.m,t:'yellow',team:c.id,pid:x.p.id,name:fullName(x.p)})}
        if(M.m>=90)M.done=true};G.live.m=9;matchTick();`);
-   let plate=$('.bc-l3');assert.ok(plate&&plate.classList.contains('goal'),'goal plate');assert.equal(plate.querySelector('.bc-name').textContent,w.scorer);
+   let plate=$('.bc-l3');
+   if(motion==='off'){assert.equal(plate,null,'no plates without match graphics (the ticker carries the events)');assert.equal($('.live-view .bug').dataset.sc,'1:0');w.eval('matchTick();matchTick();matchTick()');assert.equal($$('.bug .bt.a .rc em').length,1)}
+   else{
+   assert.ok(plate&&plate.classList.contains('goal'),'goal plate');assert.equal(plate.querySelector('.bc-name').textContent,w.scorer);
    assert.ok(plate.querySelector('.bc-sub').textContent.includes(w.assist),'the assist is credited');assert.ok(plate.querySelector('.bc-face .player-portrait'),'the scorer\'s portrait');
    assert.equal(plate.querySelector('.bc-min').textContent,"10'");assert.equal($$('.bc-l3').length,1);
    const bug=$('.live-view .bug');assert.equal(bug.dataset.sc,'1:0');assert.ok(bug.classList.contains('pulse-h'),'home side pulses');assert.equal($('#gh').textContent,'1');
@@ -28,6 +31,7 @@ const {JSDOM,VirtualConsole}=require('jsdom');
    assert.equal($$('.bc-l3').length,1,'plates never overlap');
    assert.equal(w.eval('BC.q.map(p=>p.cls).join()'),'red,yel','later events wait their turn behind the goal');
    w.eval('bcNext()');plate=$('.bc-l3');assert.ok(plate.classList.contains('red'));assert.equal(plate.querySelector('.bc-name').textContent,w.sentOff);assert.match(plate.querySelector('.bc-sub').textContent,/10/);
+   }
    // half-time slate
    w.eval('G.live.m=44;matchTick()');
    let slate=$('.bc-slate');assert.ok(slate&&slate.classList.contains('half'),'half-time slate');assert.equal($$('.bc-l3').length,0,'the slate replaces the plate');
