@@ -1,0 +1,249 @@
+{
+"key": "struga",
+"name_he": "סטרוגה",
+"source": "enwiki:FC Struga",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Vasko Vasilev",
+"en": "Vasko Vasilev",
+"pos": "GK",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.08,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Andrej Jovchevski",
+"en": "Andrej Jovchevski",
+"pos": "GK",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.059,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Arbi Vosha",
+"en": "Arbi Vosha",
+"pos": "FW",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.1,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Hammond Agamah",
+"en": "Hammond Agamah",
+"pos": "FW",
+"age": 25,
+"nat": "France",
+"value_m": 0.1,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Florian Rochi",
+"en": "Florian Rochi",
+"pos": "FW",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.1,
+"qid": null,
+"no": "13"
+},
+{
+"he": "Marjan Radeski",
+"en": "Marjan Radeski",
+"pos": "FW",
+"age": 31,
+"nat": "North Macedonia",
+"value_m": 0.1,
+"qid": "Q17285363",
+"no": "14"
+},
+{
+"he": "Agon Demiri",
+"en": "Agon Demiri",
+"pos": "FW",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.1,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Altin Aliji",
+"en": "Altin Aliji",
+"pos": "FW",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.1,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Hristijan Maleski",
+"en": "Hristijan Maleski",
+"pos": "FW",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.1,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Alban Rochi",
+"en": "Alban Rochi",
+"pos": "DF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.08,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Landrit Rama",
+"en": "Landrit Rama",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.08,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Ard Kasami",
+"en": "Ard Kasami",
+"pos": "MF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.08,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Daniel Akinlosotu",
+"en": "Daniel Akinlosotu",
+"pos": "MF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.08,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Memetriza Hamza",
+"en": "Memetriza Hamza",
+"pos": "MF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.08,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Qendrim Ismajli",
+"en": "Qendrim Ismajli",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.08,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Bleron Ramadani",
+"en": "Bleron Ramadani",
+"pos": "DF",
+"age": 25,
+"nat": "North Macedonia",
+"value_m": 0.08,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Edison Kola",
+"en": "Edison Kola",
+"pos": "DF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.08,
+"qid": "Q106798081",
+"no": "80"
+},
+{
+"he": "Lassana Diako",
+"en": "Lassana Diako",
+"pos": "DF",
+"age": 25,
+"nat": "France",
+"value_m": 0.08,
+"qid": null,
+"no": "94"
+},
+{
+"he": "Adrian Zendelovski",
+"en": "Adrian Zendelovski",
+"pos": "MF",
+"age": 21,
+"nat": "North Macedonia",
+"value_m": 0.059,
+"qid": "Q139752507",
+"no": "8"
+},
+{
+"he": "Besmir Bojku",
+"en": "Besmir Bojku",
+"pos": "MF",
+"age": 31,
+"nat": "North Macedonia",
+"value_m": 0.059,
+"qid": "Q17279891",
+"no": "10"
+},
+{
+"he": "Pape Fall",
+"en": "Pape Fall",
+"pos": "DF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.059,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Andi Demiri",
+"en": "Andi Demiri",
+"pos": "DF",
+"age": 25,
+"nat": "Kosovo",
+"value_m": 0.059,
+"qid": null,
+"no": "59"
+},
+{
+"he": "Bunjamin Shabani",
+"en": "Bunjamin Shabani",
+"pos": "MF",
+"age": 35,
+"nat": "North Macedonia",
+"value_m": 0.04,
+"qid": "Q18127925",
+"no": "11"
+},
+{
+"he": "Egzon Belica",
+"en": "Egzon Belica",
+"pos": "DF",
+"age": 35,
+"nat": "North Macedonia",
+"value_m": 0.02,
+"qid": "Q20379054",
+"no": "88"
+}
+]
+}

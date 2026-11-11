@@ -1,0 +1,299 @@
+{
+"key": "apoel",
+"name_he": "אפואל",
+"source": "enwiki:APOEL FC",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Stratos Voniatis",
+"en": "Stratos Voniatis",
+"pos": "GK",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.506,
+"qid": null,
+"no": "91"
+},
+{
+"he": "Savvas Michos",
+"en": "Savvas Michos",
+"pos": "GK",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.44,
+"qid": null,
+"no": "78"
+},
+{
+"he": "אוליבר זלניקה",
+"en": "Oliver Zelenika",
+"pos": "GK",
+"age": 33,
+"nat": "Croatia",
+"value_m": 0.343,
+"qid": "Q15042666",
+"no": "1"
+},
+{
+"he": "Vid Belec",
+"en": "Vid Belec",
+"pos": "GK",
+"age": 36,
+"nat": "Slovenia",
+"value_m": 0.196,
+"qid": "Q923884",
+"no": "27"
+},
+{
+"he": "Daniel Mancini",
+"en": "Daniel Mancini",
+"pos": "FW",
+"age": 29,
+"nat": "Argentina",
+"value_m": 1.17,
+"qid": "Q25408280",
+"no": "7"
+},
+{
+"he": "Facundo Pérez",
+"en": "Facundo Pérez",
+"pos": "MF",
+"age": 27,
+"nat": "Argentina",
+"value_m": 1.06,
+"qid": "Q86360402",
+"no": "99"
+},
+{
+"he": "Joan Sastre",
+"en": "Joan Sastre",
+"pos": "DF",
+"age": 29,
+"nat": "Spain",
+"value_m": 0.946,
+"qid": "Q21039380",
+"no": "25"
+},
+{
+"he": "Dálcio",
+"en": "Dálcio",
+"pos": "MF",
+"age": 30,
+"nat": "Guinea-Bissau",
+"value_m": 0.93,
+"qid": "Q18921789",
+"no": "8"
+},
+{
+"he": "Dimitrios Limnios",
+"en": "Dimitrios Limnios",
+"pos": "MF",
+"age": 28,
+"nat": "Greece",
+"value_m": 0.881,
+"qid": "Q27948984",
+"no": "18"
+},
+{
+"he": "אנטונין באראק",
+"en": "Antonín Barák",
+"pos": "MF",
+"age": 31,
+"nat": "Czech Republic",
+"value_m": 0.848,
+"qid": "Q21293144",
+"no": "72"
+},
+{
+"he": "Gustavo Manduca",
+"en": "Gustavo Manduca",
+"pos": "MF",
+"age": 25,
+"nat": "Italy",
+"value_m": 0.767,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Marquinhos",
+"en": "Marquinhos",
+"pos": "FW",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.75,
+"qid": "Q98594769",
+"no": "10"
+},
+{
+"he": "Stavros Georgiou",
+"en": "Stavros Georgiou",
+"pos": "FW",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.718,
+"qid": null,
+"no": "70"
+},
+{
+"he": "Álvaro Carrillo",
+"en": "Álvaro Carrillo",
+"pos": "DF",
+"age": 24,
+"nat": "Spain",
+"value_m": 0.701,
+"qid": "Q115516839",
+"no": "16"
+},
+{
+"he": "Gabriel Maioli",
+"en": "Gabriel Maioli",
+"pos": "FW",
+"age": 23,
+"nat": "Brazil",
+"value_m": 0.669,
+"qid": "Q126961383",
+"no": "11"
+},
+{
+"he": "Pieros Sotiriou",
+"en": "Pieros Sotiriou",
+"pos": "FW",
+"age": 33,
+"nat": "Cyprus",
+"value_m": 0.653,
+"qid": "Q7191933",
+"no": "79"
+},
+{
+"he": "Miloš Degenek",
+"en": "Miloš Degenek",
+"pos": "DF",
+"age": 25,
+"nat": "Australia",
+"value_m": 0.62,
+"qid": null,
+"no": "5"
+},
+{
+"he": "אנסטסיוס בקסטאס",
+"en": "Tasos Bakasetas",
+"pos": "FW",
+"age": 33,
+"nat": "Greece",
+"value_m": 0.62,
+"qid": "Q2845537",
+"no": "9"
+},
+{
+"he": "Konstantinos Poursaitidis",
+"en": "Konstantinos Poursaitidis",
+"pos": "DF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.62,
+"qid": null,
+"no": "21"
+},
+{
+"he": "קוסטאס סטפילידיס",
+"en": "Kostas Stafylidis",
+"pos": "DF",
+"age": 32,
+"nat": "Greece",
+"value_m": 0.604,
+"qid": "Q3080534",
+"no": "3"
+},
+{
+"he": "Stylianos Vrontis",
+"en": "Stylianos Vrontis",
+"pos": "MF",
+"age": 21,
+"nat": "Cyprus",
+"value_m": 0.587,
+"qid": "Q136374313",
+"no": "6"
+},
+{
+"he": "Nikolas Angelopoulos",
+"en": "Nikolas Angelopoulos",
+"pos": "DF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.538,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Panayiotis Kattirtzis",
+"en": "Panayiotis Kattirtzis",
+"pos": "MF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.538,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Ioannis Avraamides",
+"en": "Ioannis Avraamides",
+"pos": "MF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.522,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Konstantinos Giannakou",
+"en": "Konstantinos Giannakou",
+"pos": "DF",
+"age": 25,
+"nat": "Cyprus",
+"value_m": 0.457,
+"qid": null,
+"no": "45"
+},
+{
+"he": "Ángel García",
+"en": "Ángel García",
+"pos": "DF",
+"age": 33,
+"nat": "Spain",
+"value_m": 0.392,
+"qid": "Q20977878",
+"no": "14"
+},
+{
+"he": "קונסטנטינוס לאיפיס",
+"en": "Konstantinos Laifis",
+"pos": "DF",
+"age": 33,
+"nat": "Cyprus",
+"value_m": 0.392,
+"qid": "Q16235558",
+"no": "34"
+},
+{
+"he": "Fabricio Pedrozo",
+"en": "Fabricio Pedrozo",
+"pos": "FW",
+"age": 33,
+"nat": "Argentina",
+"value_m": 0.343,
+"qid": "Q5854339",
+"no": "15"
+},
+{
+"he": "Filip Đuričić",
+"en": "Filip Đuričić",
+"pos": "MF",
+"age": 34,
+"nat": "Serbia",
+"value_m": 0.326,
+"qid": "Q285518",
+"no": "31"
+}
+]
+}

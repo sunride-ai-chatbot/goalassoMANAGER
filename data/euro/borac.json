@@ -1,0 +1,309 @@
+{
+"key": "borac",
+"name_he": "בוראץ באניה לוקה",
+"source": "enwiki:FK Borac Banja Luka",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Damjan Shishkovski",
+"en": "Damjan Shishkovski",
+"pos": "GK",
+"age": 31,
+"nat": "North Macedonia",
+"value_m": 0.181,
+"qid": "Q18816271",
+"no": "1"
+},
+{
+"he": "Nikola Ćetković",
+"en": "Nikola Ćetković",
+"pos": "GK",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.132,
+"qid": null,
+"no": "21"
+},
+{
+"he": "מלאדן יורקאס",
+"en": "Mladen Jurkas",
+"pos": "GK",
+"age": 18,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.132,
+"qid": "Q140007173",
+"no": "72"
+},
+{
+"he": "ניקולה טרזיץ'",
+"en": "Nikola Terzić",
+"pos": "FW",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.363,
+"qid": "Q106426794",
+"no": "36"
+},
+{
+"he": "Sandi Ogrinec",
+"en": "Sandi Ogrinec",
+"pos": "MF",
+"age": 28,
+"nat": "Slovenia",
+"value_m": 0.297,
+"qid": "Q28924990",
+"no": "98"
+},
+{
+"he": "יוריך קרולינה",
+"en": "Jurich Carolina",
+"pos": "DF",
+"age": 28,
+"nat": "Curaçao",
+"value_m": 0.247,
+"qid": "Q20972371",
+"no": "24"
+},
+{
+"he": "Ante Roguljić",
+"en": "Ante Roguljić",
+"pos": "MF",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.247,
+"qid": "Q15328041",
+"no": "44"
+},
+{
+"he": "Luka Juričić",
+"en": "Luka Juričić",
+"pos": "FW",
+"age": 29,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.231,
+"qid": "Q75517478",
+"no": "7"
+},
+{
+"he": "Karlo Perić",
+"en": "Karlo Perić",
+"pos": "FW",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.231,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Pavle Đajić",
+"en": "Pavle Đajić",
+"pos": "FW",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.231,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Viktor Rogan",
+"en": "Viktor Rogan",
+"pos": "DF",
+"age": 23,
+"nat": "Serbia",
+"value_m": 0.231,
+"qid": "Q111356253",
+"no": "19"
+},
+{
+"he": "Omar Sijarić",
+"en": "Omar Sijarić",
+"pos": "MF",
+"age": 24,
+"nat": "Montenegro",
+"value_m": 0.214,
+"qid": "Q100436203",
+"no": "17"
+},
+{
+"he": "Amar Milak",
+"en": "Amar Milak",
+"pos": "MF",
+"age": 25,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.198,
+"qid": null,
+"no": "47"
+},
+{
+"he": "דני רומרה",
+"en": "Dani Romera",
+"pos": "FW",
+"age": 31,
+"nat": "Spain",
+"value_m": 0.198,
+"qid": "Q16236989",
+"no": "99"
+},
+{
+"he": "Bart Meijers",
+"en": "Bart Meijers",
+"pos": "DF",
+"age": 29,
+"nat": "Netherlands",
+"value_m": 0.181,
+"qid": "Q28920845",
+"no": "2"
+},
+{
+"he": "Abel Pascual",
+"en": "Abel Pascual",
+"pos": "DF",
+"age": 25,
+"nat": "Spain",
+"value_m": 0.181,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Anderson Esiti",
+"en": "Anderson Esiti",
+"pos": "MF",
+"age": 32,
+"nat": "Nigeria",
+"value_m": 0.181,
+"qid": "Q16727317",
+"no": "13"
+},
+{
+"he": "Ivan Kukavica",
+"en": "Ivan Kukavica",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.181,
+"qid": null,
+"no": "22"
+},
+{
+"he": "David Vuković",
+"en": "David Vuković",
+"pos": "MF",
+"age": 22,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.165,
+"qid": "Q127414888",
+"no": "10"
+},
+{
+"he": "Sebastián Herrera",
+"en": "Sebastián Herrera",
+"pos": "DF",
+"age": 31,
+"nat": "North Macedonia",
+"value_m": 0.165,
+"qid": "Q23668728",
+"no": "16"
+},
+{
+"he": "Amer Hiroš",
+"en": "Amer Hiroš",
+"pos": "MF",
+"age": 30,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.148,
+"qid": "Q110287907",
+"no": "12"
+},
+{
+"he": "Stefan Savić",
+"en": "Stefan Savić",
+"pos": "MF",
+"age": 32,
+"nat": "Austria",
+"value_m": 0.148,
+"qid": "Q7606257",
+"no": "77"
+},
+{
+"he": "Branimir Cipetić",
+"en": "Branimir Cipetić",
+"pos": "DF",
+"age": 31,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.132,
+"qid": "Q90563508",
+"no": "4"
+},
+{
+"he": "Siniša Saničanin",
+"en": "Siniša Saničanin",
+"pos": "DF",
+"age": 31,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.132,
+"qid": "Q23771253",
+"no": "6"
+},
+{
+"he": "Srđan Grahovac",
+"en": "Srđan Grahovac",
+"pos": "MF",
+"age": 33,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.132,
+"qid": "Q17373232",
+"no": "15"
+},
+{
+"he": "Erik Riđan",
+"en": "Erik Riđan",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.132,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Nemanja Jakšić",
+"en": "Nemanja Jakšić",
+"pos": "DF",
+"age": 31,
+"nat": "Serbia",
+"value_m": 0.132,
+"qid": "Q16236796",
+"no": "30"
+},
+{
+"he": "Petar Kunić",
+"en": "Petar Kunić",
+"pos": "FW",
+"age": 33,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.115,
+"qid": "Q16515903",
+"no": "93"
+},
+{
+"he": "מילוש יואיץ'",
+"en": "Miloš Jojić",
+"pos": "MF",
+"age": 34,
+"nat": "Serbia",
+"value_m": 0.099,
+"qid": "Q6860599",
+"no": "18"
+},
+{
+"he": "Stojan Vranješ",
+"en": "Stojan Vranješ",
+"pos": "MF",
+"age": 39,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.082,
+"qid": "Q2699366",
+"no": "23"
+}
+]
+}

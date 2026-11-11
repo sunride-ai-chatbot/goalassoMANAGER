@@ -1,0 +1,259 @@
+{
+"key": "kairat",
+"name_he": "קאיראט אלמטי",
+"source": "enwiki:FC Kairat",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Temirlan Anarbekov",
+"en": "Temirlan Anarbekov",
+"pos": "GK",
+"age": 22,
+"nat": "Kazakhstan",
+"value_m": 0.265,
+"qid": "Q111335262",
+"no": "1"
+},
+{
+"he": "שרחאן קלמורזה",
+"en": "Sherkhan Kalmurza",
+"pos": "GK",
+"age": 19,
+"nat": "Kazakhstan",
+"value_m": 0.215,
+"qid": "Q136327268",
+"no": "82"
+},
+{
+"he": "Danila Buch",
+"en": "Danila Buch",
+"pos": "GK",
+"age": 18,
+"nat": "Kazakhstan",
+"value_m": 0.083,
+"qid": "Q139719363",
+"no": "30"
+},
+{
+"he": "Jorginho",
+"en": "Jorginho",
+"pos": "FW",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.53,
+"qid": "Q127685316",
+"no": "7"
+},
+{
+"he": "Jaakko Oksanen",
+"en": "Jaakko Oksanen",
+"pos": "MF",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.514,
+"qid": "Q47476916",
+"no": "13"
+},
+{
+"he": "Edmilson",
+"en": "Edmilson",
+"pos": "FW",
+"age": 29,
+"nat": "Brazil",
+"value_m": 0.497,
+"qid": "Q132353402",
+"no": "9"
+},
+{
+"he": "Damir Kasabulat",
+"en": "Damir Kasabulat",
+"pos": "DF",
+"age": 24,
+"nat": "Kazakhstan",
+"value_m": 0.48,
+"qid": "Q111286568",
+"no": "4"
+},
+{
+"he": "Adilet Sadybekov",
+"en": "Adilet Sadybekov",
+"pos": "MF",
+"age": 24,
+"nat": "Kazakhstan",
+"value_m": 0.431,
+"qid": "Q113575058",
+"no": "6"
+},
+{
+"he": "Gustavo Mendonça",
+"en": "Gustavo Mendonça",
+"pos": "MF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.414,
+"qid": "Q131346625",
+"no": "22"
+},
+{
+"he": "Mansur Birkurmanov",
+"en": "Mansur Birkurmanov",
+"pos": "FW",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.398,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Marc Gual",
+"en": "Marc Gual",
+"pos": "FW",
+"age": 30,
+"nat": "Spain",
+"value_m": 0.398,
+"qid": "Q27916801",
+"no": "28"
+},
+{
+"he": "Oiva Jukkola",
+"en": "Oiva Jukkola",
+"pos": "MF",
+"age": 24,
+"nat": "Finland",
+"value_m": 0.364,
+"qid": "Q123260742",
+"no": "19"
+},
+{
+"he": "לואיש מאטה",
+"en": "Luís Mata",
+"pos": "DF",
+"age": 29,
+"nat": "Portugal",
+"value_m": 0.348,
+"qid": "Q26251769",
+"no": "3"
+},
+{
+"he": "Lev Kurgin",
+"en": "Lev Kurgin",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.331,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Olzhas Baybek",
+"en": "Olzhas Baybek",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.315,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Adlan Nurgaliev",
+"en": "Adlan Nurgaliev",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.315,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Daniyar Tashpulatov",
+"en": "Daniyar Tashpulatov",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.315,
+"qid": null,
+"no": "59"
+},
+{
+"he": "Mukhamedali Abish",
+"en": "Mukhamedali Abish",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.298,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Alyaksandr Martynovich",
+"en": "Alyaksandr Martynovich",
+"pos": "DF",
+"age": 25,
+"nat": "Belarus",
+"value_m": 0.282,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Ismail Bekbolat",
+"en": "Ismail Bekbolat",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.282,
+"qid": null,
+"no": "81"
+},
+{
+"he": "Azamat Tuyakbaev",
+"en": "Azamat Tuyakbaev",
+"pos": "MF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.249,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Aleksandr Mrynskiy",
+"en": "Aleksandr Mrynskiy",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.249,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Alexander Shirobokov",
+"en": "Alexander Shirobokov",
+"pos": "DF",
+"age": 25,
+"nat": "Kazakhstan",
+"value_m": 0.249,
+"qid": null,
+"no": "25"
+},
+{
+"he": "ירקין טפאלוב",
+"en": "Yerkin Tapalov",
+"pos": "DF",
+"age": 32,
+"nat": "Kazakhstan",
+"value_m": 0.199,
+"qid": "Q65250275",
+"no": "20"
+},
+{
+"he": "Lucas Áfrico",
+"en": "Lucas Áfrico",
+"pos": "DF",
+"age": 31,
+"nat": "Brazil",
+"value_m": 0.182,
+"qid": "Q55584717",
+"no": "44"
+}
+]
+}

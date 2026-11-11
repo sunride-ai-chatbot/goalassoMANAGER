@@ -1,0 +1,309 @@
+{
+"key": "basel",
+"name_he": "באזל",
+"source": "enwiki:FC Basel",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Renato",
+"en": "Renato",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 1.54,
+"qid": null,
+"no": "49"
+},
+{
+"he": "יונאס אומלין",
+"en": "Jonas Omlin",
+"pos": "GK",
+"age": 32,
+"nat": "Switzerland",
+"value_m": 1.43,
+"qid": "Q22342690",
+"no": "1"
+},
+{
+"he": "Bennett Hoch",
+"en": "Bennett Hoch",
+"pos": "GK",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.35,
+"qid": null,
+"no": "48"
+},
+{
+"he": "Renato Widmer D'Autilia",
+"en": "Renato Widmer D'Autilia",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 1.35,
+"qid": null,
+"no": null
+},
+{
+"he": "Yohann Bopaka",
+"en": "Yohann Bopaka",
+"pos": "GK",
+"age": 25,
+"nat": null,
+"value_m": 1.18,
+"qid": null,
+"no": null
+},
+{
+"he": "Simon Caillet",
+"en": "Simon Caillet",
+"pos": "GK",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.11,
+"qid": null,
+"no": null
+},
+{
+"he": "Mirko Salvi",
+"en": "Mirko Salvi",
+"pos": "GK",
+"age": 32,
+"nat": "Switzerland",
+"value_m": 1.09,
+"qid": "Q17525065",
+"no": "13"
+},
+{
+"he": "Žan Celar",
+"en": "Žan Celar",
+"pos": "FW",
+"age": 27,
+"nat": "Slovenia",
+"value_m": 4.07,
+"qid": "Q30005073",
+"no": "9"
+},
+{
+"he": "פיליפ אוטלה",
+"en": "Philip Otele",
+"pos": "FW",
+"age": 27,
+"nat": "Nigeria",
+"value_m": 3.38,
+"qid": "Q65259981",
+"no": "7"
+},
+{
+"he": "פלביוס דניליוק",
+"en": "Flavius Daniliuc",
+"pos": "DF",
+"age": 25,
+"nat": "Austria",
+"value_m": 3.38,
+"qid": "Q65948503",
+"no": "24"
+},
+{
+"he": "קייגו צונמוטו",
+"en": "Keigo Tsunemoto",
+"pos": "DF",
+"age": 27,
+"nat": "Japan",
+"value_m": 3.12,
+"qid": "Q101198734",
+"no": "6"
+},
+{
+"he": "Metinho",
+"en": "Metinho",
+"pos": "MF",
+"age": 23,
+"nat": "Brazil",
+"value_m": 3.08,
+"qid": "Q102260164",
+"no": "5"
+},
+{
+"he": "Bećir Omeragić",
+"en": "Bećir Omeragić",
+"pos": "DF",
+"age": 24,
+"nat": "Switzerland",
+"value_m": 3.04,
+"qid": "Q65029690",
+"no": "4"
+},
+{
+"he": "Kazeem Olaigbe",
+"en": "Kazeem Olaigbe",
+"pos": "FW",
+"age": 23,
+"nat": "Belgium",
+"value_m": 2.98,
+"qid": "Q113366789",
+"no": "11"
+},
+{
+"he": "גבריאל סיגואה",
+"en": "Gabriel Sigua",
+"pos": "MF",
+"age": 21,
+"nat": "Georgia",
+"value_m": 2.61,
+"qid": "Q115592990",
+"no": "26"
+},
+{
+"he": "Clément Michelin",
+"en": "Clément Michelin",
+"pos": "DF",
+"age": 29,
+"nat": "France",
+"value_m": 2.53,
+"qid": "Q26033078",
+"no": "22"
+},
+{
+"he": "Mahamadou Kanouté",
+"en": "Mahamadou Kanouté",
+"pos": "FW",
+"age": 25,
+"nat": "France",
+"value_m": 2.16,
+"qid": null,
+"no": null
+},
+{
+"he": "Jamal Camci",
+"en": "Jamal Camci",
+"pos": "FW",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 2.08,
+"qid": null,
+"no": null
+},
+{
+"he": "Kevin Rüegg",
+"en": "Kevin Rüegg",
+"pos": "DF",
+"age": 28,
+"nat": "Switzerland",
+"value_m": 2.02,
+"qid": "Q33885886",
+"no": "27"
+},
+{
+"he": "Kaio Eduardo",
+"en": "Kaio Eduardo",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 1.9,
+"qid": null,
+"no": "46"
+},
+{
+"he": "Nicolas Vouilloz",
+"en": "Nicolas Vouilloz",
+"pos": "DF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.88,
+"qid": "Q96745606",
+"no": "3"
+},
+{
+"he": "Aaron Malouda",
+"en": "Aaron Malouda",
+"pos": "FW",
+"age": 20,
+"nat": "France",
+"value_m": 1.86,
+"qid": "Q122926221",
+"no": "17"
+},
+{
+"he": "Gezim Pepsi",
+"en": "Gezim Pepsi",
+"pos": "MF",
+"age": 28,
+"nat": "Kosovo",
+"value_m": 1.81,
+"qid": "Q112692489",
+"no": null
+},
+{
+"he": "Ludwig Małachowski Thorell",
+"en": "Ludwig Małachowski Thorell",
+"pos": "MF",
+"age": 21,
+"nat": "Sweden",
+"value_m": 1.8,
+"qid": "Q133894880",
+"no": "8"
+},
+{
+"he": "Michael Izunwanne",
+"en": "Michael Izunwanne",
+"pos": "FW",
+"age": 25,
+"nat": "Poland",
+"value_m": 1.8,
+"qid": null,
+"no": null
+},
+{
+"he": "Moussa Cissé",
+"en": "Moussa Cissé",
+"pos": "DF",
+"age": 23,
+"nat": "France",
+"value_m": 1.75,
+"qid": "Q128871829",
+"no": "29"
+},
+{
+"he": "Luca Bühlmann",
+"en": "Luca Bühlmann",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.75,
+"qid": null,
+"no": null
+},
+{
+"he": "Axel Kuentz",
+"en": "Axel Kuentz",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.69,
+"qid": null,
+"no": null
+},
+{
+"he": "Agon Rexhaj",
+"en": "Agon Rexhaj",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.69,
+"qid": null,
+"no": null
+},
+{
+"he": "Josip Bralic",
+"en": "Josip Bralic",
+"pos": "FW",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 1.69,
+"qid": null,
+"no": null
+}
+]
+}

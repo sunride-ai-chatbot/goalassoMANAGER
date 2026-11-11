@@ -1,0 +1,279 @@
+{
+"key": "cska_sofia",
+"name_he": "צ.ס.ק.א. סופיה",
+"source": "enwiki:PFC CSKA Sofia",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Fyodor Lapoukhov",
+"en": "Fyodor Lapoukhov",
+"pos": "GK",
+"age": 23,
+"nat": "Belarus",
+"value_m": 0.296,
+"qid": "Q117390963",
+"no": "21"
+},
+{
+"he": "Dimitar Evtimov",
+"en": "Dimitar Evtimov",
+"pos": "GK",
+"age": 32,
+"nat": "Bulgaria",
+"value_m": 0.133,
+"qid": "Q16728886",
+"no": "25"
+},
+{
+"he": "Daniel Nikolov",
+"en": "Daniel Nikolov",
+"pos": "GK",
+"age": 20,
+"nat": "Bulgaria",
+"value_m": 0.118,
+"qid": "Q138111805",
+"no": "31"
+},
+{
+"he": "Léo Pereira",
+"en": "Léo Pereira",
+"pos": "FW",
+"age": 26,
+"nat": "Brazil",
+"value_m": 0.414,
+"qid": "Q106048941",
+"no": "38"
+},
+{
+"he": "Facundo Rodríguez",
+"en": "Facundo Rodríguez",
+"pos": "DF",
+"age": 26,
+"nat": "Argentina",
+"value_m": 0.399,
+"qid": "Q63340487",
+"no": "32"
+},
+{
+"he": "Bruno Jordão",
+"en": "Bruno Jordão",
+"pos": "MF",
+"age": 27,
+"nat": "Portugal",
+"value_m": 0.384,
+"qid": "Q26704556",
+"no": "6"
+},
+{
+"he": "Mohamed Brahimi",
+"en": "Mohamed Brahimi",
+"pos": "MF",
+"age": 27,
+"nat": "France",
+"value_m": 0.37,
+"qid": "Q111310016",
+"no": "11"
+},
+{
+"he": "Max Ebong",
+"en": "Max Ebong",
+"pos": "MF",
+"age": 27,
+"nat": "Belarus",
+"value_m": 0.34,
+"qid": "Q53534891",
+"no": "7"
+},
+{
+"he": "ג'יימס אטו",
+"en": "James Eto'o",
+"pos": "MF",
+"age": 25,
+"nat": "Cameroon",
+"value_m": 0.34,
+"qid": "Q113563588",
+"no": "99"
+},
+{
+"he": "Santiago Godoy",
+"en": "Santiago Godoy",
+"pos": "FW",
+"age": 25,
+"nat": "Argentina",
+"value_m": 0.325,
+"qid": "Q101019084",
+"no": "9"
+},
+{
+"he": "Ioannis Pittas",
+"en": "Ioannis Pittas",
+"pos": "FW",
+"age": 30,
+"nat": "Cyprus",
+"value_m": 0.31,
+"qid": "Q45287541",
+"no": "28"
+},
+{
+"he": "Cătălin Itu",
+"en": "Cătălin Itu",
+"pos": "MF",
+"age": 26,
+"nat": "Romania",
+"value_m": 0.31,
+"qid": "Q65557978",
+"no": "67"
+},
+{
+"he": "פסטור",
+"en": "Pastor",
+"pos": "DF",
+"age": 26,
+"nat": "Brazil",
+"value_m": 0.296,
+"qid": "Q114152695",
+"no": "2"
+},
+{
+"he": "Tamimou Ouorou",
+"en": "Tamimou Ouorou",
+"pos": "DF",
+"age": 23,
+"nat": "Benin",
+"value_m": 0.296,
+"qid": "Q131185792",
+"no": "3"
+},
+{
+"he": "Joël Zwarts",
+"en": "Joël Zwarts",
+"pos": "FW",
+"age": 27,
+"nat": "Netherlands",
+"value_m": 0.296,
+"qid": "Q61653603",
+"no": "10"
+},
+{
+"he": "סטפנו סנסי",
+"en": "Stefano Sensi",
+"pos": "MF",
+"age": 31,
+"nat": "Italy",
+"value_m": 0.281,
+"qid": "Q21055388",
+"no": "8"
+},
+{
+"he": "Ángelo Martino",
+"en": "Ángelo Martino",
+"pos": "DF",
+"age": 28,
+"nat": "Argentina",
+"value_m": 0.281,
+"qid": "Q28976861",
+"no": "17"
+},
+{
+"he": "Barry Cotter",
+"en": "Barry Cotter",
+"pos": "DF",
+"age": 27,
+"nat": "Ireland",
+"value_m": 0.281,
+"qid": "Q51746262",
+"no": "37"
+},
+{
+"he": "Teodor Ivanov",
+"en": "Teodor Ivanov",
+"pos": "DF",
+"age": 22,
+"nat": "Bulgaria",
+"value_m": 0.266,
+"qid": "Q134462818",
+"no": "14"
+},
+{
+"he": "Andrey Yordanov",
+"en": "Andrey Yordanov",
+"pos": "DF",
+"age": 24,
+"nat": "Bulgaria",
+"value_m": 0.266,
+"qid": "Q62692113",
+"no": "19"
+},
+{
+"he": "Georgi Chorbadzhiyski",
+"en": "Georgi Chorbadzhiyski",
+"pos": "MF",
+"age": 22,
+"nat": "Bulgaria",
+"value_m": 0.266,
+"qid": "Q122873700",
+"no": "80"
+},
+{
+"he": "Isaac Solet",
+"en": "Isaac Solet",
+"pos": "MF",
+"age": 25,
+"nat": "Central African Republic",
+"value_m": 0.266,
+"qid": "Q123338583",
+"no": "94"
+},
+{
+"he": "Jean-Philippe Gbamin",
+"en": "Jean-Philippe Gbamin",
+"pos": "DF",
+"age": 30,
+"nat": "Côte d'Ivoire",
+"value_m": 0.251,
+"qid": "Q14395948",
+"no": "5"
+},
+{
+"he": "Petko Panayotov",
+"en": "Petko Panayotov",
+"pos": "MF",
+"age": 21,
+"nat": "Bulgaria",
+"value_m": 0.207,
+"qid": "Q127603273",
+"no": "30"
+},
+{
+"he": "Dinis Almeida",
+"en": "Dinis Almeida",
+"pos": "DF",
+"age": 31,
+"nat": "Portugal",
+"value_m": 0.177,
+"qid": "Q26838418",
+"no": "4"
+},
+{
+"he": "Vasil Kaymakanov",
+"en": "Vasil Kaymakanov",
+"pos": "FW",
+"age": 19,
+"nat": "Bulgaria",
+"value_m": 0.177,
+"qid": "Q139971699",
+"no": "34"
+},
+{
+"he": "Aleks Tunchev",
+"en": "Aleks Tunchev",
+"pos": "DF",
+"age": 17,
+"nat": "Bulgaria",
+"value_m": 0.074,
+"qid": "Q138113189",
+"no": "91"
+}
+]
+}

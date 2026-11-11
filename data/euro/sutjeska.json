@@ -1,0 +1,309 @@
+{
+"key": "sutjeska",
+"name_he": "סוטייסקה ניקשיץ'",
+"source": "enwiki:FK Sutjeska Nikšić",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Tomaš Đurović",
+"en": "Tomaš Đurović",
+"pos": "GK",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Radoš Dubljević",
+"en": "Radoš Dubljević",
+"pos": "GK",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Vladan Giljen",
+"en": "Vladan Giljen",
+"pos": "GK",
+"age": 36,
+"nat": "Montenegro",
+"value_m": 0.018,
+"qid": "Q3784850",
+"no": "1"
+},
+{
+"he": "Marko Mrvaljević",
+"en": "Marko Mrvaljević",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.145,
+"qid": "Q124771721",
+"no": "99"
+},
+{
+"he": "אלכסנדר בולייביץ'",
+"en": "Aleksandar Boljević",
+"pos": "FW",
+"age": 30,
+"nat": "Montenegro",
+"value_m": 0.109,
+"qid": "Q15264840",
+"no": "7"
+},
+{
+"he": "Matija Gardašević",
+"en": "Matija Gardašević",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.109,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Petar Aničić",
+"en": "Petar Aničić",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.091,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Vasilije Čavor",
+"en": "Vasilije Čavor",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.091,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Marko Brnović",
+"en": "Marko Brnović",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.091,
+"qid": null,
+"no": "14"
+},
+{
+"he": "Danijel Nikolić",
+"en": "Danijel Nikolić",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.091,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Slobodan Babić",
+"en": "Slobodan Babić",
+"pos": "FW",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.091,
+"qid": null,
+"no": "55"
+},
+{
+"he": "Marko Šimun",
+"en": "Marko Šimun",
+"pos": "MF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.091,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Aleksa Golubović",
+"en": "Aleksa Golubović",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Mamadou Camara",
+"en": "Mamadou Camara",
+"pos": "MF",
+"age": 23,
+"nat": "Senegal",
+"value_m": 0.073,
+"qid": "Q116950343",
+"no": "3"
+},
+{
+"he": "Miloš Vračar",
+"en": "Miloš Vračar",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Igor Pajović",
+"en": "Igor Pajović",
+"pos": "MF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Kenroy Campbell",
+"en": "Kenroy Campbell",
+"pos": "FW",
+"age": 25,
+"nat": "Jamaica",
+"value_m": 0.073,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Balša Tošković",
+"en": "Balša Tošković",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "10"
+},
+{
+"he": "בוריס קופיטוביץ'",
+"en": "Boris Kopitović",
+"pos": "DF",
+"age": 31,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": "Q20726323",
+"no": "15"
+},
+{
+"he": "Ognjen Đinović",
+"en": "Ognjen Đinović",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "16"
+},
+{
+"he": "Jovan Čađenović",
+"en": "Jovan Čađenović",
+"pos": "MF",
+"age": 31,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": "Q33190021",
+"no": "20"
+},
+{
+"he": "Danilo Ćetković",
+"en": "Danilo Ćetković",
+"pos": "MF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Andrija Ražnatović",
+"en": "Andrija Ražnatović",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Jovan Mićković",
+"en": "Jovan Mićković",
+"pos": "FW",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Andrija Kecojević",
+"en": "Andrija Kecojević",
+"pos": "MF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Radoš Dedić",
+"en": "Radoš Dedić",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Anto Babić",
+"en": "Anto Babić",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.073,
+"qid": null,
+"no": "72"
+},
+{
+"he": "דני הוצ'קו",
+"en": "Deni Hočko",
+"pos": "MF",
+"age": 32,
+"nat": "Montenegro",
+"value_m": 0.054,
+"qid": "Q56254509",
+"no": "6"
+},
+{
+"he": "Marko Đukanović",
+"en": "Marko Đukanović",
+"pos": "DF",
+"age": 25,
+"nat": "Montenegro",
+"value_m": 0.054,
+"qid": null,
+"no": "25"
+},
+{
+"he": "אלכסנדר שצ'קיץ'",
+"en": "Aleksandar Šćekić",
+"pos": "MF",
+"age": 34,
+"nat": "Montenegro",
+"value_m": 0.036,
+"qid": "Q26266355",
+"no": "19"
+}
+]
+}

@@ -1,0 +1,269 @@
+{
+"key": "rfs",
+"name_he": "ר.פ.ס ריגה",
+"source": "enwiki:FK RFS",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Marko Marić",
+"en": "Marko Marić",
+"pos": "GK",
+"age": 30,
+"nat": "Croatia",
+"value_m": 0.072,
+"qid": "Q20641149",
+"no": "35"
+},
+{
+"he": "Jevgēņijs Ņerugals",
+"en": "Jevgēņijs Ņerugals",
+"pos": "GK",
+"age": 37,
+"nat": "Latvia",
+"value_m": 0.018,
+"qid": "Q33108539",
+"no": "16"
+},
+{
+"he": "Lasha Odisharia",
+"en": "Lasha Odisharia",
+"pos": "MF",
+"age": 23,
+"nat": "Georgia",
+"value_m": 0.109,
+"qid": "Q124357645",
+"no": "8"
+},
+{
+"he": "Kingsley Emenike",
+"en": "Kingsley Emenike",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.109,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Matheus Clemente",
+"en": "Matheus Clemente",
+"pos": "MF",
+"age": 28,
+"nat": "Portugal",
+"value_m": 0.109,
+"qid": "Q99463694",
+"no": "27"
+},
+{
+"he": "Mārtiņš Ķigurs",
+"en": "Mārtiņš Ķigurs",
+"pos": "MF",
+"age": 29,
+"nat": "Latvia",
+"value_m": 0.109,
+"qid": "Q41700831",
+"no": "49"
+},
+{
+"he": "Victor Osuagwu",
+"en": "Victor Osuagwu",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.09,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Roberts Veips",
+"en": "Roberts Veips",
+"pos": "DF",
+"age": 25,
+"nat": "Latvia",
+"value_m": 0.09,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Ismaël Diomandé",
+"en": "Ismaël Diomandé",
+"pos": "FW",
+"age": 22,
+"nat": "Côte d'Ivoire",
+"value_m": 0.09,
+"qid": "Q111043549",
+"no": "7"
+},
+{
+"he": "Cedric Kouadio",
+"en": "Cedric Kouadio",
+"pos": "FW",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.09,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Dmitrijs Zelenkovs",
+"en": "Dmitrijs Zelenkovs",
+"pos": "MF",
+"age": 26,
+"nat": "Latvia",
+"value_m": 0.09,
+"qid": "Q107096259",
+"no": "18"
+},
+{
+"he": "Mikaze Nagasawa",
+"en": "Mikaze Nagasawa",
+"pos": "MF",
+"age": 25,
+"nat": "Japan",
+"value_m": 0.09,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Žiga Lipušček",
+"en": "Žiga Lipušček",
+"pos": "DF",
+"age": 29,
+"nat": "Slovenia",
+"value_m": 0.09,
+"qid": "Q61070786",
+"no": "43"
+},
+{
+"he": "Modou Saidy",
+"en": "Modou Saidy",
+"pos": "MF",
+"age": 25,
+"nat": "Gambia",
+"value_m": 0.09,
+"qid": null,
+"no": "66"
+},
+{
+"he": "Niks Sliede",
+"en": "Niks Sliede",
+"pos": "DF",
+"age": 25,
+"nat": "Latvia",
+"value_m": 0.072,
+"qid": null,
+"no": "5"
+},
+{
+"he": "Aleksandar Filipović",
+"en": "Aleksandar Filipović",
+"pos": "DF",
+"age": 31,
+"nat": "Serbia",
+"value_m": 0.072,
+"qid": "Q16236133",
+"no": "6"
+},
+{
+"he": "Niks Dusalijevs",
+"en": "Niks Dusalijevs",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.072,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Rasid Njie",
+"en": "Rasid Njie",
+"pos": "MF",
+"age": 25,
+"nat": "Gambia",
+"value_m": 0.072,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Gauthier Mankenda",
+"en": "Gauthier Mankenda",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.072,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Strahinja Rakić",
+"en": "Strahinja Rakić",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.072,
+"qid": null,
+"no": "81"
+},
+{
+"he": "יאניס יקאוניקס",
+"en": "Jānis Ikaunieks",
+"pos": "MF",
+"age": 31,
+"nat": "Latvia",
+"value_m": 0.054,
+"qid": "Q17166609",
+"no": "10"
+},
+{
+"he": "Darko Lemajić",
+"en": "Darko Lemajić",
+"pos": "FW",
+"age": 33,
+"nat": "Serbia",
+"value_m": 0.054,
+"qid": "Q17198292",
+"no": "22"
+},
+{
+"he": "Herdi Prenga",
+"en": "Herdi Prenga",
+"pos": "DF",
+"age": 32,
+"nat": "Albania",
+"value_m": 0.054,
+"qid": "Q19594180",
+"no": "23"
+},
+{
+"he": "Shina Kumater",
+"en": "Shina Kumater",
+"pos": "DF",
+"age": 25,
+"nat": null,
+"value_m": 0.054,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Roberts Savaļnieks",
+"en": "Roberts Savaļnieks",
+"pos": "DF",
+"age": 33,
+"nat": "Latvia",
+"value_m": 0.036,
+"qid": "Q15714981",
+"no": "11"
+},
+{
+"he": "Stefan Panić",
+"en": "Stefan Panić",
+"pos": "MF",
+"age": 33,
+"nat": "Serbia",
+"value_m": 0.036,
+"qid": "Q20974206",
+"no": "26"
+}
+]
+}

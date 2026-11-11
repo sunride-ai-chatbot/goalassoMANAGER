@@ -1,0 +1,309 @@
+{
+"key": "dinamo_tbilisi",
+"name_he": "דינמו טביליסי",
+"source": "enwiki:FC Dinamo Tbilisi",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Mikheil Makatsaria",
+"en": "Mikheil Makatsaria",
+"pos": "GK",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.112,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Dachi Chochoshvili",
+"en": "Dachi Chochoshvili",
+"pos": "GK",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.112,
+"qid": null,
+"no": "38"
+},
+{
+"he": "{{abbr|Lucas Flores|Lucas Flores de Oliveira",
+"en": "{{abbr|Lucas Flores|Lucas Flores de Oliveira",
+"pos": "GK",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.096,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Mate Ghaghvishvili",
+"en": "Mate Ghaghvishvili",
+"pos": "GK",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.096,
+"qid": null,
+"no": "40"
+},
+{
+"he": "Giorgi Loria",
+"en": "Giorgi Loria",
+"pos": "GK",
+"age": 40,
+"nat": "Georgia",
+"value_m": 0.048,
+"qid": "Q3300662",
+"no": "1"
+},
+{
+"he": "Nika Ninua",
+"en": "Nika Ninua",
+"pos": "MF",
+"age": 27,
+"nat": "Georgia",
+"value_m": 0.272,
+"qid": "Q71986381",
+"no": "22"
+},
+{
+"he": "Maxime Do Couto",
+"en": "Maxime Do Couto",
+"pos": "FW",
+"age": 29,
+"nat": "France",
+"value_m": 0.256,
+"qid": "Q18057053",
+"no": "14"
+},
+{
+"he": "Levan Kharabadze",
+"en": "Levan Kharabadze",
+"pos": "DF",
+"age": 26,
+"nat": "Georgia",
+"value_m": 0.24,
+"qid": "Q60791339",
+"no": "31"
+},
+{
+"he": "Giorgi Kharaishvili",
+"en": "Giorgi Kharaishvili",
+"pos": "MF",
+"age": 30,
+"nat": "Georgia",
+"value_m": 0.208,
+"qid": "Q20582751",
+"no": "10"
+},
+{
+"he": "Algassime Bah",
+"en": "Algassime Bah",
+"pos": "FW",
+"age": 23,
+"nat": "Guinea",
+"value_m": 0.208,
+"qid": "Q109471039",
+"no": "12"
+},
+{
+"he": "Numan Kurdić",
+"en": "Numan Kurdić",
+"pos": "DF",
+"age": 27,
+"nat": "Bosnia-Herzegovina",
+"value_m": 0.208,
+"qid": "Q58009196",
+"no": "27"
+},
+{
+"he": "Reziko Danelia",
+"en": "Reziko Danelia",
+"pos": "FW",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.192,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Aleksandre Kalandadze",
+"en": "Aleksandre Kalandadze",
+"pos": "DF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.176,
+"qid": "Q115594461",
+"no": "3"
+},
+{
+"he": "Marios Pourzitidis",
+"en": "Marios Pourzitidis",
+"pos": "DF",
+"age": 27,
+"nat": "Greece",
+"value_m": 0.176,
+"qid": "Q88778716",
+"no": "13"
+},
+{
+"he": "Gabriel Gogua",
+"en": "Gabriel Gogua",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.176,
+"qid": null,
+"no": "26"
+},
+{
+"he": "Tornike Gobronidze",
+"en": "Tornike Gobronidze",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.16,
+"qid": null,
+"no": "25"
+},
+{
+"he": "Luka Tsikolia",
+"en": "Luka Tsikolia",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.16,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Matthew Gbomadu",
+"en": "Matthew Gbomadu",
+"pos": "FW",
+"age": 25,
+"nat": null,
+"value_m": 0.16,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Nikoloz Ugrekhelidze",
+"en": "Nikoloz Ugrekhelidze",
+"pos": "DF",
+"age": 23,
+"nat": "Georgia",
+"value_m": 0.144,
+"qid": "Q131293743",
+"no": "4"
+},
+{
+"he": "{{abbr|Welton|Welton Nunes Carvalho Junior",
+"en": "{{abbr|Welton|Welton Nunes Carvalho Junior",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.144,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Paris Psaltis",
+"en": "Paris Psaltis",
+"pos": "DF",
+"age": 29,
+"nat": "Cyprus",
+"value_m": 0.144,
+"qid": "Q47492359",
+"no": "17"
+},
+{
+"he": "Daniel Kvartskhava",
+"en": "Daniel Kvartskhava",
+"pos": "FW",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.144,
+"qid": null,
+"no": "21"
+},
+{
+"he": "Rati Aleksidze",
+"en": "Rati Aleksidze",
+"pos": "FW",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.144,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Lyes Houri",
+"en": "Lyes Houri",
+"pos": "MF",
+"age": 30,
+"nat": "France",
+"value_m": 0.144,
+"qid": "Q17476783",
+"no": "33"
+},
+{
+"he": "Koba Kakashvili",
+"en": "Koba Kakashvili",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.144,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Giorgi Gvasalia",
+"en": "Giorgi Gvasalia",
+"pos": "DF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.128,
+"qid": null,
+"no": "2"
+},
+{
+"he": "{{abbr|Léo Santos|Leonardo dos Santos Lopes da Silva",
+"en": "{{abbr|Léo Santos|Leonardo dos Santos Lopes da Silva",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.128,
+"qid": null,
+"no": "6"
+},
+{
+"he": "Halid Doltmurziev",
+"en": "Halid Doltmurziev",
+"pos": "FW",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.128,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Albert Gomez",
+"en": "Albert Gomez",
+"pos": "DF",
+"age": 25,
+"nat": "Gambia",
+"value_m": 0.112,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Nikoloz Tkalia",
+"en": "Nikoloz Tkalia",
+"pos": "MF",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.112,
+"qid": null,
+"no": "16"
+}
+]
+}

@@ -1,0 +1,229 @@
+{
+"key": "levadia",
+"name_he": "לבדיה טאלין",
+"source": "enwiki:FCI Levadia Tallinn",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Karl Andre Vallner",
+"en": "Karl Andre Vallner",
+"pos": "GK",
+"age": 28,
+"nat": "Estonia",
+"value_m": 0.064,
+"qid": "Q83788691",
+"no": "99"
+},
+{
+"he": "Oliver Ani",
+"en": "Oliver Ani",
+"pos": "GK",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.033,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Nikoloz Kutateladze",
+"en": "Nikoloz Kutateladze",
+"pos": "FW",
+"age": 25,
+"nat": "Georgia",
+"value_m": 0.08,
+"qid": "Q77283725",
+"no": "9"
+},
+{
+"he": "Geovani",
+"en": "Geovani",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.08,
+"qid": "Q108543957",
+"no": "19"
+},
+{
+"he": "Mark Oliver Roosnupp",
+"en": "Mark Oliver Roosnupp",
+"pos": "MF",
+"age": 29,
+"nat": "Estonia",
+"value_m": 0.064,
+"qid": "Q43304779",
+"no": "5"
+},
+{
+"he": "Gregor Lehtmets",
+"en": "Gregor Lehtmets",
+"pos": "FW",
+"age": 25,
+"nat": "Estonia",
+"value_m": 0.064,
+"qid": null,
+"no": "7"
+},
+{
+"he": "Frank Liivak",
+"en": "Frank Liivak",
+"pos": "MF",
+"age": 30,
+"nat": "Estonia",
+"value_m": 0.064,
+"qid": "Q16407627",
+"no": "23"
+},
+{
+"he": "Enock Otoo",
+"en": "Enock Otoo",
+"pos": "MF",
+"age": 22,
+"nat": "Ghana",
+"value_m": 0.064,
+"qid": "Q130858546",
+"no": "33"
+},
+{
+"he": "João Pedro",
+"en": "João Pedro",
+"pos": "MF",
+"age": 24,
+"nat": "Brazil",
+"value_m": 0.064,
+"qid": "Q111938441",
+"no": "36"
+},
+{
+"he": "Tanel Tammik",
+"en": "Tanel Tammik",
+"pos": "DF",
+"age": 24,
+"nat": "Estonia",
+"value_m": 0.048,
+"qid": "Q138853876",
+"no": "4"
+},
+{
+"he": "Rasmus Peetson",
+"en": "Rasmus Peetson",
+"pos": "MF",
+"age": 31,
+"nat": "Estonia",
+"value_m": 0.048,
+"qid": "Q18753412",
+"no": "6"
+},
+{
+"he": "Aleksandr Zakarliuka",
+"en": "Aleksandr Zakarliuka",
+"pos": "MF",
+"age": 25,
+"nat": "Russia",
+"value_m": 0.048,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Wendell",
+"en": "Wendell",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.048,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Mihkel Ainsalu",
+"en": "Mihkel Ainsalu",
+"pos": "MF",
+"age": 30,
+"nat": "Estonia",
+"value_m": 0.048,
+"qid": "Q43433494",
+"no": "11"
+},
+{
+"he": "Robert Kirss",
+"en": "Robert Kirss",
+"pos": "FW",
+"age": 31,
+"nat": "Estonia",
+"value_m": 0.048,
+"qid": "Q18624919",
+"no": "17"
+},
+{
+"he": "Alexandre",
+"en": "Alexandre",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.048,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Mollo Bessala",
+"en": "Mollo Bessala",
+"pos": "FW",
+"age": 25,
+"nat": "Cameroon",
+"value_m": 0.048,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Kauã Davi",
+"en": "Kauã Davi",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.048,
+"qid": null,
+"no": "71"
+},
+{
+"he": "Abraham Nwankwo",
+"en": "Abraham Nwankwo",
+"pos": "DF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.033,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Joseph Saliste",
+"en": "Joseph Saliste",
+"pos": "DF",
+"age": 31,
+"nat": "Estonia",
+"value_m": 0.033,
+"qid": "Q29420193",
+"no": "29"
+},
+{
+"he": "Victory Iboro",
+"en": "Victory Iboro",
+"pos": "DF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.033,
+"qid": null,
+"no": "35"
+},
+{
+"he": "Maksimilian Skvortsov",
+"en": "Maksimilian Skvortsov",
+"pos": "MF",
+"age": 18,
+"nat": "Estonia",
+"value_m": 0.015,
+"qid": "Q136815298",
+"no": "21"
+}
+]
+}

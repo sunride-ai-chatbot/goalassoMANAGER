@@ -1,0 +1,279 @@
+{
+"key": "sturm_graz",
+"name_he": "שטורם גראץ",
+"source": "enwiki:SK Sturm Graz",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Adam Stejskal",
+"en": "Adam Stejskal",
+"pos": "GK",
+"age": 24,
+"nat": "Czech Republic",
+"value_m": 2.31,
+"qid": "Q97665319",
+"no": null
+},
+{
+"he": "Daniil Khudyakov",
+"en": "Daniil Khudyakov",
+"pos": "GK",
+"age": 22,
+"nat": "Russia",
+"value_m": 2.28,
+"qid": "Q108688110",
+"no": "53"
+},
+{
+"he": "Ammar Helać",
+"en": "Ammar Helać",
+"pos": "GK",
+"age": 28,
+"nat": "Austria",
+"value_m": 1.94,
+"qid": "Q43267150",
+"no": "22"
+},
+{
+"he": "Elias Lorenz",
+"en": "Elias Lorenz",
+"pos": "GK",
+"age": 25,
+"nat": "Austria",
+"value_m": 1.61,
+"qid": null,
+"no": "41"
+},
+{
+"he": "סידי ג'אטה",
+"en": "Seedy Jatta",
+"pos": "FW",
+"age": 23,
+"nat": "Norway",
+"value_m": 4.33,
+"qid": "Q107215017",
+"no": "20"
+},
+{
+"he": "עומר דיאקיטה",
+"en": "Oumar Diakité",
+"pos": "FW",
+"age": 22,
+"nat": "Côte d'Ivoire",
+"value_m": 3.84,
+"qid": "Q110531201",
+"no": "14"
+},
+{
+"he": "סימון ולודרצ'יק",
+"en": "Szymon Włodarczyk",
+"pos": "FW",
+"age": 23,
+"nat": "Poland",
+"value_m": 3.68,
+"qid": "Q105824445",
+"no": "17"
+},
+{
+"he": "אריאן מאליץ'",
+"en": "Arjan Malić",
+"pos": "DF",
+"age": 21,
+"nat": "Bosnia-Herzegovina",
+"value_m": 3.26,
+"qid": "Q121028932",
+"no": "23"
+},
+{
+"he": "Otar Kiteishvili",
+"en": "Otar Kiteishvili",
+"pos": "MF",
+"age": 30,
+"nat": "Georgia",
+"value_m": 3.15,
+"qid": "Q19321096",
+"no": "10"
+},
+{
+"he": "Belmin Beganović",
+"en": "Belmin Beganović",
+"pos": "FW",
+"age": 21,
+"nat": "Austria",
+"value_m": 2.96,
+"qid": "Q113360830",
+"no": "26"
+},
+{
+"he": "Niklas Geyrhofer",
+"en": "Niklas Geyrhofer",
+"pos": "DF",
+"age": 26,
+"nat": "Austria",
+"value_m": 2.92,
+"qid": "Q85945053",
+"no": "35"
+},
+{
+"he": "Simon Seidl",
+"en": "Simon Seidl",
+"pos": "MF",
+"age": 23,
+"nat": "Austria",
+"value_m": 2.91,
+"qid": "Q113336460",
+"no": "19"
+},
+{
+"he": "Valmir Matoshi",
+"en": "Valmir Matoshi",
+"pos": "MF",
+"age": 23,
+"nat": "Kosovo",
+"value_m": 2.91,
+"qid": "Q138328476",
+"no": "79"
+},
+{
+"he": "Nelson Weiper",
+"en": "Nelson Weiper",
+"pos": "FW",
+"age": 21,
+"nat": "Germany",
+"value_m": 2.89,
+"qid": "Q114348019",
+"no": "44"
+},
+{
+"he": "Jon Gorenc Stanković",
+"en": "Jon Gorenc Stanković",
+"pos": "MF",
+"age": 30,
+"nat": "Slovenia",
+"value_m": 2.52,
+"qid": "Q16840112",
+"no": "4"
+},
+{
+"he": "Leon Grgić",
+"en": "Leon Grgić",
+"pos": "FW",
+"age": 20,
+"nat": "Croatia",
+"value_m": 2.47,
+"qid": "Q113502721",
+"no": "9"
+},
+{
+"he": "Axel Kayombo",
+"en": "Axel Kayombo",
+"pos": "FW",
+"age": 20,
+"nat": "DR Congo",
+"value_m": 2.45,
+"qid": "Q134612350",
+"no": "11"
+},
+{
+"he": "Gizo Mamageishvili",
+"en": "Gizo Mamageishvili",
+"pos": "MF",
+"age": 23,
+"nat": "Georgia",
+"value_m": 2.42,
+"qid": "Q131447457",
+"no": "15"
+},
+{
+"he": "Petar Petrović",
+"en": "Petar Petrović",
+"pos": "DF",
+"age": 21,
+"nat": "Serbia",
+"value_m": 2.1,
+"qid": "Q139891029",
+"no": "21"
+},
+{
+"he": "Filip Rózga",
+"en": "Filip Rózga",
+"pos": "MF",
+"age": 20,
+"nat": "Poland",
+"value_m": 2.08,
+"qid": "Q129840605",
+"no": "8"
+},
+{
+"he": "Paul Koller",
+"en": "Paul Koller",
+"pos": "DF",
+"age": 25,
+"nat": "Austria",
+"value_m": 2.05,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Jürgen Heil",
+"en": "Jürgen Heil",
+"pos": "DF",
+"age": 29,
+"nat": "Austria",
+"value_m": 1.96,
+"qid": "Q33130452",
+"no": "28"
+},
+{
+"he": "Emran Soglo",
+"en": "Emran Soglo",
+"pos": "DF",
+"age": 21,
+"nat": "England",
+"value_m": 1.93,
+"qid": "Q121008173",
+"no": "18"
+},
+{
+"he": "Luis Balbo",
+"en": "Luis Balbo",
+"pos": "DF",
+"age": 20,
+"nat": "Venezuela",
+"value_m": 1.73,
+"qid": "Q134434289",
+"no": "27"
+},
+{
+"he": "Jacob Hödl",
+"en": "Jacob Hödl",
+"pos": "MF",
+"age": 19,
+"nat": "Austria",
+"value_m": 1.72,
+"qid": "Q123598645",
+"no": "43"
+},
+{
+"he": "Albert Vallçi",
+"en": "Albert Vallçi",
+"pos": "DF",
+"age": 31,
+"nat": "Austria",
+"value_m": 1.54,
+"qid": "Q25273278",
+"no": "5"
+},
+{
+"he": "Luca Weinhandl",
+"en": "Luca Weinhandl",
+"pos": "MF",
+"age": 17,
+"nat": "Austria",
+"value_m": 0.823,
+"qid": "Q131401994",
+"no": "39"
+}
+]
+}

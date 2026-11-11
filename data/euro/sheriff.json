@@ -1,0 +1,289 @@
+{
+"key": "sheriff",
+"name_he": "שריף טיראספול",
+"source": "enwiki:FC Sheriff Tiraspol",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Emil Tîmbur",
+"en": "Emil Tîmbur",
+"pos": "GK",
+"age": 29,
+"nat": "Moldova",
+"value_m": 0.335,
+"qid": "Q29114902",
+"no": "1"
+},
+{
+"he": "Ivan Dyulgerov",
+"en": "Ivan Dyulgerov",
+"pos": "GK",
+"age": 27,
+"nat": "Bulgaria",
+"value_m": 0.318,
+"qid": "Q28970775",
+"no": "21"
+},
+{
+"he": "Renat Josan",
+"en": "Renat Josan",
+"pos": "GK",
+"age": 25,
+"nat": "Moldova",
+"value_m": 0.218,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Nicolae Cebotari",
+"en": "Nicolae Cebotari",
+"pos": "GK",
+"age": 29,
+"nat": "Moldova",
+"value_m": 0.218,
+"qid": "Q28972885",
+"no": "28"
+},
+{
+"he": "Dhoraso Klas",
+"en": "Dhoraso Klas",
+"pos": "MF",
+"age": 25,
+"nat": "Suriname",
+"value_m": 0.536,
+"qid": "Q100605627",
+"no": "26"
+},
+{
+"he": "Juanca Pineda",
+"en": "Juanca Pineda",
+"pos": "MF",
+"age": 26,
+"nat": "Dominican Republic",
+"value_m": 0.486,
+"qid": "Q105079895",
+"no": "77"
+},
+{
+"he": "מוסא קיאבו",
+"en": "Moussa Kyabou",
+"pos": "MF",
+"age": 28,
+"nat": "Mali",
+"value_m": 0.469,
+"qid": "Q106092166",
+"no": "18"
+},
+{
+"he": "Bourama Fomba",
+"en": "Bourama Fomba",
+"pos": "DF",
+"age": 27,
+"nat": "Mali",
+"value_m": 0.469,
+"qid": "Q100136222",
+"no": "35"
+},
+{
+"he": "Kabamba Kalabatama",
+"en": "Kabamba Kalabatama",
+"pos": "FW",
+"age": 24,
+"nat": "Norway",
+"value_m": 0.452,
+"qid": "Q93969423",
+"no": "9"
+},
+{
+"he": "Jayder Asprilla",
+"en": "Jayder Asprilla",
+"pos": "FW",
+"age": 25,
+"nat": "Colombia",
+"value_m": 0.419,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Veaceslav Cozma",
+"en": "Veaceslav Cozma",
+"pos": "FW",
+"age": 25,
+"nat": "Moldova",
+"value_m": 0.385,
+"qid": null,
+"no": "27"
+},
+{
+"he": "Konan Loukou",
+"en": "Konan Loukou",
+"pos": "FW",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.369,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Dan Boțan",
+"en": "Dan Boțan",
+"pos": "FW",
+"age": 25,
+"nat": "Moldova",
+"value_m": 0.352,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Vladimir Fratea",
+"en": "Vladimir Fratea",
+"pos": "MF",
+"age": 23,
+"nat": "Moldova",
+"value_m": 0.352,
+"qid": "Q136449647",
+"no": "10"
+},
+{
+"he": "Arli Pergjoni",
+"en": "Arli Pergjoni",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.352,
+"qid": null,
+"no": "76"
+},
+{
+"he": "Samba Koné",
+"en": "Samba Koné",
+"pos": "MF",
+"age": 24,
+"nat": "Mali",
+"value_m": 0.352,
+"qid": "Q108214578",
+"no": "99"
+},
+{
+"he": "{{abbr|Sapata|Vitor Hugo Morais de Oliveira",
+"en": "{{abbr|Sapata|Vitor Hugo Morais de Oliveira",
+"pos": "MF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.335,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Natus Swen",
+"en": "Natus Swen",
+"pos": "DF",
+"age": 25,
+"nat": "Liberia",
+"value_m": 0.318,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Baye Assane Ciss",
+"en": "Baye Assane Ciss",
+"pos": "DF",
+"age": 25,
+"nat": "Senegal",
+"value_m": 0.318,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Ștefan Bîtca",
+"en": "Ștefan Bîtca",
+"pos": "MF",
+"age": 20,
+"nat": "Moldova",
+"value_m": 0.302,
+"qid": "Q135221254",
+"no": "7"
+},
+{
+"he": "Miguel Mota",
+"en": "Miguel Mota",
+"pos": "DF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.302,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Emmanuel Afetse",
+"en": "Emmanuel Afetse",
+"pos": "MF",
+"age": 25,
+"nat": "Ghana",
+"value_m": 0.302,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Soumaïla Magossouba",
+"en": "Soumaïla Magossouba",
+"pos": "DF",
+"age": 25,
+"nat": "Mali",
+"value_m": 0.285,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Vladislav Costin",
+"en": "Vladislav Costin",
+"pos": "MF",
+"age": 25,
+"nat": "Moldova",
+"value_m": 0.285,
+"qid": null,
+"no": "90"
+},
+{
+"he": "Danila Forov",
+"en": "Danila Forov",
+"pos": "DF",
+"age": 25,
+"nat": "Moldova",
+"value_m": 0.268,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Mihail Corotcov",
+"en": "Mihail Corotcov",
+"pos": "MF",
+"age": 25,
+"nat": "Moldova",
+"value_m": 0.251,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Jair Modelo",
+"en": "Jair Modelo",
+"pos": "DF",
+"age": 25,
+"nat": "Panama",
+"value_m": 0.251,
+"qid": null,
+"no": "37"
+},
+{
+"he": "Mamoutou Ouedraogo",
+"en": "Mamoutou Ouedraogo",
+"pos": "DF",
+"age": 25,
+"nat": "Burkina Faso",
+"value_m": 0.235,
+"qid": null,
+"no": "2"
+}
+]
+}

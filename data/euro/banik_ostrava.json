@@ -1,0 +1,279 @@
+{
+"key": "banik_ostrava",
+"name_he": "באניק אוסטרבה",
+"source": "enwiki:FC Baník Ostrava",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Martin Jedlička",
+"en": "Martin Jedlička",
+"pos": "GK",
+"age": 28,
+"nat": "Czech Republic",
+"value_m": 0.765,
+"qid": "Q44539176",
+"no": "23"
+},
+{
+"he": "Martin Hrubý",
+"en": "Martin Hrubý",
+"pos": "GK",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.493,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Matouš Babka",
+"en": "Matouš Babka",
+"pos": "GK",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.493,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Viktor Budinský",
+"en": "Viktor Budinský",
+"pos": "GK",
+"age": 33,
+"nat": "Slovakia",
+"value_m": 0.238,
+"qid": "Q7929652",
+"no": "1"
+},
+{
+"he": "Filip Kubala",
+"en": "Filip Kubala",
+"pos": "FW",
+"age": 26,
+"nat": "Czech Republic",
+"value_m": 0.952,
+"qid": "Q30004761",
+"no": "28"
+},
+{
+"he": "Matěj Chaluš",
+"en": "Matěj Chaluš",
+"pos": "DF",
+"age": 28,
+"nat": "Czech Republic",
+"value_m": 0.833,
+"qid": "Q28037504",
+"no": "37"
+},
+{
+"he": "Matúš Kmeť",
+"en": "Matúš Kmeť",
+"pos": "DF",
+"age": 26,
+"nat": "Slovakia",
+"value_m": 0.816,
+"qid": "Q59656543",
+"no": "81"
+},
+{
+"he": "Abdallah Gning",
+"en": "Abdallah Gning",
+"pos": "FW",
+"age": 27,
+"nat": "Senegal",
+"value_m": 0.799,
+"qid": "Q117747923",
+"no": "12"
+},
+{
+"he": "Jiří Boula",
+"en": "Jiří Boula",
+"pos": "MF",
+"age": 27,
+"nat": "Czech Republic",
+"value_m": 0.714,
+"qid": "Q127946484",
+"no": "5"
+},
+{
+"he": "Michal Kohút",
+"en": "Michal Kohút",
+"pos": "MF",
+"age": 26,
+"nat": "Czech Republic",
+"value_m": 0.697,
+"qid": "Q105940082",
+"no": "21"
+},
+{
+"he": "David Látal",
+"en": "David Látal",
+"pos": "FW",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.663,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Vlasiy Sinyavskiy",
+"en": "Vlasiy Sinyavskiy",
+"pos": "DF",
+"age": 29,
+"nat": "Estonia",
+"value_m": 0.629,
+"qid": "Q64494537",
+"no": "99"
+},
+{
+"he": "Yevheniy Skyba",
+"en": "Yevheniy Skyba",
+"pos": "DF",
+"age": 23,
+"nat": "Ukraine",
+"value_m": 0.612,
+"qid": "Q130299732",
+"no": "44"
+},
+{
+"he": "Abdullahi Bewene",
+"en": "Abdullahi Bewene",
+"pos": "MF",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 0.595,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Filip Šancl",
+"en": "Filip Šancl",
+"pos": "MF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.578,
+"qid": null,
+"no": "19"
+},
+{
+"he": "Jiří Míček",
+"en": "Jiří Míček",
+"pos": "DF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.578,
+"qid": null,
+"no": "42"
+},
+{
+"he": "Maksym Dyachuk",
+"en": "Maksym Dyachuk",
+"pos": "DF",
+"age": 23,
+"nat": "Ukraine",
+"value_m": 0.561,
+"qid": "Q114784800",
+"no": "16"
+},
+{
+"he": "Vít Škrkoň",
+"en": "Vít Škrkoň",
+"pos": "FW",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.561,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Roan Nogha",
+"en": "Roan Nogha",
+"pos": "DF",
+"age": 22,
+"nat": "Cameroon",
+"value_m": 0.561,
+"qid": "Q124633007",
+"no": "83"
+},
+{
+"he": "Daniel Holzer",
+"en": "Daniel Holzer",
+"pos": "MF",
+"age": 31,
+"nat": "Czech Republic",
+"value_m": 0.561,
+"qid": "Q5217512",
+"no": "95"
+},
+{
+"he": "Dantaye Gilbert",
+"en": "Dantaye Gilbert",
+"pos": "MF",
+"age": 21,
+"nat": "Trinidad and Tobago",
+"value_m": 0.51,
+"qid": "Q123135735",
+"no": "7"
+},
+{
+"he": "David Planka",
+"en": "David Planka",
+"pos": "MF",
+"age": 25,
+"nat": "Czech Republic",
+"value_m": 0.51,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Aboubacar Traore",
+"en": "Aboubacar Traore",
+"pos": "DF",
+"age": 25,
+"nat": "Côte d'Ivoire",
+"value_m": 0.476,
+"qid": null,
+"no": "8"
+},
+{
+"he": "ואצלב יורצ'קה",
+"en": "Václav Jurečka",
+"pos": "FW",
+"age": 32,
+"nat": "Czech Republic",
+"value_m": 0.408,
+"qid": "Q8531445",
+"no": "15"
+},
+{
+"he": "Artúr Musák",
+"en": "Artúr Musák",
+"pos": "MF",
+"age": 20,
+"nat": "Slovakia",
+"value_m": 0.374,
+"qid": "Q136089619",
+"no": "55"
+},
+{
+"he": "Rhodri Smith",
+"en": "Rhodri Smith",
+"pos": "DF",
+"age": 19,
+"nat": "Switzerland",
+"value_m": 0.357,
+"qid": "Q118747021",
+"no": "3"
+},
+{
+"he": "Michal Frydrych",
+"en": "Michal Frydrych",
+"pos": "DF",
+"age": 36,
+"nat": "Czech Republic",
+"value_m": 0.187,
+"qid": "Q3856344",
+"no": "17"
+}
+]
+}

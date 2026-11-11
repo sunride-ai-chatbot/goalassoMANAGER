@@ -1,0 +1,309 @@
+{
+"key": "lugano",
+"name_he": "לוגאנו",
+"source": "enwiki:FC Lugano",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Felix Gebhardt",
+"en": "Felix Gebhardt",
+"pos": "GK",
+"age": 24,
+"nat": "Germany",
+"value_m": 0.61,
+"qid": "Q98090041",
+"no": "28"
+},
+{
+"he": "David von Ballmoos",
+"en": "David von Ballmoos",
+"pos": "GK",
+"age": 31,
+"nat": "Switzerland",
+"value_m": 0.488,
+"qid": "Q35749541",
+"no": "16"
+},
+{
+"he": "Diego Mina",
+"en": "Diego Mina",
+"pos": "GK",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.397,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Albian Ajeti",
+"en": "Albian Ajeti",
+"pos": "FW",
+"age": 29,
+"nat": "Switzerland",
+"value_m": 1.16,
+"qid": "Q16148161",
+"no": "9"
+},
+{
+"he": "לארס לוקאס מאי",
+"en": "Lars Lukas Mai",
+"pos": "DF",
+"age": 26,
+"nat": "Germany",
+"value_m": 1.11,
+"qid": "Q52084009",
+"no": "17"
+},
+{
+"he": "Ahmed Kendouci",
+"en": "Ahmed Kendouci",
+"pos": "MF",
+"age": 27,
+"nat": "Algeria",
+"value_m": 1.08,
+"qid": "Q107171535",
+"no": "14"
+},
+{
+"he": "Uran Bislimi",
+"en": "Uran Bislimi",
+"pos": "MF",
+"age": 26,
+"nat": "Switzerland",
+"value_m": 1.01,
+"qid": "Q93635680",
+"no": "25"
+},
+{
+"he": "Hannes Delcroix",
+"en": "Hannes Delcroix",
+"pos": "DF",
+"age": 27,
+"nat": "Haiti",
+"value_m": 0.961,
+"qid": "Q56011432",
+"no": "3"
+},
+{
+"he": "Antonios Papadopoulos",
+"en": "Antonios Papadopoulos",
+"pos": "DF",
+"age": 26,
+"nat": "Germany",
+"value_m": 0.915,
+"qid": "Q42374597",
+"no": "6"
+},
+{
+"he": "Anto Grgić",
+"en": "Anto Grgić",
+"pos": "MF",
+"age": 29,
+"nat": "Switzerland",
+"value_m": 0.808,
+"qid": "Q22162713",
+"no": "8"
+},
+{
+"he": "Yanis Cimignani",
+"en": "Yanis Cimignani",
+"pos": "MF",
+"age": 24,
+"nat": "France",
+"value_m": 0.808,
+"qid": "Q98642596",
+"no": "21"
+},
+{
+"he": "Daniel Dos Santos",
+"en": "Daniel Dos Santos",
+"pos": "MF",
+"age": 23,
+"nat": "Switzerland",
+"value_m": 0.763,
+"qid": "Q131480422",
+"no": "27"
+},
+{
+"he": "Bryan Zurmühle",
+"en": "Bryan Zurmühle",
+"pos": "FW",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.763,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Mattia Zanotti",
+"en": "Mattia Zanotti",
+"pos": "DF",
+"age": 23,
+"nat": "Italy",
+"value_m": 0.732,
+"qid": "Q110074272",
+"no": "46"
+},
+{
+"he": "Nicolò Puddu",
+"en": "Nicolò Puddu",
+"pos": "FW",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.702,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Jason Parente",
+"en": "Jason Parente",
+"pos": "MF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.686,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Beckham Castro",
+"en": "Beckham Castro",
+"pos": "FW",
+"age": 22,
+"nat": "Colombia",
+"value_m": 0.671,
+"qid": "Q118964215",
+"no": "22"
+},
+{
+"he": "Ian Tiraboschi",
+"en": "Ian Tiraboschi",
+"pos": "FW",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.656,
+"qid": null,
+"no": "37"
+},
+{
+"he": "בחרוז קרימוב",
+"en": "Bekhruz Karimov",
+"pos": "DF",
+"age": 19,
+"nat": "Uzbekistan",
+"value_m": 0.61,
+"qid": "Q131470768",
+"no": "2"
+},
+{
+"he": "Claudio Cassano",
+"en": "Claudio Cassano",
+"pos": "MF",
+"age": 23,
+"nat": "Italy",
+"value_m": 0.58,
+"qid": "Q114672151",
+"no": "19"
+},
+{
+"he": "Carbone",
+"en": "Carbone",
+"pos": "DF",
+"age": 25,
+"nat": "Brazil",
+"value_m": 0.58,
+"qid": null,
+"no": "44"
+},
+{
+"he": "Elias Pihlström",
+"en": "Elias Pihlström",
+"pos": "MF",
+"age": 20,
+"nat": "Sweden",
+"value_m": 0.564,
+"qid": "Q133816007",
+"no": "24"
+},
+{
+"he": "Christian Raffa",
+"en": "Christian Raffa",
+"pos": "FW",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.564,
+"qid": null,
+"no": "33"
+},
+{
+"he": "Martim Marques",
+"en": "Martim Marques",
+"pos": "DF",
+"age": 22,
+"nat": "Portugal",
+"value_m": 0.534,
+"qid": "Q120637543",
+"no": "26"
+},
+{
+"he": "Gjan Ajdin",
+"en": "Gjan Ajdin",
+"pos": "MF",
+"age": 25,
+"nat": "Sweden",
+"value_m": 0.503,
+"qid": null,
+"no": "23"
+},
+{
+"he": "Damian Kelvin",
+"en": "Damian Kelvin",
+"pos": "DF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.473,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Joel Bichsel",
+"en": "Joel Bichsel",
+"pos": "DF",
+"age": 25,
+"nat": "Switzerland",
+"value_m": 0.473,
+"qid": null,
+"no": "18"
+},
+{
+"he": "אזג'יאן אליוסקי",
+"en": "Ezgjan Alioski",
+"pos": "MF",
+"age": 34,
+"nat": "North Macedonia",
+"value_m": 0.397,
+"qid": "Q15936571",
+"no": "7"
+},
+{
+"he": "רנאטו שטפן",
+"en": "Renato Steffen",
+"pos": "MF",
+"age": 34,
+"nat": "Switzerland",
+"value_m": 0.32,
+"qid": "Q16234212",
+"no": "11"
+},
+{
+"he": "דרק מונקדה",
+"en": "Dereck Moncada",
+"pos": "FW",
+"age": 18,
+"nat": "Honduras",
+"value_m": 0.32,
+"qid": "Q127754842",
+"no": "30"
+}
+]
+}

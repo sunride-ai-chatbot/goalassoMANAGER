@@ -1,0 +1,309 @@
+{
+"key": "jagiellonia",
+"name_he": "יאגילוניה ביאליסטוק",
+"source": "enwiki:Jagiellonia Białystok",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Sławomir Abramowicz",
+"en": "Sławomir Abramowicz",
+"pos": "GK",
+"age": 22,
+"nat": "Poland",
+"value_m": 0.483,
+"qid": "Q120971110",
+"no": "50"
+},
+{
+"he": "Jakub Rabiczko",
+"en": "Jakub Rabiczko",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.394,
+"qid": null,
+"no": "67"
+},
+{
+"he": "Michał Perchel",
+"en": "Michał Perchel",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.381,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Adrian Damasiewicz",
+"en": "Adrian Damasiewicz",
+"pos": "GK",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.369,
+"qid": null,
+"no": "66"
+},
+{
+"he": "יוקי קובאיאשי",
+"en": "Yuki Kobayashi",
+"pos": "DF",
+"age": 26,
+"nat": "Japan",
+"value_m": 0.979,
+"qid": "Q44395385",
+"no": "4"
+},
+{
+"he": "Hampus Finndell",
+"en": "Hampus Finndell",
+"pos": "MF",
+"age": 26,
+"nat": "Sweden",
+"value_m": 0.788,
+"qid": "Q51128126",
+"no": "14"
+},
+{
+"he": "Kajetan Szmyt",
+"en": "Kajetan Szmyt",
+"pos": "MF",
+"age": 24,
+"nat": "Poland",
+"value_m": 0.738,
+"qid": "Q110931793",
+"no": "7"
+},
+{
+"he": "Aleksandar Ćirković",
+"en": "Aleksandar Ćirković",
+"pos": "MF",
+"age": 24,
+"nat": "Serbia",
+"value_m": 0.738,
+"qid": "Q99206233",
+"no": "32"
+},
+{
+"he": "Bernardo Vital",
+"en": "Bernardo Vital",
+"pos": "DF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.725,
+"qid": "Q105947957",
+"no": "5"
+},
+{
+"he": "Bartłomiej Wdowik",
+"en": "Bartłomiej Wdowik",
+"pos": "DF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.699,
+"qid": "Q87457865",
+"no": "20"
+},
+{
+"he": "Norbert Wojtuszek",
+"en": "Norbert Wojtuszek",
+"pos": "MF",
+"age": 24,
+"nat": "Poland",
+"value_m": 0.674,
+"qid": "Q104690652",
+"no": "15"
+},
+{
+"he": "Nik Prelec",
+"en": "Nik Prelec",
+"pos": "FW",
+"age": 25,
+"nat": "Slovenia",
+"value_m": 0.661,
+"qid": "Q98929168",
+"no": "99"
+},
+{
+"he": "אנדרס קלינגה",
+"en": "Anders Klynge",
+"pos": "MF",
+"age": 25,
+"nat": "Denmark",
+"value_m": 0.649,
+"qid": "Q108699485",
+"no": "19"
+},
+{
+"he": "סרחיו לוסאנו",
+"en": "Sergio Lozano",
+"pos": "MF",
+"age": 27,
+"nat": "Spain",
+"value_m": 0.649,
+"qid": "Q48999750",
+"no": "21"
+},
+{
+"he": "Apostolos Konstantopoulos",
+"en": "Apostolos Konstantopoulos",
+"pos": "DF",
+"age": 24,
+"nat": "Greece",
+"value_m": 0.623,
+"qid": "Q97013640",
+"no": "44"
+},
+{
+"he": "Kamil Jóźwiak",
+"en": "Kamil Jóźwiak",
+"pos": "MF",
+"age": 28,
+"nat": "Poland",
+"value_m": 0.623,
+"qid": "Q23772487",
+"no": "72"
+},
+{
+"he": "Dušan Stojinović",
+"en": "Dušan Stojinović",
+"pos": "DF",
+"age": 26,
+"nat": "Slovenia",
+"value_m": 0.61,
+"qid": "Q98370402",
+"no": "3"
+},
+{
+"he": "Rodrigo Conceição",
+"en": "Rodrigo Conceição",
+"pos": "DF",
+"age": 26,
+"nat": "Portugal",
+"value_m": 0.598,
+"qid": "Q60676458",
+"no": "27"
+},
+{
+"he": "Youssuf Sylla",
+"en": "Youssuf Sylla",
+"pos": "FW",
+"age": 23,
+"nat": "Belgium",
+"value_m": 0.572,
+"qid": "Q104905207",
+"no": "17"
+},
+{
+"he": "Dawid Drachal",
+"en": "Dawid Drachal",
+"pos": "MF",
+"age": 21,
+"nat": "Poland",
+"value_m": 0.547,
+"qid": "Q119154006",
+"no": "8"
+},
+{
+"he": "Ousmane Sow",
+"en": "Ousmane Sow",
+"pos": "FW",
+"age": 26,
+"nat": "Senegal",
+"value_m": 0.521,
+"qid": "Q135152676",
+"no": "30"
+},
+{
+"he": "Dimitris Rallis",
+"en": "Dimitris Rallis",
+"pos": "FW",
+"age": 21,
+"nat": "Greece",
+"value_m": 0.509,
+"qid": "Q130443089",
+"no": "9"
+},
+{
+"he": "Jeremy Agbonifo",
+"en": "Jeremy Agbonifo",
+"pos": "FW",
+"age": 20,
+"nat": "Sweden",
+"value_m": 0.445,
+"qid": "Q127691491",
+"no": "10"
+},
+{
+"he": "Guilherme Montóia",
+"en": "Guilherme Montóia",
+"pos": "DF",
+"age": 22,
+"nat": "Portugal",
+"value_m": 0.445,
+"qid": "Q131349130",
+"no": "23"
+},
+{
+"he": "Eryk Kozłowski",
+"en": "Eryk Kozłowski",
+"pos": "MF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.445,
+"qid": null,
+"no": "85"
+},
+{
+"he": "Cezary Polak",
+"en": "Cezary Polak",
+"pos": "DF",
+"age": 23,
+"nat": "Poland",
+"value_m": 0.42,
+"qid": "Q130287365",
+"no": "2"
+},
+{
+"he": "Bartłomiej Krasiewicz",
+"en": "Bartłomiej Krasiewicz",
+"pos": "DF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.407,
+"qid": null,
+"no": "61"
+},
+{
+"he": "Maksim Kononov",
+"en": "Maksim Kononov",
+"pos": "FW",
+"age": 25,
+"nat": "Belarus",
+"value_m": 0.381,
+"qid": null,
+"no": "65"
+},
+{
+"he": "Jakub Kucharski",
+"en": "Jakub Kucharski",
+"pos": "MF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.369,
+"qid": null,
+"no": null
+},
+{
+"he": "Paweł Pakieła",
+"en": "Paweł Pakieła",
+"pos": "MF",
+"age": 25,
+"nat": "Poland",
+"value_m": 0.343,
+"qid": null,
+"no": "59"
+}
+]
+}

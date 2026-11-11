@@ -1,0 +1,269 @@
+{
+"key": "tirana",
+"name_he": "טירנה",
+"source": "enwiki:KF Tirana",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Visar Bekaj",
+"en": "Visar Bekaj",
+"pos": "GK",
+"age": 29,
+"nat": "Kosovo",
+"value_m": 0.097,
+"qid": "Q22958530",
+"no": "97"
+},
+{
+"he": "Klajdi Hasani",
+"en": "Klajdi Hasani",
+"pos": "GK",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.081,
+"qid": null,
+"no": "96"
+},
+{
+"he": "Rejan Çali",
+"en": "Rejan Çali",
+"pos": "GK",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.065,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Klajdi Kuka",
+"en": "Klajdi Kuka",
+"pos": "GK",
+"age": 37,
+"nat": "Albania",
+"value_m": 0.016,
+"qid": "Q6419616",
+"no": "12"
+},
+{
+"he": "רדון ג'יג'ה",
+"en": "Redon Xhixha",
+"pos": "FW",
+"age": 28,
+"nat": "Albania",
+"value_m": 0.195,
+"qid": "Q39944869",
+"no": "19"
+},
+{
+"he": "באסילו נדונג",
+"en": "Basilio Ndong",
+"pos": "DF",
+"age": 27,
+"nat": "Equatorial Guinea",
+"value_m": 0.179,
+"qid": "Q29512609",
+"no": "3"
+},
+{
+"he": "Bojan Ilievski",
+"en": "Bojan Ilievski",
+"pos": "DF",
+"age": 26,
+"nat": "North Macedonia",
+"value_m": 0.162,
+"qid": "Q114915818",
+"no": "55"
+},
+{
+"he": "Patrik Myslovič",
+"en": "Patrik Myslovič",
+"pos": "MF",
+"age": 25,
+"nat": "Slovakia",
+"value_m": 0.146,
+"qid": "Q61828728",
+"no": "7"
+},
+{
+"he": "Erdon Daci",
+"en": "Erdon Daci",
+"pos": "FW",
+"age": 28,
+"nat": "North Macedonia",
+"value_m": 0.146,
+"qid": "Q66728184",
+"no": "11"
+},
+{
+"he": "Luciano Vera",
+"en": "Luciano Vera",
+"pos": "DF",
+"age": 24,
+"nat": "Argentina",
+"value_m": 0.13,
+"qid": "Q78516298",
+"no": "2"
+},
+{
+"he": "Joseph Colley",
+"en": "Joseph Colley",
+"pos": "DF",
+"age": 27,
+"nat": "Gambia",
+"value_m": 0.13,
+"qid": "Q106634721",
+"no": "5"
+},
+{
+"he": "Serxho Prendi",
+"en": "Serxho Prendi",
+"pos": "FW",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.13,
+"qid": null,
+"no": "24"
+},
+{
+"he": "Drilon Hazrollaj",
+"en": "Drilon Hazrollaj",
+"pos": "MF",
+"age": 22,
+"nat": "Kosovo",
+"value_m": 0.13,
+"qid": "Q126123183",
+"no": "27"
+},
+{
+"he": "Freddy Álvarez",
+"en": "Freddy Álvarez",
+"pos": "FW",
+"age": 31,
+"nat": "Costa Rica",
+"value_m": 0.114,
+"qid": "Q25407203",
+"no": "10"
+},
+{
+"he": "Leonat Vitija",
+"en": "Leonat Vitija",
+"pos": "DF",
+"age": 26,
+"nat": "Kosovo",
+"value_m": 0.114,
+"qid": "Q91206339",
+"no": "15"
+},
+{
+"he": "Etienne Tare",
+"en": "Etienne Tare",
+"pos": "FW",
+"age": 22,
+"nat": "Germany",
+"value_m": 0.114,
+"qid": "Q119078600",
+"no": "17"
+},
+{
+"he": "Mateo Maçi",
+"en": "Mateo Maçi",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.114,
+"qid": null,
+"no": "28"
+},
+{
+"he": "Serxho Vogli",
+"en": "Serxho Vogli",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.097,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Hugo Fresneda",
+"en": "Hugo Fresneda",
+"pos": "MF",
+"age": 25,
+"nat": null,
+"value_m": 0.097,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Patrick Stanić",
+"en": "Patrick Stanić",
+"pos": "DF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.097,
+"qid": null,
+"no": "95"
+},
+{
+"he": "Ardit Krymi",
+"en": "Ardit Krymi",
+"pos": "DF",
+"age": 30,
+"nat": "Albania",
+"value_m": 0.081,
+"qid": "Q19519985",
+"no": "6"
+},
+{
+"he": "Tomislav Kiš",
+"en": "Tomislav Kiš",
+"pos": "FW",
+"age": 32,
+"nat": "Croatia",
+"value_m": 0.081,
+"qid": "Q28966",
+"no": "9"
+},
+{
+"he": "Aimar Bami",
+"en": "Aimar Bami",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.081,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Olti Qerimaj",
+"en": "Olti Qerimaj",
+"pos": "MF",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.081,
+"qid": null,
+"no": "22"
+},
+{
+"he": "Ermal Meta",
+"en": "Ermal Meta",
+"pos": "MF",
+"age": 21,
+"nat": "Albania",
+"value_m": 0.081,
+"qid": "Q124547921",
+"no": "33"
+},
+{
+"he": "Bernard Berisha",
+"en": "Bernard Berisha",
+"pos": "FW",
+"age": 34,
+"nat": "Kosovo",
+"value_m": 0.065,
+"qid": "Q16212864",
+"no": "23"
+}
+]
+}
