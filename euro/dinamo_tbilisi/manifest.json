@@ -1,0 +1,427 @@
+{
+ "club": "dinamo_tbilisi",
+ "clubName": "דינמו טביליסי",
+ "clubQid": "Q201006",
+ "players": [
+  {
+   "he": "Mikheil Makatsaria",
+   "en": "Mikheil Makatsaria",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Dachi Chochoshvili",
+   "en": "Dachi Chochoshvili",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "{{abbr|Lucas Flores|Lucas Flores de Oliveira",
+   "en": "{{abbr|Lucas Flores|Lucas Flores de Oliveira",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Mate Ghaghvishvili",
+   "en": "Mate Ghaghvishvili",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Giorgi Loria",
+   "en": "Giorgi Loria",
+   "pos": "GK",
+   "age": 40,
+   "candidates": [
+    {
+     "title": "File:Giorgi Loria.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Giorgi_Loria.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/85/Giorgi_Loria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 868,
+     "height": 1000,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Кирилл Венедиктов",
+     "credit": "https://www.soccer.ru/galery/1044506/photo/721906",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-04-14 14:26:22",
+     "file": "04-Q3300662-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Giorgi Loria 2016.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Giorgi_Loria_2016.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/07/Giorgi_Loria_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 569,
+     "height": 992,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Елена Рыбакова",
+     "credit": "http://www.soccer.ru/galery/924777.shtml",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2016-08-21",
+     "file": "04-Q3300662-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q3300662",
+   "wikidata": "https://www.wikidata.org/wiki/Q3300662",
+   "label": "Giorgi Loria",
+   "birthYear": 1986
+  },
+  {
+   "he": "Nika Ninua",
+   "en": "Nika Ninua",
+   "pos": "MF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q71986381",
+   "wikidata": "https://www.wikidata.org/wiki/Q71986381",
+   "label": "Nika Ninua",
+   "birthYear": 1999
+  },
+  {
+   "he": "Maxime Do Couto",
+   "en": "Maxime Do Couto",
+   "pos": "FW",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18057053",
+   "wikidata": "https://www.wikidata.org/wiki/Q18057053",
+   "label": "Maxime Do Couto Teixeira",
+   "birthYear": 1996
+  },
+  {
+   "he": "Levan Kharabadze",
+   "en": "Levan Kharabadze",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q60791339",
+   "wikidata": "https://www.wikidata.org/wiki/Q60791339",
+   "label": "Levan Kharabadze",
+   "birthYear": 2000
+  },
+  {
+   "he": "Giorgi Kharaishvili",
+   "en": "Giorgi Kharaishvili",
+   "pos": "MF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q20582751",
+   "wikidata": "https://www.wikidata.org/wiki/Q20582751",
+   "label": "Giorgi Kharaishvili",
+   "birthYear": 1996
+  },
+  {
+   "he": "Algassime Bah",
+   "en": "Algassime Bah",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [
+    {
+     "title": "File:Algassime Bah 0K8A7061.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Algassime_Bah_0K8A7061.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Algassime_Bah_0K8A7061.jpg/960px-Algassime_Bah_0K8A7061.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3918,
+     "height": 3648,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Fédération Guinéenne Football",
+     "credit": "https://www.flickr.com/photos/196250323@N06/54768041112/",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-09-05 11:48:26",
+     "file": "09-Q109471039-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q109471039",
+   "wikidata": "https://www.wikidata.org/wiki/Q109471039",
+   "label": "Algassime Bah",
+   "birthYear": 2002
+  },
+  {
+   "he": "Numan Kurdić",
+   "en": "Numan Kurdić",
+   "pos": "DF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q58009196",
+   "wikidata": "https://www.wikidata.org/wiki/Q58009196",
+   "label": "Numan Kurdić",
+   "birthYear": 1999
+  },
+  {
+   "he": "Reziko Danelia",
+   "en": "Reziko Danelia",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Aleksandre Kalandadze",
+   "en": "Aleksandre Kalandadze",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q115594461",
+   "wikidata": "https://www.wikidata.org/wiki/Q115594461",
+   "label": "Aleksandre Kalandadze",
+   "birthYear": 2001
+  },
+  {
+   "he": "Marios Pourzitidis",
+   "en": "Marios Pourzitidis",
+   "pos": "DF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q88778716",
+   "wikidata": "https://www.wikidata.org/wiki/Q88778716",
+   "label": "Marios Pourzitidis",
+   "birthYear": 1999
+  },
+  {
+   "he": "Gabriel Gogua",
+   "en": "Gabriel Gogua",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Tornike Gobronidze",
+   "en": "Tornike Gobronidze",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Luka Tsikolia",
+   "en": "Luka Tsikolia",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Matthew Gbomadu",
+   "en": "Matthew Gbomadu",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Nikoloz Ugrekhelidze",
+   "en": "Nikoloz Ugrekhelidze",
+   "pos": "DF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q131293743",
+   "wikidata": "https://www.wikidata.org/wiki/Q131293743",
+   "label": "Nikoloz Ugrekhelidze",
+   "birthYear": 2003
+  },
+  {
+   "he": "{{abbr|Welton|Welton Nunes Carvalho Junior",
+   "en": "{{abbr|Welton|Welton Nunes Carvalho Junior",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Paris Psaltis",
+   "en": "Paris Psaltis",
+   "pos": "DF",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q47492359",
+   "wikidata": "https://www.wikidata.org/wiki/Q47492359",
+   "label": "Paris Psaltis",
+   "birthYear": 1996
+  },
+  {
+   "he": "Daniel Kvartskhava",
+   "en": "Daniel Kvartskhava",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Rati Aleksidze",
+   "en": "Rati Aleksidze",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [
+    {
+     "title": "File:Rati Aleksidze 2010.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Rati_Aleksidze_2010.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Rati_Aleksidze_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 885,
+     "height": 923,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Pilgab",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2010-04-19",
+     "file": "22-Q945139-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Rati Aleksidze.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Rati_Aleksidze.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/6/61/Rati_Aleksidze.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 730,
+     "height": 1281,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "hu:User:Pilgab",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2009-04-28",
+     "file": "22-Q945139-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "name+club",
+   "qid": "Q945139",
+   "wikidata": "https://www.wikidata.org/wiki/Q945139",
+   "label": "Rati Aleksidze",
+   "birthYear": 1978
+  },
+  {
+   "he": "Lyes Houri",
+   "en": "Lyes Houri",
+   "pos": "MF",
+   "age": 30,
+   "candidates": [
+    {
+     "title": "File:Lyes Houri 14 CS Universitatea Craiova UECL 20250821 (1).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Lyes_Houri_14_CS_Universitatea_Craiova_UECL_20250821_(1).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Lyes_Houri_14_CS_Universitatea_Craiova_UECL_20250821_%281%29.jpg/960px-Lyes_Houri_14_CS_Universitatea_Craiova_UECL_20250821_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 5152,
+     "height": 7728,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "21 August 2025, 21:19",
+     "file": "23-Q17476783-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q17476783",
+   "wikidata": "https://www.wikidata.org/wiki/Q17476783",
+   "label": "Lyes Houri",
+   "birthYear": 1996
+  },
+  {
+   "he": "Koba Kakashvili",
+   "en": "Koba Kakashvili",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Giorgi Gvasalia",
+   "en": "Giorgi Gvasalia",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+club",
+   "qid": "Q141494242",
+   "wikidata": "https://www.wikidata.org/wiki/Q141494242",
+   "label": "Giorgi Gvasalia",
+   "birthYear": 2007
+  },
+  {
+   "he": "{{abbr|Léo Santos|Leonardo dos Santos Lopes da Silva",
+   "en": "{{abbr|Léo Santos|Leonardo dos Santos Lopes da Silva",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Halid Doltmurziev",
+   "en": "Halid Doltmurziev",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q141782298:2007"
+  },
+  {
+   "he": "Albert Gomez",
+   "en": "Albert Gomez",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q443770:Jordi Gómez, Q934662:Sotigui Kouyaté)"
+  },
+  {
+   "he": "Nikoloz Tkalia",
+   "en": "Nikoloz Tkalia",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

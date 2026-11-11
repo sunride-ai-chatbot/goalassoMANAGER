@@ -1,0 +1,388 @@
+{
+ "club": "rfs",
+ "clubName": "ר.פ.ס ריגה",
+ "clubQid": "Q995093",
+ "players": [
+  {
+   "he": "Marko Marić",
+   "en": "Marko Marić",
+   "pos": "GK",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q20641149",
+   "wikidata": "https://www.wikidata.org/wiki/Q20641149",
+   "label": "Marko Marić",
+   "birthYear": 1996
+  },
+  {
+   "he": "Jevgēņijs Ņerugals",
+   "en": "Jevgēņijs Ņerugals",
+   "pos": "GK",
+   "age": 37,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q33108539",
+   "wikidata": "https://www.wikidata.org/wiki/Q33108539",
+   "label": "Jevgēņijs Ņerugals",
+   "birthYear": 1989
+  },
+  {
+   "he": "Lasha Odisharia",
+   "en": "Lasha Odisharia",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q124357645",
+   "wikidata": "https://www.wikidata.org/wiki/Q124357645",
+   "label": "Lasha Odisharia",
+   "birthYear": 2002
+  },
+  {
+   "he": "Kingsley Emenike",
+   "en": "Kingsley Emenike",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q317347:Abdul Majeed Waris)"
+  },
+  {
+   "he": "Matheus Clemente",
+   "en": "Matheus Clemente",
+   "pos": "MF",
+   "age": 28,
+   "candidates": [
+    {
+     "title": "File:Matheus dos Santos Clemente.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Matheus_dos_Santos_Clemente.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Matheus_dos_Santos_Clemente.jpg/960px-Matheus_dos_Santos_Clemente.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2062,
+     "height": 3104,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "Biser Todorov",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-07-10 18:48:37",
+     "file": "04-Q99463694-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q99463694",
+   "wikidata": "https://www.wikidata.org/wiki/Q99463694",
+   "label": "Matheus Clemente",
+   "birthYear": 1998
+  },
+  {
+   "he": "Mārtiņš Ķigurs",
+   "en": "Mārtiņš Ķigurs",
+   "pos": "MF",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q41700831",
+   "wikidata": "https://www.wikidata.org/wiki/Q41700831",
+   "label": "Mārtiņš Ķigurs",
+   "birthYear": 1997
+  },
+  {
+   "he": "Victor Osuagwu",
+   "en": "Victor Osuagwu",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Roberts Veips",
+   "en": "Roberts Veips",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q47353282",
+   "wikidata": "https://www.wikidata.org/wiki/Q47353282",
+   "label": "Roberts Veips",
+   "birthYear": 2000
+  },
+  {
+   "he": "Ismaël Diomandé",
+   "en": "Ismaël Diomandé",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q111043549",
+   "wikidata": "https://www.wikidata.org/wiki/Q111043549",
+   "label": "Ismaël Diomandé",
+   "birthYear": 2003
+  },
+  {
+   "he": "Cedric Kouadio",
+   "en": "Cedric Kouadio",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q108063987:1996, Q55081285:1997"
+  },
+  {
+   "he": "Dmitrijs Zelenkovs",
+   "en": "Dmitrijs Zelenkovs",
+   "pos": "MF",
+   "age": 26,
+   "candidates": [
+    {
+     "title": "File:Dmitrijs Zelenkovs LVA.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Dmitrijs_Zelenkovs_LVA.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Dmitrijs_Zelenkovs_LVA.jpg/960px-Dmitrijs_Zelenkovs_LVA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 4157,
+     "height": 2926,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "Latvijas Futbola federācija",
+     "credit": "https://www.flickr.com/photos/futbols/51563636000/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-10-07 15:41:11",
+     "file": "10-Q107096259-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q107096259",
+   "wikidata": "https://www.wikidata.org/wiki/Q107096259",
+   "label": "Dmitrijs Zeļenkovs",
+   "birthYear": 2000
+  },
+  {
+   "he": "Mikaze Nagasawa",
+   "en": "Mikaze Nagasawa",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q118213907:2005"
+  },
+  {
+   "he": "Žiga Lipušček",
+   "en": "Žiga Lipušček",
+   "pos": "DF",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q61070786",
+   "wikidata": "https://www.wikidata.org/wiki/Q61070786",
+   "label": "Žiga Lipušček",
+   "birthYear": 1997
+  },
+  {
+   "he": "Modou Saidy",
+   "en": "Modou Saidy",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Niks Sliede",
+   "en": "Niks Sliede",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+club",
+   "qid": "Q117082736",
+   "wikidata": "https://www.wikidata.org/wiki/Q117082736",
+   "label": "Niks Sliede",
+   "birthYear": 2004
+  },
+  {
+   "he": "Aleksandar Filipović",
+   "en": "Aleksandar Filipović",
+   "pos": "DF",
+   "age": 31,
+   "candidates": [
+    {
+     "title": "File:EuroU21 2017 Aleksandar Filipovic.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:EuroU21_2017_Aleksandar_Filipovic.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fd/EuroU21_2017_Aleksandar_Filipovic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 250,
+     "height": 647,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Pit1233",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2017-06-20 19:05:59",
+     "file": "15-Q16236133-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q16236133",
+   "wikidata": "https://www.wikidata.org/wiki/Q16236133",
+   "label": "Aleksandar Filipović",
+   "birthYear": 1994
+  },
+  {
+   "he": "Niks Dusalijevs",
+   "en": "Niks Dusalijevs",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Rasid Njie",
+   "en": "Rasid Njie",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Gauthier Mankenda",
+   "en": "Gauthier Mankenda",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "name+club",
+   "qid": "Q141505230",
+   "wikidata": "https://www.wikidata.org/wiki/Q141505230",
+   "label": "Gauthier Mankenda",
+   "birthYear": 1997
+  },
+  {
+   "he": "Strahinja Rakić",
+   "en": "Strahinja Rakić",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q134484057:2006"
+  },
+  {
+   "he": "יאניס יקאוניקס",
+   "en": "Jānis Ikaunieks",
+   "pos": "MF",
+   "age": 31,
+   "candidates": [
+    {
+     "title": "File:Jānis Ikaunieks LVA.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:J%C4%81nis_Ikaunieks_LVA.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/J%C4%81nis_Ikaunieks_LVA.jpg/960px-J%C4%81nis_Ikaunieks_LVA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2533,
+     "height": 3799,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "Latvijas Futbola federācija",
+     "credit": "https://www.flickr.com/photos/futbols/52377354656/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-09-23",
+     "file": "20-Q17166609-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q17166609",
+   "wikidata": "https://www.wikidata.org/wiki/Q17166609",
+   "label": "Jānis Ikaunieks",
+   "birthYear": 1995
+  },
+  {
+   "he": "Darko Lemajić",
+   "en": "Darko Lemajić",
+   "pos": "FW",
+   "age": 33,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q17198292",
+   "wikidata": "https://www.wikidata.org/wiki/Q17198292",
+   "label": "Darko Lemajić",
+   "birthYear": 1993
+  },
+  {
+   "he": "Herdi Prenga",
+   "en": "Herdi Prenga",
+   "pos": "DF",
+   "age": 32,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q19594180",
+   "wikidata": "https://www.wikidata.org/wiki/Q19594180",
+   "label": "Herdi Prenga",
+   "birthYear": 1994
+  },
+  {
+   "he": "Shina Kumater",
+   "en": "Shina Kumater",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Roberts Savaļnieks",
+   "en": "Roberts Savaļnieks",
+   "pos": "DF",
+   "age": 33,
+   "candidates": [
+    {
+     "title": "File:Roberts Savaļnieks LVA.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Roberts_Sava%C4%BCnieks_LVA.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Roberts_Sava%C4%BCnieks_LVA.jpg/960px-Roberts_Sava%C4%BCnieks_LVA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2484,
+     "height": 2730,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "Latvijas Futbola federācija",
+     "credit": "https://www.flickr.com/photos/futbols/53067809640/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-10-12",
+     "file": "24-Q15714981-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q15714981",
+   "wikidata": "https://www.wikidata.org/wiki/Q15714981",
+   "label": "Roberts Savaļnieks",
+   "birthYear": 1993
+  },
+  {
+   "he": "Stefan Panić",
+   "en": "Stefan Panić",
+   "pos": "MF",
+   "age": 33,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q20974206",
+   "wikidata": "https://www.wikidata.org/wiki/Q20974206",
+   "label": "Stefan Panić",
+   "birthYear": 1992
+  }
+ ]
+}

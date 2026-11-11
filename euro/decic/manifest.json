@@ -1,0 +1,235 @@
+{
+ "club": "decic",
+ "clubName": "דצ'יץ'",
+ "clubQid": "Q920281",
+ "players": [
+  {
+   "he": "Andrej Camaj",
+   "en": "Andrej Camaj",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q132188294:2006"
+  },
+  {
+   "he": "Danilo Radošević",
+   "en": "Danilo Radošević",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Miloš Dragojević",
+   "en": "Miloš Dragojević",
+   "pos": "GK",
+   "age": 37,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18043763",
+   "wikidata": "https://www.wikidata.org/wiki/Q18043763",
+   "label": "Miloš Dragojević",
+   "birthYear": 1989
+  },
+  {
+   "he": "Balša Radusinović",
+   "en": "Balša Radusinović",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Aleksa Ćetković",
+   "en": "Aleksa Ćetković",
+   "pos": "MF",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q109453289",
+   "wikidata": "https://www.wikidata.org/wiki/Q109453289",
+   "label": "Aleksa Ćetković",
+   "birthYear": 2004
+  },
+  {
+   "he": "Matija Božanović",
+   "en": "Matija Božanović",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Siniša Stanisavić",
+   "en": "Siniša Stanisavić",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Davor Kontić",
+   "en": "Davor Kontić",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Petar Pavlićević",
+   "en": "Petar Pavlićević",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q101204565",
+   "wikidata": "https://www.wikidata.org/wiki/Q101204565",
+   "label": "Petar Pavlićević",
+   "birthYear": 2000
+  },
+  {
+   "he": "Dardan Lulgjuraj",
+   "en": "Dardan Lulgjuraj",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Mario Gjolaj",
+   "en": "Mario Gjolaj",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ilir Camaj",
+   "en": "Ilir Camaj",
+   "pos": "FW",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q134621140",
+   "wikidata": "https://www.wikidata.org/wiki/Q134621140",
+   "label": "Ilir Camaj",
+   "birthYear": 1996
+  },
+  {
+   "he": "Leon Ujkaj",
+   "en": "Leon Ujkaj",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Jonathan Dreshaj",
+   "en": "Jonathan Dreshaj",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Jovan Mugoša",
+   "en": "Jovan Mugoša",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Romario Camaj",
+   "en": "Romario Camaj",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Demir Krkanović",
+   "en": "Demir Krkanović",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Petar Ivanović",
+   "en": "Petar Ivanović",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q19560829:Đorđe Ivanović)"
+  },
+  {
+   "he": "Halil Kajoshaj",
+   "en": "Halil Kajoshaj",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Medo Juković",
+   "en": "Medo Juković",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q135708229",
+   "wikidata": "https://www.wikidata.org/wiki/Q135708229",
+   "label": "Medo Juković",
+   "birthYear": 2004
+  },
+  {
+   "he": "Uroš Đuranović",
+   "en": "Uroš Đuranović",
+   "pos": "FW",
+   "age": 32,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q39398561",
+   "wikidata": "https://www.wikidata.org/wiki/Q39398561",
+   "label": "Uroš Đuranović",
+   "birthYear": 1994
+  },
+  {
+   "he": "Pjetër Lulgjuraj",
+   "en": "Pjetër Lulgjuraj",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Lazar Maraš",
+   "en": "Lazar Maraš",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q141762306:2006"
+  },
+  {
+   "he": "Nikola Braunović",
+   "en": "Nikola Braunović",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Aldin Adžović",
+   "en": "Aldin Adžović",
+   "pos": "MF",
+   "age": 32,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q23799460",
+   "wikidata": "https://www.wikidata.org/wiki/Q23799460",
+   "label": "Aldin Adžović",
+   "birthYear": 1994
+  }
+ ]
+}

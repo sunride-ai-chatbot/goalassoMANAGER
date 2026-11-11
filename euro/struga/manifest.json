@@ -1,0 +1,289 @@
+{
+ "club": "struga",
+ "clubName": "סטרוגה",
+ "clubQid": "Q30115933",
+ "players": [
+  {
+   "he": "Vasko Vasilev",
+   "en": "Vasko Vasilev",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Andrej Jovchevski",
+   "en": "Andrej Jovchevski",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Arbi Vosha",
+   "en": "Arbi Vosha",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Hammond Agamah",
+   "en": "Hammond Agamah",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Florian Rochi",
+   "en": "Florian Rochi",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Marjan Radeski",
+   "en": "Marjan Radeski",
+   "pos": "FW",
+   "age": 31,
+   "candidates": [
+    {
+     "title": "File:Marjan Radeski (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Marjan_Radeski_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/db/Marjan_Radeski_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 258,
+     "height": 626,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Тиверополник",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-10-23",
+     "file": "05-Q17285363-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Марјан Радески ака пандев.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D1%80%D1%98%D0%B0%D0%BD_%D0%A0%D0%B0%D0%B4%D0%B5%D1%81%D0%BA%D0%B8_%D0%B0%D0%BA%D0%B0_%D0%BF%D0%B0%D0%BD%D0%B4%D0%B5%D0%B2.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/%D0%9C%D0%B0%D1%80%D1%98%D0%B0%D0%BD_%D0%A0%D0%B0%D0%B4%D0%B5%D1%81%D0%BA%D0%B8_%D0%B0%D0%BA%D0%B0_%D0%BF%D0%B0%D0%BD%D0%B4%D0%B5%D0%B2.jpg/960px-%D0%9C%D0%B0%D1%80%D1%98%D0%B0%D0%BD_%D0%A0%D0%B0%D0%B4%D0%B5%D1%81%D0%BA%D0%B8_%D0%B0%D0%BA%D0%B0_%D0%BF%D0%B0%D0%BD%D0%B4%D0%B5%D0%B2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1151,
+     "height": 1728,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Тиверополник",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-10-23",
+     "file": "05-Q17285363-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q17285363",
+   "wikidata": "https://www.wikidata.org/wiki/Q17285363",
+   "label": "Marjan Radeski",
+   "birthYear": 1995
+  },
+  {
+   "he": "Agon Demiri",
+   "en": "Agon Demiri",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Altin Aliji",
+   "en": "Altin Aliji",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Hristijan Maleski",
+   "en": "Hristijan Maleski",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q141669612:2002"
+  },
+  {
+   "he": "Alban Rochi",
+   "en": "Alban Rochi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Landrit Rama",
+   "en": "Landrit Rama",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ard Kasami",
+   "en": "Ard Kasami",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Daniel Akinlosotu",
+   "en": "Daniel Akinlosotu",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q136032463:2005"
+  },
+  {
+   "he": "Memetriza Hamza",
+   "en": "Memetriza Hamza",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Qendrim Ismajli",
+   "en": "Qendrim Ismajli",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q126153171:1999"
+  },
+  {
+   "he": "Bleron Ramadani",
+   "en": "Bleron Ramadani",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Edison Kola",
+   "en": "Edison Kola",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106798081",
+   "wikidata": "https://www.wikidata.org/wiki/Q106798081",
+   "label": "Edison Kola",
+   "birthYear": 2001
+  },
+  {
+   "he": "Lassana Diako",
+   "en": "Lassana Diako",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q131302092:None"
+  },
+  {
+   "he": "Adrian Zendelovski",
+   "en": "Adrian Zendelovski",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q139752507",
+   "wikidata": "https://www.wikidata.org/wiki/Q139752507",
+   "label": "Adrian Zendelovski",
+   "birthYear": 2005
+  },
+  {
+   "he": "Besmir Bojku",
+   "en": "Besmir Bojku",
+   "pos": "MF",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q17279891",
+   "wikidata": "https://www.wikidata.org/wiki/Q17279891",
+   "label": "Besmir Bojku",
+   "birthYear": 1995
+  },
+  {
+   "he": "Pape Fall",
+   "en": "Pape Fall",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q112988042",
+   "wikidata": "https://www.wikidata.org/wiki/Q112988042",
+   "label": "Pape Yaré Fall",
+   "birthYear": 2000
+  },
+  {
+   "he": "Andi Demiri",
+   "en": "Andi Demiri",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Bunjamin Shabani",
+   "en": "Bunjamin Shabani",
+   "pos": "MF",
+   "age": 35,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18127925",
+   "wikidata": "https://www.wikidata.org/wiki/Q18127925",
+   "label": "Bunjamin Shabani",
+   "birthYear": 1991
+  },
+  {
+   "he": "Egzon Belica",
+   "en": "Egzon Belica",
+   "pos": "DF",
+   "age": 35,
+   "candidates": [
+    {
+     "title": "File:Egzon Belica 1.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Egzon_Belica_1.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/55/Egzon_Belica_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 609,
+     "height": 912,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "IA",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2015-08-19",
+     "file": "23-Q20379054-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q20379054",
+   "wikidata": "https://www.wikidata.org/wiki/Q20379054",
+   "label": "Egzon Belica",
+   "birthYear": 1990
+  }
+ ]
+}

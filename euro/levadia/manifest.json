@@ -1,0 +1,256 @@
+{
+ "club": "levadia",
+ "clubName": "לבדיה טאלין",
+ "clubQid": "Q210849",
+ "players": [
+  {
+   "he": "Karl Andre Vallner",
+   "en": "Karl Andre Vallner",
+   "pos": "GK",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q83788691",
+   "wikidata": "https://www.wikidata.org/wiki/Q83788691",
+   "label": "Karl Vallner",
+   "birthYear": 1998
+  },
+  {
+   "he": "Oliver Ani",
+   "en": "Oliver Ani",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Nikoloz Kutateladze",
+   "en": "Nikoloz Kutateladze",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q77283725",
+   "wikidata": "https://www.wikidata.org/wiki/Q77283725",
+   "label": "Nikoloz Kutateladze",
+   "birthYear": 2001
+  },
+  {
+   "he": "Geovani",
+   "en": "Geovani",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [
+    {
+     "title": "File:Geovani Reis Nascimento Junior - FC Famalicão.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Geovani_Reis_Nascimento_Junior_-_FC_Famalic%C3%A3o.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Geovani_Reis_Nascimento_Junior_-_FC_Famalic%C3%A3o.jpg/960px-Geovani_Reis_Nascimento_Junior_-_FC_Famalic%C3%A3o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1917,
+     "height": 2391,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Gianlucabellassai",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-09-24",
+     "file": "03-Q108543957-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q108543957",
+   "wikidata": "https://www.wikidata.org/wiki/Q108543957",
+   "label": "Geovani",
+   "birthYear": 2001
+  },
+  {
+   "he": "Mark Oliver Roosnupp",
+   "en": "Mark Oliver Roosnupp",
+   "pos": "MF",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q43304779",
+   "wikidata": "https://www.wikidata.org/wiki/Q43304779",
+   "label": "Mark Oliver Roosnupp",
+   "birthYear": 1997
+  },
+  {
+   "he": "Gregor Lehtmets",
+   "en": "Gregor Lehtmets",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Frank Liivak",
+   "en": "Frank Liivak",
+   "pos": "MF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q16407627",
+   "wikidata": "https://www.wikidata.org/wiki/Q16407627",
+   "label": "Frank Liivak",
+   "birthYear": 1996
+  },
+  {
+   "he": "Enock Otoo",
+   "en": "Enock Otoo",
+   "pos": "MF",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q130858546",
+   "wikidata": "https://www.wikidata.org/wiki/Q130858546",
+   "label": "Enock Otoo",
+   "birthYear": 2004
+  },
+  {
+   "he": "João Pedro",
+   "en": "João Pedro",
+   "pos": "MF",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q111938441",
+   "wikidata": "https://www.wikidata.org/wiki/Q111938441",
+   "label": "João Pedro",
+   "birthYear": 2002
+  },
+  {
+   "he": "Tanel Tammik",
+   "en": "Tanel Tammik",
+   "pos": "DF",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q138853876",
+   "wikidata": "https://www.wikidata.org/wiki/Q138853876",
+   "label": "Tanel Tammik",
+   "birthYear": 2002
+  },
+  {
+   "he": "Rasmus Peetson",
+   "en": "Rasmus Peetson",
+   "pos": "MF",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18753412",
+   "wikidata": "https://www.wikidata.org/wiki/Q18753412",
+   "label": "Rasmus Peetson",
+   "birthYear": 1995
+  },
+  {
+   "he": "Aleksandr Zakarliuka",
+   "en": "Aleksandr Zakarliuka",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q19649951:1995"
+  },
+  {
+   "he": "Wendell",
+   "en": "Wendell",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q124881728:2002, Q15131398:1993, Q7982480:1989, Q16195697:1964"
+  },
+  {
+   "he": "Mihkel Ainsalu",
+   "en": "Mihkel Ainsalu",
+   "pos": "MF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q43433494",
+   "wikidata": "https://www.wikidata.org/wiki/Q43433494",
+   "label": "Mihkel Ainsalu",
+   "birthYear": 1996
+  },
+  {
+   "he": "Robert Kirss",
+   "en": "Robert Kirss",
+   "pos": "FW",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18624919",
+   "wikidata": "https://www.wikidata.org/wiki/Q18624919",
+   "label": "Robert Kirss",
+   "birthYear": 1994
+  },
+  {
+   "he": "Alexandre",
+   "en": "Alexandre",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q4720860:1977, Q96371732:1999, Q5444576:1985, Q1138190:1986"
+  },
+  {
+   "he": "Mollo Bessala",
+   "en": "Mollo Bessala",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q124391376:2003"
+  },
+  {
+   "he": "Kauã Davi",
+   "en": "Kauã Davi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Abraham Nwankwo",
+   "en": "Abraham Nwankwo",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q605817:Jay-Jay Okocha, Q38000669:Mason Mount)"
+  },
+  {
+   "he": "Joseph Saliste",
+   "en": "Joseph Saliste",
+   "pos": "DF",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q29420193",
+   "wikidata": "https://www.wikidata.org/wiki/Q29420193",
+   "label": "Joseph Saliste",
+   "birthYear": 1995
+  },
+  {
+   "he": "Victory Iboro",
+   "en": "Victory Iboro",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Maksimilian Skvortsov",
+   "en": "Maksimilian Skvortsov",
+   "pos": "MF",
+   "age": 18,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q136815298",
+   "wikidata": "https://www.wikidata.org/wiki/Q136815298",
+   "label": "Maksimilian Skvortsov",
+   "birthYear": 2007
+  }
+ ]
+}
