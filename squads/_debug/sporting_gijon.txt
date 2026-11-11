@@ -34,7 +34,7 @@
 == References
 == External links
 
-TEMPLATES 31
+TEMPLATES 32
 {{Fs player|no= 1|nat=ESP|pos=GK|name=[[Rubén Yáñez]]}}
 {{Fs player|no= 2|nat=ESP|pos=DF|name=[[Guille Rosas]]}}
 {{Fs player|no= 3|nat=ESP|pos=DF|name=[[Pablo García (footballer, born 2000)|Pablo García]]}}
@@ -61,6 +61,7 @@ TEMPLATES 31
 {{Fs player|no=44|nat=ESP|pos=DF|name=[[Andrés Cuenca]]|other=on loan from [[Como 1907|Como]]}}
 {{Fs player|no=27|nat=ESP|pos=FW|name=[[Enol Prendes]]}}
 {{Fs player|no=28|nat=ESP|pos=FW|name=[[Miguel Conde]]}}
+{{Fs player|no=29|nat=ESP|pos=DF|name=[[Alex Diego (footballer, born 2008)|Alex Diego]]}}
 {{Fs player|no=34|nat=ESP|pos=MF|name=[[Diego Matabuena Álvarez|Diego Matabuena]]}}
 {{Fs player|no=35|nat=ESP|pos=MF|name=[[Christian Ferreres|Chris Ferreres]]}}
 {{Fs player|no=36|nat=ESP|pos=MF|name=[[Bruno Rubio Argüelles|Bruno Rubio]]}}

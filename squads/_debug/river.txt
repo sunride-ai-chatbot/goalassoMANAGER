@@ -39,7 +39,7 @@
 == References
 == External links
 
-TEMPLATES 54
+TEMPLATES 53
 {{fs player|no=2|nat=ARG|pos=DF|name=[[Tobías Ramírez]]}}
 {{fs player|no=3|nat=ARG|pos=DF|name=[[Francisco Ortega (footballer, born 1999)|Francisco Ortega]]}}
 {{fs player|no=5|nat=ARG|pos=DF|name=[[Juan Portillo|Juan Carlos Portillo]]}}
@@ -70,9 +70,8 @@ TEMPLATES 54
 {{fs player|other=|no=|nat=ARG|pos=GK|name=Franco Jaroszewicz}}
 {{fs player|no=|nat=ARG|pos=DF|name=Agustín Obregón}}
 {{fs player|no=|nat=ARG|pos=DF|name=Lisandro Bajú}}
-{{fs player|no=|nat=ARG|pos=MF|name=[[Thiago Acosta]]}}
 {{fs player|no=|nat=ARG|pos=FW|name=[[Alexis González (Argentine footballer)|Alexis González]]}}
-{{fs player|no=27|nat=ARG|pos=MF|name=Santiago Espíndola}}
+{{fs player|no=27|nat=ARG|pos=MF|name=[[User:Apolodoro Nicotatopulos/Santiago Espíndola|Santiago Espíndola]]}}
 {{fs player|no=43|nat=ARG|pos=DF|name=[[Valentín Lucero]]}}
 {{fs player|no=45|nat=ARG|pos=MF|name=Maximiliano Soria}}
 {{fs player|no=46|nat=ARG|pos=DF|name=Lucas Flores}}

@@ -76,14 +76,14 @@ TEMPLATES 44
 {{Fs player|no=35|nat=UKR|pos=GK|name=[[Ruslan Neshcheret]]}}
 {{Fs player|no=39|nat=PAN|pos=FW|name=[[Eduardo Guerrero (footballer)|Eduardo Guerrero]]}}
 {{fs player|no=40|nat=UKR|pos=DF|name=[[Kristian Bilovar]]}}
-{{fs player|no=42|nat=CIV|pos=MF|name=Keasse Bah}}
+{{fs player|no=42|nat=CIV|pos=MF|name=[[Keasse Bah]]}}
 {{Fs player|no=43|nat=UKR|pos=GK|name=Illya Olkhovyi}}
 {{Fs player|no=44|nat=UKR|pos=DF|name=[[Vladyslav Dubinchak]]}}
 {{Fs player|no=47|nat=BRA|pos=MF|name=[[Gustavo Prado]]|other=on loan from [[SC Internacional|Internacional]]}}
 {{Fs player|no=51|nat=UKR|pos=GK|name=Valentyn Morhun}}
-{{Fs player|no=66|nat=SEN|pos=DF|name=Aliou Thiaré}}
+{{Fs player|no=66|nat=SEN|pos=DF|name=[[Aliou Thiaré]]}}
 {{Fs player|no=70|nat=UKR|pos=FW|name=[[Bohdan Redushko]]}}
-{{Fs player|no=71|nat=UKR|pos=GK|name=Vyacheslav Surkis}}
+{{Fs player|no=71|nat=UKR|pos=GK|name=[[Vyacheslav Surkis]]}}
 {{Fs player|no=74|nat=UKR|pos=GK|name=Denys Ihnatenko}}
 {{Fs player|no=91|nat=UKR|pos=MF|name=[[Mykola Mykhaylenko]]}}
 {{Fs player|no=94|nat=POL|pos=DF|name=[[Tomasz Kędziora]]}}

@@ -22,7 +22,7 @@
 == References
 == External links
 
-TEMPLATES 37
+TEMPLATES 40
 {{Fs player|no=1|nat=CZE|pos=GK|name=[[Jiří Letáček]]}}
 {{Fs player|no=2|nat=TOG|pos=DF|name=[[Dakonam Djené]]|other={{small|[[Captain (association football)|captain]]}}
 {{Fs player|no=3|nat=ESP|pos=DF|name=[[Davinchi]]}}
@@ -56,6 +56,9 @@ TEMPLATES 37
 {{Fs player|no=33|nat=MAR|pos=FW|name=[[Mohamed Achraf Mrah Benneoui|Moha Achraf]]}}
 {{Fs player|no=34|nat=ESP|pos=MF|name=[[Jesús Martínez Girón|Jesús Martínez]]}}
 {{Fs player|no=35|nat=ESP|pos=GK|name=[[Diego Ferrer Martínez|Diego Ferrer]]}}
+{{Fs player|no=36|nat=SEN|pos=FW|name=[[Ibrahima Danfakha Keita|Ibrahima Danfakha]]}}
+{{Fs player|no=37|nat=ESP|pos=FW|name=[[Sebastián Salazar Trujillo|Sebas Salazar]]}}
+{{Fs player|no=38|nat=UKR|pos=DF|name=[[Vladyslav Oleksandrovich Kysil|Vladyslav Kysil]]}}
 {{Fs player|no=|nat=ESP|pos=DF|name=[[Gorka Rivera]]|other=at [[Unionistas de Salamanca CF|Unionistas]] until 30 June 2027}}
 {{Fs player|no=|nat=CMR|pos=MF|name=[[Yvan Neyou]]|other=at [[Volos F.C.|Volos]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|pos=FW|name=[[Álex Sancris]]|other=at [[CD Leganés|Leganés]] until 30 June 2027}}

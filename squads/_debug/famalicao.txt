@@ -38,4 +38,4 @@ TEMPLATES 30
 {{Fs player|no=|nat=BRA|name=[[Riccieli]]|pos=DF|other={{small|at [[Esporte Clube Vitória|Vitória]] until 31 December 2026}}
 {{Fs player|no=|nat=GEO|name=[[Otar Mamageishvili]]|pos=MF|other={{small|at [[Wolfsberger AC|Wolfsberger]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|name=[[Gonzalo Pastor]]|pos=MF|other={{small|at [[Unionistas de Salamanca CF|Unionistas]] until 30 June 2027}}
-{{Fs player|no=|nat=POR|name=Rudi Almeida|pos=FW|other={{small|at [[Amarante F.C.|Amarante]] until 30 June 2027}}
+{{Fs player|no=|nat=POR|name=[[Rúdi Almeida]]|pos=FW|other={{small|at [[Amarante F.C.|Amarante]] until 30 June 2027}}

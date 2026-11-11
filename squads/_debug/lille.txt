@@ -46,7 +46,7 @@
 
 TEMPLATES 39
 {{Fs player|no=1|nat=TUR|pos=GK|name=[[Berke Özer]]}}
-{{Fs player|no=2|nat=SUI|pos=DF|name=[[Loun Srdanovic]]}}
+{{Fs player|no=2|nat=SUI|pos=DF|name=[[Loun Srdanović]]}}
 {{Fs player|no=3|nat=BEL|pos=DF|name=[[Nathan Ngoy]]}}
 {{Fs player|no=4|nat=BRA|pos=DF|name=[[Alexsandro (footballer, born 1999)|Alexsandro]]}}
 {{Fs player|no=6|nat=ALG|pos=MF|name=[[Nabil Bentaleb]]}}

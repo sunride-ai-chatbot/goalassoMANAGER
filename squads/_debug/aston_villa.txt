@@ -43,7 +43,7 @@ TEMPLATES 58
 {{fs player|no=6|nat=ENG|pos=MF|name=[[Ross Barkley]]}}
 {{fs player|no=7|nat=SCO|pos=MF|name=[[John McGinn]]|other=[[Captain (association football)|captain]]}}
 {{fs player|no=8|nat=FRA|pos=MF|name=[[Boubacar Kamara]]}}
-{{fs player|no=10|nat=ARG|pos=MF|name=[[Emiliano Buendía]]}}
+{{fs player|no=10|nat=ARG|pos=FW|name=[[Emiliano Buendía]]}}
 {{fs player|no=11|nat=SEN|pos=FW|name=[[Nicolas Jackson]]}}
 {{Fs player|no=13|nat=ITA|pos=DF|name=[[Matteo Ruggeri]]}}
 {{fs player|no=14|nat=ESP|pos=DF|name=[[Pau Torres]]}}

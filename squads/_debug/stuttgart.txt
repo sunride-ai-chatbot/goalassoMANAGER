@@ -62,13 +62,13 @@ TEMPLATES 48
 {{Fs player|no=29|nat=GER|pos=DF|name=[[Finn Jeltsch]]}}
 {{Fs player|no=31|nat=GER|pos=FW|name=[[Justin Diehl]]}}
 {{Fs player|no=33|nat=GER|pos=GK|name=[[Marius Funk]]}}
-{{Fs player|no=39|nat=GER|pos=MF|name=Ertuğrul Yiğit}}
+{{Fs player|no=39|nat=GER|pos=MF|name=[[Ertuğrul Yiğit]]}}
 {{Fs player|no=41|nat=GER|pos=GK|name=[[Dennis Seimen]]}}
 {{Fs player|no=43|nat=GER|pos=FW|name=[[Jarzinho Malanga]]}}
 {{Fs player|no=44|nat=SVK|pos=FW|name=[[Leo Sauer]]}}
 {{Fs player|no=46|nat=GER|pos=GK|name=[[Stefan Drljača]]}}
 {{Fs player|no=47|nat=AUT|pos=MF|name=[[Yanik Spalt]]}}
-{{Fs player|no=|nat=GER|pos=GK|name=Florian Hellstern|other={{small|at [[SpVgg Greuther Fürth|Greuther Fürth]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=GK|name=[[Florian Hellstern]]|other={{small|at [[SpVgg Greuther Fürth|Greuther Fürth]] until 30 June 2027}}
 {{Fs player|no=|nat=GER|pos=MF|name=[[Mirza Catovic]]|other={{small|at [[FC Barcelona Atlètic|Barcelona B]] until 30 June 2027}}
 {{Fs player|no=|nat=GER|pos=MF|name=[[Noah Darvich]]|other={{small|at [[SV Elversberg]] until 30 June 2027}}
 {{Fs player|no=|nat=GER|pos=MF|name=[[Yannik Keitel]]|other={{small|at [[FC Augsburg]] until 30 June 2027}}

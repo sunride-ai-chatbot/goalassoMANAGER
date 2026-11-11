@@ -6,8 +6,7 @@
 === The Premier League years and relegation (1990s)
 === Relegation, promotion, financial struggles and the arrival of Bernie and Flavio (2000s)
 === Yo-yo club (2010s)
-=== Rebuilding phase (2020s)
-=== The Nourry Era 2024–
+=== Rebuilding phase and the arrival of Nourry (2020s)
 == Kits
 == Grounds
 == Fan base and club culture
@@ -66,8 +65,10 @@ TEMPLATES 78
 {{Fs player|no=30|nat=RSA|pos=DF|name=[[Tylon Smith]]|other=at [[New England Revolution]] until 31 May 2027}}
 {{Fs player|no=35|nat=ENG|pos=MF|name=Philip Sanyaolu|other=at [[Bristol Rovers F.C.|Bristol Rovers]] until 31 May 2027}}
 {{Fs player|no=38|nat=FRA|pos=DF|name=[[Ziyad Larkeche]]|other=at [[Barnsley F.C.|Barnsley]] until 31 May 2027}}
+{{Fs player|no=|nat=ENG|pos=GK|name=Alfie Fittall|other=at [[Binfield F.C.|Binfield]] until 8 December 2026}}
 {{Fs player|no=|nat=ENG|pos=GK|name=[[Joe Walsh (footballer, born 2002)|Joe Walsh]]|other= at [[Wigan Athletic F.C.|Wigan Athletic]] until 31 May 2027}}
 {{Fs player|no=|nat=GHA|pos=DF|name=Cory Adjetey-Brew|other=at [[Worthing F.C.|Worthing]] until 3 January 2027}}
+{{Fs player|no=|nat=ENG|pos=DF|name=Nkhai Majesty|other=at [[Ascot United F.C.|Ascot United]] until 31 May 2027}}
 {{Fs player|no=|nat=ENG|pos=DF|name=[[Jaiden Putman]]|other=at [[Woking F.C.|Woking]] until 31 May 2027}}
 {{Fs player|no=|nat=AUS|pos=MF|name=[[Jaylan Pearman]]|other=at [[Swindon Town F.C.|Swindon Town]] until 31 May 2027}}
 {{Fs player|no=|nat=AUS|pos=MF|name=[[Daniel Bennie]]|other=at [[Dundee United F.C.|Dundee United]] until 31 May 2027}}
@@ -89,11 +90,9 @@ TEMPLATES 78
 {{Fs player|no=|nat=ENG|pos=MF|name=[[Teddy Tarbotton]]}}
 {{Fs player|no=|nat=ENG|pos=FW|name=Ridwan Hassan}}
 {{Fs player|no=33|nat=WAL|pos=MF|name=Leon Scarlett}}
-{{Fs player|no=|nat=ENG|pos=GK|name=Alfie Fittall}}
 {{Fs player|no=|nat=ENG|pos=GK|name=Cian Osborne}}
 {{Fs player|no=|nat=ENG|pos=GK|name=Kasey Taylor}}
 {{Fs player|no=|nat=USA|pos=DF|name=Eddie Chadwick}}
-{{Fs player|no=|nat=ENG|pos=DF|name=Nkhai Majesty}}
 {{Fs player|no=|nat=ENG|pos=DF|name=Ruben Michaud}}
 {{Fs player|no=|nat=ENG|pos=DF|name=Izik Mitchell-Abadom}}
 {{Fs player|no=|nat=ENG|pos=DF|name=Shaquille Sandiford}}

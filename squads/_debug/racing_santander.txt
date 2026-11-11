@@ -15,7 +15,7 @@
 == References
 == External links
 
-TEMPLATES 32
+TEMPLATES 38
 {{Fs player|no=1|nat=SWE|name=[[Simon Eriksson (footballer)|Simon Eriksson]]|pos=GK}}
 {{Fs player|no=2|nat=ESP|name=[[Álvaro Mantilla]]|pos=DF|other=[[Captain (association football)|vice-captain]]}}
 {{Fs player|no=3|nat=ESP|name=[[Aarón Martín (footballer, born 1997)|Aarón Martín]]|pos=DF}}
@@ -40,11 +40,17 @@ TEMPLATES 32
 {{Fs player|no=22|nat=BRA|name=[[Pedro Felipe (footballer, born 2004)|Pedro Felipe]]|pos=DF}}
 {{Fs player|no=23|nat=ESP|name=[[Iván Martín (footballer, born 1999)|Iván Martín]]|pos=MF}}
 {{Fs player|no=24|nat=FRA|name=[[Jeanuël Belocian]]|pos=DF|other=on loan from [[Bayer 04 Leverkusen|Bayer Leverkusen]]}}
+{{fs player|no=26|nat=ESP|name=[[Álvaro Fernández Fernández|Álvaro Fernández]]|pos=DF}}
+{{fs player|no=28|nat=ESP|name=[[Héctor Mejía Espinosa|Héctor Mejía]]|pos=DF}}
 {{Fs player|no=29|nat=ESP|name=[[Andrés Vallecillo Arce|Andrés Vallecillo]]|pos=MF}}
 {{fs player|no=30|nat=ESP|name=[[Carlos Sánchez Martos|Carlos Sánchez]]|pos=DF}}
 {{fs player|no=31|nat=ESP|name=[[Laro Gómez]]|pos=GK}}
 {{Fs player|no=33|nat=ESP|name=[[Jorge Castellanos del Olmo|Jorge Castellanos]]|pos=FW}}
 {{fs player|no=38|nat=ESP|name=[[Hugo Pérez Sañudo|Hugo Pérez]]|pos=DF}}
+{{Fs player|no=39|nat=ESP|name=[[Gabriel Jiménez Carpintero|Gaby Jiménez]]|pos=FW}}
+{{Fs player|no=41|nat=ESP|name=[[Mario Solórzano Diestro|Mario Solórzano]]|pos=MF}}
+{{fs player|no=42|nat=EQG|name=[[Junior Bita]]|pos=MF}}
+{{Fs player|no=43|nat=ESP|name=[[Alejandro Laso Molino|Alejandro Laso]]|pos=FW}}
 {{Fs player|no=|nat=ESP|name=[[Jokin Ezkieta]]|pos=GK|other=at [[Cádiz CF|Cádiz]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|name=[[Aritz Aldasoro]]|pos=MF|other=at [[Real Oviedo|Oviedo]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|name=[[Diego Díaz (footballer, born 2005)|Diego Díaz]]|pos=MF|other=at [[FC Andorra|Andorra]] until 30 June 2027}}

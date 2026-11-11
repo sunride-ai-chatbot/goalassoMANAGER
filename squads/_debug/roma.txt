@@ -41,7 +41,7 @@
 == External links
 === Independent websites
 
-TEMPLATES 45
+TEMPLATES 47
 {{Fs player|no=2|nat=NED|pos=DF|name=[[Devyne Rensch]]}}
 {{Fs player|no=3|nat=GRE|pos=DF|name=[[Konstantinos Koulierakis]]}}
 {{Fs player|no=4|nat=ITA|pos=MF|name=[[Bryan Cristante]]|other=[[Captain (association football)|captain]]}}
@@ -67,7 +67,9 @@ TEMPLATES 45
 {{Fs player|no=87|nat=ITA|pos=DF|name=[[Daniele Ghilardi]]}}
 {{Fs player|no=95|nat=ITA|pos=GK|name=[[Pierluigi Gollini]]}}
 {{Fs player|no=99|nat=SRB|pos=GK|name=[[Mile Svilar]]}}
+{{Fs player|no=12|nat=HUN|pos=GK|name=Levente Kilvinger}}
 {{Fs player|no=63|nat=ITA|pos=MF|name=[[Alessandro Di Nunzio]]}}
+{{Fs player|no=64|nat=ITA|pos=MF|name=Valerio Maccaroni}}
 {{Fs player|no=72|nat=ITA|pos=FW|name=Lorenzo Paratici|other=on loan from [[UC Sampdoria|Sampdoria]]}}
 {{Fs player|no=78|nat=GUI|pos=FW|name=Mandjou Camara}}
 {{Fs player|no=|nat=POL|pos=GK|name=[[Radosław Żelezny]]|other=at [[AC Perugia Calcio|Perugia]] until 30 June 2027}}

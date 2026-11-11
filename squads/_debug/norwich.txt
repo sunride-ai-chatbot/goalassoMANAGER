@@ -54,7 +54,7 @@ TEMPLATES 37
 {{Fs player|no=23|nat=SCO|pos=MF|name=[[Kenny McLean]]|other=[[Captain (association football)|captain]]}}
 {{Fs player|no=24|nat=ENG|pos=FW|name=[[Jovon Makama]]}}
 {{Fs player|no=25|nat=COD|pos=MF|name=[[Paris Maghoma]]}}
-{{Fs player|no=26|nat=ENG|pos=MF|name=[[Sam Field (footballer)|Sam Field]]}}
+{{Fs player|no=26|nat=ENG|pos=MF|name=[[Sam Field (footballer)|Sam Field]]|other=[[Vice-captain (association football)|3rd captain]]}}
 {{Fs player|no=28|nat=BRA|pos=DF|name=[[Bruno Alves (footballer, born 2005)|Bruno Alves]]|other=on loan from [[Cruzeiro EC|Cruzeiro]]}}
 {{Fs player|no=29|nat=DEN|pos=MF|name=[[Oscar Schwartau]]}}
 {{Fs player|no=30|nat=DEN|pos=FW|name=[[Mathias Kvistgaarden]]}}

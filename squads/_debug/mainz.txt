@@ -40,12 +40,12 @@ TEMPLATES 33
 {{Fs player|no=30|nat=SUI|name=[[Silvan Widmer]]|pos=DF|other={{small|[[Captain (association football)|captain]]}}
 {{Fs player|no=31|nat=GER|name=[[Dominik Kohr]]|pos=DF}}
 {{Fs player|no=39|nat=CIV|name=[[Alynho Haïdara]]|pos=FW}}
-{{Fs player|no=40|nat=GER|name=Maximilian Kinzig|pos=GK}}
+{{Fs player|no=40|nat=GER|name=[[Maximilian Kinzig]]|pos=GK}}
 {{Fs player|no=48|nat=POL|name=[[Kacper Potulski]]|pos=DF}}
 {{Fs player|no=|nat=GER|name=[[Lasse Rieß]]|pos=GK|other={{small|at [[Fortuna Düsseldorf]] until 30 June 2027}}
 {{Fs player|no=|nat=AUS|name=[[Kasey Bos]]|pos=DF|other={{small|at [[Excelsior Rotterdam|Excelsior]] until 30 June 2027}}
 {{Fs player|no=|nat=AUT|name=[[Konstantin Schopp]]|pos=DF|other={{small|at [[TSV Hartberg]] until 30 June 2027}}
-{{Fs player|no=|nat=GER|name=Daniel Gleiber|pos=MF|other={{small|at [[1. FC Saarbrücken]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|name=[[Daniel Gleiber]]|pos=MF|other={{small|at [[1. FC Saarbrücken]] until 30 June 2027}}
 {{Fs player|no=|nat=KOR|name=[[Hong Hyun-seok]]|pos=MF|other={{small|at [[FC Midtjylland|Midtjylland]] until 30 June 2027}}
 {{fs player|no=|nat=DEN|name=[[William Bøving]]|pos=FW|other={{small|at [[1. FC Nürnberg]] until 30 June 2027}}
 {{Fs player|no=|nat=GER|name=[[Nelson Weiper]]|pos=FW|other={{small|at [[SK Sturm Graz|Sturm Graz]] until 30 June 2027}}

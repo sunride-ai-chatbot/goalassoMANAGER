@@ -20,7 +20,7 @@
 == References
 == External links
 
-TEMPLATES 29
+TEMPLATES 34
 {{Fs player|no= 1|nat=NED|name=[[Sem Westerveld]]|pos=GK}}
 {{Fs player|no= 2|nat=ESP|name=[[Jokin Gabilondo]]|pos=DF}}
 {{Fs player|no= 3|nat=ESP|name=[[Raúl Pereira]]|pos=DF}}
@@ -45,7 +45,12 @@ TEMPLATES 29
 {{Fs player|no=23|nat=DOM|name=[[Óscar Ureña]]|pos=FW}}
 {{Fs player|no=25|nat=ESP|name=[[Marco Sangalli]]|pos=DF}}
 {{Fs player|no=26|nat=ECU|name=[[Diego Monzón Castillo|Diego Monzón]]|pos=MF}}
+{{Fs player|no=27|nat=ESP|name=[[Sergio Beltrán Santander|Sergio Beltrán]]|pos=MF}}
+{{Fs player|no=28|nat=ESP|name=[[Gonzalo Arantegui Marín|Lalo Arantegui]]|pos=DF}}
+{{Fs player|no=30|nat=ESP|name=[[Laken Stephan Ayoola Torres|Laken Torres]]|pos=FW}}
 {{Fs player|no=31|nat=ESP|name=[[Jaime Tobajas]]|pos=MF}}
+{{Fs player|no=32|nat=ESP|name=[[Ignacio Vázquez Indiano|Ignacio Vázquez]]|pos=DF}}
+{{Fs player|no=40|nat=ROM|name=[[Marcos Marian Manolache|Marcos Manolache]]|pos=GK}}
 {{Fs player|no=|nat=SVK|name=[[Sebastian Kóša]]|pos=DF|other=at [[FC Košice|Košice]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|name=[[Hugo Carrillo Mariscal|Hugo Carrillo]]|pos=DF|other=at [[AD Mérida|Mérida]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|name=[[Iker García Ruiz|Iker García]]|pos=MF|other=at [[Arenas Club de Getxo|Arenas Getxo]] until 30 June 2027}}

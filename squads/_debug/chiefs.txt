@@ -18,7 +18,7 @@
 == References
 == External links
 
-TEMPLATES 33
+TEMPLATES 34
 {{Fs player|no= 1|pos=GK|nat=RSA|name=[[Brandon Peterson (soccer)|Brandon Peterson]]|other=[[Captain (association football)|captain]]}}
 {{Fs player|no= 2|pos=DF|nat=RSA|name=[[Thabiso Monyane]]}}
 {{Fs player|no= 3|pos=FW|nat=RSA|name=[[Khanyisa Mayo]]}}
@@ -52,3 +52,4 @@ TEMPLATES 33
 {{Fs player|no=77|pos=FW|nat=GNB|name=[[Flávio Silva]]}}
 {{Fs player|no=84|pos=DF|nat=ANG|name=[[Inácio Miguel]]}}
 {{Fs player|no=  |pos=MF|nat=RSA|name=Faiz Abrahams}}
+{{Fs player|no=  |pos=FW|nat=RSA|name=[[Elias Mokwana]]}}

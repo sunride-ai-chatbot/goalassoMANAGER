@@ -112,7 +112,7 @@ TEMPLATES 67
 {{fs player|no=–|nat=ENG|pos=FW|name=Caleb Redhead}}
 {{fs player|no=–|nat=ENG|pos=DF|name=Lyndon Snelgrove}}
 {{fs player|no=–|nat=ENG|pos=GK|name=Ronnie Sandford|other=on loan at [[Dulwich Hamlet F.C.|Dulwich Hamlet]]}}
-{{fs player|no=–|nat=ENG|pos=|name=Lucas Middleton}}
+{{fs player|no=–|nat=ENG|pos=DF|name=Lucas Middleton}}
 {{fs player|no=–|nat=ENG|pos=FW|name=Tyrese Ndige}}
 {{fs player|no=–|nat=ENG|pos=FW|name=Ephraim Osayande}}
 {{fs player|no=—|nat=ENG|pos=GK|name=Justin Ndikum}}

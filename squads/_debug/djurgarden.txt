@@ -48,6 +48,7 @@ TEMPLATES 37
 {{Fs player|no=19|nat=DEN|pos=MF|name=[[Jeppe Okkels]]}}
 {{Fs player|no=20|nat=FIN|pos=MF|name=[[Matias Siltanen]]}}
 {{Fs player|no=21|nat=SWE|pos=DF|name=[[Mikael Marqués]]}}
+{{Fs player|no=23|nat=BRA|pos=DF|name=Lucca Gentil}}
 {{Fs player|no=24|nat=SWE|pos=DF|name=Max Larsson}}
 {{Fs player|no=25|nat=GER|pos=DF|name=Daryl Tschoumy Nana}}
 {{Fs player|no=26|nat=NGA|pos=FW|name=Angelo Agbejoye}}
@@ -57,7 +58,6 @@ TEMPLATES 37
 {{Fs player|no=30|nat=SWE|pos=GK|name=[[Lukas Jonsson]]}}
 {{Fs player|no=35|nat=SWE|pos=GK|name=[[Jacob Rinne]]}}
 {{Fs player|no=40|nat=SWE|pos=GK|name=Max Croon}}
-{{Fs player|no=|nat=BRA|pos=DF|name=Lucca Gentil}}
 {{Fs player|no=3|nat=SWE|pos=DF|name=[[Leon Hien]]|other=at [[Tromsø IL|Tromsø]] until 31 December 2026}}
 {{Fs player|no=17|nat=SWE|pos=MF|name=Ahmed Saeed|other=at [[FC Arlanda]] until 31 December 2026}}
 {{Fs player|no=23|nat=SVN|pos=FW|name=[[Nino Žugelj]]|other=at [[IFK Göteborg]] until 31 December 2026}}

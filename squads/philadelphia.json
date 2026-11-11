@@ -53,6 +53,18 @@
 "sl": 20
 },
 {
+"he": "Indiana Vassilev",
+"en": "Indiana Vassilev",
+"pos": "FW",
+"age": 25,
+"nat": "United States",
+"value_m": 1.0,
+"qid": "Q80933819",
+"img": "Indiana Vassilev Philadelphia Chicago 10.26.25-070 (cropped).jpg",
+"no": "19",
+"sl": 12
+},
+{
 "he": "Bruno Damiani",
 "en": "Bruno Damiani",
 "pos": "FW",
@@ -87,18 +99,6 @@
 "img": "Milan Iloski Philadelphia Chicago 10.26.25-044 (cropped).jpg",
 "no": "10",
 "sl": 6
-},
-{
-"he": "Indiana Vassilev",
-"en": "Indiana Vassilev",
-"pos": "MF",
-"age": 25,
-"nat": "United States",
-"value_m": 0.87,
-"qid": "Q80933819",
-"img": "Indiana Vassilev Philadelphia Chicago 10.26.25-070 (cropped).jpg",
-"no": "19",
-"sl": 12
 },
 {
 "he": "Jesús Bueno",

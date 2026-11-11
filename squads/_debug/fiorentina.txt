@@ -29,7 +29,7 @@
 == References
 == External links
 
-TEMPLATES 57
+TEMPLATES 56
 {{Fs player|no=2|nat=BRA|pos=DF|name=[[Dodô (footballer, born 1998)|Dodô]]}}
 {{Fs player|no=3|nat=ROU|pos=DF|name=[[Radu Drăgușin]]|other=on loan from [[Tottenham Hotspur F.C.|Tottenham]]}}
 {{Fs player|no=4|nat=ITA|pos=MF|name=[[Marco Brescianini]]}}
@@ -46,7 +46,7 @@ TEMPLATES 57
 {{Fs player|no=28|nat=POR|pos=FW|name=[[Pedro Gonçalves]]|other=on loan from [[Sporting CP]]}}
 {{fs player|no=29|nat=ITA|pos=FW|name=[[Wilfried Gnonto]]|other=on loan from [[Leeds United F.C.|Leeds United]]}}
 {{Fs player|no=30|nat=ARG|pos=FW|name=[[Franco Mastantuono]]|other=on loan from [[Real Madrid CF|Real Madrid]]}}
-{{Fs player|no=32|nat=ESP|pos=FW|name=[[Mateo Pellegrino]]}}
+{{Fs player|no=32|nat=ARG|pos=FW|name=[[Mateo Pellegrino]]}}
 {{Fs player|no=33|nat=BRA|pos=DF|name=[[Viery]]}}
 {{Fs player|no=42|nat=CIV|pos=MF|name=[[Christ Inao Oulaï]]}}
 {{Fs player|no=43|nat=ESP|pos=GK|name=[[David de Gea]]|other=[[Captain (association football)|captain]]}}
@@ -58,7 +58,6 @@ TEMPLATES 57
 {{Fs player|no=72|nat=ITA|pos=FW|name=[[Brando Mazzeo]]}}
 {{Fs player|no=73|nat=ITA|pos=MF|name=[[Antonio Pirrò]]}}
 {{Fs player|no=|nat=ITA|pos=FW|name=[[Riccardo Sottil]]}}
-{{Fs player|no=|nat=ITA|pos=FW|name=[[Jacopo Tarantino]]}}
 {{Fs player|no=|nat=ITA|pos=GK|name=[[Pietro Leonardelli]]|other=at [[Treviso FBC|Treviso]] until 30 June 2027}}
 {{Fs player|no=|nat=ITA|pos=GK|name=[[Tommaso Martinelli (footballer)|Tommaso Martinelli]]|other=at [[US Avellino 1912|Avellino]] until 30 June 2027}}
 {{Fs player|no=|nat=ITA|pos=GK|name=[[Tommaso Vannucchi]] |other=at [[FC Arzignano Valchiampo| Arzignano Valchiampo]] until 30 June 2027}}

@@ -61,7 +61,7 @@ TEMPLATES 56
 {{fs player|no=28|nat=IRL|pos=MF|name=[[Adam Murphy]]|other=on loan at [[Fleetwood Town F.C.|Fleetwood Town]] until 2 January 2027}}
 {{fs player|no=35|nat=ENG|pos=MF|name=Louie Derrick|other=on loan at [[Weston-super-Mare A.F.C.|Weston-super-Mare]] until 6 September 2026}}
 {{fs player|no=39|nat=ENG|pos=GK|name=Freddie Godden|other=on loan at [[Taunton Town F.C.|Taunton Town]] until 30 June 2027}}
-{{fs player|no=|nat=WAL|pos=GK|name=Joe Duncan|other=on loan at [[Southend United F.C.|Southend United]] until 30 June 2027}}
+{{fs player|no=|nat=WAL|pos=GK|name=[[Joe Duncan (footballer)|Joe Duncan]]|other=on loan at [[Southend United F.C.|Southend United]] until 30 June 2027}}
 {{fs player|no=|nat=ENG|pos=DF|name=Jack Hooper|other=on loan at [[Cardiff Met F.C.|Cardiff Met]] until 31 May 2027}}
 {{fs player|no=25|nat=ITA|pos=FW|name=[[Ephraim Yeboah]]}}
 {{fs player|no=30|nat=ENG|pos=DF|name=Marley Thelwell}}

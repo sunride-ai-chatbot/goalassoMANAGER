@@ -18,6 +18,7 @@
 === European matches since 2010
 == Current squad
 === Players with multiple nationalities
+=== Other players on contract
 === Out on loan
 == Technical staff
 == Board and management
@@ -27,10 +28,9 @@
 == References
 == External links
 
-TEMPLATES 48
+TEMPLATES 45
 {{Fs player|no=1|nat=SRB|name=[[Matija Gočmanac]]|pos=GK}}
 {{Fs player|no=2|nat=CMR|name=[[Kufre Eta]]|pos=DF}}
-{{Fs player|no=3|nat=SRB|name=[[Dušan Cupara]]|pos=DF}}
 {{Fs player|no=4|nat=SRB|name=[[Marko Poletanović]]|pos=MF}}
 {{Fs player|no=5|nat=SRB|name=[[Đorđe Crnomarković]]|pos=DF}}
 {{Fs player|no=6|nat=SRB|name=[[Siniša Tanjga]]|pos=DF}}
@@ -39,7 +39,7 @@ TEMPLATES 48
 {{Fs player|no=9|nat=SRB|name=[[Aleksa Vukanović]]|pos=FW}}
 {{Fs player|no=10|nat=SRB|name=[[Dejan Zukić]]|pos=MF|other=<small>[[captain (association football)|captain]]</small>}}
 {{Fs player|no=12|nat=SRB|name=[[Dragan Rosić]]|pos=GK}}
-{{Fs player|no=13|nat=SRB|name=[[Vladan Novevski]]|pos=DF}}
+{{Fs player|no=13|nat=SRB|name=[[Vladan Novevski]]|pos=MF}}
 {{Fs player|no=15|nat=SRB|name=[[Erhan Mašović]]|pos=DF}}
 {{Fs player|no=16|nat=ROU|name=[[Mihai Butean]]|pos=DF}}
 {{Fs player|no=18|nat=SRB|name=[[Njegoš Petrović]]|pos=MF|other=<small>[[captain (association football)#Vice-captain|vice-captain]]</small>}}
@@ -51,28 +51,26 @@ TEMPLATES 48
 {{Fs player|no=24|nat=SRB|name=[[Jovan Ostojić]]|pos=MF}}
 {{Fs player|no=26|nat=HUN|name=[[Kornél Szűcs]]|pos=DF}}
 {{Fs player|no=27|nat=SRB|name=[[Petar Sukačev]]|pos=MF}}
-{{Fs player|no=28|nat=SRB|name=[[Vukašin Davidov]]|pos=DF}}
-{{Fs player|no=32|nat=SRB|name=[[David Milovanović]]|pos=FW}}
 {{Fs player|no=33|nat=SRB|name=[[Vuk Boškan]]|pos=FW}}
 {{Fs player|no=35|nat=BIH|name=[[Ifet Đakovac]]|pos=MF}}
 {{Fs player|no=66|nat=SRB|name=[[Mateja Gašić]]|pos=DF}}
-{{Fs player|no=70|nat=SRB|name=[[Andrej Pivaš]]|pos=MF}}
 {{Fs player|no=71|nat=SRB|name=[[Bogdan Bogdanović (footballer, born 2008)|Bogdan Bogdanović]]|pos=GK}}
 {{Fs player|no=77|nat=SRB|name=[[Lazar Ranđelović]]|pos=MF}}
 {{Fs player|no=99|nat=BIH|name=[[Nardin Mulahusejnović]]|pos=FW}}
+{{Fs player|no=|nat=SRB|name=[[Marko Pavić (footballer)|Marko Pavić]]|pos=DF}}
+{{Fs player|no=|nat=SRB|name=[[Dario Janjić]]|pos=MF}}
+{{Fs player|no=|nat=SRB|name=[[Uroš Paunović]]|pos=FW}}
 {{Fs player|no=|nat=SRB|name=[[Branko Nikolić]]|pos=GK|other=at [[FK Bor 1919|Bor]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Viktor Matić]]|pos=GK|other=at [[FK Indeks Novi Sad|Indeks]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Vukašin Kravić]]|pos=DF|other=at [[OFK Vršac]] until the end of the season}}
 {{Fs player|no=|nat=BIH|name=[[Hamza Redžić]]|pos=DF|other=at [[FK Bor 1919|Bor]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Vladimir Mićunović]]|pos=DF|other=at [[OFK Vrbas]] until the end of the season}}
+{{Fs player|no=|nat=SRB|name=[[Andrej Pivaš]]|pos=MF|other=at [[OFK Vršac]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Nikola Ninković (footballer, born 2006)|Nikola Ninković]]|pos=MF|other=at [[FK Indeks Novi Sad|Indeks]] until the end of the season}}
-{{Fs player|no=|nat=SRB|name=[[Dario Janjić]]|pos=MF|other=at [[FK Kabel|Kabel]] until the end of the season}}
-{{Fs player|no=|nat=SRB|name=[[Tadija Stanišić]]|pos=MF|other=at [[FK Kabel|Kabel]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Đorđe Đorđić]]|pos=MF|other=at [[FK Mačva Šabac|Mačva Šabac]] until winter transfer window}}
 {{Fs player|no=|nat=SRB|name=[[Novak Gojkov]]|pos=MF|other=at [[OFK Vršac]] until winter transfer window}}
 {{Fs player|no=|nat=GHA|name=[[Ibrahim Mustapha (Ghanaian footballer)|Ibrahim Mustapha]]|pos=FW|other=at [[FK Radnički Niš|Radnički Niš]] until the end of the season}}
 {{Fs player|no=|nat=BIH|name=[[Srđan Bašić]]|pos=FW|other=at [[OFK Vršac]] until the end of the season}}
-{{Fs player|no=|nat=SRB|name=[[Uroš Paunović]]|pos=FW|other=at [[FK Kabel|Kabel]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Damjan Đokanović]]|pos=FW|other=at [[FK Bor 1919|Bor]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Lazar Peranović]]|pos=FW|other=at [[FK Bor 1919|Bor]] until the end of the season}}
 {{Fs player|no=|nat=SRB|name=[[Milutin Vidosavljević]]|pos=FW|other=at {{flagicon|RUS}}

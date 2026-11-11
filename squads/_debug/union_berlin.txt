@@ -48,7 +48,7 @@
 TEMPLATES 34
 {{Fs player|no= 1|pos=GK|nat=DEN|name=[[Frederik Rønnow]]}}
 {{Fs player|no= 2|pos=DF|nat=GER|name=[[Felix Uduokhai]]}}
-{{Fs player|no= 3|pos=DF|nat=GER|name=Andrik Markgraf}}
+{{Fs player|no= 3|pos=DF|nat=GER|name=[[Andrik Markgraf]]}}
 {{Fs player|no= 4|pos=DF|nat=BEL|name=[[Zeno Van Den Bosch]]}}
 {{Fs player|no= 5|pos=DF|nat=GER|name=[[Marvin Friedrich]]}}
 {{Fs player|no= 6|pos=MF|nat=GER|name=[[Aljoscha Kemlein]]}}
@@ -74,9 +74,9 @@ TEMPLATES 34
 {{fs player|no=31|pos=GK|nat=GER|name=[[Matheo Raab]]}}
 {{Fs player|no=32|pos=FW|nat=JAM|name=[[Mekhi Gray]]}}
 {{Fs player|no=34|pos=DF|nat=FRA|name=[[Stanley Nsoki]]}}
-{{Fs player|no=38|pos=FW|nat=GER|name=Julien Friedrich}}
+{{Fs player|no=38|pos=FW|nat=GER|name=[[Julien Friedrich]]}}
 {{Fs player|no=49|pos=MF|nat=GER|name=[[Linus Güther]]}}
-{{Fs player|no=|pos=DF|nat=GER|name=Oluwaseun Ogbemudia|other=at [[SV Waldhof Mannheim|Waldhof Mannheim]] until 30 June 2027}}
-{{Fs player|no=|pos=DF|nat=GER|name=Leon Prosche|other=at [[FC Erzgebirge Aue|Erzgebirge Aue]] until 30 June 2027}}
-{{Fs player|no=|pos=MF|nat=GER|name=Tim Blaszczak|other=at [[FSV 63 Luckenwalde]] until 30 June 2027}}
+{{Fs player|no=|pos=DF|nat=GER|name=[[Oluwaseun Ogbemudia]]|other=at [[SV Waldhof Mannheim|Waldhof Mannheim]] until 30 June 2027}}
+{{Fs player|no=|pos=DF|nat=GER|name=[[Leon Prosche]]|other=at [[FC Erzgebirge Aue|Erzgebirge Aue]] until 30 June 2027}}
+{{Fs player|no=|pos=MF|nat=GER|name=[[Tim Blaszczak]]|other=at [[FSV 63 Luckenwalde]] until 30 June 2027}}
 {{fs player|no=|pos=FW|nat=UKR|name=[[Dmytro Bohdanov]]|other=at [[FC Energie Cottbus|Energie Cottbus]] until 30 June 2027}}

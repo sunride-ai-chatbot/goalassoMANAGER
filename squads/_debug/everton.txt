@@ -36,7 +36,7 @@
 
 TEMPLATES 22
 {{fs player|no=1|nat=ENG|pos=GK|name=[[Jordan Pickford]]}}
-{{fs player|no=2|nat=ENG|pos=DF|name=[[Ainsley Maitland-Niles]]}}
+{{fs player|no=2|nat=ENG|pos=MF|name=[[Ainsley Maitland-Niles]]}}
 {{fs player|no=4|nat=ENG|pos=DF|name=[[Jarrad Branthwaite]]}}
 {{fs player|no=5|nat=ENG|pos=DF|name=[[Michael Keane (footballer, born 1993)|Michael Keane]]}}
 {{fs player|no=6|nat=ENG|pos=DF|name=[[James Tarkowski]]|other=[[Captain (association football)|captain]]}}

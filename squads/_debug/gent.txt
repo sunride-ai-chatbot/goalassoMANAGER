@@ -27,7 +27,7 @@ TEMPLATES 69
 {{fs player|no= 8|nat=SVK|pos=MF|name=[[László Bénes]]}}
 {{Fs player|no=10|nat=NED|pos=MF|name=[[Aimé Omgba]]}}
 {{Fs player|no=11|nat=SWE|pos=FW|name=[[Momodou Sonko]]}}
-{{Fs player|no=14|nat=ENG|pos=FW|name=Kyrell Wilson}}
+{{Fs player|no=14|nat=ENG|pos=FW|name=[[Kyrell Wilson]]}}
 {{Fs player|no=16|nat=ENG|pos=DF|name=[[Christian Burgess]]}}
 {{Fs player|no=17|nat=BEL|pos=MF|name=[[Mathias Delorge]]}}
 {{Fs player|no=18|nat=BEL|pos=MF|name=[[Matisse Samoise]]}}

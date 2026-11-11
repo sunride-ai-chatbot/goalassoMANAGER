@@ -43,7 +43,7 @@ TEMPLATES 30
 {{Fs player|no=37|nat=FRA|name=[[Ilyas Azizi]]|pos=FW}}
 {{Fs player|no=49|nat=FRA|name=Aymen Amaaouch|pos=MF}}
 {{Fs player|no=60|nat=FRA|name=[[Mathys Niflore]]|pos=GK}}
-{{Fs player|no=94|nat=FRA|name=Ismaïl Diallo|pos=DF}}
+{{Fs player|no=94|nat=FRA|name=[[Ismaïl Diallo]]|pos=DF}}
 {{Fs player|no=  |nat=FRA|name=Ylies Aradj|pos=DF|other=at [[SC Aubagne Air Bel|Aubagne Air Bel]] until 30 June 2027}}
 {{Fs player|no=  |nat=ENG|name=[[Charlie Cresswell]]|pos=DF|other=at [[Stade Rennais F.C.|Rennes]] until 30 June 2027}}
 {{Fs player|no=  |nat=FRA|name=Aymen Sadi|pos=DF|other=at [[SC Aubagne Air Bel|Aubagne Air Bel]] until 30 June 2027}}

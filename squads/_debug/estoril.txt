@@ -39,7 +39,7 @@ TEMPLATES 32
 {{Fs player|no=25|nat=CYP|name=[[Stelios Andreou]]|pos=DF|other=on loan from [[Widzew Łódź]]}}
 {{Fs player|no=35|nat=ENG|name=[[Samuel Amissah]]|pos=DF|other=on loan from [[Fulham F.C. Under-21s and Academy|Fulham U21]]}}
 {{Fs player|no=38|nat=ESP|name=[[Israel Salazar (footballer)|Israel Salazar]]|pos=FW}}
-{{Fs player|no=42|nat=POR|name=Jordan Arnolin|pos=DF}}
+{{Fs player|no=42|nat=POR|name=[[Jordan Arnolin]]|pos=DF}}
 {{Fs player|no=43|nat=RSA|name=[[Fletcher Smythe-Lowe]]|pos=GK}}
 {{Fs player|no=44|nat=FRA|name=[[Milan Robin]]|pos=MF}}
 {{Fs player|no=80|nat=POR|name=Luís Gomes|pos=MF}}

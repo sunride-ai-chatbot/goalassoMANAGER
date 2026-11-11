@@ -34,7 +34,7 @@
 == References
 == External links
 
-TEMPLATES 36
+TEMPLATES 37
 {{Fs player|no=1|nat=GER|pos=GK|name=[[Noah Atubolu]]|other={{small|on loan from [[SC Freiburg]]}}
 {{Fs player|no=2|nat=GER|pos=DF|name=[[Elias Baum]]}}
 {{Fs player|no=3|nat=FRA|pos=DF|name=[[Lilian Brassier]]}}
@@ -48,6 +48,7 @@ TEMPLATES 36
 {{Fs player|no=15|nat=GER|pos=MF|name=[[Noël Aséko]]}}
 {{Fs player|no=20|nat=JPN|pos=FW|name=[[Ritsu Dōan]]}}
 {{Fs player|no=22|nat=USA|pos=DF|name=[[Timothy Chandler]]}}
+{{Fs player|no=23|nat=GER|pos=MF|name=[[Niko Iličević]]}}
 {{Fs player|no=25|nat=NGA|pos=MF|name=[[Raphael Onyedika]]}}
 {{Fs player|no=26|nat=JPN|pos=DF|name=[[Keita Kosugi]]}}
 {{Fs player|no=27|nat=GER|pos=MF|name=[[Mario Götze]]|other={{small|[[Captain (association football)#Vice-captain|vice-captain]]}}
@@ -57,12 +58,12 @@ TEMPLATES 36
 {{Fs player|no=34|nat=GER|pos=DF|name=[[Nnamdi Collins]]}}
 {{fs player|no=35|nat=DEN|pos=FW|name=[[Malik Pimpong]]}}
 {{fs player|no=37|nat=GER|pos=DF|name=[[Jeremiaha Maluze]]}}
-{{Fs player|no=39|nat=BIH|pos=GK|name=Amil Šiljević}}
+{{Fs player|no=39|nat=BIH|pos=GK|name=[[Amil Šiljević]]}}
 {{Fs player|no=40|nat=BRA|pos=GK|name=[[Kauã Santos]]}}
 {{Fs player|no=42|nat=TUR|pos=FW|name=[[Can Uzun]]}}
 {{Fs player|no=44|nat=GER|pos=FW|name=[[Jessic Ngankam]]}}
-{{Fs player|no=|nat=MLI|pos=DF|name=Fousseny Doumbia|other=at [[FC Energie Cottbus|Energie Cottbus]] until 30 June 2027}}
-{{fs player|no=|nat=GER|pos=DF|name=Ouassim Karada|other=at [[FC Hansa Rostock|Hansa Rostock]] until 30 June 2027}}
+{{Fs player|no=|nat=MLI|pos=DF|name=[[Fousseny Doumbia]]|other=at [[FC Energie Cottbus|Energie Cottbus]] until 30 June 2027}}
+{{fs player|no=|nat=GER|pos=DF|name=[[Ouassim Karada]]|other=at [[FC Hansa Rostock|Hansa Rostock]] until 30 June 2027}}
 {{Fs player|no=|nat=FRA|pos=DF|name=[[Niels Nkounkou]]|other=at [[OGC Nice|Nice]] until 30 June 2027}}
 {{Fs player|no=|nat=BEL|pos=DF|name=[[Arthur Theate]]|other=at [[Bologna FC 1909|Bologna]] until 30 June 2027}}
 {{Fs player|no=|nat=SWE|pos=MF|name=[[Hugo Larsson (footballer)|Hugo Larsson]]|other=at [[Fulham F.C.|Fulham]] until 30 June 2027}}

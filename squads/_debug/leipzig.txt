@@ -59,10 +59,10 @@ TEMPLATES 37
 {{Fs player|no=25|nat=GER|pos=GK|name=[[Leopold Zingerle]]}}
 {{Fs player|no=26|nat=BEL|pos=GK|name=[[Maarten Vandevoordt]]}}
 {{Fs player|no=27|nat=FRA|pos=FW|name=[[Tidiam Gomis]]}}
-{{Fs player|no=28|nat=FRA|pos=MF|name=[[Christopher Nkunku]]|other=on loan from [[AC Milan]]}}
+{{Fs player|no=28|nat=FRA|pos=FW|name=[[Christopher Nkunku]]|other=on loan from [[AC Milan]]}}
 {{Fs player|no=30|nat=SRB|pos=MF|name=[[Andrija Maksimović]]}}
 {{Fs player|no=35|nat=GER|pos=DF|name=[[Max Finkgräfe]]}}
-{{Fs player|no=37|nat=GER|pos=MF|name=Benno Kaltefleiter}}
+{{Fs player|no=37|nat=GER|pos=MF|name=[[Benno Kaltefleiter]]}}
 {{Fs player|no=39|nat=GER|pos=DF|name=[[Benjamin Henrichs]]}}
 {{Fs player|no=40|nat=BRA|pos=FW|name=[[Rômulo Cardoso|Rômulo]]}}
 {{Fs player|no=45|nat=FRA|pos=FW|name=[[Samba Konaté]]}}

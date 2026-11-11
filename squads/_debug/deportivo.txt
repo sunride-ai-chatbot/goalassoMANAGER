@@ -38,7 +38,7 @@
 == References
 == External links
 
-TEMPLATES 33
+TEMPLATES 35
 {{Fs player|no=1|nat=ESP|pos=GK|name=[[Germán Parreño]]}}
 {{Fs player|no=2|nat=ESP|pos=DF|name=[[Adrià Altimira]]}}
 {{Fs player|no=3|nat=ESP|pos=DF|name=[[Arnau Comas]]}}
@@ -67,6 +67,8 @@ TEMPLATES 33
 {{Fs player|no=32|nat=CMR|pos=FW|name=[[Bil Nsongo]]}}
 {{Fs player|no=31|nat=ESP|pos=FW|name=Martín Ochoa}}
 {{Fs player|no=33|nat=ESP|pos=FW|name=[[Kevin Sánchez]]}}
+{{Fs player|no=35|nat=ESP|pos=MF|name=[[Rubén López (footballer, born 2004)|Rubén López]]}}
+{{Fs player|no=36|nat=ESP|pos=MF|name=[[Yayo (footballer, born 2004)|Yayo González]]}}
 {{Fs player|no=37|nat=ESP|pos=MF|name=[[Noé Carrillo]]}}
 {{Fs player|no=|nat=ESP|pos=GK|name=[[Eric Puerto]]|other=at [[F.C. Penafiel|Penafiel]] until 30 June 2027}}
 {{Fs player|no=|nat=NED|pos=MF|name=[[Teun Gijselhart]]|other=at [[Al Ain FC|Al Ain]] until 30 June 2027}}

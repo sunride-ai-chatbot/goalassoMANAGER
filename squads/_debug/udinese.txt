@@ -36,12 +36,12 @@ TEMPLATES 38
 {{Fs player|no=13|nat=ITA|pos=DF|name=[[Nicolò Bertola]]}}
 {{Fs player|no=14|nat=IRL|pos=DF|name=[[James Abankwah]]}}
 {{Fs player|no=15|nat=CIV|pos=FW|name=[[Vakoun Issouf Bayo|Vakoun Bayo]]}}
-{{fs player|no=16|nat=GER|pos=DF|name=[[Matteo Palma]]}}
+{{fs player|no=16|nat=ITA|pos=DF|name=[[Matteo Palma]]}}
 {{fs player|no=20|nat=COL|pos=DF|name=[[Juan David Arizala]]}}
 {{fs player|no=23|nat=KOS|pos=DF|name=[[Mërgim Vojvoda]]}}
 {{Fs player|no=24|nat=POL|pos=MF|name=[[Jakub Piotrowski]]}}
 {{Fs player|no=27|nat=BEL|pos=DF|name=[[Christian Kabasele]]}}
-{{Fs player|no=28|nat=FRA|pos=DF|name=[[Oumar Solet]]}}
+{{Fs player|no=28|nat=CIV|pos=DF|name=[[Oumar Solet]]}}
 {{Fs player|no=30|nat=GEO|pos=MF|name=[[Giorgi Chakvetadze]]}}
 {{Fs player|no=32|nat=NED|pos=MF|name=[[Jurgen Ekkelenkamp]]}}
 {{fs player|no=38|nat=SCO|pos=MF|name=[[Lennon Miller]]}}

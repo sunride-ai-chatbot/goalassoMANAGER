@@ -9,7 +9,7 @@
 == Supporters
 === Rivalries
 === Average attendances
-== Stadia
+== Stadium
 == European record
 === Overall record by competition
 === UEFA Coefficient
@@ -35,13 +35,13 @@
 == External links
 
 TEMPLATES 40
-{{Fs player|no=1|nat=SWE|pos=GK|name=[[Robin Olsen]]}}
-{{Fs player|no=2|nat=NOR|pos=DF|name=[[Stian Gregersen]]}}
-{{Fs player|no=4|nat=SWE|pos=DF|name=[[Bleon Kurtulus]]}}
-{{Fs player|no=5|nat=MNE|pos=DF|name=[[Andrej Đurić]]}}
-{{Fs player|no=6|nat=BUL|pos=MF|name=[[Yanis Karabelyov]]}}
-{{Fs player|no=7|nat=SWE|pos=MF|name=[[Otto Rosengren]]}}
-{{Fs player|no=9|nat=ESP|pos=FW|name=[[Diego García (footballer, born 2000)|Diego García]]}}
+{{Fs player|no= 1|nat=SWE|pos=GK|name=[[Robin Olsen]]}}
+{{Fs player|no= 2|nat=NOR|pos=DF|name=[[Stian Gregersen]]}}
+{{Fs player|no= 4|nat=KOS|pos=DF|name=[[Bleon Kurtulus]]}}
+{{Fs player|no= 5|nat=MNE|pos=DF|name=[[Andrej Đurić]]}}
+{{Fs player|no= 6|nat=BUL|pos=MF|name=[[Yanis Karabelyov]]}}
+{{Fs player|no= 7|nat=SWE|pos=MF|name=[[Otto Rosengren]]}}
+{{Fs player|no= 9|nat=ESP|pos=FW|name=[[Diego García (footballer, born 2000)|Diego García]]}}
 {{Fs player|no=10|nat=DEN|pos=MF|name=[[Anders Christiansen]]|other=[[Captain (association football)|captain]]}}
 {{Fs player|no=11|nat=SWE|pos=FW|name=[[Emmanuel Ekong]]}}
 {{Fs player|no=14|nat=NOR|pos=DF|name=[[Warren Kamanzi]]}}
@@ -66,12 +66,12 @@ TEMPLATES 40
 {{Fs player|no=46|nat=CRO|pos=MF|name=Antonio Palac}}
 {{Fs player|no=47|nat=SWE|pos=MF|name=[[Theodor Lundbergh]]}}
 {{Fs player|no=50|nat=SWE|pos=GK|name=[[William Nieroth]]}}
-{{Fs player|no=–|nat=GHA|pos=DF|name=Israel Anum}}
-{{Fs player|no=–|nat=KOS|pos=MF|name=Medjen Llumnica}}
+{{Fs player|no=|nat=GHA|pos=DF|name=Israel Anum}}
+{{Fs player|no=|nat=KOS|pos=MF|name=Medjen Llumnica}}
 {{Fs player|no=34|nat=SWE|pos=MF|name=[[Zakaria Loukili]]|other=to [[Landskrona BoIS]] until 31 December 2026}}
 {{Fs player|no=50|nat=SWE|pos=GK|name=Joakim Persson|other=to [[BK Olympic]] until 31 December 2026}}
-{{Fs player|no=–|nat=DEN|pos=DF|name=[[Sashwat Rana]]|other=to [[Hellerup IK]] until 30 June 2027}}
-{{Fs player|no=–|nat=SWE|pos=DF|name=William Åkesson|other=to [[Landskrona BoIS]] until 31 December 2026}}
-{{Fs player|no=–|nat=SWE|pos=MF|name=Viggo Karlsson|other=to [[Trelleborgs FF]] until 31 December 2026}}
-{{Fs player|no=–|nat=GUI|pos=MF|name=[[Salifou Soumah]]|other=to [[Panetolikos F.C.|Panetolikos]]  until 30 June 2027}}
-{{Fs player|no=–|nat=GHA|pos=FW|name=Yassin Mohammed|other=to [[KAA Gent|Jong Gent]] until 30 June 2027}}
+{{Fs player|no=|nat=DEN|pos=DF|name=[[Sashwat Rana]]|other=to [[Hellerup IK]] until 30 June 2027}}
+{{Fs player|no=|nat=SWE|pos=DF|name=William Åkesson|other=to [[Landskrona BoIS]] until 31 December 2026}}
+{{Fs player|no=|nat=SWE|pos=MF|name=Viggo Karlsson|other=to [[Trelleborgs FF]] until 31 December 2026}}
+{{Fs player|no=|nat=GUI|pos=MF|name=[[Salifou Soumah]]|other=to [[Panetolikos F.C.|Panetolikos]]  until 30 June 2027}}
+{{Fs player|no=|nat=GHA|pos=FW|name=Yassin Mohammed|other=to [[KAA Gent|Jong Gent]] until 30 June 2027}}

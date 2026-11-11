@@ -35,7 +35,7 @@
 == References
 == External links
 
-TEMPLATES 39
+TEMPLATES 41
 {{Fs player|no=1|nat=SVK|pos=GK|name=[[Dominik Greif]]}}
 {{Fs player|no=2|nat=DEN|pos=MF|name=[[Mads Bidstrup]]}}
 {{Fs player|no=3|nat=ARG|pos=DF|name=[[Nicolás Tagliafico]]|other=[[Vice-captain (association football)|4th captain]]}}
@@ -65,8 +65,10 @@ TEMPLATES 39
 {{Fs player|no=4|nat=CIV|pos=MF|name=[[Paul Akouokou]]}}
 {{Fs player|no=30|nat=CIV|pos=GK|name=Yvann Konan}}
 {{Fs player|no=32|nat=ENG|pos=FW|name=[[Alejandro Gomes Rodríguez]]}}
+{{Fs player|no=33|nat=COD|pos=MF|name=Cluver Sambi Mbungu}}
 {{Fs player|no=35|nat=POR|pos=GK|name=Matthias Da Silva}}
 {{Fs player|no=37|nat=FRA|pos=DF|name=[[Steeve Kango]]}}
+{{Fs player|no=38|nat=FRA|pos=DF|name=Angel García}}
 {{Fs player|no=41|nat=FRA|pos=DF|name=Melvyn Otobo}}
 {{Fs player|no=44|nat=FRA|pos=FW|name=[[Adil Hamdani]]}}
 {{Fs player|no=46|nat=POR|pos=MF|name=[[Tiago Gonçalves (footballer, born 2007)|Tiago Gonçalves]]}}

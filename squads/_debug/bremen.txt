@@ -50,14 +50,14 @@ TEMPLATES 38
 {{Fs player|no=30|nat=AUT|pos=GK|name=[[Alexander Schlager]]}}
 {{Fs player|no=32|nat=AUT|pos=DF|name=[[Marco Friedl]]|other={{small|[[Captain (association football)|captain]]}}
 {{Fs player|no=33|nat=GER|pos=DF|name=[[Mick Schmetgens]]}}
-{{Fs player|no=34|nat=TUR|pos=MF|name=Darwin Soylu}}
-{{Fs player|no=35|nat=GER|pos=DF|name=Luca Höcker}}
-{{Fs player|no=36|nat=GER|pos=DF|name=Mats Heitmann}}
+{{Fs player|no=34|nat=TUR|pos=MF|name=[[Darwin Soylu]]}}
+{{Fs player|no=35|nat=GER|pos=DF|name=[[Luca Höcker]]}}
+{{Fs player|no=36|nat=GER|pos=DF|name=[[Mats Heitmann]]}}
 {{Fs player|no=37|nat=BUL|pos=GK|name=[[Stefan Smarkalev]]}}
 {{Fs player|no=38|nat=GER|pos=FW|name=[[Paul Erevbenagie]]}}
 {{Fs player|no=44|nat=NED|pos=MF|name=[[Youri Regeer]]|other=on loan from [[AFC Ajax|Ajax]]}}
 {{Fs player|no=|nat=ARG|pos=DF|name=[[Julián Malatini]]|other={{small|at [[FC Cincinnati]] until 30 June 2027}}
-{{Fs player|no=|nat=GER|pos=MF|name=Wesley Adeh|other={{small|at [[SC Preußen Münster|Preußen Münster]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=MF|name=[[Wesley Adeh]]|other={{small|at [[SC Preußen Münster|Preußen Münster]] until 30 June 2027}}
 {{Fs player|no=|nat=CRO|pos=MF|name=[[Patrice Čović]]|other={{small|at [[Dynamo Dresden]] until 30 June 2027}}
 {{Fs player|no=|nat=BEL|pos=MF|name=[[Samuel Mbangula]]|other={{small|at [[Bologna FC 1909|Bologna]] until 30 June 2027}}
 {{Fs player|no=|nat=GER|pos=MF|name=[[Leon Opitz]]|other={{small|at [[VfL Osnabrück]] until 30 June 2027}}

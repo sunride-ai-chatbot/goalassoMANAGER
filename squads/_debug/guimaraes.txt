@@ -43,7 +43,7 @@ TEMPLATES 31
 {{Fs player|no=17|nat=POR|name=[[Miguel Nogueira]]|pos=MF}}
 {{Fs player|no=18|nat=CPV|name=[[Telmo Arcanjo]]|pos=FW}}
 {{Fs player|no=19|nat=SWE|name=[[Victor Andersson]]|pos=MF}}
-{{Fs player|no=20|nat=POR|name=[[Samu (footballer)|Samu]]|pos=MF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=20|nat=POR|name=[[Samu (footballer, born 1996)|Samu]]|pos=MF|other=[[Captain (association football)|captain]]}}
 {{Fs player|no=21|nat=CRO|name=[[Toni Borevković]]|pos=DF|other={{small|on loan from [[Samsunspor]]}}
 {{Fs player|no=22|nat=COL|name=[[Juan Diego Castillo|Juan Castillo]]|pos=GK}}
 {{Fs player|no=23|nat=ROU|name=[[Tony Strata]]|pos=DF}}
@@ -57,5 +57,5 @@ TEMPLATES 31
 {{Fs player|no=56|nat=POR|name=[[Santiago Verdi]]|pos=MF}}
 {{Fs player|no=80|nat=POR|name=Rica Rocha|pos=MF}}
 {{Fs player|no=82|nat=POR|name=Francisco Dias|pos=DF}}
-{{Fs player|no=98|nat=BRA|name=Lucas Furtado|pos=GK}}
+{{Fs player|no=98|nat=BRA|name=[[Lucas Furtado]]|pos=GK}}
 {{Fs player|no=  |nat=POR|name=[[Miguel Nóbrega]]|pos=DF|other={{small|at [[U.D. Leiria|União de Leiria]] until 30 June 2027}}

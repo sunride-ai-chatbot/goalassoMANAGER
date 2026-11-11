@@ -13,7 +13,7 @@
 == References
 == External links
 
-TEMPLATES 34
+TEMPLATES 35
 {{fs player|no=1|nat=ESP|pos=GK|name=[[Andrés Fernández (footballer, born December 1986)|Andrés Fernández]]}}
 {{fs player|no=2|nat=ESP|pos=DF|name=[[Jorge Pulido]]}}
 {{fs player|no=3|nat=ESP|pos=DF|name=[[Álex Muñoz]]}}
@@ -40,6 +40,7 @@ TEMPLATES 34
 {{fs player|no=31|nat=HUN|pos=GK|name=[[Áron Yaakobishvili]]|other=on loan from [[FC Barcelona|Barcelona]]}}
 {{fs player|no=33|nat=ESP|pos=MF|name=[[Quim Junyent]]}}
 {{fs player|no=26|nat=FRA|pos=MF|name=[[Kassoum Kone]]}}
+{{fs player|no=28|nat=MLI|pos=DF|name=[[Ayouba Koné]]}}
 {{fs player|no=30|nat=ESP|pos=GK|name=[[Jesús López Soria|Jesús López]]}}
 {{fs player|no=32|nat=SRB|pos=DF|name=[[Andrej Popović]]}}
 {{Fs player|no=|nat=MLI|pos=FW|name=[[Ibrahima Koné (footballer, born 1999)|Ibrahima Koné]]}}

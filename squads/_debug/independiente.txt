@@ -30,6 +30,7 @@ TEMPLATES 54
 {{Fs player|no= 6|nat=ARG|pos=FW|name=[[Chimy Ávila]]}}
 {{Fs player|no= 7|nat=ARG|pos=FW|name=[[Santiago Montiel]]}}
 {{fs player|no= 8|nat=ARG|pos=FW|name=[[Maximiliano Meza (footballer, born 1992)|Maximiliano Meza]]}}
+{{Fs player|no= 9|nat=CHI|pos=FW|name=[[Iván Morales (footballer)|Iván Morales]]|other=<small>on loan from [[Argentinos Juniors]]</small>}}
 {{Fs player|no=10|nat=CHI|pos=MF|name=[[Luciano Cabral]]}}
 {{Fs player|no=13|nat=ARG|pos=DF|name=[[Juan Manuel Fedorco|Juan Fedorco]]}}
 {{Fs player|no=14|nat=CHI|pos=MF|name=[[Lautaro Millán]]}}
@@ -48,14 +49,13 @@ TEMPLATES 54
 {{Fs player|no=37|nat=ARG|pos=MF|name=Joel Medina}}
 {{Fs player|no=40|nat=ARG|pos=MF|name=[[Víctor Malcorra|Ignacio Malcorra]]}}
 {{Fs player|no=77|nat=URU|pos=GK|name=[[Santiago Mele]]|other=<small>on loan from [[C.F. Monterrey|Monterrey]]</small>}}
-{{Fs player|no=  |nat=CHI|pos=FW|name=[[Iván Morales (footballer)|Iván Morales]]|other=<small>on loan from [[Argentinos Juniors]]</small>}}
 {{Fs player|no=24|nat=ARG|pos=MF|name=Josías Palais}}
 {{Fs player|no=30|nat=ARG|pos=MF|name=[[Tomás Parmo]]}}
 {{Fs player|no=31|nat=ARG|pos=DF|name=Gonzalo Bordón}}
 {{Fs player|no=38|nat=ARG|pos=DF|name=Luciano Barros Ayala}}
 {{Fs player|no=41|nat=ARG|pos=FW|name=Mathías De Las Carreras}}
 {{Fs player|no=42|nat=ARG|pos=DF|name=Fernando Closter}}
-{{Fs player|no=51|nat=HUN|pos=FW|name=Simón Bodnar}}
+{{Fs player|no=51|nat=HUN|pos=FW|name=[[Simón Bodnar]]}}
 {{Fs player|no=53|nat=ARG|pos=FW|name=Santino Viollaz}}
 {{Fs player|no=2|nat=ARG|pos=DF|name=[[Federico Vera]]|other=at [[Club Atlético Huracán|Huracán]] until 31 December 2026}}
 {{Fs player|no=4|nat=ARG|pos=DF|name=[[Patricio Ostachuk]]|other=at [[Club Atlético Atlanta|Atlanta]] until 31 December 2026}}

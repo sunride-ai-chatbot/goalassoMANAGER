@@ -44,7 +44,7 @@ TEMPLATES 60
 {{Fs player|no=48|nat=BEL|pos=MF|name=[[Arthur Vermeeren]]|other={{small|on loan from [[RB Leipzig]]}}
 {{Fs player|no=77|nat=MAR|pos=FW|name=[[Ibrahim Salah (footballer, born 2001)|Ibrahim Salah]]|other={{small|on loan from [[FC Basel|Basel]]}}
 {{Fs player|no=80|nat=ECU|pos=FW|name=Carlos Mejía}}
-{{Fs player|no=81|nat=BEL|pos=GK|name=Niels Devalckeneer}}
+{{Fs player|no=81|nat=BEL|pos=GK|name=[[Niels Devalckeneer]]}}
 {{Fs player|no=99|nat=GHA|pos=FW|name=Luis Narh}}
 {{Fs player|no=  |nat=BEL|pos=MF|name=[[Andreas Verstraeten]]|other={{small|at [[VVV-Venlo]] until 30 June 2027}}
 {{Fs player|no=  |nat=NGA|pos=FW|name=Gabriel Jesus David|other={{small|at [[SKN St. Pölten]] until 30 June 2027}}

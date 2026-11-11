@@ -39,7 +39,7 @@ TEMPLATES 34
 {{Fs player|no=17|pos=FW|nat=NED|name=[[Sem van Duijn]]|other={{small|on loan from [[AZ Alkmaar|AZ]]}}
 {{Fs player|no=18|pos=DF|nat=CRO|name=[[Jakov Medić]]|other={{small|on loan from [[Norwich City F.C.|Norwich City FC]]}}
 {{Fs player|no=20|pos=MF|nat=NED|name=[[Dani de Wit]]}}
-{{Fs player|no=21|pos=DF|nat=NED|name=[[Neville Ogidi Nwankwo]]}}
+{{Fs player|no=21|pos=DF|nat=SUR|name=[[Neville Ogidi Nwankwo]]}}
 {{Fs player|no=22|pos=GK|nat=NED|name=[[Sergio Padt]]}}
 {{Fs player|no=23|pos=MF|nat=DEN|name=[[Niklas Vesterlund]]}}
 {{Fs player|no=26|pos=FW|nat=IDN|name=[[Miliano Jonathans]]}}

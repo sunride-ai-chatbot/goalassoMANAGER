@@ -2,8 +2,20 @@
 "key": "l_acre",
 "name_he": "הפועל עכו",
 "source": "hewiki:הפועל עכו",
-"fetched": "2026-10-27",
+"fetched": "2026-11-11",
 "players": [
+{
+"he": "עמרי זוארץ",
+"en": "עמרי זוארץ",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.06,
+"qid": null,
+"img": null,
+"no": "22",
+"sl": 0
+},
 {
 "he": "רון אפפלד",
 "en": "רון אפפלד",
@@ -17,39 +29,15 @@
 "sl": 0
 },
 {
-"he": "עמרי זוארץ",
-"en": "עמרי זוארץ",
-"pos": "GK",
-"age": 25,
-"nat": "Israel",
-"value_m": 0.05,
-"qid": null,
-"img": null,
-"no": "22",
-"sl": 0
-},
-{
 "he": "ספיר רזון",
 "en": "ספיר רזון",
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.08,
+"value_m": 0.1,
 "qid": null,
 "img": null,
 "no": "7",
-"sl": 0
-},
-{
-"he": "מוחמד ח'טיב",
-"en": "מוחמד ח'טיב",
-"pos": "FW",
-"age": 25,
-"nat": "Israel",
-"value_m": 0.08,
-"qid": null,
-"img": null,
-"no": "11",
 "sl": 0
 },
 {
@@ -58,10 +46,34 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.08,
+"value_m": 0.1,
 "qid": null,
 "img": null,
 "no": "17",
+"sl": 0
+},
+{
+"he": "מוחמד ח'טיב",
+"en": "מוחמד ח'טיב",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.09,
+"qid": null,
+"img": null,
+"no": "11",
+"sl": 0
+},
+{
+"he": "מיכאל מרנשטיין",
+"en": "מיכאל מרנשטיין",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.09,
+"qid": null,
+"img": null,
+"no": "13",
 "sl": 0
 },
 {
@@ -70,7 +82,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.08,
+"value_m": 0.09,
 "qid": null,
 "img": null,
 "no": "70",
@@ -82,22 +94,10 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.08,
 "qid": null,
 "img": null,
 "no": "10",
-"sl": 0
-},
-{
-"he": "מיכאל מרנשטיין",
-"en": "מיכאל מרנשטיין",
-"pos": "MF",
-"age": 25,
-"nat": "Israel",
-"value_m": 0.07,
-"qid": null,
-"img": null,
-"no": "13",
 "sl": 0
 },
 {
@@ -106,10 +106,58 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.08,
 "qid": null,
 "img": null,
 "no": "15",
+"sl": 0
+},
+{
+"he": "שלום אובניש",
+"en": "שלום אובניש",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"img": null,
+"no": "9",
+"sl": 0
+},
+{
+"he": "ליאם ורטמכטר",
+"en": "ליאם ורטמכטר",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.07,
+"qid": null,
+"img": null,
+"no": "14",
+"sl": 0
+},
+{
+"he": "יוני אלמאלם",
+"en": "יוני אלמאלם",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.06,
+"qid": null,
+"img": null,
+"no": "2",
+"sl": 0
+},
+{
+"he": "עילאי איבגי",
+"en": "עילאי איבגי",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.06,
+"qid": null,
+"img": null,
+"no": "4",
 "sl": 0
 },
 {
@@ -125,28 +173,16 @@
 "sl": 0
 },
 {
-"he": "שלום אובניש",
-"en": "שלום אובניש",
+"he": "קרלוס סרנטה",
+"en": "Carlos Sarante",
 "pos": "FW",
-"age": 25,
-"nat": "Israel",
+"age": 20,
+"nat": "הרפובליקה הדומיניקנית",
 "value_m": 0.06,
-"qid": null,
+"qid": "Q141726680",
 "img": null,
-"no": "9",
-"sl": 0
-},
-{
-"he": "ליאם ורטמכטר",
-"en": "ליאם ורטמכטר",
-"pos": "MF",
-"age": 25,
-"nat": "Israel",
-"value_m": 0.06,
-"qid": null,
-"img": null,
-"no": "14",
-"sl": 0
+"no": "19",
+"sl": 1
 },
 {
 "he": "ריאן מריח",
@@ -161,48 +197,12 @@
 "sl": 0
 },
 {
-"he": "יוני אלמאלם",
-"en": "יוני אלמאלם",
-"pos": "DF",
-"age": 25,
-"nat": "Israel",
-"value_m": 0.05,
-"qid": null,
-"img": null,
-"no": "2",
-"sl": 0
-},
-{
-"he": "עילאי איבגי",
-"en": "עילאי איבגי",
-"pos": "DF",
-"age": 25,
-"nat": "Israel",
-"value_m": 0.05,
-"qid": null,
-"img": null,
-"no": "4",
-"sl": 0
-},
-{
-"he": "קרלוס סרנטה",
-"en": "Carlos Sarante",
-"pos": "FW",
-"age": 20,
-"nat": "הרפובליקה הדומיניקנית",
-"value_m": 0.05,
-"qid": "Q141726680",
-"img": null,
-"no": "19",
-"sl": 1
-},
-{
 "he": "מור נעמן",
 "en": "מור נעמן",
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.05,
+"value_m": 0.06,
 "qid": null,
 "img": null,
 "no": "26",

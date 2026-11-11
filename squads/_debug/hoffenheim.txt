@@ -47,18 +47,18 @@ TEMPLATES 38
 {{fs player|no=22|nat=AUT|pos=MF|name=[[Alexander Prass]]}}
 {{Fs player|no=27|nat=CRO|pos=FW|name=[[Andrej Kramarić]]}}
 {{Fs player|no=28|nat=JPN|pos=DF|name=[[Kōki Machida]]}}
-{{Fs player|no=29|nat=GER|pos=DF|name=Natnael Abraha}}
+{{Fs player|no=29|nat=GER|pos=DF|name=[[Natnael Abraha]]}}
 {{Fs player|no=32|nat=GER|pos=MF|name=[[Cajetan Lenz]]}}
 {{Fs player|no=34|nat=CZE|pos=DF|name=[[Vladimír Coufal]]}}
 {{Fs player|no=36|nat=ISL|pos=GK|name=[[Lúkas Petersson]]}}
-{{Fs player|no=37|nat=GER|pos=GK|name=Luca Philipp}}
+{{Fs player|no=37|nat=GER|pos=GK|name=[[Luca Philipp]]}}
 {{Fs player|no=39|nat=NED|pos=DF|name=[[Mats Rots]]}}
 {{Fs player|no=|nat=GER|pos=GK|name=[[Nahuel Noll]]|other={{small|at [[SC Paderborn 07|SC Paderborn]] until 30 June 2027}}
 {{Fs player|no=|nat=BRA|pos=DF|name=[[Arthur Chaves]]|other={{small|at [[Botafogo FR|Botafogo]] until 31 December 2027}}
-{{fs player|no=|nat=NGA|pos=DF|name=Emmanuel Chukwu|other={{small|at [[SC Austria Lustenau|Austria Lustenau]] until 30 June 2027}}
-{{Fs player|no=|nat=GER|pos=DF|name=Kelven Frees|other={{small|at [[1. FC Kaiserslautern ]] until 30 June 2027}}
+{{fs player|no=|nat=NGA|pos=DF|name=[[Emmanuel Chukwu]]|other={{small|at [[SC Austria Lustenau|Austria Lustenau]] until 30 June 2027}}
+{{Fs player|no=|nat=GER|pos=DF|name=[[Kelven Frees]]|other={{small|at [[1. FC Kaiserslautern ]] until 30 June 2027}}
 {{Fs player|no=|nat=GER|pos=MF|name=[[Umut Tohumcu]]|other={{small|at [[FC Red Bull Salzburg|Red Bull Salzburg]] until 30 June 2027}}
-{{fs player|no=|nat=NGA|pos=FW|name=Precious Benjamin|other={{small|at [[SC Austria Lustenau|Austria Lustenau]] until 30 June 2027}}
+{{fs player|no=|nat=NGA|pos=FW|name=[[Precious Benjamin]]|other={{small|at [[SC Austria Lustenau|Austria Lustenau]] until 30 June 2027}}
 {{Fs player|no=|nat=CZE|pos=FW|name=[[Yannick Eduardo]]|other={{small|at [[ADO Den Haag]] until 30 June 2027}}
 {{Fs player|no=|nat=NGA|pos=FW|name=[[Gift Orban]]|other={{small|at [[Amed S.F.K.|Amedspor]] until 30 June 2027}}
 {{Fs player|no=|nat=SUI|pos=FW|name=[[Alessandro Vogt]]|other={{small|at [[1. FC Heidenheim]] until 30 June 2027}}

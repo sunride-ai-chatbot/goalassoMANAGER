@@ -23,7 +23,7 @@
 == References
 == External links
 
-TEMPLATES 35
+TEMPLATES 38
 {{Fs player|no=1|nat=BRA|pos=GK|name=[[Luiz Júnior (footballer, born 2001)|Luiz Júnior]]}}
 {{Fs player|no=2|nat=CPV|pos=DF|name=[[Logan Costa]]}}
 {{Fs player|no=3|nat=USA|pos=DF|name=[[Alex Freeman]]}}
@@ -51,6 +51,9 @@ TEMPLATES 35
 {{Fs player|no=27|nat=ESP|pos=FW|name=[[Nizar El Jmili Ben Hamou|Nizar El Jmili]]}}
 {{Fs player|no=28|nat=ESP|pos=FW|name=[[José Ángel Gaitán Diaz|Joselillo Gaitán]]}}
 {{Fs player|no=30|nat=SEN|pos=MF|name=[[Cheikh Tidiane Thiam|Cheikh Thiam]]}}
+{{Fs player|no=32|nat=ESP|pos=MF|name=[[César Bonafé Ceita|César Bonafé]]}}
+{{Fs player|no=37|nat=ESP|pos=FW|name=[[Mauro Roca Martínez|Mauro Roca]]}}
+{{Fs player|no=38|nat=ESP|pos=FW|name=[[Sergio Barrera Martín|Sergio Barrera]]}}
 {{Fs player|no=|nat=ESP|pos=GK|name=[[Arnau Tenas]]|other=at [[RCD Mallorca|Mallorca]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|pos=GK|name=[[Diego Conde]]|other=at [[Real Betis]] until 30 June 2027}}
 {{Fs player|no=|nat=ESP|pos=DF|name=[[Dani Budesca]]|other=at [[Córdoba CF|Córdoba]] until 30 June 2027}}

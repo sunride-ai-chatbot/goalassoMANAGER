@@ -173,6 +173,18 @@
 "sl": 37
 },
 {
+"he": "Salvador Agra",
+"en": "Salvador Agra",
+"pos": "FW",
+"age": 34,
+"nat": "Portugal",
+"value_m": 0.27,
+"qid": "Q2481812",
+"img": "Agra 2013 001.jpg",
+"no": "7",
+"sl": 17
+},
+{
 "he": "סבסטיאן פרס",
 "en": "Sebastián Pérez",
 "pos": "MF",
@@ -195,18 +207,6 @@
 "img": null,
 "no": "26",
 "sl": 9
-},
-{
-"he": "Salvador Agra",
-"en": "Salvador Agra",
-"pos": "MF",
-"age": 34,
-"nat": "Portugal",
-"value_m": 0.24,
-"qid": "Q2481812",
-"img": "Agra 2013 001.jpg",
-"no": "7",
-"sl": 17
 },
 {
 "he": "לייבין קורזאווה",

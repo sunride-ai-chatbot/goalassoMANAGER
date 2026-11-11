@@ -18,7 +18,7 @@
 == References
 == External links
 
-TEMPLATES 65
+TEMPLATES 66
 {{Fs player|no= 1|pos=GK|nat=BEL|name=[[Tobe Leysen]]}}
 {{Fs player|no= 4|pos=MF|nat=BIH|name=[[Benjamin Tahirović]]|other={{small|on loan from [[Brøndby IF|Brøndby]]}}
 {{Fs player|no= 5|pos=DF|nat=BEL|name=[[Christiaan Ravych]]}}
@@ -80,6 +80,7 @@ TEMPLATES 65
 {{Fs player|no=80|pos=FW|nat=COD|name=Elie Mpungu Kongolo}}
 {{Fs player|no=81|pos=GK|nat=BEL|name=Vic Debusschere}}
 {{Fs player|no=83|pos=MF|nat=BEL|name=Jens De Groof}}
+{{Fs player|no=85|pos=MF|nat=BEL|name=[[Rayan Garcia Belkacem]]}}
 {{Fs player|no=87|pos=GK|nat=BGR|name=Mariyan Boev}}
 {{Fs player|no=89|pos=FW|nat=KOR|name=[[Kim Myung-jun]]}}
 {{Fs player|no=90|pos=FW|nat=NGA|name=[[Victory Beniangba]]}}

@@ -28,7 +28,7 @@
 === Goals
 === Clean sheets
 == Honors
-==== [[USL Championship|United Soccer League]]{{efn|Known since 2019 as the [[USL Championship]]}}
+=== [[USL Championship|United Soccer League]]{{efn|Known since 2019 as the [[USL Championship]]}}
 == Affiliated clubs
 == Notes
 == References
@@ -40,7 +40,6 @@ TEMPLATES 34
 {{Fs player|no=4|nat=USA|name=[[Nick Hagglund]]|pos=DF}}
 {{Fs player|no=5|nat=NGR|name=[[Obinna Nwobodo]]|pos=MF}}
 {{Fs player|no=6|nat=ARG|name=[[Julián Malatini]]|pos=DF|other=on loan from [[SV Werder Bremen|Werder Bremen]]}}
-{{Fs player|no= 8|nat=VEN|name=[[José Andrés Martínez|José  Martínez]]|pos=MF}}
 {{Fs player|no=9|nat=TOG|name=[[Kévin Denkey]]|pos=FW}}
 {{Fs player|no=10|nat=BRA|name=[[Evander (footballer)|Evander]]|pos=MF}}
 {{Fs player|no=11|nat=SVK|name=[[Samuel Gidi]]|pos=MF}}
@@ -61,6 +60,7 @@ TEMPLATES 34
 {{Fs player|no=30|nat=MEX|name=Ademar Chávez|pos=MF}}
 {{Fs player|no=55|nat=LBY|name=Ayoub Lajhar|pos=DF}}
 {{Fs player|no=66|nat=VEN|name=[[Ender Echenique]]|pos=FW}}
+{{Fs player|no=70|nat=VEN|name=[[José Andrés Martínez|José  Martínez]]|pos=MF}}
 {{Fs player|no=88|nat=USA|name=[[Andrei Chirilă]]|pos=DF}}
 {{Fs player|no=89|nat=USA|name=Connor Dale|pos=GK}}
 {{Fs player|no=93|nat=POL|name=[[Fabian Mrozek]]|pos=GK|other=on loan from [[Liverpool F.C.|Liverpool]]}}

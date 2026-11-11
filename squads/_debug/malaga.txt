@@ -53,5 +53,5 @@ TEMPLATES 32
 {{Fs player|no=39|nat=MAR|pos=DF|name=[[Adam Aznou]]|other=on loan from [[Everton F.C.|Everton]]}}
 {{Fs player|no=28|nat=NGA|pos=MF|name=[[Joseph Otunenche|Otu]]}}
 {{Fs player|no=30|nat=ESP|pos=GK|name=[[Andrés Céspedes Rubio|Andrés Céspedes]]}}
-{{Fs player|no=32|nat=ESP|pos=MF|name=[[Juan Francisco Fernández Martin|Juani]]}}
+{{Fs player|no=32|nat=ESP|pos=MF|name=[[Juan Francisco Fernández Martín|Juani]]}}
 {{Fs player|no=|nat=ESP|pos=DF|name=[[Pablo Arriaza Jurado|Pablo Arriaza]]|other=at [[CD Estepona FS|Estepona]] until 30 June 2027}}
