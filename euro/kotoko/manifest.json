@@ -1,0 +1,259 @@
+{
+ "club": "kotoko",
+ "clubName": "אסאנטה קוטוקו",
+ "clubQid": "Q578491",
+ "players": [
+  {
+   "he": "אבראהים דנלאד",
+   "en": "Ibrahim Danlad",
+   "pos": "GK",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q84558005",
+   "wikidata": "https://www.wikidata.org/wiki/Q84558005",
+   "label": "Ibrahim Danlad",
+   "birthYear": 2002
+  },
+  {
+   "he": "Mourad Abdelwadie",
+   "en": "Mourad Abdelwadie",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Dari Aziz Haruna",
+   "en": "Dari Aziz Haruna",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Isaac Opoku Agyemang",
+   "en": "Isaac Opoku Agyemang",
+   "pos": "FW",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106033184",
+   "wikidata": "https://www.wikidata.org/wiki/Q106033184",
+   "label": "Isaac Opoku Agyemang",
+   "birthYear": 1999
+  },
+  {
+   "he": "Richard Boadu",
+   "en": "Richard Boadu",
+   "pos": "MF",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106421732",
+   "wikidata": "https://www.wikidata.org/wiki/Q106421732",
+   "label": "Richard Boadu",
+   "birthYear": 1998
+  },
+  {
+   "he": "Inusah Adam",
+   "en": "Inusah Adam",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Morifing Donzo",
+   "en": "Morifing Donzo",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Walid Fuseini",
+   "en": "Walid Fuseini",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Emmanuel Mamah",
+   "en": "Emmanuel Mamah",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Philip Amoh",
+   "en": "Philip Amoh",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Lord Hilary Adabo",
+   "en": "Lord Hilary Adabo",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Aristote Tamuzi",
+   "en": "Aristote Tamuzi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Lord Amoah",
+   "en": "Lord Amoah",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Emmanuel Antwi",
+   "en": "Emmanuel Antwi",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q43371047:1996"
+  },
+  {
+   "he": "Jordan Amissah",
+   "en": "Jordan Amissah",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q113628688",
+   "wikidata": "https://www.wikidata.org/wiki/Q113628688",
+   "label": "Jordan Amissah",
+   "birthYear": 2001
+  },
+  {
+   "he": "Prince Badu",
+   "en": "Prince Badu",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Hubert Gyau",
+   "en": "Hubert Gyau",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q141149359",
+   "wikidata": "https://www.wikidata.org/wiki/Q141149359",
+   "label": "Hubert Gyau",
+   "birthYear": 2001
+  },
+  {
+   "he": "Eric Gbetta",
+   "en": "Eric Gbetta",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Andrews Ntim",
+   "en": "Andrews Ntim",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Musa Hamzata",
+   "en": "Musa Hamzata",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Patrick Asiedu",
+   "en": "Patrick Asiedu",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Seth Kwadwo",
+   "en": "Seth Kwadwo",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Emmanuel Kotei",
+   "en": "Emmanuel Kotei",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Shayibu Abubakari",
+   "en": "Shayibu Abubakari",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Koffi Bini",
+   "en": "Koffi Bini",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Emmanuel Sanja",
+   "en": "Emmanuel Sanja",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Yakubu Dogo",
+   "en": "Yakubu Dogo",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Tarnagda Abdoul Kader",
+   "en": "Tarnagda Abdoul Kader",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Joseph Amoah",
+   "en": "Joseph Amoah",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q126210648:2002, Q30122117:1994, Q10421086:1981"
+  }
+ ]
+}

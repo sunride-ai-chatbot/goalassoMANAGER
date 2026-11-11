@@ -1,0 +1,183 @@
+{
+ "club": "l_kafr_qasim",
+ "clubName": "מ.ס. כפר קאסם",
+ "clubQid": "Q18126320",
+ "players": [
+  {
+   "he": "מתן גלנטי",
+   "en": "מתן גלנטי",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מאור ארליך",
+   "en": "מאור ארליך",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q140425016:Maor Erlich)"
+  },
+  {
+   "he": "איסמאעיל בחאש",
+   "en": "איסמאעיל בחאש",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אבראהים בדיר",
+   "en": "אבראהים בדיר",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "פדרו פטראצי",
+   "en": "פדרו פטראצי",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אנס דבור",
+   "en": "אנס דבור",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q16885508:Anas Dabour)"
+  },
+  {
+   "he": "איהאב אבו אלשיך",
+   "en": "איהאב אבו אלשיך",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אסיל כנאני",
+   "en": "אסיל כנאני",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סאמח מרעב",
+   "en": "סאמח מרעב",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q23008140:Samah Mar'ab)"
+  },
+  {
+   "he": "מוחמד חטיב",
+   "en": "מוחמד חטיב",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "רועי דיין",
+   "en": "רועי דיין",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q1902005:Roei Dayan)"
+  },
+  {
+   "he": "אחמד טאהא",
+   "en": "אחמד טאהא",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q133455998:Ahmed Taha, Q131830084:Ahmad Taha)"
+  },
+  {
+   "he": "ריאן אשמוז",
+   "en": "ריאן אשמוז",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נור בדיר",
+   "en": "נור בדיר",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עומרי עאמר",
+   "en": "עומרי עאמר",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מאלה דוגאוי",
+   "en": "מאלה דוגאוי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מוחמד עאמר",
+   "en": "מוחמד עאמר",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "שי גולן",
+   "en": "שי גולן",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מוחמד סרסור",
+   "en": "מוחמד סרסור",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עלאא ג'עפר",
+   "en": "עלאא ג'עפר",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q68147941:Ala'a Ja'afar)"
+  },
+  {
+   "he": "פאדי נג׳אר",
+   "en": "פאדי נג׳אר",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "כרם עאמר",
+   "en": "כרם עאמר",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

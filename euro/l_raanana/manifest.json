@@ -1,0 +1,240 @@
+{
+ "club": "l_raanana",
+ "clubName": "הפועל רעננה",
+ "clubQid": "Q2347701",
+ "players": [
+  {
+   "he": "יהלי נימני",
+   "en": "יהלי נימני",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "תמיר סטולר",
+   "en": "תמיר סטולר",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "טמיר סטולר",
+   "en": "טמיר סטולר",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ניוטון ויליאמס",
+   "en": "Newton Williams",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106620081",
+   "wikidata": "https://www.wikidata.org/wiki/Q106620081",
+   "label": "Newton Williams",
+   "birthYear": 2001
+  },
+  {
+   "he": "וסלי דקאס",
+   "en": "Wesly Decas",
+   "pos": "DF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q38429053",
+   "wikidata": "https://www.wikidata.org/wiki/Q38429053",
+   "label": "Wesly Decas",
+   "birthYear": 1999
+  },
+  {
+   "he": "רועי פדידה",
+   "en": "רועי פדידה",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אודי פאפו",
+   "en": "אודי פאפו",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עבדי פרחאת",
+   "en": "עבדי פרחאת",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אביב לין",
+   "en": "אביב לין",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "פיטר מייקל",
+   "en": "פיטר מייקל",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q51859492:Peter Godly Michael)"
+  },
+  {
+   "he": "אברהם רדה",
+   "en": "אברהם רדה",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אביב",
+   "en": "אביב",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q16873010:Aviv Daniel Avraham, Q4829022:Aviv Azaria, Q21180966:Dan Bitton)"
+  },
+  {
+   "he": "ג'ואד קדאח",
+   "en": "ג'ואד קדאח",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אוראל חביב",
+   "en": "אוראל חביב",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נתנאל חגאני",
+   "en": "נתנאל חגאני",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "פז בלאנדר",
+   "en": "פז בלאנדר",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "רועי הר",
+   "en": "רועי הר",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q113171847:Roi Herman)"
+  },
+  {
+   "he": "אמיר ברקוביץ'",
+   "en": "אמיר ברקוביץ'",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q116036355:Amir Berkovits)"
+  },
+  {
+   "he": "הראל ליכטנשטיין",
+   "en": "הראל ליכטנשטיין",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עילאי קריספיל",
+   "en": "עילאי קריספיל",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "יובל טיטלמן",
+   "en": "יובל טיטלמן",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "איתמר גואטה",
+   "en": "איתמר גואטה",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מג'ד אגבאריה",
+   "en": "מג'ד אגבאריה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "רון ודנר",
+   "en": "רון ודנר",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "שניר שוקר",
+   "en": "Snir Shuker",
+   "pos": "MF",
+   "age": 37,
+   "candidates": [
+    {
+     "title": "File:Snir Shuker.JPG",
+     "page": "https://commons.wikimedia.org/wiki/File:Snir_Shuker.JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Snir_Shuker.JPG/960px-Snir_Shuker.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2673,
+     "height": 3173,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Botend",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2015-10-03 18:39:34",
+     "file": "24-Q19758718-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q19758718",
+   "wikidata": "https://www.wikidata.org/wiki/Q19758718",
+   "label": "Snir Shuker",
+   "birthYear": 1989
+  }
+ ]
+}

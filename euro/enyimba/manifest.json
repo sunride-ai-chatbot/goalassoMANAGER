@@ -1,0 +1,248 @@
+{
+ "club": "enyimba",
+ "clubName": "אנימבה",
+ "clubQid": "Q1051147",
+ "players": [
+  {
+   "he": "Nathaniel Asibe",
+   "en": "Nathaniel Asibe",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Henry Ani",
+   "en": "Henry Ani",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Emeka Onyekachi",
+   "en": "Emeka Onyekachi",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Jeremy Olatunji",
+   "en": "Jeremy Olatunji",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Austin Onyemaechi",
+   "en": "Austin Onyemaechi",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Chukwudi Nwaodu",
+   "en": "Chukwudi Nwaodu",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Alade Balogun",
+   "en": "Alade Balogun",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ekwutoziam Eze",
+   "en": "Ekwutoziam Eze",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Akanni Elijah",
+   "en": "Akanni Elijah",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Nweke Kalu",
+   "en": "Nweke Kalu",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ekene Awazie",
+   "en": "Ekene Awazie",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ifeanyi Ihemekwele",
+   "en": "Ifeanyi Ihemekwele",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Odinaka Obichere",
+   "en": "Odinaka Obichere",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Gabriel Innocent",
+   "en": "Gabriel Innocent",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q1489457:Gabriel Melkam, Q6036039:Innocent Melkam)"
+  },
+  {
+   "he": "Chukwuemeka Obioma",
+   "en": "Chukwuemeka Obioma",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "name+club",
+   "qid": "Q119854729",
+   "wikidata": "https://www.wikidata.org/wiki/Q119854729",
+   "label": "Chukwuemeka Obioma",
+   "birthYear": 1998
+  },
+  {
+   "he": "Nzondiegwu Nonso",
+   "en": "Nzondiegwu Nonso",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ismail Sarki",
+   "en": "Ismail Sarki",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Somiari Alalibo",
+   "en": "Somiari Alalibo",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Imo Obot",
+   "en": "Imo Obot",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q107652788:None"
+  },
+  {
+   "he": "Adiele Eriugo",
+   "en": "Adiele Eriugo",
+   "pos": "FW",
+   "age": 20,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q123158159",
+   "wikidata": "https://www.wikidata.org/wiki/Q123158159",
+   "label": "Adiele Eriugo",
+   "birthYear": 2006
+  },
+  {
+   "he": "Fatai Abdullahi",
+   "en": "Fatai Abdullahi",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Pascal Eze",
+   "en": "Pascal Eze",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Asuquo Uwana",
+   "en": "Asuquo Uwana",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Chinedu Ufere",
+   "en": "Chinedu Ufere",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Odita Okechukwu",
+   "en": "Odita Okechukwu",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [
+    {
+     "title": "File:Okey Odita of Enyimba.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Okey_Odita_of_Enyimba.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Okey_Odita_of_Enyimba.jpg/500px-Okey_Odita_of_Enyimba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 600,
+     "height": 900,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Soccermax Nig",
+     "credit": "Nobert Okoli, Enugu",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2010-07-07 15:53:53",
+     "file": "24-Q7081888-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "name+club",
+   "qid": "Q7081888",
+   "wikidata": "https://www.wikidata.org/wiki/Q7081888",
+   "label": "Okechukwu Odita",
+   "birthYear": 1983
+  },
+  {
+   "he": "Francis Odinaka",
+   "en": "Francis Odinaka",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q42213208:1998"
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "club": "l_ahi_nazareth",
+ "clubName": "מכבי אחי נצרת",
+ "clubQid": "Q1580781",
+ "players": [
+  {
+   "he": "עומר נחפאוי",
+   "en": "עומר נחפאוי",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "שגיא מלול",
+   "en": "שגיא מלול",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מוסטפא נדאף",
+   "en": "מוסטפא נדאף",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אמג'ד סולימאן",
+   "en": "אמג'ד סולימאן",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "וואיל סלאם",
+   "en": "וואיל סלאם",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מוסטפא גדבאן",
+   "en": "מוסטפא גדבאן",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ספואן חילו",
+   "en": "ספואן חילו",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סאלח חוסין",
+   "en": "סאלח חוסין",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "גיל סלם",
+   "en": "גיל סלם",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אוהד חזוט",
+   "en": "אוהד חזוט",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "תומר לבנון",
+   "en": "תומר לבנון",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אנדרשה מולה",
+   "en": "אנדרשה מולה",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עלאא בכר",
+   "en": "עלאא בכר",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "טארק בושנאק",
+   "en": "טארק בושנאק",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עומאר בה",
+   "en": "עומאר בה",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אנס דבור",
+   "en": "Anas Dabour",
+   "pos": "MF",
+   "age": 35,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q16885508",
+   "wikidata": "https://www.wikidata.org/wiki/Q16885508",
+   "label": "Anas Dabour",
+   "birthYear": 1991
+  }
+ ]
+}

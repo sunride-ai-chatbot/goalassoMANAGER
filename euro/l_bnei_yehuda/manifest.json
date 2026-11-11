@@ -1,0 +1,316 @@
+{
+ "club": "l_bnei_yehuda",
+ "clubName": "בני יהודה",
+ "clubQid": "Q737714",
+ "players": [
+  {
+   "he": "תומר ליטבינוב",
+   "en": "תומר ליטבינוב",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אור יצחק",
+   "en": "אור יצחק",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q63138011:Isaak Hayik)"
+  },
+  {
+   "he": "יואב זז'ה",
+   "en": "יואב זז'ה",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סתיו נחמני",
+   "en": "Stav Nahmani",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q57587652",
+   "wikidata": "https://www.wikidata.org/wiki/Q57587652",
+   "label": "Stav Nahmani",
+   "birthYear": 2002
+  },
+  {
+   "he": "עילאי אלמקייס",
+   "en": "Ilay Elmkies",
+   "pos": "MF",
+   "age": 26,
+   "candidates": [
+    {
+     "title": "File:עילאי אלמקייס - יולי 2022.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:%D7%A2%D7%99%D7%9C%D7%90%D7%99_%D7%90%D7%9C%D7%9E%D7%A7%D7%99%D7%99%D7%A1_-_%D7%99%D7%95%D7%9C%D7%99_2022.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/47/%D7%A2%D7%99%D7%9C%D7%90%D7%99_%D7%90%D7%9C%D7%9E%D7%A7%D7%99%D7%99%D7%A1_-_%D7%99%D7%95%D7%9C%D7%99_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 373,
+     "height": 595,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Odedbre",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-07-30 12:12:23",
+     "file": "04-Q71142658-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:עילאי אלמקייס - יולי 2022 נירנברג.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:%D7%A2%D7%99%D7%9C%D7%90%D7%99_%D7%90%D7%9C%D7%9E%D7%A7%D7%99%D7%99%D7%A1_-_%D7%99%D7%95%D7%9C%D7%99_2022_%D7%A0%D7%99%D7%A8%D7%A0%D7%91%D7%A8%D7%92.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/08/%D7%A2%D7%99%D7%9C%D7%90%D7%99_%D7%90%D7%9C%D7%9E%D7%A7%D7%99%D7%99%D7%A1_-_%D7%99%D7%95%D7%9C%D7%99_2022_%D7%A0%D7%99%D7%A8%D7%A0%D7%91%D7%A8%D7%92.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 473,
+     "height": 654,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Odedbre",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-07-30 13:12:50",
+     "file": "04-Q71142658-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q71142658",
+   "wikidata": "https://www.wikidata.org/wiki/Q71142658",
+   "label": "Ilay Elmkies",
+   "birthYear": 2000
+  },
+  {
+   "he": "עילאי טרוסט",
+   "en": "Ilay Trost",
+   "pos": "MF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q124054832",
+   "wikidata": "https://www.wikidata.org/wiki/Q124054832",
+   "label": "Ilay Trost",
+   "birthYear": 1999
+  },
+  {
+   "he": "גולן בני",
+   "en": "Golan Beni",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q125025858",
+   "wikidata": "https://www.wikidata.org/wiki/Q125025858",
+   "label": "Golan Beni",
+   "birthYear": 2000
+  },
+  {
+   "he": "דני אעמר",
+   "en": "דני אעמר",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סהר הרקובץ",
+   "en": "סהר הרקובץ",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מתן לוי",
+   "en": "מתן לוי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "בן הדדי",
+   "en": "בן הדדי",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נהוראי אוזנה",
+   "en": "נהוראי אוזנה",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ג'ואל אבקה",
+   "en": "ג'ואל אבקה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ג'ונתן אגיאפונג",
+   "en": "ג'ונתן אגיאפונג",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נועם גיסין",
+   "en": "נועם גיסין",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "גלעד מנצר",
+   "en": "גלעד מנצר",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ז׳ה פלורס",
+   "en": "ז׳ה פלורס",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ג'ונתאס אבימאל דה סילבה קונסייסאו",
+   "en": "ג'ונתאס אבימאל דה סילבה קונסייסאו",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סהר דבח",
+   "en": "סהר דבח",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "שחר מזרחי",
+   "en": "שחר מזרחי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "יובל פיבן",
+   "en": "יובל פיבן",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עומר שרזי",
+   "en": "עומר שרזי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אורי חסאן",
+   "en": "אורי חסאן",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "רווה אסייג",
+   "en": "רווה אסייג",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q117359975:Rave Assayag)"
+  },
+  {
+   "he": "ניר ברדע",
+   "en": "Nir Bardea",
+   "pos": "DF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q63200944",
+   "wikidata": "https://www.wikidata.org/wiki/Q63200944",
+   "label": "Nir Bardea",
+   "birthYear": 1996
+  },
+  {
+   "he": "שגיא דרור",
+   "en": "Sagi Dror",
+   "pos": "MF",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q65677758",
+   "wikidata": "https://www.wikidata.org/wiki/Q65677758",
+   "label": "Sagi Dror",
+   "birthYear": 1995
+  },
+  {
+   "he": "רז נחמיאס",
+   "en": "Raz Nachmias",
+   "pos": "DF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q89242761",
+   "wikidata": "https://www.wikidata.org/wiki/Q89242761",
+   "label": "Raz Nachmias",
+   "birthYear": 1996
+  },
+  {
+   "he": "גיא סביליה",
+   "en": "גיא סביליה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "גיא דביר",
+   "en": "גיא דביר",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עמנואל אפואקה",
+   "en": "עמנואל אפואקה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

@@ -1,0 +1,195 @@
+{
+ "club": "l_kiryat_gat",
+ "clubName": "מכבי קריית גת",
+ "clubQid": "Q2012138",
+ "players": [
+  {
+   "he": "Re'em Golan",
+   "en": "Re'em Golan",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Guy Herman",
+   "en": "Guy Herman",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q131831305",
+   "wikidata": "https://www.wikidata.org/wiki/Q131831305",
+   "label": "Guy Herman",
+   "birthYear": 2000
+  },
+  {
+   "he": "Guy Dahan",
+   "en": "Guy Dahan",
+   "pos": "FW",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q137808162",
+   "wikidata": "https://www.wikidata.org/wiki/Q137808162",
+   "label": "Guy Dahan",
+   "birthYear": 2000
+  },
+  {
+   "he": "ארד בר",
+   "en": "Arad Bar",
+   "pos": "MF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q110281841",
+   "wikidata": "https://www.wikidata.org/wiki/Q110281841",
+   "label": "Arad bar",
+   "birthYear": 2000
+  },
+  {
+   "he": "Amir Altoury",
+   "en": "Amir Altoury",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q96473713",
+   "wikidata": "https://www.wikidata.org/wiki/Q96473713",
+   "label": "Amir Altoury",
+   "birthYear": 2003
+  },
+  {
+   "he": "Elvis Spikner",
+   "en": "Elvis Spikner",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Tomer Dorazi",
+   "en": "Tomer Dorazi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Amir Ella",
+   "en": "Amir Ella",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Omer Ifrah",
+   "en": "Omer Ifrah",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q131824585:2004"
+  },
+  {
+   "he": "Paul Emmanuel",
+   "en": "Paul Emmanuel",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q386876:Emmanuel Adebayor, Q124157116:Emmanuel Adegboyega, Q128852557:Emmanuel Gyamfi, Q110398266:Jacques Ekomie)"
+  },
+  {
+   "he": "פאבל זבלין",
+   "en": "Pavel Zabelin",
+   "pos": "MF",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18069324",
+   "wikidata": "https://www.wikidata.org/wiki/Q18069324",
+   "label": "Pavel Zabelin",
+   "birthYear": 1995
+  },
+  {
+   "he": "Elad Ashram",
+   "en": "Elad Ashram",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Sali Ganon",
+   "en": "Sali Ganon",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Or Daabul",
+   "en": "Or Daabul",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Erez Shifman",
+   "en": "Erez Shifman",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ilay Sakuri",
+   "en": "Ilay Sakuri",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Denis Kozlovskiy",
+   "en": "Denis Kozlovskiy",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Bar Cohen",
+   "en": "Bar Cohen",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q115208632",
+   "wikidata": "https://www.wikidata.org/wiki/Q115208632",
+   "label": "Bar Cohen",
+   "birthYear": 2001
+  },
+  {
+   "he": "Zahi Itzhak",
+   "en": "Zahi Itzhak",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אור זהבי",
+   "en": "Or Zahavi",
+   "pos": "DF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q98704599",
+   "wikidata": "https://www.wikidata.org/wiki/Q98704599",
+   "label": "Or Zahavi",
+   "birthYear": 1996
+  }
+ ]
+}

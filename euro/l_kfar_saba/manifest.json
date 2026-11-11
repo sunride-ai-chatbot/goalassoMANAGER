@@ -1,0 +1,148 @@
+{
+ "club": "l_kfar_saba",
+ "clubName": "הפועל כפר סבא",
+ "clubQid": "Q761583",
+ "players": [
+  {
+   "he": "ניב פליטר",
+   "en": "Niv Fliter",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q120065316",
+   "wikidata": "https://www.wikidata.org/wiki/Q120065316",
+   "label": "Niv Fliter",
+   "birthYear": 2001
+  },
+  {
+   "he": "Shahar Mark",
+   "en": "Shahar Mark",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q119522327:Leo Shahar)"
+  },
+  {
+   "he": "Yanir Nimni",
+   "en": "Yanir Nimni",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Benjamin Macini",
+   "en": "Benjamin Macini",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q138172:Radamel Falcao)"
+  },
+  {
+   "he": "קונאדו יאדום",
+   "en": "Konadu Yiadom",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [
+    {
+     "title": "File:FC Red Bull Salzburg (Nachwuchs) gegen West African Football Academy U80.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:FC_Red_Bull_Salzburg_(Nachwuchs)_gegen_West_African_Football_Academy_U80.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/FC_Red_Bull_Salzburg_%28Nachwuchs%29_gegen_West_African_Football_Academy_U80.jpg/960px-FC_Red_Bull_Salzburg_%28Nachwuchs%29_gegen_West_African_Football_Academy_U80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2250,
+     "height": 2486,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Werner100359",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-10-18 15:55:49",
+     "file": "04-Q107420401-0.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q107420401",
+   "wikidata": "https://www.wikidata.org/wiki/Q107420401",
+   "label": "Konadu Yiadom",
+   "birthYear": 2000
+  },
+  {
+   "he": "Lion Caro",
+   "en": "Lion Caro",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q481370:Muriel Gustavo Becker, Q134592322:Victor Aznar)"
+  },
+  {
+   "he": "Clovis Yao",
+   "en": "Clovis Yao",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Yishay Brosh",
+   "en": "Yishay Brosh",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Liad Shmueli",
+   "en": "Liad Shmueli",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Eliran Zadok",
+   "en": "Eliran Zadok",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Roy Buganim",
+   "en": "Roy Buganim",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Gilbert Bandama",
+   "en": "Gilbert Bandama",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ofek Peretz",
+   "en": "Ofek Peretz",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q5563382:Giora Antman)"
+  },
+  {
+   "he": "Roy Harel",
+   "en": "Roy Harel",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

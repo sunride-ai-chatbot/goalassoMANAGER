@@ -1,0 +1,155 @@
+{
+ "club": "l_acre",
+ "clubName": "הפועל עכו",
+ "clubQid": "Q1513003",
+ "players": [
+  {
+   "he": "רון אפפלד",
+   "en": "רון אפפלד",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עמרי זוארץ",
+   "en": "עמרי זוארץ",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ספיר רזון",
+   "en": "ספיר רזון",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מוחמד ח'טיב",
+   "en": "מוחמד ח'טיב",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סלאח חוסיין",
+   "en": "סלאח חוסיין",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ריאן אשמוז",
+   "en": "ריאן אשמוז",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מידו בדארנה",
+   "en": "מידו בדארנה",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מיכאל מרנשטיין",
+   "en": "מיכאל מרנשטיין",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ליעד לוי",
+   "en": "ליעד לוי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ריף אמסלם",
+   "en": "ריף אמסלם",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "שלום אובניש",
+   "en": "שלום אובניש",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ליאם ורטמכטר",
+   "en": "ליאם ורטמכטר",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ריאן מריח",
+   "en": "ריאן מריח",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "יוני אלמאלם",
+   "en": "יוני אלמאלם",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עילאי איבגי",
+   "en": "עילאי איבגי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "קרלוס סרנטה",
+   "en": "Carlos Sarante",
+   "pos": "FW",
+   "age": 20,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q141726680",
+   "wikidata": "https://www.wikidata.org/wiki/Q141726680",
+   "label": "Carlos Sarante",
+   "birthYear": 2006
+  },
+  {
+   "he": "מור נעמן",
+   "en": "מור נעמן",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "טומי צוציאשווילי",
+   "en": "טומי צוציאשווילי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

@@ -1,0 +1,321 @@
+{
+ "club": "l_rishon",
+ "clubName": "הפועל ראשון לציון",
+ "clubQid": "Q1584246",
+ "players": [
+  {
+   "he": "Shahar Amsalem",
+   "en": "Shahar Amsalem",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Eliran Gomalski",
+   "en": "Eliran Gomalski",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אליגיוס יאנקאוסקאס",
+   "en": "Eligijus Jankauskas",
+   "pos": "FW",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q30113018",
+   "wikidata": "https://www.wikidata.org/wiki/Q30113018",
+   "label": "Eligijus Jankauskas",
+   "birthYear": 1998
+  },
+  {
+   "he": "רועי בן שמעון",
+   "en": "Roey Ben Shimon",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q138351345",
+   "wikidata": "https://www.wikidata.org/wiki/Q138351345",
+   "label": "Roey Ben Shimon",
+   "birthYear": 2000
+  },
+  {
+   "he": "Daniel Bohadana",
+   "en": "Daniel Bohadana",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Shavit Elgabi",
+   "en": "Shavit Elgabi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Yehuda Balay",
+   "en": "Yehuda Balay",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Liam Levi",
+   "en": "Liam Levi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q128863301:Levi Amantchi)"
+  },
+  {
+   "he": "Hisham Taha",
+   "en": "Hisham Taha",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Peleg Daudi",
+   "en": "Peleg Daudi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Roei Yaron",
+   "en": "Roei Yaron",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "שי קונסטנטין",
+   "en": "Shay Konstantini",
+   "pos": "DF",
+   "age": 30,
+   "candidates": [
+    {
+     "title": "File:שי קונסטנטין 2021.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:%D7%A9%D7%99_%D7%A7%D7%95%D7%A0%D7%A1%D7%98%D7%A0%D7%98%D7%99%D7%9F_2021.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/%D7%A9%D7%99_%D7%A7%D7%95%D7%A0%D7%A1%D7%98%D7%A0%D7%98%D7%99%D7%9F_2021.jpg/960px-%D7%A9%D7%99_%D7%A7%D7%95%D7%A0%D7%A1%D7%98%D7%A0%D7%98%D7%99%D7%9F_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 4608,
+     "height": 3456,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Adir Benyamini",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-08-04",
+     "file": "11-Q24452258-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:איתמר ניצן במדי מכבי נתניה 2022.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:%D7%90%D7%99%D7%AA%D7%9E%D7%A8_%D7%A0%D7%99%D7%A6%D7%9F_%D7%91%D7%9E%D7%93%D7%99_%D7%9E%D7%9B%D7%91%D7%99_%D7%A0%D7%AA%D7%A0%D7%99%D7%94_2022.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%D7%90%D7%99%D7%AA%D7%9E%D7%A8_%D7%A0%D7%99%D7%A6%D7%9F_%D7%91%D7%9E%D7%93%D7%99_%D7%9E%D7%9B%D7%91%D7%99_%D7%A0%D7%AA%D7%A0%D7%99%D7%94_2022.jpg/960px-%D7%90%D7%99%D7%AA%D7%9E%D7%A8_%D7%A0%D7%99%D7%A6%D7%9F_%D7%91%D7%9E%D7%93%D7%99_%D7%9E%D7%9B%D7%91%D7%99_%D7%A0%D7%AA%D7%A0%D7%99%D7%94_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3828,
+     "height": 2871,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Adir Benyamini",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-10-08",
+     "file": "11-Q24452258-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q24452258",
+   "wikidata": "https://www.wikidata.org/wiki/Q24452258",
+   "label": "Shay Konstantini",
+   "birthYear": 1996
+  },
+  {
+   "he": "Ronen Peretz",
+   "en": "Ronen Peretz",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Tom Berkovic",
+   "en": "Tom Berkovic",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Liel Chane",
+   "en": "Liel Chane",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q131829622",
+   "wikidata": "https://www.wikidata.org/wiki/Q131829622",
+   "label": "Liel Chane",
+   "birthYear": 2000
+  },
+  {
+   "he": "דולב אזולאי",
+   "en": "Dolev Azulay",
+   "pos": "DF",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q98393976",
+   "wikidata": "https://www.wikidata.org/wiki/Q98393976",
+   "label": "Dolev Azulay",
+   "birthYear": 1997
+  },
+  {
+   "he": "Yosef Balata",
+   "en": "Yosef Balata",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ido Davidovich",
+   "en": "Ido Davidovich",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ori Tzaadon",
+   "en": "Ori Tzaadon",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אזקיאל הנטי",
+   "en": "Ezekiel Henty",
+   "pos": "FW",
+   "age": 33,
+   "candidates": [
+    {
+     "title": "File:Fener train 2016 (10).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Fener_train_2016_(10).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Fener_train_2016_%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 960,
+     "height": 1600,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Дмитрий Голубович",
+     "credit": "soccer.ru",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2016-02-27 01:37:53",
+     "file": "19-Q16235357-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Ezekiel Henty 2016.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Ezekiel_Henty_2016.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/52/Ezekiel_Henty_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 663,
+     "height": 948,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Елена Рыбакова",
+     "credit": "http://www.soccer.ru/galery/877379/photo/553942",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2016-03-13",
+     "file": "19-Q16235357-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    },
+    {
+     "title": "File:Ezekiel Henty with Slovan Bratislava (2021).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Ezekiel_Henty_with_Slovan_Bratislava_(2021).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/99/Ezekiel_Henty_with_Slovan_Bratislava_%282021%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 858,
+     "height": 1526,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Vincenzo.togni",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-08-10",
+     "file": "19-Q16235357-2.jpg",
+     "fromP18": false,
+     "via": "category"
+    },
+    {
+     "title": "File:Fener train 2016 (11).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Fener_train_2016_(11).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Fener_train_2016_%2811%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 636,
+     "height": 884,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Дмитрий Голубович",
+     "credit": "soccer.ru",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2016-02-27 01:31:58",
+     "file": "19-Q16235357-3.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q16235357",
+   "wikidata": "https://www.wikidata.org/wiki/Q16235357",
+   "label": "Ezekiel Isoken Henty",
+   "birthYear": 1993
+  },
+  {
+   "he": "Haroun Shapso",
+   "en": "Haroun Shapso",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q131747140:1999"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "club": "l_afula",
+ "clubName": "הפועל עפולה",
+ "clubQid": "Q15223662",
+ "players": [
+  {
+   "he": "רוי שדו",
+   "en": "רוי שדו",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סהר חסון",
+   "en": "סהר חסון",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "רבינוביץ",
+   "en": "רבינוביץ",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "בריק",
+   "en": "בריק",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q5646464:Hamudi Brick)"
+  },
+  {
+   "he": "אלימלך",
+   "en": "אלימלך",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q2777611:Shavit Elimelech, Q7604777:Stav Elimelech)"
+  },
+  {
+   "he": "מור נעמן",
+   "en": "מור נעמן",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "רז טויזר",
+   "en": "רז טויזר",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "קינגסלי",
+   "en": "קינגסלי",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q6413296:Kingsley Coman)"
+  },
+  {
+   "he": "ניב טובול",
+   "en": "ניב טובול",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נועם שמש",
+   "en": "נועם שמש",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "פישלר",
+   "en": "פישלר",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q20988641:Ofek Fishler)"
+  },
+  {
+   "he": "מזרחי",
+   "en": "מזרחי",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q2464025:Alon Mizrahi, Q98686848:Binyamin Mizrahi, Q138350009:Guy Mizrahi, Q7079084:Offer Mizrahi, Q8056378:Yossi Mizrahi)"
+  },
+  {
+   "he": "דראושה",
+   "en": "דראושה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אפיק כהן",
+   "en": "אפיק כהן",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "בן ווהבה",
+   "en": "בן ווהבה",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

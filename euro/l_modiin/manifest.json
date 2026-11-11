@@ -1,0 +1,314 @@
+{
+ "club": "l_modiin",
+ "clubName": "עירוני מודיעין",
+ "clubQid": "Q18352179",
+ "players": [
+  {
+   "he": "Mikel Taytel",
+   "en": "Mikel Taytel",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Roy Beigel",
+   "en": "Roy Beigel",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "איתמר ישראלי",
+   "en": "Itamar Israeli",
+   "pos": "GK",
+   "age": 34,
+   "candidates": [
+    {
+     "title": "File:Itamar Israeli.JPG",
+     "page": "https://commons.wikimedia.org/wiki/File:Itamar_Israeli.JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Itamar_Israeli.JPG/960px-Itamar_Israeli.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1170,
+     "height": 1551,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Botend",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2015-08-31",
+     "file": "02-Q89559569-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q89559569",
+   "wikidata": "https://www.wikidata.org/wiki/Q89559569",
+   "label": "Itamar Israeli",
+   "birthYear": 1992
+  },
+  {
+   "he": "לוקה שטור",
+   "en": "Luka Štor",
+   "pos": "FW",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q72975529",
+   "wikidata": "https://www.wikidata.org/wiki/Q72975529",
+   "label": "Luka Štor",
+   "birthYear": 1998
+  },
+  {
+   "he": "Arian Mršulja",
+   "en": "Arian Mršulja",
+   "pos": "DF",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q97200102",
+   "wikidata": "https://www.wikidata.org/wiki/Q97200102",
+   "label": "Arian Mršulja",
+   "birthYear": 1998
+  },
+  {
+   "he": "עומר סניור",
+   "en": "Omer Senior",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q110241932",
+   "wikidata": "https://www.wikidata.org/wiki/Q110241932",
+   "label": "Omer Senior",
+   "birthYear": 2003
+  },
+  {
+   "he": "Eli Magar",
+   "en": "Eli Magar",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Sean Buskila",
+   "en": "Sean Buskila",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Aleksander Sotaskov",
+   "en": "Aleksander Sotaskov",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Amir Sabag",
+   "en": "Amir Sabag",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Adir Maya",
+   "en": "Adir Maya",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Guy Amsalem",
+   "en": "Guy Amsalem",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Maor Biton",
+   "en": "Maor Biton",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q21616248:Dudu Dahan, Q26924844:Mavis Tchibota)"
+  },
+  {
+   "he": "Avihay Wodaje",
+   "en": "Avihay Wodaje",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Yarin Machluf",
+   "en": "Yarin Machluf",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Oz Zigler",
+   "en": "Oz Zigler",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Mohammed Adam Mahamid",
+   "en": "Mohammed Adam Mahamid",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Idan Avitov",
+   "en": "Idan Avitov",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Michael Ben Ami",
+   "en": "Michael Ben Ami",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Shalev Samareli",
+   "en": "Shalev Samareli",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ofek Geller",
+   "en": "Ofek Geller",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Tomer Benbeinshti",
+   "en": "Tomer Benbeinshti",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "שחר הירש",
+   "en": "Shahar Hirsh",
+   "pos": "FW",
+   "age": 33,
+   "candidates": [
+    {
+     "title": "File:Shahar Hirsh - 27 January 2016.JPG",
+     "page": "https://commons.wikimedia.org/wiki/File:Shahar_Hirsh_-_27_January_2016.JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Shahar_Hirsh_-_27_January_2016.JPG/960px-Shahar_Hirsh_-_27_January_2016.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2540,
+     "height": 1905,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Botend",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2016-01-27 22:55:20",
+     "file": "22-Q16235442-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q16235442",
+   "wikidata": "https://www.wikidata.org/wiki/Q16235442",
+   "label": "Shahar Hirsh",
+   "birthYear": 1993
+  },
+  {
+   "he": "ניר לקס",
+   "en": "Nir Lax",
+   "pos": "MF",
+   "age": 32,
+   "candidates": [
+    {
+     "title": "File:Nir Lax Hapoel 2018.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Nir_Lax_Hapoel_2018.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Nir_Lax_Hapoel_2018.jpg/960px-Nir_Lax_Hapoel_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1464,
+     "height": 1694,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Sebastian27",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-10-18 16:36:31",
+     "file": "23-Q7039828-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Nir Lax Hapoel 2018 2.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Nir_Lax_Hapoel_2018_2.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Nir_Lax_Hapoel_2018_2.jpg/960px-Nir_Lax_Hapoel_2018_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2448,
+     "height": 3264,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Sebastian27",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-10-18 16:54:37",
+     "file": "23-Q7039828-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q7039828",
+   "wikidata": "https://www.wikidata.org/wiki/Q7039828",
+   "label": "Nir Lax",
+   "birthYear": 1994
+  },
+  {
+   "he": "Georgi Kopraba",
+   "en": "Georgi Kopraba",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

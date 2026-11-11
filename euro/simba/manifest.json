@@ -1,0 +1,231 @@
+{
+ "club": "simba",
+ "clubName": "סימבה",
+ "clubQid": "Q1514387",
+ "players": [
+  {
+   "he": "Djibrilla Kassali",
+   "en": "Djibrilla Kassali",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Yakoub Suleiman Ali",
+   "en": "Yakoub Suleiman Ali",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Hussein Abel",
+   "en": "Hussein Abel",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מוריס אברהם (כדורגלן)",
+   "en": "Morice Abraham",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q110040174",
+   "wikidata": "https://www.wikidata.org/wiki/Q110040174",
+   "label": "Morice Abraham",
+   "birthYear": 2003
+  },
+  {
+   "he": "אבראהים ג'באר",
+   "en": "Ibraheem Jabaar",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106456478",
+   "wikidata": "https://www.wikidata.org/wiki/Q106456478",
+   "label": "Ibraheem Jabaar",
+   "birthYear": 2002
+  },
+  {
+   "he": "Mohammed Bajaber",
+   "en": "Mohammed Bajaber",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q112571791",
+   "wikidata": "https://www.wikidata.org/wiki/Q112571791",
+   "label": "Mohammed Bajaber",
+   "birthYear": 2003
+  },
+  {
+   "he": "Inno Loemba",
+   "en": "Inno Loemba",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Nickson Kibabage",
+   "en": "Nickson Kibabage",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106213946",
+   "wikidata": "https://www.wikidata.org/wiki/Q106213946",
+   "label": "Nickson Kibabage",
+   "birthYear": 2000
+  },
+  {
+   "he": "David Kameta",
+   "en": "David Kameta",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Yusuph Kagoma",
+   "en": "Yusuph Kagoma",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Libasse Gueye",
+   "en": "Libasse Gueye",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q141130212:2005"
+  },
+  {
+   "he": "Elie Mpanzu",
+   "en": "Elie Mpanzu",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q136979390:2002"
+  },
+  {
+   "he": "Hussein Semfuko",
+   "en": "Hussein Semfuko",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ראשין דה רוק",
+   "en": "Rushine De Reuck",
+   "pos": "DF",
+   "age": 30,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q58583657",
+   "wikidata": "https://www.wikidata.org/wiki/Q58583657",
+   "label": "Rushine De Reuck",
+   "birthYear": 1996
+  },
+  {
+   "he": "Keletso Makgalwa",
+   "en": "Keletso Makgalwa",
+   "pos": "MF",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q58583219",
+   "wikidata": "https://www.wikidata.org/wiki/Q58583219",
+   "label": "Keletso Makgalwa",
+   "birthYear": 1997
+  },
+  {
+   "he": "Antony Mligo",
+   "en": "Antony Mligo",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Nathaniel Chilambo",
+   "en": "Nathaniel Chilambo",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ladaki Chasambi",
+   "en": "Ladaki Chasambi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Vedastus Masinde",
+   "en": "Vedastus Masinde",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Abdulrazack Hamza",
+   "en": "Abdulrazack Hamza",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Wilson Nangu",
+   "en": "Wilson Nangu",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Kelvin Nashon",
+   "en": "Kelvin Nashon",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Shomari Kapombe",
+   "en": "Shomari Kapombe",
+   "pos": "DF",
+   "age": 34,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q14625721",
+   "wikidata": "https://www.wikidata.org/wiki/Q14625721",
+   "label": "Shomari Kapombe",
+   "birthYear": 1992
+  },
+  {
+   "he": "Clatous Chama",
+   "en": "Clatous Chama",
+   "pos": "FW",
+   "age": 35,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q22958757",
+   "wikidata": "https://www.wikidata.org/wiki/Q22958757",
+   "label": "Clatous Chama",
+   "birthYear": 1991
+  }
+ ]
+}

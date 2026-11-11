@@ -1,0 +1,272 @@
+{
+ "club": "l_jaffa",
+ "clubName": "מכבי יפו",
+ "clubQid": "Q773362",
+ "players": [
+  {
+   "he": "רוי ברנס",
+   "en": "רוי ברנס",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נתנאל דלויה",
+   "en": "נתנאל דלויה",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אריק ינקו",
+   "en": "Arik Yanko",
+   "pos": "GK",
+   "age": 34,
+   "candidates": [
+    {
+     "title": "File:Arik Yanko Hapoel 2018.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Arik_Yanko_Hapoel_2018.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Arik_Yanko_Hapoel_2018.jpg/960px-Arik_Yanko_Hapoel_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1885,
+     "height": 2512,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Sebastian27",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-10-18 16:47:38",
+     "file": "02-Q4790617-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Arik Yanko (2).JPG",
+     "page": "https://commons.wikimedia.org/wiki/File:Arik_Yanko_(2).JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Arik_Yanko_%282%29.JPG/960px-Arik_Yanko_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2602,
+     "height": 2694,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Botend",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2015-09-12 18:19:46",
+     "file": "02-Q4790617-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    },
+    {
+     "title": "File:Arik Yanko Hapoel 2018 2.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Arik_Yanko_Hapoel_2018_2.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Arik_Yanko_Hapoel_2018_2.jpg/960px-Arik_Yanko_Hapoel_2018_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2448,
+     "height": 3264,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Sebastian27",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-10-18 16:47:42",
+     "file": "02-Q4790617-2.jpg",
+     "fromP18": false,
+     "via": "category"
+    },
+    {
+     "title": "File:Arik Yanko Hapoel 2018 3.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Arik_Yanko_Hapoel_2018_3.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Arik_Yanko_Hapoel_2018_3.jpg/960px-Arik_Yanko_Hapoel_2018_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1909,
+     "height": 2631,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Sebastian27",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-10-18 16:35:26",
+     "file": "02-Q4790617-3.jpg",
+     "fromP18": false,
+     "via": "category"
+    },
+    {
+     "title": "File:Arik Yanko.JPG",
+     "page": "https://commons.wikimedia.org/wiki/File:Arik_Yanko.JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Arik_Yanko.JPG/960px-Arik_Yanko.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2025,
+     "height": 2299,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Botend",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2015-09-12 18:06:45",
+     "file": "02-Q4790617-4.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q4790617",
+   "wikidata": "https://www.wikidata.org/wiki/Q4790617",
+   "label": "Arik Yanko",
+   "birthYear": 1991
+  },
+  {
+   "he": "גיא יצחקי",
+   "en": "גיא יצחקי",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "רועי לוי",
+   "en": "רועי לוי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q105030733:Roy Levy, Q124212548:Roy Levy)"
+  },
+  {
+   "he": "גל לוי",
+   "en": "גל לוי",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q64743785:Gal Levi)"
+  },
+  {
+   "he": "יואל אבו חצירה",
+   "en": "יואל אבו חצירה",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אינוסנט קינגסלי",
+   "en": "אינוסנט קינגסלי",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מנסור באדג'י",
+   "en": "מנסור באדג'י",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "גוראן אנטוניץ'",
+   "en": "גוראן אנטוניץ'",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q16885497:Goran Antonić)"
+  },
+  {
+   "he": "איתי זדה",
+   "en": "איתי זדה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q120379082:Itay Zada)"
+  },
+  {
+   "he": "ניב פליטר",
+   "en": "ניב פליטר",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q120065316:Niv Fliter)"
+  },
+  {
+   "he": "דולב בלולו",
+   "en": "דולב בלולו",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אבי תורג'מן",
+   "en": "אבי תורג'מן",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ניר גואטה",
+   "en": "ניר גואטה",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "נג'ואן חטיב",
+   "en": "נג'ואן חטיב",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אדיר מאיה",
+   "en": "אדיר מאיה",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "סאלי גנון",
+   "en": "סאלי גנון",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "דניאל מאיה",
+   "en": "דניאל מאיה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "דן סירקיס",
+   "en": "דן סירקיס",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}

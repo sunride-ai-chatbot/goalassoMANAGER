@@ -1,0 +1,224 @@
+{
+ "club": "l_kfar_shalem",
+ "clubName": "הפועל כפר שלם",
+ "clubQid": "Q6585084",
+ "players": [
+  {
+   "he": "תומר צרפתי",
+   "en": "Tomer Tzarfati",
+   "pos": "GK",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q118206693",
+   "wikidata": "https://www.wikidata.org/wiki/Q118206693",
+   "label": "Tomer Tzarfati",
+   "birthYear": 2003
+  },
+  {
+   "he": "עומר קבילו",
+   "en": "עומר קבילו",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "גל חיים וייס",
+   "en": "גל חיים וייס",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אור רויזמן",
+   "en": "Or Roizman",
+   "pos": "FW",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q121028839",
+   "wikidata": "https://www.wikidata.org/wiki/Q121028839",
+   "label": "Or Roizman",
+   "birthYear": 2002
+  },
+  {
+   "he": "בן יחזקאל",
+   "en": "בן יחזקאל",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אבנעזר ממאטה",
+   "en": "Ebenezer Mamatah",
+   "pos": "FW",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q115789299",
+   "wikidata": "https://www.wikidata.org/wiki/Q115789299",
+   "label": "Ebenezer Mamatah",
+   "birthYear": 2001
+  },
+  {
+   "he": "נועם שחר",
+   "en": "נועם שחר",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עידו עוולי",
+   "en": "עידו עוולי",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "דומיניק בראון",
+   "en": "דומיניק בראון",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "אוהד חזוט",
+   "en": "אוהד חזוט",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ליאל צאנה",
+   "en": "ליאל צאנה",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ניר חסון",
+   "en": "ניר חסון",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q107445149:Nir Hasson)"
+  },
+  {
+   "he": "רם לוי",
+   "en": "רם לוי",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "איבה רנסום ג'ידצ'וקוו",
+   "en": "Ibeh Ransom",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q126723612",
+   "wikidata": "https://www.wikidata.org/wiki/Q126723612",
+   "label": "Ibeh Ransom",
+   "birthYear": 2003
+  },
+  {
+   "he": "אבי סאלם",
+   "en": "אבי סאלם",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "איתי מלמה",
+   "en": "איתי מלמה",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "איתן אהרון",
+   "en": "איתן אהרון",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "ליאור משנסקי",
+   "en": "ליאור משנסקי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "מתן בית יעקב",
+   "en": "מתן בית יעקב",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עבאס סמארי",
+   "en": "עבאס סמארי",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "עמית קרדי",
+   "en": "עמית קרדי",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "יובל אשכנזי",
+   "en": "Yuval Ashkenazi",
+   "pos": "MF",
+   "age": 34,
+   "candidates": [
+    {
+     "title": "File:יובל אשכנזי - Yuval Ashkenazi (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:%D7%99%D7%95%D7%91%D7%9C_%D7%90%D7%A9%D7%9B%D7%A0%D7%96%D7%99_-_Yuval_Ashkenazi_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e6/%D7%99%D7%95%D7%91%D7%9C_%D7%90%D7%A9%D7%9B%D7%A0%D7%96%D7%99_-_Yuval_Ashkenazi_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 958,
+     "height": 1980,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Adir Benyamini",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-02-19",
+     "file": "21-Q50289899-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q50289899",
+   "wikidata": "https://www.wikidata.org/wiki/Q50289899",
+   "label": "Yuval Ashkenazi",
+   "birthYear": 1992
+  }
+ ]
+}

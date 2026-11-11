@@ -1,0 +1,332 @@
+{
+ "club": "olimpija",
+ "clubName": "אולימפיה ליובליאנה",
+ "clubQid": "Q31932",
+ "players": [
+  {
+   "he": "Matevž Vidovšek",
+   "en": "Matevž Vidovšek",
+   "pos": "GK",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q113552495",
+   "wikidata": "https://www.wikidata.org/wiki/Q113552495",
+   "label": "Matevž Vidovšek",
+   "birthYear": 1999
+  },
+  {
+   "he": "Matevž Dajčar",
+   "en": "Matevž Dajčar",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q140595035:2002"
+  },
+  {
+   "he": "Denis Pintol",
+   "en": "Denis Pintol",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q140594992",
+   "wikidata": "https://www.wikidata.org/wiki/Q140594992",
+   "label": "Denis Pintol",
+   "birthYear": 2000
+  },
+  {
+   "he": "Alex Tamm",
+   "en": "Alex Tamm",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q113414646",
+   "wikidata": "https://www.wikidata.org/wiki/Q113414646",
+   "label": "Alex Tamm",
+   "birthYear": 2001
+  },
+  {
+   "he": "Yayah Kallon",
+   "en": "Yayah Kallon",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q108094939",
+   "wikidata": "https://www.wikidata.org/wiki/Q108094939",
+   "label": "Yayah Kallon",
+   "birthYear": 2001
+  },
+  {
+   "he": "Indrit Tuci",
+   "en": "Indrit Tuci",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q88459665",
+   "wikidata": "https://www.wikidata.org/wiki/Q88459665",
+   "label": "Indrit Tuci",
+   "birthYear": 2000
+  },
+  {
+   "he": "Nemanja Motika",
+   "en": "Nemanja Motika",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106367324",
+   "wikidata": "https://www.wikidata.org/wiki/Q106367324",
+   "label": "Nemanja Motika",
+   "birthYear": 2003
+  },
+  {
+   "he": "Antonio Marin",
+   "en": "Antonio Marin",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q55604075",
+   "wikidata": "https://www.wikidata.org/wiki/Q55604075",
+   "label": "Antonio Marin",
+   "birthYear": 2001
+  },
+  {
+   "he": "Xande",
+   "en": "Xande",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q118470998",
+   "wikidata": "https://www.wikidata.org/wiki/Q118470998",
+   "label": "Xandy",
+   "birthYear": 2001
+  },
+  {
+   "he": "Luis Perea",
+   "en": "Luis Perea",
+   "pos": "MF",
+   "age": 29,
+   "candidates": [
+    {
+     "title": "File:CSC 0149 (29636216028) Perea (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:CSC_0149_(29636216028)_Perea_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f2/CSC_0149_%2829636216028%29_Perea_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 302,
+     "height": 420,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "Giovanni Batista Rodriguez from San Sebastian-Donostia, España",
+     "credit": "CSC_0149",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-07-18 20:00",
+     "file": "09-Q32245279-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q32245279",
+   "wikidata": "https://www.wikidata.org/wiki/Q32245279",
+   "label": "Luis Perea Hernández",
+   "birthYear": 1997
+  },
+  {
+   "he": "Dimitar Mitrovski",
+   "en": "Dimitar Mitrovski",
+   "pos": "FW",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q110221623",
+   "wikidata": "https://www.wikidata.org/wiki/Q110221623",
+   "label": "Dimitar Mitrovski",
+   "birthYear": 1999
+  },
+  {
+   "he": "Bruno Lourenço",
+   "en": "Bruno Lourenço",
+   "pos": "MF",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q64736752",
+   "wikidata": "https://www.wikidata.org/wiki/Q64736752",
+   "label": "Bruno Lourenço",
+   "birthYear": 1998
+  },
+  {
+   "he": "Jan Gorenc",
+   "en": "Jan Gorenc",
+   "pos": "DF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q47088742",
+   "wikidata": "https://www.wikidata.org/wiki/Q47088742",
+   "label": "Jan Gorenc",
+   "birthYear": 1999
+  },
+  {
+   "he": "Jordi Govea",
+   "en": "Jordi Govea",
+   "pos": "DF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q113557797",
+   "wikidata": "https://www.wikidata.org/wiki/Q113557797",
+   "label": "Jordi Govea",
+   "birthYear": 1999
+  },
+  {
+   "he": "Federico Rose",
+   "en": "Federico Rose",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q139374568",
+   "wikidata": "https://www.wikidata.org/wiki/Q139374568",
+   "label": "Federico Rose",
+   "birthYear": 2004
+  },
+  {
+   "he": "Marko Brest",
+   "en": "Marko Brest",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q125505618:2002"
+  },
+  {
+   "he": "Jošt Urbančič",
+   "en": "Jošt Urbančič",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q115922508",
+   "wikidata": "https://www.wikidata.org/wiki/Q115922508",
+   "label": "Jošt Urbančič",
+   "birthYear": 2001
+  },
+  {
+   "he": "Dino Kojić",
+   "en": "Dino Kojić",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "name+club",
+   "qid": "Q131627404",
+   "wikidata": "https://www.wikidata.org/wiki/Q131627404",
+   "label": "Dino Kojić",
+   "birthYear": 2005
+  },
+  {
+   "he": "Davit Kobouri",
+   "en": "Davit Kobouri",
+   "pos": "DF",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q71984889",
+   "wikidata": "https://www.wikidata.org/wiki/Q71984889",
+   "label": "Davit Kobouri",
+   "birthYear": 1998
+  },
+  {
+   "he": "Inas Kukavica",
+   "en": "Inas Kukavica",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Marko Ristić",
+   "en": "Marko Ristić",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q6771246:1987, Q19519881:1997, Q131627420:2004"
+  },
+  {
+   "he": "Tien Goga",
+   "en": "Tien Goga",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Jan Jurgec",
+   "en": "Jan Jurgec",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Diogo Almeida",
+   "en": "Diogo Almeida",
+   "pos": "DF",
+   "age": 28,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q50070564",
+   "wikidata": "https://www.wikidata.org/wiki/Q50070564",
+   "label": "Diogo Miguel Guedes Almeida",
+   "birthYear": 1998
+  },
+  {
+   "he": "Veljko Jelenković",
+   "en": "Veljko Jelenković",
+   "pos": "DF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q116772665",
+   "wikidata": "https://www.wikidata.org/wiki/Q116772665",
+   "label": "Veljko Jelenković",
+   "birthYear": 2003
+  },
+  {
+   "he": "Kristjan Bendra",
+   "en": "Kristjan Bendra",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q128332794:2006"
+  },
+  {
+   "he": "Agustín Doffo",
+   "en": "Agustín Doffo",
+   "pos": "MF",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q21207868",
+   "wikidata": "https://www.wikidata.org/wiki/Q21207868",
+   "label": "Agustín Doffo",
+   "birthYear": 1995
+  },
+  {
+   "he": "Matej Henjak",
+   "en": "Matej Henjak",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  }
+ ]
+}
