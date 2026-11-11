@@ -33,6 +33,10 @@ def club_strength(name_he):
     m = re.search(r"\['%s','(?:[^'\\]|\\.)*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)[,\]]" % re.escape(name_he.replace("'", "\\'")), src)
     if m:
         return int(m.group(1))
+    src3 = open(os.path.join(ROOT, 'src', 'js', '04-euro-clubs.js'), encoding='utf8').read()   # European opponents: ['name','country','city','stadium','#c1','#c2',str,…]
+    m = re.search(r"\['%s','(?:[^'\\]|\\.)*','(?:[^'\\]|\\.)*','(?:[^'\\]|\\.)*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)[,\]]" % re.escape(name_he.replace("'", "\\'")), src3)
+    if m:
+        return int(m.group(1))
     src2 = open(os.path.join(ROOT, 'src', 'js', '16-leumit-toto-nt.js'), encoding='utf8').read()
     m = re.search(r"name:'%s'[^}]*?str:(\d+)" % re.escape(name_he.replace("'", "\\'")), src2)
     return int(m.group(1)) if m else None
