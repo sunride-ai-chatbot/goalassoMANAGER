@@ -588,12 +588,12 @@
     "הפועל ראשון לציון": {
       "key": "l_rishon",
       "en": "Hapoel Rishon LeZion F.C.",
-      "he_title": "הפועל ראשון לציון"
+      "he_title": "הפועל ראשון לציון (כדורגל)"
     },
     "מ.ס. קריית ים": {
       "key": "l_kiryat_yam",
-      "en": "Maccabi Kiryat Yam F.C.",
-      "he_title": "מכבי קריית ים"
+      "en": "F.C. Kiryat Yam",
+      "he_title": "מ.ס. קריית ים"
     },
     "הפועל עפולה": {
       "key": "l_afula",

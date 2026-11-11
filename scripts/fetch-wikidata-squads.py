@@ -132,6 +132,9 @@ def parse_navbox(text):
     return out
 
 
+NAVBOX_SEEN = []   # squad templates that exist but did not parse: dumped with --debug
+
+
 def navbox_squad(title):
     """Fallback for articles whose squad is a table or a transclusion: Template:<club> squad, kept current by the same editors."""
     names = [title, re.sub(r'\s+(?:A\.?F\.?C\.?|F\.?C\.?|S\.?C\.?|C\.?F\.?)$', '', title), title.replace('.', '')]
@@ -146,6 +149,7 @@ def navbox_squad(title):
                 rows = [r for r in parse_squad('\n== Current squad ==\n' + text) if not r['loan']]
             if len(rows) >= 14:
                 return rows, real
+            NAVBOX_SEEN.append('##### %s (%d rows)\n%s\n' % (real, len(rows), text[:6000]))
             time.sleep(.4)
     return [], None
 
@@ -308,7 +312,7 @@ def est_value(club_str, age, pos, seed, sitelinks=0):
 
 def club_strength(name_he):
     src = open(os.path.join(ROOT, 'src', 'js', '11-market.js'), encoding='utf8').read()
-    m = re.search(r"\['%s','[^']*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)\]" % re.escape(name_he.replace("'", "\\'")), src)
+    m = re.search(r"\['%s','(?:[^'\\]|\\.)*','#[0-9a-fA-F]{6}','#[0-9a-fA-F]{6}',(\d+)[,\]]" % re.escape(name_he.replace("'", "\\'")), src)
     if m:
         return int(m.group(1))
     src2 = open(os.path.join(ROOT, 'src', 'js', '16-leumit-toto-nt.js'), encoding='utf8').read()
@@ -424,6 +428,7 @@ def main():
                         print('hewiki', key, e)
                 rows = [r for r in parse_squad(text) if not r['loan']]
                 src_title = title
+                del NAVBOX_SEEN[:]
                 if len(rows) < a.min:
                     nb, nb_title = navbox_squad(title)
                     if nb:
@@ -454,6 +459,9 @@ def main():
                 if len(players) < a.min or not any(p['pos'] == 'GK' for p in players):
                     if a.debug:   # keep the raw squad sections so the next parser fix does not need another blind run
                         parts = re.split(r'\n(={2,4})\s*(.*?)\s*\1\s*\n', '\n' + text)
+                        if NAVBOX_SEEN:
+                            with open(os.path.join(a.out, '_debug', key + '-navbox.txt'), 'w', encoding='utf8') as fh:
+                                fh.write('\n'.join(NAVBOX_SEEN))
                         with open(os.path.join(a.out, '_debug', key + '-body.txt'), 'w', encoding='utf8') as fh:
                             for i in range(1, len(parts) - 2, 3):
                                 if SQUAD_HEAD.search(parts[i + 1]) and not SKIP_HEAD.search(parts[i + 1]):
