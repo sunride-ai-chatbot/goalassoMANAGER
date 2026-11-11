@@ -109,8 +109,10 @@ function fromRawEuro(r,fallback,club){const age=r.age??ri(20,31);const nat=r.nat
 /* shift a real squad so its best-14 average matches the club's designed strength (keeps the within-squad order from real market values) */
 function rawSquad(name,str){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)return null;const ps=raw.map(r=>fromRawEuro(r,str,name));const top=ps.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const mean=top.reduce((a,b)=>a+b,0)/top.length;const shift=clamp(Math.round(str+1-mean),-7,7);
   if(shift)for(const p of ps){p.ovr=clamp(p.ovr+shift,46,94);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.value=playerValue(p);p.wage=playerWage(p)}return ps}
+/* A real squad is not padded with invented players: a thin position group is covered by the line-up picker (bestXI
+   fills from the rest of the squad). Only a squad too small to field a side with a bench (under 16) gets reserves. */
 function realEuroSquad(name,str){const ps=rawSquad(name,str);if(!ps)return null;
-  for(const pos of POS){const min={GK:2,DF:5,MF:5,FW:3}[pos];while(ps.filter(p=>p.pos===pos).length<min)ps.push(makeEuroPlayer(pos,str-4,'',str))}return ps}
+  if(ps.length<16)for(const pos of POS){const min={GK:2,DF:5,MF:5,FW:3}[pos];while(ps.filter(p=>p.pos===pos).length<min)ps.push(makeEuroPlayer(pos,str-4,'',str))}return ps}
 function pickEuroClub(lo,hi,strong){
   if(!G.euroUsed)G.euroUsed={};
   let cands=EURO_CLUBS.filter(c=>c[6]>=lo-3&&c[6]<=hi+3&&!G.euroUsed[c[0]]);
