@@ -73,8 +73,12 @@ for face in visuals['faces'].values():
 # anything not marked ok there renders the designed fallback in the game
 audit_path = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json')
 audit = json.loads(read(audit_path)) if os.path.isfile(audit_path) else {}
+def hair_top(k):
+    # where the hair starts in the canonical 240x300 frame (px from the top): round avatars frame every head by it
+    t = audit.get(k, {}).get('hairTop')
+    return int(round(t * 300)) if isinstance(t, (int, float)) else None
 runtime_faces = {k: {'pack': v['pack'], 'status': 'ok' if audit.get(k, {}).get('status') == 'ok' else 'unresolved',
-                     'skin': audit.get(k, {}).get('skin') or v.get('skin'), 'bust': 1 if audit.get(k, {}).get('shoulders', 1) >= 0.3 else 0}
+                     'skin': audit.get(k, {}).get('skin') or v.get('skin'), 'bust': 1 if audit.get(k, {}).get('shoulders', 1) >= 0.3 else 0, 'top': hair_top(k)}
                  for k, v in visuals['faces'].items()}
 # European real squads (data/visuals/euro-players.json, written by scripts/import-commons-portraits.py): keyed by the
 # club's Hebrew name + the player's English name exactly as in data/euro; `euroEn` covers saves made before identities
@@ -92,7 +96,7 @@ for k, v in euro_v['faces'].items():
     if not os.path.isfile(os.path.join(ROOT, 'assets', 'facepacks', v['pack'] + '.json')):
         raise ValueError('Missing portrait pack: ' + v['pack'])
     runtime_faces[k] = {'pack': v['pack'], 'status': 'ok' if audit.get(k, {}).get('status') == 'ok' else 'unresolved', 'skin': audit.get(k, {}).get('skin'),
-                        'bust': 1 if audit.get(k, {}).get('shoulders', 1) >= 0.3 else 0}
+                        'bust': 1 if audit.get(k, {}).get('shoulders', 1) >= 0.3 else 0, 'top': hair_top(k)}
 page = page.replace('__PLAYER_VISUALS__', enc({'names': face_names, 'faces': runtime_faces, 'euro': euro_ids,
                                                'euroEn': {n: i for n, i in en_id.items() if en_count.get(n) == 1}}))
 # Supabase (multiplayer): public URL + anon/publishable key only, from the environment or a local .env. Never the

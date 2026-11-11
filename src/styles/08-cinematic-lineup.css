@@ -81,7 +81,7 @@
 .rt-in{display:flex;flex-direction:column;align-items:center;gap:3px;width:100%}
 .rt-face{position:relative;display:block;width:clamp(46px,14vw,76px);aspect-ratio:1;border-radius:50%;overflow:visible;background:#0b1520;border:3px solid var(--ring,#fff);box-shadow:0 5px 14px #000b}
 .rt-face .player-portrait{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:50%;overflow:hidden}
-.rt-face .player-portrait svg{transform:scale(1.22);transform-origin:50% 22%}
+.rt-face .player-portrait svg,.bc-face .player-portrait svg{transform:translateY(calc(var(--fy,5.8)*-1%)) scale(1.16);transform-origin:50% 0}
 .rt-face.rt-empty{display:grid;place-items:center;border-style:dashed;border-color:#dce8b8;color:#e2ff9e;font-size:28px;background:#0a1c24aa}
 .rt-cap{position:absolute;top:-4px;inset-inline-start:-6px;width:19px;height:19px;border-radius:50%;background:#efd78b;color:#142115;font:800 11px/19px var(--body);text-align:center;box-shadow:0 2px 5px #0007;z-index:1}
 .rt-flag{position:absolute;bottom:-4px;inset-inline:-6px;text-align:center;font:800 9px/1.4 var(--body);color:#fff;background:#c0392bdd;border-radius:4px;padding:0 2px}

@@ -84,6 +84,11 @@ function portraitGroup(p,c,id,o){o=o||{};const f=playerVisual(p),key=playerVisua
  return `<g class="pp" data-pp-state="${portraitState(f,key)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(key)}"`:''}>${bg}${kitG}${photo}${fb}</g>`}
 function playerPortraitHTML(p,c,key){c=c||playerClub(p)||{c1:'#26384a',c2:'#d2deed'};const id='pp'+String(key||p.id).replace(/[^a-zA-Z0-9]/g,'');
  return `<span class="player-portrait" aria-hidden="true" data-portrait="${playerVisual(p)?playerVisualId(p):'fallback'}"><svg viewBox="0 0 240 264" preserveAspectRatio="xMidYMin slice">${portraitGroup(p,c,id)}</svg></span>`}
+/* Round avatars (lineup circles, broadcast plates): the circle shows a 207 px window of the 240 px frame (zoom 1.16).
+   The window starts 12 px above the player's hair (PLAYER_VISUALS.faces[].top, measured when the cut-out was built) and
+   never lower than 20 px, so a tall haircut is not cut by the circle while ordinary heads all sit at the same height. */
+const FACE_ZOOM=1.16;
+function faceFrameStyle(p){const f=p?playerVisual(p):null;const top=f&&typeof f.top==='number'?f.top:32;const y0=clamp(top-12,0,20);return '--fy:'+(y0*FACE_ZOOM/240*100).toFixed(2)}
 function playerClub(p){if(!G)return null;return [...G.clubs,...G.leumit,...Object.values(G.pseudo||{}),...Object.values(G.world||{}).flatMap(l=>l.clubs||[])].find(c=>c.players.includes(p)||(c.youth||[]).includes(p))||null}
 /* Lineup figure: illustrated kit body (club colours + sponsor) with the player's real head. The cut-out is placed by the
    canonical frame (eye line, chin) and clipped just below the chin, so hair and ears are always complete. */
@@ -99,7 +104,7 @@ function cinematicPlayerHTML(c,p,key){const f=playerVisual(p),gk=p.pos==='GK',co
 const ARENA={top:37,bot:91,halfTop:38,halfBot:50,pow:1};
 function pitchProject(u,v){const P=ARENA;const t=Math.pow(v,P.pow);const y=P.top+(P.bot-P.top)*t;const hw=P.halfTop+(P.halfBot-P.halfTop)*t;return [50+u*hw,y]}
 function roundTokenHTML(c,p,i,o){const [X0,Y]=pitchProject(clamp((o.x-50)/50*1.15,-1,1),.08+.88*clamp((o.y-23)/68,0,1));const X=clamp(X0,10,90);const fit=p?clamp(Math.round(p.fit??100),0,100):100;
-  const ring=fit>=85?'#ffffff':fit>=65?'#ffcc4d':'#ff6b6b';const face=p?`<span class="rt-face" style="--ring:${ring}">${playerPortraitHTML(p,c,(o.key||'rt')+i)}${o.cap?'<span class="rt-cap">C</span>':''}${p.inj||p.susp?`<span class="rt-flag">${p.inj?'פצוע':'מורחק'}</span>`:''}</span>`:'<span class="rt-face rt-empty">+</span>';
+  const ring=fit>=85?'#ffffff':fit>=65?'#ffcc4d':'#ff6b6b';const face=p?`<span class="rt-face" style="--ring:${ring};${faceFrameStyle(p)}">${playerPortraitHTML(p,c,(o.key||'rt')+i)}${o.cap?'<span class="rt-cap">C</span>':''}${p.inj||p.susp?`<span class="rt-flag">${p.inj?'פצוע':'מורחק'}</span>`:''}</span>`:'<span class="rt-face rt-empty">+</span>';
   const plate=`<span class="rt-name" style="--c1:${c.c1};--ink:${inkFor(c.c1)}">${p?`<bdi class="rt-ovr">${p.ovr}</bdi> ${esc(p.last||p.first)}`:POSHE[o.slot||'MF']}</span>`;
   return `<span class="rt-in">${face}${plate}</span>|${X.toFixed(2)}|${Y.toFixed(2)}`}
 function token3dHTML(c,p,slot,i,o){const cls=['t3','rt'];if(!p)cls.push('empty');if(o.sel)cls.push('sel');if(p&&(p.inj||p.susp))cls.push('bad');if(p&&p.pos!==slot)cls.push('oop');

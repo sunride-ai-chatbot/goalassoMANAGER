@@ -36,7 +36,7 @@ function bcPlateFor(M,e){const key=e.t==='shot'?e.sub:e.t;const K=BC_KIND[key];i
   else if(key==='yellow')sub=p?esc(POSHE[p.pos]||''):'';
   return {cls:K[1],pri:K[2],tag:K[0],m:e.m,c,p,name:p?fullName(p):(e.name||''),sub}}
 function bcPlateHTML(pl){const c=pl.c;const face=pl.p?playerPortraitHTML(pl.p,c,'bc'+(++BC.seq)):`<span class="bc-mono">${esc(String(c.short||c.name||'').slice(0,2))}</span>`;
-  return `<div class="bc-l3 ${pl.cls}" style="--c1:${c.c1};--c2:${c.c2&&c.c2!==c.c1?c.c2:inkFor(c.c1)};--ink:${inkFor(c.c1)}"><span class="bc-flag"></span><span class="bc-face">${face}</span>
+  return `<div class="bc-l3 ${pl.cls}" style="--c1:${c.c1};--c2:${c.c2&&c.c2!==c.c1?c.c2:inkFor(c.c1)};--ink:${inkFor(c.c1)}"><span class="bc-flag"></span><span class="bc-face" style="${faceFrameStyle(pl.p)}">${face}</span>
     <span class="bc-tx"><span class="bc-top"><b class="bc-tag">${esc(pl.tag)}</b><bdi class="bc-min">${pl.m}'</bdi><span class="bc-club">${esc(c.short||c.name)}</span></span>
     <strong class="bc-name">${esc(pl.name)}</strong>${pl.sub?`<span class="bc-sub">${pl.sub}</span>`:''}</span></div>`}
 function bcEvent(M,e){if(!bcLayer()||!e||e.quiet)return;let pl=null;try{pl=bcPlateFor(M,e)}catch(err){pl=null}if(!pl)return;
@@ -75,4 +75,4 @@ function bcSlate(M,h,a,kind){const L=bcLayer();if(!L)return;bcSlateHide();bcRese
     <div class="bc-s-head"><strong class="bc-s-team h">${esc(h.short||h.name)}</strong><span class="bc-s-mid"><span class="bc-s-title">${title}</span><span class="bc-s-score"><bdi>${M.gh}</bdi><i></i><bdi>${M.ga}</bdi></span></span><strong class="bc-s-team a">${esc(a.short||a.name)}</strong></div>
     <div class="bc-s-scorers"><div class="h">${bcScorers(M,h.id)}</div><div class="a">${bcScorers(M,a.id)}</div></div>
     <div class="bc-rows">${row('אחזקת כדור',ph+'%',(100-ph)+'%',ph,100-ph)}${row('בעיטות',M.shots[h.id],M.shots[a.id],M.shots[h.id],M.shots[a.id])}${row('למסגרת',sot[h.id]||0,sot[a.id]||0,sot[h.id]||0,sot[a.id]||0)}${row('שערים צפויים',xh.toFixed(2),xa.toFixed(2),xh,xa)}</div>
-    ${mm?`<div class="bc-motm"><span class="bc-face sm">${mp?playerPortraitHTML(mp,club(mm.team),'bcm'+(++BC.seq)):''}</span><span>שחקן המשחק</span><strong>${esc(mm.name)}</strong><bdi>${esc(String(mm.r))}</bdi></div>`:''}</div>`)}
+    ${mm?`<div class="bc-motm"><span class="bc-face sm" style="${faceFrameStyle(mp)}">${mp?playerPortraitHTML(mp,club(mm.team),'bcm'+(++BC.seq)):''}</span><span>שחקן המשחק</span><strong>${esc(mm.name)}</strong><bdi>${esc(String(mm.r))}</bdi></div>`:''}</div>`)}
