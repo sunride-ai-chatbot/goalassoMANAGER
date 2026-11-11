@@ -5437,6 +5437,20 @@
   "status": "ok",
   "upscale": 0.61
  },
+ "wd-Q100436203": {
+  "bytes": 12718,
+  "faceW": 0.319,
+  "flags": [],
+  "hairTop": 0.154,
+  "pack": "eu-borac",
+  "roll": -8.5,
+  "score": 0.94,
+  "sha256": "a51272e9e968a4c6ddd294868878f4226f55a7365aa5a0668e4c59f476a0fd29",
+  "shoulders": 0.73,
+  "skin": "#ac8984",
+  "status": "ok",
+  "upscale": 0.36
+ },
  "wd-Q100533279": {
   "bytes": 9450,
   "faceW": 0.369,
@@ -5624,6 +5638,20 @@
   "status": "ok",
   "upscale": 0.62
  },
+ "wd-Q101019084": {
+  "bytes": 12786,
+  "faceW": 0.321,
+  "flags": [],
+  "hairTop": 0.139,
+  "pack": "eu-cska_sofia",
+  "roll": -3.9,
+  "score": 0.91,
+  "sha256": "02c48897acfcd18e482a5a82c797ff497a6be9b64cdb2d01bb609c62636671b7",
+  "shoulders": 0.87,
+  "skin": "#ae7e62",
+  "status": "ok",
+  "upscale": 0.25
+ },
  "wd-Q101035007": {
   "bytes": 10964,
   "faceW": 0.316,
@@ -5710,6 +5738,20 @@
   "status": "ok",
   "upscale": 0.83
  },
+ "wd-Q101246164": {
+  "bytes": 9514,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.139,
+  "pack": "eu-craiova",
+  "roll": -0.4,
+  "score": 0.93,
+  "sha256": "916d90880c03e10aabf18d7f8c9548dbbf75a7f6d5ba2f708449b8bf8086d3e3",
+  "shoulders": 0.91,
+  "skin": "#9a7051",
+  "status": "ok",
+  "upscale": 0.99
+ },
  "wd-Q101247266": {
   "bytes": 19766,
   "faceW": 0.285,
@@ -5770,6 +5812,20 @@
   "skin": "#fdd4ca",
   "status": "ok",
   "upscale": 0.3
+ },
+ "wd-Q101628281": {
+  "bytes": 6760,
+  "faceW": 0.306,
+  "flags": [],
+  "hairTop": 0.13,
+  "pack": "eu-trabzonspor",
+  "roll": 9.2,
+  "score": 0.93,
+  "sha256": "a8c7810faadb5e40859618e4ea499b96ff0413e08816818652c4a384e23d9e9c",
+  "shoulders": 0.55,
+  "skin": "#bca372",
+  "status": "ok",
+  "upscale": 0.38
  },
  "wd-Q102068288": {
   "bytes": 9108,
@@ -5951,6 +6007,20 @@
   "status": "ok",
   "upscale": 0.35
  },
+ "wd-Q104413071": {
+  "bytes": 15370,
+  "faceW": 0.312,
+  "flags": [],
+  "hairTop": 0.137,
+  "pack": "eu-shamrock",
+  "roll": -2.4,
+  "score": 0.95,
+  "sha256": "2a64d1059a615beb2aa30888a48d8ab2017b29a983fdd1108d0f351fe41b1db8",
+  "shoulders": 0.83,
+  "skin": "#ce997b",
+  "status": "ok",
+  "upscale": 0.64
+ },
  "wd-Q104414736": {
   "bytes": 15410,
   "faceW": 0.275,
@@ -5995,6 +6065,20 @@
   "status": "ok",
   "upscale": 0.27
  },
+ "wd-Q104451611": {
+  "bytes": 11478,
+  "faceW": 0.325,
+  "flags": [],
+  "hairTop": 0.133,
+  "pack": "eu-zilina",
+  "roll": 2.9,
+  "score": 0.94,
+  "sha256": "9ee23688d14786411150d45698fdf9d511bd5808ade0640a55a3bf75c5d3ec79",
+  "shoulders": 0.82,
+  "skin": "#e4a69c",
+  "status": "ok",
+  "upscale": 0.59
+ },
  "wd-Q104454": {
   "bytes": 10708,
   "faceW": 0.305,
@@ -6008,6 +6092,20 @@
   "skin": "#c68665",
   "status": "ok",
   "upscale": 0.21
+ },
+ "wd-Q104468724": {
+  "bytes": 11208,
+  "faceW": 0.284,
+  "flags": [],
+  "hairTop": 0.158,
+  "pack": "eu-levski",
+  "roll": 1.0,
+  "score": 0.94,
+  "sha256": "086e0bbbbcdeb6b490d2e67abd8860a18ff4aba8bdd1044e68fd4da4689e75e9",
+  "shoulders": 0.9,
+  "skin": "#93624a",
+  "status": "ok",
+  "upscale": 0.65
  },
  "wd-Q104519873": {
   "bytes": 8398,
@@ -6143,6 +6241,22 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q104764325": {
+  "bytes": 9364,
+  "faceW": 0.321,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.128,
+  "pack": "eu-panathinaikos",
+  "roll": 1.9,
+  "score": 0.96,
+  "sha256": "692ee525da5946ed32fc3691036d61c8cf3d15416d979877057436b3108bf3a1",
+  "shoulders": 0.75,
+  "skin": "#98705d",
+  "status": "ok",
+  "upscale": 0.37
+ },
  "wd-Q104764328": {
   "bytes": 12526,
   "faceW": 0.33,
@@ -6184,6 +6298,20 @@
   "skin": "#a66a50",
   "status": "ok",
   "upscale": 0.64
+ },
+ "wd-Q104773462": {
+  "bytes": 12286,
+  "faceW": 0.334,
+  "flags": [],
+  "hairTop": 0.119,
+  "pack": "eu-panathinaikos",
+  "roll": 2.7,
+  "score": 0.95,
+  "sha256": "679242e5499de3ec8c9d47675e104f7cefc9e5bf0ae6e2c61f41354449982a65",
+  "shoulders": 0.79,
+  "skin": "#614240",
+  "status": "ok",
+  "upscale": 0.43
  },
  "wd-Q104784108": {
   "bytes": 13656,
@@ -6486,6 +6614,20 @@
   "status": "ok",
   "upscale": 0.22
  },
+ "wd-Q10544852": {
+  "bytes": 11878,
+  "faceW": 0.335,
+  "flags": [],
+  "hairTop": 0.166,
+  "pack": "eu-pafos",
+  "roll": 0.5,
+  "score": 0.93,
+  "sha256": "e27b1168fdeae6a94999b51c757e82ea349391b5a8223ff6c2e06363915d0df2",
+  "shoulders": 0.9,
+  "skin": "#5c4d42",
+  "status": "ok",
+  "upscale": 0.28
+ },
  "wd-Q105459235": {
   "bytes": 9484,
   "faceW": 0.305,
@@ -6530,6 +6672,20 @@
   "status": "ok",
   "upscale": 0.27
  },
+ "wd-Q10552708": {
+  "bytes": 10086,
+  "faceW": 0.338,
+  "flags": [],
+  "hairTop": 0.107,
+  "pack": "eu-slovan_bratislava",
+  "roll": -1.7,
+  "score": 0.9,
+  "sha256": "04248c44225bab6afcf3213193e2d0054bae42e545889d602f49ae287f822ae9",
+  "shoulders": 0.74,
+  "skin": "#ce8a72",
+  "status": "ok",
+  "upscale": 0.21
+ },
  "wd-Q105591986": {
   "bytes": 12386,
   "faceW": 0.311,
@@ -6543,6 +6699,20 @@
   "skin": "#b65f4f",
   "status": "ok",
   "upscale": 0.34
+ },
+ "wd-Q105604996": {
+  "bytes": 10892,
+  "faceW": 0.319,
+  "flags": [],
+  "hairTop": 0.157,
+  "pack": "eu-qarabag",
+  "roll": -0.2,
+  "score": 0.95,
+  "sha256": "eb1c8db63e91054ed5e624b9e0e9f8db55e63a4efbcb74d22977881a26ebb75a",
+  "shoulders": 0.64,
+  "skin": "#d49d7e",
+  "status": "ok",
+  "upscale": 0.61
  },
  "wd-Q105620373": {
   "bytes": 11462,
@@ -6604,6 +6774,20 @@
   "status": "ok",
   "upscale": 0.29
  },
+ "wd-Q105824445": {
+  "bytes": 8388,
+  "faceW": 0.315,
+  "flags": [],
+  "hairTop": 0.098,
+  "pack": "eu-sturm_graz",
+  "roll": -1.3,
+  "score": 0.94,
+  "sha256": "e33a0a7eb1fac0c9880ebf89dbfe96a43087e8e1e874a7701ccb1b715517612c",
+  "shoulders": 0.59,
+  "skin": "#c78f79",
+  "status": "ok",
+  "upscale": 0.36
+ },
  "wd-Q105892434": {
   "bytes": 5560,
   "faceW": 0.331,
@@ -6634,6 +6818,20 @@
   "status": "ok",
   "upscale": 0.94
  },
+ "wd-Q105940082": {
+  "bytes": 12440,
+  "faceW": 0.349,
+  "flags": [],
+  "hairTop": 0.115,
+  "pack": "eu-banik_ostrava",
+  "roll": 0.2,
+  "score": 0.91,
+  "sha256": "5dbf4992d56ace864c25843fe10660a312bd7203051725e3df335e1e9b1c6459",
+  "shoulders": 0.92,
+  "skin": "#9c665f",
+  "status": "ok",
+  "upscale": 0.92
+ },
  "wd-Q105945662": {
   "bytes": 11292,
   "faceW": 0.307,
@@ -6647,6 +6845,22 @@
   "skin": "#a6816d",
   "status": "ok",
   "upscale": 0.73
+ },
+ "wd-Q105947957": {
+  "bytes": 8590,
+  "faceW": 0.325,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.073,
+  "pack": "eu-jagiellonia",
+  "roll": -0.1,
+  "score": 0.94,
+  "sha256": "008dfb042d60b1e8a2dc9aa17b567b6019ad927c766bfb522119e17e0a65bbc2",
+  "shoulders": 0.86,
+  "skin": "#5d241c",
+  "status": "ok",
+  "upscale": 0.55
  },
  "wd-Q105955008": {
   "bytes": 13434,
@@ -6718,6 +6932,22 @@
   "status": "ok",
   "upscale": 0.36
  },
+ "wd-Q106048941": {
+  "bytes": 4858,
+  "faceW": 0.326,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.137,
+  "pack": "eu-cska_sofia",
+  "roll": -2.3,
+  "score": 0.93,
+  "sha256": "33e286ddf1c70a6d4426fe685f35a99e5062c1d91d770f6369a9e06c6dfa0336",
+  "shoulders": 0.0,
+  "skin": "#d89469",
+  "status": "ok",
+  "upscale": 0.35
+ },
  "wd-Q106061737": {
   "bytes": 7710,
   "faceW": 0.321,
@@ -6731,6 +6961,20 @@
   "skin": "#98654f",
   "status": "ok",
   "upscale": 0.25
+ },
+ "wd-Q106092166": {
+  "bytes": 8544,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.135,
+  "pack": "eu-sheriff",
+  "roll": -2.7,
+  "score": 0.91,
+  "sha256": "a6dcd89c1c5f83698f0930a4d35af598f03e2af1982a1326776f3cade1e1ea64",
+  "shoulders": 0.53,
+  "skin": "#382423",
+  "status": "ok",
+  "upscale": 0.22
  },
  "wd-Q106096063": {
   "bytes": 4986,
@@ -7175,6 +7419,20 @@
   "status": "ok",
   "upscale": 0.94
  },
+ "wd-Q107022395": {
+  "bytes": 10758,
+  "faceW": 0.346,
+  "flags": [],
+  "hairTop": 0.079,
+  "pack": "eu-lask",
+  "roll": -3.1,
+  "score": 0.92,
+  "sha256": "e09e7fdfd79cdbdd08e76943bc30d7a06866441975b383984628a05fad454bc1",
+  "shoulders": 0.88,
+  "skin": "#f3c4a8",
+  "status": "ok",
+  "upscale": 0.48
+ },
  "wd-Q107031318": {
   "bytes": 9304,
   "faceW": 0.308,
@@ -7235,6 +7493,20 @@
   "skin": "#d7a070",
   "status": "ok",
   "upscale": 0.22
+ },
+ "wd-Q107215017": {
+  "bytes": 10700,
+  "faceW": 0.345,
+  "flags": [],
+  "hairTop": 0.172,
+  "pack": "eu-sturm_graz",
+  "roll": -2.1,
+  "score": 0.94,
+  "sha256": "3b1181121c3a0fab17038038e27d2e258e53c5e436e9452e4d14791b7d6a60d6",
+  "shoulders": 0.89,
+  "skin": "#7c5f57",
+  "status": "ok",
+  "upscale": 0.37
  },
  "wd-Q107285723": {
   "bytes": 9980,
@@ -7571,6 +7843,20 @@
   "status": "ok",
   "upscale": 0.28
  },
+ "wd-Q108109586": {
+  "bytes": 9442,
+  "faceW": 0.317,
+  "flags": [],
+  "hairTop": 0.134,
+  "pack": "eu-panathinaikos",
+  "roll": -3.1,
+  "score": 0.93,
+  "sha256": "6f751aad3de415637d4a3fbefb59d9819448c20f383e113e66e1dc04633b78a9",
+  "shoulders": 0.8,
+  "skin": "#97624a",
+  "status": "ok",
+  "upscale": 0.27
+ },
  "wd-Q108111889": {
   "bytes": 15754,
   "faceW": 0.347,
@@ -7835,6 +8121,20 @@
   "status": "ok",
   "upscale": 0.32
  },
+ "wd-Q108543957": {
+  "bytes": 12844,
+  "faceW": 0.32,
+  "flags": [],
+  "hairTop": 0.143,
+  "pack": "eu-levadia",
+  "roll": -3.2,
+  "score": 0.93,
+  "sha256": "74db573be26478e9daecb3bf619a7f13932c4ab18f85494e99ca6f554525b71b",
+  "shoulders": 0.81,
+  "skin": "#bf7f73",
+  "status": "ok",
+  "upscale": 0.34
+ },
  "wd-Q10855654": {
   "bytes": 12378,
   "faceW": 0.336,
@@ -7910,6 +8210,20 @@
   "skin": "#9a6a53",
   "status": "ok",
   "upscale": 0.17
+ },
+ "wd-Q108688110": {
+  "bytes": 11824,
+  "faceW": 0.329,
+  "flags": [],
+  "hairTop": 0.139,
+  "pack": "eu-sturm_graz",
+  "roll": -5.7,
+  "score": 0.94,
+  "sha256": "0654b0f895fb86ba15f72505d5d35e1c1c8e45a47786bce91a32c62e7eaaa884",
+  "shoulders": 0.52,
+  "skin": "#dfb7b4",
+  "status": "ok",
+  "upscale": 0.38
  },
  "wd-Q108703725": {
   "bytes": 9364,
@@ -8091,6 +8405,48 @@
   "skin": "#9e694b",
   "status": "ok",
   "upscale": 0.24
+ },
+ "wd-Q109471039": {
+  "bytes": 10750,
+  "faceW": 0.314,
+  "flags": [],
+  "hairTop": 0.155,
+  "pack": "eu-dinamo_tbilisi",
+  "roll": -1.6,
+  "score": 0.92,
+  "sha256": "b34d5765ce15fca6bdc2c2af2e3beaff0ae1792e86c649bbe204f92cfd09e5a0",
+  "shoulders": 0.65,
+  "skin": "#a5796e",
+  "status": "ok",
+  "upscale": 0.3
+ },
+ "wd-Q109557573": {
+  "bytes": 11326,
+  "faceW": 0.328,
+  "flags": [],
+  "hairTop": 0.162,
+  "pack": "eu-rakow",
+  "roll": 7.7,
+  "score": 0.81,
+  "sha256": "9bd8cc27637121b73d545453689c5ecd9d41fc1e6918d49450a9b8cf087247b1",
+  "shoulders": 0.52,
+  "skin": "#d0c5b6",
+  "status": "ok",
+  "upscale": 0.36
+ },
+ "wd-Q109591494": {
+  "bytes": 11032,
+  "faceW": 0.325,
+  "flags": [],
+  "hairTop": 0.08,
+  "pack": "eu-kups",
+  "roll": -12.5,
+  "score": 0.92,
+  "sha256": "d3b4f98dce63ce241fc5ff3a1f57b1c03c7d8e9b3233e4c9bfdf1725d9ae26da",
+  "shoulders": 0.64,
+  "skin": "#d28971",
+  "status": "ok",
+  "upscale": 0.61
  },
  "wd-Q109594121": {
   "bytes": 7144,
@@ -8408,6 +8764,22 @@
   "status": "ok",
   "upscale": 0.36
  },
+ "wd-Q110402208": {
+  "bytes": 8640,
+  "faceW": 0.31,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.154,
+  "pack": "eu-levski",
+  "roll": 0.6,
+  "score": 0.95,
+  "sha256": "01dfa837a7f799cd2d2dd3d7d2f2c0c071b42ca71d3ea532a5e728fba90d0076",
+  "shoulders": 0.78,
+  "skin": "#a47d79",
+  "status": "ok",
+  "upscale": 0.45
+ },
  "wd-Q110426807": {
   "bytes": 8332,
   "faceW": 0.34,
@@ -8493,6 +8865,22 @@
   "skin": "#62381a",
   "status": "ok",
   "upscale": 0.73
+ },
+ "wd-Q110531201": {
+  "bytes": 7496,
+  "faceW": 0.287,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.073,
+  "pack": "eu-sturm_graz",
+  "roll": 0.7,
+  "score": 0.91,
+  "sha256": "541ab7455476c117480424a13535dfa72ac3f6b0e326a22be0b6492d9edd8c2d",
+  "shoulders": 0.57,
+  "skin": "#6a3b2c",
+  "status": "ok",
+  "upscale": 0.2
  },
  "wd-Q110537408": {
   "bytes": 12314,
@@ -8684,6 +9072,22 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q110931793": {
+  "bytes": 10774,
+  "faceW": 0.361,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.115,
+  "pack": "eu-jagiellonia",
+  "roll": 10.0,
+  "score": 0.92,
+  "sha256": "e5dcf75d15fc0852461da6ecfb1c742e685ee05f84f5b2769a87abf43e4bfbb4",
+  "shoulders": 0.66,
+  "skin": "#daa485",
+  "status": "ok",
+  "upscale": 0.24
+ },
  "wd-Q110935258": {
   "bytes": 10764,
   "faceW": 0.312,
@@ -8839,6 +9243,20 @@
   "skin": "#c89074",
   "status": "ok",
   "upscale": 0.57
+ },
+ "wd-Q111536418": {
+  "bytes": 8840,
+  "faceW": 0.315,
+  "flags": [],
+  "hairTop": 0.1,
+  "pack": "eu-astana",
+  "roll": -1.6,
+  "score": 0.94,
+  "sha256": "1e336389309abae551f4339dfa54b27e6fd60c068717f7df1aec73a6da960f97",
+  "shoulders": 0.81,
+  "skin": "#cda673",
+  "status": "ok",
+  "upscale": 0.83
  },
  "wd-Q111588237": {
   "bytes": 7578,
@@ -9103,6 +9521,20 @@
   "status": "ok",
   "upscale": 1.0
  },
+ "wd-Q112418644": {
+  "bytes": 14452,
+  "faceW": 0.286,
+  "flags": [],
+  "hairTop": 0.133,
+  "pack": "eu-panathinaikos",
+  "roll": -3.0,
+  "score": 0.87,
+  "sha256": "788ae09b42e2bec01a46b6745cad30f5b7da475f35c2e16baad4182d82b25f03",
+  "shoulders": 0.72,
+  "skin": "#765739",
+  "status": "ok",
+  "upscale": 0.2
+ },
  "wd-Q112503285": {
   "bytes": 7632,
   "faceW": 0.29,
@@ -9301,6 +9733,20 @@
   "status": "ok",
   "upscale": 0.45
  },
+ "wd-Q113161515": {
+  "bytes": 13490,
+  "faceW": 0.298,
+  "flags": [],
+  "hairTop": 0.129,
+  "pack": "eu-elfsborg",
+  "roll": -5.5,
+  "score": 0.93,
+  "sha256": "efdbc7d32825339dbbf0652d398d95c9662f5c0511609f242d8c9ab42f0fccf0",
+  "shoulders": 0.67,
+  "skin": "#c28a78",
+  "status": "ok",
+  "upscale": 0.33
+ },
  "wd-Q113173947": {
   "bytes": 11206,
   "faceW": 0.289,
@@ -9356,6 +9802,36 @@
   "skin": "#c4a196",
   "status": "ok",
   "upscale": 0.57
+ },
+ "wd-Q113360830": {
+  "bytes": 8146,
+  "faceW": 0.309,
+  "flags": [],
+  "hairTop": 0.122,
+  "pack": "eu-sturm_graz",
+  "roll": 4.6,
+  "score": 0.94,
+  "sha256": "9d951165a9979f2df2e85c5439d4cfa58dc366f3c0aaf6e57d0f616aaf08fa15",
+  "shoulders": 0.77,
+  "skin": "#b38179",
+  "status": "ok",
+  "upscale": 0.36
+ },
+ "wd-Q113366789": {
+  "bytes": 11734,
+  "faceW": 0.361,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-basel",
+  "roll": -9.6,
+  "score": 0.93,
+  "sha256": "68cf53869feb2d377b31b555976f3414ade381522ae43b0c778417e8eee7f8da",
+  "shoulders": 0.97,
+  "skin": "#6d5440",
+  "status": "ok",
+  "upscale": 0.53
  },
  "wd-Q113367245": {
   "bytes": 7442,
@@ -9674,6 +10150,20 @@
   "status": "ok",
   "upscale": 0.29
  },
+ "wd-Q113563588": {
+  "bytes": 11876,
+  "faceW": 0.303,
+  "flags": [],
+  "hairTop": 0.143,
+  "pack": "eu-cska_sofia",
+  "roll": 6.0,
+  "score": 0.92,
+  "sha256": "b3dec23535e4ab6118a49368d443d5d12d6007ecbdab74533204a8720e51bde5",
+  "shoulders": 0.88,
+  "skin": "#3f2d2a",
+  "status": "ok",
+  "upscale": 0.27
+ },
  "wd-Q113564288": {
   "bytes": 14424,
   "faceW": 0.309,
@@ -9882,6 +10372,50 @@
   "status": "ok",
   "upscale": 0.55
  },
+ "wd-Q114152695": {
+  "bytes": 11704,
+  "faceW": 0.308,
+  "flags": [],
+  "hairTop": 0.104,
+  "pack": "eu-cska_sofia",
+  "roll": -4.5,
+  "score": 0.9,
+  "sha256": "cb111fa819c3c1ab9065b2100e9d3724936bf0da7e97eeb62126443ad0d506ae",
+  "shoulders": 0.59,
+  "skin": "#79513f",
+  "status": "ok",
+  "upscale": 0.27
+ },
+ "wd-Q114314882": {
+  "bytes": 8640,
+  "faceW": 0.32,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.164,
+  "pack": "eu-aek_athens",
+  "roll": 1.5,
+  "score": 0.92,
+  "sha256": "9ed75df9479b7db9a237d34a731962a7a09bf4b1d15a083638a6c604819f0fd4",
+  "shoulders": 0.6,
+  "skin": "#bd9063",
+  "status": "ok",
+  "upscale": 0.27
+ },
+ "wd-Q114348019": {
+  "bytes": 8716,
+  "faceW": 0.309,
+  "flags": [],
+  "hairTop": 0.138,
+  "pack": "eu-sturm_graz",
+  "roll": -9.0,
+  "score": 0.94,
+  "sha256": "f8dac7b3de32974e2b40eac66805602f33033a9a0f03bdf0804c060e1636b0d5",
+  "shoulders": 0.65,
+  "skin": "#cb9d86",
+  "status": "ok",
+  "upscale": 0.35
+ },
  "wd-Q114356315": {
   "bytes": 9088,
   "faceW": 0.336,
@@ -9909,6 +10443,20 @@
   "skin": "#b97845",
   "status": "ok",
   "upscale": 0.72
+ },
+ "wd-Q114413857": {
+  "bytes": 9382,
+  "faceW": 0.315,
+  "flags": [],
+  "hairTop": 0.106,
+  "pack": "eu-lask",
+  "roll": 0.1,
+  "score": 0.94,
+  "sha256": "06c3afa4a03698223bc7b14395312170a589a67b69f41aa16ead0c942a3d1732",
+  "shoulders": 0.76,
+  "skin": "#65403a",
+  "status": "ok",
+  "upscale": 0.37
  },
  "wd-Q114436180": {
   "bytes": 12042,
@@ -9995,6 +10543,22 @@
   "skin": "#4d3a25",
   "status": "ok",
   "upscale": 0.19
+ },
+ "wd-Q114784800": {
+  "bytes": 8206,
+  "faceW": 0.307,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.164,
+  "pack": "eu-banik_ostrava",
+  "roll": 8.1,
+  "score": 0.95,
+  "sha256": "1b7c77cf52fabf1784ee194c357685e15854bbfd23b70ae8fd1734f4749553d6",
+  "shoulders": 0.73,
+  "skin": "#d08969",
+  "status": "ok",
+  "upscale": 0.67
  },
  "wd-Q114825245": {
   "bytes": 14866,
@@ -10535,6 +11099,20 @@
   "status": "ok",
   "upscale": 0.27
  },
+ "wd-Q116920755": {
+  "bytes": 13140,
+  "faceW": 0.337,
+  "flags": [],
+  "hairTop": 0.125,
+  "pack": "eu-besiktas",
+  "roll": -1.9,
+  "score": 0.94,
+  "sha256": "61d5bf363aba82007635edc56fe1153e301b860cf74a0cba29cbdbd9a0fa40c9",
+  "shoulders": 0.67,
+  "skin": "#d09e83",
+  "status": "ok",
+  "upscale": 0.31
+ },
  "wd-Q116946751": {
   "bytes": 12812,
   "faceW": 0.308,
@@ -10702,6 +11280,20 @@
   "skin": "#936b5b",
   "status": "ok",
   "upscale": 0.82
+ },
+ "wd-Q117390963": {
+  "bytes": 8490,
+  "faceW": 0.278,
+  "flags": [],
+  "hairTop": 0.183,
+  "pack": "eu-cska_sofia",
+  "roll": -4.6,
+  "score": 0.93,
+  "sha256": "6ee66ff2a5be45d2400d59ba68a1650dbd84287d0616e1f17bdcf888fa82ea3a",
+  "shoulders": 0.57,
+  "skin": "#bc987d",
+  "status": "ok",
+  "upscale": 0.26
  },
  "wd-Q117486689": {
   "bytes": 12568,
@@ -10940,6 +11532,20 @@
   "status": "ok",
   "upscale": 0.28
  },
+ "wd-Q11866392": {
+  "bytes": 14628,
+  "faceW": 0.275,
+  "flags": [],
+  "hairTop": 0.115,
+  "pack": "eu-kups",
+  "roll": -2.6,
+  "score": 0.91,
+  "sha256": "2b33267666e529471ed4be6fdeb43efc2ae95142389e7d258cb93c0366f6df2c",
+  "shoulders": 0.86,
+  "skin": "#74554b",
+  "status": "ok",
+  "upscale": 0.31
+ },
  "wd-Q11866428": {
   "bytes": 9328,
   "faceW": 0.3,
@@ -11060,6 +11666,22 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q118964215": {
+  "bytes": 12446,
+  "faceW": 0.319,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.126,
+  "pack": "eu-lugano",
+  "roll": 1.5,
+  "score": 0.93,
+  "sha256": "c8354c09d19ec26e8ab6d902b923c3d80558f5c4a071b17d358629e2fffb2a72",
+  "shoulders": 0.81,
+  "skin": "#834829",
+  "status": "ok",
+  "upscale": 0.44
+ },
  "wd-Q118978780": {
   "bytes": 8204,
   "faceW": 0.306,
@@ -11075,6 +11697,38 @@
   "skin": "#78584c",
   "status": "ok",
   "upscale": 0.27
+ },
+ "wd-Q119154006": {
+  "bytes": 11612,
+  "faceW": 0.378,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-jagiellonia",
+  "roll": 6.2,
+  "score": 0.93,
+  "sha256": "eb5dedc0a4b060dd39775abeae5c92816c742d1d389fdacaba1d20fe3c371f95",
+  "shoulders": 0.86,
+  "skin": "#b48585",
+  "status": "ok",
+  "upscale": 0.62
+ },
+ "wd-Q1193428": {
+  "bytes": 8670,
+  "faceW": 0.282,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.1,
+  "pack": "eu-rapid_wien",
+  "roll": 3.9,
+  "score": 0.88,
+  "sha256": "02cbd7527044615f0cbf18d8007c40199e19162744be6c840cc6605ae4670b05",
+  "shoulders": 0.69,
+  "skin": "#d5977d",
+  "status": "ok",
+  "upscale": 0.19
  },
  "wd-Q119860562": {
   "bytes": 15446,
@@ -11196,6 +11850,20 @@
   "status": "ok",
   "upscale": 0.34
  },
+ "wd-Q120571834": {
+  "bytes": 9116,
+  "faceW": 0.332,
+  "flags": [],
+  "hairTop": 0.169,
+  "pack": "eu-pyunik",
+  "roll": -2.0,
+  "score": 0.94,
+  "sha256": "97b436a26b01b6aff83a569c4d3b7052a70e3e2d616e81b3c580b975989185e6",
+  "shoulders": 0.88,
+  "skin": "#d09aa2",
+  "status": "ok",
+  "upscale": 0.33
+ },
  "wd-Q120763210": {
   "bytes": 9582,
   "faceW": 0.299,
@@ -11311,6 +11979,34 @@
   "skin": "#9c6f3e",
   "status": "ok",
   "upscale": 0.56
+ },
+ "wd-Q121008173": {
+  "bytes": 9550,
+  "faceW": 0.309,
+  "flags": [],
+  "hairTop": 0.109,
+  "pack": "eu-sturm_graz",
+  "roll": 2.8,
+  "score": 0.93,
+  "sha256": "7d07d9c75d2da0fe1a0e6109e0ae6c73cbb35dd6b2b5c0a9797cc76637341ccb",
+  "shoulders": 0.75,
+  "skin": "#946a52",
+  "status": "ok",
+  "upscale": 0.29
+ },
+ "wd-Q121028932": {
+  "bytes": 10678,
+  "faceW": 0.334,
+  "flags": [],
+  "hairTop": 0.124,
+  "pack": "eu-sturm_graz",
+  "roll": -2.5,
+  "score": 0.95,
+  "sha256": "173191b806783206038a6779bacffe97e8059d9626935c38db09cd0179ddbad2",
+  "shoulders": 0.76,
+  "skin": "#d4a093",
+  "status": "ok",
+  "upscale": 0.4
  },
  "wd-Q121068701": {
   "bytes": 13368,
@@ -11533,6 +12229,22 @@
   "status": "ok",
   "upscale": 0.64
  },
+ "wd-Q122051700": {
+  "bytes": 6144,
+  "faceW": 0.341,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.122,
+  "pack": "eu-tns",
+  "roll": -2.8,
+  "score": 0.93,
+  "sha256": "1906af9f5f8dcc31e4886f594589abc93c676b3f8e7cc5cad430e00f6fa50407",
+  "shoulders": 0.58,
+  "skin": "#bb875b",
+  "status": "ok",
+  "upscale": 0.25
+ },
  "wd-Q122070428": {
   "bytes": 10522,
   "faceW": 0.332,
@@ -11695,6 +12407,20 @@
   "status": "ok",
   "upscale": 0.58
  },
+ "wd-Q12286252": {
+  "bytes": 8588,
+  "faceW": 0.312,
+  "flags": [],
+  "hairTop": 0.148,
+  "pack": "eu-levski",
+  "roll": -4.6,
+  "score": 0.94,
+  "sha256": "5bff747120a22f539d02a433b1e4d65bb77d1bfeda37a1750bf474edc8a79201",
+  "shoulders": 0.78,
+  "skin": "#ac5e45",
+  "status": "ok",
+  "upscale": 0.34
+ },
  "wd-Q122971833": {
   "bytes": 13270,
   "faceW": 0.302,
@@ -11856,6 +12582,20 @@
   "skin": "#af6361",
   "status": "ok",
   "upscale": 0.48
+ },
+ "wd-Q123851951": {
+  "bytes": 13886,
+  "faceW": 0.303,
+  "flags": [],
+  "hairTop": 0.118,
+  "pack": "eu-besiktas",
+  "roll": -5.8,
+  "score": 0.92,
+  "sha256": "07463964dc333c0e0bd65ae28958d164beabaa565beec48e9e9214761bc0336b",
+  "shoulders": 0.74,
+  "skin": "#a07658",
+  "status": "ok",
+  "upscale": 0.39
  },
  "wd-Q123923163": {
   "bytes": 13540,
@@ -12448,6 +13188,22 @@
   "status": "ok",
   "upscale": 0.32
  },
+ "wd-Q128008210": {
+  "bytes": 7942,
+  "faceW": 0.323,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.142,
+  "pack": "eu-tns",
+  "roll": 2.5,
+  "score": 0.89,
+  "sha256": "cc421cd45eed9d43235f5f8c5ed2cd11c8ab34a4c2bbdf051fedac0e40b016a5",
+  "shoulders": 0.75,
+  "skin": "#eda88d",
+  "status": "ok",
+  "upscale": 0.27
+ },
  "wd-Q128338292": {
   "bytes": 9200,
   "faceW": 0.275,
@@ -12737,6 +13493,22 @@
   "status": "ok",
   "upscale": 0.41
  },
+ "wd-Q129840605": {
+  "bytes": 10988,
+  "faceW": 0.332,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-sturm_graz",
+  "roll": -2.8,
+  "score": 0.94,
+  "sha256": "b97af6418e550fb91ccfb2fb732a0a7bf38590b4344b6d208cd18890379dc729",
+  "shoulders": 0.98,
+  "skin": "#844e32",
+  "status": "ok",
+  "upscale": 0.41
+ },
  "wd-Q129887028": {
   "bytes": 14504,
   "faceW": 0.299,
@@ -12867,6 +13639,23 @@
   "status": "ok",
   "upscale": 0.47
  },
+ "wd-Q130443089": {
+  "bytes": 9716,
+  "faceW": 0.352,
+  "flags": [
+   "multiple_faces",
+   "short_source"
+  ],
+  "hairTop": 0.072,
+  "pack": "eu-jagiellonia",
+  "roll": 6.5,
+  "score": 0.93,
+  "sha256": "4aaa900922d723b735320f28b40b034da137d46e050096f10ac37e35d5294bb9",
+  "shoulders": 0.67,
+  "skin": "#9e7479",
+  "status": "ok",
+  "upscale": 0.81
+ },
  "wd-Q130479109": {
   "bytes": 11798,
   "faceW": 0.328,
@@ -12899,6 +13688,22 @@
   "skin": "#855731",
   "status": "ok",
   "upscale": 0.97
+ },
+ "wd-Q130564892": {
+  "bytes": 11950,
+  "faceW": 0.259,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-panathinaikos",
+  "roll": -3.3,
+  "score": 0.83,
+  "sha256": "6c69abdfb3d0a5af4acb6a71166408a23e4fcbcf94d9fb95da5502f850fec903",
+  "shoulders": 0.6,
+  "skin": "#685c47",
+  "status": "ok",
+  "upscale": 1.04
  },
  "wd-Q130629639": {
   "bytes": 17664,
@@ -12958,6 +13763,20 @@
   "status": "ok",
   "upscale": 0.51
  },
+ "wd-Q131185792": {
+  "bytes": 10832,
+  "faceW": 0.312,
+  "flags": [],
+  "hairTop": 0.094,
+  "pack": "eu-cska_sofia",
+  "roll": -7.1,
+  "score": 0.93,
+  "sha256": "c7b739992c75f07a23cffdb1085ffc61336f155cd823b1a12c4a7fc94a6f9695",
+  "shoulders": 0.69,
+  "skin": "#774e42",
+  "status": "ok",
+  "upscale": 0.32
+ },
  "wd-Q131279024": {
   "bytes": 6326,
   "faceW": 0.337,
@@ -12973,6 +13792,22 @@
   "skin": "#9d726e",
   "status": "ok",
   "upscale": 0.33
+ },
+ "wd-Q131290889": {
+  "bytes": 11026,
+  "faceW": 0.299,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-kups",
+  "roll": -13.2,
+  "score": 0.92,
+  "sha256": "280d5fb44128ae21d539e15b6c44096b8efc1fc73494274f53832d53a4bd4d92",
+  "shoulders": 0.88,
+  "skin": "#6b4c3e",
+  "status": "ok",
+  "upscale": 0.3
  },
  "wd-Q131392732": {
   "bytes": 8472,
@@ -12990,6 +13825,20 @@
   "status": "ok",
   "upscale": 0.51
  },
+ "wd-Q131401994": {
+  "bytes": 8462,
+  "faceW": 0.317,
+  "flags": [],
+  "hairTop": 0.107,
+  "pack": "eu-sturm_graz",
+  "roll": -6.4,
+  "score": 0.95,
+  "sha256": "8a8638ae9bb0c043285334a397b50bc23c5ab331a2e5f1862cc46b584f69cec6",
+  "shoulders": 0.6,
+  "skin": "#c99a8c",
+  "status": "ok",
+  "upscale": 0.36
+ },
  "wd-Q131466230": {
   "bytes": 13170,
   "faceW": 0.357,
@@ -13003,6 +13852,20 @@
   "skin": "#a3805c",
   "status": "ok",
   "upscale": 0.47
+ },
+ "wd-Q131470768": {
+  "bytes": 17796,
+  "faceW": 0.331,
+  "flags": [],
+  "hairTop": 0.114,
+  "pack": "eu-lugano",
+  "roll": -7.8,
+  "score": 0.95,
+  "sha256": "8057c49608a89a0690440460cc1d66faf4fd41d5e81b0badbdb4a17a5d991e06",
+  "shoulders": 0.85,
+  "skin": "#a97e57",
+  "status": "ok",
+  "upscale": 0.4
  },
  "wd-Q131520969": {
   "bytes": 10846,
@@ -13308,6 +14171,20 @@
   "status": "ok",
   "upscale": 0.33
  },
+ "wd-Q133449580": {
+  "bytes": 11482,
+  "faceW": 0.321,
+  "flags": [],
+  "hairTop": 0.124,
+  "pack": "eu-panathinaikos",
+  "roll": -1.9,
+  "score": 0.95,
+  "sha256": "506a53812ce3eecbe9c52516f44d0b8eeeef6dbeb2141b83ade67e58ca56f58b",
+  "shoulders": 0.88,
+  "skin": "#cca191",
+  "status": "ok",
+  "upscale": 0.8
+ },
  "wd-Q133471143": {
   "bytes": 11226,
   "faceW": 0.291,
@@ -13540,6 +14417,20 @@
   "status": "ok",
   "upscale": 0.29
  },
+ "wd-Q134527459": {
+  "bytes": 11630,
+  "faceW": 0.313,
+  "flags": [],
+  "hairTop": 0.069,
+  "pack": "eu-aek_athens",
+  "roll": 0.1,
+  "score": 0.92,
+  "sha256": "b8f6d5e8936a2ede05a3900efddab3d70675111d397d5b90a83e709f4ac1e8d6",
+  "shoulders": 0.93,
+  "skin": "#c9af90",
+  "status": "ok",
+  "upscale": 0.98
+ },
  "wd-Q134543047": {
   "bytes": 12966,
   "faceW": 0.293,
@@ -13571,6 +14462,22 @@
   "skin": "#79493d",
   "status": "ok",
   "upscale": 0.31
+ },
+ "wd-Q134612350": {
+  "bytes": 7896,
+  "faceW": 0.302,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.12,
+  "pack": "eu-sturm_graz",
+  "roll": 9.5,
+  "score": 0.94,
+  "sha256": "460e3219396d5173168502dc16769954cc08edfcbfcfb191b309b1729cd7f243",
+  "shoulders": 0.42,
+  "skin": "#b37b62",
+  "status": "ok",
+  "upscale": 0.33
  },
  "wd-Q134617603": {
   "bytes": 8480,
@@ -13663,6 +14570,22 @@
   "skin": "#c28751",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q1354960": {
+  "bytes": 14022,
+  "faceW": 0.326,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.142,
+  "pack": "eu-trabzonspor",
+  "roll": 5.4,
+  "score": 0.86,
+  "sha256": "d59535d33f588f5314ee00a8eda78db912e395f65e0cbb4f1d0f7680285d463f",
+  "shoulders": 0.57,
+  "skin": "#9d775a",
+  "status": "ok",
+  "upscale": 0.18
  },
  "wd-Q135553361": {
   "bytes": 9902,
@@ -13812,6 +14735,20 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q136407806": {
+  "bytes": 12362,
+  "faceW": 0.337,
+  "flags": [],
+  "hairTop": 0.093,
+  "pack": "eu-craiova",
+  "roll": -1.5,
+  "score": 0.93,
+  "sha256": "217740cfcdb1672ffeeca89952d8084967c6f0142950381935b384dc46467d2b",
+  "shoulders": 0.92,
+  "skin": "#b27a67",
+  "status": "ok",
+  "upscale": 0.24
+ },
  "wd-Q136436807": {
   "bytes": 8934,
   "faceW": 0.316,
@@ -13920,6 +14857,20 @@
   "status": "ok",
   "upscale": 0.22
  },
+ "wd-Q137824419": {
+  "bytes": 10006,
+  "faceW": 0.331,
+  "flags": [],
+  "hairTop": 0.046,
+  "pack": "eu-panathinaikos",
+  "roll": -2.0,
+  "score": 0.94,
+  "sha256": "69e7e7eaf8c2d3130c730afb313245e1c5677cf27a2e246ca618372b06c48f73",
+  "shoulders": 0.8,
+  "skin": "#b79382",
+  "status": "ok",
+  "upscale": 0.34
+ },
  "wd-Q13784739": {
   "bytes": 21316,
   "faceW": 0.335,
@@ -13935,6 +14886,22 @@
   "skin": "#d6a18a",
   "status": "ok",
   "upscale": 0.25
+ },
+ "wd-Q138003910": {
+  "bytes": 12820,
+  "faceW": 0.306,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-puskas",
+  "roll": 0.5,
+  "score": 0.94,
+  "sha256": "2ce55c1115c733c53c0001963864a8e2120a94bbb09afb7fa1310a52843dc26a",
+  "shoulders": 0.95,
+  "skin": "#8f765b",
+  "status": "ok",
+  "upscale": 1.21
  },
  "wd-Q138496232": {
   "bytes": 7894,
@@ -14051,6 +15018,20 @@
   "status": "ok",
   "upscale": 0.3
  },
+ "wd-Q139891029": {
+  "bytes": 8918,
+  "faceW": 0.273,
+  "flags": [],
+  "hairTop": 0.163,
+  "pack": "eu-sturm_graz",
+  "roll": -5.8,
+  "score": 0.92,
+  "sha256": "54c97350269568757f670f725d184265a599453a60176d065bd29a3006b13e97",
+  "shoulders": 0.65,
+  "skin": "#e1ae95",
+  "status": "ok",
+  "upscale": 0.26
+ },
  "wd-Q139914366": {
   "bytes": 9150,
   "faceW": 0.337,
@@ -14095,6 +15076,20 @@
   "status": "ok",
   "upscale": 0.44
  },
+ "wd-Q140420403": {
+  "bytes": 6808,
+  "faceW": 0.328,
+  "flags": [],
+  "hairTop": 0.148,
+  "pack": "eu-qarabag",
+  "roll": -10.7,
+  "score": 0.93,
+  "sha256": "ef350798e96a9a2ee7ba19fd2a7b1bc2d2d768f35e43c2c93a1b724c03c116d8",
+  "shoulders": 0.69,
+  "skin": "#936951",
+  "status": "ok",
+  "upscale": 0.39
+ },
  "wd-Q14258335": {
   "bytes": 10354,
   "faceW": 0.313,
@@ -14111,6 +15106,20 @@
   "status": "ok",
   "upscale": 0.19
  },
+ "wd-Q14309492": {
+  "bytes": 12276,
+  "faceW": 0.315,
+  "flags": [],
+  "hairTop": 0.141,
+  "pack": "eu-apoel",
+  "roll": -3.2,
+  "score": 0.92,
+  "sha256": "48f94d68d475ee12b55b3ce77a44ffe7352cd42cd9b74fc5d33ab439f7ab092f",
+  "shoulders": 0.86,
+  "skin": "#d19e88",
+  "status": "ok",
+  "upscale": 0.26
+ },
  "wd-Q14327453": {
   "bytes": 10840,
   "faceW": 0.307,
@@ -14124,6 +15133,20 @@
   "skin": "#d7a781",
   "status": "ok",
   "upscale": 0.2
+ },
+ "wd-Q14395948": {
+  "bytes": 9806,
+  "faceW": 0.343,
+  "flags": [],
+  "hairTop": 0.054,
+  "pack": "eu-cska_sofia",
+  "roll": -5.0,
+  "score": 0.94,
+  "sha256": "643d94223f8ce1675fad2fc9820faccee2af9733b89fcd8ff3670ae7a980b42e",
+  "shoulders": 0.79,
+  "skin": "#a5705c",
+  "status": "ok",
+  "upscale": 0.27
  },
  "wd-Q1439915": {
   "bytes": 8556,
@@ -14140,6 +15163,20 @@
   "skin": "#cfae9a",
   "status": "ok",
   "upscale": 0.26
+ },
+ "wd-Q14432450": {
+  "bytes": 10832,
+  "faceW": 0.327,
+  "flags": [],
+  "hairTop": 0.093,
+  "pack": "eu-aek_athens",
+  "roll": -2.9,
+  "score": 0.94,
+  "sha256": "63c1d43f2128ca2886846bc0445327d56efef571f6465e9e8164947883ffed0b",
+  "shoulders": 0.92,
+  "skin": "#b6947a",
+  "status": "ok",
+  "upscale": 0.69
  },
  "wd-Q144616": {
   "bytes": 9756,
@@ -14423,6 +15460,20 @@
   "status": "ok",
   "upscale": 0.46
  },
+ "wd-Q15124046": {
+  "bytes": 10692,
+  "faceW": 0.301,
+  "flags": [],
+  "hairTop": 0.15,
+  "pack": "eu-paok",
+  "roll": -0.8,
+  "score": 0.95,
+  "sha256": "9486d9d322527f366dbe355693ce80c9dd0f739c0b9d35d901e5483b7ff0d2a4",
+  "shoulders": 0.84,
+  "skin": "#aa8163",
+  "status": "ok",
+  "upscale": 0.6
+ },
  "wd-Q15131398": {
   "bytes": 13082,
   "faceW": 0.332,
@@ -14543,6 +15594,20 @@
   "status": "ok",
   "upscale": 0.38
  },
+ "wd-Q15328041": {
+  "bytes": 7238,
+  "faceW": 0.285,
+  "flags": [],
+  "hairTop": 0.136,
+  "pack": "eu-borac",
+  "roll": 0.2,
+  "score": 0.93,
+  "sha256": "6b55c42623d1b77171645762a54d3376081a5c2ea1fdb81a7cdf6eae95a0bdfd",
+  "shoulders": 0.5,
+  "skin": "#522b11",
+  "status": "ok",
+  "upscale": 0.26
+ },
  "wd-Q15431979": {
   "bytes": 10482,
   "faceW": 0.362,
@@ -14556,6 +15621,23 @@
   "skin": "#d09e82",
   "status": "ok",
   "upscale": 0.43
+ },
+ "wd-Q15478046": {
+  "bytes": 9850,
+  "faceW": 0.316,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-lask",
+  "roll": -0.3,
+  "score": 0.86,
+  "sha256": "f9645f96ed7e2c81ffa72cc091224faf61938c37d861c212d3279e04528c10b2",
+  "shoulders": 0.62,
+  "skin": "#d79e8f",
+  "status": "ok",
+  "upscale": 0.17
  },
  "wd-Q15521306": {
   "bytes": 16000,
@@ -14643,6 +15725,50 @@
   "status": "ok",
   "upscale": 0.72
  },
+ "wd-Q15714981": {
+  "bytes": 15704,
+  "faceW": 0.323,
+  "flags": [],
+  "hairTop": 0.076,
+  "pack": "eu-rfs",
+  "roll": 2.6,
+  "score": 0.92,
+  "sha256": "d37783315f54d2f92a1ccbe4b0c70593d6022cad90426e120d633234d6e5bb48",
+  "shoulders": 0.77,
+  "skin": "#b3816a",
+  "status": "ok",
+  "upscale": 0.84
+ },
+ "wd-Q15718503": {
+  "bytes": 10342,
+  "faceW": 0.276,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.153,
+  "pack": "eu-omonia",
+  "roll": -7.5,
+  "score": 0.93,
+  "sha256": "8db68ea4b2aef13d8ea684cce085ce02cff7cc299ab4a609f8766a1568414eb0",
+  "shoulders": 0.62,
+  "skin": "#956443",
+  "status": "ok",
+  "upscale": 0.3
+ },
+ "wd-Q15729123": {
+  "bytes": 12442,
+  "faceW": 0.332,
+  "flags": [],
+  "hairTop": 0.136,
+  "pack": "eu-trabzonspor",
+  "roll": -8.3,
+  "score": 0.92,
+  "sha256": "5b98aa2dd4acb6da31cd9b398451f98b34b605d1cb4c5be29a3be801b89153e6",
+  "shoulders": 0.83,
+  "skin": "#614c41",
+  "status": "ok",
+  "upscale": 0.64
+ },
  "wd-Q15735586": {
   "bytes": 9468,
   "faceW": 0.327,
@@ -14657,6 +15783,20 @@
   "status": "ok",
   "upscale": 0.41
  },
+ "wd-Q15742572": {
+  "bytes": 7616,
+  "faceW": 0.346,
+  "flags": [],
+  "hairTop": 0.175,
+  "pack": "eu-elfsborg",
+  "roll": 3.8,
+  "score": 0.93,
+  "sha256": "3a358f9e4ad3cd6efed7cafe9ecc5984852a62f88b22bae65bdd28eeea2c35b8",
+  "shoulders": 0.53,
+  "skin": "#e7b49e",
+  "status": "ok",
+  "upscale": 0.26
+ },
  "wd-Q15830919": {
   "bytes": 7312,
   "faceW": 0.263,
@@ -14670,6 +15810,20 @@
   "skin": "#b7866d",
   "status": "ok",
   "upscale": 0.22
+ },
+ "wd-Q15830998": {
+  "bytes": 11240,
+  "faceW": 0.343,
+  "flags": [],
+  "hairTop": 0.062,
+  "pack": "eu-omonia",
+  "roll": 8.8,
+  "score": 0.95,
+  "sha256": "f4bcb7d7da80054960ccc175de9fc210265a17629c91b8ccb4b0f6ffef051369",
+  "shoulders": 0.68,
+  "skin": "#cf946f",
+  "status": "ok",
+  "upscale": 0.38
  },
  "wd-Q15831198": {
   "bytes": 12614,
@@ -15048,6 +16202,22 @@
   "status": "ok",
   "upscale": 0.95
  },
+ "wd-Q16212864": {
+  "bytes": 15134,
+  "faceW": 0.305,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.149,
+  "pack": "eu-tirana",
+  "roll": -1.4,
+  "score": 0.94,
+  "sha256": "ce9f33c458d2c5236470d8b70cb22cf4c31643812aa98050f011c763f7637376",
+  "shoulders": 0.8,
+  "skin": "#d79270",
+  "status": "ok",
+  "upscale": 0.53
+ },
  "wd-Q16224951": {
   "bytes": 10020,
   "faceW": 0.3,
@@ -15122,6 +16292,20 @@
   "status": "ok",
   "upscale": 0.55
  },
+ "wd-Q16235064": {
+  "bytes": 10368,
+  "faceW": 0.323,
+  "flags": [],
+  "hairTop": 0.127,
+  "pack": "eu-panathinaikos",
+  "roll": -1.2,
+  "score": 0.94,
+  "sha256": "6bafaf376b265f1e63960c82a3f1296834f85bc80292bac817e11dd5dcf94357",
+  "shoulders": 0.84,
+  "skin": "#d49578",
+  "status": "ok",
+  "upscale": 1.22
+ },
  "wd-Q16235357": {
   "bytes": 8702,
   "faceW": 0.237,
@@ -15182,6 +16366,20 @@
   "status": "ok",
   "upscale": 0.28
  },
+ "wd-Q16235674": {
+  "bytes": 15504,
+  "faceW": 0.324,
+  "flags": [],
+  "hairTop": 0.053,
+  "pack": "eu-puskas",
+  "roll": -0.4,
+  "score": 0.93,
+  "sha256": "4d0c084430ce00435c6752daf1b0354e677af26f0c78bc4b48b394e69291048e",
+  "shoulders": 0.85,
+  "skin": "#a37761",
+  "status": "ok",
+  "upscale": 0.65
+ },
  "wd-Q16235823": {
   "bytes": 18068,
   "faceW": 0.313,
@@ -15195,6 +16393,20 @@
   "skin": "#694a3b",
   "status": "ok",
   "upscale": 0.26
+ },
+ "wd-Q16236083": {
+  "bytes": 15658,
+  "faceW": 0.315,
+  "flags": [],
+  "hairTop": 0.148,
+  "pack": "eu-panathinaikos",
+  "roll": -4.3,
+  "score": 0.94,
+  "sha256": "bcb4223504f84c62f8dfb67e8f4bb10aef59911a1cd3686bcc9b53bd753fed37",
+  "shoulders": 0.98,
+  "skin": "#aa7f59",
+  "status": "ok",
+  "upscale": 0.57
  },
  "wd-Q16236537": {
   "bytes": 12540,
@@ -15390,6 +16602,20 @@
   "status": "ok",
   "upscale": 0.78
  },
+ "wd-Q16371681": {
+  "bytes": 9996,
+  "faceW": 0.343,
+  "flags": [],
+  "hairTop": 0.105,
+  "pack": "eu-dinamo_batumi",
+  "roll": -1.4,
+  "score": 0.94,
+  "sha256": "1bb45fb53ee9decf162a253816c973f784f311032f719cd02f96e39c8d74ff07",
+  "shoulders": 0.96,
+  "skin": "#d18f6d",
+  "status": "ok",
+  "upscale": 0.56
+ },
  "wd-Q1639968": {
   "bytes": 11666,
   "faceW": 0.335,
@@ -15418,6 +16644,20 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q16467589": {
+  "bytes": 8060,
+  "faceW": 0.339,
+  "flags": [],
+  "hairTop": 0.13,
+  "pack": "eu-elfsborg",
+  "roll": 4.9,
+  "score": 0.95,
+  "sha256": "7ebd63c42ff98d3fb0b7c730fbdaf35ff940dbb087c1adcd0edc8422e5c2889f",
+  "shoulders": 0.89,
+  "skin": "#c69880",
+  "status": "ok",
+  "upscale": 0.38
+ },
  "wd-Q16499882": {
   "bytes": 11332,
   "faceW": 0.345,
@@ -15431,6 +16671,22 @@
   "skin": "#a7735c",
   "status": "ok",
   "upscale": 0.29
+ },
+ "wd-Q16516257": {
+  "bytes": 14964,
+  "faceW": 0.299,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.126,
+  "pack": "eu-paok",
+  "roll": -4.0,
+  "score": 0.93,
+  "sha256": "e14c99b8cf7aaaaf75096e31948ace331d9f1fc35fba811949f7fbaef795f45d",
+  "shoulders": 0.6,
+  "skin": "#c7965d",
+  "status": "ok",
+  "upscale": 0.31
  },
  "wd-Q16519559": {
   "bytes": 7102,
@@ -15447,6 +16703,20 @@
   "skin": "#a87b53",
   "status": "ok",
   "upscale": 0.22
+ },
+ "wd-Q16528455": {
+  "bytes": 12436,
+  "faceW": 0.319,
+  "flags": [],
+  "hairTop": 0.104,
+  "pack": "eu-lask",
+  "roll": -5.9,
+  "score": 0.93,
+  "sha256": "e34e9d43b7ccd2b5072751d85c5e13c9174d454ae1d1d8083b821f34e4059815",
+  "shoulders": 0.76,
+  "skin": "#c09670",
+  "status": "ok",
+  "upscale": 0.25
  },
  "wd-Q16573973": {
   "bytes": 12804,
@@ -15548,6 +16818,20 @@
   "status": "ok",
   "upscale": 0.3
  },
+ "wd-Q16636551": {
+  "bytes": 10966,
+  "faceW": 0.333,
+  "flags": [],
+  "hairTop": 0.118,
+  "pack": "eu-servette",
+  "roll": 3.8,
+  "score": 0.95,
+  "sha256": "c6c4ae1daea4bbf469e5ed8448cd5581e9122e8c6c2121d01a1f9e1361c417a2",
+  "shoulders": 0.89,
+  "skin": "#be968c",
+  "status": "ok",
+  "upscale": 0.47
+ },
  "wd-Q16665941": {
   "bytes": 16284,
   "faceW": 0.322,
@@ -15593,6 +16877,20 @@
   "skin": "#8c614f",
   "status": "ok",
   "upscale": 0.28
+ },
+ "wd-Q16728886": {
+  "bytes": 8188,
+  "faceW": 0.312,
+  "flags": [],
+  "hairTop": 0.158,
+  "pack": "eu-cska_sofia",
+  "roll": 0.9,
+  "score": 0.94,
+  "sha256": "96df0ffe7029fc8d28e0f00d94d2e4a38ffc6a6fc44829fd22bf6989485ab7ca",
+  "shoulders": 0.82,
+  "skin": "#cfae98",
+  "status": "ok",
+  "upscale": 0.29
  },
  "wd-Q16729477": {
   "bytes": 9684,
@@ -15656,6 +16954,51 @@
   "status": "ok",
   "upscale": 0.31
  },
+ "wd-Q16837911": {
+  "bytes": 10832,
+  "faceW": 0.33,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-hamrun",
+  "roll": -2.7,
+  "score": 0.95,
+  "sha256": "ce12f48f7f802c46c7fdd2dcb15fd2ed0d68e6bf8ecd6bbe85020a78f95a0663",
+  "shoulders": 0.68,
+  "skin": "#e5c4b7",
+  "status": "ok",
+  "upscale": 0.41
+ },
+ "wd-Q16840112": {
+  "bytes": 8548,
+  "faceW": 0.286,
+  "flags": [],
+  "hairTop": 0.21,
+  "pack": "eu-sturm_graz",
+  "roll": -6.2,
+  "score": 0.93,
+  "sha256": "8711901c0c7875bfa583369f0a50c7d466af08cd2acbf3ccbb72fb6eff2cbb2f",
+  "shoulders": 0.62,
+  "skin": "#e4baa5",
+  "status": "ok",
+  "upscale": 0.33
+ },
+ "wd-Q16847719": {
+  "bytes": 10894,
+  "faceW": 0.333,
+  "flags": [],
+  "hairTop": 0.095,
+  "pack": "eu-celje",
+  "roll": -1.2,
+  "score": 0.93,
+  "sha256": "4ca0b334f8a162dc2b55f22c553b76638a7fd6ea6f1c3a0add3dd5cfc0874900",
+  "shoulders": 0.95,
+  "skin": "#89764f",
+  "status": "ok",
+  "upscale": 0.76
+ },
  "wd-Q16849440": {
   "bytes": 7182,
   "faceW": 0.328,
@@ -15685,6 +17028,22 @@
   "skin": "#74634b",
   "status": "ok",
   "upscale": 0.21
+ },
+ "wd-Q16887738": {
+  "bytes": 10360,
+  "faceW": 0.326,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-panathinaikos",
+  "roll": -1.8,
+  "score": 0.9,
+  "sha256": "f51e4407243cbc8c3f6f415e4baa24ee7d8de87b6aabef4d0a324a0386aa1e76",
+  "shoulders": 0.46,
+  "skin": "#724628",
+  "status": "ok",
+  "upscale": 0.5
  },
  "wd-Q16901322": {
   "bytes": 8630,
@@ -15808,6 +17167,20 @@
   "status": "ok",
   "upscale": 0.27
  },
+ "wd-Q16979983": {
+  "bytes": 7492,
+  "faceW": 0.273,
+  "flags": [],
+  "hairTop": 0.168,
+  "pack": "eu-aek_athens",
+  "roll": -0.2,
+  "score": 0.9,
+  "sha256": "f1b7204bc689fd1d013cc01a582d5e17b0cedec27dc72dcd895205027274405a",
+  "shoulders": 0.63,
+  "skin": "#896353",
+  "status": "ok",
+  "upscale": 0.2
+ },
  "wd-Q16990842": {
   "bytes": 8444,
   "faceW": 0.324,
@@ -15925,6 +17298,22 @@
   "status": "ok",
   "upscale": 0.36
  },
+ "wd-Q17166609": {
+  "bytes": 16342,
+  "faceW": 0.284,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-rfs",
+  "roll": 3.7,
+  "score": 0.92,
+  "sha256": "0afc82de360aeb7864a33c27de67013e2ee79ee86fbc16e2e69a3dae7a987e9a",
+  "shoulders": 1.0,
+  "skin": "#9f7753",
+  "status": "ok",
+  "upscale": 0.56
+ },
  "wd-Q17180607": {
   "bytes": 12006,
   "faceW": 0.311,
@@ -15939,6 +17328,20 @@
   "status": "ok",
   "upscale": 0.52
  },
+ "wd-Q17180989": {
+  "bytes": 8580,
+  "faceW": 0.313,
+  "flags": [],
+  "hairTop": 0.167,
+  "pack": "eu-omonia",
+  "roll": -0.0,
+  "score": 0.92,
+  "sha256": "9379d11e79971099b1c132fc1bed15ea7e4f2bcd67fb9444d8e50052814b322a",
+  "shoulders": 0.75,
+  "skin": "#775335",
+  "status": "ok",
+  "upscale": 1.11
+ },
  "wd-Q17274709": {
   "bytes": 12076,
   "faceW": 0.288,
@@ -15952,6 +17355,22 @@
   "skin": "#a07560",
   "status": "ok",
   "upscale": 0.3
+ },
+ "wd-Q17306302": {
+  "bytes": 7048,
+  "faceW": 0.311,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.159,
+  "pack": "eu-kups",
+  "roll": 4.2,
+  "score": 0.93,
+  "sha256": "b15190d7e5fdc3e6fa72cbda764ba8efb7d2b20ff9264444f7f042d3b616d262",
+  "shoulders": 0.54,
+  "skin": "#a08378",
+  "status": "ok",
+  "upscale": 0.45
  },
  "wd-Q1730695": {
   "bytes": 14904,
@@ -15980,6 +17399,34 @@
   "skin": "#ab6f57",
   "status": "ok",
   "upscale": 0.44
+ },
+ "wd-Q17373232": {
+  "bytes": 9688,
+  "faceW": 0.332,
+  "flags": [],
+  "hairTop": 0.132,
+  "pack": "eu-borac",
+  "roll": -4.5,
+  "score": 0.93,
+  "sha256": "97c0ce829fcb06b0b074b08f2f5862e149fa91914f38655f1755a7d32479fd09",
+  "shoulders": 0.7,
+  "skin": "#d5b69d",
+  "status": "ok",
+  "upscale": 0.27
+ },
+ "wd-Q17399584": {
+  "bytes": 10938,
+  "faceW": 0.328,
+  "flags": [],
+  "hairTop": 0.154,
+  "pack": "eu-aek_athens",
+  "roll": 4.8,
+  "score": 0.94,
+  "sha256": "e48062a5ae376a83fbda6b08553ae05a817c3542fed293334daf4e9ce3556cdf",
+  "shoulders": 0.59,
+  "skin": "#cfaa88",
+  "status": "ok",
+  "upscale": 0.4
  },
  "wd-Q17429290": {
   "bytes": 9710,
@@ -16136,6 +17583,20 @@
   "skin": "#796543",
   "status": "ok",
   "upscale": 0.47
+ },
+ "wd-Q17505907": {
+  "bytes": 10564,
+  "faceW": 0.344,
+  "flags": [],
+  "hairTop": 0.173,
+  "pack": "eu-omonia",
+  "roll": -2.0,
+  "score": 0.94,
+  "sha256": "33d0ad77a5e68dd80c81ce54714af76e294afe50709bf892aa2d810513a37065",
+  "shoulders": 0.42,
+  "skin": "#8b654e",
+  "status": "ok",
+  "upscale": 0.3
  },
  "wd-Q17517177": {
   "bytes": 7676,
@@ -16315,6 +17776,11 @@
   "status": "ok",
   "upscale": 0.62
  },
+ "wd-Q17811642": {
+  "pack": "eu-qarabag",
+  "reason": "no usable portrait among the Commons candidates (second visual review, 2026-11-11)",
+  "status": "unresolved"
+ },
  "wd-Q17811744": {
   "bytes": 10428,
   "faceW": 0.323,
@@ -16328,6 +17794,36 @@
   "skin": "#d09f82",
   "status": "ok",
   "upscale": 0.39
+ },
+ "wd-Q18015191": {
+  "bytes": 8938,
+  "faceW": 0.359,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.127,
+  "pack": "eu-paok",
+  "roll": 5.3,
+  "score": 0.93,
+  "sha256": "42d8b42b77fbf1bbc0128d7f701305e6c0fbfc6bc44f961794c02d8c30ed775b",
+  "shoulders": 0.69,
+  "skin": "#f2baa6",
+  "status": "ok",
+  "upscale": 0.31
+ },
+ "wd-Q18015360": {
+  "bytes": 15440,
+  "faceW": 0.33,
+  "flags": [],
+  "hairTop": 0.138,
+  "pack": "eu-qarabag",
+  "roll": -3.8,
+  "score": 0.94,
+  "sha256": "bb714ca5870675d62c86eb024259a6e47d82f71aac428b0a09875b498494703a",
+  "shoulders": 0.84,
+  "skin": "#e5bb8e",
+  "status": "ok",
+  "upscale": 0.46
  },
  "wd-Q18027449": {
   "bytes": 12294,
@@ -16868,6 +18364,23 @@
   "status": "ok",
   "upscale": 0.42
  },
+ "wd-Q18633688": {
+  "bytes": 9546,
+  "faceW": 0.308,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-kups",
+  "roll": -10.6,
+  "score": 0.93,
+  "sha256": "8e4a8dd5dc43d7991a9f3b7f6da4ce681a200c3170fbb25e623de1b9ed2bcb54",
+  "shoulders": 0.9,
+  "skin": "#937d6c",
+  "status": "ok",
+  "upscale": 0.29
+ },
  "wd-Q18635274": {
   "bytes": 20886,
   "faceW": 0.317,
@@ -17223,6 +18736,20 @@
   "status": "ok",
   "upscale": 0.3
  },
+ "wd-Q18978014": {
+  "bytes": 12842,
+  "faceW": 0.297,
+  "flags": [],
+  "hairTop": 0.055,
+  "pack": "eu-paok",
+  "roll": -5.5,
+  "score": 0.9,
+  "sha256": "f76ee6813cd7e9df234233d684042291ddfc39e2ba92a117a5f39c836452a697",
+  "shoulders": 0.94,
+  "skin": "#766032",
+  "status": "ok",
+  "upscale": 0.88
+ },
  "wd-Q1907": {
   "bytes": 5594,
   "faceW": 0.311,
@@ -17253,6 +18780,22 @@
   "status": "ok",
   "upscale": 0.4
  },
+ "wd-Q19116103": {
+  "bytes": 10564,
+  "faceW": 0.302,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.072,
+  "pack": "eu-trabzonspor",
+  "roll": 0.7,
+  "score": 0.89,
+  "sha256": "cb59afc1af99e971f47b35342ff0ad7e431a3a1ac06c9952a581ad4f697c5bb0",
+  "shoulders": 0.77,
+  "skin": "#897259",
+  "status": "ok",
+  "upscale": 0.2
+ },
  "wd-Q19274473": {
   "bytes": 16100,
   "faceW": 0.339,
@@ -17282,6 +18825,22 @@
   "skin": "#683c34",
   "status": "ok",
   "upscale": 0.36
+ },
+ "wd-Q19321096": {
+  "bytes": 12856,
+  "faceW": 0.321,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.155,
+  "pack": "eu-sturm_graz",
+  "roll": -7.6,
+  "score": 0.94,
+  "sha256": "88f8c1b32ef6fc23592d77732f02bad9d86aeed1ee03614adcf4464b762c6c1c",
+  "shoulders": 0.84,
+  "skin": "#c8a581",
+  "status": "ok",
+  "upscale": 0.41
  },
  "wd-Q19345854": {
   "bytes": 10360,
@@ -17324,6 +18883,20 @@
   "skin": "#c5a68a",
   "status": "ok",
   "upscale": 0.61
+ },
+ "wd-Q193706": {
+  "bytes": 19918,
+  "faceW": 0.33,
+  "flags": [],
+  "hairTop": 0.07,
+  "pack": "eu-pafos",
+  "roll": -5.9,
+  "score": 0.94,
+  "sha256": "f637ae51463118c4ed084c0162b82cd3f2f15c9c6fc9699f27259f469c87af9b",
+  "shoulders": 0.88,
+  "skin": "#cb8d57",
+  "status": "ok",
+  "upscale": 0.42
  },
  "wd-Q194149": {
   "bytes": 13428,
@@ -17431,6 +19004,20 @@
   "status": "ok",
   "upscale": 0.36
  },
+ "wd-Q19588392": {
+  "bytes": 10434,
+  "faceW": 0.328,
+  "flags": [],
+  "hairTop": 0.102,
+  "pack": "eu-besiktas",
+  "roll": 1.2,
+  "score": 0.93,
+  "sha256": "5c0aab43542f67fc251345842a14cf7d816f257b6fad06566acae044bb289893",
+  "shoulders": 0.93,
+  "skin": "#d19678",
+  "status": "ok",
+  "upscale": 1.2
+ },
  "wd-Q19594178": {
   "bytes": 11922,
   "faceW": 0.314,
@@ -17458,6 +19045,20 @@
   "skin": "#987155",
   "status": "ok",
   "upscale": 0.35
+ },
+ "wd-Q19602715": {
+  "bytes": 12274,
+  "faceW": 0.318,
+  "flags": [],
+  "hairTop": 0.152,
+  "pack": "eu-omonia",
+  "roll": 2.7,
+  "score": 0.93,
+  "sha256": "d9b8b0ba8a824b7a20f48e39426d55c2bc1219f2ce21c00595657fc5be7030b7",
+  "shoulders": 0.68,
+  "skin": "#c1a48a",
+  "status": "ok",
+  "upscale": 0.57
  },
  "wd-Q19603924": {
   "bytes": 13472,
@@ -17505,6 +19106,22 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q19630216": {
+  "bytes": 9158,
+  "faceW": 0.256,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-omonia",
+  "roll": 2.0,
+  "score": 0.91,
+  "sha256": "7c2d8e2bd5fb8d9ead76b93d88bf3ab8eb136968c711d8cf203b110fffca87fc",
+  "shoulders": 0.82,
+  "skin": "#3f4832",
+  "status": "ok",
+  "upscale": 0.37
+ },
  "wd-Q19654797": {
   "bytes": 8800,
   "faceW": 0.331,
@@ -17518,6 +19135,20 @@
   "skin": "#ac8271",
   "status": "ok",
   "upscale": 0.35
+ },
+ "wd-Q19662444": {
+  "bytes": 11364,
+  "faceW": 0.304,
+  "flags": [],
+  "hairTop": 0.116,
+  "pack": "eu-pafos",
+  "roll": 6.3,
+  "score": 0.94,
+  "sha256": "58a727640f4a6e290d9f50a3991d30b2590200b18d34df0a6bd5cb5074b5a94f",
+  "shoulders": 0.96,
+  "skin": "#c38b81",
+  "status": "ok",
+  "upscale": 0.49
  },
  "wd-Q19665907": {
   "bytes": 15918,
@@ -17623,6 +19254,22 @@
   "status": "ok",
   "upscale": 0.62
  },
+ "wd-Q19843224": {
+  "bytes": 8172,
+  "faceW": 0.343,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.055,
+  "pack": "eu-rakow",
+  "roll": -7.6,
+  "score": 0.93,
+  "sha256": "3436e0baabbacc71bc26c042968545609b0de0e8ad6bc0e16f8cf61b4ad1229f",
+  "shoulders": 0.0,
+  "skin": "#c77a6c",
+  "status": "ok",
+  "upscale": 0.29
+ },
  "wd-Q19844277": {
   "bytes": 11250,
   "faceW": 0.327,
@@ -17692,6 +19339,22 @@
   "skin": "#a76d4a",
   "status": "ok",
   "upscale": 0.48
+ },
+ "wd-Q19882808": {
+  "bytes": 6178,
+  "faceW": 0.334,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.068,
+  "pack": "eu-omonia",
+  "roll": -6.5,
+  "score": 0.93,
+  "sha256": "41e965acfe8b64e8c2dbb01b7f978232844acaa40e5b97f3227f507129629db8",
+  "shoulders": 0.8,
+  "skin": "#9f7264",
+  "status": "ok",
+  "upscale": 0.25
  },
  "wd-Q19888012": {
   "bytes": 16540,
@@ -17871,6 +19534,20 @@
   "status": "ok",
   "upscale": 0.17
  },
+ "wd-Q20019273": {
+  "bytes": 4956,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.181,
+  "pack": "eu-panathinaikos",
+  "roll": -4.6,
+  "score": 0.93,
+  "sha256": "040386b15f126d7c93fff1725672998c87c918bf5354213fa77383de446eb37e",
+  "shoulders": 0.1,
+  "skin": "#fef0e1",
+  "status": "ok",
+  "upscale": 0.52
+ },
  "wd-Q20020552": {
   "bytes": 12368,
   "faceW": 0.269,
@@ -17884,6 +19561,20 @@
   "skin": "#ae7a3b",
   "status": "ok",
   "upscale": 0.25
+ },
+ "wd-Q20036987": {
+  "bytes": 9256,
+  "faceW": 0.279,
+  "flags": [],
+  "hairTop": 0.173,
+  "pack": "eu-slovan_bratislava",
+  "roll": -2.7,
+  "score": 0.95,
+  "sha256": "e1f36878c54320c52d5b5f5b507021b5f750cfd8f06c77b90550ceee0a14d5f6",
+  "shoulders": 0.63,
+  "skin": "#bca19c",
+  "status": "ok",
+  "upscale": 1.03
  },
  "wd-Q20039495": {
   "bytes": 16858,
@@ -18056,6 +19747,38 @@
   "skin": "#d49b74",
   "status": "ok",
   "upscale": 0.43
+ },
+ "wd-Q2043015": {
+  "bytes": 8564,
+  "faceW": 0.3,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.126,
+  "pack": "eu-trabzonspor",
+  "roll": 0.4,
+  "score": 0.88,
+  "sha256": "3d5b14ac2c91c7382f910abfc69a8700d25a9b57300f95d999879fd6f01b296f",
+  "shoulders": 0.0,
+  "skin": "#b6a284",
+  "status": "ok",
+  "upscale": 0.16
+ },
+ "wd-Q20435178": {
+  "bytes": 13410,
+  "faceW": 0.317,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.152,
+  "pack": "eu-besiktas",
+  "roll": 3.6,
+  "score": 0.94,
+  "sha256": "ce173442c640d4820cc3f8967304b54ccdd2995c2806658cd94f0d726f306d1e",
+  "shoulders": 0.81,
+  "skin": "#dda191",
+  "status": "ok",
+  "upscale": 0.31
  },
  "wd-Q20435469": {
   "bytes": 8342,
@@ -18274,6 +19997,22 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q20726323": {
+  "bytes": 11044,
+  "faceW": 0.358,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.123,
+  "pack": "eu-sutjeska",
+  "roll": -3.9,
+  "score": 0.94,
+  "sha256": "3eb4dd69d9bd9eed592bf1880e1340e70ca5a51f4553872784c849c6168f02b3",
+  "shoulders": 0.7,
+  "skin": "#d1947d",
+  "status": "ok",
+  "upscale": 0.83
+ },
  "wd-Q2072675": {
   "bytes": 14896,
   "faceW": 0.354,
@@ -18361,6 +20100,34 @@
   "skin": "#cd9e8c",
   "status": "ok",
   "upscale": 0.35
+ },
+ "wd-Q20744140": {
+  "bytes": 14952,
+  "faceW": 0.324,
+  "flags": [],
+  "hairTop": 0.063,
+  "pack": "eu-besiktas",
+  "roll": -3.3,
+  "score": 0.93,
+  "sha256": "d70c921dcfd7bee562dd0e5069c546b1863ceada23cc44f2800e4649c3da3f99",
+  "shoulders": 0.98,
+  "skin": "#c59570",
+  "status": "ok",
+  "upscale": 0.58
+ },
+ "wd-Q20744941": {
+  "bytes": 9548,
+  "faceW": 0.314,
+  "flags": [],
+  "hairTop": 0.136,
+  "pack": "eu-pyunik",
+  "roll": 8.0,
+  "score": 0.94,
+  "sha256": "6c9d06400e2b4ad4c7200b1816b7b4e300408e4c6de558f527d005e9556c482f",
+  "shoulders": 0.4,
+  "skin": "#dfb282",
+  "status": "ok",
+  "upscale": 0.61
  },
  "wd-Q20745286": {
   "bytes": 10052,
@@ -18488,6 +20255,23 @@
   "status": "ok",
   "upscale": 0.19
  },
+ "wd-Q20894677": {
+  "bytes": 9246,
+  "faceW": 0.239,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-celje",
+  "roll": 19.2,
+  "score": 0.91,
+  "sha256": "6941a691960cad7eb8d4b7d63b85c589573e66c6b2cbd496f6c01af32797b2ac",
+  "shoulders": 0.0,
+  "skin": "#86745c",
+  "status": "ok",
+  "upscale": 0.2
+ },
  "wd-Q20914016": {
   "bytes": 13332,
   "faceW": 0.319,
@@ -18575,6 +20359,20 @@
   "skin": "#ad7d52",
   "status": "ok",
   "upscale": 0.65
+ },
+ "wd-Q20988104": {
+  "bytes": 12168,
+  "faceW": 0.316,
+  "flags": [],
+  "hairTop": 0.089,
+  "pack": "eu-panathinaikos",
+  "roll": -5.0,
+  "score": 0.94,
+  "sha256": "66f8849de96e7ad24bd9ab4a89ba976d7ef7a682c099aefe1f3419c3b91ea2f7",
+  "shoulders": 0.94,
+  "skin": "#ac7e70",
+  "status": "ok",
+  "upscale": 0.38
  },
  "wd-Q20992981": {
   "bytes": 7410,
@@ -18755,6 +20553,20 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q21055388": {
+  "bytes": 8628,
+  "faceW": 0.354,
+  "flags": [],
+  "hairTop": 0.121,
+  "pack": "eu-cska_sofia",
+  "roll": 1.9,
+  "score": 0.96,
+  "sha256": "ca4bea8cc8e46b0181cf0c1ed7f1a8300bd47f04c6ef49ee0a9829ece85bcbfe",
+  "shoulders": 0.58,
+  "skin": "#e6c8be",
+  "status": "ok",
+  "upscale": 0.47
+ },
  "wd-Q21064573": {
   "bytes": 6190,
   "faceW": 0.33,
@@ -18815,6 +20627,20 @@
   "status": "ok",
   "upscale": 1.05
  },
+ "wd-Q21094795": {
+  "bytes": 13922,
+  "faceW": 0.311,
+  "flags": [],
+  "hairTop": 0.18,
+  "pack": "eu-qarabag",
+  "roll": -11.1,
+  "score": 0.94,
+  "sha256": "e94681c1fb0c205a5a58d2ffc369f7fef59ddc61f8294c3130e199d9f9bccffd",
+  "shoulders": 0.73,
+  "skin": "#d5ac98",
+  "status": "ok",
+  "upscale": 0.43
+ },
  "wd-Q211064": {
   "bytes": 9984,
   "faceW": 0.33,
@@ -18828,6 +20654,22 @@
   "skin": "#a87e65",
   "status": "ok",
   "upscale": 0.9
+ },
+ "wd-Q21130217": {
+  "bytes": 7556,
+  "faceW": 0.325,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.087,
+  "pack": "eu-shamrock",
+  "roll": 2.2,
+  "score": 0.93,
+  "sha256": "e8f61400e82c4b9c74404352deffa9ceeb17d9f465fdc03a4cd9159d4af304b6",
+  "shoulders": 0.0,
+  "skin": "#9c6f62",
+  "status": "ok",
+  "upscale": 0.28
  },
  "wd-Q21130285": {
   "bytes": 15384,
@@ -18903,6 +20745,20 @@
   "skin": "#956f4a",
   "status": "ok",
   "upscale": 0.91
+ },
+ "wd-Q21293144": {
+  "bytes": 10542,
+  "faceW": 0.324,
+  "flags": [],
+  "hairTop": 0.092,
+  "pack": "eu-apoel",
+  "roll": 1.4,
+  "score": 0.94,
+  "sha256": "037ef0e8d0622cfb3c311fe904e204c6aa7b778512ae9ec9624fa16b2a468ab0",
+  "shoulders": 0.86,
+  "skin": "#c69374",
+  "status": "ok",
+  "upscale": 0.63
  },
  "wd-Q21484126": {
   "bytes": 12800,
@@ -19075,6 +20931,20 @@
   "status": "ok",
   "upscale": 0.2
  },
+ "wd-Q21621563": {
+  "bytes": 9796,
+  "faceW": 0.306,
+  "flags": [],
+  "hairTop": 0.051,
+  "pack": "eu-shamrock",
+  "roll": -0.8,
+  "score": 0.88,
+  "sha256": "a8ed09f53d450617052b2952f2f10d46513f598dbfdd5ef95f87eb63c3b30357",
+  "shoulders": 0.78,
+  "skin": "#312e1e",
+  "status": "ok",
+  "upscale": 0.67
+ },
  "wd-Q21621995": {
   "bytes": 20346,
   "faceW": 0.323,
@@ -19205,6 +21075,34 @@
   "status": "ok",
   "upscale": 0.38
  },
+ "wd-Q219884": {
+  "bytes": 11362,
+  "faceW": 0.333,
+  "flags": [],
+  "hairTop": 0.109,
+  "pack": "eu-trabzonspor",
+  "roll": -6.6,
+  "score": 0.92,
+  "sha256": "0edee556d2eb8c61d61cb1256c2bc2b8742769ecbaee8c1339ef0ca80018d554",
+  "shoulders": 0.79,
+  "skin": "#ba864f",
+  "status": "ok",
+  "upscale": 0.84
+ },
+ "wd-Q22001769": {
+  "bytes": 13768,
+  "faceW": 0.323,
+  "flags": [],
+  "hairTop": 0.149,
+  "pack": "eu-panathinaikos",
+  "roll": -0.6,
+  "score": 0.93,
+  "sha256": "b66e292b901e1893a343049fd5bb2c82e583addf019ff46a983e75c41929670e",
+  "shoulders": 0.79,
+  "skin": "#825c48",
+  "status": "ok",
+  "upscale": 0.28
+ },
  "wd-Q22001795": {
   "bytes": 8118,
   "faceW": 0.335,
@@ -19234,6 +21132,38 @@
   "skin": "#9e7d72",
   "status": "ok",
   "upscale": 0.61
+ },
+ "wd-Q22004329": {
+  "bytes": 6530,
+  "faceW": 0.306,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.13,
+  "pack": "eu-egnatia",
+  "roll": -2.9,
+  "score": 0.94,
+  "sha256": "696233d06ba2c0a380b624531d09f16bb515a8c1a2abbafde4cdebee29787de1",
+  "shoulders": 0.0,
+  "skin": "#c8936e",
+  "status": "ok",
+  "upscale": 0.39
+ },
+ "wd-Q22004457": {
+  "bytes": 9336,
+  "faceW": 0.343,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.15,
+  "pack": "eu-panathinaikos",
+  "roll": -1.8,
+  "score": 0.94,
+  "sha256": "ce8d5ed6f7c38d3ee14ada5eb8e2dddeb0a07e97ececb4dc88647f09b38e1d40",
+  "shoulders": 0.58,
+  "skin": "#b2624d",
+  "status": "ok",
+  "upscale": 0.28
  },
  "wd-Q22005877": {
   "bytes": 13114,
@@ -19325,6 +21255,20 @@
   "skin": "#bd8d69",
   "status": "ok",
   "upscale": 0.37
+ },
+ "wd-Q22162713": {
+  "bytes": 9286,
+  "faceW": 0.308,
+  "flags": [],
+  "hairTop": 0.145,
+  "pack": "eu-lugano",
+  "roll": -2.2,
+  "score": 0.94,
+  "sha256": "718b3f6d8896f9bcb409386e6f92f463210e28f874f011cc4292cf7434559122",
+  "shoulders": 0.63,
+  "skin": "#bc8263",
+  "status": "ok",
+  "upscale": 0.32
  },
  "wd-Q222151": {
   "bytes": 11150,
@@ -19656,6 +21600,20 @@
   "status": "ok",
   "upscale": 0.2
  },
+ "wd-Q23541105": {
+  "bytes": 13400,
+  "faceW": 0.342,
+  "flags": [],
+  "hairTop": 0.15,
+  "pack": "eu-pafos",
+  "roll": 3.4,
+  "score": 0.91,
+  "sha256": "9b1d67533d3210217bef3de31d7f4f62f5ce1d3670046455e8c64493a1780842",
+  "shoulders": 0.95,
+  "skin": "#785837",
+  "status": "ok",
+  "upscale": 0.91
+ },
  "wd-Q23559699": {
   "bytes": 14502,
   "faceW": 0.332,
@@ -19714,6 +21672,20 @@
   "status": "ok",
   "upscale": 0.95
  },
+ "wd-Q23679919": {
+  "bytes": 8516,
+  "faceW": 0.307,
+  "flags": [],
+  "hairTop": 0.101,
+  "pack": "eu-pafos",
+  "roll": 1.2,
+  "score": 0.94,
+  "sha256": "131e20483b6cff6567bf40a3d2495270dbeb67079f8cb0cb32811ca53f6802ab",
+  "shoulders": 0.98,
+  "skin": "#c3976c",
+  "status": "ok",
+  "upscale": 0.56
+ },
  "wd-Q23688811": {
   "bytes": 10872,
   "faceW": 0.325,
@@ -19761,6 +21733,22 @@
   "status": "ok",
   "upscale": 0.8
  },
+ "wd-Q23762815": {
+  "bytes": 18196,
+  "faceW": 0.325,
+  "flags": [
+   "hair_tips_feathered"
+  ],
+  "hairTop": 0.096,
+  "pack": "eu-besiktas",
+  "roll": -0.0,
+  "score": 0.94,
+  "sha256": "5da354c67e0770e5f1b71107ace050699f14eb2dfa8e6f59bf4f30a0a82d5c23",
+  "shoulders": 0.98,
+  "skin": "#b88778",
+  "status": "ok",
+  "upscale": 0.32
+ },
  "wd-Q23769944": {
   "bytes": 9472,
   "faceW": 0.303,
@@ -19806,6 +21794,23 @@
   "skin": "#ad8569",
   "status": "ok",
   "upscale": 0.22
+ },
+ "wd-Q23783060": {
+  "bytes": 12378,
+  "faceW": 0.274,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-kups",
+  "roll": -1.4,
+  "score": 0.83,
+  "sha256": "2654dfe4e48e5ab2a8d78fedc835ed71b14335c97ca14e317e79bdb83640fb46",
+  "shoulders": 0.63,
+  "skin": "#c59066",
+  "status": "ok",
+  "upscale": 0.17
  },
  "wd-Q23799421": {
   "bytes": 8716,
@@ -19857,6 +21862,22 @@
   "pack": "eu-crystal_palace",
   "reason": "no usable portrait among the Commons candidates (second visual review, 2026-11-11)",
   "status": "unresolved"
+ },
+ "wd-Q23887828": {
+  "bytes": 4968,
+  "faceW": 0.263,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.146,
+  "pack": "eu-paok",
+  "roll": -1.0,
+  "score": 0.84,
+  "sha256": "ec6787bad2acab386f79ecd1fffd26a3a83e7f083ef4dec28393904e451918eb",
+  "shoulders": 0.0,
+  "skin": "#735556",
+  "status": "ok",
+  "upscale": 0.15
  },
  "wd-Q23893097": {
   "bytes": 8878,
@@ -19960,6 +21981,20 @@
   "status": "ok",
   "upscale": 0.21
  },
+ "wd-Q24005530": {
+  "bytes": 7690,
+  "faceW": 0.281,
+  "flags": [],
+  "hairTop": 0.159,
+  "pack": "eu-craiova",
+  "roll": -4.3,
+  "score": 0.94,
+  "sha256": "3038a54b4d4fa3dca707b6eb0e295e8dd45c60a969ab55e0b752c06d7fc3017e",
+  "shoulders": 0.82,
+  "skin": "#ce9574",
+  "status": "ok",
+  "upscale": 0.62
+ },
  "wd-Q24005542": {
   "bytes": 15746,
   "faceW": 0.295,
@@ -20034,6 +22069,20 @@
   "skin": "#ae7151",
   "status": "ok",
   "upscale": 0.22
+ },
+ "wd-Q24036675": {
+  "bytes": 8332,
+  "faceW": 0.3,
+  "flags": [],
+  "hairTop": 0.165,
+  "pack": "eu-rakow",
+  "roll": 4.9,
+  "score": 0.92,
+  "sha256": "dcabead4527117991cc399c721343ba8809766790049db41c3b8524ba6298806",
+  "shoulders": 0.52,
+  "skin": "#c19573",
+  "status": "ok",
+  "upscale": 0.62
  },
  "wd-Q24050378": {
   "bytes": 10796,
@@ -20136,6 +22185,22 @@
   "skin": "#cc9a9f",
   "status": "ok",
   "upscale": 0.19
+ },
+ "wd-Q24083864": {
+  "bytes": 9182,
+  "faceW": 0.337,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-levski",
+  "roll": -9.7,
+  "score": 0.91,
+  "sha256": "24f2071d7359957c8e750f6ba9d4a13d6bb192936c1cadac6061e9ab8764cbe1",
+  "shoulders": 0.47,
+  "skin": "#916c5d",
+  "status": "ok",
+  "upscale": 0.84
  },
  "wd-Q24084212": {
   "bytes": 7884,
@@ -20272,6 +22337,50 @@
   "status": "ok",
   "upscale": 0.31
  },
+ "wd-Q24688826": {
+  "bytes": 13188,
+  "faceW": 0.328,
+  "flags": [],
+  "hairTop": 0.171,
+  "pack": "eu-slovan_bratislava",
+  "roll": -5.5,
+  "score": 0.93,
+  "sha256": "e2d997a6a71bebeb75e66a619d09d39dfd4a803c7b5e4b97fcad1d1814154edc",
+  "shoulders": 0.81,
+  "skin": "#b77f66",
+  "status": "ok",
+  "upscale": 0.27
+ },
+ "wd-Q24688832": {
+  "bytes": 7636,
+  "faceW": 0.337,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.12,
+  "pack": "eu-paok",
+  "roll": -5.1,
+  "score": 0.95,
+  "sha256": "f057ac1091d83decd6dacc02eb6c580ecc32525111d532fc871d85aa79202bea",
+  "shoulders": 0.72,
+  "skin": "#bb906f",
+  "status": "ok",
+  "upscale": 0.64
+ },
+ "wd-Q24701050": {
+  "bytes": 10906,
+  "faceW": 0.281,
+  "flags": [],
+  "hairTop": 0.121,
+  "pack": "eu-servette",
+  "roll": 18.1,
+  "score": 0.92,
+  "sha256": "42e57fa4b737dcd9fc917b46e4a7604da718c44fd284607e48134790c1c4d610",
+  "shoulders": 0.28,
+  "skin": "#c1a68a",
+  "status": "ok",
+  "upscale": 0.4
+ },
  "wd-Q2475780": {
   "bytes": 7752,
   "faceW": 0.315,
@@ -20388,6 +22497,34 @@
   "status": "ok",
   "upscale": 0.36
  },
+ "wd-Q25273278": {
+  "bytes": 10186,
+  "faceW": 0.302,
+  "flags": [],
+  "hairTop": 0.065,
+  "pack": "eu-sturm_graz",
+  "roll": -5.6,
+  "score": 0.93,
+  "sha256": "e7be1b2c1136e4c23980d158351ae5d13b9db30b9448f27d2b9a6315676557bd",
+  "shoulders": 0.95,
+  "skin": "#a0745c",
+  "status": "ok",
+  "upscale": 0.31
+ },
+ "wd-Q25408280": {
+  "bytes": 10816,
+  "faceW": 0.311,
+  "flags": [],
+  "hairTop": 0.104,
+  "pack": "eu-apoel",
+  "roll": 8.8,
+  "score": 0.94,
+  "sha256": "f2c74f19ba141b19399c9d52db22bc1720b0d6d78c7b844b454335c18532c537",
+  "shoulders": 0.89,
+  "skin": "#c9997c",
+  "status": "ok",
+  "upscale": 0.46
+ },
  "wd-Q25409292": {
   "bytes": 12976,
   "faceW": 0.298,
@@ -20448,6 +22585,20 @@
   "status": "ok",
   "upscale": 0.68
  },
+ "wd-Q26033078": {
+  "bytes": 7586,
+  "faceW": 0.325,
+  "flags": [],
+  "hairTop": 0.081,
+  "pack": "eu-basel",
+  "roll": 5.0,
+  "score": 0.92,
+  "sha256": "3c1269305ce645d88774b505b5bfd00b7340dbefdc0c8b3d50884708ff668c3e",
+  "shoulders": 0.7,
+  "skin": "#d9b297",
+  "status": "ok",
+  "upscale": 0.54
+ },
  "wd-Q26034345": {
   "bytes": 10818,
   "faceW": 0.299,
@@ -20475,6 +22626,22 @@
   "skin": "#d18662",
   "status": "ok",
   "upscale": 0.2
+ },
+ "wd-Q26211997": {
+  "bytes": 10968,
+  "faceW": 0.319,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.119,
+  "pack": "eu-rapid_wien",
+  "roll": -2.5,
+  "score": 0.94,
+  "sha256": "43b6795c1fc1d2eeca7007c7fe836b0e79eba0508a1752fa3a5da5c30ef46a03",
+  "shoulders": 0.9,
+  "skin": "#bc8e8e",
+  "status": "ok",
+  "upscale": 0.35
  },
  "wd-Q26220864": {
   "bytes": 7934,
@@ -20652,6 +22819,20 @@
   "status": "ok",
   "upscale": 0.3
  },
+ "wd-Q26266355": {
+  "bytes": 7760,
+  "faceW": 0.326,
+  "flags": [],
+  "hairTop": 0.168,
+  "pack": "eu-sutjeska",
+  "roll": 2.5,
+  "score": 0.94,
+  "sha256": "45de532da2d09dda5d240d1ca97a014db7100ba9ac7a1655c487bb192a24fede",
+  "shoulders": 0.61,
+  "skin": "#ab806c",
+  "status": "ok",
+  "upscale": 0.31
+ },
  "wd-Q26271402": {
   "bytes": 14476,
   "faceW": 0.314,
@@ -20665,6 +22846,38 @@
   "skin": "#dcae9a",
   "status": "ok",
   "upscale": 0.22
+ },
+ "wd-Q26271407": {
+  "bytes": 9320,
+  "faceW": 0.294,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.111,
+  "pack": "eu-omonia",
+  "roll": -2.6,
+  "score": 0.92,
+  "sha256": "969e374bc7a334d381a0776d9008e241466d490583c733de2612b01a65aa5989",
+  "shoulders": 0.73,
+  "skin": "#6f4842",
+  "status": "ok",
+  "upscale": 0.23
+ },
+ "wd-Q2627854": {
+  "bytes": 11964,
+  "faceW": 0.294,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.103,
+  "pack": "eu-kairat",
+  "roll": -9.0,
+  "score": 0.94,
+  "sha256": "9ac9dfe75ff3c09bd47e651d9e5f3e63059a7e7badf1bfa3ff80d3ce936be659",
+  "shoulders": 0.6,
+  "skin": "#7e634e",
+  "status": "ok",
+  "upscale": 0.41
  },
  "wd-Q263053": {
   "bytes": 9304,
@@ -20781,6 +22994,20 @@
   "skin": "#ba8569",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q26704556": {
+  "bytes": 9454,
+  "faceW": 0.298,
+  "flags": [],
+  "hairTop": 0.158,
+  "pack": "eu-cska_sofia",
+  "roll": -18.2,
+  "score": 0.93,
+  "sha256": "9fce0532bf919225a2869558d55c6c85c20b49f80fa21d6fc95060b91a0304e5",
+  "shoulders": 0.66,
+  "skin": "#a39074",
+  "status": "ok",
+  "upscale": 0.43
  },
  "wd-Q26704703": {
   "bytes": 15186,
@@ -20960,6 +23187,20 @@
   "status": "ok",
   "upscale": 0.74
  },
+ "wd-Q26838085": {
+  "bytes": 12664,
+  "faceW": 0.323,
+  "flags": [],
+  "hairTop": 0.149,
+  "pack": "eu-slovan_bratislava",
+  "roll": -0.1,
+  "score": 0.94,
+  "sha256": "eac59cfd04b8d6bf2dc64775e8ee735100ca4f04d99bcc19501eb6c8d6b4c755",
+  "shoulders": 1.0,
+  "skin": "#bb9480",
+  "status": "ok",
+  "upscale": 0.5
+ },
  "wd-Q26838705": {
   "bytes": 10280,
   "faceW": 0.277,
@@ -21053,6 +23294,20 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q26965570": {
+  "bytes": 14846,
+  "faceW": 0.337,
+  "flags": [],
+  "hairTop": 0.093,
+  "pack": "eu-besiktas",
+  "roll": 6.0,
+  "score": 0.89,
+  "sha256": "046b0e13ecd5ace7d62db5a55b80afee0207e31d6ce0079ea6b6fc1a00856ae3",
+  "shoulders": 0.72,
+  "skin": "#be8762",
+  "status": "ok",
+  "upscale": 0.23
+ },
  "wd-Q26973015": {
   "bytes": 13540,
   "faceW": 0.325,
@@ -21067,6 +23322,20 @@
   "status": "ok",
   "upscale": 0.3
  },
+ "wd-Q2699366": {
+  "bytes": 11364,
+  "faceW": 0.298,
+  "flags": [],
+  "hairTop": 0.147,
+  "pack": "eu-borac",
+  "roll": -1.4,
+  "score": 0.92,
+  "sha256": "51eda79ab97fec8fad36fac3887f13eae26958a7e6a3d3c7d3ea14ec15cbfbfc",
+  "shoulders": 0.72,
+  "skin": "#7c604c",
+  "status": "ok",
+  "upscale": 0.29
+ },
  "wd-Q26994740": {
   "bytes": 13162,
   "faceW": 0.317,
@@ -21080,6 +23349,20 @@
   "skin": "#ca8c6f",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q27000690": {
+  "bytes": 9456,
+  "faceW": 0.337,
+  "flags": [],
+  "hairTop": 0.107,
+  "pack": "eu-aek_athens",
+  "roll": -12.4,
+  "score": 0.94,
+  "sha256": "1e79783f7294dab8ed395dd15d95b4ff4fbe3ab3378dd869fec35494582c6d49",
+  "shoulders": 0.7,
+  "skin": "#a07047",
+  "status": "ok",
+  "upscale": 0.34
  },
  "wd-Q27037962": {
   "bytes": 9868,
@@ -21111,6 +23394,20 @@
   "status": "ok",
   "upscale": 0.2
  },
+ "wd-Q27049164": {
+  "bytes": 12618,
+  "faceW": 0.332,
+  "flags": [],
+  "hairTop": 0.11,
+  "pack": "eu-paok",
+  "roll": -3.5,
+  "score": 0.93,
+  "sha256": "d33df1c2c0cfa577a1c2ab8dff103035da26adeb9f7437cdb06d4513154e767a",
+  "shoulders": 0.82,
+  "skin": "#d4b38d",
+  "status": "ok",
+  "upscale": 0.32
+ },
  "wd-Q27049316": {
   "bytes": 7208,
   "faceW": 0.309,
@@ -21138,6 +23435,22 @@
   "skin": "#b67750",
   "status": "ok",
   "upscale": 0.5
+ },
+ "wd-Q2705846": {
+  "bytes": 13058,
+  "faceW": 0.297,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.084,
+  "pack": "eu-pyunik",
+  "roll": -4.6,
+  "score": 0.89,
+  "sha256": "13197f5b0e7d10c8adf3d8b665b7890480da25361991c178fdd08f7982291190",
+  "shoulders": 0.98,
+  "skin": "#ae7053",
+  "status": "ok",
+  "upscale": 0.92
  },
  "wd-Q27062813": {
   "bytes": 10910,
@@ -21182,6 +23495,48 @@
   "skin": "#c39a7d",
   "status": "ok",
   "upscale": 0.66
+ },
+ "wd-Q27106995": {
+  "bytes": 15416,
+  "faceW": 0.31,
+  "flags": [],
+  "hairTop": 0.123,
+  "pack": "eu-paok",
+  "roll": 2.0,
+  "score": 0.91,
+  "sha256": "34d7441ce3623c867e813b7fe815f7579f796e5e8059ff83c643a5df96786a58",
+  "shoulders": 0.86,
+  "skin": "#b17c7a",
+  "status": "ok",
+  "upscale": 0.23
+ },
+ "wd-Q27107072": {
+  "bytes": 8776,
+  "faceW": 0.331,
+  "flags": [],
+  "hairTop": 0.15,
+  "pack": "eu-craiova",
+  "roll": 3.8,
+  "score": 0.94,
+  "sha256": "3cbeac5a585409d126c91126009d1293deddc162494b8d5f6adad7b6267c2ec9",
+  "shoulders": 0.89,
+  "skin": "#b98172",
+  "status": "ok",
+  "upscale": 0.54
+ },
+ "wd-Q27300005": {
+  "bytes": 7436,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.146,
+  "pack": "eu-elfsborg",
+  "roll": 6.4,
+  "score": 0.94,
+  "sha256": "58d8c7ab2a1bddca8ce4c078d977c4c12e249edb7a8fff8afefe31ac9d7f12c6",
+  "shoulders": 0.7,
+  "skin": "#a47c79",
+  "status": "ok",
+  "upscale": 0.53
  },
  "wd-Q27310755": {
   "bytes": 12522,
@@ -21509,6 +23864,20 @@
   "status": "ok",
   "upscale": 0.55
  },
+ "wd-Q27805413": {
+  "bytes": 9840,
+  "faceW": 0.299,
+  "flags": [],
+  "hairTop": 0.161,
+  "pack": "eu-besiktas",
+  "roll": -3.5,
+  "score": 0.94,
+  "sha256": "f88f2445cab96d955a69e8e74c97c30b918a937d11db1828710094d92a03e1cb",
+  "shoulders": 0.78,
+  "skin": "#a77862",
+  "status": "ok",
+  "upscale": 0.44
+ },
  "wd-Q27825292": {
   "bytes": 7556,
   "faceW": 0.327,
@@ -21667,6 +24036,22 @@
   "status": "ok",
   "upscale": 0.58
  },
+ "wd-Q27948984": {
+  "bytes": 7624,
+  "faceW": 0.32,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.106,
+  "pack": "eu-apoel",
+  "roll": -2.2,
+  "score": 0.94,
+  "sha256": "4c6994f5b1a3bd4dba9c1a24cbb197aa468ba9599b96732b71c0146056475473",
+  "shoulders": 0.67,
+  "skin": "#cc9276",
+  "status": "ok",
+  "upscale": 0.42
+ },
  "wd-Q27960175": {
   "bytes": 7408,
   "faceW": 0.312,
@@ -21711,6 +24096,20 @@
   "status": "ok",
   "upscale": 0.53
  },
+ "wd-Q27979053": {
+  "bytes": 9562,
+  "faceW": 0.329,
+  "flags": [],
+  "hairTop": 0.081,
+  "pack": "eu-craiova",
+  "roll": 11.6,
+  "score": 0.94,
+  "sha256": "0c4292fdf3b5d7c68acb74b4deb60b626c8e8b0b4f8f77da73b393178133153b",
+  "shoulders": 0.82,
+  "skin": "#d19d85",
+  "status": "ok",
+  "upscale": 0.48
+ },
  "wd-Q27995477": {
   "bytes": 13426,
   "faceW": 0.326,
@@ -21739,6 +24138,20 @@
   "status": "ok",
   "upscale": 0.63
  },
+ "wd-Q28037504": {
+  "bytes": 11664,
+  "faceW": 0.317,
+  "flags": [],
+  "hairTop": 0.146,
+  "pack": "eu-banik_ostrava",
+  "roll": 1.0,
+  "score": 0.94,
+  "sha256": "6f1a4390a3e5a2c952891cae081b2b98436d05a46c7cd66fedfbc318cde5b85f",
+  "shoulders": 0.93,
+  "skin": "#ad7c6c",
+  "status": "ok",
+  "upscale": 0.55
+ },
  "wd-Q28038574": {
   "bytes": 8708,
   "faceW": 0.309,
@@ -21766,6 +24179,20 @@
   "skin": "#bb836f",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q28058586": {
+  "bytes": 8598,
+  "faceW": 0.278,
+  "flags": [],
+  "hairTop": 0.092,
+  "pack": "eu-dinamo_batumi",
+  "roll": 2.9,
+  "score": 0.95,
+  "sha256": "d114edd6d1f7be8be4b28f2584c2305a80c530521e733f02569b9a842fe4b45b",
+  "shoulders": 0.62,
+  "skin": "#a2745f",
+  "status": "ok",
+  "upscale": 0.56
  },
  "wd-Q28058687": {
   "bytes": 14214,
@@ -21810,6 +24237,20 @@
   "skin": "#cb9c87",
   "status": "ok",
   "upscale": 0.26
+ },
+ "wd-Q28077976": {
+  "bytes": 5608,
+  "faceW": 0.327,
+  "flags": [],
+  "hairTop": 0.168,
+  "pack": "eu-aek_athens",
+  "roll": -0.5,
+  "score": 0.91,
+  "sha256": "1229ec493c542f1c6fb97bca9987f7a5cdbc1cf3d851f212e8ce9c434b8b918e",
+  "shoulders": 0.62,
+  "skin": "#48353a",
+  "status": "ok",
+  "upscale": 0.25
  },
  "wd-Q28092384": {
   "bytes": 14314,
@@ -21868,6 +24309,22 @@
   "skin": "#c99e5e",
   "status": "ok",
   "upscale": 0.33
+ },
+ "wd-Q28137504": {
+  "bytes": 4066,
+  "faceW": 0.291,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.151,
+  "pack": "eu-aek_athens",
+  "roll": -2.8,
+  "score": 0.9,
+  "sha256": "f7c4e5e5576981438784d9d8030cf056b7027e06fff0038ab333272f89c655a2",
+  "shoulders": 0.0,
+  "skin": "#e5c4b2",
+  "status": "ok",
+  "upscale": 0.38
  },
  "wd-Q28170729": {
   "bytes": 11296,
@@ -22001,6 +24458,20 @@
   "skin": "#7b5b4f",
   "status": "ok",
   "upscale": 0.29
+ },
+ "wd-Q2845537": {
+  "bytes": 8262,
+  "faceW": 0.327,
+  "flags": [],
+  "hairTop": 0.158,
+  "pack": "eu-apoel",
+  "roll": 4.2,
+  "score": 0.93,
+  "sha256": "6f0dd314408dc97f55fa525e6634a471cd1a1e723144ac959a9999e4732ffdfc",
+  "shoulders": 0.6,
+  "skin": "#ebc19b",
+  "status": "ok",
+  "upscale": 1.03
  },
  "wd-Q28465174": {
   "bytes": 9880,
@@ -22250,6 +24721,20 @@
   "status": "ok",
   "upscale": 0.76
  },
+ "wd-Q28811942": {
+  "bytes": 15880,
+  "faceW": 0.303,
+  "flags": [],
+  "hairTop": 0.131,
+  "pack": "eu-paok",
+  "roll": 1.5,
+  "score": 0.91,
+  "sha256": "4d3db504fe2527b5af6cf798e4a1cb4cbf00cc85754d8a66d828f1cd6aaf3af3",
+  "shoulders": 0.74,
+  "skin": "#685752",
+  "status": "ok",
+  "upscale": 0.22
+ },
  "wd-Q28816035": {
   "bytes": 10186,
   "faceW": 0.338,
@@ -22352,6 +24837,22 @@
   "status": "ok",
   "upscale": 0.42
  },
+ "wd-Q28920845": {
+  "bytes": 6648,
+  "faceW": 0.324,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.144,
+  "pack": "eu-borac",
+  "roll": 3.9,
+  "score": 0.94,
+  "sha256": "7343654d1d03b96646c964e0d8ad1203156ef9eae5299691f6984289d11c8ad7",
+  "shoulders": 0.44,
+  "skin": "#d59d81",
+  "status": "ok",
+  "upscale": 0.28
+ },
  "wd-Q28925148": {
   "bytes": 9438,
   "faceW": 0.349,
@@ -22436,6 +24937,22 @@
   "status": "ok",
   "upscale": 0.37
  },
+ "wd-Q28970775": {
+  "bytes": 6750,
+  "faceW": 0.299,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.173,
+  "pack": "eu-sheriff",
+  "roll": 6.2,
+  "score": 0.93,
+  "sha256": "c13f116ccfd7d70cf76a5bf667a4451a6f4129d96dd7305e068ed26a7054209f",
+  "shoulders": 0.57,
+  "skin": "#fed2c3",
+  "status": "ok",
+  "upscale": 0.36
+ },
  "wd-Q28971436": {
   "bytes": 15816,
   "faceW": 0.299,
@@ -22480,6 +24997,38 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q28976861": {
+  "bytes": 8182,
+  "faceW": 0.271,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.144,
+  "pack": "eu-cska_sofia",
+  "roll": 5.6,
+  "score": 0.91,
+  "sha256": "cc624d5017626f6d6120abf69baa851cc6cb30ae3c40e19493433df9ecb16ccd",
+  "shoulders": 0.2,
+  "skin": "#af8c78",
+  "status": "ok",
+  "upscale": 0.19
+ },
+ "wd-Q29034390": {
+  "bytes": 5452,
+  "faceW": 0.322,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.212,
+  "pack": "eu-shkendija",
+  "roll": -1.0,
+  "score": 0.94,
+  "sha256": "1c02ee91523abb32e5e3ada8e1964a33f231897bd71ab5b198fee0b23fd9bb59",
+  "shoulders": 0.16,
+  "skin": "#ddc598",
+  "status": "ok",
+  "upscale": 0.37
+ },
  "wd-Q29169607": {
   "bytes": 8816,
   "faceW": 0.335,
@@ -22521,6 +25070,22 @@
   "skin": "#ac6a56",
   "status": "ok",
   "upscale": 0.4
+ },
+ "wd-Q29412269": {
+  "bytes": 16264,
+  "faceW": 0.32,
+  "flags": [
+   "hair_tips_feathered"
+  ],
+  "hairTop": 0.056,
+  "pack": "eu-servette",
+  "roll": -2.7,
+  "score": 0.93,
+  "sha256": "7a272df853dfc1d634b054d0e27a151fdab14237254670a19e9502b7abfeb0e7",
+  "shoulders": 0.92,
+  "skin": "#945c35",
+  "status": "ok",
+  "upscale": 0.36
  },
  "wd-Q29415698": {
   "bytes": 10726,
@@ -22593,6 +25158,34 @@
   "skin": "#ad7e62",
   "status": "ok",
   "upscale": 0.33
+ },
+ "wd-Q29512609": {
+  "bytes": 11304,
+  "faceW": 0.328,
+  "flags": [],
+  "hairTop": 0.078,
+  "pack": "eu-tirana",
+  "roll": 6.5,
+  "score": 0.9,
+  "sha256": "6e2582bd4fe08e9a3179860b46e47e13396ab382ad0bb26e9585cfca12e6b2e9",
+  "shoulders": 0.89,
+  "skin": "#574227",
+  "status": "ok",
+  "upscale": 0.65
+ },
+ "wd-Q2961319": {
+  "bytes": 10720,
+  "faceW": 0.29,
+  "flags": [],
+  "hairTop": 0.167,
+  "pack": "eu-aek_athens",
+  "roll": -9.3,
+  "score": 0.94,
+  "sha256": "916b200c221aa71415a27728d4a0c065c1098a379b7d4b3882639c04f5e7484f",
+  "shoulders": 0.75,
+  "skin": "#bc886f",
+  "status": "ok",
+  "upscale": 0.29
  },
  "wd-Q29624459": {
   "bytes": 15238,
@@ -22766,6 +25359,20 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q30070538": {
+  "bytes": 10136,
+  "faceW": 0.273,
+  "flags": [],
+  "hairTop": 0.175,
+  "pack": "eu-rapid_wien",
+  "roll": -4.0,
+  "score": 0.93,
+  "sha256": "13588daa10d268e81cc62e16ed80b9de87f98ce81880737b73eb161f9338573e",
+  "shoulders": 0.86,
+  "skin": "#89553d",
+  "status": "ok",
+  "upscale": 0.51
+ },
  "wd-Q30080367": {
   "bytes": 5550,
   "faceW": 0.334,
@@ -22781,6 +25388,22 @@
   "skin": "#bb8063",
   "status": "ok",
   "upscale": 0.48
+ },
+ "wd-Q30087944": {
+  "bytes": 12072,
+  "faceW": 0.336,
+  "flags": [
+   "hair_tips_feathered"
+  ],
+  "hairTop": 0.152,
+  "pack": "eu-dinamo_batumi",
+  "roll": -1.7,
+  "score": 0.95,
+  "sha256": "177075015fa7897c552a493319ec19787cce7b6141547c867ef5086423dc2128",
+  "shoulders": 0.78,
+  "skin": "#a9593b",
+  "status": "ok",
+  "upscale": 0.47
  },
  "wd-Q30089624": {
   "bytes": 11224,
@@ -23022,6 +25645,20 @@
   "status": "ok",
   "upscale": 0.2
  },
+ "wd-Q303108": {
+  "bytes": 10930,
+  "faceW": 0.326,
+  "flags": [],
+  "hairTop": 0.122,
+  "pack": "eu-paok",
+  "roll": -2.2,
+  "score": 0.95,
+  "sha256": "c5bbce4f571693dc9d9322f9aff587e464b79c0ba2ec95b18f3bdf2bc6389d39",
+  "shoulders": 0.88,
+  "skin": "#a38766",
+  "status": "ok",
+  "upscale": 0.66
+ },
  "wd-Q30317774": {
   "bytes": 14106,
   "faceW": 0.317,
@@ -23035,6 +25672,20 @@
   "skin": "#b38661",
   "status": "ok",
   "upscale": 0.4
+ },
+ "wd-Q30320323": {
+  "bytes": 4742,
+  "faceW": 0.342,
+  "flags": [],
+  "hairTop": 0.139,
+  "pack": "eu-servette",
+  "roll": 13.4,
+  "score": 0.94,
+  "sha256": "91baeb4c6f31a6f68258833ee63d8cdac29b9122721f72260d778f00eb47d914",
+  "shoulders": 0.87,
+  "skin": "#5f3a2a",
+  "status": "ok",
+  "upscale": 0.35
  },
  "wd-Q30330390": {
   "bytes": 12158,
@@ -23121,6 +25772,20 @@
   "skin": "#cfb3a8",
   "status": "ok",
   "upscale": 0.24
+ },
+ "wd-Q3080534": {
+  "bytes": 13186,
+  "faceW": 0.338,
+  "flags": [],
+  "hairTop": 0.062,
+  "pack": "eu-apoel",
+  "roll": -0.5,
+  "score": 0.95,
+  "sha256": "64368b2ca7ae36c7788c9395286d85d62d51858280a0f5f566637fd113f84828",
+  "shoulders": 0.92,
+  "skin": "#b07a4f",
+  "status": "ok",
+  "upscale": 0.84
  },
  "wd-Q30881092": {
   "bytes": 17872,
@@ -23240,6 +25905,23 @@
   "status": "ok",
   "upscale": 0.36
  },
+ "wd-Q314227": {
+  "bytes": 7566,
+  "faceW": 0.304,
+  "flags": [
+   "hair_tips_feathered",
+   "short_source"
+  ],
+  "hairTop": 0.146,
+  "pack": "eu-aek_athens",
+  "roll": -4.3,
+  "score": 0.95,
+  "sha256": "4d37122ddd1b357ec9910a83f9a1c69e90c25bff1264a9068c372141267a2d4c",
+  "shoulders": 0.69,
+  "skin": "#c99b76",
+  "status": "ok",
+  "upscale": 0.32
+ },
  "wd-Q316854": {
   "bytes": 7900,
   "faceW": 0.3,
@@ -23253,6 +25935,20 @@
   "skin": "#f1be76",
   "status": "ok",
   "upscale": 0.41
+ },
+ "wd-Q317389": {
+  "bytes": 10500,
+  "faceW": 0.321,
+  "flags": [],
+  "hairTop": 0.216,
+  "pack": "eu-paok",
+  "roll": -2.0,
+  "score": 0.95,
+  "sha256": "60ead59ffc10a15edff573d3d3bd25e15f336fa6e8d95d0843ae09a55d7f3cbf",
+  "shoulders": 0.85,
+  "skin": "#a38151",
+  "status": "ok",
+  "upscale": 0.37
  },
  "wd-Q318069": {
   "bytes": 9690,
@@ -23431,6 +26127,23 @@
   "status": "ok",
   "upscale": 0.34
  },
+ "wd-Q327205": {
+  "bytes": 9374,
+  "faceW": 0.293,
+  "flags": [
+   "multiple_faces",
+   "short_source"
+  ],
+  "hairTop": 0.146,
+  "pack": "eu-astana",
+  "roll": 1.0,
+  "score": 0.93,
+  "sha256": "1407162fba942956cb212349baef3fbb0dd33b40fa612b14aaa2ecae4ca38bfb",
+  "shoulders": 0.83,
+  "skin": "#a98987",
+  "status": "ok",
+  "upscale": 0.37
+ },
  "wd-Q327227": {
   "bytes": 11504,
   "faceW": 0.304,
@@ -23472,6 +26185,64 @@
   "skin": "#b98869",
   "status": "ok",
   "upscale": 0.26
+ },
+ "wd-Q3300662": {
+  "bytes": 7852,
+  "faceW": 0.304,
+  "flags": [],
+  "hairTop": 0.122,
+  "pack": "eu-dinamo_tbilisi",
+  "roll": -3.8,
+  "score": 0.94,
+  "sha256": "bb893354e7aa0a7a3fea515aec22bcc41831ff96367ad673af45332e7c7423b1",
+  "shoulders": 0.96,
+  "skin": "#79533c",
+  "status": "ok",
+  "upscale": 0.69
+ },
+ "wd-Q33112671": {
+  "bytes": 10976,
+  "faceW": 0.346,
+  "flags": [],
+  "hairTop": 0.059,
+  "pack": "eu-kups",
+  "roll": -8.6,
+  "score": 0.92,
+  "sha256": "6b238eb7a5409b7859edddbf284dc870a4d0db7864ed0612d7317035ceb9280b",
+  "shoulders": 0.65,
+  "skin": "#5b5759",
+  "status": "ok",
+  "upscale": 0.29
+ },
+ "wd-Q33130452": {
+  "bytes": 8860,
+  "faceW": 0.338,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.168,
+  "pack": "eu-sturm_graz",
+  "roll": 15.0,
+  "score": 0.94,
+  "sha256": "e933cebd71778d454eb329091ee0b6d140e262a999c255482b8afaea39393fb3",
+  "shoulders": 0.83,
+  "skin": "#fda161",
+  "status": "ok",
+  "upscale": 0.43
+ },
+ "wd-Q33296389": {
+  "bytes": 7992,
+  "faceW": 0.304,
+  "flags": [],
+  "hairTop": 0.146,
+  "pack": "eu-craiova",
+  "roll": 1.3,
+  "score": 0.93,
+  "sha256": "9fde5c97081e4a58275890ee7cc1525b26b4a509fb73839ff65b323163b595b7",
+  "shoulders": 0.85,
+  "skin": "#a77d53",
+  "status": "ok",
+  "upscale": 0.85
  },
  "wd-Q33296979": {
   "bytes": 8188,
@@ -23547,6 +26318,20 @@
   "status": "ok",
   "upscale": 1.1
  },
+ "wd-Q34058084": {
+  "bytes": 9518,
+  "faceW": 0.283,
+  "flags": [],
+  "hairTop": 0.16,
+  "pack": "eu-lask",
+  "roll": -8.5,
+  "score": 0.96,
+  "sha256": "15727317e4dd0cea0d60c5f87322f560dbc128e3233068801b77ef7e2072dcbb",
+  "shoulders": 0.79,
+  "skin": "#997259",
+  "status": "ok",
+  "upscale": 0.52
+ },
  "wd-Q3431011": {
   "bytes": 8290,
   "faceW": 0.308,
@@ -23604,6 +26389,22 @@
   "skin": "#ba825f",
   "status": "ok",
   "upscale": 0.25
+ },
+ "wd-Q350383": {
+  "bytes": 8256,
+  "faceW": 0.315,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.113,
+  "pack": "eu-shamrock",
+  "roll": 5.2,
+  "score": 0.85,
+  "sha256": "f5b556ffa61bd6105b3fbd5172a31a83708d830f999a38226cdb218bf9f09ac9",
+  "shoulders": 0.59,
+  "skin": "#a87b6d",
+  "status": "ok",
+  "upscale": 0.17
  },
  "wd-Q35039261": {
   "bytes": 13140,
@@ -23683,6 +26484,22 @@
   "skin": "#b37f5b",
   "status": "ok",
   "upscale": 0.89
+ },
+ "wd-Q35749541": {
+  "bytes": 10768,
+  "faceW": 0.325,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.108,
+  "pack": "eu-lugano",
+  "roll": 2.3,
+  "score": 0.93,
+  "sha256": "751904749a55dc22adaeb459cb5af9f4960102091528ccbecd87c4bd3cde3882",
+  "shoulders": 0.76,
+  "skin": "#b68151",
+  "status": "ok",
+  "upscale": 1.18
  },
  "wd-Q357507": {
   "bytes": 7828,
@@ -23802,6 +26619,20 @@
   "status": "ok",
   "upscale": 0.22
  },
+ "wd-Q3624614": {
+  "bytes": 15052,
+  "faceW": 0.338,
+  "flags": [],
+  "hairTop": 0.081,
+  "pack": "eu-levski",
+  "roll": 6.7,
+  "score": 0.95,
+  "sha256": "26bbde486d82b7e9a2b0e5ba7ab224686baeb87b344c14e48a678e6441dc87af",
+  "shoulders": 0.95,
+  "skin": "#bb784f",
+  "status": "ok",
+  "upscale": 1.08
+ },
  "wd-Q36318897": {
   "bytes": 11378,
   "faceW": 0.276,
@@ -23859,6 +26690,20 @@
   "skin": "#977463",
   "status": "ok",
   "upscale": 0.22
+ },
+ "wd-Q3693490": {
+  "bytes": 9926,
+  "faceW": 0.309,
+  "flags": [],
+  "hairTop": 0.126,
+  "pack": "eu-differdange",
+  "roll": -2.2,
+  "score": 0.94,
+  "sha256": "c782d7cd1a8658048267ccc396b2d2068e8d4508aab3ad2da94673bfed16715d",
+  "shoulders": 0.91,
+  "skin": "#654b40",
+  "status": "ok",
+  "upscale": 0.28
  },
  "wd-Q37007691": {
   "bytes": 10518,
@@ -24004,6 +26849,20 @@
   "status": "ok",
   "upscale": 0.74
  },
+ "wd-Q3811381": {
+  "bytes": 8484,
+  "faceW": 0.329,
+  "flags": [],
+  "hairTop": 0.12,
+  "pack": "eu-omonia",
+  "roll": -0.6,
+  "score": 0.92,
+  "sha256": "c6e4cd1b7ad5126d315eeeb930749e2e3d2dc4653f8fb9fa46a26675aaf6375e",
+  "shoulders": 0.95,
+  "skin": "#c4937c",
+  "status": "ok",
+  "upscale": 0.94
+ },
  "wd-Q38198180": {
   "bytes": 8390,
   "faceW": 0.281,
@@ -24064,6 +26923,20 @@
   "status": "ok",
   "upscale": 0.56
  },
+ "wd-Q3852462": {
+  "bytes": 17308,
+  "faceW": 0.295,
+  "flags": [],
+  "hairTop": 0.057,
+  "pack": "eu-dinamo_batumi",
+  "roll": -6.8,
+  "score": 0.91,
+  "sha256": "82d34f5eb3115f2856123d625880ec746fa8418752dfc04598a9214d80b258ad",
+  "shoulders": 1.0,
+  "skin": "#543223",
+  "status": "ok",
+  "upscale": 0.68
+ },
  "wd-Q3855340": {
   "bytes": 12126,
   "faceW": 0.341,
@@ -24121,6 +26994,20 @@
   "skin": "#bf7c5c",
   "status": "ok",
   "upscale": 0.18
+ },
+ "wd-Q38764408": {
+  "bytes": 14288,
+  "faceW": 0.313,
+  "flags": [],
+  "hairTop": 0.111,
+  "pack": "eu-lask",
+  "roll": 0.3,
+  "score": 0.92,
+  "sha256": "c056402bf71d52aff5a0baaf5c5c71dc00c9c7429cb2e1eb5a1d83a75d3ec102",
+  "shoulders": 0.85,
+  "skin": "#aa6b47",
+  "status": "ok",
+  "upscale": 0.29
  },
  "wd-Q3876530": {
   "bytes": 14808,
@@ -24251,6 +27138,20 @@
   "skin": "#e1a795",
   "status": "ok",
   "upscale": 0.26
+ },
+ "wd-Q39336454": {
+  "bytes": 10862,
+  "faceW": 0.318,
+  "flags": [],
+  "hairTop": 0.134,
+  "pack": "eu-aek_athens",
+  "roll": -1.4,
+  "score": 0.93,
+  "sha256": "4d133331770340d2fce6f98912e99faf109c743d459ea10cde24b3067525ab49",
+  "shoulders": 1.0,
+  "skin": "#7d5d4e",
+  "status": "ok",
+  "upscale": 0.82
  },
  "wd-Q39498277": {
   "bytes": 8582,
@@ -24413,6 +27314,34 @@
   "skin": "#bc8d6f",
   "status": "ok",
   "upscale": 0.29
+ },
+ "wd-Q4107394": {
+  "bytes": 9898,
+  "faceW": 0.32,
+  "flags": [],
+  "hairTop": 0.093,
+  "pack": "eu-zalgiris",
+  "roll": -2.1,
+  "score": 0.93,
+  "sha256": "3dde87dafe3daadeda49e74f93dde239c350a1085a81d5e6c2a2ee2fee759b4e",
+  "shoulders": 0.85,
+  "skin": "#cc9178",
+  "status": "ok",
+  "upscale": 0.75
+ },
+ "wd-Q4120867": {
+  "bytes": 11416,
+  "faceW": 0.338,
+  "flags": [],
+  "hairTop": 0.064,
+  "pack": "eu-astana",
+  "roll": -4.8,
+  "score": 0.92,
+  "sha256": "31ee378fa6bbca303540e756eb305e59c73f9d9e3205044032543ee77237860a",
+  "shoulders": 0.81,
+  "skin": "#c89696",
+  "status": "ok",
+  "upscale": 0.23
  },
  "wd-Q4125587": {
   "bytes": 12252,
@@ -24596,6 +27525,20 @@
   "status": "ok",
   "upscale": 0.43
  },
+ "wd-Q42374597": {
+  "bytes": 16370,
+  "faceW": 0.334,
+  "flags": [],
+  "hairTop": 0.049,
+  "pack": "eu-lugano",
+  "roll": -0.0,
+  "score": 0.94,
+  "sha256": "5506212fb7b0e306986e2ffd5b3d6ad59b2efab9b5fc5b5e5d3f5097b3b8267f",
+  "shoulders": 0.9,
+  "skin": "#d6ab89",
+  "status": "ok",
+  "upscale": 0.36
+ },
  "wd-Q42393774": {
   "bytes": 9486,
   "faceW": 0.32,
@@ -24623,6 +27566,20 @@
   "skin": "#a47b61",
   "status": "ok",
   "upscale": 0.93
+ },
+ "wd-Q4272457": {
+  "bytes": 8792,
+  "faceW": 0.329,
+  "flags": [],
+  "hairTop": 0.075,
+  "pack": "eu-cfr_cluj",
+  "roll": -3.1,
+  "score": 0.94,
+  "sha256": "ae10f68573224d3be4e22dc360462def7dd84f84c0a5af1da814c81b2766fdf1",
+  "shoulders": 0.98,
+  "skin": "#b28669",
+  "status": "ok",
+  "upscale": 0.49
  },
  "wd-Q42727824": {
   "bytes": 11534,
@@ -24709,6 +27666,20 @@
   "skin": "#dea78d",
   "status": "ok",
   "upscale": 0.32
+ },
+ "wd-Q43267150": {
+  "bytes": 10848,
+  "faceW": 0.359,
+  "flags": [],
+  "hairTop": 0.083,
+  "pack": "eu-sturm_graz",
+  "roll": 4.8,
+  "score": 0.9,
+  "sha256": "99fb2f879f823ded817c442254d37b898c9d58a97c5cf1b8e7ae3722651ebb27",
+  "shoulders": 0.67,
+  "skin": "#bd756d",
+  "status": "ok",
+  "upscale": 0.2
  },
  "wd-Q43380621": {
   "bytes": 6884,
@@ -24960,6 +27931,22 @@
   "status": "ok",
   "upscale": 0.3
  },
+ "wd-Q44395385": {
+  "bytes": 5914,
+  "faceW": 0.344,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.075,
+  "pack": "eu-jagiellonia",
+  "roll": 11.2,
+  "score": 0.93,
+  "sha256": "c3bd7dda57d38e7fc934b88d26ac7b2dc8973ad46c7c2c568307841cc53dc7ff",
+  "shoulders": 0.0,
+  "skin": "#9b7070",
+  "status": "ok",
+  "upscale": 0.53
+ },
  "wd-Q44737396": {
   "bytes": 15106,
   "faceW": 0.307,
@@ -25020,6 +28007,36 @@
   "status": "ok",
   "upscale": 0.31
  },
+ "wd-Q44983091": {
+  "bytes": 13824,
+  "faceW": 0.225,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-rakow",
+  "roll": 18.1,
+  "score": 0.89,
+  "sha256": "9a1352c1f134ff2ef518d741401266d011dd1f4575f9a09b3bec4b8346a50fb5",
+  "shoulders": 0.62,
+  "skin": "#987254",
+  "status": "ok",
+  "upscale": 0.23
+ },
+ "wd-Q45108303": {
+  "bytes": 11604,
+  "faceW": 0.276,
+  "flags": [],
+  "hairTop": 0.179,
+  "pack": "eu-puskas",
+  "roll": 2.0,
+  "score": 0.91,
+  "sha256": "a92ce81d4b4e04d3e7b6b7ad0062d8779b11d8c5ddda231c3b5953ee299bb0f7",
+  "shoulders": 0.51,
+  "skin": "#b87f56",
+  "status": "ok",
+  "upscale": 0.25
+ },
  "wd-Q45179405": {
   "bytes": 12906,
   "faceW": 0.303,
@@ -25033,6 +28050,20 @@
   "skin": "#c99983",
   "status": "ok",
   "upscale": 0.25
+ },
+ "wd-Q45287541": {
+  "bytes": 13928,
+  "faceW": 0.296,
+  "flags": [],
+  "hairTop": 0.157,
+  "pack": "eu-cska_sofia",
+  "roll": 0.7,
+  "score": 0.93,
+  "sha256": "a0731a4a6c969c5faac489c5755c8bd5312ba0ee5e3931675b83997e4df77e6e",
+  "shoulders": 1.0,
+  "skin": "#ba8a6f",
+  "status": "ok",
+  "upscale": 0.46
  },
  "wd-Q45369082": {
   "bytes": 10582,
@@ -25248,6 +28279,20 @@
   "status": "ok",
   "upscale": 0.31
  },
+ "wd-Q4721122": {
+  "bytes": 9144,
+  "faceW": 0.32,
+  "flags": [],
+  "hairTop": 0.09,
+  "pack": "eu-craiova",
+  "roll": 4.4,
+  "score": 0.93,
+  "sha256": "5f01b4bf5fb4657ab698c238bb4edcca02446a6568cf8e676068f0d057469705",
+  "shoulders": 0.78,
+  "skin": "#7a5740",
+  "status": "ok",
+  "upscale": 0.38
+ },
  "wd-Q472300": {
   "bytes": 11180,
   "faceW": 0.306,
@@ -25405,6 +28450,34 @@
   "skin": "#74554c",
   "status": "ok",
   "upscale": 0.34
+ },
+ "wd-Q47510762": {
+  "bytes": 11898,
+  "faceW": 0.301,
+  "flags": [],
+  "hairTop": 0.109,
+  "pack": "eu-trabzonspor",
+  "roll": 0.2,
+  "score": 0.94,
+  "sha256": "109f57d449dea0abd618c221760f837ae17037ede52dbdac527a0b93a37fc866",
+  "shoulders": 0.9,
+  "skin": "#8f705c",
+  "status": "ok",
+  "upscale": 0.46
+ },
+ "wd-Q4754719": {
+  "bytes": 8202,
+  "faceW": 0.291,
+  "flags": [],
+  "hairTop": 0.166,
+  "pack": "eu-slovan_bratislava",
+  "roll": -0.8,
+  "score": 0.93,
+  "sha256": "8bc96aa1b8fe8f471d67b0267cb3b884137ee8cbd2d20d8c2284fb1da8dc2178",
+  "shoulders": 0.9,
+  "skin": "#bf8d6c",
+  "status": "ok",
+  "upscale": 1.08
  },
  "wd-Q4775926": {
   "bytes": 5592,
@@ -25887,6 +28960,20 @@
   "status": "ok",
   "upscale": 0.27
  },
+ "wd-Q51331558": {
+  "bytes": 12824,
+  "faceW": 0.321,
+  "flags": [],
+  "hairTop": 0.156,
+  "pack": "eu-slovan_bratislava",
+  "roll": 8.3,
+  "score": 0.92,
+  "sha256": "a84e93c12cc4930b1945f7417b7e49acb22edb94a10b23f49b0ed07645c8ac03",
+  "shoulders": 0.65,
+  "skin": "#ad7054",
+  "status": "ok",
+  "upscale": 0.22
+ },
  "wd-Q51339710": {
   "bytes": 8532,
   "faceW": 0.333,
@@ -26050,6 +29137,20 @@
   "status": "ok",
   "upscale": 0.26
  },
+ "wd-Q52084009": {
+  "bytes": 9470,
+  "faceW": 0.325,
+  "flags": [],
+  "hairTop": 0.067,
+  "pack": "eu-lugano",
+  "roll": 4.9,
+  "score": 0.93,
+  "sha256": "b1d840276055e6eefd23fbc78ec8077c6a781a5cd93ad672c22fe3009b63a4e6",
+  "shoulders": 0.94,
+  "skin": "#dda597",
+  "status": "ok",
+  "upscale": 0.76
+ },
  "wd-Q5213217": {
   "bytes": 10630,
   "faceW": 0.312,
@@ -26108,6 +29209,20 @@
   "status": "ok",
   "upscale": 0.42
  },
+ "wd-Q5217512": {
+  "bytes": 10494,
+  "faceW": 0.336,
+  "flags": [],
+  "hairTop": 0.06,
+  "pack": "eu-banik_ostrava",
+  "roll": 1.6,
+  "score": 0.94,
+  "sha256": "bbbde3d6319f04607b6eb5e8f8687c2bcb7f0afed8d7e635b31c64494474411d",
+  "shoulders": 0.92,
+  "skin": "#cd8c68",
+  "status": "ok",
+  "upscale": 0.7
+ },
  "wd-Q522418": {
   "bytes": 7944,
   "faceW": 0.298,
@@ -26154,6 +29269,20 @@
   "skin": "#afb3b1",
   "status": "ok",
   "upscale": 0.15
+ },
+ "wd-Q5277658": {
+  "bytes": 9282,
+  "faceW": 0.305,
+  "flags": [],
+  "hairTop": 0.171,
+  "pack": "eu-paok",
+  "roll": -1.6,
+  "score": 0.95,
+  "sha256": "f4e0965808f4ee2a4f9d1e8154b7cb1c335ed4cb098b868826910c432dc1f802",
+  "shoulders": 0.83,
+  "skin": "#967a6c",
+  "status": "ok",
+  "upscale": 0.47
  },
  "wd-Q52990659": {
   "bytes": 7888,
@@ -26203,6 +29332,20 @@
   "skin": "#7d4b4b",
   "status": "ok",
   "upscale": 0.34
+ },
+ "wd-Q53243096": {
+  "bytes": 14262,
+  "faceW": 0.315,
+  "flags": [],
+  "hairTop": 0.12,
+  "pack": "eu-lask",
+  "roll": -1.4,
+  "score": 0.9,
+  "sha256": "2ddca982c827c8dbe0b0755d6bd29d177cd41a33f5b2be92692049a64436ad1c",
+  "shoulders": 0.74,
+  "skin": "#bc9884",
+  "status": "ok",
+  "upscale": 0.2
  },
  "wd-Q53252728": {
   "bytes": 9332,
@@ -26318,6 +29461,22 @@
   "status": "ok",
   "upscale": 0.41
  },
+ "wd-Q5427726": {
+  "bytes": 6030,
+  "faceW": 0.309,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.109,
+  "pack": "eu-omonia",
+  "roll": -1.9,
+  "score": 0.8,
+  "sha256": "478ab106e50136b0a68eac9a8752b25f13e8d00b28fd988101a48fd230a7d35d",
+  "shoulders": 0.55,
+  "skin": "#c08968",
+  "status": "ok",
+  "upscale": 0.15
+ },
  "wd-Q5444999": {
   "bytes": 10470,
   "faceW": 0.281,
@@ -26392,6 +29551,34 @@
   "status": "ok",
   "upscale": 0.33
  },
+ "wd-Q55081203": {
+  "bytes": 11740,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.11,
+  "pack": "eu-pyunik",
+  "roll": -0.6,
+  "score": 0.94,
+  "sha256": "6b265a0e4bcefb4321cf9e798b9f199c6d7d072c2d8091ffe0df7dfdc55f00fc",
+  "shoulders": 0.97,
+  "skin": "#bb9379",
+  "status": "ok",
+  "upscale": 0.78
+ },
+ "wd-Q55081205": {
+  "bytes": 9252,
+  "faceW": 0.316,
+  "flags": [],
+  "hairTop": 0.159,
+  "pack": "eu-differdange",
+  "roll": 3.8,
+  "score": 0.95,
+  "sha256": "923320c320d0a4c85d9ca5a415937d1e0aa3285ced930645a76196b1cdc23809",
+  "shoulders": 0.68,
+  "skin": "#ca8364",
+  "status": "ok",
+  "upscale": 0.49
+ },
  "wd-Q551192": {
   "bytes": 10376,
   "faceW": 0.296,
@@ -26407,6 +29594,20 @@
   "skin": "#906751",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q55200567": {
+  "bytes": 10402,
+  "faceW": 0.317,
+  "flags": [],
+  "hairTop": 0.162,
+  "pack": "eu-besiktas",
+  "roll": -4.8,
+  "score": 0.95,
+  "sha256": "82681bf6d872537405f05e56989a144573fa713bf96327c0f5651f07ba1f4d9a",
+  "shoulders": 0.59,
+  "skin": "#79594d",
+  "status": "ok",
+  "upscale": 0.51
  },
  "wd-Q55375240": {
   "bytes": 14768,
@@ -26566,6 +29767,36 @@
   "status": "ok",
   "upscale": 0.7
  },
+ "wd-Q5592700": {
+  "bytes": 9358,
+  "faceW": 0.296,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.169,
+  "pack": "eu-shamrock",
+  "roll": 0.0,
+  "score": 0.93,
+  "sha256": "c9dc2670f778e07c59cc7a0d85a3dd05071166ab6b5b085fc44ff0d275405b92",
+  "shoulders": 0.62,
+  "skin": "#be8f74",
+  "status": "ok",
+  "upscale": 0.28
+ },
+ "wd-Q55944900": {
+  "bytes": 9730,
+  "faceW": 0.325,
+  "flags": [],
+  "hairTop": 0.147,
+  "pack": "eu-slovan_bratislava",
+  "roll": -1.7,
+  "score": 0.89,
+  "sha256": "6c6658670bfa0daee6ed2d38869f0671f22f25e271195b168baefb5e9d857fe9",
+  "shoulders": 0.68,
+  "skin": "#c99a8f",
+  "status": "ok",
+  "upscale": 0.21
+ },
  "wd-Q55955918": {
   "bytes": 15134,
   "faceW": 0.311,
@@ -26651,6 +29882,34 @@
   "skin": "#ba8052",
   "status": "ok",
   "upscale": 0.85
+ },
+ "wd-Q56065705": {
+  "bytes": 9414,
+  "faceW": 0.32,
+  "flags": [],
+  "hairTop": 0.076,
+  "pack": "eu-omonia",
+  "roll": -4.7,
+  "score": 0.91,
+  "sha256": "9c76fcf1e72e8e77a8420a947cf5ba0b81fdabd56efe5e499726935db7fcac4b",
+  "shoulders": 0.92,
+  "skin": "#4d4524",
+  "status": "ok",
+  "upscale": 0.6
+ },
+ "wd-Q56072730": {
+  "bytes": 8852,
+  "faceW": 0.294,
+  "flags": [],
+  "hairTop": 0.124,
+  "pack": "eu-cfr_cluj",
+  "roll": -2.1,
+  "score": 0.95,
+  "sha256": "07249fd82de2e496e862553b1b642c645657d83418ff8916eef85cfe99884110",
+  "shoulders": 0.5,
+  "skin": "#a97563",
+  "status": "ok",
+  "upscale": 0.39
  },
  "wd-Q56085180": {
   "bytes": 13346,
@@ -26814,6 +30073,20 @@
   "skin": "#ddb5a1",
   "status": "ok",
   "upscale": 0.48
+ },
+ "wd-Q56254509": {
+  "bytes": 10136,
+  "faceW": 0.287,
+  "flags": [],
+  "hairTop": 0.14,
+  "pack": "eu-sutjeska",
+  "roll": -3.6,
+  "score": 0.94,
+  "sha256": "959a35bee2e295fccf1f98dae52736824cd63eed2bc69886c126ab2682adbd26",
+  "shoulders": 0.75,
+  "skin": "#c08158",
+  "status": "ok",
+  "upscale": 0.45
  },
  "wd-Q56254739": {
   "bytes": 7880,
@@ -27025,6 +30298,20 @@
   "status": "ok",
   "upscale": 0.42
  },
+ "wd-Q56562247": {
+  "bytes": 11692,
+  "faceW": 0.31,
+  "flags": [],
+  "hairTop": 0.135,
+  "pack": "eu-panathinaikos",
+  "roll": -2.9,
+  "score": 0.95,
+  "sha256": "1e6852d7946331e23f2b5b1643b3864a923dce8ed413a939b6bb5b328ec8ed14",
+  "shoulders": 0.71,
+  "skin": "#c3aba3",
+  "status": "ok",
+  "upscale": 0.4
+ },
  "wd-Q56599812": {
   "bytes": 5660,
   "faceW": 0.319,
@@ -27126,6 +30413,23 @@
   "skin": "#c49d92",
   "status": "ok",
   "upscale": 0.41
+ },
+ "wd-Q56788302": {
+  "bytes": 11948,
+  "faceW": 0.321,
+  "flags": [
+   "hair_tips_feathered",
+   "short_source"
+  ],
+  "hairTop": 0.126,
+  "pack": "eu-besiktas",
+  "roll": -0.0,
+  "score": 0.93,
+  "sha256": "e79a3b60a464f75e82dfd9d20f09e97cd8674f6a2aebbf7bfd4f6fe26503f7eb",
+  "shoulders": 0.76,
+  "skin": "#9e5c45",
+  "status": "ok",
+  "upscale": 0.32
  },
  "wd-Q56868118": {
   "bytes": 16538,
@@ -27608,6 +30912,22 @@
   "status": "ok",
   "upscale": 0.28
  },
+ "wd-Q587611": {
+  "bytes": 8146,
+  "faceW": 0.314,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.103,
+  "pack": "eu-breidablik",
+  "roll": 7.7,
+  "score": 0.9,
+  "sha256": "986f911b71f73a27b57bf761dc38373284e1252c2437b17e727f9590866df92b",
+  "shoulders": 0.72,
+  "skin": "#b67e67",
+  "status": "ok",
+  "upscale": 0.2
+ },
  "wd-Q58767078": {
   "bytes": 9504,
   "faceW": 0.313,
@@ -27621,6 +30941,22 @@
   "skin": "#492f26",
   "status": "ok",
   "upscale": 0.35
+ },
+ "wd-Q58767557": {
+  "bytes": 19294,
+  "faceW": 0.293,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-lask",
+  "roll": 6.0,
+  "score": 0.94,
+  "sha256": "52ad62a6539251a3478ea418988c3dd8a0dec16c360c73c0a36a2e872980ca3a",
+  "shoulders": 1.0,
+  "skin": "#603d2a",
+  "status": "ok",
+  "upscale": 0.43
  },
  "wd-Q5879014": {
   "bytes": 12770,
@@ -27665,6 +31001,22 @@
   "skin": "#ddaa94",
   "status": "ok",
   "upscale": 0.34
+ },
+ "wd-Q58975681": {
+  "bytes": 9954,
+  "faceW": 0.263,
+  "flags": [
+   "hair_tips_feathered"
+  ],
+  "hairTop": 0.16,
+  "pack": "eu-pyunik",
+  "roll": -12.8,
+  "score": 0.91,
+  "sha256": "7218ad73c71de2db0fea5d107b465fb2f8ecd7a8312a120521c4a80465f0518a",
+  "shoulders": 0.36,
+  "skin": "#955f25",
+  "status": "ok",
+  "upscale": 0.55
  },
  "wd-Q591443": {
   "bytes": 9122,
@@ -27866,6 +31218,22 @@
   "status": "ok",
   "upscale": 0.29
  },
+ "wd-Q59656292": {
+  "bytes": 18856,
+  "faceW": 0.296,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-astana",
+  "roll": 6.3,
+  "score": 0.94,
+  "sha256": "1f1158b3842e52c1f9718353a227c8f0f134f2c20bec5ebc284de59ebf15b900",
+  "shoulders": 1.0,
+  "skin": "#626749",
+  "status": "ok",
+  "upscale": 0.65
+ },
  "wd-Q59656516": {
   "bytes": 9648,
   "faceW": 0.302,
@@ -27881,6 +31249,22 @@
   "skin": "#b76d2d",
   "status": "ok",
   "upscale": 0.24
+ },
+ "wd-Q59747": {
+  "bytes": 5186,
+  "faceW": 0.327,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.124,
+  "pack": "eu-kups",
+  "roll": -12.0,
+  "score": 0.91,
+  "sha256": "f1ea66d70dac337bd9e0f6a10f811aabc8ba50f5162ebc5046d18c37f738afb6",
+  "shoulders": 0.0,
+  "skin": "#8a6a60",
+  "status": "ok",
+  "upscale": 0.22
  },
  "wd-Q59782306": {
   "bytes": 10294,
@@ -28478,6 +31862,20 @@
   "status": "ok",
   "upscale": 0.28
  },
+ "wd-Q61653603": {
+  "bytes": 8620,
+  "faceW": 0.331,
+  "flags": [],
+  "hairTop": 0.099,
+  "pack": "eu-cska_sofia",
+  "roll": -7.9,
+  "score": 0.94,
+  "sha256": "fccfd9da4c678d2f1da86ea5a1d0a8c4f65e0d2c14fa3c730a1b1671171cc37a",
+  "shoulders": 0.89,
+  "skin": "#97715c",
+  "status": "ok",
+  "upscale": 0.48
+ },
  "wd-Q616664": {
   "bytes": 11002,
   "faceW": 0.332,
@@ -28607,6 +32005,22 @@
   "skin": "#90684f",
   "status": "ok",
   "upscale": 0.41
+ },
+ "wd-Q61775066": {
+  "bytes": 14018,
+  "faceW": 0.302,
+  "flags": [
+   "hair_tips_feathered"
+  ],
+  "hairTop": 0.147,
+  "pack": "eu-dinamo_batumi",
+  "roll": -6.0,
+  "score": 0.94,
+  "sha256": "352f8b1f5583237410d03352193c215333db20b1ffa938c8476800b4249a8e8e",
+  "shoulders": 0.78,
+  "skin": "#b8866c",
+  "status": "ok",
+  "upscale": 0.37
  },
  "wd-Q61780902": {
   "bytes": 8290,
@@ -28905,6 +32319,20 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q62085569": {
+  "bytes": 13880,
+  "faceW": 0.323,
+  "flags": [],
+  "hairTop": 0.046,
+  "pack": "eu-slovan_bratislava",
+  "roll": 2.2,
+  "score": 0.93,
+  "sha256": "4422b5c682d9ec40fb6deb5a58c2d8d6e196fe697675185a4a6dbd4825c02248",
+  "shoulders": 0.88,
+  "skin": "#623d2a",
+  "status": "ok",
+  "upscale": 0.79
+ },
  "wd-Q62088452": {
   "bytes": 13992,
   "faceW": 0.315,
@@ -29099,6 +32527,22 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q6298271": {
+  "bytes": 5502,
+  "faceW": 0.323,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.16,
+  "pack": "eu-aek_athens",
+  "roll": 5.7,
+  "score": 0.93,
+  "sha256": "68f7ff2a8e78ca4568168829b071f42f0ac3cb1aaad60a16de16e654866c300e",
+  "shoulders": 0.67,
+  "skin": "#633324",
+  "status": "ok",
+  "upscale": 0.23
+ },
  "wd-Q630170": {
   "bytes": 18466,
   "faceW": 0.303,
@@ -29112,6 +32556,20 @@
   "skin": "#c28f69",
   "status": "ok",
   "upscale": 0.24
+ },
+ "wd-Q63073360": {
+  "bytes": 10858,
+  "faceW": 0.351,
+  "flags": [],
+  "hairTop": 0.089,
+  "pack": "eu-besiktas",
+  "roll": -0.3,
+  "score": 0.93,
+  "sha256": "9c485e048944db485f21731c02b78a46f85310622b20c06a094ee926364c596e",
+  "shoulders": 1.0,
+  "skin": "#ecad93",
+  "status": "ok",
+  "upscale": 1.21
  },
  "wd-Q63117980": {
   "bytes": 7680,
@@ -29200,6 +32658,22 @@
   "skin": "#b28761",
   "status": "ok",
   "upscale": 0.79
+ },
+ "wd-Q63344470": {
+  "bytes": 6166,
+  "faceW": 0.353,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.103,
+  "pack": "eu-besiktas",
+  "roll": -1.0,
+  "score": 0.95,
+  "sha256": "9ff20f9281451a66697fc3ad27bb98e53ff10af57e2fb577341355461dc5db45",
+  "shoulders": 0.68,
+  "skin": "#d6937d",
+  "status": "ok",
+  "upscale": 0.8
  },
  "wd-Q63345496": {
   "bytes": 11960,
@@ -29508,6 +32982,34 @@
   "status": "ok",
   "upscale": 0.68
  },
+ "wd-Q641425": {
+  "bytes": 10356,
+  "faceW": 0.335,
+  "flags": [],
+  "hairTop": 0.181,
+  "pack": "eu-trabzonspor",
+  "roll": 4.0,
+  "score": 0.92,
+  "sha256": "9b5b9d55b04706e4b4ee214dfa00894261302cccdde9178294dd360d8e321990",
+  "shoulders": 0.77,
+  "skin": "#826254",
+  "status": "ok",
+  "upscale": 0.26
+ },
+ "wd-Q6415174": {
+  "bytes": 9580,
+  "faceW": 0.294,
+  "flags": [],
+  "hairTop": 0.139,
+  "pack": "eu-paok",
+  "roll": -7.9,
+  "score": 0.95,
+  "sha256": "4ed6238ece5c74e358e70492e758e34f8b98648ff972c3da7af4aa8e6758ef80",
+  "shoulders": 0.96,
+  "skin": "#c19785",
+  "status": "ok",
+  "upscale": 0.57
+ },
  "wd-Q64167417": {
   "bytes": 9008,
   "faceW": 0.321,
@@ -29613,6 +33115,22 @@
   "skin": "#d5a48e",
   "status": "ok",
   "upscale": 0.71
+ },
+ "wd-Q64605847": {
+  "bytes": 8718,
+  "faceW": 0.328,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.136,
+  "pack": "eu-flora",
+  "roll": -2.4,
+  "score": 0.94,
+  "sha256": "4d578ab369a0b670eabf844e37a4013db50e1600422f27036a0e0495dcf29cf4",
+  "shoulders": 0.64,
+  "skin": "#c58f76",
+  "status": "ok",
+  "upscale": 0.3
  },
  "wd-Q64736321": {
   "bytes": 17112,
@@ -29744,6 +33262,20 @@
   "status": "ok",
   "upscale": 0.91
  },
+ "wd-Q64842515": {
+  "bytes": 12244,
+  "faceW": 0.288,
+  "flags": [],
+  "hairTop": 0.113,
+  "pack": "eu-cfr_cluj",
+  "roll": 1.0,
+  "score": 0.9,
+  "sha256": "6e0092ddffdf1bfcd85e688f25a75696570b0cabd4190f4d397878395fe680db",
+  "shoulders": 0.48,
+  "skin": "#e7b79d",
+  "status": "ok",
+  "upscale": 0.22
+ },
  "wd-Q64863379": {
   "bytes": 11846,
   "faceW": 0.281,
@@ -29789,6 +33321,34 @@
   "skin": "#a48157",
   "status": "ok",
   "upscale": 0.14
+ },
+ "wd-Q6509762": {
+  "bytes": 15462,
+  "faceW": 0.318,
+  "flags": [],
+  "hairTop": 0.123,
+  "pack": "eu-besiktas",
+  "roll": -2.3,
+  "score": 0.93,
+  "sha256": "6578b5958f0053490931df2619746148e93cd6c5c171ec3f9b0698a7a0d0d929",
+  "shoulders": 0.76,
+  "skin": "#ad7a71",
+  "status": "ok",
+  "upscale": 0.24
+ },
+ "wd-Q65131685": {
+  "bytes": 15946,
+  "faceW": 0.327,
+  "flags": [],
+  "hairTop": 0.074,
+  "pack": "eu-panathinaikos",
+  "roll": 1.9,
+  "score": 0.92,
+  "sha256": "2d247cd236e77482fb557d94378ef81015668cb0fe44ca30e05f4d6eb691e701",
+  "shoulders": 0.86,
+  "skin": "#c58678",
+  "status": "ok",
+  "upscale": 0.24
  },
  "wd-Q65205090": {
   "bytes": 9882,
@@ -29908,6 +33468,52 @@
   "status": "ok",
   "upscale": 0.45
  },
+ "wd-Q65552955": {
+  "bytes": 11332,
+  "faceW": 0.318,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.077,
+  "pack": "eu-rapid_wien",
+  "roll": 1.1,
+  "score": 0.89,
+  "sha256": "2c681d2913d3d098927b7bea1f611c6e24d6bc409dacde81073fd247bb1f6a9a",
+  "shoulders": 0.68,
+  "skin": "#af816c",
+  "status": "ok",
+  "upscale": 0.18
+ },
+ "wd-Q65557978": {
+  "bytes": 11362,
+  "faceW": 0.3,
+  "flags": [
+   "scaled_for_hair"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-cska_sofia",
+  "roll": -6.8,
+  "score": 0.91,
+  "sha256": "a8c44c1a9eb80ac0beb3638c5a89752825d009e41eaa11f3d803898b1f48b7bf",
+  "shoulders": 1.0,
+  "skin": "#766153",
+  "status": "ok",
+  "upscale": 0.42
+ },
+ "wd-Q65558382": {
+  "bytes": 9400,
+  "faceW": 0.321,
+  "flags": [],
+  "hairTop": 0.13,
+  "pack": "eu-craiova",
+  "roll": -1.2,
+  "score": 0.94,
+  "sha256": "db432bb8ce22e8e8a63a8fd6df03880afd4967563b3e97c24873f6b1f63061ae",
+  "shoulders": 0.9,
+  "skin": "#b88568",
+  "status": "ok",
+  "upscale": 0.76
+ },
  "wd-Q655664": {
   "bytes": 13304,
   "faceW": 0.319,
@@ -29996,6 +33602,20 @@
   "status": "ok",
   "upscale": 0.67
  },
+ "wd-Q65766558": {
+  "bytes": 10922,
+  "faceW": 0.33,
+  "flags": [],
+  "hairTop": 0.073,
+  "pack": "eu-celje",
+  "roll": -0.4,
+  "score": 0.92,
+  "sha256": "bcc70e42fda6f4d6d118b01698e11c45c01c1e189f4a89c45f8c184923f71033",
+  "shoulders": 1.0,
+  "skin": "#805f45",
+  "status": "ok",
+  "upscale": 1.23
+ },
  "wd-Q65768313": {
   "bytes": 6992,
   "faceW": 0.252,
@@ -30023,6 +33643,20 @@
   "skin": "#8f5d3f",
   "status": "ok",
   "upscale": 0.41
+ },
+ "wd-Q65948503": {
+  "bytes": 12408,
+  "faceW": 0.312,
+  "flags": [],
+  "hairTop": 0.09,
+  "pack": "eu-basel",
+  "roll": 1.2,
+  "score": 0.95,
+  "sha256": "31b7e86534319883b330b85cfe34d6dd0877dfc1114939df034e13be50655f37",
+  "shoulders": 0.95,
+  "skin": "#b76f4c",
+  "status": "ok",
+  "upscale": 0.33
  },
  "wd-Q65948595": {
   "bytes": 14248,
@@ -30198,6 +33832,20 @@
   "skin": "#925d4f",
   "status": "ok",
   "upscale": 0.28
+ },
+ "wd-Q66124553": {
+  "bytes": 11756,
+  "faceW": 0.307,
+  "flags": [],
+  "hairTop": 0.05,
+  "pack": "eu-zalgiris",
+  "roll": -12.4,
+  "score": 0.93,
+  "sha256": "7455e99eca0313712683807e701ea746b2a9b0c0ed83566fe7d6eac236449e94",
+  "shoulders": 0.73,
+  "skin": "#925d42",
+  "status": "ok",
+  "upscale": 0.49
  },
  "wd-Q66124949": {
   "bytes": 10288,
@@ -30539,6 +34187,20 @@
   "status": "ok",
   "upscale": 0.4
  },
+ "wd-Q66845364": {
+  "bytes": 7698,
+  "faceW": 0.343,
+  "flags": [],
+  "hairTop": 0.163,
+  "pack": "eu-elfsborg",
+  "roll": 1.5,
+  "score": 0.94,
+  "sha256": "512fe7520d8f39085e5fc80dcc728ee729ed0cd072e7a08e646b00228659ac8d",
+  "shoulders": 0.78,
+  "skin": "#cba09a",
+  "status": "ok",
+  "upscale": 0.52
+ },
  "wd-Q66973691": {
   "bytes": 9572,
   "faceW": 0.304,
@@ -30668,6 +34330,20 @@
   "skin": "#785655",
   "status": "ok",
   "upscale": 0.48
+ },
+ "wd-Q67519210": {
+  "bytes": 13800,
+  "faceW": 0.305,
+  "flags": [],
+  "hairTop": 0.11,
+  "pack": "eu-levski",
+  "roll": -1.5,
+  "score": 0.92,
+  "sha256": "ebacba57be7307799155a7a5653803c7db2997a53229c218c569fd12fd5327b2",
+  "shoulders": 0.96,
+  "skin": "#c1654e",
+  "status": "ok",
+  "upscale": 0.49
  },
  "wd-Q6756582": {
   "bytes": 9094,
@@ -30878,6 +34554,20 @@
   "status": "ok",
   "upscale": 0.64
  },
+ "wd-Q6835733": {
+  "bytes": 12234,
+  "faceW": 0.298,
+  "flags": [],
+  "hairTop": 0.158,
+  "pack": "eu-zilina",
+  "roll": 1.4,
+  "score": 0.9,
+  "sha256": "ba9611cc91943229cf74da81debf52a653a0df0a038da9f9d7c9c2e6fed87e3a",
+  "shoulders": 0.64,
+  "skin": "#9e6751",
+  "status": "ok",
+  "upscale": 0.19
+ },
  "wd-Q68362571": {
   "bytes": 13904,
   "faceW": 0.337,
@@ -30919,6 +34609,20 @@
   "skin": "#c09577",
   "status": "ok",
   "upscale": 0.29
+ },
+ "wd-Q6860599": {
+  "bytes": 11860,
+  "faceW": 0.327,
+  "flags": [],
+  "hairTop": 0.07,
+  "pack": "eu-borac",
+  "roll": -8.3,
+  "score": 0.93,
+  "sha256": "d488d3538a6eebd40b7de791a463a103f0a85eb2ad2cee0e98baef9dfa68fc13",
+  "shoulders": 0.78,
+  "skin": "#ecc1aa",
+  "status": "ok",
+  "upscale": 0.31
  },
  "wd-Q68607008": {
   "bytes": 13766,
@@ -31018,6 +34722,20 @@
   "status": "ok",
   "upscale": 0.67
  },
+ "wd-Q69523791": {
+  "bytes": 17874,
+  "faceW": 0.318,
+  "flags": [],
+  "hairTop": 0.151,
+  "pack": "eu-besiktas",
+  "roll": 2.5,
+  "score": 0.93,
+  "sha256": "faf694444ed687dc9f701a151edd34f79e2f9c81205c5953b063916218e79baf",
+  "shoulders": 0.69,
+  "skin": "#7f6161",
+  "status": "ok",
+  "upscale": 0.31
+ },
  "wd-Q69656941": {
   "bytes": 3946,
   "faceW": 0.243,
@@ -31049,6 +34767,22 @@
   "skin": "#dad5e7",
   "status": "ok",
   "upscale": 0.26
+ },
+ "wd-Q69760022": {
+  "bytes": 12220,
+  "faceW": 0.308,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.075,
+  "pack": "eu-rapid_wien",
+  "roll": -2.8,
+  "score": 0.94,
+  "sha256": "489a81a55594712e26bd16c4a45807aba0e143a27377fe51377199f70c55a9e1",
+  "shoulders": 1.0,
+  "skin": "#8a6751",
+  "status": "ok",
+  "upscale": 0.71
  },
  "wd-Q69812902": {
   "bytes": 11912,
@@ -31240,6 +34974,48 @@
   "skin": "#986c5b",
   "status": "ok",
   "upscale": 0.48
+ },
+ "wd-Q7179088": {
+  "bytes": 10324,
+  "faceW": 0.289,
+  "flags": [],
+  "hairTop": 0.148,
+  "pack": "eu-aek_athens",
+  "roll": -7.0,
+  "score": 0.94,
+  "sha256": "af3afd3f060667d08ab0bfbeaecbafdf9dc23b2b1fe4dacb672b3225d399f4f3",
+  "shoulders": 0.8,
+  "skin": "#b79879",
+  "status": "ok",
+  "upscale": 0.71
+ },
+ "wd-Q7191933": {
+  "bytes": 9094,
+  "faceW": 0.293,
+  "flags": [],
+  "hairTop": 0.175,
+  "pack": "eu-apoel",
+  "roll": 1.2,
+  "score": 0.94,
+  "sha256": "1444bcad618796a69c1a41b26af2223f5b1d1bff62ba1d55b4e7bf9efb70aac3",
+  "shoulders": 0.57,
+  "skin": "#cf7e61",
+  "status": "ok",
+  "upscale": 0.52
+ },
+ "wd-Q72091732": {
+  "bytes": 11058,
+  "faceW": 0.335,
+  "flags": [],
+  "hairTop": 0.074,
+  "pack": "eu-panathinaikos",
+  "roll": 0.9,
+  "score": 0.93,
+  "sha256": "f2221ea12a68c250d1207e6a873649a5d48c947b3469339cc6664205112818c7",
+  "shoulders": 0.93,
+  "skin": "#c29180",
+  "status": "ok",
+  "upscale": 0.95
  },
  "wd-Q72134904": {
   "bytes": 14794,
@@ -31434,6 +35210,22 @@
   "status": "ok",
   "upscale": 0.39
  },
+ "wd-Q7381020": {
+  "bytes": 7488,
+  "faceW": 0.346,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.113,
+  "pack": "eu-trabzonspor",
+  "roll": -5.4,
+  "score": 0.95,
+  "sha256": "0a5bce938edad3005315831bf09b09368f307221ac3e6dfc0b41b13d57736e54",
+  "shoulders": 0.61,
+  "skin": "#ecb491",
+  "status": "ok",
+  "upscale": 0.48
+ },
  "wd-Q73825355": {
   "bytes": 9584,
   "faceW": 0.299,
@@ -31492,6 +35284,34 @@
   "status": "ok",
   "upscale": 0.2
  },
+ "wd-Q74681891": {
+  "bytes": 22798,
+  "faceW": 0.299,
+  "flags": [],
+  "hairTop": 0.09,
+  "pack": "eu-trabzonspor",
+  "roll": 2.8,
+  "score": 0.91,
+  "sha256": "2c8d7272765910133d2c08e205b5054eecc73d40013483c1e65a198a5c6b64db",
+  "shoulders": 0.65,
+  "skin": "#c49983",
+  "status": "ok",
+  "upscale": 0.27
+ },
+ "wd-Q74683680": {
+  "bytes": 9068,
+  "faceW": 0.319,
+  "flags": [],
+  "hairTop": 0.152,
+  "pack": "eu-qarabag",
+  "roll": 7.0,
+  "score": 0.95,
+  "sha256": "6dec45c06fb251fa864f4258a4bea22afef59698f4cbfd4d98bb910c03e38e4f",
+  "shoulders": 0.68,
+  "skin": "#e1b487",
+  "status": "ok",
+  "upscale": 0.36
+ },
  "wd-Q75019636": {
   "bytes": 12158,
   "faceW": 0.311,
@@ -31508,6 +35328,20 @@
   "status": "ok",
   "upscale": 0.21
  },
+ "wd-Q7564054": {
+  "bytes": 13328,
+  "faceW": 0.313,
+  "flags": [],
+  "hairTop": 0.113,
+  "pack": "eu-paok",
+  "roll": 1.0,
+  "score": 0.9,
+  "sha256": "f4ec9fa9223ec972ec48c0f76be8cacc12d1321008b3570b0e742f20f8ae795f",
+  "shoulders": 0.71,
+  "skin": "#8a614f",
+  "status": "ok",
+  "upscale": 0.19
+ },
  "wd-Q7599020": {
   "bytes": 10692,
   "faceW": 0.294,
@@ -31521,6 +35355,23 @@
   "skin": "#ddaf91",
   "status": "ok",
   "upscale": 0.64
+ },
+ "wd-Q7606257": {
+  "bytes": 5582,
+  "faceW": 0.258,
+  "flags": [
+   "hair_tips_feathered",
+   "short_source"
+  ],
+  "hairTop": 0.146,
+  "pack": "eu-borac",
+  "roll": -3.9,
+  "score": 0.84,
+  "sha256": "ceced5164ffcd8f79b040fb718f422fed177da8f3ccf7df75c010db5d63ec0de",
+  "shoulders": 0.0,
+  "skin": "#9e3d1d",
+  "status": "ok",
+  "upscale": 0.17
  },
  "wd-Q763465": {
   "bytes": 8866,
@@ -31569,6 +35420,22 @@
   "skin": "#ca9373",
   "status": "ok",
   "upscale": 0.77
+ },
+ "wd-Q77237821": {
+  "bytes": 6716,
+  "faceW": 0.328,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.096,
+  "pack": "eu-panathinaikos",
+  "roll": 3.8,
+  "score": 0.94,
+  "sha256": "067ab8914a98a18a0f30388ebd19db12b30d23b4f025f14c43465e5d2f9ace5a",
+  "shoulders": 0.57,
+  "skin": "#af8f82",
+  "status": "ok",
+  "upscale": 0.29
  },
  "wd-Q77669999": {
   "bytes": 14654,
@@ -31701,6 +35568,20 @@
   "status": "ok",
   "upscale": 0.23
  },
+ "wd-Q7929652": {
+  "bytes": 13400,
+  "faceW": 0.34,
+  "flags": [],
+  "hairTop": 0.067,
+  "pack": "eu-banik_ostrava",
+  "roll": -2.7,
+  "score": 0.91,
+  "sha256": "ad5812c45bfec98131a09602a03fefe2be74c1d73a17cdb9131bdf8fd584f160",
+  "shoulders": 0.81,
+  "skin": "#c87e64",
+  "status": "ok",
+  "upscale": 0.22
+ },
  "wd-Q79408786": {
   "bytes": 9398,
   "faceW": 0.326,
@@ -31790,6 +35671,22 @@
   "skin": "#c38d7f",
   "status": "ok",
   "upscale": 0.2
+ },
+ "wd-Q8029117": {
+  "bytes": 7170,
+  "faceW": 0.329,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.152,
+  "pack": "eu-puskas",
+  "roll": -0.9,
+  "score": 0.95,
+  "sha256": "b4cf9f876e2a9de10c6b8eb3b0793dddf82eb83f43f43fbd07faf52953603bd7",
+  "shoulders": 0.99,
+  "skin": "#f1c26a",
+  "status": "ok",
+  "upscale": 0.52
  },
  "wd-Q80314837": {
   "bytes": 14206,
@@ -31962,6 +35859,20 @@
   "skin": "#996f6c",
   "status": "ok",
   "upscale": 0.85
+ },
+ "wd-Q829448": {
+  "bytes": 11756,
+  "faceW": 0.294,
+  "flags": [],
+  "hairTop": 0.154,
+  "pack": "eu-shkendija",
+  "roll": -6.2,
+  "score": 0.94,
+  "sha256": "eee1e1fef09f92b6688c0cb99d8503c4e8da5b93b1ab760b2fb08930a076110a",
+  "shoulders": 0.9,
+  "skin": "#c09381",
+  "status": "ok",
+  "upscale": 0.53
  },
  "wd-Q83264648": {
   "bytes": 11988,
@@ -32216,6 +36127,20 @@
   "status": "ok",
   "upscale": 0.69
  },
+ "wd-Q85741648": {
+  "bytes": 8392,
+  "faceW": 0.311,
+  "flags": [],
+  "hairTop": 0.093,
+  "pack": "eu-puskas",
+  "roll": -7.5,
+  "score": 0.95,
+  "sha256": "2827a6d80c897dfaa39163d507104b51f3cf1939a9509ff5c86cfa679cd00698",
+  "shoulders": 0.79,
+  "skin": "#bc7b62",
+  "status": "ok",
+  "upscale": 0.34
+ },
  "wd-Q85786276": {
   "bytes": 7718,
   "faceW": 0.349,
@@ -32231,6 +36156,20 @@
   "skin": "#a55e4d",
   "status": "ok",
   "upscale": 0.27
+ },
+ "wd-Q85797565": {
+  "bytes": 7088,
+  "faceW": 0.326,
+  "flags": [],
+  "hairTop": 0.164,
+  "pack": "eu-shamrock",
+  "roll": -4.0,
+  "score": 0.94,
+  "sha256": "845d5f138172243a7b6b53168474d90f0376af8a83301db4902ac9adae724a39",
+  "shoulders": 0.65,
+  "skin": "#b5796e",
+  "status": "ok",
+  "upscale": 0.57
  },
  "wd-Q85884126": {
   "bytes": 6994,
@@ -32465,6 +36404,22 @@
   "status": "ok",
   "upscale": 0.32
  },
+ "wd-Q87457865": {
+  "bytes": 8658,
+  "faceW": 0.35,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.081,
+  "pack": "eu-jagiellonia",
+  "roll": 3.3,
+  "score": 0.93,
+  "sha256": "3f63c7addb7bb6940d8e394fed06713686b69e958baaf0e32a1521530087372e",
+  "shoulders": 0.0,
+  "skin": "#bd8b93",
+  "status": "ok",
+  "upscale": 0.49
+ },
  "wd-Q87715532": {
   "bytes": 10126,
   "faceW": 0.336,
@@ -32637,6 +36592,20 @@
   "status": "ok",
   "upscale": 0.26
  },
+ "wd-Q929773": {
+  "bytes": 8150,
+  "faceW": 0.306,
+  "flags": [],
+  "hairTop": 0.171,
+  "pack": "eu-flora",
+  "roll": -11.8,
+  "score": 0.93,
+  "sha256": "615b8ca6b77f87e01b9509cf7561e80a98307bfaaf1b1fac8608d880c20c4ddd",
+  "shoulders": 0.45,
+  "skin": "#ba9f87",
+  "status": "ok",
+  "upscale": 0.49
+ },
  "wd-Q93555": {
   "bytes": 9796,
   "faceW": 0.31,
@@ -32729,6 +36698,38 @@
   "skin": "#b98577",
   "status": "ok",
   "upscale": 0.26
+ },
+ "wd-Q94730449": {
+  "bytes": 5254,
+  "faceW": 0.292,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.143,
+  "pack": "eu-paok",
+  "roll": 0.1,
+  "score": 0.92,
+  "sha256": "e5c3cd73c56e5976c10da9eb2f24ff05c4fee1ba87c6d025b8436c3fdafe9343",
+  "shoulders": 0.0,
+  "skin": "#a97a67",
+  "status": "ok",
+  "upscale": 0.22
+ },
+ "wd-Q956961": {
+  "bytes": 10244,
+  "faceW": 0.325,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.106,
+  "pack": "eu-omonia",
+  "roll": 3.4,
+  "score": 0.89,
+  "sha256": "65973d61ecef06a293971c6c4a73b529df3ac27d26dfdd72e896504237fccb5c",
+  "shoulders": 0.64,
+  "skin": "#c48d81",
+  "status": "ok",
+  "upscale": 0.18
  },
  "wd-Q96036411": {
   "bytes": 12280,
@@ -32823,6 +36824,20 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q96207443": {
+  "bytes": 9684,
+  "faceW": 0.289,
+  "flags": [],
+  "hairTop": 0.13,
+  "pack": "eu-besiktas",
+  "roll": -3.1,
+  "score": 0.94,
+  "sha256": "ccd23492d1aefa9681220e1c676f6594178554d228202dc977a21ed338684f57",
+  "shoulders": 0.94,
+  "skin": "#88553a",
+  "status": "ok",
+  "upscale": 0.51
+ },
  "wd-Q96211488": {
   "bytes": 12512,
   "faceW": 0.311,
@@ -32866,6 +36881,20 @@
   "skin": "#8f7571",
   "status": "ok",
   "upscale": 0.43
+ },
+ "wd-Q96376358": {
+  "bytes": 8040,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.104,
+  "pack": "eu-paok",
+  "roll": -10.2,
+  "score": 0.92,
+  "sha256": "79e167348e9a7a682fb5b4ee77c135c70efadd95a7f1f8c155e1b4ec43072ebc",
+  "shoulders": 0.28,
+  "skin": "#a97853",
+  "status": "ok",
+  "upscale": 0.74
  },
  "wd-Q96391665": {
   "bytes": 15138,
@@ -33075,6 +37104,20 @@
   "status": "ok",
   "upscale": 0.33
  },
+ "wd-Q97201177": {
+  "bytes": 14010,
+  "faceW": 0.322,
+  "flags": [],
+  "hairTop": 0.068,
+  "pack": "eu-sutjeska",
+  "roll": -1.6,
+  "score": 0.92,
+  "sha256": "9f7327041ac10e21db9ced852dc85ea65ca5ead604c65549d65ef7be31c976b5",
+  "shoulders": 0.96,
+  "skin": "#7f6456",
+  "status": "ok",
+  "upscale": 0.88
+ },
  "wd-Q97209711": {
   "bytes": 9518,
   "faceW": 0.298,
@@ -33206,6 +37249,20 @@
   "skin": "#ae6f5d",
   "status": "ok",
   "upscale": 0.63
+ },
+ "wd-Q97400347": {
+  "bytes": 8084,
+  "faceW": 0.33,
+  "flags": [],
+  "hairTop": 0.114,
+  "pack": "eu-craiova",
+  "roll": -2.5,
+  "score": 0.94,
+  "sha256": "7138290c5e325ca66e1fa413771ca5ec45714e60ee381ac8a0c64de68ef1c193",
+  "shoulders": 0.71,
+  "skin": "#a67960",
+  "status": "ok",
+  "upscale": 0.85
  },
  "wd-Q97404267": {
   "bytes": 12366,
@@ -33425,6 +37482,22 @@
   "status": "ok",
   "upscale": 0.23
  },
+ "wd-Q981409": {
+  "bytes": 10664,
+  "faceW": 0.33,
+  "flags": [
+   "hair_tips_feathered"
+  ],
+  "hairTop": 0.141,
+  "pack": "eu-zalgiris",
+  "roll": 1.5,
+  "score": 0.94,
+  "sha256": "048a53927ba46d909c3df5b05704c80aafe8de81fa0c135fee725cd17a4ede8c",
+  "shoulders": 0.63,
+  "skin": "#d08374",
+  "status": "ok",
+  "upscale": 0.85
+ },
  "wd-Q98169045": {
   "bytes": 7342,
   "faceW": 0.323,
@@ -33452,6 +37525,23 @@
   "skin": "#e3b29d",
   "status": "ok",
   "upscale": 0.25
+ },
+ "wd-Q98370402": {
+  "bytes": 9626,
+  "faceW": 0.161,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
+  "pack": "eu-jagiellonia",
+  "roll": 1.2,
+  "score": 0.95,
+  "sha256": "416dfc1556b6c74c3793a4e70f9912de93b428a47085b161bbdcd14417ea2167",
+  "shoulders": 0.0,
+  "skin": "#b3875a",
+  "status": "ok",
+  "upscale": 0.16
  },
  "wd-Q98380985": {
   "bytes": 12638,
@@ -33623,6 +37713,20 @@
   "status": "ok",
   "upscale": 0.25
  },
+ "wd-Q99206233": {
+  "bytes": 9932,
+  "faceW": 0.301,
+  "flags": [],
+  "hairTop": 0.146,
+  "pack": "eu-jagiellonia",
+  "roll": -8.0,
+  "score": 0.94,
+  "sha256": "3e8caa45b3c1e5a8665b8ab7768f952fd697eb533e871bb7bfdfa65391d5d4f7",
+  "shoulders": 0.73,
+  "skin": "#e5bd94",
+  "status": "ok",
+  "upscale": 0.29
+ },
  "wd-Q99243784": {
   "bytes": 13314,
   "faceW": 0.322,
@@ -33636,6 +37740,20 @@
   "skin": "#c48f78",
   "status": "ok",
   "upscale": 0.35
+ },
+ "wd-Q99292168": {
+  "bytes": 13000,
+  "faceW": 0.331,
+  "flags": [],
+  "hairTop": 0.062,
+  "pack": "eu-rapid_wien",
+  "roll": -14.6,
+  "score": 0.92,
+  "sha256": "f942e4329b7300d917245cc38f61f8d32530b083e3bf98ed54a1da82cd8aeb26",
+  "shoulders": 0.92,
+  "skin": "#b28f76",
+  "status": "ok",
+  "upscale": 0.29
  },
  "wd-Q99304192": {
   "bytes": 12830,
@@ -33664,6 +37782,20 @@
   "skin": "#765c52",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q99337064": {
+  "bytes": 10866,
+  "faceW": 0.316,
+  "flags": [],
+  "hairTop": 0.114,
+  "pack": "eu-qarabag",
+  "roll": -1.0,
+  "score": 0.94,
+  "sha256": "1360b66795de03e1b7d850a775b7698f4d99a40b3e19d960f33f96837800d3ce",
+  "shoulders": 0.78,
+  "skin": "#f2905e",
+  "status": "ok",
+  "upscale": 0.41
  },
  "wd-Q99352518": {
   "bytes": 7936,
