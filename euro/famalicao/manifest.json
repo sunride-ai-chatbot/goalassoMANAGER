@@ -544,6 +544,18 @@
    "wikidata": "https://www.wikidata.org/wiki/Q136388980",
    "label": "Mathis Jangeal",
    "birthYear": 2008
+  },
+  {
+   "he": "Patricio Salas",
+   "en": "Patricio Salas",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q122971913",
+   "wikidata": "https://www.wikidata.org/wiki/Q122971913",
+   "label": "Patricio Salas",
+   "birthYear": 2004
   }
  ]
 }

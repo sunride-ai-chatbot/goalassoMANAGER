@@ -882,6 +882,30 @@
    "age": 25,
    "candidates": [],
    "match": "ambiguous: Q141321264:2008"
+  },
+  {
+   "he": "סטליוס אנדראו",
+   "en": "Stelios Andreou",
+   "pos": "DF",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q105124268",
+   "wikidata": "https://www.wikidata.org/wiki/Q105124268",
+   "label": "Stelios Andreou",
+   "birthYear": 2002
+  },
+  {
+   "he": "Samuel Amissah",
+   "en": "Samuel Amissah",
+   "pos": "DF",
+   "age": 19,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q138842781",
+   "wikidata": "https://www.wikidata.org/wiki/Q138842781",
+   "label": "Samuel Amissah",
+   "birthYear": 2007
   }
  ]
 }

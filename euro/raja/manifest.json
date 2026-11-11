@@ -735,6 +735,18 @@
    "wikidata": "https://www.wikidata.org/wiki/Q53828737",
    "label": "Ayoub El Amloud",
    "birthYear": 1994
+  },
+  {
+   "he": "Younes Bakiz",
+   "en": "Younes Bakiz",
+   "pos": "MF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q107642866",
+   "wikidata": "https://www.wikidata.org/wiki/Q107642866",
+   "label": "Younes Bakiz",
+   "birthYear": 1999
   }
  ]
 }

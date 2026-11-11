@@ -1220,6 +1220,54 @@
    "wikidata": "https://www.wikidata.org/wiki/Q374523",
    "label": "Nordin Amrabat",
    "birthYear": 1987
+  },
+  {
+   "he": "Sem van Duijn",
+   "en": "Sem van Duijn",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q129357311",
+   "wikidata": "https://www.wikidata.org/wiki/Q129357311",
+   "label": "Sem van Duijn",
+   "birthYear": 2004
+  },
+  {
+   "he": "Jakov Medić",
+   "en": "Jakov Medić",
+   "pos": "DF",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q85537031",
+   "wikidata": "https://www.wikidata.org/wiki/Q85537031",
+   "label": "Jakov Medić",
+   "birthYear": 1998
+  },
+  {
+   "he": "Marius Broholm",
+   "en": "Marius Broholm",
+   "pos": "FW",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q111907468",
+   "wikidata": "https://www.wikidata.org/wiki/Q111907468",
+   "label": "Marius Broholm",
+   "birthYear": 2004
+  },
+  {
+   "he": "ארטם סטפנוב",
+   "en": "Artem Stepanov",
+   "pos": "FW",
+   "age": 19,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q131339351",
+   "wikidata": "https://www.wikidata.org/wiki/Q131339351",
+   "label": "Artem Stepanov",
+   "birthYear": 2007
   }
  ]
 }

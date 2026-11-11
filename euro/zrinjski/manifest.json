@@ -437,6 +437,14 @@
    "wikidata": "https://www.wikidata.org/wiki/Q7541150",
    "label": "Slobodan Jakovljević",
    "birthYear": 1989
+  },
+  {
+   "he": "Ivica Vidović",
+   "en": "Ivica Vidović",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q114705816:2002"
   }
  ]
 }

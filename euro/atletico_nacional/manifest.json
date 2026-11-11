@@ -785,6 +785,63 @@
    "wikidata": "https://www.wikidata.org/wiki/Q6167739",
    "label": "Monda Tesillo",
    "birthYear": 1990
+  },
+  {
+   "he": "Elías Cabrera",
+   "en": "Elías Cabrera",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q125271187",
+   "wikidata": "https://www.wikidata.org/wiki/Q125271187",
+   "label": "Elías Cabrera",
+   "birthYear": 2003
+  },
+  {
+   "he": "Nicolás Rodríguez",
+   "en": "Nicolás Rodríguez",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [
+    {
+     "title": "File:Nicolás Rodríguez.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Rodr%C3%ADguez.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Nicol%C3%A1s_Rodr%C3%ADguez.jpg/960px-Nicol%C3%A1s_Rodr%C3%ADguez.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1650,
+     "height": 2200,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Keiteay",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-08-02 18:21:01",
+     "file": "11-Q131583776-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q131583776",
+   "wikidata": "https://www.wikidata.org/wiki/Q131583776",
+   "label": "Nicolás Rodríguez",
+   "birthYear": 2004
+  },
+  {
+   "he": "Cristian Arango",
+   "en": "Cristian Arango",
+   "pos": "FW",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q16147082",
+   "wikidata": "https://www.wikidata.org/wiki/Q16147082",
+   "label": "Cristian Arango",
+   "birthYear": 1995
   }
  ]
 }

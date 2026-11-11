@@ -1479,6 +1479,104 @@
    "wikidata": "https://www.wikidata.org/wiki/Q5241591",
    "label": "Davide Zappacosta",
    "birthYear": 1992
+  },
+  {
+   "he": "ג'ונתן רואו",
+   "en": "Jonathan Rowe",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [
+    {
+     "title": "File:Rowe asse om 2425.png",
+     "page": "https://commons.wikimedia.org/wiki/File:Rowe_asse_om_2425.png",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/95/Rowe_asse_om_2425.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/png",
+     "width": 686,
+     "height": 821,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Paté kroute",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2024-12-08",
+     "file": "05-Q110320890-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q110320890",
+   "wikidata": "https://www.wikidata.org/wiki/Q110320890",
+   "label": "Jonathan Rowe",
+   "birthYear": 2003
+  },
+  {
+   "he": "אליף אלמאס",
+   "en": "Eljif Elmas",
+   "pos": "MF",
+   "age": 26,
+   "candidates": [
+    {
+     "title": "File:Elif Elmas 2021.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Elif_Elmas_2021.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Elif_Elmas_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 913,
+     "height": 1161,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Антон Зайцев",
+     "credit": "https://www.soccer.ru/galery/1293136/photo/938941",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-11-24",
+     "file": "08-Q25409292-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:FC Salzburg gegen SSC Napoli (Championsleague 3. Runde 23. Oktober 2019) 28.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:FC_Salzburg_gegen_SSC_Napoli_(Championsleague_3._Runde_23._Oktober_2019)_28.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/FC_Salzburg_gegen_SSC_Napoli_%28Championsleague_3._Runde_23._Oktober_2019%29_28.jpg/960px-FC_Salzburg_gegen_SSC_Napoli_%28Championsleague_3._Runde_23._Oktober_2019%29_28.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3458,
+     "height": 1798,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Werner100359",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-10-23 18:48:21",
+     "file": "08-Q25409292-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q25409292",
+   "wikidata": "https://www.wikidata.org/wiki/Q25409292",
+   "label": "Eljif Elmas",
+   "birthYear": 1999
+  },
+  {
+   "he": "תומאס כריסטנסן",
+   "en": "Thomas Kristensen",
+   "pos": "DF",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q107739292",
+   "wikidata": "https://www.wikidata.org/wiki/Q107739292",
+   "label": "Thomas T. Kristensen",
+   "birthYear": 2002
   }
  ]
 }

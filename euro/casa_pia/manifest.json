@@ -419,6 +419,62 @@
    "wikidata": "https://www.wikidata.org/wiki/Q518780",
    "label": "André Geraldes",
    "birthYear": 1991
+  },
+  {
+   "he": "Aymen Zouin",
+   "en": "Aymen Zouin",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q141321282:2006"
+  },
+  {
+   "he": "Lipe",
+   "en": "Lipe",
+   "pos": "DF",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q115804275",
+   "wikidata": "https://www.wikidata.org/wiki/Q115804275",
+   "label": "Lipe",
+   "birthYear": 2002
+  },
+  {
+   "he": "João Rego",
+   "en": "João Rego",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q123274546",
+   "wikidata": "https://www.wikidata.org/wiki/Q123274546",
+   "label": "João Rego",
+   "birthYear": 2005
+  },
+  {
+   "he": "Selvi Clua",
+   "en": "Selvi Clua",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q121767992",
+   "wikidata": "https://www.wikidata.org/wiki/Q121767992",
+   "label": "Selvi Clua",
+   "birthYear": 2005
+  },
+  {
+   "he": "Benjamin Pauwels",
+   "en": "Benjamin Pauwels",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q121368405",
+   "wikidata": "https://www.wikidata.org/wiki/Q121368405",
+   "label": "Benjamin Pauwels",
+   "birthYear": 2004
   }
  ]
 }

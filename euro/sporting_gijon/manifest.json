@@ -667,6 +667,75 @@
    "wikidata": "https://www.wikidata.org/wiki/Q130271281",
    "label": "Iker Martínez",
    "birthYear": 2004
+  },
+  {
+   "he": "אנדרס פרארי",
+   "en": "Andrés Ferrari",
+   "pos": "FW",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q116840725",
+   "wikidata": "https://www.wikidata.org/wiki/Q116840725",
+   "label": "Andrés Ferrari",
+   "birthYear": 2003
+  },
+  {
+   "he": "Antonio Casas",
+   "en": "Antonio Casas",
+   "pos": "FW",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q113733619",
+   "wikidata": "https://www.wikidata.org/wiki/Q113733619",
+   "label": "Antonio Manuel Casas Marín",
+   "birthYear": 2000
+  },
+  {
+   "he": "Emanuel Gularte",
+   "en": "Emanuel Gularte",
+   "pos": "DF",
+   "age": 28,
+   "candidates": [
+    {
+     "title": "File:Emanuel Gularte.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Emanuel_Gularte.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Emanuel_Gularte.jpg/960px-Emanuel_Gularte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1838,
+     "height": 2272,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Agencia de Noticias ANDES",
+     "credit": "PREMIACIÓN CAMPEONATO SUDAMERICANO SUB 20",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2017-02-11 22:21:50",
+     "file": "11-Q20020552-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q20020552",
+   "wikidata": "https://www.wikidata.org/wiki/Q20020552",
+   "label": "Emanuel Gularte",
+   "birthYear": 1997
+  },
+  {
+   "he": "אנדרס קואנקה",
+   "en": "Andrés Cuenca",
+   "pos": "DF",
+   "age": 19,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q123186203",
+   "wikidata": "https://www.wikidata.org/wiki/Q123186203",
+   "label": "Andrés Cuenca",
+   "birthYear": 2007
   }
  ]
 }

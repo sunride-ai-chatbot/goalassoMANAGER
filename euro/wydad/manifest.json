@@ -587,6 +587,14 @@
    "age": 25,
    "candidates": [],
    "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Mohammed El Jadidi",
+   "en": "Mohammed El Jadidi",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q134336690:None"
   }
  ]
 }

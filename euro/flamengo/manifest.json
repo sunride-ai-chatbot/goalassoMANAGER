@@ -1847,6 +1847,70 @@
    "wikidata": "https://www.wikidata.org/wiki/Q551192",
    "label": "Alex Sandro",
    "birthYear": 1991
+  },
+  {
+   "he": "Pedro Batista",
+   "en": "Pedro Batista",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q10321600:Luís Pedro Gomes Martins, Q57022136:Pedro de la Vega, Q577462:Ricardo Batista)"
+  },
+  {
+   "he": "Gabriel Werneck",
+   "en": "Gabriel Werneck",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q12897:Pelé)"
+  },
+  {
+   "he": "Léo Nannetti",
+   "en": "Léo Nannetti",
+   "pos": "GK",
+   "age": 19,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q140047971",
+   "wikidata": "https://www.wikidata.org/wiki/Q140047971",
+   "label": "Léo Nannetti",
+   "birthYear": 2007
+  },
+  {
+   "he": "Josmar",
+   "en": "Josmar",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q6291030:1992"
+  },
+  {
+   "he": "João Vitor",
+   "en": "João Vitor",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q113581719",
+   "wikidata": "https://www.wikidata.org/wiki/Q113581719",
+   "label": "João Vitor",
+   "birthYear": 2000
+  },
+  {
+   "he": "Jheferson",
+   "en": "Jheferson",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Gustavo Ramires",
+   "en": "Gustavo Ramires",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q197586:Fábio Alves Félix, Q2573535:Gustavo Cabrera)"
   }
  ]
 }

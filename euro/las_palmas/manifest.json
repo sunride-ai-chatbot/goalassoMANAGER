@@ -553,6 +553,30 @@
    "wikidata": "https://www.wikidata.org/wiki/Q141106444",
    "label": "Rafa Cruz",
    "birthYear": 2009
+  },
+  {
+   "he": "איוואן חיימה",
+   "en": "Iván Jaime",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q56600185",
+   "wikidata": "https://www.wikidata.org/wiki/Q56600185",
+   "label": "Iván Jaime",
+   "birthYear": 2000
+  },
+  {
+   "he": "Giovanni Bonfanti",
+   "en": "Giovanni Bonfanti",
+   "pos": "DF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q124167179",
+   "wikidata": "https://www.wikidata.org/wiki/Q124167179",
+   "label": "Giovanni Bonfanti",
+   "birthYear": 2003
   }
  ]
 }

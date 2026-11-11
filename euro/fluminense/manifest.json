@@ -1430,6 +1430,39 @@
    "wikidata": "https://www.wikidata.org/wiki/Q28113226",
    "label": "Samuel Xavier",
    "birthYear": 1990
+  },
+  {
+   "he": "Alisson",
+   "en": "Alisson",
+   "pos": "MF",
+   "age": 33,
+   "candidates": [
+    {
+     "title": "File:Alisson São Paulo.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Alisson_S%C3%A3o_Paulo.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Alisson_S%C3%A3o_Paulo.jpg/960px-Alisson_S%C3%A3o_Paulo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1834,
+     "height": 2494,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "SOCCER DIGITAL",
+     "credit": "https://www.flickr.com/photos/soccerdigital/52091354562/",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-05-22 16:23:35",
+     "file": "22-Q4727251-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q4727251",
+   "wikidata": "https://www.wikidata.org/wiki/Q4727251",
+   "label": "Alisson",
+   "birthYear": 1993
   }
  ]
 }

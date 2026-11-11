@@ -379,7 +379,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2016-10-23 15:20:16",
-     "file": "28-Q2185245-0.jpg",
+     "file": "33-Q2185245-0.jpg",
      "fromP18": true,
      "via": "p18"
     },
@@ -399,7 +399,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2020-03-05",
-     "file": "28-Q2185245-1.jpg",
+     "file": "33-Q2185245-1.jpg",
      "fromP18": false,
      "via": "category"
     },
@@ -419,7 +419,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2016-10-23 15:20:48",
-     "file": "28-Q2185245-2.jpg",
+     "file": "33-Q2185245-2.jpg",
      "fromP18": false,
      "via": "category"
     },
@@ -439,7 +439,7 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2019-03-31 00:06:32",
-     "file": "28-Q2185245-3.jpg",
+     "file": "33-Q2185245-3.jpg",
      "fromP18": false,
      "via": "category"
     },
@@ -459,7 +459,27 @@
      "restrictions": "",
      "nonFree": "",
      "date": "2019-03-30 23:58:08",
-     "file": "28-Q2185245-4.jpg",
+     "file": "33-Q2185245-4.jpg",
+     "fromP18": false,
+     "via": "category"
+    },
+    {
+     "title": "File:Strasbourg vainqueur de la Coupe de la Ligue 2019.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Strasbourg_vainqueur_de_la_Coupe_de_la_Ligue_2019.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Strasbourg_vainqueur_de_la_Coupe_de_la_Ligue_2019.jpg/960px-Strasbourg_vainqueur_de_la_Coupe_de_la_Ligue_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 4896,
+     "height": 3672,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Liondartois",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-03-31 00:24:12",
+     "file": "33-Q2185245-5.jpg",
      "fromP18": false,
      "via": "category"
     }
@@ -469,6 +489,128 @@
    "wikidata": "https://www.wikidata.org/wiki/Q2185245",
    "label": "Stefan Mitrović",
    "birthYear": 1990
+  },
+  {
+   "he": "Igor Miladinović",
+   "en": "Igor Miladinović",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [
+    {
+     "title": "File:Miladinovic asse om 2425 cdf.png",
+     "page": "https://commons.wikimedia.org/wiki/File:Miladinovic_asse_om_2425_cdf.png",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Miladinovic_asse_om_2425_cdf.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/png",
+     "width": 465,
+     "height": 697,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Paté kroute",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2024-12-22",
+     "file": "03-Q122585824-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q122585824",
+   "wikidata": "https://www.wikidata.org/wiki/Q122585824",
+   "label": "Igor Miladinović",
+   "birthYear": 2003
+  },
+  {
+   "he": "Jeh",
+   "en": "Jeh",
+   "pos": "FW",
+   "age": 26,
+   "candidates": [
+    {
+     "title": "File:Premiação Série A2 2023 - 52816858305 - Jeh.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52816858305_-_Jeh.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52816858305_-_Jeh.jpg/960px-Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52816858305_-_Jeh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2284,
+     "height": 2225,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "SOCCER DIGITAL",
+     "credit": "https://www.flickr.com/photos/soccerdigital/52816858305/",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-04-11 19:28:21",
+     "file": "04-Q117805993-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Premiação Série A2 2023 - 52816858305.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52816858305.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52816858305.jpg/960px-Premia%C3%A7%C3%A3o_S%C3%A9rie_A2_2023_-_52816858305.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 5472,
+     "height": 3648,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "SOCCER DIGITAL",
+     "credit": "https://www.flickr.com/photos/soccerdigital/52816858305/",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-04-11 19:28:21",
+     "file": "04-Q117805993-1.jpg",
+     "fromP18": false,
+     "via": "category"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q117805993",
+   "wikidata": "https://www.wikidata.org/wiki/Q117805993",
+   "label": "Jeh",
+   "birthYear": 1999
+  },
+  {
+   "he": "Erik Kojzek",
+   "en": "Erik Kojzek",
+   "pos": "FW",
+   "age": 20,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q128424232",
+   "wikidata": "https://www.wikidata.org/wiki/Q128424232",
+   "label": "Erik Kojzek",
+   "birthYear": 2006
+  },
+  {
+   "he": "Milan Aleksić",
+   "en": "Milan Aleksić",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q126137074",
+   "wikidata": "https://www.wikidata.org/wiki/Q126137074",
+   "label": "Milan Aleksić",
+   "birthYear": 2005
+  },
+  {
+   "he": "סידני לימה",
+   "en": "Sidney Lima",
+   "pos": "DF",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q128942876",
+   "wikidata": "https://www.wikidata.org/wiki/Q128942876",
+   "label": "Sidney Lima",
+   "birthYear": 1997
   }
  ]
 }

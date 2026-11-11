@@ -556,6 +556,47 @@
    "wikidata": "https://www.wikidata.org/wiki/Q120893614",
    "label": "Liam Möller",
    "birthYear": 2004
+  },
+  {
+   "he": "Jasper Samooja",
+   "en": "Jasper Samooja",
+   "pos": "GK",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q130545745:2003"
+  },
+  {
+   "he": "Leonel Montano",
+   "en": "Leonel Montano",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [
+    {
+     "title": "File:14 HJK Leonel Montano HJK vs KuPS Bolt Arena Helsinki Finland 25Oct2026 22.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:14_HJK_Leonel_Montano_HJK_vs_KuPS_Bolt_Arena_Helsinki_Finland_25Oct2026_22.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/14_HJK_Leonel_Montano_HJK_vs_KuPS_Bolt_Arena_Helsinki_Finland_25Oct2026_22.jpg/960px-14_HJK_Leonel_Montano_HJK_vs_KuPS_Bolt_Arena_Helsinki_Finland_25Oct2026_22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3217,
+     "height": 2234,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Kimberli Mäkäräinen",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-10-25 17:49:24",
+     "file": "24-Q106957242-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q106957242",
+   "wikidata": "https://www.wikidata.org/wiki/Q106957242",
+   "label": "Leonel Montano",
+   "birthYear": 1999
   }
  ]
 }

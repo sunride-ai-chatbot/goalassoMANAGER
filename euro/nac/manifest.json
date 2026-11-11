@@ -674,6 +674,18 @@
    "wikidata": "https://www.wikidata.org/wiki/Q2683463",
    "label": "Paul Gladon",
    "birthYear": 1992
+  },
+  {
+   "he": "Gabriel Misehouy",
+   "en": "Gabriel Misehouy",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q110991987",
+   "wikidata": "https://www.wikidata.org/wiki/Q110991987",
+   "label": "Gabriel Misehouy",
+   "birthYear": 2005
   }
  ]
 }

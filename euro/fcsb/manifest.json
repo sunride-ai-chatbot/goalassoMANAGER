@@ -1058,6 +1058,18 @@
    "wikidata": "https://www.wikidata.org/wiki/Q4007648",
    "label": "Valentin Crețu",
    "birthYear": 1989
+  },
+  {
+   "he": "פול גריטה",
+   "en": "Arnold Garita",
+   "pos": "FW",
+   "age": 31,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q18206089",
+   "wikidata": "https://www.wikidata.org/wiki/Q18206089",
+   "label": "Paul Garita",
+   "birthYear": 1995
   }
  ]
 }

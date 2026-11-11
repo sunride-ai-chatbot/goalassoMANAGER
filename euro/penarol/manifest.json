@@ -693,6 +693,46 @@
    "wikidata": "https://www.wikidata.org/wiki/Q136479106",
    "label": "Julio Daguer",
    "birthYear": 2008
+  },
+  {
+   "he": "Luis Angulo",
+   "en": "Luis Angulo",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q106883851",
+   "wikidata": "https://www.wikidata.org/wiki/Q106883851",
+   "label": "Luis Miguel Angulo",
+   "birthYear": 2004
+  },
+  {
+   "he": "Leonel Jaime",
+   "en": "Leonel Jaime",
+   "pos": "FW",
+   "age": 20,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q138975438",
+   "wikidata": "https://www.wikidata.org/wiki/Q138975438",
+   "label": "Cristian Jaime",
+   "birthYear": 2006
+  },
+  {
+   "he": "Brian Barboza",
+   "en": "Brian Barboza",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q140053386:2008"
+  },
+  {
+   "he": "Gonzalo Gelini",
+   "en": "Gonzalo Gelini",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q137998597:2006"
   }
  ]
 }

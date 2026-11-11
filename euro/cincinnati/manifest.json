@@ -1471,6 +1471,30 @@
    "wikidata": "https://www.wikidata.org/wiki/Q24005542",
    "label": "Kyle Smith",
    "birthYear": 1992
+  },
+  {
+   "he": "Fabian Mrozek",
+   "en": "Fabian Mrozek",
+   "pos": "GK",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q115866218",
+   "wikidata": "https://www.wikidata.org/wiki/Q115866218",
+   "label": "Fabian Mrozek",
+   "birthYear": 2003
+  },
+  {
+   "he": "Julián Malatini",
+   "en": "Julián Malatini",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q105811295",
+   "wikidata": "https://www.wikidata.org/wiki/Q105811295",
+   "label": "Julián Malatini",
+   "birthYear": 2001
   }
  ]
 }

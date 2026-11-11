@@ -1769,6 +1769,18 @@
    "wikidata": "https://www.wikidata.org/wiki/Q5220131",
    "label": "Danny Batth",
    "birthYear": 1990
+  },
+  {
+   "he": "רומן אסה",
+   "en": "Romain Esse",
+   "pos": "FW",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q116284933",
+   "wikidata": "https://www.wikidata.org/wiki/Q116284933",
+   "label": "Romain Esse",
+   "birthYear": 2005
   }
  ]
 }

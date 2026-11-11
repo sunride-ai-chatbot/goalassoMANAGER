@@ -900,6 +900,18 @@
    "wikidata": "https://www.wikidata.org/wiki/Q131573498",
    "label": "Anass Bouziane",
    "birthYear": 2006
+  },
+  {
+   "he": "Lanroy Machine",
+   "en": "Lanroy Machine",
+   "pos": "FW",
+   "age": 20,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q134523772",
+   "wikidata": "https://www.wikidata.org/wiki/Q134523772",
+   "label": "Lanroy Machine",
+   "birthYear": 2005
   }
  ]
 }

@@ -610,6 +610,30 @@
    "wikidata": "https://www.wikidata.org/wiki/Q21621904",
    "label": "Ante Majstorović",
    "birthYear": 1993
+  },
+  {
+   "he": "Yusuf Kabadayı",
+   "en": "Yusuf Kabadayı",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q121133821",
+   "wikidata": "https://www.wikidata.org/wiki/Q121133821",
+   "label": "Yusuf Kabadayı",
+   "birthYear": 2004
+  },
+  {
+   "he": "Calixte Ligue",
+   "en": "Calixte Ligue",
+   "pos": "FW",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q117243070",
+   "wikidata": "https://www.wikidata.org/wiki/Q117243070",
+   "label": "Calixte Ligue",
+   "birthYear": 2005
   }
  ]
 }

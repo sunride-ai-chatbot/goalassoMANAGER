@@ -1063,6 +1063,54 @@
    "wikidata": "https://www.wikidata.org/wiki/Q141053643",
    "label": "Adam Huram",
    "birthYear": 2009
+  },
+  {
+   "he": "קרלוס מרטין",
+   "en": "Carlos Martín",
+   "pos": "FW",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q109654631",
+   "wikidata": "https://www.wikidata.org/wiki/Q109654631",
+   "label": "Carlos Martín",
+   "birthYear": 2002
+  },
+  {
+   "he": "Marin Šotiček",
+   "en": "Marin Šotiček",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q125152368",
+   "wikidata": "https://www.wikidata.org/wiki/Q125152368",
+   "label": "Marin Šotiček",
+   "birthYear": 2004
+  },
+  {
+   "he": "Dalisson de Almeida",
+   "en": "Dalisson de Almeida",
+   "pos": "MF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q115045864",
+   "wikidata": "https://www.wikidata.org/wiki/Q115045864",
+   "label": "Dalisson de Almeida",
+   "birthYear": 2000
+  },
+  {
+   "he": "Illia Kutia",
+   "en": "Illia Kutia",
+   "pos": "MF",
+   "age": 18,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q140264442",
+   "wikidata": "https://www.wikidata.org/wiki/Q140264442",
+   "label": "Illia Kutia",
+   "birthYear": 2008
   }
  ]
 }

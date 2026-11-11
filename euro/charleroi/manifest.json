@@ -357,6 +357,30 @@
    "age": 25,
    "candidates": [],
    "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Gaku Nawata",
+   "en": "Gaku Nawata",
+   "pos": "FW",
+   "age": 20,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q120243936",
+   "wikidata": "https://www.wikidata.org/wiki/Q120243936",
+   "label": "Gaku Nawata",
+   "birthYear": 2006
+  },
+  {
+   "he": "אדאמה בוג'אנג",
+   "en": "Adama Bojang",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q117229673",
+   "wikidata": "https://www.wikidata.org/wiki/Q117229673",
+   "label": "Adama Bojang",
+   "birthYear": 2004
   }
  ]
 }

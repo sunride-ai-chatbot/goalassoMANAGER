@@ -633,6 +633,22 @@
    "wikidata": "https://www.wikidata.org/wiki/Q134529167",
    "label": "Alexander Andersson",
    "birthYear": 2010
+  },
+  {
+   "he": "Hannes Hyllenbom",
+   "en": "Hannes Hyllenbom",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Melvin Vucenovic Persson",
+   "en": "Melvin Vucenovic Persson",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
   }
  ]
 }

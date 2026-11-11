@@ -1646,6 +1646,117 @@
    "wikidata": "https://www.wikidata.org/wiki/Q137381672",
    "label": "Airidas Golambeckis",
    "birthYear": 2007
+  },
+  {
+   "he": "ג'ואל פירו",
+   "en": "Joël Piroe",
+   "pos": "FW",
+   "age": 27,
+   "candidates": [
+    {
+     "title": "File:Joël Piroe 15032025 (4).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Jo%C3%ABl_Piroe_15032025_(4).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Jo%C3%ABl_Piroe_15032025_%284%29.jpg/960px-Jo%C3%ABl_Piroe_15032025_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1668,
+     "height": 1688,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Timmy96",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-03-15 15:18:16",
+     "file": "07-Q28532244-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q28532244",
+   "wikidata": "https://www.wikidata.org/wiki/Q28532244",
+   "label": "Joël Piroe",
+   "birthYear": 1999
+  },
+  {
+   "he": "Adama Boiro",
+   "en": "Adama Boiro",
+   "pos": "DF",
+   "age": 24,
+   "candidates": [
+    {
+     "title": "File:Adama Boiro. Athletic - Racing. Foto Maider Goikoetxea (53909642167) (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Adama_Boiro._Athletic_-_Racing._Foto_Maider_Goikoetxea_(53909642167)_(cropped).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Adama_Boiro._Athletic_-_Racing._Foto_Maider_Goikoetxea_%2853909642167%29_%28cropped%29.jpg/960px-Adama_Boiro._Athletic_-_Racing._Foto_Maider_Goikoetxea_%2853909642167%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1485,
+     "height": 2166,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "Maider Goikoetxea Hidalgo",
+     "credit": "Mikel Jauregizar. Athletic - Racing. Foto: Maider Goikoetxea",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2024-07-24 18:32",
+     "file": "09-Q124356417-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q124356417",
+   "wikidata": "https://www.wikidata.org/wiki/Q124356417",
+   "label": "Adama Boiro",
+   "birthYear": 2002
+  },
+  {
+   "he": "מוראטו",
+   "en": "Morato",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [
+    {
+     "title": "File:Morato 2020.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Morato_2020.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Morato_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 605,
+     "height": 898,
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "author": "Sport Lisboa e Benfica",
+     "credit": "#MadeInBenfica​ - ENTREVISTA MORATO",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2020-05-31",
+     "file": "10-Q85786276-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q85786276",
+   "wikidata": "https://www.wikidata.org/wiki/Q85786276",
+   "label": "Morato",
+   "birthYear": 2001
+  },
+  {
+   "he": "Divine Mukasa",
+   "en": "Divine Mukasa",
+   "pos": "MF",
+   "age": 19,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q131382825",
+   "wikidata": "https://www.wikidata.org/wiki/Q131382825",
+   "label": "Divine Mukasa",
+   "birthYear": 2007
   }
  ]
 }

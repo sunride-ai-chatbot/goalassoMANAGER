@@ -846,6 +846,63 @@
    "wikidata": "https://www.wikidata.org/wiki/Q16728266",
    "label": "Đorđe Crnomarković",
    "birthYear": 1993
+  },
+  {
+   "he": "סטפן מיטרוביץ'",
+   "en": "Stefan Mitrović",
+   "pos": "MF",
+   "age": 24,
+   "candidates": [
+    {
+     "title": "File:FC Zenit Saint Petersburg vs. Red Star Belgrade, 4 July 2023 (48).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:FC_Zenit_Saint_Petersburg_vs._Red_Star_Belgrade,_4_July_2023_(48).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/FC_Zenit_Saint_Petersburg_vs._Red_Star_Belgrade%2C_4_July_2023_%2848%29.jpg/960px-FC_Zenit_Saint_Petersburg_vs._Red_Star_Belgrade%2C_4_July_2023_%2848%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1575,
+     "height": 1050,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Вячеслав Евдокимов",
+     "credit": "https://en.fc-zenit.ru/photo/54177/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-07-04",
+     "file": "03-Q77971192-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q77971192",
+   "wikidata": "https://www.wikidata.org/wiki/Q77971192",
+   "label": "Stefan Mitrovic",
+   "birthYear": 2002
+  },
+  {
+   "he": "Dario Janjić",
+   "en": "Dario Janjić",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Uroš Paunović",
+   "en": "Uroš Paunović",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Marko Pavić",
+   "en": "Marko Pavić",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q6771223:Marko Pavićević, Q6096923:Ivan Matić, Q6771152:Marko Kartelo, Q138298576:Marko SoldiÄ‡)"
   }
  ]
 }

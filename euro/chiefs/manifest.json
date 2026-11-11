@@ -407,6 +407,18 @@
    "wikidata": "https://www.wikidata.org/wiki/Q119349881",
    "label": "Sibongiseni Mthethwa",
    "birthYear": 1994
+  },
+  {
+   "he": "Elias Mokwana",
+   "en": "Elias Mokwana",
+   "pos": "FW",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q128338994",
+   "wikidata": "https://www.wikidata.org/wiki/Q128338994",
+   "label": "Elias Mokwana",
+   "birthYear": 1999
   }
  ]
 }

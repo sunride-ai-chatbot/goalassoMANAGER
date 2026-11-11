@@ -551,6 +551,30 @@
    "age": 25,
    "candidates": [],
    "match": "ambiguous: Q141321272:2005, Q16939900:1992"
+  },
+  {
+   "he": "Diogo Nascimento",
+   "en": "Diogo Nascimento",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q111734187",
+   "wikidata": "https://www.wikidata.org/wiki/Q111734187",
+   "label": "Diogo Nascimento",
+   "birthYear": 2002
+  },
+  {
+   "he": "Gustavo Mancha",
+   "en": "Gustavo Mancha",
+   "pos": "DF",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q133890399",
+   "wikidata": "https://www.wikidata.org/wiki/Q133890399",
+   "label": "Gustavo Mancha",
+   "birthYear": 2004
   }
  ]
 }

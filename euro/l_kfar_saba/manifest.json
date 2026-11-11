@@ -143,6 +143,86 @@
    "age": 25,
    "candidates": [],
    "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Or Roizman",
+   "en": "Or Roizman",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q121028839:2002"
+  },
+  {
+   "he": "Niv Vaknin",
+   "en": "Niv Vaknin",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Yuval Ben Hemo",
+   "en": "Yuval Ben Hemo",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Daniel Darzi",
+   "en": "Daniel Darzi",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Adir Waheb",
+   "en": "Adir Waheb",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Adi Tzur",
+   "en": "Adi Tzur",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q29948542:Muamar Karakra)"
+  },
+  {
+   "he": "Sarel Cohen",
+   "en": "Sarel Cohen",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Ravid Olitsky",
+   "en": "Ravid Olitsky",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Amit Arazi",
+   "en": "Amit Arazi",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Hadar Fuchs",
+   "en": "Hadar Fuchs",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q118218419:2003"
   }
  ]
 }

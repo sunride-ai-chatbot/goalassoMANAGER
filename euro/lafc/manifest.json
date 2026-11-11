@@ -1450,6 +1450,51 @@
    "wikidata": "https://www.wikidata.org/wiki/Q136521960",
    "label": "Jude Terry",
    "birthYear": 2008
+  },
+  {
+   "he": "Leo Walta",
+   "en": "Leo Walta",
+   "pos": "MF",
+   "age": 23,
+   "candidates": [
+    {
+     "title": "File:Halmstad vs Mjällby in 2023.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Halmstad_vs_Mj%C3%A4llby_in_2023.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Halmstad_vs_Mj%C3%A4llby_in_2023.jpg/960px-Halmstad_vs_Mj%C3%A4llby_in_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1650,
+     "height": 2967,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Amanda Aikioniemi",
+     "credit": "https://www.flickr.com/photos/198658015@N03/53277778054/",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-10-22 15:24:52",
+     "file": "11-Q109094289-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q109094289",
+   "wikidata": "https://www.wikidata.org/wiki/Q109094289",
+   "label": "Leo Walta",
+   "birthYear": 2003
+  },
+  {
+   "he": "Thayllon",
+   "en": "Thayllon",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "name+birth_year (club not yet on Wikidata)",
+   "qid": "Q104813224",
+   "wikidata": "https://www.wikidata.org/wiki/Q104813224",
+   "label": "Thayllon",
+   "birthYear": 2001
   }
  ]
 }

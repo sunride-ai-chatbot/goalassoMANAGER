@@ -335,6 +335,14 @@
    "age": 25,
    "candidates": [],
    "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Simphiwe Masilela",
+   "en": "Simphiwe Masilela",
+   "pos": "MF",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
   }
  ]
 }

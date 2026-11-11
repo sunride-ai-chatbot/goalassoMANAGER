@@ -903,6 +903,70 @@
    "wikidata": "https://www.wikidata.org/wiki/Q7030325",
    "label": "Nicolás Alejandro Rodríguez",
    "birthYear": 1991
+  },
+  {
+   "he": "Tomás Verón Lupi",
+   "en": "Tomás Verón Lupi",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q62391661",
+   "wikidata": "https://www.wikidata.org/wiki/Q62391661",
+   "label": "Tomás Verón Lupi",
+   "birthYear": 2000
+  },
+  {
+   "he": "Gastón Martirena",
+   "en": "Gastón Martirena",
+   "pos": "DF",
+   "age": 26,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q109225751",
+   "wikidata": "https://www.wikidata.org/wiki/Q109225751",
+   "label": "Gastón Martirena",
+   "birthYear": 2000
+  },
+  {
+   "he": "Tiziano Correa",
+   "en": "Tiziano Correa",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "ambiguous: Q125537453:2004"
+  },
+  {
+   "he": "Alejandro Martínez",
+   "en": "Alejandro Martínez",
+   "pos": "FW",
+   "age": 29,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q108118282",
+   "wikidata": "https://www.wikidata.org/wiki/Q108118282",
+   "label": "Silvio Alejandro Martínez",
+   "birthYear": 1997
+  },
+  {
+   "he": "Santiago Silva",
+   "en": "Santiago Silva",
+   "pos": "MF",
+   "age": 22,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q115158204",
+   "wikidata": "https://www.wikidata.org/wiki/Q115158204",
+   "label": "Santiago Silva",
+   "birthYear": 2004
+  },
+  {
+   "he": "Nahuel Gelos",
+   "en": "Nahuel Gelos",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [],
+   "match": "no_wikidata_footballer_with_this_name"
   }
  ]
 }

@@ -741,6 +741,96 @@
    "wikidata": "https://www.wikidata.org/wiki/Q21064577",
    "label": "Zoran Arsenić",
    "birthYear": 1994
+  },
+  {
+   "he": "Bohdan Vyunnyk",
+   "en": "Bohdan Vyunnyk",
+   "pos": "FW",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q100708808",
+   "wikidata": "https://www.wikidata.org/wiki/Q100708808",
+   "label": "Bohdan Vyunnyk",
+   "birthYear": 2002
+  },
+  {
+   "he": "יאן קוכטה",
+   "en": "Jan Kuchta",
+   "pos": "FW",
+   "age": 29,
+   "candidates": [
+    {
+     "title": "File:Jan Kuchta 2022.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Jan_Kuchta_2022.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Jan_Kuchta_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 755,
+     "height": 955,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Антон Зайцев",
+     "credit": "https://www.soccer.ru/galery/1305670/photo/968931",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-03-03",
+     "file": "05-Q45045358-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q45045358",
+   "wikidata": "https://www.wikidata.org/wiki/Q45045358",
+   "label": "Jan Kuchta",
+   "birthYear": 1997
+  },
+  {
+   "he": "Michal Ševčík",
+   "en": "Michal Ševčík",
+   "pos": "MF",
+   "age": 24,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q99912126",
+   "wikidata": "https://www.wikidata.org/wiki/Q99912126",
+   "label": "Michal Ševčík",
+   "birthYear": 2002
+  },
+  {
+   "he": "Shinnosuke Fukuda",
+   "en": "Shinnosuke Fukuda",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [
+    {
+     "title": "File:Shinnosuke Fukuda 2026.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Shinnosuke_Fukuda_2026.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Shinnosuke_Fukuda_2026.jpg/960px-Shinnosuke_Fukuda_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1271,
+     "height": 1906,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "RuinDig/Yuki Uchida",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-06-13 12:13:32",
+     "file": "16-Q118696710-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q118696710",
+   "wikidata": "https://www.wikidata.org/wiki/Q118696710",
+   "label": "Shinnosuke Fukuda",
+   "birthYear": 2000
   }
  ]
 }

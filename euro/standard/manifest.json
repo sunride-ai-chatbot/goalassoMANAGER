@@ -610,6 +610,18 @@
    "age": 25,
    "candidates": [],
    "match": "no_wikidata_footballer_with_this_name"
+  },
+  {
+   "he": "Andi Zeqiri",
+   "en": "Andi Zeqiri",
+   "pos": "FW",
+   "age": 27,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q25990555",
+   "wikidata": "https://www.wikidata.org/wiki/Q25990555",
+   "label": "Andi Zeqiri",
+   "birthYear": 1999
   }
  ]
 }

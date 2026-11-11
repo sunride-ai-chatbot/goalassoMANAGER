@@ -1051,6 +1051,63 @@
    "wikidata": "https://www.wikidata.org/wiki/Q124173696",
    "label": "Tom Iorpenda",
    "birthYear": 2005
+  },
+  {
+   "he": "Jenson Seelt",
+   "en": "Jenson Seelt",
+   "pos": "DF",
+   "age": 23,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q104543610",
+   "wikidata": "https://www.wikidata.org/wiki/Q104543610",
+   "label": "Jenson Seelt",
+   "birthYear": 2003
+  },
+  {
+   "he": "Tiago Parente",
+   "en": "Tiago Parente",
+   "pos": "DF",
+   "age": 25,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q141539103",
+   "wikidata": "https://www.wikidata.org/wiki/Q141539103",
+   "label": "Tiago Parente",
+   "birthYear": null
+  },
+  {
+   "he": "Jeremy Monga",
+   "en": "Jeremy Monga",
+   "pos": "FW",
+   "age": 17,
+   "candidates": [
+    {
+     "title": "File:Jeremy Monga 2025.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Jeremy_Monga_2025.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jeremy_Monga_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 406,
+     "height": 704,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Timmy96",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-08-23 12:33:54",
+     "file": "25-Q133832511-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q133832511",
+   "wikidata": "https://www.wikidata.org/wiki/Q133832511",
+   "label": "Jeremy Monga",
+   "birthYear": 2009
   }
  ]
 }

@@ -849,6 +849,30 @@
    "wikidata": "https://www.wikidata.org/wiki/Q4696039",
    "label": "Ahmed Tawfik",
    "birthYear": 1991
+  },
+  {
+   "he": "Eyad El Askalany",
+   "en": "Eyad El Askalany",
+   "pos": "DF",
+   "age": 21,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q124413525",
+   "wikidata": "https://www.wikidata.org/wiki/Q124413525",
+   "label": "Eyad El Askalany",
+   "birthYear": 2004
+  },
+  {
+   "he": "Mohamed El Gabbas",
+   "en": "Mohamed El Gabbas",
+   "pos": "FW",
+   "age": 39,
+   "candidates": [],
+   "match": "squad_qid",
+   "qid": "Q2359849",
+   "wikidata": "https://www.wikidata.org/wiki/Q2359849",
+   "label": "Mohamed El-Gabbas",
+   "birthYear": 1987
   }
  ]
 }

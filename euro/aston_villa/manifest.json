@@ -2015,6 +2015,72 @@
    "wikidata": "https://www.wikidata.org/wiki/Q133462797",
    "label": "Brian Madjo",
    "birthYear": 2009
+  },
+  {
+   "he": "אלחנדרו גרנאצ'ו",
+   "en": "Alejandro Garnacho",
+   "pos": "FW",
+   "age": 22,
+   "candidates": [
+    {
+     "title": "File:Alejandro Garnacho 7 August 2022 (cropped).jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Alejandro_Garnacho_7_August_2022_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Alejandro_Garnacho_7_August_2022_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 729,
+     "height": 1166,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Ardfern",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-08-07 16:48:33",
+     "file": "06-Q111366053-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q111366053",
+   "wikidata": "https://www.wikidata.org/wiki/Q111366053",
+   "label": "Alejandro Garnacho",
+   "birthYear": 2004
+  },
+  {
+   "he": "ארון ואן-ביסאקה",
+   "en": "Aaron Wan-Bissaka",
+   "pos": "DF",
+   "age": 28,
+   "candidates": [
+    {
+     "title": "File:Aaron Wan-Bissaka of West Ham United.jpeg",
+     "page": "https://commons.wikimedia.org/wiki/File:Aaron_Wan-Bissaka_of_West_Ham_United.jpeg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Aaron_Wan-Bissaka_of_West_Ham_United.jpeg/960px-Aaron_Wan-Bissaka_of_West_Ham_United.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2163,
+     "height": 2942,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Egghead06",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2024-08-24",
+     "file": "11-Q50137347-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q50137347",
+   "wikidata": "https://www.wikidata.org/wiki/Q50137347",
+   "label": "Aaron Wan-Bissaka",
+   "birthYear": 1997
   }
  ]
 }

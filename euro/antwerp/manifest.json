@@ -807,6 +807,92 @@
    "age": 25,
    "candidates": [],
    "match": "ambiguous: Q140061485:2009"
+  },
+  {
+   "he": "איברהים סאלח",
+   "en": "Ibrahim Salah",
+   "pos": "FW",
+   "age": 25,
+   "candidates": [
+    {
+     "title": "File:SalahIbrahim.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:SalahIbrahim.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/SalahIbrahim.jpg/960px-SalahIbrahim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1099,
+     "height": 1938,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Nawfel Ajari",
+     "credit": "https://be.linkedin.com/in/nawfel-ajari-8a26471a4",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-09-12 19:19:17",
+     "file": "06-Q113472639-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    },
+    {
+     "title": "File:Lens - Stade Rennais (20-08-2023) 51.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Lens_-_Stade_Rennais_(20-08-2023)_51.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lens_-_Stade_Rennais_%2820-08-2023%29_51.jpg/960px-Lens_-_Stade_Rennais_%2820-08-2023%29_51.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2122,
+     "height": 2829,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Supporterhéninois",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-08-20 19:46:38",
+     "file": "06-Q113472639-1.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q113472639",
+   "wikidata": "https://www.wikidata.org/wiki/Q113472639",
+   "label": "Ibrahim Salah",
+   "birthYear": 2001
+  },
+  {
+   "he": "ארתור ורמאירן",
+   "en": "Arthur Vermeeren",
+   "pos": "MF",
+   "age": 21,
+   "candidates": [
+    {
+     "title": "File:Arthur vermeeren-1691915252.png",
+     "page": "https://commons.wikimedia.org/wiki/File:Arthur_vermeeren-1691915252.png",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Arthur_vermeeren-1691915252.png/960px-Arthur_vermeeren-1691915252.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/png",
+     "width": 1620,
+     "height": 2160,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Tom Van de Velde",
+     "credit": "wikiportret.nl",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-07-30",
+     "file": "12-Q113499581-0.jpg",
+     "fromP18": true,
+     "via": "p18"
+    }
+   ],
+   "match": "squad_qid",
+   "qid": "Q113499581",
+   "wikidata": "https://www.wikidata.org/wiki/Q113499581",
+   "label": "Arthur Vermeeren",
+   "birthYear": 2005
   }
  ]
 }
