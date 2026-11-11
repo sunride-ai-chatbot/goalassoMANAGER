@@ -1,0 +1,74 @@
+== History
+=== 1911–1959: initial years of football
+=== 1959–2001: from Milli Lig to Süper Lig
+=== 1987–1993: Gordon Milne era
+=== 1993–2000: After Milne — transition, Daum's title and cup wins
+=== 2000–2015: Post-centenary transition and European runs
+=== 2015–present: Return to Dolmabahçe, titles under Şenol Güneş, and aftermath
+== Colours and crest
+=== Kit manufacturers and shirt sponsors
+== Supporters
+== Rivalries
+=== Beşiktaş–Fenerbahçe rivalry
+=== Beşiktaş–Galatasaray rivalry
+=== Beşiktaş–Trabzonspor rivalry
+=== Lesser-known rivalries
+== Grounds
+=== Early Stadiums and the Road to İnönü
+=== Beşiktaş Stadium: 2016–present
+== Honours
+=== Others
+== European record
+=== Statistics
+=== UEFA club points ranking
+== Recent seasons
+== Players
+=== Out on loan
+=== Other players under contract
+=== Administrative staff
+=== Coaching staff
+== Notable players
+== Captains
+== Coaching history
+== Presidential history
+== Ownership and finances
+== Affiliated clubs
+== References
+== External links
+
+TEMPLATES 35
+{{Fs player|no=1|nat=GER|pos=GK|name=[[Alexander Nübel]]}}
+{{Fs player|no=4|nat=NGA|pos=MF|name=[[Wilfred Ndidi]]|other=[[vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=6|nat=TUR|pos=MF|name=[[Salih Özcan]]}}
+{{Fs player|no=7|nat=KOS|pos=FW|name=[[Milot Rashica]]}}
+{{Fs player|no=8|nat=TUR|pos=MF|name=[[Kartal Yılmaz]]}}
+{{Fs player|no=9|nat=KOR|pos=FW|name=[[Oh Hyeon-gyu]]}}
+{{fs player|no=10|nat=TUR|pos=MF|name=[[Orkun Kökçü]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=11|nat=CIV|pos=DF|name=[[Kassoum Ouattara]]}}
+{{Fs player|no=12|nat=CIV|pos=DF|name=[[Emmanuel Agbadou]]}}
+{{Fs player|no=15|nat=BEN|pos=MF|name=[[Junior Olaitan]]}}
+{{Fs player|no=17|nat=NED|pos=FW|name=[[Ernest Poku]]|other={{small|on loan from [[Bayer 04 Leverkusen|Bayer Leverkusen]]}}
+{{Fs player|no=18|nat=CZE|pos=MF|name=[[Václav Černý (footballer)|Václav Černý]]}}
+{{Fs player|no=19|nat=BEL|pos=MF|name=[[Leandro Trossard]]}}
+{{Fs player|no=21|nat=ITA|pos=MF|name=[[Fabio Miretti]]|other={{small|on loan from [[Juventus F.C.|Juventus]]}}
+{{Fs player|no=22|nat=GER|pos=DF|name=[[Taylan Bulut]]}}
+{{Fs player|no=23|nat=TUR|pos=FW|name=[[Mustafa Erhan Hekimoğlu|Mustafa Hekimoğlu]]}}
+{{Fs player|no=28|nat=SER|pos=FW|name=[[Dušan Vlahović]]}}
+{{Fs player|no=29|nat=TUR|pos=FW|name=[[İlhan Fakılı]]}}
+{{Fs player|no=33|nat=TUR|pos=DF|name=[[Rıdvan Yılmaz]]|other=[[Captain (association football)#Vice-captain|3rd captain]]}}
+{{Fs player|no=35|nat=POR|pos=DF|name=[[Tiago Djaló]]}}
+{{Fs player|no=50|pos=DF|nat=ROU|name=[[Ümit Akdağ]]}}
+{{Fs player|no=53|nat=TUR|pos=DF|name=[[Emirhan Topçu]]}}
+{{Fs player|no=58|nat=TUR|pos=DF|name=[[Yasin Özcan]]|other={{small|on loan from [[Aston Villa F.C.|Aston Villa]]}}
+{{Fs player|no=62|nat=PAN|pos=DF|name=[[Michael Amir Murillo|Amir Murillo]]}}
+{{Fs player|no=63|nat=TUR|pos=DF|name=Azem Yortaç}}
+{{Fs player|no=66|nat=TUR|pos=MF|name=Ozan Sevim}}
+{{Fs player|no=70|nat=TUR|pos=FW|name=Sami Bircan}}
+{{Fs player|no=77|pos=FW|nat=AUT|name=[[Can Keleş]]}}
+{{Fs player|no=80|pos=GK|nat=TUR|name=[[Doğan Alemdar]]}}
+{{Fs player|no=90|pos=FW|nat=TUR|name=[[Semih Kılıçsoy]]}}
+{{Fs player|no=96|nat=TUR|pos=GK|name=Emir Yaşar}}
+{{Fs player|no=|nat=TUR|pos=FW|name=[[Devrim Şahin]]}}
+{{Fs player|no=|nat=COL|pos=MF|name=Élan Ricardo}}
+{{Fs player|no=|nat=TUR|pos=MF|name=[[Fahri Kerem Ay]]}}
+{{Fs player|no=|nat=TUR|pos=DF|name=Cumali Gürsel}}

@@ -1,0 +1,65 @@
+== History
+=== From 1937 to 1952
+=== From 1952 to 1967
+=== The Golden Era
+=== From 1983
+=== From 2016: the Václav Brabec era
+== Historical names
+== Stadiums
+== Supporters
+== Players
+=== Out on loan
+=== Former players
+== Player records in the Czech First League
+=== Most appearances
+=== Most goals
+=== Most clean sheets
+== Managers
+== History in domestic competitions
+=== Czech Republic
+== History in European competitions since 1993–94
+== Honours
+=== European
+== Club records
+== References
+== Further reading
+== External links
+
+TEMPLATES 37
+{{Fs player|no= 1|nat=SVK|pos=GK|name=[[Viktor Budinský]]}}
+{{Fs player|no= 3|nat=SUI|pos=DF|name=[[Rhodri Smith (footballer)|Rhodri Smith]]|other=on loan from [[BSC Young Boys|Young Boys]]}}
+{{Fs player|no= 5|nat=CZE|pos=MF|name=[[Jiří Boula]]}}
+{{Fs player|no= 7|nat=TRI|pos=MF|name=[[Dantaye Gilbert]]}}
+{{Fs player|no= 8|nat=CIV|pos=DF|name=Aboubacar Traore}}
+{{Fs player|no=11|nat=CZE|pos=FW|name=David Látal}}
+{{Fs player|no=12|nat=SEN|pos=FW|name=[[Abdallah Gning]]}}
+{{Fs player|no=15|nat=CZE|pos=FW|name=[[Václav Jurečka]]}}
+{{Fs player|no=16|nat=UKR|pos=DF|name=[[Maksym Dyachuk]]|other=on loan from [[FC Dynamo Kyiv|Dynamo Kyiv]]}}
+{{Fs player|no=17|nat=CZE|pos=DF|name=[[Michal Frydrych]]}}
+{{Fs player|no=18|nat=CZE|pos=MF|name=David Planka}}
+{{Fs player|no=19|nat=CZE|pos=MF|name=Filip Šancl}}
+{{Fs player|no=21|nat=CZE|pos=MF|name=[[Michal Kohút]]}}
+{{Fs player|no=22|nat=CZE|pos=FW|name=Vít Škrkoň}}
+{{Fs player|no=23|nat=CZE|pos=GK|name=[[Martin Jedlička]]}}
+{{Fs player|no=24|nat=CZE|pos=GK|name=Martin Hrubý}}
+{{Fs player|no=28|nat=CZE|pos=FW|name=[[Filip Kubala]]}}
+{{Fs player|no=34|nat=NGA|pos=MF|name=Abdullahi Bewene}}
+{{Fs player|no=37|nat=CZE|pos=DF|name=[[Matěj Chaluš]]}}
+{{Fs player|no=42|nat=CZE|pos=DF|name=Jiří Míček}}
+{{Fs player|no=44|nat=UKR|pos=DF|name=[[Yevheniy Skyba]]}}
+{{Fs player|no=55|nat=SVK|pos=MF|name=[[Artúr Musák]]}}
+{{Fs player|no=77|nat=CZE|pos=GK|name=Matouš Babka}}
+{{Fs player|no=81|nat=SVK|pos=DF|name=[[Matúš Kmeť]]}}
+{{Fs player|no=83|nat=CMR|pos=DF|name=[[Roan Nogha]]}}
+{{Fs player|no=95|nat=CZE|pos=MF|name=[[Daniel Holzer]]}}
+{{Fs player|no=99|nat=EST|pos=DF|name=[[Vlasiy Sinyavskiy]]}}
+{{Fs player|no=  |nat=COL|pos=DF|name=[[Pablo Ortiz (footballer, born 2000)|Pablo Ortiz]]|other=at [[Atlético Junior]]}}
+{{Fs player|no=  |nat=CZE|pos=DF|name=Jan Harušťák|other=at [[FK Mladá Boleslav|Mladá Boleslav]]}}
+{{Fs player|no=  |nat=CZE|pos=MF|name=[[Samuel Grygar]]|other=at Mladá Boleslav}}
+{{Fs player|no=  |nat=CZE|pos=MF|name=Marek Havran|other=at Mladá Boleslav}}
+{{Fs player|no=  |nat=CZE|pos=DF|name=Karel Pojezný|other=at [[SK Artis Brno|Artis Brno]]}}
+{{Fs player|no=  |nat=CZE|pos=MF|name=Stanislav Petruta|other=at [[FC Zlín|Zlín]]}}
+{{Fs player|no=  |nat=FIN|pos=MF|name=[[Lauri Laine]]|other=at [[FC Inter Turku|Inter Turku]]}}
+{{Fs player|no=  |nat=SVK|pos=MF|name=[[Matúš Rusnák]]|other=at [[FK Železiarne Podbrezová|Železiarne Podbrezová]]}}
+{{Fs player|no=  |nat=SVK|pos=FW|name=[[Jakub Pira]]|other=at [[MFK Karviná|Karviná]]}}
+{{Fs player|no=  |nat=GER|pos=MF|name=Dennis Owusu|other=at [[SFC Opava|Opava]]}}

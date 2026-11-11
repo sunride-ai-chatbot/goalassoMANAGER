@@ -1,0 +1,39 @@
+== History
+== Players
+=== Out on loan
+== Player records
+=== All-time appearances for Breiðablik
+=== Most [https://blikar.is/leikmenn/ goals scored] for Breiðablik
+== Notable players
+== Honours
+=== Cups
+== Club records
+== European record
+== Club ranking
+== Domestic results
+== References
+== External links
+
+TEMPLATES 22
+{{Fs player|no=1|nat=ISL|name=[[Anton Ari Einarsson]]|pos=GK}}
+{{Fs player|no=4|nat=ISL|name=[[Ásgeir Helgi Orrason]]|pos=DF}}
+{{Fs player|no=5|nat=ISL|name=[[Ívar Örn Árnason]]|pos=DF}}
+{{Fs player|no=7|nat=ISL|name=[[Höskuldur Gunnlaugsson]]|other=[[captain (association football)|captain]]|pos=MF}}
+{{Fs player|no=8|nat=ISL|name=[[Viktor Karl Einarsson]]|pos=MF}}
+{{Fs player|no=9|nat=ISL|name=[[Óli Valur Ómarsson]]|pos=DF}}
+{{Fs player|no=10|nat=ISL|name=[[Kristinn Steindórsson]]|pos=MF}}
+{{Fs player|no=11|nat=ISL|name=[[Aron Bjarnason]]|pos=FW}}
+{{Fs player|no=12|nat=ISL|name=[[Gylfi Berg Snæhólm]]|pos=GK}}
+{{Fs player|no=13|nat=ISL|name=[[Anton Logi Lúðvíksson]]|pos=MF}}
+{{Fs player|no=14|nat=ISL|name=[[Hlynur Freyr Karlsson]]|pos=DF|other={{small|on loan from [[IF Brommapojkarna]]}}
+{{Fs player|no=17|nat=ISL|name=[[Valgeir Valgeirsson]]|pos=MF}}
+{{Fs player|no=18|nat=ISL|name=[[Davíð Ingvarsson]]|pos=DF}}
+{{Fs player|no=19|nat=ISL|name=[[Kristinn Jónsson]]|pos=DF}}
+{{Fs player|no=21|nat=ISL|name=[[Viktor Örn Margeirsson]]|pos=DF}}
+{{Fs player|no=22|nat=ISL|name=[[Jónatan Guðni Arnarsson]]|pos=FW}}
+{{Fs player|no=23|nat=ISL|name=[[Kristófer Kristinsson]]|pos=FW}}
+{{Fs player|no=29|nat=ISL|name=[[Gabríel Snær Hallsson]]|pos=DF}}
+{{Fs player|no=30|nat=ISL|name=[[Andri Rafn Yeoman]]|pos=MF}}
+{{Fs player|no=33|nat=ISL|name=[[Arnar Gunnleifsson]]|pos=FW}}
+{{Fs player|no=99|nat=ISL|name=[[Thorleifur Úlfarsson]]|pos=FW}}
+{{Fs player|no=20|nat=ISL|name=[[Orri Bjarkason]]|pos=MF|other=at [[ÍR (men's football)|ÍR]] until 5 February 2027}}

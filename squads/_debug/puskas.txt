@@ -1,0 +1,48 @@
+== On the pitch history
+=== 2010s
+=== 2020s
+== Honours
+=== Youth teams
+== Seasons
+=== League positions
+== European record
+== Players
+=== Out on loan
+=== Reserve team
+== Records
+=== Top appearances
+=== Top scorers
+== See also
+== References
+== External links
+
+TEMPLATES 29
+{{Fs player|no= 1|nat=HUN|pos=GK|name=[[Tamás Markek]]}}
+{{Fs player|no= 4|nat=HUN|pos=MF|name=Michael Okeke}}
+{{Fs player|no= 6|nat=CPV|pos=MF|name=[[Laros Duarte]]}}
+{{Fs player|no= 8|nat=HUN|pos=FW|name=[[Dániel Lukács]]}}
+{{Fs player|no= 9|nat=GAM|pos=FW|name=[[Lamin Colley]]}}
+{{Fs player|no=10|nat=HUN|pos=MF|name=[[Palkó Dárdai]]}}
+{{Fs player|no=11|nat=HUN|pos=FW|name=[[Zalán Kerezsi]]}}
+{{Fs player|no=14|nat=POL|pos=DF|name=[[Wojciech Golla]]}}
+{{Fs player|no=16|nat=FIN|pos=MF|name=[[Urho Nissilä]]}}
+{{Fs player|no=18|nat=HUN|pos=MF|name=[[Bence Vékony]]}}
+{{Fs player|no=19|nat=UKR|pos=MF|name=[[Artem Favorov]]|other=[[Vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=20|nat=FIN|pos=FW|name=[[Mikael Soisalo]]}}
+{{Fs player|no=21|nat=ARM|pos=DF|name=[[Georgy Arutyunyan]]}}
+{{Fs player|no=22|nat=HUN|pos=DF|name=[[Roland Szolnoki]]|other=[[Captain (association football)#captain|captain]]}}
+{{Fs player|no=24|nat=HUN|pos=DF|name=Pál Barna}}
+{{Fs player|no=25|nat=HUN|pos=DF|name=[[Zsolt Nagy (footballer, born 1993)|Zsolt Nagy]]|other=[[Vice-captain (association football)|vice-captain]]}}
+{{Fs player|no=33|nat=ENG|pos=DF|name=[[Brandon Ormonde-Ottewill]]}}
+{{Fs player|no=34|nat=HUN|pos=MF|name=[[Szabolcs Dusinszki]]}}
+{{Fs player|no=61|nat=HUN|pos=GK|name=Mirkó Bozó}}
+{{Fs player|no=66|nat=HUN|pos=MF|name=Zsombor Varga}}
+{{Fs player|no=68|nat=HUN|pos=MF|name=Dániel Brügger}}
+{{Fs player|no=72|nat=HUN|pos=GK|name=Bendegúz Lehoczki}}
+{{Fs player|no=74|nat=HUN|pos=MF|name=[[Martin Kern (footballer)|Martin Kern]]}}
+{{Fs player|no=77|nat=HUN|pos=FW|name=[[Kevin Mondovics]]}}
+{{Fs player|no=88|nat=HUN|pos=DF|name=[[Bendegúz Farkas]]}}
+{{Fs player|no=90|nat=HUN|pos=FW|name=[[András Németh (footballer)|András Németh]]}}
+{{Fs player|no=96|nat=HUN|pos=DF|name=Roland Orján}}
+{{Fs player|no=99|nat=HUN|pos=FW|name=[[Zoárd Nagy]]}}
+{{Fs player|no=|nat=ISR|pos=MF|name=Moshe Semel|other=at {{flagicon|ISR}}

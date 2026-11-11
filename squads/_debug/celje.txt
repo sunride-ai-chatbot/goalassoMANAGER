@@ -1,0 +1,65 @@
+== History
+=== Kladivar and the Yugoslav period (1946–1991)
+=== Independence and the Publikum era (1991–2007)
+=== NK Celje before the first title (2007–2019)
+=== First championship and transition (2019–2023)
+=== Domestic and European breakthrough (2023–present)
+== Colours, names and identity
+=== Kit manufacturers
+== Stadium
+== Supporters and rivalries
+=== Styrian derby
+== European football
+=== Early European campaigns
+=== Return to Europe and 2024–25 breakthrough
+=== 2025–26 Conference League
+=== 2026–27 Champions League and Europa League
+== Ownership and management
+=== Club officials
+=== First-team coaching and support staff
+== Sponsorship
+== Players
+=== Out on loan
+== Managers
+== Honours
+== Records and statistics
+==== Most league appearances
+==== Top league goalscorers
+=== Domestic league and cup record
+=== European record
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no=1|nat=SVN|pos=GK|name=[[Žan-Luk Leban]]}}
+{{Fs player|no=2|nat=LTU|pos=DF|name=[[Pijus Širvys]]}}
+{{Fs player|no=3|nat=SVN|pos=DF|name=[[Damjan Vuklišević]]}}
+{{Fs player|no=4|nat=SVN|pos=MF|name=Darko Hrka}}
+{{Fs player|no=5|nat=SVN|pos=DF|name=Gašper Vodeb}}
+{{Fs player|no=6|nat=LTU|pos=DF|name=[[Artemijus Tutyškinas]]}}
+{{Fs player|no=7|nat=SVN|pos=FW|name=[[Benjamin Verbič]]}}
+{{Fs player|no=8|nat=BIH|pos=MF|name=[[Mario Kvesić]]}}
+{{Fs player|no=9|nat=SVN|pos=FW|name=[[Blaž Kramer]]}}
+{{Fs player|no=10|nat=SVN|pos=MF|name=[[Svit Sešlar]]}}
+{{Fs player|no=11|nat=KOS|pos=MF|name=[[Milot Avdyli]]}}
+{{Fs player|no=12|nat=SVN|pos=GK|name=Luka Kolar}}
+{{Fs player|no=13|nat=NGA|pos=MF|name=[[Papa Daniel]]}}
+{{Fs player|no=14|nat=SVN|pos=MF|name=[[Luka Vešner Tičić]]}}
+{{Fs player|no=15|nat=SVN|pos=DF|name=[[Žan Žužek]]}}
+{{Fs player|no=17|nat=SVN|pos=MF|name=[[Andrej Kotnik]]}}
+{{Fs player|no=19|nat=SVN|pos=MF|name=[[Mark Zabukovnik]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=20|nat=SEN|pos=DF|name=[[Alpha Diounkou]]}}
+{{Fs player|no=23|nat=SVN|pos=GK|name=[[Žiga Frelih]]}}
+{{Fs player|no=25|nat=KOS|pos=FW|name=[[Veton Tusha]]}}
+{{Fs player|no=27|nat=CRO|pos=MF|name=Ivan Ćalušić}}
+{{Fs player|no=33|nat=GRE|pos=DF|name=[[Leonardo Koutris]]}}
+{{Fs player|no=44|nat=POL|pos=DF|name=[[Łukasz Bejger]]}}
+{{Fs player|no=47|nat=LTU|pos=FW|name=[[Armandas Kučys]]}}
+{{Fs player|no=77|nat=SVN|pos=DF|name=Matic Ivanšek}}
+{{Fs player|no=91|nat=AUS|pos=FW|name=[[Yaya Dukuly]]}}
+{{Fs player|no=94|nat=SVN|pos=FW|name=[[Rudi Požeg Vancaš]]}}
+{{Fs player|no=|nat=SVN|pos=DF|name=Matija Kavčič|other=at [[NK Brinje Grosuplje|Brinje Grosuplje]] until June 2027}}
+{{Fs player|no=|nat=FRO|pos=DF|name=[[Hanus Sørensen]]|other=at [[NK Aluminij|Aluminij]] until June 2027}}
+{{Fs player|no=|nat=SVN|pos=MF|name=Florjan Jevšenak|other=at [[NŠ Mura|Mura]] until June 2027}}
+{{Fs player|no=|nat=CRO|pos=MF|name=Jakov Pranjić|other=at [[HNK Gorica|Gorica]] until June 2027}}
+{{Fs player|no=|nat=CRO|pos=MF|name=Ivica Vidović|other=at [[HŠK Zrinjski Mostar|Zrinjski Mostar]] until June 2027}}

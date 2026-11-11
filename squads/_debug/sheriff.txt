@@ -1,0 +1,54 @@
+== History
+=== Europe
+==== 2009–10 UEFA Europa League
+==== 2010–11 UEFA Champions League
+==== 2010–11 UEFA Europa League
+==== 2013–14 UEFA Europa League
+==== 2017–18 UEFA Europa League
+==== 2021–22 UEFA Champions League
+==== 2021–22 UEFA Europa League
+== Club identity, supporters and politics
+== Stadium
+== Players
+=== Out on loan
+== Honours
+== Records and statistics
+=== European record
+==== Matches
+== Club officials
+=== Technical staff
+=== Board of directors
+=== Managers
+== References
+== External links
+
+TEMPLATES 29
+{{Fs player|no= 1|nat=MDA|name=[[Emil Tîmbur]]|pos=GK}}
+{{Fs player|no= 2|nat=BFA|name=Mamoutou Ouedraogo|pos=DF}}
+{{Fs player|no= 4|nat=LBR|name=Natus Swen|pos=DF}}
+{{Fs player|no= 7|nat=MDA|name=[[Ștefan Bîtca]]|pos=MF}}
+{{Fs player|no= 8|nat=MDA|name=Dan Boțan|pos=FW}}
+{{Fs player|no= 9|nat=NOR|name=[[Kabamba Kalabatama]]|pos=FW}}
+{{Fs player|no=10|nat=MDA|name=[[Vladimir Fratea]]|pos=MF}}
+{{Fs player|no=11|nat=BRA|name={{abbr|Sapata|Vitor Hugo Morais de Oliveira}}
+{{Fs player|no=12|nat=MDA|name=Renat Josan|pos=GK}}
+{{Fs player|no=15|nat=SEN|name=Baye Assane Ciss|pos=DF}}
+{{Fs player|no=18|nat=MLI|name=[[Moussa Kyabou]]|pos=MF}}
+{{Fs player|no=19|nat=COL|name=Jayder Asprilla|pos=FW}}
+{{Fs player|no=21|nat=BUL|name=[[Ivan Dyulgerov]]|pos=GK}}
+{{Fs player|no=22|nat=POR|name=Miguel Mota|pos=DF}}
+{{Fs player|no=24|nat=MDA|name=Danila Forov|pos=DF}}
+{{Fs player|no=26|nat=SUR|name=[[Dhoraso Klas]]|pos=MF}}
+{{Fs player|no=27|nat=MDA|name=Veaceslav Cozma|pos=FW}}
+{{Fs player|no=28|nat=MDA|name=[[Nicolae Cebotari]]|pos=GK}}
+{{Fs player|no=29|nat=MLI|name=Soumaïla Magossouba|pos=DF}}
+{{Fs player|no=32|nat=GHA|name=Emmanuel Afetse|pos=MF}}
+{{Fs player|no=33|nat=MDA|name=Mihail Corotcov|pos=MF}}
+{{Fs player|no=35|nat=MLI|name=[[Bourama Fomba]]|pos=DF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=37|nat=PAN|name=Jair Modelo|pos=DF|other=on loan from [[C.A. Independiente de La Chorrera|CA Independiente]]}}
+{{Fs player|no=42|nat=CIV|name=Konan Loukou|pos=FW}}
+{{Fs player|no=76|nat=ALB|name=Arli Pergjoni|pos=MF}}
+{{Fs player|no=77|nat=DOM|name=[[Juanca Pineda]]|pos=MF|other=on loan from [[PFC Beroe Stara Zagora|Beroe]]}}
+{{Fs player|no=90|nat=MDA|name=Vladislav Costin|pos=MF}}
+{{Fs player|no=99|nat=MLI|name=[[Samba Koné]]|pos=MF|other=on loan from [[Académico de Viseu F.C.|Académico de Viseu]]}}
+{{Fs player|no=|nat=BRA|pos=FW|name=[[Luis Phelipe]]|other=at [[Lee Man F.C.|Lee Man]] until 31 May 2027}}

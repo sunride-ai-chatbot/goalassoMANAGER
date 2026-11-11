@@ -1,0 +1,57 @@
+== History
+=== Promotion and European football
+== Honours
+=== Cups
+== Raków Częstochowa in European football
+=== Results
+==== UEFA Team ranking
+== Players
+=== Out on loan
+=== Retired numbers
+=== Notable players
+== Player records
+==== Top goalscorers
+== Coaches and managers
+== References
+== External links
+
+TEMPLATES 39
+{{Fs player|no= 1|nat=POL|pos=GK|name=[[Kacper Trelowski]]}}
+{{Fs player|no= 2|nat=POL|pos=DF|name=Jerzy Napieraj}}
+{{Fs player|no= 3|nat=SWE|pos=DF|name=[[Arvid Brorsson]]}}
+{{Fs player|no= 4|nat=GRE|pos=DF|name=[[Stratos Svarnas]]|other=[[vice-captain (association football)|vice-captain]]}}
+{{Fs player|no= 5|nat=CRO|pos=MF|name=[[Marko Bulat (footballer)|Marko Bulat]]}}
+{{Fs player|no= 6|nat=POL|pos=MF|name=[[Oskar Repka]]}}
+{{Fs player|no= 7|nat=CRO|pos=MF|name=[[Fran Tudor]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no= 9|nat=POL|pos=FW|name=[[Patryk Makuch]]}}
+{{Fs player|no=10|nat=UKR|pos=MF|name=[[Vladyslav Kocherhin]]}}
+{{Fs player|no=11|nat=AZE|pos=FW|name=[[Mahir Emreli]]|other=on loan from [[1. FC Kaiserslautern|Kaiserslautern]]}}
+{{Fs player|no=15|nat=POL|pos=MF|name=Oliwier Kwiatkowski}}
+{{Fs player|no=17|nat=POL|pos=MF|name=Jakub Jendryka}}
+{{Fs player|no=19|nat=SWE|pos=DF|name=[[Nils Zätterström]]|other=on loan from [[Sheffield United F.C.|Sheffield United]]}}
+{{Fs player|no=20|nat=BRA|pos=MF|name=[[Jean Carlos (footballer, born 1996)|Jean Carlos]]}}
+{{Fs player|no=21|nat=POL|pos=MF|name=[[Tomasz Pieńko]]}}
+{{Fs player|no=22|nat=NGR|pos=MF|name=Abraham Ojo}}
+{{Fs player|no=23|nat=POL|pos=MF|name=[[Karol Struski]]}}
+{{Fs player|no=24|nat=POL|pos=DF|name=Nikodem Całko}}
+{{Fs player|no=25|nat=ROU|pos=DF|name=[[Bogdan Racovițan]]}}
+{{Fs player|no=26|nat=KEN|pos=MF|name=[[Erick Otieno]]}}
+{{Fs player|no=29|nat=POL|pos=GK|name=Wiktor Żołneczko}}
+{{Fs player|no=36|nat=MNE|pos=MF|name=[[Marko Perović (footballer, born 2006)|Marko Perović]]}}
+{{Fs player|no=39|nat=SWE|pos=FW|name=[[Isak Brusberg]]}}
+{{Fs player|no=44|nat=SRB|pos=MF|name=[[Bogdan Mirčetić]]}}
+{{Fs player|no=48|nat=POL|pos=GK|name=Karol Surzyn}}
+{{Fs player|no=71|nat=BIH|pos=GK|name=Tarik Karić}}
+{{Fs player|no=77|nat=UGA|pos=DF|name=[[Dieudonné Gaucho Debohi|Dieudonné Debohi]]}}
+{{Fs player|no=80|nat=GUI|pos=MF|name=[[Lamine Diaby-Fadiga]]}}
+{{Fs player|no=88|nat=HUN|pos=MF|name=[[Ádin Molnár]]}}
+{{Fs player|no=99|nat=POL|pos=FW|name=[[Adam Basse]]}}
+{{Fs player|no=  |nat=BRA|pos=MF|name=[[Adriano Amorim]]}}
+{{Fs player|no=30|nat=COL|pos=MF|name=[[Jesús Díaz (footballer, born 1999)|Jesús Díaz]]|other=at [[Cúcuta Deportivo]] until 30 June 2027}}
+{{Fs player|no=31|nat=POL|pos=GK|name=Dominik Czeremski|other=at [[Stal Brzeg]] until 30 June 2027}}
+{{Fs player|no=76|nat=POL|pos=GK|name=Jakub Rajczykowski|other=at [[Świt Szczecin]] until 30 June 2027}}
+{{Fs player|no=97|nat=SEN|pos=MF|name=Ibrahima Seck|other=at [[FK Sūduva|Sūduva]] until 30 November 2026}}
+{{Fs player|no=<!--21-->|nat=POL|pos=MF|name=Antoni Burkiewicz|other=at [[Unia Skierniewice]] until 30 June 2027}}
+{{Fs player|no=  |nat=POL|pos=MF|name=Kacper Nowakowski|other=at [[ŁKS Łódź]] until 30 June 2027}}
+{{Fs player|no=<!--31-->|nat=BIH|pos=GK|name=[[Muhamed Šahinović]]|other=at [[FK Radnički 1923|Radnički 1923]] until 30 June 2027}}
+{{Fs player|no=13|pos=MF|nat=POL|name=[[Piotr Malinowski]]|other=2015–21}}

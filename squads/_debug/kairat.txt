@@ -1,0 +1,51 @@
+== History
+=== The Nation's Team (1960–1991)
+=== First Kazakh champions and secession (1992–2000)
+=== Reunification, the second title and stagnation (2001–2009)
+=== Recent years and UEFA Champions League (2010–present)
+== Stadium
+== Players
+=== Under-21s and Academy
+=== Out on loan
+== Non-playing staff
+=== Coaching staff
+=== Notable managers
+== Honours
+=== European
+== Statistics
+=== Continental record
+=== UEFA coefficient
+=== Top goalscorers
+==== Most appearances
+== Partnerships
+== References
+== External links
+
+TEMPLATES 27
+{{Fs player|no= 1|pos=GK|nat=KAZ|name=[[Temirlan Anarbekov]]}}
+{{Fs player|no= 3|pos=DF|nat=POR|name=[[Luís Mata]]}}
+{{Fs player|no= 4|pos=DF|nat=KAZ|name=[[Damir Kasabulat]]}}
+{{Fs player|no= 5|pos=DF|nat=KAZ|name=[[Lev Kurgin]]}}
+{{Fs player|no= 6|pos=MF|nat=KAZ|name=[[Adilet Sadybekov]]}}
+{{Fs player|no= 7|pos=FW|nat=POR|name=[[Jorginho (footballer, born 1997)|Jorginho]]}}
+{{Fs player|no= 8|pos=MF|nat=KAZ|name=[[Olzhas Baybek]]}}
+{{Fs player|no= 9|pos=FW|nat=BRA|name=[[Edmilson (footballer, born 1997)|Edmilson]]}}
+{{Fs player|no=13|pos=MF|nat=FIN|name=[[Jaakko Oksanen]]}}
+{{Fs player|no=14|pos=DF|nat=BLR|name=[[Alyaksandr Martynovich]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=15|pos=FW|nat=KAZ|name=Mansur Birkurmanov}}
+{{Fs player|no=17|pos=MF|nat=KAZ|name=Azamat Tuyakbaev}}
+{{Fs player|no=19|pos=MF|nat=FIN|name=[[Oiva Jukkola]]}}
+{{Fs player|no=20|pos=DF|nat=KAZ|name=[[Yerkin Tapalov]]}}
+{{Fs player|no=22|pos=MF|nat=POR|name=[[Gustavo Mendonça]]}}
+{{Fs player|no=24|pos=DF|nat=KAZ|name=[[Aleksandr Mrynskiy]]}}
+{{Fs player|no=25|pos=DF|nat=KAZ|name=[[Alexander Shirobokov]]}}
+{{Fs player|no=27|pos=MF|nat=KAZ|name=Mukhamedali Abish}}
+{{Fs player|no=28|pos=FW|nat=ESP|name=[[Marc Gual]]}}
+{{Fs player|no=30|pos=GK|nat=KAZ|name=[[Danila Buch]]}}
+{{Fs player|no=32|pos=DF|nat=KAZ|name=Adlan Nurgaliev}}
+{{Fs player|no=44|pos=DF|nat=BRA|name=[[Lucas Áfrico]]}}
+{{Fs player|no=59|pos=DF|nat=KAZ|name=Daniyar Tashpulatov}}
+{{Fs player|no=81|pos=MF|nat=KAZ|name=Ismail Bekbolat}}
+{{Fs player|no=82|pos=GK|nat=KAZ|name=[[Sherkhan Kalmurza]]}}
+{{Fs player|no=|pos=DF|nat=KAZ|name=Sultan Askarov|other=at [[FC Kaisar|Kaisar]]}}
+{{Fs player|no=23|pos=FW|nat=KAZ|name=[[Ramazan Bagdat]]|other=at [[FC Kaisar|Kaisar]]}}

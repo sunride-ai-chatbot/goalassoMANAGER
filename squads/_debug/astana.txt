@@ -1,0 +1,54 @@
+== History
+=== Stoilov years: Domestic dominance and European breakthrough (2014–2018)
+=== Post Stoilov years: (2018–)
+== Stadium
+== Colours and crest
+== Players
+=== Out on loan
+=== Retired numbers
+== Non-playing staff
+=== Coaching staff
+=== Notable managers
+== Honours
+== Statistics
+=== Records
+== European record
+=== UEFA coefficient
+== Player history
+=== Top goalscorers
+=== Clean sheets
+== Partnerships
+== References
+== External links
+
+TEMPLATES 30
+{{Fs player|no=2 |nat=CRO|pos=DF|name=[[Karlo Bartolec]]}}
+{{Fs player|no=3 |nat=CRO|pos=DF|name=[[Branimir Kalaica]]}}
+{{Fs player|no=4 |nat=KAZ|pos=DF|name=Sanzhar Anuarov}}
+{{Fs player|no=5 |nat=LTU|pos=DF|name=[[Kipras Kažukolovas]]}}
+{{Fs player|no=6 |nat=KAZ|pos=DF|name=[[Alibek Kasym]]}}
+{{Fs player|no=7 |nat=KAZ|pos=MF|name=Dinmukhamed Karaman}}
+{{Fs player|no=8 |nat=BIH|pos=MF|name=[[Ivan Bašić]]}}
+{{Fs player|no=9 |nat=KAZ|pos=MF|name=[[Bauyrzhan Islamkhan]]}}
+{{Fs player|no=10|nat=CRO|pos=MF|name=[[Marin Tomasov]]}}
+{{Fs player|no=11|nat=KAZ|pos=DF|name=[[Yan Vorogovsky]]}}
+{{Fs player|no=15|nat=KAZ|pos=DF|name=[[Abzal Beysebekov]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=17|nat=KAZ|pos=MF|name=Damir Marat|other=on loan from [[FC Tobol|Tobol]]}}
+{{Fs player|no=20|nat=NGR|pos=FW|name=Nnamdi Ahanonu}}
+{{Fs player|no=21|nat=KAZ|pos=MF|name=[[Aleksandr Merkel]]}}
+{{Fs player|no=29|nat=CRO|pos=FW|name=[[Nikola Burić]]}}
+{{Fs player|no=45|nat=SRB|pos=DF|name=[[Ivan Miladinović]]}}
+{{Fs player|no=47|nat=KAZ|pos=MF|name=Maksat Abrayev}}
+{{Fs player|no=52|nat=KAZ|pos=DF|name=Timur Tokenov}}
+{{Fs player|no=57|nat=KAZ|pos=FW|name=Akhmetali Kaltanov}}
+{{Fs player|no=72|nat=KAZ|pos=FW|name=[[Stanislav Basmanov]]}}
+{{Fs player|no=74|nat=KAZ|pos=GK|name=[[Mukhammedzhan Seysen]]}}
+{{Fs player|no=77|nat=KAZ|pos=DF|name=[[Dmitry Shomko]]}}
+{{Fs player|no=81|nat=KAZ|pos=FW|name=[[Ramazan Karimov]]}}
+{{Fs player|no=82|nat=KAZ|pos=MF|name=Ruslan Valikhan}}
+{{Fs player|no=91|nat=KAZ|pos=DF|name=Aytuar Token}}
+{{Fs player|no=93|nat=CRO|pos=GK|name=[[Josip Čondrić]]}}
+{{Fs player|no=99|nat=KAZ|pos=GK|name=Danila Karpikov}}
+{{Fs player|no=19|nat=KAZ|pos=FW|name=Nurali Zhaksylykov|other=at [[FC Kaisar|Kaisar]]}}
+{{Fs player|no=21|nat=KAZ|pos=MF|name=[[Elkhan Astanov]]|other=at [[FC Ordabasy|Ordabasy]]}}
+{{Fs player|no=80|nat=KAZ|pos=MF|name=[[Arman Kenesov]]|other=at [[FC Aktobe|Aktobe]]}}

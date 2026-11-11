@@ -1,0 +1,46 @@
+== History
+== Stadium
+== Honours
+== Players
+=== Out on loan
+== Personnel
+== List of managers
+== Ballkani in Europe
+=== By competition
+=== Matches
+== References
+
+TEMPLATES 33
+{{Fs player|no= 1|pos=GK|nat=KOS|name=Ardit Nika}}
+{{Fs player|no= 4|pos=DF|nat=KOS|name=Gentrit Halili}}
+{{Fs player|no= 5|pos=MF|nat=BIH|name=[[Anel Šabanadžović]]}}
+{{Fs player|no= 6|pos=DF|nat=ALB|name=Diar Vokrri}}
+{{Fs player|no= 8|pos=MF|nat=KOS|name=[[Toni Domgjoni]]}}
+{{Fs player|no= 9|pos=FW|nat=CIV|name=[[Valentin Serebe]]}}
+{{Fs player|no=10|pos=MF|nat=BRA|name=[[Giovanni (footballer, born 2002)|Giovanni]]}}
+{{Fs player|no=11|pos=FW|nat=DZA|name=[[Walid Hamidi]]}}
+{{Fs player|no=12|pos=DF|nat=CIV|name=Abou Dosso}}
+{{Fs player|no=13|pos=GK|nat=KOS|name=Ideal Bytyqi}}
+{{Fs player|no=15|pos=DF|nat=KOS|name=Redon Zekaj}}
+{{Fs player|no=16|pos=MF|nat=KOS|name=[[Erlis Xhemajli]]}}
+{{Fs player|no=17|pos=FW|nat=KOS|name=Ardi Maksutaj}}
+{{Fs player|no=18|pos=DF|nat=KOS|name=Lendrit Shala}}
+{{Fs player|no=19|pos=MF|nat=KOS|name=Engjëll Ajazaj}}
+{{Fs player|no=20|pos=MF|nat=MNE|name=[[Edvin Kuč]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=27|pos=FW|nat=ALB|name=[[Dijar Nikqi]]}}
+{{Fs player|no=28|pos=DF|nat=CRO|name=Ivica Batarelo}}
+{{Fs player|no=29|pos=MF|nat=SEN|name=Albert Diène}}
+{{Fs player|no=30|pos=MF|nat=KOS|name=Almedin Klinaku}}
+{{Fs player|no=31|pos=GK|nat=TUR|name=Kaan Karagöz}}
+{{Fs player|no=32|pos=DF|nat=KOS|name=[[Bajram Jashanica]]|other=[[Captain (association football)#Vice-captain|vice-captain]]}}
+{{Fs player|no=33|pos=MF|nat=KOS|name=Leonis Murseli}}
+{{Fs player|no=34|pos=DF|nat=KOS|name=Merlind Kodra}}
+{{Fs player|no=37|pos=MF|nat=ALB|name=Arens Mateli}}
+{{Fs player|no=44|pos=GK|nat=ALB|name=[[Gentian Selmani]]}}
+{{Fs player|no=45|pos=MF|nat=KOS|name=Adonis Hoti}}
+{{Fs player|no=88|pos=MF|nat=KOS|name=Leart Popaj}}
+{{Fs player|no=93|pos=GK|nat=KOS|name=Art Miftari}}
+{{Fs player|no=98|pos=FW|nat=KOS|name=[[Jetmir Topalli]]}}
+{{Fs player|no=99|pos=FW|nat=KOS|name=[[Albin Berisha]]}}
+{{Fs player|no=92|pos=DF|nat=ALB|name=[[Elmando Gjini]]|other=at [[AF Elbasani]] until 30 June 2027}}
+{{Fs player|no=|pos=FW|nat=GAM|name=Ebrima Gaye|other=at [[KF Arsimi|Arsimi]] until 30 June 2027}}

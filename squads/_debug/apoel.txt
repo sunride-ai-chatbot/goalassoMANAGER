@@ -1,0 +1,72 @@
+== History
+=== The 1930s : The first league titles
+=== The 1948 conflicts
+=== 1955–59 period
+=== Triumph in the 1963–64 UEFA Cup Winners' Cup
+=== The successful participation in pan-Hellenic Greek Championship
+=== The 1980s: European Cup 1986–87 withdrawal
+=== The 1990s: The unbeaten "double" in 1995–96
+=== The formation of APOEL FC Company
+=== 2000s–2010s: Domestic domination
+=== 2020s
+== European ambitions
+== APOEL FC as a company
+== Youth Academy
+=== UEFA Youth League participations
+== Colours and badge
+== Stadium
+== Club culture and supporters
+=== Politics
+== Rivalries
+== Current squad
+=== Out on loan
+== Club officials
+=== Personnel
+=== Technical staff
+=== Medical staff
+== Sponsorship
+== Managerial history
+== Presidential history
+== Former players
+== Honours
+== Records
+== League and Cup history
+=== IFFHS Club world ranking
+== References
+== External links
+
+TEMPLATES 34
+{{Fs player|no= 1|nat=CRO|name=[[Oliver Zelenika]]|pos=GK}}
+{{Fs player|no= 3|nat=GRE|name=[[Kostas Stafylidis]]|pos=DF}}
+{{Fs player|no= 4|nat=CYP|name=Nikolas Angelopoulos|pos=DF}}
+{{Fs player|no= 5|nat=AUS|name=[[Milos Degenek|Miloš Degenek]]|pos=DF}}
+{{Fs player|no= 6|nat=CYP|name=[[Stylianos Vrontis]]|pos=MF}}
+{{Fs player|no= 7|nat=ARG|name=[[Daniel Mancini]]|pos=FW}}
+{{Fs player|no= 8|nat=GNB|name=[[Dálcio]]|pos=MF}}
+{{Fs player|no= 9|nat=GRE|name=[[Anastasios_Bakasetas|Tasos Bakasetas]]|pos=FW}}
+{{Fs player|no=10|nat=BRA|name=[[Marquinhos (footballer, born January 1997)|Marquinhos]]|pos=FW}}
+{{Fs player|no=11|nat=BRA|name=[[Gabriel Maioli]]|pos=FW}}
+{{Fs player|no=14|nat=ESP|name=[[Ángel García (footballer, born_1993)|Ángel García]]|pos=DF}}
+{{Fs player|no=15|nat=ARG|name=[[Fabricio Pedrozo]]|pos=FW}}
+{{Fs player|no=16|nat=ESP|name=[[Álvaro_Carrillo_(footballer) | Álvaro Carrillo]]|pos=DF}}
+{{Fs player|no=18|nat=GRE|name=[[Dimitrios Limnios]]|pos=MF}}
+{{Fs player|no=19|nat=ITA|name=Gustavo Manduca|pos=MF}}
+{{Fs player|no=21|nat=CYP|name=Konstantinos Poursaitidis|pos=DF}}
+{{Fs player|no=23|nat=CYP|name=Panayiotis Kattirtzis|pos=MF}}
+{{Fs player|no=25|nat=ESP|name=[[Joan Sastre (footballer)|Joan Sastre]]|pos=DF}}
+{{Fs player|no=27|nat=SVN|name=[[Vid Belec]]|pos=GK}}
+{{Fs player|no=31|nat=SRB|name=[[Filip Đuričić]]|pos=MF}}
+{{Fs player|no=32|nat=CYP|name=Ioannis Avraamides|pos=MF}}
+{{Fs player|no=34|nat=CYP|name=[[Konstantinos Laifis]]|pos=DF|other=[[Captain (association football)|Captain]]}}
+{{Fs player|no=45|nat=CYP|name=Konstantinos Giannakou|pos=DF}}
+{{Fs player|no=70|nat=CYP|name=Stavros Georgiou|pos=FW}}
+{{Fs player|no=72|nat=CZE|name=[[Antonín Barák]]|pos=MF}}
+{{Fs player|no=78|nat=CYP|name=Savvas Michos|pos=GK}}
+{{Fs player|no=91|nat=CYP|name=Stratos Voniatis|pos=GK}}
+{{Fs player|no=79|nat=CYP|name=[[Pieros Sotiriou]]|pos=FW}}
+{{Fs player|no=99|nat=ARG|name=[[Facundo Pérez]]|pos=MF}}
+{{Fs player|nat=CYP|pos=GK|name=[[Andreas Christodoulou (footballer, born 1997)|Andreas Christodoulou]]|other=at [[Krasava ENY Ypsonas FC|Krasava]] until 30 June 2027}}
+{{Fs player|nat=BRA|pos=GK|name=Gabriel Pereira|other=at [[Omonia Aradippou]] until 30 June 2027}}
+{{Fs Player|nat=BRA|pos=DF|name=[[Vitor Alves Meer|Vitor Meer]]|other=at [[Iraklis_F.C._(Thessaloniki)|Iraklis]] until 30 June 2027}}
+{{Fs Player|nat=BRA|pos=MF|name=[[Diego_Rosa_(footballer,_born_2002)|Diego Rosa]] (at [[Qarabag FK|Qarabağ]] until 30 June 2027)}}
+{{Fs Player|nat=BRA|pos=FW|name=Pedro Ataide|other=at [[Selangor F.C.|Selangor]] until 30 June 2027}}

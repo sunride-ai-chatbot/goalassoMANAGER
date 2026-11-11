@@ -1,0 +1,72 @@
+== History
+=== Beginnings in the Cypriot First Division (1953–1969)
+=== Golden era (1970s–1980s)
+=== General decline (1990s)
+=== Revival (2000s)
+=== Financial crisis (2012–2018)
+=== Papastavrou era (2018–present)
+== Club identity
+=== Colours and badge
+=== Anthem
+=== Supporters
+=== Left-wing politics
+==== Financial crisis and 2013 Pan-Cypriot fundraiser
+== Media presence
+== Stadium
+=== Plans for the construction of a privately owned stadium
+== Kit manufacturers and shirt sponsors
+== Honours
+=== Minor Titles
+== Player records
+== Record in European competitions
+=== European Cup / UEFA Champions League
+=== European Cup Winners' Cup
+=== UEFA Cup / UEFA Europa League
+=== UEFA Conference League
+=== UEFA and IFFHS rankings
+== Players
+==== Out on loan
+=== Former players
+=== Retired number
+== Staff
+=== Staff
+== Management
+=== Omonia FC
+=== Managerial history
+=== Presidential history
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no= 1|nat=BEL|pos=GK|name=[[Thomas Kaminski]]|other=on loan from [[Charlton Athletic F.C.|Charlton Athletic]]}}
+{{Fs player|no= 3|nat=GRE|pos=DF|name=[[Fotis Kitsos]]}}
+{{Fs player|no= 5|nat=MLI|pos=DF|name=[[Senou Coulibaly]]|other=[[Captain (association football)|vice captain]]}}
+{{Fs player|no= 6|nat=NED|pos=MF|name=[[Carel Eiting]]}}
+{{Fs player|no= 7|nat=SUR|pos=FW|name=[[Jaden Montnor]]}}
+{{Fs player|no= 8|nat=NGA|pos=FW|name=[[David Akintola]]}}
+{{Fs player|no= 9|nat=CYP|pos=FW|name=[[Andronikos Kakoullis]]}}
+{{Fs player|no=11|nat=BRA|pos=MF|name=[[Ewandro]]}}
+{{Fs player|no=14|nat=BIH|pos=MF|name=[[Mateo Marić]]}}
+{{Fs player|no=17|nat=ROM|pos=FW|name=[[Florin Tănase]]}}
+{{Fs player|no=20|nat=NED|pos=MF|name=[[Luuk Brouwers]]}}
+{{Fs player|no=21|nat=RSA|pos=FW|name=[[Mihlali Mayambela]]}}
+{{Fs player|no=22|nat=SWE|pos=MF|name=[[Muamer Tanković]]}}
+{{Fs player|no=27|nat=CZE|pos=DF|name=[[Stefan Simić]]}}
+{{Fs player|no=28|nat=ENG|pos=DF|name=[[Moses Odubajo]]}}
+{{Fs player|no=29|nat=SLO|pos=DF|name=[[Jure Balkovec]]}}
+{{Fs player|no=37|nat=SVK|pos=DF|name=[[Ľubomír Šatka]]}}
+{{Fs player|no=40|nat=CYP|pos=GK|name=[[Fabiano Freitas|Fabiano]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=44|nat=CYP|pos=DF|name=Giorgos Victoros|other=on loan from [[Nea Salamis Famagusta FC|Nea Salamina]]}}
+{{Fs player|no=74|nat=CYP|pos=MF|name=[[Panagiotis Andreou]]}}
+{{Fs player|no=77|nat=HUN|pos=DF|name=[[Loïc Négo]]}}
+{{Fs player|no=78|nat=CYP|pos=GK|name=Pantelis Michael}}
+{{Fs player|no=82|nat=CYP|pos=MF|name=Andreas Christou}}
+{{Fs player|no=85|nat=CYP|pos=FW|name=Angelos Neophytou}}
+{{Fs player|no=90|nat=CYP|pos=DF|name=Christos Constantinides}}
+{{Fs player|no=93|nat=HAI|pos=DF|name=[[Jean-Kévin Duverne]]}}
+{{Fs player|no=99|nat=FRA|pos=FW|name=[[Loïs Diony]]}}
+{{Fs player|no=|nat=CYP|pos=DF|name=Andreas Hadjievangelou|other=at [[Spartakos Kitiou]] until 31 May 2027}}
+{{Fs player|no=|nat=CYP|pos=MF|name=Gavriel Psilogenis|other=at [[MEAP Nisou]] until 31 May 2027}}
+{{Fs player|no=|nat=CYP|pos=FW|name=Constantinos Panayi|other=at [[ASIL Lysi]] until 31 May 2027}}
+{{Fs player|no=|nat=CYP|pos=FW|name=Chrysis Evangelou|other=at [[Nea Salamis Famagusta FC|Nea Salamina]] until 31 May 2027}}
+{{Fs player|no=|nat=GAB|pos=FW|name=Curtis Junior Makosso|other=at [[Omonia Aradippou]] until 31 May 2027}}

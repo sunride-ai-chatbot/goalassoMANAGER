@@ -1,0 +1,58 @@
+== History
+=== Czechoslovak League
+==== First leg
+==== Second leg
+=== New era – Slovak League
+== League finishing positions
+=== Events timeline
+== Affiliated clubs
+== Supporters
+== Stadium
+== Sponsorship
+== Honours
+=== European
+== Transfers
+=== Record transfers
+== Players
+=== Out on loan
+=== Reserve team
+== Staff
+== Results
+=== European record
+== Player records
+==== Top Goalscorer
+== Notable players
+== List of MŠK Žilina managers
+== References
+== External links
+
+TEMPLATES 29
+{{Fs player|no= 1|nat=SVK|pos=GK|name=[[Jakub Badžgoň]]}}
+{{Fs player|no= 2|nat=SVK|pos=DF|name=[[Marek Okál]]}}
+{{Fs player|no= 4|nat=SVK|pos=DF|name=Matúš Pavlík}}
+{{Fs player|no= 6|nat=CMR|pos=MF|name=[[Xavier Adang]]}}
+{{Fs player|no= 7|nat=SVK|pos=FW|name=[[František Kóša]]}}
+{{Fs player|no= 9|nat=SVK|pos=FW|name=Patrik Baleja}}
+{{Fs player|no=10|nat=ROU|pos=MF|name=[[Andrei Florea]]}}
+{{Fs player|no=11|nat=POL|pos=MF|name=[[Fabian Bzdyl]]}}
+{{Fs player|no=14|nat=SVK|pos=DF|name=Michal Svoboda}}
+{{Fs player|no=16|nat=SVK|pos=FW|name=[[Patrik Iľko]]}}
+{{Fs player|no=17|nat=SVK|pos=DF|name=[[Ján Minárik]]}}
+{{Fs player|no=19|nat=CIV|pos=DF|name=Marcus Arnold Traoré}}
+{{Fs player|no=20|nat=SVK|pos=DF|name=[[Krisztián Bari]]}}
+{{Fs player|no=21|nat=SVK|pos=DF|name=[[Timotej Hranica]]}}
+{{Fs player|no=23|nat=SVK|pos=FW|name=[[Michal Faško]]}}
+{{Fs player|no=24|nat=SVK|pos=FW|name=[[Samuel Ďatko]]}}
+{{Fs player|no=25|nat=SWE|pos=DF|name=Johan Albin}}
+{{Fs player|no=26|nat=SVK|pos=GK|name=Tamás Tarcsi}}
+{{Fs player|no=28|nat=GEO|pos=DF|name=[[Aleksandre Narimanidze]]}}
+{{Fs player|no=31|nat=SVK|pos=GK|name=[[Dávid Šípoš]]}}
+{{Fs player|no=39|nat=CZE|pos=FW|name=[[Lukáš Juliš]]}}
+{{Fs player|no=66|nat=SVK|pos=MF|name=[[Miroslav Káčer]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=77|nat=SVK|pos=MF|name=Róbert Petruška}}
+{{Fs player|no=90|nat=ESP|pos=FW|name=Dani Homet}}
+{{Fs player|no=95|nat=CRO|pos=FW|name=[[Marko Roginić]]}}
+{{Fs player|no=99|nat=SWE|pos=FW|name=[[Kenan Bilalović]]|other=on loan from {{Flagicon|SCO}}
+{{Fs player|no=|nat=CZE|pos=DF|name=[[Filip Kaša]]}}
+{{Fs player|no=27|nat=NGA|pos=FW|name=[[Ridwan Sanusi]]|other=at [[AS Trenčín|Trenčín]] until 30 June 2027}}
+{{Fs player|no=34|nat=SVK|pos=FW|name=Lukáš Prokop|other=at [[FC Inter Turku|Inter Turku]] until 31 December 2026}}

@@ -1,0 +1,36 @@
+== History
+== Honours
+== Recent seasons
+== European record
+== Players
+=== Out on loan
+== Personnel
+== References
+== External links
+
+TEMPLATES 25
+{{fs player|no=1|nat=MKD|pos=GK|name=Andrej Jovchevski}}
+{{fs player|no=2|nat=MKD|pos=DF|name=Alban Rochi}}
+{{fs player|no=5|nat=KOS|pos=DF|name=Landrit Rama}}
+{{Fs player|no=7|nat=MKD|pos=FW|name=Arbi Vosha}}
+{{fs player|no=8|nat=MKD|pos=MF|name=[[Adrian Zendelovski]]}}
+{{Fs player|no=9|nat=FRA|pos=FW|name=Hammond Agamah}}
+{{Fs player|no=10|nat=MKD|pos=MF|name=[[Besmir Bojku]]}}
+{{Fs player|no=11|nat=MKD|pos=MF|name=[[Bunjamin Shabani]]|other={{small|[[Captain (association football)|captain]]}}
+{{Fs player|no=13|nat=MKD|pos=FW|name=Florian Rochi}}
+{{Fs player|no=14|nat=MKD|pos=FW|name=[[Marjan Radeski]]}}
+{{Fs player|no=15|nat=MKD|pos=FW|name=Agon Demiri}}
+{{Fs player|no=17|nat=SEN|pos=DF|name=Pape Fall}}
+{{Fs player|no=19|nat=MKD|pos=MF|name=Ard Kasami}}
+{{fs player|no=20|nat=ALB|pos=FW|name=Altin Aliji}}
+{{Fs player|no=22|nat=NGA|pos=MF|name=Daniel Akinlosotu}}
+{{Fs player|no=27|nat=MKD|pos=MF|name=Memetriza Hamza}}
+{{fs player|no=28|nat=KOS|pos=DF|name=[[Qendrim Ismajli]]}}
+{{Fs player|no=29|nat=MKD|pos=FW|name=Hristijan Maleski}}
+{{fs player|no=44|nat=MKD|pos=GK|name=Vasko Vasilev}}
+{{fs player|no=59|nat=KOS|pos=DF|name=Andi Demiri}}
+{{fs player|no=77|nat=MKD|pos=DF|name=Bleron Ramadani}}
+{{fs player|no=80|nat=ALB|pos=DF|name=[[Edison Kola]]}}
+{{fs player|no=88|nat=MKD|pos=DF|name=[[Egzon Belica]]}}
+{{Fs player|no=94|nat=FRA|pos=DF|name=Lassana Diako}}
+{{Fs player|no=|nat=MKD|pos=FW|name=Vebi Islami|other={{small|at [[KF Kamjani|Kamjani]] until 30 June 2027}}

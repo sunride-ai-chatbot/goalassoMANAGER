@@ -1,0 +1,54 @@
+== History
+=== Settling in (2016–2017)
+=== First success (2018–2020)
+=== The double (2021)
+=== European breakthrough (2022)
+=== Regaining the title (2023)
+=== Europa League and domestic dominance (2024)
+== Grounds
+== Honours
+== Records and statistics
+== Rivalries
+== In popular culture
+== European record
+=== UEFA Club Ranking
+== Players
+=== Out on loan
+== Personnel
+=== Management
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no= 3|nat=NGA|pos=FW|name=Victor Osuagwu}}
+{{Fs player|no= 4|nat=LVA|pos=DF|name=Roberts Veips}}
+{{Fs player|no= 5|nat=LVA|pos=DF|name=Niks Sliede}}
+{{Fs player|no= 6|nat=SRB|pos=DF|name=[[Aleksandar Filipović (footballer)|Aleksandar Filipović]]}}
+{{Fs player|no= 7|nat=CIV|pos=FW|name=[[Ismaël Diomandé (footballer, born 2003)|Ismaël Diomandé]]}}
+{{Fs player|no= 8|nat=GEO|pos=MF|name=[[Lasha Odisharia]]}}
+{{fs player|no=10|nat=LVA|pos=MF|name=[[Jānis Ikaunieks (footballer)|Jānis Ikaunieks]]}}
+{{Fs player|no=11|nat=LVA|pos=DF|name=[[Roberts Savaļnieks]]}}
+{{Fs player|no=16|nat=LVA|pos=GK|name=[[Jevgēņijs Ņerugals]]}}
+{{Fs player|no=17|nat=CIV|pos=FW|name=Cedric Kouadio}}
+{{Fs player|no=18|nat=LVA|pos=MF|name=[[Dmitrijs Zelenkovs]]}}
+{{Fs player|no=20|nat=NGA|pos=FW|name=Kingsley Emenike|other={{small|on loan from [[FS Jelgava|Jelgava]]}}
+{{Fs player|no=21|nat=LAT|pos=MF|name=Niks Dusalijevs|other={{small|on loan from [[FK Tukums 2000|Tukums]]}}
+{{Fs player|no=22|nat=SRB|pos=FW|name=[[Darko Lemajić]]}}
+{{Fs player|no=23|nat=ALB|pos=DF|name=[[Herdi Prenga]]}}
+{{Fs player|no=24|nat=JPN|pos=MF|name=Mikaze Nagasawa}}
+{{Fs player|no=26|nat=SRB|pos=MF|name=[[Stefan Panić]]}}
+{{Fs player|no=27|nat=POR|pos=MF|name=[[Matheus Clemente]]}}
+{{Fs player|no=30|nat=GAM|pos=MF|name=Rasid Njie}}
+{{Fs player|no=35|nat=CRO|pos=GK|name=[[Marko Marić (footballer, born 1996)|Marko Marić]]}}
+{{Fs player|no=43|nat=SVN|pos=DF|name=[[Žiga Lipušček]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=49|nat=LVA|pos=MF|name=[[Mārtiņš Ķigurs]]}}
+{{Fs player|no=66|nat=GAM|pos=MF|name=Modou Saidy}}
+{{Fs player|no=77|nat=COD|pos=FW|name=Gauthier Mankenda}}
+{{Fs player|no=81|nat=SRB|pos=MF|name=Strahinja Rakić}}
+{{Fs player|no=99|nat=NGR|pos=DF|name=Shina Kumater}}
+{{Fs player|no=14|nat=CIV|pos=FW|name=Mamadou Sylla|other=at [[BFC Daugavpils]] until 31 December 2026}}
+{{Fs player|no=-|nat=LVA|pos=GK|name=Sergej Vilkovs|other=at [[SK Super Nova|Super Nova]] until 31 December 2026}}
+{{Fs player|no=-|nat=UKR|pos=DF|name=Maksym Derkach|other=at [[FK Tukums 2000|Tukums]] until 31 December 2026}}
+{{Fs player|no=-|nat=ARG|pos=MF|name=[[Facundo García]]|other=at [[SK Super Nova|Super Nova]] until 31 December 2026}}
+{{Fs player|no=-|nat=CMR|pos=FW|name=Rostand Ndjiki|other=at [[BFC Daugavpils]] until 31 December 2026}}
+{{Fs player|no=-|nat=UKR|pos=FW|name=Daniel Kivinda|other=at [[BFC Daugavpils]] until 31 December 2026}}

@@ -1,0 +1,75 @@
+== Crest and colours
+=== Team outfit
+== Home ground
+=== [[Víkingsvöllur]]
+== Youth training
+== Club history
+=== The Unbeaten Decade (1908–1918)
+=== First Championship Titles (1918–1947)
+=== Residence at Suðurgata (1947–1950)
+=== Hæðargarður & First Cup Win (1950–1975)
+=== Growth in Fossvogur (since 1976)
+== League history
+==== [[2013 Úrvalsdeild|2013 Season]]
+==== [[2014 Úrvalsdeild|2014 Season]]
+==== [[2015 Úrvalsdeild|2015 Season]]
+==== [[2016 Úrvalsdeild|2016 Season]]
+==== [[2017 Úrvalsdeild|2017 Season]]
+==== [[2018 Úrvalsdeild|2018 Season]]
+==== [[2019 Úrvalsdeild|2019 Season]]
+=== Men's Football - Current Squad
+=== Men's Football - Out on loan
+== Managerial history – men's football
+=== 20th century
+=== 21st century
+== Notable former players
+== Player records
+== European record
+=== UEFA Club Ranking
+== Achievements & club honours
+==== League
+==== Cup
+=== Men's handball
+==== Cup
+=== Women's handball
+==== Cup
+== Supporters
+=== Shirt sponsors
+== Staff & board 2023
+== Footnotes
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no=1|nat=ISL|name=[[Ingvar Jónsson]]|pos=GK}}
+{{Fs player|no=2|nat=ISL|name=Sveinn Gísli Þórkelsson|pos=DF}}
+{{Fs player|no=4|nat=SWE|name=[[Oliver Ekroth]]|pos=DF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=5|nat=ISL|name=Sölvi Stéfansson|pos=DF}}
+{{Fs player|no=7|nat=ISL|name=Erlingur Agnarsson|pos=MF}}
+{{Fs player|no=8|nat=ISL|name=[[Viktor Örlygur Andrason]]|pos=MF}}
+{{Fs player|no=9|nat=ISL|name=Helgi Guðjónsson|pos=DF}}
+{{Fs player|no=10|nat=ISL|name=[[Gylfi Sigurðsson]]|pos=MF}}
+{{Fs player|no=11|nat=ISL|name=[[Daníel Hafsteinsson]]|pos=MF}}
+{{Fs player|no=15|nat=ISL|name=[[Róbert Orri Þorkelsson]]|pos=DF}}
+{{Fs player|no=18|nat=ISL|name=Daði Berg Jónsson|pos=FW}}
+{{Fs player|no=19|nat=ISL|name=Óskar Borgþórsson|pos=FW}}
+{{Fs player|no=20|nat=DEN|name=[[Tarik Ibrahimagic|Tarik Ibrahimagić]]|pos=MF}}
+{{Fs player|no=21|nat=ISL|name=[[Aron Elís Þrándarson]]|pos=MF}}
+{{Fs player|no=22|nat=ISL|name=Karl Friðleifur Gunnarsson|pos=DF}}
+{{Fs player|no=23|nat=DEN|name=[[Nikolaj Hansen (footballer, born 1993)|Nikolaj Hansen]]|pos=FW}}
+{{Fs player|no=24|nat=ISL|name=Davíð Örn Atlason|pos=DF}}
+{{Fs player|no=25|nat=ISL|name=[[Valdimar Þór Ingimundarson]]|pos=FW}}
+{{Fs player|no=27|nat=ISL|name=[[Sveinn Aron Guðjohnsen]]|pos=FW}}
+{{Fs player|no=28|nat=ISL|name=[[Elías Már Ómarsson]]|pos=FW}}
+{{Fs player|no=29|nat=ISL|name=Aron Snær Friðriksson|pos=GK}}
+{{Fs player|no=30|nat=ISL|name=Sveinn Margeir Hauksson|pos=MF}}
+{{Fs player|no=47|nat=ISL|name=[[Ögmundur Kristinsson (footballer, born 1989)|Ögmundur Kristinsson]]|pos=GK}}
+{{Fs player|no=69|nat=ISL|name=Ármann Ingi Finnbogason|pos=FW}}
+{{Fs player|no=70|nat=ISL|name=Hrannar Snær Magnússon|pos=FW}}
+{{Fs player|no=77|nat=ISL|name=Stígur Diljan Þórðarson|pos=FW}}
+{{Fs player|no=99|nat=ISL|name=Uggi Jóhann Auðunsson|pos=GK}}
+{{Fs player|no= 5|nat=ISL|name=Davíð Helgi Aronsson|pos=DF|other=at [[Lyngby Boldklub]] until 30 June 2027}}
+{{Fs player|no=14|nat=ISL|name=[[Jóhannes Bjarnason]]|pos=MF|other=at [[FH (men's football)|FH]] until 5 February 2027}}
+{{Fs player|no=16|nat=ISL|name=Jochum Magnússon|pos=GK|other=at [[Íþróttafélagið Völsungur|Völsungur]] until 5 February 2027}}
+{{Fs player|no=17|nat=ISL|name=Atli Þór Jónasson|pos=FW|other=at [[Knattspyrnufélagið Fram|Fram]] until 5 February 2027}}
+{{Fs player|no=47|nat=ISL|name=Björgvin Brimi Andrésson|pos=FW|other=at [[Íþróttafélagið Grótta|Grótta]] until 5 February 2027}}

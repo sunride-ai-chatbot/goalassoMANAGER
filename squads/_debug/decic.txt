@@ -1,0 +1,39 @@
+== History
+=== Talent production
+=== First League record
+== Honours
+== European record
+== Players
+=== Notable players
+== Historical list of coaches
+== Stadium
+== See also
+== References
+== External links
+
+TEMPLATES 25
+{{Fs player|no=3|nat=MNE|name=Dardan Lulgjuraj|pos=DF}}
+{{Fs player|no=9|nat=MNE|name=Mario Gjolaj|pos=FW}}
+{{Fs player|no=8|nat=MNE|name=[[Aleksa Ćetković]]|pos=MF}}
+{{Fs player|no=9|nat=MNE|name=[[Ilir Camaj]]|pos=FW}}
+{{Fs player|no=11|nat=MNE|name=[[Uroš Đuranović]]|pos=FW}}
+{{Fs player|no=14|nat=MNE|name=[[Aldin Adžović]]|pos=MF}}
+{{Fs player|no=15|nat=MNE|name=Pjetër Lulgjuraj|pos=DF}}
+{{Fs player|no=16|nat=MNE|name=Matija Božanović|pos=MF}}
+{{Fs player|no=17|nat=MNE|name=Leon Ujkaj|pos=DF}}
+{{Fs player|no=18|nat=MNE|name=Lazar Maraš|pos=DF}}
+{{Fs player|no=21|nat=MNE|name=Andrej Camaj|pos=GK}}
+{{Fs player|no=22|nat=MNE|name=Jonathan Dreshaj|pos=DF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=23|nat=MNE|name=Siniša Stanisavić|pos=FW}}
+{{Fs player|no=25|nat=MNE|name=Danilo Radošević|pos=GK}}
+{{Fs player|no=27|nat=MNE|name=Davor Kontić|pos=MF}}
+{{Fs player|no=29|nat=MNE|name=Nikola Braunović|pos=DF}}
+{{Fs player|no=32|nat=MNE|name=Balša Radusinović|pos=FW}}
+{{Fs player|no=33|nat=MNE|name=[[Miloš Dragojević]]|pos=GK}}
+{{Fs player|no=50|nat=MNE|name=Jovan Mugoša|pos=DF}}
+{{Fs player|no=55|nat=MNE|name=Romario Camaj|pos=FW}}
+{{Fs player|no=66|nat=MNE|name=Demir Krkanović|pos=DF}}
+{{Fs player|no=72|nat=MNE|name=Petar Ivanović|pos=FW}}
+{{Fs player|no=74|nat=MNE|name=[[Petar Pavlićević]]|pos=DF}}
+{{Fs player|no=77|nat=MNE|name=Halil Kajoshaj|pos=MF}}
+{{Fs player|no=88|nat=MNE|name=[[Medo Juković]]|pos=MF}}

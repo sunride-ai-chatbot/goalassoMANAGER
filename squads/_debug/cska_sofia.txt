@@ -1,0 +1,73 @@
+== History
+=== 1948–1962
+=== 1960s
+=== 1970s
+=== 1980s
+=== 1990s
+=== 2000s
+=== 2010s
+=== 2020s
+== Club identity and supporters
+== League positions
+== Honours
+=== European
+=== Other trophies
+== Club crest
+== Names
+== Shirt sponsors and manufacturers
+== European record
+=== UEFA ranking
+== Players
+=== On loan
+=== Reserve team and Youth Academy
+=== Foreign players
+== Bulgarian Army stadium
+== Managerial history
+== Club officials
+=== Current technical body
+== Club kits
+== Club anthem
+== References
+== External links
+
+TEMPLATES 40
+{{Fs player|no=2|nat=BRA|name=[[Pastor (footballer)|Pastor]]|pos=DF}}
+{{Fs player|no=3|nat=BEN|name=[[Tamimou Ouorou]]|pos=DF|other=on loan from [[POFC Botev Vratsa|Botev Vratsa]]}}
+{{Fs player|no=4|nat=POR|name=[[Dinis Almeida]]|pos=DF}}
+{{Fs player|no=5|nat=CIV|name=[[Jean-Philippe Gbamin]]|pos=DF}}
+{{Fs player|no=6|nat=POR|name=[[Bruno Jordão]]|pos=MF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=7|nat=BLR|name=[[Max Ebong]]|pos=MF}}
+{{Fs player|no=8|nat=ITA|name=[[Stefano Sensi]]|pos=MF}}
+{{Fs player|no=9|nat=ARG|name=[[Santiago Godoy]]|pos=FW}}
+{{Fs player|no=10|nat=NED|name=[[Joël Zwarts]]|pos=FW}}
+{{Fs player|no=11|nat=FRA|name=[[Mohamed Brahimi (footballer, born 1998)|Mohamed Brahimi]]|pos=MF}}
+{{Fs player|no=14|nat=BUL|name=[[Teodor Ivanov]]|pos=DF|other=[[Captain (association football)|vice-captain]]}}
+{{Fs player|no=17|nat=ARG|name=[[Ángelo Martino]]|pos=DF}}
+{{Fs player|no=19|nat=BUL|name=[[Andrey Yordanov]]|pos=DF}}
+{{Fs player|no=21|nat=BLR|name=[[Fyodor Lapoukhov]]|pos=GK}}
+{{Fs player|no=25|nat=BUL|name=[[Dimitar Evtimov]]|pos=GK}}
+{{Fs player|no=28|nat=CYP|name=[[Ioannis Pittas]]|pos=FW}}
+{{Fs player|no=30|nat=BUL|name=[[Petko Panayotov]]|pos=MF}}
+{{Fs player|no=31|nat=BUL|name=[[Daniel Nikolov (footballer)|Daniel Nikolov]]|pos=GK}}
+{{Fs player|no=32|nat=ARG|name=[[Facundo Rodríguez (footballer, born 2000)|Facundo Rodríguez]]|pos=DF|other=on loan from [[Estudiantes de La Plata|Estudiantes]]}}
+{{Fs player|no=34|nat=BUL|name=[[Vasil Kaymakanov]]|pos=FW}}
+{{Fs player|no=37|nat=IRL|name=[[Barry Cotter (footballer)|Barry Cotter]]|pos=DF}}
+{{Fs player|no=38|nat=BRA|name=[[Léo Pereira (footballer, born 2000)|Léo Pereira]]|pos=FW}}
+{{Fs player|no=67|nat=ROM|name=[[Cătălin Itu]]|pos=MF}}
+{{Fs player|no=80|nat=BUL|name=[[Georgi Chorbadzhiyski]]|pos=MF}}
+{{Fs player|no=91|nat=BUL|name=[[Aleks Tunchev]]|pos=DF}}
+{{Fs player|no=94|nat=CAF|name=[[Isaac Solet]]|pos=MF}}
+{{Fs player|no=99|nat=CMR|name=[[James Eto'o]]|pos=MF}}
+{{Fs player|no=|nat=GAM|name=[[Sainey Sanyang]]|pos=DF|other=at [[POFC Botev Vratsa|Botev Vratsa]]}}
+{{Fs player|no=|nat=ALB|name=[[Kevin Dodaj]]|pos=MF|other=at [[Lechia Gdańsk]]}}
+{{Fs player|no=|nat=BUL|name=[[Yulian Iliev]]|pos=MF|other=at [[PFC Lokomotiv Plovdiv|Lokomotiv Plovdiv]]}}
+{{Fs player|no=|nat=BUL|name=[[Ivan Tasev (footballer)|Ivan Tasev]]|pos=MF|other=at [[PFC Cherno More Varna|Cherno More]]}}
+{{Fs player|no=|nat=COL|name=[[Alejandro Piedrahita]]|pos=FW|other=at [[Toronto FC]]}}
+{{Fs player|no=12|nat=BUL|name=Georgi Gerginov|pos=GK}}
+{{Fs player|no=20|nat=BUL|name=[[Martin Stoychev]]|pos=DF}}
+{{Fs player|no=27|nat=BUL|name=Yulian Gilov|pos=FW}}
+{{Fs player|no=35|nat=BUL|name=Lachezar Ivanov|pos=DF}}
+{{Fs player|no=36|nat=BUL|name=[[Radoslav Zhivkov]]|pos=FW}}
+{{Fs player|no=37|nat=BUL|name=[[Martin Sorakov]]|pos=FW}}
+{{Fs player|no=47|nat=BUL|name=Alesandro Nikolov|pos=MF}}
+{{Fs player|no=98|nat=BUL|name=Bozhidar Petrov|pos=DF}}

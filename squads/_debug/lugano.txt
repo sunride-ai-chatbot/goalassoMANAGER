@@ -1,0 +1,44 @@
+== History
+== European record
+== Players
+=== Out on loan
+== Honours
+== Former coaches
+== Coaching staff
+== References
+== External links
+
+TEMPLATES 33
+{{Fs player|no=2|pos=DF|nat=UZB|name=[[Bekhruz Karimov]]}}
+{{Fs player|no= 3|pos=DF|nat=HAI|name=[[Hannes Delcroix]]}}
+{{Fs player|no= 4|pos=DF|nat=SUI|name=Damian Kelvin}}
+{{Fs player|no= 6|pos=DF|nat=GER|name=[[Antonios Papadopoulos (footballer)|Antonios Papadopoulos]]}}
+{{Fs player|no= 7|pos=MF|nat=MKD|name=[[Ezgjan Alioski]]}}
+{{Fs player|no= 8|pos=MF|nat=SUI|name=[[Anto Grgić]]}}
+{{Fs player|no= 9|pos=FW|nat=SUI|name=[[Albian Ajeti]]|other=on loan from [[FC Basel|Basel]]}}
+{{Fs player|no=11|pos=MF|nat=SUI|name=[[Renato Steffen]]}}
+{{Fs player|no=14|pos=MF|nat=ALG|name=[[Ahmed Kendouci]]}}
+{{Fs player|no=16|pos=GK|nat=SUI|name=[[David von Ballmoos]]}}
+{{Fs player|no=17|pos=DF|nat=GER|name=[[Lars Lukas Mai]]}}
+{{Fs player|no=18|pos=DF|nat=SUI|name=Joel Bichsel}}
+{{Fs player|no=19|pos=MF|nat=ITA|name=[[Claudio Cassano]]|other=on loan from [[Chicago Fire FC|Chicago Fire]]}}
+{{Fs player|no=21|pos=MF|nat=FRA|name=[[Yanis Cimignani]]}}
+{{Fs player|no=22|pos=FW|nat=COL|name=[[Beckham Castro]]}}
+{{Fs player|no=23|pos=MF|nat=SWE|name=Gjan Ajdin}}
+{{Fs player|no=24|pos=MF|nat=SWE|name=[[Elias Pihlström]]}}
+{{Fs player|no=25|pos=MF|nat=SUI|name=[[Uran Bislimi]]}}
+{{Fs player|no=26|pos=DF|nat=POR|name=[[Martim Marques]]}}
+{{Fs player|no=27|pos=MF|nat=SUI|name=[[Daniel Dos Santos (footballer)|Daniel Dos Santos]]}}
+{{Fs player|no=28|pos=GK|nat=GER|name=[[Felix Gebhardt]]}}
+{{Fs player|no=30|pos=FW|nat=HON|name=[[Dereck Moncada]]}}
+{{Fs player|no=31|pos=MF|nat=SUI|name=Jason Parente}}
+{{Fs player|no=32|pos=FW|nat=SUI|name=Nicolò Puddu}}
+{{Fs player|no=33|pos=FW|nat=SUI|name=Christian Raffa}}
+{{Fs player|no=36|pos=FW|nat=SUI|name=Bryan Zurmühle}}
+{{Fs player|no=37|pos=FW|nat=SUI|name=Ian Tiraboschi}}
+{{Fs player|no=44|pos=DF|nat=BRA|name=Carbone}}
+{{Fs player|no=46|pos=DF|nat=ITA|name=[[Mattia Zanotti]]}}
+{{Fs player|no=91|pos=FW|nat=GER|name=[[Kevin Behrens]]}}
+{{Fs player|no=99|pos=GK|nat=SUI|name=Diego Mina}}
+{{Fs player|no=|pos=GK|nat=GRE|name=Fotios Pseftis|other=at [[Antalyaspor]] until 30 June 2027}}
+{{Fs player|no=|pos=MF|nat=MKD|name=Ilija Maslarov|other=at [[FC Rapperswil-Jona|Rapperswil-Jona]] until 30 June 2027}}

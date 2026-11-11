@@ -1,0 +1,75 @@
+== History
+=== 1969–1985: Levski-Spartak
+=== 1985–1989: Vitosha Sofia
+=== 1989–2009: Return of Levski Sofia and the ''Blue Tale''
+=== 2009–2020: Downfall
+=== 2020–present: Return of Sirakov and Stoilov
+== Club symbols
+=== Club anthem
+== Stadium
+== Supporters
+== Players
+=== Reserve team and Youth academy
+=== Out on loan
+=== Foreign players
+== Honours
+== European record
+== Recent seasons
+=== League positions
+== Club officials
+=== Management
+=== First team
+=== Academy
+== Youth academy
+== UEFA & IFFHS rankings
+=== Club coefficients
+=== Club world ranking
+== Shirt sponsors and kit manufacturers
+== Club records
+== Player records
+=== Most appearances
+=== Most goals scored
+== Managerial history
+== Notable players
+=== Foreign players
+=== Bulgarian Footballer of the Year
+=== First division top goalscorers
+== References
+== External links
+
+TEMPLATES 35
+{{Fs player|no=1|nat=BUL|name=[[Ognyan Vladimirov]]|pos=GK}}
+{{Fs player|no=2|nat=BRA|name=[[Hevertton Santos|Hevertton]]|pos=DF}}
+{{Fs player|no=3|nat=BRA|name=[[Maicon (footballer, born 2000)|Maicon]]|pos=DF}}
+{{Fs player|no=4|nat=VEN|name=[[Christian Makoun]]|pos=DF|other=[[Captain (association football)|vice-captain]]}}
+{{Fs player|no=7|nat=BRA|name=[[Reinaldo (footballer, born 2001)|Reinaldo]]|pos=FW}}
+{{Fs player|no=8|nat=SRB|name=[[Marko Grujić]]|pos=MF}}
+{{Fs player|no=9|nat=COL|name=[[Juan Perea]]|pos=FW}}
+{{Fs player|no=10|nat=BUL|name=[[Asen Mitkov]]|pos=MF}}
+{{Fs player|no=11|nat=IRL|name=[[Armstrong Oko-Flex]]|pos=FW}}
+{{Fs player|no=12|nat=MLI|name=[[Mustapha Sangaré]]|pos=FW}}
+{{Fs player|no=17|nat=BRA|name=[[Everton Bala]]|pos=FW}}
+{{Fs player|no=18|nat=SVN|name=[[Gašper Trdin]]|pos=MF}}
+{{Fs player|no=19|nat=MAR|name=[[El Mehdi El Moubarik]]|pos=MF}}
+{{Fs player|no=20|nat=ESP|name=[[Álex Centelles]]|pos=DF}}
+{{Fs player|no=21|nat=POR|name=[[Aldair Neves]]|pos=DF}}
+{{Fs player|no=22|nat=FRA|name=[[Mazire Soula]]|pos=MF}}
+{{Fs player|no=27|nat=ANG|name=[[David Kusso]]|pos=FW}}
+{{Fs player|no=28|nat=BUL|name=[[Stivan Stoyanchov]]|pos=FW}}
+{{Fs player|no=31|nat=MKD|name=[[Nikola Serafimov]]|pos=DF}}
+{{Fs player|no=35|nat=POR|name=[[Serginho (footballer, born 1999)|Serginho]]|pos=MF}}
+{{Fs player|no=47|nat=ALG|name=[[Akram Bouras]]|pos=MF}}
+{{Fs player|no=50|nat=BUL|name=[[Kristian Dimitrov]]|pos=DF|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=55|nat=BUL|name=[[Petko Hristov]]|pos=DF|other=on loan from [[Spezia Calcio|Spezia]]}}
+{{Fs player|no=71|nat=CMR|name=[[Oliver Kamdem]]|pos=DF}}
+{{Fs player|no=77|nat=BUL|name=Adrian Raychev|pos=FW|other=on loan from [[Pisa SC|Pisa]]}}
+{{Fs player|no=78|nat=BUL|name=[[Martin Lukov]]|pos=GK}}
+{{Fs player|no=92|nat=BUL|name=[[Svetoslav Vutsov]]|pos=GK}}
+{{Fs player|no=99|nat=BUL|name=[[Radoslav Kirilov]]|pos=FW}}
+{{Fs player|no=32|nat=BUL|name=Ivo Motev|pos=MF}}
+{{Fs player|no=36|nat=BUL|name=Radostin Stoilov|pos=MF}}
+{{Fs player|no=37|nat=BUL|name=Stoyan Dobrev|pos=DF}}
+{{Fs player|no=38|nat=BUL|name=Sasho Grancharov|pos=MF}}
+{{Fs player|no=39|nat=BUL|name=Anton Manov|pos=DF}}
+{{Fs player|no=45|nat=BUL|name=Hristo Argirov|pos=DF}}
+{{Fs player|no=|nat=CRO|pos=DF|name=[[Stipe Vulikić]]|other=at [[PFC Septemvri Sofia|Septemvri Sofia]] until 31 December 2026}}

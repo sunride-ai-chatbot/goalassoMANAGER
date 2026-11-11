@@ -1,0 +1,83 @@
+== History
+=== Foundation and early years (1926–1939)
+=== Regional league dominance and youth academy (1946–1959)
+=== Alpha Ethniki, domestic and international success, professionalism (1959–1989)
+=== Financial issues, ownership changes, continental success (1989–2012)
+=== The Ivan Savvidis era (2012–present)
+== Crest and colours
+=== Colours
+==== Kit suppliers and shirt sponsors
+== Facilities
+=== Planned new ground
+=== Training ground
+=== Planned new training ground
+== Supporters
+=== Vale of Tempe tragedy (1999)
+=== Romania  minibus crash (2026)
+=== Supporters friendships
+=== Rivalries
+== Honours
+=== Double
+=== European competitions
+=== Minor & Unofficial Titles
+== European record
+=== UEFA Club Ranking
+== Players
+=== Reserves and Academy
+=== Out on loan
+=== Captains (since 1959)
+=== MVP of the Season
+== Management
+==== Sport management
+==== Medical Staff
+=== Notable managers
+=== Club personnel
+=== PAOK FC Presidential History
+== Records and statistics
+=== One-club men
+=== Player records
+=== Domestic records
+== See also
+== Bibliography
+== Filmography
+== References
+== External links
+
+TEMPLATES 37
+{{Fs player|no=1|pos=GK|nat=CZE|name=[[Jiří Pavlenka]]}}
+{{Fs player|no=2|pos=MF|nat=GUI|name=[[Mady Camara]]}}
+{{Fs player|no=3|pos=DF|nat=ENG|name=[[Jonjoe Kenny]]}}
+{{Fs player|no=4|pos=DF|nat=GRE|name=[[Pantelis Chatzidiakos]]}}
+{{Fs player|no=5|pos=DF|nat=GRE|name=[[Giannis Michailidis]]}}
+{{Fs player|no=6|pos=DF|nat=ESP|name=[[Aritz Elustondo]]}}
+{{Fs player|no=7|pos=MF|nat=FRA|name=[[Baptiste Santamaria]]}}
+{{Fs player|no=8|pos=MF|nat=FRA|name=[[Soualiho Meïté]]}}
+{{Fs player|no=9|pos=FW|nat=RUS|name=[[Fyodor Chalov]]}}
+{{Fs player|no=10|pos=MF|nat=GRE|name=[[Dimitrios Pelkas]]}}
+{{Fs player|no=11|pos=MF|nat=BRA|name=[[Taison]]|other=[[Captain (association football)|vice-captain]]}}
+{{Fs player|no=13|pos=DF|nat=GRE|name=[[Dimitris Giannoulis]]}}
+{{fs player|no=14|pos=MF|nat=SRB|name=[[Andrija Živković]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=16|pos=MF|nat=SRB|name=[[Ognjen Ugrešić]]}}
+{{Fs player|no=18|nat=CRO|pos=MF|name=[[Kristijan Jakić]]|other={{small|on loan from [[FC Augsburg|Augsburg]]}}
+{{Fs player|no=19|nat=BRA|pos=DF|name=[[Diego Costa (footballer, born 1999)|Diego Costa]]|other={{small|on loan from [[FC Krasnodar|Krasnodar]]}}
+{{Fs player|no=20|pos=MF|nat=GRE|name=[[Christos Zafeiris]]}}
+{{Fs player|no=21|pos=DF|nat=GHA|name=[[Abdul Rahman Baba]]|other=[[Captain (association football)|third-captain]]}}
+{{Fs player|no=22|pos=MF|nat=SWE|name=[[Taha Ali]]}}
+{{Fs player|no=23|pos=MF|nat=FRA|name=[[Tom Louchet]]}}
+{{Fs player|no=24|pos=FW|nat=COD|name=[[Simon Banza]]|other={{small|on loan from [[Al Jazira Club|Al Jazira]]}}
+{{Fs player|no=27|nat=SEN|pos=FW|name=[[Cherif Ndiaye]]|other={{small|on loan from [[Samsunspor]]}}
+{{Fs player|no=32|pos=DF|nat=SCO|name=[[Greg Taylor (Scottish footballer)|Greg Taylor]]}}
+{{Fs player|no=41|pos=GK|nat=GRE|name=[[Dimitrios Monastirlis]]}}
+{{fs player|no=47|pos=MF|nat=ENG|name=[[Shola Shoretire]]}}
+{{Fs player|no=52|pos=MF|nat=GRE|name=[[Dimitris Chatsidis]]}}
+{{Fs player|no=54|pos=GK|nat=GRE|name=[[Konstantinos Balomenos]]}}
+{{Fs player|no=56|pos=FW|nat=GRE|name=[[Anestis Mythou]]}}
+{{Fs player|no=77|pos=MF|nat=BUL|name=[[Kiril Despodov]]}}
+{{Fs player|no=99|pos=GK|nat=GRE|name=[[Antonis Tsiftsis]]}}
+{{Fs player|no=33|pos=MF|nat=GRE|name=[[Dimitrios Tsopouroglou]]}}
+{{Fs player|no=39|pos=MF|nat=GRE|name=[[Dimitris Berdos]]}}
+{{Fs player|no=78|pos=DF|nat=GRE|name=[[Georgios Kosidis]]}}
+{{Fs player|no=97|pos=DF|nat=GRE|name=[[Dimitrios Bataoulas]]}}
+{{Fs player|pos=GK|nat=GEO|name=[[Luka Gugeshashvili]]|other=at [[Göztepe S.K.|Göztepe]] until 30 June 2027}}
+{{Fs player|no=|pos=DF|nat=USA|name=[[Jonathan Gómez (soccer, born 2003)|Jonathan Gómez]]|other=at [[VfL Osnabrück]] until 30 June 2027}}
+{{Fs player|no=|pos=MF|nat=ESP|name=[[Mahamadou Balde]]|other=at [[Levadiakos F.C.|Levadiakos]] until 30 June 2027}}

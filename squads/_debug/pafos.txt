@@ -1,0 +1,50 @@
+== History
+=== Investment and consolidation (2017–2023)
+=== First honours and European debut (2023–present)
+=== Domestic
+=== European
+== Honours
+== UEFA club coefficient ranking
+=== UEFA Club ranking
+== Club's identity
+=== Kit manufacturers and shirt sponsors
+== Players
+=== Out on loan
+== Current staff
+== Records
+=== Top goalscorers
+=== Managers
+== References
+== External links
+
+TEMPLATES 30
+{{Fs player|no= 1|nat=NED|pos=GK|name=[[Jay Gorter]]}}
+{{Fs player|no= 2|nat=FRA|pos=DF|name=[[Yoram Zague]]|other=on loan from [[Paris Saint-Germain FC|Paris Saint-Germain]]}}
+{{Fs player|no= 3|nat=MAR|pos=DF|name=[[Samy Mmaee]]|other=on loan from [[GNK Dinamo Zagreb|Dinamo Zagreb]]}}
+{{Fs player|no= 4|nat=BRA|pos=DF|name=[[David Luiz]]}}
+{{Fs player|no= 5|nat=ESP|pos=DF|name=[[David Goldar]]}}
+{{Fs player|no= 6|nat=POR|pos=MF|name=[[Guga (footballer, born 1997)|Guga]]}}
+{{Fs player|no= 7|nat=BRA|pos=MF|name=[[Bruno Felipe (footballer)|Bruno Felipe]]}}
+{{Fs player|no= 8|nat=POR|pos=MF|name=[[Domingos Quina]]}}
+{{Fs player|no=11|nat=BRA|pos=FW|name=[[Jajá (footballer, born 2001)|Jajá]]}}
+{{Fs player|no=12|nat=SWE|pos=MF|name=[[Ken Sema]]}}
+{{Fs player|no=13|nat=CMR|pos=FW|name=[[Moumi Ngamaleu]]}}
+{{Fs player|no=14|nat=CYP|pos=DF|name=[[Nikolas Ioannou]]}}
+{{Fs player|no=17|nat=POR|pos=FW|name=[[Afonso Patrão]]}}
+{{Fs player|no=18|nat=BRA|pos=FW|name=[[Lelê (footballer, born 1997)|Lelê]]|other=on loan from [[Fluminense FC|Fluminense]]}}
+{{Fs player|no=20|nat=BRA|pos=MF|name=[[Biel Teixeira]]|other=on loan from [[Sporting CP]]}}
+{{Fs player|no=23|nat=POR|pos=DF|name=[[Jónatas Noro]]}}
+{{Fs player|no=26|nat=BIH|pos=MF|name=[[Ivan Šunjić]]}}
+{{Fs player|no=30|nat=ROU|pos=MF|name=[[Vlad Dragomir]]|other={{small|[[Captain (association football)|captain]]}}
+{{Fs player|no=33|nat=BRA|pos=FW|name=[[Anderson Silva (footballer)|Anderson Silva]]}}
+{{Fs player|no=47|nat=AZE|pos=FW|name=[[Murad Mammadov (footballer)|Murad Mammadov]]}}
+{{Fs player|no=50|nat=POR|pos=MF|name=[[Alexandre Brito]]}}
+{{Fs player|no=60|nat=CYP|pos=MF|name=Christos Evzona}}
+{{Fs player|no=71|nat=CYP|pos=GK|name=Michalis Papastylianou}}
+{{Fs player|no=77|nat=CPV|pos=DF|name=[[João Correia (footballer, born 1996)|João Correia]]}}
+{{Fs player|no=88|nat=POR|pos=MF|name=[[Pedro Rodrigues (footballer)|Pêpê]]}}
+{{Fs player|no=98|nat=CYP|pos=GK|name=[[Charalampos Kyriakidis]]}}
+{{Fs player|no=99|nat=POL|pos=GK|name=[[Radosław Majecki]]|other=on loan from [[AS Monaco FC|Monaco]]}}
+{{Fs player|no=10|nat=BEL|pos=FW|name=[[Landry Dimata]]|other=at [[Chongqing Tonglianglong F.C.|Chongqing Tonglianglong]] until 31 December 2026}}
+{{Fs player|no=|nat=CYP|pos=DF|name=Giorgos Skafi|other=at [[Akritas Chlorakas]] until 31 May 2027}}
+{{Fs player|no=|nat=CYP|pos=DF|name=Panayiotis Charalambous|other=at [[Digenis Akritas Morphou FC|Digenis Akritas Morphou]] until 31 May 2027}}

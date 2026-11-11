@@ -1,0 +1,80 @@
+== History
+=== The beginning: 1920s
+=== World War II: 1930s and 1940s
+=== 1950s
+=== First Soviet successes: 1960s
+=== European years: 1970s
+=== Last Soviet days: 1980s
+=== 1990s
+=== 2000s
+=== 2010s
+== Stadium
+== Football kits and sponsors
+== Players
+=== Reserve team
+=== Out on loan
+== Honours
+=== Other international competitions
+=== Individual player awards
+== Managerial history
+== European campaigns
+=== European record
+=== UEFA club rankings
+== Seasons
+=== Soviet Union
+=== Georgia
+== References
+== External links
+
+TEMPLATES 51
+{{Fs player|no=1 |nat=GEO|pos=GK|name=[[Giorgi Loria]]}}
+{{Fs player|no=2 |nat=GEO|pos=DF|name=Giorgi Gvasalia}}
+{{Fs player|no=3 |nat=GEO|pos=DF|name=[[Aleksandre Kalandadze]]}}
+{{Fs player|no=4 |nat=GEO|pos=DF|name=[[Nikoloz Ugrekhelidze]]}}
+{{Fs player|no=6 |nat=BRA|pos=DF|name={{abbr|Léo Santos|Leonardo dos Santos Lopes da Silva}}
+{{Fs player|no=7 |nat=GEO|pos=FW|name=Halid Doltmurziev}}
+{{Fs player|no=8 |nat=BRA|pos=MF|name={{abbr|Welton|Welton Nunes Carvalho Junior}}
+{{Fs player|no=10|nat=GEO|pos=MF|name=[[Giorgi Kharaishvili]]}}
+{{Fs player|no=11|nat=GEO|pos=FW|name=[[Mate Vatsadze]]}}
+{{Fs player|no=12|nat=GUI|pos=FW|name=[[Algassime Bah]]}}
+{{Fs player|no=13|nat=GRC|pos=DF|name=[[Marios Pourzitidis]]}}
+{{Fs player|no=14|nat=FRA|pos=FW|name=[[Maxime Do Couto]]}}
+{{Fs player|no=15|nat=GAM|pos=DF|name=Albert Gomez}}
+{{Fs player|no=16|nat=GEO|pos=MF|name=Nikoloz Tkalia}}
+{{Fs player|no=17|nat=CYP|pos=DF|name=[[Paris Psaltis]]}}
+{{Fs player|no=18|nat=GEO|pos=FW|name=[[Tornike Kvaratskhelia]]}}
+{{Fs player|no=19|nat=GEO|pos=DF|name=Dimitri Jakhia}}
+{{Fs player|no=20|nat=BRA|pos=GK|name={{abbr|Lucas Flores|Lucas Flores de Oliveira}}
+{{Fs player|no=21|nat=GEO|pos=FW|name=Daniel Kvartskhava|other={{small|on loan from [[FC Iberia 1999|Iberia 1999]]}}
+{{Fs player|no=22|nat=GEO|pos=MF|name=[[Nika Ninua]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=23|nat=GEO|pos=MF|name=[[Jaba Kankava]]}}
+{{Fs player|no=24|nat=GHA|pos=MF|name=[[Barnes Osei]]}}
+{{Fs player|no=25|nat=GEO|pos=MF|name=Tornike Gobronidze}}
+{{Fs player|no=26|nat=GEO|pos=MF|name=Gabriel Gogua}}
+{{Fs player|no=27|nat=BIH|pos=DF|name=[[Numan Kurdić]]}}
+{{Fs player|no=28|nat=GEO|pos=FW|name=Rati Aleksidze}}
+{{Fs player|no=29|nat=GEO|pos=FW|name=Reziko Danelia}}
+{{Fs player|no=30|nat=GEO|pos=DF|name=Giorgi Lomidze}}
+{{Fs player|no=31|nat=GEO|pos=DF|name=[[Levan Kharabadze]]}}
+{{Fs player|no=32|nat=GEO|pos=MF|name=Luka Tsikolia}}
+{{Fs player|no=33|nat=FRA|pos=MF|name=[[Lyes Houri]]}}
+{{Fs player|no=34|nat=NGR|pos=FW|name=Matthew Gbomadu}}
+{{Fs player|no=35|nat=GEO|pos=DF|name=Shotiko Diakonidze}}
+{{Fs player|no=37|nat=GEO|pos=GK|name=Mikheil Makatsaria}}
+{{Fs player|no=38|nat=GEO|pos=GK|name=Dachi Chochoshvili}}
+{{Fs player|no=39|nat=GEO|pos=MF|name=Koba Kakashvili}}
+{{Fs player|no=40|nat=GEO|pos=GK|name=Mate Ghaghvishvili}}
+{{Fs player|no=16|nat=GEO|pos=DF|name=Saba Akhalkatsi}}
+{{Fs player|no=21|nat=GEO|pos=MF|name=Raul Baratelia}}
+{{Fs player|no=31|nat=GEO|pos=FW|name=Rati Aleksidze}}
+{{Fs player|no=32|nat=GEO|pos=FW|name=Sandro Mikautadze}}
+{{Fs player|no=46|nat=GEO|pos=MF|name=Lazare Natenadze}}
+{{Fs player|no=45|nat=GEO|pos=FW|name=Levan Nachkebia}}
+{{Fs player|no=46|nat=GEO|pos=MF|name=Saba Nioradze}}
+{{Fs player|no=|nat=GEO|pos=DF|name=Luka Salukvadze}}
+{{Fs player|no=|nat=GEO|pos=MF|name=Nika Sikharulashvili}}
+{{Fs player|no=|nat=GEO|pos=MF|name=Luka Bubuteishvili}}
+{{Fs player|no=|nat=GEO|pos=GK|name=Mate Sauri|other=at [[Real Oviedo Vetusta]]}}
+{{Fs player|no=|nat=GEO|pos=DF|name=Mate Shatirishvili|other=at [[FC Samgurali Tskaltubo|Samgurali Tskaltubo]]}}
+{{Fs player|no=|nat=GEO|pos=FW|name=Temur Odikadze|other=at [[FC Samtredia|Samtredia]]}}
+{{Fs player|no=|nat=TUN|pos=FW|name=Iyed Hadj Khalifa|other=at [[FC Gori|Gori]]}}

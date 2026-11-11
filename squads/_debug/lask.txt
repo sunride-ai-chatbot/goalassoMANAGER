@@ -1,0 +1,46 @@
+== History
+== Logos
+== Players
+=== Out on loan
+== Club officials
+== Historical list of coaches
+== Honours
+=== Cups
+== European competition history
+=== UEFA club ranking
+== References
+== External links
+
+TEMPLATES 32
+{{Fs player|no=1|nat=AUT|pos=GK|name=[[Lukas Jungwirth]]}}
+{{Fs player|no=2|nat=USA|pos=DF|name=[[George Bello]]}}
+{{Fs player|no=3|nat=JAM|pos=DF|name=[[Miguel Freckleton]]}}
+{{Fs player|no=4|nat=NED|pos=DF|name=[[Xavier Mbuyamba]]}}
+{{Fs player|no=5|nat=KOS|pos=MF|name=[[Art Smakaj]]}}
+{{Fs player|no=6|nat=SUR|pos=MF|name=[[Melayro Bogarde]]}}
+{{Fs player|no=7|nat=USA|pos=FW|name=[[Samuel Adeniran]]}}
+{{Fs player|no=8|nat=NGA|pos=FW|name=[[Moses Usor]]}}
+{{Fs player|no=9|nat=CZE|pos=MF|name=[[Kryštof Daněk]]}}
+{{Fs player|no=10|nat=CRO|pos=MF|name=[[Robert Ljubičić]]|other=on loan from [[AEK Athens F.C.|AEK Athens]]}}
+{{Fs player|no=14|nat=AUT|pos=FW|name=[[Saša Kalajdžić]]}}
+{{Fs player|no=15|nat=MLI|pos=MF|name=Mohamed Sanogo}}
+{{Fs player|no=16|nat=PAN|pos=DF|name=[[Andrés Andrade (footballer, born 1998)|Andrés Andrade]]}}
+{{Fs player|no=18|nat=AUT|pos=MF|name=[[Alessandro Schöpf]]}}
+{{Fs player|no=20|nat=DEN|pos=DF|name=[[Kasper Jørgensen (footballer)|Kasper Jørgensen]]}}
+{{Fs player|no=21|nat=COD|pos=DF|name=[[Manoël Verhaeghe]]}}
+{{Fs player|no=22|nat=FRA|pos=FW|name=[[Ramiz Harakaté]]}}
+{{Fs player|no=23|nat=LBY|pos=MF|name=[[Daniel Elfadli]]|other=on loan from [[Hamburger SV|Hamburg]]}}
+{{Fs player|no=25|nat=CMR|pos=DF|name=[[Yvan Dibango]]}}
+{{Fs player|no=27|nat=AUT|pos=FW|name=[[Christoph Lang]]}}
+{{Fs player|no=29|nat=AUT|pos=DF|name=[[Florian Flecker]]}}
+{{Fs player|no=30|nat=AUT|pos=MF|name=[[Sascha Horvath]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=33|nat=AUT|pos=GK|name=[[Tobias Schützenauer]]}}
+{{Fs player|no=37|nat=MNE|pos=FW|name=Filip Perović}}
+{{Fs player|no=43|nat=BRA|pos=DF|name=[[Alemão (footballer, born November 2002)|Alemão]]}}
+{{Fs player|no=45|nat=CAN|pos=MF|name=[[Nael Kane]]}}
+{{Fs player|no=50|nat=AUT|pos=GK|name=Fabian Schillinger}}
+{{Fs player|no=52|nat=MLI|pos=DF|name=Cheikne Kébé}}
+{{Fs player|no=|nat=NGA|pos=DF|name=[[Emmanuel Michael]]|other=at [[Admira Wacker]] until 30 June 2027}}
+{{Fs player|no=|nat=AUT|pos=DF|name=Yanis Traun|other=at [[SKN St. Pölten]] until 30 June 2027}}
+{{Fs player|no=|nat=NGA|pos=MF|name=[[Adetunji Adeshina]]|other=at [[NK Slaven Belupo|Slaven Belupo]] until 30 June 2027}}
+{{Fs player|no=|nat=AUT|pos=FW|name=Jakob Wanker|other=at [[FC Hertha Wels|Hertha Wels]] until 30 June 2027}}

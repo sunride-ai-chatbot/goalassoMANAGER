@@ -1,0 +1,83 @@
+== History
+=== Between World Wars
+=== Post-World War II
+== Woman's section
+== Club culture
+=== Fans
+== Stadium
+== Rivalries
+== Honours
+=== Continental Finals
+== Players
+==== Out on loan
+=== SK Rapid II
+=== Notable former players
+== Club staff
+== Coaching history
+== See also
+== References
+== External links
+
+TEMPLATES 62
+{{Fs player|no= 1|nat=AUT|pos=GK|name=[[Niklas Hedl]]}}
+{{fs player|no= 2|nat=AUT|pos=DF|name=Eaden Roka}}
+{{fs player|no= 4|nat=AUT|pos=DF|name=[[Jakob Schöller]]}}
+{{Fs player|no= 6|nat=FRA|pos=DF|name=[[Serge-Philippe Raux-Yao]]}}
+{{Fs player|no= 7|nat=AUS|pos=FW|name=[[Marco Tilio]]}}
+{{Fs player|no= 8|nat=DEN|pos=FW|name=[[Tonni Adamsen]]}}
+{{Fs player|no= 9|nat=AUT|pos=FW|name=[[Ercan Kara]]}}
+{{Fs player|no=10|nat=NOR|pos=FW|name=[[Petter Nosa Dahl]]}}
+{{Fs player|no=14|nat=CMR|pos=MF|name=[[Martin Ndzie]]}}
+{{Fs player|no=15|nat=AUT|pos=FW|name=[[Nikolaus Wurmbrand]]}}
+{{Fs player|no=18|nat=AUT|pos=MF|name=[[Matthias Seidl]]|other=[[Captain (association football)|captain]]}}
+{{Fs player|no=20|nat=CIV|pos=DF|name=[[Ange Ahoussou]]}}
+{{Fs player|no=21|nat=AUT|pos=MF|name=[[Louis Schaub]]}}
+{{Fs player|no=22|nat=AUT|pos=MF|name=[[Yusuf Demir]]}}
+{{Fs player|no=23|nat=AUT|pos=DF|name=[[Jonas Auer]]}}
+{{Fs player|no=24|nat=MAD|pos=DF|name=[[Jean Marcelin]]}}
+{{Fs player|no=25|nat=AUT|pos=GK|name=[[Paul Gartler]]}}
+{{Fs player|no=30|nat=AUT|pos=MF|name=Nicolas Bajlicz}}
+{{Fs player|no=38|nat=GER|pos=DF|name=[[Jannes Horn]]}}
+{{Fs player|no=43|nat=MLI|pos=FW|name=Moulaye Haïdara}}
+{{Fs player|no=44|nat=AUT|pos=MF|name=Lorenz Szladits}}
+{{fs player|no=47|nat=TUN|pos=DF|name=Amin-Elias Gröller}}
+{{Fs player|no=50|nat=AUT|pos=GK|name=Laurenz Orgler}}
+{{Fs player|no=51|nat=AUT|pos=GK|name=Benjamin Göschl}}
+{{Fs player|no=53|nat=AUT|pos=DF|name=Dominik Vincze}}
+{{Fs player|no=54|nat=GHA|pos=FW|name=[[Daniel Nunoo]]}}
+{{Fs player|no=55|nat=SRB|pos=DF|name=[[Nenad N. Cvetković|Nenad Cvetković]]}}
+{{Fs player|no=61|nat=TUR|pos=DF|name=[[Furkan Demir]]}}
+{{Fs player|no=71|nat=COD|pos=FW|name=[[Claudy Mbuyi]]}}
+{{Fs player|no=77|nat=HUN|pos=DF|name=[[Bendegúz Bolla]]}}
+{{Fs player|no=  |nat=AUT|pos=DF|name=Dominik Weixelbraun|other={{small|at [[SC Austria Lustenau|Austria Lustenau]] until 30 June 2027}}
+{{Fs player|no= 1|nat=AUT|pos=GK|name=[[Christoph Haas]]}}
+{{Fs player|no= 2|nat=AUT|pos=DF|name=Eaden Roka}}
+{{Fs player|no= 3|nat=AUT|pos=DF|name=Paul Ertl}}
+{{Fs player|no= 4|nat=AUT|pos=DF|name=Jakob Brunnhofer}}
+{{Fs player|no= 5|nat=BIH|pos=DF|name=Kenan Muharemović}}
+{{Fs player|no= 6|nat=GHA|pos=DF|name=Keneth Yeboah}}
+{{Fs player|no= 7|nat=AUT|pos=FW|name=[[Oliver Strunz]]}}
+{{Fs player|no= 8|nat=MLI|pos=MF|name=Ousmane Thiero}}
+{{Fs player|no=11|nat=AUT|pos=MF|name=Yasin Mankan}}
+{{Fs player|no=14|nat=AUT|pos=FW|name=Tare Ekereokosu}}
+{{Fs player|no=17|nat=PLE|pos=MF|name=Omar Badarneh}}
+{{Fs player|no=19|nat=AUT|pos=FW|name=[[René Kriwak]]}}
+{{Fs player|no=21|nat=AUT|pos=FW|name=David Berger}}
+{{Fs player|no=22|nat=AUT|pos=MF|name=Ensar Mušić}}
+{{Fs player|no=23|nat=MLI|pos=FW|name=Moulaye Haïdara}}
+{{Fs player|no=27|nat=AUT|pos=MF|name=[[Dalibor Velimirovic|Dalibor Velimirović]]}}
+{{Fs player|no=28|nat=AUT|pos=MF|name=Lorenz Szladits}}
+{{Fs player|no=30|nat=AUT|pos=FW|name=Marcel Stöhr}}
+{{Fs player|no=32|nat=SVK|pos=DF|name=Svetozár Ožvold}}
+{{Fs player|no=33|nat=AUT|pos=DF|name=Erik Stehrer}}
+{{Fs player|no=34|nat=AUT|pos=MF|name=Fabian Silber}}
+{{Fs player|no=35|nat=AUT|pos=DF|name=Amar Hadžimuratović}}
+{{Fs player|no=36|nat=AUT|pos=DF|name=Daniel Mahiya}}
+{{Fs player|no=37|nat=AUT|pos=FW|name=Daris Đezić}}
+{{Fs player|no=38|nat=TUR|pos=MF|name=Emirhan Altundağ}}
+{{Fs player|no=39|nat=AUT|pos=FW|name=Philipp Moizi}}
+{{Fs player|no=42|nat=AUT|pos=FW|name=Kenny Nzogang}}
+{{Fs player|no=43|nat=AUT|pos=DF|name=Lukas Haselmayr}}
+{{Fs player|no=44|nat=AUT|pos=GK|name=Manuel Fellner}}
+{{Fs player|no=50|nat=HUN|pos=GK|name=Ferenc Lányi}}
+{{Fs player|no=51|nat=AUT|pos=GK|name=Aldin Softić}}

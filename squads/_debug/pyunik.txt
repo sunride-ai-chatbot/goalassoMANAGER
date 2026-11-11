@@ -1,0 +1,55 @@
+== International History
+== History
+=== Domestic history
+=== European history
+== Kit and badge
+=== Kit suppliers and shirt sponsors
+=== Badge
+== Stadium
+=== List of stadiums used by the club
+== Supporters
+== Rivalries
+== Players
+=== Current squad
+=== Out on loan
+=== Technical staff
+== Management
+=== Staff
+== Honours
+== Other sports sections
+== See also
+== References
+== External links
+
+TEMPLATES 31
+{{Fs player|no= 3|nat=GRE|name=[[Nikos Kenourgios]]|pos=DF}}
+{{Fs player|no= 4|nat=ARM|name=Erik Simonyan|pos=DF}}
+{{Fs player|no= 5|nat=BRA|name=James Santos|pos=DF}}
+{{Fs player|no= 7|nat=ARM|name=[[Edgar Malakyan]]|other=[[Captain (association football)|captain]]|pos=FW}}
+{{Fs player|no= 8|nat=ARM|name=[[Gevorg Tarakhchyan]]|pos=FW}}
+{{Fs player|no= 9|nat=ARM|name=[[Artak Dashyan]]|pos=MF}}
+{{Fs player|no=10|nat=NLD|name=[[Iman Griffith]]|pos=MF}}
+{{Fs player|no=11|nat=ARM|name=[[Hovhannes Harutyunyan]]|pos=MF}}
+{{Fs player|no=14|nat=NGR|name=[[Steven Alfred]]|pos=FW}}
+{{Fs player|no=15|nat=RUS|name=[[Mikhail Kovalenko]]|pos=DF}}
+{{Fs player|no=16|nat=ARM|name=[[Henri Avagyan]]|pos=GK}}
+{{Fs player|no=17|nat=ARM|name=Vyacheslav Afyan|pos=MF}}
+{{Fs player|no=19|nat=ARM|name=Sargis Metoyan|pos=FW}}
+{{Fs player|no=20|nat=ARM|name=Davit Hakobyan|pos=MF}}
+{{Fs player|no=22|nat=SRB|name=Sead Islamović|pos=MF}}
+{{Fs player|no=23|nat=MOZ|name=[[Witi]]|pos=FW}}
+{{Fs player|no=25|nat=RUS|name=[[Daniil Kulikov]]|pos=MF}}
+{{Fs player|no=29|nat=CYP|name=Iasonas Pikis|pos=FW}}
+{{Fs player|no=44|nat=ARM|name=Hayk Tatosyan|pos=MF}}
+{{Fs player|no=71|nat=ARM|name=[[Stanislav Buchnev]]|pos=GK}}
+{{Fs player|no=76|nat=POR|name=Filipe Almeida|pos=DF}}
+{{Fs player|no=77|nat=POR|name=Gonçalo Miguel|pos=DF}}
+{{Fs player|no=79|nat=UKR|name=[[Serhiy Vakulenko]]|pos=DF}}
+{{Fs player|no=88|nat=ARM|name=[[Robert Darbinyan]]|pos=DF}}
+{{Fs player|no=99|nat=TJK|name=Alisher Rakhimov|pos=MF}}
+{{Fs player|no=|nat=CIV|name=Mohamed Bamba|pos=MF}}
+{{Fs player|no=|nat=ARM|name=Mark Avetisyan|pos=DF|other=at [[FC BKMA Yerevan|BKMA Yerevan]]}}
+{{Fs player|no=|nat=ARM|name=Sergey Harutyunyan|pos=DF|other=at [[FC BKMA Yerevan|BKMA Yerevan]]}}
+{{Fs player|no=|nat=ARM|name=Karen Hovakimyan|pos=DF|other=at [[FC BKMA Yerevan|BKMA Yerevan]]}}
+{{Fs player|no=|nat=ARM|name=Aris Karapetyan|pos=FW|other=at [[FC BKMA Yerevan|BKMA Yerevan]]}}
+{{Fs player|no=|nat=ARM|name=Levon Vardanyan|pos=FW|other=at [[FC BKMA Yerevan|BKMA Yerevan]]}}
