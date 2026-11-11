@@ -8,13 +8,5 @@
   "key": "colo_colo",
   "ok": false,
   "why": "only 6 parsed players (Colo-Colo)"
- },
- {
-  "key": "l_kiryat_yam",
-  "ok": true,
-  "n": 20,
-  "qid": 3,
-  "he": 1,
-  "img": 0
  }
 ]

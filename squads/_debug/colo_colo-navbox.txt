@@ -1,0 +1,66 @@
+##### Template:Colo-Colo squad (0 rows)
+{{Fs2
+| name        = Colo-Colo squad
+| teamname    = Colo-Colo
+| bgcolor     = #FFFFFF
+| textcolor   = #000000
+| bordercolor = #FF00000
+| format      = {{{format|navbox}}}
+| date        = 3 August 2026
+| references  = [http://www.colocolo.cl/equipos/primer-equipo/plantel-de-honor/ Official Web Site]
+| list =
+{{Fs2 start | format={{{format|navbox}}}<!--start of 1st column for table-->
+}}{{Fs2 player|format={{{format|navbox}}}|no= 1|nat=CHI|pos=GK|first=Fernando|last=de Paul
+}}{{Fs2 player|format={{{format|navbox}}}|no= 2|nat=CHI|pos=DF|first=Jonathan|last=Villagra
+}}{{Fs2 player|format={{{format|navbox}}}|no= 3|nat=CHI|pos=DF|first=Alonso|last=Olguín
+}}{{Fs2 player|format={{{format|navbox}}}|no= 4|nat=URU|pos=DF|first=Joaquín|last=Sosa|other=<small>loan from [[Bologna FC 1909|Bologna]]</small>
+}}{{Fs2 player|format={{{format|navbox}}}|no= 5|nat=CHI|pos=MF|first=Felipe|last=Méndez|link=Víctor Méndez
+}}{{Fs2 player|format={{{format|navbox}}}|no= 6|nat=CHI|pos=MF|first=Tomás|last=Alarcón
+}}{{Fs2 player|format={{{format|navbox}}}|no= 7|nat=CHI|pos=FW|first=Francisco|last=Marchant
+}}{{Fs2 player|format={{{format|navbox}}}|no= 8|nat=CHI|pos=MF|first=Álvaro|last=Madrid|other=<small>loan from [[Everton de Viña del Mar|Everton]]</small>
+}}{{Fs2 player|format={{{format|navbox}}}|no= 9|nat=ARG|pos=FW|first=Javier|last=Correa|link=Javier Correa (footballer)
+}}{{Fs2 player|format={{{format|navbox}}}|no=10|nat=ARG|pos=FW|first=Lautaro|last=Pastrán|other=<small>loan from [[Club Atlético Belgrano|Belgrano]]</small>
+}}{{Fs2 player|format={{{format|navbox}}}|no=11|nat=CHI|pos=FW|first=Marcos|last=Bolados
+}}{{Fs2 player|format={{{format|navbox}}}|no=12|nat=CHI|pos=GK|first=Eduardo|last=Villanueva|link=Eduardo Villanueva (footballer)
+}}{{Fs2 player|format={{{format|navbox}}}|no=13|nat=CHI|pos=DF|first=Matías|last=Fernández|link=Matías Fernández (footballer, born 1995)
+}}{{Fs2 player|format={{{format|navbox}}}|no=17|nat=CHI|pos=DF|first=Iván|last=Román|other=<small>loan from [[Clube Atlético Mineiro|Atlético Mineiro]]</small>
+}}{{Fs2 player|format={{{format|navbox}}}|no=19|nat=ARG|pos=FW|first=Maximiliano|last=Romero|other=<small>loan from [[Argentinos Juniors]]</small>
+}}{{Fs2 mid |format={{{format|navbox}}}<!--start of 2nd column for table-->
+}}{{Fs2 player|format={{{format|navbox}}}|no=20|nat=URU|pos=DF|first=Javier|last=Méndez|link=Javier Méndez (footballer, born 1994)
+}}{{Fs2 player|format={{{format|navbox}}}|no=21|nat=CHI|pos=DF|first=Erick|last=Wiemberg
+}}{{Fs2 player|format={{{format|navbox}}}|no=22|nat=ARG|pos=MF|first=Claudio|last=Aquino
+}}{{Fs2 player|format={{{format|navbox}}}|no=23|nat=CHI|pos=MF|first=Arturo|last=Vidal|other=[[Captain (association football)|c]]
+}}{{Fs2 player|format={{{format|navbox}}}|no=24|nat=CHI|pos=FW|first=Leandro|last=Hernández
+}}{{Fs2 player|format={{{format|navbox}}}|no=25|nat=CHI|pos=GK|first=Gabriel|last=Maureira
+}}{{Fs2 player|format={{{format|navbox}}}|no=26|nat=CHI|pos=DF|first=Diego|last=Ulloa
+}}{{Fs2 player|format={{{format|navbox}}}|no=28|nat=CHI|pos=DF|first=Jeyson|last=Rojas
+}}{{Fs2 player|format={{{format|navbox}}}|no=29|nat=CPV|pos=GK|name=Vozinha|link=Vozinha
+}}{{Fs2 player|format={{{format|navbox}}}|no=30|nat=CHI|pos=FW|first=Yastin|last=Cuevas
+}}{{Fs2 player|format={{{format|navbox}}}|no=32|nat=CHI|pos=FW|first=Vicente|last=Martínez|link=Vicente Martínez (Chilean footballer)
+}}{{Fs2 player|format={{{format|navbox}}}|no=34|nat=CHI|pos=MF|first=Rodrigo|last=Catalán
+}}{{Fs2 player|format={{{format|navbox}}}|no=39|nat=CHI|pos=DF|first=Bruno|last=Torres
+}}{{Fs2 player|format={{{format|navbox}}}|no=50|nat=CHI|pos=FW|first=Felipe|last=Raipán
+}}{{Fs2 end|format=
+{{{format|navbox}}}
+<!--end of columns for table-->
+}}{{Fs2 manager | format={{{format|navbox}}} |title=|nat=ARG|first=Fernando|last=Ortiz|link=Fernando Ortiz (footballer, born 1977)
+}}}}<noinclude>
+
+----
+:''This template contains a list of current players in the [[Colo-Colo]] football squad. It can be displayed as a [[Wikipedia:Navigation template|navigation box]] for [[Wikipedia:Transclusion|transclusion]] at the bottom of player articles (the default mode) or as a table for transclusion in the team article.''
+
+:''To include the template as a navigation box (shown above):''
+::<code><nowiki>{{Colo-Colo squad}}</nowiki></code>
+
+:''To include the template as a table (shown below):''
+::<code><nowiki>{{Colo-Colo squad|format=table}}</nowiki></code>
+
+:'''If the table below does not change to show your saved edits, the problem can be resolved by performing a [[Wikipedia:Null_edit#Null_edit|Null edit]].'''
+
+----
+
+{{Colo-Colo squad|format=table}}
+
+{{Primera División de Chile}}
+[[Category:Chilean football squad templates|Colo-Colo]]
+</noinclude>
