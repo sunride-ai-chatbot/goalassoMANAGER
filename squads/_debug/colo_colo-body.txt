@@ -1,0 +1,13 @@
+##### Players
+{{main|List of Colo-Colo players}}
+{{Colo-Colo squad|format=table}}
+
+
+##### Other players under contract
+{{Fs start}}
+{{Fs player|no=|nat=CHI|pos=DF|name=[[Miguel Toledo]]}}
+{{Fs mid}}
+{{Fs player|no=|nat=CHI|pos=MF|name=[[Bastián Silva]]}}
+{{Fs end}}
+
+
