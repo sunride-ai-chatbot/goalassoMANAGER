@@ -1,12 +1,10 @@
 [
  {
-  "key": "yanga",
-  "ok": false,
-  "why": "only 0 parsed players (Young Africans S.C.)"
- },
- {
   "key": "colo_colo",
-  "ok": false,
-  "why": "only 6 parsed players (Colo-Colo)"
+  "ok": true,
+  "n": 29,
+  "qid": 21,
+  "he": 2,
+  "img": 18
  }
 ]
