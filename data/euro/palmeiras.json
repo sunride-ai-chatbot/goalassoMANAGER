@@ -3,6 +3,7 @@
 "name_he": "פלמייראס",
 "source": "enwiki:SE Palmeiras",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Carlos Miguel",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 27,
 "nat": null,
-"value_m": 0.35,
+"value_m": 9.63,
 "qid": "Q115518500",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 28,
 "nat": null,
-"value_m": 0.25,
+"value_m": 6.88,
 "qid": "Q116815357",
 "no": "21"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 39,
 "nat": null,
-"value_m": 0.08,
+"value_m": 2.2,
 "qid": "Q6756582",
 "no": "14"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 26,
 "nat": null,
-"value_m": 0.77,
+"value_m": 21.18,
 "qid": "Q39079181",
 "no": "10"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 27,
 "nat": null,
-"value_m": 0.67,
+"value_m": 18.43,
 "qid": "Q110160871",
 "no": "19"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 25,
 "nat": null,
-"value_m": 0.61,
+"value_m": 16.78,
 "qid": "Q65718498",
 "no": "18"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 27,
 "nat": null,
-"value_m": 0.61,
+"value_m": 16.78,
 "qid": "Q97608024",
 "no": "32"
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 25,
 "nat": null,
-"value_m": 0.58,
+"value_m": 15.95,
 "qid": "Q104903216",
 "no": "42"
 },
@@ -90,7 +91,7 @@
 "pos": "FW",
 "age": 21,
 "nat": null,
-"value_m": 0.54,
+"value_m": 14.85,
 "qid": "Q111016177",
 "no": "9"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 28,
 "nat": null,
-"value_m": 0.52,
+"value_m": 14.3,
 "qid": "Q65378670",
 "no": "11"
 },
@@ -110,7 +111,7 @@
 "pos": "DF",
 "age": 27,
 "nat": null,
-"value_m": 0.46,
+"value_m": 12.65,
 "qid": "Q66685601",
 "no": "3"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 29,
 "nat": null,
-"value_m": 0.46,
+"value_m": 12.65,
 "qid": "Q32984822",
 "no": "26"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 25,
 "nat": null,
-"value_m": 0.44,
+"value_m": 12.1,
 "qid": "Q65718617",
 "no": "12"
 },
@@ -140,7 +141,7 @@
 "pos": "DF",
 "age": 22,
 "nat": null,
-"value_m": 0.4,
+"value_m": 11.0,
 "qid": "Q112854266",
 "no": "4"
 },
@@ -150,7 +151,7 @@
 "pos": "MF",
 "age": 30,
 "nat": null,
-"value_m": 0.4,
+"value_m": 11.0,
 "qid": "Q17619350",
 "no": "8"
 },
@@ -160,7 +161,7 @@
 "pos": "DF",
 "age": 28,
 "nat": null,
-"value_m": 0.4,
+"value_m": 11.0,
 "qid": "Q35066458",
 "no": "22"
 },
@@ -170,7 +171,7 @@
 "pos": "DF",
 "age": 22,
 "nat": null,
-"value_m": 0.38,
+"value_m": 10.45,
 "qid": "Q123463461",
 "no": "6"
 },
@@ -180,7 +181,7 @@
 "pos": "MF",
 "age": 31,
 "nat": null,
-"value_m": 0.31,
+"value_m": 8.53,
 "qid": "Q14755607",
 "no": "30"
 },
@@ -190,7 +191,7 @@
 "pos": "MF",
 "age": 31,
 "nat": null,
-"value_m": 0.27,
+"value_m": 7.43,
 "qid": "Q19866008",
 "no": "17"
 },
@@ -200,7 +201,7 @@
 "pos": "DF",
 "age": 31,
 "nat": null,
-"value_m": 0.25,
+"value_m": 6.88,
 "qid": "Q20872721",
 "no": "2"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 21,
 "nat": null,
-"value_m": 0.25,
+"value_m": 6.88,
 "qid": "Q137216942",
 "no": "48"
 },
@@ -220,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": null,
-"value_m": 0.25,
+"value_m": 6.88,
 "qid": null,
 "no": "56"
 },
@@ -230,7 +231,7 @@
 "pos": "DF",
 "age": 33,
 "nat": null,
-"value_m": 0.23,
+"value_m": 6.33,
 "qid": "Q1033783",
 "no": "15"
 },
@@ -240,7 +241,7 @@
 "pos": "MF",
 "age": 33,
 "nat": null,
-"value_m": 0.17,
+"value_m": 4.68,
 "qid": "Q794628",
 "no": "7"
 },
@@ -250,10 +251,9 @@
 "pos": "DF",
 "age": 20,
 "nat": null,
-"value_m": 0.17,
+"value_m": 4.68,
 "qid": "Q132173087",
 "no": "43"
 }
-],
-"rescaled": 1
+]
 }

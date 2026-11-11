@@ -249,7 +249,7 @@ def parse_squad_he(text):
         pos_he = re.sub(r'[\[\]]', '', f.get('עמדה', '')).split('|')[-1].strip()
         nat_he = re.sub(r'[\[\]]', '', f.get('ארץ', '')).split('|')[-1].strip()
         out.append({'no': f.get('מס', '').strip() or None, 'pos': POS_HE.get(pos_he), 'nat': NAT_HE2EN.get(nat_he, nat_he or None),
-                    'he': disp, 'title': title, 'loan': 'השאלה' in f.get('הערות', '') + f.get('אחר', '')})
+                    'he': disp, 'title': title, 'loan': bool(re.search(r'מושאל ל|הושאל ל|בהשאלה [בל]', f.get('הערות', '') + f.get('אחר', '')))})   # "מושאל מ…" is a squad member
     return out
 
 

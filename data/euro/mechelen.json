@@ -3,6 +3,7 @@
 "name_he": "מכלן",
 "source": "enwiki:KV Mechelen",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "אורטווין דה וולף",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Belgium",
-"value_m": 0.62,
+"value_m": 0.926,
 "qid": "Q35497504",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Spain",
-"value_m": 0.45,
+"value_m": 0.672,
 "qid": "Q112816954",
 "no": "13"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.4,
+"value_m": 0.598,
 "qid": null,
 "no": "15"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.4,
+"value_m": 0.598,
 "qid": null,
 "no": "32"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 0.9,
+"value_m": 1.34,
 "qid": "Q104521867",
 "no": "9"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Zimbabwe",
-"value_m": 0.9,
+"value_m": 1.34,
 "qid": "Q110272698",
 "no": "29"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Australia",
-"value_m": 0.83,
+"value_m": 1.24,
 "qid": "Q77669999",
 "no": "43"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Curaçao",
-"value_m": 0.76,
+"value_m": 1.14,
 "qid": "Q63164158",
 "no": "33"
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Norway",
-"value_m": 0.74,
+"value_m": 1.11,
 "qid": "Q105046386",
 "no": "5"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Sweden",
-"value_m": 0.74,
+"value_m": 1.11,
 "qid": "Q56300322",
 "no": "6"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Belgium",
-"value_m": 0.74,
+"value_m": 1.11,
 "qid": "Q100547106",
 "no": "27"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Spain",
-"value_m": 0.69,
+"value_m": 1.03,
 "qid": "Q112043053",
 "no": "3"
 },
@@ -130,7 +131,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Germany",
-"value_m": 0.69,
+"value_m": 1.03,
 "qid": "Q116733026",
 "no": "8"
 },
@@ -140,7 +141,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Belgium",
-"value_m": 0.64,
+"value_m": 0.956,
 "qid": "Q2749549",
 "no": "14"
 },
@@ -150,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.62,
+"value_m": 0.926,
 "qid": null,
 "no": "19"
 },
@@ -160,7 +161,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 0.6,
+"value_m": 0.897,
 "qid": "Q101628205",
 "no": "2"
 },
@@ -170,7 +171,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Belarus",
-"value_m": 0.6,
+"value_m": 0.897,
 "qid": "Q122830464",
 "no": "10"
 },
@@ -180,7 +181,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Turkey",
-"value_m": 0.6,
+"value_m": 0.897,
 "qid": "Q135914303",
 "no": "21"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Netherlands",
-"value_m": 0.6,
+"value_m": 0.897,
 "qid": "Q63241641",
 "no": "44"
 },
@@ -200,7 +201,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Cameroon",
-"value_m": 0.57,
+"value_m": 0.852,
 "qid": "Q113516870",
 "no": "23"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Belgium",
-"value_m": 0.55,
+"value_m": 0.822,
 "qid": "Q117314361",
 "no": "11"
 },
@@ -220,7 +221,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "France",
-"value_m": 0.52,
+"value_m": 0.777,
 "qid": "Q121383956",
 "no": "7"
 },
@@ -230,7 +231,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Belgium",
-"value_m": 0.52,
+"value_m": 0.777,
 "qid": "Q1189443",
 "no": "26"
 },
@@ -240,7 +241,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.52,
+"value_m": 0.777,
 "qid": null,
 "no": "-"
 },
@@ -250,7 +251,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.5,
+"value_m": 0.747,
 "qid": null,
 "no": "17"
 },
@@ -260,7 +261,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Belgium",
-"value_m": 0.5,
+"value_m": 0.747,
 "qid": "Q116250253",
 "no": "20"
 },
@@ -270,7 +271,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.5,
+"value_m": 0.747,
 "qid": null,
 "no": "28"
 },
@@ -280,7 +281,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.5,
+"value_m": 0.747,
 "qid": null,
 "no": "40"
 },
@@ -290,7 +291,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.5,
+"value_m": 0.747,
 "qid": null,
 "no": "49"
 },
@@ -300,10 +301,9 @@
 "pos": "MF",
 "age": 25,
 "nat": "France",
-"value_m": 0.48,
+"value_m": 0.717,
 "qid": null,
 "no": "30"
 }
-],
-"rescaled": 1
+]
 }

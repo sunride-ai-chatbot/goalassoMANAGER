@@ -3,6 +3,7 @@
 "name_he": "ליון",
 "source": "enwiki:Olympique Lyonnais",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "דומיניק גרייף",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Slovakia",
-"value_m": 6.8,
+"value_m": 9.46,
 "qid": "Q24254392",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Mali",
-"value_m": 5.79,
+"value_m": 8.05,
 "qid": "Q127789124",
 "no": "50"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 30,
 "nat": "France",
-"value_m": 4.21,
+"value_m": 5.86,
 "qid": "Q26262081",
 "no": "40"
 },
@@ -40,9 +41,19 @@
 "pos": "GK",
 "age": 21,
 "nat": "France",
-"value_m": 2.92,
+"value_m": 4.06,
 "qid": "Q108187044",
 "no": "25"
+},
+{
+"he": "לואיס אופנדה",
+"en": "Loïs Openda",
+"pos": "FW",
+"age": 26,
+"nat": "Belgium",
+"value_m": 18.05,
+"qid": "Q56183407",
+"no": "17"
 },
 {
 "he": "קייטו נקמורה",
@@ -50,7 +61,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Japan",
-"value_m": 11.01,
+"value_m": 15.31,
 "qid": "Q45819496",
 "no": "11"
 },
@@ -60,7 +71,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Ghana",
-"value_m": 9.72,
+"value_m": 13.52,
 "qid": "Q111584129",
 "no": "7"
 },
@@ -70,7 +81,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Denmark",
-"value_m": 9.1,
+"value_m": 12.66,
 "qid": "Q66433337",
 "no": "2"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "United States",
-"value_m": 8.37,
+"value_m": 11.64,
 "qid": "Q64009852",
 "no": "6"
 },
@@ -90,7 +101,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 7.75,
+"value_m": 10.78,
 "qid": "Q83779164",
 "no": "21"
 },
@@ -100,7 +111,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Czech Republic",
-"value_m": 7.69,
+"value_m": 10.7,
 "qid": "Q60791524",
 "no": "10"
 },
@@ -110,7 +121,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Brazil",
-"value_m": 6.96,
+"value_m": 9.68,
 "qid": "Q66651898",
 "no": "16"
 },
@@ -120,7 +131,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "England",
-"value_m": 6.63,
+"value_m": 9.22,
 "qid": "Q108653507",
 "no": "23"
 },
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Burkina Faso",
-"value_m": 6.35,
+"value_m": 8.83,
 "qid": "Q124478403",
 "no": "76"
 },
@@ -140,7 +151,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Austria",
-"value_m": 5.56,
+"value_m": 7.73,
 "qid": "Q55846973",
 "no": "20"
 },
@@ -150,7 +161,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Belgium",
-"value_m": 5.45,
+"value_m": 7.58,
 "qid": "Q112112991",
 "no": "24"
 },
@@ -160,9 +171,19 @@
 "pos": "FW",
 "age": 20,
 "nat": "Algeria",
-"value_m": 5.39,
+"value_m": 7.5,
 "qid": "Q137972427",
 "no": "26"
+},
+{
+"he": "Zachary Athekame",
+"en": "Zachary Athekame",
+"pos": "DF",
+"age": 21,
+"nat": "Switzerland",
+"value_m": 7.11,
+"qid": "Q130315786",
+"no": "13"
 },
 {
 "he": "מוסא ניאחאטה",
@@ -170,7 +191,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Senegal",
-"value_m": 4.72,
+"value_m": 6.56,
 "qid": "Q18637804",
 "no": "19"
 },
@@ -180,7 +201,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Denmark",
-"value_m": 4.55,
+"value_m": 6.33,
 "qid": "Q124980282",
 "no": "99"
 },
@@ -190,7 +211,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "France",
-"value_m": 3.93,
+"value_m": 5.47,
 "qid": "Q134311556",
 "no": "85"
 },
@@ -200,7 +221,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "France",
-"value_m": 3.71,
+"value_m": 5.16,
 "qid": "Q135514874",
 "no": "18"
 },
@@ -210,7 +231,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "France",
-"value_m": 3.54,
+"value_m": 4.92,
 "qid": "Q15406583",
 "no": "8"
 },
@@ -220,7 +241,7 @@
 "pos": "FW",
 "age": 18,
 "nat": "France",
-"value_m": 3.43,
+"value_m": 4.77,
 "qid": "Q134608562",
 "no": "45"
 },
@@ -230,7 +251,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Angola",
-"value_m": 3.26,
+"value_m": 4.53,
 "qid": "Q18637707",
 "no": "22"
 },
@@ -240,10 +261,10 @@
 "pos": "DF",
 "age": 34,
 "nat": "Argentina",
-"value_m": 2.36,
+"value_m": 3.28,
 "qid": "Q3876530",
 "no": "3"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

@@ -3,6 +3,7 @@
 "name_he": "קובנטרי",
 "source": "enwiki:Coventry City F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "קרל ראשוורת'",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 1.18,
+"value_m": 1.33,
 "qid": "Q107985580",
 "no": "19"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Sweden",
-"value_m": 1.12,
+"value_m": 1.26,
 "qid": "Q96834825",
 "no": "1"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 33,
 "nat": "England",
-"value_m": 0.53,
+"value_m": 0.596,
 "qid": "Q5216541",
 "no": "25"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 34,
 "nat": "England",
-"value_m": 0.24,
+"value_m": 0.27,
 "qid": "Q16000020",
 "no": "13"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 2.12,
+"value_m": 2.39,
 "qid": "Q66107406",
 "no": "34"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Ghana",
-"value_m": 1.86,
+"value_m": 2.09,
 "qid": "Q26251815",
 "no": "23"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Nigeria",
-"value_m": 1.77,
+"value_m": 1.99,
 "qid": "Q20932574",
 "no": "14"
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "France",
-"value_m": 1.68,
+"value_m": 1.89,
 "qid": "Q108703725",
 "no": "17"
 },
@@ -90,7 +91,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Jamaica",
-"value_m": 1.65,
+"value_m": 1.86,
 "qid": "Q27107132",
 "no": "10"
 },
@@ -100,7 +101,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Jamaica",
-"value_m": 1.59,
+"value_m": 1.79,
 "qid": "Q30729099",
 "no": "22"
 },
@@ -110,7 +111,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Switzerland",
-"value_m": 1.59,
+"value_m": 1.79,
 "qid": "Q111805882",
 "no": "24"
 },
@@ -120,7 +121,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "United States",
-"value_m": 1.56,
+"value_m": 1.76,
 "qid": "Q19787021",
 "no": "11"
 },
@@ -130,7 +131,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "England",
-"value_m": 1.51,
+"value_m": 1.7,
 "qid": "Q58754102",
 "no": "28"
 },
@@ -140,7 +141,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "England",
-"value_m": 1.48,
+"value_m": 1.67,
 "qid": "Q105062238",
 "no": "9"
 },
@@ -150,7 +151,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Netherlands",
-"value_m": 1.45,
+"value_m": 1.63,
 "qid": "Q27995477",
 "no": "38"
 },
@@ -160,7 +161,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Denmark",
-"value_m": 1.39,
+"value_m": 1.56,
 "qid": "Q100144433",
 "no": "29"
 },
@@ -170,7 +171,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Japan",
-"value_m": 1.36,
+"value_m": 1.53,
 "qid": "Q62085112",
 "no": "7"
 },
@@ -180,7 +181,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Nigeria",
-"value_m": 1.36,
+"value_m": 1.53,
 "qid": "Q56292818",
 "no": "16"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "England",
-"value_m": 1.36,
+"value_m": 1.53,
 "qid": "Q35554570",
 "no": "26"
 },
@@ -200,7 +201,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 1.21,
+"value_m": 1.36,
 "qid": "Q78488478",
 "no": "5"
 },
@@ -210,7 +211,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Wales",
-"value_m": 1.09,
+"value_m": 1.23,
 "qid": "Q21572868",
 "no": "3"
 },
@@ -220,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "England",
-"value_m": 1.09,
+"value_m": 1.23,
 "qid": "Q97059250",
 "no": "4"
 },
@@ -230,7 +231,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 1.09,
+"value_m": 1.23,
 "qid": "Q66124842",
 "no": "27"
 },
@@ -240,7 +241,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Ghana",
-"value_m": 1.0,
+"value_m": 1.13,
 "qid": "Q130337999",
 "no": "8"
 },
@@ -250,7 +251,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "England",
-"value_m": 0.97,
+"value_m": 1.09,
 "qid": "Q104733764",
 "no": "20"
 },
@@ -260,7 +261,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "England",
-"value_m": 0.86,
+"value_m": 0.968,
 "qid": "Q16236759",
 "no": "6"
 },
@@ -270,7 +271,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Guinea",
-"value_m": 0.68,
+"value_m": 0.765,
 "qid": "Q124219755",
 "no": "49"
 },
@@ -280,7 +281,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Jamaica",
-"value_m": 0.56,
+"value_m": 0.63,
 "qid": "Q36999329",
 "no": "2"
 },
@@ -290,10 +291,20 @@
 "pos": "DF",
 "age": 33,
 "nat": "England",
-"value_m": 0.53,
+"value_m": 0.596,
 "qid": "Q1678818",
 "no": "21"
+},
+{
+"he": "Stephen Mfuni",
+"en": "Stephen Mfuni",
+"pos": "DF",
+"age": 18,
+"nat": "England",
+"value_m": 0.462,
+"qid": "Q134547817",
+"no": "12"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

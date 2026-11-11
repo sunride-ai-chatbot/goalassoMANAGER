@@ -3,6 +3,7 @@
 "name_he": "אינטר מיאמי",
 "source": "enwiki:Inter Miami CF",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "דיין סנט קלייר",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Canada",
-"value_m": 1.91,
+"value_m": 2.67,
 "qid": "Q60583915",
 "no": "97"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Argentina",
-"value_m": 1.8,
+"value_m": 2.52,
 "qid": "Q83753402",
 "no": "34"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "United States",
-"value_m": 1.23,
+"value_m": 1.72,
 "qid": "Q86344884",
 "no": "13"
 },
@@ -40,9 +41,19 @@
 "pos": "FW",
 "age": 27,
 "nat": "Mexico",
-"value_m": 3.03,
+"value_m": 4.24,
 "qid": "Q19347095",
 "no": "19"
+},
+{
+"he": "מתיאס גלארסה",
+"en": "Matías Galarza",
+"pos": "MF",
+"age": 24,
+"nat": "Paraguay",
+"value_m": 3.07,
+"qid": "Q106804819",
+"no": "80"
 },
 {
 "he": "טלאסקו סגוביה",
@@ -50,7 +61,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Venezuela",
-"value_m": 2.18,
+"value_m": 3.05,
 "qid": "Q106645526",
 "no": "8"
 },
@@ -60,7 +71,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Argentina",
-"value_m": 2.11,
+"value_m": 2.95,
 "qid": "Q117833940",
 "no": "21"
 },
@@ -70,7 +81,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Argentina",
-"value_m": 2.08,
+"value_m": 2.91,
 "qid": "Q109937760",
 "no": "2"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Italy",
-"value_m": 1.97,
+"value_m": 2.76,
 "qid": "Q125149730",
 "no": "42"
 },
@@ -90,7 +101,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Argentina",
-"value_m": 1.94,
+"value_m": 2.72,
 "qid": "Q78651410",
 "no": "22"
 },
@@ -100,9 +111,19 @@
 "pos": "DF",
 "age": 29,
 "nat": "Spain",
-"value_m": 1.84,
+"value_m": 2.58,
 "qid": "Q24258610",
 "no": "3"
+},
+{
+"he": "Micael",
+"en": "Micael",
+"pos": "DF",
+"age": 26,
+"nat": "Brazil",
+"value_m": 2.35,
+"qid": "Q110449941",
+"no": "16"
 },
 {
 "he": "Maximiliano Falcón",
@@ -110,7 +131,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Uruguay",
-"value_m": 1.67,
+"value_m": 2.34,
 "qid": "Q89274392",
 "no": "37"
 },
@@ -120,7 +141,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Argentina",
-"value_m": 1.63,
+"value_m": 2.28,
 "qid": "Q60842138",
 "no": "4"
 },
@@ -130,7 +151,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Argentina",
-"value_m": 1.63,
+"value_m": 2.28,
 "qid": "Q129234104",
 "no": "24"
 },
@@ -140,7 +161,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Jamaica",
-"value_m": 1.6,
+"value_m": 2.24,
 "qid": "Q97574464",
 "no": "17"
 },
@@ -150,7 +171,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Dominican Republic",
-"value_m": 1.23,
+"value_m": 1.72,
 "qid": "Q119985116",
 "no": "62"
 },
@@ -160,7 +181,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Haiti",
-"value_m": 1.19,
+"value_m": 1.67,
 "qid": null,
 "no": "54"
 },
@@ -170,7 +191,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Argentina",
-"value_m": 1.09,
+"value_m": 1.53,
 "qid": "Q6110670",
 "no": "7"
 },
@@ -180,7 +201,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "United States",
-"value_m": 1.06,
+"value_m": 1.48,
 "qid": null,
 "no": "88"
 },
@@ -190,7 +211,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "United States",
-"value_m": 0.99,
+"value_m": 1.39,
 "qid": "Q132307717",
 "no": "20"
 },
@@ -200,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "United States",
-"value_m": 0.95,
+"value_m": 1.33,
 "qid": null,
 "no": "76"
 },
@@ -210,7 +231,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "United States",
-"value_m": 0.89,
+"value_m": 1.25,
 "qid": "Q136276663",
 "no": "56"
 },
@@ -220,7 +241,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "United States",
-"value_m": 0.85,
+"value_m": 1.19,
 "qid": null,
 "no": "70"
 },
@@ -230,7 +251,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "United States",
-"value_m": 0.82,
+"value_m": 1.15,
 "qid": "Q139564818",
 "no": "59"
 },
@@ -240,7 +261,7 @@
 "pos": "MF",
 "age": 34,
 "nat": "Brazil",
-"value_m": 0.78,
+"value_m": 1.09,
 "qid": "Q616664",
 "no": "5"
 },
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "United States",
-"value_m": 0.78,
+"value_m": 1.09,
 "qid": "Q122413395",
 "no": "26"
 },
@@ -260,7 +281,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Brazil",
-"value_m": 0.71,
+"value_m": 0.994,
 "qid": "Q119152074",
 "no": "11"
 },
@@ -270,7 +291,7 @@
 "pos": "FW",
 "age": 39,
 "nat": "Uruguay",
-"value_m": 0.68,
+"value_m": 0.952,
 "qid": "Q26517",
 "no": "9"
 },
@@ -280,10 +301,10 @@
 "pos": "FW",
 "age": 39,
 "nat": "Argentina",
-"value_m": 0.58,
+"value_m": 0.812,
 "qid": "Q615",
 "no": "10"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

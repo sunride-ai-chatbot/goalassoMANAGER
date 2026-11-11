@@ -3,6 +3,7 @@
 "name_he": "טולוז",
 "source": "enwiki:Toulouse FC",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "גיום רסטה",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "France",
-"value_m": 2.01,
+"value_m": 3.54,
 "qid": "Q121423825",
 "no": "16"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "Comoros",
-"value_m": 1.1,
+"value_m": 1.93,
 "qid": "Q139464119",
 "no": "30"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 19,
 "nat": "France",
-"value_m": 0.62,
+"value_m": 1.09,
 "qid": "Q118900557",
 "no": "60"
 },
@@ -40,7 +41,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Venezuela",
-"value_m": 3.22,
+"value_m": 5.66,
 "qid": "Q43380621",
 "no": "23"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Denmark",
-"value_m": 2.63,
+"value_m": 4.63,
 "qid": "Q99345848",
 "no": "20"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Canada",
-"value_m": 2.56,
+"value_m": 4.5,
 "qid": "Q78637933",
 "no": "13"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Canada",
-"value_m": 2.56,
+"value_m": 4.5,
 "qid": "Q117830854",
 "no": "14"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Norway",
-"value_m": 2.52,
+"value_m": 4.43,
 "qid": "Q35314083",
 "no": "15"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 1.97,
+"value_m": 3.46,
 "qid": "Q65559585",
 "no": "17"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Argentina",
-"value_m": 1.94,
+"value_m": 3.41,
 "qid": "Q114356315",
 "no": "9"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Germany",
-"value_m": 1.87,
+"value_m": 3.29,
 "qid": "Q26838064",
 "no": "31"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Denmark",
-"value_m": 1.68,
+"value_m": 2.95,
 "qid": "Q30513763",
 "no": "2"
 },
@@ -130,9 +131,19 @@
 "pos": "DF",
 "age": 23,
 "nat": "Algeria",
-"value_m": 1.57,
+"value_m": 2.76,
 "qid": "Q132126910",
 "no": "22"
+},
+{
+"he": "David Odogu",
+"en": "David Odogu",
+"pos": "DF",
+"age": 20,
+"nat": "Germany",
+"value_m": 2.61,
+"qid": "Q118874365",
+"no": "19"
 },
 {
 "he": "Ismaïl Diallo",
@@ -140,9 +151,19 @@
 "pos": "DF",
 "age": 25,
 "nat": "France",
-"value_m": 1.39,
+"value_m": 2.44,
 "qid": null,
 "no": "94"
+},
+{
+"he": "Mathis Amougou",
+"en": "Mathis Amougou",
+"pos": "MF",
+"age": 20,
+"nat": "France",
+"value_m": 2.29,
+"qid": "Q123458677",
+"no": "18"
 },
 {
 "he": "Thomas Jørgensen",
@@ -150,7 +171,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Denmark",
-"value_m": 1.21,
+"value_m": 2.13,
 "qid": "Q127260116",
 "no": "8"
 },
@@ -160,7 +181,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "France",
-"value_m": 1.21,
+"value_m": 2.13,
 "qid": null,
 "no": "49"
 },
@@ -170,7 +191,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Argentina",
-"value_m": 1.17,
+"value_m": 2.06,
 "qid": "Q134499516",
 "no": "7"
 },
@@ -180,7 +201,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Côte d'Ivoire",
-"value_m": 1.1,
+"value_m": 1.93,
 "qid": "Q140855622",
 "no": "12"
 },
@@ -190,7 +211,7 @@
 "pos": "MF",
 "age": 18,
 "nat": "France",
-"value_m": 0.99,
+"value_m": 1.74,
 "qid": "Q135935620",
 "no": "6"
 },
@@ -200,7 +221,7 @@
 "pos": "FW",
 "age": 18,
 "nat": "France",
-"value_m": 0.95,
+"value_m": 1.67,
 "qid": "Q134570389",
 "no": "37"
 },
@@ -210,7 +231,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "France",
-"value_m": 0.91,
+"value_m": 1.6,
 "qid": "Q136309589",
 "no": "5"
 },
@@ -220,10 +241,10 @@
 "pos": "FW",
 "age": 18,
 "nat": "Sweden",
-"value_m": 0.91,
+"value_m": 1.6,
 "qid": "Q136497613",
 "no": "11"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

@@ -7,7 +7,9 @@ const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');
 const E=JSON.parse(fs.readFileSync(path.join(root,'data/visuals/euro-players.json')));
 const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
-const w=new JSDOM(fs.readFileSync(path.join(root,'ligat-haal-manager.html'),'utf8'),{url:'https://goalasso.test/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true})}}).window;
+// storageQuota: this suite keeps two full careers in the legacy localStorage layout (about 2.6 MB each once every
+// world squad is loaded); browsers store careers gzip-compressed in IndexedDB, so jsdom's 5 MB default is not under test
+const w=new JSDOM(fs.readFileSync(path.join(root,'ligat-haal-manager.html'),'utf8'),{url:'https://goalasso.test/',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true})}}).window;
 const d=w.document;
 const rows=()=>[...d.querySelectorAll('[data-wrow]')];const closeAll=()=>w.eval('closeMarketSuggest()');
 async function main(){try{
@@ -75,6 +77,19 @@ async function main(){try{
  const legacy=w.eval('JSON.stringify(Object.assign({},G,{v:8}))');w.eval(`installCareer(${JSON.stringify(legacy)},2)`);
  const after=JSON.parse(w.eval("JSON.stringify((()=>{const c=G.world.epl.clubs.find(c=>c.name==='ליברפול');return {n:c.players.length,fake:c.players.filter(p=>!p.real).length,faces:c.players.filter(p=>playerVisual(p)).length,v:G.v}})())"));
  assert.equal(after.n,squad('liverpool').length);assert.equal(after.fake,0);assert.ok(after.faces>=16);assert.equal(after.v,w.eval('SAVE_VERSION'));
- assert.deepEqual(errors,[]);console.log('world market: full squads, not-for-sale core, faces after migration, legionnaires, suggestions, nationality and price sorts passed; errors []');
+ // v11: a career saved with the October 2026 data. Flamengo sat ten points under its strength with a tenth of the values
+ // and lacked two players; Brann still had a generated list. The migration repairs both and duplicates nobody.
+ const v11=JSON.parse(w.eval(`(()=>{const find=n=>{for(const [lg,L] of Object.entries(WORLD_LEAGUES))if(L.clubs.some(d=>d[0]===n)){ensureWorldLeague(lg);return [lg,G.world[lg].clubs.find(c=>c.name===n)]}};
+   const [,fl]=find('פלמנגו');const [blg,br]=find('ברן');const n0=fl.players.length;
+   fl.players=fl.players.slice(0,n0-2);for(const p of fl.players){p.ovr-=10;p.rv=Math.round(p.rv/6.3);p.value=playerValue(p)}fl.squadV=2;
+   br.players=[];for(const k of ['young','mid','mid','vet','mid','young','vet'])br.players.push(makeWorldPlayer(blg,WORLD_LEAGUES[blg].clubs.find(d=>d[0]==='ברן'),k,br.str));br.realSquad=false;delete br.squadV;
+   return JSON.stringify({n0,str:fl.str,brData:${squad('brann').length}})})()`));
+ const october=w.eval('JSON.stringify(Object.assign({},G,{v:10}))');w.eval(`installCareer(${JSON.stringify(october)},2)`);
+ const a11=JSON.parse(w.eval(`JSON.stringify((()=>{const all=worldClubs();const fl=all.find(c=>c.name==='פלמנגו'),br=all.find(c=>c.name==='ברן');const top=fl.players.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const names=fl.players.map(p=>p.en);
+   return {n:fl.players.length,dup:names.length-new Set(names).size,mean:top.reduce((a,b)=>a+b,0)/14,brReal:br.players.filter(p=>p.real&&p.en).length,brFake:br.players.filter(p=>!p.real).length,v:G.v}})())`));
+ assert.equal(a11.n,v11.n0,'the players the squad gained are added');assert.equal(a11.dup,0,'a re-valued player is not duplicated');
+ assert.ok(Math.abs(a11.mean-(v11.str+1))<=1.5,'the squad is back on the club strength: '+a11.mean+' vs '+v11.str);
+ assert.equal(a11.brReal,v11.brData,'a club that gained real data shows its real squad');assert.equal(a11.brFake,0);assert.equal(a11.v,w.eval('SAVE_VERSION'));
+ assert.deepEqual(errors,[]);console.log('world market: full squads, not-for-sale core, faces after migration, v11 squad refresh, legionnaires, suggestions, nationality and price sorts passed; errors []');
 }finally{await new Promise(r=>setImmediate(r));w.close()}}
 main().catch(e=>{console.error(e);process.exitCode=1});

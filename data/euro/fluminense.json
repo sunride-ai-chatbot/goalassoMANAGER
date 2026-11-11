@@ -3,6 +3,7 @@
 "name_he": "פלומיננסה",
 "source": "enwiki:Fluminense FC",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Marcelo Pitaluga",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 23,
 "nat": null,
-"value_m": 0.38,
+"value_m": 3.96,
 "qid": "Q84314202",
 "no": "27"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 27,
 "nat": null,
-"value_m": 0.25,
+"value_m": 2.61,
 "qid": "Q59206188",
 "no": "98"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 45,
 "nat": null,
-"value_m": 0.08,
+"value_m": 0.834,
 "qid": "Q677923",
 "no": "1"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 27,
 "nat": null,
-"value_m": 0.77,
+"value_m": 8.03,
 "qid": "Q26838705",
 "no": "17"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 24,
 "nat": null,
-"value_m": 0.56,
+"value_m": 5.84,
 "qid": "Q105393903",
 "no": "9"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 28,
 "nat": null,
-"value_m": 0.48,
+"value_m": 5.01,
 "qid": "Q59206576",
 "no": "16"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 25,
 "nat": null,
-"value_m": 0.48,
+"value_m": 5.01,
 "qid": "Q111948991",
 "no": "35"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 25,
 "nat": null,
-"value_m": 0.46,
+"value_m": 4.8,
 "qid": "Q104851900",
 "no": "8"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 29,
 "nat": null,
-"value_m": 0.46,
+"value_m": 4.8,
 "qid": "Q20735677",
 "no": "11"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 29,
 "nat": null,
-"value_m": 0.46,
+"value_m": 4.8,
 "qid": "Q20976280",
 "no": "30"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 28,
 "nat": null,
-"value_m": 0.42,
+"value_m": 4.38,
 "qid": "Q122723624",
 "no": "90"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 29,
 "nat": null,
-"value_m": 0.4,
+"value_m": 4.17,
 "qid": "Q19559974",
 "no": "13"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 26,
 "nat": null,
-"value_m": 0.35,
+"value_m": 3.65,
 "qid": "Q61745498",
 "no": "22"
 },
@@ -140,7 +141,7 @@
 "pos": "DF",
 "age": 28,
 "nat": null,
-"value_m": 0.33,
+"value_m": 3.44,
 "qid": "Q55613051",
 "no": "23"
 },
@@ -150,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": null,
-"value_m": 0.31,
+"value_m": 3.23,
 "qid": null,
 "no": "19"
 },
@@ -160,7 +161,7 @@
 "pos": "DF",
 "age": 26,
 "nat": null,
-"value_m": 0.29,
+"value_m": 3.02,
 "qid": "Q130731192",
 "no": "44"
 },
@@ -170,7 +171,7 @@
 "pos": "DF",
 "age": 29,
 "nat": null,
-"value_m": 0.27,
+"value_m": 2.82,
 "qid": "Q59205809",
 "no": "4"
 },
@@ -180,7 +181,7 @@
 "pos": "MF",
 "age": 32,
 "nat": null,
-"value_m": 0.27,
+"value_m": 2.82,
 "qid": "Q15696665",
 "no": "32"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 31,
 "nat": null,
-"value_m": 0.25,
+"value_m": 2.61,
 "qid": "Q30935916",
 "no": "21"
 },
@@ -200,7 +201,7 @@
 "pos": "DF",
 "age": 28,
 "nat": null,
-"value_m": 0.23,
+"value_m": 2.4,
 "qid": "Q124255942",
 "no": "29"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 32,
 "nat": null,
-"value_m": 0.23,
+"value_m": 2.4,
 "qid": "Q16849440",
 "no": "94"
 },
@@ -220,9 +221,19 @@
 "pos": "DF",
 "age": 25,
 "nat": null,
-"value_m": 0.21,
+"value_m": 2.19,
 "qid": null,
 "no": null
+},
+{
+"he": "Alisson",
+"en": "Alisson",
+"pos": "MF",
+"age": 33,
+"nat": "Brazil",
+"value_m": 2.01,
+"qid": "Q4727251",
+"no": "25"
 },
 {
 "he": "Riquelme",
@@ -230,7 +241,7 @@
 "pos": "FW",
 "age": 19,
 "nat": null,
-"value_m": 0.19,
+"value_m": 1.98,
 "qid": "Q130536535",
 "no": "28"
 },
@@ -240,7 +251,7 @@
 "pos": "DF",
 "age": 33,
 "nat": null,
-"value_m": 0.17,
+"value_m": 1.77,
 "qid": "Q20048330",
 "no": "6"
 },
@@ -250,7 +261,7 @@
 "pos": "DF",
 "age": 19,
 "nat": null,
-"value_m": 0.17,
+"value_m": 1.77,
 "qid": "Q135975418",
 "no": "46"
 },
@@ -260,7 +271,7 @@
 "pos": "FW",
 "age": 38,
 "nat": null,
-"value_m": 0.13,
+"value_m": 1.36,
 "qid": "Q3761170",
 "no": "14"
 },
@@ -270,7 +281,7 @@
 "pos": "DF",
 "age": 41,
 "nat": null,
-"value_m": 0.12,
+"value_m": 1.25,
 "qid": "Q210453",
 "no": "3"
 },
@@ -280,7 +291,7 @@
 "pos": "FW",
 "age": 40,
 "nat": null,
-"value_m": 0.12,
+"value_m": 1.25,
 "qid": "Q62786",
 "no": "7"
 },
@@ -290,7 +301,7 @@
 "pos": "MF",
 "age": 36,
 "nat": null,
-"value_m": 0.12,
+"value_m": 1.25,
 "qid": "Q313835",
 "no": "10"
 },
@@ -300,10 +311,10 @@
 "pos": "DF",
 "age": 36,
 "nat": null,
-"value_m": 0.1,
+"value_m": 1.04,
 "qid": "Q28113226",
 "no": "2"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

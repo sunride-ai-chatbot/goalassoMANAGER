@@ -3,6 +3,7 @@
 "name_he": "לוס אנג'לס אף.סי",
 "source": "enwiki:Los Angeles FC",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Thomas Hasal",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Canada",
-"value_m": 0.35,
+"value_m": 1.75,
 "qid": "Q58932309",
 "no": "12"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "United States",
-"value_m": 0.17,
+"value_m": 0.852,
 "qid": null,
 "no": "31"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 39,
 "nat": "France",
-"value_m": 0.1,
+"value_m": 0.501,
 "qid": "Q1907",
 "no": "1"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Canada",
-"value_m": 0.73,
+"value_m": 3.66,
 "qid": "Q64009768",
 "no": "18"
 },
@@ -50,7 +51,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Scotland",
-"value_m": 0.52,
+"value_m": 2.61,
 "qid": "Q35564918",
 "no": "5"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Germany",
-"value_m": 0.48,
+"value_m": 2.41,
 "qid": "Q100524677",
 "no": "9"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "United States",
-"value_m": 0.48,
+"value_m": 2.41,
 "qid": "Q27107074",
 "no": "17"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Canada",
-"value_m": 0.48,
+"value_m": 2.41,
 "qid": "Q55760452",
 "no": "66"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "United States",
-"value_m": 0.44,
+"value_m": 2.21,
 "qid": "Q62019307",
 "no": "11"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Canada",
-"value_m": 0.4,
+"value_m": 2.01,
 "qid": "Q81761131",
 "no": "21"
 },
@@ -110,9 +111,19 @@
 "pos": "FW",
 "age": 31,
 "nat": "Gabon",
-"value_m": 0.4,
+"value_m": 2.01,
 "qid": "Q21620919",
 "no": "99"
+},
+{
+"he": "Leo Walta",
+"en": "Leo Walta",
+"pos": "MF",
+"age": 23,
+"nat": "Finland",
+"value_m": 1.93,
+"qid": "Q109094289",
+"no": "81"
 },
 {
 "he": "Eddie Segura",
@@ -120,7 +131,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Colombia",
-"value_m": 0.38,
+"value_m": 1.91,
 "qid": "Q58740795",
 "no": "4"
 },
@@ -130,7 +141,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Brazil",
-"value_m": 0.35,
+"value_m": 1.75,
 "qid": "Q110884245",
 "no": "6"
 },
@@ -140,7 +151,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Ukraine",
-"value_m": 0.35,
+"value_m": 1.75,
 "qid": "Q26132244",
 "no": "23"
 },
@@ -150,7 +161,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "United States",
-"value_m": 0.35,
+"value_m": 1.75,
 "qid": "Q86305759",
 "no": "91"
 },
@@ -160,7 +171,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Spain",
-"value_m": 0.33,
+"value_m": 1.65,
 "qid": "Q19760517",
 "no": "14"
 },
@@ -170,7 +181,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ecuador",
-"value_m": 0.33,
+"value_m": 1.65,
 "qid": null,
 "no": "20"
 },
@@ -180,9 +191,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.33,
+"value_m": 1.65,
 "qid": null,
 "no": "90"
+},
+{
+"he": "Thayllon",
+"en": "Thayllon",
+"pos": "FW",
+"age": 25,
+"nat": "Brazil",
+"value_m": 1.58,
+"qid": null,
+"no": "43"
 },
 {
 "he": "Mark Delgado",
@@ -190,7 +211,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "United States",
-"value_m": 0.31,
+"value_m": 1.55,
 "qid": "Q6757520",
 "no": "8"
 },
@@ -200,7 +221,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "United States",
-"value_m": 0.29,
+"value_m": 1.45,
 "qid": "Q7859955",
 "no": "19"
 },
@@ -210,7 +231,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "United States",
-"value_m": 0.25,
+"value_m": 1.25,
 "qid": null,
 "no": "45"
 },
@@ -220,7 +241,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "United States",
-"value_m": 0.21,
+"value_m": 1.05,
 "qid": null,
 "no": "44"
 },
@@ -230,7 +251,7 @@
 "pos": "FW",
 "age": 34,
 "nat": "South Korea",
-"value_m": 0.19,
+"value_m": 0.953,
 "qid": "Q439722",
 "no": "7"
 },
@@ -240,7 +261,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "United States",
-"value_m": 0.17,
+"value_m": 0.852,
 "qid": "Q16225075",
 "no": "33"
 },
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 35,
 "nat": "United States",
-"value_m": 0.12,
+"value_m": 0.602,
 "qid": "Q17180657",
 "no": "24"
 },
@@ -260,10 +281,10 @@
 "pos": "MF",
 "age": 17,
 "nat": "United States",
-"value_m": 0.1,
+"value_m": 0.501,
 "qid": "Q136521960",
 "no": "22"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

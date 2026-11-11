@@ -3,6 +3,7 @@
 "name_he": "בריסטול סיטי",
 "source": "enwiki:Bristol City F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Sam Tickle",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "England",
-"value_m": 0.77,
+"value_m": 1.02,
 "qid": "Q108808331",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Wales",
-"value_m": 0.74,
+"value_m": 0.984,
 "qid": "Q66732355",
 "no": "32"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "England",
-"value_m": 0.66,
+"value_m": 0.878,
 "qid": "Q34637598",
 "no": "40"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "England",
-"value_m": 1.48,
+"value_m": 1.97,
 "qid": "Q47476974",
 "no": "45"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Japan",
-"value_m": 1.46,
+"value_m": 1.94,
 "qid": "Q109947455",
 "no": "7"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Slovenia",
-"value_m": 1.35,
+"value_m": 1.8,
 "qid": "Q105976535",
 "no": "14"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ireland",
-"value_m": 1.26,
+"value_m": 1.68,
 "qid": "Q66305702",
 "no": "12"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 1.13,
+"value_m": 1.5,
 "qid": "Q58975091",
 "no": "4"
 },
@@ -90,7 +91,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "England",
-"value_m": 1.1,
+"value_m": 1.46,
 "qid": "Q104833453",
 "no": "11"
 },
@@ -100,7 +101,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Sweden",
-"value_m": 1.1,
+"value_m": 1.46,
 "qid": "Q108184693",
 "no": "38"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Switzerland",
-"value_m": 1.07,
+"value_m": 1.42,
 "qid": "Q110796217",
 "no": "9"
 },
@@ -120,9 +121,19 @@
 "pos": "MF",
 "age": 27,
 "nat": "England",
-"value_m": 1.07,
+"value_m": 1.42,
 "qid": "Q29633758",
 "no": "10"
+},
+{
+"he": "Brian De Keersmaecker",
+"en": "Brian De Keersmaecker",
+"pos": "MF",
+"age": 26,
+"nat": "Belgium",
+"value_m": 1.33,
+"qid": "Q98536294",
+"no": "6"
 },
 {
 "he": "George Tanner",
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "England",
-"value_m": 0.99,
+"value_m": 1.32,
 "qid": "Q66688699",
 "no": "19"
 },
@@ -140,7 +151,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 0.99,
+"value_m": 1.32,
 "qid": "Q104732108",
 "no": "27"
 },
@@ -150,7 +161,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "England",
-"value_m": 0.96,
+"value_m": 1.28,
 "qid": "Q104772533",
 "no": "20"
 },
@@ -160,7 +171,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "England",
-"value_m": 0.96,
+"value_m": 1.28,
 "qid": "Q113586548",
 "no": "23"
 },
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "England",
-"value_m": 0.85,
+"value_m": 1.13,
 "qid": "Q56599812",
 "no": "3"
 },
@@ -180,7 +191,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Ireland",
-"value_m": 0.85,
+"value_m": 1.13,
 "qid": "Q108106462",
 "no": "15"
 },
@@ -190,7 +201,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "England",
-"value_m": 0.8,
+"value_m": 1.06,
 "qid": "Q104833415",
 "no": "5"
 },
@@ -200,7 +211,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Romania",
-"value_m": 0.74,
+"value_m": 0.984,
 "qid": "Q131840182",
 "no": "2"
 },
@@ -210,7 +221,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "England",
-"value_m": 0.74,
+"value_m": 0.984,
 "qid": "Q39078766",
 "no": "8"
 },
@@ -220,9 +231,19 @@
 "pos": "MF",
 "age": 25,
 "nat": "Italy",
-"value_m": 0.69,
+"value_m": 0.918,
 "qid": null,
 "no": "42"
+},
+{
+"he": "Rio Cardines",
+"en": "Rio Cardines",
+"pos": "DF",
+"age": 20,
+"nat": "Trinidad and Tobago",
+"value_m": 0.836,
+"qid": "Q134607428",
+"no": "21"
 },
 {
 "he": "Jed Wallace",
@@ -230,7 +251,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "England",
-"value_m": 0.58,
+"value_m": 0.772,
 "qid": "Q6172641",
 "no": "17"
 },
@@ -240,7 +261,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "England",
-"value_m": 0.55,
+"value_m": 0.732,
 "qid": "Q24679288",
 "no": "16"
 },
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "England",
-"value_m": 0.41,
+"value_m": 0.545,
 "qid": "Q139374528",
 "no": "24"
 },
@@ -260,7 +281,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "England",
-"value_m": 0.36,
+"value_m": 0.479,
 "qid": "Q125679692",
 "no": "31"
 },
@@ -270,10 +291,10 @@
 "pos": "MF",
 "age": 18,
 "nat": "England",
-"value_m": 0.25,
+"value_m": 0.333,
 "qid": "Q136736037",
 "no": "29"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

@@ -3,6 +3,7 @@
 "name_he": "אתלטיק בילבאו",
 "source": "enwiki:Athletic Bilbao",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "אונאי סימון",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Spain",
-"value_m": 12.74,
+"value_m": 13.92,
 "qid": "Q23908113",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 22,
 "nat": "Mexico",
-"value_m": 9.19,
+"value_m": 10.04,
 "qid": "Q114271394",
 "no": "13"
 },
@@ -30,7 +31,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Spain",
-"value_m": 20.6,
+"value_m": 22.5,
 "qid": "Q104414736",
 "no": "10"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Spain",
-"value_m": 17.89,
+"value_m": 19.54,
 "qid": "Q60050053",
 "no": "23"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Spain",
-"value_m": 17.54,
+"value_m": 19.16,
 "qid": "Q106644525",
 "no": "22"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Spain",
-"value_m": 17.19,
+"value_m": 18.78,
 "qid": "Q106694910",
 "no": "6"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Spain",
-"value_m": 16.57,
+"value_m": 18.1,
 "qid": "Q63368196",
 "no": "3"
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Spain",
-"value_m": 16.5,
+"value_m": 18.03,
 "qid": "Q22004701",
 "no": "11"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Spain",
-"value_m": 13.85,
+"value_m": 15.13,
 "qid": "Q66466886",
 "no": "8"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Guinea-Bissau",
-"value_m": 13.57,
+"value_m": 14.82,
 "qid": "Q113688253",
 "no": "25"
 },
@@ -110,7 +111,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 13.29,
+"value_m": 14.52,
 "qid": "Q100386793",
 "no": "4"
 },
@@ -120,7 +121,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Spain",
-"value_m": 13.29,
+"value_m": 14.52,
 "qid": "Q114628070",
 "no": "20"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Spain",
-"value_m": 13.23,
+"value_m": 14.45,
 "qid": "Q64006699",
 "no": "12"
 },
@@ -140,7 +141,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Morocco",
-"value_m": 13.09,
+"value_m": 14.3,
 "qid": "Q123439972",
 "no": "21"
 },
@@ -150,7 +151,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Spain",
-"value_m": 12.67,
+"value_m": 13.84,
 "qid": "Q123698330",
 "no": "18"
 },
@@ -160,7 +161,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Spain",
-"value_m": 12.39,
+"value_m": 13.54,
 "qid": "Q18022026",
 "no": "7"
 },
@@ -170,7 +171,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Spain",
-"value_m": 10.3,
+"value_m": 11.25,
 "qid": "Q107297831",
 "no": "15"
 },
@@ -180,7 +181,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Spain",
-"value_m": 9.88,
+"value_m": 10.79,
 "qid": "Q112159292",
 "no": "24"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Spain",
-"value_m": 9.74,
+"value_m": 10.64,
 "qid": "Q20492429",
 "no": "5"
 },
@@ -200,7 +201,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Spain",
-"value_m": 9.74,
+"value_m": 10.64,
 "qid": "Q123825008",
 "no": "28"
 },
@@ -210,7 +211,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Spain",
-"value_m": 9.74,
+"value_m": 10.64,
 "qid": "Q114627806",
 "no": null
 },
@@ -220,7 +221,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Ghana",
-"value_m": 7.66,
+"value_m": 8.37,
 "qid": "Q18608497",
 "no": "9"
 },
@@ -230,7 +231,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Spain",
-"value_m": 7.31,
+"value_m": 7.99,
 "qid": "Q133968745",
 "no": "34"
 },
@@ -240,7 +241,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "France",
-"value_m": 6.61,
+"value_m": 7.22,
 "qid": "Q110395360",
 "no": "31"
 },
@@ -250,7 +251,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Spain",
-"value_m": 5.43,
+"value_m": 5.93,
 "qid": "Q3855340",
 "no": "14"
 },
@@ -260,7 +261,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Spain",
-"value_m": 5.08,
+"value_m": 5.55,
 "qid": "Q3751255",
 "no": "16"
 },
@@ -270,7 +271,7 @@
 "pos": "FW",
 "age": 17,
 "nat": "Spain",
-"value_m": 3.41,
+"value_m": 3.73,
 "qid": "Q136481124",
 "no": "33"
 },
@@ -280,10 +281,9 @@
 "pos": "DF",
 "age": 36,
 "nat": "Spain",
-"value_m": 3.06,
+"value_m": 3.34,
 "qid": "Q4118260",
 "no": "17"
 }
-],
-"rescaled": 1
+]
 }

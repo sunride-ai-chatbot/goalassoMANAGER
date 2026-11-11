@@ -3,6 +3,7 @@
 "name_he": "ויטוריה גימראיש",
 "source": "enwiki:Vitória S.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Juan Castillo",
@@ -10,9 +11,19 @@
 "pos": "GK",
 "age": 23,
 "nat": "Colombia",
-"value_m": 1.33,
+"value_m": 2.22,
 "qid": "Q118984745",
 "no": "22"
+},
+{
+"he": "אוליוויר זיך",
+"en": "Oliwier Zych",
+"pos": "GK",
+"age": 22,
+"nat": "Poland",
+"value_m": 1.66,
+"qid": "Q105104357",
+"no": "48"
 },
 {
 "he": "Lucas Furtado",
@@ -20,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.78,
+"value_m": 1.3,
 "qid": null,
 "no": "98"
 },
@@ -30,7 +41,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Cape Verde",
-"value_m": 2.28,
+"value_m": 3.81,
 "qid": "Q97580948",
 "no": "18"
 },
@@ -40,7 +51,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Brazil",
-"value_m": 2.01,
+"value_m": 3.36,
 "qid": "Q42685672",
 "no": "10"
 },
@@ -50,7 +61,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Angola",
-"value_m": 1.84,
+"value_m": 3.07,
 "qid": "Q116681385",
 "no": "16"
 },
@@ -60,7 +71,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Senegal",
-"value_m": 1.84,
+"value_m": 3.07,
 "qid": "Q112988045",
 "no": "24"
 },
@@ -70,7 +81,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Burkina Faso",
-"value_m": 1.77,
+"value_m": 2.96,
 "qid": "Q111554243",
 "no": "44"
 },
@@ -80,9 +91,19 @@
 "pos": "FW",
 "age": 28,
 "nat": "Austria",
-"value_m": 1.67,
+"value_m": 2.79,
 "qid": "Q26836963",
 "no": "9"
+},
+{
+"he": "טוני בורבקוביץ'",
+"en": "Toni Borevković",
+"pos": "DF",
+"age": 29,
+"nat": "Croatia",
+"value_m": 2.73,
+"qid": "Q56233291",
+"no": "21"
 },
 {
 "he": "Miguel Maga",
@@ -90,7 +111,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Portugal",
-"value_m": 1.6,
+"value_m": 2.67,
 "qid": "Q111326777",
 "no": "2"
 },
@@ -100,7 +121,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 1.5,
+"value_m": 2.5,
 "qid": "Q130540172",
 "no": "11"
 },
@@ -110,7 +131,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Serbia",
-"value_m": 1.4,
+"value_m": 2.34,
 "qid": "Q120641426",
 "no": "6"
 },
@@ -120,7 +141,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Portugal",
-"value_m": 1.4,
+"value_m": 2.34,
 "qid": "Q108133635",
 "no": "13"
 },
@@ -130,7 +151,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Portugal",
-"value_m": 1.36,
+"value_m": 2.27,
 "qid": null,
 "no": "80"
 },
@@ -140,7 +161,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 1.33,
+"value_m": 2.22,
 "qid": "Q110150572",
 "no": "4"
 },
@@ -150,7 +171,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Sweden",
-"value_m": 1.33,
+"value_m": 2.22,
 "qid": "Q114402797",
 "no": "19"
 },
@@ -160,7 +181,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Portugal",
-"value_m": 1.33,
+"value_m": 2.22,
 "qid": "Q19344500",
 "no": "20"
 },
@@ -170,9 +191,19 @@
 "pos": "MF",
 "age": 22,
 "nat": "Portugal",
-"value_m": 1.23,
+"value_m": 2.05,
 "qid": "Q134451615",
 "no": "8"
+},
+{
+"he": "Ahmed Sidibé",
+"en": "Ahmed Sidibé",
+"pos": "DF",
+"age": 24,
+"nat": "France",
+"value_m": 2.0,
+"qid": "Q139731622",
+"no": "5"
 },
 {
 "he": "Fabio Blanco",
@@ -180,7 +211,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Spain",
-"value_m": 1.19,
+"value_m": 1.99,
 "qid": "Q110367868",
 "no": "35"
 },
@@ -190,7 +221,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Portugal",
-"value_m": 1.12,
+"value_m": 1.87,
 "qid": null,
 "no": "17"
 },
@@ -200,7 +231,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Romania",
-"value_m": 1.12,
+"value_m": 1.87,
 "qid": "Q122750893",
 "no": "23"
 },
@@ -210,7 +241,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Brazil",
-"value_m": 1.02,
+"value_m": 1.7,
 "qid": "Q127606063",
 "no": "28"
 },
@@ -220,7 +251,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Portugal",
-"value_m": 1.02,
+"value_m": 1.7,
 "qid": null,
 "no": "82"
 },
@@ -230,7 +261,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Côte d'Ivoire",
-"value_m": 0.95,
+"value_m": 1.59,
 "qid": "Q131617874",
 "no": "29"
 },
@@ -240,7 +271,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Portugal",
-"value_m": 0.95,
+"value_m": 1.59,
 "qid": "Q137212197",
 "no": "45"
 },
@@ -250,7 +281,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "France",
-"value_m": 0.92,
+"value_m": 1.54,
 "qid": "Q135395766",
 "no": "7"
 },
@@ -260,7 +291,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Colombia",
-"value_m": 0.85,
+"value_m": 1.42,
 "qid": "Q129521751",
 "no": "15"
 },
@@ -270,10 +301,10 @@
 "pos": "MF",
 "age": 18,
 "nat": "Portugal",
-"value_m": 0.61,
+"value_m": 1.02,
 "qid": "Q134725481",
 "no": "56"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

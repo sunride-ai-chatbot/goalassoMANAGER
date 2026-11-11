@@ -3,6 +3,7 @@
 "name_he": "טי.פי מאזמבה",
 "source": "enwiki:TP Mazembe",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "אליון בדארה פאטי",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Senegal",
-"value_m": 0.35,
+"value_m": 0.641,
 "qid": "Q110836923",
 "no": "33"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "DR Congo",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": "Q112490407",
 "no": "21"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Nigeria",
-"value_m": 0.23,
+"value_m": 0.421,
 "qid": null,
 "no": "22"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Senegal",
-"value_m": 0.21,
+"value_m": 0.384,
 "qid": null,
 "no": "22"
 },
@@ -50,7 +51,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.17,
+"value_m": 0.311,
 "qid": null,
 "no": null
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Niger",
-"value_m": 0.46,
+"value_m": 0.842,
 "qid": "Q107540791",
 "no": "15"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.35,
+"value_m": 0.641,
 "qid": null,
 "no": null
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.33,
+"value_m": 0.604,
 "qid": null,
 "no": "23"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "DR Congo",
-"value_m": 0.31,
+"value_m": 0.568,
 "qid": "Q98181746",
 "no": null
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Mali",
-"value_m": 0.31,
+"value_m": 0.568,
 "qid": null,
 "no": "39"
 },
@@ -110,7 +111,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": null,
 "no": "5"
 },
@@ -120,7 +121,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": null,
 "no": "14"
 },
@@ -130,7 +131,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Congo",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": null,
 "no": "10"
 },
@@ -140,7 +141,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": null,
 "no": "24"
 },
@@ -150,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": null,
 "no": "26"
 },
@@ -160,7 +161,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": null,
 "no": "34"
 },
@@ -170,7 +171,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Mali",
-"value_m": 0.29,
+"value_m": 0.531,
 "qid": null,
 "no": "35"
 },
@@ -180,7 +181,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.27,
+"value_m": 0.494,
 "qid": null,
 "no": "6"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Senegal",
-"value_m": 0.27,
+"value_m": 0.494,
 "qid": null,
 "no": "23"
 },
@@ -200,7 +201,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "DR Congo",
-"value_m": 0.27,
+"value_m": 0.494,
 "qid": "Q105939113",
 "no": "30"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.27,
+"value_m": 0.494,
 "qid": null,
 "no": "32"
 },
@@ -220,7 +221,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.27,
+"value_m": 0.494,
 "qid": null,
 "no": "37"
 },
@@ -230,7 +231,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.25,
+"value_m": 0.458,
 "qid": null,
 "no": "11"
 },
@@ -240,7 +241,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Niger",
-"value_m": 0.25,
+"value_m": 0.458,
 "qid": null,
 "no": "23"
 },
@@ -250,7 +251,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.25,
+"value_m": 0.458,
 "qid": null,
 "no": "27"
 },
@@ -260,7 +261,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.25,
+"value_m": 0.458,
 "qid": null,
 "no": "29"
 },
@@ -270,9 +271,19 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.25,
+"value_m": 0.458,
 "qid": null,
 "no": "31"
+},
+{
+"he": "Christopher Ngolo Samangua",
+"en": "Christopher Ngolo Samangua",
+"pos": "MF",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 0.439,
+"qid": null,
+"no": null
 },
 {
 "he": "Dieu Bénit Ndongala",
@@ -280,7 +291,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.23,
+"value_m": 0.421,
 "qid": null,
 "no": "35"
 },
@@ -290,7 +301,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.23,
+"value_m": 0.421,
 "qid": null,
 "no": "12"
 },
@@ -300,10 +311,10 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.23,
+"value_m": 0.421,
 "qid": null,
 "no": "4"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

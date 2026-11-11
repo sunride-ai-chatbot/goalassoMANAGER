@@ -3,6 +3,7 @@
 "name_he": "אל.איי גלאקסי",
 "source": "enwiki:LA Galaxy",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Novak Mićović",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Serbia",
-"value_m": 0.35,
+"value_m": 1.51,
 "qid": "Q110879228",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "United States",
-"value_m": 0.27,
+"value_m": 1.16,
 "qid": "Q58932401",
 "no": "31"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "United States",
-"value_m": 0.25,
+"value_m": 1.08,
 "qid": "Q44856714",
 "no": "12"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Ghana",
-"value_m": 0.63,
+"value_m": 2.72,
 "qid": "Q38367203",
 "no": "28"
 },
@@ -50,7 +51,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Spain",
-"value_m": 0.61,
+"value_m": 2.63,
 "qid": "Q50315237",
 "no": "10"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.52,
+"value_m": 2.24,
 "qid": "Q51754954",
 "no": "99"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Argentina",
-"value_m": 0.48,
+"value_m": 2.07,
 "qid": "Q19345854",
 "no": "17"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Argentina",
-"value_m": 0.44,
+"value_m": 1.9,
 "qid": "Q83746538",
 "no": "3"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "United States",
-"value_m": 0.4,
+"value_m": 1.73,
 "qid": "Q106515728",
 "no": "16"
 },
@@ -100,9 +101,19 @@
 "pos": "FW",
 "age": 31,
 "nat": "Japan",
-"value_m": 0.38,
+"value_m": 1.64,
 "qid": "Q28690600",
 "no": "7"
+},
+{
+"he": "אירווינג לוסאנו",
+"en": "Hirving Lozano",
+"pos": "FW",
+"age": 31,
+"nat": "Mexico",
+"value_m": 1.54,
+"qid": "Q17633812",
+"no": "11"
 },
 {
 "he": "Lucas Calegari",
@@ -110,7 +121,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Brazil",
-"value_m": 0.35,
+"value_m": 1.51,
 "qid": "Q98696683",
 "no": "2"
 },
@@ -120,7 +131,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "United States",
-"value_m": 0.35,
+"value_m": 1.51,
 "qid": "Q62267833",
 "no": "14"
 },
@@ -130,7 +141,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Finland",
-"value_m": 0.35,
+"value_m": 1.51,
 "qid": "Q16990830",
 "no": "21"
 },
@@ -140,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "United States",
-"value_m": 0.35,
+"value_m": 1.51,
 "qid": null,
 "no": "76"
 },
@@ -150,7 +161,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "United States",
-"value_m": 0.33,
+"value_m": 1.42,
 "qid": "Q97669746",
 "no": "22"
 },
@@ -160,7 +171,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Colombia",
-"value_m": 0.33,
+"value_m": 1.42,
 "qid": "Q116539321",
 "no": "25"
 },
@@ -170,7 +181,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "United States",
-"value_m": 0.31,
+"value_m": 1.34,
 "qid": "Q64748396",
 "no": "15"
 },
@@ -180,7 +191,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Uruguay",
-"value_m": 0.29,
+"value_m": 1.25,
 "qid": "Q124633047",
 "no": "8"
 },
@@ -190,7 +201,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "United States",
-"value_m": 0.25,
+"value_m": 1.08,
 "qid": "Q117834389",
 "no": "20"
 },
@@ -200,7 +211,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "United States",
-"value_m": 0.25,
+"value_m": 1.08,
 "qid": null,
 "no": "50"
 },
@@ -210,7 +221,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Norway",
-"value_m": 0.21,
+"value_m": 0.906,
 "qid": "Q17093565",
 "no": "5"
 },
@@ -220,7 +231,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Germany",
-"value_m": 0.21,
+"value_m": 0.906,
 "qid": "Q15735586",
 "no": "27"
 },
@@ -230,7 +241,7 @@
 "pos": "DF",
 "age": 34,
 "nat": "Spain",
-"value_m": 0.17,
+"value_m": 0.733,
 "qid": "Q703269",
 "no": "6"
 },
@@ -240,7 +251,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "United States",
-"value_m": 0.15,
+"value_m": 0.647,
 "qid": "Q132891315",
 "no": "26"
 },
@@ -250,7 +261,7 @@
 "pos": "FW",
 "age": 37,
 "nat": "Germany",
-"value_m": 0.13,
+"value_m": 0.561,
 "qid": "Q152377",
 "no": "18"
 },
@@ -260,10 +271,10 @@
 "pos": "DF",
 "age": 38,
 "nat": "Japan",
-"value_m": 0.12,
+"value_m": 0.518,
 "qid": "Q248141",
 "no": "4"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

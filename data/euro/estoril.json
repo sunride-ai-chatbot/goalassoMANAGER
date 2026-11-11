@@ -3,6 +3,7 @@
 "name_he": "אסטוריל",
 "source": "enwiki:G.D. Estoril Praia",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Martin Turk",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Slovenia",
-"value_m": 0.52,
+"value_m": 0.773,
 "qid": "Q107138021",
 "no": "16"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Portugal",
-"value_m": 0.4,
+"value_m": 0.595,
 "qid": null,
 "no": "23"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 19,
 "nat": "South Africa",
-"value_m": 0.19,
+"value_m": 0.282,
 "qid": "Q136444170",
 "no": "43"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 36,
 "nat": "Spain",
-"value_m": 0.14,
+"value_m": 0.208,
 "qid": "Q547296",
 "no": "1"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Morocco",
-"value_m": 1.14,
+"value_m": 1.69,
 "qid": "Q51868085",
 "no": "14"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Portugal",
-"value_m": 0.86,
+"value_m": 1.28,
 "qid": "Q124732708",
 "no": "7"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.83,
+"value_m": 1.23,
 "qid": "Q83894000",
 "no": "2"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Portugal",
-"value_m": 0.76,
+"value_m": 1.13,
 "qid": "Q22959121",
 "no": "4"
 },
@@ -90,9 +91,19 @@
 "pos": "FW",
 "age": 27,
 "nat": "Algeria",
-"value_m": 0.74,
+"value_m": 1.1,
 "qid": "Q41547628",
 "no": "99"
+},
+{
+"he": "סטליוס אנדראו",
+"en": "Stelios Andreou",
+"pos": "DF",
+"age": 24,
+"nat": "Cyprus",
+"value_m": 1.08,
+"qid": "Q105124268",
+"no": "25"
 },
 {
 "he": "נאיל אומרוביץ'",
@@ -100,7 +111,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.71,
+"value_m": 1.06,
 "qid": "Q124475069",
 "no": "11"
 },
@@ -110,7 +121,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Portugal",
-"value_m": 0.71,
+"value_m": 1.06,
 "qid": "Q18763924",
 "no": "12"
 },
@@ -120,7 +131,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Scotland",
-"value_m": 0.69,
+"value_m": 1.03,
 "qid": "Q104684591",
 "no": "10"
 },
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.64,
+"value_m": 0.95,
 "qid": "Q110730110",
 "no": "3"
 },
@@ -140,7 +151,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "France",
-"value_m": 0.64,
+"value_m": 0.95,
 "qid": "Q114565945",
 "no": "9"
 },
@@ -150,7 +161,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Spain",
-"value_m": 0.64,
+"value_m": 0.95,
 "qid": "Q114577440",
 "no": "38"
 },
@@ -160,7 +171,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Belgium",
-"value_m": 0.6,
+"value_m": 0.892,
 "qid": "Q108258085",
 "no": "5"
 },
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Croatia",
-"value_m": 0.57,
+"value_m": 0.847,
 "qid": "Q115929671",
 "no": "21"
 },
@@ -180,7 +191,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "France",
-"value_m": 0.57,
+"value_m": 0.847,
 "qid": "Q134435740",
 "no": "44"
 },
@@ -190,7 +201,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "England",
-"value_m": 0.57,
+"value_m": 0.847,
 "qid": "Q124540930",
 "no": null
 },
@@ -200,7 +211,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Spain",
-"value_m": 0.5,
+"value_m": 0.743,
 "qid": "Q118645392",
 "no": "6"
 },
@@ -210,7 +221,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Portugal",
-"value_m": 0.5,
+"value_m": 0.743,
 "qid": "Q130214626",
 "no": "22"
 },
@@ -220,7 +231,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Portugal",
-"value_m": 0.48,
+"value_m": 0.713,
 "qid": null,
 "no": "80"
 },
@@ -230,7 +241,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Portugal",
-"value_m": 0.48,
+"value_m": 0.713,
 "qid": "Q134489103",
 "no": "90"
 },
@@ -240,7 +251,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Portugal",
-"value_m": 0.45,
+"value_m": 0.669,
 "qid": "Q16235171",
 "no": "8"
 },
@@ -250,7 +261,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Spain",
-"value_m": 0.45,
+"value_m": 0.669,
 "qid": "Q140855461",
 "no": "15"
 },
@@ -260,7 +271,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Portugal",
-"value_m": 0.45,
+"value_m": 0.669,
 "qid": null,
 "no": "17"
 },
@@ -270,7 +281,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Cape Verde",
-"value_m": 0.45,
+"value_m": 0.669,
 "qid": "Q125395891",
 "no": "98"
 },
@@ -280,7 +291,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Portugal",
-"value_m": 0.4,
+"value_m": 0.595,
 "qid": "Q136198303",
 "no": "19"
 },
@@ -290,10 +301,20 @@
 "pos": "DF",
 "age": 25,
 "nat": "Portugal",
-"value_m": 0.36,
+"value_m": 0.535,
 "qid": null,
 "no": "42"
+},
+{
+"he": "Samuel Amissah",
+"en": "Samuel Amissah",
+"pos": "DF",
+"age": 19,
+"nat": "England",
+"value_m": 0.371,
+"qid": "Q138842781",
+"no": "35"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

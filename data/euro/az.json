@@ -3,6 +3,7 @@
 "name_he": "א.ז. אלקמאר",
 "source": "enwiki:AZ Alkmaar",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Jari De Busser",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 26,
 "nat": "Belgium",
-"value_m": 3.4,
+"value_m": 5.39,
 "qid": "Q56257938",
 "no": "28"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 2.13,
+"value_m": 3.38,
 "qid": "Q113628059",
 "no": "1"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 33,
 "nat": "Netherlands",
-"value_m": 1.09,
+"value_m": 1.73,
 "qid": "Q19280573",
 "no": "12"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 35,
 "nat": "Netherlands",
-"value_m": 1.0,
+"value_m": 1.59,
 "qid": "Q721572",
 "no": "41"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 4.94,
+"value_m": 7.83,
 "qid": "Q111845115",
 "no": "9"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Netherlands",
-"value_m": 4.67,
+"value_m": 7.4,
 "qid": "Q28849190",
 "no": "14"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 4.08,
+"value_m": 6.47,
 "qid": "Q76735102",
 "no": "30"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Japan",
-"value_m": 4.03,
+"value_m": 6.39,
 "qid": "Q85584053",
 "no": "2"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 3.9,
+"value_m": 6.18,
 "qid": "Q105574125",
 "no": "16"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Netherlands",
-"value_m": 3.85,
+"value_m": 6.1,
 "qid": "Q47510521",
 "no": "6"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Netherlands",
-"value_m": 3.67,
+"value_m": 5.82,
 "qid": "Q53252728",
 "no": "19"
 },
@@ -120,7 +121,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 3.63,
+"value_m": 5.76,
 "qid": "Q113574281",
 "no": "11"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Mexico",
-"value_m": 3.58,
+"value_m": 5.68,
 "qid": "Q124420330",
 "no": "5"
 },
@@ -140,7 +141,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Brazil",
-"value_m": 3.58,
+"value_m": 5.68,
 "qid": "Q113130088",
 "no": "7"
 },
@@ -150,7 +151,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 3.26,
+"value_m": 5.17,
 "qid": "Q111845112",
 "no": "4"
 },
@@ -160,7 +161,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Netherlands",
-"value_m": 3.22,
+"value_m": 5.11,
 "qid": "Q117317225",
 "no": "10"
 },
@@ -170,7 +171,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 3.13,
+"value_m": 4.96,
 "qid": "Q113741645",
 "no": "21"
 },
@@ -180,7 +181,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Netherlands",
-"value_m": 2.72,
+"value_m": 4.31,
 "qid": "Q110935258",
 "no": "3"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Netherlands",
-"value_m": 2.67,
+"value_m": 4.23,
 "qid": "Q40452277",
 "no": "34"
 },
@@ -200,7 +201,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Japan",
-"value_m": 2.58,
+"value_m": 4.09,
 "qid": "Q123405326",
 "no": "31"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Denmark",
-"value_m": 2.49,
+"value_m": 3.95,
 "qid": "Q115046294",
 "no": "17"
 },
@@ -220,7 +221,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Netherlands",
-"value_m": 2.49,
+"value_m": 3.95,
 "qid": "Q130899492",
 "no": "24"
 },
@@ -230,7 +231,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Netherlands",
-"value_m": 2.27,
+"value_m": 3.6,
 "qid": "Q133269607",
 "no": "27"
 },
@@ -240,7 +241,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Netherlands",
-"value_m": 2.22,
+"value_m": 3.52,
 "qid": "Q133857440",
 "no": "22"
 },
@@ -250,7 +251,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Netherlands",
-"value_m": 2.22,
+"value_m": 3.52,
 "qid": "Q15303013",
 "no": "29"
 },
@@ -260,7 +261,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Hungary",
-"value_m": 1.68,
+"value_m": 2.66,
 "qid": "Q138496273",
 "no": "18"
 },
@@ -270,7 +271,7 @@
 "pos": "DF",
 "age": 18,
 "nat": "Italy",
-"value_m": 1.27,
+"value_m": 2.01,
 "qid": "Q124199427",
 "no": "20"
 },
@@ -280,10 +281,9 @@
 "pos": "MF",
 "age": 35,
 "nat": "Netherlands",
-"value_m": 1.04,
+"value_m": 1.65,
 "qid": "Q198068",
 "no": "8"
 }
-],
-"rescaled": 1
+]
 }

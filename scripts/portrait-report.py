@@ -46,6 +46,10 @@ by = {(p['key'], p['en']): p for p in E['players']}
 un = {(p['key'], p['en']): p for p in E['unresolved']}
 etot = {'ok': 0, 'fallback': 0}
 out += ['# European real squads', '', 'Portraits come from Wikimedia Commons, one freely licensed file per player (CC0, public domain, CC BY or CC BY-SA), identified on Wikidata by name plus club or birth year. Credits are shown in the game (player profile, Data sources → Photo credits). Clubs whose squads are generated keep the designed fallback by design.', '']
+# every other squad in data/euro (imported from Wikipedia): world leagues, then the Israeli second tier
+_listed = {k for _, ks in LEAGUES for k in ks}
+_rest = sorted(f[:-5] for f in os.listdir(os.path.join(ROOT, 'data', 'euro')) if f.endswith('.json') and f[:-5] not in _listed)
+LEAGUES = list(LEAGUES) + [('World leagues (squads from Wikipedia)', [k for k in _rest if not k.startswith('l_')]), ('Liga Leumit', [k for k in _rest if k.startswith('l_')])]
 for lg, keys in LEAGUES:
     out += [f'## {lg}', '']
     for k in keys:

@@ -1,0 +1,249 @@
+{
+"key": "philadelphia",
+"name_he": "פילדלפיה יוניון",
+"source": "enwiki:Template:Philadelphia Union squad",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "George Marks",
+"en": "George Marks",
+"pos": "GK",
+"age": 26,
+"nat": "United States",
+"value_m": 0.783,
+"qid": "Q97670778",
+"no": "31"
+},
+{
+"he": "Andrew Rick",
+"en": "Andrew Rick",
+"pos": "GK",
+"age": 20,
+"nat": "United States",
+"value_m": 0.444,
+"qid": "Q130767899",
+"no": "76"
+},
+{
+"he": "אנדרה בלייק",
+"en": "Andre Blake",
+"pos": "GK",
+"age": 35,
+"nat": "Jamaica",
+"value_m": 0.248,
+"qid": "Q15924494",
+"no": "18"
+},
+{
+"he": "דנלי ז'אן ז'אק",
+"en": "Danley Jean Jacques",
+"pos": "MF",
+"age": 26,
+"nat": "Haiti",
+"value_m": 1.42,
+"qid": "Q113393306",
+"no": "21"
+},
+{
+"he": "Bruno Damiani",
+"en": "Bruno Damiani",
+"pos": "FW",
+"age": 24,
+"nat": "Uruguay",
+"value_m": 1.25,
+"qid": "Q124255963",
+"no": "9"
+},
+{
+"he": "Jeremy Rafanello",
+"en": "Jeremy Rafanello",
+"pos": "FW",
+"age": 26,
+"nat": "United States",
+"value_m": 1.24,
+"qid": "Q54614245",
+"no": "14"
+},
+{
+"he": "Milan Iloski",
+"en": "Milan Iloski",
+"pos": "FW",
+"age": 27,
+"nat": "United States",
+"value_m": 1.16,
+"qid": "Q86419395",
+"no": "10"
+},
+{
+"he": "Indiana Vassilev",
+"en": "Indiana Vassilev",
+"pos": "MF",
+"age": 25,
+"nat": "United States",
+"value_m": 1.14,
+"qid": "Q80933819",
+"no": "19"
+},
+{
+"he": "Jesús Bueno",
+"en": "Jesús Bueno",
+"pos": "MF",
+"age": 27,
+"nat": "Venezuela",
+"value_m": 1.04,
+"qid": "Q107705543",
+"no": "8"
+},
+{
+"he": "Japhet Sery Larsen",
+"en": "Japhet Sery Larsen",
+"pos": "DF",
+"age": 26,
+"nat": "Denmark",
+"value_m": 0.992,
+"qid": "Q64863379",
+"no": "5"
+},
+{
+"he": "Agustin Anello",
+"en": "Agustin Anello",
+"pos": "FW",
+"age": 24,
+"nat": "United States",
+"value_m": 0.992,
+"qid": "Q108421197",
+"no": "28"
+},
+{
+"he": "Jovan Lukić",
+"en": "Jovan Lukić",
+"pos": "MF",
+"age": 24,
+"nat": "Serbia",
+"value_m": 0.979,
+"qid": "Q100252028",
+"no": "4"
+},
+{
+"he": "Nathan Harriel",
+"en": "Nathan Harriel",
+"pos": "DF",
+"age": 25,
+"nat": "United States",
+"value_m": 0.953,
+"qid": "Q62088452",
+"no": "26"
+},
+{
+"he": "Kai Wagner",
+"en": "Kai Wagner",
+"pos": "DF",
+"age": 29,
+"nat": "Germany",
+"value_m": 0.914,
+"qid": "Q36224503",
+"no": "27"
+},
+{
+"he": "Ben Bender",
+"en": "Ben Bender",
+"pos": "MF",
+"age": 24,
+"nat": "United States",
+"value_m": 0.796,
+"qid": "Q110537408",
+"no": "16"
+},
+{
+"he": "Quinn Sullivan",
+"en": "Quinn Sullivan",
+"pos": "MF",
+"age": 22,
+"nat": "United States",
+"value_m": 0.757,
+"qid": "Q97574273",
+"no": "33"
+},
+{
+"he": "Ezekiel Alladoh",
+"en": "Ezekiel Alladoh",
+"pos": "FW",
+"age": 20,
+"nat": "Ghana",
+"value_m": 0.705,
+"qid": "Q131747488",
+"no": "23"
+},
+{
+"he": "Markus Anderson",
+"en": "Markus Anderson",
+"pos": "FW",
+"age": 22,
+"nat": "United States",
+"value_m": 0.653,
+"qid": "Q130074179",
+"no": "35"
+},
+{
+"he": "Philippe Ndinga",
+"en": "Philippe Ndinga",
+"pos": "DF",
+"age": 21,
+"nat": "Congo",
+"value_m": 0.574,
+"qid": "Q136218934",
+"no": "20"
+},
+{
+"he": "Frankie Westfield",
+"en": "Frankie Westfield",
+"pos": "DF",
+"age": 20,
+"nat": "United States",
+"value_m": 0.548,
+"qid": "Q132862071",
+"no": "39"
+},
+{
+"he": "Neil Pierre",
+"en": "Neil Pierre",
+"pos": "DF",
+"age": 18,
+"nat": "United States",
+"value_m": 0.287,
+"qid": "Q135184662",
+"no": "44"
+},
+{
+"he": "אלחנדרו בדויה",
+"en": "Alejandro Bedoya",
+"pos": "MF",
+"age": 39,
+"nat": "United States",
+"value_m": 0.261,
+"qid": "Q1362545",
+"no": "11"
+},
+{
+"he": "Cavan Sullivan",
+"en": "Cavan Sullivan",
+"pos": "MF",
+"age": 16,
+"nat": "United States",
+"value_m": 0.222,
+"qid": "Q124960371",
+"no": "6"
+},
+{
+"he": "Malik Jakupovic",
+"en": "Malik Jakupovic",
+"pos": "FW",
+"age": 17,
+"nat": "United States",
+"value_m": 0.222,
+"qid": "Q138757997",
+"no": "51"
+}
+]
+}

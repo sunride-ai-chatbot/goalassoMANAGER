@@ -3,6 +3,7 @@
 "name_he": "סאו פאולו",
 "source": "enwiki:São Paulo FC",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Carlos Coronel",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Paraguay",
-"value_m": 0.27,
+"value_m": 3.96,
 "qid": "Q21518688",
 "no": "31"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.25,
+"value_m": 3.66,
 "qid": null,
 "no": "41"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.25,
+"value_m": 3.66,
 "qid": null,
 "no": "52"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Brazil",
-"value_m": 0.23,
+"value_m": 3.37,
 "qid": "Q126709594",
 "no": "50"
 },
@@ -50,9 +51,19 @@
 "pos": "GK",
 "age": 37,
 "nat": "Brazil",
-"value_m": 0.08,
+"value_m": 1.17,
 "qid": "Q3928964",
 "no": "23"
+},
+{
+"he": "Artur",
+"en": "Artur",
+"pos": "FW",
+"age": 28,
+"nat": "Brazil",
+"value_m": 8.35,
+"qid": "Q28665426",
+"no": "37"
 },
 {
 "he": "Ferreira",
@@ -60,7 +71,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Brazil",
-"value_m": 0.52,
+"value_m": 7.62,
 "qid": "Q77896856",
 "no": "11"
 },
@@ -70,7 +81,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Brazil",
-"value_m": 0.5,
+"value_m": 7.33,
 "qid": "Q60497160",
 "no": "8"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Paraguay",
-"value_m": 0.5,
+"value_m": 7.33,
 "qid": "Q116223348",
 "no": "16"
 },
@@ -90,7 +101,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Portugal",
-"value_m": 0.42,
+"value_m": 6.16,
 "qid": "Q26251755",
 "no": "20"
 },
@@ -100,7 +111,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Brazil",
-"value_m": 0.4,
+"value_m": 5.86,
 "qid": "Q110914598",
 "no": "29"
 },
@@ -110,9 +121,19 @@
 "pos": "MF",
 "age": 26,
 "nat": "Brazil",
-"value_m": 0.38,
+"value_m": 5.57,
 "qid": "Q123925160",
 "no": "28"
+},
+{
+"he": "Cauly",
+"en": "Cauly",
+"pos": "MF",
+"age": 30,
+"nat": "Brazil",
+"value_m": 5.18,
+"qid": "Q19965665",
+"no": "80"
 },
 {
 "he": "André Silva",
@@ -120,7 +141,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.35,
+"value_m": 5.13,
 "qid": "Q61776748",
 "no": "17"
 },
@@ -130,9 +151,29 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.33,
+"value_m": 4.84,
 "qid": null,
 "no": "45"
+},
+{
+"he": "Juan Potes",
+"en": "Juan Potes",
+"pos": "FW",
+"age": 25,
+"nat": "Colombia",
+"value_m": 4.8,
+"qid": null,
+"no": "57"
+},
+{
+"he": "Iago Borduchi",
+"en": "Iago Borduchi",
+"pos": "DF",
+"age": 29,
+"nat": "Brazil",
+"value_m": 4.62,
+"qid": "Q55281318",
+"no": "12"
 },
 {
 "he": "Sabino",
@@ -140,7 +181,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Brazil",
-"value_m": 0.31,
+"value_m": 4.54,
 "qid": "Q61594859",
 "no": "35"
 },
@@ -150,7 +191,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Portugal",
-"value_m": 0.29,
+"value_m": 4.25,
 "qid": "Q18205836",
 "no": "22"
 },
@@ -160,7 +201,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.29,
+"value_m": 4.25,
 "qid": null,
 "no": "34"
 },
@@ -170,7 +211,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Brazil",
-"value_m": 0.27,
+"value_m": 3.96,
 "qid": "Q22342742",
 "no": "27"
 },
@@ -180,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.27,
+"value_m": 3.96,
 "qid": null,
 "no": null
 },
@@ -190,7 +231,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Argentina",
-"value_m": 0.25,
+"value_m": 3.66,
 "qid": "Q16298050",
 "no": "9"
 },
@@ -200,7 +241,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Argentina",
-"value_m": 0.25,
+"value_m": 3.66,
 "qid": "Q58303243",
 "no": "13"
 },
@@ -210,7 +251,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.25,
+"value_m": 3.66,
 "qid": null,
 "no": null
 },
@@ -220,7 +261,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Brazil",
-"value_m": 0.23,
+"value_m": 3.37,
 "qid": "Q141893539",
 "no": "43"
 },
@@ -230,7 +271,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.23,
+"value_m": 3.37,
 "qid": null,
 "no": "46"
 },
@@ -240,7 +281,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.23,
+"value_m": 3.37,
 "qid": null,
 "no": null
 },
@@ -250,7 +291,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Brazil",
-"value_m": 0.21,
+"value_m": 3.08,
 "qid": "Q15131398",
 "no": "18"
 },
@@ -260,7 +301,7 @@
 "pos": "FW",
 "age": 33,
 "nat": "Brazil",
-"value_m": 0.19,
+"value_m": 2.78,
 "qid": "Q15966749",
 "no": "10"
 },
@@ -270,7 +311,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Brazil",
-"value_m": 0.19,
+"value_m": 2.78,
 "qid": "Q55364035",
 "no": "94"
 },
@@ -280,7 +321,7 @@
 "pos": "MF",
 "age": 34,
 "nat": "Brazil",
-"value_m": 0.17,
+"value_m": 2.49,
 "qid": "Q312886",
 "no": "7"
 },
@@ -290,7 +331,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Brazil",
-"value_m": 0.17,
+"value_m": 2.49,
 "qid": "Q138478867",
 "no": "48"
 },
@@ -300,10 +341,10 @@
 "pos": "FW",
 "age": 19,
 "nat": "Brazil",
-"value_m": 0.17,
+"value_m": 2.49,
 "qid": "Q124663099",
 "no": "49"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

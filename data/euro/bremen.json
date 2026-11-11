@@ -3,6 +3,7 @@
 "name_he": "ורדר ברמן",
 "source": "enwiki:SV Werder Bremen",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "קרל יקוב היין",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Estonia",
-"value_m": 3.88,
+"value_m": 5.08,
 "qid": "Q98918607",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 30,
 "nat": "Austria",
-"value_m": 2.28,
+"value_m": 2.99,
 "qid": "Q20745286",
 "no": "30"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 19,
 "nat": "Bulgaria",
-"value_m": 1.05,
+"value_m": 1.38,
 "qid": "Q134442870",
 "no": "37"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 36,
 "nat": "Germany",
-"value_m": 0.51,
+"value_m": 0.668,
 "qid": "Q15834084",
 "no": "25"
 },
@@ -50,7 +51,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Netherlands",
-"value_m": 4.43,
+"value_m": 5.8,
 "qid": "Q41779982",
 "no": "15"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Austria",
-"value_m": 4.39,
+"value_m": 5.75,
 "qid": "Q61869848",
 "no": "17"
 },
@@ -70,9 +71,49 @@
 "pos": "MF",
 "age": 27,
 "nat": "Belgium",
-"value_m": 4.14,
+"value_m": 5.42,
 "qid": "Q48291946",
 "no": "14"
+},
+{
+"he": "ארן דינקצ'י",
+"en": "Eren Dinkçi",
+"pos": "MF",
+"age": 24,
+"nat": "Turkey",
+"value_m": 5.2,
+"qid": "Q98169045",
+"no": "18"
+},
+{
+"he": "Youri Regeer",
+"en": "Youri Regeer",
+"pos": "MF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 5.03,
+"qid": "Q86072107",
+"no": "44"
+},
+{
+"he": "ארתור (כדורגלן יליד 2003)",
+"en": "Arthur",
+"pos": "DF",
+"age": 23,
+"nat": "Brazil",
+"value_m": 5.02,
+"qid": "Q112182604",
+"no": "13"
+},
+{
+"he": "מוסא אנדיאייה",
+"en": "Moussa N'Diaye",
+"pos": "DF",
+"age": 24,
+"nat": "Senegal",
+"value_m": 4.78,
+"qid": "Q64433049",
+"no": "16"
 },
 {
 "he": "סדריק איטן",
@@ -80,7 +121,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Switzerland",
-"value_m": 3.59,
+"value_m": 4.7,
 "qid": "Q22965497",
 "no": "26"
 },
@@ -90,7 +131,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Austria",
-"value_m": 3.54,
+"value_m": 4.64,
 "qid": "Q28692516",
 "no": "32"
 },
@@ -100,7 +141,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Germany",
-"value_m": 3.5,
+"value_m": 4.58,
 "qid": "Q110610689",
 "no": "11"
 },
@@ -110,7 +151,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Belgium",
-"value_m": 3.33,
+"value_m": 4.36,
 "qid": "Q69496466",
 "no": "2"
 },
@@ -120,7 +161,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Germany",
-"value_m": 3.29,
+"value_m": 4.31,
 "qid": "Q61640976",
 "no": "5"
 },
@@ -130,7 +171,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Nigeria",
-"value_m": 3.21,
+"value_m": 4.2,
 "qid": "Q52357690",
 "no": "27"
 },
@@ -140,7 +181,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Denmark",
-"value_m": 3.16,
+"value_m": 4.14,
 "qid": "Q24901052",
 "no": "6"
 },
@@ -150,7 +191,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Poland",
-"value_m": 2.83,
+"value_m": 3.71,
 "qid": "Q135811091",
 "no": "3"
 },
@@ -160,7 +201,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Germany",
-"value_m": 2.83,
+"value_m": 3.71,
 "qid": "Q109925006",
 "no": "9"
 },
@@ -170,7 +211,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "France",
-"value_m": 2.62,
+"value_m": 3.43,
 "qid": "Q114842149",
 "no": "28"
 },
@@ -180,7 +221,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Haiti",
-"value_m": 2.57,
+"value_m": 3.37,
 "qid": "Q137970998",
 "no": "19"
 },
@@ -190,7 +231,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Spain",
-"value_m": 2.32,
+"value_m": 3.04,
 "qid": "Q130223651",
 "no": "20"
 },
@@ -200,7 +241,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Germany",
-"value_m": 2.24,
+"value_m": 2.93,
 "qid": "Q135393007",
 "no": "29"
 },
@@ -210,7 +251,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Germany",
-"value_m": 2.15,
+"value_m": 2.82,
 "qid": "Q694852",
 "no": "8"
 },
@@ -220,9 +261,19 @@
 "pos": "MF",
 "age": 20,
 "nat": "Poland",
-"value_m": 2.15,
+"value_m": 2.82,
 "qid": "Q110890452",
 "no": "23"
+},
+{
+"he": "ניקלאס פילקרוג",
+"en": "Niclas Füllkrug",
+"pos": "FW",
+"age": 33,
+"nat": "Germany",
+"value_m": 2.79,
+"qid": "Q326159",
+"no": "10"
 },
 {
 "he": "Luca Höcker",
@@ -230,7 +281,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Germany",
-"value_m": 2.03,
+"value_m": 2.66,
 "qid": null,
 "no": "35"
 },
@@ -240,7 +291,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Turkey",
-"value_m": 1.94,
+"value_m": 2.54,
 "qid": null,
 "no": "34"
 },
@@ -250,7 +301,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Germany",
-"value_m": 1.9,
+"value_m": 2.49,
 "qid": "Q3341549",
 "no": "4"
 },
@@ -260,7 +311,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Germany",
-"value_m": 1.81,
+"value_m": 2.37,
 "qid": null,
 "no": "36"
 },
@@ -270,7 +321,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Germany",
-"value_m": 1.69,
+"value_m": 2.21,
 "qid": "Q140855166",
 "no": "38"
 },
@@ -280,10 +331,10 @@
 "pos": "DF",
 "age": 18,
 "nat": "Germany",
-"value_m": 1.14,
+"value_m": 1.49,
 "qid": "Q135393092",
 "no": "33"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

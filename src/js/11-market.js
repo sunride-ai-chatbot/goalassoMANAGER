@@ -68,26 +68,38 @@ function makeWorldPlayer(lg,clubDef,kind,str){
 const WORLD_CORE=11;
 function prepWorldPlayer(p,lg,L,str){p.kn=p.kn??0;p.lg=lg;p.vmult=p.rv?clamp(p.rv/Math.max(p.value,1e5),.1,8):L.vmult;const pw=playerWage(p);const cw=Math.max(pw*.9,Math.min(pw*L.wmult,(p.rv||0)*.009));p.wmult=Math.round(cw/pw*100)/100;const h=(p.id*2246822519)>>>0;p.est=p.ovr+((h%7)-3);p.key=p.ovr>=str+1;p.real=true;return p}
 function markWorldCore(c){const ps=c.players.filter(p=>p.real&&p.en);const byVal=ps.slice().sort((a,b)=>(b.rv||b.value)-(a.rv||a.value));const core=new Set(byVal.slice(0,WORLD_CORE).map(p=>p.id));for(const p of ps)p.nfs=core.has(p.id)}
-/* names of real players already somewhere in the career (bought, moved, free agents): never duplicated by a top-up */
-function realKey(p){return p.en+'|'+(p.rv||'')}
-function careerRealNames(){const s=new Set();const add=p=>{if(p&&p.en)s.add(realKey(p))};for(const c of [...(G.clubs||[]),...(G.leumit||[]),...worldClubs()])(c.players||[]).forEach(add);(G.freeAgents||[]).forEach(add);return s}
-/* fills a real club up to its full data/euro squad (idempotent; keeps existing players and their ids) */
+/* Real players already somewhere in the career (bought, moved, free agents) are never duplicated by a top-up. A player
+   is recognised by his English name + the club he came from (kept through transfers), and also by name + data value,
+   which is all that careers saved before origin clubs existed have. */
+const WORLD_SQUAD_V=3;
+function realKeys(p,clubName){return [p.en+'|'+(p.rv||''),p.en+'|@'+(p.from||clubName||'')]}
+function careerRealNames(){const s=new Set();const add=(p,cn)=>{if(p&&p.en)for(const k of realKeys(p,cn))s.add(k)};for(const c of [...(G.clubs||[]),...(G.leumit||[]),...worldClubs()])(c.players||[]).forEach(p=>add(p,c.world?c.name:''));(G.freeAgents||[]).forEach(p=>add(p,''));return s}
+/* fills a real club up to its full data/euro squad (idempotent; keeps existing players and their ids). A squad from an
+   earlier data version that sits 3+ points under the club's designed strength (some leagues were mis-scaled) is lifted
+   back to it first, so old careers see the same ratings as new ones. */
 function fillRealWorldSquad(c,lg){const L=WORLD_LEAGUES[lg];const all=rawSquad(c.name,c.str);if(!all)return false;
-  const have=careerRealNames();const busy=new Set((G.negs||[]).filter(n=>n.stage==='club'||n.stage==='player').map(n=>n.pid));
+  const busy=new Set((G.negs||[]).filter(n=>n.stage==='club'||n.stage==='player').map(n=>n.pid));
   // a real club never shows invented players as part of its real squad
   c.players=c.players.filter(p=>p.real&&p.en||busy.has(p.id));
-  for(const p of all){if(have.has(realKey(p)))continue;c.players.push(prepWorldPlayer(p,lg,L,c.str));have.add(realKey(p))}
-  c.realSquad=true;c.squadV=2;markWorldCore(c);return true}
+  for(const p of c.players)if(p.en&&!p.from)p.from=c.name;
+  if(c.squadV&&c.squadV<WORLD_SQUAD_V){const own=c.players.filter(p=>p.real&&p.en&&p.from===c.name&&!busy.has(p.id));const top=own.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);
+    if(top.length>=11){const d=Math.round(c.str+1-top.reduce((a,b)=>a+b,0)/top.length);
+      if(d>=3)for(const p of own){p.ovr=clamp(p.ovr+d,46,94);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.value=playerValue(p);p.wage=playerWage(p);if(p.rv)p.rv=Math.round(p.rv*Math.pow(2,d/3.75));prepWorldPlayer(p,lg,L,c.str)}}}
+  const have=careerRealNames();
+  for(const p of all){const ks=realKeys(p,c.name);if(ks.some(k=>have.has(k)))continue;c.players.push(prepWorldPlayer(p,lg,L,c.str));ks.forEach(k=>have.add(k))}
+  c.realSquad=true;c.squadV=WORLD_SQUAD_V;markWorldCore(c);return true}
+function worldClubHasData(c){return !!(RAW_EURO&&RAW_EURO[c.name]&&RAW_EURO[c.name].length>=14)}
 function ensureWorldLeague(lg){
-  if(!G.world)G.world={};if(G.world[lg]){for(const c of G.world[lg].clubs)if(c.realSquad&&c.squadV!==2)fillRealWorldSquad(c,lg);return G.world[lg]}
+  if(!G.world)G.world={};if(G.world[lg]){for(const c of G.world[lg].clubs)if((c.realSquad||worldClubHasData(c))&&c.squadV!==WORLD_SQUAD_V)fillRealWorldSquad(c,lg);return G.world[lg]}
   const L=WORLD_LEAGUES[lg];const clubs=L.clubs.map(def=>{const [name,city,c1,c2,str]=def;const c={id:'w'+(uid++),name,short:name,city,country:def[6]||L.country,stadium:'',c1,c2,str,lg,league:false,world:true,pseudo:true,players:[],youth:[],money:0,tier:str>=76?1:str>=66?2:3,fans:60,P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0};
     if(RAW_EURO&&RAW_EURO[name]&&RAW_EURO[name].length>=14)fillRealWorldSquad(c,lg)
     else{const kinds=['young','young','mid','mid','mid','vet','vet'];for(const k of kinds)c.players.push(makeWorldPlayer(lg,def,k,str))}return c});
   G.world[lg]={clubs};return G.world[lg];
 }
 /* v9: careers saved with 7-player world lists get the full real squads; players remember their origin club so their
-   face resolves after a transfer */
-function migrateWorldSquads(){if(!G.world)return;for(const [lg,l] of Object.entries(G.world)){if(!WORLD_LEAGUES[lg])continue;for(const c of l.clubs||[]){if(!c.realSquad)continue;for(const p of c.players)if(p.en&&!p.from)p.from=c.name;if(c.squadV!==2)fillRealWorldSquad(c,lg)}}}
+   face resolves after a transfer. v11 runs it again for the November 2026 data: clubs that gained a real squad, players
+   the squads gained (on loan from other clubs) and the strength correction in fillRealWorldSquad. */
+function migrateWorldSquads(){if(!G.world)return;for(const [lg,l] of Object.entries(G.world)){if(!WORLD_LEAGUES[lg])continue;for(const c of l.clubs||[]){if(!c.realSquad&&!worldClubHasData(c))continue;if(c.realSquad&&!c.squadV)c.squadV=1;if(c.squadV!==WORLD_SQUAD_V)fillRealWorldSquad(c,lg)}}}
 function ensureAllWorldLeagues(){for(const lg of Object.keys(WORLD_LEAGUES))ensureWorldLeague(lg)}
 function worldClubs(){return G.world?Object.values(G.world).flatMap(l=>l.clubs):[]}
 function wclub(id){return worldClubs().find(c=>c.id===id)}

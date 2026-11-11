@@ -3,6 +3,7 @@
 "name_he": "הפועל כפר סבא",
 "source": "enwiki:Hapoel Kfar Saba F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "ניב פליטר",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.121,
+"value_m": 0.252,
 "qid": "Q120065316",
 "no": "23"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.169,
 "qid": null,
 "no": "22"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.169,
 "qid": null,
 "no": "64"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.067,
+"value_m": 0.14,
 "qid": null,
 "no": "1"
 },
@@ -50,7 +51,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Ghana",
-"value_m": 0.175,
+"value_m": 0.365,
 "qid": "Q107420401",
 "no": "5"
 },
@@ -60,9 +61,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.148,
+"value_m": 0.309,
 "qid": null,
 "no": "19"
+},
+{
+"he": "Or Roizman",
+"en": "Or Roizman",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.296,
+"qid": null,
+"no": "7"
 },
 {
 "he": "Clovis Yao",
@@ -70,9 +81,29 @@
 "pos": "FW",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.134,
+"value_m": 0.28,
 "qid": null,
 "no": "9"
+},
+{
+"he": "Niv Vaknin",
+"en": "Niv Vaknin",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.275,
+"qid": null,
+"no": "77"
+},
+{
+"he": "Yuval Ben Hemo",
+"en": "Yuval Ben Hemo",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.254,
+"qid": null,
+"no": "14"
 },
 {
 "he": "Yishay Brosh",
@@ -80,7 +111,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.121,
+"value_m": 0.252,
 "qid": null,
 "no": "6"
 },
@@ -90,9 +121,19 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.121,
+"value_m": 0.252,
 "qid": null,
 "no": null
+},
+{
+"he": "Daniel Darzi",
+"en": "Daniel Darzi",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.232,
+"qid": null,
+"no": "17"
 },
 {
 "he": "Eliran Zadok",
@@ -100,7 +141,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.225,
 "qid": null,
 "no": "2"
 },
@@ -110,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.225,
 "qid": null,
 "no": "11"
 },
@@ -120,7 +161,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.108,
+"value_m": 0.225,
 "qid": null,
 "no": "15"
 },
@@ -130,9 +171,49 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.225,
 "qid": null,
 "no": "16"
+},
+{
+"he": "Adir Waheb",
+"en": "Adir Waheb",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.211,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Adi Tzur",
+"en": "Adi Tzur",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.211,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Sarel Cohen",
+"en": "Sarel Cohen",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.211,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Ravid Olitsky",
+"en": "Ravid Olitsky",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.211,
+"qid": null,
+"no": "47"
 },
 {
 "he": "Roy Harel",
@@ -140,10 +221,30 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.094,
+"value_m": 0.196,
 "qid": null,
 "no": "10"
+},
+{
+"he": "Amit Arazi",
+"en": "Amit Arazi",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.19,
+"qid": null,
+"no": "31"
+},
+{
+"he": "Hadar Fuchs",
+"en": "Hadar Fuchs",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.19,
+"qid": null,
+"no": "44"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

@@ -3,6 +3,7 @@
 "name_he": "דינמו קייב",
 "source": "enwiki:FC Dynamo Kyiv",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Ruslan Neshcheret",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 1.33,
+"value_m": 1.7,
 "qid": "Q100165433",
 "no": "35"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 1.09,
+"value_m": 1.39,
 "qid": null,
 "no": "51"
 },
@@ -30,9 +31,19 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.99,
+"value_m": 1.27,
 "qid": null,
 "no": "71"
+},
+{
+"he": "האורהי בושצ'אן",
+"en": "Heorhiy Bushchan",
+"pos": "GK",
+"age": 32,
+"nat": "Ukraine",
+"value_m": 1.24,
+"qid": "Q16166756",
+"no": "1"
 },
 {
 "he": "Illya Olkhovyi",
@@ -40,7 +51,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.92,
+"value_m": 1.18,
 "qid": null,
 "no": "43"
 },
@@ -50,7 +61,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.82,
+"value_m": 1.05,
 "qid": null,
 "no": "74"
 },
@@ -60,7 +71,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Ukraine",
-"value_m": 3.0,
+"value_m": 3.83,
 "qid": "Q19972577",
 "no": "10"
 },
@@ -70,7 +81,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 2.69,
+"value_m": 3.44,
 "qid": "Q113585239",
 "no": "6"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 2.59,
+"value_m": 3.31,
 "qid": "Q107647344",
 "no": "91"
 },
@@ -90,7 +101,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Panama",
-"value_m": 2.55,
+"value_m": 3.26,
 "qid": "Q48359321",
 "no": "39"
 },
@@ -100,7 +111,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Suriname",
-"value_m": 2.49,
+"value_m": 3.18,
 "qid": "Q28925148",
 "no": "21"
 },
@@ -110,7 +121,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Ukraine",
-"value_m": 2.42,
+"value_m": 3.09,
 "qid": "Q56524763",
 "no": "4"
 },
@@ -120,7 +131,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 1.87,
+"value_m": 2.39,
 "qid": "Q113452564",
 "no": "15"
 },
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Ukraine",
-"value_m": 1.84,
+"value_m": 2.35,
 "qid": "Q113314320",
 "no": "2"
 },
@@ -140,7 +151,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Ukraine",
-"value_m": 1.8,
+"value_m": 2.3,
 "qid": "Q117486689",
 "no": "11"
 },
@@ -150,7 +161,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Ukraine",
-"value_m": 1.77,
+"value_m": 2.26,
 "qid": "Q27768803",
 "no": "18"
 },
@@ -160,7 +171,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Ukraine",
-"value_m": 1.6,
+"value_m": 2.05,
 "qid": "Q30099692",
 "no": "8"
 },
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 1.57,
+"value_m": 2.01,
 "qid": "Q88466926",
 "no": "5"
 },
@@ -180,7 +191,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Ukraine",
-"value_m": 1.57,
+"value_m": 2.01,
 "qid": "Q122780706",
 "no": "23"
 },
@@ -190,9 +201,19 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 1.57,
+"value_m": 2.01,
 "qid": "Q107643039",
 "no": "40"
+},
+{
+"he": "Gustavo Prado",
+"en": "Gustavo Prado",
+"pos": "MF",
+"age": 21,
+"nat": "Brazil",
+"value_m": 1.97,
+"qid": "Q126083081",
+"no": "47"
 },
 {
 "he": "Nazar Voloshyn",
@@ -200,7 +221,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Ukraine",
-"value_m": 1.53,
+"value_m": 1.96,
 "qid": "Q113585017",
 "no": "9"
 },
@@ -210,7 +231,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Ukraine",
-"value_m": 1.5,
+"value_m": 1.92,
 "qid": "Q121865675",
 "no": "32"
 },
@@ -220,7 +241,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Nigeria",
-"value_m": 1.43,
+"value_m": 1.83,
 "qid": "Q131194303",
 "no": "16"
 },
@@ -230,7 +251,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 1.26,
+"value_m": 1.61,
 "qid": null,
 "no": "34"
 },
@@ -240,7 +261,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Ukraine",
-"value_m": 1.26,
+"value_m": 1.61,
 "qid": "Q60677522",
 "no": "44"
 },
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Senegal",
-"value_m": 1.26,
+"value_m": 1.61,
 "qid": null,
 "no": "66"
 },
@@ -260,7 +281,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 1.26,
+"value_m": 1.61,
 "qid": null,
 "no": "70"
 },
@@ -270,7 +291,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 1.23,
+"value_m": 1.57,
 "qid": null,
 "no": "42"
 },
@@ -280,7 +301,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Ukraine",
-"value_m": 1.16,
+"value_m": 1.48,
 "qid": "Q17721891",
 "no": "22"
 },
@@ -290,7 +311,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Ukraine",
-"value_m": 0.99,
+"value_m": 1.27,
 "qid": "Q12086108",
 "no": "29"
 },
@@ -300,10 +321,10 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 0.95,
+"value_m": 1.21,
 "qid": null,
 "no": "13"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

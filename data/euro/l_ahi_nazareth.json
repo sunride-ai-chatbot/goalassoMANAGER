@@ -3,6 +3,7 @@
 "name_he": "מכבי אחי נצרת",
 "source": "hewiki:מכבי אחי נצרת",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "עומר נחפאוי",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.088,
+"value_m": 0.189,
 "qid": null,
 "no": null
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.075,
+"value_m": 0.161,
 "qid": null,
 "no": null
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.075,
+"value_m": 0.161,
 "qid": null,
 "no": null
 },
@@ -40,7 +41,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.1,
+"value_m": 0.215,
 "qid": null,
 "no": null
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.1,
+"value_m": 0.215,
 "qid": null,
 "no": null
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.1,
+"value_m": 0.215,
 "qid": null,
 "no": null
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.1,
+"value_m": 0.215,
 "qid": null,
 "no": null
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.088,
+"value_m": 0.189,
 "qid": null,
 "no": null
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.088,
+"value_m": 0.189,
 "qid": null,
 "no": null
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.088,
+"value_m": 0.189,
 "qid": null,
 "no": null
 },
@@ -110,7 +111,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.088,
+"value_m": 0.189,
 "qid": null,
 "no": null
 },
@@ -120,7 +121,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.088,
+"value_m": 0.189,
 "qid": null,
 "no": null
 },
@@ -130,7 +131,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.088,
+"value_m": 0.189,
 "qid": null,
 "no": null
 },
@@ -140,7 +141,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.075,
+"value_m": 0.161,
 "qid": null,
 "no": null
 },
@@ -150,7 +151,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.063,
+"value_m": 0.135,
 "qid": null,
 "no": null
 },
@@ -160,10 +161,9 @@
 "pos": "MF",
 "age": 35,
 "nat": "Israel",
-"value_m": 0.025,
+"value_m": 0.054,
 "qid": "Q16885508",
 "no": null
 }
-],
-"rescaled": 1
+]
 }

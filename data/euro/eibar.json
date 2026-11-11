@@ -3,6 +3,7 @@
 "name_he": "אייבר",
 "source": "enwiki:SD Eibar",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Luis López",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Spain",
-"value_m": 0.43,
+"value_m": 0.608,
 "qid": "Q112609508",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.43,
+"value_m": 0.608,
 "qid": "Q117774627",
 "no": "13"
 },
@@ -30,7 +31,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Spain",
-"value_m": 0.64,
+"value_m": 0.905,
 "qid": "Q107605559",
 "no": "20"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Spain",
-"value_m": 0.58,
+"value_m": 0.82,
 "qid": "Q112108197",
 "no": "7"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Spain",
-"value_m": 0.58,
+"value_m": 0.82,
 "qid": "Q108665872",
 "no": "11"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.56,
+"value_m": 0.792,
 "qid": "Q107207940",
 "no": "10"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.54,
+"value_m": 0.763,
 "qid": "Q106643331",
 "no": "3"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Spain",
-"value_m": 0.54,
+"value_m": 0.763,
 "qid": "Q54657180",
 "no": "5"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Spain",
-"value_m": 0.54,
+"value_m": 0.763,
 "qid": "Q116872826",
 "no": "30"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Spain",
-"value_m": 0.5,
+"value_m": 0.707,
 "qid": "Q124332291",
 "no": "8"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.47,
+"value_m": 0.664,
 "qid": "Q112263915",
 "no": "21"
 },
@@ -120,7 +121,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Spain",
-"value_m": 0.41,
+"value_m": 0.58,
 "qid": "Q19947838",
 "no": "9"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 0.39,
+"value_m": 0.551,
 "qid": "Q79142091",
 "no": "2"
 },
@@ -140,7 +141,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Spain",
-"value_m": 0.37,
+"value_m": 0.523,
 "qid": "Q47769891",
 "no": "17"
 },
@@ -150,7 +151,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Spain",
-"value_m": 0.37,
+"value_m": 0.523,
 "qid": "Q115487040",
 "no": "18"
 },
@@ -160,9 +161,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Spain",
-"value_m": 0.31,
+"value_m": 0.438,
 "qid": null,
 "no": "19"
+},
+{
+"he": "Elijah Gift",
+"en": "Elijah Gift",
+"pos": "FW",
+"age": 20,
+"nat": "Spain",
+"value_m": 0.368,
+"qid": "Q118724991",
+"no": "27"
 },
 {
 "he": "אונאי אלגסבאל",
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Spain",
-"value_m": 0.19,
+"value_m": 0.269,
 "qid": "Q23907858",
 "no": "4"
 },
@@ -180,7 +191,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Spain",
-"value_m": 0.19,
+"value_m": 0.269,
 "qid": "Q21428541",
 "no": "14"
 },
@@ -190,9 +201,19 @@
 "pos": "DF",
 "age": 33,
 "nat": "Spain",
-"value_m": 0.19,
+"value_m": 0.269,
 "qid": "Q19367",
 "no": "24"
+},
+{
+"he": "Lucas Núñez",
+"en": "Lucas Núñez",
+"pos": "MF",
+"age": 20,
+"nat": "Spain",
+"value_m": 0.269,
+"qid": "Q140762523",
+"no": "28"
 },
 {
 "he": "Sergio Álvarez",
@@ -200,7 +221,7 @@
 "pos": "MF",
 "age": 34,
 "nat": "Spain",
-"value_m": 0.17,
+"value_m": 0.24,
 "qid": "Q1997792",
 "no": "6"
 },
@@ -210,7 +231,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Spain",
-"value_m": 0.17,
+"value_m": 0.24,
 "qid": "Q108107922",
 "no": "22"
 },
@@ -220,7 +241,7 @@
 "pos": "DF",
 "age": 39,
 "nat": "Spain",
-"value_m": 0.12,
+"value_m": 0.17,
 "qid": "Q4750948",
 "no": "23"
 },
@@ -230,10 +251,10 @@
 "pos": "DF",
 "age": 37,
 "nat": "Portugal",
-"value_m": 0.08,
+"value_m": 0.113,
 "qid": "Q24279006",
 "no": "15"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

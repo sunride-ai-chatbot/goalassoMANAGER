@@ -3,6 +3,7 @@
 "name_he": "מכבי קריית גת",
 "source": "enwiki:Maccabi Kiryat Gat F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Re'em Golan",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.132,
 "qid": null,
 "no": "33"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.047,
+"value_m": 0.089,
 "qid": null,
 "no": "99"
 },
@@ -30,7 +31,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Israel",
-"value_m": 0.128,
+"value_m": 0.241,
 "qid": "Q137808162",
 "no": "9"
 },
@@ -40,7 +41,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Israel",
-"value_m": 0.128,
+"value_m": 0.241,
 "qid": "Q110281841",
 "no": "23"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Israel",
-"value_m": 0.093,
+"value_m": 0.175,
 "qid": "Q96473713",
 "no": "11"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.093,
+"value_m": 0.175,
 "qid": null,
 "no": "19"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.082,
+"value_m": 0.155,
 "qid": null,
 "no": "2"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.082,
+"value_m": 0.155,
 "qid": null,
 "no": "3"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.082,
+"value_m": 0.155,
 "qid": null,
 "no": "6"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.082,
+"value_m": 0.155,
 "qid": null,
 "no": "20"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Belarus",
-"value_m": 0.082,
+"value_m": 0.155,
 "qid": "Q18069324",
 "no": "28"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.132,
 "qid": null,
 "no": "5"
 },
@@ -130,7 +131,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.132,
 "qid": null,
 "no": "8"
 },
@@ -140,7 +141,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.132,
 "qid": null,
 "no": "12"
 },
@@ -150,7 +151,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.132,
 "qid": null,
 "no": "17"
 },
@@ -160,7 +161,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.132,
 "qid": null,
 "no": "32"
 },
@@ -170,7 +171,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Belarus",
-"value_m": 0.058,
+"value_m": 0.109,
 "qid": null,
 "no": "15"
 },
@@ -180,7 +181,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.109,
 "qid": null,
 "no": "16"
 },
@@ -190,7 +191,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.109,
 "qid": null,
 "no": "27"
 },
@@ -200,10 +201,9 @@
 "pos": "DF",
 "age": 30,
 "nat": "Israel",
-"value_m": 0.047,
+"value_m": 0.089,
 "qid": "Q98704599",
 "no": "4"
 }
-],
-"rescaled": 1
+]
 }

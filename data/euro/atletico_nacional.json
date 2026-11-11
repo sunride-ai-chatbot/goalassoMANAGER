@@ -3,6 +3,7 @@
 "name_he": "אתלטיקו נסיונל",
 "source": "enwiki:Atlético Nacional",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Luis Marquinez",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Colombia",
-"value_m": 0.27,
+"value_m": 1.25,
 "qid": "Q112155207",
 "no": "25"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.23,
+"value_m": 1.06,
 "qid": null,
 "no": "44"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 39,
 "nat": "Argentina",
-"value_m": 0.08,
+"value_m": 0.37,
 "qid": "Q5484508",
 "no": "34"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Colombia",
-"value_m": 0.61,
+"value_m": 2.82,
 "qid": "Q60884779",
 "no": "99"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Colombia",
-"value_m": 0.6,
+"value_m": 2.77,
 "qid": "Q20994192",
 "no": "7"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Colombia",
-"value_m": 0.52,
+"value_m": 2.4,
 "qid": "Q16301176",
 "no": "9"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.42,
+"value_m": 1.94,
 "qid": "Q96625376",
 "no": "4"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Colombia",
-"value_m": 0.4,
+"value_m": 1.85,
 "qid": "Q60661790",
 "no": "15"
 },
@@ -90,9 +91,19 @@
 "pos": "MF",
 "age": 26,
 "nat": "Colombia",
-"value_m": 0.38,
+"value_m": 1.76,
 "qid": "Q122625114",
 "no": "80"
+},
+{
+"he": "Elías Cabrera",
+"en": "Elías Cabrera",
+"pos": "MF",
+"age": 23,
+"nat": "Argentina",
+"value_m": 1.72,
+"qid": "Q125271187",
+"no": "22"
 },
 {
 "he": "Jorman Campuzano",
@@ -100,9 +111,19 @@
 "pos": "MF",
 "age": 30,
 "nat": "Colombia",
-"value_m": 0.35,
+"value_m": 1.62,
 "qid": "Q44196376",
 "no": "21"
+},
+{
+"he": "Nicolás Rodríguez",
+"en": "Nicolás Rodríguez",
+"pos": "FW",
+"age": 22,
+"nat": "Colombia",
+"value_m": 1.55,
+"qid": "Q131583776",
+"no": "13"
 },
 {
 "he": "Elkin Rivero",
@@ -110,7 +131,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.33,
+"value_m": 1.52,
 "qid": null,
 "no": "26"
 },
@@ -120,7 +141,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Colombia",
-"value_m": 0.33,
+"value_m": 1.52,
 "qid": "Q60831751",
 "no": "29"
 },
@@ -130,9 +151,19 @@
 "pos": "DF",
 "age": 23,
 "nat": "Colombia",
-"value_m": 0.33,
+"value_m": 1.52,
 "qid": "Q124313311",
 "no": "33"
+},
+{
+"he": "Cristian Arango",
+"en": "Cristian Arango",
+"pos": "FW",
+"age": 31,
+"nat": "Colombia",
+"value_m": 1.52,
+"qid": "Q16147082",
+"no": "17"
 },
 {
 "he": "Felipe Marín",
@@ -140,7 +171,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.31,
+"value_m": 1.43,
 "qid": null,
 "no": "14"
 },
@@ -150,7 +181,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.31,
+"value_m": 1.43,
 "qid": null,
 "no": "30"
 },
@@ -160,7 +191,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.29,
+"value_m": 1.34,
 "qid": null,
 "no": "35"
 },
@@ -170,7 +201,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.27,
+"value_m": 1.25,
 "qid": null,
 "no": "24"
 },
@@ -180,7 +211,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.27,
+"value_m": 1.25,
 "qid": null,
 "no": "27"
 },
@@ -190,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.27,
+"value_m": 1.25,
 "qid": null,
 "no": "31"
 },
@@ -200,7 +231,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Colombia",
-"value_m": 0.25,
+"value_m": 1.15,
 "qid": "Q2053161",
 "no": "10"
 },
@@ -210,7 +241,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.25,
+"value_m": 1.15,
 "qid": null,
 "no": "19"
 },
@@ -220,7 +251,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.25,
+"value_m": 1.15,
 "qid": null,
 "no": "37"
 },
@@ -230,7 +261,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Colombia",
-"value_m": 0.23,
+"value_m": 1.06,
 "qid": null,
 "no": "3"
 },
@@ -240,7 +271,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Colombia",
-"value_m": 0.21,
+"value_m": 0.972,
 "qid": "Q28343305",
 "no": "6"
 },
@@ -250,7 +281,7 @@
 "pos": "MF",
 "age": 35,
 "nat": "Colombia",
-"value_m": 0.15,
+"value_m": 0.695,
 "qid": "Q20017202",
 "no": "8"
 },
@@ -260,7 +291,7 @@
 "pos": "DF",
 "age": 38,
 "nat": "Argentina",
-"value_m": 0.12,
+"value_m": 0.554,
 "qid": "Q5676549",
 "no": "20"
 },
@@ -270,7 +301,7 @@
 "pos": "MF",
 "age": 35,
 "nat": "Colombia",
-"value_m": 0.12,
+"value_m": 0.554,
 "qid": "Q368441",
 "no": "23"
 },
@@ -280,10 +311,10 @@
 "pos": "DF",
 "age": 36,
 "nat": "Colombia",
-"value_m": 0.1,
+"value_m": 0.462,
 "qid": "Q6167739",
 "no": "16"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

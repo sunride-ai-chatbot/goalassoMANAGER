@@ -3,6 +3,7 @@
 "name_he": "לאנס",
 "source": "enwiki:RC Lens",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "רובין ריסר",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 21,
 "nat": "France",
-"value_m": 3.94,
+"value_m": 5.26,
 "qid": "Q124745247",
 "no": "40"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "France",
-"value_m": 2.09,
+"value_m": 2.79,
 "qid": null,
 "no": "60"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 36,
 "nat": "France",
-"value_m": 0.83,
+"value_m": 1.11,
 "qid": "Q13057",
 "no": "16"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 39,
 "nat": "France",
-"value_m": 0.68,
+"value_m": 0.907,
 "qid": "Q2178709",
 "no": "1"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Senegal",
-"value_m": 8.47,
+"value_m": 11.3,
 "qid": "Q100999415",
 "no": "19"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "France",
-"value_m": 7.01,
+"value_m": 9.35,
 "qid": "Q19963405",
 "no": "11"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Saudi Arabia",
-"value_m": 6.28,
+"value_m": 8.38,
 "qid": "Q60407856",
 "no": "23"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Algeria",
-"value_m": 6.18,
+"value_m": 8.25,
 "qid": "Q109986890",
 "no": "8"
 },
@@ -90,9 +91,29 @@
 "pos": "MF",
 "age": 28,
 "nat": "Mali",
-"value_m": 6.04,
+"value_m": 8.06,
 "qid": "Q26220864",
 "no": "21"
+},
+{
+"he": "פראניו איוואנוביץ'",
+"en": "Franjo Ivanović",
+"pos": "FW",
+"age": 22,
+"nat": "Croatia",
+"value_m": 7.9,
+"qid": "Q121535913",
+"no": "29"
+},
+{
+"he": "ז'אן-קלר טודיבו",
+"en": "Jean-Clair Todibo",
+"pos": "DF",
+"age": 26,
+"nat": "France",
+"value_m": 7.62,
+"qid": "Q56223972",
+"no": "20"
 },
 {
 "he": "מיקאל קוויזאנס",
@@ -100,7 +121,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "France",
-"value_m": 5.65,
+"value_m": 7.54,
 "qid": "Q40352866",
 "no": "27"
 },
@@ -110,7 +131,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Poland",
-"value_m": 5.4,
+"value_m": 7.21,
 "qid": "Q64167368",
 "no": "22"
 },
@@ -120,9 +141,19 @@
 "pos": "DF",
 "age": 25,
 "nat": "Poland",
-"value_m": 4.97,
+"value_m": 6.63,
 "qid": "Q64524162",
 "no": "3"
+},
+{
+"he": "Junior Kadile",
+"en": "Junior Kadile",
+"pos": "FW",
+"age": 23,
+"nat": "DR Congo",
+"value_m": 6.22,
+"qid": "Q110385369",
+"no": "28"
 },
 {
 "he": "Jhoanner Chávez",
@@ -130,7 +161,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Ecuador",
-"value_m": 4.33,
+"value_m": 5.78,
 "qid": "Q106638287",
 "no": "13"
 },
@@ -140,7 +171,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Austria",
-"value_m": 4.24,
+"value_m": 5.66,
 "qid": "Q107624550",
 "no": "6"
 },
@@ -150,7 +181,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "France",
-"value_m": 3.99,
+"value_m": 5.32,
 "qid": "Q23800240",
 "no": "14"
 },
@@ -160,7 +191,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Montenegro",
-"value_m": 2.97,
+"value_m": 3.96,
 "qid": "Q131546085",
 "no": "5"
 },
@@ -170,7 +201,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Bosnia-Herzegovina",
-"value_m": 2.82,
+"value_m": 3.76,
 "qid": "Q131149776",
 "no": "4"
 },
@@ -180,7 +211,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "France",
-"value_m": 2.77,
+"value_m": 3.7,
 "qid": "Q135401617",
 "no": "25"
 },
@@ -190,7 +221,7 @@
 "pos": "FW",
 "age": 33,
 "nat": "Belgium",
-"value_m": 2.63,
+"value_m": 3.51,
 "qid": "Q714116",
 "no": "9"
 },
@@ -200,7 +231,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Mali",
-"value_m": 2.39,
+"value_m": 3.19,
 "qid": "Q135881280",
 "no": "31"
 },
@@ -210,7 +241,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "France",
-"value_m": 2.29,
+"value_m": 3.06,
 "qid": "Q20090069",
 "no": "2"
 },
@@ -220,7 +251,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "France",
-"value_m": 1.95,
+"value_m": 2.6,
 "qid": "Q27476",
 "no": "10"
 },
@@ -230,7 +261,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "France",
-"value_m": 1.7,
+"value_m": 2.27,
 "qid": "Q17579987",
 "no": "24"
 },
@@ -240,7 +271,7 @@
 "pos": "FW",
 "age": 35,
 "nat": "France",
-"value_m": 1.51,
+"value_m": 2.02,
 "qid": "Q23799421",
 "no": "7"
 },
@@ -250,7 +281,7 @@
 "pos": "DF",
 "age": 18,
 "nat": "France",
-"value_m": 1.41,
+"value_m": 1.88,
 "qid": "Q133733095",
 "no": "32"
 },
@@ -260,10 +291,10 @@
 "pos": "MF",
 "age": 16,
 "nat": "Portugal",
-"value_m": 0.97,
+"value_m": 1.29,
 "qid": "Q139714508",
 "no": "38"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

@@ -3,6 +3,7 @@
 "name_he": "סביליה",
 "source": "enwiki:Sevilla FC",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "פראן גונזלס",
@@ -10,9 +11,19 @@
 "pos": "GK",
 "age": 21,
 "nat": "Spain",
-"value_m": 5.56,
+"value_m": 7.09,
 "qid": "Q122724434",
 "no": "13"
+},
+{
+"he": "אודיסאס ולחודימוס",
+"en": "Odysseas Vlachodimos",
+"pos": "GK",
+"age": 32,
+"nat": "Greece",
+"value_m": 4.41,
+"qid": "Q91531",
+"no": "1"
 },
 {
 "he": "Rafa Romero",
@@ -20,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Spain",
-"value_m": 3.43,
+"value_m": 4.38,
 "qid": null,
 "no": "33"
 },
@@ -30,9 +41,29 @@
 "pos": "FW",
 "age": 28,
 "nat": "Switzerland",
-"value_m": 10.28,
+"value_m": 13.12,
 "qid": "Q38053896",
 "no": "11"
+},
+{
+"he": "יוסוף פופאנה",
+"en": "Youssouf Fofana",
+"pos": "MF",
+"age": 27,
+"nat": "France",
+"value_m": 12.34,
+"qid": "Q56282611",
+"no": "24"
+},
+{
+"he": "Félix Correia",
+"en": "Félix Correia",
+"pos": "FW",
+"age": 25,
+"nat": "Portugal",
+"value_m": 11.71,
+"qid": "Q66058411",
+"no": "20"
 },
 {
 "he": "לוסיאן אגומה",
@@ -40,7 +71,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "France",
-"value_m": 8.59,
+"value_m": 10.96,
 "qid": "Q58494963",
 "no": "6"
 },
@@ -50,7 +81,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Spain",
-"value_m": 8.54,
+"value_m": 10.9,
 "qid": "Q124256126",
 "no": "16"
 },
@@ -60,7 +91,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Georgia",
-"value_m": 8.43,
+"value_m": 10.76,
 "qid": "Q97303836",
 "no": "8"
 },
@@ -70,7 +101,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Nigeria",
-"value_m": 8.43,
+"value_m": 10.76,
 "qid": "Q37850911",
 "no": "21"
 },
@@ -80,7 +111,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Spain",
-"value_m": 8.37,
+"value_m": 10.68,
 "qid": "Q111220958",
 "no": "22"
 },
@@ -90,7 +121,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Scotland",
-"value_m": 7.47,
+"value_m": 9.53,
 "qid": "Q115181709",
 "no": "9"
 },
@@ -100,9 +131,19 @@
 "pos": "DF",
 "age": 24,
 "nat": "Spain",
-"value_m": 6.85,
+"value_m": 8.74,
 "qid": "Q113894431",
 "no": "4"
+},
+{
+"he": "Lucas Stassin",
+"en": "Lucas Stassin",
+"pos": "FW",
+"age": 21,
+"nat": "Belgium",
+"value_m": 8.7,
+"qid": "Q105955387",
+"no": "19"
 },
 {
 "he": "חואן איגלסיאס",
@@ -110,7 +151,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Spain",
-"value_m": 6.68,
+"value_m": 8.52,
 "qid": "Q104602884",
 "no": "2"
 },
@@ -120,7 +161,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Chile",
-"value_m": 6.57,
+"value_m": 8.38,
 "qid": "Q21044405",
 "no": "17"
 },
@@ -130,7 +171,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Senegal",
-"value_m": 6.4,
+"value_m": 8.17,
 "qid": "Q106860345",
 "no": "12"
 },
@@ -140,7 +181,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Spain",
-"value_m": 6.29,
+"value_m": 8.03,
 "qid": "Q110156344",
 "no": "5"
 },
@@ -150,7 +191,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Spain",
-"value_m": 6.01,
+"value_m": 7.67,
 "qid": "Q118744483",
 "no": "14"
 },
@@ -160,7 +201,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Brazil",
-"value_m": 5.79,
+"value_m": 7.39,
 "qid": "Q27825292",
 "no": "23"
 },
@@ -170,7 +211,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Spain",
-"value_m": 5.67,
+"value_m": 7.24,
 "qid": "Q28966437",
 "no": "18"
 },
@@ -180,7 +221,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Spain",
-"value_m": 5.45,
+"value_m": 6.95,
 "qid": "Q137393350",
 "no": "30"
 },
@@ -190,7 +231,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Spain",
-"value_m": 5.0,
+"value_m": 6.38,
 "qid": "Q128123377",
 "no": "3"
 },
@@ -200,7 +241,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Spain",
-"value_m": 4.27,
+"value_m": 5.45,
 "qid": null,
 "no": "10"
 },
@@ -210,7 +251,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Spain",
-"value_m": 3.99,
+"value_m": 5.09,
 "qid": null,
 "no": "7"
 },
@@ -220,10 +261,10 @@
 "pos": "DF",
 "age": 32,
 "nat": "Portugal",
-"value_m": 2.86,
+"value_m": 3.65,
 "qid": "Q5511325",
 "no": "15"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

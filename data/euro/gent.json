@@ -3,6 +3,7 @@
 "name_he": "גנט",
 "source": "enwiki:KAA Gent",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Victor De Coninck",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.95,
+"value_m": 1.43,
 "qid": null,
 "no": "51"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.89,
+"value_m": 1.34,
 "qid": null,
 "no": "31"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 22,
 "nat": "Belgium",
-"value_m": 0.82,
+"value_m": 1.23,
 "qid": "Q105955008",
 "no": "30"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.79,
+"value_m": 1.19,
 "qid": null,
 "no": "52"
 },
@@ -50,7 +51,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.79,
+"value_m": 1.19,
 "qid": null,
 "no": "53"
 },
@@ -60,7 +61,7 @@
 "pos": "GK",
 "age": 32,
 "nat": "Belgium",
-"value_m": 0.7,
+"value_m": 1.05,
 "qid": "Q15632314",
 "no": "33"
 },
@@ -70,7 +71,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.67,
+"value_m": 1.01,
 "qid": null,
 "no": "50"
 },
@@ -80,7 +81,7 @@
 "pos": "GK",
 "age": 34,
 "nat": "Belgium",
-"value_m": 0.41,
+"value_m": 0.616,
 "qid": "Q101812045",
 "no": "23"
 },
@@ -90,9 +91,19 @@
 "pos": "MF",
 "age": 27,
 "nat": "Portugal",
-"value_m": 2.03,
+"value_m": 3.05,
 "qid": "Q19872475",
 "no": "22"
+},
+{
+"he": "מישל-אנז' בליקווישה",
+"en": "Michel-Ange Balikwisha",
+"pos": "FW",
+"age": 25,
+"nat": "DR Congo",
+"value_m": 2.89,
+"qid": "Q99669640",
+"no": "7"
 },
 {
 "he": "עבד אל-קהאר קאדרי",
@@ -100,7 +111,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Algeria",
-"value_m": 1.87,
+"value_m": 2.81,
 "qid": "Q108062088",
 "no": "37"
 },
@@ -110,7 +121,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Slovakia",
-"value_m": 1.62,
+"value_m": 2.43,
 "qid": "Q18921423",
 "no": "8"
 },
@@ -120,7 +131,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Belgium",
-"value_m": 1.58,
+"value_m": 2.37,
 "qid": "Q100963253",
 "no": "78"
 },
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Estonia",
-"value_m": 1.55,
+"value_m": 2.33,
 "qid": "Q106162027",
 "no": "3"
 },
@@ -140,7 +151,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Belgium",
-"value_m": 1.46,
+"value_m": 2.19,
 "qid": "Q102215143",
 "no": "18"
 },
@@ -150,7 +161,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 1.36,
+"value_m": 2.04,
 "qid": "Q121898099",
 "no": "10"
 },
@@ -160,7 +171,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Sweden",
-"value_m": 1.3,
+"value_m": 1.95,
 "qid": "Q114397513",
 "no": "11"
 },
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Senegal",
-"value_m": 1.27,
+"value_m": 1.91,
 "qid": "Q116974963",
 "no": "5"
 },
@@ -180,7 +191,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Portugal",
-"value_m": 1.27,
+"value_m": 1.91,
 "qid": "Q104833399",
 "no": "20"
 },
@@ -190,7 +201,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.27,
+"value_m": 1.91,
 "qid": "Q134506452",
 "no": "28"
 },
@@ -200,7 +211,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 1.27,
+"value_m": 1.91,
 "qid": null,
 "no": "45"
 },
@@ -210,7 +221,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Senegal",
-"value_m": 1.27,
+"value_m": 1.91,
 "qid": "Q136773369",
 "no": "19"
 },
@@ -220,7 +231,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "England",
-"value_m": 1.27,
+"value_m": 1.91,
 "qid": null,
 "no": "63"
 },
@@ -230,7 +241,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.24,
+"value_m": 1.86,
 "qid": null,
 "no": "73"
 },
@@ -240,7 +251,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Belgium",
-"value_m": 1.2,
+"value_m": 1.8,
 "qid": "Q56193635",
 "no": "44"
 },
@@ -250,9 +261,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "England",
-"value_m": 1.17,
+"value_m": 1.76,
 "qid": null,
 "no": "14"
+},
+{
+"he": "Daniel James Wisdom",
+"en": "Daniel James Wisdom",
+"pos": "FW",
+"age": 25,
+"nat": "Nigeria",
+"value_m": 1.73,
+"qid": null,
+"no": "82"
 },
 {
 "he": "Gyano Vanderdonck",
@@ -260,7 +281,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.14,
+"value_m": 1.71,
 "qid": null,
 "no": "77"
 },
@@ -270,9 +291,19 @@
 "pos": "FW",
 "age": 22,
 "nat": "England",
-"value_m": 1.11,
+"value_m": 1.67,
 "qid": "Q116692754",
 "no": "21"
+},
+{
+"he": "Yassin Mohammed",
+"en": "Yassin Mohammed",
+"pos": "FW",
+"age": 25,
+"nat": "Ghana",
+"value_m": 1.65,
+"qid": null,
+"no": "95"
 },
 {
 "he": "Abubakar Abdullahi",
@@ -280,7 +311,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Nigeria",
-"value_m": 1.08,
+"value_m": 1.62,
 "qid": "Q131036318",
 "no": "61"
 },
@@ -290,7 +321,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.08,
+"value_m": 1.62,
 "qid": null,
 "no": "97"
 },
@@ -300,10 +331,10 @@
 "pos": "MF",
 "age": 25,
 "nat": "Latvia",
-"value_m": 1.05,
+"value_m": 1.58,
 "qid": null,
 "no": "70"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

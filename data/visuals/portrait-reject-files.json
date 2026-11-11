@@ -3,13 +3,61 @@
   "player": "Jonathan Levi",
   "reason": "side-on action shot, blurred"
  },
+ "File:1 adam wharton 2026 (Adam Wharton).jpg": {
+  "player": "Adam Wharton",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:1 ross barkley 2015 (cropped).jpg": {
+  "player": "Ross Barkley",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:1 ross barkley 2015.jpg": {
+  "player": "Ross Barkley",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:1356195 sPICT.jpg": {
+  "player": "Petar Sukačev",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:14 HJK Leonel Montano HJK vs KuPS Bolt Arena Helsinki Finland 25Oct2026 22.jpg": {
+  "player": "Leonel Montano",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:191130 부산아이파크 VS FC안양 플레이오프, 조규성 2.jpg": {
+  "player": "Cho Gue-sung",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:2013 Nebelhorn Trophy Alisson Krystle Perticheto IMG 7340.JPG": {
   "player": "Alisson",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:2014-05-18 Mitchell Weiser.jpg": {
+  "player": "Mitchell Weiser",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2018-02-22 Entrainement excel-28 Taiwo Awoniyi.jpg": {
+  "player": "Taiwo Awoniyi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:20180610 FIFA Friendly Match Austria vs. Brazil David Alaba 850 1632.jpg": {
+  "player": "David Alaba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:2019-06-11 Fußball, Männer, Länderspiel, Deutschland-Estland StP 2075 LR10 by Stepro.jpg": {
   "player": "Serge Gnabry",
   "reason": "side profile, not a frontal portrait"
+ },
+ "File:2019-07-17 SG Dynamo Dresden vs. Paris Saint-Germain by Sandro Halank–020.jpg": {
+  "player": "Tanguy Nianzou",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2019-07-17 SG Dynamo Dresden vs. Paris Saint-Germain by Sandro Halank–133 (cropped).jpg": {
+  "player": "Arthur Zagré",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2019-07-17 SG Dynamo Dresden vs. Paris Saint-Germain by Sandro Halank–168.jpg": {
+  "player": "Layvin Kurzawa",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:2019-10-23 Fußball, Männer, UEFA Champions League, RB Leipzig - FC Zenit St. Petersburg 1DX 2586 by Stepro.jpg": {
   "player": "Ademola Lookman",
@@ -19,6 +67,22 @@
   "player": "Francisco Moura",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:2020-03-10 Fußball, Männer, UEFA Champions League Achtelfinale, RB Leipzig - Tottenham Hotspur 1DX 3678 by Stepro.jpg": {
+  "player": "Angeliño",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2020-03-10 Fußball, Männer, UEFA Champions League Achtelfinale, RB Leipzig - Tottenham Hotspur 1DX 3703 by Stepro.jpg": {
+  "player": "Lucas Moura",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2020-09-20 Fußball, Männer, 1. Bundesliga, RB Leipzig - 1. FSV Mainz 05 1DX 1433 b by Stepro.jpg": {
+  "player": "Jeremiah St. Juste",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2022-04-20 Fußball, Männer, DFB-Pokal, RB Leipzig - 1. FC Union Berlin 1DX 8274 by Stepro.jpg": {
+  "player": "Taiwo Awoniyi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:2022-07-30 Fußball, Männer, DFL-Supercup, RB Leipzig - FC Bayern München 1DX 3417 by Stepro (Serge Gnabry) (cropped).jpg": {
   "player": "Serge Gnabry",
   "reason": "team-mates crowding the frame; cut-out fails"
@@ -27,109 +91,865 @@
   "player": "Serge Gnabry",
   "reason": "team-mates crowding the frame"
  },
+ "File:2022128151252 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0380 - B70I6491 (Timothy Chandler cropped).jpg": {
+  "player": "Timothy Chandler",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:2022128173607 2022-05-08 Fussball Eintracht Frankfurt vs Borussia Mönchengladbach - Sven - 1D X MK II - 0635 - AK8I7370 (Jesper Lindstrøm cropped).jpg": {
   "player": "Jesper Lindstrøm",
   "reason": "head cut at the frame edge, team-mate beside"
+ },
+ "File:2023-08-12 TSV Schott Mainz gegen Borussia Dortmund (DFB-Pokal 2023-24) by Sandro Halank–074.jpg": {
+  "player": "Thorgan Hazard",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2023-10-04 Fußball, Männer, UEFA Champions League, RB Leipzig - Manchester City FC 1DX 2703 (Loïs Openda).jpg": {
+  "player": "Loïs Openda",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2025-03-10 Fabio Balde HSV 1 (cropped).jpg": {
+  "player": "Fábio Baldé",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:2025-03-10 Fabio Balde HSV 1.jpg": {
+  "player": "Fábio Baldé",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:2026 Men's European Volleyball Championship - Italy vs Finland - Torino, Palavela, 23.09.2026 - 446 - Andrea Cambiaso (cropped).jpg": {
   "player": "Andrea Cambiaso",
   "reason": "spectator photo; cut-out leaves only a small head"
  },
+ "File:240609 FC 서울 팬사인회 (Jesse Lingard).jpg": {
+  "player": "Jesse Lingard",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:AC Monza 2022 Serie A celebration 32 (Brescianini).jpg": {
+  "player": "Marco Brescianini",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Aaron Cresswell 20092025 (3).jpg": {
+  "player": "Aaron Cresswell",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Abdallah Sima 2023.jpg": {
+  "player": "Abdallah Sima",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Abdallah asse om 2425.png": {
+  "player": "Keyliane Abdallah",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Abdelli asse sco 2425.png": {
+  "player": "Himad Abdelli",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Achraf Hakimi Morocco v Norway 7 June 2026-16.jpg": {
+  "player": "Achraf Hakimi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Adem Zorgane RUSG 2026.jpg": {
+  "player": "Adem Zorgane",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Adem Zorgane Union 2025.jpg": {
+  "player": "Adem Zorgane",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Agustin-giay-palmeiras-internacional-sep2025-2.jpg": {
+  "player": "Agustín Giay",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Agustin-giay-palmeiras-internacional-sep2025.jpg": {
+  "player": "Agustín Giay",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Agustín Canobbio - SÉRIE A - PALMEIRAS 0 X 2 ATHLETICO PARANAENSE - 52192996579 (cropped).jpg": {
+  "player": "Agustín Canobbio",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Agustín Canobbio 2018.jpg": {
+  "player": "Agustín Canobbio",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Agustín Rogel.jpg": {
+  "player": "Agustín Rogel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ahmed El-Shenawy .JPG": {
+  "player": "Ahmed El Shenawy",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ahmed Nadhir Benbouali 2026.jpg": {
+  "player": "Nadhir Benbouali",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Aihen Muñoz 2018.jpg": {
+  "player": "Aihen Muñoz",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Aihen Muñoz.jpg": {
+  "player": "Aihen Muñoz",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Alejandro Cantero.png": {
+  "player": "Alejandro Cantero",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Alex Sandro Brazil V Morocco 13 June 2026-68.jpg": {
+  "player": "Alex Sandro",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Alfie Lloyd 25072026 (3).jpg": {
+  "player": "Alfie Lloyd",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Alonzo Engwanda (cropped).jpg": {
+  "player": "Alonzo Engwanda",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Alvyn Sanches.jpg": {
   "player": "Alvyn Sanches",
   "reason": "distant shot, face blurred"
+ },
+ "File:Amine Gouiri (2017).jpg": {
+  "player": "Amine Gouiri",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Andre Gomes NYCFC v Columbus 10 May 2026-65 (cropped).jpg": {
+  "player": "André Gomes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Andrew Omobamidele 2019.jpg": {
+  "player": "Andrew Omobamidele",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Andri gudjohnsen chelsea gent 2024.jpg": {
+  "player": "Andri Guðjohnsen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:André Filipe Tavares Gomes.jpg": {
+  "player": "André Gomes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:André-Frank Zambo Anguissa.jpg": {
   "player": "Frank Anguissa",
   "reason": "shouting mid-match, low resolution"
  },
+ "File:Andrés Fernández Moreno (cropped).jpg": {
+  "player": "Andrés Fernández",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Andrés Perea NYCFC v Charlotte 20 Sep 2025-026 (cropped).jpg": {
+  "player": "Andres Perea",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Anibal-Moreno-Palmeiras-Liverpool-abr24-2.jpg": {
+  "player": "Aníbal Moreno",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Anouar Ait El Hadj - RSCA (2021) (cropped).jpg": {
+  "player": "Anouar Ait El Hadj",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Anouar Ait El Hadj RUSG 2026.jpg": {
+  "player": "Anouar Ait El Hadj",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Anthony Musaba, 23102025 (cropped).jpg": {
+  "player": "Anthony Musaba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Antoine Griezmann (51100409504) (cropped).jpg": {
+  "player": "Antoine Griezmann",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Antoine Griezmann (51100409504).jpg": {
+  "player": "Antoine Griezmann",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Anton nedyalkov 2018.jpg": {
+  "player": "Anton Nedyalkov",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Antonín Kinský1.jpg": {
   "player": "Antonín Kinský",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Argentina - Colombia 2022 (52) (cropped).jpg": {
+  "player": "Marcos Acuña",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Argentina x Honduras - Futebol masculino - Olimpíada Rio 2016 (28790210122) (cropped).jpg": {
+  "player": "Santiago Ascacíbar",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Arriola USMNT.jpg": {
+  "player": "Paul Arriola",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ashley Phillips 20092025 (1).jpg": {
+  "player": "Ashley Phillips",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ashley Phillips 20092025 (2).jpg": {
+  "player": "Ashley Phillips",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ashley Phillips 20092025 (3).jpg": {
+  "player": "Ashley Phillips",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Audax Italiano v Colo-Colo 20200209 42.jpg": {
+  "player": "Gabriel Suazo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Aune Heggebø 04102025 (1).jpg": {
+  "player": "Aune Heggebø",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Aune Heggebø 04102025 (2).jpg": {
+  "player": "Aune Heggebø",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:AxelDisasi.jpg": {
+  "player": "Axel Disasi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Ayden Heaven 2025.png": {
   "player": "Ayden Heaven",
   "reason": "background not separable (cut-out empty)"
  },
+ "File:BHA 5 v Espanyol 1 pre season 30 07 2022 03.jpg": {
+  "player": "Lewis Dunk",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:BHA 5 v Espanyol 1 pre season 30 07 2022 167 (Mitoma driblando).jpg": {
+  "player": "Kaoru Mitoma",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Badr Benoun 2019.jpg": {
+  "player": "Badr Benoun",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Bae Jun-ho 20092025 (2).jpg": {
+  "player": "Bae Jun-ho",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Bae Jun-ho 20092025 (5).jpg": {
+  "player": "Bae Jun-ho",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Bae Jun-ho 20092025 (6).jpg": {
+  "player": "Bae Jun-ho",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Bakwa asse rcsa 2425.jpg": {
+  "player": "Dilane Bakwa",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Balázs Tóth 14032026 (2).jpg": {
+  "player": "Balázs Tóth",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Bamo Meite MHSC.png": {
+  "player": "Bamo Meïté",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Barcelona Training Miami 2022 04 (cropped2).jpg": {
   "player": "Ronald Araújo",
   "reason": "low-resolution, blurred face"
+ },
+ "File:Bart Nieuwkoop bij Feyenoord (2025).JPG": {
+  "player": "Bart Nieuwkoop",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Bartosz Mazurek.png": {
   "player": "Bartosz Mazurek",
   "reason": "head bowed, crowd behind"
  },
+ "File:Bartosz Slisz 2021.jpg": {
+  "player": "Bartosz Slisz",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Bartosz Slisz Red Bull Atlanta 5.31.25-170.jpg": {
+  "player": "Bartosz Slisz",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Barça - Napoli - 20140806 - 14 - Duvan Zapata.jpg": {
+  "player": "Duván Zapata",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Batubinsika asse fcn 2425.png": {
+  "player": "Dylan Batubinsika",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Begraoui 2022-01-19 1 (cropped American).jpg": {
+  "player": "Yanis Begraoui",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Begraoui 2022-01-19 1 (cropped).jpg": {
+  "player": "Yanis Begraoui",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Benjamin André asse losc 2425.jpg": {
+  "player": "Benjamin André",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Benjamin andre asse losc 2425 (cropped).jpg": {
+  "player": "Benjamin André",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Biereth asse asm 2425.png": {
+  "player": "Mika Biereth",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Botafogo-SP 0x3 Ponte Preta - 07-02-2024 - Felipinho (cropped).jpg": {
+  "player": "Felipinho",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Boudaoui asse ogcn 2425.png": {
+  "player": "Hicham Boudaoui",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Boulaye Dia Reims (cropped).jpg": {
+  "player": "Boulaye Dia",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Boulaye Dia Reims.jpg": {
+  "player": "Boulaye Dia",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Bozenik.jpg": {
+  "player": "Róbert Boženík",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Brahim Diaz Morocco v Norway 7 June 2026-36.jpg": {
   "player": "Brahim Díaz",
   "reason": "a child's head in the foreground"
+ },
+ "File:Brasileirão Série A- Bragantino 4 x 2 Coritiba - Adrián Martínez.jpg": {
+  "player": "Adrián Martínez",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Brassier asse om 2425.png": {
+  "player": "Lilian Brassier",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Brice Samba France v Senegal 16 June 2026-280 (cropped).jpg": {
+  "player": "Brice Samba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Bryan Mbeumo 00-02-31.18.png": {
   "player": "Bryan Mbeumo",
   "reason": "goal net in front of the face"
  },
+ "File:Buta asse sr 2425.png": {
+  "player": "Aurélio Buta",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:CAN 2023RD Congo 2-1 Guinée 9939 (cropped).jpg": {
+  "player": "Yoane Wissa",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:CINvNYC 2022-06-29 - John Nelson (52187621914).jpg": {
+  "player": "John Nelson",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:CINvNYC 2022-06-29 - Obinna Nwobodo (52187369221) (cropped).jpg": {
+  "player": "Obinna Nwobodo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:CJ Egan-Riley 26042025 (2).jpg": {
+  "player": "CJ Egan-Riley",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:CSKA Sporting (3) (cropped).jpg": {
+  "player": "André Carrillo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Cadu Simões 2025.jpg": {
   "player": "Cadu",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Caen - Rennes CFA 20120929 - Dimitri Foulquier.JPG": {
+  "player": "Dimitri Foulquier",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Callum Slattery 15082026 (2).jpg": {
+  "player": "Callum Slattery",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Callum Slattery 15082026 (3).jpg": {
+  "player": "Callum Slattery",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Calvin Bassey and Dan Burn 24052026 (1).jpg": {
+  "player": "Dan Burn",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Cameron Carter-Vickers USA-Columbia, FIFA U20 World Cup (18684217745) (cropped).jpg": {
+  "player": "Cameron Carter-Vickers",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Cameron Pring 11042026 (1).jpg": {
+  "player": "Cameron Pring",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Carlos Augusto Monteiro.jpg": {
   "player": "Carlos Augusto",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Carlos Palacios Copiapó v Colo-Colo 20241110 08.jpg": {
+  "player": "Carlos Palacios",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Carlos Palacios Everton v Colo-Colo 20230806 01.jpg": {
+  "player": "Carlos Palacios",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Carlos Palacios Everton v Colo-Colo 20230806 02.jpg": {
+  "player": "Carlos Palacios",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Carlos-miguel-palmeiras-sport-ago-25-5.jpg": {
+  "player": "Carlos Miguel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Casper Terho USG 2024.jpg": {
+  "player": "Casper Terho",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Cavan Sullivan Philadelphia Union New York City FC Nov 23 2025-016 (cropped).jpg": {
+  "player": "Cavan Sullivan",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Celtic-20240722-056 (cropped).jpg": {
+  "player": "Luis Palma",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Celtic-20240722-074 (Lawal).jpg": {
+  "player": "Bosun Lawal",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Charalampos Kostoulas 24012026 (2).jpg": {
+  "player": "Charalampos Kostoulas",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Cheick Doucouré.jpg": {
+  "player": "Cheick Doucouré",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Cher Ndour 20240818.jpg": {
+  "player": "Cher Ndour",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Cher Ndour 25072026 (1).jpg": {
+  "player": "Cher Ndour",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Chris Mepham January 2019.jpg": {
+  "player": "Chris Mepham",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Christian Nørgaard 1 -HSV.jpg": {
+  "player": "Christian Nørgaard",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Christian Nørgaard, Brentford F.C. footballer, May 2022.jpg": {
+  "player": "Christian Nørgaard",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Christos Mandas 09052026 (3).jpg": {
+  "player": "Christos Mandas",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Club Brugge x SL Benfica 07.png": {
   "player": "David Neres",
   "reason": "embraced by a team-mate; two bodies in the cut-out"
+ },
+ "File:Colo Colo - San Luis, 2018-08-12 - Gabriel Suazo - 01.jpg": {
+  "player": "Gabriel Suazo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Couhaib driouech-1772637324 (cropped).JPG": {
+  "player": "Couhaib Driouech",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Cresswell asse tfc 2425.png": {
+  "player": "Charlie Cresswell",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:D. Pedro Henrique Brasil 1951 (2).jpg": {
   "player": "Pedro Henrique",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:DONYELL MALEN – 2023.08.12 (02).jpg": {
+  "player": "Donyell Malen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dani Ceballos, Real Madrid, 2022.jpg": {
+  "player": "Dani Ceballos",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Dani Martínez 2022.jpg": {
   "player": "Dani Martínez",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Daniel Bentley 28-01-2017 1.jpg": {
+  "player": "Dan Bentley",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Daniel Wass - WMES (cropped) 2.jpg": {
+  "player": "Daniel Wass",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Daouda Weidmann (cropped).JPG": {
+  "player": "Daouda Weidmann",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Darius Olaru - CFR Cluj vs FCSB, 17 April 2022 (cropped).jpg": {
+  "player": "Darius Olaru",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:David Jurásek Davídek.jpg": {
   "player": "David Jurásek",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:De Silvestri.jpg": {
+  "player": "Lorenzo De Silvestri",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:De lange asse om 2425.png": {
+  "player": "Jeffrey de Lange",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Del castillo asse sb 2425.png": {
+  "player": "Romain Del Castillo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Denis Bouanga 2024 (cropped).jpg": {
+  "player": "Denis Bouanga",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dennis Man - 23 November 2017.jpg": {
+  "player": "Dennis Man",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dennis Politic.jpg": {
+  "player": "Dennis Politic",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Diego Rico 2019.png": {
+  "player": "Diego Rico",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dillon Phillips warming up prior to the away game against Brentford in 2014.jpg": {
+  "player": "Dillon Phillips",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dmytro Riznyk (cropped).jpg": {
+  "player": "Dmytro Riznyk",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dmytro Riznyk.jpg": {
+  "player": "Dmytro Riznyk",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dominik Chong-Qui.jpg": {
+  "player": "Dominik Chong-Qui",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dragan Kokanović.jpg": {
+  "player": "Dragan Kokanović",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Dylan Chambost NYCFC v Columbus 10 May 2026-176.jpg": {
+  "player": "Dylan Chambost",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ebrima Singhateh in 2024.jpg": {
+  "player": "Ebrima Singhateh",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Edgar Allan Poe 2.jpg": {
   "player": "Allan",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Edmond Tapsoba Leverkusen 3-2026.jpg": {
+  "player": "Edmond Tapsoba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Edmond Tapsoba, 2022-07-31, Saisoneröffnung Bayer 04, Leverkusen (1) (cropped).jpg": {
+  "player": "Edmond Tapsoba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Eduard Atuesta New England v Orlando 19 September 2026-024.jpg": {
+  "player": "Eduard Atuesta",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Edvin Austbø 17 Viking FK UECL 20250813 (4).jpg": {
+  "player": "Edvin Austbø",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Edward-greene-malbone-david-moses.jpg": {
   "player": "David Moses",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Ekkelenkamp2022.jpg": {
+  "player": "Jurgen Ekkelenkamp",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:El Mahdy Soliman Argentina v Egypt 7 July 2026-017.jpg": {
+  "player": "El Mahdy Soliman",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Elijah Gift.jpg": {
+  "player": "Elijah Gift",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:ElijahWynder.jpg": {
+  "player": "Elijah Wynder",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Emerson Royal in 2018 for Atletico Mineiro (cropped).jpg": {
+  "player": "Emerson Royal",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Emiliano-martinez-palmeiras-sport-ago-25 (cropped).jpg": {
+  "player": "Emiliano Martínez",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Emiliano-martinez-palmeiras-sport-ago-25-2 (cropped).jpg": {
+  "player": "Emiliano Martínez",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Emmanuel Latte Lath Red Bull Atlanta 5.31.25-068 (cropped).jpg": {
+  "player": "Emmanuel Latte Lath",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Emmanuel Latte Lath Red Bull Atlanta 5.31.25-068.jpg": {
+  "player": "Emmanuel Latte Lath",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Empfang für den 1. FC Köln im Rathaus-8841.jpg": {
+  "player": "Bård Finne",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Entrainement SRFC Dinan 20150902 - Jérémie Boga (cropped).JPG": {
   "player": "Jérémie Boga",
   "reason": "head-only crop at an angle; kit and shoulders missing"
+ },
+ "File:Entrenamiento Argentina Sub20 previo al mundial - BugWarp (36).jpg": {
+  "player": "Agustín Giay",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Eric Bailly in 2023 (cropped).jpg": {
+  "player": "Eric Bailly",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Eric Martel, FC RB Salzburg gegen FK Austria Wien (8. August 2021) (cropped).jpg": {
+  "player": "Eric Martel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:ErickPulgar.png": {
+  "player": "Erick Pulgar",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Esmir Bajraktarević (cropped).JPG": {
+  "player": "Esmir Bajraktarević",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Esmir Bajraktarević.JPG": {
+  "player": "Esmir Bajraktarević",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ethan Chislett (2).jpg": {
+  "player": "Ethan Chislett",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ethan Chislett (3).jpg": {
+  "player": "Ethan Chislett",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Evan Bush 24 GK Columbus Crew-3.jpg": {
+  "player": "Evan Bush",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Eyad Abu Abaid.jpg": {
+  "player": "Eyad Abu Abaid",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Liefering SC-ESV Parndorf 23.JPG": {
+  "player": "Stefan Lainer",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Liefering gegen SKN St. Pölten (2024-03-02) 40.jpg": {
+  "player": "Gaoussou Diakité",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Liefering gegen SKN St. Pölten (30. Juli 2021) 38.jpg": {
+  "player": "Dorgeles Nene",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Liefering gegen SV Ried (2025-03-09 Zweite Liga) 46.jpg": {
+  "player": "Enrique Aguilar",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Liefering gegen SV Stripfing (2023-09-15) 05.jpg": {
+  "player": "Adam Daghim",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Liefering gegen SV Stripfing (2023-09-15) 14.jpg": {
+  "player": "Leandro Morgalla",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:FC RB Salzburg gegen FC Bayern München (2026-01-06 Testspiel) 46.jpg": {
   "player": "Anrie Chase",
   "reason": "distant shot, face blurred"
  },
+ "File:FC RB Salzburg gegen FK Austria Wien (2026-02-06 Bundesliga) 12.jpg": {
+  "player": "Tim Drexler",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 19 (cropped).jpg": {
+  "player": "Tyler Morton",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC RB salzburg gegen SK Sturm Graz (2024-02-09) 51 (Dimitri Lavalée).jpg": {
+  "player": "Dimitri Lavalée",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:FC Red Bull Salzburg gegen Bayern München (2025-01-06 Testspiel) 26.jpg": {
   "player": "Kim Min-jae",
   "reason": "side profile, not a frontal portrait"
+ },
+ "File:FC Red Bull Salzburg gegen FC Blau-Weiß Linz (2025-04-06 Österreichische Bundesliga) 42.jpg": {
+  "player": "Radek Vítek",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Red Bull Salzburg gegen FC Nordsjaelland (Testspiel 2023-07-08) 45.jpg": {
+  "player": "Mario Dorgeles",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Red Bull Salzburg gegen Grazer AK (2025-08-09 Bundesliga Zweite Runde) 31.jpg": {
+  "player": "Sota Kitano",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Red Bull Salzburg gegen Linzer ASK (2022-10-01) 29 (cropped).jpg": {
+  "player": "Marin Ljubičić",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Red Bull Salzburg gegen Linzer ASK (2022-10-01)a 02.jpg": {
+  "player": "Keito Nakamura",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:FC Red Bull Salzburg gegen TSV Hartberg (Bundesliga 2026-27 Erste Runde) 05.jpg": {
   "player": "Haris Tabakovic",
   "reason": "head pushed to the frame edge by a second person"
  },
+ "File:FC Red Bull Salzburg vs. SK Rapid Wien (2022-09-18) 25a (cropped) (cropped).jpg": {
+  "player": "Leopold Querfeld",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Salzburg gegen FC Porto (2025-09-25 UEFA Euro League ) 36 (Deniz Gül).jpg": {
+  "player": "Deniz Gül",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Salzburg gegen Paris St. Germain (UEFA Youth League-21. Februar 2017) 24 (Samuel Essende).jpg": {
+  "player": "Samuel Essende",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:FC Salzburg gegen SK Brann Bergen (2025-07-30 Championsleague Qualifikation Zweite Runde Rückspiel) 02.jpg": {
   "player": "Nikola Sarcevic",
   "reason": "looking down, face in shadow"
+ },
+ "File:FC Salzburg gegen SK Brann Bergen (2025-07-30 Championsleague Qualifikation Zweite Runde Rückspiel) 24.jpg": {
+  "player": "Frans Krätzig",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Salzburg gegen SK Brann Bergen (2025-07-30 Championsleague Qualifikation Zweite Runde Rückspiel) 47.jpg": {
+  "player": "Japhet Sery Larsen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Salzburg vs. AC Mailand (UEFA Championsleague 2022-09-06) 60 (cropped).jpg": {
+  "player": "Tommaso Pobega",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FC Salzburg vs. Club Brügge (Euroleague Sechzehntelfinale) 14 (cropped).jpg": {
+  "player": "Emmanuel Dennis",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 34 (Manuel Locatelli).jpg": {
   "player": "Manuel Locatelli",
   "reason": "another player's head beside his"
  },
+ "File:FWC 2018 - Round of 16 - COL v ENG - Mateus Uribe during the penalty shootout (cropped).jpg": {
+  "player": "Mateus Uribe",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:FWC 2018 - Round of 16 - COL v ENG - Photo 102 (cropped) 2.jpg": {
+  "player": "Johan Mojica",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Facundo Zabala 2020.jpg": {
+  "player": "Facundo Zabala",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Felipe Anderson 2021.jpg": {
+  "player": "Felipe Anderson",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Felipe Longo goleiro.jpg": {
+  "player": "Felipe Longo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Felix Beijmo 2013 1.jpg": {
   "player": "Felix Beijmo",
   "reason": "motion-blurred action shot, head partly cut"
  },
+ "File:FelixAgu.jpg": {
+  "player": "Felix Agu",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Fener train 2016 (10).jpg": {
+  "player": "Ezekiel Isoken Henty",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ferland Mendy, June 2019.jpg": {
+  "player": "Ferland Mendy",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Fernando de Paul Everton v Colo-Colo 20230806 01.jpg": {
+  "player": "Fernando de Paul",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Fernando de Paul Everton v Colo-Colo 20230806 03.jpg": {
+  "player": "Fernando de Paul",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Feyenoord - GAE - 53333388957 (Igor Paixão).jpg": {
+  "player": "Igor Paixão",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Francisco Javier Hidalgo Gómez.jpg": {
   "player": "Son",
   "reason": "side-on action shot"
+ },
+ "File:Franco Mastantuono in 2025 (cropped).jpg": {
+  "player": "Franco Mastantuono",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Franco Mastantuono in 2025.jpg": {
+  "player": "Franco Mastantuono",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Frank Fielding 20092025 (4).jpg": {
+  "player": "Frank Fielding",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Freddie Potts (cropped).jpeg": {
+  "player": "Freddie Potts",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:GAE - Ajax - 52787515232 (Owen Wijndal).jpg": {
   "player": "Owen Wijndal",
@@ -139,33 +959,213 @@
   "player": "Youri Baas",
   "reason": "action shot, looking sideways"
  },
+ "File:GAE - Ajax - 52787525577 (Remko Pasveer).jpg": {
+  "player": "Remko Pasveer",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:GAE - Ajax - 52788474930 (Kenneth Taylor).jpg": {
+  "player": "Kenneth Taylor",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:GAE - FC Utrecht - Ryan Flamingo).jpg": {
+  "player": "Ryan Flamingo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:GAE - FC Utrecht - Souffian El Karouani).jpg": {
   "player": "Souffian El Karouani",
   "reason": "action shot, head bowed, team-mate in the cut-out"
+ },
+ "File:Gabon (2) (Denis Bouanga).jpg": {
+  "player": "Denis Bouanga",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ganso jogador.jpg": {
+  "player": "Ganso",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Gardien de but Tunisien (cropped).jpg": {
+  "player": "Bechir Ben Saïd",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:General Aleksandar Stanković.jpg": {
   "player": "Aleksandar Stanković",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Geoffrey Kondogbia - Euro U19 2012 (cropped).jpg": {
+  "player": "Geoffrey Kondogbia",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Georgi terziev 2018.jpg": {
+  "player": "Georgi Terziev",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Giovanni González 2026.jpg": {
+  "player": "Giovanni González",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Go Ahead Eagles - AZ - 53170956773 (Myron van Brederode).jpg": {
+  "player": "Myron van Brederode",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Go Ahead Eagles - Feyenoord - 53678892721 (Calvin Stengs).jpg": {
+  "player": "Calvin Stengs",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Go Ahead Eagles - Feyenoord - 53679350805 (Yankuba Minteh).jpg": {
+  "player": "Yankuba Minteh",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Go Ahead Eagles - Feyenoord - 53679350950 (Justin Bijlow).jpg": {
+  "player": "Justin Bijlow",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Go Ahead Eagles - Royale Union Saint-Gillloise - 53852891619 (Kevin Mac Allister).jpg": {
+  "player": "Kevin Mac Allister",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Gomez ulla.jpg": {
   "player": "Mariano Gómez",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Grischa Prömel - Rio 2016.jpg": {
+  "player": "Grischa Prömel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Guglielmo Vicario.png": {
+  "player": "Guglielmo Vicario",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Gui-negao-entrevista-2025 (cropped).png": {
+  "player": "Gui Negão",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Guilherme Arana 2017.jpg": {
+  "player": "Guilherme Arana",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Guirassy asse fcn 2425.jpg": {
+  "player": "Herba Guirassy",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Halmstad vs Mjällby in 2023.jpg": {
+  "player": "Leo Walta",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Hamed Junior Traoré (CIV-SLE - CAN 2022).jpg": {
+  "player": "Hamed Traorè",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Hamed Traorè.png": {
+  "player": "Hamed Traorè",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Hamza Igamane 2025 (cropped).jpg": {
+  "player": "Hamza Igamane",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Hamza Igamane 2025.jpg": {
+  "player": "Hamza Igamane",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Hamza Igamane vs Niger (cropped).jpg": {
+  "player": "Hamza Igamane",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Harry Pickering 14032026 (2).jpg": {
+  "player": "Harry Pickering",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Harvey Sarajian New England v Orlando 19 September 2026-027.jpg": {
+  "player": "Harvey Sarajian",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Hazem Mastouri 2026.jpg": {
+  "player": "Hazem Mastouri",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Hjulmand.png": {
   "player": "Morten Hjulmand",
   "reason": "blurred face, cut-out leaves only a face"
  },
+ "File:Hobie Verhulst (1).jpg": {
+  "player": "Hobie Verhulst",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Houston Dynamo vs Dallas 2025 preseason, 06 (cropped).jpg": {
+  "player": "Griffin Dorsey",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Højbjerg asse om 2425.png": {
+  "player": "Pierre-Emile Højbjerg",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:IF Brommapojkarna-Malmö FF - 2014-07-06 19-01-59 (7155).jpg": {
+  "player": "Piotr Johansson",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:ISL-HRV (20).jpg": {
+  "player": "Marko Pjaca",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ian Fray NYCFC Miami 24 Sep 2025-023 (cropped).jpg": {
+  "player": "Ian Fray",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Igor Savić (footballer, born 2000) 2022.jpg": {
+  "player": "Igor Savić",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ilaixmoriba (cropped).jpg": {
+  "player": "Ilaix Moriba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Iliyan Stefanov.jpg": {
+  "player": "Iliyan Stefanov",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Illan Meslier April 2019.jpg": {
+  "player": "Illan Meslier",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Illya Zabarnyi 2023.jpg": {
+  "player": "Illia Zabarnyi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Imran nazih-1700678727.jpeg": {
+  "player": "Imran Nazih",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Isaac Mabaya 09082025 (1).jpg": {
   "player": "Isaac Mabaya",
   "reason": "phone held against the face"
+ },
+ "File:Ivan Angulo New England v Orlando 19 September 2026-074 (cropped).jpg": {
+  "player": "Iván Angulo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Ivan Filipovic Ck 290708.jpg": {
   "player": "Ivan Filipovic",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:JURRIEN TIMBER.jpg": {
+  "player": "Jurriën Timber",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jack Hinshelwood 24012026 (2).jpg": {
+  "player": "Jack Hinshelwood",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jack Stacey October 2019.jpg": {
+  "player": "Jack Stacey",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Jacopo Palma il Giovane.png": {
   "player": "Giovane",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Jake+Bidwell+QPR+2016 (cropped).jpg": {
+  "player": "Jake Bidwell",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Jakub Martinec.jpg": {
   "player": "Jakub Martinec",
@@ -191,9 +1191,25 @@
   "player": "Jakub Moder",
   "reason": "hood up, looking down"
  },
+ "File:James Abankwah 09082025 (5).jpg": {
+  "player": "James Abankwah",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:JamesPenrice.jpg": {
   "player": "James Penrice",
   "reason": "distant full-body shot; head too small"
+ },
+ "File:Japan-vs-Thailand-Football-International-Friendly-Match--2024-01-01 0022 (cropped).jpg": {
+  "player": "Taishi Nozawa",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jarell Quansah 06042025 (1).jpg": {
+  "player": "Jarell Quansah",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jarvis Thornton 15082026 (1).jpg": {
+  "player": "Jarvis Thornton",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Javi Lopez (cropped).JPG": {
   "player": "Javi López",
@@ -203,9 +1219,33 @@
   "player": "Javi López",
   "reason": "sunglasses and crowd heads around the face"
  },
+ "File:Javier Correa Copiapó v Colo-Colo 20241110 15.jpg": {
+  "player": "Javier Correa",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jens Cajuste (Crop).jpg": {
+  "player": "Jens Cajuste",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Jeremie Frimpong 04012026 (5).jpg": {
   "player": "Jeremie Frimpong",
   "reason": "snood covers the lower face"
+ },
+ "File:Jeremy Rafanello Philadelphia Union New York City FC Nov 23 2025-022 (cropped).jpg": {
+  "player": "Jeremy Rafanello",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jeremy Rafanello Philadelphia Union New York City FC Nov 23 2025-022.jpg": {
+  "player": "Jeremy Rafanello",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jesé Rodríguez (cropped).jpg": {
+  "player": "Jesé",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jesús Bueno Philadelphia Union New York City FC Nov 23 2025-020 (cropped).jpg": {
+  "player": "Jesús Bueno",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Jhon Lucumí September 2019.jpg": {
   "player": "Jhon Lucumí",
@@ -214,6 +1254,18 @@
  "File:Joao Grimaldo.jpg": {
   "player": "João Grimaldo",
   "reason": "motion-blurred action shot"
+ },
+ "File:Joao-pedro-tchoca-entrevista-2026.png": {
+  "player": "João Pedro",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Joaquin-Piquerez-Palmeiras-Athletico-jul-2022-2.jpg": {
+  "player": "Joaquín Piquerez",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Joaquín Panichelli 2023.jpg": {
+  "player": "Joaquín Panichelli",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Joe Gomez 04012026 (1).jpg": {
   "player": "Joe Gomez",
@@ -227,9 +1279,25 @@
   "player": "James McConnell",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Jonathan Rodriguez penarol 2014.jpg": {
+  "player": "Jonathan Rodríguez",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Jonathan-Levi-Author-Photo.jpg": {
   "player": "Jonathan Levi",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Jordan Lotomba 2025.JPG": {
+  "player": "Jordan Lotomba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:JordiOsei-Tutu.jpg": {
+  "player": "Jordi Osei-Tutu",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Jorthy Mokio.JPG": {
+  "player": "Jorthy Mokio",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Josep Martínez Ècija a Gràcia..jpg": {
   "player": "Josep Martínez",
@@ -238,6 +1306,10 @@
  "File:Jota Silva image upload jpg.jpg": {
   "player": "Jota Silva",
   "reason": "shouting celebration, arm across the frame"
+ },
+ "File:Jovan Lukić.jpg": {
+  "player": "Jovan Lukić",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:João Costa, Minister of Education of Portugal (52471846652).jpg": {
   "player": "João Costa",
@@ -251,17 +1323,225 @@
   "player": "João Simões",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Joël Piroe 15032025 (4).jpg": {
+  "player": "Joël Piroe",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Joël Veltman 2022 (cropped) (2).jpg": {
+  "player": "Joël Veltman",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Julius Dirksen.jpg": {
+  "player": "Julius Dirksen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Junior Firpo 15032025 (1).jpg": {
+  "player": "Junior Firpo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Junnosuke Suzuki 15-10-2026 (cropped).jpg": {
+  "player": "Junnosuke Suzuki",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Justin Ellis New England v Orlando 19 September 2026-099 (cropped).jpg": {
+  "player": "Justin Ellis",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Justin Haak CF Montreal NYCFC 6.28.25-081 (cropped).jpg": {
+  "player": "Justin Haak",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kabaka 34.jpg": {
+  "player": "Kabaka",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kamanzi asse tfc 2425.png": {
+  "player": "Warren Kamanzi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Karl Darlow 2014.jpg": {
   "player": "Karl Darlow",
   "reason": "another person's head in the foreground"
+ },
+ "File:Karlo Muhar - CFR Cluj - Lazio 0-0 (52708188245) (cropped).png": {
+  "player": "Karlo Muhar",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kayke-entrevista-2025 (cropped).png": {
+  "player": "Kayke",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Keeper Mathias Dyngeland, Sogndal-Rosenborg 07-15-2017-2 (cropped).jpg": {
+  "player": "Mathias Dyngeland",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Kerem Aktürkoğlu 9 Fenerbahçe 20260805 (11).JPG": {
   "player": "Kerem Aktürkoğlu",
   "reason": "shouting mid-match"
  },
+ "File:Kevin Pierre NYCFC v Columbus 10 May 2026-47.jpg": {
+  "player": "Kevin Pierre",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kevin Rodriguez Cote D'Ivoire v Ecuador 14 June 2026-212.jpg": {
+  "player": "Kevin Rodríguez",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kieran Dowell 2021-08-07 2.jpg": {
+  "player": "Kieran Dowell",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kodai Sano.JPG": {
+  "player": "Kodai Sano",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kondogbia asse om 2425.png": {
+  "player": "Geoffrey Kondogbia",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Krasnodar-Wolfsburg (19) 2014-10-24 Maximilian Arnold.jpg": {
+  "player": "Maximilian Arnold",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kristian kabasele.jpg": {
+  "player": "Christian Kabasele",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Krisztián Lisztes 2005 in 2024.jpg": {
+  "player": "Krisztián Lisztes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Krzysztof kurowski-1790686952.jpg": {
+  "player": "Krzysztof Kurowski",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kyle Walker-Peters 22122024 (2).jpg": {
+  "player": "Kyle Walker-Peters",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Kyrell Lisbie 01082026 (2).jpg": {
+  "player": "Kyrell Lisbie",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lamine Cissé 20092025 (6).jpg": {
+  "player": "Lamine Cissé",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lamine Cissé 20092025 (7).jpg": {
+  "player": "Lamine Cissé",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lamine Cissé 20092025 (8).jpg": {
+  "player": "Lamine Cissé",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lars Unnerstall 2011-08-03.jpg": {
+  "player": "Lars Unnerstall",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Law McCabe.png": {
+  "player": "Law McCabe",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Leandro Hernandez.jpg": {
+  "player": "Leandro Hernández",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Leandro Paredes Argentina v Egypt 7 July 2026-048.jpg": {
+  "player": "Leandro Paredes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Marseille (22-01-2022) 17.jpg": {
+  "player": "Boubacar Kamara",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Nice (23-01-2021) 36 (cropped).jpg": {
+  "player": "Khéphren Thuram",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Orléans (09-03-2020) 46.jpg": {
+  "player": "Issa Soumaré",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Reims (12-05-2023) 45.jpg": {
+  "player": "Salis Abdul Samed",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Sochaux (15-09-2018) 78.jpg": {
+  "player": "Einar Galilea",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Sochaux (23-11-2019) 81.jpg": {
+  "player": "Cheick Doucouré",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Torino FC (02-08-2023) 25.jpg": {
+  "player": "Mërgim Vojvoda",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Torino FC (02-08-2023) 47 (cropped).jpg": {
+  "player": "Alessandro Buongiorno",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens B - Sedan (27-01-2018) 12 (cropped1).jpg": {
+  "player": "Enzo Ebosse",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Leny Yoro (08-10-2023) 12 (cropped).jpg": {
+  "player": "Leny Yoro",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Leo Kokubo 2020.jpg": {
+  "player": "Leo Kokubo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Levi Colwill FIFA Club World Cup final extraction.jpg": {
   "player": "Levi Colwill",
   "reason": "mid-celebration scream, not a portrait"
+ },
+ "File:Lewie Coyle July 2015.jpg": {
+  "player": "Lewie Coyle",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lewis Dunk with a fan 020302024.jpg": {
+  "player": "Lewis Dunk",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Livaja AEK Celtic.jpg": {
+  "player": "Marko Livaja",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:LivajaHajduckoSrce.jpg": {
+  "player": "Marko Livaja",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Liver-RM (5) (cropped 2).jpg": {
+  "player": "Isco",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lloris 2018 (cropped).jpg": {
+  "player": "Hugo Lloris",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Loïs Openda USMNT v Belgium Mar 28 2026-19 (cropped).jpg": {
+  "player": "Loïs Openda",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lucas Vennegoor of Hesselink.jpg": {
+  "player": "Lucas Vennegoor of Hesselink",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Luciano Cabral Universidad Católica v Coquimbo Unido 20230723 01.jpg": {
+  "player": "Luciano Cabral",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Luciano-Sao-Paulo-Juventude-jun-2022 (cropped).jpg": {
+  "player": "Luciano",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Luciano-Sao-Paulo-Juventude-jun-2022.jpg": {
+  "player": "Luciano",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Luis-Guilherme-Palmeiras-Liverpool-abr24 (cropped).jpg": {
   "player": "Luís Guilherme",
@@ -287,13 +1567,89 @@
   "player": "Luke Chambers",
   "reason": "looking down"
  },
+ "File:Luke Shaw, Manchester United v Newcastle United, 11 September 2021 (44) (cropped 2).png": {
+  "player": "Luke Shaw",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Luke Shaw, Manchester United v Newcastle United, 11 September 2021 (44) (cropped).jpg": {
   "player": "Luke Shaw",
   "reason": "another player's head inside the cut-out"
  },
+ "File:Luke Woolfenden.jpg": {
+  "player": "Luke Woolfenden",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:LukeWoolfendenBntIps1.jpg": {
+  "player": "Luke Woolfenden",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lyndon Dykes Scotland v Bolivia 6 June 2026-65.jpg": {
+  "player": "Lyndon Dykes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:MANUEL LOCATELLI - ZENIT vs JUVENTUS.jpg": {
   "player": "Manuel Locatelli",
   "reason": "another player's head and shoulder inside the cut-out"
+ },
+ "File:MLS FC Dallas at Real Salt Lake (51429255189) (cropped).jpg": {
+  "player": "Nkosi Tafari",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Maarten Vandevoordt USMNT v Belgium Mar 28 2026-26 (cropped).jpg": {
+  "player": "Maarten Vandevoordt",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Maarten Vandevoordt USMNT v Belgium Mar 28 2026-26.jpg": {
+  "player": "Maarten Vandevoordt",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mads Hermansen 24082024 (2) (cropped).jpg": {
+  "player": "Mads Hermansen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mads Kikkenborg RSC Anderlecht 2025.jpg": {
+  "player": "Mads Kikkenborg",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Maksym Talovyerov 20092025 (1).jpg": {
+  "player": "Maksym Talovierov",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Maksym Talovyerov 20092025 (2).jpg": {
+  "player": "Maksym Talovierov",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:ManCity20240722-051 (Ortega).jpg": {
+  "player": "Stefan Ortega",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marc Bernal (2025).png": {
+  "player": "Marc Bernal",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marcelo Lomba do Nascimento (2011).jpg": {
+  "player": "Marcelo Lomba",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marco Asensio 10 Fenerbahçe 20260805 (4) (cropped).JPG": {
+  "player": "Marco Asensio",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marco Brescianini in Milanello 2020.jpg": {
+  "player": "Marco Brescianini",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marco Delgado.jpg": {
+  "player": "Mark Delgado",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marco Sportiello (cropped).JPG": {
+  "player": "Marco Sportiello",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marco Sportiello.JPG": {
+  "player": "Marco Sportiello",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Marco palestra.jpg": {
   "player": "Marco Palestra",
@@ -303,37 +1659,289 @@
   "player": "Marcos López",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Mario Stroeykens RSC Anderlecht 2025.jpg": {
+  "player": "Mario Stroeykens",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mark Travers 2019.jpg": {
+  "player": "Mark Travers",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marlos Moreno 2017.jpg": {
+  "player": "Marlos Moreno",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Martin Linnes, 2018.jpg": {
+  "player": "Martin Linnes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Marvin Çuni 2025.jpg": {
+  "player": "Marvin Çuni",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mateo Silvetti NYCFC Miami 24 Sep 2025-024 (cropped).jpg": {
+  "player": "Mateo Silvetti",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Matheus Enholm.jpg": {
   "player": "Matheus",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Matheus-pereira-entrevista-2026 (cropped).png": {
+  "player": "Matheus Pereira",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Matheuzinho 2026 (cropped).jpg": {
+  "player": "Matheuzinho",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mathias Dyngeland (2016).jpg": {
+  "player": "Mathias Dyngeland",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mathieu Choiniere Canada v Qatar 18 June 2026-090.jpg": {
+  "player": "Mathieu Choinière",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mathys Tel en 2026.png": {
+  "player": "Mathys Tel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Matj kova-1772635856.JPG": {
   "player": "Matěj Kovář",
   "reason": "looking down at a press conference desk"
  },
+ "File:Mattia Zaccagni 2021.jpg": {
+  "player": "Mattia Zaccagni",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Maupay asse om 2425.png": {
+  "player": "Neal Maupay",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Max bruns-1672739680.jpg": {
+  "player": "Max Bruns",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Maxime Esteve 2021.jpg": {
+  "player": "Maxime Estève",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Maximiliano Meza 2018.jpg": {
+  "player": "Maximiliano Meza",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mayulu vs MHSC 18 mars 2024.png": {
+  "player": "Senny Mayulu",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mees hilgers-1672744656 (cropped).jpg": {
+  "player": "Mees Hilgers",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Memphis Depay 2019.jpg": {
+  "player": "Memphis Depay",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Merchas doski 2025.jpg": {
+  "player": "Merchas Doski",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Miguel Gutierrez (Legavolley 2017).jpg": {
   "player": "Miguel Gutiérrez",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Miha Blazic.jpg": {
+  "player": "Miha Blažič",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Miha Blažič 2021.jpg": {
+  "player": "Miha Blažič",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Miles asse ol 2425.png": {
+  "player": "Ainsley Maitland-Niles",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Million Manhoef 20092025 (1).jpg": {
+  "player": "Million Manhoef",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Minamino asse asm 2425.png": {
+  "player": "Takumi Minamino",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Mislav-Orsic-2022.png": {
   "player": "Mislav Orsic",
   "reason": "microphone covering the cheek"
  },
+ "File:Mitchell-Weiser-2018-08-19.jpg": {
+  "player": "Mitchell Weiser",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mohamed Amoura, October 2021.png": {
+  "player": "Mohamed Amoura",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mohammad Abu Zrayq.jpg": {
+  "player": "Sharara",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mohammed Kudus 14092024.jpg": {
+  "player": "Mohammed Kudus",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Moise Bombito Canada v Qatar 18 June 2026-156 (cropped).jpg": {
+  "player": "Moïse Bombito",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:MortenHjulmandSporting24.jpg": {
   "player": "Morten Hjulmand",
   "reason": "video still, blurry"
+ },
+ "File:Moussa Diaby, 2022-07-31, Saisoneröffnung Bayer 04, Leverkusen (1).jpg": {
+  "player": "Moussa Diaby",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Mukhammadali Urinboev 01082026 (1).jpg": {
+  "player": "Mukhammadali Urinboev",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Nathan De Cat USMNT v Belgium Mar 28 2026-18 (cropped).jpg": {
+  "player": "Nathan De Cat",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Nathan Harriel Philadelphia Union New York City FC Nov 23 2025-026 (cropped).jpg": {
+  "player": "Nathan Harriel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Nehuén Pérez.jpeg": {
   "player": "Nehuén Pérez",
   "reason": "soft, blurred face"
  },
+ "File:Niccolò Fortini and Pietro Comuzzo 25072026 (1).jpg": {
+  "player": "Niccolò Fortini",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Nicholas Hagen NYCFC v Columbus 10 May 2026-1.jpg": {
+  "player": "Nicholas Hagen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:NiclasFüllkrug (cropped).jpg": {
+  "player": "Niclas Füllkrug",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Nicolás de la Cruz.jpg": {
+  "player": "Nicolás de la Cruz",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:NiklasSchmidt.jpg": {
+  "player": "Niklas Schmidt",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Noa Ojea RSC Anderlecht 2026.jpg": {
+  "player": "Noa Ojea",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Noah Holm.jpg": {
+  "player": "Noah Holm",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Nordin Amrabat (cropped).jpg": {
+  "player": "Nordin Amrabat",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Nordin asse mhsc 2425.png": {
+  "player": "Arnaud Nordin",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Norway Italy - June 2025 A 22 (cropped).jpg": {
+  "player": "Nicolò Rovella",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Norway Italy - June 2025 A 28 (cropped).jpg": {
+  "player": "Cesare Casadei",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Norway Italy - June 2025 D 48 (cropped).jpg": {
+  "player": "Luca Ranieri",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ofrenda de la Liga y la Champions-13-L.Millán (52109790215) (cropped).jpg": {
+  "player": "Eduardo Camavinga",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Oleksandr Tymchyk (cropped).jpg": {
+  "player": "Oleksandr Tymchyk",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Oliver Scarles 04032026 (1).jpg": {
+  "player": "Oliver Scarles",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Oskar Pietuszewski 3.png": {
+  "player": "Oskar Pietuszewski",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Osman Kakay.jpg": {
+  "player": "Osman Kakay",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Oussama El Azzouzi at the Olympic Games 2024 2 (cropped).jpg": {
+  "player": "Oussama El Azzouzi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Oussama Targhalline at the Olympic Games 2024 2 (cropped).jpg": {
+  "player": "Oussama Targhalline",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Oğuz Aydın 70 Fenerbahçe 20260805 (1).JPG": {
   "player": "Oğuz Aydın",
   "reason": "side profile"
  },
+ "File:PABLO MAIA - Série A - SÃO PAULO 0 X 0 JUVENTUDE (cropped).jpg": {
+  "player": "Pablo Maia",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Pablo Marin.jpg": {
+  "player": "Pablo Marín",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Pablo maffeo.jpg": {
+  "player": "Pablo Maffeo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Palestino - River Plate 20190424 01.jpg": {
+  "player": "Bruno Zuculini",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Pascal Struijk 15032025 (1).jpg": {
+  "player": "Pascal Struijk",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Patrik Hrošovský.jpg": {
+  "player": "Patrik Hrošovský",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Paul Bismark Tabinas.png": {
   "player": "Paul Tabinas",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Paul Nebel with Mainz 05 (2026).jpg": {
+  "player": "Paul Nebel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Paul Rothrock NYCFC.Seattle.18.Oct.2025-009 (cropped).jpg": {
+  "player": "Paul Rothrock",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Paulo Díaz (cropped).jpg": {
+  "player": "Paulo Díaz",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Paulos Abraham (AIK, 2020, cropped).jpg": {
+  "player": "Paulos Abraham",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Pedro Lima.jpg": {
   "player": "Pedro Lima",
@@ -343,13 +1951,197 @@
   "player": "Nuno Santos",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Pentz (2024).png": {
+  "player": "Patrick Pentz",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Petar Stojanovic.jpg": {
+  "player": "Petar Stojanović",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Petar Sukačev).jpg": {
+  "player": "Petar Sukačev",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Peñarol goleó 4-0 a The Strongest - 240814-5989-jikatu.jpg": {
+  "player": "Eduardo Darias",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Peñarol goleó 4-0 a The Strongest - 240814-6342-jikatu (cropped).jpg": {
+  "player": "Maximiliano Silvera",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Philip Billing 2019.png": {
+  "player": "Philip Billing",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Przemysław Frankowski ASSE rcl 2425 (cropped).jpg": {
+  "player": "Przemysław Frankowski",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Quentin Merlin FC Nantes 2023.jpeg": {
+  "player": "Quentin Merlin",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - FC Metz (14-03-2021) 51.jpg": {
+  "player": "Matthieu Udol",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - FC Nantes (28-10-2023) 10.jpg": {
+  "player": "Jaouen Hadjam",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - LB Châteauroux (03-11-2018) 11.jpg": {
+  "player": "Abdoulaye Sissako",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - Lille OSC (08-10-2023) 12.jpg": {
+  "player": "Leny Yoro",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - Lille OSC (08-10-2023) 25.jpg": {
+  "player": "Yusuf Yazıcı",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - Lille OSC (17-09-2021) 40 (cropped).jpg": {
+  "player": "Angel Gomes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - Lille OSC (17-09-2021) 65.jpg": {
+  "player": "Sven Botman",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - OGC Nice (10-04-2022) 25 Amine Gouiri.jpg": {
+  "player": "Amine Gouiri",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - Union-Saint-Gilloise (05-08-2020) 11.jpg": {
+  "player": "Senne Lynen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Radek Vitek 11042026 (1).jpg": {
+  "player": "Radek Vítek",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Radek Vitek 11042026 (2).jpg": {
+  "player": "Radek Vítek",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Radu Dragusin - Frosinone vs Genoa 14 May 2023.jpg": {
+  "player": "Radu Drăgușin",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Radu Drăgușin 25072026 (2).jpg": {
+  "player": "Radu Drăgușin",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ramon Sosa France v Paraguay 4 July 2026-049.jpg": {
+  "player": "Ramón Sosa",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Raul Gustavo NYCFC v Charlotte 20 Sep 2025-025 (cropped).jpg": {
+  "player": "Raul Gustavo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Reda Slim 20220810 6 (cropped).jpg": {
+  "player": "Reda Slim",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Rein Van Helden 01082026 (1).jpg": {
+  "player": "Rein Van Helden",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Riccardo Orsolini.jpg": {
+  "player": "Riccardo Orsolini",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Riccardo Sottil.jpg": {
+  "player": "Riccardo Sottil",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Richard Kone 20092025 (1).jpg": {
+  "player": "Richard Kone",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Richard Kone 20092025 (2).jpg": {
+  "player": "Richard Kone",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Richard Kone 20092025 (3).jpg": {
+  "player": "Richard Kone",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Riqui Puig against Portland Timbers (cropped).jpg": {
+  "player": "Riqui Puig",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Robert Frank (1953).jpg": {
   "player": "Robert",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:RomeroCorinthians2018A.jpg": {
+  "player": "Ángel Romero",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Rongier asse om 2425.png": {
+  "player": "Valentin Rongier",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ross Barkley in 2019.jpg": {
+  "player": "Ross Barkley",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ross James Sykes USG 2023.jpg": {
+  "player": "Ross Sykes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Ross McCrorie 11042026 (1).jpg": {
   "player": "Ross McCrorie",
   "reason": "looking down, face hidden"
+ },
+ "File:Rowe asse om 2425.png": {
+  "player": "Jonathan Rowe",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ruben van Bommel.jpg": {
+  "player": "Ruben van Bommel",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Rubén Iranzo October 2019.jpg": {
+  "player": "Rubén Iranzo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ryan Fosso 80 SK Sturm Graz 20260805 (1).JPG": {
+  "player": "Ryan Fosso",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ryan Porteous 12072025 (2).jpg": {
+  "player": "Ryan Porteous",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ryan Porteous 12072025 (3).jpg": {
+  "player": "Ryan Porteous",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ryan Porteous 12072025 (4).jpg": {
+  "player": "Ryan Porteous",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ryan Teague training December 2023.jpg": {
+  "player": "Ryan Teague",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Ryoya Morishita 2024 (cropped).jpg": {
+  "player": "Ryōya Morishita",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:SM-Tosno (2).jpg": {
+  "player": "Marko Poletanović",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Sam Greenwood (po prawej) 2025 (Oskar Repka).jpg": {
+  "player": "Sam Greenwood",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Samuel Dahl 2026 2.jpg": {
   "player": "Samuel Dahl",
@@ -359,48 +2151,328 @@
   "player": "Samuel Dahl",
   "reason": "another person's head in the foreground"
  },
+ "File:Santiago Arias 2019.jpg": {
+  "player": "Santiago Arias",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Santiago Castro.jpg": {
+  "player": "Santiago Castro",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Santiago Hezze, 2024 Summer Olympics.jpg": {
   "player": "Santiago Hezze",
   "reason": "background not separable (cut-out empty)"
+ },
+ "File:Santiago Mele.png": {
+  "player": "Santiago Mele",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Saud Abdulhamid (Saudi Arabia v Uruguay, 2026 FIFA World Cup) (cropped).jpg": {
+  "player": "Saud Abdulhamid",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Saudi Arabia v Oman (2) (cropped).jpg": {
+  "player": "Saud Abdulhamid",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Seiya Maikuma 2024 (cropped).jpg": {
+  "player": "Seiya Maikuma",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Sepahan and Al-Hussein Jordan football teams meet 10 (2025) esfahanzibaonline.ir (cropped).jpg": {
+  "player": "Odeh Al-Fakhouri",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:SilvereGanvoula.jpg": {
+  "player": "Silvère Ganvoula",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Snyder Brunell NYCFC.Seattle.18.Oct.2025-011 (cropped).jpg": {
+  "player": "Snyder Brunell",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Sofyan Amrabat Brazil V Morocco 13 June 2026-63.jpg": {
   "player": "Sofyan Amrabat",
   "reason": "distant shot, head too small for the frame"
  },
+ "File:Soufiane Hetli.jpg": {
+  "player": "Soufiane Hetli",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Spartak - Napoli (16).jpg": {
+  "player": "Hirving Lozano",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Stefan-Bell-2015-07.jpg": {
+  "player": "Stefan Bell",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Stefen Frei NYCFC.Seattle.18.Oct.2025-020 (cropped).jpg": {
+  "player": "Stefan Frei",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Stian Gregersen 1.jpg": {
+  "player": "Stian Gregersen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Stuart Hawkins NYCFC.Seattle.18.Oct.2025-010 (cropped).jpg": {
+  "player": "Stuart Hawkins",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Sulaimon Bamidele Yusuf.jpg": {
   "player": "Bamidele Yusuf",
   "reason": "a different person with the same name (found by name search)"
+ },
+ "File:Sweden - Greece8 (cropped).jpg": {
+  "player": "Mattias Svanberg",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Sweden-Slovenia Nations League 2022-09-27 15 (cropped).jpg": {
+  "player": "Žan Karničnik",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:TRABZONSPOR 2025-2026 İLK MAÇ İLK 11 (Tim Jabol-Folcarelli).jpg": {
   "player": "Uğurcan Çakır",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Tani Oluwaseyi Canada v Qatar 18 June 2026-024.jpg": {
+  "player": "Tani Oluwaseyi",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Tetê in 2021.jpg": {
+  "player": "Tetê",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Thibo Baeten.jpg": {
+  "player": "Thibo Baeten",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Thore Pedersen.jpg": {
+  "player": "Thore Pedersen",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Tiago New England v Orlando 19 September 2026-016.jpg": {
+  "player": "Tiago",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Timon Wellenreuther 20150413.jpg": {
+  "player": "Timon Wellenreuther",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Tom Atcheson 14032026 (3).jpg": {
+  "player": "Tom Atcheson",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Toni Borevković (cropped).jpg": {
+  "player": "Toni Borevković",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Tosin Adarabioyo FIFA Club World Cup extraction.jpg": {
   "player": "Tosin Adarabioyo",
   "reason": "shouting, mouth wide open"
+ },
+ "File:Tristan Brown 22 MF Columbus Crew-2 (cropped).jpg": {
+  "player": "Tristan Brown",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Tristan Brown 22 MF Columbus Crew-2.jpg": {
+  "player": "Tristan Brown",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Tristan Crama 12042025 (1).jpg": {
+  "player": "Tristan Crama",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Tristan Degreef RSC Anderlecht 2025.jpg": {
+  "player": "Tristan Degreef",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:UEFA Euro 2023 Qualifiers Austria vs. Finland (2022-06-03) 29.jpg": {
+  "player": "Patrick Wimmer",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:UEFA Euro 2023 Qualifiers Austria vs. Finland (2022-06-03) 69 (cropped2).jpg": {
+  "player": "Daniel Håkans",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:USO-ASM - 20140927 - Wesley Fofana.jpg": {
   "player": "Wesley Fofana",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Universidad de Chile v Unión La Calera 20200227 12.jpg": {
+  "player": "Alexis Martín Arias",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Vakoun Bayo (2020-09-14) 2 (cropped).jpg": {
+  "player": "Vakoun Bayo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Vakoun Bayo (2020-09-14) 3.jpg": {
+  "player": "Vakoun Bayo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Valenciennes FC - RC Lens (10-11-2018) 19.jpg": {
+  "player": "Sikou Niakaté",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Valentin Cretu - CFR Cluj vs FCSB, 17 April 2022 (cropped).jpg": {
+  "player": "Valentin Crețu",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Vannecke asse om 2425.png": {
+  "player": "Jelle Van Neck",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Vetle Dragsnes.jpg": {
+  "player": "Vetle Dragsnes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Vic Chambaere Union 2025.jpg": {
+  "player": "Vic Chambaere",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Viktor Korniyenko.jpg": {
+  "player": "Viktor Korniyenko",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Viljami Sinisalo (2022-06-03).jpg": {
   "player": "Viljami Sinisalo",
   "reason": "gloved hands break the cut-out"
+ },
+ "File:Vitor-roque-palmeiras-internacional-sep2025.jpg": {
+  "player": "Vitor Roque",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Vladyslav Kabayev (cropped).jpg": {
+  "player": "Vladyslav Kabayev",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Vozinha Fifa World Cup 2026 Saudia Arabia vs Cabo Verde (cropped).jpg": {
+  "player": "Vozinha",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Warta Poznań 2023 Dario Vizinger.jpg": {
+  "player": "Dario Vizinger",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Wilfried Gnonto and Ao Tanaka 13092025 (1) (Wilfried Gnonto cropped).jpg": {
+  "player": "Wilfried Gnonto",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Will Hughes.jpg": {
+  "player": "Will Hughes",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:William Tesillo.jpg": {
+  "player": "William Tesillo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:World Cup Qualification Africa Guinea v Algeria 9 (Ibrahima Camará).jpg": {
+  "player": "Ibrahima Camará",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Wout Weghorst 2016.jpg": {
+  "player": "Wout Weghorst",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Y. karabeliov.jpg": {
+  "player": "Yanis Karabelyov",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Yaimar Medina Cote D'Ivoire v Ecuador 14 June 2026-36 (cropped).jpg": {
+  "player": "Yaimar Medina",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Yanis Issoufou 2024.png": {
+  "player": "Yanis Issoufou",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Yannick Bright NYCFC Miami 24 Sep 2025-010 (cropped).jpg": {
+  "player": "Yannick Bright",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Yassir Zabiri (cropped).jpg": {
+  "player": "Yassir Zabiri",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Yeferson Soteldo 2017.jpg": {
+  "player": "Yeferson Soteldo",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Youri Baas, 2023 (cropped).jpg": {
   "player": "Youri Baas",
   "reason": "head turned down and away"
  },
+ "File:Youth League FC Salzburg gegen Manchester City FC (8. Februar 2017) 11.jpg": {
+  "player": "Daniel Grimshaw",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Zaidu Sanusi1.jpg": {
   "player": "Zaidu Sanusi",
   "reason": "face too small and blurred in a full-body shot"
+ },
+ "File:Zak Lovelace 2024.jpg": {
+  "player": "Zak Lovelace",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Zen-Gent15 (10).jpg": {
+  "player": "Benito Raman",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Zen-OL16 (7).jpg": {
+  "player": "Gaëtan Perrin",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Zortea Cagliari 2024 (cropped2).jpg": {
+  "player": "Nadir Zortea",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Zoumana Keita RSC Anderlecht 2026.jpg": {
+  "player": "Zoumana Keita",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:«Оренбург» — «Зенит» 1 (cropped).jpg": {
+  "player": "Matías Pérez",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
  "File:Ádám Varga (HUN) 2024.jpg": {
   "player": "Ádám Varga",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:ÁlvaroCarreras.jpg": {
+  "player": "Álvaro Carreras",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Відкрите тренування «Динамо» перед матчем із «Бешикташем». 23 серпня 2023 року — 1468710.jpg": {
+  "player": "Navin Malysh",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Відкрите тренування «Динамо». 15 вересня 2023 року — 1474271 (cropped).jpg": {
+  "player": "Taras Mykhavko",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
  "File:Матч «Динамо» - АЗ 2-0. 15 сентября 2020 года — 1137461 (Teun Koopmeiners).jpg": {
   "player": "Teun Koopmeiners",
   "reason": "low resolution, green halo in the hair"
+ },
+ "File:Матч «Динамо» – ЛНЗ 1-0. 1 вересня 2024 року — 1555374 (cropped).jpg": {
+  "player": "Heorhiy Bushchan",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Матч «Зоря» - «Динамо» 3-2. 3 вересня 2022 року — 1373041.jpg": {
+  "player": "Vladyslav Dubinchak",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Руслан Нещерет. 16 серпня 2023 року — 1466753 (cropped).jpg": {
+  "player": "Ruslan Neshcheret",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:أحمد عبد القادر.jpg": {
+  "player": "Ahmed Kader",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:홍현석 인터뷰.jpg": {
+  "player": "Hong Hyun-seok",
+  "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  }
 }

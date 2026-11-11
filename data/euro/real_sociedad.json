@@ -3,6 +3,7 @@
 "name_he": "ריאל סוסיאדד",
 "source": "enwiki:Real Sociedad",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Unai Marrero",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Spain",
-"value_m": 9.07,
+"value_m": 10.16,
 "qid": "Q108861032",
 "no": "13"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 31,
 "nat": "Spain",
-"value_m": 6.16,
+"value_m": 6.9,
 "qid": "Q20492591",
 "no": "1"
 },
@@ -30,7 +31,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Japan",
-"value_m": 14.9,
+"value_m": 16.68,
 "qid": "Q27067753",
 "no": "14"
 },
@@ -40,7 +41,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Spain",
-"value_m": 14.65,
+"value_m": 16.4,
 "qid": "Q106930407",
 "no": "8"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Iceland",
-"value_m": 14.45,
+"value_m": 16.18,
 "qid": "Q111488644",
 "no": "9"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Spain",
-"value_m": 14.26,
+"value_m": 15.97,
 "qid": "Q59823403",
 "no": "7"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Spain",
-"value_m": 13.8,
+"value_m": 15.45,
 "qid": "Q96757612",
 "no": "16"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Venezuela",
-"value_m": 13.74,
+"value_m": 15.38,
 "qid": "Q20994432",
 "no": "21"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Croatia",
-"value_m": 13.03,
+"value_m": 14.59,
 "qid": "Q67999144",
 "no": "24"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Spain",
-"value_m": 12.77,
+"value_m": 14.3,
 "qid": "Q30346413",
 "no": "17"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Portugal",
-"value_m": 11.34,
+"value_m": 12.7,
 "qid": "Q16729477",
 "no": "11"
 },
@@ -120,7 +121,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Kenya",
-"value_m": 11.34,
+"value_m": 12.7,
 "qid": "Q131309598",
 "no": "12"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Spain",
-"value_m": 10.56,
+"value_m": 11.82,
 "qid": "Q60466652",
 "no": "3"
 },
@@ -140,7 +141,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Spain",
-"value_m": 10.3,
+"value_m": 11.53,
 "qid": "Q21195147",
 "no": "10"
 },
@@ -150,7 +151,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Venezuela",
-"value_m": 10.04,
+"value_m": 11.24,
 "qid": "Q113400106",
 "no": "2"
 },
@@ -160,7 +161,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Spain",
-"value_m": 9.85,
+"value_m": 11.03,
 "qid": "Q110652731",
 "no": "15"
 },
@@ -170,7 +171,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Russia",
-"value_m": 9.85,
+"value_m": 11.03,
 "qid": "Q101073917",
 "no": "23"
 },
@@ -180,7 +181,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Spain",
-"value_m": 9.72,
+"value_m": 10.88,
 "qid": "Q119591333",
 "no": "4"
 },
@@ -190,9 +191,19 @@
 "pos": "DF",
 "age": 30,
 "nat": "Spain",
-"value_m": 9.72,
+"value_m": 10.88,
 "qid": "Q19948076",
 "no": "20"
+},
+{
+"he": "ממאדו סאר",
+"en": "Mamadou Sarr",
+"pos": "DF",
+"age": 21,
+"nat": "Senegal",
+"value_m": 10.64,
+"qid": "Q108187024",
+"no": "19"
 },
 {
 "he": "קרלוס סולר",
@@ -200,7 +211,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Spain",
-"value_m": 9.01,
+"value_m": 10.09,
 "qid": "Q26707913",
 "no": "18"
 },
@@ -210,7 +221,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Spain",
-"value_m": 8.29,
+"value_m": 9.28,
 "qid": "Q23907908",
 "no": "5"
 },
@@ -220,7 +231,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Spain",
-"value_m": 7.97,
+"value_m": 8.92,
 "qid": "Q118876190",
 "no": "22"
 },
@@ -230,10 +241,10 @@
 "pos": "DF",
 "age": 20,
 "nat": "Spain",
-"value_m": 5.7,
+"value_m": 6.38,
 "qid": "Q118876123",
 "no": "6"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

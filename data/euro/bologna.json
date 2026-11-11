@@ -3,6 +3,7 @@
 "name_he": "בולוניה",
 "source": "enwiki:Bologna FC 1909",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Ukko Happonen",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 19,
 "nat": "Finland",
-"value_m": 1.41,
+"value_m": 1.56,
 "qid": "Q123575101",
 "no": "77"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 35,
 "nat": "Poland",
-"value_m": 1.25,
+"value_m": 1.39,
 "qid": "Q8080968",
 "no": "1"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 18,
 "nat": "Italy",
-"value_m": 1.25,
+"value_m": 1.39,
 "qid": "Q126326580",
 "no": "25"
 },
@@ -40,7 +41,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Scotland",
-"value_m": 8.42,
+"value_m": 9.34,
 "qid": "Q47467341",
 "no": "19"
 },
@@ -50,7 +51,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 8.37,
+"value_m": 9.29,
 "qid": "Q108024285",
 "no": "17"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Croatia",
-"value_m": 8.21,
+"value_m": 9.11,
 "qid": "Q27914817",
 "no": "6"
 },
@@ -70,9 +71,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Italy",
-"value_m": 7.84,
+"value_m": 8.7,
 "qid": "Q99836889",
 "no": "28"
+},
+{
+"he": "Roberto Piccoli",
+"en": "Roberto Piccoli",
+"pos": "FW",
+"age": 25,
+"nat": "Italy",
+"value_m": 8.4,
+"qid": "Q63244084",
+"no": "91"
 },
 {
 "he": "טומאסו פובגה",
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Italy",
-"value_m": 7.37,
+"value_m": 8.18,
 "qid": "Q57242914",
 "no": "4"
 },
@@ -90,9 +101,19 @@
 "pos": "MF",
 "age": 27,
 "nat": "Denmark",
-"value_m": 7.37,
+"value_m": 8.18,
 "qid": "Q26251603",
 "no": "21"
+},
+{
+"he": "ארטם דובביק",
+"en": "Artem Dovbyk",
+"pos": "FW",
+"age": 29,
+"nat": "Ukraine",
+"value_m": 8.14,
+"qid": "Q20066885",
+"no": "9"
 },
 {
 "he": "חואן מירנדה",
@@ -100,9 +121,19 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 7.32,
+"value_m": 8.12,
 "qid": "Q38198371",
 "no": "33"
+},
+{
+"he": "סמואל אמבנגולה",
+"en": "Samuel Mbangula",
+"pos": "FW",
+"age": 22,
+"nat": "Belgium",
+"value_m": 7.72,
+"qid": "Q105955422",
+"no": "11"
 },
 {
 "he": "אמיל הולם",
@@ -110,7 +141,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Sweden",
-"value_m": 6.8,
+"value_m": 7.55,
 "qid": "Q66843837",
 "no": "2"
 },
@@ -120,7 +151,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Italy",
-"value_m": 6.69,
+"value_m": 7.42,
 "qid": "Q27881421",
 "no": "7"
 },
@@ -130,7 +161,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Czech Republic",
-"value_m": 6.69,
+"value_m": 7.42,
 "qid": "Q100740623",
 "no": "41"
 },
@@ -140,9 +171,19 @@
 "pos": "DF",
 "age": 27,
 "nat": "Norway",
-"value_m": 6.22,
+"value_m": 6.9,
 "qid": "Q63968167",
 "no": "14"
+},
+{
+"he": "ארתור תיאטה",
+"en": "Arthur Theate",
+"pos": "DF",
+"age": 26,
+"nat": "Belgium",
+"value_m": 6.67,
+"qid": "Q97724521",
+"no": "3"
 },
 {
 "he": "Nadir Zortea",
@@ -150,7 +191,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Italy",
-"value_m": 5.91,
+"value_m": 6.56,
 "qid": "Q69408385",
 "no": "20"
 },
@@ -160,7 +201,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Italy",
-"value_m": 5.65,
+"value_m": 6.27,
 "qid": "Q43976179",
 "no": "16"
 },
@@ -170,7 +211,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Niger",
-"value_m": 5.65,
+"value_m": 6.27,
 "qid": "Q112304308",
 "no": "23"
 },
@@ -180,7 +221,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 5.23,
+"value_m": 5.8,
 "qid": "Q113367951",
 "no": "22"
 },
@@ -190,7 +231,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Argentina",
-"value_m": 4.29,
+"value_m": 4.76,
 "qid": "Q135479094",
 "no": "8"
 },
@@ -200,7 +241,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Norway",
-"value_m": 4.03,
+"value_m": 4.47,
 "qid": "Q124526287",
 "no": "5"
 },
@@ -210,7 +251,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Italy",
-"value_m": 3.66,
+"value_m": 4.06,
 "qid": "Q15220993",
 "no": "10"
 },
@@ -220,7 +261,7 @@
 "pos": "MF",
 "age": 18,
 "nat": "Venezuela",
-"value_m": 1.73,
+"value_m": 1.92,
 "qid": "Q139906802",
 "no": "18"
 },
@@ -230,7 +271,7 @@
 "pos": "DF",
 "age": 38,
 "nat": "Italy",
-"value_m": 1.31,
+"value_m": 1.45,
 "qid": "Q441426",
 "no": "29"
 },
@@ -240,10 +281,10 @@
 "pos": "DF",
 "age": 36,
 "nat": "Italy",
-"value_m": 1.31,
+"value_m": 1.45,
 "qid": "Q44788",
 "no": "36"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

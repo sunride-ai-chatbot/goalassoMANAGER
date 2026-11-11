@@ -3,6 +3,7 @@
 "name_he": "אוטרכט",
 "source": "enwiki:FC Utrecht",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "{{ill|Kevin Gadellaa|nl",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 1.12,
+"value_m": 1.62,
 "qid": null,
 "no": "33"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 32,
 "nat": "Greece",
-"value_m": 0.99,
+"value_m": 1.43,
 "qid": "Q24572676",
 "no": "1"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 0.85,
+"value_m": 1.23,
 "qid": null,
 "no": "31"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 36,
 "nat": "Netherlands",
-"value_m": 0.37,
+"value_m": 0.535,
 "qid": "Q1708703",
 "no": "22"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Denmark",
-"value_m": 2.45,
+"value_m": 3.54,
 "qid": "Q47510517",
 "no": "7"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Netherlands",
-"value_m": 2.08,
+"value_m": 3.01,
 "qid": "Q72301837",
 "no": "34"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "France",
-"value_m": 2.04,
+"value_m": 2.95,
 "qid": "Q107637358",
 "no": "10"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Burkina Faso",
-"value_m": 2.04,
+"value_m": 2.95,
 "qid": "Q63699339",
 "no": "92"
 },
@@ -90,7 +91,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 2.01,
+"value_m": 2.91,
 "qid": "Q105093854",
 "no": "29"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 1.97,
+"value_m": 2.85,
 "qid": "Q130424922",
 "no": "6"
 },
@@ -110,9 +111,19 @@
 "pos": "MF",
 "age": 23,
 "nat": "United States",
-"value_m": 1.94,
+"value_m": 2.81,
 "qid": "Q68710011",
 "no": "30"
+},
+{
+"he": "Sem van Duijn",
+"en": "Sem van Duijn",
+"pos": "FW",
+"age": 22,
+"nat": "Netherlands",
+"value_m": 2.72,
+"qid": "Q129357311",
+"no": "17"
 },
 {
 "he": "Dani de Wit",
@@ -120,9 +131,19 @@
 "pos": "MF",
 "age": 28,
 "nat": "Netherlands",
-"value_m": 1.84,
+"value_m": 2.66,
 "qid": "Q28831156",
 "no": "20"
+},
+{
+"he": "Jakov Medić",
+"en": "Jakov Medić",
+"pos": "DF",
+"age": 27,
+"nat": "Croatia",
+"value_m": 2.6,
+"qid": "Q85537031",
+"no": "18"
 },
 {
 "he": "Ángel Alarcón",
@@ -130,7 +151,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Spain",
-"value_m": 1.74,
+"value_m": 2.52,
 "qid": "Q116252162",
 "no": "11"
 },
@@ -140,9 +161,19 @@
 "pos": "DF",
 "age": 28,
 "nat": "Belgium",
-"value_m": 1.63,
+"value_m": 2.36,
 "qid": "Q26220081",
 "no": "2"
+},
+{
+"he": "Marius Broholm",
+"en": "Marius Broholm",
+"pos": "FW",
+"age": 21,
+"nat": "Norway",
+"value_m": 2.36,
+"qid": "Q111907468",
+"no": "80"
 },
 {
 "he": "Niklas Vesterlund",
@@ -150,7 +181,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Denmark",
-"value_m": 1.6,
+"value_m": 2.31,
 "qid": "Q106315270",
 "no": "23"
 },
@@ -160,7 +191,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Indonesia",
-"value_m": 1.6,
+"value_m": 2.31,
 "qid": "Q115740238",
 "no": "26"
 },
@@ -170,7 +201,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Belgium",
-"value_m": 1.57,
+"value_m": 2.27,
 "qid": "Q105364380",
 "no": "3"
 },
@@ -180,7 +211,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 1.53,
+"value_m": 2.21,
 "qid": "Q135394518",
 "no": "21"
 },
@@ -190,7 +221,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Cyprus",
-"value_m": 1.46,
+"value_m": 2.11,
 "qid": "Q65562663",
 "no": "5"
 },
@@ -200,7 +231,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Belgium",
-"value_m": 1.43,
+"value_m": 2.07,
 "qid": "Q113516869",
 "no": "27"
 },
@@ -210,7 +241,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "England",
-"value_m": 1.26,
+"value_m": 1.82,
 "qid": "Q113681943",
 "no": "15"
 },
@@ -220,7 +251,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 1.19,
+"value_m": 1.72,
 "qid": null,
 "no": "32"
 },
@@ -230,7 +261,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Morocco",
-"value_m": 1.19,
+"value_m": 1.72,
 "qid": "Q112196384",
 "no": "38"
 },
@@ -240,9 +271,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Germany",
-"value_m": 1.16,
+"value_m": 1.68,
 "qid": null,
 "no": "47"
+},
+{
+"he": "ארטם סטפנוב",
+"en": "Artem Stepanov",
+"pos": "FW",
+"age": 19,
+"nat": "Ukraine",
+"value_m": 1.36,
+"qid": "Q131339351",
+"no": "9"
 },
 {
 "he": "יוריס ואן אובריים",
@@ -250,7 +291,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Netherlands",
-"value_m": 0.85,
+"value_m": 1.23,
 "qid": "Q3183928",
 "no": "8"
 },
@@ -260,10 +301,10 @@
 "pos": "MF",
 "age": 39,
 "nat": "Morocco",
-"value_m": 0.44,
+"value_m": 0.636,
 "qid": "Q374523",
 "no": "39"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

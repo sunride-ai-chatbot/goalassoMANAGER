@@ -3,6 +3,7 @@
 "name_he": "וויבודינה",
 "source": "enwiki:FK Vojvodina",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Dragan Rosić",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Serbia",
-"value_m": 0.22,
+"value_m": 0.336,
 "qid": "Q29478762",
 "no": "12"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Serbia",
-"value_m": 0.15,
+"value_m": 0.229,
 "qid": "Q122831280",
 "no": "1"
 },
@@ -30,9 +31,19 @@
 "pos": "GK",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.13,
+"value_m": 0.199,
 "qid": null,
 "no": "71"
+},
+{
+"he": "סטפן מיטרוביץ'",
+"en": "Stefan Mitrović",
+"pos": "MF",
+"age": 24,
+"nat": "Serbia",
+"value_m": 0.474,
+"qid": "Q77971192",
+"no": "7"
 },
 {
 "he": "Dragan Kokanović",
@@ -40,7 +51,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Serbia",
-"value_m": 0.3,
+"value_m": 0.459,
 "qid": "Q106916749",
 "no": "20"
 },
@@ -50,7 +61,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.3,
+"value_m": 0.459,
 "qid": "Q121139950",
 "no": "35"
 },
@@ -60,7 +71,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Serbia",
-"value_m": 0.3,
+"value_m": 0.459,
 "qid": "Q55935603",
 "no": "77"
 },
@@ -70,7 +81,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.28,
+"value_m": 0.428,
 "qid": "Q62616469",
 "no": "10"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Serbia",
-"value_m": 0.28,
+"value_m": 0.428,
 "qid": "Q26838727",
 "no": "18"
 },
@@ -90,7 +101,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Bosnia-Herzegovina",
-"value_m": 0.28,
+"value_m": 0.428,
 "qid": "Q50845648",
 "no": "99"
 },
@@ -100,7 +111,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Serbia",
-"value_m": 0.27,
+"value_m": 0.413,
 "qid": "Q23008168",
 "no": "15"
 },
@@ -110,7 +121,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Serbia",
-"value_m": 0.27,
+"value_m": 0.413,
 "qid": "Q139771768",
 "no": "19"
 },
@@ -120,7 +131,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Brazil",
-"value_m": 0.27,
+"value_m": 0.413,
 "qid": "Q69883189",
 "no": "23"
 },
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Romania",
-"value_m": 0.23,
+"value_m": 0.352,
 "qid": "Q35977612",
 "no": "16"
 },
@@ -140,7 +151,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Serbia",
-"value_m": 0.22,
+"value_m": 0.336,
 "qid": "Q133833457",
 "no": "6"
 },
@@ -150,7 +161,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Serbia",
-"value_m": 0.22,
+"value_m": 0.336,
 "qid": "Q59914681",
 "no": "22"
 },
@@ -160,7 +171,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.22,
+"value_m": 0.336,
 "qid": null,
 "no": "24"
 },
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Hungary",
-"value_m": 0.22,
+"value_m": 0.336,
 "qid": "Q96059450",
 "no": "26"
 },
@@ -180,7 +191,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.2,
+"value_m": 0.306,
 "qid": null,
 "no": "3"
 },
@@ -190,7 +201,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Serbia",
-"value_m": 0.2,
+"value_m": 0.306,
 "qid": "Q126485850",
 "no": "8"
 },
@@ -200,7 +211,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Serbia",
-"value_m": 0.2,
+"value_m": 0.306,
 "qid": "Q105958228",
 "no": "13"
 },
@@ -210,9 +221,29 @@
 "pos": "FW",
 "age": 22,
 "nat": "Serbia",
-"value_m": 0.2,
+"value_m": 0.306,
 "qid": "Q138168535",
 "no": "21"
+},
+{
+"he": "Dario Janjić",
+"en": "Dario Janjić",
+"pos": "MF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.306,
+"qid": null,
+"no": null
+},
+{
+"he": "Uroš Paunović",
+"en": "Uroš Paunović",
+"pos": "FW",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.291,
+"qid": null,
+"no": null
 },
 {
 "he": "Vuk Boškan",
@@ -220,7 +251,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Serbia",
-"value_m": 0.18,
+"value_m": 0.275,
 "qid": "Q138332553",
 "no": "33"
 },
@@ -230,7 +261,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.18,
+"value_m": 0.275,
 "qid": null,
 "no": "70"
 },
@@ -240,7 +271,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Cameroon",
-"value_m": 0.17,
+"value_m": 0.26,
 "qid": "Q135526872",
 "no": "2"
 },
@@ -250,7 +281,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Serbia",
-"value_m": 0.17,
+"value_m": 0.26,
 "qid": "Q129559918",
 "no": "27"
 },
@@ -260,7 +291,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.17,
+"value_m": 0.26,
 "qid": null,
 "no": "28"
 },
@@ -270,9 +301,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.17,
+"value_m": 0.26,
 "qid": null,
 "no": "32"
+},
+{
+"he": "Marko Pavić",
+"en": "Marko Pavić",
+"pos": "DF",
+"age": 25,
+"nat": "Serbia",
+"value_m": 0.245,
+"qid": null,
+"no": null
 },
 {
 "he": "Mateja Gašić",
@@ -280,7 +321,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Serbia",
-"value_m": 0.15,
+"value_m": 0.229,
 "qid": null,
 "no": "66"
 },
@@ -290,7 +331,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Serbia",
-"value_m": 0.13,
+"value_m": 0.199,
 "qid": "Q6771231",
 "no": "4"
 },
@@ -300,10 +341,10 @@
 "pos": "DF",
 "age": 32,
 "nat": "Serbia",
-"value_m": 0.12,
+"value_m": 0.184,
 "qid": "Q16728266",
 "no": "5"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

@@ -7,13 +7,15 @@ Output  data/visuals/source-photos/eu-<club>.json      the chosen original per p
         data/visuals/euro-players.json                 identities (club Hebrew name + English name → visualId "wd-Q…"),
                                                        per-face source, author, licence and credit, and the reason for
                                                        every player left on the fallback
-Then run scripts/build-portraits.py --only eu-<club>,… to produce the canonical cut-outs.
+        assets/facepacks/eu-<club>.json                the canonical cut-outs (the accepted candidate is processed once, here)
+        data/visuals/portrait-audit.json               measurements per face
+A club whose decisions came from an older cache prints a note: run scripts/build-portraits.py --only eu-<club> for it.
 
 Selection: candidates are tried in order (Wikidata P18 image first, then the player's Commons category); the first one
 that the portrait pipeline accepts in strict mode (single frontal face, whole head, clean background) wins.
 Usage: python3 scripts/import-commons-portraits.py --sources /path/to/portrait-sources --clubs real_madrid,barcelona
 """
-import argparse, base64, importlib.util, io, json, os
+import argparse, base64, hashlib, importlib.util, io, json, os
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -53,6 +55,11 @@ def main():
     # decisions per candidate file (size+mtime+pipeline version), so retries only process new files
     cache_p = os.path.join(a.sources, '.import-cache.json'); cache = load(cache_p, {})
     pv = os.path.getmtime(os.path.join(ROOT, 'scripts', 'build-portraits.py'))
+    # the accepted cut-out is kept beside the decision, so the pack is written here and the photo is not processed twice
+    built_dir = os.path.join(a.sources, '.import-built'); os.makedirs(built_dir, exist_ok=True)
+    built_path = lambda ck: os.path.join(built_dir, hashlib.sha1(ck.encode('utf8')).hexdigest() + '.json')   # noqa: E731
+    overrides = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-overrides.json'), {})
+    auditp = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json')
     for key in a.clubs.split(','):
         man = load(os.path.join(a.sources, 'euro', key, 'manifest.json'))
         if not man:
@@ -62,10 +69,15 @@ def main():
         E['players'] = [p for p in E['players'] if p['key'] != key]
         E['unresolved'] = [p for p in E['unresolved'] if p['key'] != key]
         E['faces'] = {k: v for k, v in E['faces'].items() if v['pack'] != pack}
-        photos = {}
+        photos, club_built = {}, {}
         squad_en = {p.get('en') for p in squad['players']}
+        listed = {pl['en'] for pl in man['players']}
+        # squad members the candidates were not fetched for (the squad changed after the fetch) stay on the fallback
+        E['unresolved'] += [{'key': key, 'club': club_he, 'en': p['en'], 'he': p['he'], 'qid': p.get('qid'), 'reason': 'portrait not fetched yet (joined the squad after the last fetch)'}
+                            for p in squad['players'] if p.get('en') not in listed]
         for pl in man['players']:
-            assert pl['en'] in squad_en, ('manifest player not in squad', pl['en'])
+            if pl['en'] not in squad_en:
+                print(key, 'skipped (no longer in the squad):', pl['en']); continue
             base = {'key': key, 'club': club_he, 'en': pl['en'], 'he': pl['he']}
             if not pl.get('qid'):
                 E['unresolved'].append({**base, 'reason': 'not identified on Wikidata: ' + (pl.get('match') or pl.get('error') or 'unknown')}); continue
@@ -103,9 +115,13 @@ def main():
                     if ck not in cache:
                         im, meas = bp.process(t, img, key=os.path.basename(path), strict=not lenient)
                         cache[ck] = 'ok' if im is not None else meas.get('reason')
+                        if im is not None:
+                            uri, sha, n = bp.webp_uri(im)
+                            meas.update(sha256=sha, bytes=n, skin=bp.skin_tone(im))
+                            save(built_path(ck), {'uri': uri, 'meas': meas}, compact=True)
                         save(cache_p, cache, compact=True)
                     if cache[ck] == 'ok':
-                        chosen = (c, img); break
+                        chosen = (c, img, ck); break
                     reasons.append(cache[ck])
                 if chosen:
                     break
@@ -115,8 +131,9 @@ def main():
                 if pl.get('rejectedFiles'):
                     why += ' · non-free/unsupported files skipped: ' + ', '.join(f"{r['title']} ({r['license']})" for r in pl['rejectedFiles'][:3])
                 E['unresolved'].append({**base, 'qid': pl['qid'], 'reason': why}); continue
-            c, img = chosen
+            c, img, ck = chosen
             vid = 'wd-' + pl['qid']
+            club_built[vid] = load(built_path(ck))
             buf = io.BytesIO(); img.save(buf, 'JPEG', quality=92)
             photos[vid] = 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
             E['players'].append({**base, 'visualId': vid, 'qid': pl['qid'], 'wikidata': pl.get('wikidata'), 'match': pl.get('match')})
@@ -126,6 +143,28 @@ def main():
             print(key, pl['en'], '→', c['title'], c.get('license'), flush=True)
         save(os.path.join(ROOT, 'data', 'visuals', 'source-photos', pack + '.json'), {'schema': 1, 'images': photos}, compact=True)
         save(ep, E)
+        if photos:
+            # faces processed by this pipeline are written now; faces decided by an older cache keep the cut-out the
+            # pack already holds, and only the ones it lacks are left for build-portraits.py
+            packp = os.path.join(ROOT, 'assets', 'facepacks', pack + '.json')
+            had = (load(packp) or {}).get('images', {})
+            audit, images, todo = load(auditp, {}), {}, []
+            for vid in photos:
+                b = club_built.get(vid)
+                if overrides.get(vid, {}).get('status') == 'unresolved':
+                    audit[vid] = {'pack': pack, 'status': 'unresolved', 'reason': overrides[vid].get('reason', 'manual')}
+                elif b:
+                    images[vid] = b['uri']; audit[vid] = {**b['meas'], 'pack': pack}
+                elif vid in had and audit.get(vid, {}).get('status') == 'ok':
+                    images[vid] = had[vid]
+                else:
+                    todo.append(vid)
+            with open(packp, 'w', encoding='utf8') as fh:
+                json.dump({'schema': 2, 'frame': [bp.W, bp.H], 'images': images, 'credits': bp.pack_credits({'faces': E['faces']}, images)}, fh, separators=(',', ':'))
+            save(auditp, audit)
+            print(key, 'pack written:', len(images), 'portraits')
+            if todo:
+                print(key, 'run: build-portraits.py --only', pack, '--keys', ','.join(todo))
         print(key, 'portraits', sum(1 for p in E['players'] if p['key'] == key), 'unresolved', sum(1 for p in E['unresolved'] if p['key'] == key))
 
 if __name__ == '__main__':

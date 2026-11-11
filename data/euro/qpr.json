@@ -3,14 +3,25 @@
 "name_he": "קווינס פארק ריינג'רס",
 "source": "enwiki:Queens Park Rangers F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
+{
+"he": "פירס צ'ארלס",
+"en": "Pierce Charles",
+"pos": "GK",
+"age": 21,
+"nat": "Northern Ireland",
+"value_m": 0.687,
+"qid": "Q125253530",
+"no": "1"
+},
 {
 "he": "Calum Ward",
 "en": "Calum Ward",
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 0.5,
+"value_m": 0.636,
 "qid": "Q107387838",
 "no": "13"
 },
@@ -20,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 0.43,
+"value_m": 0.547,
 "qid": null,
 "no": null
 },
@@ -30,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "England",
-"value_m": 0.36,
+"value_m": 0.458,
 "qid": null,
 "no": "32"
 },
@@ -40,7 +51,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Japan",
-"value_m": 1.14,
+"value_m": 1.45,
 "qid": "Q56349862",
 "no": "14"
 },
@@ -50,7 +61,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "England",
-"value_m": 0.95,
+"value_m": 1.21,
 "qid": "Q23688811",
 "no": "6"
 },
@@ -60,7 +71,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Ireland",
-"value_m": 0.86,
+"value_m": 1.09,
 "qid": "Q110242738",
 "no": "20"
 },
@@ -70,7 +81,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Martinique",
-"value_m": 0.86,
+"value_m": 1.09,
 "qid": "Q110045820",
 "no": "40"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Morocco",
-"value_m": 0.81,
+"value_m": 1.03,
 "qid": "Q21514646",
 "no": "10"
 },
@@ -90,7 +101,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Jamaica",
-"value_m": 0.81,
+"value_m": 1.03,
 "qid": "Q104764485",
 "no": "16"
 },
@@ -100,7 +111,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Côte d'Ivoire",
-"value_m": 0.81,
+"value_m": 1.03,
 "qid": "Q124080277",
 "no": "22"
 },
@@ -110,7 +121,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Denmark",
-"value_m": 0.81,
+"value_m": 1.03,
 "qid": "Q70007795",
 "no": "24"
 },
@@ -120,7 +131,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.81,
+"value_m": 1.03,
 "qid": "Q80197171",
 "no": "48"
 },
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Netherlands",
-"value_m": 0.79,
+"value_m": 1.0,
 "qid": "Q40353735",
 "no": "12"
 },
@@ -140,7 +151,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "England",
-"value_m": 0.76,
+"value_m": 0.968,
 "qid": "Q27628154",
 "no": "7"
 },
@@ -150,7 +161,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Northern Ireland",
-"value_m": 0.76,
+"value_m": 0.968,
 "qid": "Q47476880",
 "no": "11"
 },
@@ -160,7 +171,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.76,
+"value_m": 0.968,
 "qid": "Q67163903",
 "no": "17"
 },
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "England",
-"value_m": 0.69,
+"value_m": 0.879,
 "qid": "Q98971989",
 "no": "5"
 },
@@ -180,9 +191,19 @@
 "pos": "FW",
 "age": 22,
 "nat": "Trinidad and Tobago",
-"value_m": 0.64,
+"value_m": 0.815,
 "qid": "Q124285669",
 "no": "25"
+},
+{
+"he": "גלן קמארה",
+"en": "Glen Kamara",
+"pos": "MF",
+"age": 30,
+"nat": "Finland",
+"value_m": 0.815,
+"qid": "Q11860513",
+"no": "18"
 },
 {
 "he": "Jimmy Dunne",
@@ -190,7 +211,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Ireland",
-"value_m": 0.62,
+"value_m": 0.79,
 "qid": "Q48812485",
 "no": "3"
 },
@@ -200,7 +221,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Latvia",
-"value_m": 0.62,
+"value_m": 0.79,
 "qid": "Q108094274",
 "no": "19"
 },
@@ -210,7 +231,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Scotland",
-"value_m": 0.55,
+"value_m": 0.7,
 "qid": "Q107723107",
 "no": "4"
 },
@@ -220,7 +241,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "England",
-"value_m": 0.55,
+"value_m": 0.7,
 "qid": "Q128926617",
 "no": "15"
 },
@@ -230,7 +251,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.55,
+"value_m": 0.7,
 "qid": null,
 "no": null
 },
@@ -240,7 +261,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Algeria",
-"value_m": 0.52,
+"value_m": 0.661,
 "qid": "Q121537987",
 "no": "26"
 },
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Senegal",
-"value_m": 0.5,
+"value_m": 0.636,
 "qid": "Q108784648",
 "no": "27"
 },
@@ -260,7 +281,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Czech Republic",
-"value_m": 0.5,
+"value_m": 0.636,
 "qid": null,
 "no": null
 },
@@ -270,7 +291,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.48,
+"value_m": 0.611,
 "qid": null,
 "no": null
 },
@@ -280,7 +301,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.45,
+"value_m": 0.572,
 "qid": null,
 "no": null
 },
@@ -290,7 +311,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 0.45,
+"value_m": 0.572,
 "qid": null,
 "no": null
 },
@@ -300,10 +321,10 @@
 "pos": "FW",
 "age": 25,
 "nat": "England",
-"value_m": 0.45,
+"value_m": 0.572,
 "qid": null,
 "no": null
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

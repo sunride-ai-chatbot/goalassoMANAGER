@@ -3,6 +3,7 @@
 "name_he": "חטאפה",
 "source": "enwiki:Getafe CF",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "יזי לטאצ'ק",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Czech Republic",
-"value_m": 2.55,
+"value_m": 3.55,
 "qid": "Q123335821",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 33,
 "nat": "Spain",
-"value_m": 0.94,
+"value_m": 1.31,
 "qid": "Q22166596",
 "no": "13"
 },
@@ -30,7 +31,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Uruguay",
-"value_m": 3.81,
+"value_m": 5.3,
 "qid": "Q108198513",
 "no": "10"
 },
@@ -40,7 +41,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Morocco",
-"value_m": 3.57,
+"value_m": 4.96,
 "qid": "Q56600183",
 "no": "5"
 },
@@ -50,9 +51,19 @@
 "pos": "FW",
 "age": 29,
 "nat": "Spain",
-"value_m": 3.57,
+"value_m": 4.96,
 "qid": "Q18649709",
 "no": "9"
+},
+{
+"he": "אורל מנגאלה",
+"en": "Orel Mangala",
+"pos": "MF",
+"age": 28,
+"nat": "Belgium",
+"value_m": 4.93,
+"qid": "Q26838752",
+"no": "23"
 },
 {
 "he": "רמון טראטס",
@@ -60,9 +71,19 @@
 "pos": "MF",
 "age": 25,
 "nat": "Spain",
-"value_m": 3.46,
+"value_m": 4.81,
 "qid": "Q101156112",
 "no": "11"
+},
+{
+"he": "Andrés García",
+"en": "Andrés García",
+"pos": "DF",
+"age": 23,
+"nat": "Spain",
+"value_m": 4.18,
+"qid": "Q116265572",
+"no": "21"
 },
 {
 "he": "כריסטנטוס אוצ'ה",
@@ -70,7 +91,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Nigeria",
-"value_m": 2.99,
+"value_m": 4.16,
 "qid": "Q125131571",
 "no": "18"
 },
@@ -80,7 +101,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Turkey",
-"value_m": 2.99,
+"value_m": 4.16,
 "qid": "Q14637461",
 "no": "19"
 },
@@ -90,7 +111,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Spain",
-"value_m": 2.75,
+"value_m": 3.82,
 "qid": "Q101073910",
 "no": "16"
 },
@@ -100,7 +121,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Spain",
-"value_m": 2.63,
+"value_m": 3.66,
 "qid": "Q115152735",
 "no": "6"
 },
@@ -110,7 +131,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Georgia",
-"value_m": 2.55,
+"value_m": 3.55,
 "qid": "Q106860450",
 "no": "4"
 },
@@ -120,9 +141,19 @@
 "pos": "DF",
 "age": 26,
 "nat": "Argentina",
-"value_m": 2.51,
+"value_m": 3.49,
 "qid": "Q92550871",
 "no": "24"
+},
+{
+"he": "איוואן אסון",
+"en": "Iván Azón",
+"pos": "FW",
+"age": 23,
+"nat": "Spain",
+"value_m": 3.36,
+"qid": "Q101420267",
+"no": "20"
 },
 {
 "he": "Sebastián Boselli",
@@ -130,7 +161,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Uruguay",
-"value_m": 2.2,
+"value_m": 3.06,
 "qid": "Q116790173",
 "no": "15"
 },
@@ -140,7 +171,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Togo",
-"value_m": 1.61,
+"value_m": 2.24,
 "qid": null,
 "no": "2"
 },
@@ -150,9 +181,19 @@
 "pos": "FW",
 "age": 33,
 "nat": "Spain",
-"value_m": 1.53,
+"value_m": 2.13,
 "qid": "Q649788",
 "no": "7"
+},
+{
+"he": "Jean Ives Valou",
+"en": "Jean Ives Valou",
+"pos": "DF",
+"age": 20,
+"nat": "Côte d'Ivoire",
+"value_m": 1.49,
+"qid": "Q140460486",
+"no": "26"
 },
 {
 "he": "נמניה גודל",
@@ -160,7 +201,7 @@
 "pos": "MF",
 "age": 34,
 "nat": "Serbia",
-"value_m": 1.02,
+"value_m": 1.42,
 "qid": "Q644989",
 "no": "8"
 },
@@ -170,7 +211,7 @@
 "pos": "DF",
 "age": 18,
 "nat": "Spain",
-"value_m": 0.9,
+"value_m": 1.25,
 "qid": "Q135206724",
 "no": "3"
 },
@@ -180,7 +221,7 @@
 "pos": "DF",
 "age": 34,
 "nat": "Colombia",
-"value_m": 0.86,
+"value_m": 1.2,
 "qid": "Q5932872",
 "no": "22"
 },
@@ -190,7 +231,7 @@
 "pos": "DF",
 "age": 34,
 "nat": "Spain",
-"value_m": 0.82,
+"value_m": 1.14,
 "qid": "Q127452",
 "no": "14"
 },
@@ -200,10 +241,10 @@
 "pos": "DF",
 "age": 35,
 "nat": "Spain",
-"value_m": 0.75,
+"value_m": 1.04,
 "qid": "Q2269948",
 "no": "17"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

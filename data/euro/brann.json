@@ -1,0 +1,279 @@
+{
+"key": "brann",
+"name_he": "ברן",
+"source": "enwiki:SK Brann",
+"fetched": "2026-10-27",
+"rescaled": 1,
+"players": [
+{
+"he": "Mathias Dyngeland",
+"en": "Mathias Dyngeland",
+"pos": "GK",
+"age": 30,
+"nat": "Norway",
+"value_m": 0.449,
+"qid": "Q18043771",
+"no": "1"
+},
+{
+"he": "Simen Vidtun Nilsen",
+"en": "Simen Vidtun Nilsen",
+"pos": "GK",
+"age": 26,
+"nat": "Norway",
+"value_m": 0.393,
+"qid": "Q112208182",
+"no": "12"
+},
+{
+"he": "Håkon Hellesøy",
+"en": "Håkon Hellesøy",
+"pos": "GK",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.364,
+"qid": null,
+"no": "36"
+},
+{
+"he": "Tom Bramel",
+"en": "Tom Bramel",
+"pos": "GK",
+"age": 25,
+"nat": "Netherlands",
+"value_m": 0.308,
+"qid": null,
+"no": "33"
+},
+{
+"he": "נראישו קאסאנווירג'ו",
+"en": "Neraysho Kasanwirjo",
+"pos": "DF",
+"age": 24,
+"nat": "Netherlands",
+"value_m": 0.785,
+"qid": "Q66712877",
+"no": "21"
+},
+{
+"he": "Sævar Atli Magnússon",
+"en": "Sævar Atli Magnússon",
+"pos": "FW",
+"age": 26,
+"nat": "Iceland",
+"value_m": 0.785,
+"qid": "Q108037576",
+"no": "22"
+},
+{
+"he": "Jacob Lungi Sørensen",
+"en": "Jacob Lungi Sørensen",
+"pos": "MF",
+"age": 28,
+"nat": "Denmark",
+"value_m": 0.701,
+"qid": "Q26004790",
+"no": "18"
+},
+{
+"he": "Kristall Máni Ingason",
+"en": "Kristall Máni Ingason",
+"pos": "FW",
+"age": 24,
+"nat": "Iceland",
+"value_m": 0.673,
+"qid": "Q110541390",
+"no": "10"
+},
+{
+"he": "Noah Holm",
+"en": "Noah Holm",
+"pos": "FW",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.673,
+"qid": "Q61080654",
+"no": "29"
+},
+{
+"he": "Niklas Castro",
+"en": "Niklas Castro",
+"pos": "FW",
+"age": 30,
+"nat": "Chile",
+"value_m": 0.617,
+"qid": "Q26838052",
+"no": "9"
+},
+{
+"he": "Niklas Jensen Wassberg",
+"en": "Niklas Jensen Wassberg",
+"pos": "MF",
+"age": 22,
+"nat": "Norway",
+"value_m": 0.589,
+"qid": "Q107206363",
+"no": "25"
+},
+{
+"he": "Leo Cornic",
+"en": "Leo Cornic",
+"pos": "DF",
+"age": 25,
+"nat": "Norway",
+"value_m": 0.533,
+"qid": "Q98684589",
+"no": "2"
+},
+{
+"he": "Sakarias Opsahl",
+"en": "Sakarias Opsahl",
+"pos": "MF",
+"age": 27,
+"nat": "Norway",
+"value_m": 0.505,
+"qid": "Q65923039",
+"no": "5"
+},
+{
+"he": "Bård Finne",
+"en": "Bård Finne",
+"pos": "FW",
+"age": 31,
+"nat": "Norway",
+"value_m": 0.505,
+"qid": "Q3370421",
+"no": "11"
+},
+{
+"he": "Ulrik Mathisen",
+"en": "Ulrik Mathisen",
+"pos": "MF",
+"age": 27,
+"nat": "Norway",
+"value_m": 0.505,
+"qid": "Q104381911",
+"no": "14"
+},
+{
+"he": "Joachim Soltvedt",
+"en": "Joachim Soltvedt",
+"pos": "DF",
+"age": 30,
+"nat": "Norway",
+"value_m": 0.477,
+"qid": "Q35229001",
+"no": "17"
+},
+{
+"he": "Fredrik Pallesen Knudsen",
+"en": "Fredrik Pallesen Knudsen",
+"pos": "DF",
+"age": 30,
+"nat": "Norway",
+"value_m": 0.449,
+"qid": "Q25429884",
+"no": "3"
+},
+{
+"he": "Jonas Torsvik",
+"en": "Jonas Torsvik",
+"pos": "DF",
+"age": 21,
+"nat": "Norway",
+"value_m": 0.421,
+"qid": "Q122730174",
+"no": "15"
+},
+{
+"he": "Eggert Aron Guðmundsson",
+"en": "Eggert Aron Guðmundsson",
+"pos": "MF",
+"age": 22,
+"nat": "Iceland",
+"value_m": 0.421,
+"qid": "Q123401668",
+"no": "19"
+},
+{
+"he": "Kristian Eriksen",
+"en": "Kristian Eriksen",
+"pos": "FW",
+"age": 31,
+"nat": "Norway",
+"value_m": 0.364,
+"qid": "Q19378157",
+"no": "16"
+},
+{
+"he": "Nana Kwame Boakye",
+"en": "Nana Kwame Boakye",
+"pos": "DF",
+"age": 20,
+"nat": "Ghana",
+"value_m": 0.336,
+"qid": "Q126279845",
+"no": "4"
+},
+{
+"he": "Sondre Tronstad",
+"en": "Sondre Tronstad",
+"pos": "MF",
+"age": 31,
+"nat": "Norway",
+"value_m": 0.336,
+"qid": "Q13418070",
+"no": "8"
+},
+{
+"he": "Thore Pedersen",
+"en": "Thore Pedersen",
+"pos": "DF",
+"age": 30,
+"nat": "Norway",
+"value_m": 0.308,
+"qid": "Q69505170",
+"no": "23"
+},
+{
+"he": "Chinedu Cyprain Ononogbo",
+"en": "Chinedu Cyprain Ononogbo",
+"pos": "FW",
+"age": 19,
+"nat": "Nigeria",
+"value_m": 0.28,
+"qid": "Q141649938",
+"no": "30"
+},
+{
+"he": "Julian Lægreid",
+"en": "Julian Lægreid",
+"pos": "FW",
+"age": 19,
+"nat": "Norway",
+"value_m": 0.28,
+"qid": "Q136708385",
+"no": "39"
+},
+{
+"he": "Kjartan Már Kjartansson",
+"en": "Kjartan Már Kjartansson",
+"pos": "MF",
+"age": 20,
+"nat": "Iceland",
+"value_m": 0.252,
+"qid": "Q135206297",
+"no": "7"
+},
+{
+"he": "Vetle Dragsnes",
+"en": "Vetle Dragsnes",
+"pos": "DF",
+"age": 32,
+"nat": "Norway",
+"value_m": 0.196,
+"qid": "Q62899338",
+"no": "20"
+}
+]
+}

@@ -3,6 +3,7 @@
 "name_he": "אוסאסונה",
 "source": "enwiki:CA Osasuna",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "סרחיו הררה",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 33,
 "nat": "Spain",
-"value_m": 1.05,
+"value_m": 1.45,
 "qid": "Q24279005",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 35,
 "nat": "Spain",
-"value_m": 0.68,
+"value_m": 0.942,
 "qid": "Q3754541",
 "no": "13"
 },
@@ -30,7 +31,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Spain",
-"value_m": 5.11,
+"value_m": 7.08,
 "qid": "Q64735295",
 "no": "10"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Spain",
-"value_m": 4.39,
+"value_m": 6.08,
 "qid": "Q68499016",
 "no": "9"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Spain",
-"value_m": 4.05,
+"value_m": 5.61,
 "qid": "Q32236556",
 "no": "11"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Spain",
-"value_m": 3.92,
+"value_m": 5.43,
 "qid": "Q66528894",
 "no": "7"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Spain",
-"value_m": 3.76,
+"value_m": 5.21,
 "qid": "Q97573236",
 "no": "18"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Spain",
-"value_m": 3.38,
+"value_m": 4.68,
 "qid": "Q113576903",
 "no": "23"
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Spain",
-"value_m": 3.08,
+"value_m": 4.27,
 "qid": "Q114136986",
 "no": "5"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "France",
-"value_m": 3.0,
+"value_m": 4.16,
 "qid": "Q21584345",
 "no": "20"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Spain",
-"value_m": 2.95,
+"value_m": 4.09,
 "qid": "Q116603156",
 "no": "8"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Cameroon",
-"value_m": 2.95,
+"value_m": 4.09,
 "qid": "Q99659218",
 "no": "22"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "France",
-"value_m": 2.66,
+"value_m": 3.68,
 "qid": "Q30317774",
 "no": "19"
 },
@@ -140,7 +141,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Belgium",
-"value_m": 2.66,
+"value_m": 3.68,
 "qid": "Q113154245",
 "no": "21"
 },
@@ -150,7 +151,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Spain",
-"value_m": 2.53,
+"value_m": 3.5,
 "qid": "Q122417337",
 "no": "29"
 },
@@ -160,7 +161,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Spain",
-"value_m": 2.41,
+"value_m": 3.34,
 "qid": null,
 "no": "26"
 },
@@ -170,7 +171,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Spain",
-"value_m": 2.07,
+"value_m": 2.87,
 "qid": "Q124659098",
 "no": "27"
 },
@@ -180,7 +181,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Spain",
-"value_m": 1.98,
+"value_m": 2.74,
 "qid": "Q15494540",
 "no": "6"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Ghana",
-"value_m": 1.94,
+"value_m": 2.69,
 "qid": "Q130617648",
 "no": "48"
 },
@@ -200,7 +201,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Spain",
-"value_m": 1.9,
+"value_m": 2.63,
 "qid": "Q3884280",
 "no": "16"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Spain",
-"value_m": 1.81,
+"value_m": 2.51,
 "qid": "Q1438885",
 "no": "14"
 },
@@ -220,7 +221,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Spain",
-"value_m": 1.48,
+"value_m": 2.05,
 "qid": "Q55640535",
 "no": "24"
 },
@@ -230,7 +231,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Spain",
-"value_m": 1.39,
+"value_m": 1.93,
 "qid": "Q15696580",
 "no": "15"
 },
@@ -240,10 +241,9 @@
 "pos": "FW",
 "age": 35,
 "nat": "Croatia",
-"value_m": 1.1,
+"value_m": 1.52,
 "qid": "Q17505049",
 "no": "17"
 }
-],
-"rescaled": 1
+]
 }

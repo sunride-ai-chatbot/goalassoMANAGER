@@ -253,7 +253,9 @@ function hlName(text,q){text=String(text||'');q=searchNorm(q);if(!q)return esc(t
 function playerNats(p){return [p.nat,p.nat2].filter(Boolean)}
 function hasNat(p,nat){return playerNats(p).includes(nat)}
 function marketSearchPool(){ensureAllWorldLeagues();const out=[];for(const c of [...G.clubs,...G.leumit]){if(c.id===G.me)continue;for(const p of c.players)if(!p.loanOut)out.push({p,c})}for(const c of worldClubs())for(const p of c.players)out.push({p,c});return out}
-function matchRank(hay,q){if(!hay)return 9;if(hay.startsWith(q))return 0;if((' '+hay).includes(' '+q))return 1;return hay.includes(q)?2:9}
+/* a first name and a surname that start with the query rank the same: with thousands of real players the well-known
+   one (by value) should come first, not everybody whose first name happens to match */
+function matchRank(hay,q){if(!hay)return 9;if((' '+hay).includes(' '+q))return 0;return hay.includes(q)?2:9}
 function searchPlayers(text,limit){const q=searchNorm(text);if(q.length<2)return [];const res=[];
   for(const x of marketSearchPool()){const p=x.p;const r=Math.min(matchRank(searchNorm(fullName(p)),q),matchRank(searchNorm(p.en),q),matchRank(searchNorm((p.first||'')+' '+(p.last||'')),q));if(r<9)res.push({...x,r})}
   res.sort((a,b)=>a.r-b.r||(b.p.real?1:0)-(a.p.real?1:0)||(b.p.rv||b.p.value)-(a.p.rv||a.p.value));return limit?res.slice(0,limit):res}

@@ -3,6 +3,7 @@
 "name_he": "ראג'ה קזבלנקה",
 "source": "enwiki:Raja CA",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "El Mehdi Al Harrar",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.29,
+"value_m": 1.02,
 "qid": "Q130508822",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.23,
+"value_m": 0.814,
 "qid": null,
 "no": "22"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.23,
+"value_m": 0.814,
 "qid": null,
 "no": "32"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 30,
 "nat": "Morocco",
-"value_m": 0.19,
+"value_m": 0.672,
 "qid": "Q135431481",
 "no": "12"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Jordan",
-"value_m": 0.6,
+"value_m": 2.12,
 "qid": "Q83787036",
 "no": "27"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Morocco",
-"value_m": 0.56,
+"value_m": 1.98,
 "qid": "Q58494974",
 "no": "70"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Morocco",
-"value_m": 0.54,
+"value_m": 1.91,
 "qid": "Q27892157",
 "no": "6"
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Morocco",
-"value_m": 0.46,
+"value_m": 1.62,
 "qid": "Q16069521",
 "no": "45"
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Portugal",
-"value_m": 0.44,
+"value_m": 1.55,
 "qid": "Q61140246",
 "no": "2"
 },
@@ -100,7 +101,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Morocco",
-"value_m": 0.44,
+"value_m": 1.55,
 "qid": "Q121157838",
 "no": "5"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 27,
 "nat": null,
-"value_m": 0.4,
+"value_m": 1.41,
 "qid": "Q111283432",
 "no": "99"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Morocco",
-"value_m": 0.38,
+"value_m": 1.34,
 "qid": "Q34085897",
 "no": "24"
 },
@@ -130,7 +131,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Ghana",
-"value_m": 0.38,
+"value_m": 1.34,
 "qid": "Q106599547",
 "no": "30"
 },
@@ -140,9 +141,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.37,
+"value_m": 1.31,
 "qid": null,
 "no": "10"
+},
+{
+"he": "Younes Bakiz",
+"en": "Younes Bakiz",
+"pos": "MF",
+"age": 27,
+"nat": "Denmark",
+"value_m": 1.27,
+"qid": "Q107642866",
+"no": "14"
 },
 {
 "he": "Youness Dahmani",
@@ -150,7 +161,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.35,
+"value_m": 1.23,
 "qid": null,
 "no": "11"
 },
@@ -160,7 +171,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Morocco",
-"value_m": 0.33,
+"value_m": 1.16,
 "qid": "Q105955785",
 "no": "7"
 },
@@ -170,7 +181,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Tunisia",
-"value_m": 0.33,
+"value_m": 1.16,
 "qid": "Q67629721",
 "no": "21"
 },
@@ -180,7 +191,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.29,
+"value_m": 1.02,
 "qid": null,
 "no": "16"
 },
@@ -190,7 +201,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.27,
+"value_m": 0.955,
 "qid": null,
 "no": "8"
 },
@@ -200,7 +211,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.27,
+"value_m": 0.955,
 "qid": null,
 "no": "19"
 },
@@ -210,7 +221,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.25,
+"value_m": 0.884,
 "qid": null,
 "no": "18"
 },
@@ -220,7 +231,7 @@
 "pos": "FW",
 "age": 32,
 "nat": "Morocco",
-"value_m": 0.25,
+"value_m": 0.884,
 "qid": "Q19544518",
 "no": "77"
 },
@@ -230,7 +241,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Morocco",
-"value_m": 0.23,
+"value_m": 0.814,
 "qid": "Q101071921",
 "no": "23"
 },
@@ -240,7 +251,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.21,
+"value_m": 0.743,
 "qid": null,
 "no": "3"
 },
@@ -250,7 +261,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Morocco",
-"value_m": 0.21,
+"value_m": 0.743,
 "qid": "Q102113484",
 "no": "9"
 },
@@ -260,7 +271,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Morocco",
-"value_m": 0.21,
+"value_m": 0.743,
 "qid": "Q41559810",
 "no": "13"
 },
@@ -270,7 +281,7 @@
 "pos": "DF",
 "age": 31,
 "nat": "Morocco",
-"value_m": 0.19,
+"value_m": 0.672,
 "qid": "Q100909530",
 "no": "4"
 },
@@ -280,10 +291,10 @@
 "pos": "DF",
 "age": 32,
 "nat": "Morocco",
-"value_m": 0.19,
+"value_m": 0.672,
 "qid": "Q53828737",
 "no": "17"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

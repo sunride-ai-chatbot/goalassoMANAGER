@@ -3,6 +3,7 @@
 "name_he": "פ.צ.ס.ב בוקרשט",
 "source": "enwiki:FCSB",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Ștefan Târnovanu",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 26,
 "nat": "Romania",
-"value_m": 1.02,
+"value_m": 1.39,
 "qid": "Q61484290",
 "no": "32"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Romania",
-"value_m": 0.59,
+"value_m": 0.803,
 "qid": "Q97487849",
 "no": "34"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Romania",
-"value_m": 0.49,
+"value_m": 0.667,
 "qid": null,
 "no": "1"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 19,
 "nat": "Romania",
-"value_m": 0.31,
+"value_m": 0.422,
 "qid": "Q138027335",
 "no": "13"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Romania",
-"value_m": 1.28,
+"value_m": 1.74,
 "qid": "Q40126643",
 "no": "10"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Algeria",
-"value_m": 1.15,
+"value_m": 1.56,
 "qid": "Q78410700",
 "no": "28"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Romania",
-"value_m": 1.02,
+"value_m": 1.39,
 "qid": "Q66104786",
 "no": "20"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Cape Verde",
-"value_m": 1.0,
+"value_m": 1.36,
 "qid": "Q107334828",
 "no": "18"
 },
@@ -90,7 +91,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Kosovo",
-"value_m": 0.97,
+"value_m": 1.32,
 "qid": "Q56044735",
 "no": "7"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Romania",
-"value_m": 0.95,
+"value_m": 1.29,
 "qid": "Q85525678",
 "no": "11"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Israel",
-"value_m": 0.92,
+"value_m": 1.25,
 "qid": "Q68147959",
 "no": "15"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "South Africa",
-"value_m": 0.79,
+"value_m": 1.08,
 "qid": "Q58580035",
 "no": "30"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "DR Congo",
-"value_m": 0.77,
+"value_m": 1.05,
 "qid": "Q34360045",
 "no": "21"
 },
@@ -140,7 +141,7 @@
 "pos": "MF",
 "age": 30,
 "nat": "Croatia",
-"value_m": 0.74,
+"value_m": 1.01,
 "qid": "Q64745020",
 "no": "73"
 },
@@ -150,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Romania",
-"value_m": 0.69,
+"value_m": 0.939,
 "qid": null,
 "no": "19"
 },
@@ -160,7 +161,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Martinique",
-"value_m": 0.69,
+"value_m": 0.939,
 "qid": "Q115492471",
 "no": "97"
 },
@@ -170,7 +171,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Cameroon",
-"value_m": 0.64,
+"value_m": 0.871,
 "qid": "Q55956285",
 "no": "5"
 },
@@ -180,9 +181,19 @@
 "pos": "DF",
 "age": 28,
 "nat": "Portugal",
-"value_m": 0.59,
+"value_m": 0.803,
 "qid": "Q114435945",
 "no": "3"
+},
+{
+"he": "פול גריטה",
+"en": "Arnold Garita",
+"pos": "FW",
+"age": 31,
+"nat": "Cameroon",
+"value_m": 0.762,
+"qid": "Q18206089",
+"no": "14"
 },
 {
 "he": "Andrei Dăncuș",
@@ -190,7 +201,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Romania",
-"value_m": 0.54,
+"value_m": 0.735,
 "qid": null,
 "no": "6"
 },
@@ -200,7 +211,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "France",
-"value_m": 0.49,
+"value_m": 0.667,
 "qid": "Q5336652",
 "no": "8"
 },
@@ -210,7 +221,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Romania",
-"value_m": 0.43,
+"value_m": 0.585,
 "qid": "Q136806628",
 "no": "77"
 },
@@ -220,7 +231,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Romania",
-"value_m": 0.41,
+"value_m": 0.558,
 "qid": "Q125725363",
 "no": "22"
 },
@@ -230,7 +241,7 @@
 "pos": "DF",
 "age": 19,
 "nat": "Romania",
-"value_m": 0.33,
+"value_m": 0.449,
 "qid": "Q126198683",
 "no": "4"
 },
@@ -240,7 +251,7 @@
 "pos": "FW",
 "age": 18,
 "nat": "Romania",
-"value_m": 0.33,
+"value_m": 0.449,
 "qid": "Q114905597",
 "no": "90"
 },
@@ -250,7 +261,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Romania",
-"value_m": 0.33,
+"value_m": 0.449,
 "qid": "Q126285064",
 "no": "98"
 },
@@ -260,7 +271,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Romania",
-"value_m": 0.31,
+"value_m": 0.422,
 "qid": "Q27830783",
 "no": "17"
 },
@@ -270,7 +281,7 @@
 "pos": "MF",
 "age": 33,
 "nat": "Italy",
-"value_m": 0.28,
+"value_m": 0.381,
 "qid": "Q16887647",
 "no": "31"
 },
@@ -280,7 +291,7 @@
 "pos": "DF",
 "age": 34,
 "nat": "Montenegro",
-"value_m": 0.23,
+"value_m": 0.313,
 "qid": "Q3937086",
 "no": "33"
 },
@@ -290,10 +301,10 @@
 "pos": "DF",
 "age": 37,
 "nat": "Romania",
-"value_m": 0.18,
+"value_m": 0.245,
 "qid": "Q4007648",
 "no": "2"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

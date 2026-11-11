@@ -3,14 +3,25 @@
 "name_he": "ה.י.ק הלסינקי",
 "source": "enwiki:Helsingin Jalkapalloklubi",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
+{
+"he": "Jasper Samooja",
+"en": "Jasper Samooja",
+"pos": "GK",
+"age": 25,
+"nat": "Finland",
+"value_m": 0.193,
+"qid": null,
+"no": null
+},
 {
 "he": "Vilho Tuokkola",
 "en": "Vilho Tuokkola",
 "pos": "GK",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.12,
+"value_m": 0.192,
 "qid": null,
 "no": "76"
 },
@@ -20,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.1,
+"value_m": 0.16,
 "qid": null,
 "no": null
 },
@@ -30,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.09,
+"value_m": 0.144,
 "qid": null,
 "no": "12"
 },
@@ -40,7 +51,7 @@
 "pos": "GK",
 "age": 30,
 "nat": "Croatia",
-"value_m": 0.07,
+"value_m": 0.112,
 "qid": "Q50888201",
 "no": "44"
 },
@@ -50,7 +61,7 @@
 "pos": "GK",
 "age": 35,
 "nat": "Finland",
-"value_m": 0.03,
+"value_m": 0.048,
 "qid": "Q11866428",
 "no": "1"
 },
@@ -60,7 +71,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "Finland",
-"value_m": 0.29,
+"value_m": 0.463,
 "qid": "Q23699003",
 "no": "26"
 },
@@ -70,7 +81,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Finland",
-"value_m": 0.25,
+"value_m": 0.4,
 "qid": "Q54861550",
 "no": "29"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Finland",
-"value_m": 0.19,
+"value_m": 0.305,
 "qid": "Q108004290",
 "no": "15"
 },
@@ -90,7 +101,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Finland",
-"value_m": 0.17,
+"value_m": 0.273,
 "qid": "Q55363881",
 "no": "6"
 },
@@ -100,7 +111,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Denmark",
-"value_m": 0.17,
+"value_m": 0.273,
 "qid": "Q122761164",
 "no": "9"
 },
@@ -110,7 +121,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Finland",
-"value_m": 0.17,
+"value_m": 0.273,
 "qid": "Q111359108",
 "no": "28"
 },
@@ -120,7 +131,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.17,
+"value_m": 0.273,
 "qid": null,
 "no": "51"
 },
@@ -130,7 +141,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.17,
+"value_m": 0.273,
 "qid": null,
 "no": null
 },
@@ -140,7 +151,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "England",
-"value_m": 0.16,
+"value_m": 0.257,
 "qid": "Q125382550",
 "no": "7"
 },
@@ -150,7 +161,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Finland",
-"value_m": 0.16,
+"value_m": 0.257,
 "qid": "Q20914016",
 "no": "10"
 },
@@ -160,7 +171,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Finland",
-"value_m": 0.16,
+"value_m": 0.257,
 "qid": "Q115724797",
 "no": "11"
 },
@@ -170,7 +181,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Nigeria",
-"value_m": 0.16,
+"value_m": 0.257,
 "qid": null,
 "no": "48"
 },
@@ -180,7 +191,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "France",
-"value_m": 0.14,
+"value_m": 0.225,
 "qid": "Q63170716",
 "no": "3"
 },
@@ -190,7 +201,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "Finland",
-"value_m": 0.14,
+"value_m": 0.225,
 "qid": "Q122932301",
 "no": "19"
 },
@@ -200,7 +211,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Serbia",
-"value_m": 0.14,
+"value_m": 0.225,
 "qid": "Q135670442",
 "no": "31"
 },
@@ -210,7 +221,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Senegal",
-"value_m": 0.14,
+"value_m": 0.225,
 "qid": null,
 "no": "32"
 },
@@ -220,7 +231,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.14,
+"value_m": 0.225,
 "qid": null,
 "no": null
 },
@@ -230,9 +241,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Australia",
-"value_m": 0.14,
+"value_m": 0.225,
 "qid": null,
 "no": null
+},
+{
+"he": "Leonel Montano",
+"en": "Leonel Montano",
+"pos": "DF",
+"age": 26,
+"nat": "Denmark",
+"value_m": 0.225,
+"qid": "Q106957242",
+"no": "14"
 },
 {
 "he": "Lukas Kuusisto",
@@ -240,7 +261,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.13,
+"value_m": 0.208,
 "qid": null,
 "no": "45"
 },
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Sweden",
-"value_m": 0.13,
+"value_m": 0.208,
 "qid": "Q130214832",
 "no": "62"
 },
@@ -260,7 +281,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.13,
+"value_m": 0.208,
 "qid": null,
 "no": "98"
 },
@@ -270,7 +291,7 @@
 "pos": "FW",
 "age": 25,
 "nat": null,
-"value_m": 0.13,
+"value_m": 0.208,
 "qid": null,
 "no": null
 },
@@ -280,7 +301,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Finland",
-"value_m": 0.12,
+"value_m": 0.192,
 "qid": "Q123685616",
 "no": "13"
 },
@@ -290,7 +311,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Finland",
-"value_m": 0.12,
+"value_m": 0.192,
 "qid": null,
 "no": "16"
 },
@@ -300,10 +321,10 @@
 "pos": "MF",
 "age": 21,
 "nat": "Finland",
-"value_m": 0.12,
+"value_m": 0.192,
 "qid": "Q120893614",
 "no": "22"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

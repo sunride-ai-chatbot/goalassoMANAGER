@@ -1,0 +1,209 @@
+{
+"key": "l_kiryat_yam",
+"name_he": "מ.ס. קריית ים",
+"source": "enwiki:F.C. Kiryat Yam",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Omar Nahfaoui",
+"en": "Omar Nahfaoui",
+"pos": "GK",
+"age": 25,
+"nat": "Palestine",
+"value_m": 0.158,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Itay Hemi",
+"en": "Itay Hemi",
+"pos": "GK",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.119,
+"qid": null,
+"no": "1"
+},
+{
+"he": "Ilya Potkin",
+"en": "Ilya Potkin",
+"pos": "FW",
+"age": 25,
+"nat": "Belarus",
+"value_m": 0.237,
+"qid": null,
+"no": "7"
+},
+{
+"he": "נהוראי יפרח",
+"en": "Nehorai Ifrach",
+"pos": "MF",
+"age": 23,
+"nat": "Israel",
+"value_m": 0.237,
+"qid": "Q107426689",
+"no": "26"
+},
+{
+"he": "Sekou Sylla",
+"en": "Sekou Sylla",
+"pos": "FW",
+"age": 25,
+"nat": "Guinea",
+"value_m": 0.218,
+"qid": null,
+"no": "99"
+},
+{
+"he": "Thierry Etoungou",
+"en": "Thierry Etoungou",
+"pos": "DF",
+"age": 26,
+"nat": "Cameroon",
+"value_m": 0.198,
+"qid": "Q117124047",
+"no": "5"
+},
+{
+"he": "Itay Buganim",
+"en": "Itay Buganim",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.198,
+"qid": null,
+"no": "9"
+},
+{
+"he": "Gilad Avramov",
+"en": "Gilad Avramov",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.198,
+"qid": null,
+"no": "10"
+},
+{
+"he": "Yinon Ohana",
+"en": "Yinon Ohana",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.198,
+"qid": null,
+"no": "15"
+},
+{
+"he": "Liav Farada",
+"en": "Liav Farada",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.198,
+"qid": null,
+"no": "18"
+},
+{
+"he": "Ashley Cupido",
+"en": "Ashley Cupido",
+"pos": "MF",
+"age": 25,
+"nat": "South Africa",
+"value_m": 0.198,
+"qid": "Q126923904",
+"no": "29"
+},
+{
+"he": "Yuval Cohen",
+"en": "Yuval Cohen",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.178,
+"qid": null,
+"no": "11"
+},
+{
+"he": "Itay Solomon",
+"en": "Itay Solomon",
+"pos": "FW",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.178,
+"qid": null,
+"no": "17"
+},
+{
+"he": "Razi Khalifa",
+"en": "Razi Khalifa",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.158,
+"qid": null,
+"no": "2"
+},
+{
+"he": "Fares Agbaria",
+"en": "Fares Agbaria",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.158,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Ofek Atias",
+"en": "Ofek Atias",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.158,
+"qid": null,
+"no": "4"
+},
+{
+"he": "Artur Alyenikov",
+"en": "Artur Alyenikov",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.158,
+"qid": null,
+"no": "8"
+},
+{
+"he": "Liran Turgeman",
+"en": "Liran Turgeman",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.158,
+"qid": null,
+"no": "20"
+},
+{
+"he": "Ran Meir",
+"en": "Ran Meir",
+"pos": "MF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.158,
+"qid": null,
+"no": "55"
+},
+{
+"he": "Tomer Lannes Arbel",
+"en": "Tomer Lannes Arbel",
+"pos": "DF",
+"age": 25,
+"nat": "Israel",
+"value_m": 0.158,
+"qid": null,
+"no": "77"
+}
+]
+}

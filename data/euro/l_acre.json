@@ -3,6 +3,7 @@
 "name_he": "הפועל עכו",
 "source": "hewiki:הפועל עכו",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "רון אפפלד",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.121,
 "qid": null,
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.121,
 "qid": null,
 "no": "22"
 },
@@ -30,7 +31,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.093,
+"value_m": 0.194,
 "qid": null,
 "no": "7"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.093,
+"value_m": 0.194,
 "qid": null,
 "no": "11"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.093,
+"value_m": 0.194,
 "qid": null,
 "no": "17"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.093,
+"value_m": 0.194,
 "qid": null,
 "no": "70"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.082,
+"value_m": 0.171,
 "qid": null,
 "no": "10"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.082,
+"value_m": 0.171,
 "qid": null,
 "no": "13"
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.082,
+"value_m": 0.171,
 "qid": null,
 "no": "15"
 },
@@ -100,7 +101,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.146,
 "qid": null,
 "no": "5"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.146,
 "qid": null,
 "no": "9"
 },
@@ -120,7 +121,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.146,
 "qid": null,
 "no": "14"
 },
@@ -130,7 +131,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.07,
+"value_m": 0.146,
 "qid": null,
 "no": "21"
 },
@@ -140,7 +141,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.121,
 "qid": null,
 "no": "2"
 },
@@ -150,7 +151,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.121,
 "qid": null,
 "no": "4"
 },
@@ -160,7 +161,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "הרפובליקה הדומיניקנית",
-"value_m": 0.058,
+"value_m": 0.121,
 "qid": "Q141726680",
 "no": "19"
 },
@@ -170,7 +171,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.121,
 "qid": null,
 "no": "26"
 },
@@ -180,10 +181,9 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.058,
+"value_m": 0.121,
 "qid": null,
 "no": "77"
 }
-],
-"rescaled": 1
+]
 }

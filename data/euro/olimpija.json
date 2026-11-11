@@ -3,6 +3,7 @@
 "name_he": "אולימפיה ליובליאנה",
 "source": "enwiki:NK Olimpija Ljubljana",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Matevž Vidovšek",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 26,
 "nat": "Slovenia",
-"value_m": 0.4,
+"value_m": 0.539,
 "qid": "Q113552495",
 "no": "26"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.25,
+"value_m": 0.337,
 "qid": null,
 "no": "52"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.19,
+"value_m": 0.256,
 "qid": null,
 "no": "22"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Estonia",
-"value_m": 0.63,
+"value_m": 0.85,
 "qid": "Q113414646",
 "no": "24"
 },
@@ -50,9 +51,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Sierra Leone",
-"value_m": 0.6,
+"value_m": 0.809,
 "qid": "Q108094939",
 "no": "79"
+},
+{
+"he": "Marvin Çuni",
+"en": "Marvin Çuni",
+"pos": "FW",
+"age": 25,
+"nat": "Albania",
+"value_m": 0.701,
+"qid": "Q104524199",
+"no": "17"
 },
 {
 "he": "Indrit Tuci",
@@ -60,7 +71,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Albania",
-"value_m": 0.5,
+"value_m": 0.674,
 "qid": "Q88459665",
 "no": "19"
 },
@@ -70,7 +81,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Serbia",
-"value_m": 0.5,
+"value_m": 0.674,
 "qid": "Q106367324",
 "no": "20"
 },
@@ -80,7 +91,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.5,
+"value_m": 0.674,
 "qid": "Q55604075",
 "no": "99"
 },
@@ -90,7 +101,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.44,
+"value_m": 0.593,
 "qid": "Q118470998",
 "no": "77"
 },
@@ -100,7 +111,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Spain",
-"value_m": 0.42,
+"value_m": 0.566,
 "qid": "Q32245279",
 "no": "6"
 },
@@ -110,7 +121,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "North Macedonia",
-"value_m": 0.38,
+"value_m": 0.512,
 "qid": "Q110221623",
 "no": "10"
 },
@@ -120,7 +131,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Portugal",
-"value_m": 0.37,
+"value_m": 0.499,
 "qid": "Q64736752",
 "no": "8"
 },
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Slovenia",
-"value_m": 0.37,
+"value_m": 0.499,
 "qid": "Q47088742",
 "no": "30"
 },
@@ -140,7 +151,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Ecuador",
-"value_m": 0.37,
+"value_m": 0.499,
 "qid": "Q113557797",
 "no": "33"
 },
@@ -150,7 +161,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "Canada",
-"value_m": 0.35,
+"value_m": 0.472,
 "qid": "Q139374568",
 "no": "11"
 },
@@ -160,7 +171,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.35,
+"value_m": 0.472,
 "qid": null,
 "no": "18"
 },
@@ -170,7 +181,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.33,
+"value_m": 0.445,
 "qid": "Q115922508",
 "no": "3"
 },
@@ -180,7 +191,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.31,
+"value_m": 0.418,
 "qid": null,
 "no": "9"
 },
@@ -190,7 +201,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Georgia",
-"value_m": 0.31,
+"value_m": 0.418,
 "qid": "Q71984889",
 "no": "23"
 },
@@ -200,7 +211,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.31,
+"value_m": 0.418,
 "qid": null,
 "no": "56"
 },
@@ -210,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.29,
+"value_m": 0.391,
 "qid": null,
 "no": "15"
 },
@@ -220,7 +231,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.29,
+"value_m": 0.391,
 "qid": null,
 "no": "71"
 },
@@ -230,7 +241,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.27,
+"value_m": 0.364,
 "qid": null,
 "no": "54"
 },
@@ -240,9 +251,19 @@
 "pos": "DF",
 "age": 28,
 "nat": "Portugal",
-"value_m": 0.25,
+"value_m": 0.337,
 "qid": "Q50070564",
 "no": "28"
+},
+{
+"he": "Robert Mišković",
+"en": "Robert Mišković",
+"pos": "MF",
+"age": 25,
+"nat": "Croatia",
+"value_m": 0.324,
+"qid": null,
+"no": "90"
 },
 {
 "he": "Veljko Jelenković",
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Bulgaria",
-"value_m": 0.23,
+"value_m": 0.31,
 "qid": "Q116772665",
 "no": "4"
 },
@@ -260,7 +281,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Slovenia",
-"value_m": 0.23,
+"value_m": 0.31,
 "qid": null,
 "no": "14"
 },
@@ -270,7 +291,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Argentina",
-"value_m": 0.19,
+"value_m": 0.256,
 "qid": "Q21207868",
 "no": "34"
 },
@@ -280,10 +301,10 @@
 "pos": "DF",
 "age": 25,
 "nat": "Croatia",
-"value_m": 0.19,
+"value_m": 0.256,
 "qid": null,
 "no": "55"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

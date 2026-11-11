@@ -3,6 +3,7 @@
 "name_he": "הפועל רעננה",
 "source": "hewiki:הפועל רעננה",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "יהלי נימני",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.094,
+"value_m": 0.186,
 "qid": null,
 "no": "22"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.16,
 "qid": null,
 "no": "19"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.067,
+"value_m": 0.132,
 "qid": null,
 "no": null
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "פנמה",
-"value_m": 0.175,
+"value_m": 0.346,
 "qid": "Q106620081",
 "no": "70"
 },
@@ -50,7 +51,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "הונדורס",
-"value_m": 0.161,
+"value_m": 0.318,
 "qid": "Q38429053",
 "no": "2"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.134,
+"value_m": 0.265,
 "qid": null,
 "no": "24"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.121,
+"value_m": 0.239,
 "qid": null,
 "no": null
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": "4"
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": "5"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": "9"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": "11"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": "20"
 },
@@ -130,7 +131,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": "77"
 },
@@ -140,7 +141,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": null
 },
@@ -150,7 +151,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.108,
+"value_m": 0.213,
 "qid": null,
 "no": null
 },
@@ -160,7 +161,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.094,
+"value_m": 0.186,
 "qid": null,
 "no": "6"
 },
@@ -170,7 +171,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.094,
+"value_m": 0.186,
 "qid": null,
 "no": "16"
 },
@@ -180,7 +181,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.094,
+"value_m": 0.186,
 "qid": null,
 "no": "17"
 },
@@ -190,7 +191,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.094,
+"value_m": 0.186,
 "qid": null,
 "no": null
 },
@@ -200,7 +201,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.16,
 "qid": null,
 "no": "3"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.16,
 "qid": null,
 "no": "7"
 },
@@ -220,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.16,
 "qid": null,
 "no": "12"
 },
@@ -230,7 +231,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.16,
 "qid": null,
 "no": "21"
 },
@@ -240,7 +241,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.081,
+"value_m": 0.16,
 "qid": null,
 "no": null
 },
@@ -250,10 +251,9 @@
 "pos": "MF",
 "age": 37,
 "nat": "Israel",
-"value_m": 0.027,
+"value_m": 0.053,
 "qid": "Q19758718",
 "no": "8"
 }
-],
-"rescaled": 1
+]
 }

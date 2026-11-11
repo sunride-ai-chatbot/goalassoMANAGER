@@ -3,6 +3,7 @@
 "name_he": "גנק",
 "source": "enwiki:KRC Genk",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Tobias Lawal",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 26,
 "nat": "Austria",
-"value_m": 2.23,
+"value_m": 3.42,
 "qid": "Q55841485",
 "no": "26"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.97,
+"value_m": 3.02,
 "qid": "Q131828146",
 "no": "28"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 24,
 "nat": "Belgium",
-"value_m": 1.9,
+"value_m": 2.91,
 "qid": "Q74682140",
 "no": "1"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.32,
+"value_m": 2.02,
 "qid": null,
 "no": "86"
 },
@@ -50,7 +51,7 @@
 "pos": "GK",
 "age": 25,
 "nat": null,
-"value_m": 1.28,
+"value_m": 1.96,
 "qid": null,
 "no": "87"
 },
@@ -60,7 +61,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.24,
+"value_m": 1.9,
 "qid": null,
 "no": "81"
 },
@@ -70,7 +71,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Mali",
-"value_m": 1.06,
+"value_m": 1.63,
 "qid": null,
 "no": "97"
 },
@@ -80,7 +81,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 0.95,
+"value_m": 1.46,
 "qid": null,
 "no": "61"
 },
@@ -90,9 +91,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ghana",
-"value_m": 2.38,
+"value_m": 3.65,
 "qid": "Q126279173",
 "no": "33"
+},
+{
+"he": "בנימין טהירוביץ'",
+"en": "Benjamin Tahirović",
+"pos": "MF",
+"age": 23,
+"nat": "Bosnia-Herzegovina",
+"value_m": 3.64,
+"qid": "Q115194574",
+"no": "4"
 },
 {
 "he": "Victory Beniangba",
@@ -100,7 +111,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Nigeria",
-"value_m": 2.34,
+"value_m": 3.59,
 "qid": "Q113460192",
 "no": "90"
 },
@@ -110,7 +121,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Austria",
-"value_m": 2.23,
+"value_m": 3.42,
 "qid": "Q101242938",
 "no": "24"
 },
@@ -120,7 +131,7 @@
 "pos": "FW",
 "age": 23,
 "nat": null,
-"value_m": 2.19,
+"value_m": 3.36,
 "qid": "Q105722914",
 "no": "30"
 },
@@ -130,7 +141,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Belgium",
-"value_m": 2.19,
+"value_m": 3.36,
 "qid": "Q26271405",
 "no": "38"
 },
@@ -140,7 +151,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Denmark",
-"value_m": 2.12,
+"value_m": 3.25,
 "qid": "Q131543134",
 "no": "11"
 },
@@ -150,7 +161,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Belgium",
-"value_m": 1.94,
+"value_m": 2.97,
 "qid": "Q113367245",
 "no": "5"
 },
@@ -160,7 +171,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Belgium",
-"value_m": 1.94,
+"value_m": 2.97,
 "qid": "Q20730963",
 "no": "8"
 },
@@ -170,7 +181,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Nigeria",
-"value_m": 1.94,
+"value_m": 2.97,
 "qid": "Q116059342",
 "no": "17"
 },
@@ -180,7 +191,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Uruguay",
-"value_m": 1.9,
+"value_m": 2.91,
 "qid": "Q125694499",
 "no": "20"
 },
@@ -190,7 +201,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Ecuador",
-"value_m": 1.87,
+"value_m": 2.87,
 "qid": "Q116235098",
 "no": "19"
 },
@@ -200,7 +211,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.87,
+"value_m": 2.87,
 "qid": null,
 "no": "60"
 },
@@ -210,7 +221,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Guinea",
-"value_m": 1.83,
+"value_m": 2.81,
 "qid": "Q113515016",
 "no": "21"
 },
@@ -220,7 +231,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 1.83,
+"value_m": 2.81,
 "qid": null,
 "no": "80"
 },
@@ -230,7 +241,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Belgium",
-"value_m": 1.79,
+"value_m": 2.74,
 "qid": "Q58010374",
 "no": "27"
 },
@@ -240,7 +251,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Belgium",
-"value_m": 1.76,
+"value_m": 2.7,
 "qid": "Q121746392",
 "no": "32"
 },
@@ -250,7 +261,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.76,
+"value_m": 2.7,
 "qid": null,
 "no": "66"
 },
@@ -260,7 +271,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Venezuela",
-"value_m": 1.72,
+"value_m": 2.64,
 "qid": "Q126940882",
 "no": "34"
 },
@@ -270,7 +281,7 @@
 "pos": "FW",
 "age": 25,
 "nat": null,
-"value_m": 1.68,
+"value_m": 2.58,
 "qid": null,
 "no": "57"
 },
@@ -280,7 +291,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.61,
+"value_m": 2.47,
 "qid": null,
 "no": "64"
 },
@@ -290,7 +301,7 @@
 "pos": "DF",
 "age": 22,
 "nat": "Belgium",
-"value_m": 1.57,
+"value_m": 2.41,
 "qid": "Q115902866",
 "no": "6"
 },
@@ -300,10 +311,10 @@
 "pos": "MF",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 1.54,
+"value_m": 2.36,
 "qid": null,
 "no": "50"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

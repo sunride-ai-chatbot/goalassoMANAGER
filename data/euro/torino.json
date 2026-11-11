@@ -3,14 +3,25 @@
 "name_he": "טורינו",
 "source": "enwiki:Torino FC",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
+{
+"he": "לוקאס פרי",
+"en": "Lucas Perri",
+"pos": "GK",
+"age": 28,
+"nat": "Brazil",
+"value_m": 3.92,
+"qid": "Q23893097",
+"no": "20"
+},
 {
 "he": "פרנקו ישראל",
 "en": "Franco Israel",
 "pos": "GK",
 "age": 26,
 "nat": "Uruguay",
-"value_m": 2.7,
+"value_m": 3.22,
 "qid": "Q60842316",
 "no": "81"
 },
@@ -20,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Italy",
-"value_m": 1.86,
+"value_m": 2.22,
 "qid": null,
 "no": "26"
 },
@@ -30,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Italy",
-"value_m": 1.48,
+"value_m": 1.76,
 "qid": null,
 "no": "76"
 },
@@ -40,7 +51,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Morocco",
-"value_m": 5.19,
+"value_m": 6.18,
 "qid": "Q56257819",
 "no": "7"
 },
@@ -50,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Italy",
-"value_m": 5.11,
+"value_m": 6.09,
 "qid": "Q28051511",
 "no": "9"
 },
@@ -60,7 +71,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Croatia",
-"value_m": 4.51,
+"value_m": 5.37,
 "qid": "Q17501875",
 "no": "10"
 },
@@ -70,7 +81,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Croatia",
-"value_m": 4.35,
+"value_m": 5.18,
 "qid": "Q56539556",
 "no": "17"
 },
@@ -80,7 +91,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Scotland",
-"value_m": 4.22,
+"value_m": 5.03,
 "qid": "Q83264648",
 "no": "2"
 },
@@ -90,9 +101,29 @@
 "pos": "DF",
 "age": 24,
 "nat": "Algeria",
-"value_m": 4.14,
+"value_m": 4.93,
 "qid": "Q106030853",
 "no": "45"
+},
+{
+"he": "Daniel Bragança",
+"en": "Daniel Bragança",
+"pos": "MF",
+"age": 27,
+"nat": "Portugal",
+"value_m": 4.93,
+"qid": "Q61978222",
+"no": "21"
+},
+{
+"he": "גאטנו אוריסטאניו",
+"en": "Gaetano Oristanio",
+"pos": "FW",
+"age": 23,
+"nat": "Italy",
+"value_m": 4.44,
+"qid": "Q108215572",
+"no": "11"
 },
 {
 "he": "צ'זארה קזאדיי",
@@ -100,7 +131,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Italy",
-"value_m": 3.63,
+"value_m": 4.32,
 "qid": "Q112081015",
 "no": "22"
 },
@@ -110,7 +141,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Albania",
-"value_m": 3.59,
+"value_m": 4.28,
 "qid": "Q26251753",
 "no": "44"
 },
@@ -120,7 +151,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Switzerland",
-"value_m": 3.42,
+"value_m": 4.07,
 "qid": "Q24052364",
 "no": "5"
 },
@@ -130,7 +161,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Italy",
-"value_m": 3.21,
+"value_m": 3.82,
 "qid": "Q18402294",
 "no": "8"
 },
@@ -140,7 +171,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Scotland",
-"value_m": 3.08,
+"value_m": 3.67,
 "qid": "Q18683792",
 "no": "19"
 },
@@ -150,7 +181,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Netherlands",
-"value_m": 3.08,
+"value_m": 3.67,
 "qid": "Q104602629",
 "no": "28"
 },
@@ -160,7 +191,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Lithuania",
-"value_m": 3.08,
+"value_m": 3.67,
 "qid": "Q115300322",
 "no": "66"
 },
@@ -170,7 +201,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Equatorial Guinea",
-"value_m": 3.04,
+"value_m": 3.62,
 "qid": "Q38977285",
 "no": "23"
 },
@@ -180,7 +211,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Turkey",
-"value_m": 2.91,
+"value_m": 3.47,
 "qid": "Q110486415",
 "no": "6"
 },
@@ -190,7 +221,7 @@
 "pos": "FW",
 "age": 31,
 "nat": "Argentina",
-"value_m": 2.83,
+"value_m": 3.37,
 "qid": "Q6439494",
 "no": "18"
 },
@@ -200,9 +231,29 @@
 "pos": "MF",
 "age": 25,
 "nat": "Italy",
-"value_m": 2.24,
+"value_m": 2.67,
 "qid": null,
 "no": "79"
+},
+{
+"he": "פייטרו קומוצו",
+"en": "Pietro Comuzzo",
+"pos": "DF",
+"age": 21,
+"nat": "Italy",
+"value_m": 2.5,
+"qid": "Q122979479",
+"no": "15"
+},
+{
+"he": "ניקולו פורטיני",
+"en": "Niccolò Fortini",
+"pos": "DF",
+"age": 20,
+"nat": "Italy",
+"value_m": 2.25,
+"qid": "Q135402289",
+"no": "29"
 },
 {
 "he": "Zalán Kugyela",
@@ -210,7 +261,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Hungary",
-"value_m": 1.81,
+"value_m": 2.16,
 "qid": null,
 "no": "94"
 },
@@ -220,7 +271,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Spain",
-"value_m": 1.65,
+"value_m": 1.96,
 "qid": null,
 "no": "63"
 },
@@ -230,7 +281,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "Italy",
-"value_m": 1.35,
+"value_m": 1.61,
 "qid": "Q824938",
 "no": "3"
 },
@@ -240,7 +291,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "Italy",
-"value_m": 1.31,
+"value_m": 1.56,
 "qid": "Q53450103",
 "no": "77"
 },
@@ -250,7 +301,7 @@
 "pos": "FW",
 "age": 35,
 "nat": "Colombia",
-"value_m": 1.22,
+"value_m": 1.45,
 "qid": "Q577481",
 "no": "91"
 },
@@ -260,10 +311,10 @@
 "pos": "DF",
 "age": 34,
 "nat": "Switzerland",
-"value_m": 1.1,
+"value_m": 1.31,
 "qid": "Q666506",
 "no": "13"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

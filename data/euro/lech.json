@@ -3,6 +3,7 @@
 "name_he": "לך פוזנן",
 "source": "enwiki:Lech Poznań",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Mateusz Lis",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "Poland",
-"value_m": 0.67,
+"value_m": 0.872,
 "qid": "Q22006328",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.54,
+"value_m": 0.703,
 "qid": null,
 "no": "99"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.51,
+"value_m": 0.664,
 "qid": null,
 "no": "31"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.38,
+"value_m": 0.495,
 "qid": null,
 "no": "33"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Iran",
-"value_m": 1.56,
+"value_m": 2.03,
 "qid": "Q47199479",
 "no": "17"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Sweden",
-"value_m": 1.15,
+"value_m": 1.5,
 "qid": "Q96012717",
 "no": "10"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Finland",
-"value_m": 1.13,
+"value_m": 1.47,
 "qid": "Q104912131",
 "no": "11"
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Honduras",
-"value_m": 1.13,
+"value_m": 1.47,
 "qid": "Q62268160",
 "no": "77"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Spain",
-"value_m": 1.07,
+"value_m": 1.39,
 "qid": "Q99845020",
 "no": "21"
 },
@@ -100,7 +101,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Iran",
-"value_m": 0.92,
+"value_m": 1.2,
 "qid": "Q17859780",
 "no": "8"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Côte d'Ivoire",
-"value_m": 0.9,
+"value_m": 1.17,
 "qid": "Q109199140",
 "no": "7"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Poland",
-"value_m": 0.9,
+"value_m": 1.17,
 "qid": "Q64010058",
 "no": "72"
 },
@@ -130,7 +131,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Sweden",
-"value_m": 0.82,
+"value_m": 1.07,
 "qid": "Q28800889",
 "no": "14"
 },
@@ -140,7 +141,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Poland",
-"value_m": 0.82,
+"value_m": 1.07,
 "qid": "Q16240042",
 "no": "24"
 },
@@ -150,7 +151,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Poland",
-"value_m": 0.82,
+"value_m": 1.07,
 "qid": "Q106752685",
 "no": "43"
 },
@@ -160,7 +161,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Poland",
-"value_m": 0.79,
+"value_m": 1.03,
 "qid": "Q24452152",
 "no": "20"
 },
@@ -170,7 +171,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Sweden",
-"value_m": 0.77,
+"value_m": 1.0,
 "qid": "Q26994740",
 "no": "5"
 },
@@ -180,7 +181,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.74,
+"value_m": 0.963,
 "qid": null,
 "no": "56"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "Portugal",
-"value_m": 0.72,
+"value_m": 0.937,
 "qid": "Q21622350",
 "no": "2"
 },
@@ -200,7 +201,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Sweden",
-"value_m": 0.69,
+"value_m": 0.898,
 "qid": "Q125406607",
 "no": "3"
 },
@@ -210,7 +211,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.69,
+"value_m": 0.898,
 "qid": null,
 "no": "54"
 },
@@ -220,7 +221,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.64,
+"value_m": 0.833,
 "qid": null,
 "no": "53"
 },
@@ -230,7 +231,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Portugal",
-"value_m": 0.61,
+"value_m": 0.794,
 "qid": "Q48851834",
 "no": "4"
 },
@@ -240,7 +241,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.61,
+"value_m": 0.794,
 "qid": "Q122924919",
 "no": "59"
 },
@@ -250,7 +251,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.59,
+"value_m": 0.768,
 "qid": null,
 "no": "90"
 },
@@ -260,7 +261,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.54,
+"value_m": 0.703,
 "qid": null,
 "no": "55"
 },
@@ -270,7 +271,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Poland",
-"value_m": 0.49,
+"value_m": 0.638,
 "qid": "Q121643993",
 "no": "15"
 },
@@ -280,7 +281,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Poland",
-"value_m": 0.49,
+"value_m": 0.638,
 "qid": "Q7281648",
 "no": "22"
 },
@@ -290,7 +291,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Poland",
-"value_m": 0.46,
+"value_m": 0.599,
 "qid": null,
 "no": "44"
 },
@@ -300,10 +301,9 @@
 "pos": "FW",
 "age": 33,
 "nat": "Sweden",
-"value_m": 0.41,
+"value_m": 0.534,
 "qid": "Q1334135",
 "no": "9"
 }
-],
-"rescaled": 1
+]
 }

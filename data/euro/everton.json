@@ -3,6 +3,7 @@
 "name_he": "אברטון",
 "source": "enwiki:Everton F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Mark Travers",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 27,
 "nat": "Ireland",
-"value_m": 3.81,
+"value_m": 4.71,
 "qid": "Q59913688",
 "no": "12"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 31,
 "nat": "Wales",
-"value_m": 1.86,
+"value_m": 2.3,
 "qid": "Q27139397",
 "no": "31"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 32,
 "nat": "England",
-"value_m": 1.81,
+"value_m": 2.24,
 "qid": "Q13014035",
 "no": "1"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Wales",
-"value_m": 7.02,
+"value_m": 8.68,
 "qid": "Q66108160",
 "no": "22"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "France",
-"value_m": 5.98,
+"value_m": 7.4,
 "qid": "Q116860945",
 "no": "11"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "England",
-"value_m": 5.48,
+"value_m": 6.78,
 "qid": "Q61908191",
 "no": "37"
 },
@@ -70,7 +71,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "Ukraine",
-"value_m": 5.21,
+"value_m": 6.44,
 "qid": "Q37875995",
 "no": "16"
 },
@@ -80,7 +81,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "England",
-"value_m": 4.89,
+"value_m": 6.05,
 "qid": "Q70780349",
 "no": "4"
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ireland",
-"value_m": 4.62,
+"value_m": 5.71,
 "qid": "Q110565461",
 "no": "15"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Argentina",
-"value_m": 4.49,
+"value_m": 5.55,
 "qid": "Q88130791",
 "no": "24"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "England",
-"value_m": 4.26,
+"value_m": 5.27,
 "qid": "Q83632882",
 "no": "8"
 },
@@ -120,9 +121,19 @@
 "pos": "MF",
 "age": 24,
 "nat": "England",
-"value_m": 4.17,
+"value_m": 5.16,
 "qid": "Q104764328",
 "no": "30"
+},
+{
+"he": "ג'ק גריליש",
+"en": "Jack Grealish",
+"pos": "MF",
+"age": 30,
+"nat": "England",
+"value_m": 4.7,
+"qid": "Q16056053",
+"no": "10"
 },
 {
 "he": "איינסלי מייטלנד-ניילס",
@@ -130,7 +141,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "England",
-"value_m": 3.72,
+"value_m": 4.6,
 "qid": "Q18614641",
 "no": "2"
 },
@@ -140,7 +151,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "England",
-"value_m": 3.72,
+"value_m": 4.6,
 "qid": "Q123002942",
 "no": "19"
 },
@@ -150,7 +161,7 @@
 "pos": "FW",
 "age": 20,
 "nat": "England",
-"value_m": 3.72,
+"value_m": 4.6,
 "qid": "Q115973966",
 "no": "20"
 },
@@ -160,7 +171,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Germany",
-"value_m": 3.72,
+"value_m": 4.6,
 "qid": "Q99752352",
 "no": "34"
 },
@@ -170,7 +181,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Denmark",
-"value_m": 2.81,
+"value_m": 3.47,
 "qid": "Q5109980",
 "no": "23"
 },
@@ -180,7 +191,7 @@
 "pos": "DF",
 "age": 33,
 "nat": "England",
-"value_m": 2.08,
+"value_m": 2.57,
 "qid": "Q6144020",
 "no": "6"
 },
@@ -190,7 +201,7 @@
 "pos": "MF",
 "age": 19,
 "nat": "England",
-"value_m": 2.08,
+"value_m": 2.57,
 "qid": "Q129702132",
 "no": "45"
 },
@@ -200,10 +211,10 @@
 "pos": "DF",
 "age": 33,
 "nat": "England",
-"value_m": 1.45,
+"value_m": 1.79,
 "qid": "Q80712",
 "no": "5"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

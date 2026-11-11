@@ -3,6 +3,7 @@
 "name_he": "בני יהודה",
 "source": "hewiki:בני יהודה תל אביב",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "תומר ליטבינוב",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.124,
+"value_m": 0.23,
 "qid": null,
 "no": "98"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.109,
+"value_m": 0.202,
 "qid": null,
 "no": "33"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.093,
+"value_m": 0.173,
 "qid": null,
 "no": "1"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Israel",
-"value_m": 0.248,
+"value_m": 0.461,
 "qid": "Q57587652",
 "no": "9"
 },
@@ -50,7 +51,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "Israel",
-"value_m": 0.217,
+"value_m": 0.403,
 "qid": "Q71142658",
 "no": "41"
 },
@@ -60,7 +61,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Israel",
-"value_m": 0.202,
+"value_m": 0.375,
 "qid": "Q124054832",
 "no": "6"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.202,
+"value_m": 0.375,
 "qid": "Q125025858",
 "no": "8"
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.186,
+"value_m": 0.345,
 "qid": null,
 "no": "7"
 },
@@ -90,7 +91,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.186,
+"value_m": 0.345,
 "qid": null,
 "no": "27"
 },
@@ -100,7 +101,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.171,
+"value_m": 0.318,
 "qid": null,
 "no": "5"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.171,
+"value_m": 0.318,
 "qid": null,
 "no": "11"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.171,
+"value_m": 0.318,
 "qid": null,
 "no": "55"
 },
@@ -130,7 +131,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.171,
+"value_m": 0.318,
 "qid": null,
 "no": "66"
 },
@@ -140,7 +141,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.155,
+"value_m": 0.288,
 "qid": null,
 "no": "4"
 },
@@ -150,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.155,
+"value_m": 0.288,
 "qid": null,
 "no": "18"
 },
@@ -160,7 +161,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.155,
+"value_m": 0.288,
 "qid": null,
 "no": "24"
 },
@@ -170,7 +171,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.155,
+"value_m": 0.288,
 "qid": null,
 "no": "20"
 },
@@ -180,7 +181,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.155,
+"value_m": 0.288,
 "qid": null,
 "no": "99"
 },
@@ -190,7 +191,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.26,
 "qid": null,
 "no": "12"
 },
@@ -200,7 +201,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.26,
 "qid": null,
 "no": "17"
 },
@@ -210,7 +211,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.26,
 "qid": null,
 "no": "30"
 },
@@ -220,7 +221,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.26,
 "qid": null,
 "no": "23"
 },
@@ -230,7 +231,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.26,
 "qid": null,
 "no": "26"
 },
@@ -240,7 +241,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.26,
 "qid": null,
 "no": "90"
 },
@@ -250,7 +251,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.26,
 "qid": "Q63200944",
 "no": "96"
 },
@@ -260,7 +261,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "Israel",
-"value_m": 0.124,
+"value_m": 0.23,
 "qid": "Q65677758",
 "no": "10"
 },
@@ -270,7 +271,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Israel",
-"value_m": 0.124,
+"value_m": 0.23,
 "qid": "Q89242761",
 "no": "15"
 },
@@ -280,7 +281,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.124,
+"value_m": 0.23,
 "qid": null,
 "no": "67"
 },
@@ -290,7 +291,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.124,
+"value_m": 0.23,
 "qid": null,
 "no": "80"
 },
@@ -300,10 +301,9 @@
 "pos": "MF",
 "age": 25,
 "nat": "Nigeria",
-"value_m": 0.124,
+"value_m": 0.23,
 "qid": null,
 "no": "14"
 }
-],
-"rescaled": 1
+]
 }

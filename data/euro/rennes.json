@@ -3,6 +3,7 @@
 "name_he": "רן",
 "source": "enwiki:Stade Rennais FC",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Nicolas Lemaître",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 29,
 "nat": "France",
-"value_m": 2.81,
+"value_m": 3.44,
 "qid": "Q49030166",
 "no": "16"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 32,
 "nat": "France",
-"value_m": 1.9,
+"value_m": 2.33,
 "qid": "Q15627817",
 "no": "30"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Algeria",
-"value_m": 1.68,
+"value_m": 2.06,
 "qid": null,
 "no": "60"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Senegal",
-"value_m": 5.71,
+"value_m": 6.99,
 "qid": "Q73456589",
 "no": "90"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "France",
-"value_m": 5.57,
+"value_m": 6.82,
 "qid": "Q27049316",
 "no": "70"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "France",
-"value_m": 5.48,
+"value_m": 6.71,
 "qid": "Q124357777",
 "no": "9"
 },
@@ -70,7 +71,7 @@
 "pos": "MF",
 "age": 27,
 "nat": "Poland",
-"value_m": 5.12,
+"value_m": 6.27,
 "qid": "Q25935553",
 "no": "17"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "France",
-"value_m": 5.03,
+"value_m": 6.16,
 "qid": "Q56064757",
 "no": "45"
 },
@@ -90,7 +91,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Martinique",
-"value_m": 4.99,
+"value_m": 6.11,
 "qid": "Q22003400",
 "no": "10"
 },
@@ -100,7 +101,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "France",
-"value_m": 4.85,
+"value_m": 5.94,
 "qid": "Q69949474",
 "no": "24"
 },
@@ -110,7 +111,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Jordan",
-"value_m": 4.44,
+"value_m": 5.43,
 "qid": "Q27909473",
 "no": "11"
 },
@@ -120,9 +121,19 @@
 "pos": "DF",
 "age": 25,
 "nat": "United States",
-"value_m": 4.35,
+"value_m": 5.32,
 "qid": "Q62653604",
 "no": "14"
+},
+{
+"he": "בולה דיה",
+"en": "Boulaye Dia",
+"pos": "FW",
+"age": 29,
+"nat": "Senegal",
+"value_m": 5.02,
+"qid": "Q57603663",
+"no": "22"
 },
 {
 "he": "דז'אווי סיסה",
@@ -130,7 +141,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "France",
-"value_m": 3.99,
+"value_m": 4.88,
 "qid": "Q125353864",
 "no": "6"
 },
@@ -140,7 +151,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Spain",
-"value_m": 3.85,
+"value_m": 4.71,
 "qid": "Q110186586",
 "no": "12"
 },
@@ -150,9 +161,29 @@
 "pos": "DF",
 "age": 24,
 "nat": "France",
-"value_m": 3.85,
+"value_m": 4.71,
 "qid": "Q105426428",
 "no": "26"
+},
+{
+"he": "צ'ארלי קרסוול",
+"en": "Charlie Cresswell",
+"pos": "DF",
+"age": 23,
+"nat": "England",
+"value_m": 4.42,
+"qid": "Q99396781",
+"no": "4"
+},
+{
+"he": "פז'מיסלב פרנקובסקי",
+"en": "Przemysław Frankowski",
+"pos": "MF",
+"age": 31,
+"nat": "Poland",
+"value_m": 4.21,
+"qid": "Q15043990",
+"no": "95"
 },
 {
 "he": "Valentin Rongier",
@@ -160,7 +191,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "France",
-"value_m": 3.35,
+"value_m": 4.1,
 "qid": "Q18395205",
 "no": "21"
 },
@@ -170,7 +201,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "Belgium",
-"value_m": 2.76,
+"value_m": 3.38,
 "qid": "Q120835128",
 "no": null
 },
@@ -180,7 +211,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Morocco",
-"value_m": 2.72,
+"value_m": 3.33,
 "qid": "Q118582849",
 "no": "48"
 },
@@ -190,7 +221,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "France",
-"value_m": 2.54,
+"value_m": 3.11,
 "qid": "Q18938815",
 "no": "28"
 },
@@ -200,7 +231,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Cameroon",
-"value_m": 2.49,
+"value_m": 3.05,
 "qid": "Q123594157",
 "no": "18"
 },
@@ -210,7 +241,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "Gabon",
-"value_m": 2.18,
+"value_m": 2.67,
 "qid": "Q138428379",
 "no": "65"
 },
@@ -220,7 +251,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Portugal",
-"value_m": 2.13,
+"value_m": 2.61,
 "qid": "Q134993647",
 "no": "5"
 },
@@ -230,10 +261,10 @@
 "pos": "FW",
 "age": 18,
 "nat": "Ecuador",
-"value_m": 1.63,
+"value_m": 1.99,
 "qid": "Q134544926",
 "no": "35"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

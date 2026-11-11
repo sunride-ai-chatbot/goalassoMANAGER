@@ -3,6 +3,7 @@
 "name_he": "סוונזי",
 "source": "enwiki:Swansea City A.F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Andy Fisher",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 28,
 "nat": "England",
-"value_m": 0.51,
+"value_m": 0.58,
 "qid": "Q39089765",
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 32,
 "nat": "Chile",
-"value_m": 0.43,
+"value_m": 0.489,
 "qid": "Q2595427",
 "no": "22"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 37,
 "nat": "England",
-"value_m": 0.1,
+"value_m": 0.114,
 "qid": "Q27244549",
 "no": "29"
 },
@@ -40,7 +41,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "New Zealand",
-"value_m": 1.46,
+"value_m": 1.66,
 "qid": "Q64031850",
 "no": "8"
 },
@@ -50,7 +51,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "South Korea",
-"value_m": 1.43,
+"value_m": 1.63,
 "qid": "Q105896342",
 "no": "10"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Slovenia",
-"value_m": 1.3,
+"value_m": 1.48,
 "qid": "Q106686903",
 "no": "9"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ireland",
-"value_m": 1.28,
+"value_m": 1.46,
 "qid": "Q64759162",
 "no": "33"
 },
@@ -80,7 +81,7 @@
 "pos": "FW",
 "age": 29,
 "nat": "Scotland",
-"value_m": 1.23,
+"value_m": 1.4,
 "qid": "Q47126518",
 "no": "31"
 },
@@ -90,7 +91,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Wales",
-"value_m": 1.15,
+"value_m": 1.31,
 "qid": "Q66428065",
 "no": "5"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "Canada",
-"value_m": 1.15,
+"value_m": 1.31,
 "qid": "Q35009041",
 "no": "46"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Sweden",
-"value_m": 1.02,
+"value_m": 1.16,
 "qid": "Q124669938",
 "no": "7"
 },
@@ -120,7 +121,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "New Zealand",
-"value_m": 1.0,
+"value_m": 1.14,
 "qid": "Q102257634",
 "no": "6"
 },
@@ -130,9 +131,19 @@
 "pos": "DF",
 "age": 26,
 "nat": "Scotland",
-"value_m": 0.87,
+"value_m": 0.989,
 "qid": "Q67200400",
 "no": "23"
+},
+{
+"he": "Jenson Seelt",
+"en": "Jenson Seelt",
+"pos": "DF",
+"age": 23,
+"nat": "Netherlands",
+"value_m": 0.977,
+"qid": "Q104543610",
+"no": "3"
 },
 {
 "he": "Joshua Key",
@@ -140,7 +151,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "England",
-"value_m": 0.82,
+"value_m": 0.932,
 "qid": "Q60735019",
 "no": "2"
 },
@@ -150,7 +161,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Australia",
-"value_m": 0.82,
+"value_m": 0.932,
 "qid": "Q17496350",
 "no": "15"
 },
@@ -160,7 +171,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Brazil",
-"value_m": 0.82,
+"value_m": 0.932,
 "qid": "Q107092622",
 "no": "35"
 },
@@ -170,7 +181,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Portugal",
-"value_m": 0.79,
+"value_m": 0.898,
 "qid": "Q99617382",
 "no": "17"
 },
@@ -180,7 +191,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "England",
-"value_m": 0.72,
+"value_m": 0.818,
 "qid": "Q23762015",
 "no": "14"
 },
@@ -190,9 +201,19 @@
 "pos": "MF",
 "age": 22,
 "nat": "Mali",
-"value_m": 0.67,
+"value_m": 0.761,
 "qid": "Q113557994",
 "no": "49"
+},
+{
+"he": "Tiago Parente",
+"en": "Tiago Parente",
+"pos": "DF",
+"age": 25,
+"nat": "Portugal",
+"value_m": 0.75,
+"qid": "Q141539103",
+"no": "20"
 },
 {
 "he": "Joseph Opoku",
@@ -200,7 +221,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Ghana",
-"value_m": 0.64,
+"value_m": 0.728,
 "qid": "Q131601593",
 "no": "30"
 },
@@ -210,7 +231,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Czech Republic",
-"value_m": 0.54,
+"value_m": 0.614,
 "qid": "Q138862926",
 "no": "26"
 },
@@ -220,7 +241,7 @@
 "pos": "MF",
 "age": 32,
 "nat": "Scotland",
-"value_m": 0.43,
+"value_m": 0.489,
 "qid": "Q6166625",
 "no": "4"
 },
@@ -230,10 +251,20 @@
 "pos": "MF",
 "age": 21,
 "nat": "England",
-"value_m": 0.41,
+"value_m": 0.466,
 "qid": "Q124173696",
 "no": "16"
+},
+{
+"he": "Jeremy Monga",
+"en": "Jeremy Monga",
+"pos": "FW",
+"age": 17,
+"nat": "England",
+"value_m": 0.341,
+"qid": "Q133832511",
+"no": "12"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

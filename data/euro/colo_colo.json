@@ -1,0 +1,299 @@
+{
+"key": "colo_colo",
+"name_he": "קולו-קולו",
+"source": "enwiki:Template:Colo-Colo squad",
+"fetched": "2026-11-11",
+"rescaled": 1,
+"players": [
+{
+"he": "Vozinha",
+"en": "Vozinha",
+"pos": "GK",
+"age": 25,
+"nat": "Cape Verde",
+"value_m": 0.82,
+"qid": null,
+"no": "29"
+},
+{
+"he": "Eduardo Villanueva",
+"en": "Eduardo Villanueva",
+"pos": "GK",
+"age": 25,
+"nat": "Chile",
+"value_m": 0.662,
+"qid": null,
+"no": "12"
+},
+{
+"he": "Gabriel Maureira",
+"en": "Gabriel Maureira",
+"pos": "GK",
+"age": 19,
+"nat": "Chile",
+"value_m": 0.41,
+"qid": "Q139914366",
+"no": "25"
+},
+{
+"he": "Fernando de Paul",
+"en": "Fernando de Paul",
+"pos": "GK",
+"age": 35,
+"nat": "Chile",
+"value_m": 0.252,
+"qid": "Q5444999",
+"no": "1"
+},
+{
+"he": "Maximiliano Romero",
+"en": "Maximiliano Romero",
+"pos": "FW",
+"age": 27,
+"nat": "Argentina",
+"value_m": 1.96,
+"qid": "Q19847183",
+"no": "19"
+},
+{
+"he": "Tomás Alarcón",
+"en": "Tomás Alarcón",
+"pos": "MF",
+"age": 27,
+"nat": "Chile",
+"value_m": 1.88,
+"qid": "Q27786412",
+"no": "6"
+},
+{
+"he": "Lautaro Pastrán",
+"en": "Lautaro Pastrán",
+"pos": "FW",
+"age": 24,
+"nat": "Argentina",
+"value_m": 1.64,
+"qid": "Q115409780",
+"no": "10"
+},
+{
+"he": "Joaquín Sosa",
+"en": "Joaquín Sosa",
+"pos": "DF",
+"age": 24,
+"nat": "Uruguay",
+"value_m": 1.39,
+"qid": "Q106422163",
+"no": "4"
+},
+{
+"he": "Jeyson Rojas",
+"en": "Jeyson Rojas",
+"pos": "DF",
+"age": 24,
+"nat": "Chile",
+"value_m": 1.31,
+"qid": "Q104172781",
+"no": "28"
+},
+{
+"he": "ויקטור מנדס",
+"en": "Felipe Méndez",
+"pos": "MF",
+"age": 26,
+"nat": "Chile",
+"value_m": 1.23,
+"qid": "Q60737107",
+"no": "5"
+},
+{
+"he": "Marcos Bolados",
+"en": "Marcos Bolados",
+"pos": "FW",
+"age": 30,
+"nat": "Chile",
+"value_m": 1.17,
+"qid": "Q19873686",
+"no": "11"
+},
+{
+"he": "Jonathan Villagra",
+"en": "Jonathan Villagra",
+"pos": "DF",
+"age": 25,
+"nat": "Chile",
+"value_m": 1.12,
+"qid": "Q112080517",
+"no": "2"
+},
+{
+"he": "Rodrigo Catalán",
+"en": "Rodrigo Catalán",
+"pos": "MF",
+"age": 25,
+"nat": "Chile",
+"value_m": 1.02,
+"qid": null,
+"no": "34"
+},
+{
+"he": "Francisco Marchant",
+"en": "Francisco Marchant",
+"pos": "FW",
+"age": 20,
+"nat": "Chile",
+"value_m": 1.01,
+"qid": "Q136341650",
+"no": "7"
+},
+{
+"he": "Vicente Martínez",
+"en": "Vicente Martínez",
+"pos": "FW",
+"age": 25,
+"nat": "Chile",
+"value_m": 0.978,
+"qid": null,
+"no": "32"
+},
+{
+"he": "Leandro Hernández",
+"en": "Leandro Hernández",
+"pos": "FW",
+"age": 21,
+"nat": "Chile",
+"value_m": 0.946,
+"qid": "Q132134792",
+"no": "24"
+},
+{
+"he": "Alonso Olguín",
+"en": "Alonso Olguín",
+"pos": "DF",
+"age": 25,
+"nat": "Chile",
+"value_m": 0.93,
+"qid": null,
+"no": "3"
+},
+{
+"he": "Felipe Raipán",
+"en": "Felipe Raipán",
+"pos": "FW",
+"age": 25,
+"nat": "Chile",
+"value_m": 0.899,
+"qid": null,
+"no": "50"
+},
+{
+"he": "Diego Ulloa",
+"en": "Diego Ulloa",
+"pos": "DF",
+"age": 23,
+"nat": "Chile",
+"value_m": 0.883,
+"qid": "Q124352149",
+"no": "26"
+},
+{
+"he": "Yastin Cuevas",
+"en": "Yastin Cuevas",
+"pos": "FW",
+"age": 25,
+"nat": "Chile",
+"value_m": 0.883,
+"qid": null,
+"no": "30"
+},
+{
+"he": "Álvaro Madrid",
+"en": "Álvaro Madrid",
+"pos": "MF",
+"age": 31,
+"nat": "Chile",
+"value_m": 0.867,
+"qid": "Q6172835",
+"no": "8"
+},
+{
+"he": "Javier Correa",
+"en": "Javier Correa",
+"pos": "FW",
+"age": 32,
+"nat": "Argentina",
+"value_m": 0.867,
+"qid": "Q20736164",
+"no": "9"
+},
+{
+"he": "Matías Fernández",
+"en": "Matías Fernández",
+"pos": "DF",
+"age": 31,
+"nat": "Chile",
+"value_m": 0.725,
+"qid": "Q6006626",
+"no": "13"
+},
+{
+"he": "Iván Román",
+"en": "Iván Román",
+"pos": "DF",
+"age": 20,
+"nat": "Chile",
+"value_m": 0.725,
+"qid": "Q122387410",
+"no": "17"
+},
+{
+"he": "Bruno Torres",
+"en": "Bruno Torres",
+"pos": "DF",
+"age": 25,
+"nat": "Chile",
+"value_m": 0.694,
+"qid": null,
+"no": "39"
+},
+{
+"he": "Javier Méndez",
+"en": "Javier Méndez",
+"pos": "DF",
+"age": 31,
+"nat": "Uruguay",
+"value_m": 0.678,
+"qid": "Q18223015",
+"no": "20"
+},
+{
+"he": "Erick Wiemberg",
+"en": "Erick Wiemberg",
+"pos": "DF",
+"age": 32,
+"nat": "Chile",
+"value_m": 0.583,
+"qid": "Q42727824",
+"no": "21"
+},
+{
+"he": "ארתורו וידאל",
+"en": "Arturo Vidal",
+"pos": "MF",
+"age": 39,
+"nat": "Chile",
+"value_m": 0.473,
+"qid": "Q192671",
+"no": "23"
+},
+{
+"he": "Claudio Aquino",
+"en": "Claudio Aquino",
+"pos": "MF",
+"age": 35,
+"nat": "Argentina",
+"value_m": 0.331,
+"qid": "Q5129320",
+"no": "22"
+}
+]
+}

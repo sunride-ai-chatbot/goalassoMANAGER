@@ -3,6 +3,7 @@
 "name_he": "אנדרלכט",
 "source": "enwiki:RSC Anderlecht",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Justin Heekeren",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Germany",
-"value_m": 1.96,
+"value_m": 2.5,
 "qid": "Q112306203",
 "no": "32"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.61,
+"value_m": 2.06,
 "qid": null,
 "no": "66"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.49,
+"value_m": 1.9,
 "qid": null,
 "no": "33"
 },
@@ -40,7 +41,7 @@
 "pos": "GK",
 "age": 34,
 "nat": "Belgium",
-"value_m": 0.59,
+"value_m": 0.754,
 "qid": "Q645957",
 "no": "26"
 },
@@ -50,9 +51,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Finland",
-"value_m": 4.2,
+"value_m": 5.37,
 "qid": "Q62596606",
 "no": "11"
+},
+{
+"he": "Thelo Aasgaard",
+"en": "Thelo Aasgaard",
+"pos": "MF",
+"age": 24,
+"nat": "Norway",
+"value_m": 5.17,
+"qid": "Q100711783",
+"no": "19"
 },
 {
 "he": "Giulian Biancone",
@@ -60,7 +71,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "France",
-"value_m": 3.46,
+"value_m": 4.42,
 "qid": "Q59270465",
 "no": "4"
 },
@@ -70,7 +81,7 @@
 "pos": "FW",
 "age": 26,
 "nat": "Belgium",
-"value_m": 3.46,
+"value_m": 4.42,
 "qid": "Q98100668",
 "no": "91"
 },
@@ -80,7 +91,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Netherlands",
-"value_m": 3.38,
+"value_m": 4.32,
 "qid": "Q62518004",
 "no": "24"
 },
@@ -90,9 +101,19 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ukraine",
-"value_m": 3.34,
+"value_m": 4.27,
 "qid": "Q60849755",
 "no": "14"
+},
+{
+"he": "אנדרו אומובמידלה",
+"en": "Andrew Omobamidele",
+"pos": "DF",
+"age": 24,
+"nat": "Ireland",
+"value_m": 4.19,
+"qid": "Q104849454",
+"no": "12"
 },
 {
 "he": "Marten Winkler",
@@ -100,7 +121,7 @@
 "pos": "FW",
 "age": 23,
 "nat": "Germany",
-"value_m": 3.22,
+"value_m": 4.12,
 "qid": "Q106844385",
 "no": "10"
 },
@@ -110,7 +131,7 @@
 "pos": "MF",
 "age": 24,
 "nat": "Belgium",
-"value_m": 3.18,
+"value_m": 4.06,
 "qid": "Q66124949",
 "no": "55"
 },
@@ -120,7 +141,7 @@
 "pos": "FW",
 "age": 24,
 "nat": "Morocco",
-"value_m": 2.99,
+"value_m": 3.82,
 "qid": "Q124844950",
 "no": "21"
 },
@@ -130,7 +151,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "Moldova",
-"value_m": 2.87,
+"value_m": 3.67,
 "qid": "Q50350170",
 "no": "5"
 },
@@ -140,7 +161,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Denmark",
-"value_m": 2.75,
+"value_m": 3.51,
 "qid": "Q118836143",
 "no": "3"
 },
@@ -150,7 +171,7 @@
 "pos": "FW",
 "age": 21,
 "nat": "Belgium",
-"value_m": 2.71,
+"value_m": 3.46,
 "qid": "Q115769150",
 "no": "83"
 },
@@ -160,7 +181,7 @@
 "pos": "MF",
 "age": 22,
 "nat": "Czech Republic",
-"value_m": 2.63,
+"value_m": 3.36,
 "qid": "Q116820825",
 "no": "18"
 },
@@ -170,7 +191,7 @@
 "pos": "MF",
 "age": 21,
 "nat": "DR Congo",
-"value_m": 2.63,
+"value_m": 3.36,
 "qid": "Q104840987",
 "no": "29"
 },
@@ -180,7 +201,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "Belgium",
-"value_m": 2.59,
+"value_m": 3.31,
 "qid": "Q66360961",
 "no": "54"
 },
@@ -190,7 +211,7 @@
 "pos": "DF",
 "age": 23,
 "nat": "Senegal",
-"value_m": 2.51,
+"value_m": 3.21,
 "qid": "Q113577268",
 "no": "7"
 },
@@ -200,7 +221,7 @@
 "pos": "DF",
 "age": 21,
 "nat": "Morocco",
-"value_m": 2.28,
+"value_m": 2.91,
 "qid": "Q115610899",
 "no": "79"
 },
@@ -210,7 +231,7 @@
 "pos": "MF",
 "age": 23,
 "nat": "Côte d'Ivoire",
-"value_m": 2.16,
+"value_m": 2.76,
 "qid": "Q112277165",
 "no": "8"
 },
@@ -220,7 +241,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Greece",
-"value_m": 2.12,
+"value_m": 2.71,
 "qid": "Q102327599",
 "no": "30"
 },
@@ -230,7 +251,7 @@
 "pos": "FW",
 "age": 19,
 "nat": "Serbia",
-"value_m": 2.0,
+"value_m": 2.56,
 "qid": "Q122227388",
 "no": "9"
 },
@@ -240,7 +261,7 @@
 "pos": "DF",
 "age": 29,
 "nat": "France",
-"value_m": 1.92,
+"value_m": 2.45,
 "qid": "Q108320195",
 "no": "27"
 },
@@ -250,7 +271,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Belgium",
-"value_m": 1.77,
+"value_m": 2.26,
 "qid": null,
 "no": "50"
 },
@@ -260,7 +281,7 @@
 "pos": "DF",
 "age": 32,
 "nat": "Sweden",
-"value_m": 1.26,
+"value_m": 1.61,
 "qid": "Q4806248",
 "no": "6"
 },
@@ -270,7 +291,7 @@
 "pos": "DF",
 "age": 20,
 "nat": "Germany",
-"value_m": 1.14,
+"value_m": 1.46,
 "qid": "Q131863512",
 "no": "2"
 },
@@ -280,7 +301,7 @@
 "pos": "FW",
 "age": 17,
 "nat": "Belgium",
-"value_m": 0.9,
+"value_m": 1.15,
 "qid": "Q129221941",
 "no": "49"
 },
@@ -290,7 +311,7 @@
 "pos": "MF",
 "age": 17,
 "nat": "Belgium",
-"value_m": 0.79,
+"value_m": 1.01,
 "qid": "Q140069514",
 "no": "68"
 },
@@ -300,10 +321,10 @@
 "pos": "FW",
 "age": 17,
 "nat": "Belgium",
-"value_m": 0.75,
+"value_m": 0.959,
 "qid": "Q140070135",
 "no": "53"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }

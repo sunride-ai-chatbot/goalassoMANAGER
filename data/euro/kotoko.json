@@ -3,6 +3,7 @@
 "name_he": "אסאנטה קוטוקו",
 "source": "enwiki:Asante Kotoko S.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "אבראהים דנלאד",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 23,
 "nat": "Ghana",
-"value_m": 0.4,
+"value_m": 0.498,
 "qid": "Q84558005",
 "no": "31"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Morocco",
-"value_m": 0.25,
+"value_m": 0.311,
 "qid": null,
 "no": "22"
 },
@@ -30,7 +31,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.21,
+"value_m": 0.261,
 "qid": null,
 "no": "1"
 },
@@ -40,7 +41,7 @@
 "pos": "FW",
 "age": 27,
 "nat": "Ghana",
-"value_m": 0.46,
+"value_m": 0.573,
 "qid": "Q106033184",
 "no": "14"
 },
@@ -50,7 +51,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "Ghana",
-"value_m": 0.37,
+"value_m": 0.461,
 "qid": "Q106421732",
 "no": "6"
 },
@@ -60,7 +61,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.37,
+"value_m": 0.461,
 "qid": null,
 "no": "19"
 },
@@ -70,7 +71,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Guinea",
-"value_m": 0.35,
+"value_m": 0.436,
 "qid": null,
 "no": "9"
 },
@@ -80,7 +81,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.33,
+"value_m": 0.411,
 "qid": null,
 "no": "13"
 },
@@ -90,7 +91,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.31,
+"value_m": 0.386,
 "qid": null,
 "no": "18"
 },
@@ -100,7 +101,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.29,
+"value_m": 0.361,
 "qid": null,
 "no": "7"
 },
@@ -110,7 +111,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.29,
+"value_m": 0.361,
 "qid": null,
 "no": "8"
 },
@@ -120,7 +121,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "DR Congo",
-"value_m": 0.29,
+"value_m": 0.361,
 "qid": null,
 "no": "15"
 },
@@ -130,7 +131,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.29,
+"value_m": 0.361,
 "qid": null,
 "no": "27"
 },
@@ -140,7 +141,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.29,
+"value_m": 0.361,
 "qid": null,
 "no": "40"
 },
@@ -150,7 +151,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.27,
+"value_m": 0.336,
 "qid": null,
 "no": "29"
 },
@@ -160,7 +161,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.27,
+"value_m": 0.336,
 "qid": null,
 "no": "44"
 },
@@ -170,7 +171,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.25,
+"value_m": 0.311,
 "qid": null,
 "no": "10"
 },
@@ -180,7 +181,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.25,
+"value_m": 0.311,
 "qid": null,
 "no": "11"
 },
@@ -190,7 +191,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.25,
+"value_m": 0.311,
 "qid": null,
 "no": "25"
 },
@@ -200,7 +201,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.23,
+"value_m": 0.286,
 "qid": null,
 "no": "5"
 },
@@ -210,7 +211,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.23,
+"value_m": 0.286,
 "qid": null,
 "no": "17"
 },
@@ -220,7 +221,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.23,
+"value_m": 0.286,
 "qid": null,
 "no": "20"
 },
@@ -230,7 +231,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.23,
+"value_m": 0.286,
 "qid": null,
 "no": "43"
 },
@@ -240,7 +241,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.21,
+"value_m": 0.261,
 "qid": null,
 "no": "2"
 },
@@ -250,7 +251,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Côte d'Ivoire",
-"value_m": 0.21,
+"value_m": 0.261,
 "qid": null,
 "no": "4"
 },
@@ -260,7 +261,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.21,
+"value_m": 0.261,
 "qid": null,
 "no": "12"
 },
@@ -270,7 +271,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.21,
+"value_m": 0.261,
 "qid": null,
 "no": "16"
 },
@@ -280,7 +281,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "Burkina Faso",
-"value_m": 0.21,
+"value_m": 0.261,
 "qid": null,
 "no": "24"
 },
@@ -290,10 +291,9 @@
 "pos": "DF",
 "age": 25,
 "nat": "Ghana",
-"value_m": 0.21,
+"value_m": 0.261,
 "qid": null,
 "no": "26"
 }
-],
-"rescaled": 1
+]
 }

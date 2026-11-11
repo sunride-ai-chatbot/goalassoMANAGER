@@ -3,6 +3,7 @@
 "name_he": "קייזר צ'יפס",
 "source": "enwiki:Kaizer Chiefs F.C.",
 "fetched": "2026-10-27",
+"rescaled": 1,
 "players": [
 {
 "he": "Brandon Peterson",
@@ -10,7 +11,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.25,
+"value_m": 0.507,
 "qid": null,
 "no": "1"
 },
@@ -20,7 +21,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.23,
+"value_m": 0.467,
 "qid": "Q138847878",
 "no": "16"
 },
@@ -30,9 +31,19 @@
 "pos": "GK",
 "age": 31,
 "nat": "South Africa",
-"value_m": 0.15,
+"value_m": 0.304,
 "qid": "Q58578949",
 "no": "44"
+},
+{
+"he": "Elias Mokwana",
+"en": "Elias Mokwana",
+"pos": "FW",
+"age": 27,
+"nat": "South Africa",
+"value_m": 0.918,
+"qid": "Q128338994",
+"no": null
 },
 {
 "he": "Reeve Frosler",
@@ -40,7 +51,7 @@
 "pos": "DF",
 "age": 28,
 "nat": "South Africa",
-"value_m": 0.44,
+"value_m": 0.892,
 "qid": "Q29962454",
 "no": "39"
 },
@@ -50,7 +61,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.42,
+"value_m": 0.852,
 "qid": "Q117790110",
 "no": "48"
 },
@@ -60,7 +71,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "South Africa",
-"value_m": 0.37,
+"value_m": 0.75,
 "qid": "Q125542070",
 "no": "7"
 },
@@ -70,7 +81,7 @@
 "pos": "MF",
 "age": 26,
 "nat": "South Africa",
-"value_m": 0.37,
+"value_m": 0.75,
 "qid": "Q58579696",
 "no": "12"
 },
@@ -80,7 +91,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "South Africa",
-"value_m": 0.35,
+"value_m": 0.71,
 "qid": "Q97578621",
 "no": "2"
 },
@@ -90,7 +101,7 @@
 "pos": "FW",
 "age": 28,
 "nat": "South Africa",
-"value_m": 0.35,
+"value_m": 0.71,
 "qid": "Q114379756",
 "no": "3"
 },
@@ -100,7 +111,7 @@
 "pos": "DF",
 "age": 27,
 "nat": "South Africa",
-"value_m": 0.35,
+"value_m": 0.71,
 "qid": "Q64167439",
 "no": "42"
 },
@@ -110,7 +121,7 @@
 "pos": "MF",
 "age": 28,
 "nat": "South Africa",
-"value_m": 0.33,
+"value_m": 0.669,
 "qid": "Q98831804",
 "no": "23"
 },
@@ -120,7 +131,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.33,
+"value_m": 0.669,
 "qid": null,
 "no": "31"
 },
@@ -130,7 +141,7 @@
 "pos": "FW",
 "age": 22,
 "nat": "South Africa",
-"value_m": 0.33,
+"value_m": 0.669,
 "qid": "Q125679700",
 "no": "47"
 },
@@ -140,7 +151,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "South Africa",
-"value_m": 0.31,
+"value_m": 0.629,
 "qid": "Q50821401",
 "no": "8"
 },
@@ -150,7 +161,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.31,
+"value_m": 0.629,
 "qid": null,
 "no": "17"
 },
@@ -160,7 +171,7 @@
 "pos": "MF",
 "age": 29,
 "nat": "South Africa",
-"value_m": 0.31,
+"value_m": 0.629,
 "qid": "Q33083442",
 "no": "21"
 },
@@ -170,7 +181,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.31,
+"value_m": 0.629,
 "qid": null,
 "no": "34"
 },
@@ -180,7 +191,7 @@
 "pos": "FW",
 "age": 30,
 "nat": "Guinea-Bissau",
-"value_m": 0.31,
+"value_m": 0.629,
 "qid": "Q19577866",
 "no": "77"
 },
@@ -190,7 +201,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "Angola",
-"value_m": 0.31,
+"value_m": 0.629,
 "qid": "Q28555322",
 "no": "84"
 },
@@ -200,7 +211,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.29,
+"value_m": 0.588,
 "qid": null,
 "no": "11"
 },
@@ -210,7 +221,7 @@
 "pos": "DF",
 "age": 24,
 "nat": "South Africa",
-"value_m": 0.29,
+"value_m": 0.588,
 "qid": "Q123997857",
 "no": "14"
 },
@@ -220,7 +231,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Tanzania",
-"value_m": 0.29,
+"value_m": 0.588,
 "qid": null,
 "no": "22"
 },
@@ -230,7 +241,7 @@
 "pos": "MF",
 "age": 20,
 "nat": "South Africa",
-"value_m": 0.27,
+"value_m": 0.548,
 "qid": "Q136432483",
 "no": "28"
 },
@@ -240,7 +251,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Nigeria",
-"value_m": 0.27,
+"value_m": 0.548,
 "qid": null,
 "no": "50"
 },
@@ -250,7 +261,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.27,
+"value_m": 0.548,
 "qid": null,
 "no": "70"
 },
@@ -260,7 +271,7 @@
 "pos": "DF",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.25,
+"value_m": 0.507,
 "qid": null,
 "no": "74"
 },
@@ -270,7 +281,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "South Africa",
-"value_m": 0.25,
+"value_m": 0.507,
 "qid": null,
 "no": null
 },
@@ -280,7 +291,7 @@
 "pos": "MF",
 "age": 31,
 "nat": "South Africa",
-"value_m": 0.23,
+"value_m": 0.467,
 "qid": "Q58494664",
 "no": "6"
 },
@@ -290,7 +301,7 @@
 "pos": "DF",
 "age": 30,
 "nat": "South Africa",
-"value_m": 0.21,
+"value_m": 0.426,
 "qid": "Q125342498",
 "no": "18"
 },
@@ -300,10 +311,10 @@
 "pos": "MF",
 "age": 31,
 "nat": "South Africa",
-"value_m": 0.17,
+"value_m": 0.345,
 "qid": "Q119349881",
 "no": "5"
 }
 ],
-"rescaled": 1
+"merged": "2026-11-11"
 }
