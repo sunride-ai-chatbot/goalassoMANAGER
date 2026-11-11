@@ -80,6 +80,7 @@ LINK = re.compile(r'\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]*))?\]\]')
 def parse_squad(text):
     """Players from the first-team squad sections, in article order, with number / nat / pos / name / title."""
     out, seen = [], set()
+    text = re.sub(r'\{\{\{[^{}]*\}\}\}', '', text)   # template parameters ({{{format|navbox}}}) inside squad templates
     parts = re.split(r'\n(={2,4})\s*(.*?)\s*\1\s*\n', '\n' + text)
     sections = [(parts[i + 1], parts[i + 2]) for i in range(1, len(parts) - 2, 3)]   # the lead never holds a squad
     for head, body in sections:
@@ -99,12 +100,16 @@ def parse_squad(text):
             lm = LINK.search(name)
             title = lm.group(1).strip() if lm else None
             disp = (lm.group(2) or lm.group(1)).strip() if lm else re.sub(r'<[^>]+>|\{\{[^}]*\}\}', '', name).strip()
+            if not name and f.get('last'):   # {{Fs2 player|first=|last=|link=}}: the article is `link`, or "first last"
+                disp = (f.get('first', '') + ' ' + f['last']).strip()
+                title = f.get('link', '').strip() or disp
             disp = html.unescape(re.sub(r"''+", '', disp))
             if not disp or disp in seen:
                 continue
             seen.add(disp)
+            # "on loan from X" is a squad member; only a player loaned out ("on loan to/at X") is away
             out.append({'no': f.get('no', '').strip() or None, 'pos': POS.get(f.get('pos', '').strip().upper()), 'nat': NAT.get(f.get('nat', '').strip().upper()),
-                        'en': disp, 'title': title, 'loan': bool(re.search(r'loan', f.get('other', ''), re.I))})
+                        'en': disp, 'title': title, 'loan': bool(re.search(r'loan(?:ed)?\s+(?:to|at)\b|\bat\s+\[\[', f.get('other', ''), re.I))})
     return out
 
 
