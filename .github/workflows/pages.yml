@@ -32,6 +32,7 @@ jobs:
           mkdir -p _site
           cp ligat-haal-manager.html _site/index.html
           cp beginner.html _site/beginner.html
+          cp version.json _site/version.json
           find assets -maxdepth 1 -type f -exec cp {} _site/ \;
           cp -R assets _site/assets
       - uses: actions/upload-pages-artifact@v3

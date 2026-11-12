@@ -85,6 +85,12 @@ async function main(){
     out.accepted=doSub(M,c,fo.id,b[0].id)!==false;out.after=foreignOnPitch(M,c);const eu={country:'אירופה'};out.euro=foreignLimited(eu);return out})()`);
   assert.ok(fr.limited);assert.equal(fr.on,6);assert.ok(fr.blocked,'a seventh foreigner is refused');assert.ok(fr.swapOk);assert.ok(fr.localOk);assert.ok(fr.refused);assert.equal(fr.still,6);
   assert.deepEqual(fr.disabled.sort(),fr.want.sort(),'the dialog shows which substitutes cannot come on');assert.ok(fr.max<=6,'the computer\'s own substitutions keep the limit, got '+fr.max);assert.ok(fr.accepted);assert.equal(fr.after,6);assert.equal(fr.euro,false);
+  // ---- the build is visible and an open page learns about a newer one
+  const bi=run('buildInfo()');assert.ok(/^[0-9a-f]{12}$/.test(bi.id));w.eval("BstopBroadcast();delete Bstate().live;Btab='home';Brender()");assert.ok(w.document.querySelector('.bfooter .buildstamp').textContent.includes(bi.id.slice(0,6)),'the stamp is in the footer of the beginner screens');
+  let asked='';w.fetch=u=>{asked=String(u);return Promise.resolve({ok:true,json:()=>Promise.resolve({build:bi.id,built:'x'})})};w.eval('updLast=0');assert.equal(await w.eval('updateCheck()'),false,'same build: nothing to offer');assert.ok(/version\.json\?t=\d+$/.test(asked));assert.equal($('#updBar'),null);
+  assert.equal(await w.eval('updateCheck()'),false,'not asked again within two minutes');
+  w.fetch=()=>Promise.resolve({ok:true,json:()=>Promise.resolve({build:'ffffffffffff',built:'13.11.2026 10:00'})});w.eval('updLast=0');assert.equal(await w.eval('updateCheck()'),true);assert.ok($('#updBar').textContent.includes('13.11.2026 10:00'));assert.ok($('#updGo'));$('#updNo').click();assert.equal($('#updBar'),null);
+  w.fetch=()=>Promise.resolve({ok:false});w.eval('updLast=0');assert.equal(await w.eval('updateCheck()'),false,'a host without version.json never shows the bar');w.fetch=()=>Promise.reject(new Error('offline'));w.eval('updLast=0');assert.equal(await w.eval('updateCheck()'),false);
   assert.deepEqual(errors,[]);
   console.log('live picture: score sides, ball carrier and his name (2D), name tag timeline (3D), scorers and cards, ratings of both sides, real free agents only, foreign limit on substitutions passed; errors []');
 }

@@ -137,3 +137,10 @@ h3{font-size:18px}
 @keyframes sidespop{0%{transform:scale(1)}25%{transform:scale(1.4);color:#69ead1}100%{transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.sides bdi.pop{animation:none}}
 .pl.off{opacity:.45}
+/* build stamp and the "new version" bar (36i-version.js) */
+.buildstamp{display:inline-block;font-size:12px;opacity:.7;white-space:nowrap}
+#updBar{position:fixed;inset:calc(env(safe-area-inset-top,0px) + 8px) 10px auto 10px;z-index:120;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:#0f2a33;color:#fff;border:1px solid #69ead1;box-shadow:0 10px 30px rgba(0,0,0,.5);font:600 15px/1.35 Heebo,Arial,sans-serif;direction:rtl}
+#updBar span{flex:1;min-width:0}
+#updBar button{flex:none;min-height:40px;border-radius:10px;border:0;font:800 15px Heebo,Arial,sans-serif;cursor:pointer}
+#updBar #updGo{padding:0 14px;background:#69ead1;color:#06231d}
+#updBar #updNo{width:40px;background:transparent;color:#fff;font-size:22px}

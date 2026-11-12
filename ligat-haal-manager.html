@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="deb0d63c4316">
+<meta name="goalasso-build" content="5187c7f0be54">
+<meta name="goalasso-built" content="12.11.2026 09:22">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -152,6 +153,13 @@ h3{font-size:18px}
 @keyframes sidespop{0%{transform:scale(1)}25%{transform:scale(1.4);color:#69ead1}100%{transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.sides bdi.pop{animation:none}}
 .pl.off{opacity:.45}
+/* build stamp and the "new version" bar (36i-version.js) */
+.buildstamp{display:inline-block;font-size:12px;opacity:.7;white-space:nowrap}
+#updBar{position:fixed;inset:calc(env(safe-area-inset-top,0px) + 8px) 10px auto 10px;z-index:120;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:#0f2a33;color:#fff;border:1px solid #69ead1;box-shadow:0 10px 30px rgba(0,0,0,.5);font:600 15px/1.35 Heebo,Arial,sans-serif;direction:rtl}
+#updBar span{flex:1;min-width:0}
+#updBar button{flex:none;min-height:40px;border-radius:10px;border:0;font:800 15px Heebo,Arial,sans-serif;cursor:pointer}
+#updBar #updGo{padding:0 14px;background:#69ead1;color:#06231d}
+#updBar #updNo{width:40px;background:transparent;color:#fff;font-size:22px}
 /* ---- 3D lineup ---- */
 .stad{position:relative;width:min(100%,560px);margin-inline:auto;border-radius:18px;background:#05070c;box-shadow:0 18px 50px rgba(0,0,0,.55)}
 .stad-3d{transform-style:preserve-3d}
@@ -5889,7 +5897,7 @@ function engageClick(e){const t=e.target;
   const nt=t.closest('[data-notif]');if(nt){notifySet(nt.dataset.notif==='1');return true}
   return false}
 function engageSettingsHTML(){const vib=typeof navigator!=='undefined'&&!!navigator.vibrate;const ns=notifyState();
-  return `<div class="row between wrap" style="margin-top:8px"><span class="small">פנדלים ודו־קרב פנדלים</span><div class="mt" style="flex:0 0 200px"><button data-pengame="1" class="${G.penGame!==false?'on':''}">אני בועט</button><button data-pengame="0" class="${G.penGame===false?'on':''}">אוטומטי</button></div></div>
+  return `<div class="row between wrap" style="margin-top:8px"><span class="small">גרסת המשחק</span>${buildStampHTML()}</div><div class="row between wrap" style="margin-top:8px"><span class="small">פנדלים ודו־קרב פנדלים</span><div class="mt" style="flex:0 0 200px"><button data-pengame="1" class="${G.penGame!==false?'on':''}">אני בועט</button><button data-pengame="0" class="${G.penGame===false?'on':''}">אוטומטי</button></div></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">רטט ברגעים גדולים ${vib?'':'<span class="muted">(לא נתמך בדפדפן הזה)</span>'}</span><div class="mt" style="flex:0 0 160px"><button data-hap="1" class="${G.haptic!==false?'on':''}">פעיל</button><button data-hap="0" class="${G.haptic===false?'on':''}">כבוי</button></div></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">התראות כשהמשחק ברקע <span class="muted">${ns==='unsupported'?'(לא נתמך בדפדפן הזה)':ns==='denied'?'(חסום בהגדרות הדפדפן)':'(משחק רשת)'}</span></span><div class="mt" style="flex:0 0 160px"><button data-notif="1" class="${ns==='on'?'on':''}" ${ns==='unsupported'||ns==='denied'?'disabled':''}>פעיל</button><button data-notif="0" class="${ns!=='on'?'on':''}">כבוי</button></div></div>`}
 /* ====================== CAREER BOOK: trophies, records, achievements ======================
@@ -6397,6 +6405,23 @@ function roomNotify(prev,st){if(!prev||!st)return;const n=(st.members||[]).lengt
   if(n>pn)return notify('חבר הצטרף לחדר','אפשר לסמן שאתם מוכנים ולהתחיל.','room');if(st.result&&!prev.result)return notify('משחק הרשת שוחק','התוצאה מחכה לך.','room');
   const o=(st.members||[]).find(m=>!m.mine),po=(prev.members||[]).find(m=>!m.mine);if(o&&o.ready&&po&&!po.ready)notify('החבר מוכן','מחכים רק לך.','room')}
 try{if(typeof window!=='undefined')window.addEventListener('load',()=>{if(notifyState()==='on')notifyRegister()})}catch(e){}
+/* ---- which build is running, and is there a newer one --------------------------------------------------------------
+   The page carries its build id (a content hash) and the time of the commit it was built from; the server publishes the
+   same pair in version.json. A page that stays open for days (a home-screen app resumed from the background never
+   reloads by itself) asks for that small file when it comes back to the front and offers the new build in a bar: the
+   player decides when, his career is saved first and the address gets the build id so no cache can answer. Hosts
+   without version.json simply never show the bar. The visible stamp tells a player (and support) which build he has. */
+function buildInfo(){const g=n=>{const m=document.querySelector('meta[name="'+n+'"]');return m?m.content||'':''};return {id:g('goalasso-build'),at:g('goalasso-built')}}
+function buildStampHTML(){const b=buildInfo();return b.id?`<span class="buildstamp">גרסה <bdi>${esc(b.at||'')}</bdi> · <bdi dir="ltr">${esc(b.id.slice(0,6))}</bdi></span>`:''}
+let updLast=0;
+function updateBar(v){if(document.getElementById('updBar'))return;const bar=document.createElement('div');bar.id='updBar';bar.setAttribute('role','status');
+  bar.innerHTML=`<span>יש גרסה חדשה של המשחק${v&&v.built?` (<bdi>${esc(v.built)}</bdi>)`:''}. הקריירה נשמרת.</span><button type="button" id="updGo">עדכן עכשיו</button><button type="button" id="updNo" aria-label="לא עכשיו">×</button>`;
+  document.body.appendChild(bar);bar.querySelector('#updNo').onclick=()=>bar.remove();
+  bar.querySelector('#updGo').onclick=()=>{try{if(typeof Bwrite==='function'&&typeof G!=='undefined'&&G&&G.beginner)Bwrite();else if(typeof save==='function'&&typeof G!=='undefined'&&G)save()}catch(e){}
+    setTimeout(()=>{const u=new URL(location.href);u.searchParams.set('v',(v&&v.build)||Date.now());location.replace(u.href)},250)}}
+function updateCheck(){if(typeof fetch!=='function'||location.protocol==='file:'||!buildInfo().id)return Promise.resolve(false);const now=Date.now();if(now-updLast<120000)return Promise.resolve(false);updLast=now;
+  return fetch(new URL('version.json?t='+now,location.href).href,{cache:'no-store'}).then(r=>r.ok?r.json():null).then(v=>{if(v&&v.build&&v.build!==buildInfo().id){updateBar(v);return true}return false}).catch(()=>false)}
+function updateWatch(){updateCheck();document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCheck()});window.addEventListener('pageshow',()=>updateCheck())}
 /* ====================== LIVE MATCH (30s, subs, half-time) ====================== */
 function playInstant(){const M=advanceWeek();if(M){M.live=false;runInstant(M);if(M.ctx.kind!=='league'&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);const h=club(M.h),a=club(M.a);afterMyMatch(M);toast(`${h.short} ${M.gh}:${M.ga} ${a.short}`);if(isBigMatch(M)&&pressMode()!=='off'){render();return runPress('post',M,()=>render())}}render()}
 let liveTimer=null;
@@ -6572,6 +6597,7 @@ function startUI(){
   if(!window.__ilmNoSplash&&!Rooms.arrival())showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);document.addEventListener('pointerdown',function unlock(){try{const a=ac();if(a&&typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});render();Rooms.boot();if(bootResolve){bootResolve(true);bootResolve=null}try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
 if(window.claude?.hot?.snapshot)window.claude.hot.snapshot(()=>({}));
 window.ILM={get G(){return G},me,render,NIS,myPos,myDiv,standingsOf,club,myNextMatch,ready:BOOT_READY,whenSaved:()=>SV.busy&&SV.promise?SV.promise:Promise.resolve(!persistenceError),storage:STORE};
+try{updateWatch()}catch(e){}
 window.claude?.hot?.ready?window.claude.hot.ready(start):start();
 </script>
 </body>

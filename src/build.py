@@ -122,7 +122,18 @@ for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISU
     assert ph not in out, 'unfilled placeholder ' + ph
 # build stamp: a hash of the page content, so a live check can tell which build a server is actually serving
 import hashlib
-out = out.replace('<head>', '<head>\n<meta name="goalasso-build" content="%s">' % hashlib.sha256(out.encode('utf8')).hexdigest()[:12], 1)
+build_id = hashlib.sha256(out.encode('utf8')).hexdigest()[:12]
+# ...and the time of the commit it was built from (Israel time), shown to the player as the version; version.json carries
+# the same pair so an open page can find out that the server has a newer build (36i-version.js)
+import subprocess
+try:
+    built = subprocess.run(['git', '-C', ROOT, 'log', '-1', '--format=%cd', '--date=format-local:%d.%m.%Y %H:%M'], capture_output=True, text=True,
+                           env=dict(os.environ, TZ='Asia/Jerusalem'), timeout=20).stdout.strip()
+except Exception:
+    built = ''
+out = out.replace('<head>', '<head>\n<meta name="goalasso-build" content="%s">\n<meta name="goalasso-built" content="%s">' % (build_id, built), 1)
+with open(os.path.join(ROOT, 'version.json'), 'w', encoding='utf8') as fh:
+    json.dump({'build': build_id, 'built': built}, fh)
 with open(os.path.join(ROOT, 'ligat-haal-manager.html'), 'w', encoding='utf8') as fh:
     fh.write(out)
 print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), 'euro clubs:', len(euro),
