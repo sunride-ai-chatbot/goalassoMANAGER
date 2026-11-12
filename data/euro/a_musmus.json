@@ -1,0 +1,200 @@
+{
+ "key": "a_musmus",
+ "name_he": "הפועל בני מוסמוס",
+ "league": "alef_north",
+ "city": "מוסמוס",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=2338 season 2026/27: הפועל בני מוסמוס",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "כרים אגבאריה",
+   "en": "כרים אגבאריה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.053
+  },
+  {
+   "he": "מוחמד אגבאריה",
+   "en": "מוחמד אגבאריה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.087
+  },
+  {
+   "he": "מרואן אגבאריה",
+   "en": "מרואן אגבאריה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "ליאן רפאל אדרי",
+   "en": "ליאן רפאל אדרי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "ג'ואד אנעים",
+   "en": "ג'ואד אנעים",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.143
+  },
+  {
+   "he": "מוחמד בדראן",
+   "en": "מוחמד בדראן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.127
+  },
+  {
+   "he": "גיא בן לולו",
+   "en": "גיא בן לולו",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.143
+  },
+  {
+   "he": "מוחמד ג'בארין",
+   "en": "מוחמד ג'בארין",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "עבדאללה ג'בארין",
+   "en": "עבדאללה ג'בארין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.057
+  },
+  {
+   "he": "סמיר ג'ובראן",
+   "en": "סמיר ג'ובראן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.147
+  },
+  {
+   "he": "עידן ולסנקו",
+   "en": "עידן ולסנקו",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.062
+  },
+  {
+   "he": "אברהים זועבי מהדי",
+   "en": "אברהים זועבי מהדי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.088
+  },
+  {
+   "he": "ג'ורג' זיינה",
+   "en": "ג'ורג' זיינה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.13
+  },
+  {
+   "he": "מורי זילברברג",
+   "en": "מורי זילברברג",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.106
+  },
+  {
+   "he": "מוחמד חכרוש",
+   "en": "מוחמד חכרוש",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.053
+  },
+  {
+   "he": "עבד אל רחמאן כבהא",
+   "en": "עבד אל רחמאן כבהא",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.087
+  },
+  {
+   "he": "אחמד כריים",
+   "en": "אחמד כריים",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.066
+  },
+  {
+   "he": "מוחמד מחאגנה",
+   "en": "מוחמד מחאגנה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.054
+  },
+  {
+   "he": "עמאד אלדין עבדאללה",
+   "en": "עמאד אלדין עבדאללה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.104
+  },
+  {
+   "he": "אדם עואד",
+   "en": "אדם עואד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.117
+  },
+  {
+   "he": "מוחמד עומרי",
+   "en": "מוחמד עומרי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.127
+  },
+  {
+   "he": "איל עמר",
+   "en": "איל עמר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "עבד אלרחמאן שהואן",
+   "en": "עבד אלרחמאן שהואן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.127
+  }
+ ]
+}

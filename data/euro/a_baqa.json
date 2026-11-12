@@ -1,0 +1,248 @@
+{
+ "key": "a_baqa",
+ "name_he": "הפועל בקה אל-גרבייה",
+ "league": "alef_north",
+ "city": "בקה אל-גרבייה",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=6078 season 2026/27: הפועל עירוני בקה אל גרבייה",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "דניאל אבו סעדה",
+   "en": "דניאל אבו סעדה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.059
+  },
+  {
+   "he": "ביאן אבוריא",
+   "en": "ביאן אבוריא",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "עומר אדלר",
+   "en": "עומר אדלר",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.135
+  },
+  {
+   "he": "סאלח אזברגה",
+   "en": "סאלח אזברגה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.117
+  },
+  {
+   "he": "עילאי אטיאס",
+   "en": "עילאי אטיאס",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "ג'ואל ג'מפי אסיאמה",
+   "en": "ג'ואל ג'מפי אסיאמה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.104
+  },
+  {
+   "he": "כרם בדראן",
+   "en": "כרם בדראן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "עמר בונדר",
+   "en": "עמר בונדר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "מוחמד ביאדסה",
+   "en": "מוחמד ביאדסה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.089
+  },
+  {
+   "he": "אריאל רחמים ברדוגו",
+   "en": "אריאל רחמים ברדוגו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "אברהים גמל",
+   "en": "אברהים גמל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.074
+  },
+  {
+   "he": "עלי דחלה",
+   "en": "עלי דחלה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "רז הרשנזון",
+   "en": "רז הרשנזון",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.113
+  },
+  {
+   "he": "כמאל מוואסי",
+   "en": "כמאל מוואסי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "איתי מוזס",
+   "en": "איתי מוזס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "עאטף מוסא",
+   "en": "עאטף מוסא",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "תאמר מסראוה",
+   "en": "תאמר מסראוה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "ימאן נגאר",
+   "en": "ימאן נגאר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.057
+  },
+  {
+   "he": "איסל סלאמה",
+   "en": "איסל סלאמה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.147
+  },
+  {
+   "he": "עלי עדוי",
+   "en": "עלי עדוי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.073
+  },
+  {
+   "he": "מועיד עודה",
+   "en": "מועיד עודה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "באסל עותמאן",
+   "en": "באסל עותמאן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "מאלק עתאמנה",
+   "en": "מאלק עתאמנה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "ליאור פיאסטרו",
+   "en": "ליאור פיאסטרו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  },
+  {
+   "he": "אייבי ריצ'י קאנגני סוקפה",
+   "en": "אייבי ריצ'י קאנגני סוקפה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.048
+  },
+  {
+   "he": "ניקולאס קופינסקי",
+   "en": "ניקולאס קופינסקי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.098
+  },
+  {
+   "he": "חאתם ריאן",
+   "en": "חאתם ריאן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.149
+  },
+  {
+   "he": "אוסייד שהואן",
+   "en": "אוסייד שהואן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.117
+  },
+  {
+   "he": "פראס תלחמי",
+   "en": "פראס תלחמי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.14
+  }
+ ]
+}

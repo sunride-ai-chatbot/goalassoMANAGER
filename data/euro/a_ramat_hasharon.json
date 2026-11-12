@@ -1,0 +1,224 @@
+{
+ "key": "a_ramat_hasharon",
+ "name_he": "הפועל ניר רמת השרון",
+ "league": "alef_south",
+ "city": "רמת השרון",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=2194 season 2026/27: הפועל ניר רמת השרון",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "אורי אוחיון",
+   "en": "אורי אוחיון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.146
+  },
+  {
+   "he": "אור אוסטיינד",
+   "en": "אור אוסטיינד",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "נאור נהוראי אלפסי",
+   "en": "נאור נהוראי אלפסי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.082
+  },
+  {
+   "he": "אורן ביטון",
+   "en": "אורן ביטון",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.103
+  },
+  {
+   "he": "עומרי בן הרוש",
+   "en": "עומרי בן הרוש",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "מוטי ברשצקי",
+   "en": "מוטי ברשצקי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.099
+  },
+  {
+   "he": "אביחי דהן",
+   "en": "אביחי דהן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "איתמר דיין",
+   "en": "איתמר דיין",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.066
+  },
+  {
+   "he": "רועי דיין",
+   "en": "רועי דיין",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.146
+  },
+  {
+   "he": "יהב וילדר",
+   "en": "יהב וילדר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.048
+  },
+  {
+   "he": "פיליפ חאיכ",
+   "en": "פיליפ חאיכ",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.121
+  },
+  {
+   "he": "מישל חורי",
+   "en": "מישל חורי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.073
+  },
+  {
+   "he": "מתנאל טדיסה",
+   "en": "מתנאל טדיסה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "יבלטאל טוואבה",
+   "en": "יבלטאל טוואבה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.078
+  },
+  {
+   "he": "עומר יעקב",
+   "en": "עומר יעקב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "נאור כהן",
+   "en": "נאור כהן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.05
+  },
+  {
+   "he": "רז מאיר",
+   "en": "רז מאיר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "עידו מדויל",
+   "en": "עידו מדויל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.066
+  },
+  {
+   "he": "ריף מסיקה",
+   "en": "ריף מסיקה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.146
+  },
+  {
+   "he": "ניר עזריה",
+   "en": "ניר עזריה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.07
+  },
+  {
+   "he": "גיא עיני",
+   "en": "גיא עיני",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "ליאור פזטל",
+   "en": "ליאור פזטל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.13
+  },
+  {
+   "he": "אוניקצ'י סמואל פיטר",
+   "en": "אוניקצ'י סמואל פיטר",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.103
+  },
+  {
+   "he": "תום פרידמן אוסטר",
+   "en": "תום פרידמן אוסטר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.089
+  },
+  {
+   "he": "דני רוזנבליט",
+   "en": "דני רוזנבליט",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.054
+  },
+  {
+   "he": "גל שלהבת",
+   "en": "גל שלהבת",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.133
+  }
+ ]
+}

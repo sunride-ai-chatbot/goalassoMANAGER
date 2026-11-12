@@ -1,0 +1,216 @@
+{
+ "key": "a_nof_hagalil",
+ "name_he": "הפועל נוף הגליל",
+ "league": "alef_north",
+ "city": "נוף הגליל",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=2185 season 2026/27: הפועל נוף הגליל",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "עידן אברבנאל",
+   "en": "עידן אברבנאל",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "עומרי אוחנה",
+   "en": "עומרי אוחנה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.137
+  },
+  {
+   "he": "תדהר אזולאי",
+   "en": "תדהר אזולאי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.07
+  },
+  {
+   "he": "עידו ניסים ארצי",
+   "en": "עידו ניסים ארצי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "ריאן אשמוז",
+   "en": "ריאן אשמוז",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.141
+  },
+  {
+   "he": "ליאם ביתן",
+   "en": "ליאם ביתן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.054
+  },
+  {
+   "he": "עמית גורביץ'",
+   "en": "עמית גורביץ'",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.133
+  },
+  {
+   "he": "אלן דנליה",
+   "en": "אלן דנליה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.063
+  },
+  {
+   "he": "פדיל זבידאת",
+   "en": "פדיל זבידאת",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  },
+  {
+   "he": "עומר ח'אלד",
+   "en": "עומר ח'אלד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.127
+  },
+  {
+   "he": "עבדאל סלם חמודה",
+   "en": "עבדאל סלם חמודה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.083
+  },
+  {
+   "he": "מוחמד עומר חסניין",
+   "en": "מוחמד עומר חסניין",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.057
+  },
+  {
+   "he": "מוחמד טאהא",
+   "en": "מוחמד טאהא",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.14
+  },
+  {
+   "he": "ינאי יאקובנקו",
+   "en": "ינאי יאקובנקו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.05
+  },
+  {
+   "he": "יובל כהן",
+   "en": "יובל כהן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "סאמי כיואן",
+   "en": "סאמי כיואן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "יובל ליעד",
+   "en": "יובל ליעד",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "ליאם מונטיציולו",
+   "en": "ליאם מונטיציולו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.055
+  },
+  {
+   "he": "עמית מועלם",
+   "en": "עמית מועלם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.136
+  },
+  {
+   "he": "עידן מריומה",
+   "en": "עידן מריומה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.147
+  },
+  {
+   "he": "מואמן סאלח",
+   "en": "מואמן סאלח",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "אדהם סואעד",
+   "en": "אדהם סואעד",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "איתי קנריק",
+   "en": "איתי קנריק",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.095
+  },
+  {
+   "he": "אמיר ריאן",
+   "en": "אמיר ריאן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "יהושע שטרימלינג",
+   "en": "יהושע שטרימלינג",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  }
+ ]
+}

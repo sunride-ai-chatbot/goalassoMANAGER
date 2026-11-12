@@ -243,7 +243,7 @@ def main():
     a = ap.parse_args()
     global WIDTH, CAT_LIMIT, DEEP; WIDTH = a.width; CAT_LIMIT = a.cat_limit; DEEP = a.deep
     only = {x.strip() for x in a.players.split('|') if x.strip()}
-    keys = sorted(os.path.splitext(f)[0] for f in os.listdir(os.path.join(ROOT, 'data', 'euro')) if f.endswith('.json') and not f.startswith('_')) if a.clubs == 'all' else a.clubs.split(',')
+    keys = sorted(os.path.splitext(f)[0] for f in os.listdir(os.path.join(ROOT, 'data', 'euro')) if f.endswith('.json') and not f.startswith('_') and not f.startswith('a_')) if a.clubs == 'all' else a.clubs.split(',')
     for key in keys:
         with open(os.path.join(ROOT, 'data', 'euro', key + '.json'), encoding='utf8') as fh:
             squad = json.load(fh)

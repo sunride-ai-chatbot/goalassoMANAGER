@@ -16,7 +16,8 @@ const vc=new VirtualConsole(),errors=[];
 vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'ligat-haal-manager.html'),'utf8'),{url:'https://goalasso.test/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true})}}).window;
 async function main(){try{
- const clubs=fs.readdirSync(path.join(root,'data/euro')).filter(f=>f.endsWith('.json')).map(f=>f.slice(0,-5));
+ // a_*.json are the Liga Alef squads registered with the federation: names only, outside the portrait pipeline (alef-youth.test.js)
+ const clubs=fs.readdirSync(path.join(root,'data/euro')).filter(f=>f.endsWith('.json')&&!f.startsWith('a_')).map(f=>f.slice(0,-5));
  let ok=0;const packs={};
  for(const key of clubs){
   const squad=read('data/euro/'+key+'.json');

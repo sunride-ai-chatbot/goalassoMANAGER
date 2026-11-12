@@ -1,0 +1,232 @@
+{
+ "key": "a_ironi_ashdod",
+ "name_he": "מכבי עירוני אשדוד",
+ "league": "alef_south",
+ "city": "אשדוד",
+ "c1": "#1d4ed8",
+ "c2": "#f5d000",
+ "source": "football.org.il team_id=6922 season 2026/27: מועדון כדורגל מכבי עירוני אשדוד",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "איתן אבירן",
+   "en": "איתן אבירן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.071
+  },
+  {
+   "he": "אלמוג אילוז",
+   "en": "אלמוג אילוז",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.095
+  },
+  {
+   "he": "עמרי אלעזה",
+   "en": "עמרי אלעזה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "עילי ויקטור אפנג'ר",
+   "en": "עילי ויקטור אפנג'ר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "עדי בר זיו",
+   "en": "עדי בר זיו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.072
+  },
+  {
+   "he": "דור גולדשטיין",
+   "en": "דור גולדשטיין",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "נבו גרפי",
+   "en": "נבו גרפי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "איתי דנור",
+   "en": "איתי דנור",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "טל נועם היימן",
+   "en": "טל נועם היימן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "יקיר זילברמן",
+   "en": "יקיר זילברמן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.146
+  },
+  {
+   "he": "אמנון טדלה",
+   "en": "אמנון טדלה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.148
+  },
+  {
+   "he": "רון כהן",
+   "en": "רון כהן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "ינאי שמעון לוי",
+   "en": "ינאי שמעון לוי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "בן ציון מושל",
+   "en": "בן ציון מושל",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  },
+  {
+   "he": "ניראל מחפוד",
+   "en": "ניראל מחפוד",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.08
+  },
+  {
+   "he": "אור בכור מסיכה",
+   "en": "אור בכור מסיכה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.048
+  },
+  {
+   "he": "פלאי שמעון מסיקה",
+   "en": "פלאי שמעון מסיקה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.09
+  },
+  {
+   "he": "יהלי מרציאנו",
+   "en": "יהלי מרציאנו",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "אריאל אהרון ספיר",
+   "en": "אריאל אהרון ספיר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "אסף עזריה",
+   "en": "אסף עזריה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "גיא פרגן",
+   "en": "גיא פרגן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.088
+  },
+  {
+   "he": "עידו קלדרון",
+   "en": "עידו קלדרון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.121
+  },
+  {
+   "he": "אביב אהרון רביע",
+   "en": "אביב אהרון רביע",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.074
+  },
+  {
+   "he": "אלון רט",
+   "en": "אלון רט",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.138
+  },
+  {
+   "he": "יובל שלו",
+   "en": "יובל שלו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "דביר מרום ששון",
+   "en": "דביר מרום ששון",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "רז תמר",
+   "en": "רז תמר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.078
+  }
+ ]
+}

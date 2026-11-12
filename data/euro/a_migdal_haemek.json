@@ -1,0 +1,216 @@
+{
+ "key": "a_migdal_haemek",
+ "name_he": "הפועל מגדל העמק",
+ "league": "alef_north",
+ "city": "מגדל העמק",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=2232 season 2026/27: הפועל מגדל העמק",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "שביט אברז'ל",
+   "en": "שביט אברז'ל",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  },
+  {
+   "he": "ליאם אוחיון",
+   "en": "ליאם אוחיון",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.075
+  },
+  {
+   "he": "שלו אטיאס",
+   "en": "שלו אטיאס",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.14
+  },
+  {
+   "he": "שי שמעון אלגרבלי",
+   "en": "שי שמעון אלגרבלי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.075
+  },
+  {
+   "he": "עיסא בוטו",
+   "en": "עיסא בוטו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.131
+  },
+  {
+   "he": "אלמוג בוים",
+   "en": "אלמוג בוים",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.085
+  },
+  {
+   "he": "נהוראי בורה",
+   "en": "נהוראי בורה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.097
+  },
+  {
+   "he": "חביבאללה ג'בארין",
+   "en": "חביבאללה ג'בארין",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "שר דויב",
+   "en": "שר דויב",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.077
+  },
+  {
+   "he": "יהלי הראל",
+   "en": "יהלי הראל",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "כפיר חמיאס",
+   "en": "כפיר חמיאס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.065
+  },
+  {
+   "he": "רום כהן",
+   "en": "רום כהן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.135
+  },
+  {
+   "he": "מוחמד מוחמד חסן",
+   "en": "מוחמד מוחמד חסן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.122
+  },
+  {
+   "he": "שליו מוסינקו",
+   "en": "שליו מוסינקו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "בהאא מרזוק",
+   "en": "בהאא מרזוק",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  },
+  {
+   "he": "נאור סבן",
+   "en": "נאור סבן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.099
+  },
+  {
+   "he": "ליעד סיסו",
+   "en": "ליעד סיסו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.09
+  },
+  {
+   "he": "שאקר סקר",
+   "en": "שאקר סקר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "אחמד עואד",
+   "en": "אחמד עואד",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.071
+  },
+  {
+   "he": "עידן עוז",
+   "en": "עידן עוז",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "רואי שחר פרץ",
+   "en": "רואי שחר פרץ",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "שובל צח",
+   "en": "שובל צח",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.105
+  },
+  {
+   "he": "ליאם קומיסרוב",
+   "en": "ליאם קומיסרוב",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.078
+  },
+  {
+   "he": "אנצ' קיזאילווקו",
+   "en": "אנצ' קיזאילווקו",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.138
+  },
+  {
+   "he": "סהר שטו",
+   "en": "סהר שטו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  }
+ ]
+}

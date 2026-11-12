@@ -1,0 +1,208 @@
+{
+ "key": "a_fc_jerusalem",
+ "name_he": "מ.כ. ירושלים",
+ "league": "alef_south",
+ "city": "ירושלים",
+ "c1": "#1d4ed8",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=7348 season 2026/27: מועדון כדורגל ירושלים",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "נאור אבליאב",
+   "en": "נאור אבליאב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "ירין אברהם",
+   "en": "ירין אברהם",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.052
+  },
+  {
+   "he": "דור אדרי",
+   "en": "דור אדרי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.116
+  },
+  {
+   "he": "רוי בנבניסטי",
+   "en": "רוי בנבניסטי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.064
+  },
+  {
+   "he": "דניאל גרץ",
+   "en": "דניאל גרץ",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "ינאי דוד",
+   "en": "ינאי דוד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "נועם הראל",
+   "en": "נועם הראל",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.098
+  },
+  {
+   "he": "פורז ולקוביץ",
+   "en": "פורז ולקוביץ",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "עילאי חדד",
+   "en": "עילאי חדד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.149
+  },
+  {
+   "he": "תום חי יחזקאל",
+   "en": "תום חי יחזקאל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "סהר יחזקאלי",
+   "en": "סהר יחזקאלי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.09
+  },
+  {
+   "he": "דוד ישי",
+   "en": "דוד ישי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.056
+  },
+  {
+   "he": "רועי כהן",
+   "en": "רועי כהן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "יהונתן כפיר שושן",
+   "en": "יהונתן כפיר שושן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.07
+  },
+  {
+   "he": "גיא יוסף לוי",
+   "en": "גיא יוסף לוי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.086
+  },
+  {
+   "he": "עמית מוסרי",
+   "en": "עמית מוסרי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.121
+  },
+  {
+   "he": "בן מיזן",
+   "en": "בן מיזן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "יואל נגרין",
+   "en": "יואל נגרין",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.14
+  },
+  {
+   "he": "רועי פדידה",
+   "en": "רועי פדידה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.05
+  },
+  {
+   "he": "אבישי צוריאל",
+   "en": "אבישי צוריאל",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "שגיא קבילו",
+   "en": "שגיא קבילו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.146
+  },
+  {
+   "he": "גיא אריה קליין",
+   "en": "גיא אריה קליין",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "יואב תומר",
+   "en": "יואב תומר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "עדי תמיר",
+   "en": "עדי תמיר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  }
+ ]
+}

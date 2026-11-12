@@ -3,6 +3,8 @@
    ============================================================= */
 const RAW=__CLUBS_JSON__;
 const RAW_EURO=__EURO_JSON__;
+const RAW_YOUTH=__YOUTH_JSON__;   /* senior club name → names registered for its youth side (names only) */
+const RAW_ALEF=__ALEF_JSON__;     /* Liga Alef clubs with a real squad in RAW_EURO: [name, city, shirt, trim, league] */
 const DATA_META=__DATA_META__;
 const PLAYER_VISUALS=__PLAYER_VISUALS__;
 const META={

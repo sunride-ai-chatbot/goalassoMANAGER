@@ -1,0 +1,224 @@
+{
+ "key": "a_hapoel_herzliya",
+ "name_he": "הפועל הרצליה",
+ "league": "alef_south",
+ "city": "הרצליה",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=2208 season 2026/27: הפועל הרצליה עירוני",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "רוי אהרן",
+   "en": "רוי אהרן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.124
+  },
+  {
+   "he": "אליאור אשרוב",
+   "en": "אליאור אשרוב",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "סאבר בדיר",
+   "en": "סאבר בדיר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.085
+  },
+  {
+   "he": "עמית בנאי",
+   "en": "עמית בנאי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.139
+  },
+  {
+   "he": "עיסא ג'ורן",
+   "en": "עיסא ג'ורן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.062
+  },
+  {
+   "he": "נווה גילר",
+   "en": "נווה גילר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.075
+  },
+  {
+   "he": "שליו גינדי",
+   "en": "שליו גינדי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.066
+  },
+  {
+   "he": "דן דרורי",
+   "en": "דן דרורי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "אורי הולנדר",
+   "en": "אורי הולנדר",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "יהב חיו חמו",
+   "en": "יהב חיו חמו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.099
+  },
+  {
+   "he": "איתי חיים חמו",
+   "en": "איתי חיים חמו",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.071
+  },
+  {
+   "he": "אגם חנון",
+   "en": "אגם חנון",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.095
+  },
+  {
+   "he": "עדי יצחק",
+   "en": "עדי יצחק",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.054
+  },
+  {
+   "he": "לב כהן",
+   "en": "לב כהן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.101
+  },
+  {
+   "he": "ליעד כהן",
+   "en": "ליעד כהן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "ירין מוגרבי",
+   "en": "ירין מוגרבי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "ליאם מלכה",
+   "en": "ליאם מלכה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "לני מנדלבאום",
+   "en": "לני מנדלבאום",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.083
+  },
+  {
+   "he": "איתי משיח",
+   "en": "איתי משיח",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "ג'פרי ניסמבאום",
+   "en": "ג'פרי ניסמבאום",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.08
+  },
+  {
+   "he": "יהלי פולק",
+   "en": "יהלי פולק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.067
+  },
+  {
+   "he": "אורי פלח",
+   "en": "אורי פלח",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.13
+  },
+  {
+   "he": "שון קלימקין",
+   "en": "שון קלימקין",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.136
+  },
+  {
+   "he": "אורן קלצבסקי",
+   "en": "אורן קלצבסקי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.116
+  },
+  {
+   "he": "טל קקון",
+   "en": "טל קקון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "ברק שוורצמן",
+   "en": "ברק שוורצמן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "key": "a_yavne",
+ "name_he": "מכבי יבנה",
+ "league": "alef_south",
+ "city": "יבנה",
+ "c1": "#f5d000",
+ "c2": "#1d4ed8",
+ "source": "football.org.il team_id=1002 season 2026/27: מכבי יבנה",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "בן אזולאי",
+   "en": "בן אזולאי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.063
+  },
+  {
+   "he": "ינון אליהו",
+   "en": "ינון אליהו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "שליו אלמקיאס",
+   "en": "שליו אלמקיאס",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.133
+  },
+  {
+   "he": "אורי אשרם",
+   "en": "אורי אשרם",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.125
+  },
+  {
+   "he": "אריאל בן דוד",
+   "en": "אריאל בן דוד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.079
+  },
+  {
+   "he": "עידו בן שושן",
+   "en": "עידו בן שושן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.137
+  },
+  {
+   "he": "עידו דוידוב",
+   "en": "עידו דוידוב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.082
+  },
+  {
+   "he": "אור זוזט",
+   "en": "אור זוזט",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.086
+  },
+  {
+   "he": "ליאם חפר",
+   "en": "ליאם חפר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "איתמר פנחס כהן",
+   "en": "איתמר פנחס כהן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "נועם כהן",
+   "en": "נועם כהן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.105
+  },
+  {
+   "he": "רם לוי",
+   "en": "רם לוי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.057
+  },
+  {
+   "he": "שליו לוי",
+   "en": "שליו לוי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "טמיר ללו",
+   "en": "טמיר ללו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "עומר לקאו",
+   "en": "עומר לקאו",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.075
+  },
+  {
+   "he": "שון מוסקוביץ'",
+   "en": "שון מוסקוביץ'",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "יעקב מור",
+   "en": "יעקב מור",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.086
+  },
+  {
+   "he": "מיכאל ממן",
+   "en": "מיכאל ממן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "עמית מנייסקו",
+   "en": "עמית מנייסקו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.088
+  },
+  {
+   "he": "דניאל משה",
+   "en": "דניאל משה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.074
+  },
+  {
+   "he": "אליאור משלי",
+   "en": "אליאור משלי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "סתו פיניש",
+   "en": "סתו פיניש",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.143
+  },
+  {
+   "he": "יואב פליישמן",
+   "en": "יואב פליישמן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.088
+  },
+  {
+   "he": "בן פרדוארו",
+   "en": "בן פרדוארו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.131
+  },
+  {
+   "he": "לייאם פרנקו",
+   "en": "לייאם פרנקו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.079
+  },
+  {
+   "he": "עמית צקול",
+   "en": "עמית צקול",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.07
+  },
+  {
+   "he": "נועם חיים צרנוביץ",
+   "en": "נועם חיים צרנוביץ",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "גידי קאניוק",
+   "en": "גידי קאניוק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.14
+  },
+  {
+   "he": "יובל קול",
+   "en": "יובל קול",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.125
+  },
+  {
+   "he": "מאור שכטר",
+   "en": "מאור שכטר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "דוד תירם",
+   "en": "דוד תירם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  }
+ ]
+}

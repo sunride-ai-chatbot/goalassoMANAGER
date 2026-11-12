@@ -1,0 +1,240 @@
+{
+ "key": "a_shimshon",
+ "name_he": "שמשון תל אביב",
+ "league": "alef_south",
+ "city": "תל אביב",
+ "c1": "#1d4ed8",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=6860 season 2026/27: שמשון פזטל תל אביב",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "גאי אביב",
+   "en": "גאי אביב",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.052
+  },
+  {
+   "he": "הנלי אגבו",
+   "en": "הנלי אגבו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "אופק אלמוג",
+   "en": "אופק אלמוג",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.106
+  },
+  {
+   "he": "ליאם אלמוג",
+   "en": "ליאם אלמוג",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "איתמר בלוך",
+   "en": "איתמר בלוך",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "עומר בר-אל",
+   "en": "עומר בר-אל",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "איתמר גולדשטיין",
+   "en": "איתמר גולדשטיין",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.078
+  },
+  {
+   "he": "אריאל גל",
+   "en": "אריאל גל",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.105
+  },
+  {
+   "he": "עמית דן",
+   "en": "עמית דן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.106
+  },
+  {
+   "he": "ירדן הרשנזון",
+   "en": "ירדן הרשנזון",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.13
+  },
+  {
+   "he": "גל חיים וייס",
+   "en": "גל חיים וייס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.102
+  },
+  {
+   "he": "עידן וקנין",
+   "en": "עידן וקנין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "דן ורנר",
+   "en": "דן ורנר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.116
+  },
+  {
+   "he": "איליי זגורי",
+   "en": "איליי זגורי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "טוהר אליהו חזן",
+   "en": "טוהר אליהו חזן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.122
+  },
+  {
+   "he": "יוחנא ח'ליל",
+   "en": "יוחנא ח'ליל",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.074
+  },
+  {
+   "he": "איל חן",
+   "en": "איל חן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.139
+  },
+  {
+   "he": "יואב אור כץ",
+   "en": "יואב אור כץ",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.085
+  },
+  {
+   "he": "רן לוי",
+   "en": "רן לוי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "עומרי מזרחי",
+   "en": "עומרי מזרחי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.136
+  },
+  {
+   "he": "ענבר נידם",
+   "en": "ענבר נידם",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "אביהו עזר",
+   "en": "אביהו עזר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.085
+  },
+  {
+   "he": "יואב פוריאן",
+   "en": "יואב פוריאן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "אדיר פנחס פיבניק",
+   "en": "אדיר פנחס פיבניק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "יואב פלאח",
+   "en": "יואב פלאח",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "אלון דוד קופרברג",
+   "en": "אלון דוד קופרברג",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.117
+  },
+  {
+   "he": "בן רייכרט",
+   "en": "בן רייכרט",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "הראל שאשא",
+   "en": "הראל שאשא",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.148
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "key": "a_karmiel",
+ "name_he": "הפועל כרמיאל",
+ "league": "alef_north",
+ "city": "כרמיאל",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=5900 season 2026/27: הפועל עירוני כרמיאל",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "איתי אזולאי",
+   "en": "איתי אזולאי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "עומר אמון",
+   "en": "עומר אמון",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "אופק ארביב",
+   "en": "אופק ארביב",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "איתי ארזי",
+   "en": "איתי ארזי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.134
+  },
+  {
+   "he": "איתי גולדנברג",
+   "en": "איתי גולדנברג",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.057
+  },
+  {
+   "he": "עומר מקס גניחוביץ",
+   "en": "עומר מקס גניחוביץ",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "עמית גניחוביץ",
+   "en": "עמית גניחוביץ",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.139
+  },
+  {
+   "he": "אופיר הר אבן",
+   "en": "אופיר הר אבן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  },
+  {
+   "he": "תומר הרשקוביץ",
+   "en": "תומר הרשקוביץ",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.079
+  },
+  {
+   "he": "עומרי וגנר",
+   "en": "עומרי וגנר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "דביר חזקי מזרחי",
+   "en": "דביר חזקי מזרחי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "רן חליווה",
+   "en": "רן חליווה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.059
+  },
+  {
+   "he": "מחמוד חסאן",
+   "en": "מחמוד חסאן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.05
+  },
+  {
+   "he": "חוסיין יאסין",
+   "en": "חוסיין יאסין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.103
+  },
+  {
+   "he": "אבישי יהב",
+   "en": "אבישי יהב",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.124
+  },
+  {
+   "he": "מוחמד כנעאן",
+   "en": "מוחמד כנעאן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.048
+  },
+  {
+   "he": "עידן שמואל לופטיג",
+   "en": "עידן שמואל לופטיג",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.059
+  },
+  {
+   "he": "מוחמד מאדי",
+   "en": "מוחמד מאדי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.086
+  },
+  {
+   "he": "עמית מזרחי",
+   "en": "עמית מזרחי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "עידן נטוביץ",
+   "en": "עידן נטוביץ",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.105
+  },
+  {
+   "he": "איתן סופר",
+   "en": "איתן סופר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "אדם סרחאן",
+   "en": "אדם סרחאן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.142
+  },
+  {
+   "he": "אור פנחס",
+   "en": "אור פנחס",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "עומר פרי",
+   "en": "עומר פרי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.08
+  },
+  {
+   "he": "שחר חיים צפריר",
+   "en": "שחר חיים צפריר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.098
+  },
+  {
+   "he": "אמיתי רוב",
+   "en": "אמיתי רוב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.148
+  },
+  {
+   "he": "ניר רקובשיק",
+   "en": "ניר רקובשיק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.104
+  },
+  {
+   "he": "רועי שוקרני",
+   "en": "רועי שוקרני",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.117
+  },
+  {
+   "he": "יאיר שמש",
+   "en": "יאיר שמש",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.082
+  },
+  {
+   "he": "אכראם שריח",
+   "en": "אכראם שריח",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "עומר תורג'מן",
+   "en": "עומר תורג'מן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "key": "a_fc_kfar_saba",
+ "name_he": "מ.כ. כפר סבא",
+ "league": "alef_south",
+ "city": "כפר סבא",
+ "c1": "#1f8a3a",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=8012 season 2026/27: מועדון כדורגל כפר סבא",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "לי-ים אליה אוקנין",
+   "en": "לי-ים אליה אוקנין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.138
+  },
+  {
+   "he": "בן אורזל",
+   "en": "בן אורזל",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.087
+  },
+  {
+   "he": "אוראל אלקלעי",
+   "en": "אוראל אלקלעי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.122
+  },
+  {
+   "he": "תאודרוס בלאי",
+   "en": "תאודרוס בלאי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "טל בניש",
+   "en": "טל בניש",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.079
+  },
+  {
+   "he": "סער בנקר",
+   "en": "סער בנקר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.067
+  },
+  {
+   "he": "גל בן גולדברג",
+   "en": "גל בן גולדברג",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.048
+  },
+  {
+   "he": "הראל גולן",
+   "en": "הראל גולן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "בן ויצמן",
+   "en": "בן ויצמן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.139
+  },
+  {
+   "he": "צורי הרצל זיתוני",
+   "en": "צורי הרצל זיתוני",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.045
+  },
+  {
+   "he": "ירין חדד",
+   "en": "ירין חדד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "יאן יוסופוב",
+   "en": "יאן יוסופוב",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.055
+  },
+  {
+   "he": "רתם יצקר",
+   "en": "רתם יצקר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "בן שלמה לוי",
+   "en": "בן שלמה לוי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.143
+  },
+  {
+   "he": "יהונתן מרדכי",
+   "en": "יהונתן מרדכי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.066
+  },
+  {
+   "he": "טל סארוגאטי",
+   "en": "טל סארוגאטי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "מור סעדו",
+   "en": "מור סעדו",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "איתי עגייב",
+   "en": "איתי עגייב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.066
+  },
+  {
+   "he": "דן עובדיה",
+   "en": "דן עובדיה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.143
+  },
+  {
+   "he": "אוהד עטיה",
+   "en": "אוהד עטיה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "דניאל פאינרו",
+   "en": "דניאל פאינרו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.105
+  },
+  {
+   "he": "תום ניל פביאן",
+   "en": "תום ניל פביאן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.065
+  },
+  {
+   "he": "עומר פרוכטמן",
+   "en": "עומר פרוכטמן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.127
+  },
+  {
+   "he": "רז צפריר",
+   "en": "רז צפריר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.141
+  },
+  {
+   "he": "אלעד קפלן",
+   "en": "אלעד קפלן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.058
+  },
+  {
+   "he": "אופק שליו",
+   "en": "אופק שליו",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.051
+  }
+ ]
+}

@@ -1,0 +1,256 @@
+{
+ "key": "a_jatt",
+ "name_he": "איחוד בני ג'ת",
+ "league": "alef_north",
+ "city": "ג'ת",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=6242 season 2026/27: הפועל איחוד בני ג'ת",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "תאאר אבו בכר",
+   "en": "תאאר אבו בכר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "עובידה אבו עסבה",
+   "en": "עובידה אבו עסבה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.138
+  },
+  {
+   "he": "מורד אבו פני",
+   "en": "מורד אבו פני",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.131
+  },
+  {
+   "he": "כאמל אגבאריה",
+   "en": "כאמל אגבאריה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.067
+  },
+  {
+   "he": "עלי בדראן",
+   "en": "עלי בדראן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.071
+  },
+  {
+   "he": "טנוס בנא",
+   "en": "טנוס בנא",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "עבדאללה גאנם",
+   "en": "עבדאללה גאנם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "עידן גולדשטיין",
+   "en": "עידן גולדשטיין",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "אלעד גולן",
+   "en": "אלעד גולן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.071
+  },
+  {
+   "he": "עבד אל לטיף גמאל",
+   "en": "עבד אל לטיף גמאל",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "איבראהים גרה",
+   "en": "איבראהים גרה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "אמיר גרה",
+   "en": "אמיר גרה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "יוסף גרה",
+   "en": "יוסף גרה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.121
+  },
+  {
+   "he": "עומר גרה",
+   "en": "עומר גרה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.07
+  },
+  {
+   "he": "רסמי גרה",
+   "en": "רסמי גרה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "מוחמד עלי וותד",
+   "en": "מוחמד עלי וותד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.086
+  },
+  {
+   "he": "מסעוד וותד",
+   "en": "מסעוד וותד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "אטייב ותד",
+   "en": "אטייב ותד",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.074
+  },
+  {
+   "he": "השאם ותד",
+   "en": "השאם ותד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.127
+  },
+  {
+   "he": "בשאר ח'טיב",
+   "en": "בשאר ח'טיב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.079
+  },
+  {
+   "he": "מוחמד מחאגנה",
+   "en": "מוחמד מחאגנה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.098
+  },
+  {
+   "he": "מחמד נאטור",
+   "en": "מחמד נאטור",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.046
+  },
+  {
+   "he": "מגדי עוודי",
+   "en": "מגדי עוודי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "עומר עוודי",
+   "en": "עומר עוודי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.097
+  },
+  {
+   "he": "אדמון שמס עזאם",
+   "en": "אדמון שמס עזאם",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.095
+  },
+  {
+   "he": "אכרם עסלי",
+   "en": "אכרם עסלי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.098
+  },
+  {
+   "he": "שחר יונתן שגיב",
+   "en": "שחר יונתן שגיב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.116
+  },
+  {
+   "he": "ירין שושן",
+   "en": "ירין שושן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.134
+  },
+  {
+   "he": "נסים שרקייה",
+   "en": "נסים שרקייה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "אמיר תקרורי",
+   "en": "אמיר תקרורי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "key": "a_sderot",
+ "name_he": "מ.כ. שדרות",
+ "league": "alef_south",
+ "city": "שדרות",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=7617 season 2026/27: מועדון כדורגל שדרות",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "ירדן משה אבוחצירה",
+   "en": "ירדן משה אבוחצירה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "ליעד אבוטבול",
+   "en": "ליעד אבוטבול",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "ירין דוד אבוקסיס",
+   "en": "ירין דוד אבוקסיס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.12
+  },
+  {
+   "he": "גל אביב",
+   "en": "גל אביב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.137
+  },
+  {
+   "he": "רואי אביטן",
+   "en": "רואי אביטן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.102
+  },
+  {
+   "he": "עידן אהדנני",
+   "en": "עידן אהדנני",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.086
+  },
+  {
+   "he": "חיים יגיל אוחנה",
+   "en": "חיים יגיל אוחנה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "תום איידה",
+   "en": "תום איידה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.072
+  },
+  {
+   "he": "עמאר אלדדה",
+   "en": "עמאר אלדדה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "עמראן אלקרינאוי",
+   "en": "עמראן אלקרינאוי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.116
+  },
+  {
+   "he": "אופיר דודי",
+   "en": "אופיר דודי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.135
+  },
+  {
+   "he": "תומר וולדה",
+   "en": "תומר וולדה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.115
+  },
+  {
+   "he": "עידן וינטראוב",
+   "en": "עידן וינטראוב",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "ליאל זגורי",
+   "en": "ליאל זגורי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "ליאור חידריאן",
+   "en": "ליאור חידריאן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "דוד טיוליאבקו",
+   "en": "דוד טיוליאבקו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.089
+  },
+  {
+   "he": "אופיר סגדו טמנו",
+   "en": "אופיר סגדו טמנו",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.124
+  },
+  {
+   "he": "כרמל יונה",
+   "en": "כרמל יונה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.064
+  },
+  {
+   "he": "רון שלום יוסף",
+   "en": "רון שלום יוסף",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  },
+  {
+   "he": "אורי חנניה לוי",
+   "en": "אורי חנניה לוי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "תומר לוי",
+   "en": "תומר לוי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "עדן מוספי",
+   "en": "עדן מוספי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.059
+  },
+  {
+   "he": "יחזקל אור מזרחי",
+   "en": "יחזקל אור מזרחי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.104
+  },
+  {
+   "he": "בנימין נתן",
+   "en": "בנימין נתן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.059
+  },
+  {
+   "he": "מור עדרי",
+   "en": "מור עדרי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "אורי עזרא",
+   "en": "אורי עזרא",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "גיא ישראל פרץ",
+   "en": "גיא ישראל פרץ",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.045
+  },
+  {
+   "he": "דניאל דוד צדיק",
+   "en": "דניאל דוד צדיק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.115
+  },
+  {
+   "he": "יואב צור שדי",
+   "en": "יואב צור שדי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.137
+  },
+  {
+   "he": "רוסלן קוזניצוב",
+   "en": "רוסלן קוזניצוב",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.052
+  },
+  {
+   "he": "לירוי רביבו",
+   "en": "לירוי רביבו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  }
+ ]
+}

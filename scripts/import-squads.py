@@ -56,7 +56,8 @@ def main():
     a = ap.parse_args()
     ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
     E = json.load(open(ep, encoding='utf8'))
-    keys = sorted(f[:-5] for f in os.listdir(os.path.join(ROOT, 'data', 'euro'))) if a.clubs == 'all' else a.clubs.split(',')
+    # a_*.json (Liga Alef, import-ifa-rosters.py) are not Wikipedia squads: 'all' leaves them alone
+    keys = sorted(f[:-5] for f in os.listdir(os.path.join(ROOT, 'data', 'euro')) if not f.startswith('a_')) if a.clubs == 'all' else a.clubs.split(',')
     if a.names:   # Hebrew spellings from data/config/leumit-names-he.json for players the sources only give in Latin letters
         names = json.load(open(os.path.join(ROOT, 'data', 'config', 'leumit-names-he.json'), encoding='utf8')); n = 0
         for key in keys:

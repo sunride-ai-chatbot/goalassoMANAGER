@@ -1,0 +1,224 @@
+{
+ "key": "a_umm_al_fahm",
+ "name_he": "הפועל אום אל-פחם",
+ "league": "alef_north",
+ "city": "אום אל-פחם",
+ "c1": "#1f8a3a",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=6301 season 2026/27: הפועל אום אל פאחם",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "דניאל אבו רוקן",
+   "en": "דניאל אבו רוקן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.065
+  },
+  {
+   "he": "בשיר בהגאת",
+   "en": "בשיר בהגאת",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "יונס גבארין",
+   "en": "יונס גבארין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.097
+  },
+  {
+   "he": "אחמד ג'בארין",
+   "en": "אחמד ג'בארין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.086
+  },
+  {
+   "he": "מוחמד ג'בארין",
+   "en": "מוחמד ג'בארין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  },
+  {
+   "he": "מחמוד ג'בארין",
+   "en": "מחמוד ג'בארין",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.072
+  },
+  {
+   "he": "עבד אלראוף ג'בארין",
+   "en": "עבד אלראוף ג'בארין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.146
+  },
+  {
+   "he": "ראמי ג'בארין",
+   "en": "ראמי ג'בארין",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.062
+  },
+  {
+   "he": "מוסטפא גדבאן",
+   "en": "מוסטפא גדבאן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "תאופיק דבאבסה",
+   "en": "תאופיק דבאבסה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.135
+  },
+  {
+   "he": "ראבאל דהאמשה",
+   "en": "ראבאל דהאמשה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "אחמד דראושה",
+   "en": "אחמד דראושה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "מוחמד דרוויש",
+   "en": "מוחמד דרוויש",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.09
+  },
+  {
+   "he": "ניל ורטהיים",
+   "en": "ניל ורטהיים",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.048
+  },
+  {
+   "he": "מוחמד חמארשי",
+   "en": "מוחמד חמארשי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "אווס מחאג'נה",
+   "en": "אווס מחאג'נה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "אניס מחאמיד",
+   "en": "אניס מחאמיד",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "מוחמד מחאמיד",
+   "en": "מוחמד מחאמיד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.129
+  },
+  {
+   "he": "עודי מחאמיד",
+   "en": "עודי מחאמיד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "פאיק מחאמיד",
+   "en": "פאיק מחאמיד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "יזן נסאר",
+   "en": "יזן נסאר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "חמזה סבאח",
+   "en": "חמזה סבאח",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "תאמבי סגס",
+   "en": "תאמבי סגס",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.124
+  },
+  {
+   "he": "עמית סואירי",
+   "en": "עמית סואירי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.135
+  },
+  {
+   "he": "בשאר עודה",
+   "en": "בשאר עודה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  },
+  {
+   "he": "רגד עלאוי",
+   "en": "רגד עלאוי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.071
+  }
+ ]
+}

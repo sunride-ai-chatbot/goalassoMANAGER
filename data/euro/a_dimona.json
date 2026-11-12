@@ -1,0 +1,264 @@
+{
+ "key": "a_dimona",
+ "name_he": "מ.ס. דימונה",
+ "league": "alef_south",
+ "city": "דימונה",
+ "c1": "#1d4ed8",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=5013 season 2026/27: מועדון ספורט דימונה",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "נאור אוקנין",
+   "en": "נאור אוקנין",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "רום אליגון",
+   "en": "רום אליגון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "אריאל אלמלם",
+   "en": "אריאל אלמלם",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.102
+  },
+  {
+   "he": "עמית ביטון",
+   "en": "עמית ביטון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "עדן בן מנשה",
+   "en": "עדן בן מנשה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.095
+  },
+  {
+   "he": "מרבי ברגבדזה",
+   "en": "מרבי ברגבדזה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.14
+  },
+  {
+   "he": "אביתר ברק",
+   "en": "אביתר ברק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "נועם גמון",
+   "en": "נועם גמון",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "ניר דדיה",
+   "en": "ניר דדיה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "שחר הרפז",
+   "en": "שחר הרפז",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.062
+  },
+  {
+   "he": "רן זיתון",
+   "en": "רן זיתון",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "גיל חדד",
+   "en": "גיל חדד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.08
+  },
+  {
+   "he": "אריק חלפין",
+   "en": "אריק חלפין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  },
+  {
+   "he": "ברק חמדי",
+   "en": "ברק חמדי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.129
+  },
+  {
+   "he": "עבד אל רחמאן חמודה",
+   "en": "עבד אל רחמאן חמודה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.104
+  },
+  {
+   "he": "עדי טבצ'ניק",
+   "en": "עדי טבצ'ניק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "אורי טובול",
+   "en": "אורי טובול",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.131
+  },
+  {
+   "he": "מידן יוסף כהן",
+   "en": "מידן יוסף כהן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "טל כחילה",
+   "en": "טל כחילה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.133
+  },
+  {
+   "he": "ליאב לוי",
+   "en": "ליאב לוי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.12
+  },
+  {
+   "he": "רועי גבריאל ממן",
+   "en": "רועי גבריאל ממן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "זיו ממרן",
+   "en": "זיו ממרן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.137
+  },
+  {
+   "he": "גל נבון",
+   "en": "גל נבון",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "שקד נבון",
+   "en": "שקד נבון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.055
+  },
+  {
+   "he": "בר נוהי",
+   "en": "בר נוהי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "אחיה צנגאוקר",
+   "en": "אחיה צנגאוקר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.064
+  },
+  {
+   "he": "עילי צריקר",
+   "en": "עילי צריקר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.075
+  },
+  {
+   "he": "תומר קרן",
+   "en": "תומר קרן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.062
+  },
+  {
+   "he": "מתן שורץ",
+   "en": "מתן שורץ",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "בר שושן",
+   "en": "בר שושן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "אגם שלו",
+   "en": "אגם שלו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.147
+  }
+ ]
+}

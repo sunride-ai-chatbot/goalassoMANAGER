@@ -1,0 +1,272 @@
+{
+ "key": "a_neve_shaanan",
+ "name_he": "מכבי נווה שאנן",
+ "league": "alef_north",
+ "city": "חיפה",
+ "c1": "#1d4ed8",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=1013 season 2026/27: מכבי נווה שאנן אלדד",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "כמאל אבו אל היג'א",
+   "en": "כמאל אבו אל היג'א",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.051
+  },
+  {
+   "he": "יאסר אבו נאסר",
+   "en": "יאסר אבו נאסר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "אבראהים אגבאריה",
+   "en": "אבראהים אגבאריה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.139
+  },
+  {
+   "he": "עמית אזרד",
+   "en": "עמית אזרד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "סוהיל ארמלי",
+   "en": "סוהיל ארמלי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.091
+  },
+  {
+   "he": "פאדי ארמלי",
+   "en": "פאדי ארמלי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "אור אשל",
+   "en": "אור אשל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.078
+  },
+  {
+   "he": "נהוראי אברהם בוחבוט",
+   "en": "נהוראי אברהם בוחבוט",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.058
+  },
+  {
+   "he": "עלאא בכר",
+   "en": "עלאא בכר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "עידו גוזלן",
+   "en": "עידו גוזלן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "משה גולן",
+   "en": "משה גולן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.137
+  },
+  {
+   "he": "וליד דרויש",
+   "en": "וליד דרויש",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "דוד הרוש",
+   "en": "דוד הרוש",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.116
+  },
+  {
+   "he": "ליאב מיכאל זלקינד",
+   "en": "ליאב מיכאל זלקינד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.065
+  },
+  {
+   "he": "מאור חדד",
+   "en": "מאור חדד",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  },
+  {
+   "he": "באסל טאהא",
+   "en": "באסל טאהא",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.08
+  },
+  {
+   "he": "אושר יצחק",
+   "en": "אושר יצחק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "תומר כהן",
+   "en": "תומר כהן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "חמזה נגאר",
+   "en": "חמזה נגאר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.063
+  },
+  {
+   "he": "אליאור סביר",
+   "en": "אליאור סביר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.067
+  },
+  {
+   "he": "אורי סונגו",
+   "en": "אורי סונגו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "רפי סיטון",
+   "en": "רפי סיטון",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.134
+  },
+  {
+   "he": "האני ספורי",
+   "en": "האני ספורי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.059
+  },
+  {
+   "he": "עלי עבאס",
+   "en": "עלי עבאס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "תומר עציוני",
+   "en": "תומר עציוני",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.13
+  },
+  {
+   "he": "ניק צצקה",
+   "en": "ניק צצקה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.089
+  },
+  {
+   "he": "מקסים קוטיקוב",
+   "en": "מקסים קוטיקוב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.056
+  },
+  {
+   "he": "אלמוג קיטה",
+   "en": "אלמוג קיטה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.134
+  },
+  {
+   "he": "יהונתן רוזן",
+   "en": "יהונתן רוזן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.054
+  },
+  {
+   "he": "עבד רשוואן",
+   "en": "עבד רשוואן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.146
+  },
+  {
+   "he": "ירין פירו שבו",
+   "en": "ירין פירו שבו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.05
+  },
+  {
+   "he": "יוסף שדאפנה",
+   "en": "יוסף שדאפנה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.065
+  }
+ ]
+}

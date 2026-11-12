@@ -1,0 +1,304 @@
+{
+ "key": "a_nujeidat",
+ "name_he": "מכבי נוג'ידאת",
+ "league": "alef_north",
+ "city": "בועיינה-נוג'ידאת",
+ "c1": "#f5d000",
+ "c2": "#1d4ed8",
+ "source": "football.org.il team_id=7078 season 2026/27: מכבי נוג'ידאת אחמד",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "מחמוד אבו אחמד",
+   "en": "מחמוד אבו אחמד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "נבו אמזלג",
+   "en": "נבו אמזלג",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "דוד בן לולו",
+   "en": "דוד בן לולו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.142
+  },
+  {
+   "he": "נרי בר",
+   "en": "נרי בר",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.147
+  },
+  {
+   "he": "ראמי גנאים",
+   "en": "ראמי גנאים",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.103
+  },
+  {
+   "he": "יוסף דיאב",
+   "en": "יוסף דיאב",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.138
+  },
+  {
+   "he": "עומר דלאשה",
+   "en": "עומר דלאשה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.09
+  },
+  {
+   "he": "בכר זערורה",
+   "en": "בכר זערורה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.141
+  },
+  {
+   "he": "פיסל חוסיין",
+   "en": "פיסל חוסיין",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "חמזה ח'טיב",
+   "en": "חמזה ח'טיב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "אחמד ח'ליל",
+   "en": "אחמד ח'ליל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.129
+  },
+  {
+   "he": "וחיד ח'ליל",
+   "en": "וחיד ח'ליל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.125
+  },
+  {
+   "he": "סאמר חמוד",
+   "en": "סאמר חמוד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  },
+  {
+   "he": "אור לוי",
+   "en": "אור לוי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.049
+  },
+  {
+   "he": "חסן מנאע",
+   "en": "חסן מנאע",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.074
+  },
+  {
+   "he": "נדיר מרעי",
+   "en": "נדיר מרעי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.127
+  },
+  {
+   "he": "מוניר נאסר",
+   "en": "מוניר נאסר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.108
+  },
+  {
+   "he": "מוחמד נוגדאת",
+   "en": "מוחמד נוגדאת",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.09
+  },
+  {
+   "he": "מוחמד נוגידאת",
+   "en": "מוחמד נוגידאת",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "מוחמד נוג'ידאת",
+   "en": "מוחמד נוג'ידאת",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.051
+  },
+  {
+   "he": "מוסא נוג'ידאת",
+   "en": "מוסא נוג'ידאת",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "עפיף נזאל",
+   "en": "עפיף נזאל",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.138
+  },
+  {
+   "he": "ח'ליל נחול",
+   "en": "ח'ליל נחול",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "כמאל סבע",
+   "en": "כמאל סבע",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.061
+  },
+  {
+   "he": "אחמד סלאמה",
+   "en": "אחמד סלאמה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "מוסא סלים",
+   "en": "מוסא סלים",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.079
+  },
+  {
+   "he": "מג'ד סלימאן",
+   "en": "מג'ד סלימאן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "מוחמד סלימאן",
+   "en": "מוחמד סלימאן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "מוחמד סמאר",
+   "en": "מוחמד סמאר",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.149
+  },
+  {
+   "he": "פאיז סעדי",
+   "en": "פאיז סעדי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.142
+  },
+  {
+   "he": "עאדל עאסי",
+   "en": "עאדל עאסי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "גאזי עואודה",
+   "en": "גאזי עואודה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.062
+  },
+  {
+   "he": "מוחמד עיסאוי",
+   "en": "מוחמד עיסאוי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.119
+  },
+  {
+   "he": "חמזה פרחאת",
+   "en": "חמזה פרחאת",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "שהאב קמבר",
+   "en": "שהאב קמבר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "מוחמד שעבאן",
+   "en": "מוחמד שעבאן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  }
+ ]
+}

@@ -27,13 +27,18 @@ clubs = []
 for f in sorted(glob.glob(os.path.join(ROOT, 'data', '*.json'))):
     clubs.append(json.loads(read(f)))
 euro = {}
+alef = []
 for f in sorted(glob.glob(os.path.join(ROOT, 'data', 'euro', '*.json'))):
     try:
         d = json.loads(read(f))
         if d.get('players'):
             euro[d['name_he']] = [{k: p.get(k) for k in ('he', 'en', 'pos', 'age', 'nat', 'nat2', 'value_m') if k != 'nat2' or p.get('nat2')} for p in d['players'] if p.get('he')]
+            if d.get('league', '').startswith('alef'):
+                alef.append([d['name_he'], d.get('city') or '', d.get('c1') or '#1d4ed8', d.get('c2') or '#ffffff', d['league']])
     except Exception as e:
         print('skip', f, e)
+youth_cfg = os.path.join(ROOT, 'data', 'config', 'youth-squads.json')
+youth = {k: v['players'] for k, v in json.loads(read(youth_cfg))['clubs'].items()} if os.path.exists(youth_cfg) else {}
 
 def enc(o):
     return json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</script', '<\\/script')
@@ -43,7 +48,8 @@ def mdate(pattern):
     return datetime.date.fromtimestamp(max(os.path.getmtime(f) for f in fs)).strftime('%d.%m.%Y') if fs else None
 
 meta = {'israel': {'clubs': len(clubs), 'players': sum(len(c['players']) for c in clubs), 'date': mdate('*.json')},
-        'euro': {'clubs': len(euro), 'players': sum(len(v) for v in euro.values()), 'date': mdate('euro/*.json')}}
+        'euro': {'clubs': len(euro), 'players': sum(len(v) for v in euro.values()), 'date': mdate('euro/*.json')},
+        'alef': {'clubs': len(alef), 'players': sum(len(euro[a[0]]) for a in alef)}, 'youth': {'clubs': len(youth), 'players': sum(len(v) for v in youth.values())}}
 
 def data_uri(name):
     with open(os.path.join(SRC, name), 'rb') as fh:
@@ -117,8 +123,8 @@ def supabase_cfg():
     assert key.startswith('sb_publishable_'), 'only a publishable key may be embedded'
     return {'url': url.rstrip('/'), 'key': key}
 page = page.replace('__SUPABASE_BUILD__', enc(supabase_cfg()))
-out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta))
-for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE_BUILD__'):
+out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta)).replace('__YOUTH_JSON__', enc(youth)).replace('__ALEF_JSON__', enc(alef))
+for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE_BUILD__', '__YOUTH_JSON__', '__ALEF_JSON__'):
     assert ph not in out, 'unfilled placeholder ' + ph
 # build stamp: a hash of the page content, so a live check can tell which build a server is actually serving
 import hashlib

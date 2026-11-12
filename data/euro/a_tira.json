@@ -1,0 +1,232 @@
+{
+ "key": "a_tira",
+ "name_he": "מ.ס. טירה",
+ "league": "alef_north",
+ "city": "טירה",
+ "c1": "#1d4ed8",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=5245 season 2026/27: מועדון ספורט טירה",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "מוסטפה אבו דחרוג",
+   "en": "מוסטפה אבו דחרוג",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.088
+  },
+  {
+   "he": "מוחמד אבו ציאם",
+   "en": "מוחמד אבו ציאם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.143
+  },
+  {
+   "he": "עדי אבוסעדה",
+   "en": "עדי אבוסעדה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.078
+  },
+  {
+   "he": "אחמד אזברגה",
+   "en": "אחמד אזברגה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.045
+  },
+  {
+   "he": "אופרי בוארון",
+   "en": "אופרי בוארון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.046
+  },
+  {
+   "he": "כרים בלעום",
+   "en": "כרים בלעום",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "סאלח בראנסי",
+   "en": "סאלח בראנסי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.099
+  },
+  {
+   "he": "אסף הרשקו",
+   "en": "אסף הרשקו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "יונתן וודמיכאל",
+   "en": "יונתן וודמיכאל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "שקד זידנברג",
+   "en": "שקד זידנברג",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.129
+  },
+  {
+   "he": "מאהר חאג'",
+   "en": "מאהר חאג'",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "קותיבה בן מוסלם חאג יחיא",
+   "en": "קותיבה בן מוסלם חאג יחיא",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "מוחמד חביבאללה",
+   "en": "מוחמד חביבאללה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.118
+  },
+  {
+   "he": "נור אלדין חטיב",
+   "en": "נור אלדין חטיב",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.106
+  },
+  {
+   "he": "חסן חסן",
+   "en": "חסן חסן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.088
+  },
+  {
+   "he": "עומר יונס",
+   "en": "עומר יונס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.124
+  },
+  {
+   "he": "אחמד סולטאן",
+   "en": "אחמד סולטאן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "רמי סלטאן",
+   "en": "רמי סלטאן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.116
+  },
+  {
+   "he": "עומר סעיד",
+   "en": "עומר סעיד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.081
+  },
+  {
+   "he": "אנס עאזם",
+   "en": "אנס עאזם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.124
+  },
+  {
+   "he": "דאני אייהם עודה",
+   "en": "דאני אייהם עודה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.142
+  },
+  {
+   "he": "ריאד עיראקי",
+   "en": "ריאד עיראקי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.047
+  },
+  {
+   "he": "עמר פדילה",
+   "en": "עמר פדילה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.089
+  },
+  {
+   "he": "אחמד רביע",
+   "en": "אחמד רביע",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.063
+  },
+  {
+   "he": "ראזי שיח אחמד",
+   "en": "ראזי שיח אחמד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.05
+  },
+  {
+   "he": "ניב שראל",
+   "en": "ניב שראל",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.051
+  },
+  {
+   "he": "מגד שריף",
+   "en": "מגד שריף",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.124
+  }
+ ]
+}

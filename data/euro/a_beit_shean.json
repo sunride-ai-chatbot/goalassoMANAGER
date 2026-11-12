@@ -1,0 +1,256 @@
+{
+ "key": "a_beit_shean",
+ "name_he": "הפועל בית שאן",
+ "league": "alef_north",
+ "city": "בית שאן",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=5859 season 2026/27: הפועל בית שאן מסילות",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "איתי אברהם",
+   "en": "איתי אברהם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.136
+  },
+  {
+   "he": "מעין אורון",
+   "en": "מעין אורון",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "רפאל בר איבגי",
+   "en": "רפאל בר איבגי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "בנתאמלק אנדרגה",
+   "en": "בנתאמלק אנדרגה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.048
+  },
+  {
+   "he": "ישי בוזורגי",
+   "en": "ישי בוזורגי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "מאיר ניסים בוחבוט",
+   "en": "מאיר ניסים בוחבוט",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.136
+  },
+  {
+   "he": "ראמי בטחיש",
+   "en": "ראמי בטחיש",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.054
+  },
+  {
+   "he": "עילאי בן דוד",
+   "en": "עילאי בן דוד",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "אור חיים בן זקן",
+   "en": "אור חיים בן זקן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.057
+  },
+  {
+   "he": "ניתאי בנון",
+   "en": "ניתאי בנון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.07
+  },
+  {
+   "he": "יבגני יהונתן ברקמן",
+   "en": "יבגני יהונתן ברקמן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "עלי גביס",
+   "en": "עלי גביס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.101
+  },
+  {
+   "he": "אברהם אבישי דוד",
+   "en": "אברהם אבישי דוד",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.082
+  },
+  {
+   "he": "אליהו דרעי",
+   "en": "אליהו דרעי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.131
+  },
+  {
+   "he": "אולג זבונריוב",
+   "en": "אולג זבונריוב",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "איתי לרמן",
+   "en": "איתי לרמן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "אריאל מוסה זאדה",
+   "en": "אריאל מוסה זאדה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.046
+  },
+  {
+   "he": "גיא מזרחי",
+   "en": "גיא מזרחי",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "אלמוג חי מלול",
+   "en": "אלמוג חי מלול",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "בר בראל מלכא",
+   "en": "בר בראל מלכא",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.052
+  },
+  {
+   "he": "מוחמד עבאס",
+   "en": "מוחמד עבאס",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.053
+  },
+  {
+   "he": "רג'ב עיסא",
+   "en": "רג'ב עיסא",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.099
+  },
+  {
+   "he": "ירין עמרם",
+   "en": "ירין עמרם",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.134
+  },
+  {
+   "he": "מתן פלג",
+   "en": "מתן פלג",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "עודד צוקול",
+   "en": "עודד צוקול",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.141
+  },
+  {
+   "he": "שון קומיסרוב",
+   "en": "שון קומיסרוב",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.05
+  },
+  {
+   "he": "רועי שחר",
+   "en": "רועי שחר",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.045
+  },
+  {
+   "he": "נבו יצחק שמעוני",
+   "en": "נבו יצחק שמעוני",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.051
+  },
+  {
+   "he": "איתי שריקי",
+   "en": "איתי שריקי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "עמית תשובה",
+   "en": "עמית תשובה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.133
+  }
+ ]
+}

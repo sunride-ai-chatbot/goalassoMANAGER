@@ -1,0 +1,248 @@
+{
+ "key": "a_tzeirei_tira",
+ "name_he": "צעירי טירה",
+ "league": "alef_south",
+ "city": "טירה",
+ "c1": "#1f8a3a",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=7066 season 2026/27: מועדון כדורגל צעירי טירה",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "מוסטפא אבו אל היג'א",
+   "en": "מוסטפא אבו אל היג'א",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.085
+  },
+  {
+   "he": "דוראי אלפקי אחמד",
+   "en": "דוראי אלפקי אחמד",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "איברהים בדיר",
+   "en": "איברהים בדיר",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "ניב בן יוסף",
+   "en": "ניב בן יוסף",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.085
+  },
+  {
+   "he": "עדי בן עמי",
+   "en": "עדי בן עמי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.064
+  },
+  {
+   "he": "איברהים גואברה",
+   "en": "איברהים גואברה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.143
+  },
+  {
+   "he": "מתן דהדי",
+   "en": "מתן דהדי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "אושר משה זכאי",
+   "en": "אושר משה זכאי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.083
+  },
+  {
+   "he": "סארי חאג יחיא",
+   "en": "סארי חאג יחיא",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.056
+  },
+  {
+   "he": "דיאגו חנאניא",
+   "en": "דיאגו חנאניא",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.117
+  },
+  {
+   "he": "אליה חסן",
+   "en": "אליה חסן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.149
+  },
+  {
+   "he": "ליאל כהן",
+   "en": "ליאל כהן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.135
+  },
+  {
+   "he": "לידור כהן",
+   "en": "לידור כהן",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.131
+  },
+  {
+   "he": "איתי כוכבי",
+   "en": "איתי כוכבי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.125
+  },
+  {
+   "he": "אלי יהודה לוי",
+   "en": "אלי יהודה לוי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.088
+  },
+  {
+   "he": "יואב ליברוס",
+   "en": "יואב ליברוס",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.109
+  },
+  {
+   "he": "דוד מורלי",
+   "en": "דוד מורלי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.107
+  },
+  {
+   "he": "אחמד מנצור",
+   "en": "אחמד מנצור",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.121
+  },
+  {
+   "he": "רון יצחק נפתלי",
+   "en": "רון יצחק נפתלי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.075
+  },
+  {
+   "he": "רועי סטולרו",
+   "en": "רועי סטולרו",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.045
+  },
+  {
+   "he": "ירין פדידה",
+   "en": "ירין פדידה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.075
+  },
+  {
+   "he": "אדם פדילה",
+   "en": "אדם פדילה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.06
+  },
+  {
+   "he": "רוי רואי פולק",
+   "en": "רוי רואי פולק",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.085
+  },
+  {
+   "he": "רז קוגמן פרג'",
+   "en": "רז קוגמן פרג'",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "לירן עידו קצב",
+   "en": "לירן עידו קצב",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.131
+  },
+  {
+   "he": "גל קתבי",
+   "en": "גל קתבי",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.1
+  },
+  {
+   "he": "אופק משה ראובן",
+   "en": "אופק משה ראובן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.094
+  },
+  {
+   "he": "עמית שפירא",
+   "en": "עמית שפירא",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.07
+  },
+  {
+   "he": "מחמוד תאיה",
+   "en": "מחמוד תאיה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.058
+  }
+ ]
+}

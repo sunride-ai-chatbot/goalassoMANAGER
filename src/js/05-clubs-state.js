@@ -33,7 +33,7 @@ function newGame(teamId,managerName){
   const leumit=LEUMIT16.map(buildLeumitClub);
   G={me:teamId,season:1,wk:0,clubs,leumit,pseudo:{},cal:[],fixtures:[],results:[],news:[],offers:[],freeAgents:[],paper:[],world:{},scouts:[],scoutMarket:[],reports:[],negs:[],payables:[],view:'home',phase:'contract',live:null,
      manager:{name:managerName||'המנג\'ר',wage:0,bank:0,seasonsLeft:2,history:[],trust:60},board:{conf:55,expectRank:9,expectText:''},cup:null,cupWinner:null,champion:null,log:[]};
-  computePrestige();
+  realizeYouth();computePrestige();
   clubs.forEach(c=>{c.money=Math.round(clamp(c.squadValue*.3,3e6,50e6)/1e5)*1e5;c.training=c.tier===1?3:c.tier===2?2:1;c.academy=c.training;c.ticket=c.tier===1?90:c.tier===2?70:55;c.fans=(c.tier===1?70:c.tier===2?55:42)+ri(-4,4);c.focus='bal';c.intensity='mid';c.attRecord=null;c.scouting=1;
     const s=EURO_SEEDS[c.id];c.euro=s?{comp:s[0],stage:s[1],lp:null,tie:null,prize:0,history:[]}:null;
     if(c.id!==teamId)c.sponsor=sponsorOffers(c)[0]});

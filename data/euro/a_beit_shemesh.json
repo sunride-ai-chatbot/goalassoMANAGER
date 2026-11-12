@@ -1,0 +1,224 @@
+{
+ "key": "a_beit_shemesh",
+ "name_he": "עירוני בית שמש",
+ "league": "alef_south",
+ "city": "בית שמש",
+ "c1": "#1d4ed8",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=4237 season 2026/27: עירוני בית שמש",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "הייפורד אדג'י",
+   "en": "הייפורד אדג'י",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "מאיר אוחיון",
+   "en": "מאיר אוחיון",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.053
+  },
+  {
+   "he": "טלהון - טל איילה",
+   "en": "טלהון - טל איילה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.078
+  },
+  {
+   "he": "ליעד אלעד",
+   "en": "ליעד אלעד",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "פנאטהון בלטה",
+   "en": "פנאטהון בלטה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.11
+  },
+  {
+   "he": "רואי בן בסט",
+   "en": "רואי בן בסט",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.09
+  },
+  {
+   "he": "רז ברוכיאן",
+   "en": "רז ברוכיאן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.133
+  },
+  {
+   "he": "יוסי גינזבורג",
+   "en": "יוסי גינזבורג",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.103
+  },
+  {
+   "he": "דניאל דה וונדלר",
+   "en": "דניאל דה וונדלר",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.147
+  },
+  {
+   "he": "טל דיין",
+   "en": "טל דיין",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.121
+  },
+  {
+   "he": "דוד חוגה",
+   "en": "דוד חוגה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.141
+  },
+  {
+   "he": "אושרי טדלה",
+   "en": "אושרי טדלה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.126
+  },
+  {
+   "he": "שי מזור",
+   "en": "שי מזור",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "יעקב ישראל מינקו",
+   "en": "יעקב ישראל מינקו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.097
+  },
+  {
+   "he": "שליו מנחם",
+   "en": "שליו מנחם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.123
+  },
+  {
+   "he": "גיא מעוז",
+   "en": "גיא מעוז",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.083
+  },
+  {
+   "he": "דניאל משיח",
+   "en": "דניאל משיח",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "אבי סאלם",
+   "en": "אבי סאלם",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "סינטאיהו סלליך",
+   "en": "סינטאיהו סלליך",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.096
+  },
+  {
+   "he": "פיראס עווד",
+   "en": "פיראס עווד",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.057
+  },
+  {
+   "he": "דן עזריה",
+   "en": "דן עזריה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.114
+  },
+  {
+   "he": "איתי פז",
+   "en": "איתי פז",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "ייסמאו קבדה",
+   "en": "ייסמאו קבדה",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.12
+  },
+  {
+   "he": "ליעד רמות",
+   "en": "ליעד רמות",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.115
+  },
+  {
+   "he": "אליאור משה שמואל",
+   "en": "אליאור משה שמואל",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.138
+  },
+  {
+   "he": "דויד נמרוד שמש",
+   "en": "דויד נמרוד שמש",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.141
+  }
+ ]
+}

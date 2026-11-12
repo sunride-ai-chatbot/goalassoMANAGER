@@ -1,0 +1,248 @@
+{
+ "key": "a_mahane_yehuda",
+ "name_he": "הפועל מחנה יהודה",
+ "league": "alef_south",
+ "city": "פתח תקווה",
+ "c1": "#d81e1e",
+ "c2": "#ffffff",
+ "source": "football.org.il team_id=2256 season 2026/27: הפועל מחנה יהודה עידן פוקס",
+ "fetched": "2026-11-12",
+ "generated": [
+  "pos",
+  "value_m"
+ ],
+ "players": [
+  {
+   "he": "אופק אושר",
+   "en": "אופק אושר",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.082
+  },
+  {
+   "he": "אמיתי אילן",
+   "en": "אמיתי אילן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.052
+  },
+  {
+   "he": "רן אלבגלי",
+   "en": "רן אלבגלי",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.068
+  },
+  {
+   "he": "עמית בוהדאנה",
+   "en": "עמית בוהדאנה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.067
+  },
+  {
+   "he": "גיא בנק",
+   "en": "גיא בנק",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.069
+  },
+  {
+   "he": "עידו גויטע",
+   "en": "עידו גויטע",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.059
+  },
+  {
+   "he": "יוסף דויטש",
+   "en": "יוסף דויטש",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.087
+  },
+  {
+   "he": "עומר הניג",
+   "en": "עומר הניג",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "גיא כהן",
+   "en": "גיא כהן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.112
+  },
+  {
+   "he": "אלעד מגן",
+   "en": "אלעד מגן",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.082
+  },
+  {
+   "he": "עילי מוסקוביץ",
+   "en": "עילי מוסקוביץ",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.092
+  },
+  {
+   "he": "יניב מורדוב",
+   "en": "יניב מורדוב",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.111
+  },
+  {
+   "he": "נועם מזרחי שמעון",
+   "en": "נועם מזרחי שמעון",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.14
+  },
+  {
+   "he": "אביב מלסה",
+   "en": "אביב מלסה",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.113
+  },
+  {
+   "he": "אליאב ממן",
+   "en": "אליאב ממן",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.064
+  },
+  {
+   "he": "גילי סלמאן",
+   "en": "גילי סלמאן",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.128
+  },
+  {
+   "he": "טל עטר",
+   "en": "טל עטר",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.084
+  },
+  {
+   "he": "אורי עיני",
+   "en": "אורי עיני",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.111
+  },
+  {
+   "he": "אלמוג פינטו",
+   "en": "אלמוג פינטו",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.129
+  },
+  {
+   "he": "עידן פרדה",
+   "en": "עידן פרדה",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.074
+  },
+  {
+   "he": "בנימין בני פרץ",
+   "en": "בנימין בני פרץ",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.103
+  },
+  {
+   "he": "יהושע קולקריק",
+   "en": "יהושע קולקריק",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "שמעון יוחאי רוחם",
+   "en": "שמעון יוחאי רוחם",
+   "pos": "DF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.076
+  },
+  {
+   "he": "אביב רצון",
+   "en": "אביב רצון",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.095
+  },
+  {
+   "he": "אלעד שאבי",
+   "en": "אלעד שאבי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.144
+  },
+  {
+   "he": "מוחמד שדידה",
+   "en": "מוחמד שדידה",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.132
+  },
+  {
+   "he": "יאיר שפונגין",
+   "en": "יאיר שפונגין",
+   "pos": "GK",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.093
+  },
+  {
+   "he": "איליי יעקב שפיקי",
+   "en": "איליי יעקב שפיקי",
+   "pos": "FW",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.101
+  },
+  {
+   "he": "פרינס תומס",
+   "en": "פרינס תומס",
+   "pos": "MF",
+   "age": null,
+   "nat": "Israel",
+   "value_m": 0.149
+  }
+ ]
+}

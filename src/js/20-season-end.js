@@ -44,14 +44,15 @@ function endSeason(){
   }
   G.freeAgents=(G.freeAgents||[]).filter(p=>!inventedPlayer(p));   /* released academy products do not linger as free agents */
   // ageing & intake
+  realizeYouth();const inGame=namesInGame();   /* the clubs that just came up bring their real youth; new prospects and top-ups take names nobody in the game has */
   for(const x of [...G.clubs,...G.leumit]){
     x.players.forEach(p=>{if(p.apps>0){p.hist=p.hist||[];p.hist.unshift({s:seasonLabel(),club:x.short,apps:p.apps,mins:p.mins||0,g:p.goals,a:p.assists||0,cs:p.cs||0,sv:p.saves||0,motm:p.motm||0,r:p.rn?+(p.rsum/p.rn).toFixed(2):null});p.hist=p.hist.slice(0,12)}
       p.age++;p.yellow=0;p.goals=0;p.apps=0;p.form=0;p.inj=0;p.injT=null;p.susp=0;p.mins=0;p.shots=0;p.sot=0;p.assists=0;p.passes=0;p.saves=0;p.cs=0;p.xg=0;p.rsum=0;p.rn=0;p.motm=0;if((p.age>35&&Math.random()<.6)||p.retireAtEnd)p.retire=true});
     const retired=x.players.filter(p=>p.retire);if(x.id===G.me&&retired.length)news(`פרשו: ${retired.map(fullName).join(', ')}.`);
     x.players=x.players.filter(p=>!p.retire);x.youth.forEach(y=>y.age++);x.youth=x.youth.filter(y=>y.age<=20);
-    while(x.youth.length<7){const y=makeYouth(1)[0];if(x.id===G.me&&staffD('youth')>0)y.pot=clamp(y.pot+staffD('youth')*2,40,92);x.youth.push(y)}
-    while(x.players.filter(p=>p.pos==='GK').length<2)x.players.push(makePlayer('GK',x.tier===1?66:x.tier===4?54:60));
-    while(x.players.length<20)x.players.push(makePlayer(pick(['DF','MF','FW']),x.tier===1?66:x.tier===2?62:x.tier===4?54:58));
+    while(x.youth.length<7){const y=makeYouth(1)[0];giveRealName(y,x,inGame);if(x.id===G.me&&staffD('youth')>0)y.pot=clamp(y.pot+staffD('youth')*2,40,92);x.youth.push(y)}
+    while(x.players.filter(p=>p.pos==='GK').length<2)x.players.push(topUpPlayer(x,'GK',x.tier===1?66:x.tier===4?54:60,inGame));
+    while(x.players.length<20)x.players.push(topUpPlayer(x,pick(['DF','MF','FW']),x.tier===1?66:x.tier===2?62:x.tier===4?54:58,inGame));
     x.euro=euroNext[x.id]?{comp:euroNext[x.id][0],stage:euroNext[x.id][1],lp:null,tie:null,prize:0,history:[]}:null;
     if(x.id!==G.me&&!x.sponsor)x.sponsor=sponsorOffers(x)[0];
   }
