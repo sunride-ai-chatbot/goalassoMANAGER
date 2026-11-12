@@ -81,10 +81,28 @@ async function main(){
     const out={limited:foreignLimited(c),on:foreignOnPitch(M,c),blocked:subBreaksForeign(M,c,isr.id,b[0]),swapOk:!subBreaksForeign(M,c,fo.id,b[0]),localOk:!subBreaksForeign(M,c,isr.id,b[2])};
     out.refused=doSub(M,c,isr.id,b[0].id)===false;out.still=foreignOnPitch(M,c);
     BsubOut=isr.id;BsubIn=undefined;BsubDialog();out.disabled=[...document.querySelectorAll('[data-bsub-in]')].filter(x=>x.disabled).map(x=>+x.dataset.bsubIn);out.want=b.filter(p=>p.foreign).map(p=>p.id);document.querySelector('.bdialog').remove();
+    out.accepted=doSub(M,c,fo.id,b[0].id)!==false;out.after=foreignOnPitch(M,c);   // before the simulated matches below can injure anybody
     for(let k=0;k<400;k++){const m2=createMatch(c,G.clubs.find(x=>x.id!==c.id),{kind:'friendly'});while(!m2.done)stepMinute(m2);out.max=Math.max(out.max||0,foreignOnPitch(m2,c));if(k>25)break}
-    out.accepted=doSub(M,c,fo.id,b[0].id)!==false;out.after=foreignOnPitch(M,c);const eu={country:'אירופה'};out.euro=foreignLimited(eu);return out})()`);
+    const eu={country:'אירופה'};out.euro=foreignLimited(eu);return out})()`);
   assert.ok(fr.limited);assert.equal(fr.on,6);assert.ok(fr.blocked,'a seventh foreigner is refused');assert.ok(fr.swapOk);assert.ok(fr.localOk);assert.ok(fr.refused);assert.equal(fr.still,6);
   assert.deepEqual(fr.disabled.sort(),fr.want.sort(),'the dialog shows which substitutes cannot come on');assert.ok(fr.max<=6,'the computer\'s own substitutions keep the limit, got '+fr.max);assert.ok(fr.accepted);assert.equal(fr.after,6);assert.equal(fr.euro,false);
+  // ---- penalties in the beginner mode: the clock waits, the manager kicks for his side and keeps goal against it with eight arrows
+  w.eval("Bplay();Bstate().live.paused=false;G.motion='off'");
+  const pen=async(mine,act)=>{w.eval(`(()=>{const M=Bstate().live.M,c=${mine}?me():club(M.h===G.me?M.a:M.h);window.__m0=M.m;window.__ev0=M.ev.length;const real=stepMinute;stepMinute=function(M2,ui){stepMinute=real;if(!(ui&&ui.pen&&ui.pen()))throw new Error('the beginner clock offers the penalty to the manager');M2.m++;M2.pendingPen={team:c.id,pid:penTaker(M2,c).id,m:M2.m}};Btick()})()`);
+    assert.ok($('#penGame'),'the penalty overlay opens in the beginner mode');await until(()=>w.eval('!!(PG&&PG.stage&&PG.auto)'),'the penalty stage');const before=run('({m:Bstate().live.M.m,busy:BpenBusy})');w.eval('Btick()');assert.equal(run('Bstate().live.M.m'),before.m,'the match waits for the kick');assert.ok(before.busy);
+    const view=run("({taker:!!document.querySelector('#pgTaker'),keeper:!!document.querySelector('#pgKeeper'),arrows:[...document.querySelectorAll('.pg-dirs [data-dir]')].map(b=>b.dataset.dir),sight:!!document.querySelector('.pg-aim'),title:document.querySelector('#penGame .pg-title').textContent})");
+    await act(view);await until(()=>!$('#penGame')&&w.eval('!Bstate().live.M.pendingPen&&!BpenBusy'),'the kick to be reported');return {view,ev:run("Bstate().live.M.ev.slice(window.__ev0).filter(e=>e.t==='pen'||e.t==='penmiss').map(e=>[e.t,e.how||'',e.team===G.me,e.m===window.__m0+1])")}};
+  const until=async(f,what)=>{const t0=Date.now();while(!f()){if(Date.now()-t0>8000)throw new Error('timed out: '+what);await new Promise(r=>setTimeout(r,20))}};
+  const mineK=await pen(true,async v=>{assert.ok(v.taker&&v.keeper,'the taker\'s back and the keeper are in the picture');assert.ok(v.sight);assert.deepEqual(v.arrows,[]);w.eval("window.r0=Math.random;Math.random=()=>.99;PG.fire(2.6,1.2);Math.random=window.r0")});
+  assert.deepEqual(mineK.ev,[['pen','goal',true,true]],'my kick is the engine\'s goal');
+  const keepK=await pen(false,async v=>{assert.deepEqual(v.arrows.slice().sort(),['D','DL','DR','L','R','U','UL','UR'],'eight arrows');assert.ok(!v.sight);
+    const z=run('penZone(PG.shot.x,PG.shot.y)');w.document.querySelector('.pg-dirs [data-dir="UL"]').click();assert.equal(w.document.querySelector('.pg-dirs .on').dataset.dir,'UL');w.document.querySelector(`.pg-dirs [data-dir="${z}"]`).click();assert.equal(w.document.querySelectorAll('.pg-dirs .on').length,1,'the last arrow tapped counts');
+    w.eval("window.r0=Math.random;Math.random=()=>.01;PG.strike();Math.random=window.r0")});
+  assert.equal(keepK.ev.length,1);assert.equal(keepK.ev[0][2],false);assert.ok(keepK.ev[0][0]==='penmiss','the right arrow at the right height stops it (or it missed the frame): '+JSON.stringify(keepK.ev));
+  const wrongK=await pen(false,async()=>{const z=run('penZone(PG.shot.x,PG.shot.y)'),f=run("penFrame(PG.shot.x,PG.shot.y)");global.__f=f;w.eval(`PG.go('${z.includes('L')?'R':'L'}')`)});
+  assert.equal(wrongK.ev.length,1);if(global.__f==='in')assert.deepEqual(wrongK.ev[0].slice(0,3),['pen','goal',false],'the wrong side is a goal');
+  w.eval("G.penGame=false");w.eval(`(()=>{const real=stepMinute;stepMinute=function(M2,ui){stepMinute=real;window.__offered=!!(ui&&ui.pen&&ui.pen())};Btick()})()`);assert.equal(w.__offered,false,'switched off: the engine decides');w.eval("delete G.penGame");
+  w.eval("BstopBroadcast();delete Bstate().live");
   // ---- the build is visible and an open page learns about a newer one
   const bi=run('buildInfo()');assert.ok(/^[0-9a-f]{12}$/.test(bi.id));w.eval("BstopBroadcast();delete Bstate().live;Btab='home';Brender()");assert.ok(w.document.querySelector('.bfooter .buildstamp').textContent.includes(bi.id.slice(0,6)),'the stamp is in the footer of the beginner screens');
   let asked='';w.fetch=u=>{asked=String(u);return Promise.resolve({ok:true,json:()=>Promise.resolve({build:bi.id,built:'x'})})};w.eval('updLast=0');assert.equal(await w.eval('updateCheck()'),false,'same build: nothing to offer');assert.ok(/version\.json\?t=\d+$/.test(asked));assert.equal($('#updBar'),null);

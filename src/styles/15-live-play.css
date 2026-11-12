@@ -54,12 +54,12 @@
 .pg-flash{position:absolute;left:0;right:0;top:34%;text-align:center;font-family:var(--title);font-weight:700;font-size:92px;line-height:1;z-index:4;pointer-events:none;text-shadow:0 6px 30px rgba(0,0,0,.75);animation:pgFlash 1.15s ease-out both}
 .pg-flash.good{color:#c6f24e}.pg-flash.bad{color:#ff5c6c}
 @keyframes pgFlash{0%{opacity:0;transform:scale(.6)}18%{opacity:1;transform:scale(1.08)}30%{transform:scale(1)}85%{opacity:1}100%{opacity:0}}
-.pg-gloves3d{position:absolute;inset:auto 0 0 0;height:36%;pointer-events:none;z-index:1}
-.pg-gloves3d svg{width:100%;height:100%;display:block;overflow:visible}
-.pg-gloves3d .gl{transition:transform .17s ease-out;transform-box:fill-box;transform-origin:50% 100%}
-.pg-gloves3d[data-side="L"] .gl{transform:translate(-62px,-96px) rotate(-16deg)}
-.pg-gloves3d[data-side="R"] .gl{transform:translate(62px,-96px) rotate(16deg)}
-.pg-gloves3d[data-side="C"] .gl.l{transform:translate(40px,-118px)}.pg-gloves3d[data-side="C"] .gl.r{transform:translate(-40px,-118px)}
+/* keeping goal: eight quiet arrows on the goal, the chosen one lit */
+.pg-dirs{position:absolute;inset:0;z-index:2;pointer-events:none}
+.pg-dirs button{position:absolute;left:0;top:0;width:42px;height:42px;margin:-21px 0 0 -21px;padding:0;border-radius:50%;border:1.5px solid rgba(255,255,255,.34);background:rgba(8,13,22,.26);color:rgba(255,255,255,.62);pointer-events:auto;cursor:pointer;display:grid;place-items:center;will-change:transform;-webkit-tap-highlight-color:transparent}
+.pg-dirs button svg{width:22px;height:22px;fill:currentColor;display:block}
+.pg-dirs button.on{border-color:#c6f24e;background:rgba(198,242,78,.3);color:#fff;box-shadow:0 0 14px rgba(198,242,78,.55)}
+.pg-dirs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .pg-panel{position:absolute;inset:0;z-index:5;display:grid;place-items:center;padding:20px;background:rgba(5,7,11,.72);backdrop-filter:blur(3px)}
 .pg-end{max-width:420px;text-align:center;display:flex;flex-direction:column;align-items:stretch;gap:10px}
 .pg-end small{color:var(--gold);font-size:13px}
@@ -82,4 +82,4 @@
 .pg-timer i{display:block;height:100%;background:linear-gradient(90deg,#e9c46a,#c6f24e);transform-origin:100% 50%}
 .pg-timer.idle{visibility:hidden}
 @media(min-width:900px){.pg-title{font-size:54px}.pg-flash{font-size:140px}.pg-stage{max-width:1100px;width:100%;margin:0 auto}}
-@media(prefers-reduced-motion:reduce){.pg,.pg-flash,.pg-kbody.sway,.pg-net.hit{animation:none}.pg-gloves3d .gl{transition:none}}
+@media(prefers-reduced-motion:reduce){.pg,.pg-flash,.pg-kbody.sway,.pg-net.hit{animation:none}}

@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="5187c7f0be54">
-<meta name="goalasso-built" content="12.11.2026 09:22">
+<meta name="goalasso-build" content="2d692d0ebfcc">
+<meta name="goalasso-built" content="12.11.2026 12:25">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -1169,12 +1169,12 @@ h3.sec:not(.btn){font-size:24px}
 .pg-flash{position:absolute;left:0;right:0;top:34%;text-align:center;font-family:var(--title);font-weight:700;font-size:92px;line-height:1;z-index:4;pointer-events:none;text-shadow:0 6px 30px rgba(0,0,0,.75);animation:pgFlash 1.15s ease-out both}
 .pg-flash.good{color:#c6f24e}.pg-flash.bad{color:#ff5c6c}
 @keyframes pgFlash{0%{opacity:0;transform:scale(.6)}18%{opacity:1;transform:scale(1.08)}30%{transform:scale(1)}85%{opacity:1}100%{opacity:0}}
-.pg-gloves3d{position:absolute;inset:auto 0 0 0;height:36%;pointer-events:none;z-index:1}
-.pg-gloves3d svg{width:100%;height:100%;display:block;overflow:visible}
-.pg-gloves3d .gl{transition:transform .17s ease-out;transform-box:fill-box;transform-origin:50% 100%}
-.pg-gloves3d[data-side="L"] .gl{transform:translate(-62px,-96px) rotate(-16deg)}
-.pg-gloves3d[data-side="R"] .gl{transform:translate(62px,-96px) rotate(16deg)}
-.pg-gloves3d[data-side="C"] .gl.l{transform:translate(40px,-118px)}.pg-gloves3d[data-side="C"] .gl.r{transform:translate(-40px,-118px)}
+/* keeping goal: eight quiet arrows on the goal, the chosen one lit */
+.pg-dirs{position:absolute;inset:0;z-index:2;pointer-events:none}
+.pg-dirs button{position:absolute;left:0;top:0;width:42px;height:42px;margin:-21px 0 0 -21px;padding:0;border-radius:50%;border:1.5px solid rgba(255,255,255,.34);background:rgba(8,13,22,.26);color:rgba(255,255,255,.62);pointer-events:auto;cursor:pointer;display:grid;place-items:center;will-change:transform;-webkit-tap-highlight-color:transparent}
+.pg-dirs button svg{width:22px;height:22px;fill:currentColor;display:block}
+.pg-dirs button.on{border-color:#c6f24e;background:rgba(198,242,78,.3);color:#fff;box-shadow:0 0 14px rgba(198,242,78,.55)}
+.pg-dirs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .pg-panel{position:absolute;inset:0;z-index:5;display:grid;place-items:center;padding:20px;background:rgba(5,7,11,.72);backdrop-filter:blur(3px)}
 .pg-end{max-width:420px;text-align:center;display:flex;flex-direction:column;align-items:stretch;gap:10px}
 .pg-end small{color:var(--gold);font-size:13px}
@@ -1197,7 +1197,7 @@ h3.sec:not(.btn){font-size:24px}
 .pg-timer i{display:block;height:100%;background:linear-gradient(90deg,#e9c46a,#c6f24e);transform-origin:100% 50%}
 .pg-timer.idle{visibility:hidden}
 @media(min-width:900px){.pg-title{font-size:54px}.pg-flash{font-size:140px}.pg-stage{max-width:1100px;width:100%;margin:0 auto}}
-@media(prefers-reduced-motion:reduce){.pg,.pg-flash,.pg-kbody.sway,.pg-net.hit{animation:none}.pg-gloves3d .gl{transition:none}}
+@media(prefers-reduced-motion:reduce){.pg,.pg-flash,.pg-kbody.sway,.pg-net.hit{animation:none}}
 /* ===== BETWEEN MATCHES: next-week hooks, the envelope, the career book, the quick tournament ===== */
 /* why the coming week matters */
 .hooks{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
@@ -6047,15 +6047,16 @@ function buzz(k){try{if(typeof G==='undefined'||!G||G.haptic===false||typeof nav
    match, M.pens / M.penScore for a shoot-out. Nothing here touches money, squads or the save format.
 
    Goal coordinates: x metres from the middle of the goal (posts at ±3.66), y metres above the grass (bar at 2.44).
-   Kicking (עיני הבועט): press, steer the sight to a spot and release. The sight sways: little for a good finisher, a lot
-   for a defender, more on tired legs and under pressure. Corners beat the keeper but the frame is close.
-   Keeping (עיני השוער): swipe to the side the ball goes. Moving before the kick is a guess; moving right after it, inside
-   the keeper's reaction window, is a read. Standing still covers the middle. */
+   The picture is a close-up from behind the taker: his back, the ball, the keeper's face in the goal.
+   Kicking: press, steer the sight to a spot and release. The sight sways: little for a good finisher, a lot for a
+   defender, more on tired legs and under pressure. Corners beat the keeper but the frame is close.
+   Keeping: eight quiet arrows on the goal (up, down, both sides, four diagonals); tap where the keeper goes before the
+   taker strikes. The computer's taker draws one of the same eight areas; the better he is, the more often a corner, the
+   smaller his scatter and the harder he is to stop. Not choosing leaves the keeper in the middle. */
 const PEN_G={hw:3.66,h:2.44};const PEN_TIME=10000;
 function penShootSkill(p){const at=attrs(p);return p.pos==='GK'?clamp(at[3],35,80):clamp(at[1]*.75+at[3]*.25,35,96)}
 function penKeepSkill(p){if(!p)return 45;const at=attrs(p);return p.pos==='GK'?clamp(at[0]*.6+at[2]*.4,35,96):40}
 function penWobble(skill,energy,pressure){return +(clamp(.66-(skill-55)*.0115,.16,.78)*(energy<70?1.2:1)*(pressure?1.12:1)).toFixed(3)}
-function penReactMs(gk){return Math.round(clamp(340+(gk-60)*5,300,520))}
 function penFrame(x,y){const ax=Math.abs(x);if(ax>PEN_G.hw+.09||y>PEN_G.h+.09)return 'off';if(ax>PEN_G.hw-.05||y>PEN_G.h-.05)return 'post';return 'in'}
 /* the kick's own clock counts only what the player was shown: a slow frame, or a tab that was away, adds a tenth of a second at most */
 function penClock(now){let last=now,ms=0;return {tick(n){ms+=Math.min(100,Math.max(0,n-last));last=n;return ms},get ms(){return ms}}}
@@ -6070,10 +6071,22 @@ function penKickOutcome(x,y,gk){const dive=penKeeperGuess(x,gk);const f=penFrame
 /* an AI taker: better finishers find the corners */
 function penAiShot(skill){const r=Math.random();const side=r<.43?-1:r<.86?1:0;const q=clamp((skill-50)/45,0,1);
   const x=side===0?gauss()*.45:side*clamp(1.5+q*1.3+gauss()*.7,.95,4.2);const y=clamp(.25+Math.abs(gauss())*(.85+q*.4),.1,3);return {x:+x.toFixed(2),y:+y.toFixed(2)}}
-/* the user in goal: side he went to ('L'|'C'|'R', as he sees it), and when: 'early' (a guess), 'react' (a read) or 'late' */
-function penKeepOutcome(x,y,side,timing,gk){const f=penFrame(x,y);if(f!=='in')return {out:'miss',how:f};
-  if(timing==='late'||(side||'C')!==penSide(x))return {out:'goal',how:'goal'};
-  return Math.random()<penSaveP(x,y,gk,timing==='early'?.06:0)?{out:'miss',how:'save'}:{out:'goal',how:'goal'}}
+/* Keeping goal with eight directions. Everything is as the screen shows it: x positive = the right of the picture.
+   PEN_DIRS: the middle of each area of the goal (where its arrow stands). penZone: the area a ball at (x,y) belongs to. */
+const PEN_DIRS={UL:[-2.75,1.95],U:[0,1.95],UR:[2.75,1.95],L:[-2.85,1.2],R:[2.85,1.2],DL:[-2.75,.42],D:[0,.45],DR:[2.75,.42]};
+/* where each arrow is drawn: spread to the frame of the goal so that eight of them fit a goal on a phone, each still inside its own area */
+const PEN_ARROW={UL:[-3.05,2.2],U:[0,2.25],UR:[3.05,2.2],L:[-3.2,1.2],R:[3.2,1.2],DL:[-3.05,.2],D:[0,.18],DR:[3.05,.2]};
+function penZone(x,y){const c=penSide(x);if(c==='C')return y>1.25?'U':'D';return (y>1.6?'U':y<.82?'D':'')+c}
+function penDirCol(d){return d.indexOf('L')>=0?'L':d.indexOf('R')>=0?'R':'C'}
+function penDirRow(d){return d[0]==='U'?2:d[0]==='D'?0:1}
+/* the computer's taker: one of the eight areas by lot (corners more often for a better finisher), then a spot inside it */
+function penAiShot8(skill){const q=clamp((skill-50)/45,0,1);const w=[['UL',.1+.09*q],['UR',.1+.09*q],['L',.11],['R',.11],['DL',.19],['DR',.19],['U',.05],['D',.1-.05*q]];
+  let r=Math.random()*w.reduce((t,x)=>t+x[1],0),zone='D';for(const [k,v] of w){r-=v;if(r<=0){zone=k;break}}
+  const c=PEN_DIRS[zone];return {zone,x:+(c[0]+gauss()*(.52-.22*q)).toFixed(2),y:+clamp(c[1]+gauss()*(.34-.12*q),.1,3).toFixed(2)}}
+/* the user's dive against that kick: the wrong side is a goal; the right side saves most balls at the height he chose,
+   fewer one height away, hardly any two away. A better keeper saves more, a better finisher concedes less. */
+function penKeep8(x,y,dir,gk,shooter){const f=penFrame(x,y);if(f!=='in')return {out:'miss',how:f};const z=penZone(x,y),d=dir||'D';if(penDirCol(d)!==penDirCol(z))return {out:'goal',how:'goal'};
+  const p=clamp([.84,.4,.1][Math.abs(penDirRow(d)-penDirRow(z))]+(gk-70)*.006-((shooter==null?70:shooter)-70)*.007,.04,.95);return Math.random()<p?{out:'miss',how:'save'}:{out:'goal',how:'goal'}}
 /* a shoot-out is over when the side behind cannot catch up inside the first five, or after an equal number of kicks from the sixth on */
 function penShootoutDone(h,a){const nh=h.length,na=a.length,sh=h.reduce((t,v)=>t+v,0),sa=a.reduce((t,v)=>t+v,0);
   if(nh<=5&&na<=5){if(sh>sa+(5-na))return 'h';if(sa>sh+(5-nh))return 'a';if(nh===5&&na===5&&sh!==sa)return sh>sa?'h':'a';return null}
@@ -6083,9 +6096,9 @@ function penOrder(M,c){return xiPlayers(M,c).map(x=>x.p).sort((p,q)=>penShootSki
 function penAutoShootout(M,h,a){decidePens(M);const w=M.pens;const [x,y]=pick([[5,4],[4,3],[5,3],[4,2],[3,2],[6,5]]);return {win:w,score:w==='h'?[x,y]:[y,x],auto:true}}
 
 /* ---- the picture: two renderers behind one interface ------------------------------------------------------------
-   toScreen(x,y) → [px,py] inside the stage · fromScreen(px,py) → [x,y] in goal metres
-   kick view   shoot({x,y,how,dive},done)
-   keeper view runUp(ms,done) · incoming({x,y,ms,how:()=>…},done) · gloves(side)   (x positive = the keeper's right)
+   toScreen(x,y) → [px,py] inside the stage · fromScreen(px,py) → [x,y] in goal metres (x positive = right of the picture)
+   shoot({x,y,how,dive},done): the taker runs up and strikes, the ball goes to (x,y), the keeper goes to `dive`
+   ('L'|'C'|'R' or one of the eight directions) and the kick ends as `how` says
    The 3D one (assets/demo3d/penalty.js, the stadium of the 3D highlights) is tried first on capable devices; the SVG one
    below is the fallback, and what runs when motion is reduced. */
 let pen3dMod=null,pen3dBad=false;
@@ -6114,7 +6127,7 @@ function penStage2d(host,mode,o){const S=34.15,GX=180,GY=215;const kit=o.kit||'#
   const defs=`<defs><linearGradient id="pgGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c5a2c"/><stop offset="1" stop-color="#2f8a3f"/></linearGradient><linearGradient id="pgStand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070c"/><stop offset="1" stop-color="#141c2a"/></linearGradient><radialGradient id="pgLight" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#fff6d8" stop-opacity=".5"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/></radialGradient><radialGradient id="pgBallG" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9bdc4"/></radialGradient></defs>`;
   const ballG=(id,r)=>`<g id="${id}"><ellipse class="pg-bsh" cx="0" cy="${r*.9}" rx="${r}" ry="${r*.32}" fill="rgba(0,0,0,.4)"/><circle r="${r}" fill="url(#pgBallG)" stroke="#1b2330" stroke-width="${(r*.07).toFixed(2)}"/><path d="M0 ${-r*.45}l${r*.4} ${r*.3}-${r*.16} ${r*.5}h-${r*.48}l-${r*.16}-${r*.5}z" fill="#1b2330"/></g>`;
   let html;
-  if(mode==='kick'){
+  {
     const net=[];for(let i=0;i<=12;i++){const x=GX-125+i*250/12,xb=GX-104+i*208/12;net.push(`<path d="M${x.toFixed(1)} 132L${xb.toFixed(1)} 148V215"/>`)}for(let j=1;j<=5;j++){const y=148+j*67/6;net.push(`<path d="M${GX-104} ${y.toFixed(1)}H${GX+104}"/>`)}
     html=`<svg class="pg-svg" ${vb} aria-hidden="true">${defs}
       <rect width="360" height="460" fill="url(#pgStand)"/>${crowd(4,122,260,7)}<rect width="360" height="170" fill="url(#pgLight)"/>
@@ -6127,50 +6140,29 @@ function penStage2d(host,mode,o){const S=34.15,GX=180,GY=215;const kit=o.kit||'#
       <g fill="none" stroke="#f4f4ee" stroke-width="5" stroke-linecap="round"><path d="M${GX-125} 215V132H${GX+125}V215"/></g>
       <g id="pgKeeper" transform="translate(${GX} ${GY})"><g class="pg-kbody"><ellipse cx="0" cy="1" rx="15" ry="3.5" fill="rgba(0,0,0,.35)"/><path d="M-6 0v-24h5v24zM1 0v-24h5v24z" fill="#10151d"/><rect x="-9" y="-30" width="18" height="9" rx="3" fill="#10151d"/><rect x="-10" y="-52" width="20" height="24" rx="5" fill="${gk}"/><path d="M-10 -49l-13 -9M10 -49l13 -9" stroke="${gk}" stroke-width="6" stroke-linecap="round"/><circle cx="-24" cy="-59" r="4.4" fill="#f1f1e6"/><circle cx="24" cy="-59" r="4.4" fill="#f1f1e6"/><circle cx="0" cy="-58" r="6.2" fill="#c9966f"/><path d="M-6 -60a6.2 6.2 0 0 1 12 0z" fill="#2b2019"/></g></g>
       <g id="pgBallW" transform="translate(180 404)">${ballG('pgBall',17)}</g>
+      <g id="pgTaker" transform="translate(116 456)"><ellipse cx="0" cy="2" rx="30" ry="6" fill="rgba(0,0,0,.35)"/><path d="M-15 0v-48h12v48zM3 0v-48h12v48z" fill="${ink==='#ffffff'?'#e9edf2':'#141a22'}"/><rect x="-19" y="-68" width="38" height="25" rx="6" fill="${o.trim||'#10151d'}"/><rect x="-21" y="-120" width="42" height="57" rx="10" fill="${kit}"/><path d="M-21 -111l-12 36M21 -111l12 36" stroke="${kit}" stroke-width="11" stroke-linecap="round"/><text x="0" y="-82" text-anchor="middle" font-family="Heebo,Arial,sans-serif" font-size="25" font-weight="800" fill="${ink}">${+o.number||9}</text><circle cx="0" cy="-133" r="12.5" fill="#c9966f"/><path d="M-12.5 -131a12.5 12.5 0 0 1 25 0v6h-25z" fill="#2b2019"/></g>
       <circle id="pgRip" cx="0" cy="0" r="0" fill="none" stroke="#fff" stroke-width="2" opacity="0"/></svg>`;
-  }else{
-    html=`<svg class="pg-svg" ${vb} aria-hidden="true">${defs}
-      <rect width="360" height="460" fill="url(#pgStand)"/>${crowd(30,150,300,11)}<rect width="360" height="190" fill="url(#pgLight)"/>
-      <rect y="152" width="360" height="16" fill="#0c1420"/>
-      <rect y="168" width="360" height="292" fill="url(#pgGrass)"/>
-      <g fill="#fff" opacity=".045"><rect y="182" width="360" height="12"/><rect y="212" width="360" height="20"/><rect y="262" width="360" height="34"/><rect y="340" width="360" height="60"/></g>
-      <g fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><path d="M40 214H320"/><path d="M40 214L-70 460M320 214L430 460"/><path d="M128 214a54 16 0 0 1 104 0"/></g>
-      <ellipse cx="180" cy="270" rx="5" ry="1.8" fill="rgba(255,255,255,.8)"/>
-      <g id="pgTaker" transform="translate(180 262)"><g class="pg-kbody"><ellipse cx="0" cy="1" rx="11" ry="2.6" fill="rgba(0,0,0,.35)"/><path d="M-5 0v-20h4v20zM1 0v-20h4v20z" fill="${ink==='#ffffff'?'#e9edf2':'#141a22'}"/><rect x="-8" y="-25" width="16" height="8" rx="2.5" fill="${o.trim||'#10151d'}"/><rect x="-8.5" y="-44" width="17" height="21" rx="4.5" fill="${kit}"/><path d="M-8 -41l-6 13M8 -41l6 13" stroke="${kit}" stroke-width="5" stroke-linecap="round"/><circle cx="0" cy="-49" r="5.2" fill="#c9966f"/><path d="M-5 -51a5.2 5.2 0 0 1 10 0z" fill="#2b2019"/></g></g>
-      <g id="pgBallW" transform="translate(180 268)">${ballG('pgBall',4.6)}</g>
-      <g fill="none" stroke="rgba(235,240,245,.2)" stroke-width="1.2"><path d="M46 40L10 0M314 40L350 0"/></g>
-      <g fill="none" stroke="#f4f4ee" stroke-width="12" stroke-linecap="square"><path d="M40 470V40H320V470"/></g><g fill="none" stroke="rgba(0,0,0,.25)" stroke-width="3"><path d="M47 470V47H313V470"/></g>
-      <g id="pgGloves"><g class="pg-glove l" id="pgGL" transform="translate(104 428)"><path d="M-30 30c-6-22-4-44 6-54 8-8 20-6 22 4l2-14c2-10 16-10 17 0l1 12c3-9 15-8 16 2l2 26c4 10 2 22-4 30z" fill="#f1f1e6" stroke="#10151d" stroke-width="2.5" stroke-linejoin="round"/><path d="M-22 22h48" stroke="${gk}" stroke-width="7" stroke-linecap="round"/></g>
-      <g class="pg-glove r" id="pgGR" transform="translate(256 428)"><path d="M30 30c6-22 4-44-6-54-8-8-20-6-22 4l-2-14c-2-10-16-10-17 0l-1 12c-3-9-15-8-16 2l-2 26c-4 10-2 22 4 30z" fill="#f1f1e6" stroke="#10151d" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 22h-48" stroke="${gk}" stroke-width="7" stroke-linecap="round"/></g></g></svg>`;
   }
   host.insertAdjacentHTML('beforeend',html);const svg=host.querySelector('.pg-svg');const q=id=>svg.querySelector('#'+id);
   const box=()=>{const r=svg.getBoundingClientRect();const sc=(wide?Math.min(r.width/VW,r.height/460):Math.max(r.width/VW,r.height/460))||1;return {sc,ox:((r.width||VW)-VW*sc)/2-VX*sc,oy:((r.height||460)-460*sc)/2}};
   const fast=penQuick();const D=ms=>fast?0:ms;
   const ballW=q('pgBallW');const setBall=(x,y,s)=>ballW.setAttribute('transform',`translate(${x.toFixed(1)} ${y.toFixed(1)}) scale(${s.toFixed(3)})`);
   const st={kind:'2d',mode,dispose(){svg.remove()}};
-  if(mode==='kick'){
-    const keeper=q('pgKeeper');const kb=keeper.querySelector('.pg-kbody');kb.classList.add('sway');
+  {
+    const keeper=q('pgKeeper'),taker=q('pgTaker');const kb=keeper.querySelector('.pg-kbody');kb.classList.add('sway');
     st.toScreen=(x,y)=>{const b=box();return [b.ox+(GX+x*S)*b.sc,b.oy+(GY-y*S)*b.sc]};
     st.fromScreen=(px,py)=>{const b=box();return [((px-b.ox)/b.sc-GX)/S,(GY-(py-b.oy)/b.sc)/S]};
     st.shoot=(r,done)=>{const tx=GX+r.x*S,ty=GY-r.y*S;kb.classList.remove('sway');
-      const dv=r.dive==='L'?-1:r.dive==='R'?1:0;const reach=r.how==='save';const kx=dv*(reach?clamp(Math.abs(r.x)*S-8,26,112):62),ky=dv?-(reach?clamp(r.y*S-26,0,52):14):0;const rot=dv*(reach?clamp(52+Math.abs(r.x)*8,52,82):64);
+      const dir=r.dive||'C',col=penDirCol(dir),row=dir.length===2||dir==='U'||dir==='D'?penDirRow(dir):1;const dv=col==='L'?-1:col==='R'?1:0;const reach=r.how==='save';
+      const kx=dv*(reach?clamp(Math.abs(r.x)*S-8,26,112):62),ky=reach?-clamp(r.y*S-26,0,52):dv?-[2,14,40][row]:dir==='U'?-24:0;const rot=dv*(reach?clamp(52+Math.abs(r.x)*8,52,82):[78,64,50][row]);
+      // the taker steps up to the ball, then it flies
+      penAnim(D(280),u=>taker.setAttribute('transform',`translate(${(116+38*u).toFixed(1)} ${(456-24*u).toFixed(1)}) scale(${(1-.1*u).toFixed(3)})`),()=>{
       penAnim(D(330),u=>{const e=1-Math.pow(1-u,2);keeper.setAttribute('transform',`translate(${(GX+kx*e).toFixed(1)} ${(GY+ky*e).toFixed(1)}) rotate(${(rot*e).toFixed(1)} 0 -30)`)});
       penAnim(D(430),u=>{const e=u;setBall(180+(tx-180)*e,404+(ty-404)*e-Math.sin(u*Math.PI)*16,1-.64*e)},()=>{
         if(r.how==='goal'){const rip=q('pgRip');rip.setAttribute('cx',tx);rip.setAttribute('cy',ty);q('pgNet').classList.add('hit');penAnim(D(420),u=>{rip.setAttribute('r',(6+u*34).toFixed(1));rip.setAttribute('opacity',(.8*(1-u)).toFixed(2));setBall(tx,ty+(GY-8-ty)*u*u,.36-.06*u)},done)}
         else if(r.how==='save'){const ex=tx+(r.x>=0?70:-70),ey=ty-30;penAnim(D(420),u=>setBall(tx+(ex-tx)*u,ty+(ey-ty)*u+u*u*70,.36+.1*u),done)}
         else if(r.how==='post'){const ex=tx+(r.x>=0?-60:60);penAnim(D(480),u=>setBall(tx+(ex-tx)*u,ty+(300-ty)*u*u-Math.sin(u*Math.PI)*30,.36+.3*u),done)}
-        else{const ex=tx+(tx-180)*.5,ey=ty-(404-ty)*.28;penAnim(D(360),u=>setBall(tx+(ex-tx)*u,ty+(ey-ty)*u,.36-.14*u),done)}})};
-  }else{
-    const taker=q('pgTaker'),gl=q('pgGL'),gr=q('pgGR');const EX=x=>180+x*46,EY=y=>400-y*130;
-    st.toScreen=(x,y)=>{const b=box();return [b.ox+EX(x)*b.sc,b.oy+EY(y)*b.sc]};
-    st.fromScreen=(px,py)=>{const b=box();return [((px-b.ox)/b.sc-180)/46,(400-(py-b.oy)/b.sc)/130]};
-    st.runUp=(ms,done)=>penAnim(D(ms),u=>{taker.setAttribute('transform',`translate(${(180-10*(1-u)).toFixed(1)} ${(262-14*(1-u)).toFixed(1)}) scale(${(.86+.14*u).toFixed(3)})`)},done);
-    st.gloves=side=>{const dx=side==='L'?-78:side==='R'?78:0,dy=side==='C'?-150:-120;penAnim(D(170),u=>{gl.setAttribute('transform',`translate(${(104+dx*u+(side==='C'?46*u:0)).toFixed(1)} ${(428+dy*u).toFixed(1)}) rotate(${(side==='L'?-24:side==='R'?10:0)*u})`);gr.setAttribute('transform',`translate(${(256+dx*u-(side==='C'?46*u:0)).toFixed(1)} ${(428+dy*u).toFixed(1)}) rotate(${(side==='R'?24:side==='L'?-10:0)*u})`)})};
-    st.incoming=(r,done)=>{const tx=EX(r.x),ty=EY(r.y);
-      penAnim(D(r.ms||650),u=>{const e=Math.pow(u,2.1);setBall(180+(tx-180)*e,268+(ty-268)*e-Math.sin(u*Math.PI)*10,1+8.6*e)},()=>{const how=r.how();
-        if(how==='save'){penAnim(D(380),u=>setBall(tx+(tx>=180?60:-60)*u,ty+90*u*u-30*u,9.6-3*u),done)}
-        else if(how==='post'){penAnim(D(380),u=>setBall(tx+(tx>=180?-80:80)*u,ty+60*u,9.6-5*u),done)}
-        else penAnim(D(260),u=>{setBall(tx+(tx-180)*.25*u,ty-10*u,9.6+7*u);ballW.setAttribute('opacity',(1-u).toFixed(2))},done)})};
+        else{const ex=tx+(tx-180)*.5,ey=ty-(404-ty)*.28;penAnim(D(360),u=>setBall(tx+(ex-tx)*u,ty+(ey-ty)*u,.36-.14*u),done)}})})};
   }
   return st}
 
@@ -6199,13 +6191,13 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
   const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
   const kick=o.mode==='kick';const tp=o.taker.p,kp=o.keeper&&o.keeper.p;const skill=penShootSkill(tp),gk=penKeepSkill(kp);const myP=kick?tp:kp,myC=kick?o.taker.c:(o.keeper&&o.keeper.c);
   bot.innerHTML=`<div class="pg-who">${myP?penFaceHTML(myP,myC,'pg'+myP.id+(kick?'k':'g')):''}<div><b>${esc(myP?fullName(myP):'')}</b><small>${kick?`בעיטה <bdi>${Math.round(skill)}</bdi> · מול ${esc(kp?fullName(kp):'השוער')}`:`רפלקסים <bdi>${Math.round(gk)}</bdi> · בועט ${esc(fullName(tp))}`}</small></div></div>
-    <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'לחץ, כוון אל הפינה ושחרר':'החלק לצד שאליו הכדור הולך'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
+    <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'לחץ, כוון אל הפינה ושחרר':'בחר בחץ לאן השוער יזנק, לפני הבעיטה'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
   /* a kick belongs to the overlay and the turn it was started in: once either is gone (the overlay was closed, the next
      kick began) nothing of it may run any more */
   let over=false;const token=PG.tok=(PG.tok||0)+1;const alive=()=>!!PG&&PG.root===root&&PG.tok===token;const finish=r=>{if(over||!alive())return;over=true;cb(r)};
   const end=(r,stage)=>{if(!alive())return;const fl=penFlash(host,o.mode,r.how);if(o.sfx){try{if(r.how==='goal')(kick?SFX.goal(true):(CROWD.goal(false)||SFX.groan()));else kick?SFX.groan():CROWD.chance()}catch(e){}}
     setTimeout(()=>{fl.remove();finish(r)},penQuick()?0:1150)};
-  penMakeStage(view,o.mode,{...penKits(o.taker.c,o.keeper&&o.keeper.c,o.home),number:tp.no||9}).then(st=>{
+  penMakeStage(view,'kick',{...penKits(o.taker.c,o.keeper&&o.keeper.c,o.home),number:tp.no||9}).then(st=>{
     if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
     PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();try{SFX.whistle()}catch(e){}
     const ac=new AbortController();const on=(el,ev,fn)=>el.addEventListener(ev,fn,{signal:ac.signal,passive:false});
@@ -6218,7 +6210,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
       const place=()=>{const c=cur();const [px,py]=st.toScreen(c.x,c.y);aimEl.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`;aimEl.classList.toggle('out',penFrame(c.x,c.y)!=='in')};
       const fire=auto=>{if(fired||!alive())return;fired=true;stop();aimEl.remove();let x,y;
         if(auto&&!touched){const s=penAiShot(skill);x=s.x;y=s.y}else{const c=cur();x=c.x+gauss()*wob*.3;y=Math.max(.05,c.y+gauss()*wob*.24)}
-        const r=penKickOutcome(x,y,gk);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:2600))};
+        const r=penKickOutcome(x,y,gk);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:3400))};
       const setAim=ev=>{const r=rect();const touch=ev.pointerType==='touch';const [x,y]=st.fromScreen(ev.clientX-r.left,ev.clientY-r.top-(touch?56:0));aim={x:clamp(x,-4.5,4.5),y:clamp(y,.12,3.1)};touched=true};
       on(host,'pointerdown',ev=>{ev.preventDefault();down=true;try{host.setPointerCapture(ev.pointerId)}catch(e){}setAim(ev);place()});
       on(host,'pointermove',ev=>{if(down){ev.preventDefault();setAim(ev)}});
@@ -6228,20 +6220,21 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
       (function loop(){if(dead||!alive())return;const left=1-ck.tick(performance.now())/PEN_TIME;if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;place();if(left<=0)return fire(true);raf=requestAnimationFrame(loop)})();
       try{host.focus({preventScroll:true})}catch(e){}
     }else{
-      const s0=penAiShot(skill);const shot={x:-s0.x,y:s0.y};const win=penReactMs(gk);let tStrike=0,commit=null,result=null,down=null,autoStay=false;
-      const decide=()=>{if(result)return;const timing=!commit?'late':commit.t<tStrike||!tStrike?'early':commit.t-tStrike<=win?'react':'late';const side=commit?commit.side:'C';
-        result=penKeepOutcome(shot.x,shot.y,side,commit?timing:'react',gk);result.side=side;result.timing=commit?timing:'stay'};
-      const go=side=>{if(commit||result||!alive())return;commit={side,t:performance.now()};st.gloves(side);buzz('tap');if(tStrike)decide()};
-      on(host,'pointerdown',ev=>{ev.preventDefault();down={x:ev.clientX,y:ev.clientY}});
-      on(host,'pointermove',ev=>{if(!down||commit)return;const dx=ev.clientX-down.x;if(Math.abs(dx)>24)go(dx<0?'L':'R');else if(down.y-ev.clientY>34)go('C')});
-      on(host,'pointerup',ev=>{if(!down)return;const d=down;down=null;if(commit)return;const dx=ev.clientX-d.x;if(Math.abs(dx)>24)return go(dx<0?'L':'R');const r=rect();const f=(ev.clientX-r.left)/Math.max(1,r.width);go(f<.36?'L':f>.64?'R':'C')});
-      on(host,'keydown',ev=>{if(ev.key==='ArrowLeft')go('L');else if(ev.key==='ArrowRight')go('R');else if(ev.key==='ArrowUp'||ev.key===' ')go('C');else return;ev.preventDefault()});
-      PG.auto=()=>{autoStay=true;root.querySelector('#pgAuto').disabled=true};PG.go=go;PG.shot=shot;
-      const wait=penQuick()?0:900+Math.random()*1000;if(tEl)tEl.parentNode.classList.add('idle');
-      setTimeout(()=>{if(dead||!alive())return;st.runUp(penQuick()?0:820,penOnce(()=>{if(dead||!alive())return;tStrike=performance.now();buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}
-        if(autoStay&&!commit){const g=penKeeperGuess(shot.x,gk);commit={side:g,t:tStrike-1};st.gloves(g)}
-        if(commit)decide();else setTimeout(()=>{if(!dead)decide()},penQuick()?0:win);
-        st.incoming({x:shot.x,y:shot.y,ms:650,how:()=>{decide();return result.how}},penOnce(()=>{if(!alive())return;decide();stop();end({out:result.out,how:result.how,side:result.side,timing:result.timing,auto:autoStay},st)},penQuick()?0:2800))},penQuick()?0:2200))},wait);
+      /* in goal: eight quiet arrows on the goal; the last one tapped before the strike is where the keeper goes */
+      const shot=penAiShot8(skill);let dir=null,struck=false,autoStay=false;const ck=penClock(performance.now());const lead=2800+Math.random()*1400;   /* time to choose, also when motion is reduced (only the animation is skipped then) */
+      const ARW={U:0,UR:45,R:90,DR:135,D:180,DL:225,L:270,UL:315},NAME={U:'למעלה',UR:'למעלה ימינה',R:'ימינה',DR:'למטה ימינה',D:'למטה',DL:'למטה שמאלה',L:'שמאלה',UL:'למעלה שמאלה'};
+      const pad=document.createElement('div');pad.className='pg-dirs';pad.innerHTML=Object.keys(PEN_DIRS).map(d=>`<button type="button" data-dir="${d}" aria-label="זינוק ${NAME[d]}" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]}deg)"><path d="M12 5l7 8h-4.4v6h-5.2v-6H5z"/></svg></button>`).join('');host.appendChild(pad);
+      const place=()=>{for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}};
+      const pick=d=>{if(struck||!alive()||!PEN_DIRS[d])return;dir=d;for(const b of pad.children){const on=b.dataset.dir===d;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)}buzz('tap')};
+      const strike=()=>{if(struck||!alive())return;struck=true;stop();pad.remove();let r;
+        if(autoStay&&!dir){const g=penKeeperGuess(shot.x,gk),f=penFrame(shot.x,shot.y);dir=g==='C'?'D':g;r=f!=='in'?{out:'miss',how:f}:g===penSide(shot.x)&&Math.random()<penSaveP(shot.x,shot.y,gk)?{out:'miss',how:'save'}:{out:'goal',how:'goal'}}
+        else r=penKeep8(shot.x,shot.y,dir,gk,skill);
+        buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}
+        st.shoot({x:shot.x,y:shot.y,how:r.how,dive:dir||'C'},penOnce(()=>end({out:r.out,how:r.how,dir:dir||null,zone:penZone(shot.x,shot.y),auto:autoStay},st),penQuick()?0:3400))};
+      on(pad,'click',ev=>{const b=ev.target.closest('[data-dir]');if(b){ev.preventDefault();pick(b.dataset.dir)}});
+      on(host,'keydown',ev=>{const k={ArrowLeft:'L',ArrowRight:'R',ArrowUp:'U',ArrowDown:'D'}[ev.key];if(!k)return;ev.preventDefault();pick(k)});
+      PG.auto=()=>{autoStay=true;root.querySelector('#pgAuto').disabled=true;strike()};PG.go=d=>{pick(d==='C'?'D':d);strike()};PG.pick=pick;PG.shot=shot;PG.strike=strike;
+      (function loop(){if(dead||!alive())return;const left=1-ck.tick(performance.now())/lead;if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;place();if(left<=0)return strike();raf=requestAnimationFrame(loop)})();
       try{host.focus({preventScroll:true})}catch(e){}
     }})}
 /* a penalty during a live match: for our club the manager kicks, against it he keeps goal */

@@ -80,7 +80,7 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   // first; a keeper has about two seconds before the ball is struck, so there the dive comes first
   const penalty=async(side,shot,act)=>{await page.evaluate(s=>{window.__force=s},side);
     await keepPlaying(()=>page.evaluate(()=>typeof PG!=='undefined'&&!!PG&&!!PG.stage&&!!PG.auto),'the penalty overlay did not open ('+side+')');
-    const r=await page.evaluate(()=>({view:PG.stage.kind,mode:PG.go?'keep':'kick',title:document.querySelector('#penGame .pg-title')?.textContent}));
+    const r=await page.evaluate(()=>({view:PG.stage.kind,mode:PG.go?'keep':'kick',arrows:document.querySelectorAll('.pg-dirs [data-dir]').length,title:document.querySelector('#penGame .pg-title')?.textContent}));
     if(side==='mine'){await page.waitForTimeout(500);await page.screenshot({path:OUT+shot});await page.evaluate(act)}
     else{await page.evaluate(act);await page.waitForTimeout(150);await page.screenshot({path:OUT+shot})}
     await page.waitForFunction(()=>!document.querySelector('#penGame'),null,{timeout:40000});
