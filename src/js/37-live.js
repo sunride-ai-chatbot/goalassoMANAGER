@@ -31,7 +31,7 @@ function startLive(restored){
   <div class="card"><div class="ticker" id="ticker"><div class="muted">${ml==='off'?'שריקת פתיחה':'הקבוצות בדרך למגרש'}</div></div></div></div></div>`;
   $('top').classList.add('hide');bcMount();bcMomentum(M,h,a);
   const p3d=Match3D.mount(M,h,a);
-  const tick=$('ticker');let paused=true,shown=0,mult=G.spx===2||G.spx===4?G.spx:1,hl=G.spx==='hl'||(!!G.blitz&&G.spx==null),holdUntil=0,penHold=false,soOpen=false;
+  const tick=$('ticker');let paused=true,shown=0,mult=G.spx===2||G.spx===4?G.spx:1,hl=G.spx==='hl'||(!!G.blitz&&G.spx==null),holdUntil=0,penHold=false,soOpen=false,holdT0=0;
   if(M.voice==null)M.voice=60;$('main').querySelector('.live-view').classList.toggle('hl',hl);const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}if(!p3d?.enabled||p2d.px&&(p2d.pending||p2d.rp))pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
   if(p2d){p2d.onTap=(pid,team)=>{p2d.labels[pid]=performance.now()+2200;if(team===G.me&&!M.done&&!M.playback&&M.subs[G.me]<MAX_SUBS){pause();openSubModal(pid)}}}
   M.liveMent=M.liveMent||{};M.liveMent[G.me]=M.liveMent[G.me]||me().mentality||'bal';const paintLM=()=>document.querySelectorAll('[data-lm]').forEach(b=>b.classList.toggle('on',b.dataset.lm===M.liveMent[G.me]));paintLM();
@@ -68,7 +68,10 @@ function startLive(restored){
     $('gh').textContent=M.gh;$('ga').textContent=M.ga;$('clock').textContent=fm(M.m);$('prog').style.width=(M.m/90*100)+'%';$('subCount').textContent=M.subs[G.me];bcScore(M,h,a);bcMomentum(M,h,a);
     const tp=M.poss[h.id]+M.poss[a.id]||1;const ph=Math.round(M.poss[h.id]/tp*100);const bar=(l,x,y)=>{const t=x+y||1;return `<div class="mstat"><span class="num">${x}</span><div class="bars"><i class="h" style="width:${x/t*100}%"></i><i class="a" style="width:${y/t*100}%"></i></div><span class="num">${y}</span><span class="muted tiny" style="grid-column:1/-1;text-align:center;margin-top:-4px">${l}</span></div>`};
     $('stats').innerHTML=bar('החזקת כדור %',ph,100-ph)+bar('בעיטות',M.shots[h.id],M.shots[a.id])+bar('למסגרת',(M.sot||{})[h.id]||0,(M.sot||{})[a.id]||0)+bar('קרנות',(M.corners||{})[h.id]||0,(M.corners||{})[a.id]||0)+bar('מסירות',(M.passes||{})[h.id]||0,(M.passes||{})[a.id]||0);
-    if(replayQ&&!M.done){const e=replayQ;replayQ=null;const wasPaused=paused;paused=true;playReplay(p2d,e,h,()=>{if(!wasPaused&&!M.done&&$('ctrlBtn').textContent==='השהה')paused=false})}
+    if(replayQ&&!M.done){const e=replayQ;replayQ=null;const wasPaused=paused;paused=true;let back=false;const release=()=>{if(back)return;back=true;if(!wasPaused&&!M.done&&$('ctrlBtn')&&$('ctrlBtn').textContent==='השהה')paused=false};
+      playReplay(p2d,e,h,release);
+      /* the pitch owns the clock during a replay; if it never hands it back (a WebGL pitch that is not drawing) take it back */
+      if(!back)setTimeout(()=>{if(back)return;if(p2d){p2d.hold=false;p2d.celeb=null;p2d.pending=null;p2d.rp=null}release()},9000)}
   };
   const pause=()=>{paused=true;p3d?.setPaused(true);M.paused=true;CROWD.pause();$('ctrlBtn').textContent=M.awaitingHalf?'מחצית שנייה':'המשך';save()};
   const resume=()=>{paused=false;p3d?.setPaused(false);M.paused=false;M.awaitingHalf=false;bcSlateHide();CROWD.resume();$('ctrlBtn').textContent='השהה';save()};
@@ -106,7 +109,9 @@ function startLive(restored){
     penHold=true;flush();try{crowdDuck(.45,.3)}catch(e){}
     penMatchKick(M,pc,pk,(out,how)=>{M.pendingPen=null;penResolve(M,pc,pk,out,how);try{crowdDuck(1,.8)}catch(e){}afterStep(ev0);setTimeout(()=>{penHold=false},900)})};
   const startTimer=()=>{if(liveTimer)clearInterval(liveTimer);liveTimer=setInterval(()=>{if(M.m>=80&&!M.done){const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;if(myG>opG)CROWD.song()}
-    if(document.hidden||paused||penHold||p3d?.busy||(!p3d?.enabled&&p2d&&p2d.hold))return;
+    if(document.hidden||paused||penHold||p3d?.busy)return;
+    /* a goal celebration holds the clock for a few seconds; a hold that outlives nine seconds is a pitch that stopped drawing */
+    if(!p3d?.enabled&&p2d&&p2d.hold){if(!holdT0)holdT0=performance.now();if(performance.now()-holdT0<9000)return;p2d.hold=false;p2d.celeb=null}holdT0=0;
     if(hl&&holdUntil&&performance.now()<holdUntil)return;
     if(M.done){finish();return;}
     p3d?.beforeStep();const ev0=M.ev.length;stepMinute(M,liveUI);

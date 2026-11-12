@@ -59,12 +59,16 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   await page.evaluate(()=>{closeModal();G.view='home';render()});await page.waitForTimeout(400);
   Object.assign(P,await page.evaluate(()=>({save:SAVE_VERSION,careerCard:!!document.querySelector('.car-home'),blitzEntry:!!document.querySelector('[data-blitz-open]'),achievements:achDefs().length})));
   await page.evaluate(()=>{G.motion='full';G.sound=false;G.pressMode='off';G.replay=false;autoLineups();G.live=createMatch(me(),G.clubs.find(c=>c.id!==G.me),{kind:'friendly',label:'בדיקה חיה'});G.live.live=true;G.live.fresh=true;startLive(G.live)});
-  await page.waitForSelector('.live-view');await page.evaluate(()=>document.querySelector('#kickBtn')?.click());await page.waitForFunction(()=>G.live&&G.live.m>=6,null,{timeout:30000});
+  await page.waitForSelector('.live-view');await page.evaluate(()=>document.querySelector('#kickBtn')?.click());
+  // play on to the sixth minute: an injury opens the substitution dialog and waits for the manager, as it should
+  const keepPlaying=async(test,what)=>{const t0=Date.now();for(;;){const s=await page.evaluate(()=>{const sk=document.querySelector('#modal [data-skip]');if(sk)sk.click();return {m:G.live?G.live.m:-1,btn:document.getElementById('ctrlBtn')?.textContent,pen:!!document.querySelector('#penGame')}});
+    if(await test(s))return s;if(Date.now()-t0>60000)throw new Error('live match: '+what+' (minute '+s.m+', button '+s.btn+')');await page.waitForTimeout(400)}};
+  await keepPlaying(s=>s.m>=6,'the clock did not reach the sixth minute');
   Object.assign(P,await page.evaluate(()=>({shoutButtons:document.querySelectorAll('[data-shout]').length,shoutReady:[...document.querySelectorAll('[data-shout]')].every(b=>!b.disabled),speeds:[...document.querySelectorAll('[data-spx]')].map(b=>b.dataset.spx).join(',')})));
   await page.evaluate(()=>document.querySelector('[data-shout="press"]').click());P.shout=await page.evaluate(()=>G.live.shout&&G.live.shout[G.me]&&G.live.shout[G.me].k);
   await page.evaluate(()=>document.getElementById('main').scrollTo(0,0));await page.screenshot({path:OUT+'live-shouts.png'});
   await page.evaluate(()=>{window.__step=stepMinute;stepMinute=function(M,ui){if(ui&&ui.pen&&ui.pen()&&!window.__pen){window.__pen=1;M.m++;M.pendingPen={team:G.me,pid:penTaker(M,me()).id,m:M.m};return}return window.__step(M,ui)}});
-  await page.waitForFunction(()=>typeof PG!=='undefined'&&PG&&PG.stage,null,{timeout:30000});P.penaltyView=await page.evaluate(()=>PG.stage.kind);await page.waitForTimeout(600);await page.screenshot({path:OUT+'penalty.png'});
+  await keepPlaying(()=>page.evaluate(()=>typeof PG!=='undefined'&&!!PG&&!!PG.stage),'the penalty overlay did not open');P.penaltyView=await page.evaluate(()=>PG.stage.kind);await page.waitForTimeout(600);await page.screenshot({path:OUT+'penalty.png'});
   await page.evaluate(()=>PG.auto());await page.waitForFunction(()=>!document.querySelector('#penGame'),null,{timeout:40000});
   P.penalty=await page.evaluate(()=>G.live.ev.filter(e=>e.t==='pen'||e.t==='penmiss').map(e=>e.t+':'+(e.how||'')).join(','));
   await page.evaluate(()=>{stepMinute=window.__step;if(liveTimer){clearInterval(liveTimer);liveTimer=null}penClose();G.live=null;G.motion='off';G.view='home';render()});

@@ -146,7 +146,8 @@ PX.minute=(st,M,h,a,events)=>{
       if(st.showPaths||e.t==='goal'||e.t==='pen')PX.path(st,pts,e,e.team===G.me?0x27f0a6:0xffd34d,e.t==='goal'||e.t==='pen'?5200:3200);
       if(e.sub==='save'&&e.gk){const end=pts[pts.length-1];st.dive={pid:e.gk,dir:end[1]>34?1:-1,until:now+1400,at:now+650}}}
     if(e.t==='goal'||e.t==='pen'||e.t==='own'){st.flash=1;st.shake=1;st.crowdJump=now+4200;st.crowdTeam=e.t==='own'?e.team:e.team;crowdPulse(st,e.team===G.me?'me':'');PX.toast(st,'שער',e.team===G.me?'#27f0a6':'#ffd34d');
-      const scorerSide=(e.team===h.id)===homeRight;const sc=[...st.h,...st.a].find(d=>d.pid===e.pid&&d.team===e.team);const cy=sc&&sc.y<34?1.5:66.5;st.celeb={team:e.team,pid:e.pid,corner:[scorerSide?103.5:1.5,cy],until:now+2600+1400};st.hold=true}
+      const scorerSide=(e.team===h.id)===homeRight;const sc=[...st.h,...st.a].find(d=>d.pid===e.pid&&d.team===e.team);const cy=sc&&sc.y<34?1.5:66.5;/* the celebration holds the match clock and PX.frame releases it: only when the pitch is actually drawing */
+      if(st.ready&&st.app){st.celeb={team:e.team,pid:e.pid,corner:[scorerSide?103.5:1.5,cy],until:now+2600+1400};st.hold=true}}
     else if(e.t==='penmiss')PX.toast(st,'פנדל הוחמץ','#ff5c6c');
     else if(e.t==='shot'&&e.sub==='post')PX.toast(st,'קורה','#ffffff');
     else if(e.t==='shot'&&e.sub==='save'&&!e.quiet)PX.toast(st,'הצלה','#5cb8ff');
