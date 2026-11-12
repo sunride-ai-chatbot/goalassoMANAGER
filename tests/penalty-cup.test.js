@@ -105,7 +105,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   const got3=[];const leaver=await bus3.factory()('BYE333',m=>got3.push(m));leaver.send({v:1,f:'leaver0001',t:'hi',team:'i:mta'});await until(()=>$('.pg-dirs'),'the duel against the leaver');leaver.send({v:1,f:'leaver0001',t:'bye'});
   await until(()=>$('#pgDone'),'the match ends when the other side leaves');assert.match($('.pg-end h2').textContent,/עזב/);$('#pgDone').click();
   // no network configured: a clear message, not a dead screen
-  w.__pcupNet=()=>Promise.reject(new Error('offline'));$('[data-pc-mode="net"]').click();$('[data-pc-net="host"]').click();await until(()=>$('.pc-err'),'the error line');assert.match($('.pc-err').textContent,/להתחבר|לא מוגדר/);
+  w.__pcupNet=()=>Promise.reject(new Error('offline'));$('[data-pc-mode="net"]').click();$('[data-pc-net="host"]').click();await until(()=>$('.pc-err'),'the error line');assert.match($('.pc-err').textContent,/לא זמין כרגע/);assert.ok($('[data-pc-go="mode"]'),'and a way back to the other modes');
   $('#pcup [data-pc-x]').click();assert.deepEqual(run("({me:G.me,wk:G.wk,uid})"),{me:before.me,wk:before.wk,uid:before.uid});
 
   // ---- beginner page: its own career is not touched by the lobby; highlights speed and shouts in its live match

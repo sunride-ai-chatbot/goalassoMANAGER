@@ -142,7 +142,7 @@ function pcupNetStart(host,code){const P=PCUP;pcupNetStop();const n=P.net={host,
       /* say again whatever the other phone may have missed: the open kick, and the reveal of the kick before it */
       for(const k of ks.slice(0,2)){const K=n.kicks[k];if(!K.mine)continue;sent=true;if(K.res)n.send({t:'c',k,h:pcupHash(K.mine.d+':'+K.mine.n)});if(K.sentR)n.send({t:'r',k,d:K.mine.d,n:K.mine.n})}
       if(!sent)n.send({t:'p'})},1200);
-    if(!host)n.send({t:'hi',team:P.my.key})},e=>{console.warn('pcup net',e);fail(typeof mpAvailable==='function'&&!mpAvailable()&&!window.__pcupNet?'משחק אונליין לא מוגדר בגרסה הזו':'לא הצלחנו להתחבר. בדקו את האינטרנט ונסו שוב.')})}
+    if(!host)n.send({t:'hi',team:P.my.key})},e=>{console.warn('pcup net',e);fail(typeof mpAvailable==='function'&&!mpAvailable()&&!window.__pcupNet?'משחק אונליין לא מוגדר בגרסה הזו':navigator.onLine===false?'אין חיבור לאינטרנט. בדקו את החיבור ונסו שוב.':'שירות המשחק ברשת לא זמין כרגע. בינתיים אפשר לשחק שניים על טלפון אחד.')})}
 /* opened from a shared link (?pen=CODE): straight to the team choice of that duel */
 function pcupFromLink(){if(!pcupLinkCode()||PCUP)return;const go=()=>setTimeout(()=>{try{pcupOpen()}catch(e){console.warn(e)}},400);const rd=window.ILM&&window.ILM.ready;   /* the full game loads its career first: the lobby must keep the real one */
   if(rd&&rd.then)rd.then(go,go);else go()}
