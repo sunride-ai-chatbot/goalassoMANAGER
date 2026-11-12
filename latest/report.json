@@ -155,22 +155,22 @@
    "mode": "keep",
    "arrows": 8,
    "title": "פנדל למכבי ת\"א",
-   "result": "penmiss:off"
+   "result": "penmiss:save"
   },
   "blitz": {
    "squad": 16,
    "invented": 0,
-   "rating": 81,
-   "bonus": 0.8,
-   "opponent": "בוקה ג'וניורס",
+   "rating": 80.1,
+   "bonus": 1.6,
+   "opponent": "סאו פאולו",
    "sandbox": true
   },
   "backInCareer": true
  },
  "beginner": {
   "carrier": {
-   "label": "סוקלר",
-   "name": "סוקלר",
+   "label": "מירניאן",
+   "name": "מירניאן",
    "size": 14
   },
   "home": "מכבי תל אביב",
@@ -186,17 +186,28 @@
    ],
    "rows": [
     11,
-    14
+    13
    ],
-   "star": "סייד אבו פרחי"
+   "star": "אסטר סוקלר"
+  }
+ },
+ "pcup": {
+  "teams": 38,
+  "modes": 3,
+  "cpu": {
+   "view": "2d",
+   "mode": "kick"
+  },
+  "online": {
+   "error": "לא הצלחנו להתחבר. בדקו את האינטרנט ונסו שוב."
   }
  },
  "versionFile": {
-  "build": "f33deb36f35c",
-  "built": "12.11.2026 12:44"
+  "build": "11ceeecd5a09",
+  "built": "12.11.2026 13:35"
  },
  "errors": [],
- "url": "https://sunride-ai-chatbot.github.io/goalassoMANAGER/?v=43203659681",
- "at": "2026-11-12T10:50:34.686Z",
- "build": "f33deb36f35c"
+ "url": "https://sunride-ai-chatbot.github.io/goalassoMANAGER/?v=43211402480",
+ "at": "2026-11-12T11:43:44.443Z",
+ "build": "11ceeecd5a09"
 }
