@@ -20,6 +20,13 @@ export function createPenaltyView(host,opts){
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(56,1,.1,320),ray=new T.Raycaster(),v3=new T.Vector3(),v2=new T.Vector2();
   // what is being played right now: {t, dur, step(u,t), done} — one at a time, queued by the game one call after another
   let act=null,netT=-1,netZ=0;
+  // can this device draw the scene? After half a second of warm-up, 1.2 seconds of frames are timed; under ten frames a
+  // second the game is told once (opts.onSlow) and plays later kicks on its flat picture. Time in the background is not counted.
+  const perf={t:0,n:0,from:0,skip:false,done:false};const onVis=()=>{perf.skip=true};document.addEventListener('visibilitychange',onVis);
+  function measure(now,gap){if(!perf.from){perf.from=now;return}if(now-perf.from<500)return;
+    if(perf.skip||document.hidden||gap>5000){perf.skip=false;return}
+    perf.t+=gap;perf.n++;if(perf.t<1200)return;perf.done=true;document.removeEventListener('visibilitychange',onVis);
+    if(perf.n*1000/perf.t<10){try{opts.onSlow&&opts.onSlow()}catch(e){}}}
   const K={z:0,dive:0,side:0,lift:0,sway:true};          // keeper pose
   const B={x:SPOT,y:.145,z:0};                           // ball
   const R={x:SPOT-3,z:.8,speed:0,kick:0,cele:0,phase:0}; // taker (keeper view)
@@ -27,7 +34,7 @@ export function createPenaltyView(host,opts){
     object.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.skeleton)o.skeleton.dispose();for(const m of (Array.isArray(o.material)?o.material:o.material?[o.material]:[])){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v)}});
     textures.forEach(t=>t.dispose());geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose())}
   function drop(a){if(!a)return;scene.remove(a.group,a.shadow);disposeObject(a.group);disposeObject(a.shadow)}
-  function dispose(){if(disposed)return;disposed=true;cancelAnimationFrame(raf);observer?.disconnect();const a=act;act=null;disposeObject(scene);renderer?.dispose();wrap.remove();gloves.remove();if(a&&a.done)a.done()}
+  function dispose(){if(disposed)return;disposed=true;cancelAnimationFrame(raf);observer?.disconnect();document.removeEventListener('visibilitychange',onVis);const a=act;act=null;disposeObject(scene);renderer?.dispose();wrap.remove();gloves.remove();if(a&&a.done)a.done()}
   function fail(){dispose();try{opts.onError&&opts.onError()}catch(e){}}
   function cast(o){
     drop(keeper);drop(taker);extras.forEach(drop);extras=[];
@@ -63,6 +70,7 @@ export function createPenaltyView(host,opts){
     renderer.render(scene,camera);
   }
   function frame(now){raf=0;if(disposed)return;try{
+    if(!perf.done)measure(now,now-last);
     const dt=Math.min(.05,(now-last)/1000||0);last=now;clock+=dt;if(netT>=0)netT+=dt;
     if(act){act.t+=dt;const u=clamp(act.t/act.dur);act.step(u,act.t);if(u>=1){const a=act;act=null;a.done&&a.done()}}
     draw()}catch(e){return fail()}

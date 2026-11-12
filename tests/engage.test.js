@@ -55,6 +55,11 @@ const root=path.join(__dirname,'..');
   assert.deepEqual([kits.plain.kit,kits.plain.trim,kits.plain.oppKit],['#f5d000','#0038a8','#d81e2c'],'taker and defenders in their own colours');assert.ok(kits.far>120,'a yellow side never meets a yellow keeper');
   assert.equal(kits.clash.oppKit,'#f5d000','the home side keeps its shirt');assert.notEqual(kits.clash.kit,'#ffd400','the away side changes');assert.equal(kits.clashHome.kit,'#f5d000');assert.notEqual(kits.clashHome.oppKit,'#ffd400');
   assert.equal(kits.solo.kit,'#d81e2c');assert.ok(kits.solo.oppKit&&kits.solo.gkKit,'a kick without a known keeper still has colours');
+  // the kick's clock counts shown frames only; a device that proved too slow for the 3D view gets the flat picture
+  assert.deepEqual(run("(()=>{const c=penClock(1000);return [c.tick(1016),c.tick(1033),c.tick(6033),c.tick(6000),c.ms]})()"),[16,33,133,133,133],'a slow frame adds a tenth of a second at most and time never runs backwards');
+  const slow=run(`(()=>{penOverlay({title:'x'});let gone=0;PG.view3d={kind:'3d',reset(){throw new Error('a slow view must not be reused')},dispose(){gone++}};const was=pen3dBad;pen3dBad=true;
+    penMakeStage(PG.root.querySelector('#pgView'),'kick',{kit:'#cc0000',gkKit:'#f2b233',number:9}).then(st=>{window.__slowKind=st.kind});pen3dBad=was;return {gone,left:!!PG.view3d}})()`);
+  assert.deepEqual(slow,{gone:1,left:false},'the slow 3D view is dropped');await until(()=>w.__slowKind,'the flat stage');assert.equal(w.__slowKind,'2d');w.eval('penClose()');assert.equal($('#penGame'),null);
 
   // ---- the live screen: shout bar, highlights mode, a penalty through the overlay, a knockout shoot-out
   w.eval(`window.realInterval=setInterval;window.setInterval=fn=>{window.matchTick=fn;return 991};G.penGame=true;G.live=createMatch(me(),G.clubs.find(c=>c.id!==G.me),{kind:'cup',stage:'QF',label:'גביע המדינה · רבע הגמר'});G.live.live=true;startLive(G.live)`);

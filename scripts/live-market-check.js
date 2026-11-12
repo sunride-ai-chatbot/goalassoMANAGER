@@ -59,8 +59,11 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   await page.evaluate(()=>{closeModal();G.view='home';render()});await page.waitForTimeout(400);
   Object.assign(P,await page.evaluate(()=>({save:SAVE_VERSION,careerCard:!!document.querySelector('.car-home'),blitzEntry:!!document.querySelector('[data-blitz-open]'),achievements:achDefs().length})));
   // every penalty of this match is the script's own: the engine decides any other one by itself, so the overlay opens only
-  // when asked ('mine' = we kick, 'opp' = we keep goal) and never over the screenshot of the shout bar
-  await page.evaluate(()=>{G.motion='full';G.sound=false;G.pressMode='off';G.replay=false;window.__step=stepMinute;window.__force=null;window.__forced=[];
+  // when asked ('mine' = we kick, 'opp' = we keep goal) and never over the screenshot of the shout bar.
+  // The game keeps the 3D penalty view for browsers with a graphics chip; this runner draws in software, so the check asks
+  // for the 3D view explicitly (G.pen3d) and records what the game would have chosen by itself (gpu3d)
+  P.gpu3d=await page.evaluate(()=>{G.motion='full';delete G.pen3d;return pen3dOK()});
+  await page.evaluate(()=>{G.motion='full';G.pen3d=true;G.sound=false;G.pressMode='off';G.replay=false;window.__step=stepMinute;window.__force=null;window.__forced=[];
     stepMinute=function(M,ui){const f=window.__force;if(f&&ui&&ui.pen&&ui.pen()){window.__force=null;const c=f==='mine'?me():club(M.h===G.me?M.a:M.h);M.m++;M.pendingPen={team:c.id,pid:penTaker(M,c).id,m:M.m};window.__forced.push(M.m);return}
       return window.__step(M)};
     autoLineups();G.live=createMatch(me(),G.clubs.find(c=>c.id!==G.me),{kind:'friendly',label:'בדיקה חיה'});G.live.live=true;G.live.fresh=true;startLive(G.live)});
@@ -82,8 +85,10 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
     await page.waitForFunction(()=>!document.querySelector('#penGame'),null,{timeout:40000});
     r.result=await page.evaluate(()=>{const m=window.__forced[window.__forced.length-1];return G.live.ev.filter(e=>(e.t==='pen'||e.t==='penmiss')&&e.m===m).map(e=>e.t+':'+(e.how||'')).join(',')});return r};
   const kick=await penalty('mine','penalty.png',()=>{if(PG&&PG.auto)PG.auto()});P.penaltyView=kick.view;P.penalty=kick.result;P.penaltyMode=kick.mode;
+  // a renderer under ten frames a second is moved to the flat picture for later kicks: recorded, then undone so the keeper's 3D view is seen too
+  P.slow3d=await page.evaluate(()=>{const s=pen3dBad;pen3dBad=false;return s});
   P.keeper=await penalty('opp','penalty-keep.png',()=>{if(PG&&PG.go)PG.go('L')});
-  await page.evaluate(()=>{stepMinute=window.__step;if(liveTimer){clearInterval(liveTimer);liveTimer=null}penClose();G.live=null;G.motion='off';G.view='home';render()});
+  await page.evaluate(()=>{stepMinute=window.__step;if(liveTimer){clearInterval(liveTimer);liveTimer=null}penClose();G.live=null;delete G.pen3d;G.motion='off';G.view='home';render()});
   await page.evaluate(()=>document.querySelector('[data-blitz-open]').click());await page.waitForSelector('.bz-hero');await page.click('[data-bz-form="4-3-3"]');
   for(let i=0;i<11;i++){await page.waitForSelector('[data-bz-pick]');if(i===5){await settle();await page.screenshot({path:OUT+'blitz-draft.png'})}await page.evaluate(k=>document.querySelector(`[data-bz-pick="${k}"]`).click(),i%3)}
   await page.waitForSelector('[data-bz="play"]');await settle();await page.screenshot({path:OUT+'blitz-cup.png'});

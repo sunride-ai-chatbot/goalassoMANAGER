@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="eace3abe9d43">
+<meta name="goalasso-build" content="9d60234ef90e">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -5987,6 +5987,8 @@ function penKeepSkill(p){if(!p)return 45;const at=attrs(p);return p.pos==='GK'?c
 function penWobble(skill,energy,pressure){return +(clamp(.66-(skill-55)*.0115,.16,.78)*(energy<70?1.2:1)*(pressure?1.12:1)).toFixed(3)}
 function penReactMs(gk){return Math.round(clamp(340+(gk-60)*5,300,520))}
 function penFrame(x,y){const ax=Math.abs(x);if(ax>PEN_G.hw+.09||y>PEN_G.h+.09)return 'off';if(ax>PEN_G.hw-.05||y>PEN_G.h-.05)return 'post';return 'in'}
+/* the kick's own clock counts only what the player was shown: a slow frame, or a tab that was away, adds a tenth of a second at most */
+function penClock(now){let last=now,ms=0;return {tick(n){ms+=Math.min(100,Math.max(0,n-last));last=n;return ms},get ms(){return ms}}}
 function penSide(x){return x<-.9?'L':x>.9?'R':'C'}
 /* how hard a ball is to reach: 0 straight at the keeper, 1 the top corner */
 function penCorner(x,y){const ax=Math.abs(x);return clamp((ax-1.1)/2.5,0,1)*.62+clamp(y/PEN_G.h,0,1)*.38*(ax>.9?1:.4)}
@@ -6017,17 +6019,21 @@ function penAutoShootout(M,h,a){decidePens(M);const w=M.pens;const [x,y]=pick([[
    The 3D one (assets/demo3d/penalty.js, the stadium of the 3D highlights) is tried first on capable devices; the SVG one
    below is the fallback, and what runs when motion is reduced. */
 let pen3dMod=null,pen3dBad=false;
+/* the 3D picture needs a graphics chip: a browser that would draw it in software gets the flat picture from the start
+   (G.pen3d===true, set by the live check, takes the 3D view whatever draws it; G.pen3d===false never does) */
 function pen3dOK(){try{if(pen3dBad||typeof WebGLRenderingContext==='undefined'||motionLevel()!=='full'||(G&&G.pen3d===false))return false;
-  if(pen3dOK.gl==null){const c=document.createElement('canvas');pen3dOK.gl=!!(c.getContext('webgl2')||c.getContext('webgl'))}return pen3dOK.gl}catch(e){return false}}
+  const any=!!(G&&G.pen3d===true),k=any?'any':'gl';
+  if(pen3dOK[k]==null){const c=document.createElement('canvas'),o=any?undefined:{failIfMajorPerformanceCaveat:true};pen3dOK[k]=!!(c.getContext('webgl2',o)||c.getContext('webgl',o))}return pen3dOK[k]}catch(e){return false}}
 function penPreload(){if(!pen3dOK()||pen3dMod)return;try{pen3dMod=import('./assets/demo3d/penalty.js').catch(()=>{pen3dBad=true;pen3dMod=null;return null})}catch(e){pen3dBad=true}}
 function penMakeStage(host,mode,o){const flat=()=>penStage2d(host,mode,o);const pg=PG;
+  if(pg&&pg.view3d&&pen3dBad){try{pg.view3d.dispose()}catch(e){}pg.view3d=null}   /* the device proved too slow for it during the last kick */
   if(pg&&pg.view3d){try{pg.view3d.reset(mode,o);return Promise.resolve(pg.view3d)}catch(e){pen3dBad=true;try{pg.view3d.dispose()}catch(e2){}pg.view3d=null}}
   if(!pen3dOK())return Promise.resolve(flat());
   penPreload();if(!pen3dMod)return Promise.resolve(flat());
   return new Promise(res=>{let settled=false;const fin=st=>{if(settled){try{st&&st.kind==='3d'&&st.dispose()}catch(e){}return}settled=true;res(st)};
     const t=setTimeout(()=>fin(flat()),3200);
     pen3dMod.then(mod=>{if(settled)return;if(!mod||!host.isConnected||PG!==pg){clearTimeout(t);return fin(flat())}
-      let st=null;try{st=mod.createPenaltyView(host,{mode,kit:o.kit,trim:o.trim,gkKit:o.gkKit,oppKit:o.oppKit,oppTrim:o.oppTrim,number:o.number,onError:()=>{pen3dBad=true}})}catch(e){pen3dBad=true;st=null}
+      let st=null;try{st=mod.createPenaltyView(host,{mode,kit:o.kit,trim:o.trim,gkKit:o.gkKit,oppKit:o.oppKit,oppTrim:o.oppTrim,number:o.number,onError:()=>{pen3dBad=true},onSlow:()=>{pen3dBad=true}})}catch(e){pen3dBad=true;st=null}
       clearTimeout(t);if(st&&pg)pg.view3d=st;fin(st||flat())}).catch(()=>{clearTimeout(t);fin(flat())})})}
 function penAnim(ms,step,done){if(ms<=0){step(1);done&&done();return}const t0=performance.now();(function fr(){const u=Math.min(1,(performance.now()-t0)/ms);step(u);if(u<1)requestAnimationFrame(fr);else done&&done()})()}
 function penQuick(){return typeof revealReduced==='function'&&revealReduced()}
@@ -6137,8 +6143,8 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
     on(root.querySelector('#pgAuto'),'click',()=>PG.auto&&PG.auto());
     if(kick){
       const wob=penWobble(skill,o.energy==null?100:o.energy,o.pressure);const aimEl=document.createElement('div');aimEl.className='pg-aim';host.appendChild(aimEl);
-      let aim={x:0,y:1.15},touched=false,down=false,t0=performance.now(),fired=false;
-      const cur=()=>{const t=(performance.now()-t0)/1000;return {x:aim.x+Math.sin(t*5.3)*wob+Math.sin(t*9.1+1)*wob*.35,y:Math.max(.05,aim.y+Math.sin(t*4.1+.7)*wob*.55)}};
+      let aim={x:0,y:1.15},touched=false,down=false,fired=false;const ck=penClock(performance.now());
+      const cur=()=>{const t=ck.ms/1000;return {x:aim.x+Math.sin(t*5.3)*wob+Math.sin(t*9.1+1)*wob*.35,y:Math.max(.05,aim.y+Math.sin(t*4.1+.7)*wob*.55)}};
       const place=()=>{const c=cur();const [px,py]=st.toScreen(c.x,c.y);aimEl.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`;aimEl.classList.toggle('out',penFrame(c.x,c.y)!=='in')};
       const fire=auto=>{if(fired||!alive())return;fired=true;stop();aimEl.remove();let x,y;
         if(auto&&!touched){const s=penAiShot(skill);x=s.x;y=s.y}else{const c=cur();x=c.x+gauss()*wob*.3;y=Math.max(.05,c.y+gauss()*wob*.24)}
@@ -6149,7 +6155,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
       on(host,'pointerup',ev=>{if(down){down=false;setAim(ev);fire(false)}});on(host,'pointercancel',()=>{down=false});
       on(host,'keydown',ev=>{const k=ev.key;if(k==='ArrowLeft'){aim.x=clamp(aim.x-.35,-4.5,4.5);touched=true}else if(k==='ArrowRight'){aim.x=clamp(aim.x+.35,-4.5,4.5);touched=true}else if(k==='ArrowUp'){aim.y=clamp(aim.y+.25,.12,3.1);touched=true}else if(k==='ArrowDown'){aim.y=clamp(aim.y-.25,.12,3.1);touched=true}else if(k==='Enter'||k===' '){touched=true;fire(false)}else return;ev.preventDefault()});
       PG.auto=()=>fire(true);PG.fire=(x,y)=>{aim={x,y};touched=true;fire(false)};PG.aim=()=>aim;
-      (function loop(){if(dead||!alive())return;const left=1-(performance.now()-t0)/PEN_TIME;if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;place();if(left<=0)return fire(true);raf=requestAnimationFrame(loop)})();
+      (function loop(){if(dead||!alive())return;const left=1-ck.tick(performance.now())/PEN_TIME;if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;place();if(left<=0)return fire(true);raf=requestAnimationFrame(loop)})();
       try{host.focus({preventScroll:true})}catch(e){}
     }else{
       const s0=penAiShot(skill);const shot={x:-s0.x,y:s0.y};const win=penReactMs(gk);let tStrike=0,commit=null,result=null,down=null,autoStay=false;
