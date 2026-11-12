@@ -2,7 +2,7 @@
    A button outside every career: pick a club and take penalties. Three ways to play, all on the penalty overlay of
    36f-penalty.js (the close-up from behind the taker):
      cpu   a shoot-out against the computer: the sight when we kick, the eight arrows when we keep goal (penShootout)
-     seat  two people on one phone: the kicker picks one of the eight directions, hands the phone over, the keeper picks
+     seat  two people on one phone at the same moment: each has his own pad of eight arrows, one kicks and one keeps goal
      net   two phones, a room code: the same duel, each player's choice travels over a Supabase Realtime broadcast channel
    A duel kick is decided by pcupResolve(kick direction, dive direction, finisher, keeper, random source): pure, so both
    phones reach the same result from the same seed. Online choices are exchanged commit-first (a hash of direction+nonce,
@@ -52,10 +52,10 @@ function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)
   if(P.stage==='team')body=`<h2>בחר קבוצה</h2>${P.join?`<p class="pc-note">הוזמנת לדו־קרב <bdi dir="ltr">${esc(P.join)}</bdi>. בחר קבוצה ונכנסים.</p>`:''}${grid('data-pc-team')}`;
   else if(P.stage==='mode')body=`<div class="pc-mine">${kitSVG(P.my,'lg')}<div><strong>${esc(P.my.name)}</strong><button type="button" class="pc-link" data-pc-go="team">החלף קבוצה</button></div></div>
     <button type="button" class="pc-mode" data-pc-mode="cpu"><b>אימון מול המחשב</b><small>דו־קרב של חמש בעיטות לכל צד. אתה בועט, ואתה גם בשער.</small></button>
-    <button type="button" class="pc-mode" data-pc-mode="seat"><b>שניים על טלפון אחד</b><small>אחד בועט, מעביר את הטלפון, והשני בשער. עובד בלי אינטרנט.</small></button>
+    <button type="button" class="pc-mode" data-pc-mode="seat"><b>שניים על טלפון אחד</b><small>שניכם לוחצים באותו זמן: אחד בועט, השני בשער, ובכל בעיטה מתחלפים. עובד בלי אינטרנט.</small></button>
     <button type="button" class="pc-mode" data-pc-mode="net"><b>אונליין מול חבר</b><small>פותחים חדר, שולחים קוד, וכל אחד משחק מהטלפון שלו.</small></button>
     <p class="pc-note">משחק דרך בלוטות׳ או חיפוש טלפון באותה רשת לא אפשריים בדפדפן. באותו חדר משחקים על טלפון אחד, ובכל מקום אחר עם קוד.</p>`;
-  else if(P.stage==='seat')body=`<h2>מי היריבה?</h2><p class="pc-note">${esc(P.my.name)} של השחקן הראשון. בחר את הקבוצה של השחקן השני.</p>${grid('data-pc-opp')}<button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`;
+  else if(P.stage==='seat')body=`<h2>מי היריבה?</h2><p class="pc-note">${esc(P.my.name)} משחקת בצד ימין של הטלפון. בחר את הקבוצה של מי שיושב בצד שמאל.</p>${grid('data-pc-opp')}<button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`;
   else if(P.stage==='net'){const n=P.net||{};body=`<h2>אונליין מול חבר</h2>${n.err?`<p class="pc-err" role="alert">${esc(n.err)}</p>`:''}
     ${n.code&&n.host?`<p class="pc-note">שלח לחבר את הקוד. המשחק מתחיל כשהוא נכנס.</p><div class="pc-code" dir="ltr">${esc(n.code)}</div><button type="button" class="btn" data-pc-share>שתף קישור</button><p class="pc-wait" role="status">${n.state==='open'?'ממתין לחבר…':'מתחבר…'}</p>`
      :n.code?`<p class="pc-wait" role="status">מתחבר לחדר <bdi dir="ltr">${esc(n.code)}</bdi>…</p>`
@@ -100,12 +100,22 @@ function pcupAsk(ctx,o){return new Promise(res=>{const {host,st,root}=ctx;const 
   pad.addEventListener('click',e=>{const b=e.target.closest('[data-dir]');if(b){buzz('tap');fin(b.dataset.dir)}});
   (function loop(){if(done)return;if(!ctx.alive()){done=true;pad.remove();turn.remove();return res(null)}const left=1-ck.tick(performance.now())/(o.ms||12000);if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}if(left<=0)return fin(o.fallback());raf=requestAnimationFrame(loop)})()})}
 const pcupAnyDir=()=>pick(Object.keys(PEN_DIRS));
-/* one phone: a curtain before each choice so the other player does not see it */
+/* one phone, both at once: each player has his own pad of eight arrows for the whole duel (the first club on the right, the
+   second on the left) and the roles swap with every kick. Both press during the count; the pad shows only that a choice was
+   made, never which, and the last press before the whistle counts. No press: the kicker's ball goes anywhere, the keeper stays. */
+const PCUP_COUNT=4000;
+function pcupAskBoth(ctx,side,D){return new Promise(res=>{const {st,root,host}=ctx;const bot=root.querySelector('#pgBot'),hint=root.querySelector('#pgHint'),tEl=root.querySelector('#pgTime');
+  const ARW={U:0,UR:45,R:90,DR:135,D:180,DL:225,L:270,UL:315},NAME={U:'למעלה',UR:'למעלה ימינה',R:'ימינה',DR:'למטה ימינה',D:'למטה',DL:'למטה שמאלה',L:'שמאלה',UL:'למעלה שמאלה'};
+  const pad=key=>{const S=key==='a'?D.A:D.B,kick=key===side,nm=S.c.short||S.c.name;return `<div class="pc-pad ${kick?'kick':'keep'}" data-pad="${key}" data-role="${kick?'kick':'keep'}"><div class="pc-pad-h">${kitSVG(S.c,'sm')}<b>${esc(nm)}</b><span>${kick?'בועט':'שוער'}</span></div><div class="pc-pad-g" dir="ltr">${['UL','U','UR','L','','R','DL','D','DR'].map(d=>d?`<button type="button" data-dir="${d}" aria-label="${esc(nm)}, ${kick?'בעיטה':'זינוק'} ${NAME[d]}"><svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]}deg)"><path d="M12 5l7 8h-4.4v6h-5.2v-6H5z"/></svg></button>`:'<i aria-hidden="true"></i>').join('')}</div></div>`};
+  const wrap=document.createElement('div');wrap.className='pc-pads';wrap.innerHTML=pad('a')+pad('b');bot.insertBefore(wrap,bot.querySelector('.pg-timer'));bot.classList.add('pc-both');if(hint)hint.textContent='שניכם בוחרים עכשיו. הלחיצה האחרונה קובעת.';
+  const turn=document.createElement('div');turn.className='pc-turn pc-count';turn.setAttribute('aria-hidden','true');host.appendChild(turn);
+  const pick={a:null,b:null};let done=false,raf=0,shown=0;const ck=penClock(performance.now());
+  const fin=()=>{if(done)return;done=true;cancelAnimationFrame(raf);wrap.remove();turn.remove();bot.classList.remove('pc-both');if(tEl)tEl.style.transform='scaleX(0)';if(hint)hint.textContent='';const kick=pick[side],keep=pick[side==='a'?'b':'a'];res(ctx.alive()?{kd:kick||pcupAnyDir(),gd:keep,seed:(Math.random()*4294967296)>>>0}:null)};
+  const tap=e=>{const b=e.target.closest&&e.target.closest('[data-dir]');if(!b||done)return;e.preventDefault();const box=b.closest('[data-pad]'),first=!pick[box.dataset.pad];pick[box.dataset.pad]=b.dataset.dir;box.classList.add('set');if(first||e.type==='pointerdown')buzz('tap')};
+  wrap.addEventListener('pointerdown',tap);wrap.addEventListener('click',tap);PCUP.whistle=fin;PCUP.pads=()=>Object.assign({},pick);
+  (function loop(){if(done)return;if(!ctx.alive())return fin();const left=PCUP_COUNT-ck.tick(performance.now());if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left/PCUP_COUNT).toFixed(3)})`;const n=Math.max(1,Math.ceil(left/1000-.25));if(n!==shown){shown=n;turn.textContent=n>3?'מוכנים…':String(n)}if(left<=0)return fin();raf=requestAnimationFrame(loop)})()})}
 function pcupSeat(oppKey){const P=PCUP,a=pcupClub(P.my.key),b=pcupClub(oppKey,oppKey===P.my.key);if(!a||!b)return toast('לא הצלחנו לבנות את הקבוצות');G.me=a.id;const A=pcupSide(a),B=pcupSide(b);
-  const curtain=(ctx,who,what)=>new Promise(res=>{const d=document.createElement('div');d.className='pg-panel pc-curtain';d.innerHTML=`<div class="pg-end"><small>${esc(what)}</small><h2>${esc(who)}</h2><p>רק מי שתורו מסתכל על המסך.</p><button type="button" class="btn big" id="pcReady">אני מוכן</button></div>`;ctx.host.appendChild(d);PCUP.ready=()=>{d.remove();res()};d.querySelector('#pcReady').onclick=PCUP.ready});
-  pcupDuel({A,B,first:Math.random()<.5?'a':'b',mine:null,end:()=>{const r=pcupRec();r.duels++;pcupSave(r);if(PCUP){PCUP.stage='mode';pcupPaint()}},
-    choose:async(k,side,ctx)=>{const T=ctx.T,O=ctx.O;await curtain(ctx,'הבועט: '+(T.c.short||T.c.name),'העבר את הטלפון לבועט');if(!ctx.alive())return null;const kd=await pcupAsk(ctx,{label:'בחר לאן לבעוט',after:'',fallback:pcupAnyDir});if(kd==null||!ctx.alive())return null;
-      await curtain(ctx,'השוער: '+(O.c.short||O.c.name),'העבר את הטלפון לשוער');if(!ctx.alive())return null;const gd=await pcupAsk(ctx,{label:'בחר לאן לזנק',after:'',fallback:()=>'D'});if(gd==null)return null;return {kd,gd,seed:(Math.random()*4294967296)>>>0}}})}
+  const D=pcupDuel({A,B,first:Math.random()<.5?'a':'b',mine:null,end:()=>{const r=pcupRec();r.duels++;pcupSave(r);if(PCUP){PCUP.stage='mode';pcupPaint()}},choose:(k,side,ctx)=>pcupAskBoth(ctx,side,D)})}
 /* ---- two phones ----
    Messages (all carry v:1): guest → hi{team}; host → start{a,b,first} (keys and the skills both phones must use);
    every kick: c{k,h} (commit), then r{k,d,n} (reveal) once the other side's commit is in. Unanswered messages are sent again. */
