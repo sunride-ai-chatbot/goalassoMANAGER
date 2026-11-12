@@ -1,5 +1,6 @@
-// Phone-size (iPhone 13) check of the real transfer market UI: Real Madrid and Liverpool full squads with faces, profiles
-// with photo credit, price sorts, nationality filter, live suggestions (Hebrew/English) and Israeli legionnaires.
+// Phone-size (iPhone 13) check of the deployed game: the transfer market (Real Madrid and Liverpool full squads with faces,
+// profiles with photo credit, price sorts, nationality filter, live suggestions, Israeli legionnaires) and live play
+// (shouts, a first-person penalty, the career card, the quick tournament).
 // Usage: node scripts/live-market-check.js <page URL> <output dir>   (used by .github/workflows/live-check.yml)
 const { chromium, devices } = require('playwright');
 const BASE=process.argv[2]||'http://127.0.0.1:8765/index.html', OUT=(process.argv[3]||'/tmp/mc')+'/';
@@ -52,4 +53,25 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
  R.legionnaires=await page.evaluate(()=>[...document.querySelectorAll('[data-wrow]')].map(el=>{const f=findWorldPlayer(+el.dataset.wrow);return f?`${fullName(f.p)} | ${f.c.name} | ${f.p.nat}${el.querySelector('.pp[data-pp-state="ready"]')?' | face':''}`:'?'}));
  R.foreignAtIsraeliClubShown=await page.evaluate(()=>{const ids=new Set([...document.querySelectorAll('[data-wrow]')].map(el=>+el.dataset.wrow));return G.clubs.flatMap(c=>c.players).filter(p=>p.foreign&&ids.has(p.id)).map(fullName)});
  await page.evaluate(()=>{const l=document.querySelector('.mchips');window.scrollTo(0,l.getBoundingClientRect().top+window.scrollY-160)});await page.waitForTimeout(300);await page.screenshot({path:OUT+'legionnaires.png'});
+ // live play and the screens between matches (shouts, highlights, a first-person penalty, career card, quick tournament):
+ // recorded under R.play; a failure here is reported, it never hides the market results above
+ R.play={};try{const P=R.play;
+  await page.evaluate(()=>{closeModal();G.view='home';render()});await page.waitForTimeout(400);
+  Object.assign(P,await page.evaluate(()=>({save:SAVE_VERSION,careerCard:!!document.querySelector('.car-home'),blitzEntry:!!document.querySelector('[data-blitz-open]'),achievements:achDefs().length})));
+  await page.evaluate(()=>{G.motion='full';G.sound=false;G.pressMode='off';G.replay=false;autoLineups();G.live=createMatch(me(),G.clubs.find(c=>c.id!==G.me),{kind:'friendly',label:'בדיקה חיה'});G.live.live=true;G.live.fresh=true;startLive(G.live)});
+  await page.waitForSelector('.live-view');await page.evaluate(()=>document.querySelector('#kickBtn')?.click());await page.waitForFunction(()=>G.live&&G.live.m>=6,null,{timeout:30000});
+  Object.assign(P,await page.evaluate(()=>({shoutButtons:document.querySelectorAll('[data-shout]').length,shoutReady:[...document.querySelectorAll('[data-shout]')].every(b=>!b.disabled),speeds:[...document.querySelectorAll('[data-spx]')].map(b=>b.dataset.spx).join(',')})));
+  await page.evaluate(()=>document.querySelector('[data-shout="press"]').click());P.shout=await page.evaluate(()=>G.live.shout&&G.live.shout[G.me]&&G.live.shout[G.me].k);
+  await page.evaluate(()=>document.getElementById('main').scrollTo(0,0));await page.screenshot({path:OUT+'live-shouts.png'});
+  await page.evaluate(()=>{window.__step=stepMinute;stepMinute=function(M,ui){if(ui&&ui.pen&&ui.pen()&&!window.__pen){window.__pen=1;M.m++;M.pendingPen={team:G.me,pid:penTaker(M,me()).id,m:M.m};return}return window.__step(M,ui)}});
+  await page.waitForFunction(()=>typeof PG!=='undefined'&&PG&&PG.stage,null,{timeout:30000});P.penaltyView=await page.evaluate(()=>PG.stage.kind);await page.waitForTimeout(600);await page.screenshot({path:OUT+'penalty.png'});
+  await page.evaluate(()=>PG.auto());await page.waitForFunction(()=>!document.querySelector('#penGame'),null,{timeout:40000});
+  P.penalty=await page.evaluate(()=>G.live.ev.filter(e=>e.t==='pen'||e.t==='penmiss').map(e=>e.t+':'+(e.how||'')).join(','));
+  await page.evaluate(()=>{stepMinute=window.__step;if(liveTimer){clearInterval(liveTimer);liveTimer=null}penClose();G.live=null;G.motion='off';G.view='home';render()});
+  await page.evaluate(()=>document.querySelector('[data-blitz-open]').click());await page.waitForSelector('.bz-hero');await page.click('[data-bz-form="4-3-3"]');
+  for(let i=0;i<11;i++){await page.waitForSelector('[data-bz-pick]');if(i===5){await settle();await page.screenshot({path:OUT+'blitz-draft.png'})}await page.evaluate(k=>document.querySelector(`[data-bz-pick="${k}"]`).click(),i%3)}
+  await page.waitForSelector('[data-bz="play"]');await settle();await page.screenshot({path:OUT+'blitz-cup.png'});
+  P.blitz=await page.evaluate(()=>({squad:me().players.length,invented:me().players.filter(inventedPlayer).length,rating:+blitzRating(BLITZ.picks).toFixed(1),bonus:blitzBonus(BLITZ.picks),opponent:BLITZ.opp.name,sandbox:SANDBOX}));
+  await page.evaluate(()=>blitzExit());P.backInCareer=await page.evaluate(()=>!SANDBOX&&!G.blitz&&me().id==='hbs');
+ }catch(e){R.play.error=String(e&&e.message||e).slice(0,300)}
  R.errors=errs;R.url=BASE;R.at=new Date().toISOString();R.build=await page.evaluate(()=>document.querySelector('meta[name="goalasso-build"]')?.content||null);require('fs').writeFileSync(OUT+'report.json',JSON.stringify(R,null,1));console.log(JSON.stringify(R,null,1));await b.close()})().catch(e=>{console.error(e);process.exit(1)});

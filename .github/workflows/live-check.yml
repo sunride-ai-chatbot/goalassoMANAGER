@@ -1,6 +1,7 @@
 name: Live market check
 # Manual: opens the deployed GitHub Pages game on a phone-sized viewport (iPhone 13) and records what the transfer market
-# actually shows (squads, faces, filters, suggestions, legionnaires). Screenshots + report.json go to the `live-check` branch.
+# actually shows (squads, faces, filters, suggestions, legionnaires) and that live play works there (shouts, a penalty,
+# the career card, the quick tournament). Screenshots + report.json go to the `live-check` branch.
 on:
   workflow_dispatch:
     inputs:
