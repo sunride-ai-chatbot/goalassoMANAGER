@@ -97,7 +97,7 @@ function startLive(restored){
   };
   const HL_TICK=230;const period=()=>hl?HL_TICK:Math.round(base*1000/90/mult);
   /* highlights mode ("תקציר"): quiet minutes fly by; a minute with a key moment stops the clock long enough to watch it */
-  const hlHold=evs=>{let ms=0;for(const e of evs){if(e.quiet)continue;const k=e.t==='goal'||e.t==='pen'||e.t==='own'?2600:e.t==='penmiss'||e.t==='red'?2000:e.t==='shot'&&(e.sub==='save'||e.sub==='post')?1500:e.t==='inj'||e.t==='var'?1200:e.t==='yellow'?500:e.t==='sub'?400:0;if(k>ms)ms=k}return ms};
+  const hlHold=hlHoldMs;
   const liveUI={pen:()=>G.penGame!==false&&!M.playback};
   const shoutPaint=M.playback?null:shoutMount(M,{addLine,busy:()=>M.done||penHold});
   const afterStep=ev0=>{flush();if(hl){const ms=hlHold(M.ev.slice(ev0));holdUntil=ms?performance.now()+ms:0}

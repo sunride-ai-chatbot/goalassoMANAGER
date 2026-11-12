@@ -1,0 +1,43 @@
+/* אלוף הפנדלים: the lobby behind the penalty overlay (.pg, z-index 45). Works on both pages, so it carries its own colours. */
+.pcup{position:fixed;inset:0;z-index:44;display:flex;flex-direction:column;background:radial-gradient(120% 60% at 50% 0,#17301f 0,#0a1410 46%,#05070b 100%);color:#f4efe2;font:400 16px/1.5 Heebo,Arial,sans-serif;overscroll-behavior:contain;animation:pgIn .25s ease-out}
+.pcup *{box-sizing:border-box}
+.pcup .pc-top{flex:none;position:relative;padding:calc(14px + env(safe-area-inset-top,0px)) 60px 12px;text-align:center;border-bottom:1px solid rgba(233,196,106,.25)}
+.pcup .pc-top h1{margin:0;font:700 46px/.95 "Karantina","Heebo",sans-serif;letter-spacing:.4px;color:#f4efe2}
+.pcup .pc-top p{margin:4px 0 0;font-size:14px;color:#c9c3b3}
+.pcup .pc-x{position:absolute;inset-inline-start:10px;top:calc(10px + env(safe-area-inset-top,0px));width:44px;height:44px;border-radius:50%;border:1px solid rgba(244,239,226,.3);background:rgba(5,7,11,.55);color:#f4efe2;font:400 28px/1 Arial,sans-serif;cursor:pointer}
+.pcup .pc-body{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px 16px calc(24px + env(safe-area-inset-bottom,0px));width:100%;max-width:760px;margin:0 auto}
+.pcup .pc-body h2{margin:0 0 10px;font:700 34px/1 "Karantina","Heebo",sans-serif;color:#f4efe2;text-align:start}
+.pcup .pc-note{margin:0 0 12px;font-size:14.5px;line-height:1.55;color:#c9c3b3}
+.pcup .pc-err{margin:0 0 12px;padding:10px 12px;border-radius:10px;border:1px solid #ff8a94;background:rgba(255,138,148,.12);color:#ffd9dc;font-size:15px}
+.pcup .pc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px;margin:0 0 14px}
+.pcup .pc-team{display:flex;flex-direction:column;align-items:center;gap:6px;min-height:104px;padding:10px 6px;border-radius:12px;border:1px solid rgba(244,239,226,.16);background:rgba(5,7,11,.5);color:#f4efe2;font:inherit;cursor:pointer;box-shadow:none}
+.pcup .pc-team .kit{width:46px;height:46px;flex:none}
+.pcup .pc-team strong{font-size:13.5px;font-weight:600;line-height:1.25;text-align:center}
+.pcup .pc-team:active{background:rgba(198,242,78,.14);border-color:#c6f24e}
+.pcup .pc-mine{display:flex;align-items:center;gap:12px;margin:0 0 14px}
+.pcup .pc-mine .kit{width:56px;height:56px;flex:none}
+.pcup .pc-mine strong{display:block;font:700 32px/1 "Karantina","Heebo",sans-serif}
+.pcup .pc-link{min-height:44px;padding:8px 0;border:0;background:none;color:#e9c46a;font:600 15px Heebo,Arial,sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer;box-shadow:none}
+.pcup .pc-mode{display:block;width:100%;margin:0 0 10px;padding:14px 16px;text-align:start;border-radius:14px;border:1px solid rgba(244,239,226,.18);border-inline-start:4px solid #c6f24e;background:rgba(5,7,11,.55);color:#f4efe2;font:inherit;cursor:pointer;box-shadow:none}
+.pcup .pc-mode b{display:block;font:700 30px/1.05 "Karantina","Heebo",sans-serif;letter-spacing:.3px}
+.pcup .pc-mode small{display:block;margin-top:3px;font-size:14px;line-height:1.45;color:#c9c3b3}
+.pcup .pc-mode:active{background:rgba(198,242,78,.14)}
+.pcup .pc-code{margin:6px 0 14px;padding:14px 10px;border-radius:14px;border:1px dashed rgba(233,196,106,.6);background:rgba(5,7,11,.6);text-align:center;font:800 38px/1.1 Heebo,Arial,sans-serif;letter-spacing:8px;color:#e9c46a;user-select:all;-webkit-user-select:all}
+.pcup .pc-wait{margin:14px 0;font-size:15px;color:#c9c3b3;text-align:center}
+.pcup .pc-join{margin:16px 0 6px}
+.pcup .pc-join label{display:block;margin:0 0 6px;font-size:15px;font-weight:600;color:#f4efe2}
+.pcup .pc-join>div{display:flex;gap:8px}
+.pcup .pc-join input{flex:1;min-width:0;height:50px;padding:0 14px;border-radius:12px;border:1px solid rgba(244,239,226,.3);background:#05070b;color:#f4efe2;font:700 22px/1 Heebo,Arial,sans-serif;letter-spacing:4px;text-transform:uppercase}
+.pcup .btn{min-height:48px;padding:0 20px;border-radius:12px;border:0;background:#c6f24e;color:#10151d;font:700 16px Heebo,Arial,sans-serif;cursor:pointer;box-shadow:none}
+.pcup :focus-visible,.pc-quit:focus-visible{outline:3px solid #e9c46a;outline-offset:2px}
+.pc-entry{border-color:rgba(233,196,106,.4)}
+.pc-entry-b{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.pc-entry-b>div{flex:1;min-width:200px}.pc-entry-b h2{margin:0 0 4px}.pc-entry-b p{margin:0}
+.pc-entry-b .bbtn{width:auto;margin:0;flex:none}
+/* inside the penalty overlay while it belongs to אלוף הפנדלים */
+.pg .pg-top{position:relative}
+.pc-quit{position:absolute;inset-inline-start:8px;top:calc(8px + env(safe-area-inset-top,0px));min-height:44px;padding:0 12px;border-radius:10px;border:1px solid rgba(244,239,226,.3);background:rgba(5,7,11,.6);color:#f4efe2;font:600 14px Heebo,Arial,sans-serif;cursor:pointer}
+.pcup~.pg #pgLet{display:none}
+.pc-curtain{background:#05070b}
+.pc-turn{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:4;max-width:calc(100% - 24px);padding:7px 16px;border-radius:999px;background:rgba(5,7,11,.82);border:1px solid rgba(233,196,106,.55);color:#f4efe2;font:700 16px/1.3 Heebo,Arial,sans-serif;white-space:nowrap;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.pcup{animation:none}}

@@ -108,5 +108,22 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   await bp.evaluate(()=>document.querySelector('[data-blive="skip"]').click());await bp.waitForSelector('.bresult .bratings');await bp.waitForTimeout(300);await bp.screenshot({path:OUT+'beginner-ratings.png'});
   B.ratings=await bp.evaluate(()=>({teams:[...document.querySelectorAll('.bratings-cols h4')].map(h=>h.textContent),rows:[...document.querySelectorAll('.bratings-cols>div')].map(d=>d.querySelectorAll('li').length),star:document.querySelector('.bratings-star strong')?.textContent||null}));await bp.close();
  }catch(e){R.beginner.error=String(e&&e.message||e).slice(0,300)}
+ // אלוף הפנדלים: the lobby, a shoot-out against the computer, and two phones in one room over the real Realtime channel
+ R.pcup={};try{const P=R.pcup;const mk=async url=>{const c=await b.newContext({...devices['iPhone 13'],locale:'he-IL'});const p=await c.newPage();p.on('pageerror',e=>errs.push('pcup: '+String(e).slice(0,200)));await p.addInitScript(()=>{window.__ilmNoSplash=1});await p.goto(url,{waitUntil:'load',timeout:90000});return p};
+  const tap=(p,sel)=>p.evaluate(s=>document.querySelector(s).click(),sel);
+  const ub=new URL(BASE);ub.pathname=ub.pathname.replace(/[^/]*$/,'')+'beginner.html';const host=await mk(ub.href);await host.waitForSelector('[data-pcup-open]',{timeout:60000});await tap(host,'[data-pcup-open]');await host.waitForSelector('#pcup [data-pc-team]');
+  P.teams=await host.locator('[data-pc-team]').count();await tap(host,'[data-pc-team="i:mta"]');await host.waitForSelector('[data-pc-mode]');P.modes=await host.locator('[data-pc-mode]').count();await host.screenshot({path:OUT+'pcup-modes.png'});
+  await host.evaluate(()=>{G.pen3d=false});await tap(host,'[data-pc-mode="cpu"]');await tap(host,'#pgGo');await host.waitForFunction(()=>PG&&PG.stage&&(PG.fire||PG.pick),null,{timeout:60000});
+  P.cpu=await host.evaluate(()=>({view:PG.stage.kind,mode:PG.pick?'keep':'kick'}));await host.waitForTimeout(400);await host.screenshot({path:OUT+'pcup-cpu.png'});await tap(host,'.pc-quit');
+  await tap(host,'[data-pc-mode="net"]');await tap(host,'[data-pc-net="host"]');await host.waitForFunction(()=>PCUP.net&&(PCUP.net.state==='open'||PCUP.net.err),null,{timeout:40000});
+  const net=await host.evaluate(()=>({err:PCUP.net.err||null,code:PCUP.net.code||null}));if(net.err){P.online={error:net.err}}else{const O=P.online={room:true};
+   const ug=new URL(BASE);ug.searchParams.set('pen',net.code);const guest=await mk(ug.href);await guest.waitForSelector('#pcup [data-pc-team]',{timeout:60000});await guest.evaluate(()=>{G.pen3d=false});await tap(guest,'[data-pc-team="i:mhf"]');
+   await Promise.all([host,guest].map(p=>p.waitForSelector('.pg-dirs',{timeout:60000})));O.joined=true;await host.screenshot({path:OUT+'pcup-online.png'});
+   for(let k=0;k<2;k++){await Promise.all([host,guest].map(p=>p.waitForSelector('.pg-dirs',{timeout:60000})));await tap(host,'.pg-dirs [data-dir="UL"]');await tap(guest,'.pg-dirs [data-dir="DR"]');
+    await Promise.all([host,guest].map(p=>p.waitForFunction(n=>PCUP.duel.S.a.length+PCUP.duel.S.b.length>n,k,{timeout:60000})))}
+   O.host=await host.evaluate(()=>PCUP.duel.S);O.guest=await guest.evaluate(()=>PCUP.duel.S);O.same=JSON.stringify(O.host)===JSON.stringify(O.guest);await guest.screenshot({path:OUT+'pcup-online-guest.png'});
+   await tap(guest,'.pc-quit');await host.waitForSelector('#pgDone',{timeout:30000});O.leaverSeen=await host.evaluate(()=>document.querySelector('.pg-end h2').textContent);await guest.context().close()}
+  await host.context().close();
+ }catch(e){R.pcup.error=String(e&&e.message||e).slice(0,300)}
  R.versionFile=await page.evaluate(()=>fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null));   // what an open page would be told about the server's build
  R.errors=errs;R.url=BASE;R.at=new Date().toISOString();R.build=await page.evaluate(()=>document.querySelector('meta[name="goalasso-build"]')?.content||null);require('fs').writeFileSync(OUT+'report.json',JSON.stringify(R,null,1));console.log(JSON.stringify(R,null,1));await b.close()})().catch(e=>{console.error(e);process.exit(1)});

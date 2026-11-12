@@ -8,4 +8,5 @@ function startUI(){
 if(window.claude?.hot?.snapshot)window.claude.hot.snapshot(()=>({}));
 window.ILM={get G(){return G},me,render,NIS,myPos,myDiv,standingsOf,club,myNextMatch,ready:BOOT_READY,whenSaved:()=>SV.busy&&SV.promise?SV.promise:Promise.resolve(!persistenceError),storage:STORE};
 try{updateWatch()}catch(e){}
+try{pcupFromLink()}catch(e){}
 window.claude?.hot?.ready?window.claude.hot.ready(start):start();
