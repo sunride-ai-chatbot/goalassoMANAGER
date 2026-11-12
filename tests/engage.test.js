@@ -49,6 +49,12 @@ const root=path.join(__dirname,'..');
   const odds=run(`(()=>{const n=3000;let side=0,miss=0,read=0,stay=0;for(let i=0;i<n;i++){if(penKickOutcome(2.9,1.3,74).out==='goal')side++;const s=penAiShot(78);if(penFrame(s.x,s.y)!=='in')miss++;if(penKeepOutcome(-s.x,s.y,penSide(-s.x),'react',74).out==='goal')read++;if(penKeepOutcome(-s.x,s.y,'C','react',74).out==='goal')stay++}return {side:side/n,miss:miss/n,read:read/n,stay:stay/n}})()`);
   assert.ok(odds.side>.72&&odds.side<.93,'a well-placed kick scores about four times in five: '+odds.side);assert.ok(odds.miss>.02&&odds.miss<.14,'AI takers miss the frame now and then: '+odds.miss);
   assert.ok(odds.read<odds.stay-.25,'reading the taker saves far more than standing still');assert.equal(w.eval("penKeepOutcome(2.5,1,'R','late',99).out"),'goal','too late is a goal');
+  // the picture wears the match colours: a clash moves the away side to its second kit, and the keeper stands out from both
+  const kits=run(`(()=>{const y={id:'y',c1:'#f5d000',c2:'#0038a8'},y2={id:'y2',c1:'#ffd400',c2:'#111111'},r={id:'r',c1:'#d81e2c',c2:'#ffffff'};
+    return {plain:penKits(y,r,'r'),clash:penKits(y2,y,'y'),clashHome:penKits(y,y2,'y'),solo:penKits(r,null),far:colDist(penKits(y,r,'r').gkKit,'#f5d000')}})()`);
+  assert.deepEqual([kits.plain.kit,kits.plain.trim,kits.plain.oppKit],['#f5d000','#0038a8','#d81e2c'],'taker and defenders in their own colours');assert.ok(kits.far>120,'a yellow side never meets a yellow keeper');
+  assert.equal(kits.clash.oppKit,'#f5d000','the home side keeps its shirt');assert.notEqual(kits.clash.kit,'#ffd400','the away side changes');assert.equal(kits.clashHome.kit,'#f5d000');assert.notEqual(kits.clashHome.oppKit,'#ffd400');
+  assert.equal(kits.solo.kit,'#d81e2c');assert.ok(kits.solo.oppKit&&kits.solo.gkKit,'a kick without a known keeper still has colours');
 
   // ---- the live screen: shout bar, highlights mode, a penalty through the overlay, a knockout shoot-out
   w.eval(`window.realInterval=setInterval;window.setInterval=fn=>{window.matchTick=fn;return 991};G.penGame=true;G.live=createMatch(me(),G.clubs.find(c=>c.id!==G.me),{kind:'cup',stage:'QF',label:'גביע המדינה · רבע הגמר'});G.live.live=true;startLive(G.live)`);

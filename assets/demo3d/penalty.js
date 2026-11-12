@@ -34,7 +34,7 @@ export function createPenaltyView(host,opts){
     keeper=makeRosterPlayer(scene,{slot:'GK',side:1,number:1,kit:o.gkKit||'#f2b233',trim:'#10151d',pid:'k',team:'k'},0);
     taker=makeRosterPlayer(scene,{slot:'FW',side:0,number:o.number||9,kit:o.kit||'#c6f24e',trim:o.trim||'#10151d',pid:'t',team:'t'},1);
     // the others wait on the edge of the area
-    [[-8.6,0],[-5.2,1],[-2.4,0],[2.9,1],[5.6,0],[9.1,1]].forEach(([z,s],i)=>{const a=makeRosterPlayer(scene,{slot:'MF',side:s,number:4+i,kit:s?o.oppKit||'#e9edf2':o.kit||'#c6f24e',trim:'#10151d',pid:'x'+i,team:'x'},i+2);posePlayer(a,{x:35.2-(i%2)*.7,z,angle:Math.PI/2,speed:0,kick:0,dive:0,celebrate:0,keeper:false},0);extras.push(a)});
+    [[-8.6,0],[-5.2,1],[-2.4,0],[2.9,1],[5.6,0],[9.1,1]].forEach(([z,s],i)=>{const a=makeRosterPlayer(scene,{slot:'MF',side:s,number:4+i,kit:s?o.oppKit||'#e9edf2':o.kit||'#c6f24e',trim:(s?o.oppTrim:o.trim)||'#10151d',pid:'x'+i,team:'x'},i+2);posePlayer(a,{x:35.2-(i%2)*.7,z,angle:Math.PI/2,speed:0,kick:0,dive:0,celebrate:0,keeper:false},0);extras.push(a)});
     gloves.querySelectorAll('.cuff').forEach(c=>c.setAttribute('stroke',o.gkKit||'#f2b233'));
   }
   function frameCamera(){

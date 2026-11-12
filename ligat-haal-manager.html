@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="281013f7bd2c">
+<meta name="goalasso-build" content="eace3abe9d43">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -6027,7 +6027,7 @@ function penMakeStage(host,mode,o){const flat=()=>penStage2d(host,mode,o);const 
   return new Promise(res=>{let settled=false;const fin=st=>{if(settled){try{st&&st.kind==='3d'&&st.dispose()}catch(e){}return}settled=true;res(st)};
     const t=setTimeout(()=>fin(flat()),3200);
     pen3dMod.then(mod=>{if(settled)return;if(!mod||!host.isConnected||PG!==pg){clearTimeout(t);return fin(flat())}
-      let st=null;try{st=mod.createPenaltyView(host,{mode,kit:o.kit,trim:o.trim,gkKit:o.gkKit,number:o.number,onError:()=>{pen3dBad=true}})}catch(e){pen3dBad=true;st=null}
+      let st=null;try{st=mod.createPenaltyView(host,{mode,kit:o.kit,trim:o.trim,gkKit:o.gkKit,oppKit:o.oppKit,oppTrim:o.oppTrim,number:o.number,onError:()=>{pen3dBad=true}})}catch(e){pen3dBad=true;st=null}
       clearTimeout(t);if(st&&pg)pg.view3d=st;fin(st||flat())}).catch(()=>{clearTimeout(t);fin(flat())})})}
 function penAnim(ms,step,done){if(ms<=0){step(1);done&&done();return}const t0=performance.now();(function fr(){const u=Math.min(1,(performance.now()-t0)/ms);step(u);if(u<1)requestAnimationFrame(fr);else done&&done()})()}
 function penQuick(){return typeof revealReduced==='function'&&revealReduced()}
@@ -6100,6 +6100,11 @@ function penStage2d(host,mode,o){const S=34.15,GX=180,GY=215;const kit=o.kit||'#
 
 /* ---- the overlay ---- */
 let PG=null;
+/* both sides as the match itself draws them (the away side changes kit when the colours clash); the keeper wears a colour neither side does */
+function penKits(tc,kc,homeId){let t={fill:tc.c1,stroke:tc.c2||'#10151d'},k={fill:'#e9edf2',stroke:'#10151d'};
+  if(kc){const tHome=homeId!==kc.id;const mc=tHome?matchColors(tc,kc):matchColors(kc,tc);t=tHome?mc.h:mc.a;k=tHome?mc.a:mc.h}
+  const gkKit=['#f2b233','#39c3d6','#b06cf0'].find(c=>colDist(c,t.fill)>120&&colDist(c,k.fill)>120)||'#f2b233';
+  return {kit:t.fill,trim:t.stroke,oppKit:k.fill,oppTrim:k.stroke,gkKit}}
 function penFaceHTML(p,c,key){return `<span class="pg-face" style="${faceFrameStyle(p)}">${playerPortraitHTML(p,c,key)}</span>`}
 function penOverlay(o){penClose();const root=document.createElement('div');root.id='penGame';root.className='pg';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',o.title);
   root.innerHTML=`<div class="pg-top"><div class="pg-title">${esc(o.title)}</div><div class="pg-meta">${o.meta||''}</div><div class="pg-so" id="pgSo"></div></div><div class="pg-stage" id="pgStage" tabindex="0"><div class="pg-view" id="pgView"></div></div><div class="pg-bot" id="pgBot"></div>`;
@@ -6124,7 +6129,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
   let over=false;const token=PG.tok=(PG.tok||0)+1;const alive=()=>!!PG&&PG.root===root&&PG.tok===token;const finish=r=>{if(over||!alive())return;over=true;cb(r)};
   const end=(r,stage)=>{if(!alive())return;const fl=penFlash(host,o.mode,r.how);if(o.sfx){try{if(r.how==='goal')(kick?SFX.goal(true):(CROWD.goal(false)||SFX.groan()));else kick?SFX.groan():CROWD.chance()}catch(e){}}
     setTimeout(()=>{fl.remove();finish(r)},penQuick()?0:1150)};
-  penMakeStage(view,o.mode,{kit:o.taker.c.c1,trim:o.taker.c.c2,gkKit:colDist(o.taker.c.c1,'#f2b233')>120&&(!o.keeper||colDist(o.keeper.c.c1,'#f2b233')>120)?'#f2b233':'#39c3d6',oppKit:o.keeper?o.keeper.c.c1:'#e9edf2',number:tp.no||9}).then(st=>{
+  penMakeStage(view,o.mode,{...penKits(o.taker.c,o.keeper&&o.keeper.c,o.home),number:tp.no||9}).then(st=>{
     if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
     PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();try{SFX.whistle()}catch(e){}
     const ac=new AbortController();const on=(el,ev,fn)=>el.addEventListener(ev,fn,{signal:ac.signal,passive:false});
@@ -6167,7 +6172,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
 function penMatchKick(M,c,p,cb){const h=club(M.h),a=club(M.a);const opp=c.id===M.h?a:h;const mine=c.id===G.me;const gkx=xiPlayers(M,opp).find(x=>x.p.pos==='GK');
   const e=M.xi[c.id].find(x=>x.pid===p.id);const en=e?liveEnergy(M,c,p,e,M.m):100;
   penOverlay({title:mine?`פנדל ל${c.short||c.name}!`:`פנדל ל${c.short||c.name}`,meta:`<bdi dir="ltr">${fm(M.m)}</bdi> · <bdi>${esc(h.short)}</bdi> <bdi dir="ltr">${M.gh}:${M.ga}</bdi> <bdi>${esc(a.short)}</bdi>`});const pg=PG;
-  penKick({mode:mine?'kick':'keep',taker:{p,c},keeper:gkx?{p:gkx.p,c:opp}:null,energy:en,pressure:M.m>=85},r=>{if(!r.auto){if(mine&&r.out==='goal')M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save')M.penSaved=(M.penSaved||0)+1}
+  penKick({mode:mine?'kick':'keep',taker:{p,c},keeper:gkx?{p:gkx.p,c:opp}:null,home:M.h,energy:en,pressure:M.m>=85},r=>{if(!r.auto){if(mine&&r.out==='goal')M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save')M.penSaved=(M.penSaved||0)+1}
     setTimeout(()=>{if(PG!==pg)return;penClose();cb(r.out,r.how||(r.out==='goal'?null:(Math.random()<.5?'save':'off')))},penQuick()?0:250)})}
 /* a shoot-out at the end of a knockout tie */
 function penShootout(M,h,a,done){const meH=h.id===G.me;const my=meH?h:a,op=meH?a:h;const ord={h:penOrder(M,h),a:penOrder(M,a)};const gkOf=c=>{const x=xiPlayers(M,c).find(x=>x.p.pos==='GK');return x?{p:x.p,c}:null};
@@ -6182,7 +6187,7 @@ function penShootout(M,h,a,done){const meH=h.id===G.me;const my=meH?h:a,op=meH?a
   const autoRest=()=>{let w=penShootoutDone(S.h,S.a),g=0;while(!w&&g++<60){const c=side==='h'?h:a,o=side==='h'?a:h;const tk=ord[side][S[side].length%ord[side].length];const gk=gkOf(o);const s=penAiShot(penShootSkill(tk));S[side].push(penKickOutcome(s.x,s.y,penKeepSkill(gk&&gk.p)).out==='goal'?1:0);side=side==='h'?'a':'h';w=penShootoutDone(S.h,S.a)}finish(w||'h',true)};
   const next=()=>{const w=penShootoutDone(S.h,S.a);if(w)return finish(w);paint();const c=side==='h'?h:a,o=side==='h'?a:h;const tk=ord[side][S[side].length%ord[side].length];const mine=c.id===G.me;
     const e=M.xi[c.id].find(x=>x.pid===tk.id);
-    penKick({mode:mine?'kick':'keep',taker:{p:tk,c},keeper:gkOf(o),energy:e?liveEnergy(M,c,tk,e,M.m):100,pressure:S.h.length+S.a.length>=8,sfx:true},r=>{if(!PG||PG.root!==root)return;S[side].push(r.out==='goal'?1:0);if(mine&&r.out==='goal'&&!r.auto)M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save'&&!r.auto)M.penSaved=(M.penSaved||0)+1;side=side==='h'?'a':'h';paint();setTimeout(next,penQuick()?0:500)})};
+    penKick({mode:mine?'kick':'keep',taker:{p:tk,c},keeper:gkOf(o),home:h.id,energy:e?liveEnergy(M,c,tk,e,M.m):100,pressure:S.h.length+S.a.length>=8,sfx:true},r=>{if(!PG||PG.root!==root)return;S[side].push(r.out==='goal'?1:0);if(mine&&r.out==='goal'&&!r.auto)M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save'&&!r.auto)M.penSaved=(M.penSaved||0)+1;side=side==='h'?'a':'h';paint();setTimeout(next,penQuick()?0:500)})};
   PG.skipAll=autoRest;
   penPanel(`<div class="pg-end"><small>${esc(M.ctx.label||'')}</small><h2>הולכים לפנדלים</h2><p>חמש בעיטות לכל קבוצה. ${esc((first==='h'?h:a).short)} בועטת ראשונה.<br>כשאתה בועט: כוון ושחרר. כשהם בועטים: אתה בשער.</p><button type="button" class="btn big" id="pgGo">אני לוקח את זה</button><button type="button" class="btn sec" id="pgLet">שהשחקנים יחליטו</button></div>`);paint();
   root.querySelector('#pgGo').onclick=()=>{penPreload();next()};root.querySelector('#pgLet').onclick=()=>autoRest()}

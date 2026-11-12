@@ -58,7 +58,12 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
  R.play={};try{const P=R.play;
   await page.evaluate(()=>{closeModal();G.view='home';render()});await page.waitForTimeout(400);
   Object.assign(P,await page.evaluate(()=>({save:SAVE_VERSION,careerCard:!!document.querySelector('.car-home'),blitzEntry:!!document.querySelector('[data-blitz-open]'),achievements:achDefs().length})));
-  await page.evaluate(()=>{G.motion='full';G.sound=false;G.pressMode='off';G.replay=false;autoLineups();G.live=createMatch(me(),G.clubs.find(c=>c.id!==G.me),{kind:'friendly',label:'בדיקה חיה'});G.live.live=true;G.live.fresh=true;startLive(G.live)});
+  // every penalty of this match is the script's own: the engine decides any other one by itself, so the overlay opens only
+  // when asked ('mine' = we kick, 'opp' = we keep goal) and never over the screenshot of the shout bar
+  await page.evaluate(()=>{G.motion='full';G.sound=false;G.pressMode='off';G.replay=false;window.__step=stepMinute;window.__force=null;window.__forced=[];
+    stepMinute=function(M,ui){const f=window.__force;if(f&&ui&&ui.pen&&ui.pen()){window.__force=null;const c=f==='mine'?me():club(M.h===G.me?M.a:M.h);M.m++;M.pendingPen={team:c.id,pid:penTaker(M,c).id,m:M.m};window.__forced.push(M.m);return}
+      return window.__step(M)};
+    autoLineups();G.live=createMatch(me(),G.clubs.find(c=>c.id!==G.me),{kind:'friendly',label:'בדיקה חיה'});G.live.live=true;G.live.fresh=true;startLive(G.live)});
   await page.waitForSelector('.live-view');await page.evaluate(()=>document.querySelector('#kickBtn')?.click());
   // play on to the sixth minute: an injury opens the substitution dialog and waits for the manager, as it should
   const keepPlaying=async(test,what)=>{const t0=Date.now();for(;;){const s=await page.evaluate(()=>{const sk=document.querySelector('#modal [data-skip]');if(sk)sk.click();return {m:G.live?G.live.m:-1,btn:document.getElementById('ctrlBtn')?.textContent,pen:!!document.querySelector('#penGame')}});
@@ -67,10 +72,17 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   Object.assign(P,await page.evaluate(()=>({shoutButtons:document.querySelectorAll('[data-shout]').length,shoutReady:[...document.querySelectorAll('[data-shout]')].every(b=>!b.disabled),speeds:[...document.querySelectorAll('[data-spx]')].map(b=>b.dataset.spx).join(',')})));
   await page.evaluate(()=>document.querySelector('[data-shout="press"]').click());P.shout=await page.evaluate(()=>G.live.shout&&G.live.shout[G.me]&&G.live.shout[G.me].k);
   await page.evaluate(()=>document.getElementById('main').scrollTo(0,0));await page.screenshot({path:OUT+'live-shouts.png'});
-  await page.evaluate(()=>{window.__step=stepMinute;stepMinute=function(M,ui){if(ui&&ui.pen&&ui.pen()&&!window.__pen){window.__pen=1;M.m++;M.pendingPen={team:G.me,pid:penTaker(M,me()).id,m:M.m};return}return window.__step(M,ui)}});
-  await keepPlaying(()=>page.evaluate(()=>typeof PG!=='undefined'&&!!PG&&!!PG.stage),'the penalty overlay did not open');P.penaltyView=await page.evaluate(()=>PG.stage.kind);await page.waitForTimeout(600);await page.screenshot({path:OUT+'penalty.png'});
-  await page.evaluate(()=>PG.auto());await page.waitForFunction(()=>!document.querySelector('#penGame'),null,{timeout:40000});
-  P.penalty=await page.evaluate(()=>G.live.ev.filter(e=>e.t==='pen'||e.t==='penmiss').map(e=>e.t+':'+(e.how||'')).join(','));
+  // a penalty through the overlay. Our kick waits ten seconds for the manager, so the picture (the sight on the goal) comes
+  // first; a keeper has about two seconds before the ball is struck, so there the dive comes first
+  const penalty=async(side,shot,act)=>{await page.evaluate(s=>{window.__force=s},side);
+    await keepPlaying(()=>page.evaluate(()=>typeof PG!=='undefined'&&!!PG&&!!PG.stage&&!!PG.auto),'the penalty overlay did not open ('+side+')');
+    const r=await page.evaluate(()=>({view:PG.stage.kind,mode:PG.go?'keep':'kick',title:document.querySelector('#penGame .pg-title')?.textContent}));
+    if(side==='mine'){await page.waitForTimeout(500);await page.screenshot({path:OUT+shot});await page.evaluate(act)}
+    else{await page.evaluate(act);await page.waitForTimeout(150);await page.screenshot({path:OUT+shot})}
+    await page.waitForFunction(()=>!document.querySelector('#penGame'),null,{timeout:40000});
+    r.result=await page.evaluate(()=>{const m=window.__forced[window.__forced.length-1];return G.live.ev.filter(e=>(e.t==='pen'||e.t==='penmiss')&&e.m===m).map(e=>e.t+':'+(e.how||'')).join(',')});return r};
+  const kick=await penalty('mine','penalty.png',()=>{if(PG&&PG.auto)PG.auto()});P.penaltyView=kick.view;P.penalty=kick.result;P.penaltyMode=kick.mode;
+  P.keeper=await penalty('opp','penalty-keep.png',()=>{if(PG&&PG.go)PG.go('L')});
   await page.evaluate(()=>{stepMinute=window.__step;if(liveTimer){clearInterval(liveTimer);liveTimer=null}penClose();G.live=null;G.motion='off';G.view='home';render()});
   await page.evaluate(()=>document.querySelector('[data-blitz-open]').click());await page.waitForSelector('.bz-hero');await page.click('[data-bz-form="4-3-3"]');
   for(let i=0;i<11;i++){await page.waitForSelector('[data-bz-pick]');if(i===5){await settle();await page.screenshot({path:OUT+'blitz-draft.png'})}await page.evaluate(k=>document.querySelector(`[data-bz-pick="${k}"]`).click(),i%3)}
