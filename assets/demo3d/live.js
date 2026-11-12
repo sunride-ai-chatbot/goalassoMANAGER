@@ -13,6 +13,15 @@ export function createLiveView(host,{onError}){
   let renderer,world,ball,observer,disposed=false,paused=false,raf=0,lastTime=0,clip=null,lastClip=null,snapshot=null,time=0,queue=[],actors=new Map(),cameraMode=0,yaw=0,zoom=1,drag=null;
   let quality='auto',low=innerWidth<=900,frames=0,windowMs=0,slowWindows=0,activeMs=0;
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(48,1,.1,320),target=new T.Vector3();
+  // The name of the player on the ball, above his head: a plain element over the canvas, placed after every render.
+  const tag=document.createElement('div');tag.className='m3-tag';tag.hidden=true;const tagAt=new T.Vector3();let tagKey='',stageW=0,stageH=0;
+  function placeTag(p){
+    if(!p||!stageW){if(!tag.hidden)tag.hidden=true;return;}
+    tagAt.set(p.x,2.25,p.z).project(camera);
+    if(tagAt.z<-1||tagAt.z>1||Math.abs(tagAt.x)>1.05||Math.abs(tagAt.y)>1.05){if(!tag.hidden)tag.hidden=true;return;}
+    const key=p.team+':'+p.pid;if(key!==tagKey){tagKey=key;tag.textContent=p.short||p.name||'';tag.style.setProperty('--kit',p.kit||'#fff');}
+    tag.style.transform=`translate(${((tagAt.x*.5+.5)*stageW).toFixed(1)}px,${((-tagAt.y*.5+.5)*stageH).toFixed(1)}px) translate(-50%,-100%)`;if(tag.hidden)tag.hidden=false;
+  }
   const stats={fps:null,frames:0,quality:low?'low':'high',drawCalls:0,triangles:0,players:0};
   const events=new AbortController();
   function disposeObject(object){
@@ -37,6 +46,7 @@ export function createLiveView(host,{onError}){
     ball.shadow.position.set(state.ball.x,.028,state.ball.z);ball.shadow.material.opacity=.38/(1+state.ball.y);
     for(let i=0;i<2;i++)animateNet(world.goals[i],clip&&i===(clip.direction>0?1:0)?state.netTime:-1,clip?.path.at(-1).z||0);
     const b=state.ball,d=clip?.direction||1,portrait=camera.aspect<1;
+    const held=clip&&state.holder?state.players.find(p=>p.pid===state.holder.pid&&p.team===state.holder.team):null;
     target.set(T.MathUtils.clamp(b.x,-43,43),.8,b.z*.45);
     // first person (modes 3 and 4): the camera sits at the eyes of the shooter or of the keeper facing him and follows
     // the ball; his own body is hidden so the view is clear. Without a running clip it falls back to the broadcast view.
@@ -47,13 +57,13 @@ export function createLiveView(host,{onError}){
       if(eye.distanceTo(look)<2.6)look.set(end.x,1.1,end.z);   // the ball at his feet: he looks where he is about to send it
       const dir=look.clone().sub(eye).setY(0).normalize();camera.position.copy(eye).addScaledVector(dir,.22);
       if(camera.fov!==72){camera.fov=72;camera.updateProjectionMatrix()}camera.lookAt(look);
-      renderer.render(scene,camera);stats.frames++;stats.drawCalls=renderer.info.render.calls;stats.triangles=renderer.info.render.triangles;return}
+      renderer.render(scene,camera);placeTag(held&&held!==fp?held:null);stats.frames++;stats.drawCalls=renderer.info.render.calls;stats.triangles=renderer.info.render.triangles;return}
     if(camera.fov!==48){camera.fov=48;camera.updateProjectionMatrix()}
     let offset=cameraMode===0||cameraMode>=3?new T.Vector3(-12*d,portrait?24:21,portrait?43:35):cameraMode===1?new T.Vector3(-9*d,5,15):new T.Vector3(22*d,12,18);
     offset.multiplyScalar(zoom).applyAxisAngle(new T.Vector3(0,1,0),yaw);camera.position.copy(target).add(offset);camera.lookAt(target);
-    renderer.render(scene,camera);stats.frames++;stats.drawCalls=renderer.info.render.calls;stats.triangles=renderer.info.render.triangles;
+    renderer.render(scene,camera);placeTag(held);stats.frames++;stats.drawCalls=renderer.info.render.calls;stats.triangles=renderer.info.render.triangles;
   }
-  function resize(){if(disposed)return;const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();draw();}
+  function resize(){if(disposed)return;const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;stageW=w;stageH=h;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();draw();}
   function applyQuality(){const reduced=quality==='low'||(quality==='auto'&&low);renderer.setPixelRatio(Math.min(devicePixelRatio||1,reduced?1:1.5));renderer.shadowMap.enabled=!reduced;stats.quality=reduced?'low':'high';resize();}
   function setCaption(replaying=false){if(!clip)return;const labels={goal:'שער',save:'הדיפה',miss:'מחוץ למסגרת',post:'קורה'};caption.textContent=`${replaying?'שידור חוזר · ':''}${clip.minute}′ · ${labels[clip.outcome]} · ${clip.name}${clip.outcome==='save'&&clip.keeperName?' · השוער: '+clip.keeperName:''}`;}
   function next(){clip=queue.shift()||null;time=0;activeMs=0;if(clip){lastClip=clip;replay.disabled=true;setCaption();}else{replay.disabled=!lastClip;caption.textContent='ממתין למצב הבא · התוצאה בלוח המשחק';}draw();}
@@ -72,7 +82,7 @@ export function createLiveView(host,{onError}){
   });}
   function setPaused(value){paused=!!value;cancelAnimationFrame(raf);raf=0;lastTime=performance.now();frames=0;windowMs=0;schedule();}
   try{
-    renderer=new T.WebGLRenderer({antialias:false,powerPreference:'default'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.type=T.PCFSoftShadowMap;stage.append(renderer.domElement);
+    renderer=new T.WebGLRenderer({antialias:false,powerPreference:'default'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.type=T.PCFSoftShadowMap;stage.append(renderer.domElement,tag);
     world=buildWorld(scene,renderer);ball=makeBall(scene);applyQuality();
     renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();if(!disposed)fail();},{signal:events.signal});
     observer=new ResizeObserver(()=>guarded(resize));observer.observe(stage);
@@ -92,7 +102,7 @@ export function createLiveView(host,{onError}){
   }catch(e){dispose();throw e;}
   return {
     get busy(){return !disposed&&(!!clip||queue.length>0);},
-    get diagnostics(){return {...stats,eventId:clip?.id??null,time,queued:queue.length,disposed};},
+    get diagnostics(){return {...stats,eventId:clip?.id??null,time,queued:queue.length,disposed,tag:tag.hidden?null:tag.textContent};},
     sync(value){snapshot=value;if(!clip)guarded(draw);},
     enqueue(clips){if(disposed)return;if(queue.length+clips.length>32){fail();return;}queue.push(...clips);if(!clip)guarded(next);schedule();},
     setPaused,dispose

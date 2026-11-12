@@ -17,7 +17,7 @@ const Match3D = (() => {
           const group = xi.filter(x => x.slot === e.slot), n = group.indexOf(e);
           const depth = {GK:4,DF:22,MF:36,FW:47}[e.slot] || 30;
           const x = side ? 105-depth : depth, y = e.slot === 'GK' ? 34 : 10+48*(n+1)/(group.length+1);
-          return {pid:e.pid,team:c.id,side,slot:e.slot,name:p?fullName(p):'',number:p?.no||i+1,
+          return {pid:e.pid,team:c.id,side,slot:e.slot,name:p?fullName(p):'',short:p?(p.last||p.first||''):'',number:p?.no||i+1,
             x:x-52.5,z:y-34,kit:cols.fill,trim:cols.stroke};
         });
       })});
@@ -31,7 +31,9 @@ const Match3D = (() => {
     if (!shooter) return null; // Old/incomplete events remain in the existing commentary.
     const direction = (e.team === after.home ? 1 : -1) * (e.m > 45 ? -1 : 1);
     const flip = e.m > 45 ? -1 : 1;
-    return freeze({id:index,minute:e.m,outcome,team:e.team,shooter:e.pid,
+    // the passer of the final ball, when the engine recorded one who is on the pitch: the picture names him while he has it
+    const assist = e.asst != null && e.asst !== e.pid && roster.players.some(p => p.pid === e.asst && p.team === e.team) ? e.asst : null;
+    return freeze({id:index,minute:e.m,outcome,team:e.team,shooter:e.pid,assist,
       keeper:e.gk ?? roster.players.find(p => p.team !== e.team && p.slot === 'GK')?.pid ?? null,
       name:shooter.name,keeperName:e.sub==='save'?e.name:'',direction,score:[...after.score],
       path:e.path.map(([x,y]) => ({x:(x-52.5)*direction,z:(y-34)*direction})),

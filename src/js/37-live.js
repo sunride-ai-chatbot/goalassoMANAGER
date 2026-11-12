@@ -147,13 +147,14 @@ function startLive(restored){
     const d=openModal('',e=>{
       const o=e.target.closest('[data-out]');if(o){outId=+o.dataset.out;draw();return}
       const i=e.target.closest('[data-in]');if(i){const inId=+i.dataset.in;if(M.xi[c.id].length>=11&&!outId){toast('בחר קודם מי יוצא');return}
+        if(subBreaksForeign(M,c,outId,b.find(p=>p.id===inId))){toast(`מגבלת זרים: כבר ${MAX_FOREIGN_XI} זרים על המגרש. הוצא זר או הכנס ישראלי`);return}
         if(doSub(M,c,outId,inId)){save();closeModal();flush();if(!M.awaitingHalf)resume()}return}
       if(e.target.closest('[data-skip]')){closeModal();if(!M.awaitingHalf)resume()}
     });d.dataset.lock='1';
     function draw(){const need=M.xi[c.id].length<11;
       d.querySelector('.card').innerHTML=`<h3 class="sec">חילוף · ${fm(M.m)}</h3>${need?'<div class="small muted">יש לך פחות מ-11 שחקנים על המגרש, בחר מי נכנס.</div>':'<div class="small muted">בחר מי יוצא ואז מי נכנס.</div>'}
       ${need?'':`<div class="muted tiny" style="margin-top:8px">על המגרש</div><div class="list">${xs.map(({p,e})=>playerRow(p,'',outId===p.id?'sel':'',`${POSHE[p.pos]} · כושר ${p.form>0?'+':''}${p.form.toFixed(1)}${e.yel?' · 🟨':''}${M.m-e.since>60?' · עייף':''}`).replace('data-pid','data-out')).join('')}</div>`}
-      <div class="muted tiny" style="margin-top:8px">ספסל</div><div class="list">${b.map(p=>playerRow(p,'','',`${POSHE[p.pos]} · ${p.age}`).replace('data-pid','data-in')).join('')||'<div class="muted small">אין שחקנים זמינים</div>'}</div>
+      <div class="muted tiny" style="margin-top:8px">ספסל${foreignLimited(c)?` · זרים על המגרש <bdi>${foreignOnPitch(M,c)}/${MAX_FOREIGN_XI}</bdi>`:''}</div><div class="list">${b.map(p=>playerRow(p,'',subBreaksForeign(M,c,outId,p)?'off':'',`${POSHE[p.pos]} · ${p.age}${subBreaksForeign(M,c,outId,p)?' · זר: חורג מהמכסה':''}`).replace('data-pid','data-in')).join('')||'<div class="muted small">אין שחקנים זמינים</div>'}</div>
       ${(()=>{const out=[...M.used[c.id].map(id=>{const p=c.players.find(x=>x.id===id);return p?`${esc(p.last||p.first)} (הוחלף)`:''}),...M.ev.filter(e=>e.team===c.id&&(e.t==='inj'||e.t==='red')).map(e=>`${esc(e.name)} (${e.t==='inj'?'נפצע':'הורחק'})`),...c.players.filter(p=>(p.inj>0||p.susp>0)&&!M.ev.some(e=>e.pid===p.id&&(e.t==='inj'||e.t==='red'))).map(p=>`${esc(p.last||p.first)} (${p.inj>0?'פצוע':'מורחק'})`)].filter(Boolean);return out.length?`<div class="muted tiny" style="margin-top:8px">לא זמינים: ${out.join(' · ')}</div>`:''})()}
       <div class="muted tiny" style="margin-top:4px">${M.subs[c.id]}/${MAX_SUBS} חילופים נוצלו · שחקן שהוחלף לא חוזר למגרש</div>
       <div class="actions" style="margin-top:10px"><button class="btn sec" data-skip>${need?(M.subs[c.id]>=MAX_SUBS||!b.length?'המשך בחוסר':'המשך בלי חילוף (בחוסר)'):'ביטול'}</button></div>`}

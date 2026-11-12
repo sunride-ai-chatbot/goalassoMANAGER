@@ -102,6 +102,32 @@ function matchColors(h,a){const strokeOf=c=>c==='#ffffff'?'#111':c;const hf=h.c1
   if(colDist(hf,af)<110){if(a.c2&&a.c2!=='#ffffff'&&colDist(hf,a.c2)>=110){af=a.c2;as=a.c1}else{const lum=hexRGB(hf).reduce((s,v)=>s+v,0)/3;af=lum>140?'#1b1b1b':'#ffffff';as=lum>140?'#fff':'#111'}}
   return {h:{fill:hf,stroke:hs,shorts:hs},a:{fill:af,stroke:as,shorts:as}}}
 function tokenSVG(col,gk,num,shorts){const bodyFill=gk?col.stroke:col.fill,bodyStroke=gk?col.fill:col.stroke;const sh=shorts||bodyStroke;return `<ellipse class="sh" cx="0" cy=".3" rx="2.2" ry=".7" fill="rgba(0,0,0,.42)"/><path d="M-1.15,0 L-.95,-1.5 M1.15,0 L.95,-1.5" stroke="${bodyFill}" stroke-width=".75" stroke-linecap="round"/><path d="M-1.15,-.05 L-.85,-.6 M1.15,-.05 L.85,-.6" stroke="#f3f3f3" stroke-width=".8"/><rect x="-1.45" y="-2.75" width="2.9" height="1.45" rx=".35" fill="${sh}"/><path d="M-1.6,-5.4 Q0,-5.95 1.6,-5.4 L2.35,-4.5 L1.7,-3.95 L1.45,-4.3 L1.45,-2.6 L-1.45,-2.6 L-1.45,-4.3 L-1.7,-3.95 L-2.35,-4.5 Z" fill="${bodyFill}" stroke="rgba(0,0,0,.35)" stroke-width=".18"/><circle cx="0" cy="-6.35" r=".95" fill="#c99a78"/><path d="M-.95,-6.5 Q0,-7.6 .95,-6.5 Q.5,-7 0,-7 Q-.5,-7 -.95,-6.5Z" fill="#2a1d14"/><text class="no" x="0" y="-3.05" text-anchor="middle" font-size="1.75" font-weight="700" fill="${bodyStroke}">${num||''}</text><text class="lab" x="0" y="2.8" text-anchor="middle" font-size="2.5" fill="#fff" stroke="rgba(0,0,0,.75)" stroke-width=".4" paint-order="stroke" style="display:none"></text><ellipse class="ring" cx="0" cy=".3" rx="2.8" ry="1" fill="none" stroke="#27f0a6" stroke-width=".35" style="display:none"/>`}
+/* ---- who has the ball -------------------------------------------------------------------------------------------------
+   In open play the ball is played to one player of the side in possession and stays at his feet until the next pass; his
+   name is shown beside him. The minute still decides the side (st.poss) and the area the move heads for (st.focus, the same
+   two random numbers the ball's target used to take); which team-mate receives the ball comes from a small generator of
+   the picture's own (st.rs), so the picture takes nothing more from Math.random than it did. A carrier keeps the ball for
+   CARRY_MIN ms at least, so the name can be read at every match speed. Shots, corners, celebrations and replays move the
+   ball themselves: nobody carries it then. Shared by the SVG pitch and the WebGL pitch (same state contract). */
+const CARRY_MIN=650,LAB_FS=4.2;
+const tokOn=d=>d.el?d.el.style.display!=='none':d.show!==false;
+const tokKeeper=d=>Math.abs(d.bx-52.5)>41;
+function carryRnd(st){st.rs=(Math.imul(st.rs==null?0x9e3779b9:st.rs,1664525)+1013904223)>>>0;return st.rs/4294967296}
+function carryMinute(st,attRight,now){
+  const fx=attRight?rnd(45,95):rnd(10,60),fy=rnd(8,60);
+  const cur=st.car;if(cur&&tokOn(cur.d)&&now-cur.t0<CARRY_MIN)return;      // too soon to change hands (fast match speeds)
+  st.focus={x:fx,y:fy};const team=st.poss,arr=(team===st.hid?st.h:st.a).filter(d=>tokOn(d)&&!tokKeeper(d));if(!arr.length){st.car=null;return}
+  const b=st.ball;let next;
+  if(!cur||cur.team!==team||!tokOn(cur.d))next=arr.reduce((m,d)=>Math.hypot(d.x-b.x,d.y-b.y)<Math.hypot(m.x-b.x,m.y-b.y)?d:m);   // the side wins the ball: its nearest man takes it
+  else if(arr.length>1&&carryRnd(st)<.72){let bs=-1e9;for(const d of arr){if(d===cur.d)continue;const sc=-Math.hypot(d.x-fx,d.y-fy)+carryRnd(st)*14;if(sc>bs){bs=sc;next=d}}}   // a pass towards the area of the move
+  else return;                                                               // he keeps it and carries on
+  st.car={d:next,pid:next.pid,team,t0:now}}
+/* every frame: in open play the ball goes to the carrier's feet (a pass is the ball travelling to its new owner).
+   Returns the carrier's token, also kept in st.carNow for the name label, or null */
+function carryFrame(st){const c=st.car;if(!c||st.seq||st.hold||st.snap||st.celeb||st.rp||st.entranceDone===false)return st.carNow=null;
+  const d=c.d;if(!tokOn(d)){st.car=null;return st.carNow=null}
+  const dir=((c.team===st.hid)===!st.flip)?1:-1;st.ball.tx=clamp(d.x+dir*1.2,1,104);st.ball.ty=clamp(d.y+.45,1,67);return st.carNow=d}
+function carryTarget(st,d){const f=st.focus||{x:52.5,y:34};return [clamp(d.bx+(f.x-d.bx)*.62,3,102),clamp(d.by+(f.y-d.by)*.62,3,65)]}
 function initPitch2d(M,h,a){if($('pxHost'))return PX.init(M,h,a);return initPitch2dSVG(M,h,a)}
 function initPitch2dSVG(M,h,a){const svg=$('p2d');if(!svg)return null;const cols=matchColors(h,a);
   const st={h:[],a:[],ball:{x:52.5,y:34,tx:52.5,ty:34,z:0},poss:h.id,flash:0,flip:false,seq:null,hold:false,heat:{[h.id]:Array(60).fill(0),[a.id]:Array(60).fill(0)},frame:0,labels:{},cols,hid:h.id,aid:a.id,showPaths:false,entrance:motionLevel()==='full'};
@@ -118,15 +144,15 @@ function pitchMinute(st,M,h,a,events){if(!st)return;if(st.px)return PX.minute(st
   const flip=M.m>45;if(flip!==st.flip){st.flip=flip}
   const lastPoss=M.poss[h.id]+M.poss[a.id];const homeHas=Math.random()<(M.poss[h.id]/Math.max(1,lastPoss));st.poss=homeHas?h.id:a.id;
   const homeRight=!flip;const attRight=homeHas?homeRight:!homeRight;
-  if(!st.seq){st.ball.tx=attRight?rnd(45,95):rnd(10,60);st.ball.ty=rnd(8,60)}
+  if(!st.seq)carryMinute(st,attRight,performance.now());
   for(const e of events){const mineRight=(e.team===h.id)===homeRight;
-    if(e.path&&(e.t==='shot'||e.t==='goal'||e.t==='pen'||e.t==='penmiss')){const pts=e.path.map(([x,y])=>mineRight?[x,y]:[105-x,68-y]);st.seq={pts,i:0,t:0,ev:e,team:e.team,done:false};st.ball.x=pts[0][0];st.ball.y=pts[0][1];if(e.pid)st.labels[e.pid]=performance.now()+2600;if(e.asst)st.labels[e.asst]=performance.now()+2600;if(e.gk)st.labels[e.gk]=performance.now()+2600;
+    if(e.path&&(e.t==='shot'||e.t==='goal'||e.t==='pen'||e.t==='penmiss')){const pts=e.path.map(([x,y])=>mineRight?[x,y]:[105-x,68-y]);st.car=null;st.seq={pts,i:0,t:0,ev:e,team:e.team,done:false};st.ball.x=pts[0][0];st.ball.y=pts[0][1];if(e.pid)st.labels[e.pid]=performance.now()+2600;if(e.asst)st.labels[e.asst]=performance.now()+2600;if(e.gk)st.labels[e.gk]=performance.now()+2600;
       if(st.showPaths||e.t==='goal'||e.t==='pen')drawPath(st,pts,e,(e.team===G.me)?'#27f0a6':'#ffd34d',e.t==='goal'||e.t==='pen'?5200:3200)}
     if(e.t==='goal'||e.t==='pen'||e.t==='own'){st.flash=30;flashText(st,52.5,-6,'שער!',e.team===G.me?'#27f0a6':'#ffd34d',9);crowdPulse(st,e.team===G.me?'me':'')}
     else if(e.t==='penmiss'){flashText(st,52.5,-6,'פנדל הוחמץ','#ff5c6c',6)}
     else if(e.t==='shot'&&e.sub==='post'){flashText(st,52.5,-6,'קורה!','#fff',6)}
     else if(e.t==='shot'&&e.sub==='save'&&!e.quiet){flashText(st,52.5,-6,'הצלה!','#5cb8ff',6)}
-    else if(e.t==='corner'){const r=mineRight;st.ball.tx=r?104:1;st.ball.ty=Math.random()<.5?1:67}
+    else if(e.t==='corner'){const r=mineRight;st.car=null;st.ball.tx=r?104:1;st.ball.ty=Math.random()<.5?1:67}
     else if(e.t==='var'){flashText(st,52.5,-6,'VAR','#fff',7)}
     else if(e.t==='red'||e.t==='yellow'){if(e.pid)st.labels[e.pid]=performance.now()+2200}}
   const sync=(arr,c,homeSide)=>{const pos=pitchPositions(c,M,homeSide);const alive=new Set(M.xi[c.id].map(e=>e.pid));
@@ -138,8 +164,16 @@ function drawPath(st,pts,e,color,ms){if(!st.paths)return;const g=document.create
 function flashText(st,x,y,txt,color,size){if(!st.fx)return;const [X,Y]=prj(x,y);const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',X);t.setAttribute('y',Y);t.setAttribute('text-anchor','middle');t.setAttribute('font-size',size||6);t.setAttribute('font-weight','700');t.setAttribute('fill',color);t.setAttribute('stroke','rgba(0,0,0,.75)');t.setAttribute('stroke-width','.45');t.setAttribute('paint-order','stroke');t.setAttribute('class','ftxt');t.textContent=txt;st.fx.appendChild(t);setTimeout(()=>t.remove(),1500)}
 function crowdPulse(st,cls){const ar=$('arena');if(!ar)return;ar.classList.remove('pulse','pulse-me');void ar.offsetWidth;ar.classList.add(cls==='me'?'pulse-me':'pulse');setTimeout(()=>ar.classList.remove('pulse','pulse-me'),1600)}
 function placeTok(d,now,st){const [X,Y]=prj(d.x,d.y);const s=prjS(d.y);d.el.setAttribute('transform',`translate(${X.toFixed(2)} ${Y.toFixed(2)}) scale(${s.toFixed(3)})`);
-  const until=st.labels[d.pid];const show=until&&until>now;if(show!==d.showing){d.showing=show;d.lab.style.display=show?'':'none';d.ring.style.display=show?'':'none';if(show)d.lab.textContent=d.name}}
-function pitchFrame(st){if(!st)return;if(st.px)return PX.frame(st);const now=performance.now();st.frame++;const b=st.ball;
+  const has=d===st.carNow,until=st.labels[d.pid];const show=!!(until&&until>now);const key=show?1:has?2:0;
+  if(key!==d.showing){d.showing=key;d.lab.style.display=show?'':'none';d.ring.style.display=key?'':'none';d.ring.setAttribute('stroke',show?'#27f0a6':'#ffffff');if(show)d.lab.textContent=d.name}
+  if(show){const fs=LAB_FS/s;d.lab.setAttribute('font-size',fs.toFixed(2));d.lab.setAttribute('y',(1+fs*.84).toFixed(2));d.lab.setAttribute('stroke-width',(.5/s).toFixed(2))}}
+/* the name of the player on the ball: one label above everything else on the pitch, the same size wherever he is */
+function carryLabel(st,d){if(!st.fx)return;let t=st.carLab;
+  if(!d){if(t&&t.style.display!=='none')t.style.display='none';return}
+  if(!t){t=st.carLab=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('class','carlab');t.setAttribute('text-anchor','middle');t.setAttribute('font-size',LAB_FS);t.setAttribute('font-weight','800');t.setAttribute('fill','#fff');t.setAttribute('stroke','rgba(4,10,18,.85)');t.setAttribute('stroke-width','.6');t.setAttribute('paint-order','stroke');t.setAttribute('pointer-events','none');st.fx.appendChild(t)}
+  if(st.carLabPid!==d.pid){st.carLabPid=d.pid;t.textContent=d.name}
+  const [X,Y]=prj(d.x,d.y);t.setAttribute('x',X.toFixed(2));t.setAttribute('y',(Y+1.1*prjS(d.y)+LAB_FS*.84).toFixed(2));if(t.style.display==='none')t.style.display=''}
+function pitchFrame(st){if(!st)return;if(st.px)return PX.frame(st);const now=performance.now();st.frame++;const b=st.ball;const cd=carryFrame(st);
   if(st.snap){if(st.seq){const e=st.seq.pts[st.seq.pts.length-1];b.x=e[0];b.y=e[1];st.seq=null}else{b.x=b.tx;b.y=b.ty}b.z=0}
   else if(st.seq&&!st.hold){const q=st.seq;const p0=q.pts[q.i],p1=q.pts[q.i+1];if(!p1){st.seq=null;b.tx=b.x;b.ty=b.y}else{const len=Math.hypot(p1[0]-p0[0],p1[1]-p0[1]);const last=q.i===q.pts.length-2;const spd=(last?2.6:1.5)/Math.max(6,len);q.t+=spd;const t=Math.min(1,q.t);b.x=p0[0]+(p1[0]-p0[0])*t;b.y=p0[1]+(p1[1]-p0[1])*t;b.z=len>14&&!last?Math.sin(t*Math.PI)*Math.min(4,len*.16):(last?Math.sin(t*Math.PI)*.8:0);b.tx=b.x;b.ty=b.y;
       const mover=q.team===st.hid?st.h:st.a;const shooter=mover.find(d=>d.pid===q.ev.pid);if(shooter){shooter.tx=q.pts[q.pts.length-2][0];shooter.ty=q.pts[q.pts.length-2][1]}
@@ -147,7 +181,7 @@ function pitchFrame(st){if(!st)return;if(st.px)return PX.frame(st);const now=per
       if(q.t>=1){q.i++;q.t=0;if(q.i>=q.pts.length-1){st.seq=null;b.z=0}}}}
   else if(!st.hold){b.x+=(b.tx-b.x)*.1;b.y+=(b.ty-b.y)*.1;b.z*=.85}
   const [BX,BY]=prj(b.x,b.y);const bs=prjS(b.y);st.ballEl.setAttribute('transform',`translate(${BX.toFixed(2)} ${BY.toFixed(2)}) scale(${bs.toFixed(3)})`);st.ballBody.setAttribute('cy',(-.95-b.z).toFixed(2));st.ballMark.setAttribute('transform',`translate(0 ${(-.95-b.z).toFixed(2)}) rotate(${(st.frame*9)%360})`);st.ballSh.setAttribute('rx',(1+b.z*.15).toFixed(2));st.ballSh.setAttribute('opacity',(.4-b.z*.05).toFixed(2));
-  const move=(arr)=>{for(const d of arr){if(d.el.style.display==='none')continue;let tx,ty;if(d.tx!=null){tx=d.tx;ty=d.ty;if(Math.hypot(tx-d.x,ty-d.y)<.6){d.tx=null}}else{const pull=st.entranceDone===false?0:.22;tx=d.bx+(b.x-d.bx)*pull;ty=d.by+(b.y-d.by)*pull}const k=st.snap?1:st.hold?.03:.085;d.x+=(tx-d.x)*k;d.y+=(ty-d.y)*k;placeTok(d,now,st)}};move(st.h);move(st.a);
+  const move=(arr)=>{for(const d of arr){if(d.el.style.display==='none')continue;let tx,ty;if(d.tx!=null){tx=d.tx;ty=d.ty;if(Math.hypot(tx-d.x,ty-d.y)<.6){d.tx=null}}else if(d===cd){[tx,ty]=carryTarget(st,d)}else{const pull=st.entranceDone===false?0:.22;tx=d.bx+(b.x-d.bx)*pull;ty=d.by+(b.y-d.by)*pull}const k=st.snap?1:st.hold?.03:.085;d.x+=(tx-d.x)*k;d.y+=(ty-d.y)*k;placeTok(d,now,st)}};move(st.h);move(st.a);carryLabel(st,cd&&!(st.labels[cd.pid]>now)?cd:null);
   if(st.frame%6===0){for(const arr of [st.h,st.a]){const grid=st.heat[arr===st.h?st.hid:st.aid];for(const d of arr){if(d.el.style.display==='none')continue;const gx=clamp(Math.floor(d.x/10.5),0,9),gy=clamp(Math.floor(d.y/11.4),0,5);grid[gy*10+gx]++}}}
   if(st.frame%4===0){const all=[...st.h,...st.a].filter(d=>d.el.style.display!=='none').sort((p,q)=>p.y-q.y);const par=st.ballEl.parentNode;let changed=false;for(let i=0;i<all.length;i++){if(par.children[i]!==all[i].el){changed=true;break}}if(changed){for(const d of all)par.appendChild(d.el);par.appendChild(st.ballEl)}else if(par.lastChild!==st.ballEl)par.appendChild(st.ballEl)}
   if(st.flash>0){st.flash--;st.flashEl.setAttribute('opacity',(st.flash>24?(st.flash-24)/6*.5:0).toFixed(2))}

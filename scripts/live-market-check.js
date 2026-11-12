@@ -73,6 +73,7 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
     if(await test(s))return s;if(Date.now()-t0>60000)throw new Error('live match: '+what+' (minute '+s.m+', button '+s.btn+')');await page.waitForTimeout(400)}};
   await keepPlaying(s=>s.m>=6,'the clock did not reach the sixth minute');
   Object.assign(P,await page.evaluate(()=>({shoutButtons:document.querySelectorAll('[data-shout]').length,shoutReady:[...document.querySelectorAll('[data-shout]')].every(b=>!b.disabled),speeds:[...document.querySelectorAll('[data-spx]')].map(b=>b.dataset.spx).join(',')})));
+  P.carrier=await page.evaluate(()=>{const st=typeof PX!=='undefined'&&PX.cur&&PX.cur.ready?PX.cur:null;return st&&st.car?st.car.d.name:null});   // the player on the ball (WebGL pitch), when one has it at this moment
   await page.evaluate(()=>document.querySelector('[data-shout="press"]').click());P.shout=await page.evaluate(()=>G.live.shout&&G.live.shout[G.me]&&G.live.shout[G.me].k);
   await page.evaluate(()=>document.getElementById('main').scrollTo(0,0));await page.screenshot({path:OUT+'live-shouts.png'});
   // a penalty through the overlay. Our kick waits ten seconds for the manager, so the picture (the sight on the goal) comes
@@ -95,4 +96,16 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   P.blitz=await page.evaluate(()=>({squad:me().players.length,invented:me().players.filter(inventedPlayer).length,rating:+blitzRating(BLITZ.picks).toFixed(1),bonus:blitzBonus(BLITZ.picks),opponent:BLITZ.opp.name,sandbox:SANDBOX}));
   await page.evaluate(()=>blitzExit());P.backInCareer=await page.evaluate(()=>!SANDBOX&&!G.blitz&&me().id==='hbs');
  }catch(e){R.play.error=String(e&&e.message||e).slice(0,300)}
+ // The beginner mode (beginner.html beside the page): each number of the live score on its own team's side, the name of the
+ // player on the ball, ratings of both sides after the final whistle
+ R.beginner={};try{const B=R.beginner;const bp=await ctx.newPage();bp.on('pageerror',e=>errs.push('beginner: '+String(e).slice(0,200)));await bp.addInitScript(()=>{window.__ilmNoSplash=1});
+  const u=new URL(BASE);u.pathname=u.pathname.replace(/[^/]*$/,'')+'beginner.html';await bp.goto(u.href,{waitUntil:'load',timeout:90000});await bp.waitForFunction(()=>typeof Bcreate==='function'&&document.querySelectorAll('[data-start]').length>10,null,{timeout:60000});
+  await bp.evaluate(()=>{Bcreate('mta');Bplay()});await bp.waitForSelector('#bscore .sd-h');
+  await bp.waitForFunction(()=>Bpitch&&Bpitch.carLab&&Bpitch.carLab.style.display!=='none'&&Bpitch.carNow,null,{timeout:30000});
+  B.carrier=await bp.evaluate(()=>({label:Bpitch.carLab.textContent,name:Bpitch.carNow.name,size:Math.round(Bpitch.carLab.getBoundingClientRect().height)}));await bp.evaluate(()=>scrollTo(0,0));await bp.screenshot({path:OUT+'beginner-live.png'});
+  Object.assign(B,await bp.evaluate(()=>{const live=Bstate().live,M=live.M;live.paused=true;M.gh=2;M.ga=0;BpaintBroadcast();const x=s=>{const r=document.querySelector(s).getBoundingClientRect();return Math.round(r.left+r.width/2)};const t=[...document.querySelectorAll('.bscoreboard>div strong')];
+   const o={home:t[0].textContent,homeX:x('.bscoreboard>div:first-child strong'),awayX:x('.bscoreboard>div:last-child strong'),homeGoalsX:x('#bscore .sd-h'),awayGoalsX:x('#bscore .sd-a')};o.scoreOnOwnSide=(o.homeX>o.awayX)===(o.homeGoalsX>o.awayGoalsX);M.gh=0;M.ga=0;live.paused=false;BpaintBroadcast();return o}));
+  await bp.evaluate(()=>document.querySelector('[data-blive="skip"]').click());await bp.waitForSelector('.bresult .bratings');await bp.waitForTimeout(300);await bp.screenshot({path:OUT+'beginner-ratings.png'});
+  B.ratings=await bp.evaluate(()=>({teams:[...document.querySelectorAll('.bratings-cols h4')].map(h=>h.textContent),rows:[...document.querySelectorAll('.bratings-cols>div')].map(d=>d.querySelectorAll('li').length),star:document.querySelector('.bratings-star strong')?.textContent||null}));await bp.close();
+ }catch(e){R.beginner.error=String(e&&e.message||e).slice(0,300)}
  R.errors=errs;R.url=BASE;R.at=new Date().toISOString();R.build=await page.evaluate(()=>document.querySelector('meta[name="goalasso-build"]')?.content||null);require('fs').writeFileSync(OUT+'report.json',JSON.stringify(R,null,1));console.log(JSON.stringify(R,null,1));await b.close()})().catch(e=>{console.error(e);process.exit(1)});

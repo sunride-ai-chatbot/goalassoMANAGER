@@ -138,10 +138,10 @@ PX.path=(st,pts,e,color,ms)=>{if(!st.ready)return;const P=st.P;const g=new P.Gra
 PX.minute=(st,M,h,a,events)=>{
   const flip=M.m>45;st.flip=flip;const homeRight=!flip;
   const tot=M.poss[h.id]+M.poss[a.id];const homeHas=Math.random()<(M.poss[h.id]/Math.max(1,tot));st.poss=homeHas?h.id:a.id;const attRight=homeHas?homeRight:!homeRight;
-  if(!st.seq&&!st.celeb){st.ball.tx=attRight?rnd(45,95):rnd(10,60);st.ball.ty=rnd(8,60)}
   const now=performance.now();
+  if(!st.seq&&!st.celeb)carryMinute(st,attRight,now);
   for(const e of events){const mineRight=(e.team===h.id)===homeRight;
-    if(e.path&&(e.t==='shot'||e.t==='goal'||e.t==='pen'||e.t==='penmiss')){const pts=e.path.map(([x,y])=>mineRight?[x,y]:[105-x,68-y]);st.seq={pts,i:0,t:0,ev:e,team:e.team};st.ball.x=pts[0][0];st.ball.y=pts[0][1];
+    if(e.path&&(e.t==='shot'||e.t==='goal'||e.t==='pen'||e.t==='penmiss')){const pts=e.path.map(([x,y])=>mineRight?[x,y]:[105-x,68-y]);st.car=null;st.seq={pts,i:0,t:0,ev:e,team:e.team};st.ball.x=pts[0][0];st.ball.y=pts[0][1];
       for(const id of [e.pid,e.asst,e.gk])if(id)st.labels[id]=now+2800;
       if(st.showPaths||e.t==='goal'||e.t==='pen')PX.path(st,pts,e,e.team===G.me?0x27f0a6:0xffd34d,e.t==='goal'||e.t==='pen'?5200:3200);
       if(e.sub==='save'&&e.gk){const end=pts[pts.length-1];st.dive={pid:e.gk,dir:end[1]>34?1:-1,until:now+1400,at:now+650}}}
@@ -151,7 +151,7 @@ PX.minute=(st,M,h,a,events)=>{
     else if(e.t==='penmiss')PX.toast(st,'פנדל הוחמץ','#ff5c6c');
     else if(e.t==='shot'&&e.sub==='post')PX.toast(st,'קורה','#ffffff');
     else if(e.t==='shot'&&e.sub==='save'&&!e.quiet)PX.toast(st,'הצלה','#5cb8ff');
-    else if(e.t==='corner'){st.ball.tx=mineRight?104:1;st.ball.ty=Math.random()<.5?1:67}
+    else if(e.t==='corner'){st.car=null;st.ball.tx=mineRight?104:1;st.ball.ty=Math.random()<.5?1:67}
     else if(e.t==='var')PX.toast(st,'VAR','#ffffff');
     else if(e.t==='yellow'||e.t==='red'){if(e.pid){st.labels[e.pid]=now+2400;st.cards[e.pid]={c:e.t==='red'?0xe11d48:0xfacc15,until:now+2600}}}}
   const sync=(arr,c,homeSide)=>{const pos=pitchPositions(c,M,homeSide);const alive=new Set(M.xi[c.id].map(e=>e.pid));
@@ -172,6 +172,7 @@ PX.frame=(st)=>{if(!st||!st.ready||!st.app)return;if(!st.host.isConnected){PX.de
   const now=performance.now();const dt=Math.min(64,now-st.last);st.last=now;const k=dt/16.7;st.frame++;const b=st.ball;const all=[...st.h,...st.a];
   // celebration → replay hand-off
   if(st.celeb&&now>st.celeb.until){st.celeb=null;if(st.pending)PX.startReplay(st);else st.hold=false}
+  const cd=carryFrame(st);   // open play: the ball at its carrier's feet
   // ball
   if(st.rp){const R=st.rp;const u=Math.min(1,(now-R.t0)/R.dur);const ease=u<.75?u/.75*.82:.82+(u-.75)/.25*.18;let dd=ease*R.total,i=0;while(i<R.segs.length-1&&dd>R.segs[i]){dd-=R.segs[i];i++}const f=R.segs[i]?Math.min(1,dd/R.segs[i]):1;const p0=R.pts[i],p1=R.pts[i+1]||p0;b.x=p0[0]+(p1[0]-p0[0])*f;b.y=p0[1]+(p1[1]-p0[1])*f;b.z=R.segs[i]>14&&i<R.segs.length-1?Math.sin(f*Math.PI)*Math.min(4,R.segs[i]*.16):(i===R.segs.length-1?Math.sin(f*Math.PI)*.8:0);if(R.shooter&&u<.35){R.shooter.tx=R.pts[Math.max(0,R.pts.length-2)][0];R.shooter.ty=R.pts[Math.max(0,R.pts.length-2)][1]}if(u>=1&&!R.ending){R.ending=true;setTimeout(R.done,650)}}
   else if(st.snap){if(st.seq){const e=st.seq.pts[st.seq.pts.length-1];b.x=e[0];b.y=e[1];st.seq=null}else{b.x=b.tx;b.y=b.ty}b.z=0}
@@ -188,6 +189,7 @@ PX.frame=(st)=>{if(!st||!st.ready||!st.app)return;if(!st.host.isConnected){PX.de
     if(C&&d.team===C.team){const sc=all.find(x=>x.pid===C.pid&&x.team===C.team);if(d===sc){tx=C.corner[0];ty=C.corner[1]}else if(sc&&Math.hypot(d.x-sc.x,d.y-sc.y)<30&&!d.gk){const ang=(d.pid%7)/7*Math.PI*2;tx=sc.x+Math.cos(ang)*2.2;ty=sc.y+Math.sin(ang)*1.6}else{tx=d.bx;ty=d.by}if(Math.hypot((tx??d.x)-d.x,(ty??d.y)-d.y)<1.6)pose='cele'}
     else if(C){tx=d.bx;ty=d.by}
     else if(d.tx!=null){tx=d.tx;ty=d.ty;if(Math.hypot(tx-d.x,ty-d.y)<.6)d.tx=null}
+    else if(d===cd){[tx,ty]=carryTarget(st,d)}
     else{const pull=st.entranceDone===false?0:.22;const w=st.entranceDone===false?0:Math.sin(now*.0007+d.pid)*1.1;tx=d.bx+(b.x-d.bx)*pull+w;ty=d.by+(b.y-d.by)*pull+Math.cos(now*.0006+d.pid*1.7)*.8}
     const kk=st.snap?1:(st.hold&&!C&&!st.rp?.03:.075)*k;const ox=d.x,oy=d.y;d.x+=(tx-d.x)*Math.min(1,kk);d.y+=(ty-d.y)*Math.min(1,kk);
     const sp=Math.hypot(d.x-ox,d.y-oy)/Math.max(.2,k);if(Math.abs(d.x-ox)>.004)d.face=d.x>ox?1:-1;
@@ -198,7 +200,7 @@ PX.frame=(st)=>{if(!st||!st.ready||!st.app)return;if(!st.host.isConnected){PX.de
     d.sprite.rotation=pose==='dive'?(st.dive.dir>0?1:-1)*1.15*(d.home===(d.x<52.5)?1:1):0;if(pose==='dive'){d.sprite.y=-14*s}else d.sprite.y=0;
     if(pose==='cele'){d.sprite.y=-Math.abs(Math.sin(now*.012+d.pid))*9*s}
     d.sh.x=X;d.sh.y=Y;d.sh.width=34*s;d.sh.height=11*s;
-    const lt=st.labels[d.pid];const show=lt&&lt>now;const card=st.cards[d.pid]&&st.cards[d.pid].until>now?st.cards[d.pid]:null;
+    const lt=st.labels[d.pid];const show=(lt&&lt>now)||d===cd;const card=st.cards[d.pid]&&st.cards[d.pid].until>now?st.cards[d.pid]:null;
     if(show||card){const ds=st.dispScale();const lab=PX.label(st,d,d.name,card?(card.c===0xe11d48?'#ff8fa3':'#fde68a'):'#ffffff');lab.visible=true;const c=st.camC;const sx=(X-c.pivot.x)*c.scale.x+c.position.x,sy=(Y-62*s-c.pivot.y)*c.scale.y+c.position.y;lab.x=sx;lab.y=sy;lab.scale.set(clamp(.7/ds,1,3.2)*.6)}else if(d.lab)d.lab.visible=false}
   // ball draw
   { const [BX,BY]=pxP(b.x,b.y);const s=prjS(b.y);st.ballG.x=BX;st.ballG.y=BY-(7+b.z*PXK*.9)*s;st.ballG.scale.set(s*.95);st.ballG.rotation+=.12*k*(st.seq?1:.3);st.ballG.zIndex=BY+.5;st.ballSh.x=BX;st.ballSh.y=BY;st.ballSh.width=(16+b.z*2)*s;st.ballSh.height=(6+b.z*.6)*s;st.ballSh.alpha=Math.max(.25,.8-b.z*.12)}

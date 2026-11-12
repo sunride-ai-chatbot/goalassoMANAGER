@@ -183,6 +183,12 @@ function penResolve(M,c,p,out,how){M.shots[c.id]++;M.sot=M.sot||{[M.h]:0,[M.a]:0
   if(how){ev.how=how;if(how==='save'){M.sot[c.id]++;const o=club(c.id===M.h?M.a:M.h);const gk=o&&xiPlayers(M,o).find(x=>x.p.pos==='GK');if(gk){ev.gk=gk.p.id;ev.gkName=fullName(gk.p);pstat(M,o.id,gk.p.id).sv++}}}
   M.ev.push(ev);return ev}
 function bench(M,c){const inXI=new Set(M.xi[c.id].map(e=>e.pid));const used=new Set(M.used[c.id]);return available(c).filter(p=>!inXI.has(p.id)&&!used.has(p.id))}
+/* The foreign-player limit holds during the match too. A club of the Israeli leagues may not make a substitution that
+   leaves more than MAX_FOREIGN_XI foreigners on the pitch (a foreigner for a foreigner changes nothing and is always
+   allowed). Clubs of other countries and the quick tournament's drafted side are not bound by it. */
+function foreignLimited(c){if(!c||!G||G.blitz)return false;return c.country?c.country==='ישראל':(G.clubs||[]).includes(c)||(G.leumit||[]).includes(c)}
+function foreignOnPitch(M,c,without){let n=0;for(const e of M.xi[c.id]){if(e.pid===without)continue;const p=c.players.find(x=>x.id===e.pid);if(p&&p.foreign)n++}return n}
+function subBreaksForeign(M,c,outId,inP){if(!inP||!inP.foreign||!foreignLimited(c))return false;const out=outId?c.players.find(x=>x.id===outId):null;if(out&&out.foreign)return false;return foreignOnPitch(M,c,outId||null)+1>MAX_FOREIGN_XI}
 function autoSub(M,c,pos){
   if(M.subs[c.id]>=MAX_SUBS)return;
   const b=bench(M,c);if(!b.length)return;
@@ -190,13 +196,14 @@ function autoSub(M,c,pos){
   let out=null;
   if(M.xi[c.id].length<11){out=null}
   else{const cand=xs.filter(x=>x.p.pos!=='GK').sort((x,y)=>(effOvr(x.p)-minuteFatigue(M,x.p,x.e))-(effOvr(y.p)-minuteFatigue(M,y.p,y.e)));out=cand[0]||null}
-  const wantPos=pos||out?.p.pos;const inP=b.sort((x,y)=>((y.pos===wantPos?50:0)+effOvr(y))-((x.pos===wantPos?50:0)+effOvr(x)))[0];
+  const wantPos=pos||out?.p.pos;const inP=b.filter(p=>!subBreaksForeign(M,c,out?out.p.id:null,p)).sort((x,y)=>((y.pos===wantPos?50:0)+effOvr(y))-((x.pos===wantPos?50:0)+effOvr(x)))[0];
   if(!inP)return;if(out&&effOvr(inP)<effOvr(out.p)-4&&!pos)return;
   doSub(M,c,out?out.p.id:null,inP.id);
 }
 function doSub(M,c,outId,inId){
   if(M.done||M.subs[c.id]>=MAX_SUBS)return false;
   const inP=bench(M,c).find(p=>p.id===inId);if(!inP||outId&&!M.xi[c.id].some(e=>e.pid===outId)||!outId&&M.xi[c.id].length>=11)return false;
+  if(subBreaksForeign(M,c,outId,inP))return false;
   let slot=inP.pos;if(outId){const oe=M.xi[c.id].find(e=>e.pid===outId);if(oe&&oe.slot)slot=oe.slot;if(oe&&M.mins)M.mins[c.id][outId]=M.m-oe.since;M.xi[c.id]=M.xi[c.id].filter(e=>e.pid!==outId);M.used[c.id].push(outId)}
   if(M.xi[c.id].length>=11)return false;
   M.xi[c.id].push({pid:inId,slot,since:M.m,yel:0});M.subs[c.id]++;

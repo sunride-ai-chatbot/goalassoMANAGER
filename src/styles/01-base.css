@@ -130,3 +130,10 @@ h3{font-size:18px}
 .winchip.open{color:#c6f24e;border-color:rgba(198,242,78,.45);background:rgba(198,242,78,.08)}
 .winchip.open::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#c6f24e;margin-inline-end:6px;vertical-align:1px}
 .winchip.soon{color:#ffd34d;border-color:rgba(255,211,77,.5);background:rgba(255,211,77,.08)}.winchip.soon::before{background:#ffd34d}
+/* a score between two teams side by side: home number on the right, next to the home side (scoreSides in 02-util.js) */
+.sides{display:inline-flex;direction:rtl;align-items:baseline;justify-content:center;gap:.24em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sides i{font-style:normal;opacity:.55}.sides bdi{min-width:.62em;text-align:center}
+.sides bdi.pop{animation:sidespop .9s ease-out}
+@keyframes sidespop{0%{transform:scale(1)}25%{transform:scale(1.4);color:#69ead1}100%{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.sides bdi.pop{animation:none}}
+.pl.off{opacity:.45}
