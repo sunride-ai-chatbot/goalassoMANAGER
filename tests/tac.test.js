@@ -7,7 +7,7 @@ const errors=[];w.addEventListener('error',e=>errors.push(e.message));
 const $=id=>w.document.getElementById(id);const click=el=>{if(!el)throw new Error('missing');el.dispatchEvent(new w.MouseEvent('click',{bubbles:true}))};
 const change=(el,v)=>{el.value=v;el.dispatchEvent(new w.Event('change',{bubbles:true}))};
 click(w.document.querySelector('[data-pick="mhf"]'));click($('signBtn'));click(w.document.querySelector('[data-sponsor="0"]'));click(w.document.querySelector('[data-board="none"]'));
-const G=w.ILM.G,c=w.ILM.me();G.pressMode='off';G.speed=0.45;
+const G=w.ILM.G,c=w.ILM.me();G.pressMode='off';G.speed=0.45;G.penGame=false;
 // go to a league week (skip euro/friendly weeks) 
 for(let i=0;i<8;i++){const ev=G.cal[G.wk];if(ev.t==='league')break;G.view='home';w.ILM.render();if($('toLineupBtn')){click($('toLineupBtn'));click($('skipBtn'))}else click($('playBtn'))}
 G.view='lineup';w.ILM.render();

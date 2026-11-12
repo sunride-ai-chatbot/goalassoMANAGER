@@ -11,7 +11,7 @@ function settle(M){if(G&&(M.h===G.me||M.a===G.me)){const mc=me();if(mc)mc.prepLe
   M.motm=M.motmLive||manOfMatch(M,h,a);if(M.motm){const mp=club(M.motm.team).players.find(x=>x.id===M.motm.pid);if(mp)mp.motm=(mp.motm||0)+1}
   matchFatigue(M);fansUpdate(h,M.gh,M.ga,a,ctx.kind,ctx.stage,true);fansUpdate(a,M.ga,M.gh,h,ctx.kind,ctx.stage,false);
   moraleAfterMatch(M,h,M.gh,M.ga);moraleAfterMatch(M,a,M.ga,M.gh);
-  const rec={wk:G.wk,season:G.season,kind:ctx.kind,label:ctx.label,h:h.id,a:a.id,hn:h.short,an:a.short,gh:M.gh,ga:M.ga,pens:M.pens,att:M.att,motm:M.motm,ev:mine?M.ev.map(e=>({...e})):M.ev.filter(e=>e.t==='goal'||e.t==='pen'||e.t==='own'||e.t==='red').map(e=>({m:e.m,t:e.t,team:e.team,pid:e.pid,name:e.name}))};
+  const rec={wk:G.wk,season:G.season,kind:ctx.kind,label:ctx.label,h:h.id,a:a.id,hn:h.short,an:a.short,gh:M.gh,ga:M.ga,pens:M.pens,penScore:M.penScore||undefined,att:M.att,motm:M.motm,ev:mine?M.ev.map(e=>({...e})):M.ev.filter(e=>e.t==='goal'||e.t==='pen'||e.t==='own'||e.t==='red').map(e=>({m:e.m,t:e.t,team:e.team,pid:e.pid,name:e.name}))};
   if(mine){rec.plan=M.plan||null;rec.oppSwitch=M.oppSwitch||null;rec.anConf=M.anConf||null;rec.shots={[h.id]:M.shots[h.id],[a.id]:M.shots[a.id]};rec.sot=M.sot;rec.corners=M.corners;rec.poss={[h.id]:M.poss[h.id],[a.id]:M.poss[a.id]};rec.passes=M.passes;rec.pm=M.pm;rec.seed=M.seed;rec.xi={[h.id]:M.xi[h.id].map(e=>e.pid).concat(M.used[h.id]),[a.id]:M.xi[a.id].map(e=>e.pid).concat(M.used[a.id])};rec.ps={};for(const c of [h,a]){rec.ps[c.id]={};for(const pid in R){if(c.players.some(p=>p.id==pid)){const s=R[pid];rec.ps[c.id][pid]={min:s.min,g:s.g,a:s.a,sh:s.sh,sot:s.sot,sv:s.sv,ps:s.ps,cs:s.cs||0,r:s.r,xg:+s.xg.toFixed(2),pos:(c.players.find(p=>p.id==pid)||{}).pos,name:fullName(c.players.find(p=>p.id==pid))}}}}}
   // gate income from the real attendance
   if(h.league&&!ctx.neutral&&ctx.kind!=='friendly'){const price=(h.ticket||baseTicket(h))*(ctx.kind==='euro'?1.5:1);const inc=Math.round(M.att*price);h.money+=inc;rec.income=inc;if(h.id===G.me)addLog(`הכנסות כרטיסים (${M.att.toLocaleString('he')} צופים)`,inc);
@@ -26,7 +26,7 @@ function settle(M){if(G&&(M.h===G.me||M.a===G.me)){const mc=me();if(mc)mc.prepLe
   if(ctx.kind==='toto')settleToto(M,h,a,rec);
   if(ctx.kind==='euro')settleEuro(M,h,a,rec);
   G.results.push(rec);
-  if(mine){try{chemAfterMatch(M,club(G.me),R);storyOnMatch(M)}catch(e){}boardAfterMatch(M,h,a);resultStory(M,h,a);try{adBonuses(M,h,a)}catch(e){}}
+  if(mine){try{chemAfterMatch(M,club(G.me),R);storyOnMatch(M)}catch(e){}boardAfterMatch(M,h,a);resultStory(M,h,a);try{adBonuses(M,h,a)}catch(e){}try{carAfterMatch(M,rec)}catch(e){console.warn('career book',e)}}
   return rec;
 }
 function gateIncome(h,a,kind){

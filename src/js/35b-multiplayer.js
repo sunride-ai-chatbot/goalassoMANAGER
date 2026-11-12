@@ -62,9 +62,10 @@ async function mpRefresh(){if(!mpIsOn())return;if(MP.busy||MP.refreshing){MP.pen
 async function mpRefreshNow(){const c=await mpClient();
   const [{data:L,error:e1},{data:M,error:e2}]=await Promise.all([c.from('mp_leagues').select('id,code,status,revision,week,season,turn_due,turn_min,state_gz').eq('id',G.mp.league).single(),c.from('mp_members').select('uid,club_id,display_name,is_host,ready_rev,commands,last_seen').eq('league_id',G.mp.league)]);
   if(e1||e2){MP.err=mpErrHe((e1||e2).message);return}
-  const prevStatus=G.mp.status;G.mp.status=L.status;G.mp.turnDue=L.turn_due;G.mp.turnMin=L.turn_min;G.mp.members=M.map(m=>({uid:m.uid,club:m.club_id,name:m.display_name,host:m.is_host,ready:m.ready_rev>=L.revision,seen:m.last_seen,me:m.uid===MP.uid}));
+  const prevStatus=G.mp.status;const wasReady=(G.mp.members||[]).some(m=>!m.me&&m.ready);G.mp.status=L.status;G.mp.turnDue=L.turn_due;G.mp.turnMin=L.turn_min;G.mp.members=M.map(m=>({uid:m.uid,club:m.club_id,name:m.display_name,host:m.is_host,ready:m.ready_rev>=L.revision,seen:m.last_seen,me:m.uid===MP.uid}));
   const other=G.mp.members.find(m=>!m.me);G.mp.oppClub=other?other.club:null;G.mp.oppName=other?other.name:null;G.mp.oppOnline=other?(Date.now()-new Date(other.seen).getTime()<90000):false;
   try{await mpRpc('mp_seen',{p_league:G.mp.league})}catch(e){}
+  try{mpNotifyReady(wasReady,other,G.mp.members.some(m=>m.me&&m.ready));if(L.revision>G.mp.rev&&!mpIsHost())notify('המחזור שוחק','התוצאות מחכות לך במשחק.','mp-week')}catch(e){}
   if(L.revision>G.mp.rev){await mpLoadRevision(L);return}
   if(mpIsHost()&&L.status==='play'){const allReady=G.mp.members.length===2&&G.mp.members.every(m=>m.ready);const expired=L.turn_due&&Date.now()>new Date(L.turn_due).getTime();const meReady=G.mp.members.some(m=>m.me&&m.ready);
     if(allReady||(expired&&meReady)){await mpHostSimulate(L,M);return}}

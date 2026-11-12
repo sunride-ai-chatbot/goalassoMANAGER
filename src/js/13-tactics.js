@@ -37,7 +37,7 @@ function tacticAdj(M,h,a){
   dh=H.own+A.opp;da=A.own+H.opp;poss=H.ps-A.ps;fatH=H.fat;fatA=A.fat;
   return {dh,da,poss,fatH,fatA,notes};
 }
-function liveEnergy(M,c,p,e,m){const t=tacOfM(M,c);const rate=(t&&t.press==='high'?1.25:t&&t.press==='low'?.85:1)*(t&&t.tempo==='fast'?1.1:1)*(p.pos==='GK'?.35:1);const played=Math.max(0,(m??M.m)-(e?e.since:0));return Math.round(clamp((p.fit??100)-played*.16*rate-Math.max(0,played-60)*.35*rate,15,100))}
+function liveEnergy(M,c,p,e,m){const t=tacOfM(M,c);const rate=(t&&t.press==='high'?1.25:t&&t.press==='low'?.85:1)*(t&&t.tempo==='fast'?1.1:1)*(p.pos==='GK'?.35:1);const played=Math.max(0,(m??M.m)-(e?e.since:0));return Math.round(clamp((p.fit??100)-played*.16*rate-Math.max(0,played-60)*.35*rate-((M&&M.burn&&M.burn[p.id])||0),15,100))}
 function liveMentality(M,c){return (M.liveMent&&M.liveMent[c.id])||c.mentality||'bal'}
 function matchupText(c,o){const t=tacOf(c),to=tacOf(o);const tips=[];
   tips.push(`${o.short} משחקת ב${TAC.press[to.press]}, ${TAC.style[to.style]}, ${TAC.tempo[to.tempo]}.`);

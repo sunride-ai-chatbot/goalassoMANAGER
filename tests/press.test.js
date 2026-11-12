@@ -6,7 +6,7 @@ const errors=[];w.addEventListener('error',e=>errors.push(e.message));
 const $=id=>w.document.getElementById(id);const click=el=>{if(!el)throw new Error('missing');el.dispatchEvent(new w.MouseEvent('click',{bubbles:true}))};
 click(w.document.querySelector('[data-pick="hta"]'));click($('signBtn'));click(w.document.querySelector('[data-sponsor="0"]'));click(w.document.querySelector('[data-board="patience"]'));
 const G=w.ILM.G;console.log('after board: expect',G.board.expectText,'conf',G.board.conf,'owner',w.ILM.me().owner);
-G.pressMode='all';G.speed=0.45;G.motion='off';G.renderer='svg';
+G.pressMode='all';G.speed=0.45;G.motion='off';G.renderer='svg';G.penGame=false;   // penalties stay automatic: this suite times a whole match
 // Qualification results can leave preseason weeks empty. Reach the first league
 // fixture through the UI instead of assuming that week 3 always has a match.
 let played=0;

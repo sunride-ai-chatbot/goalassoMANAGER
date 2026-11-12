@@ -11,13 +11,15 @@ function recordSigning(p,c,kind,x){x=x||{};if(!G||!p||!c)return null;G.signings=
   const tx={id,kind,pid:p.id,club:c.id,clubName:c.name,season:G.season,seasonLabel:seasonLabel(),wk:G.wk,
     name:fullName(p),pos:p.pos||null,age:p.age!=null?p.age:null,ovr:isKnown(p)?p.ovr:null,no:p.no||null,
     from:x.from||null,fee:x.fee!=null?x.fee:null,inst:x.inst||1,years:kind==='loan'?null:(p.contract||null),buy:x.buy||null,shown:false,t:Date.now()};
-  G.signings.push(tx);if(G.signings.length>40)G.signings=G.signings.slice(-40);save();return tx}
-function recordMoment(kind,comp){if(!G)return;G.moments=G.moments||[];const id=`m-${kind}-${G.season}-${comp}`;if(G.moments.some(m=>m.id===id))return;
+  G.signings.push(tx);if(G.signings.length>40)G.signings=G.signings.slice(-40);try{carSigning(p,kind)}catch(e){}save();return tx}
+function recordMoment(kind,comp){if(!G)return;try{carTrophy(kind,comp)}catch(e){}G.moments=G.moments||[];const id=`m-${kind}-${G.season}-${comp}`;if(G.moments.some(m=>m.id===id))return;
   G.moments.push({id,kind,comp,club:G.me,clubName:me().name,season:seasonLabel(),shown:false});save()}
 let revealOpen=false;
-function maybeShowQueued(){if(!G||G.live||revealOpen||(typeof splashOpen==='function'&&splashOpen()))return;
+function maybeShowQueued(){if(!G||G.blitz||G.live||revealOpen||envOpen||(typeof splashOpen==='function'&&splashOpen()))return;
   const tx=(G.signings||[]).find(t=>!t.shown);if(tx){tx.shown=true;save();return openReveal(tx)}
-  const m=(G.moments||[]).find(t=>!t.shown);if(m){m.shown=true;save();return openMoment(m)}}
+  const m=(G.moments||[]).find(t=>!t.shown);if(m){m.shown=true;save();return openMoment(m)}
+  /* an envelope that arrived after a quick-played match */
+  if(G.env&&!G.env.shown&&G.phase==='play'&&G.view==='home'&&!$('modal')){G.env.shown=true;save();return envelopeOpen(G.env)}}
 function revealReduced(){return (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)||(G&&G.motion==='off')}
 function inkFor(hex){const [r,g,b]=hexRGB(hex);return (r*299+g*587+b*114)/1000>150?'#0b1020':'#ffffff'}
 function shirtSVG(c,no,k){const id='rv'+(k||'');return `<svg class="rv-shirt" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="kg${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient></defs>${kitInner(c).replace('url(#kg)',`url(#kg${id})`)}${no?`<text x="20" y="${sponsorName(c)?31.5:27.5}" text-anchor="middle" font-size="${sponsorName(c)?8.5:11}" font-weight="800" font-family="Heebo, Arial, sans-serif" fill="${inkFor(c.c1)}" stroke="rgba(0,0,0,.25)" stroke-width=".3">${no}</text>`:''}</svg>`}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="211eb93d3484">
+<meta name="goalasso-build" content="048fcc9e23b9">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -1094,6 +1094,215 @@ h3.sec:not(.btn){font-size:24px}
 .bc-l3.two{padding-inline-end:66px}
 .bc-l3 .bc-face.off{inset-inline-start:auto;inset-inline-end:10px;bottom:auto;top:50%;transform:translateY(-50%);width:44px;height:44px;border-color:#ff4658;filter:saturate(.55) brightness(.9)}
 @media(min-width:900px){.bc-l3.two{padding-inline-end:92px}.bc-l3 .bc-face.off{width:60px;height:60px;inset-inline-end:16px}}
+/* ===== LIVE PLAY: touchline shouts, highlights mode, first-person penalties ===== */
+/* shouts: the manager's voice under the pitch */
+.shouts{margin-top:8px;padding:8px 8px 9px;border-radius:12px;background:linear-gradient(180deg,#14161d,#0d0e13);border:1px solid var(--line)}
+.sh-head{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:11.5px;color:var(--muted)}
+.sh-head span{flex:none}
+.sh-meter{flex:1;height:5px;border-radius:5px;background:#1b1d25;overflow:hidden}
+.sh-meter i{display:block;height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,#9fd12a,#d8ff5c);transition:width .3s linear}
+.sh-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.sh-btn{position:relative;min-height:54px;border-radius:10px;border:1px solid var(--line2);background:#12141a;color:var(--fg);padding:6px 3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.05;transition:transform .08s,border-color .2s,box-shadow .2s}
+.sh-btn b{font-family:var(--title);font-size:21px;font-weight:700;letter-spacing:.2px;text-wrap:balance}
+.sh-btn small{font-size:10.5px;color:var(--muted);text-wrap:balance}
+.sh-btn:disabled{opacity:.42;cursor:default}
+.sh-btn:not(:disabled):active{transform:scale(.96)}
+.shouts.ready .sh-meter i{box-shadow:0 0 10px rgba(198,242,78,.7)}
+.shouts.ready .sh-btn{border-color:rgba(198,242,78,.6);box-shadow:inset 0 0 0 1px rgba(198,242,78,.16),0 4px 14px rgba(182,240,60,.1)}
+.sh-btn.on{opacity:1;background:linear-gradient(180deg,#2a2416,#1a170f);border-color:rgba(233,196,106,.75);color:#f6dc8c}
+.sh-btn.on small{color:#d9c58a}
+.sh-btn.on[data-left]::after{content:attr(data-left) "′";position:absolute;top:3px;inset-inline-end:5px;font:700 11px var(--body);color:#f6dc8c;font-variant-numeric:tabular-nums;direction:ltr}
+@media(min-width:900px){.sh-btn b{font-size:24px}.sh-btn small{font-size:12px}}
+/* highlights mode: the clock races between the moments that matter */
+.live-view.hl #clock{color:var(--gold)}
+.live-view.hl #livePill::after{content:" · תקציר"}
+
+/* ---- penalties: a full-screen first-person stage ---- */
+.pg{position:fixed;inset:0;z-index:45;display:flex;flex-direction:column;background:#05070b;color:#f4efe2;touch-action:none;user-select:none;-webkit-user-select:none;overscroll-behavior:contain;animation:pgIn .25s ease-out}
+@keyframes pgIn{from{opacity:0}to{opacity:1}}
+.pg-top{flex:none;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 8px;text-align:center;background:linear-gradient(180deg,#11131a,#0a0b10);border-bottom:1px solid rgba(233,196,106,.25)}
+.pg-title{font-family:var(--title);font-weight:700;font-size:40px;line-height:.95;letter-spacing:.3px}
+.pg-meta{font-size:13px;color:var(--muted);margin-top:2px}
+.pg-so:empty{display:none}
+.pg-so{margin:8px auto 0;max-width:420px;display:flex;flex-direction:column;gap:4px}
+.pg-so-row{display:grid;grid-template-columns:minmax(0,1fr) auto 26px;align-items:center;gap:8px;padding:3px 8px;border-radius:8px;font-size:13px;border:1px solid transparent}
+.pg-so-row.on{background:rgba(233,196,106,.1);border-color:rgba(233,196,106,.35)}
+.pg-so-row b{font-weight:600;text-align:start;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-so-row span{display:flex;gap:5px;direction:ltr}
+.pg-so-row i{width:12px;height:12px;border-radius:50%;border:1.5px solid #4a4f5e;background:transparent}
+.pg-so-row i.in{background:#c6f24e;border-color:#c6f24e}
+.pg-so-row i.no{background:#ff4658;border-color:#ff4658}
+.pg-so-row strong{font-family:var(--title);font-size:24px;line-height:1;text-align:center}
+.pg-stage{position:relative;flex:1;min-height:0;overflow:hidden;background:#0a0d14;outline:none;cursor:crosshair;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+.pg-view,.pg-3d{position:absolute;inset:0}
+.pg-3d canvas{width:100%!important;height:100%!important;display:block}
+.pg-svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.pg-kbody.sway{animation:pgSway 1.5s ease-in-out infinite alternate}
+@keyframes pgSway{from{transform:translateX(-9px)}to{transform:translateX(9px)}}
+.pg-net.hit{animation:pgNet .5s ease-out}
+@keyframes pgNet{30%{transform:translateY(-3px) scale(1.012)}}
+.pg-net{transform-origin:50% 40%}
+.pg-load{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;font-family:var(--title);font-size:28px;color:#f4efe2;background:radial-gradient(circle at 50% 40%,#151b2a,#05070b);z-index:3}
+.pg-aim{position:absolute;left:0;top:0;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;border:2.5px solid #c6f24e;box-shadow:0 0 0 1.5px rgba(0,0,0,.55),0 0 16px rgba(198,242,78,.65);pointer-events:none;z-index:2;will-change:transform}
+.pg-aim::before,.pg-aim::after{content:"";position:absolute;left:50%;top:50%;background:#c6f24e}
+.pg-aim::before{width:2px;height:16px;margin:-8px 0 0 -1px}.pg-aim::after{width:16px;height:2px;margin:-1px 0 0 -8px}
+.pg-aim.out{border-color:#ff4658;box-shadow:0 0 0 1.5px rgba(0,0,0,.55),0 0 16px rgba(255,70,88,.6)}.pg-aim.out::before,.pg-aim.out::after{background:#ff4658}
+.pg-flash{position:absolute;left:0;right:0;top:34%;text-align:center;font-family:var(--title);font-weight:700;font-size:92px;line-height:1;z-index:4;pointer-events:none;text-shadow:0 6px 30px rgba(0,0,0,.75);animation:pgFlash 1.15s ease-out both}
+.pg-flash.good{color:#c6f24e}.pg-flash.bad{color:#ff5c6c}
+@keyframes pgFlash{0%{opacity:0;transform:scale(.6)}18%{opacity:1;transform:scale(1.08)}30%{transform:scale(1)}85%{opacity:1}100%{opacity:0}}
+.pg-gloves3d{position:absolute;inset:auto 0 0 0;height:36%;pointer-events:none;z-index:1}
+.pg-gloves3d svg{width:100%;height:100%;display:block;overflow:visible}
+.pg-gloves3d .gl{transition:transform .17s ease-out;transform-box:fill-box;transform-origin:50% 100%}
+.pg-gloves3d[data-side="L"] .gl{transform:translate(-62px,-96px) rotate(-16deg)}
+.pg-gloves3d[data-side="R"] .gl{transform:translate(62px,-96px) rotate(16deg)}
+.pg-gloves3d[data-side="C"] .gl.l{transform:translate(40px,-118px)}.pg-gloves3d[data-side="C"] .gl.r{transform:translate(-40px,-118px)}
+.pg-panel{position:absolute;inset:0;z-index:5;display:grid;place-items:center;padding:20px;background:rgba(5,7,11,.72);backdrop-filter:blur(3px)}
+.pg-end{max-width:420px;text-align:center;display:flex;flex-direction:column;align-items:stretch;gap:10px}
+.pg-end small{color:var(--gold);font-size:13px}
+.pg-end h2{font-family:var(--title);font-weight:700;font-size:54px;line-height:.95;margin:0}
+.pg-end.good h2{color:#c6f24e}.pg-end.bad h2{color:#ff8a94}
+.pg-end p{margin:0 0 6px;font-size:14.5px;line-height:1.5;color:#d9d4c6}
+.pg-endsc{font-size:17px}.pg-endsc b{font-family:var(--title);font-size:44px;line-height:1;margin:0 8px;vertical-align:-6px}
+.pg-bot{flex:none;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 10px;padding:10px 14px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(180deg,#0d0e13,#08090c);border-top:1px solid rgba(233,196,106,.22);min-height:74px}
+.pg-bot:empty{display:none}
+.pg-who{display:flex;align-items:center;gap:10px;min-width:0}
+.pg-who b{display:block;font-family:var(--title);font-size:26px;font-weight:700;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-who small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pg-face{position:relative;flex:none;width:48px;height:48px;border-radius:50%;overflow:hidden;background:#0b1520;border:2px solid #f6f2e7}
+.pg-face .player-portrait{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.pg-face .player-portrait svg{transform:translateY(calc(var(--fy,5.8)*-1%)) scale(1.16);transform-origin:50% 0}
+.pg-skip{min-height:40px;padding:6px 12px;border-radius:999px;border:1px solid var(--line2);color:var(--muted);font-size:12.5px;white-space:nowrap}
+.pg-skip:disabled{opacity:.4}
+.pg-hint{grid-column:1/-1;font-size:14px;color:#f4efe2;text-align:center}
+.pg-timer{grid-column:1/-1;height:4px;border-radius:4px;background:#1b1d25;overflow:hidden}
+.pg-timer i{display:block;height:100%;background:linear-gradient(90deg,#e9c46a,#c6f24e);transform-origin:100% 50%}
+.pg-timer.idle{visibility:hidden}
+@media(min-width:900px){.pg-title{font-size:54px}.pg-flash{font-size:140px}.pg-stage{max-width:1100px;width:100%;margin:0 auto}}
+@media(prefers-reduced-motion:reduce){.pg,.pg-flash,.pg-kbody.sway,.pg-net.hit{animation:none}.pg-gloves3d .gl{transition:none}}
+/* ===== BETWEEN MATCHES: next-week hooks, the envelope, the career book, the quick tournament ===== */
+/* why the coming week matters */
+.hooks{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.hooks li{display:flex;align-items:baseline;gap:8px;font-size:13.5px;line-height:1.35;padding:6px 9px;border-radius:9px;background:rgba(7,8,12,.6);border:1px solid rgba(233,196,106,.18)}
+.hooks li .tag{flex:none;font-size:11px}
+.ev-hero .hooks li{backdrop-filter:blur(3px)}
+
+/* the next-week card after a live match */
+.modal.nx-modal .card{max-width:440px}
+.nx-kick{font-size:12.5px;color:var(--gold);text-align:center;margin-bottom:6px}
+.nx-vs{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px;text-align:center}
+.nx-t{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
+.nx-t b{font-family:var(--title);font-weight:700;font-size:28px;line-height:1;max-width:100%;text-wrap:balance}
+.nx-mid span{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid var(--line2);font-size:12px;color:var(--muted)}
+.nx-label{text-align:center;color:var(--muted);font-size:13px;margin-top:6px}
+.nx-free{text-align:center;padding:10px 0}
+.nx-free b{display:block;font-family:var(--title);font-weight:700;font-size:34px;line-height:1}
+.nx-free small{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+.nx-got{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+
+/* the envelope */
+.env{position:fixed;inset:0;z-index:70;display:grid;place-items:center;padding:20px;background:rgba(4,5,8,.82);backdrop-filter:blur(4px);animation:pgIn .25s ease-out}
+.env-box{width:min(380px,100%);display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.env-from{font-family:var(--title);font-weight:700;font-size:34px;line-height:1;color:#f4efe2}
+.env-seal{position:relative;width:min(280px,82vw);aspect-ratio:1.5;border-radius:10px;background:linear-gradient(180deg,#f2ead6,#ddd2b8);box-shadow:0 18px 50px rgba(0,0,0,.6),inset 0 0 0 1px rgba(0,0,0,.12);overflow:hidden;animation:envBob 2.2s ease-in-out infinite}
+@keyframes envBob{50%{transform:translateY(-6px) rotate(-1deg)}}
+.env-flap{position:absolute;inset:0 0 auto 0;height:58%;background:linear-gradient(180deg,#e9dfc6,#cfc3a6);clip-path:polygon(0 0,100% 0,50% 100%);box-shadow:0 2px 0 rgba(0,0,0,.12);transform-origin:50% 0;transition:transform .45s ease}
+.env-wax{position:absolute;left:50%;top:52%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#d84a5c,#8f1d2c);color:#f8e3b0;font-family:var(--title);font-weight:700;font-size:30px;box-shadow:0 4px 10px rgba(0,0,0,.4),inset 0 -3px 0 rgba(0,0,0,.25);transition:transform .3s ease,opacity .3s}
+.env-to{position:absolute;inset:auto 0 12px 0;color:#3a3324;font-size:14px;font-weight:600}
+.env-tap{color:var(--muted);font-size:13px}
+.env.open .env-seal,.env.open .env-from,.env.open .env-tap{display:none}
+.env-letter{width:100%;text-align:start;padding:16px 16px 14px;border-radius:14px;background:linear-gradient(180deg,#14161d,#0d0e13);border:1px solid rgba(233,196,106,.35);box-shadow:0 18px 50px rgba(0,0,0,.6);animation:envUp .4s ease-out both}
+@keyframes envUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.env-who{font-size:12.5px;color:var(--gold)}
+.env-letter h3{font-family:var(--title);font-weight:700;font-size:32px;line-height:1;margin:4px 0 8px}
+.env-letter p{margin:0;font-size:14.5px;line-height:1.5;color:#d9d4c6}
+.env-fx{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.env-fx li{padding:4px 10px;border-radius:999px;background:rgba(198,242,78,.1);border:1px solid rgba(198,242,78,.4);color:#d8ff5c;font-size:13px;font-weight:600}
+.env-letter .actions{margin-top:14px}
+
+/* the budget counts to its new value */
+#topMoney.up{animation:cntUp .9s ease-out}#topMoney.down{animation:cntDown .9s ease-out}
+@keyframes cntUp{20%{color:#fff;text-shadow:0 0 12px rgba(198,242,78,.9)}}
+@keyframes cntDown{20%{color:#ff8a94;text-shadow:0 0 12px rgba(255,92,108,.7)}}
+.btn:not(:disabled):active{transform:translateY(1px) scale(.985)}
+
+/* the career book */
+.car-head{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.car-lv{display:flex;align-items:center;gap:14px;width:100%}
+.car-lv>div{flex:1;min-width:0}
+.car-lvn{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--title);font-weight:700;font-size:40px;line-height:1;color:#1a1304;background:radial-gradient(circle at 35% 30%,#fff0b8,#e9c46a 55%,#a97c22);box-shadow:0 6px 18px rgba(233,196,106,.25),inset 0 -3px 0 rgba(0,0,0,.2)}
+.shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px;padding-bottom:10px;border-bottom:4px solid #2a2416;background:linear-gradient(180deg,transparent 60%,rgba(233,196,106,.05))}
+.tro{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:8px 6px}
+.tro-ic{width:54px;height:54px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+.tro b{font-weight:600;font-size:14px;line-height:1.2}.tro small{font-size:11.5px;color:var(--muted)}
+.tro.empty{grid-column:1/-1;opacity:.75}.tro.empty .tro-ic{filter:grayscale(1) brightness(.55)}
+.recs{display:flex;flex-direction:column}
+.recrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
+.recrow:last-child{border-bottom:0}.recrow span{color:var(--muted);flex:none}.recrow b{font-weight:600;text-align:end}
+.achlist{display:flex;flex-direction:column;gap:6px}
+.ach{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;background:rgba(18,20,27,.92);border:1px solid var(--line)}
+.ach-ic{width:34px;height:34px}
+.ach-tx b{display:block;font-weight:600;font-size:14.5px;line-height:1.2}
+.ach-tx small{display:block;color:var(--muted);font-size:12px;line-height:1.3;margin-top:1px}
+.ach-n{font-size:13px;color:var(--muted);font-weight:600}
+.ach.done{border-color:rgba(233,196,106,.4);background:linear-gradient(180deg,#1d1a12,#14120d)}
+.ach.done .ach-n{color:#c6f24e;font-size:16px}
+.ach-bar{height:4px;border-radius:4px;background:#1b1d25;overflow:hidden;margin-top:6px}
+.ach-bar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,#a97c22,#e9c46a)}
+.ach-bar.lv{height:6px;margin:8px 0 4px}
+details.achcat>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;list-style:none;min-height:44px}
+details.achcat>summary::-webkit-details-marker{display:none}
+details.achcat>summary .sec{margin-bottom:0}
+details.achcat>summary::after{content:"";width:9px;height:9px;border-inline-end:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-inline-start:2px;transition:transform .2s;flex:none}
+details.achcat[open]>summary::after{transform:rotate(-135deg)}
+details.achcat>summary>span{margin-inline-start:auto}
+details.achcat[open]>.achlist{margin-top:10px}
+
+/* the quick tournament */
+.bz-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;border-color:rgba(198,242,78,.35)}
+.bz-entry>div{min-width:0}.bz-entry .btn{flex:none;min-width:84px}
+.bz-hero{text-align:center;padding:18px 6px 4px}
+.bz-hero h1{font-family:var(--title);font-weight:700;font-size:68px;line-height:.9;color:#c6f24e;text-shadow:0 0 34px rgba(198,242,78,.25)}
+.bz-hero.out h1{color:#ff8a94;text-shadow:none}.bz-hero.won h1{color:var(--gold);text-shadow:0 0 34px rgba(233,196,106,.35)}
+.bz-hero p{max-width:46ch;margin:10px auto 0;color:#d9d4c6;font-size:15px;line-height:1.5}
+.bz-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;text-align:center}
+.bz-stats b{display:block;font-family:var(--title);font-weight:700;font-size:34px;line-height:1}
+.bz-stats div:last-child b{font-size:24px;line-height:34px}
+.bz-stats small{display:block;color:var(--muted);font-size:11.5px;margin-top:2px}
+.bz-forms{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.bz-form{padding:10px;border-radius:12px;border:1px solid var(--line2);background:#12141a;text-align:center;min-height:64px}
+.bz-form b{display:block;font-family:var(--title);font-weight:700;font-size:30px;line-height:1}
+.bz-form small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px}
+.bz-form:hover,.bz-form:focus-visible{border-color:rgba(198,242,78,.6)}
+.bz-top{display:flex;align-items:center;gap:12px}
+.bz-top h2{font-family:var(--title);font-weight:700;font-size:34px;line-height:1}
+.bz-offer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.bz-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;padding:12px 6px 10px;border-radius:14px;border:1px solid var(--line2);background:linear-gradient(180deg,#171a22,#0e1016);text-align:center;min-width:0;transition:transform .1s,border-color .2s,box-shadow .2s}
+.bz-card:hover,.bz-card:focus-visible{border-color:rgba(198,242,78,.7);box-shadow:0 8px 24px rgba(182,240,60,.14)}
+.bz-card:active{transform:scale(.97)}
+.bz-card b{font-family:var(--title);font-weight:700;font-size:24px;line-height:1;max-width:100%;text-wrap:balance}
+.bz-card small{font-size:12px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bz-card .tag{margin-top:4px;font-size:10.5px;white-space:normal;line-height:1.2}
+.bz-ovr{position:absolute;top:6px;inset-inline-start:8px;font-family:var(--title);font-weight:700;font-size:30px;line-height:1;color:var(--gold)}
+.bz-face{position:relative;display:block;width:72px;height:72px;border-radius:50%;overflow:hidden;background:#0b1520;border:2px solid #f6f2e7;flex:none}
+.bz-face .player-portrait{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.bz-face .player-portrait svg{transform:translateY(calc(var(--fy,5.8)*-1%)) scale(1.16);transform-origin:50% 0}
+.bz-face.empty{display:grid;place-items:center;border-style:dashed;border-color:#4a4f5e;color:var(--muted);font-size:11px;font-weight:700}
+.bz-pitch{position:relative;width:100%;aspect-ratio:68/78;max-width:440px;margin:0 auto;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(180deg,#1f5a30 0 12.5%,#235f34 12.5% 25%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.25)}
+.bz-pitch::before{content:"";position:absolute;inset:50% 0 auto 0;height:2px;background:rgba(255,255,255,.3)}
+.bz-pitch::after{content:"";position:absolute;left:50%;top:50%;width:22%;aspect-ratio:1;border-radius:50%;border:2px solid rgba(255,255,255,.3);transform:translate(-50%,-50%)}
+.bz-tok{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:1px;width:64px;z-index:1}
+.bz-tok .bz-face{width:42px;height:42px;border-width:1.5px}
+.bz-tok b{position:absolute;top:-4px;inset-inline-start:2px;min-width:22px;padding:0 3px;border-radius:6px;background:#e9c46a;color:#1a1304;font-size:11.5px;font-weight:800;line-height:16px;text-align:center}
+.bz-tok small{font-size:10.5px;line-height:1.1;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff;text-shadow:0 1px 3px #000}
+.bz-tok.cur .bz-face{border-color:#c6f24e;box-shadow:0 0 0 3px rgba(198,242,78,.3);color:#c6f24e}
+.bz-rounds{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:5px}
+.bz-rounds li{display:flex;justify-content:space-between;gap:10px;padding:7px 10px;border-radius:9px;border:1px solid var(--line);font-size:14px}
+.bz-rounds li span{color:var(--muted);flex:none}.bz-rounds li b{font-weight:600;text-align:end}
+.bz-rounds li.cur{border-color:rgba(198,242,78,.55);background:rgba(198,242,78,.06)}
+.bz-rounds li.won{border-color:rgba(233,196,106,.4)}.bz-rounds li.won b{color:#f6dc8c}
+.bz-rounds li.lost b{color:#ff8a94}
+@media(max-width:380px){.bz-card b{font-size:21px}.bz-face{width:62px;height:62px}.bz-hero h1{font-size:56px}}
+@media(prefers-reduced-motion:reduce){.env,.env-seal,.env-letter,#topMoney.up,#topMoney.down{animation:none}.env-flap,.env-wax{transition:none}}
 </style>
 </head>
 <body>
@@ -1559,11 +1768,32 @@ function momentum(M,cid){const mo=M.mo;if(!mo||M.m-mo.m>8)return 0;const k=(1-(M
 /* Expected goals per 90 for home and away: attack against the opposing defence, scaled by midfield control. One rating
    point of net advantage is worth ~0.085 goals (was 0.06 on the flat average), and the curve is convex so big gaps
    produce the lopsided results real football does. */
-function expGoals(sh,sa,neutral,h,a,M){const U=M&&M.units;const ha=neutral?0:.22;const mh=mentalityAdj(h,M),ma=mentalityAdj(a,M);const t=M&&M.tadj||{dh:0,da:0};
+function expGoals(sh,sa,neutral,h,a,M){const U=M&&M.units;const ha=neutral?0:.22;const mh=mentalityAdj(h,M),ma=mentalityAdj(a,M);const t=M&&M.tadj||{dh:0,da:0};const so=M&&M.shout?shoutAdj(M,h,a):SHOUT0;
   const xg=(att,def,midEdge,base)=>{const d=att-def;const k=d>=0?.08:.07;return Math.max(.12,base*Math.exp(clamp(d,-14,14)*k/1.25)*(1+clamp(midEdge,-10,10)*.016))};
-  if(!U)return [Math.max(.2,1.25+(sh-sa)*.085+ha+mh[0]+ma[1]+t.dh),Math.max(.18,1.25-(sh-sa)*.085-.04+ma[0]+mh[1]+t.da)];
+  if(!U)return [Math.max(.2,1.25+(sh-sa)*.085+ha+mh[0]+ma[1]+t.dh+so.dh),Math.max(.18,1.25-(sh-sa)*.085-.04+ma[0]+mh[1]+t.da+so.da)];
   const uh=U[h.id],ua=U[a.id];const mid=uh.mid-ua.mid;
-  return [Math.max(.12,xg(uh.att,ua.def,mid,1.02)+ha+mh[0]+ma[1]+t.dh+momentum(M,h.id)),Math.max(.12,xg(ua.att,uh.def,-mid,1.02)-.04+ma[0]+mh[1]+t.da+momentum(M,a.id))]}
+  return [Math.max(.12,xg(uh.att,ua.def,mid,1.02)+ha+mh[0]+ma[1]+t.dh+so.dh+momentum(M,h.id)),Math.max(.12,xg(ua.att,uh.def,-mid,1.02)-.04+ma[0]+mh[1]+t.da+so.da+momentum(M,a.id))]}
+/* ---- touchline shouts (the user's club in a live match): a six-minute swing with a price ----
+   press  wins the ball high: more chances for us (more still against tired legs), a little space behind, burns energy
+   all    everybody forward: many more chances at both ends
+   calm   takes the sting out: fewer chances against, a few fewer for us, kills the opponent's momentum, fewer cards
+   hold   keeps the ball: very little happens at either end, the legs recover a little
+   Values are expected goals per 90 minutes, the unit tacticAdj uses. Only the live screen starts a shout (shoutStart),
+   so simulated matches and AI clubs are untouched. */
+const SHOUT0={dh:0,da:0,poss:0};const SHOUT_MIN=6;
+function shoutOf(M,cid){const s=M&&M.shout&&M.shout[cid];return s&&M.m<=s.until?s:null}
+function avgEnergy(M,c){const xs=xiPlayers(M,c);if(!xs.length)return 100;return xs.reduce((t,x)=>t+liveEnergy(M,c,x.p,x.e,M.m),0)/xs.length}
+function shoutAdj(M,h,a){let dh=0,da=0,poss=0;
+  for(const [c,o,home] of [[h,a,true],[a,h,false]]){const s=shoutOf(M,c.id);if(!s)continue;let own=0,opp=0,ps=0;
+    if(s.k==='press'){own=.9+clamp((78-avgEnergy(M,o))*.05,0,.7);opp=.25;ps=.06}
+    else if(s.k==='all'){own=1.5;opp=1.1;ps=.03}
+    else if(s.k==='calm'){own=-.25;opp=-.55}
+    else if(s.k==='hold'){own=-.6;opp=-.7;ps=.15}
+    if(home){dh+=own;da+=opp;poss+=ps}else{da+=own;dh+=opp;poss-=ps}}
+  return {dh,da,poss}}
+function shoutTick(M,h,a){for(const c of [h,a]){const s=shoutOf(M,c.id);if(!s)continue;const d=s.k==='press'?.5:s.k==='all'?.3:s.k==='hold'?-.3:0;if(!d)continue;
+  M.burn=M.burn||{};for(const e of M.xi[c.id]){if(e.slot==='GK')continue;M.burn[e.pid]=clamp((M.burn[e.pid]||0)+d,0,40)}}}
+function shoutStart(M,cid,k){M.shout=M.shout||{};M.shout[cid]={k,from:M.m,until:M.m+SHOUT_MIN};M.shoutN=(M.shoutN||0)+1;if(k==='calm'&&M.mo&&M.mo.team!==cid)M.mo=null;return M.shout[cid]}
 function scorerFrom(M,c){const xs=xiPlayers(M,c);if(!xs.length)return null;const mk=M.plan&&M.plan.kind==='mark'&&M.plan.target?M.plan.target:null;const w=xs.map(({p})=>{const r=roleOf(p);let b=p.pos==='FW'?6:p.pos==='MF'?3:p.pos==='DF'?1:.05;if(r==='poach')b*=1.5;if(r==='target')b*=1.15;if(r==='false9')b*=.75;if(r==='winger')b*=1.3;if(r==='b2b')b*=1.2;if(r==='anchor')b*=.5;if(r==='wingback')b*=1.4;if(mk&&p.id===mk)b*=1-.5*(M.plan.mult||1);return b});let r=Math.random()*w.reduce((x,y)=>x+y,0);for(let i=0;i<xs.length;i++){r-=w[i];if(r<=0)return xs[i].p}return xs[0].p}
 function penTaker(M,c){const xs=xiPlayers(M,c);if(!xs.length)return null;const fw=xs.filter(x=>x.p.pos==='FW').sort((a,b)=>b.p.ovr-a.p.ovr)[0]||xs.filter(x=>x.p.pos==='MF').sort((a,b)=>b.p.ovr-a.p.ovr)[0]||xs[0];return fw.p}
 function fm(m){return '\u2066'+m+"'\u2069"}
@@ -1605,13 +1835,15 @@ function matchRatings(M,h,a){
       let r=6.1+(effOvr(p)-avg)*.045+s.g*1.0+s.a*.55+(p.pos==='GK'?s.sv*.18:0)+(cs?.5:0)+res+s.sot*.12-(p.pos==='GK'?ga*.25:0)-s.y*.25-s.red*1.6+rnd(-.35,.35);
       if(min<20)r=6+(r-6)*.5;s.r=+clamp(r,3,10).toFixed(1);out[pid]=s}}
   M.ratings=out;return out}
-function stepMinute(M){
+function stepMinute(M,ui){
   if(M.playback)return mpPlaybackStep(M); /* multiplayer: replay a recorded match, no simulation */
-  const h=club(M.h),a=club(M.a);M.m++;
+  const h=club(M.h),a=club(M.a);
+  if(M.pendingPen){const pp=M.pendingPen;M.pendingPen=null;const pc=club(pp.team);const pk=pc&&pc.players.find(x=>x.id===pp.pid);if(pk)penResolve(M,pc,pk,Math.random()<.76?'goal':'miss')}   /* a penalty the screen never answered (the app closed on it) */
+  M.m++;if(M.shout)shoutTick(M,h,a);
   if(M.m===1||M.m%15===0||M.tadjDirty){M.tadj=tacticAdj(M,h,a);M.tadjDirty=false;if(M.tadj.notes.length&&M.live&&!M.tadjNoted){M.tadjNoted=true;M.ev.push({m:M.m,t:'note',team:G.me,txt:M.tadj.notes[0]})}}
   const sh=xiStrength(M,h),sa=xiStrength(M,a);M.units={[h.id]:unitStrength(M,h),[a.id]:unitStrength(M,a)};const [lh,la]=expGoals(sh,sa,M.ctx.neutral,h,a,M);
   /* possession share: strength gap, mentality and style move it, inside the range real matches show (about 27-73%) */
-  const homeHas=Math.random()<clamp(.5+(sh-sa)*.015+(mentalityAdj(h,M)[0]-mentalityAdj(a,M)[0])*.4+(M.tadj?M.tadj.poss:0),.27,.73);/* a minute is never one side's alone: the side on the ball is credited four fifths of it, so the share shown stays in the range of real matches */
+  const homeHas=Math.random()<clamp(.5+(sh-sa)*.015+(mentalityAdj(h,M)[0]-mentalityAdj(a,M)[0])*.4+(M.tadj?M.tadj.poss:0)+(M.shout?shoutAdj(M,h,a).poss:0),.27,.73);/* a minute is never one side's alone: the side on the ball is credited four fifths of it, so the share shown stays in the range of real matches */
   if(homeHas){M.poss[h.id]+=.8;M.poss[a.id]+=.2}else{M.poss[a.id]+=.8;M.poss[h.id]+=.2}
   M.pm=M.pm||[];M.pm.push(homeHas?1:0);M.passes=M.passes||{[h.id]:0,[a.id]:0};const tt=tacOf(homeHas?h:a);M.passes[homeHas?h.id:a.id]+=ri(5,11)+(tt&&tt.tempo==='slow'?2:0)-(tt&&tt.style==='direct'?2:0);
   M.sot=M.sot||{[h.id]:0,[a.id]:0};M.corners=M.corners||{[h.id]:0,[a.id]:0};
@@ -1643,12 +1875,12 @@ function stepMinute(M){
   const r=Math.random();
   if(false){}
   else{const r2=Math.random();
-    if(r2<lh*.0025){const p=penTaker(M,h);if(p){M.shots[h.id]++;if(Math.random()<.76){M.gh++;M.sot[h.id]++;M.ev.push(goalEvent(M,h,p,'pen'))}else{const s=pstat(M,h.id,p.id);s.sh++;M.ev.push({m:M.m,t:'penmiss',team:h.id,pid:p.id,name:fullName(p),x:94,y:34,xg:.76,path:buildPath({x:94,y:34},Math.random()<.5?'save':'off')})}}}
-    else if(r2<(lh+la)*.0025){const p=penTaker(M,a);if(p){M.shots[a.id]++;if(Math.random()<.76){M.ga++;M.sot[a.id]++;M.ev.push(goalEvent(M,a,p,'pen'))}else{const s=pstat(M,a.id,p.id);s.sh++;M.ev.push({m:M.m,t:'penmiss',team:a.id,pid:p.id,name:fullName(p),x:94,y:34,xg:.76,path:buildPath({x:94,y:34},Math.random()<.5?'save':'off')})}}}
+    if(r2<lh*.0025)penAward(M,h,a,ui);
+    else if(r2<(lh+la)*.0025)penAward(M,a,h,ui);
     else if(r2<(lh+la)*.0025+.0006){const og=Math.random()<.5?h:a;const other=og===h?a:h;const ds=xiPlayers(M,og).filter(x=>x.p.pos==='DF'||x.p.pos==='GK');const x=ds.length?pick(ds):null;if(x){if(og===h)M.ga++;else M.gh++;M.ev.push({m:M.m,t:'own',team:other.id,ogteam:og.id,pid:x.p.id,name:fullName(x.p),x:rnd(96,103),y:rnd(26,42),xg:.1})}}}
   for(const c of [h,a]){
     const xs=xiPlayers(M,c);if(!xs.length)continue;
-    if(Math.random()<.016){const x=pick(xs);x.e.yel++;if(x.e.yel>=2){markOut(M,c,x.e);M.xi[c.id]=M.xi[c.id].filter(e=>e!==x.e);x.p.susp=Math.max(x.p.susp,1);M.ev.push({m:M.m,t:'red',team:c.id,pid:x.p.id,name:fullName(x.p)})}else M.ev.push({m:M.m,t:'yellow',team:c.id,pid:x.p.id,name:fullName(x.p)})}
+    if(Math.random()<(M.shout&&shoutOf(M,c.id)&&shoutOf(M,c.id).k==='calm'?.008:.016)){const x=pick(xs);x.e.yel++;if(x.e.yel>=2){markOut(M,c,x.e);M.xi[c.id]=M.xi[c.id].filter(e=>e!==x.e);x.p.susp=Math.max(x.p.susp,1);M.ev.push({m:M.m,t:'red',team:c.id,pid:x.p.id,name:fullName(x.p)})}else M.ev.push({m:M.m,t:'yellow',team:c.id,pid:x.p.id,name:fullName(x.p)})}
     else if(Math.random()<.0022*(c.focus==='fit'?.75:1)*(c.campShield>0?.6:1)){const w=xs.map(x=>1+(100-(x.p.fit??100))/50+Math.max(0,82-liveEnergy(M,c,x.p,x.e,M.m))/40);let rr=Math.random()*w.reduce((p,q)=>p+q,0);let x=xs[0];for(let i=0;i<xs.length;i++){rr-=w[i];if(rr<=0){x=xs[i];break}}setInjury(x.p,injuryWeeks(c));markOut(M,c,x.e);M.xi[c.id]=M.xi[c.id].filter(e=>e!==x.e);M.ev.push({m:M.m,t:'inj',team:c.id,pid:x.p.id,name:fullName(x.p),weeks:x.p.inj,injT:x.p.injT,needSub:true});
       if(c.id!==G.me||!M.live)autoSub(M,c,x.p.pos)}
     if(c.id!==G.me||!M.live){ if([58,66,74,82].includes(M.m)&&Math.random()<.55)autoSub(M,c);
@@ -1658,6 +1890,18 @@ function stepMinute(M){
   }
   if(M.m>=90){M.done=true}
 }
+/* A penalty. In a live match of the user's club the screen may take it over (ui.pen returns true): the engine parks it in
+   M.pendingPen and the screen reports the outcome through penResolve(M,club,taker,'goal'|'miss',how). Everywhere else
+   (simulated matches, AI against AI, multiplayer) it is decided here exactly as before. */
+function penAward(M,c,opp,ui){const p=penTaker(M,c);if(!p)return;
+  if(ui&&ui.pen&&(c.id===G.me||opp.id===G.me)&&ui.pen(M,c,p)){M.pendingPen={team:c.id,pid:p.id,m:M.m};return}
+  penResolve(M,c,p,Math.random()<.76?'goal':'miss')}
+function penResolve(M,c,p,out,how){M.shots[c.id]++;M.sot=M.sot||{[M.h]:0,[M.a]:0};
+  if(out==='goal'){if(c.id===M.h)M.gh++;else M.ga++;M.sot[c.id]++;const ev=goalEvent(M,c,p,'pen');if(how)ev.how=how;M.ev.push(ev);return ev}
+  const s=pstat(M,c.id,p.id);s.sh++;
+  const ev={m:M.m,t:'penmiss',team:c.id,pid:p.id,name:fullName(p),x:94,y:34,xg:.76,path:buildPath({x:94,y:34},how?(how==='save'?'save':'off'):(Math.random()<.5?'save':'off'))};
+  if(how){ev.how=how;if(how==='save'){M.sot[c.id]++;const o=club(c.id===M.h?M.a:M.h);const gk=o&&xiPlayers(M,o).find(x=>x.p.pos==='GK');if(gk){ev.gk=gk.p.id;ev.gkName=fullName(gk.p);pstat(M,o.id,gk.p.id).sv++}}}
+  M.ev.push(ev);return ev}
 function bench(M,c){const inXI=new Set(M.xi[c.id].map(e=>e.pid));const used=new Set(M.used[c.id]);return available(c).filter(p=>!inXI.has(p.id)&&!used.has(p.id))}
 function autoSub(M,c,pos){
   if(M.subs[c.id]>=MAX_SUBS)return;
@@ -1696,7 +1940,7 @@ function settle(M){if(G&&(M.h===G.me||M.a===G.me)){const mc=me();if(mc)mc.prepLe
   M.motm=M.motmLive||manOfMatch(M,h,a);if(M.motm){const mp=club(M.motm.team).players.find(x=>x.id===M.motm.pid);if(mp)mp.motm=(mp.motm||0)+1}
   matchFatigue(M);fansUpdate(h,M.gh,M.ga,a,ctx.kind,ctx.stage,true);fansUpdate(a,M.ga,M.gh,h,ctx.kind,ctx.stage,false);
   moraleAfterMatch(M,h,M.gh,M.ga);moraleAfterMatch(M,a,M.ga,M.gh);
-  const rec={wk:G.wk,season:G.season,kind:ctx.kind,label:ctx.label,h:h.id,a:a.id,hn:h.short,an:a.short,gh:M.gh,ga:M.ga,pens:M.pens,att:M.att,motm:M.motm,ev:mine?M.ev.map(e=>({...e})):M.ev.filter(e=>e.t==='goal'||e.t==='pen'||e.t==='own'||e.t==='red').map(e=>({m:e.m,t:e.t,team:e.team,pid:e.pid,name:e.name}))};
+  const rec={wk:G.wk,season:G.season,kind:ctx.kind,label:ctx.label,h:h.id,a:a.id,hn:h.short,an:a.short,gh:M.gh,ga:M.ga,pens:M.pens,penScore:M.penScore||undefined,att:M.att,motm:M.motm,ev:mine?M.ev.map(e=>({...e})):M.ev.filter(e=>e.t==='goal'||e.t==='pen'||e.t==='own'||e.t==='red').map(e=>({m:e.m,t:e.t,team:e.team,pid:e.pid,name:e.name}))};
   if(mine){rec.plan=M.plan||null;rec.oppSwitch=M.oppSwitch||null;rec.anConf=M.anConf||null;rec.shots={[h.id]:M.shots[h.id],[a.id]:M.shots[a.id]};rec.sot=M.sot;rec.corners=M.corners;rec.poss={[h.id]:M.poss[h.id],[a.id]:M.poss[a.id]};rec.passes=M.passes;rec.pm=M.pm;rec.seed=M.seed;rec.xi={[h.id]:M.xi[h.id].map(e=>e.pid).concat(M.used[h.id]),[a.id]:M.xi[a.id].map(e=>e.pid).concat(M.used[a.id])};rec.ps={};for(const c of [h,a]){rec.ps[c.id]={};for(const pid in R){if(c.players.some(p=>p.id==pid)){const s=R[pid];rec.ps[c.id][pid]={min:s.min,g:s.g,a:s.a,sh:s.sh,sot:s.sot,sv:s.sv,ps:s.ps,cs:s.cs||0,r:s.r,xg:+s.xg.toFixed(2),pos:(c.players.find(p=>p.id==pid)||{}).pos,name:fullName(c.players.find(p=>p.id==pid))}}}}}
   // gate income from the real attendance
   if(h.league&&!ctx.neutral&&ctx.kind!=='friendly'){const price=(h.ticket||baseTicket(h))*(ctx.kind==='euro'?1.5:1);const inc=Math.round(M.att*price);h.money+=inc;rec.income=inc;if(h.id===G.me)addLog(`הכנסות כרטיסים (${M.att.toLocaleString('he')} צופים)`,inc);
@@ -1711,7 +1955,7 @@ function settle(M){if(G&&(M.h===G.me||M.a===G.me)){const mc=me();if(mc)mc.prepLe
   if(ctx.kind==='toto')settleToto(M,h,a,rec);
   if(ctx.kind==='euro')settleEuro(M,h,a,rec);
   G.results.push(rec);
-  if(mine){try{chemAfterMatch(M,club(G.me),R);storyOnMatch(M)}catch(e){}boardAfterMatch(M,h,a);resultStory(M,h,a);try{adBonuses(M,h,a)}catch(e){}}
+  if(mine){try{chemAfterMatch(M,club(G.me),R);storyOnMatch(M)}catch(e){}boardAfterMatch(M,h,a);resultStory(M,h,a);try{adBonuses(M,h,a)}catch(e){}try{carAfterMatch(M,rec)}catch(e){console.warn('career book',e)}}
   return rec;
 }
 function gateIncome(h,a,kind){
@@ -2581,7 +2825,7 @@ function tacticAdj(M,h,a){
   dh=H.own+A.opp;da=A.own+H.opp;poss=H.ps-A.ps;fatH=H.fat;fatA=A.fat;
   return {dh,da,poss,fatH,fatA,notes};
 }
-function liveEnergy(M,c,p,e,m){const t=tacOfM(M,c);const rate=(t&&t.press==='high'?1.25:t&&t.press==='low'?.85:1)*(t&&t.tempo==='fast'?1.1:1)*(p.pos==='GK'?.35:1);const played=Math.max(0,(m??M.m)-(e?e.since:0));return Math.round(clamp((p.fit??100)-played*.16*rate-Math.max(0,played-60)*.35*rate,15,100))}
+function liveEnergy(M,c,p,e,m){const t=tacOfM(M,c);const rate=(t&&t.press==='high'?1.25:t&&t.press==='low'?.85:1)*(t&&t.tempo==='fast'?1.1:1)*(p.pos==='GK'?.35:1);const played=Math.max(0,(m??M.m)-(e?e.since:0));return Math.round(clamp((p.fit??100)-played*.16*rate-Math.max(0,played-60)*.35*rate-((M&&M.burn&&M.burn[p.id])||0),15,100))}
 function liveMentality(M,c){return (M.liveMent&&M.liveMent[c.id])||c.mentality||'bal'}
 function matchupText(c,o){const t=tacOf(c),to=tacOf(o);const tips=[];
   tips.push(`${o.short} משחקת ב${TAC.press[to.press]}, ${TAC.style[to.style]}, ${TAC.tempo[to.tempo]}.`);
@@ -3301,6 +3545,7 @@ function settingsCardHTML(){return `<div class="card"><h3 class="sec">הגדרו
   <div class="row between wrap" style="margin-top:8px"><span class="small">אנימציית אצטדיון</span><div class="mt" style="flex:0 0 200px"><button data-motion="full" class="${motionLevel()==='full'?'on':''}">מלאה</button><button data-motion="low" class="${motionLevel()==='low'?'on':''}">מופחתת</button><button data-motion="off" class="${motionLevel()==='off'?'on':''}">כבויה</button></div></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">מנוע גרפי למשחק החי <span class="muted">${pixiState==='ready'?'(WebGL מוכן)':pixiState==='failed'?'(WebGL לא זמין, SVG בשימוש)':'(נטען…)'}</span></span><div class="mt" style="flex:0 0 200px"><button data-rend="pixi" class="${G.renderer!=='svg'?'on':''}">WebGL</button><button data-rend="svg" class="${G.renderer==='svg'?'on':''}">קל (SVG)</button></div></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">עיתון קופץ באירועים גדולים</span><div class="mt" style="flex:0 0 160px"><button data-ppon="1" class="${!G.paperPopOff?'on':''}">פעיל</button><button data-ppon="0" class="${G.paperPopOff?'on':''}">כבוי</button></div></div>
+  ${engageSettingsHTML()}
   <div class="row between wrap" style="margin-top:8px"><span class="small">תצוגה מקדימה <span class="muted">(בלי כסף ובלי העברה)</span></span><div class="row wrap" style="gap:6px"><button class="btn sm sec" data-demo="perm">חתימה</button><button class="btn sm sec" data-demo="loan">השאלה</button><button class="btn sm sec" data-demo="free">חופשי</button><button class="btn sm sec" data-demo="cup">גביע</button><button class="btn sm sec" data-demo="champ">אליפות</button></div></div>
   <div class="row between wrap" style="margin-top:8px"><span class="small">עיתון לדוגמה <span class="muted">(לא נשמר)</span></span><div class="row wrap" style="gap:6px"><button class="btn sm sec" data-npdemo="appoint">מינוי</button><button class="btn sm sec" data-npdemo="perm">רכש</button><button class="btn sm sec" data-npdemo="loan">השאלה</button><button class="btn sm sec" data-npdemo="sponsor">חסות</button><button class="btn sm sec" data-npdemo="champ">אליפות</button><button class="btn sm sec" data-npdemo="cup">גביע</button></div></div>
   <div class="muted tiny" style="margin-top:4px">"מופחתת" מתאימה למכשירים חלשים ולמי שמעדיף פחות תנועה (נבחרת אוטומטית כשהמערכת מבקשת להפחית אנימציות).</div>
@@ -3339,7 +3584,7 @@ function advanceWeek(){
   if(!my)finishWeek();
   return my;
 }
-function afterMyMatch(M){if(!M||M.settled)return;M.settled=true;settle(M);G.live=null;try{localStorage.removeItem('ilm2_livefl')}catch(e){}finishWeek()}
+function afterMyMatch(M){if(!M||M.settled)return;M.settled=true;settle(M);G.live=null;try{localStorage.removeItem('ilm2_livefl')}catch(e){}finishWeek();try{surpriseRoll(M)}catch(e){console.warn('envelope',e)}}
 function finishWeek(){
   const ev=currentEvent();
   if(ev.t==='cup')finishCupStage();
@@ -3348,7 +3593,7 @@ function finishWeek(){
   if(G.lsched&&G.lsched[G.wk]===37){const lst=standingsOf('leumit');G.lchampion=lst[0].id;news(`${lst[0].name} אלופת הליגה הלאומית!`)}
   if(ev.t==='league'&&ev.n===36){G.champion=standingsOf('top')[0].id;news(`${club(G.champion).name} היא אלופת המדינה לעונת ${seasonLabel()}!`);if(G.champion===G.me){G.celebrate='אלופת המדינה!';recordMoment('champ','ליגת העל')}}
   if(me().campShield>0)me().campShield--;
-  weeklyEconomy();weeklyDevelopment();try{loansOutWeekly()}catch(e){console.warn('loans',e)}weeklyM2();weeklyStaff();weeklySquadLife();try{storyTick();challengesTick()}catch(e){console.warn('story',e)}weeklyProjects();weeklyTransfersAI();weeklyOffers();fansDecay();scoutTick();processNegotiationsWeekly();payablesWeekly();checkPromises();midSeasonBoard(ev);maybeJobOffer(ev);if(G.jobOffer&&G.wk-G.jobOffer.wk>=2){G.jobOffer=null;news('הצעת העבודה פגה.')}
+  weeklyEconomy();weeklyDevelopment();try{loansOutWeekly()}catch(e){console.warn('loans',e)}weeklyM2();weeklyStaff();weeklySquadLife();try{storyTick();challengesTick()}catch(e){console.warn('story',e)}weeklyProjects();weeklyTransfersAI();weeklyOffers();fansDecay();scoutTick();processNegotiationsWeekly();payablesWeekly();checkPromises();midSeasonBoard(ev);maybeJobOffer(ev);try{carWeekly()}catch(e){console.warn('career book',e)}if(G.jobOffer&&G.wk-G.jobOffer.wk>=2){G.jobOffer=null;news('הצעת העבודה פגה.')}
   if(ev.t==='league'&&ev.n%4===0){potm();const pos=myPos();G.board.conf=clamp(G.board.conf+(pos<=G.board.expectRank?2:pos<=G.board.expectRank+1?0:-2),0,100)}
   const fired=G.wk>14&&G.board.conf<fireThreshold()&&G.phase==='play';
   G.wk++;
@@ -3494,6 +3739,7 @@ function endSeason(){
   const euroText=c.euro?(c.euro.history.length?c.euro.history.join(' · '):`${COMP_HE[c.euro.comp]}: ${STAGE_HE[c.euro.stage]}`):'לא שיחקה באירופה';
   G.summary={season:seasonLabel(),pos,div:inTop?'top':'leumit',champ:inTop?champ.name:lchamp.name,rel:(inTop?rel:lrel).map(x=>x.name),promoted:promoted.map(x=>x.name),cup:club(G.cupWinner)?.name||'—',toto:G.toto&&G.toto.winner?club(G.toto.winner).name:'—',met,bonus,euro:inTop?euroText:'ליגה לאומית',conf:G.board.conf,prize:inTop?prize(pos-1):lprize(pos-1),contractOver:G.manager.seasonsLeft<=0,up:!inTop&&promoted.some(x=>x.id===c.id),down:inTop&&rel.some(x=>x.id===c.id)};
   G.manager.history.push({season:seasonLabel(),club:c.name,pos,cup:G.cupWinner===G.me,div:inTop?'top':'leumit',champ:G.champion===G.me,toto:G.toto&&G.toto.winner===G.me,up:!inTop&&promoted.some(x=>x.id===c.id)});
+  try{carSeasonEnd({pos,inTop,promoted:!inTop&&promoted.some(x=>x.id===c.id)})}catch(e){console.warn('career book',e)}
   try{ensureRep();let dr=(G.board.expectRank-pos)*1.5;if(G.champion===G.me)dr+=8;if(G.cupWinner===G.me)dr+=5;if(G.toto&&G.toto.winner===G.me)dr+=3;if(!inTop&&promoted.some(x=>x.id===c.id))dr+=6;addRep(Math.round(clamp(dr,-10,15)),'סיכום עונה')}catch(e){}
   awardsStory();
   recordSeason({season:seasonLabel(),champ:champ.name,champId:champ.id,cup:club(G.cupWinner)?.name||'—',cupId:G.cupWinner,toto:G.toto&&G.toto.winner?club(G.toto.winner).name:null,totoId:G.toto&&G.toto.winner,lchamp:lchamp.name,lchampId:lchamp.id,topScorer:G.awards&&G.awards.top,poty:G.awards&&G.awards.poty&&G.awards.poty.name,myClub:c.name,myPos:pos,myDiv:inTop?'top':'leumit',relegated:rel.map(x=>x.name),promoted:promoted.map(x=>x.name)});
@@ -3571,7 +3817,7 @@ function sellPlayer(pid){
   c.players=c.players.filter(x=>x!==p);if(c.lineup)c.lineup=c.lineup.map(id=>id===p.id?null:id);if(c.captain===p.id)c.captain=null;let net=fee;if(p.sellon){const cut=Math.round(fee*p.sellon.pct/100);net-=cut;addLog(`${p.sellon.pct}% ל${p.sellon.to}`,-cut);p.sellon=null}c.money+=net;buyer.players.push(p);buyer.money-=fee;addLog(`מכירת ${fullName(p)}`,fee);
   news(`${fullName(p)} נמכר ל${buyer.short} תמורת ${NIS(fee)}.`);saleStory(p,c,buyer,fee);toast('נמכר');closeModal();autoLineups();save();render();
 }
-function promoteYouth(pid){const c=me();const y=c.youth.find(x=>x.id===pid);if(!y)return;if(c.players.length>=30)return toast('הסגל מלא');c.youth=c.youth.filter(x=>x!==y);y.contract=3;y.wage=playerWage(y);c.players.push(y);news(`${fullName(y)} (${y.age}) הועלה מהנוער לקבוצה הבוגרת בחוזה ל-3 שנים.`);y.morale=78;if(y.pot>=76)paper('מועדון',`כישרון חדש: ${fullName(y)} הועלה לבוגרים`,`${POSHE[y.pos]} בן ${y.age} עם פוטנציאל גבוה`,`באקדמיה של ${c.name} מדברים עליו כבר שנתיים. ${pick(['המנג\'ר רוצה לתת לו דקות כבר העונה.','האוהדים מסמנים אותו כעתיד.','הסקאוטים מאירופה כבר שאלו עליו.'])}`);toast('הועלה לבוגרים');save();render()}
+function promoteYouth(pid){const c=me();const y=c.youth.find(x=>x.id===pid);if(!y)return;if(c.players.length>=30)return toast('הסגל מלא');c.youth=c.youth.filter(x=>x!==y);y.contract=3;y.acad=1;y.wage=playerWage(y);c.players.push(y);news(`${fullName(y)} (${y.age}) הועלה מהנוער לקבוצה הבוגרת בחוזה ל-3 שנים.`);y.morale=78;if(y.pot>=76)paper('מועדון',`כישרון חדש: ${fullName(y)} הועלה לבוגרים`,`${POSHE[y.pos]} בן ${y.age} עם פוטנציאל גבוה`,`באקדמיה של ${c.name} מדברים עליו כבר שנתיים. ${pick(['המנג\'ר רוצה לתת לו דקות כבר העונה.','האוהדים מסמנים אותו כעתיד.','הסקאוטים מאירופה כבר שאלו עליו.'])}`);toast('הועלה לבוגרים');save();render()}
 function signFreeAgent(pid){const c=me();const p=G.freeAgents.find(x=>x.id===pid);if(!p)return;
   if(!WINDOW(G.wk))return toast('חלון ההעברות סגור');if(c.players.length>=30)return toast('הסגל מלא');
   const d=contractDemand(p);if(c.money<d.bonus)return toast('אין מספיק תקציב לבונוס החתימה');
@@ -3599,7 +3845,7 @@ function chooseSponsor(i){const c=me();const o=G.sponsorOffers[i];c.sponsor={...
    Browsers without IndexedDB (and the jsdom test suites) use the legacy localStorage layout unchanged: key ilm2 / ilm2_sN,
    ilm2_*_backup and ilm2_meta_N, written synchronously. Legacy localStorage careers are migrated into IndexedDB at boot
    and deleted only after the new record was read back and compared. */
-const SAVE_VERSION=12;const SLOTS=3;
+const SAVE_VERSION=13;const SLOTS=3;
 const DB_NAME='goalasso',DB_STORE='careers';
 function curSlot(){try{return clamp(parseInt(localStorage.getItem('ilm2_cur'))||1,1,SLOTS)}catch(e){return 1}}
 function setCurSlot(n){try{localStorage.setItem('ilm2_cur',String(n))}catch(e){}}
@@ -3671,7 +3917,8 @@ let saveBC=null;try{if(typeof BroadcastChannel!=='undefined'){saveBC=new Broadca
 function broadcastSave(rec){try{if(saveBC)saveBC.postMessage({writer:SV.writer,slot:rec.slot,careerId:rec.careerId,rev:rec.rev,meta:rec.meta})}catch(e){}}
 /* Returns true/false synchronously in localStorage mode, a Promise<boolean> in IndexedDB mode. Callers that need the
    outcome use Promise.resolve(save()).then(ok=>…). */
-function save(opts){if(!G)return false;if(isDeletedCareer(G.careerId))return STORE.kind==='idb'?Promise.resolve(false):false;if(STORE.kind!=='idb')return saveSync();
+function save(opts){if(!G)return false;if(SANDBOX)return STORE.kind==='idb'?Promise.resolve(true):true;   /* the quick tournament runs on a throw-away state: nothing of it is ever written */
+  if(isDeletedCareer(G.careerId))return STORE.kind==='idb'?Promise.resolve(false):false;if(STORE.kind!=='idb')return saveSync();
   if(SV.blocked&&!(opts&&opts.force)){showConflict();return Promise.resolve(false)}
   try{validateCareer(G)}catch(e){storageNotice('המשחק במצב לא תקין ולא נשמר. ייצא גיבוי ופנה לתמיכה.');saveIndicator('error');return Promise.resolve(false)}
   ensureCareerIdentity(G);const slot=G.slot||curSlot();const stamp=Date.now();G.rev=(G.rev||0)+1;G.slot=slot;G.v=SAVE_VERSION;G.savedAt=stamp;
@@ -3691,7 +3938,7 @@ async function writeJob(job){if(jobFenced(job))return false;try{const packed=awa
     SV.retry=job;saveIndicator('error');const quota=e&&(e.name==='QuotaExceededError'||/quota/i.test(String(e.message||e)));
     storageNotice(quota?'אין מקום באחסון של הדפדפן. ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי עכשיו, פנה מקום (מחק קריירה ישנה) ונסה לשמור שוב.':'השמירה נכשלה ('+(e&&e.name||'שגיאה')+'). ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי ונסה לשמור שוב.');return false}}
 function askPersistence(){if(SV.persistAsked)return;SV.persistAsked=true;try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{})}catch(e){}}
-function showConflict(){if(typeof document==='undefined'||!document||!document.body)return;   /* a write that finishes while the page is closing has nobody to ask */
+function showConflict(){if(SANDBOX||typeof document==='undefined'||!document||!document.body)return;   /* a write that finishes while the page is closing has nobody to ask */
   if($('modal')||!SV.blocked)return;const st=SV.blocked.stored||{};const m=st.meta||{};
   openModal(`<h3 class="sec">הקריירה נשמרה ממקום אחר</h3><p class="small">${SV.blocked.remote?'לשונית או חלון אחר של המשחק שמרו גרסה חדשה יותר של הקריירה הזאת.':'באחסון יש גרסה חדשה יותר של הקריירה (כנראה מלשונית אחרת).'}<br>שם: ${esc(m.club||'')} · ${esc(m.season||'')} · שבוע ${(m.wk||0)+1} · גרסה ${st.rev||'?'}<br>כאן: ${esc(me()?me().name:'')} · ${seasonLabel()} · שבוע ${G.wk+1} · גרסה ${G.rev||0}</p><p class="muted tiny">כדי לא לאבד התקדמות, המשחק הזה לא ישמור עד שתבחר.</p><div class="actions"><button class="btn" id="conflictLoad">טען את הגרסה החדשה</button><button class="btn danger" id="conflictForce">דרוס אותה בגרסה שכאן</button></div>`,
    e=>{if(e.target.closest('#conflictLoad')){closeModal();const n=G.slot||curSlot();SV.blocked=null;G=null;Promise.resolve(load(n)).then(ok=>{if(!ok)toast('הטעינה נכשלה');render()})}
@@ -3708,7 +3955,7 @@ function saveSync(){try{
   storageNotice('');saveIndicator('saved');return true;
 }catch(e){saveIndicator('error');storageNotice('השמירה נכשלה. ההתקדמות נמצאת בזיכרון בלבד — פנו מקום ונסו לשמור שוב, או ייצאו גיבוי.');return false}}
 /* the tab is closing while a write is still in flight: park the newest snapshot in localStorage, restored at next boot */
-function emergencyFlush(){if(STORE.kind!=='idb'||!G||isDeletedCareer(G.careerId))return;const job=SV.q||(SV.busy?SV.retry:null);if(!job&&!SV.busy)return;try{localStorage.setItem('ilm2_em_'+(G.slot||curSlot()),JSON.stringify(G))}catch(e){}}
+function emergencyFlush(){if(SANDBOX||STORE.kind!=='idb'||!G||isDeletedCareer(G.careerId))return;const job=SV.q||(SV.busy?SV.retry:null);if(!job&&!SV.busy)return;try{localStorage.setItem('ilm2_em_'+(G.slot||curSlot()),JSON.stringify(G))}catch(e){}}
 try{window.addEventListener('pagehide',emergencyFlush);window.addEventListener('beforeunload',emergencyFlush)}catch(e){}
 
 /* ---- validation, restore, migrations ---- */
@@ -3731,7 +3978,7 @@ function installCareer(json,slot){const old=G,oldUid=uid;const fail=()=>{G=old;u
   // an explicit install (import, cloud, backup) brings a deleted career back on purpose
   if(G&&G.careerId)SV.deleted.delete(G.careerId);SV.blocked=null;return Promise.resolve(save({force:true})).then(ok=>{if(!ok){G=old;uid=oldUid;return false}return true})}
 
-const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}],[8,'מזהה קריירה ומונה גרסאות',()=>ensureCareerIdentity(G)],[9,'סגלים מלאים בשוק העולמי ופנים אירופיות',()=>migrateWorldSquads()],[10,'סגלים אמיתיים בליגה הלאומית',()=>migrateLeumitSquads()],[11,'סגלים מעודכנים בליגות העולם ובלאומית',()=>{migrateWorldSquads();migrateLeumitSquads()}],[12,'רק שחקנים אמיתיים בשוק; שמות בעברית בלאומית',()=>migrateRealOnly()]];
+const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}],[8,'מזהה קריירה ומונה גרסאות',()=>ensureCareerIdentity(G)],[9,'סגלים מלאים בשוק העולמי ופנים אירופיות',()=>migrateWorldSquads()],[10,'סגלים אמיתיים בליגה הלאומית',()=>migrateLeumitSquads()],[11,'סגלים מעודכנים בליגות העולם ובלאומית',()=>{migrateWorldSquads();migrateLeumitSquads()}],[12,'רק שחקנים אמיתיים בשוק; שמות בעברית בלאומית',()=>migrateRealOnly()],[13,'ספר הקריירה: תארים, שיאים והישגים',()=>carBackfill()]];
 function runMigrations(){const from=G.v||4;for(const [v,,fn] of MIGRATIONS){if(from<v){fn()}}G.v=SAVE_VERSION;if(from<SAVE_VERSION)G.migratedFrom=from}
 function hydrateCareer(){const all=[...G.clubs,...G.leumit,...Object.values(G.pseudo)];const wall=G.world?Object.values(G.world).flatMap(l=>l.clubs):[];uid=Math.max(uid,...all.concat(wall).flatMap(c=>[...c.players,...(c.youth||[])].map(p=>p.id)),...(G.scouts||[]).map(s=>s.id),...(G.scoutMarket||[]).map(s=>s.id),...(G.negs||[]).map(n=>n.id))+1;if(!G.paper)G.paper=[];if(!G.world)G.world={};if(!G.scouts)G.scouts=[];if(!G.scoutMarket)G.scoutMarket=[];if(!G.reports)G.reports=[];if(!G.negs)G.negs=[];if(!G.payables)G.payables=[];if(G.manager&&G.manager.trust==null)G.manager.trust=60;G.clubs.forEach(c=>{if(!c.div)c.div='top'});G.leumit.forEach(c=>{if(!c.div)c.div='leumit';if(c.tier==null)c.tier=4});if(G.leumit.length<16){const have=new Set(G.leumit.map(c=>c.name));for(const d of LEUMIT16){if(G.leumit.length>=16)break;if(!have.has(d.name)&&!G.clubs.some(c=>c.name===d.name))G.leumit.push(buildLeumitClub(d))}}if(!G.lfx||!G.lsched){buildLeumitSeason();G.leumit.forEach(c=>Object.assign(c,{P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0}))}if(!G.toto)buildToto();if(!G.hist)G.hist=[];computeLeumitPrestige();for(const c of all){if(c.scouting==null)c.scouting=1;for(const p of [...c.players,...(c.youth||[])])assignPers(p);if(c.fans==null)c.fans=baseFans(c);if(!c.focus)c.focus='bal';if(!c.intensity)c.intensity='mid';for(const p of [...c.players,...(c.youth||[])]){if(p.morale==null)p.morale=65;if(p.fit==null)p.fit=100}}migrateM2();ensureStaff();seedChem();runMigrations();if(G.phase==='play'&&G.cal&&G.wk<G.cal.length)ensureDraws();}
 
@@ -3854,13 +4101,15 @@ function recordSigning(p,c,kind,x){x=x||{};if(!G||!p||!c)return null;G.signings=
   const tx={id,kind,pid:p.id,club:c.id,clubName:c.name,season:G.season,seasonLabel:seasonLabel(),wk:G.wk,
     name:fullName(p),pos:p.pos||null,age:p.age!=null?p.age:null,ovr:isKnown(p)?p.ovr:null,no:p.no||null,
     from:x.from||null,fee:x.fee!=null?x.fee:null,inst:x.inst||1,years:kind==='loan'?null:(p.contract||null),buy:x.buy||null,shown:false,t:Date.now()};
-  G.signings.push(tx);if(G.signings.length>40)G.signings=G.signings.slice(-40);save();return tx}
-function recordMoment(kind,comp){if(!G)return;G.moments=G.moments||[];const id=`m-${kind}-${G.season}-${comp}`;if(G.moments.some(m=>m.id===id))return;
+  G.signings.push(tx);if(G.signings.length>40)G.signings=G.signings.slice(-40);try{carSigning(p,kind)}catch(e){}save();return tx}
+function recordMoment(kind,comp){if(!G)return;try{carTrophy(kind,comp)}catch(e){}G.moments=G.moments||[];const id=`m-${kind}-${G.season}-${comp}`;if(G.moments.some(m=>m.id===id))return;
   G.moments.push({id,kind,comp,club:G.me,clubName:me().name,season:seasonLabel(),shown:false});save()}
 let revealOpen=false;
-function maybeShowQueued(){if(!G||G.live||revealOpen||(typeof splashOpen==='function'&&splashOpen()))return;
+function maybeShowQueued(){if(!G||G.blitz||G.live||revealOpen||envOpen||(typeof splashOpen==='function'&&splashOpen()))return;
   const tx=(G.signings||[]).find(t=>!t.shown);if(tx){tx.shown=true;save();return openReveal(tx)}
-  const m=(G.moments||[]).find(t=>!t.shown);if(m){m.shown=true;save();return openMoment(m)}}
+  const m=(G.moments||[]).find(t=>!t.shown);if(m){m.shown=true;save();return openMoment(m)}
+  /* an envelope that arrived after a quick-played match */
+  if(G.env&&!G.env.shown&&G.phase==='play'&&G.view==='home'&&!$('modal')){G.env.shown=true;save();return envelopeOpen(G.env)}}
 function revealReduced(){return (window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)||(G&&G.motion==='off')}
 function inkFor(hex){const [r,g,b]=hexRGB(hex);return (r*299+g*587+b*114)/1000>150?'#0b1020':'#ffffff'}
 function shirtSVG(c,no,k){const id='rv'+(k||'');return `<svg class="rv-shirt" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="kg${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient></defs>${kitInner(c).replace('url(#kg)',`url(#kg${id})`)}${no?`<text x="20" y="${sponsorName(c)?31.5:27.5}" text-anchor="middle" font-size="${sponsorName(c)?8.5:11}" font-weight="800" font-family="Heebo, Arial, sans-serif" fill="${inkFor(c.c1)}" stroke="rgba(0,0,0,.25)" stroke-width=".3">${no}</text>`:''}</svg>`}
@@ -4040,7 +4289,7 @@ function windowInfo(){if(!G||!G.cal)return null;const open=WINDOW(G.wk);let roun
   const summer=!open&&found&&!G.cal.slice(at).some(e=>e.t==='league');
   if(open)return {open,rounds,weeks,txt:!found?'חלון ההעברות פתוח':rounds<=1?'חלון ההעברות נסגר אחרי המחזור הקרוב':`חלון ההעברות נסגר בעוד ${rounds} מחזורים`};
   return {open,rounds,weeks,txt:!found?'החלון ייפתח שוב בקיץ':summer?`חלון הקיץ נפתח בסוף העונה, בעוד ${rounds} ${rounds===1?'מחזור':'מחזורים'}`:rounds<=0?'חלון ההעברות נפתח בשבוע הבא':`חלון ההעברות נפתח בעוד ${rounds} ${rounds===1?'מחזור':'מחזורים'}`}}
-function renderTop(){const c=me();try{const wi=windowInfo();const b=$('topWin');if(b&&wi){b.textContent=wi.txt;b.className='winchip '+(wi.open?'open':'closed')+(wi.open&&wi.rounds<=2?' soon':'');b.onclick=()=>{if(G.phase==='play'){G.view='market';render()}}}}catch(e){}$('topKitWrap').innerHTML=kitSVG(c);$('topName').textContent=c.name;$('topMoney').textContent=NIS(c.money);$('topWeek').textContent=`${Math.min(G.wk+1,G.cal.length)}/${G.cal.length}`;$('topPos').textContent=myPos()}
+function renderTop(){const c=me();try{const wi=windowInfo();const b=$('topWin');if(b&&wi){b.textContent=wi.txt;b.className='winchip '+(wi.open?'open':'closed')+(wi.open&&wi.rounds<=2?' soon':'');b.onclick=()=>{if(G.phase==='play'){G.view='market';render()}}}}catch(e){}$('topKitWrap').innerHTML=kitSVG(c);$('topName').textContent=c.name;$('topMoney').textContent=NIS(c.money);$('topWeek').textContent=`${Math.min(G.wk+1,G.cal.length)}/${G.cal.length}`;$('topPos').textContent=myPos();try{topCountUp(c)}catch(e){}}
 const NAV=[['home','בית','<svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>'],['lineup','הרכב','<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="2.5"/></svg>'],['squad','סגל','<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>'],['market','העברות','<svg viewBox="0 0 24 24"><path d="M4 7h12l-3-3M20 17H8l3 3"/></svg>'],['club','מועדון','<svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6"/></svg>'],['table','טבלאות','<svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>'],['money','כספים','<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h3.5a1.5 1.5 0 0 1 0 3H11a1.5 1.5 0 0 0 0 3h3.5"/></svg>']];
 function renderNav(){$('nav').innerHTML=NAV.map(([id,l,s])=>`<button class="${G.view===id?'on':''}" data-view="${id}">${s}${l}</button>`).join('');$('nav').onclick=e=>{const b=e.target.closest('button');if(b&&G.phase==='play'){G.view=b.dataset.view;render()}}}
 
@@ -4048,13 +4297,14 @@ function render(){
   closeModal();setTimeout(()=>{try{AdSvc.observe()}catch(e){}},50);if(G&&G.paperPop&&G.paperPop.length&&G.phase==='play')setTimeout(()=>{if(G&&G.view==='home'&&!liveTimer)showPaperPop()},80);
   if(!G){renderStart();return}
   if(G.live&&!G.live.settled){startLive(G.live);return}
+  if(G.blitz){Match3D.stop();if(typeof AUD!=='undefined'&&AUD.matchOn)crowdStop(1.2);return blitzRender()}   /* the quick tournament has its own screens */
   if(typeof MP!=='undefined'&&MP.watching&&!MP.watching.done&&document.querySelector('.live-view'))return;   // multiplayer playback on screen
   Match3D.stop();
   if(typeof AUD!=='undefined'&&AUD.matchOn)crowdStop(1.2);   // any other screen: the stadium fades out
   $('top').classList.remove('hide');renderTop();if(!$('top').querySelector('[data-room-open]'))$('top').insertAdjacentHTML('beforeend',Rooms.entry());
   if(G.phase!=='play'){$('nav').classList.add('hide');const v={contract:viewContract,sponsor:viewSponsor,board:viewBoard,seasonEnd:viewSeasonEnd,fired:viewFired}[G.phase];$('main').innerHTML=`<div class="view">${v()}</div>`;bind();return}
   $('nav').classList.remove('hide');renderNav();
-  const v={home:viewHome,lineup:viewLineup,squad:()=>viewSquad()+(squadTab==='youth'?'':loansOutCardHTML()),market:viewMarket,club:viewClub,table:viewTable,money:viewMoney}[G.view]||viewHome;
+  const v={home:viewHome,lineup:viewLineup,squad:()=>viewSquad()+(squadTab==='youth'?'':loansOutCardHTML()),market:viewMarket,club:viewClub,table:viewTable,money:viewMoney,career:viewCareer}[G.view]||viewHome;
   $('main').innerHTML=`<div class="view">${v()}</div>`;bind();
   setTimeout(maybeShowQueued,150);
 }
@@ -4073,9 +4323,9 @@ function renderStart(){
   <div class="card" style="margin-top:4px"><div class="row between"><h3 class="sec">ליגה לאומית · 16 מועדונים</h3><button class="btn sm sec" id="toggleLeumit">הסתר</button></div><div class="muted small" style="margin-top:4px">התחל מלמטה: תקציב קטן, סגלים מדומים, ויעד אחד: לעלות לליגת העל.</div>
   <div class="grid" id="leumitGrid" style="margin-top:10px">${LEUMIT16.map(t=>`<button class="teamcard" data-pick="${t.id}" style="--c1:${t.c1};--c2:${t.c2}">${kitSVG(t,'lg')}<b>${esc(t.name)}</b><span class="ov num">${t.str}</span><small>${esc(t.stadium)} · ${t.cap.toLocaleString('he')}</small><small>ליגה לאומית</small></button>`).join('')}</div></div>
   ${ranked.some(r=>!openIds.has(r.id))?`<div class="card"><div class="row between"><h3 class="sec">נעולים בתחילת הקריירה</h3><span class="muted tiny">${ranked.filter(r=>!openIds.has(r.id)).length} מועדונים</span></div><div class="muted small" style="margin-top:4px">המועדונים הגדולים לא לוקחים מאמן בלי רזומה. תוצאות טובות מעלות את המוניטין שלך, ואז מגיעות הצעות עבודה באמצע העונה או בסופה.</div><div class="lockrow">${ranked.filter(r=>!openIds.has(r.id)).map(r=>defs.find(t=>t.id===r.id)).map(t=>`<button class="lockchip" data-locked="${t.id}" aria-disabled="true">${kitSVG(t)}<span>${esc((META[t.id]&&META[t.id].short)||t.name)}</span><svg class="lk" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></button>`).join('')}</div></div>`:''}
-  ${migrationNoticeHTML()}${mpStartHTML()}${slotsCardHTML()}${cloudBoxHTML()}
+  ${blitzEntryHTML()}${migrationNoticeHTML()}${mpStartHTML()}${slotsCardHTML()}${cloudBoxHTML()}
   <p class="muted tiny" style="text-align:center">GOALASSO מאמן כדורגל · גרסה 2.6 · סגלים ישראליים: וואלה ספורט / footballtransfers · 41 מועדונים אירופיים עם סגלים אמיתיים (footballtransfers) · דירוגים נגזרים משווי השוק</p></div>`;
-  $('main').onclick=e=>{const mpb=e.target.closest('[data-mpa]');if(mpb)return mpUiAction(mpb.dataset.mpa,mpb);if(e.target.closest('#cloudLoad'))return cloudLoad();const lx=e.target.closest('[data-legacyexport]');if(lx)return exportLegacy(+lx.dataset.legacyexport);const ll=e.target.closest('[data-legacyload]');if(ll)return loadLegacy(+ll.dataset.legacyload);if(e.target.closest('#migrationRetry'))return retryMigration();if(e.target.closest('#toggleLeumit')){const g=$('leumitGrid');g.classList.toggle('hide');e.target.closest('#toggleLeumit').textContent=g.classList.contains('hide')?'הצג':'הסתר';return}const sl=e.target.closest('[data-slotload]');if(sl){const n=+sl.dataset.slotload;setCurSlot(n);G=null;Promise.resolve(load(n)).then(ok=>{if(ok){cloud.meta=null;cloudRefreshMeta()}else toast('הטעינה נכשלה');render()});return}const sd=e.target.closest('[data-slotdel]');if(sd){const n=+sd.dataset.slotdel;openModal(`<h3 class="sec">למחוק את משבצת ${n}?</h3><p class="small muted">הקריירה במשבצת הזו תימחק מהדפדפן. שמירה בענן, אם יש, לא נמחקת כאן.</p><div class="actions"><button class="btn danger" id="slotDelGo">מחק</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#slotDelGo')){deleteSlot(n);closeModal();render()}});return}const ss=e.target.closest('[data-slotsel]');if(ss){setCurSlot(+ss.dataset.slotsel);cloud.meta=null;cloudRefreshMeta();render();return}
+  $('main').onclick=e=>{const mpb=e.target.closest('[data-mpa]');if(mpb)return mpUiAction(mpb.dataset.mpa,mpb);if(e.target.closest('[data-blitz-open]'))return blitzEnter();if(e.target.closest('#cloudLoad'))return cloudLoad();const lx=e.target.closest('[data-legacyexport]');if(lx)return exportLegacy(+lx.dataset.legacyexport);const ll=e.target.closest('[data-legacyload]');if(ll)return loadLegacy(+ll.dataset.legacyload);if(e.target.closest('#migrationRetry'))return retryMigration();if(e.target.closest('#toggleLeumit')){const g=$('leumitGrid');g.classList.toggle('hide');e.target.closest('#toggleLeumit').textContent=g.classList.contains('hide')?'הצג':'הסתר';return}const sl=e.target.closest('[data-slotload]');if(sl){const n=+sl.dataset.slotload;setCurSlot(n);G=null;Promise.resolve(load(n)).then(ok=>{if(ok){cloud.meta=null;cloudRefreshMeta()}else toast('הטעינה נכשלה');render()});return}const sd=e.target.closest('[data-slotdel]');if(sd){const n=+sd.dataset.slotdel;openModal(`<h3 class="sec">למחוק את משבצת ${n}?</h3><p class="small muted">הקריירה במשבצת הזו תימחק מהדפדפן. שמירה בענן, אם יש, לא נמחקת כאן.</p><div class="actions"><button class="btn danger" id="slotDelGo">מחק</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#slotDelGo')){deleteSlot(n);closeModal();render()}});return}const ss=e.target.closest('[data-slotsel]');if(ss){setCurSlot(+ss.dataset.slotsel);cloud.meta=null;cloudRefreshMeta();render();return}
     const lk=e.target.closest('[data-locked]');if(lk)return toast('מועדון גדול לא לוקח מאמן בלי רזומה. התחל בליגה הלאומית או בתחתית ליגת העל, והצעות יגיעו.');const b=e.target.closest('[data-pick]');if(b){const n=curSlot();const go=()=>{newGame(b.dataset.pick,$('mgrName')?$('mgrName').value.trim():'');G.slot=n;ensureCareerIdentity(G);save({force:true});render()};if(slotMeta(n)){openModal(`<h3 class="sec">משבצת ${n} תפוסה</h3><p class="small">קריירה חדשה תחליף את השמירה במשבצת ${n}. אפשר לבחור משבצת אחרת למעלה.</p><div class="actions"><button class="btn danger" id="ovGo">החלף</button><button class="btn sec" data-close>ביטול</button></div>`,ev=>{if(ev.target.closest('#ovGo')){closeModal();go()}});return}go()}};
 }
 
@@ -4123,7 +4373,7 @@ function eventCard(){
   }
   const actNegs=(G.negs||[]).filter(n=>n.stage==='club'||n.stage==='player').length;const windowTag=(WINDOW(G.wk)?'<span class="tag good">חלון העברות פתוח</span>':'<span class="tag">חלון סגור</span>')+(actNegs?` <span class="tag info">${actNegs} במו"מ</span>`:'');
   return `<div class="card${nm?' ev-hero':''}"><div class="row between wrap"><h2 class="ev-title">${esc(title)}</h2><div>${windowTag} ${c.euro&&c.euro.stage!=='out'?`<span class="tag info">${COMP_HE[c.euro.comp]}</span>`:''}</div></div>
-  <div class="muted tiny">שבוע ${G.wk+1} מתוך ${G.cal.length} · עונת ${seasonLabel()}</div>${body}
+  <div class="muted tiny">שבוע ${G.wk+1} מתוך ${G.cal.length} · עונת ${seasonLabel()}</div>${body}${nm&&!mpIsOn()?nextHooksHTML(2):''}
   <div class="actions" style="margin-top:8px">${mpIsOn()?'<button class="btn sec" id="toLineupBtn">הרכב וטקטיקה</button>':nm?'<button class="btn big" id="toLineupBtn">לבחירת הרכב ולמשחק</button>':'<button class="btn big" id="playBtn">המשך לשבוע הבא</button><button class="btn sec" id="simNext" style="flex:0 0 auto">עד המשחק הבא</button>'}</div></div>${mpIsOn()?mpCardHTML():''}`;
 }
 function viewHome(){
@@ -4132,6 +4382,7 @@ function viewHome(){
   html+=jobOfferCard();html+=storyCardHTML();
   if(G.wk===0&&!G.campDone)html+=`<div class="card hero"><h3 class="sec">מחנה אימונים לפני העונה</h3><div class="small muted" style="margin:6px 0 10px">בחירה אחת לעונה. משפיע על הכושר הגופני, המורל ועל הסיכוי לפציעות בחודש הראשון.</div><div class="list">${[['aut','מחנה באוסטריה','₪1.5M · כושר גופני מלא, מורל +5, פחות פציעות בחודש הראשון',1.5e6],['cyp','מחנה בקפריסין','₪700K · מורל +3, כושר +',7e5],['home','מתאמנים בבית','חינם · בלי בונוסים, הכסף נשאר לשוק',0]].map(([k,t,d])=>`<button class="pl" style="display:block;text-align:right;cursor:pointer" data-camp="${k}"><b>${t}</b><div class="muted tiny" style="margin-top:3px">${d}</div></button>`).join('')}</div></div>`;
   try{html+=goalsCardHTML()}catch(e){}
+  try{html+=careerCardHTML();if(!mpIsOn())html+=blitzEntryHTML()}catch(e){console.warn('career card',e)}
   const edition=(G.paper||[]).filter(x=>x.s===G.season&&x.wk>=G.wk-1).slice(0,3);const fallback=(G.paper||[]).slice(0,1);
   if(edition.length||fallback.length)html+=paperHTML(edition.length?edition:fallback,{max:3});
   if(G.offers.length)html+=`<div class="card"><h3 class="sec">הצעות לשחקנים שלך</h3><div class="list" style="margin-top:8px">${G.offers.map((o,i)=>{const p=c.players.find(x=>x.id===o.pid);if(!p)return '';return `<div class="pl"><span class="pos ${p.pos}">${POSB[p.pos]}</span><div class="name"><b>${esc(fullName(p))}</b><small>${esc(club(o.from).short)}${club(o.from).lg?' ('+WORLD_LEAGUES[club(o.from).lg].flag+' '+esc(WORLD_LEAGUES[club(o.from).lg].name)+')':''} מציעה <b class="num">${NIS(o.fee)}</b> (שווי ${NIS(p.value)})</small></div><button class="btn sm" data-accept="${i}">קבל</button><button class="btn sm sec" data-counter="${i}" ${o.countered?'disabled':''}>+15%</button><button class="btn sm sec" data-reject="${i}">דחה</button></div>`}).join('')}</div></div>`;
@@ -4636,7 +4887,7 @@ function matchReportHTML(r,opts){opts=opts||{};const h0=club(r.h)||{short:r.hn,n
     if(mp>=58&&r.shots[my]<=8)lines.push(`${mp}% החזקה אבל רק ${r.shots[my]} בעיטות: המסירות לא תורגמו למצבים.`);if(mp<=42&&gf>=ga)lines.push(`${mp}% החזקה בלבד ובכל זאת לא הפסדנו: משחק מעבר שעבד.`);
     if(((r.sot||{})[op]||0)>=6)lines.push(`${(r.sot||{})[op]} בעיטות למסגרת של היריבה: ההגנה נפרצה יותר מדי.`);if(!lines.length)lines.push(gf>ga?'משחק מאוזן שהוכרע ברגעים הקטנים.':gf===ga?'משחק שקול, התוצאה משקפת.':'היריבה הייתה טובה יותר הערב בפרמטרים המרכזיים.');
     verdict=`<div class="card"><h3 class="sec">ניתוח העוזר</h3>${lines.map(l=>`<div class="small" style="margin-top:4px">• ${l}</div>`).join('')}</div>`}
-  return `<div class="rep"><div class="rep-head"><div class="rt" style="--c:${h.c1}">${kitSVG(h,'sm')}<b>${esc(h.name)}</b><div class="muted tiny">${goals(r.h)||''}</div></div><div class="rs num"><span class="sc2"><span>${r.gh}</span><span class="muted">:</span><span>${r.ga}</span></span>${r.pens?`<small>פנדלים: ${esc((r.pens==='h'?h:a).short)}</small>`:''}</div><div class="rt" style="--c:${a.c1}">${kitSVG(a,'sm')}<b>${esc(a.name)}</b><div class="muted tiny">${goals(r.a)||''}</div></div></div>
+  return `<div class="rep"><div class="rep-head"><div class="rt" style="--c:${h.c1}">${kitSVG(h,'sm')}<b>${esc(h.name)}</b><div class="muted tiny">${goals(r.h)||''}</div></div><div class="rs num"><span class="sc2"><span>${r.gh}</span><span class="muted">:</span><span>${r.ga}</span></span>${r.pens?`<small>פנדלים: ${esc((r.pens==='h'?h:a).short)}${r.penScore?` <bdi dir="ltr">${r.penScore[0]}:${r.penScore[1]}</bdi>`:''}</small>`:''}</div><div class="rt" style="--c:${a.c1}">${kitSVG(a,'sm')}<b>${esc(a.name)}</b><div class="muted tiny">${goals(r.a)||''}</div></div></div>
   <div class="muted tiny" style="text-align:center;margin-top:4px">${esc(r.label||'')}${r.att?` · ${r.att.toLocaleString('he')} צופים`:''}${r.motm?` · ⭐ ${esc(r.motm.name)}${r.motm.r?' ('+r.motm.r+')':''}`:''}</div>
   ${verdict}${planVerdict(r)}${stats}${shotmap}${mom}${ratings}${heat}</div>`}
 function matchReportModal(r,onClose){const d=openModal(`<h3 class="sec" style="text-align:center">סיכום המשחק</h3>${matchReportHTML(r)}<div class="actions" style="margin-top:12px"><button class="btn big" id="reportNext">המשך</button></div>`,e=>{if(e.target.closest('#reportNext')){closeModal();onClose&&onClose()}});d.dataset.lock='1';d.querySelector('.card').classList.add('wide')}
@@ -4707,9 +4958,10 @@ async function mpRefresh(){if(!mpIsOn())return;if(MP.busy||MP.refreshing){MP.pen
 async function mpRefreshNow(){const c=await mpClient();
   const [{data:L,error:e1},{data:M,error:e2}]=await Promise.all([c.from('mp_leagues').select('id,code,status,revision,week,season,turn_due,turn_min,state_gz').eq('id',G.mp.league).single(),c.from('mp_members').select('uid,club_id,display_name,is_host,ready_rev,commands,last_seen').eq('league_id',G.mp.league)]);
   if(e1||e2){MP.err=mpErrHe((e1||e2).message);return}
-  const prevStatus=G.mp.status;G.mp.status=L.status;G.mp.turnDue=L.turn_due;G.mp.turnMin=L.turn_min;G.mp.members=M.map(m=>({uid:m.uid,club:m.club_id,name:m.display_name,host:m.is_host,ready:m.ready_rev>=L.revision,seen:m.last_seen,me:m.uid===MP.uid}));
+  const prevStatus=G.mp.status;const wasReady=(G.mp.members||[]).some(m=>!m.me&&m.ready);G.mp.status=L.status;G.mp.turnDue=L.turn_due;G.mp.turnMin=L.turn_min;G.mp.members=M.map(m=>({uid:m.uid,club:m.club_id,name:m.display_name,host:m.is_host,ready:m.ready_rev>=L.revision,seen:m.last_seen,me:m.uid===MP.uid}));
   const other=G.mp.members.find(m=>!m.me);G.mp.oppClub=other?other.club:null;G.mp.oppName=other?other.name:null;G.mp.oppOnline=other?(Date.now()-new Date(other.seen).getTime()<90000):false;
   try{await mpRpc('mp_seen',{p_league:G.mp.league})}catch(e){}
+  try{mpNotifyReady(wasReady,other,G.mp.members.some(m=>m.me&&m.ready));if(L.revision>G.mp.rev&&!mpIsHost())notify('המחזור שוחק','התוצאות מחכות לך במשחק.','mp-week')}catch(e){}
   if(L.revision>G.mp.rev){await mpLoadRevision(L);return}
   if(mpIsHost()&&L.status==='play'){const allReady=G.mp.members.length===2&&G.mp.members.every(m=>m.ready);const expired=L.turn_due&&Date.now()>new Date(L.turn_due).getTime();const meReady=G.mp.members.some(m=>m.me&&m.ready);
     if(allReady||(expired&&meReady)){await mpHostSimulate(L,M);return}}
@@ -4814,7 +5066,7 @@ const Rooms=(()=>{
  }
  function inviteId(value){try{value=new URL(value).searchParams.get('invite')||value}catch(e){}if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(value))throw Error('invitation_expired');return value}
  function inviteLink(){const u=new URL(location.href);u.search='';u.hash='';u.searchParams.set('invite',G.networkRoom.invitation);return u.href}
- async function refresh(gen=generation){const ref=G?.networkRoom;if(!ref||!modal||gen!==generation)return;clearTimeout(poll);const state=await rpc('mp_friendly_state',{p_room:ref.id});if(gen!==generation||!modal||G?.networkRoom?.id!==ref.id)return;last=state;const body=document.getElementById('room-body');
+ async function refresh(gen=generation){const ref=G?.networkRoom;if(!ref||!modal||gen!==generation)return;clearTimeout(poll);const state=await rpc('mp_friendly_state',{p_room:ref.id});if(gen!==generation||!modal||G?.networkRoom?.id!==ref.id)return;try{roomNotify(last,state)}catch(e){}last=state;const body=document.getElementById('room-body');
   if(!playTimer)body.innerHTML=`<h3>חדר המשחק</h3>${state.members.map(m=>`<div class="room-member"><strong>${esc(m.snapshot.club.name)}${m.mine?' · אתה':''}</strong><span>${m.ready?'מוכן ✓':'מנהל את ההרכב'}</span></div>`).join('')}${state.members.length<2?'<p>ממתינים לחבר שיצטרף להזמנה.</p>':''}${ref.invitation?`<label>קישור ההזמנה<input id="room-share-link" readonly dir="ltr" value="${esc(inviteLink())}"></label><div class="room-actions"><button class="btn" data-room-action="share">שתף הזמנה</button><button class="btn sec" data-room-action="copy">העתק קישור</button></div>`:''}<div class="room-actions">${state.result?'<button class="btn" data-room-action="watch">צפה במשחק</button>':`<button class="btn" data-room-action="ready" ${state.members.find(m=>m.mine)?.ready?'disabled':''}>אני מוכן למשחק</button>${state.host?`<button class="btn" data-room-action="start" ${state.members.length===2&&state.members.every(m=>m.ready)?'':'disabled'}>התחל משחק ידידות</button>`:'<p>כשתהיו מוכנים, המזמין יתחיל את המשחק.</p>'}`}</div><button class="btn sec" data-room-action="new">חזרה להזמנות</button>`;
   if(!state.result)poll=setTimeout(()=>refresh(gen).catch(e=>message(err(e))),3000);
  }
@@ -5258,6 +5510,7 @@ function bind(){
   const m=$('main');
   m.onclick=e=>{
     const t=e.target;if(!t.closest('.msearch'))closeMarketSuggest();
+    if(engageClick(e))return;
     const id=t.id||t.closest('button')?.id;
     const mpb=t.closest('[data-mpa]');if(mpb)return mpUiAction(mpb.dataset.mpa,mpb);if(t.closest('[data-view-home]')){G.view='home';return render()}
     if(mpIsOn()&&(id==='playBtn'||id==='skipBtn'||id==='simNext'))return toast('במשחק רשת השבוע רץ כששני המאמנים לוחצים "מוכן"');
@@ -5460,14 +5713,624 @@ function bcMomentum(M,h,a){const el=document.getElementById('bcMom');if(!el)retu
   for(let i=1;i<=n;i++){const s=clamp((v[i]*.5+v[i-1]*.3+(i>1?v[i-2]:0)*.2)/1.1,-1,1);const hh=Math.max(.5,Math.abs(s)*8.8);
     bars+=`<rect x="${90-i}" y="${s>=0?(10-hh).toFixed(2):10}" width=".74" height="${hh.toFixed(2)}" fill="${s>=0?col.h.fill:col.a.fill}"/>`}
   el.innerHTML=`<svg viewBox="0 0 90 20" preserveAspectRatio="none"><line x1="0" y1="10" x2="90" y2="10" stroke="#ffffff26" stroke-width=".25"/><line x1="45" y1="0" x2="45" y2="20" stroke="#ffffff3d" stroke-width=".3" stroke-dasharray="1.2 1.2"/>${bars}</svg>${goals.join('')}`}
+/* ====================== AFTER THE MATCH: what waits next week, the envelope ======================
+   Three small things that sit between one match and the next. All of them read the real state of the career:
+     nextHooks()      why the coming week matters (a derby, the top of the table, a running streak, a player one goal from
+                      a round number, an achievement almost done). Shown on the home card and after a live match.
+     the envelope     now and then something arrives after a match: a scout's tip, an academy player who jumped, a bonus
+                      from the sponsor, a word from the stands. The effect is applied when it is rolled (surpriseRoll) and
+                      written to the news; the envelope only reveals it, like the signing reveal does.
+     postMatchFlow()  after the report and the press conference of a live match: the envelope if there is one, then the
+                      next-week card with one button that leads to the next match. */
+const HOOK_TAG={derby:'דרבי',top:'צמרת',six:'שש נקודות',rel:'תחתית',cup:'גביע',euro:'אירופה',under:'אנדרדוג',streak:'רצף',goal:'שחקן',ach:'הישג',board:'הנהלה',back:'חוזר'};
+function nextHooks(max){const out=[];if(!G||G.phase!=='play')return out;const c=me();const nm=myNextMatch();const C=carEnsure();
+  const add=(k,html)=>{if(!out.some(x=>x.k===k))out.push({k,html})};
+  if(nm&&nm.a&&nm.h){const opp=nm.h.id===G.me?nm.a:nm.h;const dl=derbyLabel(nm.h.id,nm.a.id);
+    if(dl)add('derby',`${esc(dl)} מול ${esc(opp.name)}, ${nm.neutral?'במגרש ניטרלי':nm.h.id===G.me?'אצלך בבית':'בחוץ'}`);
+    if(nm.kind==='league'){const tab=standings();const i=tab.findIndex(x=>x.id===G.me),j=tab.findIndex(x=>x.id===opp.id);
+      if(i>=0&&j>=0&&tab[i].P>=3){const pts=tab[i].pts,top=tab[0];
+        if(i>0&&(pts+3>top.pts||(pts+3===top.pts&&top.id===opp.id)))add('top','ניצחון יכול להעלות אותך למקום הראשון');
+        else if(i===0&&tab[1])add('top',tab[1].id===opp.id?`אתה ראשון, והיריבה היא הרודפת שלך`:`אתה ראשון, <bdi>${pts-tab[1].pts}</bdi> נקודות מעל ${esc(tab[1].short)}`);
+        else if(Math.abs(i-j)<=2)add('six',`${esc(opp.short)} במקום <bdi>${j+1}</bdi>, אתה במקום <bdi>${i+1}</bdi>: משחק על שש נקודות`);
+        if(i>=tab.length-3&&tab[i].P>=5)add('rel',`מקום <bdi>${i+1}</bdi> מתוך <bdi>${tab.length}</bdi>: כל נקודה חשובה במאבק ההישרדות`)}}
+    else if(nm.kind==='cup')add('cup',`${esc(nm.label)}: משחק אחד, המפסידה בחוץ`);
+    else if(nm.kind==='toto'&&/גמר/.test(nm.label))add('cup',esc(nm.label));
+    else if(nm.kind==='euro')add('euro',`${esc(nm.label)}${nm.firstLeg?` · המשחק הראשון <bdi dir="ltr">${nm.firstLeg[0]}:${nm.firstLeg[1]}</bdi>`:''}`);
+    const d=Math.round(strength(opp)-strength(c));if(d>=5&&nm.kind!=='friendly')add('under',`${esc(opp.short)} חזקה ממך ב־<bdi>${d}</bdi> נקודות דירוג: ניצחון כאן נרשם`)}
+  if(C.st.w>=2){const best=C.rec.bestW||0;add('streak',C.st.w>=best?`<bdi>${C.st.w}</bdi> ניצחונות רצופים, השיא שלך. המשחק הבא יכול לשבור אותו`:`<bdi>${C.st.w}</bdi> ניצחונות רצופים. השיא שלך: <bdi>${best}</bdi>`)}
+  else if(C.st.unb>=5)add('streak',`<bdi>${C.st.unb}</bdi> משחקים בלי הפסד${(C.rec.bestUnb||0)>C.st.unb?`. השיא שלך: <bdi>${C.rec.bestUnb}</bdi>`:''}`);
+  const sc=c.players.filter(p=>!p.inj&&!p.susp&&[4,9,14,19,24,29].includes(p.goals||0)).sort((a,b)=>b.goals-a.goals)[0];if(sc)add('goal',`${esc(fullName(sc))} במרחק שער אחד מ־<bdi>${sc.goals+1}</bdi> העונה`);
+  const back=c.players.filter(p=>p.inj===1&&(p.injTot||0)>=3).sort(byOvr)[0];if(back)add('back',`${esc(fullName(back))} חוזר מפציעה בשבוע הבא`);
+  const near=achNear(1)[0];if(near&&near.left<=2)add('ach',`עוד <bdi>${near.left}</bdi> להישג "${esc(near.he)}"`);
+  try{if(G.board&&G.wk>10&&G.board.conf<fireThreshold()+8)add('board',`אמון ההנהלה <bdi>${Math.round(G.board.conf)}</bdi>: תוצאה טובה תוריד את הלחץ`)}catch(e){}
+  return out.slice(0,max||3)}
+function nextHooksHTML(max){const hs=nextHooks(max);return hs.length?`<ul class="hooks">${hs.map(h=>`<li><span class="tag info">${HOOK_TAG[h.k]||''}</span><span>${h.html}</span></li>`).join('')}</ul>`:''}
+
+/* ---- the next-week card (after a live match) ---- */
+function nextUpModal(M,done){const go=view=>{closeModal();if(view&&G&&G.phase==='play')G.view=view;done&&done()};
+  if(!G||G.phase!=='play'||!currentEvent())return done&&done();
+  const C=carEnsure();const defs=achDefs();const got=C.fresh.map(id=>defs.find(d=>d.id===id)).filter(Boolean);C.fresh=[];
+  const nm=myNextMatch();const ev=currentEvent();let head;
+  if(nm&&nm.a&&nm.h){const h=nm.h,a=nm.a;const home=h.id===G.me;
+    head=`<div class="nx-vs"><div class="nx-t">${kitSVG(h,'lg')}<b>${esc(h.short||h.name)}</b></div><div class="nx-mid"><span>${nm.neutral?'ניטרלי':home?'בית':'חוץ'}</span></div><div class="nx-t">${kitSVG(a,'lg')}<b>${esc(a.short||a.name)}</b></div></div><div class="nx-label">${esc(nm.label)}</div>`}
+  else head=`<div class="nx-free"><b>${ev.t==='break'?'פגרת נבחרות':nm?esc(nm.label):'שבוע בלי משחק'}</b><small>${ev.t==='break'?'פצועים מחלימים והצעירים מתאמנים':nm?'ההגרלה תיערך בתחילת השבוע':'שבוע אימונים: זמן לסגל, לשוק ולאקדמיה'}</small></div>`;
+  const d=openModal(`<div class="nx"><div class="nx-kick">השבוע הבא</div>${head}${nextHooksHTML(3)}
+    ${got.length?`<div class="nx-got"><div class="muted tiny">הישגים חדשים</div><div class="achlist">${got.map(achRowHTML).join('')}</div></div>`:''}
+    <div class="actions" style="margin-top:12px"><button class="btn big" id="nxGo">${nm&&nm.a?'למשחק הבא':'המשך'}</button><button class="btn sec" id="nxHome" style="flex:0 0 auto">למסך הבית</button></div></div>`,
+    e=>{if(e.target.closest('#nxGo')){if(nm&&nm.a){lineupSel=null;return go('lineup')}return go('home')}if(e.target.closest('#nxHome'))return go('home')});
+  d.dataset.lock='1';d.classList.add('nx-modal');if(got.length)buzz('open');save()}
+function postMatchFlow(M,done){if(!G||G.blitz||G.phase!=='play'||mpIsOn()||G.live)return done&&done();
+  const next=()=>nextUpModal(M,done);const env=G.env&&!G.env.shown?G.env:null;
+  if(env){env.shown=true;save();return envelopeOpen(env,next)}
+  next()}
+
+/* ---- the envelope ---- */
+function envRecord(o){G.envSeq=(G.envSeq||0)+1;G.env={id:G.envSeq,wk:G.wk,s:G.season,shown:false,...o};try{news(`✉️ ${o.from}: ${o.title}${o.fx&&o.fx.length?' ('+o.fx.join(', ').replace(/[⁦-⁩‎]/g,'')+')':''}.`)}catch(e){}return G.env}
+/* Rolled once after each competitive match of the user's club. Roughly one match in three brings something; never two
+   in a row, and never more than four matches without one. What can arrive depends on what just happened. */
+function surpriseRoll(M){if(!G||G.blitz||G.phase!=='play'||mpIsOn()||!M||M.ctx.kind==='friendly')return null;
+  const S=G.envS||(G.envS={dry:1});const p=S.dry>=4?1:S.dry<=0?0:.2+S.dry*.1;if(Math.random()>=p){S.dry++;return null}
+  const c=me();const meH=M.h===G.me;const gf=meH?M.gh:M.ga,ga=meH?M.ga:M.gh;const win=gf>ga,loss=gf<ga;const opp=club(meH?M.a:M.h);const opts=[];
+  const ys=(c.youth||[]).filter(y=>y.pot-y.ovr>=4);
+  if(ys.length)opts.push([3,()=>{const y=ys.slice().sort((a,b)=>b.pot-a.pot)[ri(0,Math.min(2,ys.length-1))];const d=ri(2,3);y.ovr=Math.min(y.pot,y.ovr+d);finalize(y);
+    return {k:'youth',from:'מנהל האקדמיה',title:`${fullName(y)} קפץ מדרגה`,body:`${POSHE[y.pos]} בן ${y.age}. באימוני השבוע הוא נראה שחקן אחר, והמאמנים מבקשים שתבוא לראות.`,fx:[`דירוג ‎+${d}, עכשיו ${y.ovr}`,`פוטנציאל ${y.pot}`],go:'youth'}}]);
+  const tip=surpriseScoutPick(c);if(tip)opts.push([WINDOW(G.wk)?4:2,()=>{const {p:sp,cl}=tip;sp.kn=2;sp.rep=sp.rep||{by:'סקאוט אורח',q:4,wk:G.wk,s:G.season,txt:`${sp.ovr>=effOvrTop(c,sp.pos)?'יכול להיכנס להרכב מיד':'תוספת עומק טובה'}. ${sp.pot-sp.ovr>=6?'יש לו עוד לאן לגדול.':'שחקן בשל.'}`};G.reports=G.reports||[];G.reports.unshift({pid:sp.id,club:cl.id,by:sp.rep.by,wk:G.wk,s:G.season});G.reports=G.reports.slice(0,40);
+    return {k:'scout',from:'סקאוט שישב ביציע',title:`שווה לבדוק: ${fullName(sp)}`,body:`${POSHE[sp.pos]} בן ${sp.age} מ${cl.name}. ${sp.rep.txt}`,fx:[`דירוג ${sp.ovr} · פוטנציאל ${sp.pot}`,`שווי ${NIS(marketValue(sp))}`],wpid:sp.id}}]);
+  if(win&&c.sponsor)opts.push([2,()=>{const amt=Math.round((c.tier===1?420000:c.tier===2?260000:c.tier===3?160000:70000)*rnd(.8,1.3)/1e4)*1e4;c.money+=amt;addLog(`בונוס ניצחון מ${c.sponsor.name}`,amt);
+    return {k:'cash',from:c.sponsor.name,title:'בונוס על הניצחון',body:`נציגי הספונסר ישבו ביציע הכבוד ונהנו מכל רגע. ההעברה כבר בחשבון המועדון.`,fx:[`‎+${NIS(amt)} לקופה`]}}]);
+  if(win&&(isDerby(M.h,M.a)||gf-ga>=3||strength(opp)>=strength(c)+4))opts.push([3,()=>{c.fans=clamp((c.fans||50)+2,10,100);c.players.forEach(p=>p.morale=clamp((p.morale??65)+3,10,100));
+    return {k:'fans',from:'מכתב מהיציע',title:'האוהדים חיכו לשחקנים בחוץ',body:`מאות נשארו אחרי השריקה ושרו עד שהאוטובוס יצא. בחדר ההלבשה עוד מדברים על זה.`,fx:['אוהדים ‎+2','מורל הסגל ‎+3']}}]);
+  const mm=M.motm||M.motmLive;const star=mm&&mm.team===G.me?c.players.find(p=>p.id===mm.pid):null;
+  if(star)opts.push([2,()=>{star.form=clamp((star.form||0)+1.2,-4,4);star.morale=clamp((star.morale??65)+6,10,100);
+    return {k:'form',from:'המאמן האישי',title:`${fullName(star)} בכושר שיא`,body:`שחקן המשחק ביקש להישאר לאימון נוסף גם למחרת. ככה נראה שחקן שמרגיש שהכול הולך לו.`,fx:['כושר משחק ‎+1.2','מורל ‎+6']}}]);
+  const tired=c.players.filter(p=>(p.fit??100)<82).length;
+  if(tired>=5)opts.push([2,()=>{c.players.forEach(p=>p.fit=clamp((p.fit??100)+8,0,100));return {k:'rest',from:'המחלקה הרפואית',title:'יום התאוששות מלא',body:`הפיזיותרפיסטים פינו יום שלם לאמבטיות קרח, עיסויים ושינה. הרגליים ירגישו את זה.`,fx:['כושר גופני ‎+8 לכל הסגל']}}]);
+  if(loss)opts.push([3,()=>{const low=c.players.slice().sort((a,b)=>(a.morale??65)-(b.morale??65)).slice(0,6);low.forEach(p=>p.morale=clamp((p.morale??65)+6,10,100));
+    return {k:'talk',from:'הקפטן',title:'החדר איתך',body:`אחרי ההפסד הקפטן אסף את השחקנים בלי הצוות. הם יצאו משם עם מסר אחד: ממשיכים יחד.`,fx:['מורל ‎+6 לשישה שחקנים']}}]);
+  if(win&&strength(opp)>=strength(c)+3&&G.board)opts.push([2,()=>{G.board.conf=clamp(G.board.conf+3,0,100);return {k:'board',from:'הבעלים',title:'טלפון אחרי המשחק',body:`"ראיתי כל דקה. ככה אני רוצה לראות את הקבוצה שלי." השיחה נמשכה פחות מדקה, אבל היא נרשמה.`,fx:['אמון ההנהלה ‎+3']}}]);
+  if(!opts.length){S.dry++;return null}
+  let r=Math.random()*opts.reduce((t,o)=>t+o[0],0);let fn=opts[0][1];for(const o of opts){r-=o[0];if(r<=0){fn=o[1];break}}
+  S.dry=0;return envRecord(fn())}
+/* a real player abroad who would improve the squad and whom the club can afford; nobody the scouts already reported on */
+function surpriseScoutPick(c){try{if(!G.world||typeof WORLD_LEAGUES==='undefined')return null;const keys=Object.keys(G.world).filter(k=>G.world[k]&&G.world[k].clubs);if(!keys.length)return null;
+  const weak=['GK','DF','MF','FW'].map(pos=>({pos,v:effOvrTop(c,pos)})).sort((a,b)=>a.v-b.v)[0];let pool=[];
+  for(const k of keys)for(const cl of G.world[k].clubs)for(const p of cl.players){if(p.rep||p.nfs||!p.en||p.age>30||p.pos!==weak.pos)continue;if(p.ovr<weak.v-1||p.ovr>weak.v+7)continue;if(marketValue(p)*1.2>c.money)continue;pool.push({p,cl})}
+  if(!pool.length)return null;pool.sort((a,b)=>(b.p.ovr+(b.p.pot-b.p.ovr)*.3)-(a.p.ovr+(a.p.pot-a.p.ovr)*.3));return pool[ri(0,Math.min(4,pool.length-1))]}catch(e){return null}}
+let envOpen=false;
+function envelopeOpen(env,done){if(typeof document==='undefined'||!document.body)return done&&done();envelopeClose();envOpen=true;
+  const root=document.createElement('div');root.id='envelope';root.className='env';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','מעטפה: '+env.from);
+  root.innerHTML=`<div class="env-box"><div class="env-from">הגיעה מעטפה</div><button type="button" class="env-seal" id="envSeal" aria-label="פתח את המעטפה"><span class="env-flap"></span><span class="env-wax">G</span><span class="env-to">${esc(env.from)}</span></button><div class="env-tap">הקש לפתיחה</div>
+    <div class="env-letter" id="envLetter" hidden><div class="env-who">${esc(env.from)}</div><h3>${esc(env.title)}</h3><p>${esc(env.body)}</p>${env.fx&&env.fx.length?`<ul class="env-fx">${env.fx.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:''}
+    <div class="actions">${env.wpid?'<button type="button" class="btn sec" id="envPlayer">לכרטיס השחקן</button>':env.go==='youth'?'<button type="button" class="btn sec" id="envYouth">לאקדמיה</button>':''}<button type="button" class="btn" id="envOk">יפה</button></div></div></div>`;
+  document.body.appendChild(root);const open=()=>{if(root.classList.contains('open'))return;root.classList.add('open');root.querySelector('#envLetter').hidden=false;buzz('open');try{SFX.click()}catch(e){}setTimeout(()=>{try{root.querySelector('#envOk').focus({preventScroll:true})}catch(e){}},60)};
+  const close=after=>{envelopeClose();if(after)after();else done&&done()};
+  root.onclick=e=>{const t=e.target;if(t.closest('#envSeal'))return open();if(t.closest('#envOk'))return close();
+    if(t.closest('#envPlayer'))return close(()=>{done&&done();setTimeout(()=>{try{playerModalAny(env.wpid)}catch(e2){}},80)});
+    if(t.closest('#envYouth'))return close(()=>{squadTab='youth';G.view='squad';closeModal();render()})};
+  if(revealReduced())open();else setTimeout(()=>{try{root.querySelector('#envSeal').focus({preventScroll:true})}catch(e){}},60)}
+function envelopeClose(){const r=$('envelope');if(r)r.remove();envOpen=false}
+
+/* ---- the budget in the top bar counts to its new value instead of jumping ---- */
+let moneyShown=null;
+function topCountUp(c){const el=$('topMoney');if(!el||!c)return;const key=(G.careerId||'')+'|'+c.id;const to=c.money;const prev=moneyShown;moneyShown={key,v:to};
+  if(!prev||prev.key!==key||prev.v===to||revealReduced()||typeof requestAnimationFrame==='undefined')return;
+  const from=prev.v,t0=performance.now(),dur=700;el.classList.remove('up','down');void el.offsetWidth;el.classList.add(to>from?'up':'down');const my=moneyShown;
+  (function fr(){if(moneyShown!==my||!el.isConnected)return;const u=Math.min(1,(performance.now()-t0)/dur);const e=1-Math.pow(1-u,3);el.textContent=NIS(from+(to-from)*e);if(u<1)requestAnimationFrame(fr);else el.textContent=NIS(to)})()}
+
+/* ---- clicks of the screens in 36c–36h (called first by bind() in 36-views.js; true = handled) ---- */
+function engageClick(e){const t=e.target;
+  const gv=t.closest('[data-goview]');if(gv){G.view=gv.dataset.goview;render();const m=$('main');if(m)m.scrollTop=0;return true}
+  if(t.closest('[data-blitz-open]')){blitzEnter();return true}
+  const pg=t.closest('[data-pengame]');if(pg){G.penGame=pg.dataset.pengame==='1';save();render();return true}
+  const hp=t.closest('[data-hap]');if(hp){G.haptic=hp.dataset.hap==='1';if(G.haptic)buzz('goal');save();render();return true}
+  const nt=t.closest('[data-notif]');if(nt){notifySet(nt.dataset.notif==='1');return true}
+  return false}
+function engageSettingsHTML(){const vib=typeof navigator!=='undefined'&&!!navigator.vibrate;const ns=notifyState();
+  return `<div class="row between wrap" style="margin-top:8px"><span class="small">פנדלים ודו־קרב פנדלים</span><div class="mt" style="flex:0 0 200px"><button data-pengame="1" class="${G.penGame!==false?'on':''}">אני בועט</button><button data-pengame="0" class="${G.penGame===false?'on':''}">אוטומטי</button></div></div>
+  <div class="row between wrap" style="margin-top:8px"><span class="small">רטט ברגעים גדולים ${vib?'':'<span class="muted">(לא נתמך בדפדפן הזה)</span>'}</span><div class="mt" style="flex:0 0 160px"><button data-hap="1" class="${G.haptic!==false?'on':''}">פעיל</button><button data-hap="0" class="${G.haptic===false?'on':''}">כבוי</button></div></div>
+  <div class="row between wrap" style="margin-top:8px"><span class="small">התראות כשהמשחק ברקע <span class="muted">${ns==='unsupported'?'(לא נתמך בדפדפן הזה)':ns==='denied'?'(חסום בהגדרות הדפדפן)':'(משחק רשת)'}</span></span><div class="mt" style="flex:0 0 160px"><button data-notif="1" class="${ns==='on'?'on':''}" ${ns==='unsupported'||ns==='denied'?'disabled':''}>פעיל</button><button data-notif="0" class="${ns!=='on'?'on':''}">כבוי</button></div></div>`}
+/* ====================== CAREER BOOK: trophies, records, achievements ======================
+   G.car belongs to the manager and survives a change of club:
+     n     counters of competitive matches (wins, goals, clean sheets, derbies, penalties he took himself…)
+     st    running streaks                rec   best marks (longest run, biggest win, best finish…)
+     tr    trophies [{k,name,season,club}]     ach   unlocked achievements {id:{s,w}}     fresh  unlocked, not shown yet
+   Everything is derived from matches the game already settles; nothing here changes results, money or squads.
+   Friendlies never count. The quick tournament keeps its own record outside the career (blitzRec). */
+function carEnsure(){if(!G)return null;const C=G.car||(G.car={});C.n=C.n||{};C.st=C.st||{w:0,unb:0,cs:0};C.rec=C.rec||{};C.tr=C.tr||[];C.ach=C.ach||{};C.fresh=C.fresh||[];return C}
+function carInc(k,by){const C=carEnsure();if(!C)return;C.n[k]=(C.n[k]||0)+(by==null?1:by)}
+function carTrophy(kind,comp){if(carOff())return;const C=carEnsure();if(!C)return;const k=kind==='champ'?'champ':comp==='גביע המדינה'?'cup':comp==='גביע הטוטו'?'toto':kind==='promo'?'promo':kind==='lchamp'?'lchamp':'euro';
+  const season=seasonLabel();if(C.tr.some(t=>t.k===k&&t.season===season&&(k!=='euro'||t.name===comp)))return;
+  C.tr.push({k,name:k==='champ'?'אליפות המדינה':k==='promo'?'עלייה לליגת העל':k==='lchamp'?'אליפות הליגה הלאומית':comp,season,club:me().name});
+  if(C.tr.some(t=>t.k==='champ'&&t.season===season)&&C.tr.some(t=>t.k==='cup'&&t.season===season))C.n.double=Math.max(C.n.double||0,1);
+  try{achCheck()}catch(e){}}
+function carSigning(p,kind){if(!p||kind==='loan')return;carInc('signings');if(p.ovr>=80)carInc('starSign')}
+/* one settled match of the user's club */
+/* network leagues share one state between two managers, so the book (which belongs to one manager) stays out of them */
+function carOff(){return !G||!!G.blitz||(typeof mpIsOn==='function'&&mpIsOn())}
+function carAfterMatch(M,rec){if(carOff()||M.ctx.kind==='friendly')return;const C=carEnsure(),n=C.n,st=C.st,R=C.rec;
+  const meH=M.h===G.me;const my=club(G.me),opp=club(meH?M.a:M.h);if(!my||!opp)return;const gf=meH?M.gh:M.ga,ga=meH?M.ga:M.gh;
+  const wonPens=!!M.pens&&((M.pens==='h')===meH);const win=gf>ga,loss=gf<ga;
+  n.mp=(n.mp||0)+1;n.gf=(n.gf||0)+gf;n.ga=(n.ga||0)+ga;if(win)n.w=(n.w||0)+1;else if(loss)n.l=(n.l||0)+1;else n.d=(n.d||0)+1;if(ga===0)n.cs=(n.cs||0)+1;
+  st.w=win?st.w+1:0;st.unb=loss?0:st.unb+1;st.cs=ga===0?st.cs+1:0;R.bestW=Math.max(R.bestW||0,st.w);R.bestUnb=Math.max(R.bestUnb||0,st.unb);R.bestCs=Math.max(R.bestCs||0,st.cs);
+  const goals=M.ev.filter(e=>e.t==='goal'||e.t==='pen'||e.t==='own');const mine=goals.filter(e=>e.team===G.me),theirs=goals.filter(e=>e.team!==G.me);
+  if(win){if(isDerby(M.h,M.a))carInc('derbyW');if(strength(opp)>=strength(my)+5)carInc('giantW');if(gf-ga>=4)carInc('bigW');if(!meH&&!M.ctx.neutral)carInc('awayW');
+    if(mine.filter(e=>e.m<=45).length<theirs.filter(e=>e.m<=45).length)carInc('comeback');
+    const last=mine.length?Math.max(...mine.map(e=>e.m)):0;if(gf-ga===1&&last>=85&&!theirs.some(e=>e.m>last))carInc('lateW');
+    if(!R.bigWin||gf-ga>R.bigWin.gf-R.bigWin.ga||(gf-ga===R.bigWin.gf-R.bigWin.ga&&gf>R.bigWin.gf))R.bigWin={gf,ga,opp:opp.short||opp.name,season:seasonLabel()}}
+  if(!R.goals||gf>R.goals.n)R.goals={n:gf,opp:opp.short||opp.name,season:seasonLabel()};
+  const by={};for(const e of mine)if(e.t!=='own'&&e.pid!=null)by[e.pid]=(by[e.pid]||0)+1;if(Object.values(by).some(v=>v>=3))carInc('hat');
+  const subs=new Map(M.ev.filter(e=>e.t==='sub'&&e.team===G.me&&e.inPid!=null).map(e=>[e.inPid,e.m]));const sg=mine.filter(e=>e.t!=='own'&&subs.has(e.pid)&&e.m>=subs.get(e.pid)).length;if(sg)carInc('subGoal',sg);
+  const yg=mine.filter(e=>{if(e.t==='own')return false;const p=my.players.find(x=>x.id===e.pid);return p&&p.acad}).length;if(yg)carInc('youthGoal',yg);
+  if(M.shoutGoals)carInc('shoutGoal',M.shoutGoals);if(M.penMine)carInc('penScored',M.penMine);if(M.penSaved)carInc('penSaved',M.penSaved);if(wonPens)carInc('soWon');
+  const mm=M.motm||M.motmLive;if(mm&&mm.team===G.me)carInc('motm');
+  if(meH&&!M.ctx.neutral&&my.cap&&M.att>=my.cap*.97)carInc('fullHouse');
+  achCheck()}
+/* the season is over (called from endSeason while the table and the players' season goals are still there) */
+function carSeasonEnd(o){if(carOff())return;const C=carEnsure();if(!C)return;const c=me();C.n.seasons=(C.n.seasons||0)+1;const R=C.rec;
+  if(o.inTop&&(!R.bestPos||o.pos<R.bestPos.pos))R.bestPos={pos:o.pos,season:seasonLabel(),club:c.name};
+  if(!R.pts||c.pts>R.pts.n)R.pts={n:c.pts,season:seasonLabel(),club:c.name};
+  const top=c.players.slice().sort((a,b)=>(b.goals||0)-(a.goals||0))[0];if(top&&(top.goals||0)>0&&(!R.topScorer||top.goals>R.topScorer.g))R.topScorer={name:fullName(top),g:top.goals,season:seasonLabel()};
+  if(o.promoted)carTrophy('promo','עלייה');if(G.lchampion===G.me&&!o.inTop)carTrophy('lchamp','ליגה לאומית');achCheck()}
+/* careers that began before the book existed: trophies from the manager's history, counters from this season's results */
+function carBackfill(){if(!G||!G.manager)return;const had=!!G.car;const C=carEnsure();if(had&&C.n.mp)return;
+  for(const h of G.manager.history||[]){const add=(k,name)=>{if(!C.tr.some(t=>t.k===k&&t.season===h.season))C.tr.push({k,name,season:h.season,club:h.club})};
+    if(h.champ)add('champ','אליפות המדינה');if(h.cup)add('cup','גביע המדינה');if(h.toto)add('toto','גביע הטוטו');if(h.up)add('promo','עלייה לליגת העל');if(h.champ&&h.cup)C.n.double=1;
+    if(!h.left&&!h.resigned){if(h.div!=='leumit'&&(!C.rec.bestPos||h.pos<C.rec.bestPos.pos))C.rec.bestPos={pos:h.pos,season:h.season,club:h.club}}}
+  for(const m of G.moments||[]){if(m.kind==='cup'&&m.comp!=='גביע המדינה'&&m.comp!=='גביע הטוטו'&&!C.tr.some(t=>t.k==='euro'&&t.season===m.season&&t.name===m.comp))C.tr.push({k:'euro',name:m.comp,season:m.season,club:m.clubName})}
+  C.n.seasons=(G.manager.history||[]).filter(h=>!h.left&&!h.resigned).length;
+  const n=C.n,st=C.st,R=C.rec;for(const r of G.results||[]){if(r.kind==='friendly'||(r.h!==G.me&&r.a!==G.me))continue;const meH=r.h===G.me;const gf=meH?r.gh:r.ga,ga=meH?r.ga:r.gh;
+    n.mp=(n.mp||0)+1;n.gf=(n.gf||0)+gf;n.ga=(n.ga||0)+ga;if(gf>ga)n.w=(n.w||0)+1;else if(gf<ga)n.l=(n.l||0)+1;else n.d=(n.d||0)+1;if(ga===0)n.cs=(n.cs||0)+1;
+    st.w=gf>ga?st.w+1:0;st.unb=gf<ga?0:st.unb+1;st.cs=ga===0?st.cs+1:0;R.bestW=Math.max(R.bestW||0,st.w);R.bestUnb=Math.max(R.bestUnb||0,st.unb);R.bestCs=Math.max(R.bestCs||0,st.cs);
+    if(gf>ga&&(!R.bigWin||gf-ga>R.bigWin.gf-R.bigWin.ga))R.bigWin={gf,ga,opp:meH?r.an:r.hn,season:seasonLabel()};if(!R.goals||gf>R.goals.n)R.goals={n:gf,opp:meH?r.an:r.hn,season:seasonLabel()}}
+  for(const d of achDefs())if(d.v>=d.g&&!C.ach[d.id])C.ach[d.id]={s:G.season,w:G.wk,old:1};C.fresh=[]}
+
+/* ---- achievements: [id, name, what it takes, category, target, current value, stars] ---- */
+const ACH_CATS=[['res','תוצאות'],['run','רצפים'],['tro','תארים וותק'],['pl','שחקנים'],['club','מועדון ושם'],['mom','רגעים שלך'],['blz','טורניר בזק']];
+function achDefs(){const C=carEnsure();if(!C)return [];const n=C.n,R=C.rec,c=me()||{};const tr=k=>C.tr.filter(t=>t.k===k).length;const B=blitzRec();const v=x=>x||0;
+  const rows=[
+  ['w1','ניצחון ראשון','לנצח במשחק רשמי','res',1,v(n.w),1],['w10','עשרה ניצחונות','עשרה ניצחונות במשחקים רשמיים','res',10,v(n.w),1],['w50','חמישים ניצחונות','חמישים ניצחונות במשחקים רשמיים','res',50,v(n.w),2],['w150','מאה וחמישים ניצחונות','מאה וחמישים ניצחונות במשחקים רשמיים','res',150,v(n.w),3],
+  ['g100','מאה שערים','הקבוצות שלך כבשו מאה שערים','res',100,v(n.gf),1],['g400','ארבע מאות שערים','הקבוצות שלך כבשו ארבע מאות שערים','res',400,v(n.gf),3],
+  ['cs10','עשרה שערים נקיים','עשרה משחקים בלי לספוג','res',10,v(n.cs),1],['cs40','ארבעים שערים נקיים','ארבעים משחקים בלי לספוג','res',40,v(n.cs),2],
+  ['big','תבוסה','לנצח בהפרש ארבעה שערים או יותר','res',1,v(n.bigW),1],['giant','קוטל ענקים','לנצח יריבה שחזקה ממך בחמש נקודות דירוג','res',1,v(n.giantW),2],['giant5','מומחה להפתעות','חמישה ניצחונות על יריבות חזקות בהרבה','res',5,v(n.giantW),3],
+  ['comeback','מהפך','לנצח אחרי פיגור במחצית','res',1,v(n.comeback),2],['late','דקה תשעים','שער ניצחון מהדקה ה־85 והלאה','res',1,v(n.lateW),1],
+  ['derby','מלך העיר','לנצח בדרבי','res',1,v(n.derbyW),1],['derby5','בעל הבית','חמישה ניצחונות בדרבי','res',5,v(n.derbyW),2],['away10','אורחים לא מנומסים','עשרה ניצחונות חוץ','res',10,v(n.awayW),1],
+  ['st3','שלושה ברצף','שלושה ניצחונות רצופים','run',3,v(R.bestW),1],['st6','שישה ברצף','שישה ניצחונות רצופים','run',6,v(R.bestW),2],['st10','עשרה ברצף','עשרה ניצחונות רצופים','run',10,v(R.bestW),3],
+  ['unb10','עשרה בלי הפסד','עשרה משחקים רצופים בלי הפסד','run',10,v(R.bestUnb),1],['unb20','עשרים בלי הפסד','עשרים משחקים רצופים בלי הפסד','run',20,v(R.bestUnb),3],['cs4','חומה','ארבעה שערים נקיים ברצף','run',4,v(R.bestCs),2],
+  ['champ','אלוף המדינה','לזכות באליפות','tro',1,tr('champ'),3],['champ3','שושלת','שלוש אליפויות','tro',3,tr('champ'),3],['cup','מחזיק הגביע','לזכות בגביע המדינה','tro',1,tr('cup'),2],['toto','גביע הטוטו','לזכות בגביע הטוטו','tro',1,tr('toto'),1],
+  ['double','דאבל','אליפות וגביע באותה עונה','tro',1,v(n.double),3],['promo','עולים','לעלות לליגת העל','tro',1,tr('promo'),2],['euro','לילה אירופי','לזכות בגביע אירופי','tro',1,tr('euro'),3],
+  ['seasons5','ותיק','חמש עונות על הקווים','tro',5,v(n.seasons),1],['seasons12','מוסד','שתים־עשרה עונות על הקווים','tro',12,v(n.seasons),3],
+  ['hat','שלושער','שחקן שלך כובש שלושה במשחק אחד','pl',1,v(n.hat),1],['scorer20','מלך שערים','שחקן שלך כובש עשרים שערים בעונה','pl',20,v(R.topScorer&&R.topScorer.g),2],['motm10','כוכבי המשחק','עשרה תוארי שחקן המשחק לשחקנים שלך','pl',10,v(n.motm),1],
+  ['sub','חילוף זהב','מחליף שהכנסת כובש','pl',1,v(n.subGoal),1],['sub10','יד מכוונת','עשרה שערים של מחליפים שהכנסת','pl',10,v(n.subGoal),2],['youth','מהאקדמיה לרשת','בוגר אקדמיה שהעלית לבוגרים כובש','pl',1,v(n.youthGoal),2],['star','חתימת ענק','להחתים שחקן בדירוג 80 ומעלה','pl',1,v(n.starSign),2],
+  ['house','אין כרטיסים','למלא את האצטדיון הביתי','club',1,v(n.fullHouse),1],['fans','אהבת הקהל','מדד האוהדים מגיע ל־90','club',90,Math.round(v(c.fans)),2],['bank','קופה מלאה','ארבעים מיליון שקל בקופת המועדון','club',40,Math.floor(Math.max(0,v(c.money))/1e6),2],
+  ['rep70','שם בענף','מוניטין 70 כמאמן','club',70,v(G.manager&&G.manager.rep),2],['rep90','אגדה','מוניטין 90 כמאמן','club',90,v(G.manager&&G.manager.rep),3],
+  ['pen1','עצבי ברזל','לכבוש פנדל שבעטת בעצמך','mom',1,v(n.penScored),1],['pen10','מומחה מהנקודה','עשרה פנדלים שבעטת וכבשת','mom',10,v(n.penScored),2],['save1','ידיים של זהב','להדוף פנדל בעצמך','mom',1,v(n.penSaved),2],['save5','חוסם פנדלים','חמש הדיפות פנדל','mom',5,v(n.penSaved),3],
+  ['so','דו־קרב','לנצח בדו־קרב פנדלים','mom',1,v(n.soWon),2],['shout','הקול שלך נשמע','שער בזמן "לחץ!" או "כולם קדימה"','mom',1,v(n.shoutGoal),1],['shout15','מנצח מהקווים','חמישה־עשר שערים בזמן צעקה שלך','mom',15,v(n.shoutGoal),2],
+  ['blzfin','עד הגמר','להגיע לגמר טורניר בזק','blz',1,v(B.finals),1],['blz1','גביע בזק','לזכות בטורניר בזק','blz',1,v(B.cups),2],['blz5','מלך הבזק','חמש זכיות בטורניר בזק','blz',5,v(B.cups),3],['blzrow','פעמיים ברצף','שתי זכיות רצופות בטורניר בזק','blz',2,v(B.bestStreak),3]];
+  return rows.map(([id,he,d,cat,g,val,s])=>({id,he,d,cat,g,v:Math.min(g,val),raw:val,s,done:!!C.ach[id]}))}
+function achCheck(){const C=carEnsure();if(!C)return [];const got=[];for(const d of achDefs()){if(!d.done&&d.raw>=d.g){C.ach[d.id]={s:G.season,w:G.wk};C.fresh.push(d.id);got.push(d);try{news(`🏅 הישג חדש: ${d.he} (${d.d}).`)}catch(e){}}}return got}
+function carStars(){const C=carEnsure();if(!C)return 0;let s=0;for(const d of achDefs())if(C.ach[d.id])s+=d.s;return s}
+const CAR_LEVELS=[[0,'מתאמן'],[2,'עוזר מאמן'],[5,'מאמן צעיר'],[9,'מאמן מבטיח'],[14,'מאמן מוכר'],[20,'מאמן בכיר'],[27,'מאמן צמרת'],[35,'מאמן על'],[45,'אגדה מקומית'],[58,'אגדה']];
+function carLevel(stars){let i=0;while(i+1<CAR_LEVELS.length&&stars>=CAR_LEVELS[i+1][0])i++;const next=CAR_LEVELS[i+1];return {n:i+1,he:CAR_LEVELS[i][1],from:CAR_LEVELS[i][0],next:next?next[0]:null,stars}}
+/* the achievements closest to done (never the finished ones), nearest first */
+function achNear(k){return achDefs().filter(d=>!d.done&&d.raw>0&&d.cat!=='blz').map(d=>({...d,left:d.g-d.v,frac:d.v/d.g})).sort((a,b)=>(b.frac-a.frac)||(a.left-b.left)).slice(0,k||3)}
+/* state that only moves between matches (fans, bank, reputation): checked once a week */
+function carWeekly(){if(carOff())return;achCheck()}
+
+/* ---- the cabinet ---- */
+const TROPHY_SVG={
+  champ:'<path d="M8 6h24v6c0 9-5 15-12 16-7-1-12-7-12-16z"/><path d="M8 9H3c0 6 3 9 7 10M32 9h5c0 6-3 9-7 10"/><path d="M17 28v5h-5v4h16v-4h-5v-5"/><path d="M20 11l1.6 3.4 3.7.4-2.8 2.5.8 3.7-3.3-1.9-3.3 1.9.8-3.7-2.8-2.5 3.7-.4z" class="in"/>',
+  cup:'<path d="M11 5h18l-2 14c-.5 4-3.5 7-7 7s-6.5-3-7-7z"/><path d="M11 8H6c0 5 2 8 6 9M29 8h5c0 5-2 8-6 9"/><path d="M18 26v6h-5v5h14v-5h-5v-6"/>',
+  toto:'<path d="M12 7h16v9c0 5-3.5 8-8 8s-8-3-8-8z"/><path d="M18 24v7h-4v5h12v-5h-4v-7"/>',
+  euro:'<path d="M9 5h22v5c0 9-4 15-11 17C13 25 9 19 9 10z"/><path d="M9 8H3c0 7 3 10 8 11M31 8h6c0 7-3 10-8 11"/><path d="M16 27v6h-4v4h16v-4h-4v-6"/><circle cx="20" cy="13" r="4" class="in"/>',
+  lchamp:'<path d="M20 4l5 9 10 1.5-7.5 7 2 10L20 26.5 10.500 31.500l2-10L5 14.500 15 13z"/>',
+  promo:'<path d="M20 5l12 13h-7v16H15V18H8z"/>'};
+function trophySVG(k){return `<svg class="tro-ic" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="trg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0b8"/><stop offset=".5" stop-color="#e9c46a"/><stop offset="1" stop-color="#a97c22"/></linearGradient></defs><g fill="url(#trg)" stroke="#6d4d10" stroke-width="1" stroke-linejoin="round">${TROPHY_SVG[k]||TROPHY_SVG.cup}</g></svg>`}
+function medalSVG(s,done){const col=done?['#c98b5a','#cfd6e3','#f3cf5a'][s-1]:'#3a3f4d';return `<svg class="ach-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M10 2h5l3 9h-5zM22 2h-5l-3 9h5z" fill="${done?'#b33a4a':'#2a2e39'}"/><circle cx="16" cy="19" r="10" fill="${col}" stroke="${done?'rgba(0,0,0,.35)':'#4a4f5e'}" stroke-width="1.2"/>${[0,1,2].map(i=>i<s?`<circle cx="${16+(i-(s-1)/2)*6}" cy="19" r="2" fill="${done?'rgba(0,0,0,.55)':'#4a4f5e'}"/>`:'').join('')}</svg>`}
+function achBarHTML(d){return `<div class="ach-bar"><i style="width:${Math.round(d.v/d.g*100)}%"></i></div>`}
+function achRowHTML(d){return `<div class="ach ${d.done?'done':''}">${medalSVG(d.s,d.done)}<div class="ach-tx"><b>${esc(d.he)}</b><small>${esc(d.d)}</small>${d.done?'':achBarHTML(d)}</div><span class="ach-n num">${d.done?'✓':`<bdi>${d.v}/${d.g}</bdi>`}</span></div>`}
+function carRecordsHTML(){const C=carEnsure(),R=C.rec,n=C.n,c=me();const rows=[];const row=(l,v2)=>rows.push(`<div class="recrow"><span>${l}</span><b>${v2}</b></div>`);
+  row('משחקים רשמיים',`<bdi>${n.mp||0}</bdi> · <bdi>${n.w||0}</bdi> נ׳ · <bdi>${n.d||0}</bdi> ת׳ · <bdi>${n.l||0}</bdi> ה׳`);row('שערים',`<bdi>${n.gf||0}</bdi> בעד · <bdi>${n.ga||0}</bdi> נגד`);
+  if(R.bigWin)row('הניצחון הגדול',`<bdi dir="ltr">${R.bigWin.gf}:${R.bigWin.ga}</bdi> על ${esc(R.bigWin.opp)} <small class="muted">(${esc(R.bigWin.season)})</small>`);
+  if(R.bestW)row('רצף הניצחונות הארוך',`<bdi>${R.bestW}</bdi>${C.st.w>=2?` <small class="muted">(עכשיו ${C.st.w})</small>`:''}`);if(R.bestUnb)row('רצף בלי הפסד',`<bdi>${R.bestUnb}</bdi>${C.st.unb>=3?` <small class="muted">(עכשיו ${C.st.unb})</small>`:''}`);
+  if(R.topScorer)row('מלך השערים בעונה',`${esc(R.topScorer.name)} · <bdi>${R.topScorer.g}</bdi> <small class="muted">(${esc(R.topScorer.season)})</small>`);
+  if(R.bestPos)row('המיקום הטוב ביותר',`מקום <bdi>${R.bestPos.pos}</bdi> בליגת העל <small class="muted">(${esc(R.bestPos.season)})</small>`);if(R.pts)row('שיא נקודות בעונה',`<bdi>${R.pts.n}</bdi> <small class="muted">(${esc(R.pts.season)})</small>`);
+  if(c&&c.attRecord)row('שיא קהל בבית',`<bdi>${c.attRecord.n.toLocaleString('he')}</bdi> מול ${esc(c.attRecord.opp)}`);
+  return rows.join('')}
+function viewCareer(){const C=carEnsure();achCheck();const defs=achDefs();const stars=carStars();const L=carLevel(stars);const done=defs.filter(d=>d.done).length;C.fresh=[];
+  const pct=L.next==null?100:Math.round((stars-L.from)/(L.next-L.from)*100);const near=achNear(3);
+  const shelf=C.tr.length?C.tr.slice().reverse().map(t=>`<div class="tro">${trophySVG(t.k)}<b>${esc(t.name)}</b><small><bdi dir="ltr">${esc(t.season)}</bdi> · ${esc(t.club||'')}</small></div>`).join(''):`<div class="tro empty">${trophySVG('cup')}<b>המדף מחכה לגביע הראשון</b><small>אליפות, גביע המדינה, גביע הטוטו, אירופה ועלייה יוצגו כאן</small></div>`;
+  return `<div class="card car-head"><button class="btn sm sec" data-view-home>חזרה</button><div class="car-lv"><span class="car-lvn num">${L.n}</span><div><h2>${esc(G.manager.name)}</h2><div class="muted small">${esc(L.he)} · <bdi>${done}</bdi> מתוך <bdi>${defs.length}</bdi> הישגים · <bdi>${stars}</bdi> כוכבים</div><div class="ach-bar lv"><i style="width:${pct}%"></i></div><div class="muted tiny">${L.next==null?'הרמה הגבוהה ביותר':`עוד <bdi>${L.next-stars}</bdi> כוכבים לרמה <bdi>${L.n+1}</bdi> (${esc(CAR_LEVELS[L.n][1])})`}</div></div></div></div>
+  <div class="card"><h3 class="sec">ארון הגביעים</h3><div class="shelf">${shelf}</div></div>
+  ${near.length?`<div class="card"><h3 class="sec">הכי קרוב</h3><div class="achlist">${near.map(achRowHTML).join('')}</div></div>`:''}
+  <div class="card"><h3 class="sec">שיאים</h3><div class="recs">${carRecordsHTML()}</div></div>
+  ${ACH_CATS.map(([k,l])=>{const ds=defs.filter(d=>d.cat===k);const n=ds.filter(d=>d.done).length;return `<details class="card achcat"><summary><h3 class="sec">${l}</h3><span class="muted small"><bdi>${n}/${ds.length}</bdi></span></summary><div class="achlist">${ds.map(achRowHTML).join('')}</div></details>`}).join('')}`}
+/* the home screen: level and the two achievements nearest to done */
+function careerCardHTML(){if(carOff()||G.phase!=='play')return '';const C=carEnsure();achCheck();const stars=carStars(),L=carLevel(stars);const near=achNear(2);const fresh=C.fresh.length;
+  return `<div class="card car-home"><div class="row between"><h3 class="sec">הקריירה שלך</h3><button class="btn sm sec" data-goview="career">ארון הגביעים${fresh?` <span class="tag good">${fresh} חדש</span>`:''}</button></div>
+  <div class="muted small">רמה <bdi>${L.n}</bdi> · ${esc(L.he)}${C.tr.length?` · <bdi>${C.tr.length}</bdi> תארים`:''}${C.st.w>=2?` · רצף של <bdi>${C.st.w}</bdi> ניצחונות`:''}</div>
+  ${near.length?`<div class="achlist" style="margin-top:8px">${near.map(achRowHTML).join('')}</div>`:''}</div>`}
+/* ====================== TOUCHLINE SHOUTS + HAPTICS (live screen) ======================
+   The manager's voice fills during play (a full charge every 12 match minutes). A shout spends it and changes the next
+   six minutes of the match: the effect and its price are in 07-engine.js (shoutAdj / shoutTick). Presentation only here. */
+const SHOUTS=[
+  {k:'press',he:'לחץ!',tip:'יותר מצבים, שורף כוח',line:'הקבוצה עולה ללחוץ גבוה'},
+  {k:'all',he:'כולם קדימה',tip:'הכול או כלום',line:'כולם עולים להתקפה, מאחור נשאר חשוף'},
+  {k:'calm',he:'תירגעו',tip:'סוגרים מאחור',line:'הקבוצה מורידה הילוך ומתארגנת'},
+  {k:'hold',he:'תחזיקו בכדור',tip:'מעבירים זמן, נחים',line:'מחזיקים בכדור והשעון רץ'}];
+function shoutBarHTML(){return `<div class="shouts" id="shoutBar" role="group" aria-label="פקודות מהקווים"><div class="sh-head"><span>הקול שלך</span><div class="sh-meter" aria-hidden="true"><i id="voiceFill"></i></div></div><div class="sh-row">${SHOUTS.map(s=>`<button type="button" class="sh-btn" data-shout="${s.k}" disabled><b>${s.he}</b><small>${s.tip}</small></button>`).join('')}</div></div>`}
+function shoutMount(M,o){const bar=$('shoutBar');if(!bar)return null;
+  const paint=()=>{const v=clamp(M.voice||0,0,100),act=shoutOf(M,G.me),ready=v>=100&&!o.busy();
+    const f=$('voiceFill');if(f)f.style.width=v+'%';bar.classList.toggle('ready',ready);
+    bar.querySelectorAll('[data-shout]').forEach(b=>{const on=!!act&&act.k===b.dataset.shout;b.disabled=!ready;b.classList.toggle('on',on);if(on)b.dataset.left=String(Math.max(0,act.until-M.m));else delete b.dataset.left})};
+  bar.onclick=e=>{const b=e.target.closest('[data-shout]');if(!b||b.disabled||(M.voice||0)<100||o.busy())return;const s=SHOUTS.find(x=>x.k===b.dataset.shout);if(!s)return;
+    shoutStart(M,G.me,s.k);M.voice=0;buzz('tap');o.addLine('note',`📣 ${fm(M.m)} ${s.he} · ${s.line}`);paint();save()};
+  paint();return paint}
+/* a goal of ours while "לחץ!" or "כולם קדימה" is running: say so (and count it for the career book) */
+function shoutCredit(M,e,addLine){const s=shoutOf(M,G.me);if(!s||e.team!==G.me||(s.k!=='press'&&s.k!=='all'))return;M.shoutGoals=(M.shoutGoals||0)+1;addLine('note',`📣 הצעקה עבדה: שער בזמן "${SHOUTS.find(x=>x.k===s.k).he}"`)}
+
+/* ---- haptics: a short vibration on the moments that matter (Android browsers; iOS Safari has no vibration API) ---- */
+const BUZZ={tap:12,goal:[70,50,140],conceded:35,card:60,kick:25,save:[40,30,90],win:[60,60,60,60,220],open:[20,40,20]};
+function buzz(k){try{if(typeof G==='undefined'||!G||G.haptic===false||typeof navigator==='undefined'||!navigator.vibrate)return false;return navigator.vibrate(BUZZ[k]||12)}catch(e){return false}}
+/* ====================== PENALTIES: the manager takes them himself ======================
+   A small skill game on top of the match engine. The engine only learns the outcome: penResolve() for a penalty during a
+   match, M.pens / M.penScore for a shoot-out. Nothing here touches money, squads or the save format.
+
+   Goal coordinates: x metres from the middle of the goal (posts at ±3.66), y metres above the grass (bar at 2.44).
+   Kicking (עיני הבועט): press, steer the sight to a spot and release. The sight sways: little for a good finisher, a lot
+   for a defender, more on tired legs and under pressure. Corners beat the keeper but the frame is close.
+   Keeping (עיני השוער): swipe to the side the ball goes. Moving before the kick is a guess; moving right after it, inside
+   the keeper's reaction window, is a read. Standing still covers the middle. */
+const PEN_G={hw:3.66,h:2.44};const PEN_TIME=10000;
+function penShootSkill(p){const at=attrs(p);return p.pos==='GK'?clamp(at[3],35,80):clamp(at[1]*.75+at[3]*.25,35,96)}
+function penKeepSkill(p){if(!p)return 45;const at=attrs(p);return p.pos==='GK'?clamp(at[0]*.6+at[2]*.4,35,96):40}
+function penWobble(skill,energy,pressure){return +(clamp(.66-(skill-55)*.0115,.16,.78)*(energy<70?1.2:1)*(pressure?1.12:1)).toFixed(3)}
+function penReactMs(gk){return Math.round(clamp(340+(gk-60)*5,300,520))}
+function penFrame(x,y){const ax=Math.abs(x);if(ax>PEN_G.hw+.09||y>PEN_G.h+.09)return 'off';if(ax>PEN_G.hw-.05||y>PEN_G.h-.05)return 'post';return 'in'}
+function penSide(x){return x<-.9?'L':x>.9?'R':'C'}
+/* how hard a ball is to reach: 0 straight at the keeper, 1 the top corner */
+function penCorner(x,y){const ax=Math.abs(x);return clamp((ax-1.1)/2.5,0,1)*.62+clamp(y/PEN_G.h,0,1)*.38*(ax>.9?1:.4)}
+function penSaveP(x,y,gk,bonus){return clamp(.97-penCorner(x,y)*1.06+(gk-70)*.006+(bonus||0),.03,.96)}
+/* an AI keeper: sometimes he reads the taker, otherwise he picks a side */
+function penKeeperGuess(x,gk){const read=clamp(.12+(gk-65)*.006,.05,.3);if(Math.random()<read)return penSide(x);const r=Math.random();return r<.42?'L':r<.84?'R':'C'}
+function penKickOutcome(x,y,gk){const dive=penKeeperGuess(x,gk);const f=penFrame(x,y);if(f!=='in')return {out:'miss',how:f,dive};
+  if(dive===penSide(x)&&Math.random()<penSaveP(x,y,gk))return {out:'miss',how:'save',dive};return {out:'goal',how:'goal',dive}}
+/* an AI taker: better finishers find the corners */
+function penAiShot(skill){const r=Math.random();const side=r<.43?-1:r<.86?1:0;const q=clamp((skill-50)/45,0,1);
+  const x=side===0?gauss()*.45:side*clamp(1.5+q*1.3+gauss()*.7,.95,4.2);const y=clamp(.25+Math.abs(gauss())*(.85+q*.4),.1,3);return {x:+x.toFixed(2),y:+y.toFixed(2)}}
+/* the user in goal: side he went to ('L'|'C'|'R', as he sees it), and when: 'early' (a guess), 'react' (a read) or 'late' */
+function penKeepOutcome(x,y,side,timing,gk){const f=penFrame(x,y);if(f!=='in')return {out:'miss',how:f};
+  if(timing==='late'||(side||'C')!==penSide(x))return {out:'goal',how:'goal'};
+  return Math.random()<penSaveP(x,y,gk,timing==='early'?.06:0)?{out:'miss',how:'save'}:{out:'goal',how:'goal'}}
+/* a shoot-out is over when the side behind cannot catch up inside the first five, or after an equal number of kicks from the sixth on */
+function penShootoutDone(h,a){const nh=h.length,na=a.length,sh=h.reduce((t,v)=>t+v,0),sa=a.reduce((t,v)=>t+v,0);
+  if(nh<=5&&na<=5){if(sh>sa+(5-na))return 'h';if(sa>sh+(5-nh))return 'a';if(nh===5&&na===5&&sh!==sa)return sh>sa?'h':'a';return null}
+  return nh===na&&sh!==sa?(sh>sa?'h':'a'):null}
+function penOrder(M,c){return xiPlayers(M,c).map(x=>x.p).sort((p,q)=>penShootSkill(q)-penShootSkill(p))}
+/* players decide it themselves: the same odds decidePens uses, with a believable score line */
+function penAutoShootout(M,h,a){decidePens(M);const w=M.pens;const [x,y]=pick([[5,4],[4,3],[5,3],[4,2],[3,2],[6,5]]);return {win:w,score:w==='h'?[x,y]:[y,x],auto:true}}
+
+/* ---- the picture: two renderers behind one interface ------------------------------------------------------------
+   toScreen(x,y) → [px,py] inside the stage · fromScreen(px,py) → [x,y] in goal metres
+   kick view   shoot({x,y,how,dive},done)
+   keeper view runUp(ms,done) · incoming({x,y,ms,how:()=>…},done) · gloves(side)   (x positive = the keeper's right)
+   The 3D one (assets/demo3d/penalty.js, the stadium of the 3D highlights) is tried first on capable devices; the SVG one
+   below is the fallback, and what runs when motion is reduced. */
+let pen3dMod=null,pen3dBad=false;
+function pen3dOK(){try{if(pen3dBad||typeof WebGLRenderingContext==='undefined'||motionLevel()!=='full'||(G&&G.pen3d===false))return false;
+  if(pen3dOK.gl==null){const c=document.createElement('canvas');pen3dOK.gl=!!(c.getContext('webgl2')||c.getContext('webgl'))}return pen3dOK.gl}catch(e){return false}}
+function penPreload(){if(!pen3dOK()||pen3dMod)return;try{pen3dMod=import('./assets/demo3d/penalty.js').catch(()=>{pen3dBad=true;pen3dMod=null;return null})}catch(e){pen3dBad=true}}
+function penMakeStage(host,mode,o){const flat=()=>penStage2d(host,mode,o);const pg=PG;
+  if(pg&&pg.view3d){try{pg.view3d.reset(mode,o);return Promise.resolve(pg.view3d)}catch(e){pen3dBad=true;try{pg.view3d.dispose()}catch(e2){}pg.view3d=null}}
+  if(!pen3dOK())return Promise.resolve(flat());
+  penPreload();if(!pen3dMod)return Promise.resolve(flat());
+  return new Promise(res=>{let settled=false;const fin=st=>{if(settled){try{st&&st.kind==='3d'&&st.dispose()}catch(e){}return}settled=true;res(st)};
+    const t=setTimeout(()=>fin(flat()),3200);
+    pen3dMod.then(mod=>{if(settled)return;if(!mod||!host.isConnected||PG!==pg){clearTimeout(t);return fin(flat())}
+      let st=null;try{st=mod.createPenaltyView(host,{mode,kit:o.kit,trim:o.trim,gkKit:o.gkKit,number:o.number,onError:()=>{pen3dBad=true}})}catch(e){pen3dBad=true;st=null}
+      clearTimeout(t);if(st&&pg)pg.view3d=st;fin(st||flat())}).catch(()=>{clearTimeout(t);fin(flat())})})}
+function penAnim(ms,step,done){if(ms<=0){step(1);done&&done();return}const t0=performance.now();(function fr(){const u=Math.min(1,(performance.now()-t0)/ms);step(u);if(u<1)requestAnimationFrame(fr);else done&&done()})()}
+function penQuick(){return typeof revealReduced==='function'&&revealReduced()}
+function penStage2d(host,mode,o){const S=34.15,GX=180,GY=215;const kit=o.kit||'#c6f24e',gk=o.gkKit||'#f2b233',ink=inkFor(kit);
+  /* a phone stage is a tall portrait: show the middle 300 units and fill it; a wide stage shows the whole scene */
+  const hr=host.getBoundingClientRect();const wide=!!(hr.width&&hr.height&&hr.width/hr.height>.82);const VX=wide?0:30,VW=wide?360:300;const vb=`viewBox="${VX} 0 ${VW} 460" preserveAspectRatio="xMidYMid ${wide?'meet':'slice'}"`;
+  const crowd=(y0,y1,n,seed)=>{let s=seed,out='';const rnd2=()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296};for(let i=0;i<n;i++){const x=rnd2()*360,y=y0+rnd2()*(y1-y0);out+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.1+rnd2()*.9).toFixed(1)}" fill="${['#d9c58a','#8fa3b8','#e7e3d6','#5f7186','#c6f24e'][Math.floor(rnd2()*5)]}" opacity="${(.25+rnd2()*.5).toFixed(2)}"/>`}return out};
+  const defs=`<defs><linearGradient id="pgGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c5a2c"/><stop offset="1" stop-color="#2f8a3f"/></linearGradient><linearGradient id="pgStand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070c"/><stop offset="1" stop-color="#141c2a"/></linearGradient><radialGradient id="pgLight" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#fff6d8" stop-opacity=".5"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/></radialGradient><radialGradient id="pgBallG" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9bdc4"/></radialGradient></defs>`;
+  const ballG=(id,r)=>`<g id="${id}"><ellipse class="pg-bsh" cx="0" cy="${r*.9}" rx="${r}" ry="${r*.32}" fill="rgba(0,0,0,.4)"/><circle r="${r}" fill="url(#pgBallG)" stroke="#1b2330" stroke-width="${(r*.07).toFixed(2)}"/><path d="M0 ${-r*.45}l${r*.4} ${r*.3}-${r*.16} ${r*.5}h-${r*.48}l-${r*.16}-${r*.5}z" fill="#1b2330"/></g>`;
+  let html;
+  if(mode==='kick'){
+    const net=[];for(let i=0;i<=12;i++){const x=GX-125+i*250/12,xb=GX-104+i*208/12;net.push(`<path d="M${x.toFixed(1)} 132L${xb.toFixed(1)} 148V215"/>`)}for(let j=1;j<=5;j++){const y=148+j*67/6;net.push(`<path d="M${GX-104} ${y.toFixed(1)}H${GX+104}"/>`)}
+    html=`<svg class="pg-svg" ${vb} aria-hidden="true">${defs}
+      <rect width="360" height="460" fill="url(#pgStand)"/>${crowd(4,122,260,7)}<rect width="360" height="170" fill="url(#pgLight)"/>
+      <rect y="124" width="360" height="26" fill="#0c1420"/><g font-family="Karantina,Heebo,sans-serif" font-weight="700" font-size="17" fill="#c6f24e" opacity=".85"><text x="46" y="143">GOALASSO</text><text x="252" y="143">GOALASSO</text></g>
+      <rect y="150" width="360" height="310" fill="url(#pgGrass)"/>
+      <g fill="#fff" opacity=".045"><path d="M150 150h60l110 310H40z"/><path d="M0 150h60L-150 460H-320z"/><path d="M300 150h60l320 310H510z"/></g>
+      <g fill="none" stroke="rgba(255,255,255,.72)" stroke-width="2.2"><path d="M0 215H360"/><path d="M${GX-94} 215L${GX-170} 318H${GX+170}L${GX+94} 215"/></g>
+      <ellipse cx="180" cy="414" rx="16" ry="5" fill="rgba(255,255,255,.75)"/>
+      <g class="pg-net" id="pgNet" fill="none" stroke="rgba(235,240,245,.34)" stroke-width="1">${net.join('')}<rect x="${GX-104}" y="148" width="208" height="67"/></g>
+      <g fill="none" stroke="#f4f4ee" stroke-width="5" stroke-linecap="round"><path d="M${GX-125} 215V132H${GX+125}V215"/></g>
+      <g id="pgKeeper" transform="translate(${GX} ${GY})"><g class="pg-kbody"><ellipse cx="0" cy="1" rx="15" ry="3.5" fill="rgba(0,0,0,.35)"/><path d="M-6 0v-24h5v24zM1 0v-24h5v24z" fill="#10151d"/><rect x="-9" y="-30" width="18" height="9" rx="3" fill="#10151d"/><rect x="-10" y="-52" width="20" height="24" rx="5" fill="${gk}"/><path d="M-10 -49l-13 -9M10 -49l13 -9" stroke="${gk}" stroke-width="6" stroke-linecap="round"/><circle cx="-24" cy="-59" r="4.4" fill="#f1f1e6"/><circle cx="24" cy="-59" r="4.4" fill="#f1f1e6"/><circle cx="0" cy="-58" r="6.2" fill="#c9966f"/><path d="M-6 -60a6.2 6.2 0 0 1 12 0z" fill="#2b2019"/></g></g>
+      <g id="pgBallW" transform="translate(180 404)">${ballG('pgBall',17)}</g>
+      <circle id="pgRip" cx="0" cy="0" r="0" fill="none" stroke="#fff" stroke-width="2" opacity="0"/></svg>`;
+  }else{
+    html=`<svg class="pg-svg" ${vb} aria-hidden="true">${defs}
+      <rect width="360" height="460" fill="url(#pgStand)"/>${crowd(30,150,300,11)}<rect width="360" height="190" fill="url(#pgLight)"/>
+      <rect y="152" width="360" height="16" fill="#0c1420"/>
+      <rect y="168" width="360" height="292" fill="url(#pgGrass)"/>
+      <g fill="#fff" opacity=".045"><rect y="182" width="360" height="12"/><rect y="212" width="360" height="20"/><rect y="262" width="360" height="34"/><rect y="340" width="360" height="60"/></g>
+      <g fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><path d="M40 214H320"/><path d="M40 214L-70 460M320 214L430 460"/><path d="M128 214a54 16 0 0 1 104 0"/></g>
+      <ellipse cx="180" cy="270" rx="5" ry="1.8" fill="rgba(255,255,255,.8)"/>
+      <g id="pgTaker" transform="translate(180 262)"><g class="pg-kbody"><ellipse cx="0" cy="1" rx="11" ry="2.6" fill="rgba(0,0,0,.35)"/><path d="M-5 0v-20h4v20zM1 0v-20h4v20z" fill="${ink==='#ffffff'?'#e9edf2':'#141a22'}"/><rect x="-8" y="-25" width="16" height="8" rx="2.5" fill="${o.trim||'#10151d'}"/><rect x="-8.5" y="-44" width="17" height="21" rx="4.5" fill="${kit}"/><path d="M-8 -41l-6 13M8 -41l6 13" stroke="${kit}" stroke-width="5" stroke-linecap="round"/><circle cx="0" cy="-49" r="5.2" fill="#c9966f"/><path d="M-5 -51a5.2 5.2 0 0 1 10 0z" fill="#2b2019"/></g></g>
+      <g id="pgBallW" transform="translate(180 268)">${ballG('pgBall',4.6)}</g>
+      <g fill="none" stroke="rgba(235,240,245,.2)" stroke-width="1.2"><path d="M46 40L10 0M314 40L350 0"/></g>
+      <g fill="none" stroke="#f4f4ee" stroke-width="12" stroke-linecap="square"><path d="M40 470V40H320V470"/></g><g fill="none" stroke="rgba(0,0,0,.25)" stroke-width="3"><path d="M47 470V47H313V470"/></g>
+      <g id="pgGloves"><g class="pg-glove l" id="pgGL" transform="translate(104 428)"><path d="M-30 30c-6-22-4-44 6-54 8-8 20-6 22 4l2-14c2-10 16-10 17 0l1 12c3-9 15-8 16 2l2 26c4 10 2 22-4 30z" fill="#f1f1e6" stroke="#10151d" stroke-width="2.5" stroke-linejoin="round"/><path d="M-22 22h48" stroke="${gk}" stroke-width="7" stroke-linecap="round"/></g>
+      <g class="pg-glove r" id="pgGR" transform="translate(256 428)"><path d="M30 30c6-22 4-44-6-54-8-8-20-6-22 4l-2-14c-2-10-16-10-17 0l-1 12c-3-9-15-8-16 2l-2 26c-4 10-2 22 4 30z" fill="#f1f1e6" stroke="#10151d" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 22h-48" stroke="${gk}" stroke-width="7" stroke-linecap="round"/></g></g></svg>`;
+  }
+  host.insertAdjacentHTML('beforeend',html);const svg=host.querySelector('.pg-svg');const q=id=>svg.querySelector('#'+id);
+  const box=()=>{const r=svg.getBoundingClientRect();const sc=(wide?Math.min(r.width/VW,r.height/460):Math.max(r.width/VW,r.height/460))||1;return {sc,ox:((r.width||VW)-VW*sc)/2-VX*sc,oy:((r.height||460)-460*sc)/2}};
+  const fast=penQuick();const D=ms=>fast?0:ms;
+  const ballW=q('pgBallW');const setBall=(x,y,s)=>ballW.setAttribute('transform',`translate(${x.toFixed(1)} ${y.toFixed(1)}) scale(${s.toFixed(3)})`);
+  const st={kind:'2d',mode,dispose(){svg.remove()}};
+  if(mode==='kick'){
+    const keeper=q('pgKeeper');const kb=keeper.querySelector('.pg-kbody');kb.classList.add('sway');
+    st.toScreen=(x,y)=>{const b=box();return [b.ox+(GX+x*S)*b.sc,b.oy+(GY-y*S)*b.sc]};
+    st.fromScreen=(px,py)=>{const b=box();return [((px-b.ox)/b.sc-GX)/S,(GY-(py-b.oy)/b.sc)/S]};
+    st.shoot=(r,done)=>{const tx=GX+r.x*S,ty=GY-r.y*S;kb.classList.remove('sway');
+      const dv=r.dive==='L'?-1:r.dive==='R'?1:0;const reach=r.how==='save';const kx=dv*(reach?clamp(Math.abs(r.x)*S-8,26,112):62),ky=dv?-(reach?clamp(r.y*S-26,0,52):14):0;const rot=dv*(reach?clamp(52+Math.abs(r.x)*8,52,82):64);
+      penAnim(D(330),u=>{const e=1-Math.pow(1-u,2);keeper.setAttribute('transform',`translate(${(GX+kx*e).toFixed(1)} ${(GY+ky*e).toFixed(1)}) rotate(${(rot*e).toFixed(1)} 0 -30)`)});
+      penAnim(D(430),u=>{const e=u;setBall(180+(tx-180)*e,404+(ty-404)*e-Math.sin(u*Math.PI)*16,1-.64*e)},()=>{
+        if(r.how==='goal'){const rip=q('pgRip');rip.setAttribute('cx',tx);rip.setAttribute('cy',ty);q('pgNet').classList.add('hit');penAnim(D(420),u=>{rip.setAttribute('r',(6+u*34).toFixed(1));rip.setAttribute('opacity',(.8*(1-u)).toFixed(2));setBall(tx,ty+(GY-8-ty)*u*u,.36-.06*u)},done)}
+        else if(r.how==='save'){const ex=tx+(r.x>=0?70:-70),ey=ty-30;penAnim(D(420),u=>setBall(tx+(ex-tx)*u,ty+(ey-ty)*u+u*u*70,.36+.1*u),done)}
+        else if(r.how==='post'){const ex=tx+(r.x>=0?-60:60);penAnim(D(480),u=>setBall(tx+(ex-tx)*u,ty+(300-ty)*u*u-Math.sin(u*Math.PI)*30,.36+.3*u),done)}
+        else{const ex=tx+(tx-180)*.5,ey=ty-(404-ty)*.28;penAnim(D(360),u=>setBall(tx+(ex-tx)*u,ty+(ey-ty)*u,.36-.14*u),done)}})};
+  }else{
+    const taker=q('pgTaker'),gl=q('pgGL'),gr=q('pgGR');const EX=x=>180+x*46,EY=y=>400-y*130;
+    st.toScreen=(x,y)=>{const b=box();return [b.ox+EX(x)*b.sc,b.oy+EY(y)*b.sc]};
+    st.fromScreen=(px,py)=>{const b=box();return [((px-b.ox)/b.sc-180)/46,(400-(py-b.oy)/b.sc)/130]};
+    st.runUp=(ms,done)=>penAnim(D(ms),u=>{taker.setAttribute('transform',`translate(${(180-10*(1-u)).toFixed(1)} ${(262-14*(1-u)).toFixed(1)}) scale(${(.86+.14*u).toFixed(3)})`)},done);
+    st.gloves=side=>{const dx=side==='L'?-78:side==='R'?78:0,dy=side==='C'?-150:-120;penAnim(D(170),u=>{gl.setAttribute('transform',`translate(${(104+dx*u+(side==='C'?46*u:0)).toFixed(1)} ${(428+dy*u).toFixed(1)}) rotate(${(side==='L'?-24:side==='R'?10:0)*u})`);gr.setAttribute('transform',`translate(${(256+dx*u-(side==='C'?46*u:0)).toFixed(1)} ${(428+dy*u).toFixed(1)}) rotate(${(side==='R'?24:side==='L'?-10:0)*u})`)})};
+    st.incoming=(r,done)=>{const tx=EX(r.x),ty=EY(r.y);
+      penAnim(D(r.ms||650),u=>{const e=Math.pow(u,2.1);setBall(180+(tx-180)*e,268+(ty-268)*e-Math.sin(u*Math.PI)*10,1+8.6*e)},()=>{const how=r.how();
+        if(how==='save'){penAnim(D(380),u=>setBall(tx+(tx>=180?60:-60)*u,ty+90*u*u-30*u,9.6-3*u),done)}
+        else if(how==='post'){penAnim(D(380),u=>setBall(tx+(tx>=180?-80:80)*u,ty+60*u,9.6-5*u),done)}
+        else penAnim(D(260),u=>{setBall(tx+(tx-180)*.25*u,ty-10*u,9.6+7*u);ballW.setAttribute('opacity',(1-u).toFixed(2))},done)})};
+  }
+  return st}
+
+/* ---- the overlay ---- */
+let PG=null;
+function penFaceHTML(p,c,key){return `<span class="pg-face" style="${faceFrameStyle(p)}">${playerPortraitHTML(p,c,key)}</span>`}
+function penOverlay(o){penClose();const root=document.createElement('div');root.id='penGame';root.className='pg';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',o.title);
+  root.innerHTML=`<div class="pg-top"><div class="pg-title">${esc(o.title)}</div><div class="pg-meta">${o.meta||''}</div><div class="pg-so" id="pgSo"></div></div><div class="pg-stage" id="pgStage" tabindex="0"><div class="pg-view" id="pgView"></div></div><div class="pg-bot" id="pgBot"></div>`;
+  document.body.appendChild(root);PG={root,o};return root}
+function penClose(){if(PG){const pg=PG;PG=null;try{pg.off&&pg.off()}catch(e){}try{pg.stage&&pg.stage.dispose&&pg.stage.dispose()}catch(e){}try{pg.view3d&&pg.view3d.dispose()}catch(e){}if(pg.root)pg.root.remove()}}
+/* clear what the last kick left on the stage (the sight, the result word, a text panel); the picture itself stays */
+function penClear(){if(!PG)return null;const host=PG.root.querySelector('#pgStage');try{PG.off&&PG.off()}catch(e){}PG.off=null;if(PG.stage&&PG.stage.kind==='2d'){try{PG.stage.dispose()}catch(e){}}PG.stage=null;
+  for(const el of [...host.children])if(el.id!=='pgView')el.remove();return host}
+function penPanel(html){const host=penClear();if(!host)return null;const d=document.createElement('div');d.className='pg-panel';d.innerHTML=html;host.appendChild(d);return d}
+function penOnce(fn,ms){let done=false;const go=()=>{if(done)return;done=true;fn()};if(ms)setTimeout(go,ms);return go}
+const PEN_WORD={kick:{goal:'שער!',save:'נהדף',post:'קורה!',off:'החוצה'},keep:{goal:'שער',save:'הצלה!',post:'קורה!',off:'החוצה!'}};
+function penFlash(host,mode,how){const good=mode==='kick'?how==='goal':how!=='goal';const el=document.createElement('div');el.className='pg-flash '+(good?'good':'bad');el.textContent=PEN_WORD[mode][how];host.appendChild(el);buzz(good?(how==='goal'?'goal':'save'):'conceded');return el}
+/* One kick inside an open overlay. o: {mode:'kick'|'keep', taker:{p,c}, keeper:{p,c}|null, energy, pressure, sfx}
+   cb({out:'goal'|'miss', how:'goal'|'save'|'post'|'off', auto}) */
+function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.76?'goal':'miss',how:null,auto:true});return}
+  const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
+  const kick=o.mode==='kick';const tp=o.taker.p,kp=o.keeper&&o.keeper.p;const skill=penShootSkill(tp),gk=penKeepSkill(kp);const myP=kick?tp:kp,myC=kick?o.taker.c:(o.keeper&&o.keeper.c);
+  bot.innerHTML=`<div class="pg-who">${myP?penFaceHTML(myP,myC,'pg'+myP.id+(kick?'k':'g')):''}<div><b>${esc(myP?fullName(myP):'')}</b><small>${kick?`בעיטה <bdi>${Math.round(skill)}</bdi> · מול ${esc(kp?fullName(kp):'השוער')}`:`רפלקסים <bdi>${Math.round(gk)}</bdi> · בועט ${esc(fullName(tp))}`}</small></div></div>
+    <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'לחץ, כוון אל הפינה ושחרר':'החלק לצד שאליו הכדור הולך'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
+  /* a kick belongs to the overlay and the turn it was started in: once either is gone (the overlay was closed, the next
+     kick began) nothing of it may run any more */
+  let over=false;const token=PG.tok=(PG.tok||0)+1;const alive=()=>!!PG&&PG.root===root&&PG.tok===token;const finish=r=>{if(over||!alive())return;over=true;cb(r)};
+  const end=(r,stage)=>{if(!alive())return;const fl=penFlash(host,o.mode,r.how);if(o.sfx){try{if(r.how==='goal')(kick?SFX.goal(true):(CROWD.goal(false)||SFX.groan()));else kick?SFX.groan():CROWD.chance()}catch(e){}}
+    setTimeout(()=>{fl.remove();finish(r)},penQuick()?0:1150)};
+  penMakeStage(view,o.mode,{kit:o.taker.c.c1,trim:o.taker.c.c2,gkKit:colDist(o.taker.c.c1,'#f2b233')>120&&(!o.keeper||colDist(o.keeper.c.c1,'#f2b233')>120)?'#f2b233':'#39c3d6',oppKit:o.keeper?o.keeper.c.c1:'#e9edf2',number:tp.no||9}).then(st=>{
+    if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
+    PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();try{SFX.whistle()}catch(e){}
+    const ac=new AbortController();const on=(el,ev,fn)=>el.addEventListener(ev,fn,{signal:ac.signal,passive:false});
+    const rect=()=>host.getBoundingClientRect();const tEl=root.querySelector('#pgTime');let raf=0,dead=false;const stop=()=>{dead=true;cancelAnimationFrame(raf);ac.abort()};PG.off=()=>{dead=true;cancelAnimationFrame(raf);ac.abort()};
+    on(root.querySelector('#pgAuto'),'click',()=>PG.auto&&PG.auto());
+    if(kick){
+      const wob=penWobble(skill,o.energy==null?100:o.energy,o.pressure);const aimEl=document.createElement('div');aimEl.className='pg-aim';host.appendChild(aimEl);
+      let aim={x:0,y:1.15},touched=false,down=false,t0=performance.now(),fired=false;
+      const cur=()=>{const t=(performance.now()-t0)/1000;return {x:aim.x+Math.sin(t*5.3)*wob+Math.sin(t*9.1+1)*wob*.35,y:Math.max(.05,aim.y+Math.sin(t*4.1+.7)*wob*.55)}};
+      const place=()=>{const c=cur();const [px,py]=st.toScreen(c.x,c.y);aimEl.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`;aimEl.classList.toggle('out',penFrame(c.x,c.y)!=='in')};
+      const fire=auto=>{if(fired||!alive())return;fired=true;stop();aimEl.remove();let x,y;
+        if(auto&&!touched){const s=penAiShot(skill);x=s.x;y=s.y}else{const c=cur();x=c.x+gauss()*wob*.3;y=Math.max(.05,c.y+gauss()*wob*.24)}
+        const r=penKickOutcome(x,y,gk);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:2600))};
+      const setAim=ev=>{const r=rect();const touch=ev.pointerType==='touch';const [x,y]=st.fromScreen(ev.clientX-r.left,ev.clientY-r.top-(touch?56:0));aim={x:clamp(x,-4.5,4.5),y:clamp(y,.12,3.1)};touched=true};
+      on(host,'pointerdown',ev=>{ev.preventDefault();down=true;try{host.setPointerCapture(ev.pointerId)}catch(e){}setAim(ev);place()});
+      on(host,'pointermove',ev=>{if(down){ev.preventDefault();setAim(ev)}});
+      on(host,'pointerup',ev=>{if(down){down=false;setAim(ev);fire(false)}});on(host,'pointercancel',()=>{down=false});
+      on(host,'keydown',ev=>{const k=ev.key;if(k==='ArrowLeft'){aim.x=clamp(aim.x-.35,-4.5,4.5);touched=true}else if(k==='ArrowRight'){aim.x=clamp(aim.x+.35,-4.5,4.5);touched=true}else if(k==='ArrowUp'){aim.y=clamp(aim.y+.25,.12,3.1);touched=true}else if(k==='ArrowDown'){aim.y=clamp(aim.y-.25,.12,3.1);touched=true}else if(k==='Enter'||k===' '){touched=true;fire(false)}else return;ev.preventDefault()});
+      PG.auto=()=>fire(true);PG.fire=(x,y)=>{aim={x,y};touched=true;fire(false)};PG.aim=()=>aim;
+      (function loop(){if(dead||!alive())return;const left=1-(performance.now()-t0)/PEN_TIME;if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;place();if(left<=0)return fire(true);raf=requestAnimationFrame(loop)})();
+      try{host.focus({preventScroll:true})}catch(e){}
+    }else{
+      const s0=penAiShot(skill);const shot={x:-s0.x,y:s0.y};const win=penReactMs(gk);let tStrike=0,commit=null,result=null,down=null,autoStay=false;
+      const decide=()=>{if(result)return;const timing=!commit?'late':commit.t<tStrike||!tStrike?'early':commit.t-tStrike<=win?'react':'late';const side=commit?commit.side:'C';
+        result=penKeepOutcome(shot.x,shot.y,side,commit?timing:'react',gk);result.side=side;result.timing=commit?timing:'stay'};
+      const go=side=>{if(commit||result||!alive())return;commit={side,t:performance.now()};st.gloves(side);buzz('tap');if(tStrike)decide()};
+      on(host,'pointerdown',ev=>{ev.preventDefault();down={x:ev.clientX,y:ev.clientY}});
+      on(host,'pointermove',ev=>{if(!down||commit)return;const dx=ev.clientX-down.x;if(Math.abs(dx)>24)go(dx<0?'L':'R');else if(down.y-ev.clientY>34)go('C')});
+      on(host,'pointerup',ev=>{if(!down)return;const d=down;down=null;if(commit)return;const dx=ev.clientX-d.x;if(Math.abs(dx)>24)return go(dx<0?'L':'R');const r=rect();const f=(ev.clientX-r.left)/Math.max(1,r.width);go(f<.36?'L':f>.64?'R':'C')});
+      on(host,'keydown',ev=>{if(ev.key==='ArrowLeft')go('L');else if(ev.key==='ArrowRight')go('R');else if(ev.key==='ArrowUp'||ev.key===' ')go('C');else return;ev.preventDefault()});
+      PG.auto=()=>{autoStay=true;root.querySelector('#pgAuto').disabled=true};PG.go=go;PG.shot=shot;
+      const wait=penQuick()?0:900+Math.random()*1000;if(tEl)tEl.parentNode.classList.add('idle');
+      setTimeout(()=>{if(dead||!alive())return;st.runUp(penQuick()?0:820,penOnce(()=>{if(dead||!alive())return;tStrike=performance.now();buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}
+        if(autoStay&&!commit){const g=penKeeperGuess(shot.x,gk);commit={side:g,t:tStrike-1};st.gloves(g)}
+        if(commit)decide();else setTimeout(()=>{if(!dead)decide()},penQuick()?0:win);
+        st.incoming({x:shot.x,y:shot.y,ms:650,how:()=>{decide();return result.how}},penOnce(()=>{if(!alive())return;decide();stop();end({out:result.out,how:result.how,side:result.side,timing:result.timing,auto:autoStay},st)},penQuick()?0:2800))},penQuick()?0:2200))},wait);
+      try{host.focus({preventScroll:true})}catch(e){}
+    }})}
+/* a penalty during a live match: for our club the manager kicks, against it he keeps goal */
+function penMatchKick(M,c,p,cb){const h=club(M.h),a=club(M.a);const opp=c.id===M.h?a:h;const mine=c.id===G.me;const gkx=xiPlayers(M,opp).find(x=>x.p.pos==='GK');
+  const e=M.xi[c.id].find(x=>x.pid===p.id);const en=e?liveEnergy(M,c,p,e,M.m):100;
+  penOverlay({title:mine?`פנדל ל${c.short||c.name}!`:`פנדל ל${c.short||c.name}`,meta:`<bdi dir="ltr">${fm(M.m)}</bdi> · <bdi>${esc(h.short)}</bdi> <bdi dir="ltr">${M.gh}:${M.ga}</bdi> <bdi>${esc(a.short)}</bdi>`});const pg=PG;
+  penKick({mode:mine?'kick':'keep',taker:{p,c},keeper:gkx?{p:gkx.p,c:opp}:null,energy:en,pressure:M.m>=85},r=>{if(!r.auto){if(mine&&r.out==='goal')M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save')M.penSaved=(M.penSaved||0)+1}
+    setTimeout(()=>{if(PG!==pg)return;penClose();cb(r.out,r.how||(r.out==='goal'?null:(Math.random()<.5?'save':'off')))},penQuick()?0:250)})}
+/* a shoot-out at the end of a knockout tie */
+function penShootout(M,h,a,done){const meH=h.id===G.me;const my=meH?h:a,op=meH?a:h;const ord={h:penOrder(M,h),a:penOrder(M,a)};const gkOf=c=>{const x=xiPlayers(M,c).find(x=>x.p.pos==='GK');return x?{p:x.p,c}:null};
+  const root=penOverlay({title:'דו־קרב פנדלים',meta:`<bdi>${esc(h.short)}</bdi> <bdi dir="ltr">${M.gh}:${M.ga}</bdi> <bdi>${esc(a.short)}</bdi> · ${esc(M.ctx.label||'')}`});
+  const S={h:[],a:[]};let side=Math.random()<.5?'h':'a';const first=side;
+  const dots=k=>{const n=Math.max(5,S[k].length+(S.h.length+S.a.length>=10&&S.h.length===S.a.length?1:0));let o='';for(let i=0;i<n;i++)o+=`<i class="${S[k][i]==null?'':S[k][i]?'in':'no'}"></i>`;return o};
+  const paint=()=>{const el=root.querySelector('#pgSo');if(el)el.innerHTML=`<div class="pg-so-row${side==='h'?' on':''}"><b>${esc(h.short)}</b><span>${dots('h')}</span><strong>${S.h.reduce((t,v)=>t+v,0)}</strong></div><div class="pg-so-row${side==='a'?' on':''}"><b>${esc(a.short)}</b><span>${dots('a')}</span><strong>${S.a.reduce((t,v)=>t+v,0)}</strong></div>`};
+  const finish=(win,auto)=>{const sc=[S.h.reduce((t,v)=>t+v,0),S.a.reduce((t,v)=>t+v,0)];const won=(win==='h')===meH;
+    penPanel(`<div class="pg-end ${won?'good':'bad'}"><small>${esc(M.ctx.label||'')}</small><h2>${won?'ניצחת בפנדלים!':'הפסד בפנדלים'}</h2><div class="pg-endsc"><bdi>${esc(h.short)}</bdi> <b dir="ltr">${sc[0]}:${sc[1]}</b> <bdi>${esc(a.short)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
+    root.querySelector('#pgBot').innerHTML='';side=null;paint();if(won){try{SFX.win()}catch(e){}confetti(2600);buzz('win')}
+    root.querySelector('#pgDone').onclick=()=>{penClose();done({win,score:sc,auto:!!auto})}};
+  const autoRest=()=>{let w=penShootoutDone(S.h,S.a),g=0;while(!w&&g++<60){const c=side==='h'?h:a,o=side==='h'?a:h;const tk=ord[side][S[side].length%ord[side].length];const gk=gkOf(o);const s=penAiShot(penShootSkill(tk));S[side].push(penKickOutcome(s.x,s.y,penKeepSkill(gk&&gk.p)).out==='goal'?1:0);side=side==='h'?'a':'h';w=penShootoutDone(S.h,S.a)}finish(w||'h',true)};
+  const next=()=>{const w=penShootoutDone(S.h,S.a);if(w)return finish(w);paint();const c=side==='h'?h:a,o=side==='h'?a:h;const tk=ord[side][S[side].length%ord[side].length];const mine=c.id===G.me;
+    const e=M.xi[c.id].find(x=>x.pid===tk.id);
+    penKick({mode:mine?'kick':'keep',taker:{p:tk,c},keeper:gkOf(o),energy:e?liveEnergy(M,c,tk,e,M.m):100,pressure:S.h.length+S.a.length>=8,sfx:true},r=>{if(!PG||PG.root!==root)return;S[side].push(r.out==='goal'?1:0);if(mine&&r.out==='goal'&&!r.auto)M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save'&&!r.auto)M.penSaved=(M.penSaved||0)+1;side=side==='h'?'a':'h';paint();setTimeout(next,penQuick()?0:500)})};
+  PG.skipAll=autoRest;
+  penPanel(`<div class="pg-end"><small>${esc(M.ctx.label||'')}</small><h2>הולכים לפנדלים</h2><p>חמש בעיטות לכל קבוצה. ${esc((first==='h'?h:a).short)} בועטת ראשונה.<br>כשאתה בועט: כוון ושחרר. כשהם בועטים: אתה בשער.</p><button type="button" class="btn big" id="pgGo">אני לוקח את זה</button><button type="button" class="btn sec" id="pgLet">שהשחקנים יחליטו</button></div>`);paint();
+  root.querySelector('#pgGo').onclick=()=>{penPreload();next()};root.querySelector('#pgLet').onclick=()=>autoRest()}
+/* ====================== BLITZ: the quick draft tournament ======================
+   A separate mode outside the career: draft an eleven (one of three real players for every position), then four knockout
+   rounds against real clubs that get stronger. Lose once and the run is over; a new draft starts from nothing.
+
+   It never touches a career. While it runs, the global G is a throw-away sandbox built by newGame(), the career object
+   waits untouched in BLITZ.career, and SANDBOX switches every write to storage off (save / saveSync / emergencyFlush in
+   22-save.js). Leaving restores G and the player-id counter. The only thing the mode stores is its own small record and
+   the current run, in localStorage (BLITZ_KEY / BLITZ_RUN); the achievements read the record through blitzRec(). */
+const BLITZ_KEY='goalasso_blitz_v1',BLITZ_RUN='goalasso_blitz_run_v1';
+const BLITZ_ROUNDS=[['R16','שמינית הגמר',-8],['QF','רבע הגמר',-5.5],['SF','חצי הגמר',-3.5],['F','הגמר',-1.5]];
+let BLITZ=null,SANDBOX=false;
+function blitzRec(){const base={runs:0,cups:0,finals:0,streak:0,bestStreak:0,best:-1};try{return Object.assign(base,JSON.parse(localStorage.getItem(BLITZ_KEY)||'{}'))}catch(e){return base}}
+function blitzStore(key,val){try{if(val==null)localStorage.removeItem(key);else localStorage.setItem(key,JSON.stringify(val))}catch(e){}}
+/* every real player the game knows who is good enough for the draft: {club, str, r (raw row), ovr} or {club, p (Israeli league player)} */
+function blitzStrengths(){const m={};for(const d of EURO_CLUBS)m[d[0]]={str:d[6],c1:d[4],c2:d[5],country:d[1],def:d};for(const L of Object.values(WORLD_LEAGUES))for(const c of L.clubs)if(!m[c[0]])m[c[0]]={str:c[4],c1:c[2],c2:c[3],country:c[6]||L.country,def:[c[0],c[6]||L.country,c[1],'',c[2],c[3],c[4]]};return m}
+function blitzPool(){if(blitzPool.c)return blitzPool.c;const S=blitzStrengths();const out=[];
+  for(const name in S){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)continue;const rated=raw.map(r=>({r,o:euroRating(r.value_m,r.age)})).filter(x=>x.o!=null&&x.r.he&&x.r.en);
+    const top=rated.map(x=>x.o).sort((a,b)=>b-a).slice(0,14);if(!top.length)continue;const shift=clamp(Math.round(S[name].str+1-top.reduce((a,b)=>a+b,0)/top.length),-7,7);
+    for(const x of rated){const ovr=clamp(x.o+shift,46,94);if(ovr>=73)out.push({key:name+'|'+x.r.en,club:name,str:S[name].str,r:x.r,ovr,pos:x.r.pos||'MF',nat:NAT_HE[x.r.nat]||x.r.nat||'',he:x.r.he})}}
+  if(BLITZ&&G&&G.blitz)for(const c of G.clubs){if(c.id===G.me)continue;for(const p of c.players)if(p.real&&p.ovr>=73)out.push({key:c.name+'|'+fullName(p),club:c.name,p,ovr:p.ovr,pos:p.pos,nat:p.nat||'ישראל',he:fullName(p)})}
+  blitzPool.c=out;return out}
+function blitzClubDefs(){if(blitzClubDefs.c)return blitzClubDefs.c;const S=blitzStrengths();blitzClubDefs.c=Object.keys(S).filter(n=>RAW_EURO&&RAW_EURO[n]&&RAW_EURO[n].length>=14).map(n=>S[n].def);return blitzClubDefs.c}
+function blitzMake(rec){let p;if(rec.p){p=JSON.parse(JSON.stringify(rec.p));p.id=uid++}else{p=fromRawEuro(rec.r,rec.str,rec.club);p.ovr=rec.ovr;p.pot=Math.max(p.pot,rec.ovr)}
+  Object.assign(p,{foreign:false,inj:0,susp:0,fit:100,form:0,morale:72,goals:0,apps:0,yellow:0,contract:3,bkey:rec.key,from:p.from||rec.club});finalize(p);return p}
+/* links: two picked players from the same club or the same country play better together */
+function blitzLinks(ps){let n=0;for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const a=ps[i],b=ps[j];if(!a||!b)continue;if(a.from&&a.from===b.from)n+=2;else if(a.nat&&a.nat===b.nat&&a.nat!=='זר')n+=1}return n}
+function blitzBonus(ps){return +Math.min(3,blitzLinks(ps)*.2).toFixed(1)}
+function blitzRating(ps){const xs=ps.filter(Boolean);return xs.length?xs.reduce((t,p)=>t+p.ovr,0)/xs.length:0}
+/* three different candidates for the next slot: a headline name, a solid one, and one who links with the squad when possible */
+function blitzOffer(){const B=BLITZ;const pos=B.slots[B.picks.length];const taken=new Set([...B.picks.map(p=>p.bkey)]);const pool=blitzPool().filter(x=>x.pos===pos&&!taken.has(x.key));
+  const band=(lo,hi)=>pool.filter(x=>x.ovr>=lo&&x.ovr<=hi);const take=(arr,used)=>{const a=arr.filter(x=>!used.includes(x));return a.length?pick(a):null};const out=[];
+  const star=Math.random()<.3?band(86,94):band(82,86);const c1=take(star.length?star:band(80,94),out)||take(pool,out);if(c1)out.push(c1);
+  const c2=take(band(78,83),out)||take(pool,out);if(c2)out.push(c2);
+  const clubs=new Set(B.picks.map(p=>p.from)),nats=new Set(B.picks.map(p=>p.nat));const linked=band(75,84).filter(x=>clubs.has(x.club)||(x.nat&&x.nat!=='זר'&&nats.has(x.nat)));
+  const c3=take(linked.length&&Math.random()<.8?linked:band(74,80),out)||take(pool,out);if(c3)out.push(c3);
+  B.offer=shuffle(out);return B.offer}
+function blitzSandbox(){const career=G,oldUid=uid;SANDBOX=true;
+  try{newGame(Object.keys(META)[0],career&&career.manager?career.manager.name:'');}catch(e){G=career;uid=oldUid;SANDBOX=false;throw e}
+  const src=career||{};Object.assign(G,{blitz:true,phase:'play',view:'home',pressMode:'off',paperPopOff:true,paperPop:[],sound:src.sound,vol:src.vol,motion:src.motion,renderer:src.renderer,speed:src.speed,replay:src.replay,haptic:src.haptic,penGame:src.penGame,spx:blitzRec().spx||'hl'});
+  const c=me();Object.assign(c,{name:'נבחרת החלומות',short:'החלומות',c1:'#c6f24e',c2:'#10151d',stadium:'אצטדיון הבזק',players:[],youth:[],chem:null,tacFam:null,sponsor:null,lineup:null,captain:null,naming:null,ads:[]});
+  blitzPool.c=null;return {career,uid:oldUid}}
+function blitzEnter(){if(BLITZ)return render();if(G&&G.live&&!G.live.settled)return toast('סיים קודם את המשחק הפעיל');if(typeof mpIsOn==='function'&&G&&mpIsOn())return toast('טורניר בזק לא זמין בזמן משחק רשת');
+  const go=()=>{let box;try{box=blitzSandbox()}catch(e){console.warn('blitz',e);return toast('לא הצלחנו לפתוח את הטורניר')}
+    BLITZ={career:box.career,uid:box.uid,stage:'lobby',picks:[],slots:[],offer:[],round:0,opp:null,res:[],form:'4-3-3'};closeModal();try{hideSplash()}catch(e){}render();const m=$('main');if(m)m.scrollTop=0};
+  if(G&&!G.blitz)return Promise.resolve(save()).then(go,go);go()}
+function blitzExit(){if(!BLITZ)return;const B=BLITZ;try{Match3D.stop()}catch(e){}if(liveTimer){clearInterval(liveTimer);liveTimer=null}try{crowdStop(.4)}catch(e){}try{penClose()}catch(e){}
+  G=B.career;uid=B.uid;BLITZ=null;SANDBOX=false;blitzPool.c=null;closeModal();
+  if(G){try{const got=achCheck();if(got.length)toast('🏅 הישג חדש: '+got[0].he)}catch(e){}}render()}
+function blitzRunSave(){const B=BLITZ;if(!B||B.stage==='lobby')return;blitzStore(BLITZ_RUN,{form:B.form,picks:B.picks.map(p=>p.bkey),bench:(B.bench||[]).map(p=>p.bkey),round:B.round,res:B.res,stage:B.stage==='draft'?'draft':'cup',used:B.used||[],opp:B.oppName||null})}
+function blitzResume(){let R=null;try{R=JSON.parse(localStorage.getItem(BLITZ_RUN)||'null')}catch(e){}if(!R||!Array.isArray(R.picks))return false;const B=BLITZ;const byKey=new Map(blitzPool().map(x=>[x.key,x]));
+  B.form=FORMATIONS[R.form]?R.form:'4-3-3';B.slots=slotsFor(B.form);B.picks=R.picks.map(k=>byKey.get(k)).filter(Boolean).map(blitzMake);if(B.picks.length!==R.picks.length)return false;
+  if(R.stage==='draft'&&B.picks.length<11){B.stage='draft';blitzOffer();return true}if(B.picks.length<11)return false;
+  B.bench=(R.bench||[]).map(k=>byKey.get(k)).filter(Boolean).map(blitzMake);B.round=clamp(R.round|0,0,3);B.res=Array.isArray(R.res)?R.res:[];B.used=R.used||[];blitzSquad();B.oppName=R.opp;blitzDraw(R.opp);B.stage='cup';return true}
+function blitzStart(form){const B=BLITZ;B.form=FORMATIONS[form]?form:'4-3-3';B.slots=slotsFor(B.form);B.picks=[];B.bench=[];B.round=0;B.res=[];B.used=[];B.opp=null;B.oppName=null;B.stage='draft';blitzOffer();blitzRunSave();render()}
+function blitzPick(i){const B=BLITZ;const rec=B.offer[i];if(!rec||B.stage!=='draft')return;B.picks.push(blitzMake(rec));buzz('tap');
+  if(B.picks.length>=11){blitzBench();blitzSquad();blitzDraw();B.stage='cup'}else blitzOffer();blitzRunSave();render();const m=$('main');if(m)m.scrollTop=0}
+/* five substitutes a little below the eleven, one goalkeeper among them */
+function blitzBench(){const B=BLITZ;const avg=blitzRating(B.picks);const taken=new Set(B.picks.map(p=>p.bkey));B.bench=[];
+  for(const pos of ['GK','DF','MF','MF','FW']){const c=blitzPool().filter(x=>x.pos===pos&&!taken.has(x.key)&&x.ovr<=avg-3&&x.ovr>=avg-8);const all=c.length?c:blitzPool().filter(x=>x.pos===pos&&!taken.has(x.key));if(!all.length)continue;const r=pick(all);taken.add(r.key);B.bench.push(blitzMake(r))}}
+function blitzSquad(){const B=BLITZ,c=me();c.formation=B.form;c.players=[...B.picks,...B.bench];c.lineup=B.picks.map(p=>p.id);c.captain=B.picks.slice().sort((a,b)=>(b.ovr+b.age*.4)-(a.ovr+a.age*.4))[0].id;try{ensureNumbers(c)}catch(e){}}
+/* the next opponent: a real club whose strength sits at the round's offset from the drafted eleven */
+function blitzDraw(name){const B=BLITZ;const T=blitzRating(B.picks)+BLITZ_ROUNDS[B.round][2];const defs=blitzClubDefs();B.used=B.used||[];
+  let def=name?defs.find(d=>d[0]===name):null;
+  if(!def){const free=defs.filter(d=>!B.used.includes(d[0]));const near=free.filter(d=>Math.abs(d[6]-T)<=1.5);def=near.length?pick(near):free.slice().sort((a,b)=>Math.abs(a[6]-T)-Math.abs(b[6]-T))[0]}
+  for(const k of Object.keys(G.pseudo))if(/^b\d/.test(k))delete G.pseudo[k];
+  B.opp=clubFromDef(def,'b');B.oppName=def[0];if(!B.used.includes(def[0]))B.used.push(def[0]);return B.opp}
+function blitzPlay(){const B=BLITZ;if(!B||B.stage!=='cup'||!B.opp)return;const c=me();blitzSquad();c.players.forEach(p=>{p.inj=0;p.susp=0;p.fit=100});
+  G.mentalBoost=blitzBonus(B.picks);const M=createMatch(c,B.opp,{kind:'friendly',neutral:true,ko:true,blitz:true,stage:BLITZ_ROUNDS[B.round][0],label:'טורניר בזק · '+BLITZ_ROUNDS[B.round][1]});
+  M.live=true;M.fresh=true;G.live=M;penPreload();startLive(M)}
+function blitzAfterMatch(M){const B=BLITZ;if(!B)return render();const c=me();const meH=M.h===G.me;const gf=meH?M.gh:M.ga,ga=meH?M.ga:M.gh;const won=gf>ga||(gf===ga&&!!M.pens&&((M.pens==='h')===meH));
+  G.live=null;try{crowdStop(.6)}catch(e){}const R=blitzRec();B.res.push({r:B.round,opp:B.opp.name,gf,ga,pens:M.pens?(M.penScore?(meH?M.penScore:[M.penScore[1],M.penScore[0]]):true):null,won});
+  R.best=Math.max(R.best,B.round+(won?1:0));if(B.round===3&&B.res.length&&!B.finalCounted){B.finalCounted=true;R.finals++}
+  if(won&&B.round===3){R.cups++;R.runs++;R.streak++;R.bestStreak=Math.max(R.bestStreak,R.streak);B.stage='won';blitzStore(BLITZ_RUN,null)}
+  else if(won){B.round++;blitzDraw();B.stage='cup';blitzRunSave()}
+  else{R.runs++;R.streak=0;B.stage='out';blitzStore(BLITZ_RUN,null)}
+  if(G.spx!=null)R.spx=G.spx;blitzStore(BLITZ_KEY,R);render();const m=$('main');if(m)m.scrollTop=0;if(B.stage==='won'){try{SFX.win()}catch(e){}confetti(4000);buzz('win')}}
+/* ---- screens ---- */
+function blitzFaceHTML(p,key){return `<span class="bz-face" style="${faceFrameStyle(p)}">${playerPortraitHTML(p,{c1:'#1a2231',c2:'#c6f24e'},key)}</span>`}
+function blitzPitchHTML(){const B=BLITZ;const lay=slotLayout(B.form);return `<div class="bz-pitch" aria-label="ההרכב שנבחר">${B.slots.map((pos,i)=>{const p=B.picks[i];const L=lay[i]||{x:50,y:50};const cur=i===B.picks.length&&B.stage==='draft';
+    return `<div class="bz-tok${p?' in':''}${cur?' cur':''}" style="left:${L.x}%;top:${L.y}%">${p?`${blitzFaceHTML(p,'bzp'+p.id)}<b class="num">${p.ovr}</b><small>${esc(p.last||p.first)}</small>`:`<span class="bz-face empty">${POSB[pos]}</span>`}</div>`}).join('')}</div>`}
+function blitzBracketHTML(){const B=BLITZ;return `<ol class="bz-rounds">${BLITZ_ROUNDS.map((r,i)=>{const res=B.res.find(x=>x.r===i);const cur=i===B.round&&B.stage==='cup';return `<li class="${res?(res.won?'won':'lost'):cur?'cur':''}"><span>${r[1]}</span><b>${res?`${esc(res.opp)} <bdi dir="ltr">${res.gf}:${res.ga}</bdi>${res.pens?' (פנדלים)':''}`:cur&&B.opp?esc(B.opp.name):'—'}</b></li>`}).join('')}</ol>`}
+function blitzView(){const B=BLITZ,R=blitzRec();
+  if(B.stage==='lobby'){let saved=null;try{saved=JSON.parse(localStorage.getItem(BLITZ_RUN)||'null')}catch(e){}
+    return `<div class="bz-hero"><h1>טורניר בזק</h1><p>בחר אחד משלושה שחקנים אמיתיים לכל עמדה, בנה אחת־עשרה בשתי דקות וצא לארבעה משחקי נוקאאוט. הפסד אחד והטורניר נגמר.</p></div>
+    <div class="card"><div class="bz-stats"><div><b class="num">${R.cups}</b><small>גביעים</small></div><div><b class="num">${R.runs}</b><small>טורנירים</small></div><div><b class="num">${R.bestStreak}</b><small>שיא זכיות רצופות</small></div><div><b>${R.best<0?'—':R.best>=4?'זכייה':esc(BLITZ_ROUNDS[R.best][1])}</b><small>הכי רחוק</small></div></div></div>
+    <div class="card"><h3 class="sec">בחר מערך</h3><div class="bz-forms">${Object.keys(FORMATIONS).map(f=>`<button type="button" class="bz-form" data-bz-form="${f}"><b dir="ltr">${f}</b><small>${FORMATIONS[f][1]} בהגנה · ${FORMATIONS[f][2]} בקישור · ${FORMATIONS[f][3]} בהתקפה</small></button>`).join('')}</div>
+    ${saved&&Array.isArray(saved.picks)&&saved.picks.length?'<div class="actions" style="margin-top:10px"><button class="btn" data-bz="resume">המשך את הטורניר השמור</button></div>':''}</div>
+    <div class="actions"><button class="btn sec" data-bz="exit">${B.career?'חזרה לקריירה':'חזרה'}</button></div>`}
+  if(B.stage==='draft'){const n=B.picks.length,pos=B.slots[n];const clubs=new Set(B.picks.map(p=>p.from)),nats=new Set(B.picks.map(p=>p.nat));
+    return `<div class="bz-top"><button class="btn sm sec" data-bz="quit">יציאה</button><div><h2>בחירה <bdi>${n+1}</bdi> מתוך <bdi>11</bdi></h2><div class="muted small">${POSHE[pos]} · דירוג ממוצע <bdi>${n?blitzRating(B.picks).toFixed(1):'—'}</bdi> · בונוס קישורים <bdi dir="ltr">+${blitzBonus(B.picks)}</bdi></div></div></div>
+    <div class="bz-offer">${B.offer.map((x,i)=>{const p=x.p||{first:x.he,last:'',visualId:euroVisualId(x.club,x.r.en),id:900000+i,pos:x.pos};const link=clubs.has(x.club)?'אותו מועדון':(x.nat&&x.nat!=='זר'&&nats.has(x.nat))?'אותה נבחרת':'';
+      return `<button type="button" class="bz-card" data-bz-pick="${i}"><span class="bz-ovr num">${x.ovr}</span>${blitzFaceHTML(p,'bzo'+n+'_'+i)}<b>${esc(x.he)}</b><small>${esc(x.club)}</small><small class="muted">${esc(x.nat||'')}${x.r&&x.r.age?` · בן <bdi>${x.r.age}</bdi>`:x.p?` · בן <bdi>${x.p.age}</bdi>`:''}</small>${link?`<span class="tag good">קישור · ${link}</span>`:'<span class="tag">בלי קישור</span>'}</button>`}).join('')}</div>
+    <div class="card"><div class="muted tiny" style="margin-bottom:6px">שחקנים מאותו מועדון או מאותה מדינה משחקים טוב יותר יחד (עד <bdi dir="ltr">+3</bdi> לדירוג הקבוצה)</div>${blitzPitchHTML()}</div>`}
+  const avg=blitzRating(B.picks),bonus=blitzBonus(B.picks);
+  if(B.stage==='cup'){const o=B.opp;const os=Math.round(strength(o));
+    return `<div class="bz-top"><button class="btn sm sec" data-bz="quit">יציאה</button><div><h2>${BLITZ_ROUNDS[B.round][1]}</h2><div class="muted small">הקבוצה שלך <bdi>${avg.toFixed(1)}</bdi> <bdi dir="ltr">+${bonus}</bdi> קישורים · היריבה <bdi>${os}</bdi></div></div></div>
+    <div class="card bz-match"><div class="nx-vs"><div class="nx-t">${kitSVG(me(),'lg')}<b>${esc(me().short)}</b></div><div class="nx-mid"><span>נוקאאוט</span></div><div class="nx-t">${kitSVG(o,'lg')}<b>${esc(o.name)}</b></div></div><div class="nx-label">${esc(o.country||'')} · תיקו אחרי 90 דקות הולך לפנדלים</div>
+    <div class="actions" style="margin-top:12px"><button class="btn big" data-bz="play">לשריקת הפתיחה</button></div></div>
+    <div class="card">${blitzBracketHTML()}</div><div class="card"><h3 class="sec">האחת־עשרה שלך</h3>${blitzPitchHTML()}<div class="muted tiny" style="margin-top:8px">ספסל: ${B.bench.map(p=>`${esc(p.last||p.first)} <bdi>${p.ovr}</bdi>`).join(' · ')}</div></div>`}
+  const won=B.stage==='won';const last=B.res[B.res.length-1];
+  return `<div class="bz-hero ${won?'won':'out'}"><h1>${won?'הגביע שלך!':'הודחת'}</h1><p>${won?`ארבעה ניצחונות, אחת־עשרה שבחרת בעצמך. זו הזכייה ה־<bdi>${R.cups}</bdi> שלך${R.streak>1?`, <bdi>${R.streak}</bdi> ברצף`:''}.`:`${esc(BLITZ_ROUNDS[last?last.r:0][1])}: ${last?`${esc(last.opp)} <bdi dir="ltr">${last.gf}:${last.ga}</bdi>${last.pens?' בפנדלים':''}`:''}. דראפט חדש מתחיל מאפס.`}</p></div>
+  <div class="card">${blitzBracketHTML()}</div>
+  <div class="actions"><button class="btn big" data-bz="again">דראפט חדש</button><button class="btn sec" data-bz="exit" style="flex:0 0 auto">${B.career?'חזרה לקריירה':'חזרה'}</button></div>`}
+function blitzRender(){$('top').classList.add('hide');$('nav').classList.add('hide');try{envelopeClose()}catch(e){}const m=$('main');m.innerHTML=`<div class="view blitz">${blitzView()}</div>`;
+  m.onsubmit=m.oninput=m.onchange=m.onkeydown=null;
+  m.onclick=e=>{const t=e.target;const f=t.closest('[data-bz-form]');if(f)return blitzStart(f.dataset.bzForm);const pk=t.closest('[data-bz-pick]');if(pk)return blitzPick(+pk.dataset.bzPick);const b=t.closest('[data-bz]');if(!b)return;const a=b.dataset.bz;
+    if(a==='exit')return blitzExit();if(a==='play')return blitzPlay();if(a==='again'){BLITZ.stage='lobby';BLITZ.picks=[];BLITZ.res=[];BLITZ.finalCounted=false;return render()}
+    if(a==='resume'){if(blitzResume())return render();blitzStore(BLITZ_RUN,null);toast('הטורניר השמור כבר לא זמין');return render()}
+    if(a==='quit')return openModal(`<h3 class="sec">לצאת מהטורניר?</h3><p class="small">הטורניר נשמר במכשיר הזה. אפשר להמשיך אותו בפעם הבאה שתיכנס לטורניר בזק.</p><div class="actions"><button class="btn" id="bzLeave">צא</button><button class="btn sec" data-close>הישאר</button></div>`,ev=>{if(ev.target.closest('#bzLeave')){closeModal();blitzRunSave();blitzExit()}})}}
+/* the entry on the home screen and on the club-selection screen */
+function blitzEntryHTML(){const R=blitzRec();return `<div class="card bz-entry"><div><h3 class="sec">טורניר בזק</h3><div class="muted small">דראפט של שחקנים אמיתיים וארבעה משחקי נוקאאוט. כעשר דקות.${R.runs?` <bdi>${R.cups}</bdi> גביעים ב־<bdi>${R.runs}</bdi> טורנירים.`:''}</div></div><button class="btn" data-blitz-open>שחק</button></div>`}
+/* ====================== NOTIFICATIONS (opt-in, per device) ======================
+   Only for things that really happened while the game sits in a background tab or as an installed home-screen app:
+   the other manager in a network game is ready, the week was played, a friend joined the room. Nothing is scheduled and
+   no server pushes anything: when the game is closed, nothing arrives. The choice is kept in localStorage
+   (goalasso_notify), asked only when the player switches it on in the settings.
+   sw.js (assets/sw.js, served beside the page) shows the notification and brings the game forward when it is tapped;
+   it caches nothing and handles no requests. */
+let swReg=null;
+function notifySupported(){return typeof window!=='undefined'&&typeof Notification!=='undefined'}
+function notifyPref(){try{return localStorage.getItem('goalasso_notify')==='1'}catch(e){return false}}
+function notifyState(){if(!notifySupported())return 'unsupported';if(Notification.permission==='denied')return 'denied';return Notification.permission==='granted'&&notifyPref()?'on':'off'}
+function notifyRegister(){if(swReg)return Promise.resolve(swReg);if(typeof navigator==='undefined'||!navigator.serviceWorker||typeof location==='undefined'||!/^https?:$/.test(location.protocol))return Promise.resolve(null);
+  return navigator.serviceWorker.register('sw.js').then(r=>{swReg=r;return r}).catch(()=>null)}
+function notifySet(on){const done=()=>{if(G&&!G.blitz)render()};try{localStorage.setItem('goalasso_notify',on?'1':'0')}catch(e){}
+  if(!on||!notifySupported())return done();
+  let ask;try{ask=Notification.permission==='granted'?Promise.resolve('granted'):Promise.resolve(Notification.requestPermission())}catch(e){ask=Promise.resolve('denied')}
+  ask.then(p=>{if(p==='granted'){notifyRegister();toast('התראות יגיעו כשהמשחק פתוח ברקע')}else{try{localStorage.setItem('goalasso_notify','0')}catch(e){}toast('הדפדפן לא אישר התראות')}done()},done)}
+function notify(title,body,tag){try{if(notifyState()!=='on'||typeof document==='undefined'||!document.hidden)return false;
+  const opt={body,tag:tag||'goalasso',icon:'assets/icons/goalasso-180-v1.png',badge:'assets/icons/goalasso-32-v1.png',lang:'he',dir:'rtl'};
+  notifyRegister().then(r=>{if(r&&r.showNotification)return r.showNotification(title,opt);new Notification(title,opt)}).catch(()=>{try{new Notification(title,opt)}catch(e){}});return true}catch(e){return false}}
+/* network game (35b): the other manager became ready while it is still my turn */
+function mpNotifyReady(wasReady,other,meReady){if(other&&other.ready&&!wasReady&&!meReady)notify('היריב מוכן',`${other.name||'המאמן השני'} סיים להתכונן. נשאר רק לסגור את ההרכב שלך.`,'mp-ready')}
+/* invitation friendlies (35c): a friend joined, became ready, or the match was played */
+function roomNotify(prev,st){if(!prev||!st)return;const n=(st.members||[]).length,pn=(prev.members||[]).length;
+  if(n>pn)return notify('חבר הצטרף לחדר','אפשר לסמן שאתם מוכנים ולהתחיל.','room');if(st.result&&!prev.result)return notify('משחק הרשת שוחק','התוצאה מחכה לך.','room');
+  const o=(st.members||[]).find(m=>!m.mine),po=(prev.members||[]).find(m=>!m.mine);if(o&&o.ready&&po&&!po.ready)notify('החבר מוכן','מחכים רק לך.','room')}
+try{if(typeof window!=='undefined')window.addEventListener('load',()=>{if(notifyState()==='on')notifyRegister()})}catch(e){}
 /* ====================== LIVE MATCH (30s, subs, half-time) ====================== */
 function playInstant(){const M=advanceWeek();if(M){M.live=false;runInstant(M);if(M.ctx.kind!=='league'&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);const h=club(M.h),a=club(M.a);afterMyMatch(M);toast(`${h.short} ${M.gh}:${M.ga} ${a.short}`);if(isBigMatch(M)&&pressMode()!=='off'){render();return runPress('post',M,()=>render())}}render()}
 let liveTimer=null;
 function ensureNumbers(c){if(!c||!c.players)return;const used=new Set(c.players.filter(p=>p.no).map(p=>p.no));const order={GK:0,DF:1,MF:2,FW:3};const ps=c.players.filter(p=>!p.no).sort((x,y)=>(order[x.pos]-order[y.pos])||(y.ovr-x.ovr));let n=1;for(const p of ps){if(p.pos==='GK'&&!used.has(1)){p.no=1;used.add(1);continue}while(used.has(n)||n===1)n++;p.no=n;used.add(n)}}
 function xiListHTML(M,c){return xiPlayers(M,c).map(({p,e})=>`<span><span>${p.no||''} ${esc(p.last||p.first)}${e.slot&&e.slot!==p.pos?' <small class="muted">('+e.slot+')</small>':''}</span><b>${p.ovr}</b></span>`).join('')}
 function startLive(restored){
-  Match3D.stop();if(liveTimer){clearInterval(liveTimer);liveTimer=null;}
-  try{localStorage.setItem('ilm2_livefl',String(G.slot||curSlot()))}catch(e){}
+  Match3D.stop();if(liveTimer){clearInterval(liveTimer);liveTimer=null;}try{penClose()}catch(e){}   /* a penalty left open by an earlier run of this screen is dropped; the engine decides it */
+  if(!G.blitz){try{localStorage.setItem('ilm2_livefl',String(G.slot||curSlot()))}catch(e){}}
   const M=restored||advanceWeek();if(!M){try{localStorage.removeItem('ilm2_livefl')}catch(e){}render();return}
   save();const h=club(M.h),a=club(M.a);ensureNumbers(h);ensureNumbers(a);
   const ml=motionLevel();const base=(G.speed||90);
@@ -5478,6 +6341,7 @@ function startLive(restored){
     <div class="bc"><span class="clock num" id="clock">${fm(0)}</span><span class="tag live" id="livePill">LIVE</span><span class="lbl">${esc(M.ctx.label)}${M.ctx.neutral?' · מגרש ניטרלי':' · '+esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</span></div></div>
   <div class="progress"><i id="prog" style="width:0%"></i></div><div class="bc-mom" id="bcMom" aria-hidden="true"></div>
   ${ml==='off'?'':pitch2dHTML(h,a,M.att&&h.cap?M.att/h.cap:(M.ctx.kind==='friendly'?.3:.85))}
+  ${M.playback?'':shoutBarHTML()}
   ${Match3D.html()}
   <div class="xistrip" id="xiStrip"></div></div>
   <aside class="live-side"><div class="row between"><h3 class="sec">ניהול משחק</h3><span class="muted tiny num">${esc(me().formation||'4-3-3')}</span></div>
@@ -5485,19 +6349,20 @@ function startLive(restored){
     <button class="lbtn primary" id="ctrlBtn">השהה</button>
     <button class="lbtn" id="subBtn"><span>חילופים</span><span class="num"><span id="subCount">0</span>/${MAX_SUBS}</span></button>
     <div class="livemt"><button data-lm="def">הגנתי</button><button data-lm="bal">מאוזן</button><button data-lm="att">התקפי</button></div>
-    <div class="livectl"><div class="spd"><button data-spx="1" class="on">×1</button><button data-spx="2">×2</button><button data-spx="4">×4</button></div>
+    <div class="livectl"><div class="spd"><button data-spx="hl" title="רק הרגעים החשובים, בקצב מהיר">תקציר</button><button data-spx="1">×1</button><button data-spx="2">×2</button><button data-spx="4">×4</button></div>
     <button class="ic ${G.sound===false?'':'on'}" id="muteBtn" title="צליל" aria-label="צליל">${G.sound===false?'🔇':'🔊'}</button>${ml==='off'?'':`<button class="ic" id="pathBtn" title="הצג מסלולי כדור">מסלולים</button><button class="ic ${G.replay===false?'':'on'}" id="rpBtn" title="שידור חוזר אחרי שער">חוזר</button>`}</div>
   </aside></div>
   <div class="live-lower"><div class="card" id="statsCard" style="--hc:${matchColors(h,a).h.fill};--ac:${matchColors(h,a).a.fill}"><div id="stats"></div></div>
   <div class="card"><div class="ticker" id="ticker"><div class="muted">${ml==='off'?'שריקת פתיחה':'הקבוצות בדרך למגרש'}</div></div></div></div></div>`;
   $('top').classList.add('hide');bcMount();bcMomentum(M,h,a);
   const p3d=Match3D.mount(M,h,a);
-  const tick=$('ticker');let paused=true,shown=0,mult=1;const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}if(!p3d?.enabled||p2d.px&&(p2d.pending||p2d.rp))pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
+  const tick=$('ticker');let paused=true,shown=0,mult=G.spx===2||G.spx===4?G.spx:1,hl=G.spx==='hl'||(!!G.blitz&&G.spx==null),holdUntil=0,penHold=false,soOpen=false;
+  if(M.voice==null)M.voice=60;$('main').querySelector('.live-view').classList.toggle('hl',hl);const p2d=ml==='off'?null:initPitch2d(M,h,a);if(p2d&&ml==='low'){p2d.snap=true;p2d.entrance=false;p2d.entranceDone=true;for(const d of [...p2d.h,...p2d.a]){d.x=d.bx;d.y=d.by}}let raf=null,running=true;const frame=()=>{if(!p2d||!p2d.ballEl.isConnected){running=false;raf=null;return}if(!p3d?.enabled||p2d.px&&(p2d.pending||p2d.rp))pitchFrame(p2d);raf=running?requestAnimationFrame(frame):null};
   if(p2d){p2d.onTap=(pid,team)=>{p2d.labels[pid]=performance.now()+2200;if(team===G.me&&!M.done&&!M.playback&&M.subs[G.me]<MAX_SUBS){pause();openSubModal(pid)}}}
   M.liveMent=M.liveMent||{};M.liveMent[G.me]=M.liveMent[G.me]||me().mentality||'bal';const paintLM=()=>document.querySelectorAll('[data-lm]').forEach(b=>b.classList.toggle('on',b.dataset.lm===M.liveMent[G.me]));paintLM();
   document.querySelectorAll('[data-lm]').forEach(b=>b.onclick=()=>{M.liveMent[G.me]=b.dataset.lm;M.tadjDirty=true;save();paintLM();addLine('note',`${fm(M.m)} שינוי מנטליות: ${{def:'הגנתי',bal:'מאוזן',att:'התקפי'}[b.dataset.lm]}`)});
   const addLine=(cls,txt)=>{const prev=tick.querySelector('.latest');if(prev)prev.classList.remove('latest');const d=document.createElement('div');d.className=cls+' latest';d.textContent=txt;tick.appendChild(d);tick.scrollTop=tick.scrollHeight};
-  let replayQ=null;let restoring=!!restored&&!restored.playback;
+  let replayQ=null;const resumed=!!restored&&!restored.playback&&!restored.fresh;if(restored)restored.fresh=false;let restoring=resumed;
   const myC=me();const homeMe=M.h===G.me;
   const drawSide=()=>{const xs=xiPlayers(M,myC);const lay=slotLayout(myC.formation||'4-3-3');
     const chip=({p,e})=>{const en=liveEnergy(M,myC,p,e);const cls=en>=70?'good':en>=50?'warn':'bad';return `<button class="xc" data-xo="${p.id}" aria-label="${esc(fullName(p))}">${playerPortraitHTML(p,myC,'live'+p.id)}<span class="pos ${p.pos}">${POSB[p.pos]}</span><b class="num">${p.ovr}</b><span class="nm">${esc(p.last||p.first)}</span><i class="en ${cls}"><u style="width:${en}%"></u></i>${e.yel?'<em class="yc"></em>':''}</button>`};
@@ -5506,7 +6371,7 @@ function startLive(restored){
   $('main').querySelector('.live-wrap').addEventListener('click',ev=>{if(M.playback)return;const t=ev.target.closest('[data-xo]');if(t&&!M.done){if(M.subs[G.me]>=MAX_SUBS){toast('נגמרו החילופים');return}pause();openSubModal(+t.dataset.xo);return}if(ev.target.closest('#benchBtn')&&!M.done){pause();openSubModal()}});
   const flush=()=>{
     while(shown<M.ev.length){const e=M.ev[shown++];const who=club(e.team);const mine=e.team===G.me;
-      if(!restoring&&(e.t==='goal'||e.t==='pen'||e.t==='own')){if(mine){SFX.goal(true);confetti(1200)}else{if(!CROWD.goal(false))SFX.groan()}if(!p3d?.enabled&&p2d&&e.path&&(e.t==='goal'||e.t==='pen'))replayQ=e}else if(!restoring&&(e.t==='yellow'||e.t==='red'))SFX.card();else if(!restoring&&e.t==='shot'&&(e.sub==='save'||e.sub==='post')&&!e.quiet)CROWD.chance();
+      if(!restoring&&(e.t==='goal'||e.t==='pen'||e.t==='own')){buzz(mine?'goal':'conceded');if(mine){SFX.goal(true);confetti(1200);shoutCredit(M,e,addLine)}else{if(!CROWD.goal(false))SFX.groan()}if(!p3d?.enabled&&p2d&&e.path&&(e.t==='goal'||e.t==='pen'))replayQ=e}else if(!restoring&&(e.t==='yellow'||e.t==='red')){SFX.card();if(e.t==='red')buzz('card')}else if(!restoring&&e.t==='shot'&&(e.sub==='save'||e.sub==='post')&&!e.quiet)CROWD.chance();
       if(e.quiet)continue;
       if(!restoring)bcEvent(M,e);
       if(e.t==='goal')addLine('goal '+(mine?'me':''),`⚽ ${fm(e.m)} שער! ${e.name} (${who.short})${e.asstName?' · בישול: '+e.asstName:''} · ${M.gh}:${M.ga}`);
@@ -5534,27 +6399,48 @@ function startLive(restored){
   const resume=()=>{paused=false;p3d?.setPaused(false);M.paused=false;M.awaitingHalf=false;bcSlateHide();CROWD.resume();$('ctrlBtn').textContent='השהה';save()};
   const finish=()=>{p3d?.setPaused(false);clearInterval(liveTimer);liveTimer=null;running=false;if(raf)cancelAnimationFrame(raf);raf=null;
     if(!M.finishPrepared){
-    if(!M.playback&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'))decidePens(M);
-    if(!M.playback&&M.gh===M.ga&&M.ctx.kind==='euro'&&M.ctx.leg===2){const E=me().euro;if(E&&E.tie&&E.tie.g1&&E.tie.g1[0]+(M.h===G.me?M.gh:M.ga)===E.tie.g1[1]+(M.h===G.me?M.ga:M.gh))decidePens(M)}
+    let tie=!M.playback&&!M.pens&&M.gh===M.ga&&(M.ctx.kind==='cup'||M.ctx.stage==='F'||!!M.ctx.ko);
+    if(!M.playback&&!M.pens&&M.gh===M.ga&&M.ctx.kind==='euro'&&M.ctx.leg===2){const E=me().euro;if(E&&E.tie&&E.tie.g1&&E.tie.g1[0]+(M.h===G.me?M.gh:M.ga)===E.tie.g1[1]+(M.h===G.me?M.ga:M.gh))tie=true}
+    /* level after 90 minutes in a knockout: the manager takes the shoot-out himself, or lets the players decide */
+    if(tie&&soOpen)return;   /* the shoot-out is on screen */
+    if(tie&&G.penGame!==false){soOpen=true;CROWD.pause();penShootout(M,h,a,r=>{soOpen=false;M.pens=r.win;if(r.score)M.penScore=r.score;CROWD.resume();save();finish()});return}
+    if(tie)decidePens(M);
     if(p2d)M.heat=p2d.heat;
     SFX.whistleEnd();CROWD.end();const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;const wonIt=myG>opG||(M.pens&&((M.pens==='h')===(M.h===G.me)));if(wonIt&&(M.ctx.kind==='cup'&&M.ctx.stage==='F'||M.ctx.kind==='euro'&&M.ctx.stage==='F'||M.ctx.kind==='toto'&&M.ctx.stage==='F')){SFX.win();confetti(4000);recordMoment('cup',M.ctx.kind==='cup'?'גביע המדינה':M.ctx.kind==='toto'?'גביע הטוטו':(M.ctx.label||'').split('·')[0].trim()||'הגביע האירופי')}
     M.finishPrepared=true;}
-    addLine('',`שריקת סיום · ${h.short} ${M.gh}:${M.ga} ${a.short}${M.pens?` · ${(M.pens==='h'?h:a).short} ניצחה בפנדלים`:''}`);
+    addLine('',`שריקת סיום · ${h.short} ${M.gh}:${M.ga} ${a.short}${M.pens?` · ${(M.pens==='h'?h:a).short} ניצחה בפנדלים${M.penScore?' '+M.penScore[M.pens==='h'?0:1]+':'+M.penScore[M.pens==='h'?1:0]:''}`:''}`);
     const mm=M.motmLive||(M.playback?M.playback.motm:manOfMatch(M,h,a));M.motmLive=mm;bcSlate(M,h,a,'full');if(mm)addLine('goal '+(mm.team===G.me?'me':''),`⭐ שחקן המשחק: ${mm.name} (${mm.short}) · ציון ${mm.r}`);
     save();$('subBtn').disabled=true;$('ctrlBtn').textContent='סיכום המשחק';$('livePill').textContent='סיום';$('livePill').classList.remove('live');$('livePill').classList.add('info');
       if(M.playback){$('ctrlBtn').onclick=()=>{p3d?.dispose();const rec=G.results.slice().reverse().find(r=>r.h===M.h&&r.a===M.a&&r.wk===M.playback.wk);if(rec)matchReportModal(rec,()=>mpWatchNext());else mpWatchNext()};return}
-    $('ctrlBtn').onclick=()=>{p3d?.dispose();afterMyMatch(M);G.view='home';const rec=G.results[G.results.length-1];if(rec&&rec.h===M.h&&rec.a===M.a){matchReportModal(rec,()=>runPress('post',M,()=>render()))}else runPress('post',M,()=>render())};
+    if(G.blitz){$('ctrlBtn').textContent='המשך';$('ctrlBtn').onclick=()=>{p3d?.dispose();blitzAfterMatch(M)};return}
+    /* after the report and the press: the envelope (when there is one) and what waits next week */
+    const onward=()=>postMatchFlow(M,()=>render());
+    $('ctrlBtn').onclick=()=>{p3d?.dispose();afterMyMatch(M);G.view='home';const rec=G.results[G.results.length-1];if(rec&&rec.h===M.h&&rec.a===M.a){matchReportModal(rec,()=>runPress('post',M,onward))}else runPress('post',M,onward)};
   };
-  const period=()=>Math.round(base*1000/90/mult);
-  const startTimer=()=>{if(liveTimer)clearInterval(liveTimer);liveTimer=setInterval(()=>{if(M.m>=80&&!M.done){const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;if(myG>opG)CROWD.song()}
-    if(document.hidden||paused||p3d?.busy||(!p3d?.enabled&&p2d&&p2d.hold))return;
-    if(M.done){finish();return;}
-    p3d?.beforeStep();stepMinute(M);flush();
-    if(M.m===62||M.m===76){const my=M.h===G.me?M.gh:M.ga,op=M.h===G.me?M.ga:M.gh;const oppC=M.h===G.me?a:h;const of=avgFit(M,oppC);const tip=my<op?'אנחנו מאחור. שווה לעבור להתקפי ולהכניס חלוץ.':my===op&&of<72?'הם נראים עייפים. אפשר ללחוץ עכשיו.':my>op&&M.m>=76?'מובילים בסיום. מנטליות הגנתית תסגור את המשחק.':null;if(tip)addLine('note',`🎧 העוזר: ${tip}`)}
+  const HL_TICK=230;const period=()=>hl?HL_TICK:Math.round(base*1000/90/mult);
+  /* highlights mode ("תקציר"): quiet minutes fly by; a minute with a key moment stops the clock long enough to watch it */
+  const hlHold=evs=>{let ms=0;for(const e of evs){if(e.quiet)continue;const k=e.t==='goal'||e.t==='pen'||e.t==='own'?2600:e.t==='penmiss'||e.t==='red'?2000:e.t==='shot'&&(e.sub==='save'||e.sub==='post')?1500:e.t==='inj'||e.t==='var'?1200:e.t==='yellow'?500:e.t==='sub'?400:0;if(k>ms)ms=k}return ms};
+  const liveUI={pen:()=>G.penGame!==false&&!M.playback};
+  const shoutPaint=M.playback?null:shoutMount(M,{addLine,busy:()=>M.done||penHold});
+  const afterStep=ev0=>{flush();if(hl){const ms=hlHold(M.ev.slice(ev0));holdUntil=ms?performance.now()+ms:0}
+    if(M.m===62||M.m===76){const my=M.h===G.me?M.gh:M.ga,op=M.h===G.me?M.ga:M.gh;const oppC=M.h===G.me?a:h;const of=avgEnergy(M,oppC);const tip=my<op?'אנחנו מאחור. "כולם קדימה" או מנטליות התקפית, ולהכניס חלוץ.':my===op&&of<72?'הם נראים עייפים. זה הזמן לצעוק "לחץ!".':my>op&&M.m>=76?'מובילים בסיום. "תחזיקו בכדור" או מנטליות הגנתית יסגרו את המשחק.':null;if(tip)addLine('note',`🎧 העוזר: ${tip}`)}
     if(M.m===45&&!M.half){M.half=true;M.awaitingHalf=true;CROWD.halftime();addLine('muted','מחצית · לחץ "מחצית שנייה" כדי להמשיך');if(!M.playback)halfTimeTalk(M,tick);bcSlate(M,h,a,'half');pause();$('ctrlBtn').textContent='מחצית שנייה';if(M.playback)setTimeout(()=>{if(M.awaitingHalf&&!M.done&&$('ctrlBtn'))resume()},4000);if(p2d){p2d.flip=true;pitchMinute(p2d,M,h,a,[]);for(const d of [...p2d.h,...p2d.a]){d.tx=52.5;d.ty=74}}}
-    if(M.done&&!p3d?.busy)finish();else save();
+    if(M.done&&!p3d?.busy)finish();else save()};
+  /* a penalty for or against us: the match waits while the manager takes it (or keeps goal) himself */
+  const takePen=ev0=>{const pp=M.pendingPen;const pc=club(pp.team),pk=pc&&pc.players.find(x=>x.id===pp.pid);if(!pk){M.pendingPen=null;return afterStep(ev0)}
+    penHold=true;flush();try{crowdDuck(.45,.3)}catch(e){}
+    penMatchKick(M,pc,pk,(out,how)=>{M.pendingPen=null;penResolve(M,pc,pk,out,how);try{crowdDuck(1,.8)}catch(e){}afterStep(ev0);setTimeout(()=>{penHold=false},900)})};
+  const startTimer=()=>{if(liveTimer)clearInterval(liveTimer);liveTimer=setInterval(()=>{if(M.m>=80&&!M.done){const myG=M.h===G.me?M.gh:M.ga,opG=M.h===G.me?M.ga:M.gh;if(myG>opG)CROWD.song()}
+    if(document.hidden||paused||penHold||p3d?.busy||(!p3d?.enabled&&p2d&&p2d.hold))return;
+    if(hl&&holdUntil&&performance.now()<holdUntil)return;
+    if(M.done){finish();return;}
+    p3d?.beforeStep();const ev0=M.ev.length;stepMinute(M,liveUI);
+    if(!M.playback){M.voice=Math.min(100,(M.voice||0)+100/12);if(shoutPaint)shoutPaint()}
+    if(M.pendingPen)return takePen(ev0);
+    afterStep(ev0);
   },period());if(p2d&&!p2d.snap&&!raf)raf=requestAnimationFrame(frame)};
-  document.querySelectorAll('[data-spx]').forEach(b=>b.onclick=()=>{mult=+b.dataset.spx;document.querySelectorAll('[data-spx]').forEach(x=>x.classList.toggle('on',x===b));if(liveTimer)startTimer()});
+  const paintSpx=()=>document.querySelectorAll('[data-spx]').forEach(x=>x.classList.toggle('on',hl?x.dataset.spx==='hl':+x.dataset.spx===mult));paintSpx();
+  document.querySelectorAll('[data-spx]').forEach(b=>b.onclick=()=>{hl=b.dataset.spx==='hl';if(!hl)mult=+b.dataset.spx;holdUntil=0;G.spx=hl?'hl':mult;paintSpx();$('main').querySelector('.live-view').classList.toggle('hl',hl);save();if(liveTimer)startTimer()});
   $('muteBtn').onclick=()=>{G.sound=G.sound===false?true:false;if(G.sound===false)crowdStop(.3);else if(!M.done&&!paused)CROWD.kickoff(M.att);$('muteBtn').textContent=G.sound===false?'🔇':'🔊';$('muteBtn').classList.toggle('on',G.sound!==false);save()};
   const pb=$('pathBtn');if(pb)pb.onclick=()=>{p2d.showPaths=!p2d.showPaths;pb.classList.toggle('on',p2d.showPaths)};
   const rb=$('rpBtn');if(rb)rb.onclick=()=>{G.replay=G.replay===false?true:false;rb.classList.toggle('on',G.replay!==false);save()};
@@ -5563,9 +6449,11 @@ function startLive(restored){
   if(M.playback){$('subBtn').disabled=true;document.querySelectorAll('[data-lm]').forEach(b=>b.disabled=true);$('livePill').textContent=G.mp&&G.mp.oppClub&&(M.h===G.mp.oppClub||M.a===G.mp.oppClub)?'שידור משותף':'שידור';}
   drawSide();$('subCount').textContent=M.subs[G.me];
   // pre-match presentation
-  const kickoff=()=>{const ov=$('arenaOver');if(ov)ov.innerHTML='';SFX.whistle();CROWD.kickoff(M.att);tick.innerHTML='<div class="muted">שריקת פתיחה</div>';paused=false;p3d?.setPaused(false);$('ctrlBtn').textContent='השהה';startTimer()};
+  const kickoff=()=>{const ov=$('arenaOver');if(ov)ov.innerHTML='';SFX.whistle();CROWD.kickoff(M.att);
+    /* warm the first-person penalty view while the match runs (not on a data-saving or slow connection) */
+    if(G.penGame!==false&&!M.playback){const cn=typeof navigator!=='undefined'&&navigator.connection;if(!cn||(!cn.saveData&&!/2g|3g/.test(cn.effectiveType||'')))setTimeout(()=>{try{penPreload()}catch(e){}},5000)}tick.innerHTML='<div class="muted">שריקת פתיחה</div>';if(!M.playback&&!G.tipShout){G.tipShout=1;addLine('note','📣 הקול שלך מתמלא במהלך המשחק. צעקה אחת מהקווים משנה את שש הדקות הבאות.')}paused=false;p3d?.setPaused(false);$('ctrlBtn').textContent='השהה';startTimer()};
   const ov=$('arenaOver');
-  if(restored&&!restored.playback){if(p2d){p2d.entrance=false;p2d.entranceDone=true;p2d.flip=M.m>=45}flush();restoring=false;replayQ=null;if(M.awaitingHalf&&!M.halfTalk)halfTimeTalk(M,tick);if(M.awaitingHalf&&!M.done)bcSlate(M,h,a,'half');if(M.done)finish();else{pause();startTimer()}toast('המשחק שוחזר. לחצו המשך כשתהיו מוכנים.')}
+  if(resumed){if(p2d){p2d.entrance=false;p2d.entranceDone=true;p2d.flip=M.m>=45}flush();restoring=false;replayQ=null;if(M.awaitingHalf&&!M.halfTalk)halfTimeTalk(M,tick);if(M.awaitingHalf&&!M.done)bcSlate(M,h,a,'half');if(M.done)finish();else{pause();startTimer()}toast('המשחק שוחזר. לחצו המשך כשתהיו מוכנים.')}
   else if(ov&&ml==='full'){ov.innerHTML=`<div class="intro"><div class="comp">${esc(M.ctx.label)}${derbyLabel(h.id,a.id)?' · '+esc(derbyLabel(h.id,a.id)):''}</div><div class="venue">${M.ctx.neutral?'מגרש ניטרלי':esc(h.stadium)}${M.att?` · ${M.att.toLocaleString('he')} צופים`:''}${M.ctx.firstLeg?` · משחק ראשון ${M.ctx.firstLeg[0]}:${M.ctx.firstLeg[1]}`:''}</div>
     <div class="vs"><div class="side" style="--c:${h.c1}"><h4>${kitSVG(h,'sm')} ${esc(h.short)}</h4><div class="xi">${xiListHTML(M,h)}</div></div><div class="vsx">VS</div><div class="side" style="--c:${a.c1}"><h4>${kitSVG(a,'sm')} ${esc(a.short)}</h4><div class="xi">${xiListHTML(M,a)}</div></div></div>
     <button class="btn big" id="kickBtn">שריקת פתיחה ▶</button></div>`;

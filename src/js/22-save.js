@@ -8,7 +8,7 @@
    Browsers without IndexedDB (and the jsdom test suites) use the legacy localStorage layout unchanged: key ilm2 / ilm2_sN,
    ilm2_*_backup and ilm2_meta_N, written synchronously. Legacy localStorage careers are migrated into IndexedDB at boot
    and deleted only after the new record was read back and compared. */
-const SAVE_VERSION=12;const SLOTS=3;
+const SAVE_VERSION=13;const SLOTS=3;
 const DB_NAME='goalasso',DB_STORE='careers';
 function curSlot(){try{return clamp(parseInt(localStorage.getItem('ilm2_cur'))||1,1,SLOTS)}catch(e){return 1}}
 function setCurSlot(n){try{localStorage.setItem('ilm2_cur',String(n))}catch(e){}}
@@ -80,7 +80,8 @@ let saveBC=null;try{if(typeof BroadcastChannel!=='undefined'){saveBC=new Broadca
 function broadcastSave(rec){try{if(saveBC)saveBC.postMessage({writer:SV.writer,slot:rec.slot,careerId:rec.careerId,rev:rec.rev,meta:rec.meta})}catch(e){}}
 /* Returns true/false synchronously in localStorage mode, a Promise<boolean> in IndexedDB mode. Callers that need the
    outcome use Promise.resolve(save()).then(ok=>…). */
-function save(opts){if(!G)return false;if(isDeletedCareer(G.careerId))return STORE.kind==='idb'?Promise.resolve(false):false;if(STORE.kind!=='idb')return saveSync();
+function save(opts){if(!G)return false;if(SANDBOX)return STORE.kind==='idb'?Promise.resolve(true):true;   /* the quick tournament runs on a throw-away state: nothing of it is ever written */
+  if(isDeletedCareer(G.careerId))return STORE.kind==='idb'?Promise.resolve(false):false;if(STORE.kind!=='idb')return saveSync();
   if(SV.blocked&&!(opts&&opts.force)){showConflict();return Promise.resolve(false)}
   try{validateCareer(G)}catch(e){storageNotice('המשחק במצב לא תקין ולא נשמר. ייצא גיבוי ופנה לתמיכה.');saveIndicator('error');return Promise.resolve(false)}
   ensureCareerIdentity(G);const slot=G.slot||curSlot();const stamp=Date.now();G.rev=(G.rev||0)+1;G.slot=slot;G.v=SAVE_VERSION;G.savedAt=stamp;
@@ -100,7 +101,7 @@ async function writeJob(job){if(jobFenced(job))return false;try{const packed=awa
     SV.retry=job;saveIndicator('error');const quota=e&&(e.name==='QuotaExceededError'||/quota/i.test(String(e.message||e)));
     storageNotice(quota?'אין מקום באחסון של הדפדפן. ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי עכשיו, פנה מקום (מחק קריירה ישנה) ונסה לשמור שוב.':'השמירה נכשלה ('+(e&&e.name||'שגיאה')+'). ההתקדמות נמצאת בזיכרון בלבד — ייצא גיבוי ונסה לשמור שוב.');return false}}
 function askPersistence(){if(SV.persistAsked)return;SV.persistAsked=true;try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{})}catch(e){}}
-function showConflict(){if(typeof document==='undefined'||!document||!document.body)return;   /* a write that finishes while the page is closing has nobody to ask */
+function showConflict(){if(SANDBOX||typeof document==='undefined'||!document||!document.body)return;   /* a write that finishes while the page is closing has nobody to ask */
   if($('modal')||!SV.blocked)return;const st=SV.blocked.stored||{};const m=st.meta||{};
   openModal(`<h3 class="sec">הקריירה נשמרה ממקום אחר</h3><p class="small">${SV.blocked.remote?'לשונית או חלון אחר של המשחק שמרו גרסה חדשה יותר של הקריירה הזאת.':'באחסון יש גרסה חדשה יותר של הקריירה (כנראה מלשונית אחרת).'}<br>שם: ${esc(m.club||'')} · ${esc(m.season||'')} · שבוע ${(m.wk||0)+1} · גרסה ${st.rev||'?'}<br>כאן: ${esc(me()?me().name:'')} · ${seasonLabel()} · שבוע ${G.wk+1} · גרסה ${G.rev||0}</p><p class="muted tiny">כדי לא לאבד התקדמות, המשחק הזה לא ישמור עד שתבחר.</p><div class="actions"><button class="btn" id="conflictLoad">טען את הגרסה החדשה</button><button class="btn danger" id="conflictForce">דרוס אותה בגרסה שכאן</button></div>`,
    e=>{if(e.target.closest('#conflictLoad')){closeModal();const n=G.slot||curSlot();SV.blocked=null;G=null;Promise.resolve(load(n)).then(ok=>{if(!ok)toast('הטעינה נכשלה');render()})}
@@ -117,7 +118,7 @@ function saveSync(){try{
   storageNotice('');saveIndicator('saved');return true;
 }catch(e){saveIndicator('error');storageNotice('השמירה נכשלה. ההתקדמות נמצאת בזיכרון בלבד — פנו מקום ונסו לשמור שוב, או ייצאו גיבוי.');return false}}
 /* the tab is closing while a write is still in flight: park the newest snapshot in localStorage, restored at next boot */
-function emergencyFlush(){if(STORE.kind!=='idb'||!G||isDeletedCareer(G.careerId))return;const job=SV.q||(SV.busy?SV.retry:null);if(!job&&!SV.busy)return;try{localStorage.setItem('ilm2_em_'+(G.slot||curSlot()),JSON.stringify(G))}catch(e){}}
+function emergencyFlush(){if(SANDBOX||STORE.kind!=='idb'||!G||isDeletedCareer(G.careerId))return;const job=SV.q||(SV.busy?SV.retry:null);if(!job&&!SV.busy)return;try{localStorage.setItem('ilm2_em_'+(G.slot||curSlot()),JSON.stringify(G))}catch(e){}}
 try{window.addEventListener('pagehide',emergencyFlush);window.addEventListener('beforeunload',emergencyFlush)}catch(e){}
 
 /* ---- validation, restore, migrations ---- */
@@ -140,7 +141,7 @@ function installCareer(json,slot){const old=G,oldUid=uid;const fail=()=>{G=old;u
   // an explicit install (import, cloud, backup) brings a deleted career back on purpose
   if(G&&G.careerId)SV.deleted.delete(G.careerId);SV.blocked=null;return Promise.resolve(save({force:true})).then(ok=>{if(!ok){G=old;uid=oldUid;return false}return true})}
 
-const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}],[8,'מזהה קריירה ומונה גרסאות',()=>ensureCareerIdentity(G)],[9,'סגלים מלאים בשוק העולמי ופנים אירופיות',()=>migrateWorldSquads()],[10,'סגלים אמיתיים בליגה הלאומית',()=>migrateLeumitSquads()],[11,'סגלים מעודכנים בליגות העולם ובלאומית',()=>{migrateWorldSquads();migrateLeumitSquads()}],[12,'רק שחקנים אמיתיים בשוק; שמות בעברית בלאומית',()=>migrateRealOnly()]];
+const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}],[8,'מזהה קריירה ומונה גרסאות',()=>ensureCareerIdentity(G)],[9,'סגלים מלאים בשוק העולמי ופנים אירופיות',()=>migrateWorldSquads()],[10,'סגלים אמיתיים בליגה הלאומית',()=>migrateLeumitSquads()],[11,'סגלים מעודכנים בליגות העולם ובלאומית',()=>{migrateWorldSquads();migrateLeumitSquads()}],[12,'רק שחקנים אמיתיים בשוק; שמות בעברית בלאומית',()=>migrateRealOnly()],[13,'ספר הקריירה: תארים, שיאים והישגים',()=>carBackfill()]];
 function runMigrations(){const from=G.v||4;for(const [v,,fn] of MIGRATIONS){if(from<v){fn()}}G.v=SAVE_VERSION;if(from<SAVE_VERSION)G.migratedFrom=from}
 function hydrateCareer(){const all=[...G.clubs,...G.leumit,...Object.values(G.pseudo)];const wall=G.world?Object.values(G.world).flatMap(l=>l.clubs):[];uid=Math.max(uid,...all.concat(wall).flatMap(c=>[...c.players,...(c.youth||[])].map(p=>p.id)),...(G.scouts||[]).map(s=>s.id),...(G.scoutMarket||[]).map(s=>s.id),...(G.negs||[]).map(n=>n.id))+1;if(!G.paper)G.paper=[];if(!G.world)G.world={};if(!G.scouts)G.scouts=[];if(!G.scoutMarket)G.scoutMarket=[];if(!G.reports)G.reports=[];if(!G.negs)G.negs=[];if(!G.payables)G.payables=[];if(G.manager&&G.manager.trust==null)G.manager.trust=60;G.clubs.forEach(c=>{if(!c.div)c.div='top'});G.leumit.forEach(c=>{if(!c.div)c.div='leumit';if(c.tier==null)c.tier=4});if(G.leumit.length<16){const have=new Set(G.leumit.map(c=>c.name));for(const d of LEUMIT16){if(G.leumit.length>=16)break;if(!have.has(d.name)&&!G.clubs.some(c=>c.name===d.name))G.leumit.push(buildLeumitClub(d))}}if(!G.lfx||!G.lsched){buildLeumitSeason();G.leumit.forEach(c=>Object.assign(c,{P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0}))}if(!G.toto)buildToto();if(!G.hist)G.hist=[];computeLeumitPrestige();for(const c of all){if(c.scouting==null)c.scouting=1;for(const p of [...c.players,...(c.youth||[])])assignPers(p);if(c.fans==null)c.fans=baseFans(c);if(!c.focus)c.focus='bal';if(!c.intensity)c.intensity='mid';for(const p of [...c.players,...(c.youth||[])]){if(p.morale==null)p.morale=65;if(p.fit==null)p.fit=100}}migrateM2();ensureStaff();seedChem();runMigrations();if(G.phase==='play'&&G.cal&&G.wk<G.cal.length)ensureDraws();}
 

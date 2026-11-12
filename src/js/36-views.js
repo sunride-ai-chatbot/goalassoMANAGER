@@ -412,6 +412,7 @@ function bind(){
   const m=$('main');
   m.onclick=e=>{
     const t=e.target;if(!t.closest('.msearch'))closeMarketSuggest();
+    if(engageClick(e))return;
     const id=t.id||t.closest('button')?.id;
     const mpb=t.closest('[data-mpa]');if(mpb)return mpUiAction(mpb.dataset.mpa,mpb);if(t.closest('[data-view-home]')){G.view='home';return render()}
     if(mpIsOn()&&(id==='playBtn'||id==='skipBtn'||id==='simNext'))return toast('במשחק רשת השבוע רץ כששני המאמנים לוחצים "מוכן"');

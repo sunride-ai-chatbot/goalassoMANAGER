@@ -48,11 +48,32 @@ function momentum(M,cid){const mo=M.mo;if(!mo||M.m-mo.m>8)return 0;const k=(1-(M
 /* Expected goals per 90 for home and away: attack against the opposing defence, scaled by midfield control. One rating
    point of net advantage is worth ~0.085 goals (was 0.06 on the flat average), and the curve is convex so big gaps
    produce the lopsided results real football does. */
-function expGoals(sh,sa,neutral,h,a,M){const U=M&&M.units;const ha=neutral?0:.22;const mh=mentalityAdj(h,M),ma=mentalityAdj(a,M);const t=M&&M.tadj||{dh:0,da:0};
+function expGoals(sh,sa,neutral,h,a,M){const U=M&&M.units;const ha=neutral?0:.22;const mh=mentalityAdj(h,M),ma=mentalityAdj(a,M);const t=M&&M.tadj||{dh:0,da:0};const so=M&&M.shout?shoutAdj(M,h,a):SHOUT0;
   const xg=(att,def,midEdge,base)=>{const d=att-def;const k=d>=0?.08:.07;return Math.max(.12,base*Math.exp(clamp(d,-14,14)*k/1.25)*(1+clamp(midEdge,-10,10)*.016))};
-  if(!U)return [Math.max(.2,1.25+(sh-sa)*.085+ha+mh[0]+ma[1]+t.dh),Math.max(.18,1.25-(sh-sa)*.085-.04+ma[0]+mh[1]+t.da)];
+  if(!U)return [Math.max(.2,1.25+(sh-sa)*.085+ha+mh[0]+ma[1]+t.dh+so.dh),Math.max(.18,1.25-(sh-sa)*.085-.04+ma[0]+mh[1]+t.da+so.da)];
   const uh=U[h.id],ua=U[a.id];const mid=uh.mid-ua.mid;
-  return [Math.max(.12,xg(uh.att,ua.def,mid,1.02)+ha+mh[0]+ma[1]+t.dh+momentum(M,h.id)),Math.max(.12,xg(ua.att,uh.def,-mid,1.02)-.04+ma[0]+mh[1]+t.da+momentum(M,a.id))]}
+  return [Math.max(.12,xg(uh.att,ua.def,mid,1.02)+ha+mh[0]+ma[1]+t.dh+so.dh+momentum(M,h.id)),Math.max(.12,xg(ua.att,uh.def,-mid,1.02)-.04+ma[0]+mh[1]+t.da+so.da+momentum(M,a.id))]}
+/* ---- touchline shouts (the user's club in a live match): a six-minute swing with a price ----
+   press  wins the ball high: more chances for us (more still against tired legs), a little space behind, burns energy
+   all    everybody forward: many more chances at both ends
+   calm   takes the sting out: fewer chances against, a few fewer for us, kills the opponent's momentum, fewer cards
+   hold   keeps the ball: very little happens at either end, the legs recover a little
+   Values are expected goals per 90 minutes, the unit tacticAdj uses. Only the live screen starts a shout (shoutStart),
+   so simulated matches and AI clubs are untouched. */
+const SHOUT0={dh:0,da:0,poss:0};const SHOUT_MIN=6;
+function shoutOf(M,cid){const s=M&&M.shout&&M.shout[cid];return s&&M.m<=s.until?s:null}
+function avgEnergy(M,c){const xs=xiPlayers(M,c);if(!xs.length)return 100;return xs.reduce((t,x)=>t+liveEnergy(M,c,x.p,x.e,M.m),0)/xs.length}
+function shoutAdj(M,h,a){let dh=0,da=0,poss=0;
+  for(const [c,o,home] of [[h,a,true],[a,h,false]]){const s=shoutOf(M,c.id);if(!s)continue;let own=0,opp=0,ps=0;
+    if(s.k==='press'){own=.9+clamp((78-avgEnergy(M,o))*.05,0,.7);opp=.25;ps=.06}
+    else if(s.k==='all'){own=1.5;opp=1.1;ps=.03}
+    else if(s.k==='calm'){own=-.25;opp=-.55}
+    else if(s.k==='hold'){own=-.6;opp=-.7;ps=.15}
+    if(home){dh+=own;da+=opp;poss+=ps}else{da+=own;dh+=opp;poss-=ps}}
+  return {dh,da,poss}}
+function shoutTick(M,h,a){for(const c of [h,a]){const s=shoutOf(M,c.id);if(!s)continue;const d=s.k==='press'?.5:s.k==='all'?.3:s.k==='hold'?-.3:0;if(!d)continue;
+  M.burn=M.burn||{};for(const e of M.xi[c.id]){if(e.slot==='GK')continue;M.burn[e.pid]=clamp((M.burn[e.pid]||0)+d,0,40)}}}
+function shoutStart(M,cid,k){M.shout=M.shout||{};M.shout[cid]={k,from:M.m,until:M.m+SHOUT_MIN};M.shoutN=(M.shoutN||0)+1;if(k==='calm'&&M.mo&&M.mo.team!==cid)M.mo=null;return M.shout[cid]}
 function scorerFrom(M,c){const xs=xiPlayers(M,c);if(!xs.length)return null;const mk=M.plan&&M.plan.kind==='mark'&&M.plan.target?M.plan.target:null;const w=xs.map(({p})=>{const r=roleOf(p);let b=p.pos==='FW'?6:p.pos==='MF'?3:p.pos==='DF'?1:.05;if(r==='poach')b*=1.5;if(r==='target')b*=1.15;if(r==='false9')b*=.75;if(r==='winger')b*=1.3;if(r==='b2b')b*=1.2;if(r==='anchor')b*=.5;if(r==='wingback')b*=1.4;if(mk&&p.id===mk)b*=1-.5*(M.plan.mult||1);return b});let r=Math.random()*w.reduce((x,y)=>x+y,0);for(let i=0;i<xs.length;i++){r-=w[i];if(r<=0)return xs[i].p}return xs[0].p}
 function penTaker(M,c){const xs=xiPlayers(M,c);if(!xs.length)return null;const fw=xs.filter(x=>x.p.pos==='FW').sort((a,b)=>b.p.ovr-a.p.ovr)[0]||xs.filter(x=>x.p.pos==='MF').sort((a,b)=>b.p.ovr-a.p.ovr)[0]||xs[0];return fw.p}
 function fm(m){return '\u2066'+m+"'\u2069"}
@@ -94,13 +115,15 @@ function matchRatings(M,h,a){
       let r=6.1+(effOvr(p)-avg)*.045+s.g*1.0+s.a*.55+(p.pos==='GK'?s.sv*.18:0)+(cs?.5:0)+res+s.sot*.12-(p.pos==='GK'?ga*.25:0)-s.y*.25-s.red*1.6+rnd(-.35,.35);
       if(min<20)r=6+(r-6)*.5;s.r=+clamp(r,3,10).toFixed(1);out[pid]=s}}
   M.ratings=out;return out}
-function stepMinute(M){
+function stepMinute(M,ui){
   if(M.playback)return mpPlaybackStep(M); /* multiplayer: replay a recorded match, no simulation */
-  const h=club(M.h),a=club(M.a);M.m++;
+  const h=club(M.h),a=club(M.a);
+  if(M.pendingPen){const pp=M.pendingPen;M.pendingPen=null;const pc=club(pp.team);const pk=pc&&pc.players.find(x=>x.id===pp.pid);if(pk)penResolve(M,pc,pk,Math.random()<.76?'goal':'miss')}   /* a penalty the screen never answered (the app closed on it) */
+  M.m++;if(M.shout)shoutTick(M,h,a);
   if(M.m===1||M.m%15===0||M.tadjDirty){M.tadj=tacticAdj(M,h,a);M.tadjDirty=false;if(M.tadj.notes.length&&M.live&&!M.tadjNoted){M.tadjNoted=true;M.ev.push({m:M.m,t:'note',team:G.me,txt:M.tadj.notes[0]})}}
   const sh=xiStrength(M,h),sa=xiStrength(M,a);M.units={[h.id]:unitStrength(M,h),[a.id]:unitStrength(M,a)};const [lh,la]=expGoals(sh,sa,M.ctx.neutral,h,a,M);
   /* possession share: strength gap, mentality and style move it, inside the range real matches show (about 27-73%) */
-  const homeHas=Math.random()<clamp(.5+(sh-sa)*.015+(mentalityAdj(h,M)[0]-mentalityAdj(a,M)[0])*.4+(M.tadj?M.tadj.poss:0),.27,.73);/* a minute is never one side's alone: the side on the ball is credited four fifths of it, so the share shown stays in the range of real matches */
+  const homeHas=Math.random()<clamp(.5+(sh-sa)*.015+(mentalityAdj(h,M)[0]-mentalityAdj(a,M)[0])*.4+(M.tadj?M.tadj.poss:0)+(M.shout?shoutAdj(M,h,a).poss:0),.27,.73);/* a minute is never one side's alone: the side on the ball is credited four fifths of it, so the share shown stays in the range of real matches */
   if(homeHas){M.poss[h.id]+=.8;M.poss[a.id]+=.2}else{M.poss[a.id]+=.8;M.poss[h.id]+=.2}
   M.pm=M.pm||[];M.pm.push(homeHas?1:0);M.passes=M.passes||{[h.id]:0,[a.id]:0};const tt=tacOf(homeHas?h:a);M.passes[homeHas?h.id:a.id]+=ri(5,11)+(tt&&tt.tempo==='slow'?2:0)-(tt&&tt.style==='direct'?2:0);
   M.sot=M.sot||{[h.id]:0,[a.id]:0};M.corners=M.corners||{[h.id]:0,[a.id]:0};
@@ -132,12 +155,12 @@ function stepMinute(M){
   const r=Math.random();
   if(false){}
   else{const r2=Math.random();
-    if(r2<lh*.0025){const p=penTaker(M,h);if(p){M.shots[h.id]++;if(Math.random()<.76){M.gh++;M.sot[h.id]++;M.ev.push(goalEvent(M,h,p,'pen'))}else{const s=pstat(M,h.id,p.id);s.sh++;M.ev.push({m:M.m,t:'penmiss',team:h.id,pid:p.id,name:fullName(p),x:94,y:34,xg:.76,path:buildPath({x:94,y:34},Math.random()<.5?'save':'off')})}}}
-    else if(r2<(lh+la)*.0025){const p=penTaker(M,a);if(p){M.shots[a.id]++;if(Math.random()<.76){M.ga++;M.sot[a.id]++;M.ev.push(goalEvent(M,a,p,'pen'))}else{const s=pstat(M,a.id,p.id);s.sh++;M.ev.push({m:M.m,t:'penmiss',team:a.id,pid:p.id,name:fullName(p),x:94,y:34,xg:.76,path:buildPath({x:94,y:34},Math.random()<.5?'save':'off')})}}}
+    if(r2<lh*.0025)penAward(M,h,a,ui);
+    else if(r2<(lh+la)*.0025)penAward(M,a,h,ui);
     else if(r2<(lh+la)*.0025+.0006){const og=Math.random()<.5?h:a;const other=og===h?a:h;const ds=xiPlayers(M,og).filter(x=>x.p.pos==='DF'||x.p.pos==='GK');const x=ds.length?pick(ds):null;if(x){if(og===h)M.ga++;else M.gh++;M.ev.push({m:M.m,t:'own',team:other.id,ogteam:og.id,pid:x.p.id,name:fullName(x.p),x:rnd(96,103),y:rnd(26,42),xg:.1})}}}
   for(const c of [h,a]){
     const xs=xiPlayers(M,c);if(!xs.length)continue;
-    if(Math.random()<.016){const x=pick(xs);x.e.yel++;if(x.e.yel>=2){markOut(M,c,x.e);M.xi[c.id]=M.xi[c.id].filter(e=>e!==x.e);x.p.susp=Math.max(x.p.susp,1);M.ev.push({m:M.m,t:'red',team:c.id,pid:x.p.id,name:fullName(x.p)})}else M.ev.push({m:M.m,t:'yellow',team:c.id,pid:x.p.id,name:fullName(x.p)})}
+    if(Math.random()<(M.shout&&shoutOf(M,c.id)&&shoutOf(M,c.id).k==='calm'?.008:.016)){const x=pick(xs);x.e.yel++;if(x.e.yel>=2){markOut(M,c,x.e);M.xi[c.id]=M.xi[c.id].filter(e=>e!==x.e);x.p.susp=Math.max(x.p.susp,1);M.ev.push({m:M.m,t:'red',team:c.id,pid:x.p.id,name:fullName(x.p)})}else M.ev.push({m:M.m,t:'yellow',team:c.id,pid:x.p.id,name:fullName(x.p)})}
     else if(Math.random()<.0022*(c.focus==='fit'?.75:1)*(c.campShield>0?.6:1)){const w=xs.map(x=>1+(100-(x.p.fit??100))/50+Math.max(0,82-liveEnergy(M,c,x.p,x.e,M.m))/40);let rr=Math.random()*w.reduce((p,q)=>p+q,0);let x=xs[0];for(let i=0;i<xs.length;i++){rr-=w[i];if(rr<=0){x=xs[i];break}}setInjury(x.p,injuryWeeks(c));markOut(M,c,x.e);M.xi[c.id]=M.xi[c.id].filter(e=>e!==x.e);M.ev.push({m:M.m,t:'inj',team:c.id,pid:x.p.id,name:fullName(x.p),weeks:x.p.inj,injT:x.p.injT,needSub:true});
       if(c.id!==G.me||!M.live)autoSub(M,c,x.p.pos)}
     if(c.id!==G.me||!M.live){ if([58,66,74,82].includes(M.m)&&Math.random()<.55)autoSub(M,c);
@@ -147,6 +170,18 @@ function stepMinute(M){
   }
   if(M.m>=90){M.done=true}
 }
+/* A penalty. In a live match of the user's club the screen may take it over (ui.pen returns true): the engine parks it in
+   M.pendingPen and the screen reports the outcome through penResolve(M,club,taker,'goal'|'miss',how). Everywhere else
+   (simulated matches, AI against AI, multiplayer) it is decided here exactly as before. */
+function penAward(M,c,opp,ui){const p=penTaker(M,c);if(!p)return;
+  if(ui&&ui.pen&&(c.id===G.me||opp.id===G.me)&&ui.pen(M,c,p)){M.pendingPen={team:c.id,pid:p.id,m:M.m};return}
+  penResolve(M,c,p,Math.random()<.76?'goal':'miss')}
+function penResolve(M,c,p,out,how){M.shots[c.id]++;M.sot=M.sot||{[M.h]:0,[M.a]:0};
+  if(out==='goal'){if(c.id===M.h)M.gh++;else M.ga++;M.sot[c.id]++;const ev=goalEvent(M,c,p,'pen');if(how)ev.how=how;M.ev.push(ev);return ev}
+  const s=pstat(M,c.id,p.id);s.sh++;
+  const ev={m:M.m,t:'penmiss',team:c.id,pid:p.id,name:fullName(p),x:94,y:34,xg:.76,path:buildPath({x:94,y:34},how?(how==='save'?'save':'off'):(Math.random()<.5?'save':'off'))};
+  if(how){ev.how=how;if(how==='save'){M.sot[c.id]++;const o=club(c.id===M.h?M.a:M.h);const gk=o&&xiPlayers(M,o).find(x=>x.p.pos==='GK');if(gk){ev.gk=gk.p.id;ev.gkName=fullName(gk.p);pstat(M,o.id,gk.p.id).sv++}}}
+  M.ev.push(ev);return ev}
 function bench(M,c){const inXI=new Set(M.xi[c.id].map(e=>e.pid));const used=new Set(M.used[c.id]);return available(c).filter(p=>!inXI.has(p.id)&&!used.has(p.id))}
 function autoSub(M,c,pos){
   if(M.subs[c.id]>=MAX_SUBS)return;

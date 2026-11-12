@@ -29,7 +29,7 @@ function advanceWeek(){
   if(!my)finishWeek();
   return my;
 }
-function afterMyMatch(M){if(!M||M.settled)return;M.settled=true;settle(M);G.live=null;try{localStorage.removeItem('ilm2_livefl')}catch(e){}finishWeek()}
+function afterMyMatch(M){if(!M||M.settled)return;M.settled=true;settle(M);G.live=null;try{localStorage.removeItem('ilm2_livefl')}catch(e){}finishWeek();try{surpriseRoll(M)}catch(e){console.warn('envelope',e)}}
 function finishWeek(){
   const ev=currentEvent();
   if(ev.t==='cup')finishCupStage();
@@ -38,7 +38,7 @@ function finishWeek(){
   if(G.lsched&&G.lsched[G.wk]===37){const lst=standingsOf('leumit');G.lchampion=lst[0].id;news(`${lst[0].name} אלופת הליגה הלאומית!`)}
   if(ev.t==='league'&&ev.n===36){G.champion=standingsOf('top')[0].id;news(`${club(G.champion).name} היא אלופת המדינה לעונת ${seasonLabel()}!`);if(G.champion===G.me){G.celebrate='אלופת המדינה!';recordMoment('champ','ליגת העל')}}
   if(me().campShield>0)me().campShield--;
-  weeklyEconomy();weeklyDevelopment();try{loansOutWeekly()}catch(e){console.warn('loans',e)}weeklyM2();weeklyStaff();weeklySquadLife();try{storyTick();challengesTick()}catch(e){console.warn('story',e)}weeklyProjects();weeklyTransfersAI();weeklyOffers();fansDecay();scoutTick();processNegotiationsWeekly();payablesWeekly();checkPromises();midSeasonBoard(ev);maybeJobOffer(ev);if(G.jobOffer&&G.wk-G.jobOffer.wk>=2){G.jobOffer=null;news('הצעת העבודה פגה.')}
+  weeklyEconomy();weeklyDevelopment();try{loansOutWeekly()}catch(e){console.warn('loans',e)}weeklyM2();weeklyStaff();weeklySquadLife();try{storyTick();challengesTick()}catch(e){console.warn('story',e)}weeklyProjects();weeklyTransfersAI();weeklyOffers();fansDecay();scoutTick();processNegotiationsWeekly();payablesWeekly();checkPromises();midSeasonBoard(ev);maybeJobOffer(ev);try{carWeekly()}catch(e){console.warn('career book',e)}if(G.jobOffer&&G.wk-G.jobOffer.wk>=2){G.jobOffer=null;news('הצעת העבודה פגה.')}
   if(ev.t==='league'&&ev.n%4===0){potm();const pos=myPos();G.board.conf=clamp(G.board.conf+(pos<=G.board.expectRank?2:pos<=G.board.expectRank+1?0:-2),0,100)}
   const fired=G.wk>14&&G.board.conf<fireThreshold()&&G.phase==='play';
   G.wk++;
