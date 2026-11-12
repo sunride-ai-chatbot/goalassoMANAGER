@@ -16,6 +16,9 @@ async function main(){try{
  assert.equal(w.document.querySelectorAll('.stad .t3.rt .rt-face .player-portrait').length,11);
  for(const n of w.document.querySelectorAll('.stad .rt-ovr'))assert.match(n.textContent,/^\d{2}$/);
  // pre-match presentation: my page, then the opponent's probable XI, then kick-off
+ // (one team of each seven-club Toto Cup group rests every round: a first week without a fixture is played through)
+ for(let i=0;i<6&&!w.eval('!!(myNextMatch()&&myNextMatch().a)');i++){w.eval("G.view='home';render()");w.document.querySelector('#playBtn').click()}
+ w.eval("closeModal();G.paperPop=[];G.view='lineup';render()");
  w.__ilmPrematch=1;w.document.querySelector('#playBtn').click();assert.ok(w.document.querySelector('#prematch .pm-page'));assert.equal(w.document.querySelectorAll('#prematch .t3.rt').length,11);
  w.document.querySelector('#pmNext').click();assert.ok(w.document.querySelector('#pmGo'));assert.equal(w.document.querySelectorAll('#prematch .t3.rt').length,11);
  w.document.querySelector('#prematch').remove();w.__ilmPrematch=0;w.eval("G.view='lineup';render()");
