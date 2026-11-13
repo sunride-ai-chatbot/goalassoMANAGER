@@ -87,7 +87,121 @@
    "qid": "Q10557783",
    "wikidata": "https://www.wikidata.org/wiki/Q10557783",
    "label": "Matt Ingram",
-   "birthYear": 1993
+   "birthYear": 1993,
+   "rejectedFiles": [
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4347 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Goff supporting Tom Odell (Haldern Pop Festival 2013) IMGP4294 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Matt Ingram supporting Tom Odell (Haldern Pop Festival 2013) IMGP4269 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Matt Ingram supporting Tom Odell (Haldern Pop Festival 2013) IMGP4337 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Matt Ingram supporting Tom Odell (Haldern Pop Festival 2013) IMGP4267 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Matt Ingram supporting Tom Odell (Haldern Pop Festival 2013) IMGP4203 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Clilverd supporting Tom Odell (Haldern Pop Festival 2013) IMGP4350 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Goff supporting Tom Odell (Haldern Pop Festival 2013) IMGP4295 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Goff supporting Tom Odell (Haldern Pop Festival 2013) IMGP4301 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4273 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4249 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4291 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Goff supporting Tom Odell (Haldern Pop Festival 2013) IMGP4188 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Clilverd supporting Tom Odell (Haldern Pop Festival 2013) IMGP4237 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4219 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Goff supporting Tom Odell (Haldern Pop Festival 2013) IMGP4232 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Clilverd supporting Tom Odell (Haldern Pop Festival 2013) IMGP4241 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4313 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Goff supporting Tom Odell (Haldern Pop Festival 2013) IMGP4298 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4327 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Matt Ingram supporting Tom Odell (Haldern Pop Festival 2013) IMGP4206 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Clilverd supporting Tom Odell (Haldern Pop Festival 2013) IMGP4201 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4265 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4282 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Clilverd supporting Tom Odell (Haldern Pop Festival 2013) IMGP4202 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Max Clilverd supporting Tom Odell (Haldern Pop Festival 2013) IMGP4199 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4307 smial wp.jpg",
+     "license": "FAL"
+    },
+    {
+     "title": "File:Tom Odell (Haldern Pop Festival 2013) IMGP4183 smial wp.jpg",
+     "license": "FAL"
+    }
+   ]
   },
   {
    "he": "Aune Heggebø",
@@ -267,6 +381,211 @@
      "file": "03-Q40351320-4.jpg",
      "fromP18": false,
      "via": "category"
+    },
+    {
+     "title": "File:Chris Mepham December 2019.jpg",
+     "pageid": 97352474,
+     "page": "https://commons.wikimedia.org/wiki/File:Chris_Mepham_December_2019.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/15/Chris_Mepham_December_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 684,
+     "height": 684,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "@cfcunofficial (Chelsea Debs) London from London, UK",
+     "credit": "Chelsea 0 Bournemouth 1",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2019-12-14 15:24",
+     "file": "03-Q40351320-m5.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q40351320"
+     ],
+     "score": 9.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Chris Mepham 04102025 (1).jpg",
+     "pageid": 176902588,
+     "page": "https://commons.wikimedia.org/wiki/File:Chris_Mepham_04102025_(1).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Chris_Mepham_04102025_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 950,
+     "height": 2193,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Timmy96",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-10-04 17:29:09",
+     "file": "03-Q40351320-m6.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [],
+     "score": 5.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Chris Mepham 04102025 (2).jpg",
+     "pageid": 176902596,
+     "page": "https://commons.wikimedia.org/wiki/File:Chris_Mepham_04102025_(2).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Chris_Mepham_04102025_%282%29.jpg/960px-Chris_Mepham_04102025_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1528,
+     "height": 2592,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Timmy96",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-10-04 17:29:17",
+     "file": "03-Q40351320-m7.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [],
+     "score": 5.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:2022 FIFA World Cup United States 1–1 Wales - (38).jpg",
+     "pageid": 126408332,
+     "page": "https://commons.wikimedia.org/wiki/File:2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_(38).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/95/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2838%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 800,
+     "height": 532,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "حسین ظهروند",
+     "credit": "دیدار تیم‌های فوتبال آمریکا و ولز- جام جهانی ۲۰۲۲",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-11-21",
+     "file": "03-Q40351320-m8.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q40351320"
+     ],
+     "score": 4.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:2022 FIFA World Cup United States 1–1 Wales - (44).jpg",
+     "pageid": 126408339,
+     "page": "https://commons.wikimedia.org/wiki/File:2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_(44).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5a/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 800,
+     "height": 557,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "حسین ظهروند",
+     "credit": "دیدار تیم‌های فوتبال آمریکا و ولز- جام جهانی ۲۰۲۲",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-11-21",
+     "file": "03-Q40351320-m9.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q40351320"
+     ],
+     "score": 4.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:2022 FIFA World Cup United States 1–1 Wales - (50).jpg",
+     "pageid": 126409219,
+     "page": "https://commons.wikimedia.org/wiki/File:2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_(50).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/59/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2850%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 800,
+     "height": 557,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "حسین ظهروند",
+     "credit": "دیدار تیم‌های فوتبال آمریکا و ولز- جام جهانی ۲۰۲۲",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-11-21",
+     "file": "03-Q40351320-m10.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q40351320"
+     ],
+     "score": 4.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Wales-Switzerland match at Euro 2020 in Baku 5 (cropped 2).jpg",
+     "pageid": 106657721,
+     "page": "https://commons.wikimedia.org/wiki/File:Wales-Switzerland_match_at_Euro_2020_in_Baku_5_(cropped_2).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Wales-Switzerland_match_at_Euro_2020_in_Baku_5_%28cropped_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 748,
+     "height": 940,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "Press Service of the President of the Republic of Azerbaijan",
+     "credit": "president.az",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-06-12 17:33:30",
+     "file": "03-Q40351320-m11.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q15956282",
+      "Q40351320"
+     ],
+     "score": 3.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:U.S.-Wales Men’s World Cup Match in Doha, Qatar. (52515715639).jpg",
+     "pageid": 125816245,
+     "page": "https://commons.wikimedia.org/wiki/File:U.S.-Wales_Men%E2%80%99s_World_Cup_Match_in_Doha,_Qatar._(52515715639).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/U.S.-Wales_Men%E2%80%99s_World_Cup_Match_in_Doha%2C_Qatar._%2852515715639%29.jpg/960px-U.S.-Wales_Men%E2%80%99s_World_Cup_Match_in_Doha%2C_Qatar._%2852515715639%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2991,
+     "height": 1994,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "U.S. Department of State from United States",
+     "credit": "U.S.-Wales Men’s World Cup Match in Doha, Qatar.",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-11-21 15:54",
+     "file": "03-Q40351320-m12.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q40351320"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
@@ -993,7 +1312,13 @@
    "qid": "Q111089621",
    "wikidata": "https://www.wikidata.org/wiki/Q111089621",
    "label": "Isaac Price",
-   "birthYear": 2003
+   "birthYear": 2003,
+   "rejectedFiles": [
+    {
+     "title": "File:History of the Church of the brethren of the Eastern district in Pennsylvania by the committee appointed by District conference (1915) (14792793043).jpg",
+     "license": "No restrictions"
+    }
+   ]
   },
   {
    "he": "Barney Stewart",

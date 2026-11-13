@@ -103,7 +103,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q35040268:Omar Bugiel)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "לוריס בניטו",
@@ -1191,6 +1191,32 @@
      "date": "2024-02-28 16:16:12",
      "file": "21-Q129777758-4.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:Herba Guirassy.jpg",
+     "pageid": 151814613,
+     "page": "https://commons.wikimedia.org/wiki/File:Herba_Guirassy.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Herba_Guirassy.jpg/960px-Herba_Guirassy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1170,
+     "height": 1925,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "SonoGrazy",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2024-02-28",
+     "file": "21-Q129777758-m5.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q129777758"
+     ],
+     "score": 11.0,
+     "pass": "more"
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",
