@@ -40,8 +40,37 @@ def save(p, obj, compact=False):
     with open(p, 'w', encoding='utf8') as fh:
         json.dump(obj, fh, ensure_ascii=False, **({'separators': (',', ':')} if compact else {'indent': 1, 'sort_keys': True}))
 
+FM_MIN = 0.55   # cosine similarity of two SFace features; on these photos no pair of different players reached 0.47 (6,000 pairs),
+                # and two thirds of the pairs of one player pass
+
+class FaceMatch:
+    """Is the face in an unnamed picture the face in the player's own, named pictures? (OpenCV YuNet + SFace; the SFace
+    model is opencv_zoo's face_recognition_sface_2021dec.onnx at $SFACE or ~/.u2net/sface.onnx. Without it nothing is
+    matched and the import behaves as before.)"""
+    def __init__(self, yunet):
+        import cv2
+        self.cv2 = cv2; self.yunet = yunet
+        sp = os.environ.get('SFACE') or os.path.join(os.path.expanduser('~'), '.u2net', 'sface.onnx')
+        self.rec = cv2.FaceRecognizerSF.create(sp, '') if os.path.isfile(sp) else None
+
+    def feature(self, pil):
+        import numpy as np
+        if not self.rec:
+            return None
+        img = np.array(pil)[:, :, ::-1].copy()
+        h, w = img.shape[:2]
+        det = self.cv2.FaceDetectorYN.create(self.yunet, '', (w, h), 0.7, 0.3, 50)
+        _, faces = det.detect(img)
+        if faces is None or len(faces) != 1 or faces[0][2] < 60:
+            return None
+        return self.rec.feature(self.rec.alignCrop(img, faces[0]))
+
+    def cos(self, a, b):
+        return float(self.rec.match(a, b, self.cv2.FaceRecognizerSF_FR_COSINE))
+
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--sources', required=True); ap.add_argument('--clubs', required=True)
+    ap.add_argument('--review', default='', help='directory for side-by-side pictures of every identity confirmed by face match')
     a = ap.parse_args()
     ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
     E = load(ep, {'schema': 1, 'players': [], 'faces': {}, 'unresolved': []})
@@ -52,6 +81,7 @@ def main():
     # found only by full-text search can be another person with the same name, so it needs a visual review (ACCEPT)
     trusted = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-trusted-files.json'), {})
     t = bp.Tools()
+    fm = FaceMatch(t.yunet_path)
     # decisions per candidate file (size+mtime+pipeline version), so retries only process new files
     cache_p = os.path.join(a.sources, '.import-cache.json'); cache = load(cache_p, {})
     pv = os.path.getmtime(os.path.join(ROOT, 'scripts', 'build-portraits.py'))
@@ -60,6 +90,45 @@ def main():
     built_path = lambda ck: os.path.join(built_dir, hashlib.sha1(ck.encode('utf8')).hexdigest() + '.json')   # noqa: E731
     overrides = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-overrides.json'), {})
     auditp = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json')
+    def run_file(key, c, lenient):
+        """All renditions of one Commons file through the portrait pipeline: ((candidate, image, cache key) | None, reasons)."""
+        # the same Commons file may exist in several renditions (640 px first, wider retries later); a wider
+        # rendition can reveal a second face the detector rejects, so every rendition on disk is tried
+        import glob as _g, re as _re
+        stem = _re.sub(r'(-w\d+)?\.jpg$', '', c['file'])
+        paths = sorted(_g.glob(os.path.join(a.sources, 'euro', key, stem + '.jpg')) + _g.glob(os.path.join(a.sources, 'euro', key, stem + '-w*.jpg')), key=os.path.getsize, reverse=True)
+        if not paths:
+            return None, ['unreadable']
+        reasons = []
+        for path in paths:
+            try:
+                img = Image.open(path).convert('RGB')
+            except Exception:
+                reasons.append('unreadable'); continue
+            ck = f"{key}/{os.path.basename(path)}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if lenient else '')
+            if ck not in cache:
+                im, meas = bp.process(t, img, key=os.path.basename(path), strict=not lenient)
+                cache[ck] = 'ok' if im is not None else meas.get('reason')
+                if im is not None:
+                    uri, sha, n = bp.webp_uri(im)
+                    meas.update(sha256=sha, bytes=n, skin=bp.skin_tone(im))
+                    save(built_path(ck), {'uri': uri, 'meas': meas}, compact=True)
+                save(cache_p, cache, compact=True)
+            if cache[ck] == 'ok':
+                return (c, img, ck), reasons
+            reasons.append(cache[ck])
+        return None, reasons
+
+    def any_image(key, c):
+        import glob as _g, re as _re
+        stem = _re.sub(r'(-w\d+)?\.jpg$', '', c['file'])
+        for path in sorted(_g.glob(os.path.join(a.sources, 'euro', key, stem + '.jpg')) + _g.glob(os.path.join(a.sources, 'euro', key, stem + '-w*.jpg')), key=os.path.getsize, reverse=True):
+            try:
+                return Image.open(path).convert('RGB')
+            except Exception:
+                pass
+        return None
+
     for key in a.clubs.split(','):
         man = load(os.path.join(a.sources, 'euro', key, 'manifest.json'))
         if not man:
@@ -81,7 +150,7 @@ def main():
             base = {'key': key, 'club': club_he, 'en': pl['en'], 'he': pl['he']}
             if not pl.get('qid'):
                 E['unresolved'].append({**base, 'reason': 'not identified on Wikidata: ' + (pl.get('match') or pl.get('error') or 'unknown')}); continue
-            chosen, tried = None, []
+            chosen, tried, pending, named, matched = None, [], [], [], None
             surname = bp_norm(pl.get('label') or pl['en']).split()[-1:] + bp_norm(pl['en']).split()[-1:]
             for c in pl.get('candidates', []):
                 # files from the player's Commons category must name him: a category can be shared with, or polluted
@@ -89,7 +158,12 @@ def main():
                 if not (c.get('author') or '').strip() and not str(c.get('license', '')).upper().startswith(('CC0', 'PUBLIC DOMAIN', 'PD')):
                     tried.append(c['title'] + ': no author recorded, so the required attribution cannot be given'); continue
                 if c['title'] in REJECT:
-                    tried.append(f"{c['title']}: rejected on review ({REJECT[c['title']]['reason']})"); continue
+                    tried.append(f"{c['title']}: rejected on review ({REJECT[c['title']]['reason']})")
+                    if not c.get('fromP18') and 'different person' not in REJECT[c['title']]['reason'] and (c.get('via') in ('category', 'subcat') and any(sn and sn in bp_norm(c['title']) for sn in surname)):
+                        named.append(c)   # a poor portrait of the right man still shows his face
+                    elif c.get('fromP18'):
+                        named.append(c)
+                    continue
                 acc = ACCEPT.get(c['title'])
                 if acc and acc['player'] != pl['en']:
                     acc = None
@@ -97,38 +171,40 @@ def main():
                 # Wikidata image for knowing whose face it is (the portrait checks still have to pass)
                 shown = bool(pl.get('qid')) and c.get('depicts') == [pl.get('qid')]
                 if not acc and not shown and not c.get('fromP18') and c.get('via') not in ('category', 'subcat') and c['title'] not in trusted.get(key + '|' + pl['en'], []):
-                    tried.append(c['title'] + ': found by name search only, not yet confirmed on review'); continue
+                    tried.append(c['title'] + ': found by name search only, not yet confirmed on review'); pending.append(c); continue
                 if not acc and not shown and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
-                    tried.append(c['title'] + ': file name does not name the player'); continue
-                # the same Commons file may exist in several renditions (640 px first, wider retries later); a wider
-                # rendition can reveal a second face the detector rejects, so every rendition on disk is tried
-                import glob as _g, re as _re
-                stem = _re.sub(r'(-w\d+)?\.jpg$', '', c['file'])
-                paths = sorted(_g.glob(os.path.join(a.sources, 'euro', key, stem + '.jpg')) + _g.glob(os.path.join(a.sources, 'euro', key, stem + '-w*.jpg')), key=os.path.getsize, reverse=True)
-                if not paths:
-                    tried.append(c['title'] + ': unreadable'); continue
-                reasons = []
-                for path in paths:
-                    try:
-                        img = Image.open(path).convert('RGB')
-                    except Exception:
-                        reasons.append('unreadable'); continue
-                    lenient = bool(acc) and not acc.get('strict')   # identity-only confirmations keep the strict quality checks
-                    ck = f"{key}/{os.path.basename(path)}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if lenient else '')
-                    if ck not in cache:
-                        im, meas = bp.process(t, img, key=os.path.basename(path), strict=not lenient)
-                        cache[ck] = 'ok' if im is not None else meas.get('reason')
-                        if im is not None:
-                            uri, sha, n = bp.webp_uri(im)
-                            meas.update(sha256=sha, bytes=n, skin=bp.skin_tone(im))
-                            save(built_path(ck), {'uri': uri, 'meas': meas}, compact=True)
-                        save(cache_p, cache, compact=True)
-                    if cache[ck] == 'ok':
-                        chosen = (c, img, ck); break
-                    reasons.append(cache[ck])
-                if chosen:
-                    break
+                    tried.append(c['title'] + ': file name does not name the player'); pending.append(c); continue
+                named.append(c)
+                got, reasons = run_file(key, c, bool(acc) and not acc.get('strict'))   # identity-only confirmations keep the strict quality checks
+                if got:
+                    chosen = got; break
                 tried.append(f"{c['title']}: {'/'.join(dict.fromkeys(reasons))}")
+            if not chosen and pending and fm.rec:
+                # nobody named him in these files, but his face can: compare with the pictures that are known to be his
+                refs = []
+                for c in named:
+                    if 'different person' in (REJECT.get(c['title']) or {}).get('reason', ''):
+                        continue
+                    im0 = any_image(key, c); f = fm.feature(im0) if im0 is not None else None
+                    if f is not None:
+                        refs.append((c, im0, f))
+                for c in pending if refs else []:
+                    got, reasons = run_file(key, c, False)
+                    if not got:
+                        tried.append(f"{c['title']}: {'/'.join(dict.fromkeys(reasons))}"); continue
+                    f = fm.feature(got[1])
+                    if f is None:
+                        tried.append(c['title'] + ': no single clear face to compare'); continue
+                    best = max(refs, key=lambda r: fm.cos(f, r[2])); score = fm.cos(f, best[2])
+                    if score < FM_MIN:
+                        tried.append(f"{c['title']}: not the face of his named pictures ({score:.2f})"); continue
+                    chosen = got; matched = (best[0]['title'], score)
+                    if a.review:
+                        os.makedirs(a.review, exist_ok=True)
+                        l, r = best[1].copy(), got[1].copy(); l.thumbnail((300, 300)); r.thumbnail((300, 300))
+                        sheet = Image.new('RGB', (620, 300), '#202020'); sheet.paste(l, (0, 0)); sheet.paste(r, (320, 0))
+                        sheet.save(os.path.join(a.review, f"{key}--{bp_norm(pl['en']).replace(' ', '_')}--{score:.2f}.jpg"), quality=85)
+                    break
             if not chosen:
                 why = 'no freely licensed image on Commons' if not pl.get('candidates') else 'no usable image (' + '; '.join(tried) + ')'
                 if pl.get('rejectedFiles'):
@@ -143,6 +219,8 @@ def main():
             E['faces'][vid] = {'pack': pack, 'source': {k: c.get(k) for k in SRC_KEYS}, 'fromP18': c.get('fromP18')}
             if c['title'] in ACCEPT:
                 E['faces'][vid]['reviewed'] = ACCEPT[c['title']]['reason']
+            if matched:
+                E['faces'][vid]['reviewed'] = f"the file does not name him; the face is the one in {matched[0]} (similarity {matched[1]:.2f})"
             print(key, pl['en'], '→', c['title'], c.get('license'), flush=True)
         save(os.path.join(ROOT, 'data', 'visuals', 'source-photos', pack + '.json'), {'schema': 1, 'images': photos}, compact=True)
         save(ep, E)
