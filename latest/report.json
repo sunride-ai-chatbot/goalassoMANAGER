@@ -144,10 +144,10 @@
   "shoutButtons": 4,
   "shoutReady": true,
   "speeds": "hl,1,2,4",
-  "carrier": "זלאטנוביץ'",
+  "carrier": null,
   "shout": "press",
   "penaltyView": "3d",
-  "penalty": "pen:goal",
+  "penalty": "penmiss:off",
   "penaltyMode": "kick",
   "slow3d": true,
   "keeper": {
@@ -160,17 +160,17 @@
   "blitz": {
    "squad": 16,
    "invented": 0,
-   "rating": 81.1,
-   "bonus": 1.2,
-   "opponent": "רן",
+   "rating": 79.8,
+   "bonus": 2.2,
+   "opponent": "אוסאסונה",
    "sandbox": true
   },
   "backInCareer": true
  },
  "beginner": {
   "carrier": {
-   "label": "מדמון",
-   "name": "מדמון",
+   "label": "מירניאן",
+   "name": "מירניאן",
    "size": 14
   },
   "home": "מכבי תל אביב",
@@ -186,9 +186,9 @@
    ],
    "rows": [
     11,
-    14
+    12
    ],
-   "star": "סייד אבו פרחי"
+   "star": "סמיר פרהוד"
   }
  },
  "pcup": {
@@ -196,7 +196,7 @@
   "modes": 3,
   "cpu": {
    "view": "2d",
-   "mode": "kick"
+   "mode": "keep"
   },
   "online": {
    "error": "שירות המשחק ברשת לא זמין כרגע. בינתיים אפשר לשחק שניים על טלפון אחד.",
@@ -215,11 +215,11 @@
   }
  },
  "versionFile": {
-  "build": "a7bb9525463d",
-  "built": "12.11.2026 15:21"
+  "build": "1249dbb238cc",
+  "built": "13.11.2026 02:50"
  },
  "errors": [],
- "url": "https://sunride-ai-chatbot.github.io/goalassoMANAGER/?v=43227489897",
- "at": "2026-11-12T13:29:27.457Z",
- "build": "a7bb9525463d"
+ "url": "https://sunride-ai-chatbot.github.io/goalassoMANAGER/?v=43341066895",
+ "at": "2026-11-13T00:58:44.892Z",
+ "build": "1249dbb238cc"
 }
