@@ -236,7 +236,11 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "hebrew name found, club not on the item: Q51859492"
+   "match": "hebrew_name+article_names_club",
+   "qid": "Q51859492",
+   "wikidata": "https://www.wikidata.org/wiki/Q51859492",
+   "label": "Peter Godly Michael",
+   "birthYear": 1998
   },
   {
    "he": "אברהם רדה",
@@ -300,7 +304,11 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "hebrew name found, club not on the item: Q116036355"
+   "match": "hebrew_name+article_names_club",
+   "qid": "Q116036355",
+   "wikidata": "https://www.wikidata.org/wiki/Q116036355",
+   "label": "Amir Berkovits",
+   "birthYear": 2000
   },
   {
    "he": "הראל ליכטנשטיין",

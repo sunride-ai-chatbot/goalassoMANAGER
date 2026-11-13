@@ -411,6 +411,32 @@
      "file": "22-Q929773-4.jpg",
      "fromP18": false,
      "via": "category"
+    },
+    {
+     "title": "File:Zenjov, Sergei.IMG 7112.JPG",
+     "pageid": 39362291,
+     "page": "https://commons.wikimedia.org/wiki/File:Zenjov,_Sergei.IMG_7112.JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Zenjov%2C_Sergei.IMG_7112.JPG/960px-Zenjov%2C_Sergei.IMG_7112.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1879,
+     "height": 1408,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Ave Maria Mõistlik",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2015-03-31",
+     "file": "22-Q929773-m5.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q929773"
+     ],
+     "score": 9.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

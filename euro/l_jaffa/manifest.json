@@ -186,7 +186,11 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "hebrew name found, club not on the item: Q16885497"
+   "match": "hebrew_name+article_names_club",
+   "qid": "Q16885497",
+   "wikidata": "https://www.wikidata.org/wiki/Q16885497",
+   "label": "Goran Antonić",
+   "birthYear": 1990
   },
   {
    "he": "איתי זדה",

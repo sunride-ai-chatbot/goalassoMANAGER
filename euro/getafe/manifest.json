@@ -60,6 +60,30 @@
      "file": "01-Q22166596-1.jpg",
      "fromP18": false,
      "via": "category"
+    },
+    {
+     "title": "File:05-05-2016 - Sevilla FC - FC Shakhtar Donetsk - 3-1 (26235556264) (cropped).jpg",
+     "pageid": 72289111,
+     "page": "https://commons.wikimedia.org/wiki/File:05-05-2016_-_Sevilla_FC_-_FC_Shakhtar_Donetsk_-_3-1_(26235556264)_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/9e/05-05-2016_-_Sevilla_FC_-_FC_Shakhtar_Donetsk_-_3-1_%2826235556264%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 306,
+     "height": 473,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "Aleksandr Osipov from Ukraine",
+     "credit": "05/05/2016 - Sevilla FC - FC Shakhtar Donetsk - 3:1",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2016-05-06 02:37",
+     "file": "01-Q22166596-m2.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
@@ -368,7 +392,32 @@
    "en": "Francho Serrano",
    "pos": "MF",
    "age": 24,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Mural de Francho Serrano.jpg",
+     "pageid": 181003844,
+     "page": "https://commons.wikimedia.org/wiki/File:Mural_de_Francho_Serrano.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Mural_de_Francho_Serrano.jpg/960px-Mural_de_Francho_Serrano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3486,
+     "height": 2686,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Campeones 2008",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-12-31 14:07:19",
+     "file": "10-Q101073910-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 3.0,
+     "pass": "more"
+    }
+   ],
    "match": "squad_qid",
    "qid": "Q101073910",
    "wikidata": "https://www.wikidata.org/wiki/Q101073910",
@@ -380,7 +429,34 @@
    "en": "Mario Martín",
    "pos": "MF",
    "age": 22,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Mario Delgado (portrait).jpg",
+     "pageid": 106324801,
+     "page": "https://commons.wikimedia.org/wiki/File:Mario_Delgado_(portrait).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Mario_Delgado_%28portrait%29.jpg/960px-Mario_Delgado_%28portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2576,
+     "height": 3600,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Reda Raouchaia",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-04-24 19:59:10",
+     "file": "11-Q115152735-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q5998612"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "squad_qid",
    "qid": "Q115152735",
    "wikidata": "https://www.wikidata.org/wiki/Q115152735",
@@ -510,7 +586,34 @@
    "en": "Dakonam Djené",
    "pos": "DF",
    "age": 25,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Djene Kaba Conde.jpg",
+     "pageid": 60741905,
+     "page": "https://commons.wikimedia.org/wiki/File:Djene_Kaba_Conde.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/42/Djene_Kaba_Conde.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 462,
+     "height": 584,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Office of the White House (Amanda Lucidon)",
+     "credit": "https://www.flickr.com/photos/statephotos/14837202231/",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2014-08-05 19:27:27",
+     "file": "16-Q3467456-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q5285288"
+     ],
+     "score": 2.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+club",
    "qid": "Q3467456",
    "wikidata": "https://www.wikidata.org/wiki/Q3467456",
@@ -753,7 +856,17 @@
    "qid": "Q135206724",
    "wikidata": "https://www.wikidata.org/wiki/Q135206724",
    "label": "Davinchi",
-   "birthYear": 2007
+   "birthYear": 2007,
+   "rejectedFiles": [
+    {
+     "title": "File:Helium discharge tube.jpg",
+     "license": "GFDL 1.2"
+    },
+    {
+     "title": "File:Helium discharge tube cropped.jpg",
+     "license": "GFDL 1.2"
+    }
+   ]
   },
   {
    "he": "יוהאן מוחיקה",
@@ -860,6 +973,32 @@
      "file": "17-Q5932872-4.jpg",
      "fromP18": false,
      "via": "category"
+    },
+    {
+     "title": "File:FWC 2018 - Round of 16 - COL v ENG - Photo 033.jpg",
+     "pageid": 70558860,
+     "page": "https://commons.wikimedia.org/wiki/File:FWC_2018_-_Round_of_16_-_COL_v_ENG_-_Photo_033.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/88/FWC_2018_-_Round_of_16_-_COL_v_ENG_-_Photo_033.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 900,
+     "height": 1200,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Voltmetro",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-07-03 22:27:54",
+     "file": "21-Q5932872-m5.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q5932872"
+     ],
+     "score": 5.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
