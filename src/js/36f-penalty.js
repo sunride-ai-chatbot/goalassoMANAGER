@@ -77,8 +77,11 @@ function penMakeStage(host,mode,o){const flat=()=>penStage2d(host,mode,o);const 
 function penAnim(ms,step,done){if(ms<=0){step(1);done&&done();return}const t0=performance.now();(function fr(){const u=Math.min(1,(performance.now()-t0)/ms);step(u);if(u<1)requestAnimationFrame(fr);else done&&done()})()}
 function penQuick(){return typeof revealReduced==='function'&&revealReduced()}
 function penStage2d(host,mode,o){const S=34.15,GX=180,GY=215;const kit=o.kit||'#c6f24e',gk=o.gkKit||'#f2b233',ink=inkFor(kit);
-  /* a phone stage is a tall portrait: show the middle 300 units and fill it; a wide stage shows the whole scene */
-  const hr=host.getBoundingClientRect();const wide=!!(hr.width&&hr.height&&hr.width/hr.height>.82);const VX=wide?0:30,VW=wide?360:300;const vb=`viewBox="${VX} 0 ${VW} 460" preserveAspectRatio="xMidYMid ${wide?'meet':'slice'}"`;
+  /* a phone stage is a tall portrait: show the middle 300 units and fill it; a wide stage shows the whole scene. A stage
+     taller than the scene (the picture on the whole screen) keeps the full width, both posts in view, and gets more stand
+     above and more grass below instead of being cut at the sides. */
+  const hr=host.getBoundingClientRect();const ar=hr.width&&hr.height?hr.width/hr.height:1,wide=ar>.82;const VX=wide?0:30,VW=wide?360:300;let VY=0,VH=460;if(!wide&&VW/ar>460){VH=VW/ar;VY=-(VH-460)*.42}
+  const vb=`viewBox="${VX} ${VY.toFixed(1)} ${VW} ${VH.toFixed(1)}" preserveAspectRatio="xMidYMid ${wide?'meet':'slice'}"`;
   const crowd=(y0,y1,n,seed)=>{let s=seed,out='';const rnd2=()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296};for(let i=0;i<n;i++){const x=rnd2()*360,y=y0+rnd2()*(y1-y0);out+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.1+rnd2()*.9).toFixed(1)}" fill="${['#d9c58a','#8fa3b8','#e7e3d6','#5f7186','#c6f24e'][Math.floor(rnd2()*5)]}" opacity="${(.25+rnd2()*.5).toFixed(2)}"/>`}return out};
   const defs=`<defs><linearGradient id="pgGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c5a2c"/><stop offset="1" stop-color="#2f8a3f"/></linearGradient><linearGradient id="pgStand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070c"/><stop offset="1" stop-color="#141c2a"/></linearGradient><radialGradient id="pgLight" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#fff6d8" stop-opacity=".5"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/></radialGradient><radialGradient id="pgBallG" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9bdc4"/></radialGradient></defs>`;
   const ballG=(id,r)=>`<g id="${id}"><ellipse class="pg-bsh" cx="0" cy="${r*.9}" rx="${r}" ry="${r*.32}" fill="rgba(0,0,0,.4)"/><circle r="${r}" fill="url(#pgBallG)" stroke="#1b2330" stroke-width="${(r*.07).toFixed(2)}"/><path d="M0 ${-r*.45}l${r*.4} ${r*.3}-${r*.16} ${r*.5}h-${r*.48}l-${r*.16}-${r*.5}z" fill="#1b2330"/></g>`;
@@ -86,7 +89,7 @@ function penStage2d(host,mode,o){const S=34.15,GX=180,GY=215;const kit=o.kit||'#
   {
     const net=[];for(let i=0;i<=12;i++){const x=GX-125+i*250/12,xb=GX-104+i*208/12;net.push(`<path d="M${x.toFixed(1)} 132L${xb.toFixed(1)} 148V215"/>`)}for(let j=1;j<=5;j++){const y=148+j*67/6;net.push(`<path d="M${GX-104} ${y.toFixed(1)}H${GX+104}"/>`)}
     html=`<svg class="pg-svg" ${vb} aria-hidden="true">${defs}
-      <rect width="360" height="460" fill="url(#pgStand)"/>${crowd(4,122,260,7)}<rect width="360" height="170" fill="url(#pgLight)"/>
+      <rect y="-700" width="360" height="701" fill="#05070c"/><rect y="459" width="360" height="800" fill="#2f8a3f"/><rect width="360" height="460" fill="url(#pgStand)"/>${crowd(4,122,260,7)}<rect width="360" height="170" fill="url(#pgLight)"/>
       <rect y="124" width="360" height="26" fill="#0c1420"/><g font-family="Karantina,Heebo,sans-serif" font-weight="700" font-size="17" fill="#c6f24e" opacity=".85"><text x="46" y="143">GOALASSO</text><text x="252" y="143">GOALASSO</text></g>
       <rect y="150" width="360" height="310" fill="url(#pgGrass)"/>
       <g fill="#fff" opacity=".045"><path d="M150 150h60l110 310H40z"/><path d="M0 150h60L-150 460H-320z"/><path d="M300 150h60l320 310H510z"/></g>

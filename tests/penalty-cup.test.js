@@ -63,7 +63,10 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   while(!$('#pgDone')){if(++guard>6000)throw new Error('the one-phone duel never ended');
     if(w.eval('!!(PCUP&&PCUP.asking)')){const zs=$$('.pc-zone');assert.equal(zs.length,2,'a strip for each player');assert.ok($('.pc-zone[data-zone="b"]').classList.contains('far')&&$('.pc-zone[data-zone="a"]').classList.contains('near'),'the second club at the far edge and turned to its player, the first at the near edge');
       assert.equal($$('.pc-zone button,.pc-pad,.pg-dirs').length,0,'no buttons and no arrows: the finger slides');assert.deepEqual(zs.map(z=>z.dataset.role).sort(),['keep','kick'],'one kicks, one keeps goal');assert.equal($('#pcReady'),null,'the phone never changes hands');
-      const kick=$('.pc-zone[data-role="kick"]'),keep=$('.pc-zone[data-role="keep"]');roles.push(kick.dataset.zone);
+      const kick=$('.pc-zone[data-role="kick"]'),keep=$('.pc-zone[data-role="keep"]');roles.push(kick.dataset.zone);assert.ok($('#penGame').classList.contains('pc-face'),'the picture takes the whole screen');
+      // nothing runs until one press; it starts the count of three seconds
+      assert.ok($('.pc-go'),'one button in the middle');assert.ok($('.pc-turn').hidden,'no count before the press');if(kicks===2){await tick(900);assert.ok(w.eval('PCUP.asking'),'it waits as long as nobody presses');}
+      if(kicks>=1){$('.pc-go').click();assert.equal($('.pc-go'),null);assert.ok(!$('.pc-turn').hidden);assert.equal($('.pc-turn').textContent,'3')}
       if(kicks===0){   // nobody slid a finger: the kick still happens, the keeper stays in the middle
        }else if(kicks===1){   // the last slide before the whistle counts; two fingers at the same moment are both heard; a tap is nothing
         slide(keep,-40,40,1);assert.ok(keep.classList.contains('set'));assert.ok(!kick.classList.contains('set'),'only the one who chose is marked');
@@ -71,7 +74,9 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
         keep.dispatchEvent(d1('pointerdown',50,50,7));kick.dispatchEvent(d1('pointerdown',200,300,8));keep.dispatchEvent(d1('pointerup',10,10,7));kick.dispatchEvent(d1('pointerup',260,300,8));slide(kick,3,2,9);
         assert.equal($$('.pc-zone [data-dir],.pc-zone .on').length,0,'a strip never shows which way');assert.doesNotMatch(keep.textContent+kick.textContent,/UL|שמאל|ימין|למעלה|למטה/);assert.deepEqual(run('PCUP.pads()'),kick.dataset.zone==='a'?{a:'R',b:'UL'}:{a:'UL',b:'R'});
        }else{slide(kick,40,-40);slide(keep,-40,40)}
-      kicks++;w.eval('PCUP.whistle()');assert.equal(w.eval('PCUP.asking'),false);assert.equal($$('.pc-zone').length,0,'the strips leave at the whistle and the picture is clear')}
+      const want=run('PCUP.pads()');kicks++;w.eval('PCUP.whistle()');assert.equal(w.eval('PCUP.asking'),false);assert.equal($$('.pc-zone,.pc-go').length,0,'the strips leave at the whistle and the picture is clear');
+      const chips=$$('.pc-chose');assert.equal(chips.length,2,'each choice is shown at its own edge once the kick is on');const near=chips.find(c=>c.classList.contains('near')),far=chips.find(c=>c.classList.contains('far'));
+      if(want.a)assert.equal(near.dataset.dir,want.a);if(want.b)assert.equal(far.dataset.dir,want.b);if(kicks===1)assert.ok(chips.some(c=>c.dataset.dir===''),'the keeper who did not slide is shown standing')}
     await tick(5)}
   assert.ok(kicks>=6,'at least six kicks decide a shoot-out, got '+kicks);assert.ok(roles.every((r,i)=>i===0||r!==roles[i-1]),'kicker and keeper swap with every kick: '+roles.join(''));
   const seat=run('window.__seat');assert.equal(seat.length,kicks);assert.ok(seat[0][0]&&seat[0][1]===null,'no slide: the ball goes somewhere, the keeper stays');assert.deepEqual(seat[1],['R','UL'],'the last slide of each player');assert.deepEqual(seat[2],['UR','DL']);
