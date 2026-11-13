@@ -157,6 +157,23 @@ def name_matches(ent, name):
     w = set(want.split())
     return any(w and w <= set(h.split()) for h in have)
 
+def infobox_clubs(ent):
+    """Wikidata items of the clubs the player's English article lists in its infobox (current, senior and youth clubs)."""
+    t = ent.get('sitelinks', {}).get('enwiki', {}).get('title')
+    if not t:
+        return set()
+    api = 'https://en.wikipedia.org/w/api.php'
+    r = get(api, {'action': 'query', 'titles': t, 'prop': 'revisions', 'rvprop': 'content', 'rvslots': 'main', 'redirects': 1, 'format': 'json'})
+    text = ' '.join(rv.get('slots', {}).get('main', {}).get('*', '') for pg in r.get('query', {}).get('pages', {}).values() for rv in pg.get('revisions', []))
+    targets = []
+    for m in re.finditer(r'^\s*\|\s*(?:currentclub|clubs\d+|youthclubs\d+)\s*=(.*)$', text, re.M):
+        targets += [x.strip() for x in re.findall(r'\[\[([^\]|#]+)', m.group(1))]
+    targets = list(dict.fromkeys(x for x in targets if x))[:45]
+    if not targets:
+        return set()
+    r = get(api, {'action': 'query', 'titles': '|'.join(targets), 'prop': 'pageprops', 'redirects': 1, 'format': 'json'})
+    return {pg['pageprops']['wikibase_item'] for pg in r.get('query', {}).get('pages', {}).values() if pg.get('pageprops', {}).get('wikibase_item')}
+
 def identify(player, club_q):
     name = player.get('en') or ''
     if not name:
@@ -189,6 +206,10 @@ def identify(player, club_q):
         if len(both) == 1:
             return both[0], 'name+club+birth_year'
         return None, 'ambiguous_same_club: ' + ', '.join(e['id'] for e in team)
+    # Wikidata often lags a transfer: the one footballer of this name whose article lists this club in its infobox
+    said = [e for e in cands[:6] if club_q in infobox_clubs(e)]
+    if len(said) == 1:
+        return said[0], 'name+club in the article infobox'
     born = [e for e in cands if birth_year(e) in years]
     if len(born) == 1:
         return born[0], 'name+birth_year (club not yet on Wikidata)'
@@ -353,6 +374,13 @@ def more_pass(a, keys):
                     entry['match'] = why
                     if ent:
                         qid = ent['id']; entry.update(qid=qid, wikidata='https://www.wikidata.org/wiki/' + qid, label=label(ent) or p.get('he'), birthYear=birth_year(ent))
+                elif not qid and re.search('[A-Za-z]', p.get('en') or ''):
+                    # not identified in the first pass: Wikidata and the articles move on, so ask again
+                    cq = cq or club_qid(key)
+                    ent, why = identify(p, cq)
+                    entry['match'] = why
+                    if ent:
+                        qid = ent['id']; entry.update(qid=qid, wikidata='https://www.wikidata.org/wiki/' + qid, label=label(ent), birthYear=birth_year(ent))
                 if qid and ent is None:
                     r = wd({'action': 'wbgetentities', 'ids': qid, 'props': 'claims|labels|aliases|sitelinks', 'languages': 'en|mul|he'})
                     ent = (r.get('entities') or {}).get(qid)
