@@ -93,9 +93,12 @@ def main():
                 acc = ACCEPT.get(c['title'])
                 if acc and acc['player'] != pl['en']:
                     acc = None
-                if not acc and not c.get('fromP18') and c.get('via') not in ('category', 'subcat') and c['title'] not in trusted.get(key + '|' + pl['en'], []):
+                # Commons' structured data names who a file shows: "depicts" this player and nobody else is as good as his
+                # Wikidata image for knowing whose face it is (the portrait checks still have to pass)
+                shown = bool(pl.get('qid')) and c.get('depicts') == [pl.get('qid')]
+                if not acc and not shown and not c.get('fromP18') and c.get('via') not in ('category', 'subcat') and c['title'] not in trusted.get(key + '|' + pl['en'], []):
                     tried.append(c['title'] + ': found by name search only, not yet confirmed on review'); continue
-                if not acc and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
+                if not acc and not shown and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
                     tried.append(c['title'] + ': file name does not name the player'); continue
                 # the same Commons file may exist in several renditions (640 px first, wider retries later); a wider
                 # rendition can reveal a second face the detector rejects, so every rendition on disk is tried
