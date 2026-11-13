@@ -21,7 +21,7 @@
    "pos": "GK",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q119522327:Leo Shahar)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "Yanir Nimni",
@@ -37,7 +37,7 @@
    "pos": "GK",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q138172:Radamel Falcao)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "קונאדו יאדום",
@@ -78,7 +78,7 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q481370:Muriel Gustavo Becker, Q134592322:Victor Aznar)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "Clovis Yao",
@@ -134,7 +134,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q5563382:Giora Antman)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "Roy Harel",
@@ -150,7 +150,7 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q121028839:2002"
+   "match": "hebrew name found, club not on the item: Q121028839"
   },
   {
    "he": "Niv Vaknin",
@@ -190,7 +190,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q29948542:Muamar Karakra)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "Sarel Cohen",
@@ -222,7 +222,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q118218419:2003"
+   "match": "hebrew name found, club not on the item: Q118218419"
   }
  ]
 }

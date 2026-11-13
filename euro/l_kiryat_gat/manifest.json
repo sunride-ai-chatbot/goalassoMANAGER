@@ -21,7 +21,17 @@
    "qid": "Q131831305",
    "wikidata": "https://www.wikidata.org/wiki/Q131831305",
    "label": "Guy Herman",
-   "birthYear": 2000
+   "birthYear": 2000,
+   "rejectedFiles": [
+    {
+     "title": "File:The Monticola (1896) (14593652059).jpg",
+     "license": "No restrictions"
+    },
+    {
+     "title": "File:The Monticola (1896) (14593678320).jpg",
+     "license": "No restrictions"
+    }
+   ]
   },
   {
    "he": "Guy Dahan",
@@ -89,7 +99,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q131824585:2004"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "Paul Emmanuel",
@@ -97,7 +107,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q386876:Emmanuel Adebayor, Q124157116:Emmanuel Adegboyega, Q128852557:Emmanuel Gyamfi, Q110398266:Jacques Ekomie)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "פאבל זבלין",
@@ -164,7 +174,106 @@
    "en": "Bar Cohen",
    "pos": "DF",
    "age": 25,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Einav Bar Cohen - DSC 0035 1.jpg",
+     "pageid": 65949852,
+     "page": "https://commons.wikimedia.org/wiki/File:Einav_Bar_Cohen_-_DSC_0035_1.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Einav_Bar_Cohen_-_DSC_0035_1.jpg/960px-Einav_Bar_Cohen_-_DSC_0035_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1200,
+     "height": 900,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Arielinson",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-01-28",
+     "file": "17-Q115208632-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 3.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Einav Bar Cohen - DSC 0042.jpg",
+     "pageid": 65949856,
+     "page": "https://commons.wikimedia.org/wiki/File:Einav_Bar_Cohen_-_DSC_0042.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Einav_Bar_Cohen_-_DSC_0042.jpg/960px-Einav_Bar_Cohen_-_DSC_0042.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1200,
+     "height": 900,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Arielinson",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-01-28",
+     "file": "17-Q115208632-m1.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 3.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:CRREL 1968 electrodrill.png",
+     "pageid": 64413780,
+     "page": "https://commons.wikimedia.org/wiki/File:CRREL_1968_electrodrill.png",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/c8/CRREL_1968_electrodrill.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/png",
+     "width": 363,
+     "height": 1585,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Herbert T. Ueda and Donald E. Garfield",
+     "credit": "Bar-Cohen, Yoseph; Zacny, Kris (2009). Drilling in Extreme Environments. Weinheim, Germany: Wiley-VCH. ISBN 978-3-527-40852-8.  p. 229.",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "1968-11-01",
+     "file": "17-Q115208632-m2.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 2.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Anat Zuria (cropped).jpg",
+     "pageid": 121402342,
+     "page": "https://commons.wikimedia.org/wiki/File:Anat_Zuria_(cropped).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Anat_Zuria_%28cropped%29.jpg/960px-Anat_Zuria_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2350,
+     "height": 3040,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "RuthlessT",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-08-08",
+     "file": "17-Q115208632-m3.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q4752006"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q115208632",
    "wikidata": "https://www.wikidata.org/wiki/Q115208632",

@@ -33,7 +33,7 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q138351345:Roey Ben Shimon)"
+   "match": "hebrew name found, club not on the item: Q138351345"
   },
   {
    "he": "רונן פרץ",
@@ -77,7 +77,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q98393976:Dolev Azulay)"
+   "match": "hebrew name found, club not on the item: Q98393976"
   },
   {
    "he": "עמרי לוזון",
@@ -85,7 +85,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q101007427:Omri Luzon)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "אליאן רוחנא",
@@ -113,7 +113,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q1902005:Roei Dayan)"
+   "match": "hebrew name found, club not on the item: Q1902005"
   },
   {
    "he": "אורי צעדון",
@@ -277,7 +277,60 @@
    "en": "Matan Peleg",
    "pos": "DF",
    "age": 32,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Matan Peleg Picture.jpg",
+     "pageid": 85724136,
+     "page": "https://commons.wikimedia.org/wiki/File:Matan_Peleg_Picture.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Matan_Peleg_Picture.jpg/960px-Matan_Peleg_Picture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2847,
+     "height": 3751,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "ImTirtzu",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2020-01-08",
+     "file": "21-Q106415343-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q47402049"
+     ],
+     "score": 2.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:מתן פלג - 2019 (cropped).jpg",
+     "pageid": 85742438,
+     "page": "https://commons.wikimedia.org/wiki/File:%D7%9E%D7%AA%D7%9F_%D7%A4%D7%9C%D7%92_-_2019_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/49/%D7%9E%D7%AA%D7%9F_%D7%A4%D7%9C%D7%92_-_2019_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 960,
+     "height": 1124,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "עמירם פאל",
+     "credit": "עמירם פאל",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "Taken on 8 September 2019",
+     "file": "21-Q106415343-m1.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q47402049"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "squad_qid",
    "qid": "Q106415343",
    "wikidata": "https://www.wikidata.org/wiki/Q106415343",

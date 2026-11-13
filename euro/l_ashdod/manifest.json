@@ -89,7 +89,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q141582852:Itay Hazut)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "סער פדידה",
@@ -133,7 +133,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q60827530:Maksim Grechkin)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "עמית דנציגר",
@@ -157,7 +157,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q110243712:Ibrahim Diakité)"
+   "match": "hebrew name found, club not on the item: Q110243712"
   },
   {
    "he": "רן אתורי",

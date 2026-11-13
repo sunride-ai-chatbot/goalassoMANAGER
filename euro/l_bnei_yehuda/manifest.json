@@ -17,7 +17,7 @@
    "pos": "GK",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q63138011:Isaak Hayik)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "יואב זז'ה",
@@ -250,7 +250,7 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q117359975:Rave Assayag)"
+   "match": "hebrew name found, club not on the item: Q117359975"
   },
   {
    "he": "ניר ברדע",

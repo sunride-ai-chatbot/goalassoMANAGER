@@ -9,7 +9,7 @@
    "pos": "GK",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q131753626:Matan Zalmanovich)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "Shon Ben Nesher",
@@ -90,7 +90,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q24572693:Ido Davidov, Q129257493:Antonio José Cordero Campillo)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "שי אייזן",
@@ -162,7 +162,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q505645:Haim Revivo)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "Ofek Mishan",
@@ -178,7 +178,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q30080367:1998"
+   "match": "hebrew name found, club not on the item: Q30080367"
   },
   {
    "he": "Amit Ben Kish",
@@ -210,7 +210,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q23893097:Lucas Estella Perri)"
+   "match": "no_wikidata_footballer_with_this_name"
   }
  ]
 }

@@ -146,7 +146,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q105030733:Roy Levy, Q124212548:Roy Levy)"
+   "match": "hebrew name found, club not on the item: Q105030733, Q124212548"
   },
   {
    "he": "גל לוי",
@@ -154,7 +154,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q64743785:Gal Levi)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "יואל אבו חצירה",
@@ -186,7 +186,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q16885497:Goran Antonić)"
+   "match": "hebrew name found, club not on the item: Q16885497"
   },
   {
    "he": "איתי זדה",
@@ -194,7 +194,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q120379082:Itay Zada)"
+   "match": "hebrew name found, club not on the item: Q120379082"
   },
   {
    "he": "ניב פליטר",
@@ -202,7 +202,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q120065316:Niv Fliter)"
+   "match": "hebrew name found, club not on the item: Q120065316"
   },
   {
    "he": "דולב בלולו",

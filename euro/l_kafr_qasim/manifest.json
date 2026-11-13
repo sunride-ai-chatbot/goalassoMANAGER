@@ -17,7 +17,7 @@
    "pos": "GK",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q140425016:Maor Erlich)"
+   "match": "hebrew name found, club not on the item: Q140425016"
   },
   {
    "he": "איסמאעיל בחאש",
@@ -49,7 +49,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q16885508:Anas Dabour)"
+   "match": "hebrew name found, club not on the item: Q16885508"
   },
   {
    "he": "איהאב אבו אלשיך",
@@ -73,7 +73,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q23008140:Samah Mar'ab)"
+   "match": "no_wikidata_footballer_with_this_name"
   },
   {
    "he": "מוחמד חטיב",
@@ -89,7 +89,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q1902005:Roei Dayan)"
+   "match": "hebrew name found, club not on the item: Q1902005"
   },
   {
    "he": "אחמד טאהא",
@@ -97,7 +97,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q133455998:Ahmed Taha, Q131830084:Ahmad Taha)"
+   "match": "hebrew name found, club not on the item: Q133455998, Q131830084"
   },
   {
    "he": "ריאן אשמוז",
@@ -161,7 +161,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q68147941:Ala'a Ja'afar)"
+   "match": "hebrew name found, club not on the item: Q68147941"
   },
   {
    "he": "פאדי נג׳אר",
@@ -169,7 +169,7 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name"
+   "match": "hebrew name found, club not on the item: Q100272618"
   },
   {
    "he": "כרם עאמר",
