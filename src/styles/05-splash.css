@@ -57,3 +57,14 @@
 .splash .sp-glow,.splash .sp-ver{display:none}
 .splash .sp-tag{letter-spacing:0;font-size:14px}
 @media (max-height:500px) and (orientation:landscape){.splash .sp-card{width:min(100vw,900px);flex-direction:row}.splash .sp-launch{width:50%}.splash .sp-ui{width:50%;justify-content:center;padding:20px}}
+
+/* beginner page: the coach's name on the title screen, and a small way over to the full game */
+.splash .sp-name{width:100%;display:block;text-align:start}
+.splash .sp-name span{display:block;margin:0 4px 6px;font-size:15px;font-weight:700;color:#f4efe2;text-shadow:0 1px 6px #000}
+.splash .sp-name input{width:100%;height:56px;padding:0 16px;border-radius:14px;border:1px solid rgba(233,196,106,.7);background:rgba(5,7,11,.82);color:#f4efe2;font:600 20px/1 Heebo,Arial,sans-serif;text-align:start}
+.splash .sp-name input::placeholder{color:#b9b2a2}
+.splash .sp-name input:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.splash .sp-name input[aria-invalid="true"]{border-color:#ff8a94}
+.splash .sp-err{width:100%;min-height:0;margin:-6px 4px 0;font-size:14.5px;color:#ffd0d4;text-shadow:0 1px 6px #000;text-align:start}
+.splash .sp-err:empty{display:none}
+.splash .sp-link{display:inline-block;min-height:44px;padding:11px 14px 0;font-size:14.5px;color:#d9d2c2;text-decoration:underline;text-underline-offset:4px}

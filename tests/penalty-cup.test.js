@@ -42,34 +42,37 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.equal($$('[data-pc-mode]').length,3,'computer, one phone, online');assert.match($('#pcup').textContent,/בלוטות/,'says plainly what a browser cannot do');
 
   // against the computer: the shoot-out of the full game, with a way out
-  $('[data-pc-mode="cpu"]').click();assert.ok($('#penGame'),'the penalty overlay');assert.ok($('#penGame .pc-quit'),'a way out of the overlay');
+  $('[data-pc-mode="cpu"]').click();assert.equal($('#penGame'),null);assert.ok($$('[data-pc-cpuopp]').length>=30,'against the computer the opponent is chosen too');const rival=$$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp==='i:mta');rival.click();assert.ok($('#penGame'),'the penalty overlay');assert.match($('#penGame .pg-meta').textContent,/מכבי ת"א|מכבי תל אביב/,'the chosen opponent');assert.ok($('#penGame .pc-quit'),'a way out of the overlay');
   assert.equal(w.eval('G.me'),w.eval('PCUP.clubs[PCUP.my.key].id'),'the chosen club is ours');assert.match($('#penGame .pg-meta').textContent,new RegExp(w.eval('PCUP.my.name').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
   $('#pgGo').click();await until(()=>w.eval('!!(PG&&(PG.fire||PG.strike||PG.pick))'),'the first kick');
   // play it out: we always aim at a top corner; in goal we always go low right
   let guard=0;while(!$('#pgDone')){if(++guard>4000)throw new Error('the shoot-out never ended');w.eval("if(PG){try{PG.fire&&PG.fire(3.2,2.1)}catch(e){}try{PG.go&&PG.go('DR')}catch(e){}}");await tick(5)}
   const rec0=run('pcupRec()');$('#pgDone').click();const rec1=run('pcupRec()');assert.equal(rec1.played,rec0.played+1,'the result is recorded once');assert.equal($('#penGame'),null);assert.ok($('[data-pc-mode="cpu"]'),'back at the modes');
   // leaving in the middle records nothing
-  $('[data-pc-mode="cpu"]').click();$('#penGame .pc-quit').click();assert.equal($('#penGame'),null);assert.equal(run('pcupRec()').played,rec1.played);
+  $('[data-pc-mode="cpu"]').click();$('[data-pc-cpuopp="?"]').click();assert.ok($('#penGame'),'or drawn by lot');$('#penGame .pc-quit').click();assert.equal($('#penGame'),null);assert.equal(run('pcupRec()').played,rec1.played);
 
-  // ---- two people on one phone, both at once: a pad each, one kicks and one keeps goal, roles swap with every kick
+  // ---- two people on one phone, both at once, facing each other: a strip each, a slide of the finger chooses
+  assert.deepEqual(run("[[30,0],[30,-30],[0,-30],[-30,-30],[-30,0],[-30,30],[0,30],[30,30],[5,5],[0,0]].map(v=>pcupSwipeDir(v[0],v[1]))"),['R','UR','U','UL','L','DL','D','DR',null,null],'eight directions on the screen; a touch that does not travel chooses nothing');
   $('[data-pc-mode="seat"]').click();const same=w.eval('PCUP.my.key');$$('[data-pc-opp]').find(b=>b.dataset.pcOpp===same).click();assert.ok($('#penGame'),'the duel');
   assert.notEqual(w.eval("PCUP.clubs[PCUP.my.key].id"),w.eval("PCUP.clubs[PCUP.my.key+'#2'].id"),'the twin has its own id');
   w.eval("window.__seat=[];(()=>{const real=pcupResolve;pcupResolve=function(kd,gd){window.__seat.push([kd,gd]);return real.apply(this,arguments)}})()");
+  const slide=(el,dx,dy,pid)=>{const mk=(t,x,y)=>{const e=new w.MouseEvent(t,{bubbles:true,cancelable:true,clientX:x,clientY:y});if(pid!=null)Object.defineProperty(e,'pointerId',{value:pid});return e};el.dispatchEvent(mk('pointerdown',100,100));el.dispatchEvent(mk('pointermove',100+dx/2,100+dy/2));el.dispatchEvent(mk('pointerup',100+dx,100+dy))};
   let kicks=0;const roles=[];guard=0;
   while(!$('#pgDone')){if(++guard>6000)throw new Error('the one-phone duel never ended');
-    if($('.pc-pads')){const pads=$$('.pc-pad');assert.equal(pads.length,2,'a pad for each player');assert.deepEqual(pads.map(x=>x.dataset.pad),['a','b'],'the first club first (on the right of a right-to-left row), every kick');
-      assert.deepEqual(pads.map(x=>x.querySelectorAll('[data-dir]').length),[8,8]);assert.deepEqual(pads.map(x=>x.dataset.role).sort(),['keep','kick'],'one kicks, one keeps goal');assert.equal($('.pg-dirs'),null,'no arrows on the goal itself');assert.equal($('#pcReady'),null,'the phone never changes hands');
-      const kick=$('.pc-pad[data-role="kick"]'),keep=$('.pc-pad[data-role="keep"]');roles.push(kick.dataset.pad);
-      if(kicks===0){   // nobody pressed: the kick still happens, the keeper stays in the middle
-       }else if(kicks===1){   // the last press before the whistle counts; a second finger at the same moment (pointerdown) is heard too
-        keep.querySelector('[data-dir="DL"]').click();assert.ok(keep.classList.contains('set'));assert.ok(!kick.classList.contains('set'),'only the one who pressed is marked');
-        keep.querySelector('[data-dir="UL"]').dispatchEvent(new w.Event('pointerdown',{bubbles:true,cancelable:true}));kick.querySelector('[data-dir="R"]').dispatchEvent(new w.Event('pointerdown',{bubbles:true,cancelable:true}));
-        assert.equal($$('.pc-pad .on,.pc-pad [aria-pressed="true"]').length,0,'a pad never shows which arrow was chosen');assert.deepEqual(run('PCUP.pads()'),kick.dataset.pad==='a'?{a:'R',b:'UL'}:{a:'UL',b:'R'});
-       }else{kick.querySelector('[data-dir="UR"]').click();keep.querySelector('[data-dir="DL"]').click()}
-      kicks++;w.eval('PCUP.whistle()');assert.equal($('.pc-pads'),null,'the pads leave at the whistle')}
+    if(w.eval('!!(PCUP&&PCUP.asking)')){const zs=$$('.pc-zone');assert.equal(zs.length,2,'a strip for each player');assert.ok($('.pc-zone[data-zone="b"]').classList.contains('far')&&$('.pc-zone[data-zone="a"]').classList.contains('near'),'the second club at the far edge and turned to its player, the first at the near edge');
+      assert.equal($$('.pc-zone button,.pc-pad,.pg-dirs').length,0,'no buttons and no arrows: the finger slides');assert.deepEqual(zs.map(z=>z.dataset.role).sort(),['keep','kick'],'one kicks, one keeps goal');assert.equal($('#pcReady'),null,'the phone never changes hands');
+      const kick=$('.pc-zone[data-role="kick"]'),keep=$('.pc-zone[data-role="keep"]');roles.push(kick.dataset.zone);
+      if(kicks===0){   // nobody slid a finger: the kick still happens, the keeper stays in the middle
+       }else if(kicks===1){   // the last slide before the whistle counts; two fingers at the same moment are both heard; a tap is nothing
+        slide(keep,-40,40,1);assert.ok(keep.classList.contains('set'));assert.ok(!kick.classList.contains('set'),'only the one who chose is marked');
+        const d1=(t,x,y,pid)=>{const e=new w.MouseEvent(t,{bubbles:true,cancelable:true,clientX:x,clientY:y});Object.defineProperty(e,'pointerId',{value:pid});return e};
+        keep.dispatchEvent(d1('pointerdown',50,50,7));kick.dispatchEvent(d1('pointerdown',200,300,8));keep.dispatchEvent(d1('pointerup',10,10,7));kick.dispatchEvent(d1('pointerup',260,300,8));slide(kick,3,2,9);
+        assert.equal($$('.pc-zone [data-dir],.pc-zone .on').length,0,'a strip never shows which way');assert.doesNotMatch(keep.textContent+kick.textContent,/UL|שמאל|ימין|למעלה|למטה/);assert.deepEqual(run('PCUP.pads()'),kick.dataset.zone==='a'?{a:'R',b:'UL'}:{a:'UL',b:'R'});
+       }else{slide(kick,40,-40);slide(keep,-40,40)}
+      kicks++;w.eval('PCUP.whistle()');assert.equal(w.eval('PCUP.asking'),false);assert.equal($$('.pc-zone').length,0,'the strips leave at the whistle and the picture is clear')}
     await tick(5)}
   assert.ok(kicks>=6,'at least six kicks decide a shoot-out, got '+kicks);assert.ok(roles.every((r,i)=>i===0||r!==roles[i-1]),'kicker and keeper swap with every kick: '+roles.join(''));
-  const seat=run('window.__seat');assert.equal(seat.length,kicks);assert.ok(seat[0][0]&&seat[0][1]===null,'no press: the ball goes somewhere, the keeper stays');assert.deepEqual(seat[1],['R','UL'],'the last press of each player');assert.deepEqual(seat[2],['UR','DL']);
+  const seat=run('window.__seat');assert.equal(seat.length,kicks);assert.ok(seat[0][0]&&seat[0][1]===null,'no slide: the ball goes somewhere, the keeper stays');assert.deepEqual(seat[1],['R','UL'],'the last slide of each player');assert.deepEqual(seat[2],['UR','DL']);
   const sc=run('({a:PCUP.duel.S.a,b:PCUP.duel.S.b})');assert.ok(w.eval(`penShootoutDone(${JSON.stringify(sc.a)},${JSON.stringify(sc.b)})`),'ended by the shoot-out rule');
   $('#pgDone').click();assert.equal(run('pcupRec()').duels,(rec1.duels||0)+1);assert.equal(run('pcupRec()').played,rec1.played,'a duel between two people is not a win of mine');
 

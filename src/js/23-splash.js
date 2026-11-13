@@ -2,8 +2,11 @@
 function latestSlot(){let best=null;for(let n=1;n<=SLOTS;n++){const m=slotMeta(n);if(m&&(!best||(m.t||0)>(best.m.t||0)))best={n,m}}return best}
 function emptySlot(){const c=curSlot();if(!slotMeta(c)&&!G)return c;for(let n=1;n<=SLOTS;n++)if(!slotMeta(n))return n;return 0}
 function splashMetaLine(m){if(!m)return '';const bits=[m.club,m.season,m.wk!=null?'שבוע '+(m.wk+1):''].filter(Boolean);return bits.map(esc).join(' · ')}
-function renderSplash(){const ui=$('spUI');if(!ui)return;
- ui.innerHTML=`<button type="button" class="sp-btn sp-new" id="spRegular">משחק רגיל</button><button type="button" class="sp-btn sp-cont" id="spNetwork">משחק רשת</button><div class="sp-tag">${G?'הקריירה שלך מחכה לך':'הקבוצה שלך. הדרך שלך.'}</div>`;
+/* The full game: regular / network. The beginner page: a new coach writes his name here (network play moved to the league
+   screen and to the end of the home screen), a returning one continues; a small link leads to the full game. */
+function renderSplash(){const ui=$('spUI');if(!ui)return;const beg=!!window.BEGINNER,fresh=beg&&!(G&&G.beginner);
+ ui.innerHTML=beg?`${fresh?`<label class="sp-name" for="spName"><span>שם המאמן</span><input id="spName" maxlength="24" autocomplete="name" enterkeyhint="go" placeholder="איך קוראים לך?"></label><div class="sp-err" id="spErr" role="alert"></div>`:''}<button type="button" class="sp-btn sp-new" id="spRegular">${fresh?'משחק רגיל':'המשך קריירה'}</button><div class="sp-tag">${fresh?'הקבוצה שלך. הדרך שלך.':'הקריירה שלך מחכה לך'}</div><a class="sp-link" href="./">למשחק הפרו</a>`
+  :`<button type="button" class="sp-btn sp-new" id="spRegular">משחק רגיל</button><button type="button" class="sp-btn sp-cont" id="spNetwork">משחק רשת</button><div class="sp-tag">${G?'הקריירה שלך מחכה לך':'הקבוצה שלך. הדרך שלך.'}</div>`;
 }
 const INTRO={mp4:'assets/launch.mp4',poster:'assets/launch-poster.jpg'};let INTRO_R=null;
 function playIntro(sp){endIntro(true);const card=sp.querySelector('.sp-card');if(!card)return;
@@ -15,7 +18,8 @@ function playIntro(sp){endIntro(true);const card=sp.querySelector('.sp-card');if
 function endIntro(){const r=INTRO_R;if(!r)return;INTRO_R=null;r.v.pause();r.v.removeAttribute('src');r.v.load();r.box.remove()}
 function showSplash(){const sp=$('splash');if(!sp)return;sp.classList.remove('hide','out');document.body.style.overflow='hidden';renderSplash();playIntro(sp);
  sp.onclick=e=>{if(e.target.closest('#spNetwork')){hideSplash();void Rooms.open();return}
- if(e.target.closest('#spRegular')){if(window.BEGINNER||G){hideSplash();return}if(cloud.ready&&cloud.meta){hideSplash();return cloudLoad()}splashNew()}};
+ if(e.target.closest('#spRegular')){if(window.BEGINNER){if(typeof BsplashGo==='function'&&!BsplashGo())return;hideSplash();return}if(G){hideSplash();return}if(cloud.ready&&cloud.meta){hideSplash();return cloudLoad()}splashNew()}};
+ sp.onkeydown=e=>{if(e.key==='Enter'&&e.target.id==='spName'){e.preventDefault();$('spRegular')?.click()}};
  $('spRegular')?.focus({preventScroll:true});
 }
 document.addEventListener('visibilitychange',()=>{const r=INTRO_R;if(!r)return;if(document.hidden)r.v.pause();else if(!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)r.v.play()?.catch(()=>{})});

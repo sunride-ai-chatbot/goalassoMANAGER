@@ -113,7 +113,7 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   const tap=(p,sel)=>p.evaluate(s=>document.querySelector(s).click(),sel);
   const ub=new URL(BASE);ub.pathname=ub.pathname.replace(/[^/]*$/,'')+'beginner.html';const host=await mk(ub.href);await host.waitForSelector('[data-pcup-open]',{timeout:60000});await tap(host,'[data-pcup-open]');await host.waitForSelector('#pcup [data-pc-team]');
   P.teams=await host.locator('[data-pc-team]').count();await tap(host,'[data-pc-team="i:mta"]');await host.waitForSelector('[data-pc-mode]');P.modes=await host.locator('[data-pc-mode]').count();await host.screenshot({path:OUT+'pcup-modes.png'});
-  await host.evaluate(()=>{G.pen3d=false});await tap(host,'[data-pc-mode="cpu"]');await tap(host,'#pgGo');await host.waitForFunction(()=>PG&&PG.stage&&(PG.fire||PG.pick),null,{timeout:60000});
+  await host.evaluate(()=>{G.pen3d=false});await tap(host,'[data-pc-mode="cpu"]');await host.waitForSelector('[data-pc-cpuopp]');P.rivals=await host.locator('[data-pc-cpuopp]').count();await tap(host,'[data-pc-cpuopp="?"]');await tap(host,'#pgGo');await host.waitForFunction(()=>PG&&PG.stage&&(PG.fire||PG.pick),null,{timeout:60000});
   P.cpu=await host.evaluate(()=>({view:PG.stage.kind,mode:PG.pick?'keep':'kick'}));await host.waitForTimeout(400);await host.screenshot({path:OUT+'pcup-cpu.png'});await tap(host,'.pc-quit');
   await tap(host,'[data-pc-mode="net"]');await tap(host,'[data-pc-net="host"]');await host.waitForFunction(()=>PCUP.net&&(PCUP.net.state==='open'||PCUP.net.err),null,{timeout:40000});
   const net=await host.evaluate(()=>({err:PCUP.net.err||null,code:PCUP.net.code||null}));
