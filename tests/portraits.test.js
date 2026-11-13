@@ -26,8 +26,9 @@ async function main(){try{
  w.eval("newGame('mta','בדיקת פנים')");
  assert.equal(w.eval('RAW.flatMap(c=>c.players).filter(r=>!playerVisualId(fromRaw(r,65))).length'),0);
  // a European namesake never borrows an Israeli face (Celtic's Jota vs Hapoel Ramat Gan's Jota), new or from an old save
- assert.equal(w.eval("playerVisualId(fromRawEuro({he:\"ז'וטה\",en:'Jota',pos:'FW',age:27,nat:'Portugal',value_m:8},70))"),null);
- assert.equal(w.eval("playerVisualId({id:1,first:\"ז'וטה\",last:'',real:true,en:'Jota'})"),null);
+ // (since his own Commons picture was found he has a face of his own, a "wd-" one; an Israeli "ifa-" face is what must never come back)
+ for(const v of [w.eval("playerVisualId(fromRawEuro({he:\"ז'וטה\",en:'Jota',pos:'FW',age:27,nat:'Portugal',value_m:8},70))"),w.eval("playerVisualId({id:1,first:\"ז'וטה\",last:'',real:true,en:'Jota'})")])
+  assert.ok(v===null||/^wd-/.test(v),'a European namesake has no face or his own, never an Israeli one: '+v);
  // unresolved faces keep their identity but render the designed fallback, never another face
  for(const k of unresolved)assert.equal(w.eval(`playerVisual({visualId:'${k}'})`),null);
  const malika=w.eval("me().players.find(p=>fullName(p)==='אופק מליקה')");
