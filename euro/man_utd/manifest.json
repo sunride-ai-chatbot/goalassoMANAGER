@@ -2314,7 +2314,34 @@
    "en": "Shea Lacey",
    "pos": "FW",
    "age": 19,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Shea Lacey.jpg",
+     "pageid": 203028660,
+     "page": "https://commons.wikimedia.org/wiki/File:Shea_Lacey.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Shea_Lacey.jpg/960px-Shea_Lacey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3730,
+     "height": 4662,
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "author": "Jahrenvisuals",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-08-08 18:02:10",
+     "file": "21-Q117207006-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q117207006"
+     ],
+     "score": 11.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q117207006",
    "wikidata": "https://www.wikidata.org/wiki/Q117207006",

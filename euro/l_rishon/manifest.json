@@ -33,7 +33,11 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "hebrew name found, club not on the item: Q138351345"
+   "match": "hebrew_name+article_names_club",
+   "qid": "Q138351345",
+   "wikidata": "https://www.wikidata.org/wiki/Q138351345",
+   "label": "Roey Ben Shimon",
+   "birthYear": 2000
   },
   {
    "he": "רונן פרץ",
@@ -77,7 +81,11 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "hebrew name found, club not on the item: Q98393976"
+   "match": "hebrew_name+article_names_club",
+   "qid": "Q98393976",
+   "wikidata": "https://www.wikidata.org/wiki/Q98393976",
+   "label": "Dolev Azulay",
+   "birthYear": 1997
   },
   {
    "he": "עמרי לוזון",

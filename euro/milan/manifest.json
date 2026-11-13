@@ -958,6 +958,33 @@
      "date": "2023-02-24 10:19",
      "file": "09-Q109255453-13-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:CFR Cluj - Lazio 0-0 (52708189810).png",
+     "pageid": 129213119,
+     "page": "https://commons.wikimedia.org/wiki/File:CFR_Cluj_-_Lazio_0-0_(52708189810).png",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/CFR_Cluj_-_Lazio_0-0_%2852708189810%29.png/960px-CFR_Cluj_-_Lazio_0-0_%2852708189810%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/png",
+     "width": 1365,
+     "height": 2048,
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "author": "Nuță Lucian from Cluj-Napoca, Romania",
+     "credit": "CFR Cluj - Lazio 0-0",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-02-24 10:23",
+     "file": "09-Q109255453-m14.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q109255453",
+      "Q3930067"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "name+club",

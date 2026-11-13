@@ -124,6 +124,32 @@
      "file": "09-Q18719698-0.jpg",
      "fromP18": true,
      "via": "p18"
+    },
+    {
+     "title": "File:Andre de Jong (2).jpg",
+     "pageid": 187471024,
+     "page": "https://commons.wikimedia.org/wiki/File:Andre_de_Jong_(2).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Andre_de_Jong_%282%29.jpg/500px-Andre_de_Jong_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 688,
+     "height": 1424,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "JaumeBG",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "27 March 2026 (according to Exif data)",
+     "file": "09-Q18719698-m1.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q937857"
+     ],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
@@ -234,7 +260,11 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q141156143:2002"
+   "match": "name+club in the article infobox",
+   "qid": "Q141156143",
+   "wikidata": "https://www.wikidata.org/wiki/Q141156143",
+   "label": "Thapelo Mokobodi",
+   "birthYear": 2002
   },
   {
    "he": "Nkosikhona Ndaba",
@@ -249,7 +279,32 @@
    "en": "Lebone Seema",
    "pos": "DF",
    "age": 23,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Lebone Seema.jpg",
+     "pageid": 198027938,
+     "page": "https://commons.wikimedia.org/wiki/File:Lebone_Seema.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Lebone_Seema.jpg/960px-Lebone_Seema.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1638,
+     "height": 2048,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Zeeluna",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-08-13",
+     "file": "21-Q141349880-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 5.0,
+     "pass": "more"
+    }
+   ],
    "match": "squad_qid",
    "qid": "Q141349880",
    "wikidata": "https://www.wikidata.org/wiki/Q141349880",
@@ -326,7 +381,11 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q58797097:1989"
+   "match": "name+club in the article infobox",
+   "qid": "Q58797097",
+   "wikidata": "https://www.wikidata.org/wiki/Q58797097",
+   "label": "Makhehleni Makhaula",
+   "birthYear": 1989
   },
   {
    "he": "Christian Derbyshire",
