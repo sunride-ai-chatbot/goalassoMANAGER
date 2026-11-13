@@ -5,7 +5,7 @@ function splashMetaLine(m){if(!m)return '';const bits=[m.club,m.season,m.wk!=nul
 /* The full game: regular / network. The beginner page: a new coach writes his name here (network play moved to the league
    screen and to the end of the home screen), a returning one continues; a small link leads to the full game. */
 function renderSplash(){const ui=$('spUI');if(!ui)return;const beg=!!window.BEGINNER,fresh=beg&&!(G&&G.beginner);
- ui.innerHTML=beg?`${fresh?`<label class="sp-name" for="spName"><span>שם המאמן</span><input id="spName" maxlength="24" autocomplete="name" enterkeyhint="go" placeholder="איך קוראים לך?"></label><div class="sp-err" id="spErr" role="alert"></div>`:''}<button type="button" class="sp-btn sp-new" id="spRegular">${fresh?'משחק רגיל':'המשך קריירה'}</button><div class="sp-tag">${fresh?'הקבוצה שלך. הדרך שלך.':'הקריירה שלך מחכה לך'}</div><a class="sp-link" href="./">למשחק הפרו</a>`
+ ui.innerHTML=beg?`${fresh?`<label class="sp-name" for="spName"><span>שם המאמן</span><input id="spName" maxlength="24" autocomplete="name" enterkeyhint="go" placeholder="איך קוראים לך?"></label><div class="sp-err" id="spErr" role="alert"></div>`:''}<button type="button" class="sp-btn sp-new" id="spRegular">${fresh?'משחק רגיל':'המשך קריירה'}</button><div class="sp-tag">${fresh?'הקבוצה שלך. הדרך שלך.':'הקריירה שלך מחכה לך'}</div><a class="sp-link" href="index.html">למשחק הפרו</a>`
   :`<button type="button" class="sp-btn sp-new" id="spRegular">משחק רגיל</button><button type="button" class="sp-btn sp-cont" id="spNetwork">משחק רשת</button><div class="sp-tag">${G?'הקריירה שלך מחכה לך':'הקבוצה שלך. הדרך שלך.'}</div>`;
 }
 const INTRO={mp4:'assets/launch.mp4',poster:'assets/launch-poster.jpg'};let INTRO_R=null;

@@ -48,6 +48,6 @@ Hebrew (RTL), mobile-first football management game. Single-file web build.
 
 ## Deploy
 - Claude artifact: publish `ligat-haal-manager.html` with every file in `assets/` as supporting files.
-- GitHub Pages: `.github/workflows/pages.yml` builds and deploys on push to `main` (enable Pages → Source: GitHub Actions).
+- GitHub Pages: `.github/workflows/pages.yml` builds and deploys on push to `main` (enable Pages → Source: GitHub Actions). The custom domain goal-m.com (no www) has always opened on the beginner game: the shell's first script (`beginnerFirst` in `src/index.html`) sends its bare root to `beginner.html`; the full game is `index.html` there (the beginner title's small link), and a root with a query (`?join=`, `?pen=`, `?v=`) is left alone.
 
 - Invitation friendlies: `35c-network-rooms.js` is the production entry in beginner and Pro, using existing room RPCs and email auth. See `docs/network-friendlies.md`. Legacy league support remains for existing `G.mp` saves. Build config placeholder is `__SUPABASE_BUILD__`; the public fallback is `data/config/multiplayer-public.json`.

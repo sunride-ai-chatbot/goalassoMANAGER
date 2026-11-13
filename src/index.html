@@ -2,6 +2,9 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
+<script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
+function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
+if(beginnerFirst(location))location.replace('beginner.html')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
 <meta name="application-name" content="GOALASSO">

@@ -6,7 +6,11 @@ async function boot(mode,saved={},query=''){
 }
 (async()=>{for(const mode of ['beginner','pro']){
  // the full game: regular / network. The beginner page: the coach's name instead of the network button, and a link to the full game.
- let {w,errors}=await boot(mode);const beg=mode==='beginner';assert.equal(w.document.querySelectorAll('#spUI button').length,beg?1:2);assert.equal(!!w.document.querySelector('#spName'),beg);assert.equal(!!w.document.querySelector('#spNetwork'),!beg);assert.equal(!!w.document.querySelector('#spUI .sp-link[href="./"]'),beg);assert.equal(w.eval('splashOpen()'),true);
+ let {w,errors}=await boot(mode);const beg=mode==='beginner';assert.equal(w.document.querySelectorAll('#spUI button').length,beg?1:2);assert.equal(!!w.document.querySelector('#spName'),beg);assert.equal(!!w.document.querySelector('#spNetwork'),!beg);assert.equal(!!w.document.querySelector('#spUI .sp-link[href="index.html"]'),beg);
+ // goal-m.com has always opened on the beginner game: only its bare root goes there, on both pages the same rule
+ {const f=w.beginnerFirst,L=(hostname,pathname,search='',hash='')=>({hostname,pathname,search,hash});assert.equal(f(L('goal-m.com','/')),true);assert.equal(f(L('www.goal-m.com','/')),true);
+  assert.equal(f(L('goal-m.com','/index.html')),false,'the full game stays reachable');assert.equal(f(L('goal-m.com','/beginner.html')),false);assert.equal(f(L('goal-m.com','/','?join=ABCD')),false,'an invitation link is not sent away');
+  assert.equal(f(L('sunride-ai-chatbot.github.io','/goalassoMANAGER/')),false);assert.equal(f(L('notgoal-m.com','/')),false)}assert.equal(w.eval('splashOpen()'),true);
  if(beg){w.document.querySelector('#spRegular').click();assert.equal(w.eval('splashOpen()'),true,'a new coach writes his name first');w.document.querySelector('#spName').value='בדיקה'}
  w.document.querySelector('#spRegular').click();assert.equal(w.eval('splashOpen()'),false);
  w.eval(mode==='beginner'?"Bcreate('mta');me().pts=3;me().P=1;Bwrite()":"newGame('mta','בדיקה');G.phase='play';me().pts=3;me().P=1;save()");
