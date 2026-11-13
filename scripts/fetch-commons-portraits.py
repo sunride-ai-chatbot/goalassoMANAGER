@@ -277,7 +277,7 @@ def he_norm(s):
     s = re.sub(r'\s*\([^)]*\)', '', s or '')
     return re.sub(r'\s+', ' ', re.sub(r'["\'׳״`־-]', ' ', s)).strip()
 
-def identify_hebrew(player, club_q):
+def identify_hebrew(player, club_q, club_he=''):
     """A squad that names its players in Hebrew (the second tier): the Hebrew label, alias or article title must be the
     name and the Wikidata item must list this club among the player's teams. The squad ages of these clubs are not
     reliable, so there is no birth-year fallback: no club on the item, no match."""
@@ -304,6 +304,19 @@ def identify_hebrew(player, club_q):
         return team[0], 'hebrew_name+club'
     if not cands:
         return None, 'no_wikidata_footballer_with_this_name'
+    if not team and club_he:
+        # Wikidata often lags a transfer: the one footballer of this name whose Hebrew article names this club is the man
+        said = []
+        for e in cands:
+            t = e.get('sitelinks', {}).get('hewiki', {}).get('title')
+            if not t:
+                continue
+            r = get('https://he.wikipedia.org/w/api.php', {'action': 'query', 'titles': t, 'prop': 'revisions', 'rvprop': 'content', 'rvslots': 'main', 'format': 'json'})
+            text = ' '.join(rv.get('slots', {}).get('main', {}).get('*', '') for pg in r.get('query', {}).get('pages', {}).values() for rv in pg.get('revisions', []))
+            if he_norm(club_he) in he_norm(text):
+                said.append(e)
+        if len(said) == 1 and len(cands) == 1:
+            return said[0], 'hebrew_name+article_names_club'
     return None, ('ambiguous_same_club: ' if team else 'hebrew name found, club not on the item: ') + ', '.join(e['id'] for e in (team or cands)[:6])
 
 def more_pass(a, keys):
@@ -336,7 +349,7 @@ def more_pass(a, keys):
                 ent = None
                 if not qid and (key.startswith('l_') or re.search('[\u0590-\u05ff]', p.get('en') or '')) and re.search('[\u0590-\u05ff]', p.get('he') or ''):
                     cq = cq or club_qid(key)
-                    ent, why = identify_hebrew(p, cq)
+                    ent, why = identify_hebrew(p, cq, squad.get('name_he') or '')
                     entry['match'] = why
                     if ent:
                         qid = ent['id']; entry.update(qid=qid, wikidata='https://www.wikidata.org/wiki/' + qid, label=label(ent) or p.get('he'), birthYear=birth_year(ent))
