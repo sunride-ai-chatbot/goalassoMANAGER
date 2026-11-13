@@ -273,7 +273,32 @@
    "en": "Aleksandër Trumçi",
    "pos": "DF",
    "age": 25,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:FranPerezRayoVallecano.png",
+     "pageid": 176058479,
+     "page": "https://commons.wikimedia.org/wiki/File:FranPerezRayoVallecano.png",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/e1/FranPerezRayoVallecano.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/png",
+     "width": 896,
+     "height": 1459,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "MaestroDash",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-10-02",
+     "file": "16-Q115775180-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 2.0,
+     "pass": "more"
+    }
+   ],
    "match": "squad_qid",
    "qid": "Q115775180",
    "wikidata": "https://www.wikidata.org/wiki/Q115775180",
@@ -322,7 +347,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q144048:1960, Q15907851:1993, Q118918027:2003, Q114222941:2002, Q21540971:1997"
+   "match": "ambiguous: Q144048:1960, Q15907851:1993, Q2640420:1970, Q118918027:2003, Q114222941:2002"
   },
   {
    "he": "Nazif Ceka",

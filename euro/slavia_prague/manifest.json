@@ -128,7 +128,34 @@
    "en": "Jakub Markovič",
    "pos": "GK",
    "age": 25,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:SK Slavia Praha 20261019 (8) (cropped).JPG",
+     "pageid": 202329549,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(8)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/50/SK_Slavia_Praha_20261019_%288%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 432,
+     "height": 621,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:48:30",
+     "file": "02-Q60791920-m0.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+club",
    "qid": "Q60791920",
    "wikidata": "https://www.wikidata.org/wiki/Q60791920",
@@ -229,7 +256,34 @@
    "en": "Ange N'Guessan",
    "pos": "DF",
    "age": 23,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:SK Slavia Praha 20261019 (5) (cropped).JPG",
+     "pageid": 202306766,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(5)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/0a/SK_Slavia_Praha_20261019_%285%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 567,
+     "height": 853,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:48:22",
+     "file": "04-Q130545539-m0.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q130545539",
    "wikidata": "https://www.wikidata.org/wiki/Q130545539",
@@ -289,7 +343,34 @@
    "en": "Samuel Isife",
    "pos": "DF",
    "age": 22,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:SK Slavia Praha 20261019 (11) (cropped).JPG",
+     "pageid": 202399477,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(11)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/cf/SK_Slavia_Praha_20261019_%2811%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 620,
+     "height": 666,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:11",
+     "file": "09-Q137773863-m0.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q137773863",
    "wikidata": "https://www.wikidata.org/wiki/Q137773863",
@@ -555,6 +636,32 @@
      "date": "2026-05-29 23:12:37",
      "file": "12-Q119773936-4-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:SK Slavia Praha 20261019 (15) (cropped).JPG",
+     "pageid": 202329896,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(15)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/84/SK_Slavia_Praha_20261019_%2815%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 506,
+     "height": 678,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:16",
+     "file": "12-Q119773936-m5.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "name+club",
@@ -638,6 +745,32 @@
      "date": "2016-02-04 18:49:13",
      "file": "14-Q96070453-1-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:David Jurásek SK Slavia Praha 20261019 (2) (cropped).JPG",
+     "pageid": 202399621,
+     "page": "https://commons.wikimedia.org/wiki/File:David_Jur%C3%A1sek_SK_Slavia_Praha_20261019_(2)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fb/David_Jur%C3%A1sek_SK_Slavia_Praha_20261019_%282%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 921,
+     "height": 1157,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:47:57",
+     "file": "14-Q96070453-m2.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 4.0,
+     "pass": "more"
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",
@@ -917,6 +1050,32 @@
      "date": "1969",
      "file": "15-Q130634322-13-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:Portrait of James Baldwin LCCN2004662552.jpg",
+     "pageid": 66036411,
+     "page": "https://commons.wikimedia.org/wiki/File:Portrait_of_James_Baldwin_LCCN2004662552.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Portrait_of_James_Baldwin_LCCN2004662552.jpg/960px-Portrait_of_James_Baldwin_LCCN2004662552.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1053,
+     "height": 1536,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Carl Van Vechten",
+     "credit": "Library of Congress\n\nCatalog: http://lccn.loc.gov/2004662552\nImage download: https://cdn.loc.gov/service/pnp/cph/3a40000/3a42000/3a42800/3a42800r.jpg\nOriginal url: http://hdl.loc.gov/loc.pnp/van.5a51683",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "1955",
+     "file": "15-Q130634322-m14.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q273210"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",
@@ -928,6 +1087,10 @@
     {
      "title": "File:Graffiti from George Floyd protests in Indianapolis, 2020-06-01 21.jpg",
      "license": "Copyrighted free use"
+    },
+    {
+     "title": "File:(Portrait of James Baldwin) (LOC) - Flickr - The Library of Congress.jpg",
+     "license": "No restrictions"
     }
    ]
   },
@@ -936,7 +1099,34 @@
    "en": "Toumani Diakité",
    "pos": "MF",
    "age": 20,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:SK Slavia Praha 20261019 (24) (cropped).JPG",
+     "pageid": 202329612,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(24)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/84/SK_Slavia_Praha_20261019_%2824%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 363,
+     "height": 508,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:31",
+     "file": "16-Q139889187-m0.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q139889187",
    "wikidata": "https://www.wikidata.org/wiki/Q139889187",
@@ -1075,6 +1265,32 @@
      "date": "2024-09-04 14:37:56",
      "file": "18-Q138561908-0-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:SK Slavia Praha 20261019 (17) (Wiktor Nowak).JPG",
+     "pageid": 202313436,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(17)_(Wiktor_Nowak).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/56/SK_Slavia_Praha_20261019_%2817%29_%28Wiktor_Nowak%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 960,
+     "height": 1383,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:19",
+     "file": "18-Q138561908-m1.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",
@@ -1088,7 +1304,34 @@
    "en": "Pavel Kačor",
    "pos": "MF",
    "age": 20,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Pavel Kačor SK Slavia Praha 20261019 (18) (cropped).JPG",
+     "pageid": 202399332,
+     "page": "https://commons.wikimedia.org/wiki/File:Pavel_Ka%C4%8Dor_SK_Slavia_Praha_20261019_(18)_(cropped).JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Pavel_Ka%C4%8Dor_SK_Slavia_Praha_20261019_%2818%29_%28cropped%29.JPG/960px-Pavel_Ka%C4%8Dor_SK_Slavia_Praha_20261019_%2818%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1012,
+     "height": 1209,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:20",
+     "file": "19-Q139944562-m0.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393"
+     ],
+     "score": 4.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q139944562",
    "wikidata": "https://www.wikidata.org/wiki/Q139944562",
@@ -1100,7 +1343,35 @@
    "en": "Emmanuel Ayaosi",
    "pos": "MF",
    "age": 21,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:SK Slavia Praha 20261019 (19) (cropped).JPG",
+     "pageid": 202330013,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(19)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/85/SK_Slavia_Praha_20261019_%2819%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 563,
+     "height": 774,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:22",
+     "file": "20-Q134312023-m0.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393",
+      "Q104488728"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q134312023",
    "wikidata": "https://www.wikidata.org/wiki/Q134312023",
@@ -1124,7 +1395,62 @@
    "en": "Mojmír Chytil",
    "pos": "FW",
    "age": 27,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:SK Slavia Praha 20261019 (19) (Mojmír Chytil).JPG",
+     "pageid": 202330061,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(19)_(Mojm%C3%ADr_Chytil).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f6/SK_Slavia_Praha_20261019_%2819%29_%28Mojm%C3%ADr_Chytil%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 637,
+     "height": 876,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:22",
+     "file": "22-Q104488728-m0.jpg",
+     "fromP18": true,
+     "via": "p18",
+     "depicts": [
+      "Q194393",
+      "Q104488728"
+     ],
+     "score": 7.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:SK Slavia Praha 20261019 (19) (cropped).JPG",
+     "pageid": 202330013,
+     "page": "https://commons.wikimedia.org/wiki/File:SK_Slavia_Praha_20261019_(19)_(cropped).JPG",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/85/SK_Slavia_Praha_20261019_%2819%29_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 563,
+     "height": 774,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "User:Zafer",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2026-10-19 17:49:22",
+     "file": "22-Q104488728-m1.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q194393",
+      "Q104488728"
+     ],
+     "score": 6.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q104488728",
    "wikidata": "https://www.wikidata.org/wiki/Q104488728",
