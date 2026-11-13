@@ -45,6 +45,8 @@ def save(p, obj, compact=False):
 # club-mates 3 (one pair of brothers). A file of the player's own Commons category needs FM_MIN; a file that only a
 # name search found has no such prior and needs FM_MIN_SEARCH. Every face accepted this way is still looked at.
 FM_MIN = 0.55
+FM_MIN_SEARCH = 0.60
+
 def two_names(title, surnames):
     """Does the file name name somebody else as well? "Hamad Al Qallaf, Vladimír Coufal CZE-KUW (cropped)" shows either
     of them. Somebody named right before the player, or "A and B": yes. "Daniel Holzer, Baník Ostrava-Zlín" (his club after
