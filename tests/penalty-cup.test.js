@@ -47,6 +47,8 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   $('#pgGo').click();await until(()=>w.eval('!!(PG&&(PG.fire||PG.strike||PG.pick))'),'the first kick');
   // play it out: we always aim at a top corner; in goal we always go low right
   let guard=0;while(!$('#pgDone')){if(++guard>4000)throw new Error('the shoot-out never ended');w.eval("if(PG){try{PG.fire&&PG.fire(3.2,2.1)}catch(e){}try{PG.go&&PG.go('DR')}catch(e){}}");await tick(5)}
+  const endOK=(D,gh,ga,what)=>{const e=D.querySelector('.pg-endsc'),n=[...e.children];assert.equal(e.querySelector('[dir="ltr"]'),null,what+': never one left-to-right "4:5" between two names');assert.equal(n.length,3);assert.ok(n[1].classList.contains('sides'));assert.equal(n[1].querySelector('.sd-h').textContent,String(gh),what+': the first club\'s number is the first (right-hand) one');assert.equal(n[1].querySelector('.sd-a').textContent,String(ga),what)};
+  {const sc=run('G&&PG?[... (PG.root.querySelectorAll("#pgSo .pg-so-row strong"))].map(x=>+x.textContent):null')||[];if(sc.length===2)endOK(w.document,sc[0],sc[1],'against the computer');else assert.ok($('.pg-endsc .sides'),'against the computer')}
   const rec0=run('pcupRec()');$('#pgDone').click();const rec1=run('pcupRec()');assert.equal(rec1.played,rec0.played+1,'the result is recorded once');assert.equal($('#penGame'),null);assert.ok($('[data-pc-mode="cpu"]'),'back at the modes');
   // leaving in the middle records nothing
   $('[data-pc-mode="cpu"]').click();$('[data-pc-cpuopp="?"]').click();assert.ok($('#penGame'),'or drawn by lot');$('#penGame .pc-quit').click();assert.equal($('#penGame'),null);assert.equal(run('pcupRec()').played,rec1.played);
@@ -74,6 +76,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.ok(kicks>=6,'at least six kicks decide a shoot-out, got '+kicks);assert.ok(roles.every((r,i)=>i===0||r!==roles[i-1]),'kicker and keeper swap with every kick: '+roles.join(''));
   const seat=run('window.__seat');assert.equal(seat.length,kicks);assert.ok(seat[0][0]&&seat[0][1]===null,'no slide: the ball goes somewhere, the keeper stays');assert.deepEqual(seat[1],['R','UL'],'the last slide of each player');assert.deepEqual(seat[2],['UR','DL']);
   const sc=run('({a:PCUP.duel.S.a,b:PCUP.duel.S.b})');assert.ok(w.eval(`penShootoutDone(${JSON.stringify(sc.a)},${JSON.stringify(sc.b)})`),'ended by the shoot-out rule');
+  {const sum=x=>x.reduce((t,v)=>t+v,0);endOK(w.document,sum(sc.a),sum(sc.b),'one phone');assert.match($('.pg-endsc').children[0].textContent+$('.pg-endsc').children[2].textContent,/./)}
   $('#pgDone').click();assert.equal(run('pcupRec()').duels,(rec1.duels||0)+1);assert.equal(run('pcupRec()').played,rec1.played,'a duel between two people is not a win of mine');
 
   // ---- close: the career is exactly as it was, nothing was written
@@ -100,7 +103,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
     for(const T of [{$,w},{$:G2.$,w:g}])if(T.$('.pg-dirs')){const d=dirs[(guard*7+(T.w===g?3:0))%8];T.$(`.pg-dirs [data-dir="${d}"]`).click()}
     await tick(5)}
   assert.ok(lost['c0:'+w.eval('PCUP.net.id')]||lost['c0:'+g.eval('PCUP.net.id')],'a commit was lost and sent again');
-  const sa=run('PCUP.duel.S'),sb=G2.run('PCUP.duel.S');assert.deepEqual(sb,sa,'both phones saw the same kicks');assert.ok(sa.a.length+sa.b.length>=6);
+  const sa=run('PCUP.duel.S'),sb=G2.run('PCUP.duel.S');assert.deepEqual(sb,sa,'both phones saw the same kicks');{const sum=x=>x.reduce((t,v)=>t+v,0);endOK(w.document,sum(sa.a),sum(sa.b),'online, host');endOK(g.document,sum(sa.a),sum(sa.b),'online, guest')}assert.ok(sa.a.length+sa.b.length>=6);
   assert.notEqual($('.pg-end').classList.contains('good'),G2.$('.pg-end').classList.contains('good'),'one won, one lost');
   // a reveal never travels before the other side's commit arrived
   for(const id of [w.eval('PCUP.net.id'),g.eval('PCUP.net.id')]){const other=bus.sent.findIndex(m=>m.t==='c'&&m.k===0&&m.f!==id),mine=bus.sent.findIndex(m=>m.t==='r'&&m.k===0&&m.f===id);assert.ok(other>=0&&mine>other,'reveal after the other commit')}

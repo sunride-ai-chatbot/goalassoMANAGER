@@ -82,7 +82,7 @@ function pcupDuel(D){const A=D.A,B=D.B;const root=penOverlay({title:'אלוף ה
   const paint=()=>{const el=root.querySelector('#pgSo');if(el)el.innerHTML=`<div class="pg-so-row${side==='a'?' on':''}"><b>${esc(A.c.short||A.c.name)}</b><span>${dots('a')}</span><strong>${sum(S.a)}</strong></div><div class="pg-so-row${side==='b'?' on':''}"><b>${esc(B.c.short||B.c.name)}</b><span>${dots('b')}</span><strong>${sum(S.b)}</strong></div>`};
   const alive=()=>!over&&PG===pg&&!!PCUP;
   const finish=(win,why)=>{if(!alive())return;over=true;const won=D.mine?win===D.mine:null;const W=win==='a'?A:B;
-    penPanel(`<div class="pg-end ${why?'':won===false?'bad':'good'}"><small>אלוף הפנדלים</small><h2${why?' style="font-size:34px;line-height:1.1"':''}>${why?esc(why):won==null?esc(W.c.short||W.c.name)+' ניצחה':won?'ניצחת!':'הפסדת'}</h2><div class="pg-endsc"><bdi>${esc(A.c.short||A.c.name)}</bdi> <b dir="ltr">${sum(S.a)}:${sum(S.b)}</b> <bdi>${esc(B.c.short||B.c.name)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
+    penPanel(`<div class="pg-end ${why?'':won===false?'bad':'good'}"><small>אלוף הפנדלים</small><h2${why?' style="font-size:34px;line-height:1.1"':''}>${why?esc(why):won==null?esc(W.c.short||W.c.name)+' ניצחה':won?'ניצחת!':'הפסדת'}</h2><div class="pg-endsc"><bdi>${esc(A.c.short||A.c.name)}</bdi> ${scoreSides(sum(S.a),sum(S.b))} <bdi>${esc(B.c.short||B.c.name)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
     root.querySelector('#pgBot').innerHTML='';side=null;paint();if(won!==false&&!why){try{SFX.win()}catch(e){}confetti(2200);buzz('win')}
     root.querySelector('#pgDone').onclick=()=>{penClose();D.end(win,won,!!why)}};
   D.abort=why=>finish(sum(S.a)>=sum(S.b)?'a':'b',why);

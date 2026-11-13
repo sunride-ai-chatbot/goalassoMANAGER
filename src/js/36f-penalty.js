@@ -196,17 +196,17 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
 /* a penalty during a live match: for our club the manager kicks, against it he keeps goal */
 function penMatchKick(M,c,p,cb){const h=club(M.h),a=club(M.a);const opp=c.id===M.h?a:h;const mine=c.id===G.me;const gkx=xiPlayers(M,opp).find(x=>x.p.pos==='GK');
   const e=M.xi[c.id].find(x=>x.pid===p.id);const en=e?liveEnergy(M,c,p,e,M.m):100;
-  penOverlay({title:mine?`פנדל ל${c.short||c.name}!`:`פנדל ל${c.short||c.name}`,meta:`<bdi dir="ltr">${fm(M.m)}</bdi> · <bdi>${esc(h.short)}</bdi> <bdi dir="ltr">${M.gh}:${M.ga}</bdi> <bdi>${esc(a.short)}</bdi>`});const pg=PG;
+  penOverlay({title:mine?`פנדל ל${c.short||c.name}!`:`פנדל ל${c.short||c.name}`,meta:`<bdi dir="ltr">${fm(M.m)}</bdi> · <bdi>${esc(h.short)}</bdi> ${scoreSides(M.gh,M.ga)} <bdi>${esc(a.short)}</bdi>`});const pg=PG;
   penKick({mode:mine?'kick':'keep',taker:{p,c},keeper:gkx?{p:gkx.p,c:opp}:null,home:M.h,energy:en,pressure:M.m>=85},r=>{if(!r.auto){if(mine&&r.out==='goal')M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save')M.penSaved=(M.penSaved||0)+1}
     setTimeout(()=>{if(PG!==pg)return;penClose();cb(r.out,r.how||(r.out==='goal'?null:(Math.random()<.5?'save':'off')))},penQuick()?0:250)})}
 /* a shoot-out at the end of a knockout tie */
 function penShootout(M,h,a,done){const meH=h.id===G.me;const my=meH?h:a,op=meH?a:h;const ord={h:penOrder(M,h),a:penOrder(M,a)};const gkOf=c=>{const x=xiPlayers(M,c).find(x=>x.p.pos==='GK');return x?{p:x.p,c}:null};
-  const root=penOverlay({title:'דו־קרב פנדלים',meta:`<bdi>${esc(h.short)}</bdi> <bdi dir="ltr">${M.gh}:${M.ga}</bdi> <bdi>${esc(a.short)}</bdi> · ${esc(M.ctx.label||'')}`});
+  const root=penOverlay({title:'דו־קרב פנדלים',meta:`<bdi>${esc(h.short)}</bdi> ${scoreSides(M.gh,M.ga)} <bdi>${esc(a.short)}</bdi> · ${esc(M.ctx.label||'')}`});
   const S={h:[],a:[]};let side=Math.random()<.5?'h':'a';const first=side;
   const dots=k=>{const n=Math.max(5,S[k].length+(S.h.length+S.a.length>=10&&S.h.length===S.a.length?1:0));let o='';for(let i=0;i<n;i++)o+=`<i class="${S[k][i]==null?'':S[k][i]?'in':'no'}"></i>`;return o};
   const paint=()=>{const el=root.querySelector('#pgSo');if(el)el.innerHTML=`<div class="pg-so-row${side==='h'?' on':''}"><b>${esc(h.short)}</b><span>${dots('h')}</span><strong>${S.h.reduce((t,v)=>t+v,0)}</strong></div><div class="pg-so-row${side==='a'?' on':''}"><b>${esc(a.short)}</b><span>${dots('a')}</span><strong>${S.a.reduce((t,v)=>t+v,0)}</strong></div>`};
   const finish=(win,auto)=>{const sc=[S.h.reduce((t,v)=>t+v,0),S.a.reduce((t,v)=>t+v,0)];const won=(win==='h')===meH;
-    penPanel(`<div class="pg-end ${won?'good':'bad'}"><small>${esc(M.ctx.label||'')}</small><h2>${won?'ניצחת בפנדלים!':'הפסד בפנדלים'}</h2><div class="pg-endsc"><bdi>${esc(h.short)}</bdi> <b dir="ltr">${sc[0]}:${sc[1]}</b> <bdi>${esc(a.short)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
+    penPanel(`<div class="pg-end ${won?'good':'bad'}"><small>${esc(M.ctx.label||'')}</small><h2>${won?'ניצחת בפנדלים!':'הפסד בפנדלים'}</h2><div class="pg-endsc"><bdi>${esc(h.short)}</bdi> ${scoreSides(sc[0],sc[1])} <bdi>${esc(a.short)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
     root.querySelector('#pgBot').innerHTML='';side=null;paint();if(won){try{SFX.win()}catch(e){}confetti(2600);buzz('win')}
     root.querySelector('#pgDone').onclick=()=>{penClose();done({win,score:sc,auto:!!auto})}};
   const autoRest=()=>{let w=penShootoutDone(S.h,S.a),g=0;while(!w&&g++<60){const c=side==='h'?h:a,o=side==='h'?a:h;const tk=ord[side][S[side].length%ord[side].length];const gk=gkOf(o);const s=penAiShot(penShootSkill(tk));S[side].push(penKickOutcome(s.x,s.y,penKeepSkill(gk&&gk.p)).out==='goal'?1:0);side=side==='h'?'a':'h';w=penShootoutDone(S.h,S.a)}finish(w||'h',true)};

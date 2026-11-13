@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="d7ea11db43c0">
-<meta name="goalasso-built" content="13.11.2026 02:50">
+<meta name="goalasso-build" content="cf5a2c481981">
+<meta name="goalasso-built" content="13.11.2026 09:08">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GOALASSO</title>
@@ -1192,7 +1192,7 @@ h3.sec:not(.btn){font-size:24px}
 .pg-end h2{font-family:var(--title);font-weight:700;font-size:54px;line-height:.95;margin:0}
 .pg-end.good h2{color:#c6f24e}.pg-end.bad h2{color:#ff8a94}
 .pg-end p{margin:0 0 6px;font-size:14.5px;line-height:1.5;color:#d9d4c6}
-.pg-endsc{font-size:17px}.pg-endsc b{font-family:var(--title);font-size:44px;line-height:1;margin:0 8px;vertical-align:-6px}
+.pg-endsc{font-size:17px}.pg-endsc b,.pg-endsc .sides{font-family:var(--title);font-size:44px;line-height:1;margin:0 8px;vertical-align:-6px;font-weight:700}
 .pg-bot{flex:none;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 10px;padding:10px 14px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(180deg,#0d0e13,#08090c);border-top:1px solid rgba(233,196,106,.22);min-height:74px}
 .pg-bot:empty{display:none}
 .pg-who{display:flex;align-items:center;gap:10px;min-width:0}
@@ -6342,17 +6342,17 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
 /* a penalty during a live match: for our club the manager kicks, against it he keeps goal */
 function penMatchKick(M,c,p,cb){const h=club(M.h),a=club(M.a);const opp=c.id===M.h?a:h;const mine=c.id===G.me;const gkx=xiPlayers(M,opp).find(x=>x.p.pos==='GK');
   const e=M.xi[c.id].find(x=>x.pid===p.id);const en=e?liveEnergy(M,c,p,e,M.m):100;
-  penOverlay({title:mine?`פנדל ל${c.short||c.name}!`:`פנדל ל${c.short||c.name}`,meta:`<bdi dir="ltr">${fm(M.m)}</bdi> · <bdi>${esc(h.short)}</bdi> <bdi dir="ltr">${M.gh}:${M.ga}</bdi> <bdi>${esc(a.short)}</bdi>`});const pg=PG;
+  penOverlay({title:mine?`פנדל ל${c.short||c.name}!`:`פנדל ל${c.short||c.name}`,meta:`<bdi dir="ltr">${fm(M.m)}</bdi> · <bdi>${esc(h.short)}</bdi> ${scoreSides(M.gh,M.ga)} <bdi>${esc(a.short)}</bdi>`});const pg=PG;
   penKick({mode:mine?'kick':'keep',taker:{p,c},keeper:gkx?{p:gkx.p,c:opp}:null,home:M.h,energy:en,pressure:M.m>=85},r=>{if(!r.auto){if(mine&&r.out==='goal')M.penMine=(M.penMine||0)+1;if(!mine&&r.how==='save')M.penSaved=(M.penSaved||0)+1}
     setTimeout(()=>{if(PG!==pg)return;penClose();cb(r.out,r.how||(r.out==='goal'?null:(Math.random()<.5?'save':'off')))},penQuick()?0:250)})}
 /* a shoot-out at the end of a knockout tie */
 function penShootout(M,h,a,done){const meH=h.id===G.me;const my=meH?h:a,op=meH?a:h;const ord={h:penOrder(M,h),a:penOrder(M,a)};const gkOf=c=>{const x=xiPlayers(M,c).find(x=>x.p.pos==='GK');return x?{p:x.p,c}:null};
-  const root=penOverlay({title:'דו־קרב פנדלים',meta:`<bdi>${esc(h.short)}</bdi> <bdi dir="ltr">${M.gh}:${M.ga}</bdi> <bdi>${esc(a.short)}</bdi> · ${esc(M.ctx.label||'')}`});
+  const root=penOverlay({title:'דו־קרב פנדלים',meta:`<bdi>${esc(h.short)}</bdi> ${scoreSides(M.gh,M.ga)} <bdi>${esc(a.short)}</bdi> · ${esc(M.ctx.label||'')}`});
   const S={h:[],a:[]};let side=Math.random()<.5?'h':'a';const first=side;
   const dots=k=>{const n=Math.max(5,S[k].length+(S.h.length+S.a.length>=10&&S.h.length===S.a.length?1:0));let o='';for(let i=0;i<n;i++)o+=`<i class="${S[k][i]==null?'':S[k][i]?'in':'no'}"></i>`;return o};
   const paint=()=>{const el=root.querySelector('#pgSo');if(el)el.innerHTML=`<div class="pg-so-row${side==='h'?' on':''}"><b>${esc(h.short)}</b><span>${dots('h')}</span><strong>${S.h.reduce((t,v)=>t+v,0)}</strong></div><div class="pg-so-row${side==='a'?' on':''}"><b>${esc(a.short)}</b><span>${dots('a')}</span><strong>${S.a.reduce((t,v)=>t+v,0)}</strong></div>`};
   const finish=(win,auto)=>{const sc=[S.h.reduce((t,v)=>t+v,0),S.a.reduce((t,v)=>t+v,0)];const won=(win==='h')===meH;
-    penPanel(`<div class="pg-end ${won?'good':'bad'}"><small>${esc(M.ctx.label||'')}</small><h2>${won?'ניצחת בפנדלים!':'הפסד בפנדלים'}</h2><div class="pg-endsc"><bdi>${esc(h.short)}</bdi> <b dir="ltr">${sc[0]}:${sc[1]}</b> <bdi>${esc(a.short)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
+    penPanel(`<div class="pg-end ${won?'good':'bad'}"><small>${esc(M.ctx.label||'')}</small><h2>${won?'ניצחת בפנדלים!':'הפסד בפנדלים'}</h2><div class="pg-endsc"><bdi>${esc(h.short)}</bdi> ${scoreSides(sc[0],sc[1])} <bdi>${esc(a.short)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
     root.querySelector('#pgBot').innerHTML='';side=null;paint();if(won){try{SFX.win()}catch(e){}confetti(2600);buzz('win')}
     root.querySelector('#pgDone').onclick=()=>{penClose();done({win,score:sc,auto:!!auto})}};
   const autoRest=()=>{let w=penShootoutDone(S.h,S.a),g=0;while(!w&&g++<60){const c=side==='h'?h:a,o=side==='h'?a:h;const tk=ord[side][S[side].length%ord[side].length];const gk=gkOf(o);const s=penAiShot(penShootSkill(tk));S[side].push(penKickOutcome(s.x,s.y,penKeepSkill(gk&&gk.p)).out==='goal'?1:0);side=side==='h'?'a':'h';w=penShootoutDone(S.h,S.a)}finish(w||'h',true)};
@@ -6601,7 +6601,7 @@ function pcupDuel(D){const A=D.A,B=D.B;const root=penOverlay({title:'אלוף ה
   const paint=()=>{const el=root.querySelector('#pgSo');if(el)el.innerHTML=`<div class="pg-so-row${side==='a'?' on':''}"><b>${esc(A.c.short||A.c.name)}</b><span>${dots('a')}</span><strong>${sum(S.a)}</strong></div><div class="pg-so-row${side==='b'?' on':''}"><b>${esc(B.c.short||B.c.name)}</b><span>${dots('b')}</span><strong>${sum(S.b)}</strong></div>`};
   const alive=()=>!over&&PG===pg&&!!PCUP;
   const finish=(win,why)=>{if(!alive())return;over=true;const won=D.mine?win===D.mine:null;const W=win==='a'?A:B;
-    penPanel(`<div class="pg-end ${why?'':won===false?'bad':'good'}"><small>אלוף הפנדלים</small><h2${why?' style="font-size:34px;line-height:1.1"':''}>${why?esc(why):won==null?esc(W.c.short||W.c.name)+' ניצחה':won?'ניצחת!':'הפסדת'}</h2><div class="pg-endsc"><bdi>${esc(A.c.short||A.c.name)}</bdi> <b dir="ltr">${sum(S.a)}:${sum(S.b)}</b> <bdi>${esc(B.c.short||B.c.name)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
+    penPanel(`<div class="pg-end ${why?'':won===false?'bad':'good'}"><small>אלוף הפנדלים</small><h2${why?' style="font-size:34px;line-height:1.1"':''}>${why?esc(why):won==null?esc(W.c.short||W.c.name)+' ניצחה':won?'ניצחת!':'הפסדת'}</h2><div class="pg-endsc"><bdi>${esc(A.c.short||A.c.name)}</bdi> ${scoreSides(sum(S.a),sum(S.b))} <bdi>${esc(B.c.short||B.c.name)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
     root.querySelector('#pgBot').innerHTML='';side=null;paint();if(won!==false&&!why){try{SFX.win()}catch(e){}confetti(2200);buzz('win')}
     root.querySelector('#pgDone').onclick=()=>{penClose();D.end(win,won,!!why)}};
   D.abort=why=>finish(sum(S.a)>=sum(S.b)?'a':'b',why);
