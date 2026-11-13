@@ -45,7 +45,17 @@ def save(p, obj, compact=False):
 # club-mates 3 (one pair of brothers). A file of the player's own Commons category needs FM_MIN; a file that only a
 # name search found has no such prior and needs FM_MIN_SEARCH. Every face accepted this way is still looked at.
 FM_MIN = 0.55
-FM_MIN_SEARCH = 0.60
+def two_names(title, surnames):
+    """Does the file name name somebody else as well? "Hamad Al Qallaf, Vladimír Coufal CZE-KUW (cropped)" shows either
+    of them. Somebody named right before the player, or "A and B": yes. "Daniel Holzer, Baník Ostrava-Zlín" (his club after
+    his name): no."""
+    import re, unicodedata
+    t = re.sub(r'^File:|\.\w+$', '', title)
+    low = ''.join(ch for ch in unicodedata.normalize('NFKD', t) if not unicodedata.combining(ch)).lower()
+    at = min([low.find(sn) for sn in surnames if sn and low.find(sn) >= 0] or [-1])
+    if at > 0 and re.search(r'[a-z]{3,}\s+[a-z].*?(,| and | & | und | et )\s*(?:[\w.-]+\s+){0,2}$', low[:at]):   # the other name ends right before his
+        return True
+    return bool(re.search(r"[A-Z\u00c0-\u017f][\w'\u2019-]+ (and|&|und) [A-Z\u00c0-\u017f][\w'\u2019-]+ [A-Z\u00c0-\u017f]", t))
 
 class FaceMatch:
     """Is the face in an unnamed picture the face in the player's own, named pictures? (OpenCV YuNet + SFace; the SFace
@@ -209,6 +219,9 @@ def main():
                     tried.append(c['title'] + ': found by name search only, not yet confirmed on review'); pending.append(c); continue
                 if not acc and not shown and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
                     tried.append(c['title'] + ': file name does not name the player'); pending.append(c); continue
+                # "Hamad Al Qallaf, Vladimír Coufal CZE-KUW (cropped)": a file named after two people shows either of them
+                if not acc and not shown and not c.get('fromP18') and two_names(c['title'], surname):
+                    tried.append(c['title'] + ': the file name names more than one person'); pending.append(c); continue
                 named.append(c)
                 got, reasons = run_file(key, c, bool(acc) and not acc.get('strict'), refused(prev, c['title']))   # identity-only confirmations keep the strict quality checks
                 if got:
