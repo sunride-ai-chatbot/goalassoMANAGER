@@ -100,6 +100,41 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   assert.ok(clc.pool.length>50&&!clc.pool.includes('cl1'),'offers from outside come from the countries\' leagues');assert.ok(clc.same.length===15&&clc.same.every(x=>x==='cl1'),'inside it a bigger club of the same league may call');
   playTo(3,60);assert.equal(run('Bstate().round'),3);assert.ok(run('Bstandings().length')===16);w.eval('Bwrite()');assert.equal(run('Bstate().leagueId'),'cl1');
 
+  // ---- the Champions League inside a career: a top-division club that qualified plays it beside the league
+  assert.equal(run('Bstate().cl||null'),null,'a career in the Champions League as a league has no second one inside it');
+  const fresh=(key,lg)=>w.eval(`(()=>{document.querySelector('.bdialog')?.remove();localStorage.removeItem(BK);localStorage.removeItem(BK+'.backup');G=null;BsaveRev=0;Bcreate(${JSON.stringify(key)},{name:'פפ',league:${JSON.stringify(lg)}});G.penGame=false})()`);
+  const clPlay=res=>w.eval(`(()=>{document.querySelector('.bdialog')?.remove();Bplay();const M=Bstate().live.M,home=M.h===G.me,r=${JSON.stringify(res)};M.m=90;M.done=true;M.gh=home?r[0]:r[1];M.ga=home?r[1]:r[0];Btick(true)})()`);
+  const es=run("BcatLeague('es1').clubs.slice().sort((a,b)=>b.str-a.str).map(x=>x.key)");fresh(es[0],'es1');
+  let k=run('Bstate().cl');assert.ok(k,'the strongest club of a top division starts in it');assert.equal(k.ids.length,16);assert.equal(new Set(k.ids).size,16);assert.equal(k.ties.length,8);assert.ok(k.ids.includes(run('G.me')));
+  assert.ok(k.at.every((x,i)=>x>=1&&x<run('Bstate().schedule.length')&&(i===0||x>k.at[i-1])),'four evenings spread over the season, the final before the last round');
+  const lands=run("Bstate().cl.ids.map(id=>BcatFind(club(id).bkey).country.id)"),cnt=lands.reduce((m,x)=>(m[x]=(m[x]||0)+1,m),{});assert.equal(cnt.es,run("BclPlaces(BcatLeague('es1'))"),'the league sends the head of its table');assert.ok(Object.entries(cnt).every(([c,n])=>c==='es'||n<=4));assert.ok(run("Bstate().cl.ids.every(id=>club(id).players.length>=14&&club(id).players.every(p=>!inventedPlayer(p)))"),'real squads only');
+  assert.equal(run('BclTie()'),null,'no evening before its round');assert.match($('.bcl').textContent,/שמינית הגמר/);assert.match($('.bcl').textContent,new RegExp('אחרי מחזור\\s*'+k.at[0]));
+  playTo(k.at[0],70);w.eval('Brender()');const tie=run('BclTie()');assert.ok(tie&&tie.includes(run('G.me')),'the evening has come');assert.match($('.bhero').textContent,/ליגת האלופות, שמינית הגמר/);
+  $('[data-action="prematch"]').click();assert.match($('.bdialog').textContent,/ליגת האלופות · שמינית הגמר/);assert.match($('.bdialog').textContent,/בתיקו פנדלים/);
+  const round0=run('Bstate().round'),money0=run('me().money');w.eval("document.querySelector('.bdialog')?.remove();Bplay()");assert.equal(run('Bstate().live.M.bCL'),0);assert.equal(run('Bstate().live.M.ctx.ko'),true);assert.match($('.btop .bpill').textContent,/ליגת האלופות · שמינית הגמר/);
+  w.eval("(()=>{const M=Bstate().live.M,home=M.h===G.me;M.m=90;M.done=true;M.gh=1;M.ga=1;const real=decidePens;decidePens=m=>{m.pens=home?'h':'a'};try{Btick(true)}finally{decidePens=real}})()");
+  k=run('Bstate().cl');assert.equal(run('Bstate().live||null'),null);assert.equal(k.stage,1);assert.equal(k.out,false);assert.equal(k.res[0].length,8);assert.ok(k.res[0].every(r=>r.w===r.h||r.w===r.a));assert.equal(k.alive.length,8);assert.equal(k.ties.length,4);
+  assert.equal(run('Bstate().round'),round0,'an evening is not a league round');assert.match($('.bdialog').textContent,/ניצחון בפנדלים/);assert.match($('.bdialog').textContent,/עליתם לרבע הגמר/);assert.ok(run('me().money')>money0,'prize money');assert.ok(run("Bstate().ledger.some(x=>/פרס ליגת האלופות/.test(x.label))"));
+  const mineRow=k.res[0].find(r=>r.h===run('G.me')||r.a===run('G.me'));assert.ok(mineRow.pens&&mineRow.gh===1&&mineRow.ga===1&&mineRow.w===run('G.me'));
+  w.eval("document.querySelector('.bdialog')?.remove();Btab='league';Brender()");assert.match($('.bcl').textContent,/רבע הגמר/);assert.equal($$('.bcl-ties li').length,12,'the played round and the draw of the next');assert.ok($$('.bcl-ties .sides').length>=8);w.eval("Btab='home';Brender()");
+  // all the way: quarter-final, semi-final, final
+  for(const st of [1,2,3]){playTo(k.at[st],70);assert.ok(run('BclTie()'),'evening '+st);clPlay([2,0]);k=run('Bstate().cl');assert.equal(k.stage,st+1)}
+  assert.ok(k.won&&!k.out);assert.equal(k.champion,run('G.me'));assert.match($('.bdialog').textContent,/אלופי אירופה/);assert.deepEqual(run('Bstate().honours.map(h=>h.what)'),['ליגת האלופות']);assert.equal(k.res[3].length,1);assert.equal(run('BclTie()'),null);
+  w.eval("document.querySelector('.bdialog')?.remove();Brender()");assert.match($('.bcl').textContent,/הגביע שלכם/);
+  // knocked out: the competition goes on without the coach and still gets its champion
+  fresh(es[0],'es1');k=run('Bstate().cl');playTo(k.at[0],70);clPlay([0,1]);k=run('Bstate().cl');assert.ok(k.out);assert.equal(k.stage,1);assert.match($('.bdialog').textContent,/המסע באירופה הסתיים/);assert.equal(run('BclTie()'),null);
+  playTo(run('Bstate().schedule.length'),70);k=run('Bstate().cl');assert.equal(k.stage,4);assert.ok(k.champion&&k.champion!==run('G.me'));assert.deepEqual(k.res.map(r=>r.length),[8,4,2,1]);w.eval('Brender()');assert.match($('.bcl').textContent,/הודחתם בשמינית הגמר/);assert.match($('.bcl').textContent,/האלופה/);
+  // the table decides who plays it next season
+  const q=run("BclPlaces(BcatLeague('es1'))");w.eval("(()=>{const t=Bstandings();t.forEach((c,i)=>c.pts=200-i);me().pts=1})()");w.eval("Bsummary()");assert.equal($('.bcl-next'),null);
+  w.eval("document.querySelector('.bdialog')?.remove();Bstate().board=70;Bstate().verdict=null;Bsummary();document.querySelector('[data-action=\"newseason\"]')?.click()");
+  if(run('!Bstate().out')&&run('Bstate().season')===2){assert.equal(run('Bstate().clq.keys.length'),q);assert.equal(run('Bstate().cl||null'),null,'outside the places of the table: no Champions League this season')}
+  w.eval("(()=>{const b=Bstate();while(b.round<b.schedule.length)BfinishRound();document.querySelector('.bdialog')?.remove();Bstandings().forEach((c,i)=>c.pts=100-i);me().pts=500;b.board=80;b.verdict=null;Bsummary()})()");assert.match($('.bcl-next').textContent,/בליגת האלופות/);
+  $('[data-action="newseason"]').click();assert.ok(run('Bstate().cl&&Bstate().cl.ids.includes(G.me)'),'the champion plays it');assert.equal(run('Bstate().cl.season'),run('Bstate().season'));
+  // a weak club of the same league, a second-tier club: none
+  fresh(es[es.length-1],'es1');assert.equal(run('Bstate().cl||null'),null);assert.equal($('.bcl'),null);fresh(run("BcatLeague('il2').clubs[0].key"),'il2');assert.equal(run('Bstate().cl||null'),null);
+  // Israel's top division sends its head too
+  fresh('mta','il1');assert.ok(run('Bstate().cl&&Bstate().cl.ids.includes(G.me)'));assert.equal(run("Bstate().cl.ids.filter(id=>club(id).country==='ישראל').length"),run("BclPlaces(BcatLeague('il1'))"));
+
   assert.equal(w.localStorage.getItem('ilm2'),'PRO_SENTINEL','the full game\'s career is never touched');
   // ---- the title screen of the beginner page: the name is written there, network play is not, a small link leads to the full game
   const t=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://career.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,beforeParse(x){x.matchMedia=()=>({matches:true});x.scrollTo=()=>{};x.HTMLMediaElement.prototype.play=()=>Promise.resolve();x.HTMLMediaElement.prototype.pause=()=>{};x.HTMLMediaElement.prototype.load=()=>{}}}).window;
@@ -107,7 +142,7 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   T('#spRegular').click();assert.ok(!T('#splash').classList.contains('out'),'without a name the title screen stays');assert.match(T('#spErr').textContent,/שתי אותיות/);assert.equal(T('#spName').getAttribute('aria-invalid'),'true');
   T('#spName').value='נועה';T('#spRegular').click();assert.ok(T('#splash').classList.contains('out'));assert.equal(t.eval('Bstart.step'),'league');assert.match(T('#bstart h1').textContent,/נועה/);
   t.eval("Bcreate('mta',{name:'נועה'});showSplash()");assert.equal(T('#spName'),null,'a returning coach is not asked again');assert.match(T('#spRegular').textContent,/המשך קריירה/);T('#spRegular').click();assert.ok(T('#splash').classList.contains('out'));t.close();
-  assert.deepEqual(errors,[]);console.log('beginner career: leagues, opening steps and contract, board, dismissal, resignation, offers before and during a season, older careers; errors',errors);
+  assert.deepEqual(errors,[]);console.log('beginner career: leagues, opening steps and contract, board, dismissal, resignation, offers before and during a season, the Champions League as a league and inside a career, older careers; errors',errors);
  }catch(e){console.error(e);console.log('errors',[String(e&&e.message||e)].concat(errors));process.exitCode=1}
  finally{w.close()}
 })();
