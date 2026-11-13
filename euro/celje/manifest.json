@@ -475,7 +475,11 @@
    "pos": "DF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q141183678:2004"
+   "match": "name+club in the article infobox",
+   "qid": "Q141183678",
+   "wikidata": "https://www.wikidata.org/wiki/Q141183678",
+   "label": "Matic Ivanšek",
+   "birthYear": 2004
   },
   {
    "he": "Rudi Požeg Vancaš",

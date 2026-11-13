@@ -1126,6 +1126,32 @@
      ],
      "score": 1.0,
      "pass": "more"
+    },
+    {
+     "title": "File:IF Brommapojkarna-Malmö FF - 2014-07-06 18-47-53 (6982).jpg",
+     "pageid": 33867357,
+     "page": "https://commons.wikimedia.org/wiki/File:IF_Brommapojkarna-Malm%C3%B6_FF_-_2014-07-06_18-47-53_(6982).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/IF_Brommapojkarna-Malm%C3%B6_FF_-_2014-07-06_18-47-53_%286982%29.jpg/960px-IF_Brommapojkarna-Malm%C3%B6_FF_-_2014-07-06_18-47-53_%286982%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 4290,
+     "height": 2860,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Holger Motzkau",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2014-07-06 18:47:53",
+     "file": "26-Q6219808-m13.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q6219808"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

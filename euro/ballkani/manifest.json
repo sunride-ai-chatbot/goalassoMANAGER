@@ -364,6 +364,32 @@
      ],
      "score": 1.0,
      "pass": "more"
+    },
+    {
+     "title": "File:Giovanni Boldini, 1865 - Self-portrait while looking at a painting.jpg",
+     "pageid": 43979996,
+     "page": "https://commons.wikimedia.org/wiki/File:Giovanni_Boldini,_1865_-_Self-portrait_while_looking_at_a_painting.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Giovanni_Boldini%2C_1865_-_Self-portrait_while_looking_at_a_painting.jpg/960px-Giovanni_Boldini%2C_1865_-_Self-portrait_while_looking_at_a_painting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1181,
+     "height": 1693,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Giovanni Boldini",
+     "credit": "pinterest.com on 2009-07-14 16:01:41",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "ita-mibac",
+     "nonFree": "",
+     "date": "circa 1865date QS:P571,+1865-00-00T00:00",
+     "file": "10-Q98970158-m8.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q362003"
+     ],
+     "score": 4.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

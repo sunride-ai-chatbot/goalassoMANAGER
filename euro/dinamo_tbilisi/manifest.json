@@ -506,7 +506,11 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q141782298:2007"
+   "match": "name+club in the article infobox",
+   "qid": "Q141782298",
+   "wikidata": "https://www.wikidata.org/wiki/Q141782298",
+   "label": "Halid Doltmurziev",
+   "birthYear": 2007
   },
   {
    "he": "Albert Gomez",

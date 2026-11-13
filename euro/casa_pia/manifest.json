@@ -736,7 +736,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "ambiguous: Q17418702:1981, Q358688:1983, Q24069297:1997"
+   "match": "ambiguous: Q17418702:1981, Q358688:1983, Q20640703:1985"
   },
   {
    "he": "Pedro Rosas",
@@ -1428,6 +1428,32 @@
      "via": "search",
      "depicts": [],
      "score": 1.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Antonello da Messina Pala di Cassiano 23.jpg",
+     "pageid": 2528737,
+     "page": "https://commons.wikimedia.org/wiki/File:Antonello_da_Messina_Pala_di_Cassiano_23.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/9/98/Antonello_da_Messina_Pala_di_Cassiano_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 754,
+     "height": 1067,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Antonello da Messina",
+     "credit": "Maria Accascina",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "15th centurydate QS:P,+1450-00-00T00:00:",
+     "file": "27-Q16337102-m8.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q1750739"
+     ],
+     "score": 2.0,
      "pass": "more"
     }
    ],
