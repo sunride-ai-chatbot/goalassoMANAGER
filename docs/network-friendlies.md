@@ -10,7 +10,22 @@ The connected deployment uses the existing `mp_rooms` / `mp_members` invitation 
 
 Room members alone can retrieve squad snapshots. Only the host can commit a result, after both members are ready. Results are immutable. Tables have RLS and no direct client access. Authenticated public invoker wrappers call private definer functions with fixed empty search paths. Existing invitation expiration and room capacity rules remain in force.
 
+### A fresh project (2026-11-13)
+
+The first deployment's project no longer exists, and its base room objects (`mp_rooms`, the room `mp_members`, `mp_create_room`, `mp_join_room`, `mp_preview_invitation`, `mp_get_room`, `mp_validate_snapshot`) had lived only in its database. They are restored as `supabase/migrations/20261024000000_rooms.sql`, written from what the client calls and what the friendlies migration and its SQL regression expect. For a new project:
+
+1. Paste `supabase/install-rooms.sql` (the base rooms and the friendlies migrations in order, nothing else) into the SQL Editor and run it once. Do not run `20261023120000_multiplayer.sql` there: the historical league schema defines another `public.mp_members`.
+2. Authentication → Sign In / Providers: Email enabled (the dialog signs up and signs in with email + password; with "Confirm email" on, a new manager must open the confirmation email first, and the built-in mail sender allows only a few emails an hour).
+3. Authentication → URL Configuration: Site URL = the address the game is played at, and that address with `/**` under Redirect URLs (the confirmation link returns to the game, `emailRedirectTo`), for every address the game is served from.
+4. The Project URL and the publishable key go into `data/config/multiplayer-public.json` (or the Pages secrets `SUPABASE_URL` / `SUPABASE_PUBLISHABLE_KEY`). Never the secret key.
+
+אלוף הפנדלים online needs none of this: it uses Realtime broadcast channels only, so it works as soon as the URL and the publishable key are in the build.
+
+Rooms: an invitation is a random uuid of its own (not the room id) and lives seven days; a manager joins once and his squad stays as he joined with it (a second call with the same career returns the room, another career is `different_career`); one club name per room (`club_taken`); `room_full` beyond the capacity; a host keeps at most twenty rooms, expired ones are removed when he creates the next. `mp_preview_invitation` is the only function a visitor without an account may call, and it returns the inviting club's name and whether the room is full.
+
 ## Validation
+
+- `tests/rooms-sql.test.js`: both room migrations applied to an empty Postgres in the test process (PGlite, dressed with Supabase's roles, `auth.uid()` and default privileges), then `tests/sql/rooms-base.sql` and `tests/sql/room-friendlies.sql`; also checks that `supabase/install-rooms.sql` is exactly the two migrations.
 
 - `tests/network-rooms.test.js`: two client windows, create/join/ready, real engine simulation, identical result, exact preservation of career state and player ID counter.
 - `tests/sql/room-friendlies.sql`: transactional test on the connected backend; duplicate club, membership, ready gate, host authority, immutable result, guest visibility, anonymous denial and table privileges. Rolls back synthetic users and rooms.
