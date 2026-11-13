@@ -6269,6 +6269,22 @@
   "status": "ok",
   "upscale": 0.63
  },
+ "wd-Q104733764": {
+  "bytes": 8748,
+  "faceW": 0.335,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.13,
+  "pack": "eu-coventry",
+  "roll": -0.1,
+  "score": 0.73,
+  "sha256": "4c6ba16f3df08cdebf909c9409157e863e7d02a940a83463b4d9b2f3fe894b31",
+  "shoulders": 0.3,
+  "skin": "#9c6b55",
+  "status": "ok",
+  "upscale": 0.16
+ },
  "wd-Q104737263": {
   "bytes": 9542,
   "faceW": 0.334,
@@ -6417,6 +6433,20 @@
   "status": "ok",
   "upscale": 0.24
  },
+ "wd-Q104833453": {
+  "bytes": 6728,
+  "faceW": 0.348,
+  "flags": [],
+  "hairTop": 0.056,
+  "pack": "eu-bristol_city",
+  "roll": 2.6,
+  "score": 0.95,
+  "sha256": "b92276b16506ab539a29d32bf2b60e949216252f9af701cfff4898e75224ddb7",
+  "shoulders": 0.8,
+  "skin": "#a9857c",
+  "status": "ok",
+  "upscale": 0.37
+ },
  "wd-Q104834242": {
   "bytes": 13622,
   "faceW": 0.309,
@@ -6547,6 +6577,20 @@
   "skin": "#ba7b64",
   "status": "ok",
   "upscale": 0.23
+ },
+ "wd-Q105062238": {
+  "bytes": 13210,
+  "faceW": 0.319,
+  "flags": [],
+  "hairTop": 0.059,
+  "pack": "eu-coventry",
+  "roll": 2.6,
+  "score": 0.94,
+  "sha256": "5dee2878841a794faadf2aaa8b19c2670993f11ca6ae8e23475415aaebadf6ad",
+  "shoulders": 0.38,
+  "skin": "#734733",
+  "status": "ok",
+  "upscale": 0.36
  },
  "wd-Q105067197": {
   "bytes": 9472,
@@ -8997,6 +9041,20 @@
   "status": "ok",
   "upscale": 0.36
  },
+ "wd-Q110390851": {
+  "bytes": 8332,
+  "faceW": 0.311,
+  "flags": [],
+  "hairTop": 0.101,
+  "pack": "eu-west_ham",
+  "roll": 0.8,
+  "score": 0.94,
+  "sha256": "fbd05ab8361c1288ced9e65c061a2eb7d47f857f82e1554c3072a8acd7e00ce1",
+  "shoulders": 0.97,
+  "skin": "#4f3e30",
+  "status": "ok",
+  "upscale": 0.57
+ },
  "wd-Q110402208": {
   "bytes": 8640,
   "faceW": 0.31,
@@ -9156,6 +9214,20 @@
   "skin": "#e0ae8d",
   "status": "ok",
   "upscale": 0.19
+ },
+ "wd-Q110565461": {
+  "bytes": 7820,
+  "faceW": 0.327,
+  "flags": [],
+  "hairTop": 0.132,
+  "pack": "eu-everton",
+  "roll": -14.5,
+  "score": 0.94,
+  "sha256": "5d6d8c354fe11ae252b59a04165f5b2923d828261ad8e87d939d245a4502c436",
+  "shoulders": 0.83,
+  "skin": "#a8735d",
+  "status": "ok",
+  "upscale": 0.61
  },
  "wd-Q11059683": {
   "bytes": 11140,
@@ -9925,21 +9997,20 @@
   "upscale": 0.27
  },
  "wd-Q112791108": {
-  "bytes": 12238,
-  "faceW": 0.285,
+  "bytes": 8634,
+  "faceW": 0.369,
   "flags": [
-   "scaled_for_hair",
    "short_source"
   ],
-  "hairTop": 0.045,
+  "hairTop": 0.077,
   "pack": "eu-liverpool",
-  "roll": 4.7,
-  "score": 0.91,
-  "sha256": "323896e3f7753b1450de7c094872f008f72180bc76e61118b25df89ea81dd6e8",
-  "shoulders": 0.87,
-  "skin": "#9d7f75",
+  "roll": 2.4,
+  "score": 0.66,
+  "sha256": "e286b03b8b8acd1be231ae0010717112b78718fb2ba378d21d5a415c64dcfb73",
+  "shoulders": 0.59,
+  "skin": "#846a69",
   "status": "ok",
-  "upscale": 0.19
+  "upscale": 0.17
  },
  "wd-Q112813857": {
   "bytes": 12734,
@@ -10256,21 +10327,20 @@
   "upscale": 0.24
  },
  "wd-Q113434149": {
-  "bytes": 8894,
-  "faceW": 0.292,
+  "bytes": 5326,
+  "faceW": 0.326,
   "flags": [
-   "hair_tips_feathered",
-   "short_source"
+   "multiple_faces"
   ],
-  "hairTop": 0.058,
+  "hairTop": 0.597,
   "pack": "eu-liverpool",
-  "roll": 4.9,
+  "roll": -5.1,
   "score": 0.91,
-  "sha256": "825a39e422d5fb91eb25f82d608772c258e7695c215c16c2a80a0ca8ce8443c9",
-  "shoulders": 0.0,
-  "skin": "#6c4d4a",
+  "sha256": "b1ab0ee9d34659d952b5d6037a70c66e62702607a9dbf4573d0925699b7ab04f",
+  "shoulders": 0.53,
+  "skin": null,
   "status": "ok",
-  "upscale": 0.26
+  "upscale": 0.33
  },
  "wd-Q113463914": {
   "bytes": 11332,
@@ -12095,6 +12165,20 @@
   "status": "ok",
   "upscale": 1.02
  },
+ "wd-Q118725657": {
+  "bytes": 9748,
+  "faceW": 0.3,
+  "flags": [],
+  "hairTop": 0.177,
+  "pack": "eu-liverpool",
+  "roll": -7.0,
+  "score": 0.76,
+  "sha256": "f3a66c3f665c0799c9b56c09dba30ee79064738f22a68e69a39747992706a966",
+  "shoulders": 0.48,
+  "skin": "#bc9088",
+  "status": "ok",
+  "upscale": 0.17
+ },
  "wd-Q118767830": {
   "bytes": 9066,
   "faceW": 0.284,
@@ -12389,20 +12473,18 @@
   "upscale": 1.07
  },
  "wd-Q120277811": {
-  "bytes": 10056,
-  "faceW": 0.342,
-  "flags": [
-   "multiple_faces"
-  ],
-  "hairTop": 0.128,
+  "bytes": 8696,
+  "faceW": 0.293,
+  "flags": [],
+  "hairTop": 0.125,
   "pack": "eu-man_city",
-  "roll": -1.0,
+  "roll": 2.3,
   "score": 0.93,
-  "sha256": "1bb95971ef069adb5dbd758dd4ef0e679b007e12e99c9ac4fa5b62fc6d39310c",
-  "shoulders": 0.88,
-  "skin": "#81503c",
+  "sha256": "07ae5ad3bc0de11fd64c499526e5dc4cb00465eb426e10cdb54f6b94a2a8f4e5",
+  "shoulders": 0.86,
+  "skin": "#9f7364",
   "status": "ok",
-  "upscale": 0.4
+  "upscale": 0.32
  },
  "wd-Q12042676": {
   "bytes": 15008,
@@ -24552,6 +24634,20 @@
   "status": "ok",
   "upscale": 0.3
  },
+ "wd-Q26704890": {
+  "bytes": 7732,
+  "faceW": 0.332,
+  "flags": [],
+  "hairTop": 0.135,
+  "pack": "eu-west_ham",
+  "roll": -8.4,
+  "score": 0.95,
+  "sha256": "3380200c78d0eed9504f8d2e038a6f33c92d6448fb00afd742ec5dc998f924a5",
+  "shoulders": 0.83,
+  "skin": "#dcb09d",
+  "status": "ok",
+  "upscale": 0.58
+ },
  "wd-Q26704990": {
   "bytes": 9978,
   "faceW": 0.295,
@@ -25965,6 +26061,20 @@
   "skin": "#e5c4b2",
   "status": "ok",
   "upscale": 0.38
+ },
+ "wd-Q28147551": {
+  "bytes": 12364,
+  "faceW": 0.317,
+  "flags": [],
+  "hairTop": 0.117,
+  "pack": "eu-middlesbrough",
+  "roll": -16.2,
+  "score": 0.93,
+  "sha256": "2f18a623df1b7503caea68ea6a959d8142f4420d3902aa4223b311263df4043e",
+  "shoulders": 0.76,
+  "skin": "#ba836b",
+  "status": "ok",
+  "upscale": 0.26
  },
  "wd-Q28170729": {
   "bytes": 11296,
@@ -28474,6 +28584,22 @@
   "status": "ok",
   "upscale": 0.28
  },
+ "wd-Q36999329": {
+  "bytes": 8936,
+  "faceW": 0.335,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.202,
+  "pack": "eu-coventry",
+  "roll": -0.5,
+  "score": 0.94,
+  "sha256": "56a443c10516cb95e854601e3a62012feaa719308ac364f6b23287d1f49b6055",
+  "shoulders": 0.67,
+  "skin": "#9f7943",
+  "status": "ok",
+  "upscale": 0.65
+ },
  "wd-Q37007691": {
   "bytes": 10518,
   "faceW": 0.333,
@@ -30789,17 +30915,18 @@
   "upscale": 0.92
  },
  "wd-Q510401": {
-  "bytes": 9240,
-  "faceW": 0.314,
+  "bytes": 7156,
+  "faceW": 0.307,
   "flags": [],
-  "hairTop": 0.102,
+  "hairTop": 0.122,
   "pack": "eu-tottenham",
-  "roll": 2.7,
+  "roll": 0.5,
   "score": 0.93,
-  "sha256": "25acaac2178d280e3d0a8f2df4b5125a4bc1fe65dbcc977d875b2c0f5fa042a9",
-  "skin": "#a5816c",
+  "sha256": "38a2341bd94554856a91bb946710972df4e0ee1d65894ffb59cded07aa8b339f",
+  "shoulders": 0.84,
+  "skin": "#b98877",
   "status": "ok",
-  "upscale": 1.13
+  "upscale": 1.32
  },
  "wd-Q5109980": {
   "bytes": 12040,
@@ -31973,6 +32100,22 @@
   "skin": "#d58056",
   "status": "ok",
   "upscale": 0.34
+ },
+ "wd-Q56222105": {
+  "bytes": 6310,
+  "faceW": 0.326,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.145,
+  "pack": "eu-middlesbrough",
+  "roll": 1.4,
+  "score": 0.74,
+  "sha256": "a6c51d4e086f43dc276e30298cb9b72d18b3fb2770f6df74b6783c7f63d8778a",
+  "shoulders": 0.0,
+  "skin": "#986d64",
+  "status": "ok",
+  "upscale": 0.15
  },
  "wd-Q56222532": {
   "bytes": 14028,
@@ -34010,6 +34153,20 @@
   "status": "ok",
   "upscale": 0.64
  },
+ "wd-Q6127572": {
+  "bytes": 10878,
+  "faceW": 0.331,
+  "flags": [],
+  "hairTop": 0.195,
+  "pack": "eu-sheffield_wed",
+  "roll": 7.9,
+  "score": 0.72,
+  "sha256": "9044bcfad7d4270d078bff3b7d5da1c3b17a36b8f1cf168ad893264fd4bdab97",
+  "shoulders": 0.5,
+  "skin": "#7f5e57",
+  "status": "ok",
+  "upscale": 0.15
+ },
  "wd-Q615": {
   "bytes": 15272,
   "faceW": 0.312,
@@ -34081,6 +34238,20 @@
   "skin": "#dc9f73",
   "status": "ok",
   "upscale": 0.99
+ },
+ "wd-Q61694519": {
+  "bytes": 10652,
+  "faceW": 0.324,
+  "flags": [],
+  "hairTop": 0.171,
+  "pack": "eu-blackburn",
+  "roll": 2.1,
+  "score": 0.94,
+  "sha256": "f7a5587f18539ab3ae422c433dfaca40b986021c9810242accf622c42d58d920",
+  "shoulders": 0.8,
+  "skin": "#795d52",
+  "status": "ok",
+  "upscale": 1.16
  },
  "wd-Q6171506": {
   "bytes": 17988,
@@ -35479,18 +35650,18 @@
   "upscale": 0.33
  },
  "wd-Q64828338": {
-  "bytes": 6876,
-  "faceW": 0.35,
+  "bytes": 6796,
+  "faceW": 0.331,
   "flags": [],
-  "hairTop": 0.136,
+  "hairTop": 0.141,
   "pack": "eu-millwall",
-  "roll": 2.8,
-  "score": 0.88,
-  "sha256": "0a34941398c795416123f655ec27df1c32ce0c9e2897a9ce8e1988fc866eefcc",
-  "shoulders": 0.81,
-  "skin": "#7b6557",
+  "roll": 1.1,
+  "score": 0.9,
+  "sha256": "ddc066338c8392eb1db508b9b1f5331df5316f2f0e868a9990e0ffd8f231cc95",
+  "shoulders": 0.83,
+  "skin": "#7a6556",
   "status": "ok",
-  "upscale": 0.91
+  "upscale": 0.9
  },
  "wd-Q64842515": {
   "bytes": 10094,
@@ -36212,6 +36383,22 @@
   "status": "ok",
   "upscale": 0.21
  },
+ "wd-Q66305702": {
+  "bytes": 7850,
+  "faceW": 0.299,
+  "flags": [
+   "short_source"
+  ],
+  "hairTop": 0.173,
+  "pack": "eu-bristol_city",
+  "roll": -10.8,
+  "score": 0.65,
+  "sha256": "041c66fbc6dce6561d6aff451eedc4e490ffdcc55157e2b615fe12ef64ae3048",
+  "shoulders": 0.35,
+  "skin": "#966250",
+  "status": "ok",
+  "upscale": 0.14
+ },
  "wd-Q66360728": {
   "bytes": 9504,
   "faceW": 0.303,
@@ -36416,6 +36603,20 @@
   "skin": "#ce8f64",
   "status": "ok",
   "upscale": 0.47
+ },
+ "wd-Q66688699": {
+  "bytes": 9860,
+  "faceW": 0.294,
+  "flags": [],
+  "hairTop": 0.13,
+  "pack": "eu-bristol_city",
+  "roll": -1.8,
+  "score": 0.92,
+  "sha256": "ee6538db4438fdceb8d4a2aab48deb7673e5b1fb04fac8525caa5e50043d2db7",
+  "shoulders": 0.6,
+  "skin": "#99817a",
+  "status": "ok",
+  "upscale": 0.31
  },
  "wd-Q66700393": {
   "bytes": 10052,
@@ -36653,6 +36854,22 @@
   "skin": "#424035",
   "status": "ok",
   "upscale": 0.38
+ },
+ "wd-Q67200400": {
+  "bytes": 8948,
+  "faceW": 0.309,
+  "flags": [
+   "multiple_faces"
+  ],
+  "hairTop": 0.116,
+  "pack": "eu-swansea",
+  "roll": -2.3,
+  "score": 0.93,
+  "sha256": "0a7ccc0e1487fe91f78114d2c480db1a0fd205f817c3c4da31e274d96c8bf463",
+  "shoulders": 0.81,
+  "skin": "#cc9581",
+  "status": "ok",
+  "upscale": 0.4
  },
  "wd-Q67222776": {
   "bytes": 11852,
@@ -37050,18 +37267,21 @@
   "upscale": 0.26
  },
  "wd-Q68608132": {
-  "bytes": 10210,
-  "faceW": 0.297,
-  "flags": [],
-  "hairTop": 0.065,
+  "bytes": 5960,
+  "faceW": 0.177,
+  "flags": [
+   "scaled_for_hair",
+   "short_source"
+  ],
+  "hairTop": 0.045,
   "pack": "eu-millwall",
-  "roll": 3.7,
-  "score": 0.94,
-  "sha256": "4399f2cfe188dc2bce211003e02a298dbf18f930e8726366b15a5037638ff066",
-  "shoulders": 0.74,
-  "skin": "#73473c",
+  "roll": -2.6,
+  "score": 0.93,
+  "sha256": "bb5e27c8cb5c01cfbbcbbe1f3839d900a230ed46e0959739d67353f2f892afaa",
+  "shoulders": 0.46,
+  "skin": "#8a6b5f",
   "status": "ok",
-  "upscale": 0.37
+  "upscale": 0.13
  },
  "wd-Q68650133": {
   "bytes": 11014,
@@ -37711,6 +37931,23 @@
   "skin": "#c29c9b",
   "status": "ok",
   "upscale": 0.39
+ },
+ "wd-Q74051767": {
+  "bytes": 5136,
+  "faceW": 0.323,
+  "flags": [
+   "multiple_faces",
+   "short_source"
+  ],
+  "hairTop": 0.108,
+  "pack": "eu-brighton",
+  "roll": 0.4,
+  "score": 0.93,
+  "sha256": "d2aab2be6035d59332c32d60c9148cb1bb10a208c4435ee264d2b04a4ea44733",
+  "shoulders": 0.0,
+  "skin": "#c59d72",
+  "status": "ok",
+  "upscale": 0.71
  },
  "wd-Q7407943": {
   "bytes": 11704,
@@ -38595,18 +38832,18 @@
   "upscale": 0.24
  },
  "wd-Q85410990": {
-  "bytes": 9106,
-  "faceW": 0.302,
+  "bytes": 7560,
+  "faceW": 0.326,
   "flags": [],
-  "hairTop": 0.088,
+  "hairTop": 0.124,
   "pack": "eu-norwich",
-  "roll": -5.2,
-  "score": 0.91,
-  "sha256": "2b470be3b716358e5bd3fd784232c9e51a8077e787d74d7ed31cbe7d9d924025",
-  "shoulders": 0.59,
-  "skin": "#a47654",
+  "roll": 0.6,
+  "score": 0.96,
+  "sha256": "25b23df2409bb3026b08b4c23a46ea0cad6156b5fbf977503f0a8af8248d0c5f",
+  "shoulders": 0.87,
+  "skin": "#ba8c65",
   "status": "ok",
-  "upscale": 0.84
+  "upscale": 0.59
  },
  "wd-Q85584053": {
   "bytes": 7318,

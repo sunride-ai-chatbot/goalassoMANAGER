@@ -25,6 +25,10 @@
   "player": "Alessandro Circati",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:Alfie Jones 16082025 (1).jpg": {
+  "player": "Alfie Jones",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
  "File:Anatoliy Trubin.jpg": {
   "player": "Anatoliy Trubin",
   "reason": "frontal, single subject; checked by eye"
@@ -55,6 +59,10 @@
   "player": "Ben Davies",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:Ben Wilmot.png": {
+  "player": "Ben Wilmot",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
  "File:Biereth asse asm 2425.png": {
   "player": "Mika Biereth",
   "reason": "frontal, single subject; checked by eye"
@@ -63,6 +71,14 @@
   "player": "Janis Blaswich",
   "reason": "found by Commons name search; identity confirmed by eye (kit, club and context match the player)",
   "strict": true
+ },
+ "File:Bobby Thomas.png": {
+  "player": "Bobby Thomas",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it no_face_detected)"
+ },
+ "File:Callum Brittain 16082025 (1).jpg": {
+  "player": "Callum Brittain",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it other_person_in_cutout)"
  },
  "File:Cameron Carter-Vickers USA-Columbia, FIFA U20 World Cup (18684217745) (cropped).jpg": {
   "player": "Cameron Carter-Vickers",
@@ -97,9 +113,17 @@
   "player": "Ebrima Singhateh",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:Echauffement Tunisie (cropped).jpg": {
+  "player": "Anis Ben Slimane",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it blurry)"
+ },
  "File:Edison ndreca inter egnati (cropped Denzel Dumfries).jpg": {
   "player": "Denzel Dumfries",
   "reason": "three-quarter view, named crop; checked by eye"
+ },
+ "File:Ellis Reco Simms 2016.jpg": {
+  "player": "Ellis Simms",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it blurry)"
  },
  "File:Entraînement du RC Lens - 15 juillet 2020 30.jpg": {
   "player": "Loïc Badé",
@@ -108,6 +132,10 @@
  "File:Erling Haaland France v Norway 26 June 26-008.jpg": {
   "player": "Erling Haaland",
   "reason": "frontal, single subject; checked by eye"
+ },
+ "File:Ethan Pinnock, footballer, February 2015.jpg": {
+  "player": "Ethan Pinnock",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it multiple_faces)"
  },
  "File:FC Liefering SC-ESV Parndorf 23.JPG": {
   "player": "Stefan Lainer",
@@ -167,10 +195,18 @@
   "player": "Ryan Flamingo",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:George Tanner.jpg": {
+  "player": "George Tanner",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_turned)"
+ },
  "File:Georgi terziev 2018.jpg": {
   "player": "Georgi Terziev",
   "reason": "found by Commons name search; identity confirmed by eye (kit, club and context match the player)",
   "strict": true
+ },
+ "File:Georginio Rutter (cropped).jpeg": {
+  "player": "Georginio Rutter",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it multiple_faces)"
  },
  "File:Geronimo Rulli Argentina v Spain 19 July 2026-267 (cropped).jpg": {
   "player": "Gerónimo Rulli",
@@ -201,15 +237,43 @@
   "player": "Iván Fresneda",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:Jack Rudoni.png": {
+  "player": "Jack Rudoni",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it background_not_separable)"
+ },
+ "File:Jake O'Brien in 2024.png": {
+  "player": "Jake O'Brien",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it blurry)"
+ },
+ "File:Jamal Lowe 18102025 (1).jpg": {
+  "player": "Jamal Lowe",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
+ "File:Jarrod Bowen.jpeg": {
+  "player": "Jarrod Bowen",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it blurry)"
+ },
  "File:Jashari-Foto-AC-Milan.webp": {
   "player": "Ardon Jashari",
   "reason": "found by Commons name search; identity confirmed by eye (kit, club and context match the player)",
   "strict": true
  },
+ "File:Jason Knight.png": {
+  "player": "Jason Knight",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
  "File:Joe Gomez 04012026 (2).jpg": {
   "player": "Joe Gomez",
   "reason": "found by Commons name search; identity confirmed by eye (kit, club and context match the player)",
   "strict": true
+ },
+ "File:Joe Williams.png": {
+  "player": "Joe Williams",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
+ "File:Joel Lautibaudiere.png": {
+  "player": "Joel Latibeaudiere",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it background_not_separable)"
  },
  "File:João Pedro, 2025 FIFA Club World Cup final (54654843615).jpg": {
   "player": "João Pedro",
@@ -242,6 +306,14 @@
   "player": "Luis Suárez",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:Luke Chambers 07032026 (1).jpg": {
+  "player": "Luke Chambers",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
+ "File:Luke McNally.png": {
+  "player": "Luke McNally",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
  "File:Luke Shaw, Manchester United v Newcastle United, 11 September 2021 (44) (cropped 2).png": {
   "player": "Luke Shaw",
   "reason": "found by Commons name search; identity confirmed by eye (kit, club and context match the player)",
@@ -251,6 +323,10 @@
   "player": "Manuel Ugarte",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:Magassa asse asm 2425.png": {
+  "player": "Soungoutou Magassa",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it blurry)"
+ },
  "File:Manchester City 2025 06 26 Juventus (cropped).jpg": {
   "player": "Savinho",
   "reason": "frontal, single subject; checked by eye (file sits in the player's own Commons category; identity checked against his other photos)"
@@ -258,6 +334,14 @@
  "File:Marcus Bettinelli 12-04-2014 1.jpg": {
   "player": "Marcus Bettinelli",
   "reason": "frontal, single subject; checked by eye"
+ },
+ "File:Mark Sykes.png": {
+  "player": "Mark Sykes",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it source_cuts_head)"
+ },
+ "File:Martin Dúbravka IMG 3696.jpg": {
+  "player": "Martin Dúbravka",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_too_small)"
  },
  "File:Martin Odegaard Morocco v Norway 7 June 2026-56 (cropped).jpg": {
   "player": "Martin Ødegaard",
@@ -341,10 +425,22 @@
   "player": "Ulrik Saltnes",
   "reason": "frontal, single subject; checked by eye"
  },
+ "File:Sam Bell 11042026 (1).jpg": {
+  "player": "Sam Bell",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it blurry)"
+ },
+ "File:Scott Twine 11042026 (5).jpg": {
+  "player": "Scott Twine",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it background_not_separable)"
+ },
  "File:Sofyan Amrabat France v Morocco 9 July 2026-026.jpg": {
   "player": "Sofyan Amrabat",
   "reason": "found by Commons name search; identity confirmed by eye (kit, club and context match the player)",
   "strict": true
+ },
+ "File:Stephen Welsh (cropped).jpg": {
+  "player": "Stephen Welsh",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it multiple_faces)"
  },
  "File:Teze asse asm 2425.png": {
   "player": "Jordan Teze",
@@ -355,9 +451,21 @@
   "reason": "found by Commons name search; identity confirmed by eye (kit, club and context match the player)",
   "strict": true
  },
+ "File:Tyler Onyango 15082026 (2).jpg": {
+  "player": "Tyler Onyango",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it face_unclear)"
+ },
  "File:Valeriy Bondar.jpg": {
   "player": "Valeriy Bondar",
   "reason": "frontal, single subject; checked by eye"
+ },
+ "File:Vitor-Reis-Palmeiras-Sao-Paulo-ago24-2 (cropped).jpg": {
+  "player": "Vitor Reis",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it blurry)"
+ },
+ "File:Yu Hirakawa.png": {
+  "player": "Yū Hirakawa",
+  "reason": "frontal, single subject; checked by eye (the strict checks called it background_not_separable)"
  },
  "File:Zenit-Slavia Pr (10).jpg": {
   "player": "Ondřej Kolář",
