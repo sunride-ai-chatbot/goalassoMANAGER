@@ -52,7 +52,14 @@ function expGoals(sh,sa,neutral,h,a,M){const U=M&&M.units;const ha=neutral?0:.22
   const xg=(att,def,midEdge,base)=>{const d=att-def;const k=d>=0?.08:.07;return Math.max(.12,base*Math.exp(clamp(d,-14,14)*k/1.25)*(1+clamp(midEdge,-10,10)*.016))};
   if(!U)return [Math.max(.2,1.25+(sh-sa)*.085+ha+mh[0]+ma[1]+t.dh+so.dh),Math.max(.18,1.25-(sh-sa)*.085-.04+ma[0]+mh[1]+t.da+so.da)];
   const uh=U[h.id],ua=U[a.id];const mid=uh.mid-ua.mid;
-  return [Math.max(.12,xg(uh.att,ua.def,mid,1.02)+ha+mh[0]+ma[1]+t.dh+so.dh+momentum(M,h.id)),Math.max(.12,xg(ua.att,uh.def,-mid,1.02)-.04+ma[0]+mh[1]+t.da+so.da+momentum(M,a.id))]}
+  let lh=Math.max(.12,xg(uh.att,ua.def,mid,1.02)+ha+mh[0]+ma[1]+t.dh+so.dh+momentum(M,h.id)),la=Math.max(.12,xg(ua.att,uh.def,-mid,1.02)-.04+ma[0]+mh[1]+t.da+so.da+momentum(M,a.id));
+  /* A match has only so many goals in it. Two sides that both attack, press and field forwards far better than the
+     keepers they face would add up to five goals a match and scores like 11:2 (the leagues of Europe's richest clubs);
+     above XG_SOFT expected goals for the two sides together only a fifth of the surplus is kept, in the same proportion
+     for both, so who is the better side does not change. A touchline shout is the user's own doing and is left whole. */
+  const tot=lh+la-so.dh-so.da;if(tot>XG_SOFT){const f=(XG_SOFT+(tot-XG_SOFT)*XG_KEEP)/tot;lh=(lh-so.dh)*f+so.dh;la=(la-so.da)*f+so.da}
+  return [lh,la]}
+const XG_SOFT=3.2,XG_KEEP=.2;
 /* ---- touchline shouts (the user's club in a live match): a six-minute swing with a price ----
    press  wins the ball high: more chances for us (more still against tired legs), a little space behind, burns energy
    all    everybody forward: many more chances at both ends

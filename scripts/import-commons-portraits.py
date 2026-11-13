@@ -40,8 +40,12 @@ def save(p, obj, compact=False):
     with open(p, 'w', encoding='utf8') as fh:
         json.dump(obj, fh, ensure_ascii=False, **({'separators': (',', ':')} if compact else {'indent': 1, 'sort_keys': True}))
 
-FM_MIN = 0.55   # cosine similarity of two SFace features; on these photos no pair of different players reached 0.47 (6,000 pairs),
-                # and two thirds of the pairs of one player pass
+# Cosine similarity of two SFace features. Measured on 3,781 named single-face pictures of 2,787 players: two thirds of
+# the pairs of one player reach 0.55; of 7.1 million pairs of different players 31 did (0.0004%), of 39,000 pairs of
+# club-mates 3 (one pair of brothers). A file of the player's own Commons category needs FM_MIN; a file that only a
+# name search found has no such prior and needs FM_MIN_SEARCH. Every face accepted this way is still looked at.
+FM_MIN = 0.55
+FM_MIN_SEARCH = 0.60
 
 class FaceMatch:
     """Is the face in an unnamed picture the face in the player's own, named pictures? (OpenCV YuNet + SFace; the SFace
@@ -220,11 +224,13 @@ def main():
                     if f is not None:
                         refs.append((c, im0, f))
                 for c in pending if refs else []:
+                    if c.get('depicts') and pl['qid'] not in c['depicts']:
+                        continue   # Commons says who the file shows, and it is somebody else
                     im1 = any_image(key, c); f = fm.feature(im1) if im1 is not None else None
                     if f is None:
                         continue
                     best = max(refs, key=lambda r: fm.cos(f, r[2])); score = fm.cos(f, best[2])
-                    if score < FM_MIN:
+                    if score < (FM_MIN if c.get('via') in ('category', 'subcat') else FM_MIN_SEARCH):
                         continue
                     got, reasons = run_file(key, c, False)
                     if not got:

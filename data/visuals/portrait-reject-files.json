@@ -3,6 +3,10 @@
   "player": "Jonathan Levi",
   "reason": "side-on action shot, blurred"
  },
+ "File:08042023 BP-MFF reportagefotografen 7256.jpg": {
+  "player": "Gabriel Busanello",
+  "reason": "poor portrait on visual review (face-matched file): arms across the frame"
+ },
  "File:085A9288.jpg": {
   "player": "Enes Mahmutović",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
@@ -571,6 +575,10 @@
   "player": "Cadu",
   "reason": "a different person with the same name (found by name search)"
  },
+ "File:Caen - Rennes 20140709 32.JPG": {
+  "player": "Steven Moreira",
+  "reason": "poor portrait on visual review (face-matched file): a second head in the cut-out"
+ },
  "File:Caen - Rennes CFA 20120929 - Dimitri Foulquier.JPG": {
   "player": "Dimitri Foulquier",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
@@ -879,6 +887,10 @@
   "player": "El Mahdy Soliman",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:ElKhannouss2.jpg": {
+  "player": "Mehdi Benabid",
+  "reason": "different person: the file name names a different person (El Khannouss)"
+ },
  "File:Elijah Gift.jpg": {
   "player": "Elijah Gift",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
@@ -1094,6 +1106,10 @@
  "File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 34 (Manuel Locatelli).jpg": {
   "player": "Manuel Locatelli",
   "reason": "another player's head beside his"
+ },
+ "File:FC Zenit Saint Petersburg vs. Juventus, 20 October 2021 34.jpg": {
+  "player": "Manuel Locatelli",
+  "reason": "poor portrait on visual review (face-matched file): a second head in the cut-out"
  },
  "File:FWC 2018 - Group E - SRB v BRA - Photo 113 (cropped).jpg": {
   "player": "Luka Jović",
@@ -1751,9 +1767,17 @@
   "player": "Leandro Paredes",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:Lens - Angers (29-11-2020) 61.jpg": {
+  "player": "Loïs Diony",
+  "reason": "poor portrait on visual review (face-matched file): head down, face half covered"
+ },
  "File:Lens - Angers (29-11-2020) 64.jpg": {
   "player": "Loïs Diony",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Dijon (21-02-2021) 17.jpg": {
+  "player": "Senou Coulibaly",
+  "reason": "poor portrait on visual review (face-matched file): blurred"
  },
  "File:Lens - Marseille (22-01-2022) 17.jpg": {
   "player": "Boubacar Kamara",
@@ -1763,9 +1787,21 @@
   "player": "Khéphren Thuram",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:Lens - Nice (23-01-2021) 36.jpg": {
+  "player": "Khéphren Thuram",
+  "reason": "poor portrait on visual review (face-matched file): blurred"
+ },
+ "File:Lens - Nice (23-01-2021) 7.jpg": {
+  "player": "Khéphren Thuram",
+  "reason": "poor portrait on visual review (face-matched file): blurred, head down"
+ },
  "File:Lens - Orléans (09-03-2020) 46.jpg": {
   "player": "Issa Soumaré",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Lens - Reims (12-05-2023) 27.jpg": {
+  "player": "Jens Cajuste",
+  "reason": "poor portrait on visual review (face-matched file): hands at the head cover the face"
  },
  "File:Lens - Reims (12-05-2023) 45.jpg": {
   "player": "Salis Abdul Samed",
@@ -1886,6 +1922,10 @@
  "File:Luke Chambers 07032026 (3).jpg": {
   "player": "Luke Chambers",
   "reason": "looking down"
+ },
+ "File:Luke Shaw WC2022.jpg": {
+  "player": "Luke Shaw",
+  "reason": "poor portrait on visual review (face-matched file): crouching in a team picture: the cut-out is broken"
  },
  "File:Luke Shaw, Manchester United v Newcastle United, 11 September 2021 (44) (cropped 2).png": {
   "player": "Luke Shaw",
@@ -2042,6 +2082,10 @@
  "File:Mathys Tel en 2026.png": {
   "player": "Mathys Tel",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Matj kova-1772635856 (cropped).JPG": {
+  "player": "Matěj Kovář",
+  "reason": "poor portrait on visual review (face-matched file): profile"
  },
  "File:Matj kova-1772635856.JPG": {
   "player": "Matěj Kovář",
@@ -2227,6 +2271,10 @@
   "player": "Arnaud Nordin",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:Norway Italy - June 2025 A 10 (cropped).jpg": {
+  "player": "Ørjan Nyland",
+  "reason": "poor portrait on visual review (face-matched file): a second person in the cut-out"
+ },
  "File:Norway Italy - June 2025 A 22 (cropped).jpg": {
   "player": "Nicolò Rovella",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
@@ -2383,9 +2431,17 @@
   "player": "Quentin Merlin",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:RC Lens - AS Nancy-Lorraine (19-01-2019) 29.jpg": {
+  "player": "Laurent Abergel",
+  "reason": "poor portrait on visual review (face-matched file): head down, a second head in the cut-out"
+ },
  "File:RC Lens - Dijon FCO (30-05-2019) 57.jpg": {
   "player": "Senou Coulibaly",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - FC Metz (14-03-2021) 45.jpg": {
+  "player": "Matthieu Udol",
+  "reason": "poor portrait on visual review (face-matched file): blurred, head down"
  },
  "File:RC Lens - FC Metz (14-03-2021) 51.jpg": {
   "player": "Matthieu Udol",
@@ -2395,9 +2451,17 @@
   "player": "Jaouen Hadjam",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:RC Lens - Grenoble Foot 38 (10-02-2020) 20.jpg": {
+  "player": "Kristófer Kristinsson",
+  "reason": "poor portrait on visual review (face-matched file): blurred, small in the frame"
+ },
  "File:RC Lens - LB Châteauroux (03-11-2018) 11.jpg": {
   "player": "Abdoulaye Sissako",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:RC Lens - Lille OSC (08-10-2023) 12 (cropped1).jpg": {
+  "player": "Leny Yoro",
+  "reason": "poor portrait on visual review (face-matched file): blurred"
  },
  "File:RC Lens - Lille OSC (08-10-2023) 12.jpg": {
   "player": "Leny Yoro",
@@ -2555,6 +2619,10 @@
   "player": "Marko Poletanović",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:SM-Tosno (6).jpg": {
+  "player": "Marko Poletanović",
+  "reason": "poor portrait on visual review (face-matched file): action shot, head down"
+ },
  "File:Saku Savolainen 2020.jpg": {
   "player": "Saku Savolainen",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
@@ -2602,6 +2670,10 @@
  "File:Saudi Arabia v Oman (2) (cropped).jpg": {
   "player": "Saud Abdulhamid",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Saudi Arabia v Oman (2).jpg": {
+  "player": "Saud Abdulhamid",
+  "reason": "poor portrait on visual review (face-matched file): hands on the head"
  },
  "File:Seedy Jatta 20 SK Sturm Graz 20260805 (3) (cropped).JPG": {
   "player": "Seedy Jatta",
@@ -2670,6 +2742,10 @@
  "File:Sweden - Greece13 (Andreas Tetteh).jpg": {
   "player": "Andrews Tetteh",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
+ },
+ "File:Sweden - Greece26 (cropped).jpg": {
+  "player": "Taha Ali",
+  "reason": "poor portrait on visual review (face-matched file): head down"
  },
  "File:Sweden - Greece8 (cropped).jpg": {
   "player": "Mattias Svanberg",
@@ -2767,6 +2843,10 @@
   "player": "Taneli Hämäläinen",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
  },
+ "File:UEFA Euro 2023 Qualifiers Austria vs. Finland (2022-06-03) 45.jpg": {
+  "player": "Taneli Hämäläinen",
+  "reason": "poor portrait on visual review (face-matched file): action shot, head tilted"
+ },
  "File:UEFA Euro 2023 Qualifiers Austria vs. Finland (2022-06-03) 69 (cropped2).jpg": {
   "player": "Daniel Håkans",
   "reason": "poor portrait on visual review: face turned away, looking down, too dark or blurred"
@@ -2822,6 +2902,10 @@
  "File:Viljami Sinisalo (2022-06-03).jpg": {
   "player": "Viljami Sinisalo",
   "reason": "gloved hands break the cut-out"
+ },
+ "File:Villarreal001.jpg": {
+  "player": "Andrés Fernández",
+  "reason": "poor portrait on visual review (face-matched file): small in the frame, arm raised"
  },
  "File:Vitor-roque-palmeiras-internacional-sep2025.jpg": {
   "player": "Vitor Roque",

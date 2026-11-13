@@ -16,8 +16,12 @@ async function main(){try{
  for(const k of ['gk','def','mid','att'])assert.ok(Number.isFinite(u.U[k])&&u.U[k]>30&&u.U[k]<100,k);
  assert.ok(u.after<u.before-1,'a worse goalkeeper weakens the defensive unit');
  // expected goals rise with attack vs defence and are bounded
- const eg=JSON.parse(w.eval("(()=>{const h=G.clubs[0],a=G.clubs[1];const M=createMatch(h,a,{kind:'league',round:1,label:'x'});stepMinute(M);const base=expGoals(0,0,false,h,a,M);M.units[h.id].att+=8;const up=expGoals(0,0,false,h,a,M);M.units[h.id].att+=100;const cap=expGoals(0,0,false,h,a,M);return JSON.stringify({base,up,cap})})()"));
- assert.ok(eg.up[0]>eg.base[0]*1.4,'8 attack points add at least 40% expected goals');assert.ok(eg.cap[0]<6,'expected goals are capped');
+ const eg=JSON.parse(w.eval("(()=>{const h=G.clubs[0],a=G.clubs[1];const M=createMatch(h,a,{kind:'league',round:1,label:'x'});stepMinute(M);M.tadj={dh:0,da:0,poss:0,fatH:1,fatA:1,notes:[]};M.mo=null;const base=expGoals(0,0,false,h,a,M);M.units[h.id].att+=8;const up=expGoals(0,0,false,h,a,M);M.units[h.id].att+=100;const cap=expGoals(0,0,false,h,a,M);return JSON.stringify({base,up,cap})})()"));
+ assert.ok(eg.base[0]+eg.base[1]<3.2,'measured in an ordinary match, below the damping of high-scoring ones: '+eg.base);assert.ok(eg.up[0]>eg.base[0]*1.4,'8 attack points add at least 40% expected goals');assert.ok(eg.cap[0]<6,'expected goals are capped');
+ // a match has only so many goals in it: two sides that both create far more than usual are damped together, in proportion
+ const dm=JSON.parse(w.eval("(()=>{const h=G.clubs[0],a=G.clubs[1];const M=createMatch(h,a,{kind:'league',round:1,label:'x'});stepMinute(M);M.mo=null;const U=M.units;const b=expGoals(0,0,true,h,a,M);U[h.id].att+=9;U[a.id].att+=9;const e=expGoals(0,0,true,h,a,M);U[h.id].att+=4;const e2=expGoals(0,0,true,h,a,M);return JSON.stringify({b,e,e2,soft:XG_SOFT,keep:XG_KEEP})})()"));
+ assert.ok(dm.e[0]+dm.e[1]>dm.soft&&dm.e[0]+dm.e[1]<dm.soft+1,'two attacking sides together stay near three goals: '+dm.e);
+ assert.ok(dm.e2[0]>dm.e[0]+.05&&dm.e2[1]<dm.e[1]&&dm.e2[0]/dm.e2[1]>dm.e[0]/dm.e[1]*1.05,'the better side still gets the better of it: '+dm.e+' → '+dm.e2);
  // fix A: chemistry survives the mental programme, training plan reaches the match
  const fa=JSON.parse(w.eval("(()=>{const h=me(),a=G.clubs.find(c=>c.id!==G.me);const M=createMatch(h,a,{kind:'league',round:1,label:'x'});h.tacFam=60;h.prepLeft=0;const s0=xiStrength(M,h);h.tacFam=100;h.prepLeft=1;const s1=xiStrength(M,h);return JSON.stringify({s0,s1,tb:trainBonus(h)})})()"));
  assert.ok(Math.abs((fa.s1-fa.s0)-fa.tb)<1e-9&&fa.tb>2,'training familiarity and preparation count in the match: '+fa.tb);
