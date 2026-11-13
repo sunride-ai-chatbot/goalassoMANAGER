@@ -300,7 +300,9 @@ function BstartClick(el){const d=el.dataset;if(d.bstep){Bstart.step=d.bstep;Bren
   if(el.hasAttribute('data-bsign')){if(G?.beginner||!Bstart.club)return true;el.closest('dialog')?.remove();const s=Bstart;Bcreate(s.club,{name:s.name,league:s.league});Bstart={step:'name',name:'',country:null,league:null,club:null,q:'',err:''};window.scrollTo?.(0,0);return true}
   return false}
 document.addEventListener('submit',e=>{if(!e.target.matches||!e.target.matches('[data-bnameform]'))return;e.preventDefault();const v=(document.getElementById('bcoach')?.value||'').trim();if(v.length<2){Bstart.err='כתוב שם של שתי אותיות לפחות.';Brender();document.getElementById('bcoach')?.focus();return}Bstart.name=v;Bstart.err='';Bstart.step='league';Brender();$('bstart')?.scrollIntoView?.({block:'start'})});
-Bload();if(G?.beginner?.live)G.beginner.live.paused=true;Brender();try{updateWatch()}catch(e){}try{pcupFromLink()}catch(e){}window.BEGINNER={get state(){return G},create:Bcreate,render:Brender,play:Bplay,save:Bwrite};
+Bload();if(G?.beginner?.live)G.beginner.live.paused=true;Brender();/* the recorded stadium is decoded after the first tap, as in the full game: without it the crowd is only the
+   synthesized fallback */
+document.addEventListener('pointerdown',function unlock(){try{if(typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});try{updateWatch()}catch(e){}try{pcupFromLink()}catch(e){}window.BEGINNER={get state(){return G},create:Bcreate,render:Brender,play:Bplay,save:Bwrite};
 
 if(!window.__ilmNoSplash&&!Rooms.arrival())showSplash();
 Rooms.boot();

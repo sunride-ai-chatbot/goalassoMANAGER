@@ -82,7 +82,12 @@ function penStage2d(host,mode,o){const S=34.15,GX=180,GY=215;const kit=o.kit||'#
      above and more grass below instead of being cut at the sides. */
   const hr=host.getBoundingClientRect();const ar=hr.width&&hr.height?hr.width/hr.height:1,wide=ar>.82;const VX=wide?0:30,VW=wide?360:300;let VY=0,VH=460;if(!wide&&VW/ar>460){VH=VW/ar;VY=-(VH-460)*.42}
   const vb=`viewBox="${VX} ${VY.toFixed(1)} ${VW} ${VH.toFixed(1)}" preserveAspectRatio="xMidYMid ${wide?'meet':'slice'}"`;
-  const crowd=(y0,y1,n,seed)=>{let s=seed,out='';const rnd2=()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296};for(let i=0;i<n;i++){const x=rnd2()*360,y=y0+rnd2()*(y1-y0);out+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.1+rnd2()*.9).toFixed(1)}" fill="${['#d9c58a','#8fa3b8','#e7e3d6','#5f7186','#c6f24e'][Math.floor(rnd2()*5)]}" opacity="${(.25+rnd2()*.5).toFixed(2)}"/>`}return out};
+  /* The stand: three bands that sway at their own pace (one CSS animation each, not one per spectator) and a few
+     camera flashes. `.pg-cheer` on the stage makes the sway a leap; reduced motion holds everything still. */
+  const crowd=(y0,y1,n,seed)=>{let s=seed;const rnd2=()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296};const band=['','',''],fl=[];
+    for(let i=0;i<n;i++){const x=rnd2()*360,y=y0+rnd2()*(y1-y0);band[i%3]+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.1+rnd2()*.9).toFixed(1)}" fill="${['#d9c58a','#8fa3b8','#e7e3d6','#5f7186','#c6f24e'][Math.floor(rnd2()*5)]}" opacity="${(.25+rnd2()*.5).toFixed(2)}"/>`}
+    for(let i=0;i<16;i++)fl.push(`<circle class="pg-spark" cx="${(rnd2()*360).toFixed(1)}" cy="${(y0+rnd2()*(y1-y0)).toFixed(1)}" r="1.7" fill="#fff" style="--d:${(rnd2()*7).toFixed(2)}s"/>`);
+    return band.map((g,i)=>`<g class="pg-crowd pg-c${i+1}">${g}</g>`).join('')+`<g class="pg-sparks">${fl.join('')}</g>`};
   const defs=`<defs><linearGradient id="pgGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c5a2c"/><stop offset="1" stop-color="#2f8a3f"/></linearGradient><linearGradient id="pgStand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070c"/><stop offset="1" stop-color="#141c2a"/></linearGradient><radialGradient id="pgLight" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#fff6d8" stop-opacity=".5"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/></radialGradient><radialGradient id="pgBallG" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9bdc4"/></radialGradient></defs>`;
   const ballG=(id,r)=>`<g id="${id}"><ellipse class="pg-bsh" cx="0" cy="${r*.9}" rx="${r}" ry="${r*.32}" fill="rgba(0,0,0,.4)"/><circle r="${r}" fill="url(#pgBallG)" stroke="#1b2330" stroke-width="${(r*.07).toFixed(2)}"/><path d="M0 ${-r*.45}l${r*.4} ${r*.3}-${r*.16} ${r*.5}h-${r*.48}l-${r*.16}-${r*.5}z" fill="#1b2330"/></g>`;
   let html;
@@ -133,10 +138,19 @@ function penKits(tc,kc,homeId){let t={fill:tc.c1,stroke:tc.c2||'#10151d'},k={fil
   const gkKit=['#f2b233','#39c3d6','#b06cf0'].find(c=>colDist(c,t.fill)>120&&colDist(c,k.fill)>120)||'#f2b233';
   return {kit:t.fill,trim:t.stroke,oppKit:k.fill,oppTrim:k.stroke,gkKit}}
 function penFaceHTML(p,c,key){return `<span class="pg-face" style="${faceFrameStyle(p)}">${playerPortraitHTML(p,c,key)}</span>`}
+/* The stadium of the penalty overlay: the recorded crowd bed runs while it is open (`G.sound===false` mutes it as
+   everywhere else), and `penCheer` lets the stand answer a kick — the 2D bands leap through `.pg-cheer`, the 3D
+   spectators through the shader uniform of `world.crowd`. */
+function penCrowdOn(){try{if(typeof CROWD==='object')CROWD.kickoff(26000)}catch(e){}}
+function penCrowdOff(){try{if(typeof CROWD==='object')CROWD.end()}catch(e){}}
+function penCheer(how,mine){const pg=PG;if(!pg)return;const host=pg.root.querySelector('#pgStage');const big=mine?how==='goal':how!=='goal';
+  try{pg.stage&&pg.stage.cheer&&pg.stage.cheer(big?1:.3)}catch(e){}
+  if(!host)return;host.classList.add('pg-cheer');host.classList.toggle('pg-cheer-big',big);
+  clearTimeout(penCheer.t);penCheer.t=setTimeout(()=>{host.classList.remove('pg-cheer','pg-cheer-big')},big?2600:1100)}
 function penOverlay(o){penClose();const root=document.createElement('div');root.id='penGame';root.className='pg';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',o.title);
   root.innerHTML=`<div class="pg-top"><div class="pg-title">${esc(o.title)}</div><div class="pg-meta">${o.meta||''}</div><div class="pg-so" id="pgSo"></div></div><div class="pg-stage" id="pgStage" tabindex="0"><div class="pg-view" id="pgView"></div></div><div class="pg-bot" id="pgBot"></div>`;
-  document.body.appendChild(root);PG={root,o};return root}
-function penClose(){if(PG){const pg=PG;PG=null;try{pg.off&&pg.off()}catch(e){}try{pg.stage&&pg.stage.dispose&&pg.stage.dispose()}catch(e){}try{pg.view3d&&pg.view3d.dispose()}catch(e){}if(pg.root)pg.root.remove()}}
+  document.body.appendChild(root);PG={root,o};penCrowdOn();return root}
+function penClose(){if(PG){const pg=PG;PG=null;penCrowdOff();try{pg.off&&pg.off()}catch(e){}try{pg.stage&&pg.stage.dispose&&pg.stage.dispose()}catch(e){}try{pg.view3d&&pg.view3d.dispose()}catch(e){}if(pg.root)pg.root.remove()}}
 /* clear what the last kick left on the stage (the sight, the result word, a text panel); the picture itself stays */
 function penClear(){if(!PG)return null;const host=PG.root.querySelector('#pgStage');try{PG.off&&PG.off()}catch(e){}PG.off=null;if(PG.stage&&PG.stage.kind==='2d'){try{PG.stage.dispose()}catch(e){}}PG.stage=null;
   for(const el of [...host.children])if(el.id!=='pgView')el.remove();return host}
@@ -154,7 +168,8 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
   /* a kick belongs to the overlay and the turn it was started in: once either is gone (the overlay was closed, the next
      kick began) nothing of it may run any more */
   let over=false;const token=PG.tok=(PG.tok||0)+1;const alive=()=>!!PG&&PG.root===root&&PG.tok===token;const finish=r=>{if(over||!alive())return;over=true;cb(r)};
-  const end=(r,stage)=>{if(!alive())return;const fl=penFlash(host,o.mode,r.how);if(o.sfx){try{if(r.how==='goal')(kick?SFX.goal(true):(CROWD.goal(false)||SFX.groan()));else kick?SFX.groan():CROWD.chance()}catch(e){}}
+  const end=(r,stage)=>{if(!alive())return;const fl=penFlash(host,o.mode,r.how);if(o.sfx){try{if(r.how==='goal')((CROWD.goal(kick)||SFX.goal(kick)));else kick?SFX.groan():CROWD.chance()}catch(e){}}
+    try{penCheer(r.how,kick)}catch(e){}
     setTimeout(()=>{fl.remove();finish(r)},penQuick()?0:1150)};
   penMakeStage(view,'kick',{...penKits(o.taker.c,o.keeper&&o.keeper.c,o.home),number:tp.no||9}).then(st=>{
     if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}

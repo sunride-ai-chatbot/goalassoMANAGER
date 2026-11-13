@@ -66,6 +66,7 @@ export function createPenaltyView(host,opts){
   function frame(now){raf=0;if(disposed)return;try{
     if(!perf.done)measure(now,now-last);
     const dt=Math.min(.05,(now-last)/1000||0);last=now;clock+=dt;if(netT>=0)netT+=dt;
+    if(world&&world.crowd){world.crowd.time=clock;world.crowd.decay(dt)}
     if(act){act.t+=dt;const u=clamp(act.t/act.dur);act.step(u,act.t);if(u>=1){const a=act;act=null;a.done&&a.done()}}
     draw()}catch(e){return fail()}
     if(!disposed)raf=requestAnimationFrame(frame)}
@@ -89,6 +90,7 @@ export function createPenaltyView(host,opts){
     // a new kick in the same stadium
     reset(m,o){if(disposed)throw new Error('disposed');mode=m;act=null;netT=-1;clock=0;animateNet(world.goals[1],-1,0);Object.assign(K,{z:0,dive:0,side:0,lift:0,sway:true});Object.assign(B,{x:SPOT,y:.145,z:0});Object.assign(R,{x:RUN.x,z:RUN.z,speed:0,kick:0,cele:0,phase:0});
       cast(o||opts);frameCamera();resize()},
+    cheer(v){if(world&&world.crowd)world.crowd.cheer=v==null?1:v},
     dispose};
   try{
     renderer=new T.WebGLRenderer({antialias:true,powerPreference:'default'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.type=T.PCFSoftShadowMap;

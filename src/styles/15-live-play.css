@@ -83,3 +83,22 @@
 .pg-timer.idle{visibility:hidden}
 @media(min-width:900px){.pg-title{font-size:54px}.pg-flash{font-size:140px}.pg-stage{max-width:1100px;width:100%;margin:0 auto}}
 @media(prefers-reduced-motion:reduce){.pg,.pg-flash,.pg-kbody.sway,.pg-net.hit{animation:none}}
+
+/* The stand of the 2D penalty picture: three bands sway on their own pace, a few camera flashes go off, and the whole
+   crowd leaps for a couple of seconds when the kick is decided (`.pg-cheer`, `.pg-cheer-big` for our side's joy). */
+@keyframes pgStandSway{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.1px)}}
+@keyframes pgStandLeap{0%,100%{transform:translateY(0)}45%{transform:translateY(-4.2px)}}
+@keyframes pgSpark{0%,95.5%,100%{opacity:0}96.5%{opacity:.95}98%{opacity:.25}}
+.pg-crowd{animation:pgStandSway 2.7s ease-in-out infinite}
+.pg-c2{animation-duration:3.4s;animation-delay:-.9s}
+.pg-c3{animation-duration:4.2s;animation-delay:-2.1s}
+.pg-spark{opacity:0;animation:pgSpark 7s linear infinite;animation-delay:var(--d,0s)}
+.pg-cheer .pg-crowd{animation-name:pgStandLeap;animation-duration:.46s}
+.pg-cheer .pg-c2{animation-duration:.38s}
+.pg-cheer .pg-c3{animation-duration:.54s}
+.pg-cheer .pg-spark{animation-duration:1.4s}
+.pg-cheer-big .pg-crowd{animation-duration:.34s}
+.pg-cheer-big .pg-c2{animation-duration:.29s}
+.pg-cheer-big .pg-c3{animation-duration:.4s}
+.pg-cheer-big .pg-spark{animation-duration:.7s}
+@media (prefers-reduced-motion:reduce){.pg-crowd,.pg-spark{animation:none}}

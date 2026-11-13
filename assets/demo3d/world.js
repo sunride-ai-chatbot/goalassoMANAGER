@@ -31,13 +31,25 @@ export function buildWorld(scene,renderer){
  for(const sx of [-1,1])for(const sz of [-1,1])for(let row=0;row<15;row++)for(let col=0;col<13;col++)people.push([sx*(55.4+row*.87+col*.6),2+row*.69,sz*(44.6+row*.87-col*.6),Math.atan2(-sx,-sz)]);
  const bodies=new T.InstancedMesh(new T.CylinderGeometry(.18,.23,.55,5),mat(0xffffff),people.length),heads=new T.InstancedMesh(new T.OctahedronGeometry(.13,0),mat(0xffffff),people.length),dummy=new T.Object3D();const shirts=[0xb82034,0xcd3646,0xe3e4dc,0xddddcf,0x182c41,0x73838a,0x304555];const skins=[0xc28f65,0xdfb38c,0x87583d,0xe1c1a0,0x593e2e];
  people.forEach(([x,y,z,rot],i)=>{dummy.position.set(x,y,z);dummy.rotation.y=rot;dummy.scale.set(1,random()*.18+.9,1);dummy.updateMatrix();bodies.setMatrixAt(i,dummy.matrix);bodies.setColorAt(i,new T.Color(shirts[Math.floor(random()*shirts.length)]));dummy.position.y+=.42;dummy.scale.setScalar(1);dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);heads.setColorAt(i,new T.Color(skins[Math.floor(random()*skins.length)]))});scene.add(bodies,heads);
+ /* The stand is alive: every spectator sways on his own phase, and on a goal he leaps. It runs in the vertex shader,
+    so thousands of them cost nothing per frame; the scene only advances `crowd.time` and sets `crowd.cheer`. */
+ const crowd={uniforms:{uTime:{value:0},uCheer:{value:0}},
+  set time(v){this.uniforms.uTime.value=v},get time(){return this.uniforms.uTime.value},
+  set cheer(v){this.uniforms.uCheer.value=Math.max(0,Math.min(1,v))},get cheer(){return this.uniforms.uCheer.value},
+  decay(dt){this.cheer=this.cheer*Math.pow(.12,dt)}};
+ {const phase=new Float32Array(people.length);for(let i=0;i<people.length;i++)phase[i]=random()*Math.PI*2;
+  for(const m of [bodies,heads]){m.geometry.setAttribute('aPhase',new T.InstancedBufferAttribute(phase,1));
+   m.material.onBeforeCompile=sh=>{sh.uniforms.uTime=crowd.uniforms.uTime;sh.uniforms.uCheer=crowd.uniforms.uCheer;
+    sh.vertexShader='attribute float aPhase;uniform float uTime;uniform float uCheer;\n'+sh.vertexShader.replace('#include <begin_vertex>',
+     '#include <begin_vertex>\n transformed.y += sin(uTime*1.7+aPhase)*0.045 + max(0.0,sin(uTime*7.5+aPhase*3.0))*uCheer*0.75;')};
+   m.material.needsUpdate=true}}
  const adtex=canvasTexture(2048,128,(c,w,h)=>{c.fillStyle='#102631';c.fillRect(0,0,w,h);c.font='italic 900 65px Arial';c.textBaseline='middle';c.fillStyle='#75efbd';c.fillText('GOALASSO',55,66);c.fillStyle='#e5f2f4';c.font='700 49px Arial';c.fillText('SUNRIDE',650,66);c.fillText('THE BEAUTIFUL GAME',1120,66);for(let x=0;x<w;x+=512){c.fillStyle='#75efbd';c.fillRect(x,h-8,200,6)}});adtex.wrapS=T.RepeatWrapping;adtex.repeat.x=3;adtex.anisotropy=4;
  const admat=mat(0xffffff,{map:adtex,emissive:0x18342b,emissiveIntensity:.2});for(const z of [-37.6,37.6])box(scene,112,1.25,.2,0,.65,z,admat);for(const x of [-56.5,56.5])box(scene,.2,1.25,72,x,.65,0,admat);
  // Corner flags and dugouts.
  for(const x of [-52.5,52.5])for(const z of [-34,34]){tube(scene,[x,0,z],[x,1.55,z],.025,mat(0xffffff));const flag=new T.Mesh(new T.PlaneGeometry(.5,.35),mat(0xe4ce55,{side:T.DoubleSide}));flag.position.set(x+.25,1.38,z);scene.add(flag)}
  for(const x of [-14,14]){box(scene,10,2.6,.15,x,1.3,40,dark);box(scene,10,.15,3,x,2.65,39,dark);for(let n=0;n<9;n++)box(scene,.7,.5,.7,x-4+n, .5,39,mat(0x962a3f))}
  for(const x of [-59,59])for(const z of [-40,40]){tube(scene,[x,0,z],[x,25,z],.18,rail);const bank=box(scene,5,1.6,.5,x,25,z,dark);for(let n=0;n<6;n++)box(scene,.6,.55,.12,x-2+n*.8,25.1,z+(z>0?-.3:.3),new T.MeshBasicMaterial({color:0xfff1cc}))}
- const goals=[makeGoal(scene,-1),makeGoal(scene,1)];return{sun,goals,crowdCount:people.length};
+ const goals=[makeGoal(scene,-1),makeGoal(scene,1)];return{sun,goals,crowdCount:people.length,crowd};
 }
 function makeGoal(scene,side){const g=new T.Group();g.position.x=side*52.5;g.scale.x=side;scene.add(g);const post=mat(0xf5f5e8,{roughness:.45});for(const z of [-3.66,3.66]){tube(g,[0,0,z],[0,2.44,z],.065,post);tube(g,[0,2.44,z],[2.1,1.9,z],.035,post);tube(g,[2.1,1.9,z],[2.1,0,z],.035,post)}tube(g,[0,2.44,-3.66],[0,2.44,3.66],.065,post);
  const pos=[];const push=(a,b)=>pos.push(...a,...b);for(let z=-3.66;z<=3.67;z+=.22){push([2.1,0,z],[2.1,1.9,z]);push([0,2.44,z],[2.1,1.9,z])}for(let y=0;y<=1.91;y+=.2)push([2.1,y,-3.66],[2.1,y,3.66]);for(const z of [-3.66,3.66]){for(let x=0;x<=2.11;x+=.21)push([x,0,z],[x,2.44-x*.257,z]);for(let y=0;y<=2.4;y+=.2)push([0,y,z],[2.1,Math.min(y,1.9),z])}for(let x=0;x<=2.11;x+=.21)push([x,2.44-x*.257,-3.66],[x,2.44-x*.257,3.66]);const geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(pos,3));const net=new T.LineSegments(geo,new T.LineBasicMaterial({color:0xe2e9e4,transparent:true,opacity:.52}));g.add(net);const base=Float32Array.from(pos);return {net,base,group:g};}
