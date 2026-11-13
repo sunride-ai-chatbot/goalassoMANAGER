@@ -55,3 +55,27 @@ body.beginner{background:radial-gradient(ellipse at 90% 0%,#174c5255,transparent
 /* touchline shouts under the pitch (the bar of the full game) and the highlights speed button */
 .beginner .shouts{margin:10px 0 0}
 .bspeed .bbtn[data-bspeed="hl"]{min-width:74px}
+/* career: opening steps, contract, board, offers */
+.bstart{scroll-margin-top:12px}.bstart h2{margin:6px 0 14px}
+.bfield{display:block;font-weight:700;margin:0 0 6px}.bfield input{display:block;width:100%;max-width:420px;height:54px;margin-top:8px;padding:0 16px;border-radius:12px;border:1px solid #3c5065;background:#0c1928;color:#f4f8fc;font:600 19px Heebo,Arial,sans-serif}
+.bstart-err{min-height:1.4em;margin:4px 0 8px;color:#ffb4a8;font-size:15px}
+.bstart form .bbtn{width:auto}
+.blink{display:inline-block;min-height:44px;padding:8px 2px;margin-top:10px;border:0;background:none;color:var(--bmint);font:700 16px Heebo,Arial,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.bcountries{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin:0 0 18px;align-items:start}
+.bcountry>button,.bleagues button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:58px;padding:10px 16px;border-radius:14px;border:1px solid var(--bline);background:#0f2031;color:#f4f8fc;font:inherit;text-align:start;cursor:pointer}
+.bcountry>button strong{font-size:19px}.bcountry small,.bleagues small{color:var(--bmuted);font-size:14px}
+.bcountry.open>button{border-color:var(--bmint);background:#12303a}
+.bleagues{display:grid;gap:6px;margin:6px 0 4px;padding-inline-start:14px;border-inline-start:3px solid var(--bmint)}
+.bleagues button{min-height:52px;background:#132a3d}
+.bcountry>button:active,.bleagues button:active{transform:translateY(1px)}
+.bcontract h2{display:flex;align-items:center;gap:12px;margin:6px 0 14px}.bcontract h2 .kit{width:52px;height:52px;flex:none}
+.bcontract .bbtn{width:100%}.bcontract .blink{display:block;margin:8px auto 0}
+.bcontract dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0 0 16px}.bcontract dt{color:var(--bmuted)}.bcontract dd{margin:0;font-weight:700}
+.bcareer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}.bcareer-head h2{margin:2px 0 4px}.bcareer-head p{margin:0;color:var(--bmuted)}.bcareer-head .blink{margin-top:0;color:#ffb4a8}
+.bboard{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;margin-top:16px}.bboard span{color:var(--bmuted);font-size:15px}
+.bboard-bar{height:12px;border-radius:999px;background:#0c1928;border:1px solid var(--bline);overflow:hidden}.bboard-bar i{display:block;height:100%;border-radius:999px;background:var(--bmint)}.bboard-bar i.mid{background:#f2c14e}.bboard-bar i.low{background:#ff8a7a}
+.boffers{margin-top:18px}.boffers h3{margin:0 0 10px;font-size:18px}
+.boffer{display:flex;align-items:center;gap:14px;padding:14px;margin:0 0 10px;border-radius:16px;border:1px solid var(--bline);background:#0f2031}.boffer .kit{width:48px;height:48px;flex:none}.boffer>div{flex:1;min-width:0}.boffer strong{display:block;font-size:19px}.boffer small{display:block;color:var(--bmuted);font-size:14.5px;line-height:1.5}.boffer .bbtn{width:auto;margin:0;flex:none}
+.bverdict{margin:16px 0;padding:14px 16px;border-radius:14px;border:1px solid var(--bline);background:#0f2031}.bverdict h3{margin:0 0 4px;font-size:18px}.bverdict p{margin:0}
+.bout{margin-top:26px}
+@media(max-width:600px){.boffer{flex-wrap:wrap}.boffer .bbtn{width:100%}.bboard{grid-template-columns:1fr auto}.bboard span{grid-column:1/-1}.bcountries{grid-template-columns:1fr}}

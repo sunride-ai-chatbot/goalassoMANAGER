@@ -99,7 +99,7 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
  // The beginner mode (beginner.html beside the page): each number of the live score on its own team's side, the name of the
  // player on the ball, ratings of both sides after the final whistle
  R.beginner={};try{const B=R.beginner;const bp=await ctx.newPage();bp.on('pageerror',e=>errs.push('beginner: '+String(e).slice(0,200)));await bp.addInitScript(()=>{window.__ilmNoSplash=1});
-  const u=new URL(BASE);u.pathname=u.pathname.replace(/[^/]*$/,'')+'beginner.html';await bp.goto(u.href,{waitUntil:'load',timeout:90000});await bp.waitForFunction(()=>typeof Bcreate==='function'&&document.querySelectorAll('[data-start]').length>10,null,{timeout:60000});
+  const u=new URL(BASE);u.pathname=u.pathname.replace(/[^/]*$/,'')+'beginner.html';await bp.goto(u.href,{waitUntil:'load',timeout:90000});await bp.waitForFunction(()=>typeof Bcreate==='function'&&!!document.querySelector('#bstart'),null,{timeout:60000});
   await bp.evaluate(()=>{Bcreate('mta');Bplay()});await bp.waitForSelector('#bscore .sd-h');
   await bp.waitForFunction(()=>Bpitch&&Bpitch.carLab&&Bpitch.carLab.style.display!=='none'&&Bpitch.carNow,null,{timeout:30000});
   B.carrier=await bp.evaluate(()=>({label:Bpitch.carLab.textContent,name:Bpitch.carNow.name,size:Math.round(Bpitch.carLab.getBoundingClientRect().height)}));await bp.evaluate(()=>scrollTo(0,0));await bp.screenshot({path:OUT+'beginner-live.png'});
