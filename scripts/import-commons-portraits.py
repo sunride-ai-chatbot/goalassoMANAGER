@@ -61,7 +61,11 @@ class FaceMatch:
         h, w = img.shape[:2]
         det = self.cv2.FaceDetectorYN.create(self.yunet, '', (w, h), 0.7, 0.3, 50)
         _, faces = det.detect(img)
-        if faces is None or len(faces) != 1 or faces[0][2] < 60:
+        if faces is None or not len(faces):
+            return None
+        faces = sorted(faces, key=lambda f: -f[2] * f[3])
+        # one subject: a face of 60 px or more, and no second face of comparable size (as the portrait checks ask)
+        if faces[0][2] < 60 or (len(faces) > 1 and faces[1][2] * faces[1][3] >= 0.55 * faces[0][2] * faces[0][3]):
             return None
         return self.rec.feature(self.rec.alignCrop(img, faces[0]))
 
@@ -70,6 +74,7 @@ class FaceMatch:
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--sources', required=True); ap.add_argument('--clubs', required=True)
+    ap.add_argument('--fresh', action='store_true', help='decide every player again (by default a player keeps the face he has, and recorded refusals are not measured again)')
     ap.add_argument('--review', default='', help='directory for side-by-side pictures of every identity confirmed by face match')
     a = ap.parse_args()
     ep = os.path.join(ROOT, 'data', 'visuals', 'euro-players.json')
@@ -82,16 +87,27 @@ def main():
     trusted = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-trusted-files.json'), {})
     t = bp.Tools()
     fm = FaceMatch(t.yunet_path)
-    # decisions per candidate file (size+mtime+pipeline version), so retries only process new files
+    # decisions per candidate file (size + pipeline version), so retries only process new files. The version is the
+    # pipeline's content, not its date: a fresh checkout must not throw the decisions away
     cache_p = os.path.join(a.sources, '.import-cache.json'); cache = load(cache_p, {})
-    pv = os.path.getmtime(os.path.join(ROOT, 'scripts', 'build-portraits.py'))
+    with open(os.path.join(ROOT, 'scripts', 'build-portraits.py'), 'rb') as fh:
+        pv = hashlib.sha1(fh.read()).hexdigest()[:12]
+    PIPE = {'no_face_detected', 'multiple_faces', 'face_turned', 'face_tilted', 'face_unclear', 'face_not_upright', 'face_too_small', 'blurry',
+            'background_not_separable', 'source_cuts_head', 'unreadable'}
+    import re as _re0
+    def refused(prev, title):
+        """The refusal the last import recorded for this file ('' = none): the pipeline is the same, so is its answer."""
+        m = _re0.search(_re0.escape(title) + r': ([a-z_/]+)(?:;|\)|$)', prev or '')
+        return m.group(1) if m and not a.fresh and set(m.group(1).split('/')) <= PIPE else ''
     # the accepted cut-out is kept beside the decision, so the pack is written here and the photo is not processed twice
     built_dir = os.path.join(a.sources, '.import-built'); os.makedirs(built_dir, exist_ok=True)
     built_path = lambda ck: os.path.join(built_dir, hashlib.sha1(ck.encode('utf8')).hexdigest() + '.json')   # noqa: E731
     overrides = load(os.path.join(ROOT, 'data', 'visuals', 'portrait-overrides.json'), {})
     auditp = os.path.join(ROOT, 'data', 'visuals', 'portrait-audit.json')
-    def run_file(key, c, lenient):
+    def run_file(key, c, lenient, known=''):
         """All renditions of one Commons file through the portrait pipeline: ((candidate, image, cache key) | None, reasons)."""
+        if known and not lenient:
+            return None, known.split('/')
         # the same Commons file may exist in several renditions (640 px first, wider retries later); a wider
         # rendition can reveal a second face the detector rejects, so every rendition on disk is tried
         import glob as _g, re as _re
@@ -105,7 +121,7 @@ def main():
                 img = Image.open(path).convert('RGB')
             except Exception:
                 reasons.append('unreadable'); continue
-            ck = f"{key}/{os.path.basename(path)}|{os.path.getsize(path)}|{os.path.getmtime(path)}|{pv}" + ('|reviewed' if lenient else '')
+            ck = f"{key}/{os.path.basename(path)}|{os.path.getsize(path)}|{pv}" + ('|reviewed' if lenient else '')
             if ck not in cache:
                 im, meas = bp.process(t, img, key=os.path.basename(path), strict=not lenient)
                 cache[ck] = 'ok' if im is not None else meas.get('reason')
@@ -135,6 +151,9 @@ def main():
             print('no manifest for', key); continue
         squad = load(os.path.join(ROOT, 'data', 'euro', key + '.json'))
         club_he = squad['name_he']; pack = 'eu-' + key
+        was = {p['visualId']: E['faces'].get(p['visualId']) for p in E['players'] if p['key'] == key}
+        was_un = {p['en']: p.get('reason', '') for p in E['unresolved'] if p['key'] == key}
+        had0 = (load(os.path.join(ROOT, 'assets', 'facepacks', pack + '.json')) or {}).get('images', {}); audit0 = load(auditp, {})
         E['players'] = [p for p in E['players'] if p['key'] != key]
         E['unresolved'] = [p for p in E['unresolved'] if p['key'] != key]
         E['faces'] = {k: v for k, v in E['faces'].items() if v['pack'] != pack}
@@ -150,7 +169,19 @@ def main():
             base = {'key': key, 'club': club_he, 'en': pl['en'], 'he': pl['he']}
             if not pl.get('qid'):
                 E['unresolved'].append({**base, 'reason': 'not identified on Wikidata: ' + (pl.get('match') or pl.get('error') or 'unknown')}); continue
+            # a player keeps the face he has: the same file, still not rejected on review, its cut-out in the pack
+            vid0 = 'wd-' + pl['qid']; pf = None if a.fresh else was.get(vid0)
+            c0 = pf and next((c for c in pl.get('candidates', []) if c['title'] == pf['source']['title']), None)
+            if c0 and c0['title'] not in REJECT and vid0 in had0 and audit0.get(vid0, {}).get('status') == 'ok' and overrides.get(vid0, {}).get('status') != 'unresolved':
+                im0 = any_image(key, c0)
+                if im0 is not None:
+                    buf = io.BytesIO(); im0.save(buf, 'JPEG', quality=92)
+                    photos[vid0] = 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
+                    E['players'].append({**base, 'visualId': vid0, 'qid': pl['qid'], 'wikidata': pl.get('wikidata'), 'match': pl.get('match')})
+                    E['faces'][vid0] = pf
+                    continue
             chosen, tried, pending, named, matched = None, [], [], [], None
+            prev = was_un.get(pl['en'], '')
             surname = bp_norm(pl.get('label') or pl['en']).split()[-1:] + bp_norm(pl['en']).split()[-1:]
             for c in pl.get('candidates', []):
                 # files from the player's Commons category must name him: a category can be shared with, or polluted
@@ -175,7 +206,7 @@ def main():
                 if not acc and not shown and not c.get('fromP18') and not any(sn and sn in bp_norm(c['title']) for sn in surname):
                     tried.append(c['title'] + ': file name does not name the player'); pending.append(c); continue
                 named.append(c)
-                got, reasons = run_file(key, c, bool(acc) and not acc.get('strict'))   # identity-only confirmations keep the strict quality checks
+                got, reasons = run_file(key, c, bool(acc) and not acc.get('strict'), refused(prev, c['title']))   # identity-only confirmations keep the strict quality checks
                 if got:
                     chosen = got; break
                 tried.append(f"{c['title']}: {'/'.join(dict.fromkeys(reasons))}")
@@ -189,15 +220,15 @@ def main():
                     if f is not None:
                         refs.append((c, im0, f))
                 for c in pending if refs else []:
-                    got, reasons = run_file(key, c, False)
-                    if not got:
-                        tried.append(f"{c['title']}: {'/'.join(dict.fromkeys(reasons))}"); continue
-                    f = fm.feature(got[1])
+                    im1 = any_image(key, c); f = fm.feature(im1) if im1 is not None else None
                     if f is None:
-                        tried.append(c['title'] + ': no single clear face to compare'); continue
+                        continue
                     best = max(refs, key=lambda r: fm.cos(f, r[2])); score = fm.cos(f, best[2])
                     if score < FM_MIN:
-                        tried.append(f"{c['title']}: not the face of his named pictures ({score:.2f})"); continue
+                        continue
+                    got, reasons = run_file(key, c, False)
+                    if not got:
+                        tried.append(f"{c['title']}: his face (similarity {score:.2f}), refused as a portrait: {'/'.join(dict.fromkeys(reasons))}"); continue
                     chosen = got; matched = (best[0]['title'], score)
                     if a.review:
                         os.makedirs(a.review, exist_ok=True)

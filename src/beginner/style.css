@@ -89,6 +89,7 @@ body.beginner{background:radial-gradient(ellipse at 90% 0%,#174c5255,transparent
 .bpick-page .btop{border-bottom:0;height:64px}
 .beginner .bpick h1{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 6px;font:700 clamp(46px,13vw,72px)/.95 "Karantina",Heebo,Arial,sans-serif;letter-spacing:.3px;color:#fff;text-shadow:0 3px 22px rgba(0,0,0,.75)}
 .bpick h1 .bflag{width:54px;height:36px}
+.bpick h1 .bstar{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(233,196,106,.2);color:#f2d68a;font-size:24px;vertical-align:middle}
 .bpick-sub{margin:0 0 22px;max-width:34ch;color:#e6edf3;font-size:17px;text-shadow:0 1px 10px rgba(0,0,0,.8)}
 .bflag{width:42px;height:28px;flex:none;border-radius:5px;box-shadow:0 0 0 1px rgba(255,255,255,.28),0 4px 12px rgba(0,0,0,.45)}
 .bpick .bcountries{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-bottom:14px}

@@ -11,7 +11,7 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
  try{
   // ---- the leagues on offer
   LEUM.push(...run('LEUMIT16.map(d=>d.name)'));
-  const cat=run('Bcat().map(c=>({id:c.id,name:c.name,leagues:c.leagues.map(l=>({id:l.id,name:l.name,n:l.clubs.length,keys:l.clubs.map(x=>x.key)}))}))');
+  const cat=run('Bcat().filter(c=>!c.cup).map(c=>({id:c.id,name:c.name,leagues:c.leagues.map(l=>({id:l.id,name:l.name,n:l.clubs.length,keys:l.clubs.map(x=>x.key)}))}))');
   assert.deepEqual(cat[0].leagues.map(l=>l.name),['ליגת העל','ליגה לאומית','ליגה א׳ צפון','ליגה א׳ דרום'],'Israel: four leagues');assert.deepEqual(cat[0].leagues.map(l=>l.n),[14,16,17,18]);
   const names=cat.flatMap(c=>c.leagues.map(l=>l.name));for(const n of ['פרמייר ליג','צ׳מפיונשיפ','לה ליגה','לה ליגה 2','סרייה א׳','בונדסליגה','ליג 1'])assert.ok(names.includes(n),'league on offer: '+n);
   assert.ok(cat.every(c=>c.leagues.every(l=>l.n>=6)));const allKeys=cat.flatMap(c=>c.leagues.flatMap(l=>l.keys));assert.equal(new Set(allKeys).size,allKeys.length,'a club belongs to one league');
@@ -21,9 +21,9 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   assert.ok($('#bstart #bcoach'),'step one asks for the name');assert.equal($$('.bclub').length,0,'no wall of clubs before a league is chosen');
   submit('[data-bnameform]');assert.match($('.bstart-err').textContent,/שתי אותיות/,'a name is required');assert.ok($('#bcoach'));
   type('#bcoach','  דני רופא ');submit('[data-bnameform]');assert.equal(w.eval('Bstart.step'),'league');assert.match($('#bstart h1').textContent,/דני רופא/);assert.ok($('.bpick-page'),'the league choice is its own screen in front of the stadium');assert.equal($('.bopening'),null);
-  assert.equal($$('[data-bcountry] .bflag').length,cat.length,'a flag beside every country');const modes=$$('.bmodes .bmode');assert.equal(modes.length,2);assert.match(modes[0].textContent,/ליגת האלופות/);assert.ok(modes[0].disabled,'the Champions League is announced, not yet open');assert.match(modes[0].textContent,/בקרוב/);assert.ok(modes[1].hasAttribute('data-room-open'),'network play is the last option');
+  assert.equal($$('[data-bcountry] .bflag').length,cat.length,'a flag beside every country');const modes=$$('.bmodes .bmode');assert.equal(modes.length,2);assert.match(modes[0].textContent,/ליגת האלופות/);assert.equal(modes[0].dataset.bleague,'cl1','the Champions League is a league to choose');assert.ok(!modes[0].disabled);assert.ok(modes[1].hasAttribute('data-room-open'),'network play is the last option');
   assert.equal($$('[data-bcountry]').length,cat.length);$('[data-bcountry="it"]').click();assert.equal(w.eval('Bstart.step'),'club','a country with one league goes straight to its clubs');assert.equal($$('.bclub').length,cat.find(c=>c.id==='it').leagues[0].n);
-  $('[data-bstep="league"]').click();$('[data-bcountry="il"]').click();assert.equal($$('[data-bleague]').length,4);assert.equal($('[data-bcountry="il"]').getAttribute('aria-expanded'),'true');
+  $('[data-bstep="league"]').click();$('[data-bcountry="il"]').click();assert.equal($$('.bleagues [data-bleague]').length,4);assert.equal($('[data-bcountry="il"]').getAttribute('aria-expanded'),'true');
   // search by name finds a club in its league
   type('#bclubsearch','ליברפול');assert.equal(w.document.activeElement.id,'bclubsearch','typing keeps the field');const hit=$$('.bclub').find(b=>/ליברפול/.test(b.textContent));assert.ok(hit&&/פרמייר ליג/.test(hit.textContent));type('#bclubsearch','');
   $('[data-bleague="il3n"]').click();const clubs=$$('.bclub');assert.equal(clubs.length,17);assert.match($('#bstart h1').textContent,/ליגה א׳ צפון/);assert.ok($('#bstart h1 .bflag'));
@@ -88,6 +88,17 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   w.eval(`(()=>{const d=JSON.parse(localStorage.getItem(BK));const b=d.G.beginner;for(const c of d.G.clubs)delete c.bkey;for(const k of ['contract','board','leagueId','coach','jobs'])delete b[k];b.league=b.league.slice(0,6);localStorage.setItem(BK,JSON.stringify(d));G=null;Bload();Bseason();Brender()})()`);
   assert.equal(run('Bstate().leagueId||null'),null);assert.equal(run('!!Bstate().contract'),false);assert.equal($('.bcareer'),null,'a training league that is not on the list plays on as before, without a board');
   playTo(3);assert.equal(run('Bstate().round'),3);assert.equal(run('!!Bstate().out'),false);
+
+  // ---- the Champions League: the strongest clubs of the continent as one league
+  const cl=run("(()=>{const l=BcatLeague('cl1');return {n:l.clubs.length,min:Math.min(...l.clubs.map(x=>x.str)),keys:l.clubs.map(x=>x.key),home:l.clubs.map(x=>BcatFind(x.key).l.id),per:Object.values(l.clubs.reduce((m,x)=>(m[BcatFind(x.key).country.id]=(m[BcatFind(x.key).country.id]||0)+1,m),{})),rest:Math.max(...Bcat().filter(c=>!c.cup&&c.id!=='il').flatMap(c=>c.leagues.filter(l=>l.tier===1).flatMap(l=>l.clubs)).filter(x=>!l.clubs.includes(x)).map(x=>x.str))}})()");
+  assert.equal(cl.n,16);assert.ok(cl.home.every(id=>id!=='cl1'&&/1$/.test(id)),'every club of it is found in its own top division first');assert.ok(Math.max(...cl.per)<=4,'at most four clubs of one country');assert.ok(cl.per.length>=5,'five countries or more');assert.equal(new Set(cl.keys).size,16);
+  w.eval("document.querySelector('.bdialog')?.remove();localStorage.removeItem(BK);G=null;Bstart={step:'league',name:'קרלו',country:null,league:null,club:null,q:'',err:''};Brender()");
+  $('.bmodes [data-bleague="cl1"]').click();assert.equal(w.eval('Bstart.step'),'club');assert.equal($$('.bclub').length,16);assert.match($('#bstart h1').textContent,/ליגת האלופות/);assert.ok($('#bstart h1 .bstar'));
+  $$('.bclub')[7].click();assert.match($('.bcontract').textContent,/ליגת האלופות/);$('[data-bsign]').click();
+  const clc=run("({id:Bstate().leagueId,n:Bstate().league.length,rounds:Bstate().schedule.length,name:BleagueName(),keys:Bstate().league.map(id=>club(id).bkey).sort(),goal:Bstate().contract.goal,pool:BjobPool(0,200).map(o=>o.league),same:BjobPool(0,200,true).map(o=>o.league)})");
+  assert.equal(clc.id,'cl1');assert.equal(clc.n,16);assert.equal(clc.rounds,30,'home and away against everyone');assert.equal(clc.name,'ליגת האלופות');assert.deepEqual(clc.keys,cl.keys.slice().sort());assert.ok(clc.goal>=1&&clc.goal<=15);
+  assert.ok(clc.pool.length>50&&!clc.pool.includes('cl1'),'offers from outside come from the countries\' leagues');assert.ok(clc.same.length===15&&clc.same.every(x=>x==='cl1'),'inside it a bigger club of the same league may call');
+  playTo(3,60);assert.equal(run('Bstate().round'),3);assert.ok(run('Bstandings().length')===16);w.eval('Bwrite()');assert.equal(run('Bstate().leagueId'),'cl1');
 
   assert.equal(w.localStorage.getItem('ilm2'),'PRO_SENTINEL','the full game\'s career is never touched');
   // ---- the title screen of the beginner page: the name is written there, network play is not, a small link leads to the full game
