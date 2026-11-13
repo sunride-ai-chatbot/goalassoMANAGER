@@ -334,7 +334,7 @@ def more_pass(a, keys):
             try:
                 qid = entry.get('qid') or u.get('qid')
                 ent = None
-                if not qid and re.search('[\u0590-\u05ff]', p.get('en') or ''):
+                if not qid and (key.startswith('l_') or re.search('[\u0590-\u05ff]', p.get('en') or '')) and re.search('[\u0590-\u05ff]', p.get('he') or ''):
                     cq = cq or club_qid(key)
                     ent, why = identify_hebrew(p, cq)
                     entry['match'] = why
