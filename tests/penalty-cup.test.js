@@ -59,11 +59,13 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.notEqual(w.eval("PCUP.clubs[PCUP.my.key].id"),w.eval("PCUP.clubs[PCUP.my.key+'#2'].id"),'the twin has its own id');
   w.eval("window.__seat=[];(()=>{const real=pcupResolve;pcupResolve=function(kd,gd){window.__seat.push([kd,gd]);return real.apply(this,arguments)}})()");
   const slide=(el,dx,dy,pid)=>{const mk=(t,x,y)=>{const e=new w.MouseEvent(t,{bubbles:true,cancelable:true,clientX:x,clientY:y});if(pid!=null)Object.defineProperty(e,'pointerId',{value:pid});return e};el.dispatchEvent(mk('pointerdown',100,100));el.dispatchEvent(mk('pointermove',100+dx/2,100+dy/2));el.dispatchEvent(mk('pointerup',100+dx,100+dy))};
-  let kicks=0;const roles=[];guard=0;
+  let kicks=0;const roles=[],expect=[];guard=0;const TURN={U:'D',D:'U',L:'R',R:'L',UL:'DR',UR:'DL',DL:'UR',DR:'UL'};
   while(!$('#pgDone')){if(++guard>6000)throw new Error('the one-phone duel never ended');
     if(w.eval('!!(PCUP&&PCUP.asking)')){const zs=$$('.pc-zone');assert.equal(zs.length,2,'a strip for each player');assert.ok($('.pc-zone[data-zone="b"]').classList.contains('far')&&$('.pc-zone[data-zone="a"]').classList.contains('near'),'the second club at the far edge and turned to its player, the first at the near edge');
       assert.equal($$('.pc-zone button,.pc-pad,.pg-dirs').length,0,'no buttons and no arrows: the finger slides');assert.deepEqual(zs.map(z=>z.dataset.role).sort(),['keep','kick'],'one kicks, one keeps goal');assert.equal($('#pcReady'),null,'the phone never changes hands');
       const kick=$('.pc-zone[data-role="kick"]'),keep=$('.pc-zone[data-role="keep"]');roles.push(kick.dataset.zone);assert.ok($('#penGame').classList.contains('pc-face'),'the picture takes the whole screen');
+      // the pitch turns to the kicker: when the far player kicks, the picture is turned and a slide is read in the turned picture
+      const flip=$('#pgStage').classList.contains('pc-flip');assert.equal(flip,kick.dataset.zone==='b','the taker\'s back is at the kicker\'s own edge');assert.ok($('#pgStage #pgView'));const see=d=>flip?TURN[d]:d;
       // nothing runs until one press; it starts the count of three seconds
       assert.ok($('.pc-go'),'one button in the middle');assert.ok($('.pc-turn').hidden,'no count before the press');if(kicks===2){await tick(900);assert.ok(w.eval('PCUP.asking'),'it waits as long as nobody presses');}
       if(kicks>=1){$('.pc-go').click();assert.equal($('.pc-go'),null);assert.ok(!$('.pc-turn').hidden);assert.equal($('.pc-turn').textContent,'3')}
@@ -72,14 +74,14 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
         slide(keep,-40,40,1);assert.ok(keep.classList.contains('set'));assert.ok(!kick.classList.contains('set'),'only the one who chose is marked');
         const d1=(t,x,y,pid)=>{const e=new w.MouseEvent(t,{bubbles:true,cancelable:true,clientX:x,clientY:y});Object.defineProperty(e,'pointerId',{value:pid});return e};
         keep.dispatchEvent(d1('pointerdown',50,50,7));kick.dispatchEvent(d1('pointerdown',200,300,8));keep.dispatchEvent(d1('pointerup',10,10,7));kick.dispatchEvent(d1('pointerup',260,300,8));slide(kick,3,2,9);
-        assert.equal($$('.pc-zone [data-dir],.pc-zone .on').length,0,'a strip never shows which way');assert.doesNotMatch(keep.textContent+kick.textContent,/UL|שמאל|ימין|למעלה|למטה/);assert.deepEqual(run('PCUP.pads()'),kick.dataset.zone==='a'?{a:'R',b:'UL'}:{a:'UL',b:'R'});
-       }else{slide(kick,40,-40);slide(keep,-40,40)}
+        assert.equal($$('.pc-zone [data-dir],.pc-zone .on').length,0,'a strip never shows which way');assert.doesNotMatch(keep.textContent+kick.textContent,/UL|שמאל|ימין|למעלה|למטה/);assert.deepEqual(run('PCUP.pads()'),kick.dataset.zone==='a'?{a:'R',b:'UL'}:{a:see('UL'),b:see('R')});expect[1]=[see('R'),see('UL')];
+       }else{slide(kick,40,-40);slide(keep,-40,40);expect[kicks]=[see('UR'),see('DL')]}
       const want=run('PCUP.pads()');kicks++;w.eval('PCUP.whistle()');assert.equal(w.eval('PCUP.asking'),false);assert.equal($$('.pc-zone,.pc-go').length,0,'the strips leave at the whistle and the picture is clear');
       const chips=$$('.pc-chose');assert.equal(chips.length,2,'each choice is shown at its own edge once the kick is on');const near=chips.find(c=>c.classList.contains('near')),far=chips.find(c=>c.classList.contains('far'));
       if(want.a)assert.equal(near.dataset.dir,want.a);if(want.b)assert.equal(far.dataset.dir,want.b);if(kicks===1)assert.ok(chips.some(c=>c.dataset.dir===''),'the keeper who did not slide is shown standing')}
     await tick(5)}
   assert.ok(kicks>=6,'at least six kicks decide a shoot-out, got '+kicks);assert.ok(roles.every((r,i)=>i===0||r!==roles[i-1]),'kicker and keeper swap with every kick: '+roles.join(''));
-  const seat=run('window.__seat');assert.equal(seat.length,kicks);assert.ok(seat[0][0]&&seat[0][1]===null,'no slide: the ball goes somewhere, the keeper stays');assert.deepEqual(seat[1],['R','UL'],'the last slide of each player');assert.deepEqual(seat[2],['UR','DL']);
+  const seat=run('window.__seat');assert.equal(seat.length,kicks);assert.ok(seat[0][0]&&seat[0][1]===null,'no slide: the ball goes somewhere, the keeper stays');assert.deepEqual(seat[1],expect[1],'the last slide of each player, read in the picture as it lay');for(let i=2;i<kicks;i++)assert.deepEqual(seat[i],expect[i],'kick '+i);assert.ok(expect.slice(1).some(e=>e[0]==='UR')&&expect.slice(1).some(e=>e[0]==='DL'||e[0]==='L'),'both orientations were played');assert.equal($('#pgStage').classList.contains('pc-flip'),false,'the picture is upright again at the end');
   const sc=run('({a:PCUP.duel.S.a,b:PCUP.duel.S.b})');assert.ok(w.eval(`penShootoutDone(${JSON.stringify(sc.a)},${JSON.stringify(sc.b)})`),'ended by the shoot-out rule');
   {const sum=x=>x.reduce((t,v)=>t+v,0);endOK(w.document,sum(sc.a),sum(sc.b),'one phone');assert.match($('.pg-endsc').children[0].textContent+$('.pg-endsc').children[2].textContent,/./)}
   $('#pgDone').click();assert.equal(run('pcupRec()').duels,(rec1.duels||0)+1);assert.equal(run('pcupRec()').played,rec1.played,'a duel between two people is not a win of mine');

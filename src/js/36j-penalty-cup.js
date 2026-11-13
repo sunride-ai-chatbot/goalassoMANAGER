@@ -83,11 +83,12 @@ function pcupDuel(D){const A=D.A,B=D.B;const root=penOverlay({title:'אלוף ה
   const alive=()=>!over&&PG===pg&&!!PCUP;
   const finish=(win,why)=>{if(!alive())return;over=true;const won=D.mine?win===D.mine:null;const W=win==='a'?A:B;
     penPanel(`<div class="pg-end ${why?'':won===false?'bad':'good'}"><small>אלוף הפנדלים</small><h2${why?' style="font-size:34px;line-height:1.1"':''}>${why?esc(why):won==null?esc(W.c.short||W.c.name)+' ניצחה':won?'ניצחת!':'הפסדת'}</h2><div class="pg-endsc"><bdi>${esc(A.c.short||A.c.name)}</bdi> ${scoreSides(sum(S.a),sum(S.b))} <bdi>${esc(B.c.short||B.c.name)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
-    root.querySelector('#pgBot').innerHTML='';side=null;paint();if(won!==false&&!why){try{SFX.win()}catch(e){}confetti(2200);buzz('win')}
+    root.querySelector('#pgBot').innerHTML='';root.querySelector('#pgStage').classList.remove('pc-flip');side=null;paint();if(won!==false&&!why){try{SFX.win()}catch(e){}confetti(2200);buzz('win')}
     root.querySelector('#pgDone').onclick=()=>{penClose();D.end(win,won,!!why)}};
   D.abort=why=>finish(sum(S.a)>=sum(S.b)?'a':'b',why);
   const next=()=>{if(!alive())return;const w=penShootoutDone(S.a,S.b);if(w)return finish(w==='h'?'a':'b');paint();const T=side==='a'?A:B,O=side==='a'?B:A,i=S[side].length%Math.max(1,T.ord.length),tk=T.ord[i];
-    const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
+    const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');if(D.face)host.classList.toggle('pc-flip',side==='b');   /* two on one phone: the pitch turns to the kicker, see pcupAskBoth */
+    host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
     bot.innerHTML=`<div class="pg-who">${penFaceHTML(tk,T.c,'pc'+tk.id)}<div><b>${esc(fullName(tk))}</b><small>בועט עבור ${esc(T.c.short||T.c.name)} · בשער ${esc(O.gk?fullName(O.gk):'השוער')}</small></div></div><div class="pg-hint" id="pgHint"></div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
     const kickNo=k++;penMakeStage(view,'kick',{...penKits(T.c,O.c,A.c.id),number:tk.no||9}).then(st=>{if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
       PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();
@@ -104,9 +105,11 @@ const pcupAnyDir=()=>pick(Object.keys(PEN_DIRS));
 /* one phone, both at once, the players facing each other with the phone between them. The picture takes the whole screen
    (root.pc-face: no title, no bottom bar). Each player has a strip over his own edge of the picture (the first club at the
    bottom, the second at the top and turned to face its player) and the roles swap with every kick. Nothing runs until one
-   of them presses the button in the middle; that starts a count of three seconds, then the kick. A player chooses by
+   of them presses the button in the middle; that starts a count of three seconds, then the kick. The pitch, not the
+   phone, turns round: the kicker always has the taker's back at his own edge and the keeper has the goal at his, so
+   when the far player kicks the picture is turned by half a circle (#pgStage.pc-flip). A player chooses by
    sliding a finger across his strip towards the place in the picture he means: the direction is where the finger went on
-   the screen (pcupSwipeDir), the same for both whatever way they sit. He may choose before the count and change his mind
+   the screen, read in the picture as it lies at that moment (pcupSwipeDir, turned back when the pitch is turned). He may choose before the count and change his mind
    until the whistle; the strip shows only that a choice was made. At the whistle each choice is shown by a small arrow at
    its own edge, so both can see that the keeper went where he was sent. No slide: the kicker's ball goes anywhere, the
    keeper stays in the middle. */
@@ -120,11 +123,12 @@ function pcupAskBoth(ctx,side,D){return new Promise(res=>{const {root,host}=ctx;
   const go=document.createElement('button');go.type='button';go.className='pc-go';go.innerHTML='<b>מתחילים</b><small>לחיצה אחת, ואז 3 שניות עד הבעיטה</small>';host.appendChild(go);
   const turn=document.createElement('div');turn.className='pc-turn pc-count';turn.setAttribute('aria-hidden','true');turn.hidden=true;host.appendChild(turn);
   const pick={a:null,b:null},touch={};let done=false,raf=0,shown=0,ck=null;const id=e=>e.pointerId==null?'m':e.pointerId;
-  const slide=(t,e)=>{const d=pcupSwipeDir(e.clientX-t.x,e.clientY-t.y);if(!d)return;const k=t.z.dataset.zone;if(!pick[k])buzz('tap');pick[k]=d;t.z.classList.add('set')};
+  const flip=host.classList.contains('pc-flip'),sg=flip?-1:1;
+  const slide=(t,e)=>{const d=pcupSwipeDir(sg*(e.clientX-t.x),sg*(e.clientY-t.y));if(!d)return;const k=t.z.dataset.zone;if(!pick[k])buzz('tap');pick[k]=d;t.z.classList.add('set')};
   const down=e=>{const z=e.target.closest&&e.target.closest('.pc-zone');if(!z||done)return;touch[id(e)]={z,x:e.clientX,y:e.clientY};try{z.setPointerCapture&&e.pointerId!=null&&z.setPointerCapture(e.pointerId)}catch(_){ }e.preventDefault()};
   const move=e=>{const t=touch[id(e)];if(t&&!done)slide(t,e)},up=e=>{const t=touch[id(e)];if(!t)return;delete touch[id(e)];if(!done)slide(t,e)};
   const evs=[['pointerdown',down],['pointermove',move],['pointerup',up],['pointercancel',e=>{delete touch[id(e)]}]];for(const [n,f] of evs)root.addEventListener(n,f);
-  const chip=(key,d,kick)=>{const c=document.createElement('div');c.className='pc-chose '+(key==='a'?'near':'far');c.innerHTML=`<span>${kick?'בעיטה':'זינוק'}</span>${d?`<svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]}deg)"><path d="M12 4l7 8h-4.4v8h-5.2v-8H5z"/></svg>`:'<i aria-hidden="true"></i>'}`;c.dataset.dir=d||'';host.appendChild(c)};
+  const chip=(key,d,kick)=>{const c=document.createElement('div');c.className='pc-chose '+(key==='a'?'near':'far');c.innerHTML=`<span>${kick?'בעיטה':'זינוק'}</span>${d?`<svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]+(flip?180:0)}deg)"><path d="M12 4l7 8h-4.4v8h-5.2v-8H5z"/></svg>`:'<i aria-hidden="true"></i>'}`;c.dataset.dir=d||'';host.appendChild(c)};
   const fin=()=>{if(done)return;done=true;cancelAnimationFrame(raf);for(const [n,f] of evs)root.removeEventListener(n,f);PCUP.asking=false;za.remove();zb.remove();turn.remove();go.remove();
     if(!ctx.alive())return res(null);const other=side==='a'?'b':'a',kd=pick[side]||pcupAnyDir(),gd=pick[other];chip(side,kd,true);chip(other,gd,false);res({kd,gd,seed:(Math.random()*4294967296)>>>0})};
   const start=()=>{if(ck||done)return;ck=penClock(performance.now());go.remove();turn.hidden=false;buzz('tap');loop()};go.addEventListener('click',start);

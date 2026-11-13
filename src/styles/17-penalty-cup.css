@@ -50,6 +50,7 @@
 .pc-zone.set .pc-zone-in small{visibility:hidden}
 .pc-zone.set .pc-zone-in span::after{content:" ✓"}
 /* the whole screen for the picture while two people share the phone */
+.pg-stage.pc-flip #pgView{transform:rotate(180deg)}
 .pg.pc-face .pg-title,.pg.pc-face .pg-meta,.pg.pc-face .pg-bot{display:none}
 .pg.pc-face .pg-top{padding:calc(4px + env(safe-area-inset-top,0px)) 12px 4px;border-bottom:0}
 .pg.pc-face .pg-so{margin:0;max-width:none;padding-inline-start:74px;gap:0}
