@@ -68,13 +68,140 @@
      "file": "00-Q98918607-2.jpg",
      "fromP18": false,
      "via": "category"
+    },
+    {
+     "title": "File:Grabstätte Karl Hein.jpg",
+     "pageid": 94707802,
+     "page": "https://commons.wikimedia.org/wiki/File:Grabst%C3%A4tte_Karl_Hein.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Grabst%C3%A4tte_Karl_Hein.jpg/960px-Grabst%C3%A4tte_Karl_Hein.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3024,
+     "height": 4032,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Bernhard Diener",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2020-10-03 12:42:17",
+     "file": "00-Q98918607-m3.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 5.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Karl Hein 1936.jpg",
+     "pageid": 61686796,
+     "page": "https://commons.wikimedia.org/wiki/File:Karl_Hein_1936.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Karl_Hein_1936.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 649,
+     "height": 926,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "ACME",
+     "credit": "[1]",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "1936-08-03",
+     "file": "00-Q98918607-m4.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q61854"
+     ],
+     "score": 2.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Brunner, Karl-Heinz-9632.jpg",
+     "pageid": 35272141,
+     "page": "https://commons.wikimedia.org/wiki/File:Brunner,_Karl-Heinz-9632.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Brunner%2C_Karl-Heinz-9632.jpg/960px-Brunner%2C_Karl-Heinz-9632.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1664,
+     "height": 2500,
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "author": "Foto-AG Gymnasium Melle",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 3.0",
+     "restrictions": "personality",
+     "nonFree": "",
+     "date": "2014-09-10 10:28:12",
+     "file": "00-Q98918607-m5.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q14946405"
+     ],
+     "score": 2.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Kriegerdenkmal köln-Roggendorf-Thenhoven-6781.jpg",
+     "pageid": 128624670,
+     "page": "https://commons.wikimedia.org/wiki/File:Kriegerdenkmal_k%C3%B6ln-Roggendorf-Thenhoven-6781.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Kriegerdenkmal_k%C3%B6ln-Roggendorf-Thenhoven-6781.jpg/960px-Kriegerdenkmal_k%C3%B6ln-Roggendorf-Thenhoven-6781.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2657,
+     "height": 3986,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Raimond Spekking",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2023-02-11",
+     "file": "00-Q98918607-m6.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
    "qid": "Q98918607",
    "wikidata": "https://www.wikidata.org/wiki/Q98918607",
    "label": "Karl Jakob Hein",
-   "birthYear": 2002
+   "birthYear": 2002,
+   "rejectedFiles": [
+    {
+     "title": "File:Fasnacht Sigmaringen 1930; Narren auf dem Rathausplatz, rechts Bräutlingsgesellen; zweitvorderster beim Elferrat- Rudolf Müller; zweitvorderster bei d - LABW - Staatsarchiv Sigmaringen N 1-68 Nr. 767.jpeg",
+     "license": "CC BY 4.0",
+     "why": "no author recorded"
+    },
+    {
+     "title": "File:Gruppenfoto des katholischen Gesellenvereins (Kolpingfamilie) Sigmaringen (?) vor der Hohenzollerischen Landesbank Sigmaringen; 1. Reihe sitzend- in d - LABW - Staatsarchiv Sigmaringen N 1-68 Nr. 2210.jpeg",
+     "license": "CC BY 4.0",
+     "why": "no author recorded"
+    },
+    {
+     "title": "File:Fasnacht Sigmaringen 1932; Bräutlingsgesellen vor dem Rathaus; Mitte- Niklas; 3. von rechts- Schreiner Karl Hein; 4. von links- Weißhaupt - LABW - Staatsarchiv Sigmaringen N 1-68 Nr. 787.jpeg",
+     "license": "CC BY 4.0",
+     "why": "no author recorded"
+    },
+    {
+     "title": "File:Fasnacht Sigmaringen 1932; Bräutlingsgesellen vor dem Rathaus; Mitte- Niklas; 3. von rechts- Schreiner Karl Hein; 4. von rechts- Weißhaupt - LABW - Staatsarchiv Sigmaringen N 1-68 Nr. 786.jpg",
+     "license": "CC BY 4.0",
+     "why": "no author recorded"
+    },
+    {
+     "title": "File:Fasnacht Sigmaringen 1930; Bräutlingsgesellen vor dem Gasthaus Traube; 1. von rechts- Niklas; 2. von rechts- Schmid Emele; 3. von rechts- Schreiner Ka - LABW - Staatsarchiv Sigmaringen N 1-68 Nr. 769.jpeg",
+     "license": "CC BY 4.0",
+     "why": "no author recorded"
+    }
+   ]
   },
   {
    "he": "אלכסנדר שלאגר",
@@ -818,7 +945,19 @@
    "qid": "Q130223651",
    "wikidata": "https://www.wikidata.org/wiki/Q130223651",
    "label": "Chuki",
-   "birthYear": 2004
+   "birthYear": 2004,
+   "rejectedFiles": [
+    {
+     "title": "File:Roman soldier end of third century northern province - cropped.jpg",
+     "license": "CC BY-SA 3.0",
+     "why": "no author recorded"
+    },
+    {
+     "title": "File:Sarawak; five native Kenyah warriors in a warfare ritual. Ph Wellcome V0037446.jpg",
+     "license": "CC BY 4.0",
+     "why": "no author recorded"
+    }
+   ]
   },
   {
    "he": "Salim Musah",
@@ -937,6 +1076,34 @@
      "file": "20-Q694852-4.jpg",
      "fromP18": false,
      "via": "category"
+    },
+    {
+     "title": "File:Testspiel gegen FC Bayern München 21.JPG",
+     "pageid": 30693328,
+     "page": "https://commons.wikimedia.org/wiki/File:Testspiel_gegen_FC_Bayern_M%C3%BCnchen_21.JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Testspiel_gegen_FC_Bayern_M%C3%BCnchen_21.JPG/960px-Testspiel_gegen_FC_Bayern_M%C3%BCnchen_21.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1477,
+     "height": 2000,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Werner100359",
+     "credit": "Own work",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2014-01-18 15:29:42",
+     "file": "24-Q694852-m5.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q694852",
+      "Q312115",
+      "Q174926"
+     ],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

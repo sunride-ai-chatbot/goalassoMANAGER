@@ -405,7 +405,8 @@
    "qid": "Q10556851",
    "wikidata": "https://www.wikidata.org/wiki/Q10556851",
    "label": "Benjamin Verbič",
-   "birthYear": 1993
+   "birthYear": 1993,
+   "error": "HTTP Error 414: URI Too Long"
   },
   {
    "he": "Gašper Vodeb",

@@ -1151,6 +1151,33 @@
      "date": "2026-08-30 17:26:29",
      "file": "12-Q125130980-1.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:Bislett Games 2026 - 100m menn nasjonal (Johansen, Normann-Afanou).jpg",
+     "pageid": 195965291,
+     "page": "https://commons.wikimedia.org/wiki/File:Bislett_Games_2026_-_100m_menn_nasjonal_(Johansen,_Normann-Afanou).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Bislett_Games_2026_-_100m_menn_nasjonal_%28Johansen%2C_Normann-Afanou%29.jpg/960px-Bislett_Games_2026_-_100m_menn_nasjonal_%28Johansen%2C_Normann-Afanou%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3773,
+     "height": 2829,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Ssu",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-06-10 19:55:15",
+     "file": "12-Q125130980-m2.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q141283457",
+      "Q125130980"
+     ],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",
@@ -1240,6 +1267,32 @@
      "date": "2026-03-31",
      "file": "13-Q111087062-3-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:Rayane bounida-1776338298 (cropped).JPG",
+     "pageid": 202381302,
+     "page": "https://commons.wikimedia.org/wiki/File:Rayane_bounida-1776338298_(cropped).JPG",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Rayane_bounida-1776338298_%28cropped%29.JPG/960px-Rayane_bounida-1776338298_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1369,
+     "height": 1980,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Hans Reefman",
+     "credit": "wikiportret.nl",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-04-11",
+     "file": "13-Q111087062-m4.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q111087062"
+     ],
+     "score": 13.0,
+     "pass": "more"
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",
@@ -1519,6 +1572,32 @@
      "date": "2016-11-18 22:46:03",
      "file": "14-Q22683033-13-w1280.jpg",
      "fromP18": false
+    },
+    {
+     "title": "File:Lille vs Lyon, 18 novembre 2016 - Yves Bissouma.jpg",
+     "pageid": 54878513,
+     "page": "https://commons.wikimedia.org/wiki/File:Lille_vs_Lyon,_18_novembre_2016_-_Yves_Bissouma.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Lille_vs_Lyon%2C_18_novembre_2016_-_Yves_Bissouma.jpg/960px-Lille_vs_Lyon%2C_18_novembre_2016_-_Yves_Bissouma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2184,
+     "height": 3720,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Bigmatbasket",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2016-11-18 22:33:42",
+     "file": "14-Q22683033-m14.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q22683033"
+     ],
+     "score": 8.0,
+     "pass": "more"
     }
    ],
    "match": "name+club",

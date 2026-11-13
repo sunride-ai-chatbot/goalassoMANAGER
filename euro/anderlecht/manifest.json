@@ -1366,6 +1366,32 @@
      "file": "19-Q115610899-4.jpg",
      "fromP18": false,
      "via": "category"
+    },
+    {
+     "title": "File:UEFA Europa League - RSC Anderlecht vs 1899 Hoffenheim - 30.01.2025 (Ali Maamar).jpg",
+     "pageid": 164728422,
+     "page": "https://commons.wikimedia.org/wiki/File:UEFA_Europa_League_-_RSC_Anderlecht_vs_1899_Hoffenheim_-_30.01.2025_(Ali_Maamar).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/3b/UEFA_Europa_League_-_RSC_Anderlecht_vs_1899_Hoffenheim_-_30.01.2025_%28Ali_Maamar%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 305,
+     "height": 554,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Sidney.Cortez",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-01-30",
+     "file": "21-Q115610899-m5.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q115610899"
+     ],
+     "score": 8.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
