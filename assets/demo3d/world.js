@@ -38,11 +38,14 @@ export function buildWorld(scene,renderer){
     apart a spectator is an object you can count, and a grid of countable objects behind a goal reads as a field
     of cones however well each one is shaped. Shoulder to shoulder (about half a metre, which is what a seat
     actually is) they stop being objects and become a crowd, with a little jitter so the eye finds no column. */
- const random=seeded(32),people=[],STEP=.52;
+ const random=seeded(32),people=[],STEP=.52,ULTRA_W=9;
  for(let row=0;row<18;row++){const y=2.23+row*.69,jx=()=>(random()-.5)*.16;
   for(const sign of [-1,1]){
    for(let col=0;col<236;col++){if(col%59<3||random()<.035)continue;people.push([(col-118)*STEP+jx(),y,sign*(42+row*1.23)+jx(),sign===1?Math.PI:0])}
-   for(let col=0;col<148;col++){if(col%49<3||random()<.04)continue;people.push([sign*(60+row*1.23)+jx(),y,(col-74)*STEP+jx(),sign>0?-Math.PI/2:Math.PI/2])}}
+   for(let col=0;col<148;col++){if(col%49<3||random()<.04)continue;const z=(col-74)*STEP+jx();
+    /* the gate: the block behind each goal where the club's own support stands. It is marked here and the rest
+       follows from the mark — the poses, the colour and how hard it jumps. */
+    people.push([sign*(60+row*1.23)+jx(),y,z,sign>0?-Math.PI/2:Math.PI/2,Math.abs(z)<ULTRA_W?1:0])}}
  }
  for(const sx of [-1,1])for(const sz of [-1,1])for(let row=0;row<18;row++)for(let col=0;col<20;col++)people.push([sx*(55.4+row*.87+col*.42),2.23+row*.69,sz*(44.6+row*.87-col*.42),Math.atan2(-sx,-sz)]);
  /* A spectator is a cut-out, not a solid. Every shape the geometry could afford — a cone, then a cylinder with
@@ -76,8 +79,16 @@ export function buildWorld(scene,renderer){
  const bodies=new T.InstancedMesh(new T.PlaneGeometry(.86,1.02),bodyMat,people.length),
        heads=new T.InstancedMesh(new T.IcosahedronGeometry(.125,0),mat(0xffffff),people.length),dummy=new T.Object3D();
  const shirts=[0x43191f,0x4e262d,0x7b7d76,0x5f6159,0x1d2b3a,0x414b52,0x2b3640];const skins=[0x8e6749,0x9c7f62,0x624032,0xa08871,0x412d22];
- {const cell=new Float32Array(people.length);for(let i=0;i<people.length;i++)cell[i]=Math.floor(random()*POSES);
-  bodies.geometry.setAttribute('aCell',new T.InstancedBufferAttribute(cell,1));}
+ /* The gate does not stand with its arms folded: its poses are the ones with the arms up, the scarf overhead
+    and the flag, and its own attribute tells the vertex shader to bounce it twice as hard, all match, not only
+    when a goal goes in. */
+ const ULTRA_POSES=[2,5,2,1,6,5];
+ {const cell=new Float32Array(people.length),ult=new Float32Array(people.length);
+  for(let i=0;i<people.length;i++){const u=people[i][4]?1:0;ult[i]=u;
+   cell[i]=u?ULTRA_POSES[Math.floor(random()*ULTRA_POSES.length)]:Math.floor(random()*POSES)}
+  bodies.geometry.setAttribute('aCell',new T.InstancedBufferAttribute(cell,1));
+  bodies.geometry.setAttribute('aUltra',new T.InstancedBufferAttribute(ult,1));
+  heads.geometry.setAttribute('aUltra',new T.InstancedBufferAttribute(ult,1));}
  people.forEach(([x,y,z,rot],i)=>{dummy.position.set(x,y+.07,z);dummy.rotation.y=rot;dummy.scale.set(.94+random()*.16,.92+random()*.18,1);dummy.updateMatrix();bodies.setMatrixAt(i,dummy.matrix);bodies.setColorAt(i,new T.Color(shirts[Math.floor(random()*shirts.length)]));dummy.position.y+=.47;dummy.scale.setScalar(1);dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);heads.setColorAt(i,new T.Color(skins[Math.floor(random()*skins.length)]).multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.5))});scene.add(bodies,heads);
  /* The stand is alive: every spectator sways on his own phase, and on a goal he leaps. It runs in the vertex shader,
     so thousands of them cost nothing per frame; the scene only advances `crowd.time` and sets `crowd.cheer`. */
@@ -90,11 +101,59 @@ export function buildWorld(scene,renderer){
    m.material.onBeforeCompile=sh=>{sh.uniforms.uTime=crowd.uniforms.uTime;sh.uniforms.uCheer=crowd.uniforms.uCheer;
     // the cut-out picks its pose from the atlas here, which is why the bodies carry an `aCell` attribute
     const pose=m===bodies?'attribute float aCell;\n':'';
-    let v='attribute float aPhase;uniform float uTime;uniform float uCheer;\n'+pose+sh.vertexShader.replace('#include <begin_vertex>',
-     '#include <begin_vertex>\n transformed.y += sin(uTime*1.7+aPhase)*0.045 + max(0.0,sin(uTime*7.5+aPhase*3.0))*uCheer*0.75;');
+    let v='attribute float aPhase;attribute float aUltra;uniform float uTime;uniform float uCheer;\n'+pose+sh.vertexShader.replace('#include <begin_vertex>',
+     '#include <begin_vertex>\n transformed.y += sin(uTime*1.7+aPhase)*0.045'
+     +' + max(0.0,sin(uTime*4.6+aPhase))*aUltra*0.34'          /* the gate jumps all match */
+     +' + max(0.0,sin(uTime*7.5+aPhase*3.0))*uCheer*0.75;');
     if(m===bodies)v=v.replace('#include <uv_vertex>','#include <uv_vertex>\n#ifdef USE_MAP\n vMapUv = vMapUv*vec2(1.0/8.0,1.0) + vec2(aCell/8.0,0.0);\n#endif');
     sh.vertexShader=v};
    m.material.needsUpdate=true}}
+ /* ---- the gate's own kit: flags and pyro -------------------------------------------------------------
+    Flags are a plane that waves in the vertex shader on a pole, so fifty-six of them are two draw calls and
+    nothing per frame. The smoke is the same trick: additive quads that rise, spread and fade on `uTime`, with
+    the fade carried to the fragment shader as a varying — the stand owns its own weather and the scene only
+    advances the clock. Nothing here carries a word or a badge: a real club's tifo is its own work, so what the
+    gate flies is its colours. */
+ const gatePts=[];
+ for(const sign of [-1,1])for(let n=0;n<28;n++){
+  const row=6+Math.floor(random()*11);
+  gatePts.push([sign*(60+row*1.23),2.6+row*.69,(random()-.5)*2*(ULTRA_W-1),sign>0?-Math.PI/2:Math.PI/2,sign]);
+ }
+ const flagGeo=new T.PlaneGeometry(1.9,1.15,10,3);flagGeo.translate(.95,0,0);
+ const flagMat=new T.MeshBasicMaterial({side:T.DoubleSide,fog:true});
+ const flags=new T.InstancedMesh(flagGeo,flagMat,gatePts.length);
+ const poleGeo=new T.CylinderGeometry(.035,.035,2.4,5);poleGeo.translate(0,-.6,0);
+ const poles=new T.InstancedMesh(poleGeo,new T.MeshBasicMaterial({color:0x252b34,fog:true}),gatePts.length);
+ {const d=new T.Object3D(),ph=new Float32Array(gatePts.length);
+  gatePts.forEach(([x,y,z,rot],i)=>{ph[i]=random()*Math.PI*2;
+   d.position.set(x,y+1.1,z);d.rotation.set(0,rot,0);d.scale.setScalar(.7+random()*.4);d.updateMatrix();
+   flags.setMatrixAt(i,d.matrix);poles.setMatrixAt(i,d.matrix);flags.setColorAt(i,new T.Color(0xb9c2cc))});
+  flagGeo.setAttribute('aPhase',new T.InstancedBufferAttribute(ph,1));
+  flagMat.onBeforeCompile=sh=>{sh.uniforms.uTime=crowd.uniforms.uTime;
+   sh.vertexShader='attribute float aPhase;uniform float uTime;\n'+sh.vertexShader.replace('#include <begin_vertex>',
+    '#include <begin_vertex>\n transformed.z += sin(position.x*2.4 - uTime*4.2 + aPhase)*0.15*position.x;\n transformed.y += cos(position.x*1.7 - uTime*3.1 + aPhase)*0.05*position.x;')};
+  flagMat.needsUpdate=true;scene.add(poles,flags)}
+ /* pyro: a soft plume that climbs out of the block, and a hot core where it is lit */
+ const puff=canvasTexture(128,128,(c,w,h)=>{const g=c.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);
+  g.addColorStop(0,'rgba(255,255,255,.55)');g.addColorStop(.4,'rgba(255,255,255,.2)');g.addColorStop(1,'rgba(255,255,255,0)');c.fillStyle=g;c.fillRect(0,0,w,h)});
+ const smokeMat=new T.MeshBasicMaterial({map:puff,blending:T.AdditiveBlending,depthWrite:false,transparent:true,fog:false});
+ const SMOKE_PER=34,smokePts=[];
+ for(const sign of [-1,1])for(let n=0;n<SMOKE_PER;n++)smokePts.push([sign*(58+Math.random()*9),3.2+random()*4.5,(random()-.5)*2*(ULTRA_W-.5),sign>0?-Math.PI/2:Math.PI/2]);
+ const smoke=new T.InstancedMesh(new T.PlaneGeometry(6.5,6.5),smokeMat,smokePts.length);
+ smoke.renderOrder=3;smoke.frustumCulled=false;
+ {const d=new T.Object3D(),ph=new Float32Array(smokePts.length);
+  smokePts.forEach(([x,y,z,rot],i)=>{ph[i]=random();d.position.set(x,y,z);d.rotation.set(0,rot,0);d.updateMatrix();
+   smoke.setMatrixAt(i,d.matrix);smoke.setColorAt(i,new T.Color(0xff5c22).multiplyScalar(.75+random()*.6))});
+  smoke.geometry.setAttribute('aPhase',new T.InstancedBufferAttribute(ph,1));
+  smokeMat.onBeforeCompile=sh=>{sh.uniforms.uTime=crowd.uniforms.uTime;
+   sh.vertexShader='attribute float aPhase;uniform float uTime;varying float vFade;\n'+sh.vertexShader.replace('#include <begin_vertex>',
+    '#include <begin_vertex>\n float t=fract(uTime*0.075+aPhase);\n transformed *= 0.4+t*1.7;\n transformed.y += t*7.5;\n transformed.x += (aPhase-0.5)*t*4.0;\n vFade=(1.0-t)*(1.0-t)*smoothstep(0.0,0.1,t);');
+   sh.fragmentShader='varying float vFade;\n'+sh.fragmentShader.replace('#include <opaque_fragment>','#include <opaque_fragment>\n gl_FragColor.rgb *= vFade;')};
+  smokeMat.needsUpdate=true;scene.add(smoke)}
+ const flareMat=new T.SpriteMaterial({map:puff,blending:T.AdditiveBlending,depthWrite:false,transparent:true,fog:false,color:0xffb060});
+ const flares=[];
+ for(const sign of [-1,1])for(let n=0;n<7;n++){const sp=new T.Sprite(flareMat.clone());
+  sp.position.set(sign*(59+Math.random()*7),3.4+random()*4.5,(random()-.5)*2*(ULTRA_W-2));sp.scale.set(3.4,3.4,1);sp.renderOrder=4;scene.add(sp);flares.push(sp)}
  const adtex=canvasTexture(2048,128,(c,w,h)=>{c.fillStyle='#102631';c.fillRect(0,0,w,h);c.font='italic 900 65px Arial';c.textBaseline='middle';c.fillStyle='#75efbd';c.fillText('GOALASSO',55,66);c.fillStyle='#e5f2f4';c.font='700 49px Arial';c.fillText('SUNRIDE',650,66);c.fillText('THE BEAUTIFUL GAME',1120,66);for(let x=0;x<w;x+=512){c.fillStyle='#75efbd';c.fillRect(x,h-8,200,6)}});adtex.wrapS=T.RepeatWrapping;adtex.repeat.x=3;adtex.anisotropy=4;
  const admat=mat(0xffffff,{map:adtex,emissive:0x2c5f4c,emissiveIntensity:.6});   /* lit boards: at night they are the brightest line on the ground */for(const z of [-37.6,37.6])box(scene,112,1.25,.2,0,.65,z,admat);for(const x of [-56.5,56.5])box(scene,.2,1.25,72,x,.65,0,admat);
  // Corner flags and dugouts.
@@ -129,7 +188,14 @@ export function buildWorld(scene,renderer){
      else col.setHex(shirts[(i*7+i%5)%shirts.length]).multiplyScalar(.62+r*.4);
      if((i*2246822519)%17===0)col.lerp(pale,.34);
      return col.multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.5)};
-   people.forEach(([x,y],i)=>bodies.setColorAt(i,mix(x<0?A:B,i,y)));   /* split down the middle of every stand, as a segregated ground is */
+   /* the gate is a wall of one colour, which is the whole point of it; the rest of the ground is a mixed crowd */
+   const gate=(base,i,y)=>{if(base==null)return null;const r=((i*2654435761)%1000)/1000;
+     if(r<.16)return null;                                   /* a few coats among them, or the block is a flat sheet */
+     col.setHex(base).multiplyScalar(.34+r*.22);
+     return col.multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.34)};
+   people.forEach(([x,y,z,rot,u],i)=>{const base=x<0?A:B;const c=u?gate(base,i,y):null;bodies.setColorAt(i,c||mix(base,i,y))});
+   gatePts.forEach(([x],i)=>{const base=x<0?A:B;if(base==null)return;flags.setColorAt(i,col.setHex(base).multiplyScalar(.9))});
+   flags.instanceColor&&(flags.instanceColor.needsUpdate=true);   /* split down the middle of every stand, as a segregated ground is */
    bodies.instanceColor&&(bodies.instanceColor.needsUpdate=true)};
  const goals=[makeGoal(scene,-1),makeGoal(scene,1)];return{sun,goals,crowdCount:people.length,crowd};
 }
