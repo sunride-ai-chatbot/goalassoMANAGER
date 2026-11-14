@@ -46,7 +46,14 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.equal(w.eval('G.me'),w.eval('PCUP.clubs[PCUP.my.key].id'),'the chosen club is ours');assert.match($('#penGame .pg-meta').textContent,new RegExp(w.eval('PCUP.my.name').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
   $('#pgGo').click();await until(()=>w.eval('!!(PG&&(PG.fire||PG.strike||PG.pick))'),'the first kick');
   // the stand: three swaying bands of spectators and a few camera flashes, and it answers the kick
-  assert.equal($$('#penGame .pg-crowd').length,3,'three bands in the stand');assert.ok($$('#penGame .pg-crowd circle').length>60,'a full front row');assert.ok($$('#penGame .pg-spark').length>=8,'camera flashes');assert.ok($('#penGame image[href*="stand-crowd"]'),'the photographed stand behind it');
+  assert.equal($$('#penGame .pg-crowd').length,3,'three bands in the stand');
+  // the stand is drawn as paths, one per band and tone, and has to be full: thirteen rows of a few hundred
+  // people, in the two clubs' colours as well as the dark coats — a stand of holes was the old bug
+  const crowdPaths=$$('#penGame .pg-crowd path');
+  assert.ok(crowdPaths.length>=9,'each band carries its dark coats and both clubs\' colours');
+  assert.ok(crowdPaths.reduce((n,p)=>n+((p.getAttribute('d')||'').match(/a/g)||[]).length,0)>600,'a stand of several hundred spectators');
+  assert.ok(crowdPaths.some(p=>/rgb\(/.test(p.getAttribute('fill')||'')),'some of them wear a club colour');
+  assert.ok($$('#penGame .pg-spark').length>=8,'camera flashes');assert.ok($('#penGame image[href*="stand-crowd"]'),'the photographed stand behind it');
   w.eval("penCheer('goal',true)");assert.ok($('#pgStage').classList.contains('pg-cheer')&&$('#pgStage').classList.contains('pg-cheer-big'),'our goal makes the stand leap');
   w.eval("penCheer('save',true)");assert.ok($('#pgStage').classList.contains('pg-cheer')&&!$('#pgStage').classList.contains('pg-cheer-big'),'a miss of ours is only a murmur');
   // play it out: we always aim at a top corner; in goal we always go low right

@@ -20,7 +20,7 @@ export function createPenaltyView(host,opts){
   // can this device draw the scene? After half a second of warm-up, 1.2 seconds of frames are timed; under ten frames a
   // second the game is told once (opts.onSlow) and plays later kicks on its flat picture. Time in the background is not counted.
   const perf={t:0,n:0,from:0,skip:false,done:false};const onVis=()=>{perf.skip=true};document.addEventListener('visibilitychange',onVis);
-  function measure(now,gap){if(!perf.from){perf.from=now;return}if(now-perf.from<500)return;
+  function measure(now,gap){if(!perf.from){perf.from=now;return}if(now-perf.from<900)return;   /* a longer warm-up: the first frames carry shader compilation and texture upload, and counting them once marked a good machine slow for the rest of its session */
     if(perf.skip||document.hidden||gap>5000){perf.skip=false;return}
     perf.t+=gap;perf.n++;if(perf.t<1200)return;perf.done=true;document.removeEventListener('visibilitychange',onVis);
     if(perf.n*1000/perf.t<10){try{opts.onSlow&&opts.onSlow()}catch(e){}}}
