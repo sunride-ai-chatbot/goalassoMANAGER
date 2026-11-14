@@ -5,22 +5,22 @@ function createRig(team,number,variant,kit=null){
  const cloth=new T.MeshStandardMaterial({vertexColors:true,roughness:.83,metalness:0});
  const bones=[],names={};const bone=(name,parent,x,y,z)=>{const b=new T.Bone();b.name=name;b.position.set(x,y,z);if(parent)parent.add(b);names[name]=bones.length;bones.push(b);return b};
  const root=bone('hips',null,0,.97,0),spine=bone('spine',root,0,.12,0),head=bone('head',spine,0,.57,0);
- for(const [label,s] of [['L',-1],['R',1]]){const arm=bone(label+'arm',spine,s*.245,.43,0),fore=bone(label+'fore',arm,0,-.29,0);bone(label+'hand',fore,0,-.25,0);const thigh=bone(label+'thigh',root,s*.105,-.01,0),shin=bone(label+'shin',thigh,0,-.43,0);bone(label+'foot',shin,0,-.43,0)}
+ for(const [label,s] of [['L',-1],['R',1]]){const arm=bone(label+'arm',spine,s*.186,.43,0),fore=bone(label+'fore',arm,0,-.29,0);bone(label+'hand',fore,0,-.25,0);const thigh=bone(label+'thigh',root,s*.105,-.01,0),shin=bone(label+'shin',thigh,0,-.43,0);bone(label+'foot',shin,0,-.43,0)}
  const P=[],N=[],C=[],I=[],W=[],ind=[];const col=new T.Color();
  function shape(geo,scale,pos,color,name){geo.scale(...scale);geo.translate(...pos);const p=geo.attributes.position,n=geo.attributes.normal,offset=P.length/3;col.setHex(color);for(let i=0;i<p.count;i++){P.push(p.getX(i),p.getY(i),p.getZ(i));N.push(n.getX(i),n.getY(i),n.getZ(i));C.push(col.r,col.g,col.b);I.push(names[name],0,0,0);W.push(1,0,0,0)}if(geo.index)for(const a of geo.index.array)ind.push(offset+a);else for(let i=0;i<p.count;i++)ind.push(offset+i);geo.dispose()}
- const ell=(size,pos,c,b)=>shape(new T.SphereGeometry(1,10,7),size,pos,c,b);
- const taper=(rt,rb,len,pos,c,b,scale=[1,1,1])=>shape(new T.CylinderGeometry(rt,rb,len,10),scale,pos,c,b);
+ const ell=(size,pos,c,b)=>shape(new T.SphereGeometry(1,14,10),size,pos,c,b);
+ const taper=(rt,rb,len,pos,c,b,scale=[1,1,1])=>shape(new T.CylinderGeometry(rt,rb,len,14),scale,pos,c,b);
  const skin=skinColors[variant%skinColors.length],hair=hairColors[variant%hairColors.length];const jersey=kit?new T.Color(kit.kit).getHex():team==='red'?0xbc1731:team==='white'?0xefeee8:team==='keeperRed'?0xe7b529:0x29a985;const trim=kit?new T.Color(kit.trim).getHex():team==='red'?0xf0e5ce:team==='white'?0x203e65:0x172b37;
- taper(.225,.155,.49,[0,1.325,0],jersey,'spine',[1,1,.65]);ell([.22,.16,.135],[0,1.14,0],jersey,'spine');
- taper(.085,.09,.12,[0,1.64,0],skin,'head');taper(.10,.11,.035,[0,1.58,0],trim,'spine');
- ell([.112,.145,.118],[0,1.79,.01],skin,'head');ell([.087,.078,.095],[0,1.70,.034],skin,'head');ell([.025,.035,.042],[0,1.78,.126],skin,'head');for(const s of [-1,1]){ell([.023,.037,.02],[s*.113,1.79,0],skin,'head');ell([.014,.008,.006],[s*.043,1.81,.117],0x202023,'head')}
- shape(new T.SphereGeometry(1,10,7,0,Math.PI*2,0,Math.PI*.53),[.116,.15,.125],[0,1.80,.002],hair,'head');
+ taper(.207,.15,.5,[0,1.325,0],jersey,'spine',[1,1,.66]);ell([.178,.128,.12],[0,1.15,0],jersey,'spine');
+ taper(.062,.076,.145,[0,1.648,0],skin,'head');taper(.088,.098,.032,[0,1.585,0],trim,'spine');
+ ell([.097,.126,.103],[0,1.80,.009],skin,'head');ell([.076,.068,.083],[0,1.724,.03],skin,'head');ell([.022,.030,.037],[0,1.791,.110],skin,'head');for(const s of [-1,1]){ell([.02,.032,.018],[s*.098,1.80,0],skin,'head');ell([.012,.0075,.005],[s*.038,1.818,.102],0x202023,'head')}
+ shape(new T.SphereGeometry(1,14,10,0,Math.PI*2,0,Math.PI*.46),[.1,.132,.107],[0,1.812,.001],hair,'head');
  // Club-neutral original kits, collar, shirt crest and central sponsor stripe.
- shape(new T.BoxGeometry(.042,.055,.007),[1,1,1],[-.105,1.47,.146],trim,'spine');shape(new T.BoxGeometry(.18,.025,.007),[1,1,1],[0,1.32,.15],trim,'spine');
+ shape(new T.BoxGeometry(.038,.05,.007),[1,1,1],[-.096,1.47,.142],trim,'spine');shape(new T.BoxGeometry(.165,.023,.007),[1,1,1],[0,1.32,.147],trim,'spine');
  const shorts=kit?new T.Color(kit.trim).getHex():team==='white'?0xe7e9e7:team==='red'?0x9e142a:0x18303a;
  ell([.19,.14,.125],[0,.98,0],shorts,'hips');
  for(const [l,s] of [['L',-1],['R',1]]){
-  ell([.105,.108,.105],[s*.245,1.50,0],jersey,l+'arm');taper(.092,.075,.19,[s*.245,1.405,0],jersey,l+'arm');taper(.077,.078,.025,[s*.245,1.31,0],trim,l+'arm');taper(.074,.056,.12,[s*.245,1.255,0],skin,l+'arm');ell([.058,.06,.06],[s*.245,1.23,0],skin,l+'fore');taper(.06,.044,.23,[s*.245,1.105,0],skin,l+'fore');ell([.048,.075,.038],[s*.245,.94,.008],team.startsWith('keeper')?0xe9efdb:skin,l+'hand');
+  ell([.073,.082,.075],[s*.186,1.5,0],jersey,l+'arm');taper(.07,.058,.2,[s*.186,1.4,0],jersey,l+'arm');taper(.06,.061,.022,[s*.186,1.296,0],trim,l+'arm');taper(.057,.046,.125,[s*.186,1.243,0],skin,l+'arm');ell([.047,.049,.049],[s*.186,1.22,0],skin,l+'fore');taper(.049,.037,.235,[s*.186,1.095,0],skin,l+'fore');ell([.04,.062,.033],[s*.186,.935,.008],team.startsWith('keeper')?0xe9efdb:skin,l+'hand');
   taper(.115,.10,.25,[s*.105,.86,0],shorts,l+'thigh',[1,1,1.05]);taper(.098,.073,.20,[s*.105,.66,0],skin,l+'thigh');ell([.075,.074,.074],[s*.105,.53,0],skin,l+'shin');taper(.074,.044,.32,[s*.105,.34,0],jersey,l+'shin');taper(.075,.075,.045,[s*.105,.485,0],trim,l+'shin');taper(.045,.045,.09,[s*.105,.15,0],jersey,l+'shin');ell([.061,.054,.137],[s*.105,.065,.064],variant%3===0?0xe7d65b:0x18222c,l+'foot');shape(new T.BoxGeometry(.12,.019,.21),[1,1,1],[s*.105,.024,.05],0x111b20,l+'foot');
  }
  const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(P,3));geometry.setAttribute('normal',new T.Float32BufferAttribute(N,3));geometry.setAttribute('color',new T.Float32BufferAttribute(C,3));geometry.setAttribute('skinIndex',new T.Uint16BufferAttribute(I,4));geometry.setAttribute('skinWeight',new T.Float32BufferAttribute(W,4));geometry.setIndex(ind);const mesh=new T.SkinnedMesh(geometry,cloth);mesh.add(root);mesh.bind(new T.Skeleton(bones));mesh.castShadow=true;mesh.frustumCulled=false;
@@ -33,7 +33,13 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export function posePlayer(actor,state,t){const {bones:b,names:n}=actor;for(const bone of b)bone.rotation.set(0,0,0);actor.group.position.set(state.x,0,state.z);actor.group.rotation.y=state.angle;actor.shadow.position.set(state.x,.025,state.z);const speed=state.speed,run=clamp(speed/4.8,0,1),phase=state.phase??t*(7+run*4)+actor.index*.67;const cycle=Math.sin(phase);b[n.hips].position.y=.97+Math.abs(Math.cos(phase))*.045*run;b[n.spine].rotation.x=.10*run;b[n.spine].rotation.y=cycle*.09*run;b[n.head].rotation.y=-cycle*.035*run;
  for(const [side,s] of [['L',1],['R',-1]]){const swing=cycle*s;b[n[side+'thigh']].rotation.x=-swing*.70*run;b[n[side+'shin']].rotation.x=Math.max(0,-swing)*1.20*run+.04;b[n[side+'foot']].rotation.x=-Math.max(0,-swing)*.35*run;b[n[side+'arm']].rotation.x=swing*.54*run;b[n[side+'arm']].rotation.z=side==='L'?.10:-.10;b[n[side+'fore']].rotation.x=-.50-.4*run;}
  if(state.kick>0){const k=state.kick;b[n.Rthigh].rotation.x=-1.15*k;b[n.Rshin].rotation.x=.12*k;b[n.Rfoot].rotation.x=-.18*k;b[n.spine].rotation.x=.18*k;b[n.Larm].rotation.z=.7*k;b[n.Rarm].rotation.z=-.6*k;}
- if(state.keeper){b[n.Larm].rotation.z=.35;b[n.Rarm].rotation.z=-.35;b[n.Lfore].rotation.x=-.8;b[n.Rfore].rotation.x=-.8;b[n.Lthigh].rotation.x=-.2;b[n.Rthigh].rotation.x=-.2;b[n.Lshin].rotation.x=.3;b[n.Rshin].rotation.x=.3;b[n.hips].position.y=.90;
+ /* A keeper waiting for a penalty does not stand to attention: he is low, his feet are apart, his weight is
+    forward and his hands are away from his body. Standing straight was most of why he read as a doll. */
+ if(state.keeper){b[n.Larm].rotation.z=.34;b[n.Rarm].rotation.z=-.34;b[n.Larm].rotation.x=-.1;b[n.Rarm].rotation.x=-.1;
+  b[n.Lfore].rotation.x=-.42;b[n.Rfore].rotation.x=-.42;b[n.Lfore].rotation.z=-.22;b[n.Rfore].rotation.z=.22;
+  b[n.Lthigh].rotation.x=-.4;b[n.Rthigh].rotation.x=-.4;b[n.Lthigh].rotation.z=-.13;b[n.Rthigh].rotation.z=.13;
+  b[n.Lshin].rotation.x=.66;b[n.Rshin].rotation.x=.66;b[n.Lfoot].rotation.x=-.26;b[n.Rfoot].rotation.x=-.26;
+  b[n.spine].rotation.x=.13;b[n.head].rotation.x=-.1;b[n.spine].rotation.y=Math.sin(t*1.1)*.055;b[n.hips].position.y=.84;
  if(state.dive>0){const d=state.dive;b[n.hips].rotation.z=d*1.25;b[n.hips].position.y=.9-.32*d;b[n.Larm].rotation.z=2.0*d;b[n.Rarm].rotation.z=1.4*d;b[n.Lfore].rotation.x=-.15;b[n.Rfore].rotation.x=-.15;b[n.Lthigh].rotation.x=-.28;b[n.Rthigh].rotation.x=.18;}}
  if(state.celebrate){const c=state.celebrate;b[n.Larm].rotation.z=2.3*c;b[n.Rarm].rotation.z=-2.3*c;b[n.Lfore].rotation.x=-.25;b[n.Rfore].rotation.x=-.25;b[n.hips].position.y+=Math.max(0,Math.sin(t*5))*.10*c;b[n.head].rotation.x=-.12*c;}
 }

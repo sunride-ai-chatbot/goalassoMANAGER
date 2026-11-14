@@ -189,9 +189,13 @@ export function buildWorld(scene,renderer){
      if((i*2246822519)%17===0)col.lerp(pale,.34);
      return col.multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.5)};
    /* the gate is a wall of one colour, which is the whole point of it; the rest of the ground is a mixed crowd */
+   /* a kit too dark to be seen at night paints the gate in the stand's own colour and the block vanishes, the
+      same way it did in the flat picture: lift it toward a cool grey while it keeps its hue */
+   const lift=c=>{const L=c.r*.3+c.g*.59+c.b*.11;if(L>=.13)return c;const t=(.13-L)*2.2;
+     return c.setRGB(c.r+(.45-c.r)*t,c.g+(.48-c.g)*t,c.b+(.56-c.b)*t)};
    const gate=(base,i,y)=>{if(base==null)return null;const r=((i*2654435761)%1000)/1000;
      if(r<.16)return null;                                   /* a few coats among them, or the block is a flat sheet */
-     col.setHex(base).multiplyScalar(.34+r*.22);
+     lift(col.setHex(base)).multiplyScalar(.34+r*.22);
      return col.multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.34)};
    people.forEach(([x,y,z,rot,u],i)=>{const base=x<0?A:B;const c=u?gate(base,i,y):null;bodies.setColorAt(i,c||mix(base,i,y))});
    gatePts.forEach(([x],i)=>{const base=x<0?A:B;if(base==null)return;flags.setColorAt(i,col.setHex(base).multiplyScalar(.9))});
