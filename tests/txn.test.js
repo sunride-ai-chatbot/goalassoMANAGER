@@ -22,4 +22,11 @@ setTimeout(()=>{const d=w.document;const run=c=>w.eval(c);
   const w2=mk(store);setTimeout(()=>{out.reload={open:!!w2.document.getElementById('reveal'),signings:w2.eval('G.signings.length')};
    // free agent + loan record shapes
    out.free=w2.eval(`(()=>{G.wk=0;const from=G.clubs.find(c=>c.id!==G.me);const p=from.players.pop();p.contract=0;G.freeAgents.push(p);/* the list starts empty: only released real players are on it */me().money+=5e6;signFreeAgent(p.id);const t=G.signings[G.signings.length-1];return {kind:t.kind,years:t.years,fee:t.fee,from:t.from}})()`);
-   setTimeout(()=>{out.freeRevealText=(w2.document.querySelector('#reveal .rv-card')||{}).textContent;console.log(JSON.stringify(out,null,1));console.log('errs',errs);process.exit(0)},600)},700)},500)},700);
+   setTimeout(()=>{out.freeRevealText=(w2.document.querySelector('#reveal .rv-card')||{}).textContent;
+    // the dressing room closes the signing: his own peg, his shirt, and the manager who signed him
+    const peg=w2.document.querySelector('#reveal .rv-peg'),room=w2.document.querySelector('#reveal .rv-roomshot');
+    out.room={shot:!!room&&/room-dressing/.test(room.getAttribute('style')||''),plate:!!peg&&!!peg.querySelector('.rv-plate b').textContent.trim(),
+     shirt:!!peg&&!!peg.querySelector('.rv-hang .rv-shirt'),coach:(w2.document.querySelector('#reveal .rv-coach')||{}).textContent||''};
+    if(!out.room.shot||!out.room.plate||!out.room.shirt)errs.push('dressing room missing from the signing reveal');
+    if(!/המנג|מנג׳ר|\S/.test(out.room.coach))errs.push('the manager is not named in the dressing room');
+    console.log(JSON.stringify(out,null,1));console.log('errs',errs);process.exit(0)},600)},700)},500)},700);

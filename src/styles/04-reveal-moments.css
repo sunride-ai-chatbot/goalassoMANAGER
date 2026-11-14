@@ -8,6 +8,36 @@
 .rv-media{position:absolute;inset:0;background:#0b0b0e center 40%/cover no-repeat}
 .rv-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;background:transparent}
 .rv-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),transparent 28%,transparent 55%,rgba(0,0,0,.72));pointer-events:none}
+/* ---- the dressing room: the last beat of a signing ------------------------------------------------
+   The press stage dissolves into his own peg: the plate, the shirt, the number, the manager who signed
+   him. The photograph carries no lettering of its own — every word is drawn over it as UI text, which
+   is both the rule for generated art here and what keeps a Hebrew name readable at any size.
+   The photograph is landscape, so a phone-shaped `cover` would crop away the lockers and leave an anonymous
+   dark wall: it is shown whole instead, as a lit band across the top, over a blurred copy of itself. */
+.rv-room{position:absolute;inset:0;z-index:2;background:#07080b;opacity:0;transition:opacity var(--t-slow) var(--ease-out);pointer-events:none}
+.rv-final .rv-room{opacity:1}
+.rv-roomblur{position:absolute;inset:-40px;background:center 70%/cover no-repeat;filter:blur(34px) brightness(.55) saturate(.85);transform:scale(1.1)}
+/* the room keeps going past the lit band instead of ending in a black void under it */
+.rv-room::after{content:"";position:absolute;inset:0;background:radial-gradient(130% 70% at 50% 24%,transparent 38%,rgba(5,6,9,.72) 100%)}
+.rv-roomwrap{position:absolute;left:0;right:0;top:0;z-index:1;display:flex;flex-direction:column;align-items:center}
+.rv-roomshot{position:relative;width:100%;aspect-ratio:5/4;background:center/cover no-repeat;
+  transform:scale(1.05);transition:transform 1.8s var(--ease-out);
+  -webkit-mask-image:linear-gradient(180deg,#000 68%,transparent 99%);mask-image:linear-gradient(180deg,#000 68%,transparent 99%)}
+.rv-final .rv-roomshot{transform:none}
+.rv-peg{position:absolute;left:50%;top:9%;width:min(34vw,132px);display:flex;flex-direction:column;align-items:center;
+  opacity:0;transform:translate(-50%,12px);transition:opacity .5s var(--ease-out) .35s, transform .6s var(--ease-out) .35s}
+.rv-final .rv-peg{opacity:1;transform:translate(-50%,0)}
+.rv-plate{display:flex;align-items:center;gap:8px;max-width:100%;background:linear-gradient(180deg,rgba(20,22,30,.94),rgba(8,9,13,.94));
+  border:1px solid rgba(255,255,255,.18);border-top:2px solid var(--k1);border-radius:var(--r1);padding:5px 11px;box-shadow:var(--e2)}
+.rv-plate b{font-family:var(--display);font-weight:400;font-size:clamp(13px,3.8vw,18px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rv-plate i{font-style:normal;font-family:var(--display);font-size:clamp(13px,3.8vw,18px);color:#ffd34d}
+.rv-hang{position:relative;margin-top:11px;width:100%;filter:drop-shadow(0 14px 22px rgba(0,0,0,.6))}
+.rv-hang::before{content:"";position:absolute;top:-9px;left:50%;width:2px;height:13px;transform:translateX(-50%);background:rgba(225,230,240,.7);border-radius:2px}
+.rv-coach{margin-top:-10px;font:600 12.5px var(--body);color:#e4e8f2;background:rgba(6,7,10,.62);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--rp);padding:5px 13px;backdrop-filter:blur(4px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:86%;
+  opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease-out) .45s, transform .6s var(--ease-out) .45s}
+.rv-final .rv-coach{opacity:1;transform:none}
+.rv-card .rv-cardhead{padding-inline-end:62px}
 .rv-skip{position:absolute;z-index:6;top:max(12px,env(safe-area-inset-top));left:max(12px,env(safe-area-inset-left));background:rgba(8,8,12,.6);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 18px;font:600 15px var(--body);cursor:pointer;backdrop-filter:blur(6px);min-height:40px}
 .rv-skip:focus-visible,.rv .btn:focus-visible,.mo-btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .rv-demo{position:absolute;z-index:6;top:max(14px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));max-width:calc(100% - 110px);background:#ffd34d;color:#1b1400;font:700 12px var(--body);padding:6px 10px;border-radius:8px}
@@ -47,8 +77,8 @@
 .rv-card .rv-terms{font-size:14px;text-shadow:none;margin-top:10px}.rv-card .rv-terms li{background:rgba(255,255,255,.05)}
 .rv-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.rv-actions .btn{min-height:46px;font-size:15px}.rv-actions .btn:first-child{grid-column:1/-1}
 @media (orientation:landscape){.rv-stage{width:100vw}.rv-media{background-position:center 55%}.rv-media video{object-position:center 55%}.rv-l0{top:18%}.rv-l1{top:5%;bottom:30%}.rv-l2{top:8%}.rv-l3{top:16%}.rv-shirtwrap{width:auto;height:62%;max-height:none}.rv-name{font-size:clamp(28px,9vh,52px)}.rv-brand{width:min(40vw,300px)}}
-@media (orientation:landscape) and (max-height:600px){.rv-card{left:max(12px,calc(50% - 320px));right:max(12px,calc(50% - 320px));bottom:max(8px,env(safe-area-inset-bottom));padding:12px 14px 10px;max-height:calc(100% - 16px)}.rv-cardname{font-size:22px}.rv-card .rv-facts,.rv-card .rv-terms{margin-top:6px}.rv-card .rv-terms{flex-direction:row;flex-wrap:wrap}.rv-actions{grid-template-columns:repeat(3,1fr);margin-top:8px}.rv-actions .btn:first-child{grid-column:auto}.rv-actions .btn{min-height:40px}.rv-l2 .rv-terms{flex-direction:row;flex-wrap:wrap;justify-content:center}}
-@media (prefers-reduced-motion:reduce){.rv-layer,.rv-card{transition:none}.rv-p1 .rv-shirtwrap:not(.sm){animation:none}}
+@media (orientation:landscape) and (max-height:600px){.rv-peg{top:4%;width:min(24vw,130px)}.rv-coach{display:none}.rv-card{left:max(12px,calc(50% - 320px));right:max(12px,calc(50% - 320px));bottom:max(8px,env(safe-area-inset-bottom));padding:12px 14px 10px;max-height:calc(100% - 16px)}.rv-cardname{font-size:22px}.rv-card .rv-facts,.rv-card .rv-terms{margin-top:6px}.rv-card .rv-terms{flex-direction:row;flex-wrap:wrap}.rv-actions{grid-template-columns:repeat(3,1fr);margin-top:8px}.rv-actions .btn:first-child{grid-column:auto}.rv-actions .btn{min-height:40px}.rv-l2 .rv-terms{flex-direction:row;flex-wrap:wrap;justify-content:center}}
+@media (prefers-reduced-motion:reduce){.rv-layer,.rv-card,.rv-room,.rv-peg,.rv-roomshot,.rv-coach{transition:none}.rv-p1 .rv-shirtwrap:not(.sm){animation:none}}
 /* ---- trophy moments ---- */
 .mo-card{position:relative;width:min(100vw,calc(100dvh * .5628));height:100dvh;background:#08080a 50% 38%/cover no-repeat;box-shadow:var(--e3);overflow:hidden}
 /* The picture fills the card whatever its shape, and a scrim rises behind the plate so the words sit on

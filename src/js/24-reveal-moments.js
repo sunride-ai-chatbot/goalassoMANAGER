@@ -2,7 +2,7 @@
    Presentation only: these never move money or players. A transaction is recorded (and saved) by the code that
    completed it; the reveal reads that record. Each record has a unique id and a `shown` flag, so a refresh never
    replays it and a record is never created twice.                                                             */
-const REVEAL_ASSETS={video:'signing.mp4',webm:'signing.webm',poster:'signing-poster.jpg',cup:'moment-cup.webp',champ:'moment-champ.webp'};
+const REVEAL_ASSETS={video:'signing.mp4',webm:'signing.webm',poster:'signing-poster.jpg',cup:'moment-cup.webp',champ:'moment-champ.webp',room:'room-dressing.webp'};
 const SIGN_HEAD={perm:'חתום. עכשיו הוא משלנו.',loan:'מצטרף למשימה — בהשאלה',free:'פרק חדש מתחיל כאן'};
 const SIGN_KIND={perm:'העברה קבועה',loan:'השאלה',free:'שחקן חופשי'};
 function recordSigning(p,c,kind,x){x=x||{};if(!G||!p||!c)return null;G.signings=G.signings||[];
@@ -35,8 +35,16 @@ function openReveal(tx){const c=club(tx.club)||me();if(!c)return;closeReveal(tru
   // the player's own verified cut-out (never another player's face) stands on the stage when the pack has one
   const hit=typeof npPlayerOf==='function'?npPlayerOf({pid:tx.pid}):null;const face=hit&&playerVisual(hit.p)?`<svg viewBox="0 0 240 300" aria-hidden="true">${portraitGroup(hit.p,c,'rvface'+tx.pid,{bg:false,h:300})}</svg>`:'';
   const facts=txFacts(tx).map(([l,v])=>`<div class="rv-fact"><small>${l}</small><b>${esc(v)}</b></div>`).join('');const terms=txTerms(tx).map(s=>`<li>${s}</li>`).join('');
+  // the last beat leaves the press stage for the dressing room: his peg, his shirt, his number, the manager who signed him.
+  // the photograph itself carries no lettering — every word here is drawn over it as UI text.
+  const last=(tx.name||'').trim().split(/\s+/).pop()||tx.name;const coach=(G&&G.manager&&G.manager.name)||'';
   root.innerHTML=`<div class="rv-bg" style="background-image:url(${REVEAL_ASSETS.poster})"></div>
-  <div class="rv-stage"><div class="rv-media" style="background-image:url(${REVEAL_ASSETS.poster})"></div><div class="rv-shade"></div>
+  <div class="rv-stage"><div class="rv-media" style="background-image:url(${REVEAL_ASSETS.poster})"></div>
+    <div class="rv-room" aria-hidden="true"><div class="rv-roomblur" style="background-image:url(${REVEAL_ASSETS.room})"></div>
+      <div class="rv-roomwrap"><div class="rv-roomshot" style="background-image:url(${REVEAL_ASSETS.room})"><div class="rv-peg">
+        <div class="rv-plate"><b>${esc(last)}</b>${tx.no?`<i><bdi dir="ltr">${tx.no}</bdi></i>`:''}</div>
+        <div class="rv-hang">${shirtSVG(c,tx.no,'c')}</div></div></div>
+      ${coach?`<div class="rv-coach">החתים <bdi>${esc(coach)}</bdi></div>`:''}</div></div><div class="rv-shade"></div>
     ${tx.demo?'<div class="rv-demo">הדגמה · לא בוצעה העברה</div>':''}
     <button class="rv-skip" id="rvSkip" type="button">דלג</button>
     <div class="rv-layer rv-l0"><div class="rv-brand">GOALASSO</div><div class="rv-club"><span class="rv-bar"></span><b>${esc(tx.clubName)}</b><span class="rv-bar"></span></div></div>
