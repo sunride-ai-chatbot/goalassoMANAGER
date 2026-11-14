@@ -118,7 +118,22 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.notEqual($('.pg-end').classList.contains('good'),G2.$('.pg-end').classList.contains('good'),'one won, one lost');
   // a reveal never travels before the other side's commit arrived
   for(const id of [w.eval('PCUP.net.id'),g.eval('PCUP.net.id')]){const other=bus.sent.findIndex(m=>m.t==='c'&&m.k===0&&m.f!==id),mine=bus.sent.findIndex(m=>m.t==='r'&&m.k===0&&m.f===id);assert.ok(other>=0&&mine>other,'reveal after the other commit')}
-  const hostRec=run('pcupRec()');$('#pgDone').click();G2.$('#pgDone').click();assert.equal(run('pcupRec()').played,hostRec.played+1);assert.equal(w.eval('PCUP.net'),null);assert.equal(G2.run('pcupRec()').played,1);
+  const hostRec=run('pcupRec()');$('#pgDone').click();G2.$('#pgDone').click();assert.equal(run('pcupRec()').played,hostRec.played+1);assert.equal(G2.run('pcupRec()').played,1);
+  // the room outlives the duel: a second one needs no new code, and either phone may change club first
+  await until(()=>$('[data-pc-again]')&&G2.$('[data-pc-again]'),'the rematch screen on both phones');
+  assert.equal(w.eval("PCUP.net.state"),'over','the host keeps the room open');
+  $('[data-pc-newteam]').click();await until(()=>$('[data-pc-team]'),'the club grid inside the room');
+  assert.ok(w.eval('!!PCUP.net'),'changing club does not close the room');
+  $('[data-pc-team="i:hbs"]').click();await until(()=>$('[data-pc-again]'),'back to the rematch screen');
+  assert.equal(w.eval('PCUP.my.key'),'i:hbs');
+  $('[data-pc-again]').click();await tick(5);assert.ok(w.eval('PCUP.net.wantAgain'),'the host asked');
+  assert.ok(!$('.pg-dirs'),'one side alone does not start it');
+  G2.$('[data-pc-again]').click();
+  await until(()=>$('.pg-dirs')&&G2.$('.pg-dirs'),'the second duel on both phones');
+  assert.equal(w.eval('PCUP.net.code'),'QQ77ZZ','the same room, no new code');
+  const meta=q=>{const el=q('.pg-meta');return el?el.textContent:''};
+  assert.match(meta($),/הפועל ב/,'the host plays his new club');assert.match(meta(G2.$),/הפועל ב/,'and the guest sees it too');
+  w.eval("pcupNetStop();PCUP.stage='mode';pcupPaint()");g.eval("pcupNetStop();PCUP.stage='mode';pcupPaint()");await tick(5);
   ch3.close();
 
   // ---- a forged reveal (not the committed direction) stops the match on the phone that sees it
@@ -148,7 +163,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.ok(g.eval("hlHoldMs([{t:'goal'}])")>g.eval("hlHoldMs([])"),'a minute with a goal holds the clock');
   g.eval("BstopBroadcast&&BstopBroadcast()");
 
-  assert.deepEqual(errors,[]);console.log('penalty cup: rules, sandbox, computer, one phone, two phones (loss, third phone, forged reveal, leaver), beginner entry + highlights + shouts; errors',errors);
+  assert.deepEqual(errors,[]);console.log('penalty cup: rules, sandbox, computer, one phone, two phones (loss, a rematch in the same room with a new club, third phone, forged reveal, leaver), beginner entry + highlights + shouts; errors',errors);
  }catch(e){console.error(e);console.log('errors',[String(e&&e.message||e)].concat(errors));process.exitCode=1}
  finally{for(const x of wins){try{x.close()}catch(e){}}}
 })();

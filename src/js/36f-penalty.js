@@ -31,7 +31,28 @@ function penAiShot(skill){const r=Math.random();const side=r<.43?-1:r<.86?1:0;co
    PEN_DIRS: the middle of each area of the goal (where its arrow stands). penZone: the area a ball at (x,y) belongs to. */
 const PEN_DIRS={UL:[-2.75,1.95],U:[0,1.95],UR:[2.75,1.95],L:[-2.85,1.2],R:[2.85,1.2],DL:[-2.75,.42],D:[0,.45],DR:[2.75,.42]};
 /* where each arrow is drawn: spread to the frame of the goal so that eight of them fit a goal on a phone, each still inside its own area */
-const PEN_ARROW={UL:[-3.05,2.2],U:[0,2.25],UR:[3.05,2.2],L:[-3.2,1.2],R:[3.2,1.2],DL:[-3.05,.2],D:[0,.18],DR:[3.05,.2]};
+const PEN_ARROW={UL:[-2.6,1.95],U:[0,2.05],UR:[2.6,1.95],L:[-2.75,1.1],R:[2.75,1.1],DL:[-2.6,.32],D:[0,.3],DR:[2.6,.32]};
+/* Aiming is a pull, not a keypad: the finger drags toward the corner it wants and a sight rides the goal where the
+   ball — or the keeper — is going. The eight areas stay the unit of choice, because the duel commits a direction
+   over the network, so this changes how a choice is made and not what is chosen. The arrow pad stays in the page
+   out of sight, for the keyboard and for assistive technology. */
+const PEN_AIM_MIN=26;
+function penAimDir(dx,dy,min){if(Math.hypot(dx,dy)<(min==null?PEN_AIM_MIN:min))return null;const a=(Math.atan2(-dy,dx)*180/Math.PI+360)%360;return ['R','UR','U','UL','L','DL','D','DR'][Math.round(a/45)%8]}
+function penAimPad(host,st,pick){
+  const pad=document.createElement('div');pad.className='pg-pull';
+  pad.innerHTML='<svg aria-hidden="true"><line x1="0" y1="0" x2="0" y2="0"/></svg><div class="pg-pull-sight"><b></b><i></i></div>';
+  const line=pad.querySelector('line'),sight=pad.querySelector('.pg-pull-sight');let from=null,cur=null;
+  const place=d=>{const c=PEN_ARROW[d||cur];if(!c)return;const [px,py]=st.toScreen(c[0],c[1]);sight.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`};
+  const at=e=>{const r=pad.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]};
+  pad.addEventListener('pointerdown',e=>{if(e.button>0)return;from={x:e.clientX,y:e.clientY};const [x,y]=at(e);
+    for(const k of ['x1','y1','x2','y2'])line.setAttribute(k,k[0]==='x'?x:y);pad.classList.add('on');
+    try{pad.setPointerCapture(e.pointerId)}catch(err){}e.preventDefault()});
+  pad.addEventListener('pointermove',e=>{if(!from)return;const [x,y]=at(e);line.setAttribute('x2',x);line.setAttribute('y2',y);
+    const d=penAimDir(e.clientX-from.x,e.clientY-from.y);if(d&&d!==cur){cur=d;place();pad.classList.add('aimed');try{buzz('tap')}catch(err){}}e.preventDefault()});
+  const drop=e=>{if(!from)return;from=null;pad.classList.remove('on');if(cur)pick(cur);e&&e.preventDefault&&e.preventDefault()};
+  pad.addEventListener('pointerup',drop);pad.addEventListener('pointercancel',()=>{from=null;pad.classList.remove('on')});
+  host.appendChild(pad);
+  return {el:pad,show(d){cur=d;place();pad.classList.add('aimed')},place(){if(cur)place()},remove(){pad.remove()}}}
 function penZone(x,y){const c=penSide(x);if(c==='C')return y>1.25?'U':'D';return (y>1.6?'U':y<.82?'D':'')+c}
 function penDirCol(d){return d.indexOf('L')>=0?'L':d.indexOf('R')>=0?'R':'C'}
 function penDirRow(d){return d[0]==='U'?2:d[0]==='D'?0:1}
@@ -164,13 +185,14 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
   const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
   const kick=o.mode==='kick';const tp=o.taker.p,kp=o.keeper&&o.keeper.p;const skill=penShootSkill(tp),gk=penKeepSkill(kp);const myP=kick?tp:kp,myC=kick?o.taker.c:(o.keeper&&o.keeper.c);
   bot.innerHTML=`<div class="pg-who">${myP?penFaceHTML(myP,myC,'pg'+myP.id+(kick?'k':'g')):''}<div><b>${esc(myP?fullName(myP):'')}</b><small>${kick?`בעיטה <bdi>${Math.round(skill)}</bdi> · מול ${esc(kp?fullName(kp):'השוער')}`:`רפלקסים <bdi>${Math.round(gk)}</bdi> · בועט ${esc(fullName(tp))}`}</small></div></div>
-    <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'לחץ, כוון אל הפינה ושחרר':'בחר בחץ לאן השוער יזנק, לפני הבעיטה'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
+    <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'לחץ, כוון אל הפינה ושחרר':'משוך לכיוון שאליו השוער יזנק, לפני הבעיטה'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
   /* a kick belongs to the overlay and the turn it was started in: once either is gone (the overlay was closed, the next
      kick began) nothing of it may run any more */
   let over=false;const token=PG.tok=(PG.tok||0)+1;const alive=()=>!!PG&&PG.root===root&&PG.tok===token;const finish=r=>{if(over||!alive())return;over=true;cb(r)};
   const end=(r,stage)=>{if(!alive())return;const fl=penFlash(host,o.mode,r.how);if(o.sfx){try{if(r.how==='goal')((CROWD.goal(kick)||SFX.goal(kick)));else kick?SFX.groan():CROWD.chance()}catch(e){}}
     try{penCheer(r.how,kick)}catch(e){}
     setTimeout(()=>{fl.remove();finish(r)},penQuick()?0:1150)};
+  try{ensureNumbers(o.taker.c)}catch(e){}
   penMakeStage(view,'kick',{...penKits(o.taker.c,o.keeper&&o.keeper.c,o.home),number:tp.no||9}).then(st=>{
     if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
     PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();try{SFX.whistle()}catch(e){}
@@ -198,9 +220,10 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
       const shot=penAiShot8(skill);let dir=null,struck=false,autoStay=false;const ck=penClock(performance.now());const lead=2800+Math.random()*1400;   /* time to choose, also when motion is reduced (only the animation is skipped then) */
       const ARW={U:0,UR:45,R:90,DR:135,D:180,DL:225,L:270,UL:315},NAME={U:'למעלה',UR:'למעלה ימינה',R:'ימינה',DR:'למטה ימינה',D:'למטה',DL:'למטה שמאלה',L:'שמאלה',UL:'למעלה שמאלה'};
       const pad=document.createElement('div');pad.className='pg-dirs';pad.innerHTML=Object.keys(PEN_DIRS).map(d=>`<button type="button" data-dir="${d}" aria-label="זינוק ${NAME[d]}" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]}deg)"><path d="M12 5l7 8h-4.4v6h-5.2v-6H5z"/></svg></button>`).join('');host.appendChild(pad);
-      const place=()=>{for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}};
-      const pick=d=>{if(struck||!alive()||!PEN_DIRS[d])return;dir=d;for(const b of pad.children){const on=b.dataset.dir===d;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)}buzz('tap')};
-      const strike=()=>{if(struck||!alive())return;struck=true;stop();pad.remove();let r;
+      const aim=penAimPad(host,st,d=>pick(d));
+      const place=()=>{aim.place();for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}};
+      const pick=d=>{if(struck||!alive()||!PEN_DIRS[d])return;dir=d;aim.show(d);for(const b of pad.children){const on=b.dataset.dir===d;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)}buzz('tap')};
+      const strike=()=>{if(struck||!alive())return;struck=true;stop();pad.remove();aim.remove();let r;
         if(autoStay&&!dir){const g=penKeeperGuess(shot.x,gk),f=penFrame(shot.x,shot.y);dir=g==='C'?'D':g;r=f!=='in'?{out:'miss',how:f}:g===penSide(shot.x)&&Math.random()<penSaveP(shot.x,shot.y,gk)?{out:'miss',how:'save'}:{out:'goal',how:'goal'}}
         else r=penKeep8(shot.x,shot.y,dir,gk,skill);
         buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}
