@@ -17,6 +17,18 @@ export function buildWorld(scene,renderer){
  const sun=new T.DirectionalLight(0xe9f1ff,1.8);sun.position.set(-34,76,34);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-40,right:40,top:35,bottom:-35,near:1,far:150});sun.shadow.bias=-.00015;sun.shadow.normalBias=.025;sun.shadow.radius=2;sun.target.position.set(28,0,0);scene.add(sun,sun.target);
  const fill=new T.DirectionalLight(0xc3d6f5,.6);fill.position.set(44,58,-42);scene.add(fill);
  const warm=new T.DirectionalLight(0xffd6a2,.3);warm.position.set(0,16,-72);scene.add(warm);
+ /* An environment to light the surfaces with. A standard material lit only by lamps has one bright side and
+    one black side and reads as plastic; an environment gives it light arriving from everywhere, which is most
+    of what separates "rendered" from "flat" — far more than polygon count does. It is a 64×128 gradient
+    (night sky above, the dark horizon, the lit pitch below) run through PMREM, so it costs one small texture. */
+ try{
+  const sky=canvasTexture(64,128,(c,w,h)=>{const g=c.createLinearGradient(0,0,0,h);
+   g.addColorStop(0,'#33486a');g.addColorStop(.42,'#1a2536');g.addColorStop(.52,'#0d1119');g.addColorStop(.62,'#1b3a22');g.addColorStop(1,'#2d5c33');
+   c.fillStyle=g;c.fillRect(0,0,w,h)});
+  sky.mapping=T.EquirectangularReflectionMapping;
+  const pmrem=new T.PMREMGenerator(renderer);pmrem.compileEquirectangularShader&&pmrem.compileEquirectangularShader();
+  scene.environment=pmrem.fromEquirectangular(sky).texture;pmrem.dispose();sky.dispose();
+ }catch(e){}
  const grass=canvasTexture(2048,1024,(c,w,h)=>{const rand=seeded(821);c.fillStyle='#33602c';c.fillRect(0,0,w,h);for(let i=0;i<20;i++){c.fillStyle=i%2?'#3a6a31':'#2a5226';c.fillRect(i*w/20,0,w/20,h)}for(let i=0;i<210000;i++){const v=rand();c.fillStyle=v>.5?'rgba(190,204,120,.05)':'rgba(7,37,14,.06)';c.fillRect(rand()*w,rand()*h,rand()*2+1,rand()*3+1)}
  // Lines are painted into the grass so they stay crisp without z-fighting.
  const sx=w/112,sz=h/75;c.strokeStyle='#e5ead8';c.lineWidth=1.8;c.lineJoin='round';const X=x=>w/2+x*sx,Z=z=>h/2+z*sz;

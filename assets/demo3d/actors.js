@@ -2,7 +2,8 @@ import * as T from './vendor/three.js';
 const skinColors=[0xc99673,0x774b35,0xe3b796,0xa76b49,0x543b2c];
 const hairColors=[0x211913,0x34241b,0x211b18,0x65442c,0x181714];
 function createRig(team,number,variant,kit=null){
- const cloth=new T.MeshStandardMaterial({vertexColors:true,roughness:.83,metalness:0});
+ // cloth, not plastic: a little less rough so the environment shows as a sheen along the forms
+ const cloth=new T.MeshStandardMaterial({vertexColors:true,roughness:.72,metalness:0,envMapIntensity:1.15});
  const bones=[],names={};const bone=(name,parent,x,y,z)=>{const b=new T.Bone();b.name=name;b.position.set(x,y,z);if(parent)parent.add(b);names[name]=bones.length;bones.push(b);return b};
  const root=bone('hips',null,0,.97,0),spine=bone('spine',root,0,.12,0),head=bone('head',spine,0,.57,0);
  for(const [label,s] of [['L',-1],['R',1]]){const arm=bone(label+'arm',spine,s*.186,.43,0),fore=bone(label+'fore',arm,0,-.29,0);bone(label+'hand',fore,0,-.25,0);const thigh=bone(label+'thigh',root,s*.105,-.01,0),shin=bone(label+'shin',thigh,0,-.43,0);bone(label+'foot',shin,0,-.43,0)}
