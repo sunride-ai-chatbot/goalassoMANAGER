@@ -45,11 +45,40 @@ export function buildWorld(scene,renderer){
    for(let col=0;col<148;col++){if(col%49<3||random()<.04)continue;people.push([sign*(60+row*1.23)+jx(),y,(col-74)*STEP+jx(),sign>0?-Math.PI/2:Math.PI/2])}}
  }
  for(const sx of [-1,1])for(const sz of [-1,1])for(let row=0;row<18;row++)for(let col=0;col<20;col++)people.push([sx*(55.4+row*.87+col*.42),2.23+row*.69,sz*(44.6+row*.87-col*.42),Math.atan2(-sx,-sz)]);
- /* A body with almost no taper and a head wider than the shoulders it sits on. The old shape — a cylinder
-    narrowing from .23 to .18 with a small spike on top — was a cone with a tip, and no colour fixes that.
-    The colours are a night crowd, mostly dark coats with the club's colour showing through. */
- const bodies=new T.InstancedMesh(new T.CylinderGeometry(.21,.235,.9,6),mat(0xffffff),people.length),heads=new T.InstancedMesh(new T.IcosahedronGeometry(.125,0),mat(0xffffff),people.length),dummy=new T.Object3D();const shirts=[0x6d1823,0x7b2430,0x8e908a,0x6f7068,0x12202f,0x454f55,0x24333f];const skins=[0x8e6749,0x9c7f62,0x624032,0xa08871,0x412d22];
- people.forEach(([x,y,z,rot],i)=>{dummy.position.set(x,y,z);dummy.rotation.y=rot;dummy.scale.set(1,random()*.18+.9,1);dummy.updateMatrix();bodies.setMatrixAt(i,dummy.matrix);bodies.setColorAt(i,new T.Color(shirts[Math.floor(random()*shirts.length)]));dummy.position.y+=.55;dummy.scale.setScalar(1);dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);heads.setColorAt(i,new T.Color(skins[Math.floor(random()*skins.length)]).multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.42))});scene.add(bodies,heads);
+ /* A spectator is a cut-out, not a solid. Every shape the geometry could afford — a cone, then a cylinder with
+    a ball on it — gives every person in the ground the same silhouette, and fifteen thousand identical
+    silhouettes read as a field of bottles whatever colour they are. Eight drawn poses on one texture (standing,
+    an arm up, both arms up, arms folded, leaning, a scarf held overhead, a flag, hands on the rail) cost one
+    draw call, pick themselves per instance from a single float attribute, and give the stand the broken,
+    uneven outline a crowd actually has. Cut out with alphaTest rather than blended, so rows still occlude. */
+ const POSES=8,CW=64,CH=80;
+ const atlas=canvasTexture(CW*POSES,CH,(c,w,h)=>{c.clearRect(0,0,w,h);c.fillStyle='#fff';c.strokeStyle='#fff';c.lineCap='round';c.lineJoin='round';
+  const torso=(o,wid,lean)=>{const x=o+CW/2+lean;c.beginPath();c.moveTo(x-wid,CH);c.lineTo(x-wid,CH*.34);c.quadraticCurveTo(x-wid,CH*.12,x-wid*.42,CH*.1);c.lineTo(x+wid*.42,CH*.1);c.quadraticCurveTo(x+wid,CH*.12,x+wid,CH*.34);c.lineTo(x+wid,CH);c.closePath();c.fill();return x};
+  const arm=(x,y,dx,dy,wid)=>{c.lineWidth=wid;c.beginPath();c.moveTo(x,y);c.lineTo(x+dx,y+dy);c.stroke()};
+  for(let p=0;p<POSES;p++){const o=p*CW;
+   if(p===0){torso(o,17,0)}
+   else if(p===1){const x=torso(o,16,0);arm(x+13,CH*.26,9,-26,8)}
+   else if(p===2){const x=torso(o,16,0);arm(x+12,CH*.26,10,-30,8);arm(x-12,CH*.26,-10,-30,8)}
+   else if(p===3){const x=torso(o,20,0);arm(x-14,CH*.3,9,10,9);arm(x+14,CH*.3,-9,10,9)}
+   else if(p===4){torso(o,15,5)}
+   else if(p===5){const x=torso(o,16,0);arm(x+12,CH*.26,8,-26,8);arm(x-12,CH*.26,-8,-26,8);c.lineWidth=7;c.beginPath();c.moveTo(x-22,CH*.08);c.lineTo(x+22,CH*.08);c.stroke()}
+   else if(p===6){const x=torso(o,16,0);arm(x+12,CH*.26,7,-24,8);c.lineWidth=4;c.beginPath();c.moveTo(x+19,CH*.05);c.lineTo(x+19,CH*.34);c.stroke()}
+   else {const x=torso(o,18,-4);arm(x-13,CH*.3,-7,13,9)}}
+ });
+ atlas.anisotropy=Math.min(renderer.capabilities.getMaxAnisotropy(),4);
+ /* Unlit, and the palette carries the night instead. A flat cut-out stands vertical and faces the pitch, so a
+    floodlight almost directly above it grazes the surface and leaves it black; the solid bodies it replaced
+    were curved and caught that light from somewhere. What a spectator is worth is decided here. */
+ const bodyMat=new T.MeshBasicMaterial({map:atlas,alphaTest:.5,side:T.DoubleSide,fog:true});
+ /* No `vertexColors`: three.js defines USE_COLOR from that flag alone and the shader then multiplies by a
+    `color` attribute the geometry does not have, which reads as zero and paints every spectator black.
+    `setColorAt` works through USE_INSTANCING_COLOR on its own. */
+ const bodies=new T.InstancedMesh(new T.PlaneGeometry(.86,1.02),bodyMat,people.length),
+       heads=new T.InstancedMesh(new T.IcosahedronGeometry(.125,0),mat(0xffffff),people.length),dummy=new T.Object3D();
+ const shirts=[0x43191f,0x4e262d,0x7b7d76,0x5f6159,0x1d2b3a,0x414b52,0x2b3640];const skins=[0x8e6749,0x9c7f62,0x624032,0xa08871,0x412d22];
+ {const cell=new Float32Array(people.length);for(let i=0;i<people.length;i++)cell[i]=Math.floor(random()*POSES);
+  bodies.geometry.setAttribute('aCell',new T.InstancedBufferAttribute(cell,1));}
+ people.forEach(([x,y,z,rot],i)=>{dummy.position.set(x,y+.07,z);dummy.rotation.y=rot;dummy.scale.set(.94+random()*.16,.92+random()*.18,1);dummy.updateMatrix();bodies.setMatrixAt(i,dummy.matrix);bodies.setColorAt(i,new T.Color(shirts[Math.floor(random()*shirts.length)]));dummy.position.y+=.47;dummy.scale.setScalar(1);dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);heads.setColorAt(i,new T.Color(skins[Math.floor(random()*skins.length)]).multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.5))});scene.add(bodies,heads);
  /* The stand is alive: every spectator sways on his own phase, and on a goal he leaps. It runs in the vertex shader,
     so thousands of them cost nothing per frame; the scene only advances `crowd.time` and sets `crowd.cheer`. */
  const crowd={uniforms:{uTime:{value:0},uCheer:{value:0}},
@@ -59,8 +88,12 @@ export function buildWorld(scene,renderer){
  {const phase=new Float32Array(people.length);for(let i=0;i<people.length;i++)phase[i]=random()*Math.PI*2;
   for(const m of [bodies,heads]){m.geometry.setAttribute('aPhase',new T.InstancedBufferAttribute(phase,1));
    m.material.onBeforeCompile=sh=>{sh.uniforms.uTime=crowd.uniforms.uTime;sh.uniforms.uCheer=crowd.uniforms.uCheer;
-    sh.vertexShader='attribute float aPhase;uniform float uTime;uniform float uCheer;\n'+sh.vertexShader.replace('#include <begin_vertex>',
-     '#include <begin_vertex>\n transformed.y += sin(uTime*1.7+aPhase)*0.045 + max(0.0,sin(uTime*7.5+aPhase*3.0))*uCheer*0.75;')};
+    // the cut-out picks its pose from the atlas here, which is why the bodies carry an `aCell` attribute
+    const pose=m===bodies?'attribute float aCell;\n':'';
+    let v='attribute float aPhase;uniform float uTime;uniform float uCheer;\n'+pose+sh.vertexShader.replace('#include <begin_vertex>',
+     '#include <begin_vertex>\n transformed.y += sin(uTime*1.7+aPhase)*0.045 + max(0.0,sin(uTime*7.5+aPhase*3.0))*uCheer*0.75;');
+    if(m===bodies)v=v.replace('#include <uv_vertex>','#include <uv_vertex>\n#ifdef USE_MAP\n vMapUv = vMapUv*vec2(1.0/8.0,1.0) + vec2(aCell/8.0,0.0);\n#endif');
+    sh.vertexShader=v};
    m.material.needsUpdate=true}}
  const adtex=canvasTexture(2048,128,(c,w,h)=>{c.fillStyle='#102631';c.fillRect(0,0,w,h);c.font='italic 900 65px Arial';c.textBaseline='middle';c.fillStyle='#75efbd';c.fillText('GOALASSO',55,66);c.fillStyle='#e5f2f4';c.font='700 49px Arial';c.fillText('SUNRIDE',650,66);c.fillText('THE BEAUTIFUL GAME',1120,66);for(let x=0;x<w;x+=512){c.fillStyle='#75efbd';c.fillRect(x,h-8,200,6)}});adtex.wrapS=T.RepeatWrapping;adtex.repeat.x=3;adtex.anisotropy=4;
  const admat=mat(0xffffff,{map:adtex,emissive:0x2c5f4c,emissiveIntensity:.6});   /* lit boards: at night they are the brightest line on the ground */for(const z of [-37.6,37.6])box(scene,112,1.25,.2,0,.65,z,admat);for(const x of [-56.5,56.5])box(scene,.2,1.25,72,x,.65,0,admat);
@@ -92,10 +125,10 @@ export function buildWorld(scene,renderer){
       and the thing that gives a wall of eight thousand instances any depth at all. */
    const pale=new T.Color(0xcdd3cb);
    const mix=(base,i,y)=>{const r=((i*2654435761)%1000)/1000;
-     if(base!=null&&r<.34){col.setHex(base).multiplyScalar(.13+r*.42)}
-     else col.setHex(shirts[(i*7+i%5)%shirts.length]).multiplyScalar(.38+r*.4);
+     if(base!=null&&r<.34){col.setHex(base).multiplyScalar(.26+r*.44)}
+     else col.setHex(shirts[(i*7+i%5)%shirts.length]).multiplyScalar(.62+r*.4);
      if((i*2246822519)%17===0)col.lerp(pale,.34);
-     return col.multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.42)};
+     return col.multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.5)};
    people.forEach(([x,y],i)=>bodies.setColorAt(i,mix(x<0?A:B,i,y)));   /* split down the middle of every stand, as a segregated ground is */
    bodies.instanceColor&&(bodies.instanceColor.needsUpdate=true)};
  const goals=[makeGoal(scene,-1),makeGoal(scene,1)];return{sun,goals,crowdCount:people.length,crowd};
