@@ -162,6 +162,14 @@
   "player": "Benjamin Šeško",
   "reason": "frontal, single subject; checked by eye (file sits in the player's own Commons category; identity checked against his other photos)"
  },
+ "File:FC RB Salzburg vs. Liverpool FC (2022-07-27, Testspiel) 29.jpg": {
+  "player": "Isaac Mabaya",
+  "reason": "frontal, single subject; his face matches his Wikidata picture (cosine 0.67)"
+ },
+ "File:FC Red Bull Salzburg gegen CF Barcelona (Testspiel 4. August 2021) 45 (cropped).jpg": {
+  "player": "Ronald Araújo",
+  "reason": "his Wikidata picture; the head is at three quarters but the whole face is clear"
+ },
  "File:FC Red Bull Salzburg gegen Grazer AK (2025-08-09 Bundesliga Zweite Runde) 31.jpg": {
   "player": "Sota Kitano",
   "reason": "frontal, single subject; checked by eye (file sits in the player's own Commons category; identity checked against his other photos)"
@@ -240,6 +248,10 @@
  "File:Jack Rudoni.png": {
   "player": "Jack Rudoni",
   "reason": "frontal, single subject; checked by eye (the strict checks called it background_not_separable)"
+ },
+ "File:Jacquet asse srfc 2425.png": {
+  "player": "Jérémy Jacquet",
+  "reason": "his Wikidata picture; the head is at three quarters but the whole face is clear"
  },
  "File:Jake O'Brien in 2024.png": {
   "player": "Jake O'Brien",
