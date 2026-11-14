@@ -52,7 +52,7 @@
  "liverpool": {
   "rows": 30,
   "nfs": 11,
-  "withFace": 19,
+  "withFace": 23,
   "wrongFace": 0,
   "names": [
    "דומיניק סובוסלאי ✓",
@@ -65,14 +65,14 @@
    "אלכסנדר איסאק ✓",
    "מילוש קרקז ✓",
    "גיורגי ממרדשווילי –",
-   "ז'רמי ז'אקה –",
+   "ז'רמי ז'אקה ✓",
    "קונור בראדלי ✓",
    "ג'רמי פרימפונג –",
    "ריו נגומוהה ✓",
    "אליסון ✓",
    "פדריקו קייזה ✓",
    "ג'ו גומז ✓",
-   "רונאלד אראוחו –",
+   "רונאלד אראוחו ✓",
    "וירג'יל ואן דייק ✓",
    "ויקטור מוניוס ✓",
    "ג'ובאני לאוני –",
@@ -83,8 +83,8 @@
    "ואטארו אנדו ✓",
    "פרדי וודמן ✓",
    "ג'יימס מקונל –",
-   "לוק צ'יימברס –",
-   "אייזק מבאיה –"
+   "לוק צ'יימברס ✓",
+   "אייזק מבאיה ✓"
   ],
   "profiles": [
    {
@@ -144,10 +144,10 @@
   "shoutButtons": 4,
   "shoutReady": true,
   "speeds": "hl,1,2,4",
-  "carrier": null,
+  "carrier": "זלאטנוביץ'",
   "shout": "press",
   "penaltyView": "3d",
-  "penalty": "penmiss:off",
+  "penalty": "penmiss:save",
   "penaltyMode": "kick",
   "slow3d": true,
   "keeper": {
@@ -160,17 +160,17 @@
   "blitz": {
    "squad": 16,
    "invented": 0,
-   "rating": 80.6,
-   "bonus": 1.4,
-   "opponent": "פרייבורג",
+   "rating": 82.5,
+   "bonus": 0.8,
+   "opponent": "ליון",
    "sandbox": true
   },
   "backInCareer": true
  },
  "beginner": {
   "carrier": {
-   "label": "סוקלר",
-   "name": "סוקלר",
+   "label": "מדמון",
+   "name": "מדמון",
    "size": 14
   },
   "home": "מכבי תל אביב",
@@ -186,9 +186,9 @@
    ],
    "rows": [
     11,
-    15
+    14
    ],
-   "star": "סייד אבו פרחי"
+   "star": "אלעד מדמון"
   }
  },
  "pcup": {
@@ -223,11 +223,21 @@
   }
  },
  "versionFile": {
-  "build": "055cc018cf97",
-  "built": "13.11.2026 21:22"
+  "build": "81f33fd39dda",
+  "built": "14.11.2026 11:57"
+ },
+ "rooms": {
+  "asked": "nothing",
+  "note": "",
+  "invitation": true,
+  "guestAsked": "nothing",
+  "preview": "התקבלה הזמנה למשחקהזמנה ממכבי תל אביב · משחק ידידות עם הסגל שלךלא נטענה קריירה במצב הזה. השמירות נשמרות בנפרד בכל דפדפן ",
+  "joined": true,
+  "guestNote": "",
+  "bothSeen": 2
  },
  "errors": [],
- "url": "https://sunride-ai-chatbot.github.io/goalassoMANAGER/?v=43497189419",
- "at": "2026-11-13T20:00:28.440Z",
- "build": "055cc018cf97"
+ "url": "https://sunride-ai-chatbot.github.io/goalassoMANAGER/?v=43583379497",
+ "at": "2026-11-14T10:04:52.897Z",
+ "build": "81f33fd39dda"
 }
