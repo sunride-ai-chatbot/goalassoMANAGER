@@ -34,17 +34,22 @@ export function buildWorld(scene,renderer){
  for(const z of [-62.5,62.5]){box(scene,133,2.5,1,0,13.3,z,dark);box(scene,133,.25,22,0,17,z>0?57:-57,dark);for(let x=-64;x<=64;x+=16){tube(scene,[x,0,z],[x,17,z],.18,rail);tube(scene,[x,17,z],[x,17,z>0?45:-45],.11,rail)}}
  for(const x of [-81,81]){box(scene,1,2.5,84,x,13.3,0,dark);box(scene,20,.25,84,x>0?76:-76,17,0,dark)}
  for(const sx of [-1,1])for(const sz of [-1,1]){for(let row=0;row<16;row++){const corner=box(scene,12,.75,1.5,sx*(59+row*.87),1.4+row*.69,sz*(41+row*.87),concrete);corner.rotation.y=-sx*sz*Math.PI/4;}box(scene,22,.25,22,sx*72,17,sz*54,dark);}
- // Instanced crowd: two batched meshes for thousands of spectators.
- const random=seeded(32),people=[];for(let row=0;row<15;row++){
-  for(const sign of [-1,1]){for(let col=0;col<145;col++){if(col%36<3||random()<.08)continue;people.push([(col-72)*.84,2+row*.69,sign*(42+row*1.23),sign===1?Math.PI:0])}
-  for(let col=0;col<90;col++){if(col%30<3||random()<.1)continue;people.push([sign*(60+row*1.23),2+row*.69,(col-45)*.85,sign>0?-Math.PI/2:Math.PI/2])}}
+ /* Instanced crowd: two batched meshes for thousands of spectators. Density is the whole thing — at 0.84 metres
+    apart a spectator is an object you can count, and a grid of countable objects behind a goal reads as a field
+    of cones however well each one is shaped. Shoulder to shoulder (about half a metre, which is what a seat
+    actually is) they stop being objects and become a crowd, with a little jitter so the eye finds no column. */
+ const random=seeded(32),people=[],STEP=.52;
+ for(let row=0;row<18;row++){const y=2.23+row*.69,jx=()=>(random()-.5)*.16;
+  for(const sign of [-1,1]){
+   for(let col=0;col<236;col++){if(col%59<3||random()<.035)continue;people.push([(col-118)*STEP+jx(),y,sign*(42+row*1.23)+jx(),sign===1?Math.PI:0])}
+   for(let col=0;col<148;col++){if(col%49<3||random()<.04)continue;people.push([sign*(60+row*1.23)+jx(),y,(col-74)*STEP+jx(),sign>0?-Math.PI/2:Math.PI/2])}}
  }
- for(const sx of [-1,1])for(const sz of [-1,1])for(let row=0;row<15;row++)for(let col=0;col<13;col++)people.push([sx*(55.4+row*.87+col*.6),2+row*.69,sz*(44.6+row*.87-col*.6),Math.atan2(-sx,-sz)]);
- /* Narrower bodies with one more side and smaller heads: at this distance the old five-sided cylinders read as
-    traffic cones in rows. The colours are a night crowd — mostly dark coats with the club's colour showing
-    through — rather than the bright shirts that made every stand look like a toy. */
- const bodies=new T.InstancedMesh(new T.CylinderGeometry(.15,.2,.52,6),mat(0xffffff),people.length),heads=new T.InstancedMesh(new T.OctahedronGeometry(.112,0),mat(0xffffff),people.length),dummy=new T.Object3D();const shirts=[0x6d1823,0x7b2430,0x8e908a,0x6f7068,0x12202f,0x454f55,0x24333f];const skins=[0x8e6749,0x9c7f62,0x624032,0xa08871,0x412d22];
- people.forEach(([x,y,z,rot],i)=>{dummy.position.set(x,y,z);dummy.rotation.y=rot;dummy.scale.set(1,random()*.18+.9,1);dummy.updateMatrix();bodies.setMatrixAt(i,dummy.matrix);bodies.setColorAt(i,new T.Color(shirts[Math.floor(random()*shirts.length)]));dummy.position.y+=.42;dummy.scale.setScalar(1);dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);heads.setColorAt(i,new T.Color(skins[Math.floor(random()*skins.length)]))});scene.add(bodies,heads);
+ for(const sx of [-1,1])for(const sz of [-1,1])for(let row=0;row<18;row++)for(let col=0;col<20;col++)people.push([sx*(55.4+row*.87+col*.42),2.23+row*.69,sz*(44.6+row*.87-col*.42),Math.atan2(-sx,-sz)]);
+ /* A body with almost no taper and a head wider than the shoulders it sits on. The old shape — a cylinder
+    narrowing from .23 to .18 with a small spike on top — was a cone with a tip, and no colour fixes that.
+    The colours are a night crowd, mostly dark coats with the club's colour showing through. */
+ const bodies=new T.InstancedMesh(new T.CylinderGeometry(.21,.235,.9,6),mat(0xffffff),people.length),heads=new T.InstancedMesh(new T.IcosahedronGeometry(.125,0),mat(0xffffff),people.length),dummy=new T.Object3D();const shirts=[0x6d1823,0x7b2430,0x8e908a,0x6f7068,0x12202f,0x454f55,0x24333f];const skins=[0x8e6749,0x9c7f62,0x624032,0xa08871,0x412d22];
+ people.forEach(([x,y,z,rot],i)=>{dummy.position.set(x,y,z);dummy.rotation.y=rot;dummy.scale.set(1,random()*.18+.9,1);dummy.updateMatrix();bodies.setMatrixAt(i,dummy.matrix);bodies.setColorAt(i,new T.Color(shirts[Math.floor(random()*shirts.length)]));dummy.position.y+=.55;dummy.scale.setScalar(1);dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);heads.setColorAt(i,new T.Color(skins[Math.floor(random()*skins.length)]).multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.42))});scene.add(bodies,heads);
  /* The stand is alive: every spectator sways on his own phase, and on a goal he leaps. It runs in the vertex shader,
     so thousands of them cost nothing per frame; the scene only advances `crowd.time` and sets `crowd.cheer`. */
  const crowd={uniforms:{uTime:{value:0},uCheer:{value:0}},
@@ -82,13 +87,16 @@ export function buildWorld(scene,renderer){
    const A=hex(a),B=hex(b);if(A==null&&B==null)return;
    /* A stand at night is mostly coats and shadow with the club's colour running through it. Painting every
       spectator the full kit colour was what turned the terraces into rows of bright traffic cones: roughly a
-      third wear the colour, dimmed hard, the rest wear the dark palette, and a few catch the floodlight. */
+      third wear the colour, dimmed hard, the rest wear the dark palette, and a few catch the floodlight.
+      The higher rows are darker, which is both true — the floodlights point at the pitch, not at row 18 —
+      and the thing that gives a wall of eight thousand instances any depth at all. */
    const pale=new T.Color(0xcdd3cb);
-   const mix=(base,i)=>{const r=((i*2654435761)%1000)/1000;
-     if(base!=null&&r<.34){col.setHex(base).multiplyScalar(.20+r*.62)}
-     else col.setHex(shirts[(i*7+i%5)%shirts.length]).multiplyScalar(.5+r*.45);
-     if((i*2246822519)%17===0)col.lerp(pale,.42);return col};
-   people.forEach(([x],i)=>bodies.setColorAt(i,mix(x<0?A:B,i)));   /* split down the middle of every stand, as a segregated ground is */
+   const mix=(base,i,y)=>{const r=((i*2654435761)%1000)/1000;
+     if(base!=null&&r<.34){col.setHex(base).multiplyScalar(.13+r*.42)}
+     else col.setHex(shirts[(i*7+i%5)%shirts.length]).multiplyScalar(.38+r*.4);
+     if((i*2246822519)%17===0)col.lerp(pale,.34);
+     return col.multiplyScalar(1-Math.min(1,Math.max(0,(y-2.2)/12.5))*.42)};
+   people.forEach(([x,y],i)=>bodies.setColorAt(i,mix(x<0?A:B,i,y)));   /* split down the middle of every stand, as a segregated ground is */
    bodies.instanceColor&&(bodies.instanceColor.needsUpdate=true)};
  const goals=[makeGoal(scene,-1),makeGoal(scene,1)];return{sun,goals,crowdCount:people.length,crowd};
 }
