@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="54f6fe8b488b">
-<meta name="goalasso-built" content="14.11.2026 23:53">
+<meta name="goalasso-build" content="4e8f81d02422">
+<meta name="goalasso-built" content="15.11.2026 00:10">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
 function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
@@ -1686,8 +1686,21 @@ function realYouthName(c,taken){const list=typeof RAW_YOUTH!=='undefined'&&RAW_Y
 function giveRealName(p,c,taken){const nm=realYouthName(c,taken);if(!nm)return false;[p.first,p.last]=splitName(nm);p.real=true;p.visualId=null;delete p.gen;p.nat='ישראל';p.foreign=false;if(p.age<16)p.age=16;return true}
 /* every generated prospect of a club that has a list gets a real name (new career, season intake, save migration) */
 function realizeYouth(only){if(!G||typeof RAW_YOUTH==='undefined')return 0;const taken=namesInGame();let n=0;for(const c of [...(G.clubs||[]),...(G.leumit||[])]){if(only&&!only(c))continue;if(!RAW_YOUTH[c.name])continue;for(const y of c.youth||[])if(generatedPlayer(y)&&giveRealName(y,c,taken))n++}return n}
-/* a senior the club has to add (thin squad, no keeper): a graduate of its own youth side when one is left, else generated */
-function topUpPlayer(c,pos,base,taken){const p=makePlayer(pos,base);if(RAW_YOUTH[c.name]&&giveRealName(p,c,taken)){p.age=ri(18,20);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.contract=3;p.value=playerValue(p)}return p}
+/* A name from the club's own registered squad that nobody in the game is using. A club promoted from Liga Alef
+   arrives with all of its registered players and then goes through the same season end as everyone else: one
+   contract runs out, the squad drops under the minimum, and the club that had twenty-three real names on file
+   was handed an invented one. Its own list is asked first, and a name on it is used by one player at a time. */
+function registeredName(c,taken){const list=typeof RAW_EURO!=='undefined'&&RAW_EURO&&c&&RAW_EURO[c.name];
+  if(!list||!list.length||!G||!list.every(r=>r.nat==='Israel'))return null;   /* Israeli lists only: a foreign name carries a nationality and a foreign-player slot with it */
+  taken=taken||namesInGame();const free=list.filter(r=>r.he&&!taken.has(nameKey(r.he)));
+  if(!free.length)return null;const r=pick(free);taken.add(nameKey(r.he));return r}
+/* a senior the club has to add (thin squad, no keeper): a graduate of its own youth side when one is left, then a
+   registered team-mate nobody is playing, and only when the club has neither is a player invented */
+function topUpPlayer(c,pos,base,taken){const p=makePlayer(pos,base);
+  if(RAW_YOUTH[c.name]&&giveRealName(p,c,taken)){p.age=ri(18,20);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.contract=3;p.value=playerValue(p);return p}
+  const r=registeredName(c,taken);
+  if(r){[p.first,p.last]=splitName(r.he);p.real=true;p.visualId=null;delete p.gen;p.nat='ישראל';p.foreign=false;p.contract=p.contract||ri(1,3)}
+  return p}
 
 /* ====================== EUROPEAN CLUBS (real names & colours; squads generated with local-sounding names) ====================== */
 const EURO_CLUBS=[
