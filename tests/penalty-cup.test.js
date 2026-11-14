@@ -46,7 +46,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.equal(w.eval('G.me'),w.eval('PCUP.clubs[PCUP.my.key].id'),'the chosen club is ours');assert.match($('#penGame .pg-meta').textContent,new RegExp(w.eval('PCUP.my.name').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
   $('#pgGo').click();await until(()=>w.eval('!!(PG&&(PG.fire||PG.strike||PG.pick))'),'the first kick');
   // the stand: three swaying bands of spectators and a few camera flashes, and it answers the kick
-  assert.equal($$('#penGame .pg-crowd').length,3,'three bands in the stand');assert.ok($$('#penGame .pg-crowd circle').length>150,'the stand is full');assert.ok($$('#penGame .pg-spark').length>=8,'camera flashes');
+  assert.equal($$('#penGame .pg-crowd').length,3,'three bands in the stand');assert.ok($$('#penGame .pg-crowd circle').length>60,'a full front row');assert.ok($$('#penGame .pg-spark').length>=8,'camera flashes');assert.ok($('#penGame image[href*="stand-crowd"]'),'the photographed stand behind it');
   w.eval("penCheer('goal',true)");assert.ok($('#pgStage').classList.contains('pg-cheer')&&$('#pgStage').classList.contains('pg-cheer-big'),'our goal makes the stand leap');
   w.eval("penCheer('save',true)");assert.ok($('#pgStage').classList.contains('pg-cheer')&&!$('#pgStage').classList.contains('pg-cheer-big'),'a miss of ours is only a murmur');
   // play it out: we always aim at a top corner; in goal we always go low right

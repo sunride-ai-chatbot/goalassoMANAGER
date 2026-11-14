@@ -49,6 +49,22 @@ export function buildWorld(scene,renderer){
  for(const x of [-52.5,52.5])for(const z of [-34,34]){tube(scene,[x,0,z],[x,1.55,z],.025,mat(0xffffff));const flag=new T.Mesh(new T.PlaneGeometry(.5,.35),mat(0xe4ce55,{side:T.DoubleSide}));flag.position.set(x+.25,1.38,z);scene.add(flag)}
  for(const x of [-14,14]){box(scene,10,2.6,.15,x,1.3,40,dark);box(scene,10,.15,3,x,2.65,39,dark);for(let n=0;n<9;n++)box(scene,.7,.5,.7,x-4+n, .5,39,mat(0x962a3f))}
  for(const x of [-59,59])for(const z of [-40,40]){tube(scene,[x,0,z],[x,25,z],.18,rail);const bank=box(scene,5,1.6,.5,x,25,z,dark);for(let n=0;n<6;n++)box(scene,.6,.55,.12,x-2+n*.8,25.1,z+(z>0?-.3:.3),new T.MeshBasicMaterial({color:0xfff1cc}))}
+ /* A photographed night stand stands behind the terraces: the instanced spectators in front of it keep the motion,
+    the picture gives the depth that rows of cylinders never will. It is one texture on four planes, and if the file
+    is missing nothing waits for it — the stadium is simply as dark as it was. */
+ try{
+  const tex=new T.TextureLoader().load('assets/stand-crowd.webp');
+  tex.colorSpace=T.SRGBColorSpace!==undefined?T.SRGBColorSpace:tex.colorSpace;
+  const far=new T.MeshBasicMaterial({map:tex,fog:false});
+  const wall=(w,x,z,ry)=>{const m=new T.Mesh(new T.PlaneGeometry(w,34),far);m.position.set(x,14,z);m.rotation.y=ry;m.renderOrder=-1;scene.add(m)};
+  wall(170,0,-63.5,0);wall(170,0,63.5,Math.PI);wall(110,-82.5,0,Math.PI/2);wall(110,82.5,0,-Math.PI/2);
+ }catch(e){}
+ crowd.dress=(a,b)=>{const col=new T.Color();const hex=x=>{try{return new T.Color(x).getHex()}catch(e){return null}};
+   const A=hex(a),B=hex(b);if(A==null&&B==null)return;
+   const mix=(base,i)=>{col.setHex(base==null?shirts[i%shirts.length]:base);
+     const k=.72+((i*2654435761)%1000)/1000*.5;col.multiplyScalar(k);if((i*2246822519)%7===0)col.lerp(new T.Color(0xf1f1ea),.6);return col};
+   people.forEach(([x],i)=>bodies.setColorAt(i,mix(x<0?A:B,i)));   /* split down the middle of every stand, as a segregated ground is */
+   bodies.instanceColor&&(bodies.instanceColor.needsUpdate=true)};
  const goals=[makeGoal(scene,-1),makeGoal(scene,1)];return{sun,goals,crowdCount:people.length,crowd};
 }
 function makeGoal(scene,side){const g=new T.Group();g.position.x=side*52.5;g.scale.x=side;scene.add(g);const post=mat(0xf5f5e8,{roughness:.45});for(const z of [-3.66,3.66]){tube(g,[0,0,z],[0,2.44,z],.065,post);tube(g,[0,2.44,z],[2.1,1.9,z],.035,post);tube(g,[2.1,1.9,z],[2.1,0,z],.035,post)}tube(g,[0,2.44,-3.66],[0,2.44,3.66],.065,post);
