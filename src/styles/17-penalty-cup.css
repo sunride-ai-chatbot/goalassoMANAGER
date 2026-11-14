@@ -1,5 +1,9 @@
 /* אלוף הפנדלים: the lobby behind the penalty overlay (.pg, z-index 45). Works on both pages, so it carries its own colours. */
-.pcup{position:fixed;inset:0;z-index:44;display:flex;flex-direction:column;background:radial-gradient(120% 60% at 50% 0,#17301f 0,#0a1410 46%,#05070b 100%);color:#f4efe2;font:400 16px/1.5 Heebo,Arial,sans-serif;overscroll-behavior:contain;animation:pgIn .25s ease-out}
+/* a full stand at night sits behind the lobby, darkened until only its depth and its lights come through:
+   picking a club for a shoot-out should feel like standing in a ground, not like filling in a form. */
+.pcup{position:fixed;inset:0;z-index:44;display:flex;flex-direction:column;background:#05070b url('assets/prematch-crowd.webp') center 34%/cover no-repeat;color:#f4efe2;font:400 16px/1.5 Heebo,Arial,sans-serif;overscroll-behavior:contain;animation:pgIn .25s ease-out}
+.pcup::before{content:"";position:absolute;inset:0;background:radial-gradient(135% 68% at 50% 2%,rgba(14,32,21,.42) 0,rgba(9,18,15,.78) 42%,rgba(5,7,11,.95) 100%);pointer-events:none}
+.pcup>*{position:relative;z-index:1}
 .pcup *{box-sizing:border-box}
 .pcup .pc-top{flex:none;position:relative;padding:calc(14px + env(safe-area-inset-top,0px)) 60px 12px;text-align:center;border-bottom:1px solid rgba(233,196,106,.25)}
 .pcup .pc-top h1{margin:0;font:700 46px/.95 "Karantina","Heebo",sans-serif;letter-spacing:.4px;color:#f4efe2}

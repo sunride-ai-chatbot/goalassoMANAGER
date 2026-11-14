@@ -99,6 +99,11 @@ h3{font-size:18px}
 .neglog{margin:10px 0;padding:8px 10px;border-radius:8px;background:var(--bg2);font-size:13px;display:flex;flex-direction:column;gap:4px;max-height:120px;overflow-y:auto}
 .neglog div:last-child{color:var(--fg);font-weight:500}.neglog div{color:var(--muted)}
 .negstep{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+/* the press room, bled to the card's edges: the table of microphones the manager is about to sit at */
+.press-head{position:relative;margin:-12px -14px 10px;height:112px;display:flex;align-items:flex-end;justify-content:space-between;
+  gap:8px;padding:10px 14px;background:#0a0c12 url('assets/room-press.webp') center 64%/cover no-repeat}
+.press-head::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,16,.1) 30%,rgba(10,11,16,.85) 88%,var(--panel2))}
+.press-head>*{position:relative}
 .press-q{font-family:var(--display);font-size:20px;line-height:1.25;margin-top:6px}
 .press-you{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--bg2);border-right:3px solid var(--gold);font-size:15px}
 .press .pl b{font-weight:500}

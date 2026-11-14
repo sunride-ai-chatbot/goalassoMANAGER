@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="50863259013a">
-<meta name="goalasso-built" content="14.11.2026 22:11">
+<meta name="goalasso-build" content="e2e29c8623fc">
+<meta name="goalasso-built" content="14.11.2026 22:27">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
 function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
@@ -118,6 +118,11 @@ h3{font-size:18px}
 .neglog{margin:10px 0;padding:8px 10px;border-radius:8px;background:var(--bg2);font-size:13px;display:flex;flex-direction:column;gap:4px;max-height:120px;overflow-y:auto}
 .neglog div:last-child{color:var(--fg);font-weight:500}.neglog div{color:var(--muted)}
 .negstep{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+/* the press room, bled to the card's edges: the table of microphones the manager is about to sit at */
+.press-head{position:relative;margin:-12px -14px 10px;height:112px;display:flex;align-items:flex-end;justify-content:space-between;
+  gap:8px;padding:10px 14px;background:#0a0c12 url('assets/room-press.webp') center 64%/cover no-repeat}
+.press-head::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,16,.1) 30%,rgba(10,11,16,.85) 88%,var(--panel2))}
+.press-head>*{position:relative}
 .press-q{font-family:var(--display);font-size:20px;line-height:1.25;margin-top:6px}
 .press-you{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--bg2);border-right:3px solid var(--gold);font-size:15px}
 .press .pl b{font-weight:500}
@@ -1426,7 +1431,11 @@ details.achcat[open]>.achlist{margin-top:10px}
 @media(max-width:380px){.bz-card b{font-size:21px}.bz-face{width:62px;height:62px}.bz-hero h1{font-size:56px}}
 @media(prefers-reduced-motion:reduce){.env,.env-seal,.env-letter,#topMoney.up,#topMoney.down{animation:none}.env-flap,.env-wax{transition:none}}
 /* אלוף הפנדלים: the lobby behind the penalty overlay (.pg, z-index 45). Works on both pages, so it carries its own colours. */
-.pcup{position:fixed;inset:0;z-index:44;display:flex;flex-direction:column;background:radial-gradient(120% 60% at 50% 0,#17301f 0,#0a1410 46%,#05070b 100%);color:#f4efe2;font:400 16px/1.5 Heebo,Arial,sans-serif;overscroll-behavior:contain;animation:pgIn .25s ease-out}
+/* a full stand at night sits behind the lobby, darkened until only its depth and its lights come through:
+   picking a club for a shoot-out should feel like standing in a ground, not like filling in a form. */
+.pcup{position:fixed;inset:0;z-index:44;display:flex;flex-direction:column;background:#05070b url('assets/prematch-crowd.webp') center 34%/cover no-repeat;color:#f4efe2;font:400 16px/1.5 Heebo,Arial,sans-serif;overscroll-behavior:contain;animation:pgIn .25s ease-out}
+.pcup::before{content:"";position:absolute;inset:0;background:radial-gradient(135% 68% at 50% 2%,rgba(14,32,21,.42) 0,rgba(9,18,15,.78) 42%,rgba(5,7,11,.95) 100%);pointer-events:none}
+.pcup>*{position:relative;z-index:1}
 .pcup *{box-sizing:border-box}
 .pcup .pc-top{flex:none;position:relative;padding:calc(14px + env(safe-area-inset-top,0px)) 60px 12px;text-align:center;border-bottom:1px solid rgba(233,196,106,.25)}
 .pcup .pc-top h1{margin:0;font:700 46px/.95 "Karantina","Heebo",sans-serif;letter-spacing:.4px;color:#f4efe2}
@@ -3004,13 +3013,16 @@ function pressQuestionsPost(M){
     {t:'שרקו? לא שמתי לב.',fx:()=>{me().fans=clamp(me().fans-1,10,100);quote('לא שמתי לב')()},r:'ציניות לא עובדת פה.'}]});
   return qs;
 }
+/* The press room itself, as a band across the top of the card: an empty table of microphones waiting for the
+   manager. Places and light only — no face is generated, and no word is baked into the photograph. */
+function pressHeadHTML(kind,right){return `<div class="press-head"><span class="tag info">${kind==='pre'?'מסיבת עיתונאים · לפני המשחק':'מסיבת עיתונאים · אחרי המשחק'}</span>${right?`<span class="muted tiny">${right}</span>`:''}</div>`}
 function runPress(kind,M,done){
   const mode=pressMode();if(mode==='off'||M.ctx.kind==='friendly')return done();
   const big=isBigMatch(M);if(mode==='big'&&!big&&Math.random()>.3)return done();
   const qs=shuffle(kind==='pre'?pressQuestionsPre(M):pressQuestionsPost(M)).slice(0,big?2:1);if(!qs.length)return done();
-  let i=0;const d=openModal('',e=>{const b=e.target.closest('[data-ans]');if(b){const q=qs[i];const ans=q.a[+b.dataset.ans];ans.fx();d.querySelector('.card').innerHTML=`<div class="press"><span class="tag info">${kind==='pre'?'מסיבת עיתונאים · לפני המשחק':'מסיבת עיתונאים · אחרי המשחק'}</span><div class="press-q">${esc(q.q)}</div><div class="press-you">"${esc(ans.t)}"</div><div class="small" style="margin-top:8px;color:var(--accent)">${esc(ans.r)}</div><div class="actions" style="margin-top:12px"><button class="btn" id="pressNext">${i<qs.length-1?'השאלה הבאה':'סיום'}</button></div></div>`;save();return}
+  let i=0;const d=openModal('',e=>{const b=e.target.closest('[data-ans]');if(b){const q=qs[i];const ans=q.a[+b.dataset.ans];ans.fx();d.querySelector('.card').innerHTML=`<div class="press">${pressHeadHTML(kind,'')}<div class="press-q">${esc(q.q)}</div><div class="press-you">"${esc(ans.t)}"</div><div class="small" style="margin-top:8px;color:var(--accent)">${esc(ans.r)}</div><div class="actions" style="margin-top:12px"><button class="btn" id="pressNext">${i<qs.length-1?'השאלה הבאה':'סיום'}</button></div></div>`;save();return}
     if(e.target.closest('#pressNext')){i++;if(i>=qs.length){closeModal();done()}else draw()}});d.dataset.lock='1';
-  function draw(){const q=qs[i];d.querySelector('.card').innerHTML=`<div class="press"><div class="row between"><span class="tag info">${kind==='pre'?'מסיבת עיתונאים · לפני המשחק':'מסיבת עיתונאים · אחרי המשחק'}</span><span class="muted tiny">${i+1}/${qs.length}</span></div><div class="muted tiny" style="margin-top:8px">${esc(pick(REPORTERS))}:</div><div class="press-q">${esc(q.q)}</div><div class="list" style="margin-top:10px">${q.a.map((a,k)=>`<button class="pl" style="display:block;text-align:right;cursor:pointer" data-ans="${k}"><b>"${esc(a.t)}"</b></button>`).join('')}</div></div>`}
+  function draw(){const q=qs[i];d.querySelector('.card').innerHTML=`<div class="press">${pressHeadHTML(kind,qs.length>1?`${i+1}/${qs.length}`:'')}<div class="muted tiny">${esc(pick(REPORTERS))}:</div><div class="press-q">${esc(q.q)}</div><div class="list" style="margin-top:10px">${q.a.map((a,k)=>`<button class="pl" style="display:block;text-align:right;cursor:pointer" data-ans="${k}"><b>"${esc(a.t)}"</b></button>`).join('')}</div></div>`}
   draw();
 }
 

@@ -116,13 +116,16 @@ function pressQuestionsPost(M){
     {t:'שרקו? לא שמתי לב.',fx:()=>{me().fans=clamp(me().fans-1,10,100);quote('לא שמתי לב')()},r:'ציניות לא עובדת פה.'}]});
   return qs;
 }
+/* The press room itself, as a band across the top of the card: an empty table of microphones waiting for the
+   manager. Places and light only — no face is generated, and no word is baked into the photograph. */
+function pressHeadHTML(kind,right){return `<div class="press-head"><span class="tag info">${kind==='pre'?'מסיבת עיתונאים · לפני המשחק':'מסיבת עיתונאים · אחרי המשחק'}</span>${right?`<span class="muted tiny">${right}</span>`:''}</div>`}
 function runPress(kind,M,done){
   const mode=pressMode();if(mode==='off'||M.ctx.kind==='friendly')return done();
   const big=isBigMatch(M);if(mode==='big'&&!big&&Math.random()>.3)return done();
   const qs=shuffle(kind==='pre'?pressQuestionsPre(M):pressQuestionsPost(M)).slice(0,big?2:1);if(!qs.length)return done();
-  let i=0;const d=openModal('',e=>{const b=e.target.closest('[data-ans]');if(b){const q=qs[i];const ans=q.a[+b.dataset.ans];ans.fx();d.querySelector('.card').innerHTML=`<div class="press"><span class="tag info">${kind==='pre'?'מסיבת עיתונאים · לפני המשחק':'מסיבת עיתונאים · אחרי המשחק'}</span><div class="press-q">${esc(q.q)}</div><div class="press-you">"${esc(ans.t)}"</div><div class="small" style="margin-top:8px;color:var(--accent)">${esc(ans.r)}</div><div class="actions" style="margin-top:12px"><button class="btn" id="pressNext">${i<qs.length-1?'השאלה הבאה':'סיום'}</button></div></div>`;save();return}
+  let i=0;const d=openModal('',e=>{const b=e.target.closest('[data-ans]');if(b){const q=qs[i];const ans=q.a[+b.dataset.ans];ans.fx();d.querySelector('.card').innerHTML=`<div class="press">${pressHeadHTML(kind,'')}<div class="press-q">${esc(q.q)}</div><div class="press-you">"${esc(ans.t)}"</div><div class="small" style="margin-top:8px;color:var(--accent)">${esc(ans.r)}</div><div class="actions" style="margin-top:12px"><button class="btn" id="pressNext">${i<qs.length-1?'השאלה הבאה':'סיום'}</button></div></div>`;save();return}
     if(e.target.closest('#pressNext')){i++;if(i>=qs.length){closeModal();done()}else draw()}});d.dataset.lock='1';
-  function draw(){const q=qs[i];d.querySelector('.card').innerHTML=`<div class="press"><div class="row between"><span class="tag info">${kind==='pre'?'מסיבת עיתונאים · לפני המשחק':'מסיבת עיתונאים · אחרי המשחק'}</span><span class="muted tiny">${i+1}/${qs.length}</span></div><div class="muted tiny" style="margin-top:8px">${esc(pick(REPORTERS))}:</div><div class="press-q">${esc(q.q)}</div><div class="list" style="margin-top:10px">${q.a.map((a,k)=>`<button class="pl" style="display:block;text-align:right;cursor:pointer" data-ans="${k}"><b>"${esc(a.t)}"</b></button>`).join('')}</div></div>`}
+  function draw(){const q=qs[i];d.querySelector('.card').innerHTML=`<div class="press">${pressHeadHTML(kind,qs.length>1?`${i+1}/${qs.length}`:'')}<div class="muted tiny">${esc(pick(REPORTERS))}:</div><div class="press-q">${esc(q.q)}</div><div class="list" style="margin-top:10px">${q.a.map((a,k)=>`<button class="pl" style="display:block;text-align:right;cursor:pointer" data-ans="${k}"><b>"${esc(a.t)}"</b></button>`).join('')}</div></div>`}
   draw();
 }
 
