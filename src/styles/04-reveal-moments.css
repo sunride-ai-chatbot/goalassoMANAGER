@@ -50,7 +50,17 @@
 @media (orientation:landscape) and (max-height:600px){.rv-card{left:max(12px,calc(50% - 320px));right:max(12px,calc(50% - 320px));bottom:max(8px,env(safe-area-inset-bottom));padding:12px 14px 10px;max-height:calc(100% - 16px)}.rv-cardname{font-size:22px}.rv-card .rv-facts,.rv-card .rv-terms{margin-top:6px}.rv-card .rv-terms{flex-direction:row;flex-wrap:wrap}.rv-actions{grid-template-columns:repeat(3,1fr);margin-top:8px}.rv-actions .btn:first-child{grid-column:auto}.rv-actions .btn{min-height:40px}.rv-l2 .rv-terms{flex-direction:row;flex-wrap:wrap;justify-content:center}}
 @media (prefers-reduced-motion:reduce){.rv-layer,.rv-card{transition:none}.rv-p1 .rv-shirtwrap:not(.sm){animation:none}}
 /* ---- trophy moments ---- */
-.mo-card{position:relative;width:min(100vw,calc(100dvh * .5628));height:100dvh;background:#08080a center top/100% auto no-repeat;box-shadow:0 0 80px rgba(0,0,0,.8);overflow:hidden}
+.mo-card{position:relative;width:min(100vw,calc(100dvh * .5628));height:100dvh;background:#08080a 50% 38%/cover no-repeat;box-shadow:var(--e3);overflow:hidden}
+/* The picture fills the card whatever its shape, and a scrim rises behind the plate so the words sit on
+   darkness rather than on a trophy. Before this the art was pinned to the top at its own height and the
+   bottom two thirds of the screen were black. */
+.mo-card::after{content:"";position:absolute;inset:auto 0 0;height:62%;background:linear-gradient(180deg,transparent,rgba(6,7,10,.72) 46%,rgba(5,6,9,.95));pointer-events:none}
+.mo-ui{z-index:1}
+.mo-plate{backdrop-filter:blur(6px);box-shadow:var(--e3)}
+@keyframes moRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.mo-plate{animation:moRise var(--t-slow) var(--ease-out) both .25s}
+.mo-btn{animation:moRise var(--t-slow) var(--ease-out) both .45s}
+@media (prefers-reduced-motion:reduce){.mo-plate,.mo-btn{animation:none}}
 @supports not (height:100dvh){.mo-card{width:min(100vw,calc(100vh * .5628));height:100vh}}
 .mo-ui{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:0 7% max(22px,calc(env(safe-area-inset-bottom) + 16px))}
 .mo-plate{display:flex;align-items:center;gap:10px;width:100%;justify-content:center;background:linear-gradient(180deg,rgba(20,18,14,.85),rgba(8,8,10,.92));border:1px solid rgba(230,200,130,.55);border-radius:18px;padding:12px 14px;color:#e9c46a;box-shadow:0 10px 30px rgba(0,0,0,.6)}

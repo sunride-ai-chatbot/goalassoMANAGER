@@ -6,6 +6,19 @@
   --good:#3ddc84; --warn:#ffb547; --bad:#ff5c6c; --info:#5cb8ff;
   --display:"Secular One","Heebo",system-ui,sans-serif; --body:"Heebo",system-ui,sans-serif;
   --r:14px; --r-sm:9px;
+  /* One ladder for the whole game. Before this, seventeen stylesheets carried twenty-four different corner
+     radii and seventy-nine different shadows between them, which is what made the app read as assembled
+     rather than designed. Anything new uses these; anything old is pulled onto them in 19-system.css. */
+  --r1:6px; --r2:10px; --r3:14px; --r4:20px; --rp:999px;
+  --e1:0 1px 2px rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.04) inset;          /* resting */
+  --e2:0 4px 14px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.05) inset;        /* raised */
+  --e3:0 14px 40px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06) inset;        /* floating, dialogs */
+  --e-press:0 1px 2px rgba(0,0,0,.5) inset;
+  --glow:0 6px 20px color-mix(in srgb, var(--accent) 28%, transparent);
+  --t-fast:120ms; --t:200ms; --t-slow:380ms;
+  --ease:cubic-bezier(.2,.8,.2,1); --ease-out:cubic-bezier(.16,1,.3,1);
+  --s1:4px; --s2:8px; --s3:12px; --s4:18px; --s5:26px; --s6:40px;
+  --ring:0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
   color-scheme:dark;
 }
 html,body{height:100%}

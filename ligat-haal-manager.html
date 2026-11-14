@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="fe04cb9e8c4c">
-<meta name="goalasso-built" content="14.11.2026 19:07">
+<meta name="goalasso-build" content="e3eb33a5f90f">
+<meta name="goalasso-built" content="14.11.2026 21:45">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
 function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
@@ -25,6 +25,19 @@ if(beginnerFirst(location))location.replace('beginner.html')</script>
   --good:#3ddc84; --warn:#ffb547; --bad:#ff5c6c; --info:#5cb8ff;
   --display:"Secular One","Heebo",system-ui,sans-serif; --body:"Heebo",system-ui,sans-serif;
   --r:14px; --r-sm:9px;
+  /* One ladder for the whole game. Before this, seventeen stylesheets carried twenty-four different corner
+     radii and seventy-nine different shadows between them, which is what made the app read as assembled
+     rather than designed. Anything new uses these; anything old is pulled onto them in 19-system.css. */
+  --r1:6px; --r2:10px; --r3:14px; --r4:20px; --rp:999px;
+  --e1:0 1px 2px rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.04) inset;          /* resting */
+  --e2:0 4px 14px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.05) inset;        /* raised */
+  --e3:0 14px 40px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06) inset;        /* floating, dialogs */
+  --e-press:0 1px 2px rgba(0,0,0,.5) inset;
+  --glow:0 6px 20px color-mix(in srgb, var(--accent) 28%, transparent);
+  --t-fast:120ms; --t:200ms; --t-slow:380ms;
+  --ease:cubic-bezier(.2,.8,.2,1); --ease-out:cubic-bezier(.16,1,.3,1);
+  --s1:4px; --s2:8px; --s3:12px; --s4:18px; --s5:26px; --s6:40px;
+  --ring:0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
   color-scheme:dark;
 }
 html,body{height:100%}
@@ -308,7 +321,17 @@ h3{font-size:18px}
 @media (orientation:landscape) and (max-height:600px){.rv-card{left:max(12px,calc(50% - 320px));right:max(12px,calc(50% - 320px));bottom:max(8px,env(safe-area-inset-bottom));padding:12px 14px 10px;max-height:calc(100% - 16px)}.rv-cardname{font-size:22px}.rv-card .rv-facts,.rv-card .rv-terms{margin-top:6px}.rv-card .rv-terms{flex-direction:row;flex-wrap:wrap}.rv-actions{grid-template-columns:repeat(3,1fr);margin-top:8px}.rv-actions .btn:first-child{grid-column:auto}.rv-actions .btn{min-height:40px}.rv-l2 .rv-terms{flex-direction:row;flex-wrap:wrap;justify-content:center}}
 @media (prefers-reduced-motion:reduce){.rv-layer,.rv-card{transition:none}.rv-p1 .rv-shirtwrap:not(.sm){animation:none}}
 /* ---- trophy moments ---- */
-.mo-card{position:relative;width:min(100vw,calc(100dvh * .5628));height:100dvh;background:#08080a center top/100% auto no-repeat;box-shadow:0 0 80px rgba(0,0,0,.8);overflow:hidden}
+.mo-card{position:relative;width:min(100vw,calc(100dvh * .5628));height:100dvh;background:#08080a 50% 38%/cover no-repeat;box-shadow:var(--e3);overflow:hidden}
+/* The picture fills the card whatever its shape, and a scrim rises behind the plate so the words sit on
+   darkness rather than on a trophy. Before this the art was pinned to the top at its own height and the
+   bottom two thirds of the screen were black. */
+.mo-card::after{content:"";position:absolute;inset:auto 0 0;height:62%;background:linear-gradient(180deg,transparent,rgba(6,7,10,.72) 46%,rgba(5,6,9,.95));pointer-events:none}
+.mo-ui{z-index:1}
+.mo-plate{backdrop-filter:blur(6px);box-shadow:var(--e3)}
+@keyframes moRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.mo-plate{animation:moRise var(--t-slow) var(--ease-out) both .25s}
+.mo-btn{animation:moRise var(--t-slow) var(--ease-out) both .45s}
+@media (prefers-reduced-motion:reduce){.mo-plate,.mo-btn{animation:none}}
 @supports not (height:100dvh){.mo-card{width:min(100vw,calc(100vh * .5628));height:100vh}}
 .mo-ui{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:14px;padding:0 7% max(22px,calc(env(safe-area-inset-bottom) + 16px))}
 .mo-plate{display:flex;align-items:center;gap:10px;width:100%;justify-content:center;background:linear-gradient(180deg,rgba(20,18,14,.85),rgba(8,8,10,.92));border:1px solid rgba(230,200,130,.55);border-radius:18px;padding:12px 14px;color:#e9c46a;box-shadow:0 10px 30px rgba(0,0,0,.6)}
@@ -1444,6 +1467,51 @@ details.achcat[open]>.achlist{margin-top:10px}
 @media(max-height:720px){.pg-bot.pc-both .pg-who{display:none}.pc-pad-g{gap:4px}.pc-pad-g button{min-height:40px}}
 .pc-turn{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:4;max-width:calc(100% - 24px);padding:7px 16px;border-radius:999px;background:rgba(5,7,11,.82);border:1px solid rgba(233,196,106,.55);color:#f4efe2;font:700 16px/1.3 Heebo,Arial,sans-serif;white-space:nowrap;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.pcup{animation:none}}
+/* The design system, applied last so it wins over the seventeen stylesheets that grew before it.
+   It changes depth, corners, motion and interaction states only — never a size, a spacing or a layout,
+   so nothing moves on any screen; what changes is that the whole game finally behaves like one piece of
+   software. The ladder itself is declared in 01-base.css. */
+
+/* --- buttons ---------------------------------------------------------------------------------------
+   Every button in the game had its own shadow and its own idea of what a press looks like; several had
+   no pressed state at all, which is the single loudest tell of an unfinished app on a phone. */
+.btn{border-radius:var(--r2);
+  transition:transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
+  box-shadow:var(--e2), var(--glow)}
+.btn.sec,.btn.ghost{box-shadow:var(--e1)}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(1px);box-shadow:var(--e-press);filter:brightness(.96)}
+.btn[disabled],.btn:disabled{opacity:.45;transform:none;box-shadow:var(--e1);filter:grayscale(.4);cursor:not-allowed}
+.btn.big{border-radius:var(--r3)}
+
+/* A visible focus ring everywhere, which the game did not have: without it the keyboard is lost on a page
+   this dark, and a control that cannot show it is focused looks broken rather than deliberate. */
+:where(button,[role=button],a,input,select,textarea,summary,[tabindex]):focus-visible{
+  outline:none;box-shadow:var(--ring);border-radius:var(--r1)}
+.btn:focus-visible{box-shadow:var(--e2),var(--ring)}
+
+/* --- surfaces --------------------------------------------------------------------------------------
+   Cards sat flat on the background with a hairline border; a single shared elevation gives the screen a
+   front and a back, which is most of what "designed" means at a glance. */
+.card{border-radius:var(--r3);box-shadow:var(--e1)}
+.card.hero{box-shadow:var(--e2)}
+.pl{border-radius:var(--r2);box-shadow:var(--e1);transition:box-shadow var(--t) var(--ease), transform var(--t) var(--ease)}
+.pl:active{transform:scale(.995)}
+.tag{border-radius:var(--rp)}
+.tabs button{border-radius:var(--r2);transition:background var(--t) var(--ease), color var(--t) var(--ease), box-shadow var(--t) var(--ease)}
+
+/* Anything that floats over the page shares one shadow, so depth means the same thing everywhere. */
+.rv-card,.modal,.sheet,#pcup .pc-panel,.pg-end,#updBar,.envelope,.nx-card{box-shadow:var(--e3)}
+
+/* --- motion ----------------------------------------------------------------------------------------
+   One curve, three speeds. The game had `ease` in most places and two different hand-written beziers in
+   others, so nothing felt related to anything else. */
+.card,.pl,.tag,.tabs button,.btn{will-change:auto}
+
+@media (prefers-reduced-motion:reduce){
+  .btn,.pl,.card,.tabs button{transition-duration:1ms}
+  .btn:hover,.btn:active,.pl:active{transform:none}
+}
 </style>
 </head>
 <body>
