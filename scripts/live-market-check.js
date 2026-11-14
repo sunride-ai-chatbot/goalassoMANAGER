@@ -132,4 +132,32 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   await host.context().close();
  }catch(e){R.pcup.error=String(e&&e.message||e).slice(0,300)}
  R.versionFile=await page.evaluate(()=>fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null));   // what an open page would be told about the server's build
+ // משחק רשת: the quiet entry against the real project — no address asked for, an invitation made and a second phone joining it
+ R.rooms={};try{const Q=R.rooms;const mk=async(url,club)=>{const c=await b.newContext({...devices['iPhone 13'],locale:'he-IL'});const p=await c.newPage();p.on('pageerror',e=>errs.push('rooms: '+String(e).slice(0,200)));await p.addInitScript(()=>{window.__ilmNoSplash=1;window.__ilmUnlock=1});await p.goto(url,{waitUntil:'load',timeout:90000});await p.waitForFunction(()=>typeof Bcreate==='function',{timeout:60000});if(club)await p.evaluate(c=>Bcreate(c),club);return p};
+  const tap=(p,sel)=>p.evaluate(s=>document.querySelector(s).click(),sel);
+  const ub=new URL(BASE);ub.pathname=ub.pathname.replace(/[^/]*$/,'')+'beginner.html';
+  const host=await mk(ub.href,'mta');await tap(host,'[data-room-open]');
+  await host.waitForFunction(()=>document.querySelector('#room-invite')||document.querySelector('#room-email'),{timeout:60000});
+  Q.asked=await host.evaluate(()=>document.querySelector('#room-email')?'address':'nothing');
+  Q.note=await host.evaluate(()=>document.getElementById('room-status')?.textContent||'');
+  await host.screenshot({path:OUT+'rooms-entry.png'});
+  if(Q.asked==='nothing'){
+   await tap(host,'[data-room-action="create"]');
+   await host.waitForFunction(()=>G?.networkRoom?.invitation,{timeout:60000});
+   Q.invitation=true;const inv=await host.evaluate(()=>G.networkRoom.invitation);
+   const ug=new URL(ub.href);ug.searchParams.set('invite',inv);
+   const guest=await mk(ug.href,'bje');
+   await guest.waitForFunction(()=>document.querySelector('#room-invite')||document.querySelector('#room-email'),{timeout:60000});
+   Q.guestAsked=await guest.evaluate(()=>document.querySelector('#room-email')?'address':'nothing');
+   Q.preview=await guest.evaluate(()=>document.getElementById('room-context')?.textContent.slice(0,120)||'');
+   await tap(guest,'[data-room-action="join"]');
+   await guest.waitForFunction(()=>G?.networkRoom?.id||document.getElementById('room-status')?.textContent.length>3,{timeout:60000});
+   Q.joined=await guest.evaluate(()=>!!G?.networkRoom?.id);Q.guestNote=await guest.evaluate(()=>document.getElementById('room-status')?.textContent||'');
+   await guest.screenshot({path:OUT+'rooms-guest.png'});
+   await host.evaluate(()=>{Rooms.close();void Rooms.open()});
+   await host.waitForFunction(()=>document.querySelectorAll('#room-body .room-member').length>0,{timeout:60000}).catch(()=>{});
+   Q.bothSeen=await host.evaluate(()=>document.querySelectorAll('#room-body .room-member').length);
+   await host.screenshot({path:OUT+'rooms-host.png'});
+  }
+ }catch(e){R.rooms.error=String(e&&e.message||e).slice(0,300)}
  R.errors=errs;R.url=BASE;R.at=new Date().toISOString();R.build=await page.evaluate(()=>document.querySelector('meta[name="goalasso-build"]')?.content||null);require('fs').writeFileSync(OUT+'report.json',JSON.stringify(R,null,1));console.log(JSON.stringify(R,null,1));await b.close()})().catch(e=>{console.error(e);process.exit(1)});
