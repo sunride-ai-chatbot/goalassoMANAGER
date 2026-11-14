@@ -104,10 +104,22 @@ The champion is announced with his coach's picture, his squad with the trophy an
 
 ## Build order
 
-1. **The server**: `lg_leagues`, `lg_members` (team name, crest, kit, budget), `lg_squads` (ownership),
-   `lg_fixtures`, `lg_results`, `lg_offers`, `lg_training`, and a money ledger so every change has a
-   reason. Definer functions behind invoker wrappers, `auth.uid()` checked, tables with RLS and no
-   privileges — exactly the shape of `20261024000000_rooms.sql`, and tested the same way on PGlite.
+1. **The server** — done, `supabase/migrations/20261114210000_shared_league.sql`. `lg_leagues`, `lg_members`
+   (team, crest, kit, budget), `lg_squads` (ownership), `lg_ledger`, `lg_fixtures`, `lg_results`, `lg_offers`,
+   `lg_training`, and `lg_pool`. Definer functions behind invoker wrappers, `auth.uid()` checked, every table
+   with RLS and no privileges — the shape of `20261024000000_rooms.sql`, tested the same way on PGlite
+   (`tests/sql/league-base.sql`, run by `tests/rooms-sql.test.js`).
+
+   Live now: `lg_create`, `lg_join`, `lg_preview_invitation` (the invitation card, for a guest who has not
+   signed in), `lg_get`, `lg_set_identity` (a tier is charged once on the way up and never refunded on the way
+   down), `lg_buy`, `lg_sell`, `lg_offer`, `lg_respond`. The round, the training and the season's end are the
+   later steps and add their own functions over these tables.
+
+   **The price list is the server's.** `lg_pool` holds all 8,171 real players, keyed by the club's Hebrew name
+   and the player's English name — the one identity the built game can also compute, since `src/build.py`
+   strips `qid`. `scripts/build-league-pool.py` writes `supabase/seed-league-pool.sql` from `data/`; apply it
+   with `supabase db push` or `psql -f`, not the SQL editor. An empty pool sells nothing rather than
+   everything for free, which is the safe way round.
 2. **Lobby and identity**: create and join by invitation (the anonymous session already works), name,
    crest generator, kit. No match yet.
 3. **The market**: buy from the pool, sell back, offer a trade, accept. All server-side.
