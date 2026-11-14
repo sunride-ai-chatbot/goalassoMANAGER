@@ -11,7 +11,7 @@ function createRig(team,number,variant,kit=null){
  const ell=(size,pos,c,b)=>shape(new T.SphereGeometry(1,14,10),size,pos,c,b);
  const taper=(rt,rb,len,pos,c,b,scale=[1,1,1])=>shape(new T.CylinderGeometry(rt,rb,len,14),scale,pos,c,b);
  const skin=skinColors[variant%skinColors.length],hair=hairColors[variant%hairColors.length];const jersey=kit?new T.Color(kit.kit).getHex():team==='red'?0xbc1731:team==='white'?0xefeee8:team==='keeperRed'?0xe7b529:0x29a985;const trim=kit?new T.Color(kit.trim).getHex():team==='red'?0xf0e5ce:team==='white'?0x203e65:0x172b37;
- taper(.207,.15,.5,[0,1.325,0],jersey,'spine',[1,1,.66]);ell([.178,.128,.12],[0,1.15,0],jersey,'spine');
+ taper(.207,.15,.5,[0,1.325,0],jersey,'spine',[1,1,.66]);ell([.152,.118,.112],[0,1.155,0],jersey,'spine');
  taper(.062,.076,.145,[0,1.648,0],skin,'head');taper(.088,.098,.032,[0,1.585,0],trim,'spine');
  ell([.097,.126,.103],[0,1.80,.009],skin,'head');ell([.076,.068,.083],[0,1.724,.03],skin,'head');ell([.022,.030,.037],[0,1.791,.110],skin,'head');for(const s of [-1,1]){ell([.02,.032,.018],[s*.098,1.80,0],skin,'head');ell([.012,.0075,.005],[s*.038,1.818,.102],0x202023,'head')}
  shape(new T.SphereGeometry(1,14,10,0,Math.PI*2,0,Math.PI*.46),[.1,.132,.107],[0,1.812,.001],hair,'head');
@@ -20,8 +20,8 @@ function createRig(team,number,variant,kit=null){
  const shorts=kit?new T.Color(kit.trim).getHex():team==='white'?0xe7e9e7:team==='red'?0x9e142a:0x18303a;
  ell([.19,.14,.125],[0,.98,0],shorts,'hips');
  for(const [l,s] of [['L',-1],['R',1]]){
-  ell([.073,.082,.075],[s*.186,1.5,0],jersey,l+'arm');taper(.07,.058,.2,[s*.186,1.4,0],jersey,l+'arm');taper(.06,.061,.022,[s*.186,1.296,0],trim,l+'arm');taper(.057,.046,.125,[s*.186,1.243,0],skin,l+'arm');ell([.047,.049,.049],[s*.186,1.22,0],skin,l+'fore');taper(.049,.037,.235,[s*.186,1.095,0],skin,l+'fore');ell([.04,.062,.033],[s*.186,.935,.008],team.startsWith('keeper')?0xe9efdb:skin,l+'hand');
-  taper(.115,.10,.25,[s*.105,.86,0],shorts,l+'thigh',[1,1,1.05]);taper(.098,.073,.20,[s*.105,.66,0],skin,l+'thigh');ell([.075,.074,.074],[s*.105,.53,0],skin,l+'shin');taper(.074,.044,.32,[s*.105,.34,0],jersey,l+'shin');taper(.075,.075,.045,[s*.105,.485,0],trim,l+'shin');taper(.045,.045,.09,[s*.105,.15,0],jersey,l+'shin');ell([.061,.054,.137],[s*.105,.065,.064],variant%3===0?0xe7d65b:0x18222c,l+'foot');shape(new T.BoxGeometry(.12,.019,.21),[1,1,1],[s*.105,.024,.05],0x111b20,l+'foot');
+  ell([.073,.082,.075],[s*.186,1.5,0],jersey,l+'arm');taper(.07,.058,.2,[s*.186,1.4,0],jersey,l+'arm');taper(.062,.06,.03,[s*.186,1.3,0],jersey,l+'arm');taper(.057,.046,.125,[s*.186,1.243,0],skin,l+'arm');ell([.045,.047,.046],[s*.186,1.218,0],skin,l+'fore');taper(.049,.037,.235,[s*.186,1.095,0],skin,l+'fore');ell([.04,.062,.033],[s*.186,.935,.008],team.startsWith('keeper')?0xe9efdb:skin,l+'hand');
+  taper(.115,.10,.25,[s*.105,.86,0],shorts,l+'thigh',[1,1,1.05]);taper(.098,.073,.20,[s*.105,.66,0],skin,l+'thigh');ell([.071,.072,.071],[s*.105,.532,0],skin,l+'shin');taper(.074,.044,.32,[s*.105,.34,0],jersey,l+'shin');taper(.076,.075,.05,[s*.105,.487,0],jersey,l+'shin');taper(.045,.045,.09,[s*.105,.15,0],jersey,l+'shin');ell([.061,.054,.137],[s*.105,.065,.064],variant%3===0?0xe7d65b:0x18222c,l+'foot');shape(new T.BoxGeometry(.12,.019,.21),[1,1,1],[s*.105,.024,.05],0x111b20,l+'foot');
  }
  const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.Float32BufferAttribute(P,3));geometry.setAttribute('normal',new T.Float32BufferAttribute(N,3));geometry.setAttribute('color',new T.Float32BufferAttribute(C,3));geometry.setAttribute('skinIndex',new T.Uint16BufferAttribute(I,4));geometry.setAttribute('skinWeight',new T.Float32BufferAttribute(W,4));geometry.setIndex(ind);const mesh=new T.SkinnedMesh(geometry,cloth);mesh.add(root);mesh.bind(new T.Skeleton(bones));mesh.castShadow=true;mesh.frustumCulled=false;
  // Back numbers are attached to the spine and follow the player's movement.
