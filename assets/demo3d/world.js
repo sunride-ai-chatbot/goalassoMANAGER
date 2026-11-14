@@ -7,15 +7,26 @@ function tube(scene,a,b,r,material){const av=new T.Vector3(...a),bv=new T.Vector
 function canvasTexture(w,h,draw){const c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);const t=new T.CanvasTexture(c);t.colorSpace=T.SRGBColorSpace;return t}
 function seeded(seed){return()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296}}
 export function buildWorld(scene,renderer){
- scene.background=new T.Color(0x9ab8c9);scene.fog=new T.Fog(0xa0baca,110,250);
- scene.add(new T.HemisphereLight(0xd5edff,0x536244,1.5));const sun=new T.DirectionalLight(0xffefd3,2.6);sun.position.set(-28,65,30);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-40,right:40,top:35,bottom:-35,near:1,far:140});sun.shadow.bias=-.00015;sun.shadow.normalBias=.025;sun.shadow.radius=2;sun.target.position.set(28,0,0);scene.add(sun,sun.target);
- const grass=canvasTexture(2048,1024,(c,w,h)=>{const rand=seeded(821);c.fillStyle='#477a37';c.fillRect(0,0,w,h);for(let i=0;i<20;i++){c.fillStyle=i%2?'#486f35':'#3c622e';c.fillRect(i*w/20,0,w/20,h)}for(let i=0;i<210000;i++){const v=rand();c.fillStyle=v>.5?'rgba(190,204,120,.05)':'rgba(7,37,14,.06)';c.fillRect(rand()*w,rand()*h,rand()*2+1,rand()*3+1)}
+ /* A floodlit evening, which is the art direction of everything else in the game — the crests, the trophy moments,
+    the photographed stand behind these terraces. The scene used to be lit as a bright afternoon while the penalty
+    view darkened only the sky behind it, so the pitch glowed like noon under a black sky. The light itself is the
+    fix: one cold bank high over the near touchline casting the shadows, a dimmer bank from the far corner so no
+    face goes black, and a warm bounce off the stands. */
+ scene.background=new T.Color(0x070c15);scene.fog=new T.Fog(0x0a111c,95,240);
+ scene.add(new T.HemisphereLight(0x3a5a7a,0x101a14,.8));
+ const sun=new T.DirectionalLight(0xe9f1ff,1.8);sun.position.set(-34,76,34);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-40,right:40,top:35,bottom:-35,near:1,far:150});sun.shadow.bias=-.00015;sun.shadow.normalBias=.025;sun.shadow.radius=2;sun.target.position.set(28,0,0);scene.add(sun,sun.target);
+ const fill=new T.DirectionalLight(0xc3d6f5,.6);fill.position.set(44,58,-42);scene.add(fill);
+ const warm=new T.DirectionalLight(0xffd6a2,.3);warm.position.set(0,16,-72);scene.add(warm);
+ const grass=canvasTexture(2048,1024,(c,w,h)=>{const rand=seeded(821);c.fillStyle='#33602c';c.fillRect(0,0,w,h);for(let i=0;i<20;i++){c.fillStyle=i%2?'#3a6a31':'#2a5226';c.fillRect(i*w/20,0,w/20,h)}for(let i=0;i<210000;i++){const v=rand();c.fillStyle=v>.5?'rgba(190,204,120,.05)':'rgba(7,37,14,.06)';c.fillRect(rand()*w,rand()*h,rand()*2+1,rand()*3+1)}
  // Lines are painted into the grass so they stay crisp without z-fighting.
  const sx=w/112,sz=h/75;c.strokeStyle='#e5ead8';c.lineWidth=1.8;c.lineJoin='round';const X=x=>w/2+x*sx,Z=z=>h/2+z*sz;
  const rect=(x,z,dx,dz)=>c.strokeRect(X(x),Z(z),dx*sx,dz*sz);rect(-52.5,-34,105,68);c.beginPath();c.moveTo(X(0),Z(-34));c.lineTo(X(0),Z(34));c.stroke();c.beginPath();c.ellipse(X(0),Z(0),9.15*sx,9.15*sz,0,0,Math.PI*2);c.stroke();
- for(const side of [-1,1]){rect(side===1?36:-52.5,-20.16,16.5,40.32);rect(side===1?47:-52.5,-9.16,5.5,18.32);c.beginPath();c.ellipse(X(side*41.5),Z(0),.17*sx,.17*sz,0,0,Math.PI*2);c.fillStyle='#e5ead8';c.fill();c.beginPath();const a=Math.acos(5.5/9.15);c.ellipse(X(side*41.5),Z(0),9.15*sx,9.15*sz,0,side===1?Math.PI-a:-a,side===1?Math.PI+a:a);c.stroke()}
- c.beginPath();c.ellipse(X(0),Z(0),.17*sx,.17*sz,0,0,Math.PI*2);c.fill();});grass.anisotropy=Math.min(renderer.capabilities.getMaxAnisotropy(),8);
+ for(const side of [-1,1]){rect(side===1?36:-52.5,-20.16,16.5,40.32);rect(side===1?47:-52.5,-9.16,5.5,18.32);c.beginPath();const a=Math.acos(5.5/9.15);c.ellipse(X(side*41.5),Z(0),9.15*sx,9.15*sz,0,side===1?Math.PI-a:-a,side===1?Math.PI+a:a);c.stroke()}
+ });grass.anisotropy=Math.min(renderer.capabilities.getMaxAnisotropy(),8);
  const pitch=new T.Mesh(new T.PlaneGeometry(112,75),mat(0xffffff,{map:grass}));pitch.rotation.x=-Math.PI/2;pitch.receiveShadow=true;scene.add(pitch);
+ /* The three spots are geometry, not paint: at 18 pixels to the metre a painted spot is six pixels across, and the
+    penalty camera — a metre behind the ball, looking straight down at it — magnified that into a grey puddle. */
+ {const spotMat=mat(0xd9e0d0);for(const x of [-41.5,0,41.5]){const s=new T.Mesh(new T.CircleGeometry(.11,20),spotMat);s.rotation.x=-Math.PI/2;s.position.set(x,.012,0);scene.add(s)}}
  box(scene,155,.15,120,0,-.13,0,mat(0x3a5c36));
  const concrete=mat(0x35444c),ledge=mat(0x647078),dark=mat(0x1e303a),rail=mat(0xa5adb0,{metalness:.5});
  // Four terraced stands, all in world space; no background image.
@@ -29,7 +40,10 @@ export function buildWorld(scene,renderer){
   for(let col=0;col<90;col++){if(col%30<3||random()<.1)continue;people.push([sign*(60+row*1.23),2+row*.69,(col-45)*.85,sign>0?-Math.PI/2:Math.PI/2])}}
  }
  for(const sx of [-1,1])for(const sz of [-1,1])for(let row=0;row<15;row++)for(let col=0;col<13;col++)people.push([sx*(55.4+row*.87+col*.6),2+row*.69,sz*(44.6+row*.87-col*.6),Math.atan2(-sx,-sz)]);
- const bodies=new T.InstancedMesh(new T.CylinderGeometry(.18,.23,.55,5),mat(0xffffff),people.length),heads=new T.InstancedMesh(new T.OctahedronGeometry(.13,0),mat(0xffffff),people.length),dummy=new T.Object3D();const shirts=[0xb82034,0xcd3646,0xe3e4dc,0xddddcf,0x182c41,0x73838a,0x304555];const skins=[0xc28f65,0xdfb38c,0x87583d,0xe1c1a0,0x593e2e];
+ /* Narrower bodies with one more side and smaller heads: at this distance the old five-sided cylinders read as
+    traffic cones in rows. The colours are a night crowd — mostly dark coats with the club's colour showing
+    through — rather than the bright shirts that made every stand look like a toy. */
+ const bodies=new T.InstancedMesh(new T.CylinderGeometry(.15,.2,.52,6),mat(0xffffff),people.length),heads=new T.InstancedMesh(new T.OctahedronGeometry(.112,0),mat(0xffffff),people.length),dummy=new T.Object3D();const shirts=[0x6d1823,0x7b2430,0x8e908a,0x6f7068,0x12202f,0x454f55,0x24333f];const skins=[0x8e6749,0x9c7f62,0x624032,0xa08871,0x412d22];
  people.forEach(([x,y,z,rot],i)=>{dummy.position.set(x,y,z);dummy.rotation.y=rot;dummy.scale.set(1,random()*.18+.9,1);dummy.updateMatrix();bodies.setMatrixAt(i,dummy.matrix);bodies.setColorAt(i,new T.Color(shirts[Math.floor(random()*shirts.length)]));dummy.position.y+=.42;dummy.scale.setScalar(1);dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);heads.setColorAt(i,new T.Color(skins[Math.floor(random()*skins.length)]))});scene.add(bodies,heads);
  /* The stand is alive: every spectator sways on his own phase, and on a goal he leaps. It runs in the vertex shader,
     so thousands of them cost nothing per frame; the scene only advances `crowd.time` and sets `crowd.cheer`. */
@@ -44,11 +58,16 @@ export function buildWorld(scene,renderer){
      '#include <begin_vertex>\n transformed.y += sin(uTime*1.7+aPhase)*0.045 + max(0.0,sin(uTime*7.5+aPhase*3.0))*uCheer*0.75;')};
    m.material.needsUpdate=true}}
  const adtex=canvasTexture(2048,128,(c,w,h)=>{c.fillStyle='#102631';c.fillRect(0,0,w,h);c.font='italic 900 65px Arial';c.textBaseline='middle';c.fillStyle='#75efbd';c.fillText('GOALASSO',55,66);c.fillStyle='#e5f2f4';c.font='700 49px Arial';c.fillText('SUNRIDE',650,66);c.fillText('THE BEAUTIFUL GAME',1120,66);for(let x=0;x<w;x+=512){c.fillStyle='#75efbd';c.fillRect(x,h-8,200,6)}});adtex.wrapS=T.RepeatWrapping;adtex.repeat.x=3;adtex.anisotropy=4;
- const admat=mat(0xffffff,{map:adtex,emissive:0x18342b,emissiveIntensity:.2});for(const z of [-37.6,37.6])box(scene,112,1.25,.2,0,.65,z,admat);for(const x of [-56.5,56.5])box(scene,.2,1.25,72,x,.65,0,admat);
+ const admat=mat(0xffffff,{map:adtex,emissive:0x2c5f4c,emissiveIntensity:.6});   /* lit boards: at night they are the brightest line on the ground */for(const z of [-37.6,37.6])box(scene,112,1.25,.2,0,.65,z,admat);for(const x of [-56.5,56.5])box(scene,.2,1.25,72,x,.65,0,admat);
  // Corner flags and dugouts.
  for(const x of [-52.5,52.5])for(const z of [-34,34]){tube(scene,[x,0,z],[x,1.55,z],.025,mat(0xffffff));const flag=new T.Mesh(new T.PlaneGeometry(.5,.35),mat(0xe4ce55,{side:T.DoubleSide}));flag.position.set(x+.25,1.38,z);scene.add(flag)}
  for(const x of [-14,14]){box(scene,10,2.6,.15,x,1.3,40,dark);box(scene,10,.15,3,x,2.65,39,dark);for(let n=0;n<9;n++)box(scene,.7,.5,.7,x-4+n, .5,39,mat(0x962a3f))}
- for(const x of [-59,59])for(const z of [-40,40]){tube(scene,[x,0,z],[x,25,z],.18,rail);const bank=box(scene,5,1.6,.5,x,25,z,dark);for(let n=0;n<6;n++)box(scene,.6,.55,.12,x-2+n*.8,25.1,z+(z>0?-.3:.3),new T.MeshBasicMaterial({color:0xfff1cc}))}
+ /* The four pylons carry the evening: each lamp gets a soft additive halo, which is the one thing that tells the
+    eye a stadium is floodlit rather than merely dark. One small texture, four quads, no post-processing. */
+ const halo=canvasTexture(128,128,(c,w,h)=>{const g=c.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);g.addColorStop(0,'rgba(255,246,219,.95)');g.addColorStop(.35,'rgba(255,240,200,.35)');g.addColorStop(1,'rgba(255,236,190,0)');c.fillStyle=g;c.fillRect(0,0,w,h)});
+ const halomat=new T.SpriteMaterial({map:halo,blending:T.AdditiveBlending,depthWrite:false,fog:false,transparent:true});
+ for(const x of [-59,59])for(const z of [-40,40]){tube(scene,[x,0,z],[x,25,z],.18,rail);const bank=box(scene,5,1.6,.5,x,25,z,dark);for(let n=0;n<6;n++)box(scene,.6,.55,.12,x-2+n*.8,25.1,z+(z>0?-.3:.3),new T.MeshBasicMaterial({color:0xfff1cc}));
+  const sp=new T.Sprite(halomat);sp.position.set(x,25.1,z+(z>0?-.6:.6));sp.scale.set(16,11,1);sp.renderOrder=2;scene.add(sp)}
  /* A photographed night stand stands behind the terraces: the instanced spectators in front of it keep the motion,
     the picture gives the depth that rows of cylinders never will. It is one texture on four planes, and if the file
     is missing nothing waits for it — the stadium is simply as dark as it was. */
@@ -61,8 +80,14 @@ export function buildWorld(scene,renderer){
  }catch(e){}
  crowd.dress=(a,b)=>{const col=new T.Color();const hex=x=>{try{return new T.Color(x).getHex()}catch(e){return null}};
    const A=hex(a),B=hex(b);if(A==null&&B==null)return;
-   const mix=(base,i)=>{col.setHex(base==null?shirts[i%shirts.length]:base);
-     const k=.72+((i*2654435761)%1000)/1000*.5;col.multiplyScalar(k);if((i*2246822519)%7===0)col.lerp(new T.Color(0xf1f1ea),.6);return col};
+   /* A stand at night is mostly coats and shadow with the club's colour running through it. Painting every
+      spectator the full kit colour was what turned the terraces into rows of bright traffic cones: roughly a
+      third wear the colour, dimmed hard, the rest wear the dark palette, and a few catch the floodlight. */
+   const pale=new T.Color(0xcdd3cb);
+   const mix=(base,i)=>{const r=((i*2654435761)%1000)/1000;
+     if(base!=null&&r<.34){col.setHex(base).multiplyScalar(.20+r*.62)}
+     else col.setHex(shirts[(i*7+i%5)%shirts.length]).multiplyScalar(.5+r*.45);
+     if((i*2246822519)%17===0)col.lerp(pale,.42);return col};
    people.forEach(([x],i)=>bodies.setColorAt(i,mix(x<0?A:B,i)));   /* split down the middle of every stand, as a segregated ground is */
    bodies.instanceColor&&(bodies.instanceColor.needsUpdate=true)};
  const goals=[makeGoal(scene,-1),makeGoal(scene,1)];return{sun,goals,crowdCount:people.length,crowd};

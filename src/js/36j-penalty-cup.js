@@ -45,7 +45,7 @@ function pcupOpen(){if(PCUP)return;if(typeof BLITZ!=='undefined'&&BLITZ)return t
 function pcupClose(){if(!PCUP)return;const P=PCUP;try{penClose()}catch(e){}pcupNetStop();const r=document.getElementById('pcup');if(r)r.remove();G=P.keep.G;uid=P.keep.uid;SANDBOX=P.keep.sandbox;PCUP=null;
   try{render()}catch(e){document.querySelectorAll('.pc-entry').forEach(el=>{el.outerHTML=pcupEntryHTML()})}}
 /* the penalty overlay has no way out in a career; here every picture gets one */
-function pcupExitBtn(onExit){const top=PG&&PG.root.querySelector('.pg-top');if(!top)return;const b=document.createElement('button');b.type='button';b.className='pc-quit';b.textContent='יציאה';b.onclick=()=>{onExit&&onExit();penClose();if(PCUP){PCUP.stage='mode';pcupPaint()}};top.appendChild(b)}
+function pcupExitBtn(onExit){const top=PG&&PG.root.querySelector('.pg-top');if(!top)return;const b=document.createElement('button');b.type='button';b.className='pc-quit';b.textContent='יציאה';top.classList.add('has-quit');   /* the header makes room for it instead of printing the title under it */b.onclick=()=>{onExit&&onExit();penClose();if(PCUP){PCUP.stage='mode';pcupPaint()}};top.appendChild(b)}
 /* ---- screens ---- */
 function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)return;const P=PCUP,r=pcupRec(),T=pcupTeams();const grid=attr=>`<div class="pc-grid">${T.map(t=>`<button type="button" class="pc-team" ${attr}="${esc(t.key)}">${kitSVG(t,'lg')}<strong>${esc(t.name)}</strong></button>`).join('')}</div>`;
   let body='';

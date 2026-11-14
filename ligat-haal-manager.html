@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="e2e29c8623fc">
-<meta name="goalasso-built" content="14.11.2026 22:27">
+<meta name="goalasso-build" content="c4269918f4ab">
+<meta name="goalasso-built" content="14.11.2026 22:34">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
 function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
@@ -1472,6 +1472,8 @@ details.achcat[open]>.achlist{margin-top:10px}
 .pc-entry-b .bbtn{width:auto;margin:0;flex:none}
 /* inside the penalty overlay while it belongs to אלוף הפנדלים */
 .pg .pg-top{position:relative}
+.pg-top.has-quit{padding-inline:76px}
+.pg-top.has-quit .pg-title{font-size:clamp(26px,8vw,40px)}
 .pc-quit{position:absolute;inset-inline-start:8px;top:calc(8px + env(safe-area-inset-top,0px));min-height:44px;padding:0 12px;border-radius:10px;border:1px solid rgba(244,239,226,.3);background:rgba(5,7,11,.6);color:#f4efe2;font:600 14px Heebo,Arial,sans-serif;cursor:pointer}
 .pcup~.pg #pgLet{display:none}
 .pc-zone{position:absolute;left:10px;right:10px;z-index:3;height:clamp(110px,19vh,170px);display:grid;place-items:center;border-radius:20px;border:1px solid rgba(255,255,255,.42);background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.8);touch-action:none;cursor:grab}
@@ -6801,7 +6803,7 @@ function pcupOpen(){if(PCUP)return;if(typeof BLITZ!=='undefined'&&BLITZ)return t
 function pcupClose(){if(!PCUP)return;const P=PCUP;try{penClose()}catch(e){}pcupNetStop();const r=document.getElementById('pcup');if(r)r.remove();G=P.keep.G;uid=P.keep.uid;SANDBOX=P.keep.sandbox;PCUP=null;
   try{render()}catch(e){document.querySelectorAll('.pc-entry').forEach(el=>{el.outerHTML=pcupEntryHTML()})}}
 /* the penalty overlay has no way out in a career; here every picture gets one */
-function pcupExitBtn(onExit){const top=PG&&PG.root.querySelector('.pg-top');if(!top)return;const b=document.createElement('button');b.type='button';b.className='pc-quit';b.textContent='יציאה';b.onclick=()=>{onExit&&onExit();penClose();if(PCUP){PCUP.stage='mode';pcupPaint()}};top.appendChild(b)}
+function pcupExitBtn(onExit){const top=PG&&PG.root.querySelector('.pg-top');if(!top)return;const b=document.createElement('button');b.type='button';b.className='pc-quit';b.textContent='יציאה';top.classList.add('has-quit');   /* the header makes room for it instead of printing the title under it */b.onclick=()=>{onExit&&onExit();penClose();if(PCUP){PCUP.stage='mode';pcupPaint()}};top.appendChild(b)}
 /* ---- screens ---- */
 function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)return;const P=PCUP,r=pcupRec(),T=pcupTeams();const grid=attr=>`<div class="pc-grid">${T.map(t=>`<button type="button" class="pc-team" ${attr}="${esc(t.key)}">${kitSVG(t,'lg')}<strong>${esc(t.name)}</strong></button>`).join('')}</div>`;
   let body='';

@@ -96,8 +96,7 @@ export function createPenaltyView(host,opts){
     renderer=new T.WebGLRenderer({antialias:true,powerPreference:'default'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.type=T.PCFSoftShadowMap;
     const phone=innerWidth<=900;renderer.setPixelRatio(Math.min(devicePixelRatio||1,phone?1.25:1.5));renderer.shadowMap.enabled=!phone;wrap.append(renderer.domElement);
     world=buildWorld(scene,renderer);try{world.crowd.dress(opts.kit||'#c6f24e',opts.oppKit||'#e9edf2')}catch(e){}ball=makeBall(scene);
-    // an evening kick-off: the sky and the haze go dark, the pitch stays floodlit
-    scene.background=new T.Color(0x0a101c);scene.fog=new T.Fog(0x0a101c,95,230);
+    // the evening is `buildWorld`'s own now — sky, haze and the light that goes with them — so nothing is overridden here
     renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();if(!disposed)fail()});
     api.reset(mode,opts);
     observer=new ResizeObserver(()=>{try{resize()}catch(e){fail()}});observer.observe(wrap);
