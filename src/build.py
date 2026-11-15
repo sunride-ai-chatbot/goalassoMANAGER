@@ -123,8 +123,15 @@ def supabase_cfg():
     assert key.startswith('sb_publishable_'), 'only a publishable key may be embedded'
     return {'url': url.rstrip('/'), 'key': key}
 page = page.replace('__SUPABASE_BUILD__', enc(supabase_cfg()))
+# Shared league: two phones must simulate the same match, so each carries a fingerprint of the source files the
+# match depends on (the engine, the player model, the penalty rules). Phones whose fingerprints differ are told to
+# update instead of quietly disagreeing about a result. Screens and styles are deliberately not part of it.
+import hashlib as _h
+SIM_FILES = ['02-util.js', '03-players.js', '04-euro-clubs.js', '06-lineup.js', '07-engine.js', '10-realism.js', '12-manager.js', '13-tactics.js',
+             '27-render.js', '32-chemistry-dev.js', '33-staff-analyst.js', '35d-crest.js', '35f-league-sim.js', '36f-penalty.js', '36j-penalty-cup.js', '37-live.js']
+page = page.replace('__SIM_SRC__', _h.sha256(''.join(read(os.path.join(SRC, 'js', f)) for f in SIM_FILES).encode('utf8')).hexdigest()[:12])
 out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(euro)).replace('__DATA_META__', enc(meta)).replace('__YOUTH_JSON__', enc(youth)).replace('__ALEF_JSON__', enc(alef))
-for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE_BUILD__', '__YOUTH_JSON__', '__ALEF_JSON__'):
+for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE_BUILD__', '__YOUTH_JSON__', '__ALEF_JSON__', '__SIM_SRC__'):
     assert ph not in out, 'unfilled placeholder ' + ph
 # build stamp: a hash of the page content, so a live check can tell which build a server is actually serving
 import hashlib

@@ -1,10 +1,10 @@
-# Shared league (designed 2026-11-14, not yet built)
+# Shared league (designed 2026-11-14, built 2026-11-15)
 
 Several friends in one league of their own: equal money, a team each — name, crest, kit — a squad bought
 from the real players, trades between them, a table, and a penalty played manager against manager.
 
-This document is the plan agreed with the owner, the numbers to start from, and the order of the build.
-Nothing here is implemented yet.
+This document is the plan agreed with the owner, the numbers it runs on, and what was built in which order.
+All seven steps are built; "Installing it" at the end is what the owner of the Supabase project has to do.
 
 ## The rule everything else follows from
 
@@ -128,13 +128,65 @@ The champion is announced with his coach's picture, his squad with the trophy an
    offers six ready-made crests, custom opens shape, division, emblem and palette, premium adds the metal.
    The client shows the prices; the server charges them, only on a step up, and never refunds a step down,
    so a changed page cannot buy the gold for nothing. No match yet.
-3. **The market**: buy from the pool, sell back, offer a trade, accept. All server-side.
-4. **The round**: fixtures, both phones simulate from the server's seed and both submit the result; the
-   server accepts it only if the two agree. This blocks a manager cheating on his own; two friends could
-   still agree on a score between themselves, which an Edge Function running the engine would close
-   later if it ever matters.
-5. **The penalty duel inside a league match**, on the existing channel.
-6. **Training**, three a round, and the table.
-7. **The season's end**: champion, trophy, prize money, a new season with the same managers.
+3. **The market** — built (`src/js/35g-league-squad.js`). The lists, the search and the faces come from the
+   game's own data (`lgCatalog()` in `35f-league-sim.js`: every real player under the key the price list uses),
+   so they are instant and in Hebrew; which players are still free is the server's news. Buying sends a key and
+   the server answers with the price it charged. `tests/league-sim.test.js` checks that every one of the 8,171
+   catalogue prices is the price in the server's list, so "the price shown is the price charged" is a test and
+   not a hope. "Build me a squad" (`lg_autofill`) buys sixteen players in a 4-3-3 with weighted shares — a
+   striker and a playmaker carry the most, the bench the least — leaves a sixth of the purse in the bank, and at
+   the same price prefers a player the game has a photograph of. Trades are an offer and an acceptance.
+4. **The round** — built. The server draws the fixtures (everyone plays everyone, home and away) and each
+   fixture's seed. Opening a fixture **locks** it (`lg_fixture_lock`): both squads, both line-ups and every
+   player's training are written into the fixture as they stand, and that is what both phones simulate — nothing
+   bought, sold or trained afterwards reaches the match. The seed is not shown before the lock, or a manager
+   could try line-ups against the match he is about to play. `lgSimulate` runs the engine in a throw-away state
+   with the seeded generator installed as `Math.random` only while it runs; the recording is then played back on
+   the league's own match screen (`35h-league-match.js`). Each phone sends `lg_result`; the match counts when the
+   two answers are the same match, and two answers that differ are both thrown away and the fixture is dealt
+   again from a new seed. The host closes an evening (or anybody, two days after it began): one answer stands, a
+   match nobody opened is 0:0, and a match that was opened and never answered is a 0:3 forfeit for whoever opened
+   it — once a fixture is locked its manager's phone knows how it ends, and "look, and leave it if it is a
+   defeat" would otherwise turn every loss into a draw.
+5. **The penalty duel** — built, and it does not need both managers at the same moment. The recording stops at
+   the penalty, each manager chooses one of eight directions, and the choices go to the server (`lg_pen`) and
+   come back only when both are in. A manager who is not at the match (not seen at the fixture for nine seconds,
+   or silent for twenty) has his direction drawn by the server. When both are in, the server adds a number of its
+   own that decides where the ball really goes, so nothing about a penalty can be worked out beforehand from the
+   seed. The match is then simply run again from the first minute with one more answered penalty in its log —
+   which is also why a match can be reopened on any phone at any time and come out the same.
+6. **Training and the table** — built. Three sessions a round on your own players (`lg_train`); a session adds a
+   whole rating point to a player of 21 or under, less with age, never past his ceiling, and each level of the
+   training ground (`lg_ground`) makes every session worth 15% more. The table is the server's
+   (`lg_standings`: points, goal difference, goals scored).
+7. **The season's end** — built. When the last round is over the server pays the prizes into the purses and the
+   league is `done`; the board shows the champion, the prize list and, for the host, "open a new season"
+   (`lg_next_season`): the same managers, the same squads, what the players learned, a clean table.
 
-Steps 1–3 are a league you can build a team in. Step 4 is the first evening that counts.
+## What a manager cannot do with a console
+
+- State a price, a balance or a score: none of them is his to send.
+- Pay himself or write a result: the helpers that move money and results (`lg_pay`, `lg_fill`, `lg_finalize`,
+  `lg_advance`, `lg_make_fixtures`) cannot be executed by a signed-in user at all.
+- See the seed before the match is locked, or the other manager's direction before he has chosen his own.
+- Work out a penalty in advance: the absent side's direction and the kick's own randomness are drawn by the
+  server when they are needed.
+- Win by lying about the result: the other phone ran the same match. (Two friends who agree on a score between
+  them still can, as the plan always said; an Edge Function running the engine would close that if it ever
+  matters.)
+- Turn a defeat into a draw by walking away from a match he opened.
+
+## Installing it
+
+Three files, pasted into the Supabase SQL Editor in this order, each with **Run**:
+
+1. `supabase/install-league.sql` — the lobby (already installed on the live project).
+2. `supabase/install-league-2.sql` — the season. It may be run again: it replaces the functions and adds only
+   what is missing, so a later version is installed the same way.
+3. `supabase/install-league-pool.sql` — the price list of all 8,171 real players (255 KB, packed one line of text
+   per club so that it pastes). Running it again replaces the list, which is also how prices are refreshed.
+
+`python3 -I scripts/build-league-install.py` and `python3 -I scripts/build-league-pool.py` regenerate 2 and 3.
+`tests/rooms-sql.test.js` checks that each installer is its migration and that the packed list is the list;
+`tests/league-season.test.js` plays a whole season in two browser windows against exactly these three files on
+an in-process Postgres.

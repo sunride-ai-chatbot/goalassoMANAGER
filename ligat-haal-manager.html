@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="f7d9b0f06e46">
-<meta name="goalasso-built" content="15.11.2026 09:23">
+<meta name="goalasso-build" content="349e2038efa3">
+<meta name="goalasso-built" content="15.11.2026 13:07">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
 function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
@@ -1508,34 +1508,59 @@ details.achcat[open]>.achlist{margin-top:10px}
 @media(max-height:720px){.pg-bot.pc-both .pg-who{display:none}.pc-pad-g{gap:4px}.pc-pad-g button{min-height:40px}}
 .pc-turn{position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:4;max-width:calc(100% - 24px);padding:7px 16px;border-radius:999px;background:rgba(5,7,11,.82);border:1px solid rgba(233,196,106,.55);color:#f4efe2;font:700 16px/1.3 Heebo,Arial,sans-serif;white-space:nowrap;pointer-events:none}
 @media(prefers-reduced-motion:reduce){.pcup{animation:none}}
-/* ===================== SHARED LEAGUE ===================== */
+/* ===================== SHARED LEAGUE =====================
+   The league is its own app over the game: a column that fills a phone, with its title and purse on top, the
+   screen in the middle and five tabs underneath. Everything is on the system's ladder (01-base.css :root). */
 .lg-intro{display:grid;gap:var(--s2)}
 .lg-intro h3{margin:0}
 .lg-intro p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
 .lg-entry{width:100%}
 
-.lg-overlay{position:fixed;inset:0;z-index:46;background:rgba(5,9,16,.78);backdrop-filter:blur(6px);display:grid;place-items:center;padding:var(--s3);overflow:auto}
-.lg-dialog{position:relative;width:min(560px,100%);max-height:92vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r3);box-shadow:var(--e3);padding:var(--s4);display:grid;gap:var(--s3)}
-.lg-dialog h2{margin:0;font-size:20px}
-.lg-close{position:absolute;inset-inline-end:10px;top:8px;width:34px;height:34px;border-radius:var(--rp);border:1px solid var(--line);background:transparent;color:var(--fg);font-size:20px;line-height:1;cursor:pointer}
-#lg-status{margin:0;min-height:18px;color:var(--muted);font-size:13px}
-#lg-body{display:grid;gap:var(--s3)}
+/* above everything the game itself puts up, the title screen included: an invitation link has to land on the
+   league, not behind a splash. The penalty picture is the one thing that opens over it (below). */
+.lg-overlay{position:fixed;inset:0;z-index:12000;background:rgba(4,6,10,.86);backdrop-filter:blur(8px);display:flex;justify-content:center;align-items:stretch}
+.lg-dialog{position:relative;width:min(720px,100%);height:100%;height:100dvh;background:var(--bg,#07080c);border-inline:1px solid var(--line);display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;color:var(--fg)}
+.lg-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--s3);padding:calc(var(--s3) + env(safe-area-inset-top,0px)) var(--s4) var(--s3);border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--panel),var(--panel2))}
+.lg-title{min-width:0}
+.lg-title h2{margin:0;font-family:var(--title,inherit);font-size:26px;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg-title small{display:block;margin-top:3px;font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg-cash{font-weight:800;font-size:17px;color:var(--gold);font-variant-numeric:tabular-nums}
+.lg-close{width:36px;height:36px;border-radius:var(--rp);border:1px solid var(--line2);background:transparent;color:var(--fg);font-size:21px;line-height:1;cursor:pointer;flex:none}
+#lg-body{overflow:auto;-webkit-overflow-scrolling:touch;padding:var(--s4);display:grid;gap:var(--s3);align-content:start;position:relative}
+#lg-status{margin:0;padding:0 var(--s4);min-height:0;color:var(--fg);font-size:13.5px;line-height:1.45;background:var(--panel2)}
+#lg-status:not(:empty){padding:9px var(--s4);border-top:1px solid var(--line)}
 #lg-body label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
-#lg-body input,#lg-body select{width:100%;padding:10px;border-radius:var(--r1);border:1px solid var(--line);background:var(--bg2,rgba(255,255,255,.04));color:var(--fg);font:inherit}
-#lg-body fieldset{border:1px solid var(--line);border-radius:var(--r2);padding:var(--s3);display:grid;gap:var(--s2);margin:0}
+#lg-body input,#lg-body select{width:100%;padding:11px 10px;border-radius:var(--r2);border:1px solid var(--line2);background:var(--panel);color:var(--fg);font:inherit;font-size:16px}
+#lg-body fieldset{border:1px solid var(--line);border-radius:var(--r2);padding:var(--s3);display:grid;gap:var(--s2);margin:0;min-width:0}
 #lg-body legend{padding:0 6px;font-size:13px;color:var(--muted)}
+#lg-body h3{margin:0;font-size:17px}
+#lg-body h4{margin:var(--s2) 0 0;font-size:14px;color:var(--muted);font-weight:600}
+#lg-body h5{margin:var(--s2) 0 0;font-size:13px;color:var(--muted);font-weight:600}
+.lg-wide{width:100%}
+.lg-note{margin:0;font-size:12.5px;color:var(--muted);line-height:1.5}
+.lg-card{border:1px solid var(--line);border-radius:var(--r3);padding:var(--s3);background:linear-gradient(180deg,var(--panel),var(--panel2));display:grid;gap:var(--s2);min-width:0}
+.lg-rowhead{display:flex;justify-content:space-between;align-items:center;gap:var(--s2)}
+.lg-mini{padding:6px 11px;border-radius:var(--rp);border:1px solid var(--line2);background:transparent;color:var(--fg);font:inherit;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.lg-empty{display:grid;gap:var(--s3);padding:var(--s5) var(--s3);text-align:center;justify-items:center}
+.lg-empty p{margin:0;color:var(--muted);font-size:14px;line-height:1.55;max-width:44ch}
 
-.lg-invite{display:grid;gap:2px;padding:var(--s3);border:1px solid var(--line);border-radius:var(--r2);background:rgba(255,255,255,.03)}
+/* tabs */
+.lg-tabs{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);background:var(--panel2);padding-bottom:env(safe-area-inset-bottom,0px)}
+.lg-tabs[hidden]{display:none}
+.lg-tab{position:relative;padding:13px 2px 12px;border:0;background:transparent;color:var(--muted);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer}
+.lg-tab.on{color:var(--gold)}
+.lg-tab.on::before{content:'';position:absolute;top:-1px;inset-inline:22%;height:2px;background:var(--gold);border-radius:2px}
+.lg-dot{position:absolute;top:6px;inset-inline-end:14%;min-width:17px;height:17px;padding:0 4px;border-radius:var(--rp);background:var(--bad,#ff5c6c);color:#fff;font-size:11px;font-style:normal;line-height:17px}
+
+/* lobby */
+.lg-invite{display:grid;gap:2px;padding:var(--s3);border:1px solid var(--line);border-radius:var(--r2);background:var(--panel)}
 .lg-invite span,.lg-invite em{font-size:13px;color:var(--muted)}
 .lg-create{display:grid;gap:var(--s2)}
 .lg-or{margin:var(--s2) 0 0;text-align:center;font-size:13px;color:var(--muted)}
-
-.lg-head{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s2);flex-wrap:wrap}
-.lg-head span{font-size:13px;color:var(--muted)}
 .lg-share{display:grid;grid-template-columns:1fr auto;gap:var(--s2);align-items:end}
 .lg-members{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
-.lg-members li{display:grid;grid-template-columns:38px 30px 1fr auto;align-items:center;gap:var(--s2);padding:8px;border:1px solid var(--line);border-radius:var(--r2);background:rgba(255,255,255,.03)}
-.lg-members li.is-me{border-color:var(--accent,#3ea76a);box-shadow:var(--e1)}
+.lg-members li{display:grid;grid-template-columns:38px 30px 1fr auto;align-items:center;gap:var(--s2);padding:8px;border:1px solid var(--line);border-radius:var(--r2);background:var(--panel)}
+.lg-members li.is-me{border-color:var(--accent)}
 .lg-members .crest{width:38px;height:auto;display:block}
 .lg-members .kit{width:30px;height:30px;display:block}
 .lg-who{display:grid;gap:1px;min-width:0}
@@ -1544,43 +1569,206 @@ details.achcat[open]>.achlist{margin-top:10px}
 .lg-money{font-variant-numeric:tabular-nums;font-weight:700}
 .lg-actions{display:flex;gap:var(--s2);flex-wrap:wrap}
 .lg-actions .btn{flex:1 1 150px}
+.lg-next{border:1px solid var(--line);border-radius:var(--r2);padding:var(--s3);background:var(--panel)}
+.lg-next h4{margin:0 0 6px!important;font-size:13px;color:var(--muted);font-weight:600}
+.lg-next ul{margin:0;padding-inline-start:18px;display:grid;gap:5px;font-size:14px;line-height:1.45}
+.lg-leave{justify-self:center;background:none;border:0;color:var(--muted);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;padding:6px}
 
+/* the board */
+.lg-hero{display:grid;gap:var(--s3);padding:var(--s4);border-radius:var(--r4);border:1px solid rgba(233,196,106,.28);background:radial-gradient(120% 120% at 50% 0,rgba(233,196,106,.13),transparent 62%),linear-gradient(180deg,var(--panel),var(--panel2));text-align:center}
+.lg-hero small{font-size:13px;color:var(--gold)}
+.lg-hero h3{font-family:var(--title,inherit);font-size:30px!important;line-height:1}
+.lg-hero p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5}
+.lg-duel{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--s2)}
+.lg-duel>div{display:grid;justify-items:center;gap:6px;min-width:0}
+.lg-duel b{font-size:16px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lg-duel i{font-style:normal;font-size:13px;color:var(--muted)}
+.d-crest .crest{width:74px;height:auto;display:block}
+.lg-fxs{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.lg-fx{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--s2);padding:8px;border-radius:var(--r2);background:rgba(255,255,255,.03);border:1px solid transparent}
+.lg-fx.is-me{border-color:var(--line2)}
+.lg-fx .lg-mini{grid-column:1/-1;justify-self:center}
+.fx-t{display:flex;align-items:center;gap:7px;min-width:0;font-size:14px}
+.fx-t b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.fx-h{justify-content:flex-end}.fx-a{justify-content:flex-start}
+.t-crest{flex:none;display:inline-block;width:22px}.t-crest .crest{width:22px;height:auto;display:block}
+.fx-mid{min-width:62px;text-align:center;font-weight:800;font-size:17px;font-variant-numeric:tabular-nums}
+.lg-vs{font-size:11.5px;font-weight:500;color:var(--muted);white-space:nowrap}
+.lg-table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+.lg-table th{font-weight:500;color:var(--muted);font-size:12px;padding:4px 3px;text-align:center}
+.lg-table td{padding:8px 3px;text-align:center;border-top:1px solid var(--line)}
+.lg-table .t-team{text-align:start}
+.lg-table td.t-team{max-width:38vw}
+.lg-table td.t-team>span{display:flex;align-items:center;gap:7px;min-width:0}
+.lg-table td.t-team b{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg-table tr.is-me td{background:rgba(198,242,78,.07)}
+.lg-table tr.is-me .t-team b{font-weight:700}
+.lg-all summary{cursor:pointer;font-weight:600;font-size:15px}
+.lg-champ{display:grid;justify-items:center;gap:4px;padding:var(--s5) var(--s3);border-radius:var(--r4);border:1px solid rgba(233,196,106,.4);background:radial-gradient(110% 90% at 50% 0,rgba(233,196,106,.22),transparent 64%),linear-gradient(180deg,var(--panel),var(--panel2));text-align:center}
+.lg-champ .crest{width:128px;height:auto}
+.lg-champ small{color:var(--gold);font-size:13px}
+.lg-champ h3{font-family:var(--title,inherit);font-size:40px!important;line-height:1}
+.lg-champ p{margin:0;color:var(--muted)}
+.lg-prizes,.lg-ledger{list-style:none;margin:0;padding:0;display:grid}
+.lg-prizes li,.lg-ledger li{display:flex;justify-content:space-between;gap:var(--s2);padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.lg-prizes li:first-child,.lg-ledger li:first-child{border-top:0}
+.lg-prizes li.is-me{font-weight:700;color:var(--accent)}
+.lg-ledger b.neg{color:var(--bad,#ff5c6c)}.lg-ledger b.pos{color:var(--good,#3ddc84)}
+.lg-clubhead{display:grid;grid-template-columns:auto auto 1fr;align-items:center;gap:var(--s3)}
+.lg-clubhead .crest{width:84px;height:auto;display:block}.lg-clubhead .kit{width:58px;height:58px;display:block}
+.lg-clubhead h3{font-family:var(--title,inherit);font-size:30px!important;line-height:1}
+.lg-clubhead p{margin:4px 0 0;color:var(--muted);font-size:13.5px}
+
+/* identity */
 .lg-id{display:grid;gap:var(--s3)}
 /* the crest stays in sight while its parts are chosen, so a change is seen where it lands */
-.lg-preview{position:sticky;top:-2px;z-index:1;display:flex;align-items:center;justify-content:center;gap:var(--s4);padding:var(--s3);border-radius:var(--r2);background:var(--card);box-shadow:0 10px 18px -12px rgba(0,0,0,.8),inset 0 0 0 1px var(--line)}
-.lg-preview::before{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(120% 90% at 50% 0,rgba(255,255,255,.07),transparent);pointer-events:none}
+.lg-preview{position:sticky;top:calc(var(--s4)*-1);z-index:1;display:flex;align-items:center;justify-content:center;gap:var(--s4);padding:var(--s3);border-radius:var(--r2);background:var(--panel);box-shadow:0 12px 18px -12px rgba(0,0,0,.85),inset 0 0 0 1px var(--line)}
 .lg-preview .crest{width:112px;height:auto}
 .lg-preview .kit{width:76px;height:76px}
 .lg-tiers{display:flex;gap:var(--s2)}
-.lg-tier{flex:1;display:grid;gap:2px;padding:8px 6px;border-radius:var(--r2);border:1px solid var(--line);background:transparent;color:var(--fg);font:inherit;font-size:13px;cursor:pointer;transition:border-color var(--t) var(--ease),background var(--t) var(--ease)}
-.lg-tier small{font-size:11px;color:var(--muted)}
-.lg-tier.on{border-color:var(--accent,#3ea76a);background:rgba(62,167,106,.14)}
+.lg-tier{flex:1;display:grid;gap:2px;padding:9px 6px;border-radius:var(--r2);border:1px solid var(--line2);background:transparent;color:var(--fg);font:inherit;font-size:13.5px;cursor:pointer;transition:border-color var(--t) var(--ease),background var(--t) var(--ease)}
+.lg-tier small{font-size:11.5px;color:var(--muted)}
+.lg-tier.on{border-color:var(--accent);background:rgba(198,242,78,.12)}
 .lg-opts{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--s2)}
-.lg-opt{padding:4px;border-radius:var(--r2);border:1px solid var(--line);background:transparent;cursor:pointer}
+.lg-opt{padding:4px;border-radius:var(--r2);border:1px solid var(--line2);background:transparent;cursor:pointer}
 .lg-opt .crest{width:100%;height:auto;display:block}
 .lg-parts{display:grid;gap:var(--s2)}
 .lg-part{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .lg-part>span{font-size:12px;color:var(--muted);flex:0 0 100%}
-.lg-chip{padding:6px 10px;border-radius:var(--rp);border:1px solid var(--line);background:transparent;color:var(--fg);font:inherit;font-size:13px;cursor:pointer;transition:border-color var(--t) var(--ease),background var(--t) var(--ease)}
-.lg-chip.on{border-color:var(--accent,#3ea76a);background:rgba(62,167,106,.16)}
-.lg-chip.ic{width:38px;height:38px;padding:5px;display:grid;place-items:center}
+.lg-chip{padding:8px 12px;border-radius:var(--rp);border:1px solid var(--line2);background:transparent;color:var(--fg);font:inherit;font-size:13.5px;cursor:pointer;transition:border-color var(--t) var(--ease),background var(--t) var(--ease)}
+.lg-chip.on{border-color:var(--accent);background:rgba(198,242,78,.14);color:var(--fg)}
+.lg-chip.ic{width:40px;height:40px;padding:6px;display:grid;place-items:center}
 .lg-chip.ic svg{width:100%;height:100%}
-.lg-chip.sw{display:inline-flex;gap:0;padding:0;overflow:hidden;width:44px;height:26px}
+.lg-chip.sw{display:inline-flex;gap:0;padding:0;overflow:hidden;width:46px;height:28px}
 .lg-chip.sw i{flex:1}
+.lg-chip.sw.on{outline:2px solid var(--accent);outline-offset:2px}
+.lg-chip.lg-mgr{display:inline-flex;align-items:center;gap:7px}
 .lg-charge{margin:0;font-size:13px;color:var(--muted)}
 
+/* players */
+.lg-face{position:relative;display:block;flex:none;width:44px;height:44px;border-radius:50%;overflow:hidden;background:#0b1520;border:2px solid #f6f2e7}
+.lg-face .player-portrait{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.lg-face .player-portrait svg{transform:translateY(calc(var(--fy,5.8)*-1%)) scale(1.16);transform-origin:50% 0}
+.lg-face.big{width:84px;height:84px;border-width:3px}
+.lg-plist{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.lg-p{display:flex;align-items:center;gap:var(--s2);padding:7px 8px;border-radius:var(--r2);background:rgba(255,255,255,.03);border:1px solid transparent;cursor:pointer;min-width:0;transition:border-color var(--t) var(--ease),background var(--t) var(--ease)}
+.lg-p:hover{background:rgba(255,255,255,.06)}
+.lg-p:focus-visible{outline:none;box-shadow:var(--ring)}
+.lg-p.empty{cursor:default;opacity:.7;border:1px dashed var(--line2)}
+.p-slot{flex:none;width:44px;text-align:center;font-size:11px;font-weight:700;padding:4px 0;border-radius:var(--r1);background:rgba(255,255,255,.07);color:var(--muted)}
+.p-slot.pos-GK{color:#f2b233}.p-slot.pos-DF{color:#6cb6ff}.p-slot.pos-MF{color:#7ee0a1}.p-slot.pos-FW{color:#ff8f8f}
+.p-main{display:grid;gap:1px;min-width:0;flex:1}
+.p-main b{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p-main small{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p-main em{font-style:normal;color:var(--warn,#ffb547)}
+.p-ovr{flex:none;position:relative;min-width:38px;text-align:center;font-weight:800;font-size:17px;padding:5px 0;border-radius:var(--r2);background:rgba(233,196,106,.13);color:var(--gold);font-variant-numeric:tabular-nums}
+.p-ovr.big{font-size:26px;min-width:58px;padding:9px 0}
+.p-gain{position:absolute;top:-7px;inset-inline-start:-7px;font-style:normal;font-size:10.5px;font-weight:700;padding:1px 5px;border-radius:var(--rp);background:var(--good,#3ddc84);color:#04210f}
+.p-price{flex:none;font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+.p-price.far{color:var(--muted);font-weight:500}
+.lg-avg{font-size:13px;color:var(--muted)}.lg-avg b{color:var(--gold);font-size:16px}
+.lg-tacs{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)}
+.lg-train-left{margin:0;font-size:15px}.lg-train-left b{font-size:22px;color:var(--accent)}
+.lg-ground{display:flex;justify-content:space-between;align-items:center;gap:var(--s2);flex-wrap:wrap;font-size:14px}
+
+/* the player's card */
+.lg-sheet-bg{position:fixed;inset:0;z-index:12001;background:rgba(0,0,0,.6)}
+.lg-sheet{position:fixed;z-index:12002;inset-inline:0;bottom:0;margin-inline:auto;width:min(720px,100%);max-height:86dvh;overflow:auto;background:var(--panel);border:1px solid var(--line2);border-bottom:0;border-radius:var(--r4) var(--r4) 0 0;box-shadow:var(--e3);padding:var(--s4);padding-bottom:calc(var(--s4) + env(safe-area-inset-bottom,0px));display:grid;gap:var(--s3);animation:lg-up var(--t-slow) var(--ease-out)}
+@keyframes lg-up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.lg-sheet>.lg-close{position:absolute;top:10px;inset-inline-end:10px}
+.lg-sheet-head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--s3);padding-inline-end:40px}
+.lg-sheet-head h3{font-size:21px!important}
+.lg-sheet-head p{margin:2px 0 0;font-size:13px;color:var(--muted)}
+.lg-sheet-en{font-size:12px!important;opacity:.8}
+.lg-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);margin:0}
+.lg-facts div{padding:8px;border-radius:var(--r2);background:rgba(255,255,255,.04);text-align:center}
+.lg-facts dt{font-size:11.5px;color:var(--muted)}.lg-facts dd{margin:2px 0 0;font-weight:700;font-size:15px}
+.lg-swaps,.lg-picks{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.lg-swap,.lg-pick{display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:6px;align-items:center;padding:8px 10px;border-radius:var(--r2);border:1px solid var(--line2);background:transparent;color:var(--fg);font:inherit;text-align:start;cursor:pointer;min-width:0}
+.lg-swap b,.lg-pick b{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+.lg-swap small,.lg-pick small{grid-row:2;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg-swap i,.lg-pick i{grid-row:1/3;grid-column:2;font-style:normal;font-weight:800;color:var(--gold)}
+.lg-pick.on{border-color:var(--accent);background:rgba(198,242,78,.13)}
+.pp-credit{font-size:11px}
+
+/* market */
+.lg-mkhead{display:grid;grid-template-columns:1fr 1fr auto;gap:var(--s2);align-items:center}
+.lg-mkhead>div{display:grid}
+.lg-mkhead b{font-size:19px;font-variant-numeric:tabular-nums}.lg-mkhead b i{font-style:normal;font-size:13px;color:var(--muted);font-weight:500}
+.lg-mkhead small{font-size:11.5px;color:var(--muted)}
+.lg-filters{display:grid;gap:var(--s2);position:sticky;top:calc(var(--s4)*-1);z-index:1;background:var(--bg,#07080c);padding:var(--s2) 0;margin:0 0 calc(var(--s2)*-1)}
+.lg-offer{display:grid;gap:5px;padding:var(--s3);border-radius:var(--r2);background:rgba(255,255,255,.04);font-size:14px;line-height:1.45}
+.lg-offer span em{font-style:normal;color:var(--muted);font-size:12.5px;margin-inline-end:4px}
+
+/* the match */
+.lg-overlay~.pg{z-index:12010}
+.lg-overlay~#confetti{z-index:12020!important}
+.lg-inmatch .lg-top .lg-cash{visibility:hidden}
+.lg-mload{display:grid;place-items:center;min-height:40dvh;font-family:var(--title,inherit);font-size:28px;color:var(--muted)}
+.lg-score{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--s2);padding:var(--s3) var(--s2);border-radius:var(--r4);background:radial-gradient(120% 130% at 50% 0,rgba(233,196,106,.12),transparent 60%),linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line)}
+.ms-t{display:grid;justify-items:center;gap:4px;min-width:0;text-align:center}
+.ms-t b{font-size:14.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ms-t small{font-size:11px;color:var(--accent)}
+.ms-crest .crest{width:58px;height:auto;display:block}
+.ms-mid{display:grid;justify-items:center;gap:2px}
+.ms-sc{font-family:var(--title,inherit);font-size:58px;line-height:.9;font-weight:700;font-variant-numeric:tabular-nums;display:inline-flex;gap:8px;align-items:center}
+.ms-sc i{font-style:normal;opacity:.5}
+.ms-clock{font-size:13px;color:var(--gold);font-variant-numeric:tabular-nums}
+.ms-bar{height:3px;border-radius:3px;background:var(--line);overflow:hidden}
+.ms-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--accent));transition:width .15s linear}
+.lg-feed{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.lg-ev{display:grid;grid-template-columns:38px 12px 1fr;align-items:center;gap:8px;padding:8px;border-radius:var(--r2);background:rgba(255,255,255,.03);font-size:14px;line-height:1.35}
+.lg-ev.quiet{grid-template-columns:1fr;color:var(--muted);text-align:center}
+.ev-m{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;text-align:center}
+.ev-dot{width:11px;height:11px;border-radius:50%;border:2px solid;display:block}
+.ev-t small{color:var(--muted);font-size:12.5px;margin-inline-start:6px}
+.lg-ev.goal{background:rgba(198,242,78,.12);border:1px solid rgba(198,242,78,.3)}
+.lg-ev.goal b{color:var(--accent)}
+.lg-ev.red b,.lg-ev.miss b{color:var(--bad,#ff5c6c)}
+.lg-ev.yel .ev-t{color:#f4d470}
+.lg-ev.sub,.lg-ev.shot,.lg-ev.inj{color:var(--muted)}
+.lg-mfoot{position:sticky;bottom:calc(var(--s4)*-1);display:flex;justify-content:space-between;align-items:center;gap:var(--s2);padding:var(--s2) 0;background:linear-gradient(0deg,var(--bg,#07080c) 70%,transparent)}
+.ms-here{font-size:12.5px;color:var(--good,#3ddc84)}
+.lg-mend{padding:var(--s4);border-radius:var(--r3);border:1px solid var(--line);text-align:center;display:grid;gap:6px;background:var(--panel)}
+.lg-mend h3{font-family:var(--title,inherit);font-size:40px!important;line-height:1}
+.lg-mend p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5}
+.lg-mend.won{border-color:rgba(198,242,78,.45)}.lg-mend.won h3{color:var(--accent)}
+.lg-mend.lost h3{color:var(--muted)}.lg-mend.bad{border-color:var(--bad,#ff5c6c)}
+.lg-scorers{grid-template-columns:1fr 1fr;font-size:13px;align-items:start}
+.lg-scorers ul{list-style:none;margin:0;padding:0;display:grid;gap:3px}.lg-scorers ul:last-child{text-align:end}
+.lg-scorers small{color:var(--muted);font-size:11.5px}
+.ms-live{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--s2);font-variant-numeric:tabular-nums;font-size:14px;color:var(--muted)}
+.ms-live span{font-weight:700;color:var(--fg);text-align:center}.ms-live em{font-style:normal;font-size:12px}
+.lg-xi{list-style:none;margin:0;padding:0;display:grid;gap:3px;font-size:12.5px}
+.lg-xi li{display:grid;grid-template-columns:auto 1fr auto;gap:6px;align-items:center;min-width:0}
+.lg-xi li bdi{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg-xi i{font-style:normal;font-size:10px;font-weight:700;width:34px;text-align:center;padding:2px 0;border-radius:var(--r1);background:rgba(255,255,255,.07)}
+.lg-xi i.pos-GK{color:#f2b233}.lg-xi i.pos-DF{color:#6cb6ff}.lg-xi i.pos-MF{color:#7ee0a1}.lg-xi i.pos-FW{color:#ff8f8f}
+.lg-xi b{color:var(--gold);font-variant-numeric:tabular-nums}
+.lg-xis .lg-rat2{border:0;padding:0;background:none;margin-top:var(--s2);display:grid;gap:var(--s3)}
+.lg-mstats{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.lg-mstats th{font-weight:500;font-size:12.5px;color:var(--muted);padding:6px}
+.lg-mstats td{width:28%;text-align:center;font-weight:700;font-size:15px;padding:6px}
+.lg-motm{margin:0;text-align:center;font-size:14px;color:var(--muted)}.lg-motm b{color:var(--gold)}
+.lg-rat2{grid-template-columns:1fr 1fr;align-items:start}
+.lg-rat2>div{min-width:0;display:grid;gap:6px}
+.lg-rat2 h4{margin:0!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg-ratings{list-style:none;margin:0;padding:0;display:grid;gap:3px;font-size:12.5px}
+.lg-ratings li{display:flex;justify-content:space-between;gap:6px;min-width:0}
+.lg-ratings span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lg-ratings b{font-variant-numeric:tabular-nums}.lg-ratings b.hi{color:var(--accent)}.lg-ratings b.lo{color:var(--bad,#ff5c6c)}
+.r-g{font-style:normal;display:inline-grid;place-items:center;min-width:15px;height:15px;border-radius:50%;background:var(--fg);color:#07080c;font-size:10px;font-weight:800}
+
 @media (max-width:420px){
- .lg-dialog{padding:var(--s3)}
+ #lg-body{padding:var(--s3)}
+ .lg-preview,.lg-filters{top:calc(var(--s3)*-1)}
+ .lg-mfoot{bottom:calc(var(--s3)*-1)}
  .lg-opts{grid-template-columns:repeat(3,1fr)}
  .lg-preview .crest{width:92px}
+ .lg-tab{font-size:12.5px}
+ .ms-sc{font-size:50px}
 }
-
-/* what the league is waiting for, so a board with one button does not read as a dead end */
-.lg-next{border:1px solid var(--line);border-radius:var(--r2);padding:var(--s3);background:rgba(255,255,255,.03)}
-.lg-next h4{margin:0 0 6px;font-size:13px;color:var(--muted);font-weight:600}
-.lg-next ul{margin:0;padding-inline-start:18px;display:grid;gap:4px;font-size:14px}
-.lg-next p{margin:10px 0 0;font-size:12.5px;color:var(--muted);line-height:1.5}
-.lg-leave{justify-self:center;background:none;border:0;color:var(--muted);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;padding:4px}
+@media (prefers-reduced-motion:reduce){.lg-sheet{animation:none}.ms-bar i{transition:none}}
 /* The design system, applied last so it wins over the seventeen stylesheets that grew before it.
    It changes depth, corners, motion and interaction states only — never a size, a spacing or a layout,
    so nothing moves on any screen; what changes is that the whole game finally behaves like one piece of
@@ -5617,7 +5805,9 @@ function crestSVG(spec,opts){spec=spec||{};opts=opts||{};
  const name=(opts.name||s.name||'').toString().slice(0,22),year=opts.year||s.year||'';
  /* The band sits where every shape is still wide (a kite has pulled in to x 18..82 by y 74) and the name is
      squeezed to fit it rather than clipped, so a long Hebrew name still reads. */
- const bandY=s.shape==='disc'?70:74;
+ /* a kite has pulled in to x 29..71 by y 89, so a band at 74 has its corners outside the shape; it sits higher there,
+    where the kite is still as wide as the band, and the emblem moves up and shrinks to make room */
+ const kite=s.shape==='kite',bandY=s.shape==='disc'?70:kite?58:74;
  const band=name?`<rect x="18" y="${bandY}" width="64" height="15" rx="3.5" fill="${s.ink}" opacity=".92"/><rect x="18" y="${bandY}" width="64" height="15" rx="3.5" fill="none" stroke="#fff" stroke-opacity=".35"/><text x="50" y="${bandY+11}" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="700" textLength="${Math.min(56,name.length*5.4).toFixed(0)}" lengthAdjust="spacingAndGlyphs">${esc(name)}</text>`:'';
  return `<svg class="crest" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" role="img"${opts.label?` aria-label="${esc(opts.label)}"`:' aria-hidden="true"'}>
  <defs><clipPath id="cl${id}"><path d="${outline}"/></clipPath>
@@ -5626,7 +5816,7 @@ function crestSVG(spec,opts){spec=spec||{};opts=opts||{};
  <g clip-path="url(#cl${id})">
   <rect width="100" height="120" fill="${s.c1}"/>
   <g fill="${s.c2}">${div}</g>
-  <g transform="translate(50 ${name?(s.shape==='disc'?42:45):56}) scale(${name?1.22:1.4})" fill="${s.ink}" stroke="${s.ink}">${crestEmblem(s.emblem)}</g>
+  <g transform="translate(50 ${name?(s.shape==='disc'?42:kite?33:45):(kite?48:56)}) scale(${name?(kite?.98:1.22):(kite?1.25:1.4)})" fill="${s.ink}" stroke="${s.ink}">${crestEmblem(s.emblem)}</g>
   ${band}
   ${year?`<text x="50" y="${s.shape==='disc'?17:15}" text-anchor="middle" font-size="7.5" fill="${s.ink}" opacity=".75">${esc(String(year))}</text>`:''}
   <rect width="100" height="120" fill="url(#gl${id})"/>
@@ -5669,169 +5859,674 @@ function clubKitSVG(kit,opts){kit=Object.assign({},kitDefault(3),kit||{});opts=o
 ${opts.no?`<text x="20" y="27.5" text-anchor="middle" font-size="11" font-weight="800" font-family="Heebo, Arial, sans-serif" fill="${inkFor(kit.c1)}" stroke="rgba(0,0,0,.25)" stroke-width=".3">${opts.no}</text>`:''}</svg>`}
 function kitTierCost(t){return t==='premium'?2e6:t==='pattern'?5e5:0}
 function crestTierCost(t){return t==='premium'?2e6:t==='custom'?1e6:0}
-/* ===================== SHARED LEAGUE — lobby and identity =====================
+/* ===================== SHARED LEAGUE — the app: lobby, identity, the board =====================
    Several managers in one league, each building a club out of one shared pool of real players. The server owns
-   the money and the pool (`supabase/migrations/..._shared_league.sql`): the client never sends a price, only
-   which player it wants, so a changed page cannot buy a star for a shekel.
+   the money, the squads, the fixtures and the results (supabase/migrations/..._shared_league*.sql): a phone asks
+   and shows. Nothing a manager can change in this page changes a price, a balance or a score.
 
-   This file is the lobby and the identity: create a league, invite by link, join, name the club, draw its crest
-   and its kit. The market, the fixtures and the season come next; nothing here plays a match.
+   The league is its own full-screen app over the game, with tabs: the board (table, the evening's matches),
+   the squad (line-up, training), the market, trades and the club. This file is the shell and everything up to
+   the board; 35g-league-squad.js is the squad, the market and trades, 35h-league-match.js the match itself.
 
-   The identity lives in this browser: an anonymous session is taken quietly (the server only ever asks that the
-   caller has an id of its own and never reads an address), exactly as the invitation rooms do. */
-const League=(()=>{
- let client=null,modal=null,generation=0,busy=false,poll=null,state=null,draft=null,view='lobby';
- const KEY='goalasso.league.id';
- const api=async()=>client||(client=await (window.__lgClientFactory?window.__lgClientFactory():mpClient()));
- async function rpc(name,args){const c=await api(),r=await c.rpc(name,args);if(r.error)throw r.error;return r.data}
- const saved=()=>{try{return localStorage.getItem(KEY)||''}catch(e){return ''}};
- const remember=id=>{try{id?localStorage.setItem(KEY,id):localStorage.removeItem(KEY)}catch(e){}};
- const invited=()=>{try{return new URL(location.href).searchParams.get('league')||''}catch(e){return ''}};
- const linkFor=inv=>{try{const u=new URL(location.href);u.search='';u.searchParams.set('league',inv);return u.href}catch(e){return '?league='+inv}};
- function clearInvite(){try{const u=new URL(location.href);u.searchParams.delete('league');history.replaceState(null,'',u.href)}catch(e){}}
- const money=n=>'₪'+Math.round((+n||0)/1e5)/10+'M';   /* plain, for a status line */
- const cash=n=>`<bdi dir="ltr">${money(n)}</bdi>`;   /* a sum inside Hebrew keeps its own direction */
- const ERR={login_required:'צריך להתחבר לשירות לפני פתיחת ליגה.',invalid_name:'שם הליגה צריך להיות בין תו אחד ל־60.',invalid_team:'שם המועדון צריך להיות בין תו אחד ל־40.',invalid_capacity:'מספר המנהלים צריך להיות בין 2 ל־8.',too_many_leagues:'יש לך כבר עשר ליגות פתוחות. סגור אחת לפני שתפתח חדשה.',invitation_expired:'ההזמנה פגה או אינה תקינה.',league_started:'הליגה כבר יצאה לדרך ואי אפשר להצטרף אליה.',team_taken:'מישהו בליגה כבר לקח את השם הזה.',league_full:'הליגה מלאה.',not_a_member:'אין לחשבון הזה גישה לליגה.',invalid_crest:'הסמל אינו תקין.',invalid_kit:'המדים אינם תקינים.',no_money:'אין מספיק כסף בקופה.'};
- /* A league whose SQL has not been installed in the project answers with PostgREST's own English sentence
-    about a missing function, which tells a player nothing. It is the one failure that is not his fault and
-    not a bug in the page, so it says what it is. */
- const err=e=>{const m=String(e&&e.message||e);
-  if(/schema cache|does not exist|42883|PGRST202/i.test(m))return 'שירות הליגה עדיין לא הותקן בפרויקט. עד שיותקן, משחק רשת והזמנות עובדים כרגיל.';
-  return ERR[m]||m};
- const mine=()=>(state&&state.members||[]).find(m=>m.mine)||null;
+   The identity lives in this browser: an anonymous session is taken quietly, exactly as the invitation rooms do. */
+const LG={client:null,root:null,gen:0,busy:false,poll:null,state:null,view:'lobby',draft:null,setup:null,sheet:null,offer:null,match:null,
+  mk:{q:'',pos:'',sort:'v',mine:false,n:30},confirm:null};
+const LG_KEY='goalasso.league.id';
+const LG_TABS=[['home','הליגה'],['squad','הסגל'],['market','רכש'],['trades','עסקאות'],['club','המועדון']];
+const LG_ERR={login_required:'צריך להתחבר לשירות לפני פתיחת ליגה.',invalid_name:'שם הליגה צריך להיות בין תו אחד ל־60.',invalid_team:'שם המועדון צריך להיות בין תו אחד ל־40.',invalid_capacity:'מספר המנהלים צריך להיות בין 2 ל־8.',
+  too_many_leagues:'יש לך כבר עשר ליגות פתוחות. סגור אחת לפני שתפתח חדשה.',invitation_expired:'ההזמנה פגה או אינה תקינה.',league_started:'הליגה כבר יצאה לדרך.',team_taken:'מישהו בליגה כבר לקח את השם הזה.',league_full:'הליגה מלאה.',
+  not_a_member:'אין לחשבון הזה גישה לליגה.',invalid_crest:'הסמל אינו תקין.',invalid_kit:'המדים אינם תקינים.',no_money:'אין מספיק כסף בקופה.',unknown_player:'השחקן אינו ברשימת המחירים של השרת.',player_taken:'מנהל אחר כבר החתים את השחקן הזה.',
+  squad_full:'הסגל מלא: 22 שחקנים לכל היותר.',squad_too_small:'אי אפשר לרדת מתחת ל־14 שחקנים במהלך העונה.',not_yours:'השחקן הזה אינו שלך.',not_his:'השחקן הזה כבר אינו אצל המנהל השני.',no_such_manager:'המנהל הזה אינו בליגה.',empty_offer:'הצעה צריכה לכלול שחקן או כסף.',
+  offer_too_big:'עד שמונה שחקנים מכל צד בהצעה אחת.',no_such_offer:'ההצעה כבר אינה פתוחה.',offer_stale:'אחד השחקנים בהצעה כבר עבר הלאה. ההצעה בוטלה.',host_only:'רק המארח יכול לעשות את זה.',not_enough_managers:'צריך לפחות שני מנהלים כדי להתחיל עונה.',
+  pool_empty:'רשימת המחירים של השחקנים עדיין לא הותקנה בשרת.',no_season:'העונה לא פעילה כרגע.',no_sessions_left:'שלושת האימונים של המחזור הזה כבר נוצלו.',ground_max:'מגרש האימונים כבר ברמה הגבוהה ביותר.',not_your_match:'המשחק הזה אינו שלך.',
+  not_this_round:'המשחק הזה אינו במחזור הנוכחי.',not_in_play:'המשחק הזה אינו פתוח כרגע.',penalty_open:'יש פנדל שעדיין לא הוכרע.',invalid_result:'התוצאה אינה תקינה.',season_running:'העונה עדיין רצה.',invalid_setup:'ההרכב אינו תקין.',pen_mismatch:'הפנדל אינו תואם את המשחק.'};
+/* A league whose SQL has not been installed in the project answers with PostgREST's own English sentence about a
+   missing function, which tells a player nothing. It is the one failure that is not his fault and not a bug in
+   the page, so it says what it is. */
+function lgErr(e){const m=String(e&&e.message||e);if(/schema cache|does not exist|42883|PGRST202/i.test(m))return 'החלק הזה של שירות הליגה עדיין לא הותקן בפרויקט.';return LG_ERR[m]||m}
+const lgApi=async()=>LG.client||(LG.client=await (window.__lgClientFactory?window.__lgClientFactory():mpClient()));
+async function lgRpc(name,args){const c=await lgApi(),r=await c.rpc(name,args);if(r.error)throw r.error;return r.data}
+const lgSaved=()=>{try{return localStorage.getItem(LG_KEY)||''}catch(e){return ''}};
+const lgRemember=id=>{try{id?localStorage.setItem(LG_KEY,id):localStorage.removeItem(LG_KEY)}catch(e){}};
+const lgInvited=()=>{try{return new URL(location.href).searchParams.get('league')||''}catch(e){return ''}};
+const lgLinkFor=inv=>{try{const u=new URL(location.href);u.search='';u.hash='';u.searchParams.set('league',inv);return u.href}catch(e){return '?league='+inv}};
+function lgClearInvite(){try{const u=new URL(location.href);u.searchParams.delete('league');history.replaceState(null,'',u.href)}catch(e){}}
+const lgMoney=n=>{n=+n||0;const s=n<0?'-':'';n=Math.abs(n);return s+'₪'+(n>=1e6?(Math.round(n/1e5)/10)+'M':n>=1e3?Math.round(n/1e3)+'K':String(n))};   /* plain, for a status line */
+const lgCash=n=>`<bdi dir="ltr">${lgMoney(n)}</bdi>`;   /* a sum inside Hebrew keeps its own direction */
+const lgMe=()=>(LG.state&&LG.state.members||[]).find(m=>m.mine)||null;
+const lgMember=id=>(LG.state&&LG.state.members||[]).find(m=>m.id===id)||null;
+const lgV2=()=>!!(LG.state&&LG.state.me);   /* the season functions are installed (the second migration) */
+const lgCrestOf=(m,o)=>crestSVG((m&&m.crest&&m.crest.shape)?m.crest:Object.assign(crestDefault(lgHashN(m&&m.team)),{tier:(m&&m.crest&&m.crest.tier)||'free'}),Object.assign({name:''},o||{}));
+const lgKitOf=(m,o)=>clubKitSVG(Object.assign({},kitDefault(lgHashN(m&&m.team)),m&&m.kit||{}),o||{});
+function lgMsg(s){const el=document.getElementById('lg-status');if(el)el.textContent=s||''}
+function lgBody(html){const el=document.getElementById('lg-body');if(el){el.innerHTML=html}}
 
- const entry=()=>'<button type="button" class="btn lg-entry" data-lg-open>ליגה משותפת · כמה מנהלים</button>';
- const intro=()=>`<section class="card lg-intro"><h3>ליגה משותפת</h3><p>עד שמונה מנהלים, מאגר שחקנים אחד. כל אחד בונה מועדון משלו: שם, סמל, מדים וסגל — ומי שחתם על שחקן, הוא שלו.</p>${entry()}</section>`;
- function boot(){if(invited()||saved())void open()}
+const League={entry:()=>`<button type="button" class="btn lg-entry" data-lg-open>${lgSaved()?'לליגה שלי':'ליגה משותפת · כמה מנהלים'}</button>`,
+ intro:()=>`<section class="card lg-intro"><h3>ליגה משותפת</h3><p>עד שמונה מנהלים, מאגר שחקנים אחד. כל אחד בונה מועדון משלו: שם, סמל, מדים וסגל — ומי שחתם על שחקן, הוא שלו.</p>${League.entry()}</section>`,
+ /* only an invitation opens the league by itself; a manager who already has one finds it behind its button */
+ open:()=>lgOpen(),close:()=>lgClose(),boot(){if(lgInvited())void lgOpen()},get state(){return LG.state}};
 
- function close(){generation++;clearTimeout(poll);poll=null;modal?.remove();modal=null;busy=false;draft=null}
- function message(s){const el=document.getElementById('lg-status');if(el)el.textContent=s||''}
- function paint(html){const el=document.getElementById('lg-body');if(el)el.innerHTML=html}
-
- async function open(){close();const gen=generation;
-  modal=document.createElement('div');modal.className='lg-overlay';
-  modal.innerHTML='<section class="lg-dialog" role="dialog" aria-modal="true" aria-label="ליגה משותפת"><button type="button" class="lg-close" data-lg="close" aria-label="סגור">×</button><h2>ליגה משותפת</h2><div id="lg-body">מתחבר לשירות…</div><p id="lg-status" role="status" aria-live="polite"></p></section>';
-  document.body.appendChild(modal);
+function lgClose(){LG.gen++;clearTimeout(LG.poll);LG.poll=null;try{lgMatchStop()}catch(e){}if(LG.root)LG.root.remove();LG.root=null;LG.busy=false;LG.draft=null;LG.sheet=null;LG.offer=null;LG.confirm=null}
+async function lgOpen(){lgClose();const gen=LG.gen;
+  LG.root=document.createElement('div');LG.root.className='lg-overlay';
+  LG.root.innerHTML='<section class="lg-dialog" role="dialog" aria-modal="true" aria-label="ליגה משותפת"><header class="lg-top"><button type="button" class="lg-close" data-lg="close" aria-label="סגור">×</button><div class="lg-title"><h2 id="lg-name-h">ליגה משותפת</h2><small id="lg-sub"></small></div><div class="lg-cash" id="lg-cash"></div></header><div id="lg-body">מתחבר לשירות…</div><p id="lg-status" role="status" aria-live="polite"></p><nav class="lg-tabs" id="lg-tabs" hidden></nav></section>';
+  document.body.appendChild(LG.root);
   try{
-   if(!mpAvailable()&&!window.__lgClientFactory){paint('<p>שירות הרשת לא מוגדר בבנייה הזו.</p>');return}
-   const c=await api(),s=await c.auth.getSession();if(gen!==generation)return;
+   if(!mpAvailable()&&!window.__lgClientFactory){lgBody('<p>שירות הרשת לא מוגדר בבנייה הזו.</p>');return}
+   const c=await lgApi(),s=await c.auth.getSession();if(gen!==LG.gen)return;
    if(s.error)throw s.error;
-   if(!s.data?.session){if(!c.auth.signInAnonymously){paint('<p>הדפדפן הזה לא הצליח לפתוח חיבור לשירות.</p>');return}
-    message('נכנס…');const r=await c.auth.signInAnonymously();if(gen!==generation)return;
-    if(r.error){paint('<p>לא הצלחנו לפתוח חיבור לשירות. נסה שוב מאוחר יותר.</p>');message(err(r.error));return}message('')}
-   await refresh(gen)}
-  catch(e){message(err(e))}}
+   if(!s.data?.session){if(!c.auth.signInAnonymously){lgBody('<p>הדפדפן הזה לא הצליח לפתוח חיבור לשירות.</p>');return}
+    lgMsg('נכנס…');const r=await c.auth.signInAnonymously();if(gen!==LG.gen)return;
+    if(r.error){lgBody('<p>לא הצלחנו לפתוח חיבור לשירות. נסה שוב מאוחר יותר.</p>');lgMsg(lgErr(r.error));return}lgMsg('')}
+   await lgEnter(gen)}
+  catch(e){lgMsg(lgErr(e))}}
+async function lgEnter(gen){
+  if(lgSaved()){try{await lgLoad();if(gen!==LG.gen)return;LG.view='home';lgPaint();lgSchedule(gen);return}
+   catch(e){if(/not_a_member|invitation_expired/.test(String(e.message||e)))lgRemember('');else lgMsg(lgErr(e))}}
+  LG.state=null;await lgLobby(gen)}
+/* everything the league shows comes from this one call */
+async function lgLoad(){const s=await lgRpc('lg_get',{p_league:lgSaved()});LG.state=s;LG.setup=lgCleanSetup(s.setup);LG.clubCache=null;return s}
+async function lgReload(){const gen=LG.gen;await lgLoad();if(gen===LG.gen)lgPaint()}
+function lgSchedule(gen){clearTimeout(LG.poll);LG.poll=setTimeout(async()=>{if(gen!==LG.gen)return;
+  /* only the screens that show other people's news refresh by themselves; a screen being typed into is left alone */
+  if(['home','trades'].includes(LG.view)&&!LG.busy&&!LG.confirm&&!(LG.offer&&LG.view==='trades')){try{await lgLoad();if(gen!==LG.gen)return;lgPaint()}catch(e){}}
+  lgSchedule(gen)},15000)}
 
- async function refresh(gen){
-  if(saved()){try{state=await rpc('lg_get',{p_league:saved()});if(gen!==generation)return;render();schedule(gen);return}
-   catch(e){if(/not_a_member|invitation_expired/.test(String(e.message||e)))remember('');else{message(err(e))}}}
-  state=null;await lobby(gen)}
- function schedule(gen){clearTimeout(poll);poll=setTimeout(async()=>{if(gen!==generation||view!=='board')return schedule(gen);
-  try{state=await rpc('lg_get',{p_league:saved()});if(gen!==generation)return;render()}catch(e){}schedule(gen)},20000)}
-
- /* ---- lobby ---- */
- async function lobby(gen){view='lobby';const inv=invited();let card='';
-  if(inv){try{const p=await rpc('lg_preview_invitation',{p_invitation:inv});if(gen!==generation)return;
+/* ---- lobby ---- */
+const lgCreateHTML=()=>`<div class="lg-create"><label>שם הליגה<input id="lg-name" maxlength="60" placeholder="ליגת החברים"></label><label>שם המועדון שלך<input id="lg-team2" maxlength="40" placeholder="הפועל הצפון"></label><label>כמה מנהלים<select id="lg-cap">${[2,3,4,5,6,7,8].map(n=>`<option value="${n}"${n===4?' selected':''}>${n}</option>`).join('')}</select></label><button type="button" class="btn" data-lg="create">פתח ליגה וקבל קישור הזמנה</button></div>`;
+async function lgLobby(gen){LG.view='lobby';lgChrome();const inv=lgInvited();let card='';
+  if(inv){try{const p=await lgRpc('lg_preview_invitation',{p_invitation:inv});if(gen!==LG.gen)return;
     card=`<div class="lg-invite"><strong>${esc(p.league)}</strong><span>הזמנה מ${esc(p.team||'המארח')} · <bdi>${p.members}</bdi> מתוך <bdi>${p.capacity}</bdi> מנהלים</span>${p.full?'<em>הליגה כבר מלאה או יצאה לדרך.</em>':''}</div>`;
-    if(!p.full){paint(`${card}<label>שם המועדון שלך<input id="lg-team" maxlength="40" placeholder="הפועל הצפון"></label><button type="button" class="btn" data-lg="join">הצטרף לליגה</button><p class="lg-or">או פתח ליגה משלך</p>${createHTML()}`);return}}
-   catch(e){card=`<div class="lg-invite"><em>${esc(err(e))}</em></div>`}}
-  paint(card+createHTML())}
- const createHTML=()=>`<div class="lg-create"><label>שם הליגה<input id="lg-name" maxlength="60" placeholder="ליגת החברים"></label><label>שם המועדון שלך<input id="lg-team2" maxlength="40" placeholder="הפועל הצפון"></label><label>כמה מנהלים<select id="lg-cap">${[2,3,4,5,6,7,8].map(n=>`<option value="${n}"${n===4?' selected':''}>${n}</option>`).join('')}</select></label><button type="button" class="btn" data-lg="create">פתח ליגה וקבל קישור הזמנה</button></div>`;
+    if(!p.full){lgBody(`${card}<label>שם המועדון שלך<input id="lg-team" maxlength="40" placeholder="הפועל הצפון"></label><button type="button" class="btn" data-lg="join">הצטרף לליגה</button><p class="lg-or">או פתח ליגה משלך</p>${lgCreateHTML()}`);return}}
+   catch(e){card=`<div class="lg-invite"><em>${esc(lgErr(e))}</em></div>`}}
+  lgBody(card+lgCreateHTML())}
 
- /* ---- the board ---- */
- function render(){if(!state)return;view='board';
-  const me=mine(),link=state.invitation?linkFor(state.invitation):'';
-  paint(`<div class="lg-head"><strong>${esc(state.name)}</strong><span><bdi>${state.members.length}</bdi> מתוך <bdi>${state.capacity}</bdi> מנהלים · ${state.phase==='build'?'בונים סגלים':'עונה '+state.season}</span></div>
-  ${link?`<div class="lg-share"><label>קישור הזמנה<input id="lg-link" readonly dir="ltr" value="${esc(link)}"></label><button type="button" class="btn sec" data-lg="copy">העתק</button></div>`:''}
-  <ul class="lg-members">${state.members.map(m=>`<li class="${m.mine?'is-me':''}">
-    <span class="lg-crest">${crestSVG(m.crest||crestDefault(hash(m.team)),{name:'',label:'סמל '+m.team})}</span>
-    <span class="lg-kit">${clubKitSVG(m.kit||kitDefault(hash(m.team)))}</span>
+/* ---- the frame: title, the purse, the tabs ---- */
+function lgChrome(){const s=LG.state,me=lgMe(),tabs=document.getElementById('lg-tabs'),sub=document.getElementById('lg-sub'),cashEl=document.getElementById('lg-cash'),h=document.getElementById('lg-name-h');if(!tabs)return;
+  const inApp=lgV2()&&LG_TABS.some(t=>t[0]===LG.view);
+  h.textContent=s?s.name:'ליגה משותפת';
+  sub.innerHTML=s?(s.phase==='build'?`בונים סגלים · <bdi>${s.members.length}</bdi> מתוך <bdi>${s.capacity}</bdi> מנהלים`:s.phase==='done'?`עונה <bdi>${s.season}</bdi> הסתיימה`:`עונה <bdi>${s.season}</bdi> · מחזור <bdi>${s.round}</bdi> מתוך <bdi>${lgRounds()}</bdi>`):'';
+  cashEl.innerHTML=me?lgCash(me.money):'';
+  tabs.hidden=!inApp;LG.root.classList.toggle('lg-inmatch',LG.view==='match');
+  const inbox=s&&s.offers?s.offers.filter(o=>o.to===s.me).length:0;
+  tabs.innerHTML=inApp?LG_TABS.map(([k,l])=>`<button type="button" class="lg-tab${LG.view===k?' on':''}" data-lg="tab" data-v="${k}"${LG.view===k?' aria-current="page"':''}>${l}${k==='trades'&&inbox?`<i class="lg-dot" aria-label="${inbox} הצעות ממתינות">${inbox}</i>`:''}</button>`).join(''):''}
+const lgRounds=()=>{const f=LG.state&&LG.state.fixtures||[];return f.length?Math.max(...f.map(x=>x.round)):0};
+function lgPaint(){if(!LG.root||!LG.state)return;lgChrome();const v=LG.view;const body=document.getElementById('lg-body');const y=body?body.scrollTop:0;
+  if(v==='home')lgBody(lgHomeHTML());else if(v==='identity')lgIdentityPaint();else if(v==='club')lgBody(lgClubHTML());
+  else if(v==='squad')lgBody(lgSquadHTML());else if(v==='market')lgBody(lgMarketHTML());else if(v==='trades')lgBody(lgTradesHTML());
+  else if(v==='match')lgMatchPaint();
+  if(body&&LG.keepScroll){body.scrollTop=y}LG.keepScroll=false;try{lgFacesWatch()}catch(e){}}
+
+/* ---- the board ---- */
+function lgMembersHTML(){const s=LG.state;return `<ul class="lg-members">${s.members.map(m=>`<li class="${m.mine?'is-me':''}">
+    <span class="lg-crest">${lgCrestOf(m,{label:'סמל '+m.team})}</span><span class="lg-kit">${lgKitOf(m)}</span>
     <span class="lg-who"><strong>${esc(m.team)}</strong><small>${m.host?'מארח · ':''}<bdi>${m.squad}</bdi> שחקנים</small></span>
-    <span class="lg-money">${cash(m.money)}</span></li>`).join('')}</ul>
-  <div class="lg-actions"><button type="button" class="btn" data-lg="identity">המועדון שלי · שם, סמל ומדים</button></div>
-  ${nextStepHTML()}
-  <button type="button" class="lg-leave" data-lg="leave">צא מהליגה בטלפון הזה</button>`)}
- /* A board with nothing to press reads as broken. It says what the league is waiting for, and says plainly that
-    the squads and the fixtures are not built yet rather than letting a manager hunt for a button that is not
-    there. Each line is removed as the thing it describes arrives. */
- function nextStepHTML(){const need=state.capacity-state.members.length,me=mine(),named=me&&me.crest;
-  const steps=[[!named,'בחר שם, סמל ומדים למועדון'],
-   [need>0,`ממתינים לעוד <bdi>${need}</bdi> ${need===1?'מנהל':'מנהלים'} · שלח להם את קישור ההזמנה`],
-   [need<=0&&named,'כולם כאן והמועדון שלך מוכן']];
-  return `<div class="lg-next"><h4>מה עכשיו</h4><ul>${steps.filter(x=>x[0]).map(x=>`<li>${x[1]}</li>`).join('')}</ul>
-   <p>רכש מהמאגר המשותף והמחזור עצמו עדיין בבנייה. הקופה והמאגר מנוהלים בשרת, ושחקן שנחתם שייך למנהל אחד בלבד בליגה.</p></div>`}
- const hash=s=>{let h=2166136261;for(const ch of String(s||''))h=Math.imul(h^ch.charCodeAt(0),16777619)>>>0;return h>>>0};
+    <span class="lg-money">${lgCash(m.money)}</span></li>`).join('')}</ul>`}
+function lgShareHTML(){const s=LG.state;return s.invitation?`<div class="lg-share"><label>קישור הזמנה<input id="lg-link" readonly dir="ltr" value="${esc(lgLinkFor(s.invitation))}"></label><button type="button" class="btn sec" data-lg="copy">העתק</button></div>`:''}
+/* what the league is waiting for, so a board is never a dead end */
+function lgNextHTML(){const s=LG.state,me=lgMe(),need=s.capacity-s.members.length,named=!!(me&&me.crest&&me.crest.shape),short=me?Math.max(0,14-me.squad):0;
+  const steps=[];
+  if(!lgV2())steps.push('המשך העונה — רכש, מחזורים וטבלה — מחכה להתקנה בשרת. עד אז אפשר להזמין מנהלים ולעצב את המועדון.');
+  else if(!s.pool)steps.push('רשימת המחירים של השחקנים עדיין לא הותקנה בשרת, ולכן אי אפשר לקנות שחקנים.');
+  if(!named)steps.push('עצב את המועדון: שם, סמל ומדים — בלשונית "המועדון"');
+  if(lgV2()&&s.pool&&short)steps.push(`חסרים לך <bdi>${short}</bdi> שחקנים לסגל של 14 — בלשונית "רכש", או בלחיצה אחת על "בנה לי סגל"`);
+  if(need>0)steps.push(`יש מקום לעוד <bdi>${need}</bdi> ${need===1?'מנהל':'מנהלים'} · שלח להם את קישור ההזמנה`);
+  if(lgV2()&&s.members.length>=2)steps.push(s.host?'כשכולם מוכנים — התחל את העונה. מי שלא סיים לקנות יקבל סגל חוקי אוטומטית.':'המארח מתחיל את העונה כשכולם מוכנים.');
+  return `<div class="lg-next"><h4>מה עכשיו</h4><ul>${steps.map(x=>`<li>${x}</li>`).join('')}</ul></div>`}
+function lgTableHTML(){const s=LG.state;if(!s.table||!s.table.length)return '';
+  return `<div class="lg-card"><h3>הטבלה</h3><table class="lg-table"><thead><tr><th></th><th class="t-team">קבוצה</th><th>מש'</th><th>נ'</th><th>ת'</th><th>ה'</th><th>שערים</th><th>נק'</th></tr></thead><tbody>${s.table.map(r=>{const m=lgMember(r.id)||{team:'?'};
+    return `<tr class="${m.mine?'is-me':''}"><td><bdi>${r.pos}</bdi></td><td class="t-team"><span><span class="t-crest">${lgCrestOf(m)}</span><b>${esc(m.team)}</b></span></td><td><bdi>${r.p}</bdi></td><td><bdi>${r.w}</bdi></td><td><bdi>${r.d}</bdi></td><td><bdi>${r.l}</bdi></td><td><bdi dir="ltr">${r.gf}:${r.ga}</bdi></td><td><b><bdi>${r.pts}</bdi></b></td></tr>`}).join('')}</tbody></table></div>`}
+function lgFixtureRowHTML(f){const s=LG.state,h=lgMember(f.home)||{team:'?'},a=lgMember(f.away)||{team:'?'},mine=f.home===s.me||f.away===s.me;
+  const mid=f.played?scoreSides(f.hg,f.ag,{label:`${h.team} ${f.hg}, ${a.team} ${f.ag}`}):`<span class="lg-vs">${f.answers&&f.answers.length?'ממתין לאישור':'טרם שוחק'}</span>`;
+  return `<li class="lg-fx${mine?' is-me':''}${f.played?' done':''}"><span class="fx-t fx-h"><b>${esc(h.team)}</b><span class="t-crest">${lgCrestOf(h)}</span></span><span class="fx-mid">${mid}</span><span class="fx-t fx-a"><span class="t-crest">${lgCrestOf(a)}</span><b>${esc(a.team)}</b></span>${f.played&&mine?`<button type="button" class="lg-mini" data-lg="play" data-v="${f.id}">צפה שוב</button>`:''}</li>`}
+function lgRoundHTML(){const s=LG.state,fx=s.fixtures.filter(f=>f.round===s.round),mine=fx.find(f=>f.home===s.me||f.away===s.me);let hero;
+  if(!mine)hero=`<div class="lg-hero free"><small>מחזור <bdi>${s.round}</bdi></small><h3>ערב חופשי</h3><p>אין לך משחק במחזור הזה. זה ערב טוב לאימונים ולרכש.</p></div>`;
+  else{const home=mine.home===s.me,opp=lgMember(home?mine.away:mine.home)||{team:'?'},me=lgMe(),did=(mine.answers||[]).includes(s.me),he=(mine.answers||[]).some(x=>x!==s.me);
+    hero=`<div class="lg-hero"><small>מחזור <bdi>${s.round}</bdi> · ${home?'משחק בית':'משחק חוץ'}</small>
+     <div class="lg-duel"><div><span class="d-crest">${lgCrestOf(me)}</span><b>${esc(me.team)}</b></div><i>נגד</i><div><span class="d-crest">${lgCrestOf(opp)}</span><b>${esc(opp.team)}</b></div></div>
+     ${did?`<p>שיחקת את המשחק. הוא ייכנס לטבלה כש${esc(opp.team)} תשחק אותו אצלה, או כשהמארח יסגור את המחזור.</p><button type="button" class="btn sec" data-lg="play" data-v="${mine.id}">צפה שוב</button>`
+        :`<p>${he?`${esc(opp.team)} כבר שיחקה. המשחק שלך יציג את אותו משחק בדיוק ויאשר את התוצאה.`:'ההרכב שבלשונית "הסגל" הוא שיעלה. אם היריב מחובר, פנדלים הם דו־קרב ביניכם.'}</p><button type="button" class="btn big" data-lg="play" data-v="${mine.id}">לשריקת הפתיחה</button>`}</div>`}
+  const open=fx.filter(f=>!f.played).length;
+  return `${hero}<div class="lg-card"><h3>משחקי המחזור</h3><ul class="lg-fxs">${fx.map(lgFixtureRowHTML).join('')}</ul>
+   ${s.host&&open?`<button type="button" class="btn sec lg-wide" data-lg="close-round">${LG.confirm==='close-round'?'לחץ שוב לאישור: סגור את המחזור':'סגור את המחזור'}</button><p class="lg-note">סגירה קובעת את מה שנשאר פתוח: משחק שרק מנהל אחד שיחק נשאר כפי ששוחק, ומשחק שאף אחד לא שיחק נרשם <bdi dir="ltr">0:0</bdi>.</p>`:''}</div>`}
+function lgAllFixturesHTML(){const s=LG.state,n=lgRounds();if(!n)return '';let out='';
+  for(let r=1;r<=n;r++){if(r===s.round&&s.phase==='season')continue;const fx=s.fixtures.filter(f=>f.round===r);if(!fx.length)continue;out+=`<h4>מחזור <bdi>${r}</bdi></h4><ul class="lg-fxs">${fx.map(lgFixtureRowHTML).join('')}</ul>`}
+  return out?`<details class="lg-card lg-all"><summary>כל המחזורים</summary>${out}</details>`:''}
+const LG_PRIZES=[20e6,16e6,12e6,8e6,4e6];
+function lgDoneHTML(){const s=LG.state,t=s.table||[],champ=lgMember(t[0]&&t[0].id)||{team:'?'};
+  return `<div class="lg-champ"><span class="c-crest">${lgCrestOf(champ,{name:champ.team})}</span><small>אלופת עונה <bdi>${s.season}</bdi></small><h3>${esc(champ.team)}</h3>${champ.mine?'<p>האליפות שלך.</p>':''}</div>
+   <div class="lg-card"><h3>כספי הפרסים</h3><ul class="lg-prizes">${t.map((r,i)=>{const m=lgMember(r.id)||{team:'?'};return `<li class="${m.mine?'is-me':''}"><span><bdi>${r.pos}</bdi>. ${esc(m.team)}</span><b>${LG_PRIZES[i]?lgCash(LG_PRIZES[i]):'—'}</b></li>`}).join('')}</ul><p class="lg-note">הפרסים כבר בקופות, ונכנסים איתכם לעונה הבאה יחד עם הסגלים ומה שהשחקנים למדו באימונים.</p></div>
+   ${s.host?`<button type="button" class="btn big lg-wide" data-lg="next-season">פתח עונה חדשה</button>`:'<p class="lg-note">המארח פותח את העונה הבאה.</p>'}`}
+function lgHomeHTML(){const s=LG.state;
+  if(s.phase==='season'&&lgV2())return lgRoundHTML()+lgTableHTML()+lgAllFixturesHTML();
+  if(s.phase==='done'&&lgV2())return lgDoneHTML()+lgTableHTML()+lgAllFixturesHTML();
+  const can=lgV2()&&s.host&&s.members.length>=2&&s.pool>0;
+  return `${lgShareHTML()}${lgMembersHTML()}${lgNextHTML()}
+   ${lgV2()&&s.host?`<button type="button" class="btn big lg-wide" data-lg="start" ${can?'':'disabled'}>${LG.confirm==='start'?'לחץ שוב לאישור: התחל את העונה':'התחל את העונה'}</button>`:''}
+   ${!lgV2()?'<div class="lg-actions"><button type="button" class="btn" data-lg="identity">המועדון שלי · שם, סמל ומדים</button></div><button type="button" class="lg-leave" data-lg="leave">צא מהליגה בטלפון הזה</button>':''}`}
 
- /* ---- identity ---- */
- function identity(){const me=mine();if(!me)return;view='identity';
-  draft=draft||{team:me.team,crest:Object.assign({},me.crest||crestDefault(hash(me.team))),kit:Object.assign({},me.kit||kitDefault(hash(me.team)))};
-  const charge=Math.max(0,crestTierCost(draft.crest.tier)-crestTierCost((me.crest||{}).tier||'free'))
-              +Math.max(0,kitTierCost(draft.kit.tier)-kitTierCost((me.kit||{}).tier||'plain'));
-  const opts=crestOptions(hash(draft.team)+ (draft.roll||0)*7,6);
-  paint(`<div class="lg-id">
-   <div class="lg-preview">${crestSVG(draft.crest,{name:draft.team,label:'תצוגה מקדימה של הסמל'})}${clubKitSVG(draft.kit,{no:9})}</div>
-   <label>שם המועדון<input id="lg-team3" maxlength="40" value="${esc(draft.team)}" data-lg-input="team"></label>
+/* ---- the club: identity, the account, the way out ---- */
+const LG_REASON={start:'תקציב פתיחה',buy:'רכישה',sell:'מכירה',trade:'עסקה',result:'תוצאת משחק',prize:'פרס עונה',kit:'מדים',crest:'סמל',training:'מגרש אימונים'};
+function lgClubHTML(){const s=LG.state,me=lgMe();
+  return `<div class="lg-clubhead"><span class="c-crest">${lgCrestOf(me,{name:me.team,label:'הסמל של '+me.team})}</span><span class="c-kit">${lgKitOf(me,{no:9})}</span><div><h3>${esc(me.team)}</h3><p>${lgCash(me.money)} בקופה · <bdi>${me.squad}</bdi> שחקנים</p></div></div>
+   <div class="lg-actions"><button type="button" class="btn" data-lg="identity">שם, סמל ומדים</button></div>
+   ${lgShareHTML()}
+   <div class="lg-card"><h3>החשבון</h3>${(s.ledger||[]).length?`<ul class="lg-ledger">${s.ledger.map(g=>`<li><span>${LG_REASON[g.reason]||esc(g.reason)}${g.note&&lgEntry(g.note)?' · '+esc(lgEntry(g.note).he):''}</span><b class="${g.amount<0?'neg':'pos'}">${lgCash(g.amount)}</b></li>`).join('')}</ul>`:'<p class="lg-note">כל תנועה בקופה נרשמת כאן.</p>'}</div>
+   <div class="lg-card"><h3>חברי הליגה</h3>${lgMembersHTML()}</div>
+   <button type="button" class="lg-leave" data-lg="leave">צא מהליגה בטלפון הזה</button>`}
+
+/* ---- identity ---- */
+const CREST_SHAPE_HE={shield:'מגן',kite:'חוד',block:'מלבן',disc:'עיגול'};
+const CREST_DIV_HE={solid:'אחיד',half:'חצוי',pale:'פס אמצעי',quarter:'רבעים',bend:'אלכסון',chevron:'שברון',stripes:'פסים'};
+const CREST_EMBLEM_HE={ball:'כדור',star:'כוכב',crown:'כתר',anchor:'עוגן',bolt:'ברק',flame:'להבה',tower:'מגדל',bridge:'גשר',wave:'גל',lion:'אריה'};
+const KIT_PATTERN_HE={stripes:'פסים',hoops:'טבעות',sash:'אלכסון',halves:'חצוי',sleeves:'שרוולים'};
+function lgIdentityPaint(){const me=lgMe();if(!me)return;const hash=lgHashN;
+  const d=LG.draft=LG.draft||{team:me.team,crest:Object.assign({},crestDefault(hash(me.team)),me.crest||{}),kit:Object.assign({},kitDefault(hash(me.team)),me.kit||{})};
+  const charge=Math.max(0,crestTierCost(d.crest.tier)-crestTierCost((me.crest||{}).tier||'free'))+Math.max(0,kitTierCost(d.kit.tier)-kitTierCost((me.kit||{}).tier||'plain'));
+  const opts=crestOptions(hash(d.team)+(d.roll||0)*7,6);
+  lgBody(`<div class="lg-id">
+   <div class="lg-preview">${crestSVG(d.crest,{name:d.team,label:'תצוגה מקדימה של הסמל'})}${clubKitSVG(d.kit,{no:9})}</div>
+   <label>שם המועדון<input id="lg-team3" maxlength="40" value="${esc(d.team)}" data-lg-input="team"></label>
    <fieldset><legend>הסמל</legend>
-    <div class="lg-tiers">${[['free','מוכן',0],['custom','לפי בחירה',1e6],['premium','מוזהב',2e6]].map(([t,l,c])=>`<button type="button" class="lg-tier${draft.crest.tier===t?' on':''}" data-lg="ctier" data-v="${t}">${l}${c?`<small>${cash(c)}</small>`:'<small>חינם</small>'}</button>`).join('')}</div>
-    ${draft.crest.tier==='free'
+    <div class="lg-tiers">${[['free','מוכן',0],['custom','לפי בחירה',1e6],['premium','מוזהב',2e6]].map(([t,l,c])=>`<button type="button" class="lg-tier${d.crest.tier===t?' on':''}" data-lg="ctier" data-v="${t}">${l}<small>${c?lgCash(c):'חינם'}</small></button>`).join('')}</div>
+    ${d.crest.tier==='free'
       ?`<div class="lg-opts">${opts.map((o,i)=>`<button type="button" class="lg-opt" data-lg="cpick" data-v="${i}">${crestSVG(Object.assign({},o,{tier:'free'}),{name:'',label:'אפשרות '+(i+1)})}</button>`).join('')}</div><button type="button" class="btn sec" data-lg="croll">הצע סמלים אחרים</button>`
       :`<div class="lg-parts">
-        <div class="lg-part"><span>צורה</span>${CREST_SHAPES.map(v=>`<button type="button" class="lg-chip${draft.crest.shape===v?' on':''}" data-lg="cset" data-k="shape" data-v="${v}">${CREST_SHAPE_HE[v]}</button>`).join('')}</div>
-        <div class="lg-part"><span>חלוקה</span>${CREST_DIVS.map(v=>`<button type="button" class="lg-chip${draft.crest.div===v?' on':''}" data-lg="cset" data-k="div" data-v="${v}">${CREST_DIV_HE[v]}</button>`).join('')}</div>
-        <div class="lg-part"><span>סמל</span>${CREST_EMBLEMS.map(v=>`<button type="button" class="lg-chip ic${draft.crest.emblem===v?' on':''}" data-lg="cset" data-k="emblem" data-v="${v}" aria-label="${CREST_EMBLEM_HE[v]}"><svg viewBox="-22 -22 44 44" aria-hidden="true"><g fill="currentColor" stroke="currentColor">${crestEmblem(v)}</g></svg></button>`).join('')}</div>
-        <div class="lg-part"><span>צבעים</span>${CREST_PALETTES.map((p,i)=>`<button type="button" class="lg-chip sw${draft.crest.c1===p[0]&&draft.crest.c2===p[1]?' on':''}" data-lg="cpal" data-v="${i}" aria-label="ערכת צבעים ${i+1}"><i style="background:${p[0]}"></i><i style="background:${p[1]}"></i></button>`).join('')}</div>
+        <div class="lg-part"><span>צורה</span>${CREST_SHAPES.map(v=>`<button type="button" class="lg-chip${d.crest.shape===v?' on':''}" data-lg="cset" data-k="shape" data-v="${v}">${CREST_SHAPE_HE[v]}</button>`).join('')}</div>
+        <div class="lg-part"><span>חלוקה</span>${CREST_DIVS.map(v=>`<button type="button" class="lg-chip${d.crest.div===v?' on':''}" data-lg="cset" data-k="div" data-v="${v}">${CREST_DIV_HE[v]}</button>`).join('')}</div>
+        <div class="lg-part"><span>סמל</span>${CREST_EMBLEMS.map(v=>`<button type="button" class="lg-chip ic${d.crest.emblem===v?' on':''}" data-lg="cset" data-k="emblem" data-v="${v}" aria-label="${CREST_EMBLEM_HE[v]}"><svg viewBox="-22 -22 44 44" aria-hidden="true"><g fill="currentColor" stroke="currentColor">${crestEmblem(v)}</g></svg></button>`).join('')}</div>
+        <div class="lg-part"><span>צבעים</span>${CREST_PALETTES.map((p,i)=>`<button type="button" class="lg-chip sw${d.crest.c1===p[0]&&d.crest.c2===p[1]?' on':''}" data-lg="cpal" data-v="${i}" aria-label="ערכת צבעים ${i+1}"><i style="background:${p[0]}"></i><i style="background:${p[1]}"></i></button>`).join('')}</div>
        </div>`}
    </fieldset>
    <fieldset><legend>המדים</legend>
-    <div class="lg-tiers">${[['plain','חלק',0],['pattern','עם דוגמה',5e5],['premium','מוזהב',2e6]].map(([t,l,c])=>`<button type="button" class="lg-tier${draft.kit.tier===t?' on':''}" data-lg="ktier" data-v="${t}">${l}<small>${c?cash(c):'חינם'}</small></button>`).join('')}</div>
-    ${draft.kit.tier==='plain'?'':`<div class="lg-part">${KIT_PATTERNS.filter(p=>p!=='solid').map(v=>`<button type="button" class="lg-chip${draft.kit.pattern===v?' on':''}" data-lg="kset" data-k="pattern" data-v="${v}">${KIT_PATTERN_HE[v]}</button>`).join('')}</div>`}
-    <div class="lg-part"><span>צבעים</span>${CREST_PALETTES.map((p,i)=>`<button type="button" class="lg-chip sw${draft.kit.c1===p[0]&&draft.kit.c2===p[1]?' on':''}" data-lg="kpal" data-v="${i}" aria-label="ערכת צבעים ${i+1}"><i style="background:${p[0]}"></i><i style="background:${p[1]}"></i></button>`).join('')}</div>
+    <div class="lg-tiers">${[['plain','חלק',0],['pattern','עם דוגמה',5e5],['premium','מוזהב',2e6]].map(([t,l,c])=>`<button type="button" class="lg-tier${d.kit.tier===t?' on':''}" data-lg="ktier" data-v="${t}">${l}<small>${c?lgCash(c):'חינם'}</small></button>`).join('')}</div>
+    ${d.kit.tier==='plain'?'':`<div class="lg-part">${KIT_PATTERNS.filter(p=>p!=='solid').map(v=>`<button type="button" class="lg-chip${d.kit.pattern===v?' on':''}" data-lg="kset" data-k="pattern" data-v="${v}">${KIT_PATTERN_HE[v]}</button>`).join('')}</div>`}
+    <div class="lg-part"><span>צבעים</span>${CREST_PALETTES.map((p,i)=>`<button type="button" class="lg-chip sw${d.kit.c1===p[0]&&d.kit.c2===p[1]?' on':''}" data-lg="kpal" data-v="${i}" aria-label="ערכת צבעים ${i+1}"><i style="background:${p[0]}"></i><i style="background:${p[1]}"></i></button>`).join('')}</div>
    </fieldset>
-   <p class="lg-charge">${charge?`השינוי יחויב ב־${cash(charge)} מתוך ${cash(me.money)}. דרגה נקנית פעם אחת ואינה מוחזרת.`:'ללא עלות.'}</p>
+   <p class="lg-charge">${charge?`השינוי יחויב ב־${lgCash(charge)} מתוך ${lgCash(me.money)}. דרגה נקנית פעם אחת ואינה מוחזרת.`:'ללא עלות.'}</p>
    <div class="lg-actions"><button type="button" class="btn" data-lg="save">שמור</button><button type="button" class="btn sec" data-lg="back">חזרה</button></div>
   </div>`)}
- const CREST_SHAPE_HE={shield:'מגן',kite:'חוד',block:'מלבן',disc:'עיגול'};
- const CREST_DIV_HE={solid:'אחיד',half:'חצוי',pale:'פס אמצעי',quarter:'רבעים',bend:'אלכסון',chevron:'שברון',stripes:'פסים'};
- const CREST_EMBLEM_HE={ball:'כדור',star:'כוכב',crown:'כתר',anchor:'עוגן',bolt:'ברק',flame:'להבה',tower:'מגדל',bridge:'גשר',wave:'גל',lion:'אריה'};
- const KIT_PATTERN_HE={stripes:'פסים',hoops:'טבעות',sash:'אלכסון',halves:'חצוי',sleeves:'שרוולים'};
 
- /* ---- one listener for the whole screen ---- */
- document.addEventListener('click',async e=>{
-  if(e.target.closest('[data-lg-open]')){void open();return}
-  const btn=e.target.closest('[data-lg]');if(!btn||!modal)return;
-  const a=btn.dataset.lg,v=btn.dataset.v,k=btn.dataset.k,gen=generation;
-  if(a==='close'){close();return}
-  if(a==='back'){draft=null;render();return}
-  if(a==='identity'){identity();return}
-  if(a==='copy'){const i=document.getElementById('lg-link');try{await navigator.clipboard.writeText(i.value);message('הקישור הועתק. שלח אותו לחברים.')}catch(x){i.select();message('סמן והעתק את הקישור.')}return}
-  if(a==='croll'){draft.roll=(draft.roll||0)+1;identity();return}
-  if(a==='cpick'){Object.assign(draft.crest,crestOptions(hash(draft.team)+(draft.roll||0)*7,6)[+v],{tier:'free'});identity();return}
-  if(a==='cset'){draft.crest[k]=v;identity();return}
-  if(a==='kset'){draft.kit[k]=v;identity();return}
-  if(a==='cpal'){const p=CREST_PALETTES[+v];draft.crest.c1=p[0];draft.crest.c2=p[1];draft.crest.ink=p[2];identity();return}
-  if(a==='kpal'){const p=CREST_PALETTES[+v];draft.kit.c1=p[0];draft.kit.c2=p[1];identity();return}
-  if(a==='ctier'){draft.crest.tier=v;identity();return}
-  if(a==='ktier'){draft.kit.tier=v;if(v!=='plain'&&draft.kit.pattern==='solid')draft.kit.pattern='stripes';identity();return}
-  if(a==='leave'){remember('');state=null;draft=null;await lobby(gen);message('יצאת מהליגה בטלפון הזה. הקישור עדיין פותח אותה.');return}
-  if(busy)return;busy=true;btn.disabled=true;
+/* ---- one listener for the whole league ----
+   Quick actions repaint and return; anything that talks to the server goes through the busy gate at the bottom. */
+const LG_ACT={};   /* filled by the other league files: name → async (btn, gen) */
+document.addEventListener('click',async e=>{
+  if(e.target.closest('[data-lg-open]')){void lgOpen();return}
+  const btn=e.target.closest('[data-lg]');if(!btn||!LG.root||!LG.root.contains(btn))return;
+  const a=btn.dataset.lg,v=btn.dataset.v,k=btn.dataset.k,gen=LG.gen,d=LG.draft;
+  if(a==='close'){lgClose();return}
+  if(a==='tab'){LG.view=v;LG.sheet=null;LG.confirm=null;lgMsg('');lgPaint();const b=document.getElementById('lg-body');if(b)b.scrollTop=0;return}
+  if(a==='back'){LG.draft=null;LG.view=lgV2()?'club':'home';lgPaint();return}
+  if(a==='identity'){LG.view='identity';lgPaint();return}
+  if(a==='copy'){const i=document.getElementById('lg-link');try{await navigator.clipboard.writeText(i.value);lgMsg('הקישור הועתק. שלח אותו לחברים.')}catch(x){i.select();lgMsg('סמן והעתק את הקישור.')}return}
+  if(a==='croll'){d.roll=(d.roll||0)+1;lgPaint();return}
+  if(a==='cpick'){Object.assign(d.crest,crestOptions(lgHashN(d.team)+(d.roll||0)*7,6)[+v],{tier:'free'});lgPaint();return}
+  if(a==='cset'){d.crest[k]=v;lgPaint();return}
+  if(a==='kset'){d.kit[k]=v;lgPaint();return}
+  if(a==='cpal'){const p=CREST_PALETTES[+v];d.crest.c1=p[0];d.crest.c2=p[1];d.crest.ink=p[2];lgPaint();return}
+  if(a==='kpal'){const p=CREST_PALETTES[+v];d.kit.c1=p[0];d.kit.c2=p[1];lgPaint();return}
+  if(a==='ctier'){d.crest.tier=v;lgPaint();return}
+  if(a==='ktier'){d.kit.tier=v;if(v!=='plain'&&(!d.kit.pattern||d.kit.pattern==='solid'))d.kit.pattern='stripes';lgPaint();return}
+  if(a==='leave'){lgRemember('');LG.state=null;LG.draft=null;await lgLobby(gen);lgMsg('יצאת מהליגה בטלפון הזה. קישור ההזמנה עדיין פותח אותה.');return}
+  /* the two buttons that cannot be taken back ask once more, in place */
+  if((a==='start'||a==='close-round')&&LG.confirm!==a){LG.confirm=a;lgPaint();return}
+  if(LG_ACT[a]&&LG_ACT[a].quick){LG_ACT[a](btn,gen);return}
+  if(LG.busy)return;LG.busy=true;btn.disabled=true;
   try{
    if(a==='create'){const name=document.getElementById('lg-name').value.trim(),team=document.getElementById('lg-team2').value.trim(),cap=+document.getElementById('lg-cap').value;
-    const r=await rpc('lg_create',{p_name:name,p_team:team,p_capacity:cap});if(gen!==generation)return;
-    remember(r.id);clearInvite();await refresh(gen);message('הליגה נפתחה. שלח את קישור ההזמנה.')}
+    const r=await lgRpc('lg_create',{p_name:name,p_team:team,p_capacity:cap});if(gen!==LG.gen)return;
+    lgRemember(r.id);lgClearInvite();await lgEnter(gen);lgMsg('הליגה נפתחה. שלח את קישור ההזמנה.')}
    else if(a==='join'){const team=document.getElementById('lg-team').value.trim();
-    const r=await rpc('lg_join',{p_invitation:invited(),p_team:team});if(gen!==generation)return;
-    remember(r.id);clearInvite();await refresh(gen);message('הצטרפת לליגה.')}
+    const r=await lgRpc('lg_join',{p_invitation:lgInvited(),p_team:team});if(gen!==LG.gen)return;
+    lgRemember(r.id);lgClearInvite();await lgEnter(gen);lgMsg('הצטרפת לליגה.')}
    else if(a==='save'){const team=(document.getElementById('lg-team3').value||'').trim();
-    const r=await rpc('lg_set_identity',{p_league:saved(),p_team:team,p_crest:draft.crest,p_kit:draft.kit});if(gen!==generation)return;
-    draft=null;state=await rpc('lg_get',{p_league:saved()});render();
-    message(r.charged?`נשמר. חויבת ב־${money(r.charged)}.`:'נשמר.')}}
-  catch(x){message(err(x))}
-  finally{busy=false;if(btn.isConnected)btn.disabled=false}});
- document.addEventListener('input',e=>{const el=e.target.closest('[data-lg-input="team"]');if(!el||!draft)return;draft.team=el.value;
-  const p=document.querySelector('.lg-preview');if(p)p.innerHTML=crestSVG(draft.crest,{name:draft.team})+clubKitSVG(draft.kit,{no:9})});
+    const r=await lgRpc('lg_set_identity',{p_league:lgSaved(),p_team:team,p_crest:d.crest,p_kit:d.kit});if(gen!==LG.gen)return;
+    LG.draft=null;LG.view=lgV2()?'club':'home';await lgReload();lgMsg(r.charged?`נשמר. חויבת ב־${lgMoney(r.charged)}.`:'נשמר.')}
+   else if(a==='start'){LG.confirm=null;await lgRpc('lg_start',{p_league:lgSaved()});if(gen!==LG.gen)return;await lgReload();lgMsg('העונה התחילה. בהצלחה.')}
+   else if(a==='close-round'){LG.confirm=null;await lgRpc('lg_round_close',{p_league:lgSaved()});if(gen!==LG.gen)return;await lgReload();lgMsg('המחזור נסגר.')}
+   else if(a==='next-season'){await lgRpc('lg_next_season',{p_league:lgSaved()});if(gen!==LG.gen)return;await lgReload();lgMsg('עונה חדשה יצאה לדרך.')}
+   else if(LG_ACT[a])await LG_ACT[a](btn,gen)}
+  catch(x){if(gen===LG.gen){LG.confirm=null;lgMsg(lgErr(x))}}
+  finally{if(gen===LG.gen){LG.busy=false;if(btn.isConnected)btn.disabled=false}}});
+document.addEventListener('input',e=>{if(!LG.root)return;const el=e.target.closest('[data-lg-input]');if(!el)return;const k=el.dataset.lgInput;
+  if(k==='team'&&LG.draft){LG.draft.team=el.value;const p=LG.root.querySelector('.lg-preview');if(p)p.innerHTML=crestSVG(LG.draft.crest,{name:LG.draft.team})+clubKitSVG(LG.draft.kit,{no:9});return}
+  if(LG_ACT['input:'+k])LG_ACT['input:'+k](el)});
+document.addEventListener('keydown',e=>{if(!LG.root)return;
+  /* a row that opens a card is a button to the keyboard as well */
+  if((e.key==='Enter'||e.key===' ')&&e.target&&e.target.matches&&e.target.matches('[data-lg][role="button"]')){e.preventDefault();e.target.click();return}
+  if(e.key==='Escape'&&!(typeof PG!=='undefined'&&PG)){if(LG.sheet){LG.sheet=null;lgPaint()}else if(LG.view!=='match')lgClose()}});
+/* ===================== SHARED LEAGUE — the catalogue and the match =====================
+   Two phones have to play the same match. The engine (07-engine.js) is arithmetic over two squads and a stream
+   of random numbers, so the whole of this file is about making those three things identical on both phones:
 
- return {entry,intro,open,close,boot,get state(){return state}}
+   the squads    are not sent by either manager. The server locks them (lg_fixture_lock) as a list of player
+                 keys, and each phone builds the same players from the data it was built with: rating from the
+                 price, age and potential from the key, attributes from an id that is a hash of the key.
+   the numbers   come from a generator seeded by the server, installed as Math.random only while the engine runs
+                 and taken away again, so nothing the screen draws in the meantime can shift the stream.
+   the state     is a throw-away G that owes nothing to the career on this phone (or to there being one).
+
+   A penalty stops the engine. The two managers choose through the server (lg_pen), the choices come back
+   together, and the match is simply run again from the first minute with one more answered penalty in the log —
+   it takes a few milliseconds, and a match that is always replayed from its log can be reopened on any phone at
+   any time and come out the same.
+
+   LG_SIM_SRC is a hash of the engine's source files, filled in by the build. With a hash of the player data it
+   makes lgSimId(): two phones with different ids would simulate different matches, and are told so. */
+const LG_SIM_SRC='28fcaa6c11c7';
+const LG_DIRS=['UL','U','UR','L','R','DL','D','DR'];
+function lgRng(seed){let a=seed>>>0;return ()=>{a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296}}
+function lgHashN(s){let h=2166136261;s=String(s);for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0}
+function lgDigest(s){let h1=0xdeadbeef,h2=0x41c6ce57;s=String(s);for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}
+  h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return (h2>>>0).toString(16).padStart(8,'0')+(h1>>>0).toString(16).padStart(8,'0')}
+
+/* ---- the catalogue: every real player the game ships, under the key the server's price list uses ----
+   The key is the club's Hebrew name, a slash and the player's English name (scripts/build-league-pool.py). The
+   same key listed twice keeps the dearer valuation, as the price list does. */
+let LG_CAT=null;
+function lgCatalog(){if(LG_CAT)return LG_CAT;const map=new Map();
+  const add=(club,r,il)=>{if(!r||!r.en||!r.he||!(r.value_m>0))return;const key=club+'/'+r.en;if(key.length>80)return;const v=Math.round(r.value_m*1e6);const old=map.get(key);if(old&&old.v>=v)return;
+    map.set(key,{key,club,he:r.he,en:r.en,pos:POS.includes(r.pos)?r.pos:'MF',age:Number.isInteger(r.age)&&r.age>=14&&r.age<=60?r.age:null,v,nat:r.nat||'',il})};
+  for(const c of RAW||[])for(const r of c.players||[])add(c.name_he,r,true);
+  for(const club in RAW_EURO||{})for(const r of RAW_EURO[club])add(club,r,false);
+  const list=[...map.values()].sort((a,b)=>a.key<b.key?-1:a.key>b.key?1:0);
+  let h=2166136261;for(const e of list){const s=e.key+'|'+e.v+'|'+(e.age??'')+'|'+e.pos+';';for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619)}
+  LG_CAT={list,map,hash:(h>>>0).toString(16).padStart(8,'0')};return LG_CAT}
+function lgEntry(key){return lgCatalog().map.get(key)||null}
+function lgSimId(){return LG_SIM_SRC.slice(0,12)+'.'+lgCatalog().hash}
+
+/* ---- a player ----
+   Rated by the one rule the game already has for real market values (euroRating), from the catalogue's value
+   alone — not shifted by the club he comes from, because in a league where everybody pays the same price for him
+   he has to be the same player for everybody. Age (where the data has none) and potential come from the key.
+   Training adds whole points, more for the young, more on a better ground, never past his potential. */
+function lgTrainRate(age){return age<=21?1:age<=25?.7:age<=29?.45:.25}
+function lgStats(e,t,ground){const r=lgRng(lgHashN('p:'+e.key));const a0=19+Math.floor(r()*10),b=r(),age=e.age??a0;
+  const ovr0=euroRating(e.v/1e6,age);
+  const pot=age<=20?clamp(ovr0+8+Math.floor(b*9),ovr0,94):age<=23?clamp(ovr0+3+Math.floor(b*7),ovr0,92):age<=26?clamp(ovr0+Math.floor(b*4),ovr0,90):ovr0;
+  const gain=Math.max(0,Math.min(pot-ovr0,Math.floor((t||0)*lgTrainRate(age)*(1+.15*(ground||0)))));
+  return {age,ovr0,pot,gain,ovr:ovr0+gain}}
+function lgPlayerId(key){return 1000000+lgHashN('id:'+key)%8000000}
+function lgMakePlayer(e,t,ground){const s=lgStats(e,t,ground);const [first,last]=splitName(e.he);
+  const p={id:lgPlayerId(e.key),first,last,pos:e.pos,age:s.age,nat:NAT_HE[e.nat]||e.nat||'',foreign:false,ovr:s.ovr,pot:s.pot,form:0,yellow:0,inj:0,susp:0,goals:0,apps:0,
+    contract:3,morale:65,fit:100,sharp:70,real:true,en:e.en,from:e.club,lgKey:e.key,lgBase:s.ovr0,lgGain:s.gain,lgValue:e.v,
+    visualId:e.il?(PLAYER_VISUALS.names[e.he]||null):(euroVisualId(e.club,e.en)||null)};
+  assignPers(p);p.roleT=aiRoleFor(p);p.value=e.v;p.wage=0;return p}
+
+/* ---- a club, from one side of a lock: {team, kit, crest, ground, setup, squad:[{p:key,t:sessions}]} ---- */
+const LG_TAC0={press:'mid',width:'normal',tempo:'normal',style:'balanced'};
+function lgCleanSetup(su){su=su&&typeof su==='object'?su:{};const tac={};for(const k of Object.keys(LG_TAC0))tac[k]=su.tac&&TAC[k][su.tac[k]]?su.tac[k]:LG_TAC0[k];
+  return {formation:FORMATIONS[su.formation]?su.formation:'4-3-3',mentality:['att','bal','def'].includes(su.mentality)?su.mentality:'bal',tac,lineup:Array.isArray(su.lineup)?su.lineup.slice(0,11).map(x=>typeof x==='string'?x:null):null}}
+function lgBuildClub(side,id){side=side||{};const kit=Object.assign({},kitDefault(lgHashN(side.team||id)),side.kit||{}),su=lgCleanSetup(side.setup);
+  const used=new Set(),players=[];
+  for(const row of (side.squad||[]).slice().sort((a,b)=>a.p<b.p?-1:a.p>b.p?1:0)){const e=lgEntry(row.p);if(!e)continue;const p=lgMakePlayer(e,+row.t||0,+side.ground||0);while(used.has(p.id))p.id++;used.add(p.id);players.push(p)}
+  const c={id,name:side.team||'',short:side.team||'',c1:kit.c1,c2:kit.c2,country:'ליגה משותפת',players,youth:[],formation:su.formation,mentality:su.mentality,tac:su.tac,
+    lineup:null,captain:null,training:1,focus:'bal',tier:2,stadium:'',lgKit:kit,lgCrest:side.crest||null,missing:(side.squad||[]).length-players.length};
+  ensureNumbers(c);
+  if(su.lineup){const by=new Map(players.map(p=>[p.lgKey,p.id])),seen=new Set();const slots=slotsFor(c.formation);
+    c.lineup=slots.map((_,i)=>{const pid=by.get(su.lineup[i]);if(pid==null||seen.has(pid))return null;seen.add(pid);return pid})}
+  else c.lineup=autoLineupFor(c);
+  ensureCaptain(c);return c}
+
+/* ---- the throw-away state the engine runs in. Identical on every phone: nothing of the local career is in it. ---- */
+function lgSandbox(clubs,fn){const keep={G,uid,sb:SANDBOX,cap:MP.capture,capd:MP.captured,rand:Math.random};
+  try{SANDBOX=true;uid=9000000;
+    G={me:clubs[0].id,season:1,wk:1,clubs,leumit:[],pseudo:{},world:{},cal:[],fixtures:[],results:[],news:[],paper:[],freeAgents:[],staff:null,mental:null,mentalBoost:0,nextBoost:null,injSeq:0,live:null,mp:null,phase:'play',lgSim:true,manager:{name:''}};
+    MP.capture=new Set(clubs.map(c=>c.id));MP.captured=[];
+    return fn()}
+  finally{G=keep.G;uid=keep.uid;SANDBOX=keep.sb;MP.capture=keep.cap;MP.captured=keep.capd;Math.random=keep.rand}}
+
+/* ---- the match ----
+   fx: {seed, lock:{home,away}, pens:[{t:'h'|'a', k, d, n, ak, ad, done}]}  (what lg_fixture_lock / lg_fixture_state return)
+   →  {state:'done', rec}                       the whole match, with rec.digest
+      {state:'pen',  rec, pen:{idx,side,m,…}}   stopped at a penalty the log has no answer for; rec is the match so far
+      {state:'bad',  why}                       the log does not fit this match (a penalty for the other side) */
+function lgSimulate(fx){const lock=fx&&fx.lock;if(!lock||!lock.home||!lock.away)return {state:'bad',why:'no_lock'};
+  const h=lgBuildClub(lock.home,'lgh'),a=lgBuildClub(lock.away,'lga');const pens=fx.pens||[];
+  return lgSandbox([h,a],()=>{const main=lgRng((+fx.seed||1)>>>0);Math.random=main;
+    const M=createMatch(h,a,{kind:'league',label:'ליגה משותפת'});M.plan=null;M.anConf=null;M.live=false;
+    const side=id=>id===h.id?'h':'a';
+    const xi0={h:M.xi.lgh.map(e=>e.pid),a:M.xi.lga.map(e=>e.pid)};const shots=[];let idx=0,stop=null,bad=null;
+    const ui={pen:()=>true};
+    while(!M.done&&!stop&&!bad){stepMinute(M,ui);
+      if(M.pendingPen){const pp=M.pendingPen;M.pendingPen=null;const c=pp.team===h.id?h:a,o=c===h?a:h,tk=c.players.find(p=>p.id===pp.pid);const gkx=xiPlayers(M,o).find(x=>x.p.pos==='GK');const gk=gkx?gkx.p:null;
+        const info={idx,side:side(c.id),m:M.m,taker:tk?fullName(tk):'',takerId:tk?tk.id:null,keeper:gk?fullName(gk):'',keeperId:gk?gk.id:null};const e=pens[idx];
+        if(!e||!e.done){stop=info;M.pendingPen=pp;break}
+        if(e.t!==info.side){bad='pen_mismatch';break}
+        /* The choices decide where the ball and the keeper go, and the server's own number for this kick (e.n, drawn
+           when both choices were in) decides the rest: how far the ball strays and whether a keeper who guessed
+           right holds it. Nothing of that can be worked out beforehand from the fixture's seed, and the match's
+           main stream is the same whether a penalty was scored or saved by a hair. */
+        const pr=lgRng(lgHashN('pen:'+fx.seed+':'+idx+':'+(e.n==null?'':e.n)));
+        const kd=LG_DIRS.includes(e.k)?e.k:'D',gd=LG_DIRS.includes(e.d)?e.d:'D';
+        const r=pcupResolve(kd,gd,tk?penShootSkill(tk):60,penKeepSkill(gk),pr);
+        penResolve(M,c,tk,r.out,r.how);shots.push(Object.assign(info,{kd,gd,x:r.x,y:r.y,how:r.how,out:r.out,autoK:!!e.ak,autoD:!!e.ad}));idx++}}
+    if(bad)return {state:'bad',why:bad};
+    const name=(c,pid)=>{const p=c.players.find(x=>x.id===pid);return p?fullName(p):''};
+    const ev=M.ev.map(e=>{const o={m:e.m,t:e.t,team:side(e.team),name:e.name||''};if(e.sub)o.sub=e.sub;if(e.asstName)o.asst=e.asstName;if(e.out)o.out=e.out;if(e.how)o.how=e.how;if(e.quiet)o.quiet=1;if(e.t==='own')o.og=side(e.ogteam);if(e.weeks)o.weeks=e.weeks;if(e.shooter)o.shooter=e.shooter;if(e.ok!=null)o.ok=e.ok;return o});
+    const rec={gh:M.gh,ga:M.ga,m:M.m,ev,pens:shots,
+      home:{team:h.name,kit:h.lgKit,crest:h.lgCrest,formation:h.formation,mentality:h.mentality},away:{team:a.name,kit:a.lgKit,crest:a.lgCrest,formation:a.formation,mentality:a.mentality},
+      xi:{h:xi0.h.map(pid=>{const p=h.players.find(x=>x.id===pid);return {key:p.lgKey,name:fullName(p),pos:p.pos,ovr:p.ovr,no:p.no}}),a:xi0.a.map(pid=>{const p=a.players.find(x=>x.id===pid);return {key:p.lgKey,name:fullName(p),pos:p.pos,ovr:p.ovr,no:p.no}})},
+      shots:{h:M.shots.lgh,a:M.shots.lga},sot:{h:(M.sot||{}).lgh||0,a:(M.sot||{}).lga||0},corners:{h:(M.corners||{}).lgh||0,a:(M.corners||{}).lga||0},
+      poss:{h:Math.round(M.poss.lgh/Math.max(1,M.poss.lgh+M.poss.lga)*100)},missing:{h:h.missing,a:a.missing}};
+    rec.poss.a=100-rec.poss.h;
+    if(stop)return {state:'pen',pen:stop,rec};
+    const R=matchRatings(M,h,a),best=manOfMatch(M,h,a);
+    rec.ratings={h:[],a:[]};for(const c of [h,a])for(const p of c.players){const s=R[p.id];if(s)rec.ratings[side(c.id)].push({key:p.lgKey,name:fullName(p),pos:p.pos,r:s.r,g:s.g,a:s.a,min:s.min})}
+    rec.ratings.h.sort((x,y)=>y.r-x.r);rec.ratings.a.sort((x,y)=>y.r-x.r);
+    rec.motm=best?{name:best.name,team:side(best.team),r:best.r}:null;
+    rec.xg={h:+M.ev.filter(e=>e.team===h.id&&e.xg&&['goal','pen','shot','penmiss'].includes(e.t)).reduce((t,e)=>t+e.xg,0).toFixed(2),a:+M.ev.filter(e=>e.team===a.id&&e.xg&&['goal','pen','shot','penmiss'].includes(e.t)).reduce((t,e)=>t+e.xg,0).toFixed(2)};
+    /* what the two phones have to agree on: the score and every event of the match, in order */
+    rec.digest=lgDigest(JSON.stringify([rec.gh,rec.ga,ev.map(e=>[e.m,e.t,e.team,e.name,e.sub||'',e.how||'']),shots.map(s=>[s.idx,s.side,s.kd,s.gd,s.out])]));
+    return {state:'done',rec}})}
+/* ===================== SHARED LEAGUE — the squad, the market, trades =====================
+   Everything here is a request. Buying sends a player's key and the server answers with the price it charged;
+   a line-up is saved as a list of keys and is worth nothing until a match is locked with it; a trade is an offer
+   the other manager accepts, and the server moves both sides together or neither.
+
+   The catalogue is the game's own data (lgCatalog), so the lists, the search and the faces are instant and in
+   Hebrew; which of those players are still free is the server's news (`taken`). */
+const LG_POS_ORDER={GK:0,DF:1,MF:2,FW:3};
+const LG_MENT_HE={att:'התקפי',bal:'מאוזן',def:'הגנתי'};
+const LG_TAC_HE={press:'לחץ',width:'רוחב',tempo:'קצב',style:'סגנון'};
+function lgT(key){return (LG.state&&LG.state.training&&LG.state.training[key])||0}
+function lgOwnerOf(key){const r=(LG.state.squads||[]).find(x=>x.player===key);return r?r.owner:null}
+function lgGroundOf(key){const m=lgMember(lgOwnerOf(key));return m?m.ground||0:0}
+/* a player as the league sees him now: trained, on his owner's ground */
+function lgPlayer(key){const e=lgEntry(key);return e?lgMakePlayer(e,lgT(key),lgGroundOf(key)):null}
+/* A face. In a list the photograph is fetched only when its row comes into view: the pictures ship as one pack
+   per club (a hundred to four hundred KB), and a market screen of forty players of forty clubs would otherwise
+   download fifteen megabytes to draw itself. Until then — and where there is no free photograph of the man at all —
+   the row shows the designed monogram. */
+function lgFace(p,kit,o){o=o||{};kit=kit||{c1:'#1a2231',c2:'#c6f24e'};const f=playerVisual(p),id='lg'+(o.k||'')+p.id;
+  if(o.lazy&&f&&!facePackCache.has(f.pack)){const q={id:p.id,first:p.first,last:p.last,pos:p.pos,visualId:null};
+    return `<span class="lg-face${o.cls?' '+o.cls:''}" data-want="${esc(f.pack)}" data-pkey="${esc(p.lgKey)}" data-fid="${esc(id)}" data-c1="${esc(kit.c1)}" data-c2="${esc(kit.c2)}" style="${faceFrameStyle(q)}">${playerPortraitHTML(q,kit,id)}</span>`}
+  return `<span class="lg-face${o.cls?' '+o.cls:''}" style="${faceFrameStyle(p)}">${playerPortraitHTML(p,kit,id)}</span>`}
+function lgFacesWatch(){if(!LG.root||typeof IntersectionObserver==='undefined')return;
+  if(!LG.io)LG.io=new IntersectionObserver(es=>{for(const en of es){if(!en.isIntersecting)continue;LG.io.unobserve(en.target);lgFaceLoad(en.target.dataset.want)}},{rootMargin:'160px'});
+  LG.root.querySelectorAll('.lg-face[data-want]').forEach(el=>LG.io.observe(el))}
+function lgFaceLoad(pack){if(!pack)return;
+  const fill=()=>{if(!facePackCache.has(pack)||!LG.root)return;LG.root.querySelectorAll('.lg-face[data-want]').forEach(el=>{if(el.dataset.want!==pack)return;const e=lgEntry(el.dataset.pkey);el.removeAttribute('data-want');if(!e)return;
+    const p=lgMakePlayer(e,0,0);el.setAttribute('style',faceFrameStyle(p));el.innerHTML=playerPortraitHTML(p,{c1:el.dataset.c1,c2:el.dataset.c2},el.dataset.fid)})};
+  if(facePackCache.has(pack))return fill();loadFacePack(pack);const rq=facePackRequests.get(pack);if(rq)rq.then(fill,()=>{})}
+/* my club, built exactly as a match would build it */
+function lgMyClub(){if(LG.clubCache)return LG.clubCache;const s=LG.state,me=lgMe();
+  return LG.clubCache=lgBuildClub({team:me.team,kit:me.kit,crest:me.crest,ground:me.ground,setup:LG.setup,squad:(s.squad||[]).map(x=>({p:x.player,t:lgT(x.player)}))},'lgme')}
+function lgLineupKeys(){const c=lgMyClub();return c.lineup.map(id=>{const p=c.players.find(x=>x.id===id);return p?p.lgKey:null})}
+function lgSetupSave(){LG.clubCache=null;const su=LG.setup,body={formation:su.formation,mentality:su.mentality,tac:su.tac,lineup:su.lineup};const seq=LG.saveSeq=(LG.saveSeq||0)+1,gen=LG.gen;
+  lgPaint();lgMsg('שומר…');
+  lgRpc('lg_setup',{p_league:lgSaved(),p_setup:body}).then(()=>{if(gen===LG.gen&&seq===LG.saveSeq){if(LG.state)LG.state.setup=body;lgMsg('ההרכב נשמר.')}},x=>{if(gen===LG.gen)lgMsg(lgErr(x))})}
+
+function lgPRowHTML(p,o){o=o||{};const kit=o.kit;const gain=p.lgGain?`<i class="p-gain" title="מאימונים">+${p.lgGain}</i>`:'';
+  return `<li class="lg-p${o.cls?' '+o.cls:''}" data-lg="sheet" data-v="${esc(p.lgKey)}" role="button" tabindex="0">
+   ${o.slot?`<span class="p-slot pos-${o.slot}">${POSHE[o.slot]}</span>`:''}${lgFace(p,kit,{lazy:true,k:o.k})}
+   <span class="p-main"><b>${esc(fullName(p))}</b><small>${o.slot&&o.slot!==p.pos?`<em>לא בעמדה שלו</em> · `:''}${POSHE[p.pos]} · בן <bdi>${p.age}</bdi>${o.from?` · ${esc(p.from)}`:''}</small></span>
+   ${o.right||''}<span class="p-ovr"><bdi>${p.ovr}</bdi>${gain}</span></li>`}
+
+/* ---- the squad ---- */
+function lgSquadHTML(){const s=LG.state,me=lgMe();
+  if(!(s.squad||[]).length)return `<div class="lg-empty"><h3>עוד אין לך שחקנים</h3><p>כל מנהל בונה סגל של 14 עד 22 שחקנים אמיתיים מתוך המאגר המשותף, עם אותו תקציב.</p><div class="lg-actions"><button type="button" class="btn" data-lg="autofill">בנה לי סגל</button><button type="button" class="btn sec" data-lg="tab" data-v="market">לרכש</button></div><p class="lg-note">"בנה לי סגל" בוחר 16 שחקנים מאוזנים בתקציב שלך ומשאיר שישית ממנו בקופה. אפשר להחליף כל אחד מהם אחר כך.</p></div>`;
+  const c=lgMyClub(),su=LG.setup,slots=slotsFor(c.formation),kit={c1:c.c1,c2:c.c2};
+  const xi=c.lineup.map(id=>c.players.find(p=>p.id===id)||null),inXI=new Set(c.lineup.filter(Boolean));
+  const bench=c.players.filter(p=>!inXI.has(p.id)).sort((a,b)=>(LG_POS_ORDER[a.pos]-LG_POS_ORDER[b.pos])||(b.ovr-a.ovr));
+  const on=xi.filter(Boolean),avg=on.length?(on.reduce((t,p)=>t+p.ovr,0)/on.length).toFixed(1):'—',left=Math.max(0,3-(s.trained||0)),season=s.phase==='season';
+  const G_COST=[1e6,2e6,4e6,7e6,12e6];
+  return `<div class="lg-card lg-setup"><div class="lg-rowhead"><h3>מערך וגישה</h3><span class="lg-avg">דירוג ההרכב <b><bdi>${avg}</bdi></b></span></div>
+    <div class="lg-part"><span>מערך</span>${Object.keys(FORMATIONS).map(f=>`<button type="button" class="lg-chip${c.formation===f?' on':''}" data-lg="formation" data-v="${f}"><bdi dir="ltr">${f}</bdi></button>`).join('')}</div>
+    <div class="lg-part"><span>גישה</span>${Object.keys(LG_MENT_HE).map(m=>`<button type="button" class="lg-chip${su.mentality===m?' on':''}" data-lg="ment" data-v="${m}">${LG_MENT_HE[m]}</button>`).join('')}</div>
+    <div class="lg-tacs">${Object.keys(LG_TAC_HE).map(k=>`<label>${LG_TAC_HE[k]}<select data-lg-input="tac" data-k="${k}">${Object.keys(TAC[k]).map(v=>`<option value="${v}"${su.tac[k]===v?' selected':''}>${TAC[k][v]}</option>`).join('')}</select></label>`).join('')}</div></div>
+   <div class="lg-card"><div class="lg-rowhead"><h3>ההרכב</h3><button type="button" class="lg-mini" data-lg="auto-xi">${su.lineup?'הרכב אוטומטי':'אוטומטי ✓'}</button></div>
+    <ul class="lg-plist">${slots.map((pos,i)=>xi[i]?lgPRowHTML(xi[i],{slot:pos,kit,k:'x'}):`<li class="lg-p empty"><span class="p-slot pos-${pos}">${POSHE[pos]}</span><span class="p-main"><b>מקום ריק</b><small>ישובץ אוטומטית במשחק</small></span></li>`).join('')}</ul>
+    <p class="lg-note">נגיעה בשחקן פותחת את הכרטיס שלו: החלפה, אימון ומכירה.</p></div>
+   <div class="lg-card"><h3>ספסל · <bdi>${bench.length}</bdi></h3>${bench.length?`<ul class="lg-plist">${bench.map(p=>lgPRowHTML(p,{kit,k:'b'})).join('')}</ul>`:'<p class="lg-note">אין שחקנים על הספסל. סגל רחב יותר נותן חילופים במשחק.</p>'}</div>
+   <div class="lg-card"><h3>אימונים</h3>
+    ${season?`<p class="lg-train-left"><b><bdi>${left}</bdi></b> ${left===1?'אימון נשאר':'אימונים נשארו'} במחזור הזה</p>`:'<p class="lg-note">אימונים נפתחים עם תחילת העונה: שלושה בכל מחזור, לכל מנהל.</p>'}
+    <p class="lg-note">אימון מוסיף נקודת דירוג לשחקן צעיר ופחות למבוגר, ולעולם לא מעבר לתקרה שלו. מי מקבל אותם — זה כל העניין.</p>
+    <div class="lg-ground"><span>מגרש אימונים · רמה <b><bdi>${me.ground||0}</bdi></b> מתוך <bdi>5</bdi></span>${(me.ground||0)<5?`<button type="button" class="btn sec" data-lg="ground">שדרג · ${lgCash(G_COST[me.ground||0])}</button>`:'<span class="lg-note">הרמה הגבוהה ביותר</span>'}</div>
+    <p class="lg-note">כל רמה מוסיפה <bdi>15%</bdi> לכל אימון של הקבוצה.</p></div>
+   ${c.missing?`<p class="lg-note">${c.missing} שחקנים בסגל אינם מוכרים לגרסה הזאת של המשחק. רענן את הדף.</p>`:''}${lgSheetHTML()}`}
+
+/* ---- the player's card ---- */
+function lgSheetHTML(){const sh=LG.sheet;if(!sh)return '';const s=LG.state,key=sh.key,e=lgEntry(key);if(!e)return '';
+  const owner=lgOwnerOf(key),mineP=owner===s.me,p=lgPlayer(key)||lgMakePlayer(e,0,0),st=lgStats(e,lgT(key),lgGroundOf(key)),me=lgMe();
+  let acts='';
+  if(mineP){const c=lgMyClub(),cp=c.players.find(x=>x.lgKey===key),inXI=cp&&c.lineup.includes(cp.id),left=Math.max(0,3-(s.trained||0)),room=st.pot-st.ovr;
+    const others=c.players.filter(x=>x.lgKey!==key&&c.lineup.includes(x.id)!==inXI).sort((a,b)=>((b.pos===p.pos?100:0)+b.ovr)-((a.pos===p.pos?100:0)+a.ovr));
+    acts=`${s.phase==='season'?(room>0?`<button type="button" class="btn" data-lg="train" data-v="${esc(key)}" ${left?'':'disabled'}>אמן אותו · ${left?`נשארו <bdi>${left}</bdi> במחזור`:'אין אימונים במחזור הזה'}</button>`:'<p class="lg-note">הגיע לתקרה שלו: אימון נוסף לא יוסיף.</p>'):''}
+     <h4>${inXI?'החלף אותו בשחקן מהספסל':'הכנס אותו להרכב במקום'}</h4>
+     ${others.length?`<div class="lg-swaps">${others.map(o=>`<button type="button" class="lg-swap" data-lg="swap" data-v="${esc(o.lgKey)}"><b>${esc(fullName(o))}</b><small>${POSHE[o.pos]}</small><i><bdi>${o.ovr}</bdi></i></button>`).join('')}</div>`:'<p class="lg-note">אין עם מי להחליף.</p>'}
+     <button type="button" class="btn sec lg-wide" data-lg="sell" data-v="${esc(key)}">${LG.confirm==='sell:'+key?'לחץ שוב לאישור המכירה':`מכור חזרה למאגר · ${lgCash(Math.floor(e.v*.7))}`}</button><p class="lg-note">מכירה למאגר מחזירה <bdi>70%</bdi> מהמחיר. לקבל יותר אפשר רק ממנהל אחר, בעסקה.</p>`}
+  else if(!owner){const full=me.squad>=22,poor=e.v>me.money;
+    acts=`<button type="button" class="btn big lg-wide" data-lg="buy" data-v="${esc(key)}" ${full||poor?'disabled':''}>החתם · ${lgCash(e.v)}</button>${full?'<p class="lg-note">הסגל מלא (22). מכור שחקן כדי לפנות מקום.</p>':poor?`<p class="lg-note">חסרים לך ${lgCash(e.v-me.money)}.</p>`:`<p class="lg-note">יישארו לך ${lgCash(me.money-e.v)}.</p>`}`}
+  else{const m=lgMember(owner);acts=`<p class="lg-note">שייך ל${esc(m?m.team:'מנהל אחר')}. אפשר להציע עליו עסקה.</p><button type="button" class="btn sec lg-wide" data-lg="offer-for" data-v="${esc(key)}">הצע עסקה</button>`}
+  return `<div class="lg-sheet-bg" data-lg="sheet-close"></div><aside class="lg-sheet" role="dialog" aria-label="${esc(e.he)}">
+   <button type="button" class="lg-close" data-lg="sheet-close" aria-label="סגור">×</button>
+   <div class="lg-sheet-head">${lgFace(p,null,{cls:'big',k:'s'})}<div><h3>${esc(e.he)}</h3><p>${POSHE[e.pos]} · בן <bdi>${st.age}</bdi> · ${esc(e.club)}</p><p class="lg-sheet-en"><bdi dir="ltr">${esc(e.en)}</bdi></p></div><span class="p-ovr big"><bdi>${st.ovr}</bdi></span></div>
+   <dl class="lg-facts"><div><dt>שווי</dt><dd>${lgCash(e.v)}</dd></div><div><dt>תקרה</dt><dd><bdi>${st.pot}</bdi></dd></div><div><dt>אימונים</dt><dd><bdi>${lgT(key)}</bdi>${st.gain?` · <bdi dir="ltr">+${st.gain}</bdi>`:''}</dd></div></dl>
+   ${portraitCreditHTML(p)}${acts}</aside>`}
+
+/* ---- the market ---- */
+function lgMarketRows(){const s=LG.state,mk=LG.mk,taken=new Set(s.taken||[]),me=lgMe(),q=searchNorm(mk.q);
+  const C=lgCatalog();if(!C.normed){for(const e of C.list){e.n=searchNorm(e.he+' '+e.en+' '+e.club);e.o=lgStats(e,0,0).ovr}C.normed=true}
+  if(mk.face&&!C.faced){for(const e of C.list)e.f=!!playerVisual(lgMakePlayer(e,0,0));C.faced=true}
+  let list=C.list.filter(e=>!taken.has(e.key)&&(!mk.pos||e.pos===mk.pos)&&(!mk.mine||e.v<=me.money)&&(!mk.face||e.f)&&(!q||e.n.includes(q)));
+  list.sort(mk.sort==='c'?(a,b)=>a.v-b.v:mk.sort==='o'?(a,b)=>(b.o-a.o)||(a.v-b.v):(a,b)=>b.v-a.v);return list}
+function lgMarketListHTML(){const me=lgMe(),list=lgMarketRows(),n=LG.mk.n;
+  if(!list.length)return '<p class="lg-note">אין שחקן פנוי שמתאים לחיפוש הזה.</p>';
+  return `<ul class="lg-plist">${list.slice(0,n).map(e=>{const p=lgMakePlayer(e,lgT(e.key),0);const can=e.v<=me.money&&me.squad<22;
+    return lgPRowHTML(p,{lazy:true,from:true,k:'m',right:`<span class="p-price${can?'':' far'}">${lgCash(e.v)}</span>`})}).join('')}</ul>
+   ${list.length>n?`<button type="button" class="btn sec lg-wide" data-lg="mk-more">הצג עוד · <bdi>${list.length-n}</bdi> נוספים</button>`:''}`}
+function lgMarketHTML(){const s=LG.state,me=lgMe(),mk=LG.mk;
+  if(!s.pool)return '<div class="lg-empty"><h3>הרכש עוד לא נפתח</h3><p>רשימת המחירים של השחקנים עדיין לא הותקנה בשרת. בלי מחיר מהשרת אף אחד לא יכול לקנות אף אחד — וזה הצד הבטוח.</p></div>';
+  return `<div class="lg-mkhead"><div><b>${lgCash(me.money)}</b><small>בקופה</small></div><div><b><bdi>${me.squad}</bdi><i>/22</i></b><small>בסגל · מינימום 14</small></div><button type="button" class="btn sec" data-lg="autofill" ${me.squad>=16?'disabled':''}>בנה לי סגל</button></div>
+   <div class="lg-filters"><input id="lg-q" type="search" placeholder="חיפוש שחקן או מועדון" value="${esc(mk.q)}" data-lg-input="q" autocomplete="off" enterkeyhint="search">
+    <div class="lg-part">${[['','הכול'],['GK','שוערים'],['DF','הגנה'],['MF','קישור'],['FW','התקפה']].map(([v,l])=>`<button type="button" class="lg-chip${mk.pos===v?' on':''}" data-lg="mk-pos" data-v="${v}">${l}</button>`).join('')}</div>
+    <div class="lg-part">${[['v','היקרים קודם'],['o','הטובים קודם'],['c','הזולים קודם']].map(([v,l])=>`<button type="button" class="lg-chip${mk.sort===v?' on':''}" data-lg="mk-sort" data-v="${v}">${l}</button>`).join('')}<button type="button" class="lg-chip${mk.mine?' on':''}" data-lg="mk-mine">רק מה שבתקציב שלי</button><button type="button" class="lg-chip${mk.face?' on':''}" data-lg="mk-face">רק עם תמונה</button></div></div>
+   <div id="lg-mklist">${lgMarketListHTML()}</div>${lgSheetHTML()}`}
+
+/* ---- trades ---- */
+function lgNames(keys){return (keys||[]).map(k=>{const e=lgEntry(k);return e?esc(e.he):esc(k)}).join(', ')}
+function lgOfferTextHTML(o,mine){const cashIn=o.cash,parts=[];
+  /* cash is what the one who offers adds; a negative sum is what he asks for */
+  const gives=[lgNames(o.give),cashIn>0?lgCash(cashIn):''].filter(Boolean).join(' + '),wants=[lgNames(o.want),cashIn<0?lgCash(-cashIn):''].filter(Boolean).join(' + ');
+  parts.push(`<span><em>${mine?'אתה נותן':'נותן'}</em> ${gives||'כלום'}</span>`);parts.push(`<span><em>${mine?'אתה מקבל':'מבקש'}</em> ${wants||'כלום'}</span>`);return parts.join('')}
+function lgTradesHTML(){const s=LG.state,me=lgMe(),inbox=(s.offers||[]).filter(o=>o.to===s.me),sent=(s.offers||[]).filter(o=>o.from===s.me),others=s.members.filter(m=>!m.mine),of=LG.offer;
+  let build='';
+  if(!others.length)build='<p class="lg-note">כשיצטרפו מנהלים נוספים אפשר יהיה להציע להם עסקאות.</p>';
+  else if(!of)build=`<p class="lg-note">בחר מנהל כדי לבנות הצעה: שחקנים תמורת שחקנים, עם כסף או בלי. השרת מעביר את שני הצדדים יחד או אף אחד מהם.</p><div class="lg-part">${others.map(m=>`<button type="button" class="lg-chip lg-mgr" data-lg="offer-to" data-v="${m.id}"><span class="t-crest">${lgCrestOf(m)}</span>${esc(m.team)}</button>`).join('')}</div>`;
+  else{const to=lgMember(of.to)||{team:'?'},his=(s.squads||[]).filter(x=>x.owner===of.to).map(x=>lgPlayer(x.player)).filter(Boolean).sort((a,b)=>b.ovr-a.ovr),my=lgMyClub().players.slice().sort((a,b)=>b.ovr-a.ovr);
+    const pick=(p,set,act)=>`<button type="button" class="lg-pick${set.has(p.lgKey)?' on':''}" data-lg="${act}" data-v="${esc(p.lgKey)}" aria-pressed="${set.has(p.lgKey)}"><b>${esc(fullName(p))}</b><small>${POSHE[p.pos]} · ${lgCash(p.lgValue)}</small><i><bdi>${p.ovr}</bdi></i></button>`;
+    build=`<div class="lg-rowhead"><h4>הצעה ל${esc(to.team)}</h4><button type="button" class="lg-mini" data-lg="offer-cancel">בטל</button></div>
+     <h5>אני רוצה ממנו · <bdi>${of.want.size}</bdi></h5><div class="lg-picks">${his.length?his.map(p=>pick(p,of.want,'offer-want')).join(''):'<p class="lg-note">אין לו עדיין שחקנים.</p>'}</div>
+     <h5>אני נותן · <bdi>${of.give.size}</bdi></h5><div class="lg-picks">${my.length?my.map(p=>pick(p,of.give,'offer-give')).join(''):'<p class="lg-note">אין לך עדיין שחקנים.</p>'}</div>
+     <label>כסף שאני מוסיף, במיליונים (מספר שלילי = אני מבקש כסף)<input id="lg-cashin" type="number" inputmode="decimal" step="0.1" value="${of.cash||''}" placeholder="0" data-lg-input="cash" dir="ltr"></label>
+     <button type="button" class="btn lg-wide" data-lg="offer-send" ${of.want.size||of.give.size||of.cash?'':'disabled'}>שלח הצעה</button>`}
+  return `<div class="lg-card"><h3>הצעות שקיבלת</h3>${inbox.length?inbox.map(o=>{const m=lgMember(o.from)||{team:'?'};return `<div class="lg-offer"><strong>${esc(m.team)}</strong>${lgOfferTextHTML(o,false)}<div class="lg-actions"><button type="button" class="btn" data-lg="offer-yes" data-v="${o.id}">קבל</button><button type="button" class="btn sec" data-lg="offer-no" data-v="${o.id}">דחה</button></div></div>`}).join(''):'<p class="lg-note">אין הצעות ממתינות.</p>'}</div>
+   ${sent.length?`<div class="lg-card"><h3>הצעות ששלחת</h3>${sent.map(o=>{const m=lgMember(o.to)||{team:'?'};return `<div class="lg-offer"><strong>אל ${esc(m.team)}</strong>${lgOfferTextHTML(o,true)}<div class="lg-actions"><button type="button" class="btn sec" data-lg="offer-no" data-v="${o.id}">משוך את ההצעה</button></div></div>`}).join('')}</div>`:''}
+   <div class="lg-card"><h3>הצעה חדשה</h3>${build}</div>${lgSheetHTML()}`}
+
+/* ---- actions ---- */
+(function(){const Q=(name,fn)=>{fn.quick=true;LG_ACT[name]=fn},keep=()=>{LG.keepScroll=true;lgPaint()};
+  Q('sheet',btn=>{LG.sheet={key:btn.dataset.v};LG.confirm=null;keep()});
+  Q('sheet-close',()=>{LG.sheet=null;LG.confirm=null;keep()});
+  Q('formation',btn=>{LG.setup.formation=btn.dataset.v;LG.setup.lineup=null;lgSetupSave()});
+  Q('ment',btn=>{LG.setup.mentality=btn.dataset.v;LG.keepScroll=true;lgSetupSave()});
+  Q('auto-xi',()=>{LG.setup.lineup=null;LG.keepScroll=true;lgSetupSave()});
+  Q('swap',btn=>{const c=lgMyClub(),a=LG.sheet&&LG.sheet.key,b=btn.dataset.v,keys=lgLineupKeys();const ia=keys.indexOf(a),ib=keys.indexOf(b);
+    if(ia>=0&&ib<0)keys[ia]=b;else if(ib>=0&&ia<0)keys[ib]=a;else return;LG.setup.lineup=keys;LG.sheet=null;LG.keepScroll=true;lgSetupSave()});
+  Q('mk-pos',btn=>{LG.mk.pos=btn.dataset.v;LG.mk.n=30;lgPaint()});
+  Q('mk-sort',btn=>{LG.mk.sort=btn.dataset.v;LG.mk.n=30;lgPaint()});
+  Q('mk-mine',()=>{LG.mk.mine=!LG.mk.mine;LG.mk.n=30;lgPaint()});
+  Q('mk-face',()=>{LG.mk.face=!LG.mk.face;LG.mk.n=30;lgPaint()});
+  Q('mk-more',()=>{LG.mk.n+=30;keep()});
+  Q('offer-to',btn=>{LG.offer={to:btn.dataset.v,give:new Set(),want:new Set(),cash:0};lgPaint()});
+  Q('offer-for',btn=>{const key=btn.dataset.v;LG.offer={to:lgOwnerOf(key),give:new Set(),want:new Set([key]),cash:0};LG.sheet=null;LG.view='trades';lgPaint()});
+  Q('offer-cancel',()=>{LG.offer=null;lgPaint()});
+  Q('offer-want',btn=>{const s=LG.offer.want,k=btn.dataset.v;s.has(k)?s.delete(k):s.size<8&&s.add(k);keep()});
+  Q('offer-give',btn=>{const s=LG.offer.give,k=btn.dataset.v;s.has(k)?s.delete(k):s.size<8&&s.add(k);keep()});
+  LG_ACT['input:q']=el=>{LG.mk.q=el.value;LG.mk.n=30;const box=document.getElementById('lg-mklist');if(box){box.innerHTML=lgMarketListHTML();lgFacesWatch()}};
+  LG_ACT['input:tac']=el=>{LG.setup.tac[el.dataset.k]=el.value;LG.keepScroll=true;lgSetupSave()};
+  LG_ACT['input:cash']=el=>{if(LG.offer){LG.offer.cash=+el.value||0;const b=LG.root.querySelector('[data-lg="offer-send"]');if(b)b.disabled=!(LG.offer.want.size||LG.offer.give.size||LG.offer.cash)}};
+  const L=()=>lgSaved();
+  LG_ACT.buy=async(btn,gen)=>{const key=btn.dataset.v,e=lgEntry(key);const r=await lgRpc('lg_buy',{p_league:L(),p_player:key});if(gen!==LG.gen)return;LG.sheet=null;LG.keepScroll=true;await lgReload();lgMsg(`${e?e.he:key} חתם · ${lgMoney(r.paid)}. נשארו ${lgMoney(r.money)}.`)};
+  LG_ACT.sell=async(btn,gen)=>{const key=btn.dataset.v;if(LG.confirm!=='sell:'+key){LG.confirm='sell:'+key;LG.keepScroll=true;lgPaint();return}
+    LG.confirm=null;const e=lgEntry(key);const r=await lgRpc('lg_sell',{p_league:L(),p_player:key});if(gen!==LG.gen)return;LG.sheet=null;
+    if(LG.setup.lineup&&LG.setup.lineup.includes(key)){LG.setup.lineup=LG.setup.lineup.map(k=>k===key?null:k);try{await lgRpc('lg_setup',{p_league:L(),p_setup:LG.setup})}catch(x){}}
+    await lgReload();lgMsg(`${e?e.he:key} נמכר · ${lgMoney(r.back)} חזרו לקופה.`)};
+  LG_ACT.autofill=async(btn,gen)=>{const r=await lgRpc('lg_autofill',{p_league:L()});if(gen!==LG.gen)return;LG.view='squad';await lgReload();lgMsg(r.bought?`נבנה סגל: ${r.bought} שחקנים חתמו. נשארו ${lgMoney(r.money)}.`:'הסגל כבר מלא מספיק.')};
+  LG_ACT.train=async(btn,gen)=>{const key=btn.dataset.v,e=lgEntry(key),before=lgStats(e,lgT(key),lgGroundOf(key)).ovr;await lgRpc('lg_train',{p_league:L(),p_player:key});if(gen!==LG.gen)return;LG.keepScroll=true;await lgReload();
+    const after=lgStats(e,lgT(key),lgGroundOf(key)).ovr;lgMsg(after>before?`${e.he} השתפר: ${before} ← ${after}.`:`${e.he} התאמן. השיפור יגיע באימון הבא.`)};
+  LG_ACT.ground=async(btn,gen)=>{const r=await lgRpc('lg_ground',{p_league:L()});if(gen!==LG.gen)return;LG.keepScroll=true;await lgReload();lgMsg(`מגרש האימונים עלה לרמה ${r.ground} · ${lgMoney(r.charged)}.`)};
+  LG_ACT['offer-send']=async(btn,gen)=>{const o=LG.offer;if(!o)return;await lgRpc('lg_offer',{p_league:L(),p_to:o.to,p_give:[...o.give],p_want:[...o.want],p_cash:Math.round((+o.cash||0)*1e6)});if(gen!==LG.gen)return;LG.offer=null;await lgReload();lgMsg('ההצעה נשלחה.')};
+  LG_ACT['offer-yes']=async(btn,gen)=>{await lgRpc('lg_respond',{p_offer:btn.dataset.v,p_accept:true});if(gen!==LG.gen)return;await lgReload();lgMsg('העסקה בוצעה.')};
+  LG_ACT['offer-no']=async(btn,gen)=>{await lgRpc('lg_respond',{p_offer:btn.dataset.v,p_accept:false});if(gen!==LG.gen)return;await lgReload();lgMsg('ההצעה נסגרה.')};
 })();
+/* ===================== SHARED LEAGUE — the match =====================
+   What a manager watches is a recording of a match his phone has already played. Opening a fixture locks it on
+   the server; lgSimulate (35f) then runs the whole match in a few milliseconds from the server's seed, and this
+   file plays the recording back at a watchable pace: a clock, the score, the events as they come.
+
+   A penalty is where the two managers actually meet. The recording stops at the minute it was given, the
+   penalty picture opens, and each chooses one of eight directions — where to shoot, or where to dive. The
+   choices go to the server and come back only when both are in (lg_pen); the match is run again with the answer
+   and the recording carries on. If the other manager is not at the match, his part is taken for him at once.
+
+   At the whistle the phone sends what it got. The result counts when the other phone, which ran the same match,
+   sends the same thing. */
+const LG_TICK=150,LG_HOLD=1150;
+const lgIsGoal=e=>e.t==='goal'||e.t==='pen'||e.t==='own';
+function lgMatchStop(){const M=LG.match;if(!M)return;clearTimeout(M.timer);clearTimeout(M.poll);if(M.penOpen){try{penClose()}catch(e){}}LG.match=null}
+function lgMatchSim(){const M=LG.match;M.res=lgSimulate({seed:M.fx.seed,lock:M.fx.lock,pens:M.fx.pens||[]});
+  if(M.res.state==='bad'){M.phase='broken';return false}
+  M.rec=M.res.rec;M.stopAt=M.res.state==='pen'?M.res.pen.m:90;return true}
+LG_ACT.play=async(btn,gen)=>{const id=btn.dataset.v;lgMatchStop();LG.view='match';LG.sheet=null;const M=LG.match={id,phase:'load',shown:0,penOpen:false};lgMsg('');lgPaint();
+  const fx=await lgRpc('lg_fixture_lock',{p_fixture:id,p_sim:lgSimId()});if(gen!==LG.gen||LG.match!==M)return;
+  M.fx=fx;M.replay=!!(fx.played||fx.answered);
+  /* a match that was closed without being played has nothing to show but its score */
+  if(!fx.lock){M.phase=fx.played?'norep':'broken';lgPaint();return}
+  /* a phone built from other engine sources or other player data would play a different match */
+  if(fx.lock.sim!==lgSimId()){M.phase=fx.played?'norep':'version';lgPaint();return}
+  if(!lgMatchSim()){lgPaint();return}
+  /* a recording is only shown if it is the match that counted */
+  if(fx.played&&(M.res.state!=='done'||M.rec.gh!==fx.hg||M.rec.ga!==fx.ag)){M.phase='norep';lgPaint();return}
+  M.phase='play';lgPaint();lgMatchTick();lgMatchPoll()};
+LG_ACT['match-skip']=Object.assign(()=>{const M=LG.match;if(!M||M.phase!=='play')return;M.shown=M.stopAt;clearTimeout(M.timer);lgMatchReach()},{quick:true});
+LG_ACT['match-back']=Object.assign(()=>{lgMatchStop();LG.view='home';lgPaint();lgReload().catch(()=>{})},{quick:true});
+LG_ACT.reload=Object.assign(()=>{try{location.reload()}catch(e){}},{quick:true});
+function lgMatchTick(){const M=LG.match;if(!M||M.phase!=='play')return;clearTimeout(M.timer);
+  if(M.shown>=M.stopAt)return lgMatchReach();
+  M.timer=setTimeout(()=>{if(LG.match!==M||M.phase!=='play')return;M.shown++;const key=M.rec.ev.some(e=>e.m===M.shown&&(lgIsGoal(e)||e.t==='red'||e.t==='penmiss'));
+    lgMatchPaint();if(key){try{buzz('goal')}catch(e){}}
+    M.timer=setTimeout(lgMatchTick,key&&!(typeof penQuick==='function'&&penQuick())?LG_HOLD:0)},LG.fast?0:LG_TICK)}
+function lgMatchReach(){const M=LG.match;if(!M)return;if(M.res.state==='pen')return lgPenStart();return lgMatchEnd()}
+/* "I am here": the other manager's penalty reaches me through this, and so does the news that the match counted */
+function lgMatchPoll(){const M=LG.match;if(!M)return;clearTimeout(M.poll);M.poll=setTimeout(async()=>{if(LG.match!==M)return;
+  try{const st=await lgRpc('lg_fixture_state',{p_fixture:M.id});if(LG.match!==M)return;
+    M.fx.here=st.here;
+    if(st.played&&!M.fx.played){M.fx.played=true;M.fx.hg=st.hg;M.fx.ag=st.ag;if(M.phase==='end'){M.result='final';lgPaint()}}
+    /* he is standing over a penalty: stop the recording where it is and go to it */
+    if(M.phase==='play'&&M.res.state==='pen'&&(st.pens||[]).length>M.res.pen.idx&&M.shown<M.stopAt){M.shown=M.stopAt;clearTimeout(M.timer);lgMatchPaint();lgMatchReach()}
+    /* answers that arrived while this phone was away from the picture */
+    if(M.phase==='play'&&(st.pens||[]).filter(p=>p.done).length>(M.fx.pens||[]).filter(p=>p.done).length&&!M.penOpen){M.fx.pens=st.pens;const at=M.shown;if(lgMatchSim()){M.shown=Math.min(at,M.stopAt);lgMatchTick()}}
+  }catch(e){}
+  lgMatchPoll()},M.phase==='pen'?1500:3000)}
+async function lgMatchEnd(){const M=LG.match;if(!M||M.phase==='end')return;M.phase='end';M.shown=90;const rec=M.rec;lgPaint();
+  if(M.replay){M.result=M.fx.played?'final':'waiting';lgPaint();return}
+  try{const r=await lgRpc('lg_result',{p_fixture:M.id,p_home:rec.gh,p_away:rec.ga,p_digest:rec.digest});if(LG.match!==M)return;M.result=r.state;M.replay=true;
+    if(r.state==='final'){try{SFX.win&&rec&&((M.fx.mine==='h')===(rec.gh>rec.ga))&&rec.gh!==rec.ga&&SFX.win()}catch(e){}}}
+  catch(e){if(LG.match===M){M.result='error';M.error=lgErr(e)}}
+  if(LG.match===M)lgPaint()}
+
+/* ---- the picture ---- */
+function lgEvHTML(e,rec){const side=e.team,k=rec[side==='h'?'home':'away'].kit,dot=`<i class="ev-dot" style="background:${esc(k.c1)};border-color:${esc(k.c2)}"></i>`;let cls='',txt='';
+  if(e.t==='goal'){cls='goal';txt=`<b>שער!</b> <bdi>${esc(e.name)}</bdi>${e.asst?` <small>בישול: <bdi>${esc(e.asst)}</bdi></small>`:''}`}
+  else if(e.t==='pen'){cls='goal';txt=`<b>שער בפנדל</b> <bdi>${esc(e.name)}</bdi>`}
+  else if(e.t==='own'){cls='goal';txt=`<b>שער עצמי</b> <bdi>${esc(e.name)}</bdi>`}
+  else if(e.t==='penmiss'){cls='miss';txt=`<b>פנדל ${e.how==='save'?'נהדף':'הוחמץ'}</b> <bdi>${esc(e.name)}</bdi>`}
+  else if(e.t==='yellow'){cls='yel';txt=`כרטיס צהוב · <bdi>${esc(e.name)}</bdi>`}
+  else if(e.t==='red'){cls='red';txt=`<b>כרטיס אדום</b> <bdi>${esc(e.name)}</bdi>`}
+  else if(e.t==='sub'){cls='sub';txt=`חילוף · <bdi>${esc(e.name)}</bdi> נכנס${e.out?` במקום <bdi>${esc(e.out)}</bdi>`:''}`}
+  else if(e.t==='inj'){cls='inj';txt=`פציעה · <bdi>${esc(e.name)}</bdi>`}
+  else if(e.t==='var'&&e.ok===false){cls='miss';txt=`שער נפסל בבדיקת וידאו · <bdi>${esc(e.name)}</bdi>`}
+  else if(e.t==='shot'&&!e.quiet&&e.sub==='save'){cls='shot';txt=`${e.shooter?'<bdi>'+esc(e.shooter)+'</bdi> בועט, ':''}<bdi>${esc(e.name)}</bdi> מציל`}
+  else if(e.t==='shot'&&e.sub==='post'){cls='shot';txt=`קורה! <bdi>${esc(e.name)}</bdi>`}
+  else return '';
+  return `<li class="lg-ev ${cls} side-${side}"><span class="ev-m"><bdi>${e.m}'</bdi></span>${dot}<span class="ev-t">${txt}</span></li>`}
+function lgScoreAt(rec,m){let h=0,a=0;for(const e of rec.ev)if(e.m<=m&&lgIsGoal(e)){if(e.team==='h')h++;else a++}return [h,a]}
+function lgStatsHTML(rec){const row=(l,h,a)=>`<tr><td><bdi>${h}</bdi></td><th>${l}</th><td><bdi>${a}</bdi></td></tr>`;
+  return `<table class="lg-mstats"><tbody>${row('בעיטות',rec.shots.h,rec.shots.a)}${row('למסגרת',rec.sot.h,rec.sot.a)}${row('החזקה',rec.poss.h+'%',rec.poss.a+'%')}${row('קרנות',rec.corners.h,rec.corners.a)}${rec.xg?row('xG',rec.xg.h.toFixed(2),rec.xg.a.toFixed(2)):''}</tbody></table>`}
+function lgRatingsHTML(rec,side){const rows=(rec.ratings&&rec.ratings[side])||[];return `<ul class="lg-ratings">${rows.slice(0,14).map(r=>`<li><span>${esc(r.name)}${r.g?` <i class="r-g" title="שערים">${r.g}</i>`:''}</span><b class="${r.r>=7.5?'hi':r.r<6?'lo':''}"><bdi>${r.r.toFixed(1)}</bdi></b></li>`).join('')}</ul>`}
+function lgMatchPaint(){const M=LG.match;if(!M||LG.view!=='match')return;lgChrome();
+  if(M.phase==='load'){lgBody('<div class="lg-mload">מכין את המשחק…</div>');return}
+  if(M.phase==='version'){lgBody(`<div class="lg-empty"><h3>שני הטלפונים לא על אותה גרסה</h3><p>המשחק הזה ננעל על גרסה אחרת של המשחק מזו שפתוחה כאן, ולכן שני הטלפונים היו מקבלים משחקים שונים. רענן את הדף כדי לקבל את הגרסה העדכנית, ובקש גם מהיריב לרענן.</p><div class="lg-actions"><button type="button" class="btn" data-lg="reload">רענן את הדף</button><button type="button" class="btn sec" data-lg="match-back">חזרה לליגה</button></div></div>`);return}
+  if(M.phase==='norep'){const f=(LG.state.fixtures||[]).find(x=>x.id===M.id)||{},h=lgMember(f.home)||{team:'?'},a2=lgMember(f.away)||{team:'?'};
+    lgBody(`<div class="lg-empty"><h3>${esc(h.team)} ${scoreSides(M.fx.hg,M.fx.ag)} ${esc(a2.team)}</h3><p>המשחק הזה נסגר בלי הקלטה שאפשר להציג כאן: או שהמארח סגר את המחזור לפני ששוחק, או שהוא שוחק בגרסה אחרת של המשחק.</p><div class="lg-actions"><button type="button" class="btn" data-lg="match-back">חזרה לליגה</button></div></div>`);return}
+  if(M.phase==='broken'){lgBody(`<div class="lg-empty"><h3>המשחק הזה לא נפתח</h3><p>הנתונים של המשחק בשרת אינם תואמים למה שהטלפון הזה מחשב. חזור לליגה ונסה שוב.</p><div class="lg-actions"><button type="button" class="btn" data-lg="match-back">חזרה לליגה</button></div></div>`);return}
+  const rec=M.rec,fx=M.fx,end=M.phase==='end',[gh,ga]=end?[rec.gh,rec.ga]:lgScoreAt(rec,M.shown);
+  const side=(k,cls)=>`<div class="ms-t ${cls}"><span class="ms-crest">${crestSVG((rec[k].crest&&rec[k].crest.shape)?rec[k].crest:Object.assign(crestDefault(lgHashN(rec[k].team)),{tier:'free'}),{name:''})}</span><b>${esc(rec[k].team)}</b>${fx.mine===(k==='home'?'h':'a')?'<small>אתה</small>':''}</div>`;
+  const feed=rec.ev.filter(e=>e.m<=M.shown).map(e=>lgEvHTML(e,rec)).filter(Boolean).reverse();
+  const head=`<div class="lg-score">${side('home','h')}<div class="ms-mid">${scoreSides(gh,ga,{cls:'ms-sc',label:`${rec.home.team} ${gh}, ${rec.away.team} ${ga}`})}<span class="ms-clock">${end?'סיום':M.shown?`<bdi>${M.shown}'</bdi>`:'שריקת פתיחה'}</span></div>${side('away','a')}</div>
+   <div class="ms-bar" aria-hidden="true"><i style="width:${Math.min(100,M.shown/90*100).toFixed(1)}%"></i></div>`;
+  if(!end){const sh=k=>rec.ev.filter(e=>e.m<=M.shown&&e.team===k&&(e.t==='shot'||e.t==='goal'||e.t==='pen'||e.t==='penmiss')).length;
+    const xi=k=>`<ul class="lg-xi">${rec.xi[k].map(p=>`<li><i class="pos-${p.pos}">${POSHE[p.pos]}</i><bdi>${esc(p.name)}</bdi><b><bdi>${p.ovr}</bdi></b></li>`).join('')}</ul>`;
+    lgBody(`${head}<div class="ms-live"><span><bdi>${sh('h')}</bdi></span><em>בעיטות</em><span><bdi>${sh('a')}</bdi></span></div>
+    <ul class="lg-feed" aria-live="polite">${feed.slice(0,40).join('')||'<li class="lg-ev quiet"><span class="ev-t">המשחק יצא לדרך.</span></li>'}</ul>
+    <details class="lg-card lg-all lg-xis"${feed.length<4?' open':''}><summary>ההרכבים · <bdi dir="ltr">${esc(rec.home.formation)}</bdi> מול <bdi dir="ltr">${esc(rec.away.formation)}</bdi></summary><div class="lg-rat2"><div>${xi('h')}</div><div>${xi('a')}</div></div></details>
+    <div class="lg-mfoot">${M.phase==='pen'?'<span>פנדל!</span>':`<button type="button" class="btn sec" data-lg="match-skip">${M.res.state==='pen'?'דלג לרגע הבא':'דלג לסיום'}</button>`}${fx.here?'<span class="ms-here">היריב צופה עכשיו</span>':''}</div>`);return}
+  const mineH=fx.mine==='h',won=mineH?rec.gh>rec.ga:rec.ga>rec.gh,drew=rec.gh===rec.ga,st=M.result;
+  const verdict=st==='final'?`התוצאה בטבלה. ${won?'ניצחון':drew?'תיקו':'הפסד'}: ${lgCash(won?2.5e6:drew?1e6:3e5)} לקופה.`
+    :st==='waiting'?'התוצאה נשמרה. היא תיכנס לטבלה כשהיריב ישחק את המשחק אצלו — הוא יראה בדיוק את אותו משחק — או כשהמארח יסגור את המחזור.'
+    :st==='conflict'?'שני הטלפונים קיבלו משחקים שונים, ולכן השרת ביטל את המשחק והוא יוגרל מחדש. ודאו ששניכם על אותה גרסה של המשחק ושחקו שוב.'
+    :st==='error'?esc(M.error||''):'שולח את התוצאה…';
+  const scorers=k=>rec.ev.filter(e=>lgIsGoal(e)&&e.team===k).map(e=>`<li><bdi>${esc(e.name)}</bdi> <bdi>${e.m}'</bdi>${e.t==='pen'?' <small>פנדל</small>':e.t==='own'?' <small>עצמי</small>':''}</li>`).join('');
+  lgBody(`${head}<div class="lg-mend ${st==='conflict'||st==='error'?'bad':won?'won':drew?'':'lost'}"><h3>${st==='conflict'?'המשחק בוטל':won?'ניצחון':drew?'תיקו':'הפסד'}</h3><p>${verdict}</p></div>
+   ${scorers('h')||scorers('a')?`<div class="lg-card lg-scorers"><ul>${scorers('h')}</ul><ul>${scorers('a')}</ul></div>`:''}
+   <div class="lg-card">${lgStatsHTML(rec)}${rec.motm?`<p class="lg-motm">איש המשחק · <b>${esc(rec.motm.name)}</b> <bdi>${(+rec.motm.r).toFixed(1)}</bdi></p>`:''}</div>
+   <div class="lg-card lg-rat2"><div><h4>${esc(rec.home.team)}</h4>${lgRatingsHTML(rec,'h')}</div><div><h4>${esc(rec.away.team)}</h4>${lgRatingsHTML(rec,'a')}</div></div>
+   <details class="lg-card lg-all"><summary>מהלך המשחק</summary><ul class="lg-feed">${feed.join('')}</ul></details>
+   <button type="button" class="btn big lg-wide" data-lg="match-back">חזרה לליגה</button>`)}
+
+/* ---- the penalty ---- */
+/* eight directions over the picture; resolves with the one chosen, or with fallback() when the time is up */
+function lgPenAsk(ctx,o){return new Promise(res=>{const {host,st,root}=ctx;const hint=root.querySelector('#pgHint'),tEl=root.querySelector('#pgTime');if(hint)hint.textContent=o.label;
+  const turn=document.createElement('div');turn.className='pc-turn';turn.setAttribute('role','status');turn.textContent=o.label;host.appendChild(turn);let done=false,raf=0;const ck=penClock(performance.now());
+  const ARW={U:0,UR:45,R:90,DR:135,D:180,DL:225,L:270,UL:315};const pad=document.createElement('div');pad.className='pg-dirs';
+  pad.innerHTML=Object.keys(PEN_ARROW).map(d=>`<button type="button" data-dir="${d}" aria-label="${d}"><svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]}deg)"><path d="M12 5l7 8h-4.4v6h-5.2v-6H5z"/></svg></button>`).join('');host.appendChild(pad);
+  let aim={remove(){},place(){}};try{aim=penAimPad(host,st,d=>{try{buzz('tap')}catch(e){}fin(d)})}catch(e){}
+  const fin=d=>{if(done)return;done=true;cancelAnimationFrame(raf);pad.remove();try{aim.remove()}catch(e){}turn.textContent=o.after;if(tEl)tEl.style.transform='scaleX(0)';if(hint)hint.textContent=o.after;LG.penPick=null;res(d)};LG.penPick=fin;
+  pad.addEventListener('click',e=>{const b=e.target.closest('[data-dir]');if(b){try{buzz('tap')}catch(x){}fin(b.dataset.dir)}});
+  (function loop(){if(done)return;if(!ctx.alive()){done=true;pad.remove();try{aim.remove()}catch(e){}turn.remove();return res(null)}
+    const left=1-ck.tick(performance.now())/(o.ms||12000);if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;
+    try{aim.place();for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}}catch(e){}
+    if(left<=0)return fin(o.fallback());raf=requestAnimationFrame(loop)})()})}
+function lgPenStart(){const M=LG.match;if(!M||M.phase==='pen')return;const info=M.res.pen,fx=M.fx,rec=M.rec;M.phase='pen';M.penOpen=true;clearTimeout(M.timer);lgMatchPaint();lgMatchPoll();
+  const kicking=info.side===fx.mine,mode=kicking?'kick':'keep';
+  const club=k=>({id:k==='h'?'lgh':'lga',name:rec[k==='h'?'home':'away'].team,short:rec[k==='h'?'home':'away'].team,c1:rec[k==='h'?'home':'away'].kit.c1,c2:rec[k==='h'?'home':'away'].kit.c2});
+  const T=club(info.side),O=club(info.side==='h'?'a':'h');
+  const sideLock=fx.lock[info.side==='h'?'home':'away'],row=(sideLock.squad||[]).map(x=>lgEntry(x.p)).filter(Boolean).find(e=>lgPlayerId(e.key)===info.takerId)||null;
+  const tk=row?lgMakePlayer(row,0,0):{id:1,first:info.taker,last:'',pos:'FW',visualId:null};
+  const root=penOverlay({title:'פנדל',meta:`דקה <bdi>${info.m}</bdi> · <bdi>${esc(T.name)}</bdi> בועטת`});const pg=PG;
+  const alive=()=>PG===pg&&LG.match===M;
+  const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');
+  host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
+  bot.innerHTML=`<div class="pg-who">${penFaceHTML(tk,T,'lgpen'+info.idx)}<div><b>${esc(info.taker)}</b><small>בועט עבור ${esc(T.name)} · בשער ${esc(info.keeper||'השוער')}</small></div></div><div class="pg-hint" id="pgHint"></div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
+  const back=()=>{if(LG.match!==M)return;try{penClose()}catch(e){}M.penOpen=false;M.phase='play';lgMatchPaint();lgMatchTick()};
+  penMakeStage(view,'kick',{...penKits(T,O,'lgh'),number:9}).then(async st=>{if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
+    PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();
+    const dir=await lgPenAsk({host,st,root,alive},{label:kicking?'לאן לבעוט? משוך באצבע או הקש על חץ':'לאן לזנק? משוך באצבע או הקש על חץ',after:'הבחירה נשלחה. מחכים ליריב…',ms:12000,fallback:()=>pick(LG_DIRS)});
+    if(!alive()||!dir)return;
+    /* the choice goes to the server and comes back only with the other one beside it */
+    let r=null,tries=0;
+    while(alive()){try{r=await lgRpc('lg_pen',{p_fixture:M.id,p_idx:info.idx,p_side:info.side,p_dir:tries?null:dir});tries++;if(r&&r.done)break}catch(e){tries++;if(/pen_mismatch|not_in_play|not_your_match/.test(String(e.message||e))||tries>40){lgMsg(lgErr(e));return back()}}
+      await new Promise(ok=>setTimeout(ok,LG.fast?5:1200))}
+    if(!alive()||!r||!r.done)return;
+    const pens=(fx.pens||[]).slice();pens[info.idx]={t:info.side,k:r.k,d:r.d,n:r.n,ak:r.ak,ad:r.ad,done:true};fx.pens=pens;
+    if(!lgMatchSim()){try{penClose()}catch(e){}M.penOpen=false;lgPaint();return}
+    const shot=M.rec.pens[info.idx];if(!shot)return back();
+    host.querySelectorAll('.pc-turn').forEach(x=>x.remove());try{SFX.whistle()}catch(e){}try{buzz('kick')}catch(e){}
+    const quick=LG.fast||penQuick();
+    st.shoot({x:shot.x,y:shot.y,how:shot.how,dive:shot.gd||'C'},penOnce(()=>{if(!alive())return;try{penCheer(shot.how,kicking)}catch(e){}const fl=penFlash(host,mode,shot.how);
+      setTimeout(()=>{try{fl.remove()}catch(e){}back()},quick?0:1500)},quick?0:3400))})}
 /* ---- 3D lineup: stadium photo pitch, FIFA-style cards, fitness + morale meters ---- */
 const STADIUM_IMG={webp:'lineup-stadium.webp',jpg:'lineup-stadium.jpg',w:941,h:1672,px0:12.86,px1:87.14,py0:10.29,py1:83.25};
 function meter10(v,kind){const n=Math.round(clamp(v,0,100)/10);const lab=kind==='fit'?`כושר ${Math.round(v)}%`:`מורל ${moraleWord(v)} (${Math.round(v)})`;
@@ -7524,7 +8219,7 @@ function start(){if(STORE.kind==='idb'){storageBoot().then(async()=>{if(STORE.ki
 let bootResolve=null;const BOOT_READY=new Promise(r=>{bootResolve=r});
 function startUI(){
   if(G&&G.mp&&typeof mpConnect==='function')mpConnect().catch(e=>console.warn('mp',e));
-  if(!window.__ilmNoSplash&&!Rooms.arrival())showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);document.addEventListener('pointerdown',function unlock(){try{const a=ac();if(a&&typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});render();Rooms.boot();League.boot();if(bootResolve){bootResolve(true);bootResolve=null}try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
+  if(!window.__ilmNoSplash&&!Rooms.arrival()&&!lgInvited())showSplash();setTimeout(()=>{if(!G||G.renderer!=='svg')loadPixi()},1200);document.addEventListener('pointerdown',function unlock(){try{const a=ac();if(a&&typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});render();Rooms.boot();League.boot();if(bootResolve){bootResolve(true);bootResolve=null}try{if(localStorage.getItem('ilm2_livefl')){localStorage.removeItem('ilm2_livefl');if(G&&!G.live)setTimeout(()=>toast('נמצאה שמירה ישנה מלפני המשחק שנקטע.'),400)}}catch(e){}cloudInit().then(()=>{if(typeof document==='undefined'||!document.body)return;if(splashOpen()){renderSplash();return}if(!G&&cloud.ready&&cloud.meta){const d=openModal(`<h3 class="sec">נמצאה שמירה בענן</h3><p class="small">${esc(cloud.meta.club||'')} · עונת ${esc(cloud.meta.season||'')} · שבוע ${(cloud.meta.wk||0)+1}</p><div class="actions"><button class="btn" id="cloudLoad2">המשך מהענן</button><button class="btn sec" data-close>התחל חדש</button></div>`,e=>{if(e.target.closest('#cloudLoad2')){closeModal();cloudLoad()}})}})}
 if(window.claude?.hot?.snapshot)window.claude.hot.snapshot(()=>({}));
 window.ILM={get G(){return G},me,render,NIS,myPos,myDiv,standingsOf,club,myNextMatch,ready:BOOT_READY,whenSaved:()=>SV.busy&&SV.promise?SV.promise:Promise.resolve(!persistenceError),storage:STORE};
 try{updateWatch()}catch(e){}

@@ -63,7 +63,9 @@ function crestSVG(spec,opts){spec=spec||{};opts=opts||{};
  const name=(opts.name||s.name||'').toString().slice(0,22),year=opts.year||s.year||'';
  /* The band sits where every shape is still wide (a kite has pulled in to x 18..82 by y 74) and the name is
      squeezed to fit it rather than clipped, so a long Hebrew name still reads. */
- const bandY=s.shape==='disc'?70:74;
+ /* a kite has pulled in to x 29..71 by y 89, so a band at 74 has its corners outside the shape; it sits higher there,
+    where the kite is still as wide as the band, and the emblem moves up and shrinks to make room */
+ const kite=s.shape==='kite',bandY=s.shape==='disc'?70:kite?58:74;
  const band=name?`<rect x="18" y="${bandY}" width="64" height="15" rx="3.5" fill="${s.ink}" opacity=".92"/><rect x="18" y="${bandY}" width="64" height="15" rx="3.5" fill="none" stroke="#fff" stroke-opacity=".35"/><text x="50" y="${bandY+11}" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="700" textLength="${Math.min(56,name.length*5.4).toFixed(0)}" lengthAdjust="spacingAndGlyphs">${esc(name)}</text>`:'';
  return `<svg class="crest" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" role="img"${opts.label?` aria-label="${esc(opts.label)}"`:' aria-hidden="true"'}>
  <defs><clipPath id="cl${id}"><path d="${outline}"/></clipPath>
@@ -72,7 +74,7 @@ function crestSVG(spec,opts){spec=spec||{};opts=opts||{};
  <g clip-path="url(#cl${id})">
   <rect width="100" height="120" fill="${s.c1}"/>
   <g fill="${s.c2}">${div}</g>
-  <g transform="translate(50 ${name?(s.shape==='disc'?42:45):56}) scale(${name?1.22:1.4})" fill="${s.ink}" stroke="${s.ink}">${crestEmblem(s.emblem)}</g>
+  <g transform="translate(50 ${name?(s.shape==='disc'?42:kite?33:45):(kite?48:56)}) scale(${name?(kite?.98:1.22):(kite?1.25:1.4)})" fill="${s.ink}" stroke="${s.ink}">${crestEmblem(s.emblem)}</g>
   ${band}
   ${year?`<text x="50" y="${s.shape==='disc'?17:15}" text-anchor="middle" font-size="7.5" fill="${s.ink}" opacity=".75">${esc(String(year))}</text>`:''}
   <rect width="100" height="120" fill="url(#gl${id})"/>
