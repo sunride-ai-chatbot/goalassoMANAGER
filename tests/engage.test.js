@@ -16,7 +16,7 @@ const root=path.join(__dirname,'..');
   w.eval("G.pressMode='off';G.motion='off';G.sound=false;G.paperPopOff=true;G.paperPop=[];G.replay=false;G.board.conf=99;autoLineups()");
 
   // ---- engine: shouts move the next six minutes and cost energy; without a shout nothing changes
-  const sh=run(`(()=>{const h=me(),a=G.clubs.find(c=>c.id!==G.me);let M;do{M=createMatch(h,a,{kind:'league',round:1,label:'x'});M.live=true;stepMinute(M)}while(M.gh+M.ga>0);   /* a goal in the first minute would add its own eight minutes of momentum */
+  const sh=run(`(()=>{const h=me(),a=G.clubs.find(c=>c.id!==G.me);let M;do{M=createMatch(h,a,{kind:'league',round:1,label:'x'});M.live=true;stepMinute(M)}while(M.gh+M.ga>0||xiPlayers(M,h).length<11);   /* a goal in the first minute would add its own eight minutes of momentum, and an injury or a red card in it (one match in three hundred) leaves nine outfield players to burn, which failed this suite about once in a few deploys */
     const base=expGoals(0,0,false,h,a,M);
     const e0=xiPlayers(M,h).filter(x=>x.e.slot!=='GK').map(x=>liveEnergy(M,h,x.p,x.e,M.m));
     shoutStart(M,G.me,'all');const all=expGoals(0,0,false,h,a,M);shoutStart(M,G.me,'calm');const calm=expGoals(0,0,false,h,a,M);shoutStart(M,G.me,'hold');const hold=expGoals(0,0,false,h,a,M);
