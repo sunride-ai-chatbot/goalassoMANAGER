@@ -4,6 +4,27 @@
 "source": "enwiki:Hapoel Kfar Saba F.C.",
 "fetched": "2026-10-27",
 "rescaled": 1,
+"merged": "2026-11-11",
+"registered": {
+"source": "football.org.il registered squad, season 2026/27",
+"date": "2026-11-16",
+"added": [
+"אורי לוי",
+"אנדרו חרופי",
+"גאווין ג'ונה כאראם",
+"דוד אלוש",
+"יואב כראדי",
+"יואב סולל",
+"מור נעמן",
+"מעיין שביט",
+"עופר גלברד",
+"עילאי אתל"
+],
+"generated": [
+"pos",
+"value_m"
+]
+},
 "players": [
 {
 "he": "ניב פליטר",
@@ -11,7 +32,7 @@
 "pos": "GK",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.252,
+"value_m": 0.286,
 "qid": "Q120065316",
 "no": "23"
 },
@@ -19,9 +40,9 @@
 "he": "שחר מרק",
 "en": "Shahar Mark",
 "pos": "GK",
-"age": 25,
+"age": 21,
 "nat": "Israel",
-"value_m": 0.169,
+"value_m": 0.192,
 "qid": null,
 "no": "22"
 },
@@ -29,9 +50,9 @@
 "he": "יניר נמני",
 "en": "Yanir Nimni",
 "pos": "GK",
-"age": 25,
+"age": 22,
 "nat": "Israel",
-"value_m": 0.169,
+"value_m": 0.192,
 "qid": null,
 "no": "64"
 },
@@ -39,9 +60,9 @@
 "he": "בנימין מציני",
 "en": "Benjamin Macini",
 "pos": "GK",
-"age": 25,
+"age": 30,
 "nat": "Israel",
-"value_m": 0.14,
+"value_m": 0.159,
 "qid": null,
 "no": "1"
 },
@@ -51,7 +72,7 @@
 "pos": "DF",
 "age": 26,
 "nat": "Ghana",
-"value_m": 0.365,
+"value_m": 0.414,
 "qid": "Q107420401",
 "no": "5"
 },
@@ -61,7 +82,7 @@
 "pos": "FW",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.309,
+"value_m": 0.35,
 "qid": null,
 "no": "19"
 },
@@ -69,9 +90,9 @@
 "he": "אור רויזמן",
 "en": "Or Roizman",
 "pos": "FW",
-"age": 25,
+"age": 24,
 "nat": "Israel",
-"value_m": 0.296,
+"value_m": 0.335,
 "qid": null,
 "no": "7"
 },
@@ -79,9 +100,9 @@
 "he": "קלוביס יאו",
 "en": "Clovis Yao",
 "pos": "FW",
-"age": 25,
+"age": 21,
 "nat": "Côte d'Ivoire",
-"value_m": 0.28,
+"value_m": 0.317,
 "qid": null,
 "no": "9"
 },
@@ -89,9 +110,9 @@
 "he": "ניב וקנין",
 "en": "Niv Vaknin",
 "pos": "FW",
-"age": 25,
+"age": 19,
 "nat": "Israel",
-"value_m": 0.275,
+"value_m": 0.312,
 "qid": null,
 "no": "77"
 },
@@ -99,9 +120,9 @@
 "he": "יובל בן חמו",
 "en": "Yuval Ben Hemo",
 "pos": "MF",
-"age": 25,
+"age": 20,
 "nat": "Israel",
-"value_m": 0.254,
+"value_m": 0.288,
 "qid": null,
 "no": "14"
 },
@@ -109,9 +130,9 @@
 "he": "ישי ברוש",
 "en": "Yishay Brosh",
 "pos": "MF",
-"age": 25,
+"age": 19,
 "nat": "Israel",
-"value_m": 0.252,
+"value_m": 0.286,
 "qid": null,
 "no": "6"
 },
@@ -119,9 +140,9 @@
 "he": "ליעד שמואלי",
 "en": "Liad Shmueli",
 "pos": "MF",
-"age": 25,
+"age": 19,
 "nat": "Israel",
-"value_m": 0.252,
+"value_m": 0.286,
 "qid": null,
 "no": null
 },
@@ -129,9 +150,9 @@
 "he": "דניאל דרזי",
 "en": "Daniel Darzi",
 "pos": "MF",
-"age": 25,
+"age": 20,
 "nat": "Israel",
-"value_m": 0.232,
+"value_m": 0.263,
 "qid": null,
 "no": "17"
 },
@@ -139,9 +160,9 @@
 "he": "אלירן צדוק",
 "en": "Eliran Zadok",
 "pos": "DF",
-"age": 25,
+"age": 19,
 "nat": "Israel",
-"value_m": 0.225,
+"value_m": 0.255,
 "qid": null,
 "no": "2"
 },
@@ -149,9 +170,9 @@
 "he": "רוי בוגנים",
 "en": "Roy Buganim",
 "pos": "FW",
-"age": 25,
+"age": 23,
 "nat": "Israel",
-"value_m": 0.225,
+"value_m": 0.255,
 "qid": null,
 "no": "11"
 },
@@ -159,9 +180,9 @@
 "he": "ז'ילבר בנדמה",
 "en": "Gilbert Bandama",
 "pos": "MF",
-"age": 25,
+"age": 20,
 "nat": "Côte d'Ivoire",
-"value_m": 0.225,
+"value_m": 0.255,
 "qid": null,
 "no": "15"
 },
@@ -169,9 +190,9 @@
 "he": "אופק פרץ",
 "en": "Ofek Peretz",
 "pos": "MF",
-"age": 25,
+"age": 21,
 "nat": "Israel",
-"value_m": 0.225,
+"value_m": 0.255,
 "qid": null,
 "no": "16"
 },
@@ -179,9 +200,9 @@
 "he": "אדיר והב",
 "en": "Adir Waheb",
 "pos": "DF",
-"age": 25,
+"age": 20,
 "nat": "Israel",
-"value_m": 0.211,
+"value_m": 0.239,
 "qid": null,
 "no": "4"
 },
@@ -189,9 +210,9 @@
 "he": "עדי צור",
 "en": "Adi Tzur",
 "pos": "MF",
-"age": 25,
+"age": 20,
 "nat": "Israel",
-"value_m": 0.211,
+"value_m": 0.239,
 "qid": null,
 "no": "8"
 },
@@ -199,9 +220,9 @@
 "he": "שראל כהן",
 "en": "Sarel Cohen",
 "pos": "MF",
-"age": 25,
+"age": 21,
 "nat": "Israel",
-"value_m": 0.211,
+"value_m": 0.239,
 "qid": null,
 "no": "18"
 },
@@ -209,9 +230,9 @@
 "he": "רביד אוליצקי",
 "en": "Ravid Olitsky",
 "pos": "MF",
-"age": 25,
+"age": 18,
 "nat": "Israel",
-"value_m": 0.211,
+"value_m": 0.239,
 "qid": null,
 "no": "47"
 },
@@ -219,9 +240,9 @@
 "he": "רוי הראל",
 "en": "Roy Harel",
 "pos": "MF",
-"age": 25,
+"age": 22,
 "nat": "Israel",
-"value_m": 0.196,
+"value_m": 0.222,
 "qid": null,
 "no": "10"
 },
@@ -231,7 +252,7 @@
 "pos": "MF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.19,
+"value_m": 0.215,
 "qid": null,
 "no": "31"
 },
@@ -241,10 +262,109 @@
 "pos": "DF",
 "age": 25,
 "nat": "Israel",
-"value_m": 0.19,
+"value_m": 0.215,
 "qid": null,
 "no": "44"
+},
+{
+"he": "דוד אלוש",
+"en": "דוד אלוש",
+"pos": "DF",
+"age": 19,
+"nat": "Israel",
+"value_m": 0.124,
+"qid": null,
+"no": null
+},
+{
+"he": "עילאי אתל",
+"en": "עילאי אתל",
+"pos": "DF",
+"age": 19,
+"nat": "Israel",
+"value_m": 0.144,
+"qid": null,
+"no": null
+},
+{
+"he": "עופר גלברד",
+"en": "עופר גלברד",
+"pos": "FW",
+"age": 20,
+"nat": "Israel",
+"value_m": 0.104,
+"qid": null,
+"no": null
+},
+{
+"he": "אנדרו חרופי",
+"en": "אנדרו חרופי",
+"pos": "DF",
+"age": 20,
+"nat": "Israel",
+"value_m": 0.135,
+"qid": null,
+"no": null
+},
+{
+"he": "גאווין ג'ונה כאראם",
+"en": "גאווין ג'ונה כאראם",
+"pos": "DF",
+"age": 19,
+"nat": "Israel",
+"value_m": 0.11,
+"qid": null,
+"no": null
+},
+{
+"he": "יואב כראדי",
+"en": "יואב כראדי",
+"pos": "FW",
+"age": 20,
+"nat": "Israel",
+"value_m": 0.145,
+"qid": null,
+"no": null
+},
+{
+"he": "אורי לוי",
+"en": "אורי לוי",
+"pos": "DF",
+"age": 18,
+"nat": "Israel",
+"value_m": 0.102,
+"qid": null,
+"no": null
+},
+{
+"he": "מור נעמן",
+"en": "מור נעמן",
+"pos": "DF",
+"age": 28,
+"nat": "Israel",
+"value_m": 0.145,
+"qid": null,
+"no": null
+},
+{
+"he": "יואב סולל",
+"en": "יואב סולל",
+"pos": "FW",
+"age": 19,
+"nat": "Israel",
+"value_m": 0.102,
+"qid": null,
+"no": null
+},
+{
+"he": "מעיין שביט",
+"en": "מעיין שביט",
+"pos": "DF",
+"age": 19,
+"nat": "Israel",
+"value_m": 0.127,
+"qid": null,
+"no": null
 }
-],
-"merged": "2026-11-11"
+]
 }

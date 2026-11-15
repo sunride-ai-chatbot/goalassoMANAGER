@@ -139,7 +139,8 @@ def main():
             for p in d['players']:
                 p['value_m'] = round(max(.01, p['value_m'] * f), 3 if p['value_m'] * f < 1 else 2)
         players = [{k: p.get(k) for k in ('he', 'en', 'pos', 'age', 'nat', 'value_m', 'qid', 'no')} for p in d['players']]
-        out = {'key': key, 'name_he': d['name_he'], 'source': d['source'], 'fetched': d['fetched'], 'rescaled': 1, 'players': players}
+        keep = {k: d[k] for k in ('merged', 'registered') if a.rescale and k in d}   # what later steps wrote on the file (--merge, merge-registered-squad.py) survives a rescale
+        out = {'key': key, 'name_he': d['name_he'], 'source': d['source'], 'fetched': d['fetched'], 'rescaled': 1, **keep, 'players': players}
         with open(dst, 'w', encoding='utf8') as fh:
             json.dump(out, fh, ensure_ascii=False, indent=0)
         if a.rescale:
