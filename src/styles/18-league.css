@@ -64,3 +64,10 @@
  .lg-opts{grid-template-columns:repeat(3,1fr)}
  .lg-preview .crest{width:92px}
 }
+
+/* what the league is waiting for, so a board with one button does not read as a dead end */
+.lg-next{border:1px solid var(--line);border-radius:var(--r2);padding:var(--s3);background:rgba(255,255,255,.03)}
+.lg-next h4{margin:0 0 6px;font-size:13px;color:var(--muted);font-weight:600}
+.lg-next ul{margin:0;padding-inline-start:18px;display:grid;gap:4px;font-size:14px}
+.lg-next p{margin:10px 0 0;font-size:12.5px;color:var(--muted);line-height:1.5}
+.lg-leave{justify-self:center;background:none;border:0;color:var(--muted);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;padding:4px}

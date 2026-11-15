@@ -77,8 +77,18 @@ const League=(()=>{
     <span class="lg-kit">${clubKitSVG(m.kit||kitDefault(hash(m.team)))}</span>
     <span class="lg-who"><strong>${esc(m.team)}</strong><small>${m.host?'מארח · ':''}<bdi>${m.squad}</bdi> שחקנים</small></span>
     <span class="lg-money">${cash(m.money)}</span></li>`).join('')}</ul>
-  <div class="lg-actions"><button type="button" class="btn" data-lg="identity">המועדון שלי · שם, סמל ומדים</button><button type="button" class="btn sec" data-lg="leave">צא מהליגה בטלפון הזה</button></div>
-  <p class="small">הקופה והמאגר מנוהלים בשרת. שחקן שנחתם שייך למנהל אחד בלבד בליגה.</p>`)}
+  <div class="lg-actions"><button type="button" class="btn" data-lg="identity">המועדון שלי · שם, סמל ומדים</button></div>
+  ${nextStepHTML()}
+  <button type="button" class="lg-leave" data-lg="leave">צא מהליגה בטלפון הזה</button>`)}
+ /* A board with nothing to press reads as broken. It says what the league is waiting for, and says plainly that
+    the squads and the fixtures are not built yet rather than letting a manager hunt for a button that is not
+    there. Each line is removed as the thing it describes arrives. */
+ function nextStepHTML(){const need=state.capacity-state.members.length,me=mine(),named=me&&me.crest;
+  const steps=[[!named,'בחר שם, סמל ומדים למועדון'],
+   [need>0,`ממתינים לעוד <bdi>${need}</bdi> ${need===1?'מנהל':'מנהלים'} · שלח להם את קישור ההזמנה`],
+   [need<=0&&named,'כולם כאן והמועדון שלך מוכן']];
+  return `<div class="lg-next"><h4>מה עכשיו</h4><ul>${steps.filter(x=>x[0]).map(x=>`<li>${x[1]}</li>`).join('')}</ul>
+   <p>רכש מהמאגר המשותף והמחזור עצמו עדיין בבנייה. הקופה והמאגר מנוהלים בשרת, ושחקן שנחתם שייך למנהל אחד בלבד בליגה.</p></div>`}
  const hash=s=>{let h=2166136261;for(const ch of String(s||''))h=Math.imul(h^ch.charCodeAt(0),16777619)>>>0;return h>>>0};
 
  /* ---- identity ---- */

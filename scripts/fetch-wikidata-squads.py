@@ -55,6 +55,29 @@ SKIP_HEAD = re.compile(r'loan|reserve|youth|academy|women|former|notable|\bb\s*t
 SQUAD_HEAD = re.compile(r'squad|players|roster|team', re.I)
 
 
+
+# A squad entry's name field is wikitext, and a template there is not decoration: {{ill|Mees Eppink|nl}} IS the
+# name, {{abbr|Sapata|Vitor Hugo Morais de Oliveira}} is a short name and its long form. Deleting the template
+# (the old `re.sub(r'\{\{[^}]*\}\}','',name)`) left either nothing or, when the field had already been cut at a
+# `|`, the raw opening — which is how players ended up called "{{ill|Mees Eppink|nl" in the game itself.
+# The first argument of these templates is the name as Wikipedia displays it, so that is what is taken, and
+# anything still unclosed is cut rather than kept.
+def clean_name(v):
+    v = v or ''
+    v = re.sub(r'<!--.*?(?:-->|$)', ' ', v, flags=re.S)          # an editor's note, closed or not
+    for _ in range(4):                                            # templates nest
+        n = re.sub(r'\{\{\s*(?:ill|interlanguage link[^|}]*|abbr|nowrap|nobr|lang[^|}]*|transliteration)\s*\|\s*([^|}]+)[^}]*\}\}', r'\1', v, flags=re.I)
+        n = re.sub(r'\{\{\s*sortname\s*\|\s*([^|}]+)\|\s*([^|}]+)[^}]*\}\}', r'\1 \2', n, flags=re.I)
+        if n == v: break
+        v = n
+    v = re.sub(r'\{\{\s*(?:ill|interlanguage link[^|}]*|abbr|nowrap|nobr|lang[^|}]*)\s*\|\s*([^|}]+).*$', r'\1', v, flags=re.I|re.S)   # the same template left unclosed
+    v = re.sub(r'\{\{[^{}]*\}\}', ' ', v)                          # any other template is not a name
+    v = re.sub(r'\{\{.*$', ' ', v, flags=re.S)                     # and an unclosed one of a kind we do not know
+    v = re.sub(r'\[\[(?:[^\]|]*\|)?([^\]|]*)\]\]', r'\1', v)           # [[article|shown]] -> shown
+    v = re.sub(r'<[^>]*>', ' ', v)
+    v = re.sub(r"''+", '', v)
+    return re.sub(r'\s+', ' ', v).strip(' |[]{}')
+
 def get(url, params, tries=4):
     url += '?' + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': 'application/json'})
@@ -99,11 +122,11 @@ def parse_squad(text):
             name = f.get('name', '')
             lm = LINK.search(name)
             title = lm.group(1).strip() if lm else None
-            disp = (lm.group(2) or lm.group(1)).strip() if lm else re.sub(r'<[^>]+>|\{\{[^}]*\}\}', '', name).strip()
+            disp = clean_name(lm.group(2) or lm.group(1)) if lm else clean_name(name)
             if not name and f.get('last'):   # {{Fs2 player|first=|last=|link=}}: the article is `link`, or "first last"
                 disp = (f.get('first', '') + ' ' + f['last']).strip()
                 title = f.get('link', '').strip() or disp
-            disp = html.unescape(re.sub(r"''+", '', disp))
+            disp = clean_name(html.unescape(disp))
             if not disp or disp in seen:
                 continue
             seen.add(disp)
@@ -241,8 +264,8 @@ def parse_squad_he(text):
         name = f.get('שם', '')
         lm = LINK.search(name)
         title = lm.group(1).strip() if lm else None
-        disp = (lm.group(2) or lm.group(1)).strip() if lm else re.sub(r'<[^>]+>|\{\{[^}]*\}\}', '', name).strip()
-        disp = html.unescape(re.sub(r"''+", '', disp))
+        disp = clean_name(lm.group(2) or lm.group(1)) if lm else clean_name(name)
+        disp = clean_name(html.unescape(disp))
         if not disp or disp in seen:
             continue
         seen.add(disp)
