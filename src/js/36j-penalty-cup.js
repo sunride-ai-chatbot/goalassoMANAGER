@@ -198,5 +198,7 @@ function pcupNetStart(host,code){const P=PCUP;pcupNetStop();const n=P.net={host,
       if(!sent)n.send({t:'p'})},1200);
     if(!host)n.send({t:'hi',team:P.my.key})},e=>{console.warn('pcup net',e);fail(typeof mpAvailable==='function'&&!mpAvailable()&&!window.__pcupNet?'משחק אונליין לא מוגדר בגרסה הזו':navigator.onLine===false?'אין חיבור לאינטרנט. בדקו את החיבור ונסו שוב.':'שירות המשחק ברשת לא זמין כרגע. בינתיים אפשר לשחק שניים על טלפון אחד.')})}
 /* opened from a shared link (?pen=CODE): straight to the team choice of that duel */
-function pcupFromLink(){if(!pcupLinkCode()||PCUP)return;const go=()=>setTimeout(()=>{try{pcupOpen()}catch(e){console.warn(e)}},400);const rd=window.ILM&&window.ILM.ready;   /* the full game loads its career first: the lobby must keep the real one */
+/* `?pen=CODE` joins a room; a bare `?pen` is the direct link to the lobby itself */
+function pcupLinkOpen(){try{return new URLSearchParams(location.search).has('pen')}catch(e){return false}}
+function pcupFromLink(){if(!pcupLinkOpen()||PCUP)return;const go=()=>setTimeout(()=>{try{pcupOpen()}catch(e){console.warn(e)}},400);const rd=window.ILM&&window.ILM.ready;   /* the full game loads its career first: the lobby must keep the real one */
   if(rd&&rd.then)rd.then(go,go);else go()}
