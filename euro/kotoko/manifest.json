@@ -132,7 +132,34 @@
    "en": "Jordan Amissah",
    "pos": "FW",
    "age": 25,
-   "candidates": [],
+   "candidates": [
+    {
+     "title": "File:Jordan Amissah Hearts v Dundee United 9 Aug 2026-001.jpg",
+     "pageid": 203244216,
+     "page": "https://commons.wikimedia.org/wiki/File:Jordan_Amissah_Hearts_v_Dundee_United_9_Aug_2026-001.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Jordan_Amissah_Hearts_v_Dundee_United_9_Aug_2026-001.jpg/960px-Jordan_Amissah_Hearts_v_Dundee_United_9_Aug_2026-001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3333,
+     "height": 5000,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Bryan Berlin",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2026-08-09 09:21:19",
+     "file": "14-Q113628688-m0.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q113628688"
+     ],
+     "score": 8.0,
+     "pass": "more"
+    }
+   ],
    "match": "name+birth_year (club not yet on Wikidata)",
    "qid": "Q113628688",
    "wikidata": "https://www.wikidata.org/wiki/Q113628688",

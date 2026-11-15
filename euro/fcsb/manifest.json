@@ -568,6 +568,32 @@
      "depicts": [],
      "score": 1.0,
      "pass": "more"
+    },
+    {
+     "title": "File:João do Rio em 1909 (cropped).png",
+     "pageid": 135739298,
+     "page": "https://commons.wikimedia.org/wiki/File:Jo%C3%A3o_do_Rio_em_1909_(cropped).png",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Jo%C3%A3o_do_Rio_em_1909_%28cropped%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/png",
+     "width": 339,
+     "height": 405,
+     "license": "Public domain",
+     "licenseUrl": "",
+     "author": "Unknown authorUnknown author",
+     "credit": "FON-FON!: semanario illustrado. Rio de Janeiro, p. 11. 13 fev. 1909. Disponível em: <http://memoria.bn.br/DOCREADER/DOCREADER.ASPX?BIB=259063>. Acesso em: 07 set. 2014.",
+     "attributionRequired": "false",
+     "usageTerms": "Public domain",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "1909-02-13",
+     "file": "07-Q107334828-m9.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q1710229"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

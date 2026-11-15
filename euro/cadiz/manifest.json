@@ -844,6 +844,58 @@
      ],
      "score": 2.0,
      "pass": "more"
+    },
+    {
+     "title": "File:Juan Diaz, 2008.jpg",
+     "pageid": 8929843,
+     "page": "https://commons.wikimedia.org/wiki/File:Juan_Diaz,_2008.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/13/Juan_Diaz%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 380,
+     "height": 565,
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "author": "https://www.flickr.com/people/mwlguide",
+     "credit": "https://www.flickr.com/photos/mwlguide/2474012065",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2008-05-01",
+     "file": "18-Q65159360-m8.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q3187637"
+     ],
+     "score": 2.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Diazdios.jpg",
+     "pageid": 90650393,
+     "page": "https://commons.wikimedia.org/wiki/File:Diazdios.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Diazdios.jpg/960px-Diazdios.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 1025,
+     "height": 1429,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Chalisimo5",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2020-05-25",
+     "file": "18-Q65159360-m9.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q16298799"
+     ],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "name+birth_year (club not yet on Wikidata)",

@@ -1147,6 +1147,34 @@
      ],
      "score": 2.0,
      "pass": "more"
+    },
+    {
+     "title": "File:Mo Salah in a mask 2021.jpg",
+     "pageid": 112439155,
+     "page": "https://commons.wikimedia.org/wiki/File:Mo_Salah_in_a_mask_2021.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Mo_Salah_in_a_mask_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 730,
+     "height": 1107,
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "author": "Bex Walton",
+     "credit": "https://www.flickr.com/photos/bexwalton/50942739913/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-01-31 14:53:00",
+     "file": "23-Q113463035-m8.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q1354960",
+      "Q50995749",
+      "Q2252352"
+     ],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

@@ -1772,6 +1772,33 @@
      ],
      "score": 1.0,
      "pass": "more"
+    },
+    {
+     "title": "File:FC Red Bull Salzburg vs. SK Rapid Wien (2022-09-18) 41.jpg",
+     "pageid": 123160051,
+     "page": "https://commons.wikimedia.org/wiki/File:FC_Red_Bull_Salzburg_vs._SK_Rapid_Wien_(2022-09-18)_41.jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/FC_Red_Bull_Salzburg_vs._SK_Rapid_Wien_%282022-09-18%29_41.jpg/960px-FC_Red_Bull_Salzburg_vs._SK_Rapid_Wien_%282022-09-18%29_41.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2657,
+     "height": 3288,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "Werner100359",
+     "credit": "Own work",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-09-18 16:53:21",
+     "file": "18-Q100894027-m13.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q100894027",
+      "Q99178821"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

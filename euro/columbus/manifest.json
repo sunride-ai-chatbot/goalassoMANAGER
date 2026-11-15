@@ -589,6 +589,32 @@
      ],
      "score": 1.0,
      "pass": "more"
+    },
+    {
+     "title": "File:Nicolás Rodríguez (cropped).jpg",
+     "pageid": 173158134,
+     "page": "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Rodr%C3%ADguez_(cropped).jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/3/38/Nicol%C3%A1s_Rodr%C3%ADguez_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 852,
+     "height": 1516,
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "author": "Keiteay",
+     "credit": "File:Nicolás_Rodríguez.jpg",
+     "attributionRequired": "false",
+     "usageTerms": "Creative Commons Zero, Public Domain Dedication",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2025-08-02 18:21:01",
+     "file": "09-Q61855443-m6.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [
+      "Q131583776"
+     ],
+     "score": 4.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",

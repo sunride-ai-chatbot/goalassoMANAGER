@@ -415,6 +415,30 @@
      ],
      "score": 1.0,
      "pass": "more"
+    },
+    {
+     "title": "File:The 1975 at the Armory (52710868242).jpg",
+     "pageid": 131557882,
+     "page": "https://commons.wikimedia.org/wiki/File:The_1975_at_the_Armory_(52710868242).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/The_1975_at_the_Armory_%2852710868242%29.jpg/960px-The_1975_at_the_Armory_%2852710868242%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 2160,
+     "height": 3840,
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "author": "Erin McCormack",
+     "credit": "The 1975 - The Armory - 12/14/2022",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution 2.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2022-12-14 20:57",
+     "file": "08-Q122203928-m8.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
+     "score": 2.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
@@ -557,6 +581,30 @@
      "depicts": [
       "Q110940605"
      ],
+     "score": 2.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:Close-up of the inscription (OpenBenches 9346).jpg",
+     "pageid": 74342012,
+     "page": "https://commons.wikimedia.org/wiki/File:Close-up_of_the_inscription_(OpenBenches_9346).jpg",
+     "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Close-up_of_the_inscription_%28OpenBenches_9346%29.jpg/960px-Close-up_of_the_inscription_%28OpenBenches_9346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "mime": "image/jpeg",
+     "width": 3264,
+     "height": 2448,
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "author": "AnonymousUnknown author",
+     "credit": "Gallery Photo archive copy at the Wayback Machine",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 4.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2018-10-07",
+     "file": "10-Q135650279-m3.jpg",
+     "fromP18": false,
+     "via": "search",
+     "depicts": [],
      "score": 2.0,
      "pass": "more"
     }

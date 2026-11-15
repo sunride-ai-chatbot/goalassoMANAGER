@@ -381,7 +381,7 @@
    "pos": "MF",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name (footballers found: Q97578549:Asenele Velebayi)"
+   "match": "no_wikidata_footballer_with_this_name (footballers found: Q97578549:Asenele Velebayi, Q142164551:Luke Baartman)"
   },
   {
    "he": "Thabo Cele",
@@ -460,7 +460,11 @@
    "pos": "FW",
    "age": 25,
    "candidates": [],
-   "match": "no_wikidata_footballer_with_this_name"
+   "match": "name+club in the article infobox",
+   "qid": "Q142164551",
+   "wikidata": "https://www.wikidata.org/wiki/Q142164551",
+   "label": "Luke Baartman",
+   "birthYear": 2006
   },
   {
    "he": "Rushwin Dortley",

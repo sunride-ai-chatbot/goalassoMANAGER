@@ -786,6 +786,58 @@
      ],
      "score": 1.0,
      "pass": "more"
+    },
+    {
+     "title": "File:UEFA Youth League Zenit-Juventus, 2021-10-20 08.jpg",
+     "pageid": 115916631,
+     "page": "https://commons.wikimedia.org/wiki/File:UEFA_Youth_League_Zenit-Juventus,_2021-10-20_08.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/e/ea/UEFA_Youth_League_Zenit-Juventus%2C_2021-10-20_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 600,
+     "height": 420,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Зенит",
+     "credit": "https://fc-zenit.ru/photo/50516/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-10-20 14:08:06",
+     "file": "10-Q111269387-m21.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q111269387"
+     ],
+     "score": 1.0,
+     "pass": "more"
+    },
+    {
+     "title": "File:UEFA Youth League Zenit-Juventus, 2021-10-20 18.jpg",
+     "pageid": 115916644,
+     "page": "https://commons.wikimedia.org/wiki/File:UEFA_Youth_League_Zenit-Juventus,_2021-10-20_18.jpg",
+     "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/1d/UEFA_Youth_League_Zenit-Juventus%2C_2021-10-20_18.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "mime": "image/jpeg",
+     "width": 600,
+     "height": 420,
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "author": "Зенит",
+     "credit": "https://fc-zenit.ru/photo/50516/",
+     "attributionRequired": "true",
+     "usageTerms": "Creative Commons Attribution-Share Alike 3.0",
+     "restrictions": "",
+     "nonFree": "",
+     "date": "2021-10-20 15:57:41",
+     "file": "10-Q111269387-m22.jpg",
+     "fromP18": false,
+     "via": "category",
+     "depicts": [
+      "Q111269387"
+     ],
+     "score": 1.0,
+     "pass": "more"
     }
    ],
    "match": "squad_qid",
