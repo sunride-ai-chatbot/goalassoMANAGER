@@ -122,6 +122,12 @@ async function main(){try{
  Gst.document.querySelector('[data-lg="identity"]').click();
  await until(()=>body(Gst).querySelector('.lg-preview'),'identity screen');
  assert.ok(body(Gst).querySelectorAll('.lg-opt').length===6,'the free tier offers ready-made crests');
+ // one press opens the whole wall of crests at once, each of them once, and a pick is marked
+ body(Gst).querySelector('[data-lg="croll"]').click();
+ {const all=[...body(Gst).querySelectorAll('.lg-opt')];assert.equal(all.length,72,'every ready-made crest in one press');
+  assert.equal(new Set(all.map(b=>b.innerHTML.replace(/id="[^"]*"|url\(#[^)]*\)|href="#[^"]*"/g,''))).size>=70,true,'and no crest twice');
+  all[40].click();assert.equal(body(Gst).querySelectorAll('.lg-opt').length,72,'the wall stays open after a pick');
+  assert.equal(body(Gst).querySelectorAll('.lg-opt.on').length,1);assert.ok(body(Gst).querySelectorAll('.lg-opt')[40].classList.contains('on'))}
  body(Gst).querySelector('[data-lg="ctier"][data-v="premium"]').click();
  await until(()=>body(Gst).querySelector('.lg-charge').textContent.includes('₪2'),'the price of the step up is shown before it is paid');
  body(Gst).querySelector('[data-lg="cset"][data-k="emblem"][data-v="lion"]').click();

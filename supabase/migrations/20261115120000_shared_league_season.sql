@@ -16,7 +16,10 @@
 -- A manager who never shows up does not freeze the league: his penalties are taken for him, his opponent's
 -- answer stands when the host closes the round, and a match nobody played is a goalless draw.
 
-alter table public.lg_leagues  add column if not exists round_started timestamptz;
+alter table public.lg_leagues  add column if not exists round_started timestamptz,
+                               add column if not exists kickoff_at timestamptz;
+-- the manager's time zone (an IANA name his phone reports): an appointment is checked against everybody's night
+alter table public.lg_members  add column if not exists tz text;
 alter table public.lg_members  add column if not exists setup jsonb not null default '{}'::jsonb,
                                add column if not exists ground int not null default 0 check (ground between 0 and 5);
 alter table public.lg_fixtures add column if not exists lock jsonb,
@@ -158,7 +161,7 @@ begin
  if l.phase<>'season' then return; end if;
  if exists(select 1 from public.lg_fixtures where league_id=p_league and season=l.season and round=l.round and played_at is null) then return; end if;
  if exists(select 1 from public.lg_fixtures where league_id=p_league and season=l.season and round>l.round) then
-  update public.lg_leagues set round=(select min(round) from public.lg_fixtures where league_id=p_league and season=l.season and round>l.round), round_started=now() where id=p_league;
+  update public.lg_leagues set round=(select min(round) from public.lg_fixtures where league_id=p_league and season=l.season and round>l.round), round_started=now(), kickoff_at=null where id=p_league;
   return;
  end if;
  for s in select * from goalasso_private.lg_standings(p_league,l.season) loop
@@ -191,11 +194,11 @@ begin
  return jsonb_build_object(
   'id',l.id,'name',l.name,'invitation',case when l.host_id=auth.uid() then l.invitation else null end,
   'host',l.host_id=auth.uid(),'capacity',l.capacity,'budget',l.budget,'season',l.season,'round',l.round,'phase',l.phase,
-  'me',auth.uid(),'round_started',l.round_started,
+  'me',auth.uid(),'round_started',l.round_started,'kickoff',l.kickoff_at,
   'pool',(select count(*) from public.lg_pool),
   'members',(select coalesce(jsonb_agg(jsonb_build_object(
      'id',m.owner_id,'mine',m.owner_id=auth.uid(),'host',m.owner_id=l.host_id,'team',m.team,'crest',m.crest,'kit',m.kit,
-     'money',m.money,'ground',m.ground,'squad',goalasso_private.lg_squad_size(p_league,m.owner_id),'seen',m.last_seen)
+     'money',m.money,'ground',m.ground,'tz',m.tz,'squad',goalasso_private.lg_squad_size(p_league,m.owner_id),'seen',m.last_seen)
     order by m.joined_at),'[]'::jsonb) from public.lg_members m where m.league_id=p_league),
   'setup',(select m.setup from public.lg_members m where m.league_id=p_league and m.owner_id=auth.uid()),
   'squad',(select coalesce(jsonb_agg(jsonb_build_object('player',s.player,'paid',s.paid) order by s.bought_at),'[]'::jsonb)
@@ -263,7 +266,7 @@ begin
   if goalasso_private.lg_squad_size(p_league,m.owner_id)<14 then perform goalasso_private.lg_fill(p_league,m.owner_id,14,true); end if;
  end loop;
  n:=goalasso_private.lg_make_fixtures(p_league,l.season);
- update public.lg_leagues set phase='season', round=1, round_started=now() where id=p_league;
+ update public.lg_leagues set phase='season', round=1, round_started=now(), kickoff_at=null where id=p_league;
  return jsonb_build_object('fixtures',n);
 end $$;
 
@@ -275,7 +278,7 @@ begin
  if l.phase<>'done' then raise exception 'season_running'; end if;
  if l.season>=99 then raise exception 'league_over'; end if;
  n:=goalasso_private.lg_make_fixtures(p_league,l.season+1);
- update public.lg_leagues set season=l.season+1, phase='season', round=1, round_started=now(), expires_at=now()+interval '180 days' where id=p_league;
+ update public.lg_leagues set season=l.season+1, phase='season', round=1, round_started=now(), kickoff_at=null, expires_at=now()+interval '180 days' where id=p_league;
  return jsonb_build_object('season',l.season+1,'fixtures',n);
 end $$;
 
@@ -467,6 +470,37 @@ begin
  return jsonb_build_object('ground',g+1,'charged',cost,'money',left_);
 end $$;
 
+-- ---------------------------------------------------------------------------------------------------------
+-- the appointment: "we play at nine"
+-- ---------------------------------------------------------------------------------------------------------
+-- A round has no clock of its own; the host may give it one. It is an appointment and not a gate: the match can
+-- be played before it and after it, the time only tells every phone when to count down and when to remind.
+-- Friends may sit in different countries, so the moment is one instant (timestamptz) that each phone shows in its
+-- own time, and the server refuses an instant that falls between midnight and seven in the morning for any
+-- manager whose time zone it knows.
+create or replace function goalasso_private.lg_tz(p_league uuid, p_tz text) returns jsonb language plpgsql security definer set search_path='' as $$
+begin
+ if auth.uid() is null then raise exception 'login_required'; end if;
+ if p_tz is null or length(p_tz)>64 or not exists(select 1 from pg_catalog.pg_timezone_names where name=p_tz) then raise exception 'invalid_tz'; end if;
+ update public.lg_members set tz=p_tz where league_id=p_league and owner_id=auth.uid() and tz is distinct from p_tz;
+ return jsonb_build_object('tz',p_tz);
+end $$;
+
+create or replace function goalasso_private.lg_kickoff(p_league uuid, p_at timestamptz) returns jsonb language plpgsql security definer set search_path='' as $$
+declare l public.lg_leagues; asleep text;
+begin
+ l:=goalasso_private.lg_member(p_league);
+ if l.host_id<>auth.uid() then raise exception 'host_only'; end if;
+ if l.phase<>'season' then raise exception 'no_season'; end if;
+ if p_at is null then update public.lg_leagues set kickoff_at=null where id=p_league; return jsonb_build_object('kickoff',null); end if;
+ if p_at<now()+interval '1 minute' or p_at>now()+interval '14 days' then raise exception 'bad_time'; end if;
+ select m.team into asleep from public.lg_members m
+  where m.league_id=p_league and m.tz is not null and extract(hour from (p_at at time zone m.tz))<7 order by m.joined_at limit 1;
+ if asleep is not null then raise exception 'night'; end if;
+ update public.lg_leagues set kickoff_at=p_at where id=p_league;
+ return jsonb_build_object('kickoff',p_at);
+end $$;
+
 revoke all on all functions in schema goalasso_private from public, anon;
 grant execute on all functions in schema goalasso_private to authenticated;
 -- The helpers that move money, squads or results are called only from the definer functions above, which run
@@ -490,9 +524,11 @@ create or replace function public.lg_result(p_fixture uuid, p_home int, p_away i
 create or replace function public.lg_round_close(p_league uuid) returns jsonb language sql security invoker set search_path='' as $$select goalasso_private.lg_round_close(p_league)$$;
 create or replace function public.lg_train(p_league uuid, p_player text) returns jsonb language sql security invoker set search_path='' as $$select goalasso_private.lg_train(p_league,p_player)$$;
 create or replace function public.lg_ground(p_league uuid) returns jsonb language sql security invoker set search_path='' as $$select goalasso_private.lg_ground(p_league)$$;
+create or replace function public.lg_tz(p_league uuid, p_tz text) returns jsonb language sql security invoker set search_path='' as $$select goalasso_private.lg_tz(p_league,p_tz)$$;
+create or replace function public.lg_kickoff(p_league uuid, p_at timestamptz) returns jsonb language sql security invoker set search_path='' as $$select goalasso_private.lg_kickoff(p_league,p_at)$$;
 revoke all on function public.lg_prices(text[]), public.lg_autofill(uuid), public.lg_setup(uuid,jsonb), public.lg_start(uuid),
  public.lg_next_season(uuid), public.lg_fixture_lock(uuid,text), public.lg_fixture_state(uuid), public.lg_pen(uuid,int,text,text),
- public.lg_result(uuid,int,int,text), public.lg_round_close(uuid), public.lg_train(uuid,text), public.lg_ground(uuid) from public, anon;
+ public.lg_result(uuid,int,int,text), public.lg_round_close(uuid), public.lg_train(uuid,text), public.lg_ground(uuid), public.lg_tz(uuid,text), public.lg_kickoff(uuid,timestamptz) from public, anon;
 grant execute on function public.lg_prices(text[]), public.lg_autofill(uuid), public.lg_setup(uuid,jsonb), public.lg_start(uuid),
  public.lg_next_season(uuid), public.lg_fixture_lock(uuid,text), public.lg_fixture_state(uuid), public.lg_pen(uuid,int,text,text),
- public.lg_result(uuid,int,int,text), public.lg_round_close(uuid), public.lg_train(uuid,text), public.lg_ground(uuid) to authenticated;
+ public.lg_result(uuid,int,int,text), public.lg_round_close(uuid), public.lg_train(uuid,text), public.lg_ground(uuid), public.lg_tz(uuid,text), public.lg_kickoff(uuid,timestamptz) to authenticated;

@@ -45,7 +45,7 @@ const League={entry:()=>`<button type="button" class="btn lg-entry" data-lg-open
  /* only an invitation opens the league by itself; a manager who already has one finds it behind its button */
  open:()=>lgOpen(),close:()=>lgClose(),boot(){if(lgInvited())void lgOpen()},get state(){return LG.state}};
 
-function lgClose(){LG.gen++;clearTimeout(LG.poll);LG.poll=null;try{lgMatchStop()}catch(e){}if(LG.root)LG.root.remove();LG.root=null;LG.busy=false;LG.draft=null;LG.sheet=null;LG.offer=null;LG.confirm=null}
+function lgClose(){LG.gen++;clearTimeout(LG.poll);LG.poll=null;clearInterval(LG.kickTimer);LG.kickTimer=null;LG.kick=null;try{lgMatchStop()}catch(e){}if(LG.root)LG.root.remove();LG.root=null;LG.busy=false;LG.draft=null;LG.sheet=null;LG.offer=null;LG.confirm=null}
 async function lgOpen(){lgClose();const gen=LG.gen;
   LG.root=document.createElement('div');LG.root.className='lg-overlay';
   LG.root.innerHTML='<section class="lg-dialog" role="dialog" aria-modal="true" aria-label="ליגה משותפת"><header class="lg-top"><button type="button" class="lg-close" data-lg="close" aria-label="סגור">×</button><div class="lg-title"><h2 id="lg-name-h">ליגה משותפת</h2><small id="lg-sub"></small></div><div class="lg-cash" id="lg-cash"></div></header><div id="lg-body">מתחבר לשירות…</div><p id="lg-status" role="status" aria-live="polite"></p><nav class="lg-tabs" id="lg-tabs" hidden></nav></section>';
@@ -64,11 +64,11 @@ async function lgEnter(gen){
    catch(e){if(/not_a_member|invitation_expired/.test(String(e.message||e)))lgRemember('');else lgMsg(lgErr(e))}}
   LG.state=null;await lgLobby(gen)}
 /* everything the league shows comes from this one call */
-async function lgLoad(){const s=await lgRpc('lg_get',{p_league:lgSaved()});LG.state=s;LG.setup=lgCleanSetup(s.setup);LG.clubCache=null;return s}
+async function lgLoad(){const s=await lgRpc('lg_get',{p_league:lgSaved()});LG.state=s;LG.setup=lgCleanSetup(s.setup);LG.clubCache=null;try{lgKickSync()}catch(e){}return s}
 async function lgReload(){const gen=LG.gen;await lgLoad();if(gen===LG.gen)lgPaint()}
 function lgSchedule(gen){clearTimeout(LG.poll);LG.poll=setTimeout(async()=>{if(gen!==LG.gen)return;
   /* only the screens that show other people's news refresh by themselves; a screen being typed into is left alone */
-  if(['home','trades'].includes(LG.view)&&!LG.busy&&!LG.confirm&&!(LG.offer&&LG.view==='trades')){try{await lgLoad();if(gen!==LG.gen)return;lgPaint()}catch(e){}}
+  if(['home','trades'].includes(LG.view)&&!LG.busy&&!LG.confirm&&!LG.kick&&!(LG.offer&&LG.view==='trades')){try{await lgLoad();if(gen!==LG.gen)return;lgPaint()}catch(e){}}
   lgSchedule(gen)},15000)}
 
 /* ---- lobby ---- */
@@ -126,7 +126,7 @@ function lgRoundHTML(){const s=LG.state,fx=s.fixtures.filter(f=>f.round===s.roun
      ${did?`<p>שיחקת את המשחק. הוא ייכנס לטבלה כש${esc(opp.team)} תשחק אותו אצלה, או כשהמארח יסגור את המחזור.</p><button type="button" class="btn sec" data-lg="play" data-v="${mine.id}">צפה שוב</button>`
         :`<p>${he?`${esc(opp.team)} כבר שיחקה. המשחק שלך יציג את אותו משחק בדיוק ויאשר את התוצאה.`:'ההרכב שבלשונית "הסגל" הוא שיעלה. אם היריב מחובר, פנדלים הם דו־קרב ביניכם.'}</p><button type="button" class="btn big" data-lg="play" data-v="${mine.id}">לשריקת הפתיחה</button>`}</div>`}
   const open=fx.filter(f=>!f.played).length;
-  return `${hero}<div class="lg-card"><h3>משחקי המחזור</h3><ul class="lg-fxs">${fx.map(lgFixtureRowHTML).join('')}</ul>
+  return `${hero}${lgKickHTML()}<div class="lg-card"><h3>משחקי המחזור</h3><ul class="lg-fxs">${fx.map(lgFixtureRowHTML).join('')}</ul>
    ${s.host&&open?`<button type="button" class="btn sec lg-wide" data-lg="close-round">${LG.confirm==='close-round'?'לחץ שוב לאישור: סגור את המחזור':'סגור את המחזור'}</button><p class="lg-note">סגירה קובעת את מה שנשאר פתוח: משחק שרק מנהל אחד שיחק נשאר כפי ששוחק, ומשחק שאף אחד לא שיחק נרשם <bdi dir="ltr">0:0</bdi>.</p>`:''}</div>`}
 function lgAllFixturesHTML(){const s=LG.state,n=lgRounds();if(!n)return '';let out='';
   for(let r=1;r<=n;r++){if(r===s.round&&s.phase==='season')continue;const fx=s.fixtures.filter(f=>f.round===r);if(!fx.length)continue;out+=`<h4>מחזור <bdi>${r}</bdi></h4><ul class="lg-fxs">${fx.map(lgFixtureRowHTML).join('')}</ul>`}
@@ -159,17 +159,30 @@ const CREST_SHAPE_HE={shield:'מגן',kite:'חוד',block:'מלבן',disc:'עי�
 const CREST_DIV_HE={solid:'אחיד',half:'חצוי',pale:'פס אמצעי',quarter:'רבעים',bend:'אלכסון',chevron:'שברון',stripes:'פסים'};
 const CREST_EMBLEM_HE={ball:'כדור',star:'כוכב',crown:'כתר',anchor:'עוגן',bolt:'ברק',flame:'להבה',tower:'מגדל',bridge:'גשר',wave:'גל',lion:'אריה'};
 const KIT_PATTERN_HE={stripes:'פסים',hoops:'טבעות',sash:'אלכסון',halves:'חצוי',sleeves:'שרוולים'};
+/* The ready-made crests. Six to begin with, and one press opens the whole wall at once: asking for six more at a
+   time made choosing a crest a queue. The list is the same list every time for a club (its seed is the name the
+   manager came in with), the first six of it are the short one, and no crest appears twice. */
+const LG_CRESTS_ALL=72;
+const lgSameCrest=(a,b)=>!!a&&!!b&&['shape','div','emblem','c1','c2'].every(k=>a[k]===b[k]);
+function lgCrestChoices(d){const me=lgMe(),seed=lgHashN(me?me.team:d.team);if(!LG.crests||LG.crests.seed!==seed){const out=[];
+   /* every part is drawn from its own bits of a hash, and the shapes simply take turns: a generator that reads the low
+      bits of one running number gave a wall of seventy discs in three colours */
+   for(let i=0;out.length<LG_CRESTS_ALL&&i<LG_CRESTS_ALL*6;i++){const h=lgHashN(seed+':'+i),p=CREST_PALETTES[(h>>>3)%CREST_PALETTES.length];
+    const c={shape:CREST_SHAPES[(i+seed)%CREST_SHAPES.length],div:CREST_DIVS[(h>>>9)%CREST_DIVS.length],c1:p[0],c2:p[1],ink:p[2],emblem:CREST_EMBLEMS[(h>>>15)%CREST_EMBLEMS.length],tier:'free'};
+    if(!out.some(o=>lgSameCrest(o,c)))out.push(c)}
+   LG.crests={seed,list:out}}
+  return d.all?LG.crests.list:LG.crests.list.slice(0,6)}
 function lgIdentityPaint(){const me=lgMe();if(!me)return;const hash=lgHashN;
   const d=LG.draft=LG.draft||{team:me.team,crest:Object.assign({},crestDefault(hash(me.team)),me.crest||{}),kit:Object.assign({},kitDefault(hash(me.team)),me.kit||{})};
   const charge=Math.max(0,crestTierCost(d.crest.tier)-crestTierCost((me.crest||{}).tier||'free'))+Math.max(0,kitTierCost(d.kit.tier)-kitTierCost((me.kit||{}).tier||'plain'));
-  const opts=crestOptions(hash(d.team)+(d.roll||0)*7,6);
+  const opts=lgCrestChoices(d);
   lgBody(`<div class="lg-id">
    <div class="lg-preview">${crestSVG(d.crest,{name:d.team,label:'תצוגה מקדימה של הסמל'})}${clubKitSVG(d.kit,{no:9})}</div>
    <label>שם המועדון<input id="lg-team3" maxlength="40" value="${esc(d.team)}" data-lg-input="team"></label>
    <fieldset><legend>הסמל</legend>
     <div class="lg-tiers">${[['free','מוכן',0],['custom','לפי בחירה',1e6],['premium','מוזהב',2e6]].map(([t,l,c])=>`<button type="button" class="lg-tier${d.crest.tier===t?' on':''}" data-lg="ctier" data-v="${t}">${l}<small>${c?lgCash(c):'חינם'}</small></button>`).join('')}</div>
     ${d.crest.tier==='free'
-      ?`<div class="lg-opts">${opts.map((o,i)=>`<button type="button" class="lg-opt" data-lg="cpick" data-v="${i}">${crestSVG(Object.assign({},o,{tier:'free'}),{name:'',label:'אפשרות '+(i+1)})}</button>`).join('')}</div><button type="button" class="btn sec" data-lg="croll">הצע סמלים אחרים</button>`
+      ?`<div class="lg-opts${d.all?' all':''}">${opts.map((o,i)=>`<button type="button" class="lg-opt${lgSameCrest(o,d.crest)?' on':''}" data-lg="cpick" data-v="${i}">${crestSVG(Object.assign({},o,{tier:'free'}),{name:'',label:'אפשרות '+(i+1)})}</button>`).join('')}</div><button type="button" class="btn sec" data-lg="croll">${d.all?'הצג פחות':`כל הסמלים · <bdi>${LG_CRESTS_ALL}</bdi>`}</button>`
       :`<div class="lg-parts">
         <div class="lg-part"><span>צורה</span>${CREST_SHAPES.map(v=>`<button type="button" class="lg-chip${d.crest.shape===v?' on':''}" data-lg="cset" data-k="shape" data-v="${v}">${CREST_SHAPE_HE[v]}</button>`).join('')}</div>
         <div class="lg-part"><span>חלוקה</span>${CREST_DIVS.map(v=>`<button type="button" class="lg-chip${d.crest.div===v?' on':''}" data-lg="cset" data-k="div" data-v="${v}">${CREST_DIV_HE[v]}</button>`).join('')}</div>
@@ -198,8 +211,8 @@ document.addEventListener('click',async e=>{
   if(a==='back'){LG.draft=null;LG.view=lgV2()?'club':'home';lgPaint();return}
   if(a==='identity'){LG.view='identity';lgPaint();return}
   if(a==='copy'){const i=document.getElementById('lg-link');try{await navigator.clipboard.writeText(i.value);lgMsg('הקישור הועתק. שלח אותו לחברים.')}catch(x){i.select();lgMsg('סמן והעתק את הקישור.')}return}
-  if(a==='croll'){d.roll=(d.roll||0)+1;lgPaint();return}
-  if(a==='cpick'){Object.assign(d.crest,crestOptions(lgHashN(d.team)+(d.roll||0)*7,6)[+v],{tier:'free'});lgPaint();return}
+  if(a==='croll'){d.all=!d.all;LG.keepScroll=true;lgPaint();return}
+  if(a==='cpick'){Object.assign(d.crest,lgCrestChoices(d)[+v],{tier:'free'});LG.keepScroll=true;lgPaint();return}
   if(a==='cset'){d.crest[k]=v;lgPaint();return}
   if(a==='kset'){d.kit[k]=v;lgPaint();return}
   if(a==='cpal'){const p=CREST_PALETTES[+v];d.crest.c1=p[0];d.crest.c2=p[1];d.crest.ink=p[2];lgPaint();return}

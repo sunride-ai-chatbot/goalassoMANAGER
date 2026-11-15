@@ -163,6 +163,15 @@ The champion is announced with his coach's picture, his squad with the trophy an
    league is `done`; the board shows the champion, the prize list and, for the host, "open a new season"
    (`lg_next_season`): the same managers, the same squads, what the players learned, a clean table.
 
+8. **The appointment** — built (`src/js/35i-league-kickoff.js`). The host may give a round a time; every phone
+   counts down to it on its own clock and reminds five minutes before. It is not a gate: the match can be played
+   earlier or later. Managers may be in different countries, so each phone tells the server its time zone and a
+   time that is between midnight and seven in the morning for anybody is refused. The reminder from the page
+   itself only arrives while the game is open or in the background — a web page without a push server cannot be
+   woken — so the card also gives a calendar entry with a five-minute alarm, which rings regardless. A real push
+   to a closed game needs a server piece (an Edge Function holding a VAPID key, a subscriptions table, a
+   scheduler); it is not built.
+
 ## What a manager cannot do with a console
 
 - State a price, a balance or a score: none of them is his to send.

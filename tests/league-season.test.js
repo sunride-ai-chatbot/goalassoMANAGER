@@ -8,6 +8,7 @@
 // window is the full game, the other the beginner page, and neither has a career); a penalty is a duel whose
 // choices cross only when both are in, and is taken for a manager who is not there; a result counts when both
 // phones send the same one; training, a trade, the table, the prize money and a second season.
+process.env.TZ='UTC';   // the appointment is checked against time zones: this phone's is a known one
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
@@ -119,6 +120,29 @@ async function until(fn,what,ms=20000){const t=Date.now();let last;while(Date.no
   assert.ok(Number((await sqlOne(`select count(*)::int n from public.lg_squads where owner_id='${U.b}'`)).n)>=14,'nobody starts without a team');
   assert.equal($$(H,'.lg-table tbody tr').length,2);assert.equal($$(H,'.lg-card:not(.lg-all) .lg-fxs .lg-fx').length,1);
   await Gs.eval('lgReload()');await until(()=>$(Gs,'.lg-hero [data-lg="play"]'),'the guest sees the same evening');
+
+  // ---- the appointment: the host's to set, never in anybody's night, a countdown and a reminder for all ----
+  {assert.ok($(H,'[data-lg="kick-open"]'),'the host may give the round a time');assert.ok(!$(Gs,'.lg-kick'),'and nobody else');
+   await until(async()=>(await sqlOne(`select count(*)::int n from public.lg_members where tz='UTC'`)).n===2,'each phone told the server its time zone');
+   await db.exec(`update public.lg_members set tz='Asia/Tokyo' where owner_id='${U.b}'`);await H.eval('lgReload()');
+   const day=Math.floor(Date.now()/864e5)*864e5+2*864e5,night=day+18*36e5,fine=day+11*36e5;   // 18:00 UTC is 03:00 in Tokyo, 11:00 UTC is 20:00
+   $(H,'[data-lg="kick-open"]').click();assert.ok($$(H,'[data-lg="kick-chip"]').length>=4);
+   H.eval(`LG.kick.t=${night};lgPaint()`);
+   assert.equal($(H,'[data-lg="kick-set"]').disabled,true,'a time that is the night for somebody cannot be set');assert.match($(H,'#lg-kick-check').textContent,/מכבי הגבעה זה אמצע הלילה/);
+   await assert.rejects(rpc(U.h,'lg_kickoff',{p_league:lid,p_at:new Date(night).toISOString()}),/night/,'nor by a changed page');
+   await assert.rejects(rpc(U.b,'lg_kickoff',{p_league:lid,p_at:new Date(fine).toISOString()}),/host_only/);
+   const inp=$(H,'[data-lg-input="kick"]');inp.value=H.eval(`lgLocalInput(${fine})`);inp.dispatchEvent(new H.Event('input',{bubbles:true}));
+   assert.equal($(H,'[data-lg="kick-set"]').disabled,false);assert.match($(H,'.k-zones').textContent,/20:00/,'the host sees what it is on the other clock');
+   $(H,'[data-lg="kick-set"]').click();await until(()=>$(H,'#lg-count'),'the countdown');await idle(H);
+   assert.match($(H,'.lg-kick').textContent,/11:00/);assert.match($(H,'#lg-count').textContent,/בעוד/);
+   await Gs.eval('lgReload()');await until(()=>$(Gs,'#lg-count'),'the guest sees it too');assert.ok($(Gs,'[data-lg="kick-remind"]')&&$(Gs,'[data-lg="kick-ics"]')&&!$(Gs,'[data-lg="kick-open"]'));
+   const ics=Gs.eval('lgIcs()');assert.match(ics,/TRIGGER:-PT5M/);assert.ok(ics.includes('DTSTART:'+new Date(fine).toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'')),'one instant, whatever the phone\'s zone');
+   // five minutes before: one reminder, once
+   await db.exec(`update public.lg_leagues set kickoff_at=now()+interval '4 minutes 30 seconds' where id='${lid}'`);
+   Gs.eval('window.__n=[];notify=(t,b)=>{window.__n.push(t+" | "+b);return true}');await Gs.eval('lgReload()');Gs.eval('lgKickTick();lgKickTick()');
+   const n=Gs.eval('window.__n');assert.equal(n.length,1,'reminded once');assert.match(n[0],/עוד 5 דקות משחקים \| ליגת חמישי · מחזור 1 · נגד הפועל הצפון/);
+   $(H,'[data-lg="kick-open"]')||await H.eval('lgReload()');
+   await idle(H);$(H,'[data-lg="kick-clear"]').click();await until(()=>!$(H,'#lg-count')&&$(H,'[data-lg="kick-open"]'),'the host takes the time back');await idle(H)}
 
   // ---- training: three a round ----
   await tab(H,'squad');

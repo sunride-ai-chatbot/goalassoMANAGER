@@ -73,6 +73,24 @@ begin
  v:=public.lg_ground(lid);assert (v->>'ground')::int=1 and (v->>'charged')::bigint=1000000;
  v:=public.lg_ground(lid);assert (v->>'ground')::int=2 and (v->>'charged')::bigint=2000000;
 
+ -- the appointment: only the host, never in anybody's night, shown to all, gone with the round
+ begin perform public.lg_tz(lid,'Mars/Olympus');raise exception 'expected invalid_tz';
+ exception when raise_exception then if sqlerrm<>'invalid_tz' then raise; end if;end;
+ perform public.lg_tz(lid,'Asia/Tokyo');
+ begin perform public.lg_kickoff(lid,now()+interval '1 hour');raise exception 'expected host_only';
+ exception when raise_exception then if sqlerrm<>'host_only' then raise; end if;end;
+ perform set_config('request.jwt.claim.sub',h::text,true);perform public.lg_tz(lid,'Asia/Jerusalem');
+ begin perform public.lg_kickoff(lid,((current_date+2)::text||' 20:00')::timestamp at time zone 'Asia/Jerusalem');raise exception 'expected night';
+ exception when raise_exception then if sqlerrm<>'night' then raise; end if;end;
+ begin perform public.lg_kickoff(lid,now()-interval '1 hour');raise exception 'expected bad_time';
+ exception when raise_exception then if sqlerrm<>'bad_time' then raise; end if;end;
+ v:=public.lg_kickoff(lid,((current_date+2)::text||' 13:00')::timestamp at time zone 'Asia/Jerusalem');
+ v:=public.lg_get(lid);assert (v->>'kickoff')::timestamptz=((current_date+2)::text||' 13:00')::timestamp at time zone 'Asia/Jerusalem';
+ assert (select m->>'tz' from jsonb_array_elements(v->'members') m where m->>'id'=g::text)='Asia/Tokyo';
+ v:=public.lg_kickoff(lid,null);v:=public.lg_get(lid);assert v->>'kickoff' is null;
+ perform public.lg_kickoff(lid,((current_date+2)::text||' 13:00')::timestamp at time zone 'Asia/Jerusalem');
+ perform set_config('request.jwt.claim.sub',g::text,true);
+
  -- the first evening: one match, one manager free
  execute 'reset role';
  select * into f from public.lg_fixtures where league_id=lid and season=1 and round=1;
@@ -171,6 +189,7 @@ begin
  v:=public.lg_round_close(lid);assert (v->>'closed')::int=1;
  execute 'reset role';
  select * into f from public.lg_fixtures where league_id=lid and season=1 and round=2;
+ assert (select kickoff_at is null and round=3 from public.lg_leagues where id=lid),'a new round has no appointment yet';
  assert f.home_goals=0 and f.away_goals=0 and f.played_at is not null;
  assert (select round from public.lg_leagues where id=lid)=3;
  -- an evening one manager played stands as he played it
