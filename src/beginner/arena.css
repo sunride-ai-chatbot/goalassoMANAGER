@@ -6,7 +6,9 @@
    a club is a hexagon holding its own kit. */
 body.beginner{--bbase:#020617;--bpanel:#0b1228;--bline:rgba(255,255,255,.12);--bmuted:#aebccd;--bmint:#00FF9D;--agold:#fbbf24;
   background:radial-gradient(90% 38% at 100% 0,rgba(0,255,157,.11),transparent 62%),radial-gradient(70% 34% at 0 100%,rgba(251,191,36,.05),transparent 60%),#020617;background-attachment:fixed}
-.beginner h1{font-weight:900}.beginner h2{font-weight:900}.beginner h3{font-weight:800}
+.beginner h1{font-weight:900}.beginner h2:where(:not(.np *)){font-weight:900}.beginner h3{font-weight:800}
+/* the newspaper (.np) is a sheet of paper inside the game and sets its own type: the game's h2 and p rules, here and in style.css, stop at its edge.
+   They used to reach in: the headline came out smaller than the line under it, and the story itself in the game's pale grey on cream paper. */
 .beginner .beyebrow{color:#00FF9D;letter-spacing:0}
 .beginner .bpill{border-color:rgba(0,255,157,.5);background:rgba(0,255,157,.08);color:#b9ffe2}
 .beginner button:focus-visible,.beginner a:focus-visible,.beginner input:focus-visible,.beginner select:focus-visible{outline-color:#7dffcc}

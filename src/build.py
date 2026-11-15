@@ -9,7 +9,7 @@
 The numeric prefix is the load order: a file may use anything declared in files before it, and function declarations
 are hoisted, so views may call engine code declared later. Keep new code in the file that owns the subject.
 """
-import json, glob, os, base64, datetime
+import json, glob, os, base64, datetime, re, struct
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'src')
 
@@ -60,8 +60,22 @@ assert '__CSS__' in shell and '__JS__' in shell, 'src/index.html must contain __
 page = shell.replace('__CSS__', concat('styles', '.css')).replace('__JS__', concat('js', '.js'))
 catalog = json.loads(read(os.path.join(ROOT, 'data', 'sponsors', 'catalog.json')))
 assert len(catalog) == 50 and len({b['id'] for b in catalog}) == 50, 'Expected 50 unique sponsor brands'
+def logo_ratio(path):
+    """width / height of a sponsor logo, read without an imaging library: the IHDR of a PNG, the viewBox of an SVG."""
+    with open(path, 'rb') as fh:
+        head = fh.read(4096)
+    if head[:8] == b'\x89PNG\r\n\x1a\n':
+        w, h = struct.unpack('>II', head[16:24])
+    else:
+        m = re.search(r'viewBox="\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)', head.decode('utf8', 'replace'))
+        assert m, 'No viewBox in sponsor logo: ' + path
+        w, h = float(m.group(1)), float(m.group(2))
+    assert w > 0 and h > 0, 'Empty sponsor logo: ' + path
+    return round(w / h, 3)
+
 for b in catalog:
     assert os.path.isfile(os.path.join(ROOT, b['logo'])), 'Missing sponsor logo: ' + b['id']
+    b['ar'] = logo_ratio(os.path.join(ROOT, b['logo']))   # the newspaper's sign hugs the logo (npSignHTML): an SVG with a viewBox alone has no size of its own as an <img>
 page = page.replace('__SPONSOR_CATALOG__', enc(catalog))
 page = page.replace('__SPLASH_IMG__', data_uri('splash.webp')).replace('__LOGO_IMG__', data_uri('logo.webp'))
 

@@ -28,9 +28,13 @@ function npFaceHTML(st){const ev=st.ev||{};let hit=npPlayerOf(ev);
   if(!hit&&ev.vid&&PLAYER_VISUALS.faces[ev.vid])hit={p:{id:ev.pid,first:ev.player||'',last:'',pos:ev.pos||'MF',visualId:ev.vid},c:null};
   if(!hit||!playerVisual(hit.p))return '';const c=npShirtFor(st)||hit.c||club(st.team)||me();const id='npf'+String(ev.pid)+Math.random().toString(36).slice(2,5);
   return `<div class="np-face"><svg viewBox="0 0 240 300" aria-hidden="true">${portraitGroup(hit.p,c,id,{bg:false,h:300})}</svg></div>`}
+/* a sponsor's sign hangs on the back wall of the stage and belongs to the room: one plate that hugs the logo (a square mark gets a square sign, a long word a long one),
+   lit like the wall it hangs on, with the photograph's own smoke laid over it again (.np-smoke, assets/np-stage-smoke.webp). It used to be a black board in front of everything. */
+function npSignHTML(name){const b=sponsorBrand(name);
+  return `<div class="np-sign${b?'':' txt'}"><div class="np-plate"${b?` style="--sponsor-bg:${b.logoBg}"`:''}>${b?`<img src="${b.logo}" alt="${esc(b.name)}" style="--ar:${+b.ar||2.7}" decoding="async" onerror="var t=document.createElement('bdi');t.textContent=this.alt;this.closest('.np-sign').classList.add('txt');this.replaceWith(t)">`:`<bdi>${esc(name)}</bdi>`}</div></div><i class="np-smoke" aria-hidden="true"></i>`}
 function npFigure(st,lazy){const im=npImage(st);const [f,w,h]=NP_IMG[im.k];const ev=st.ev||{};const face=im.shirt?npFaceHTML(st):'';const c=im.shirt&&!face?npShirtFor(st):null;
   return `<figure class="np-fig"><div class="np-ph"><picture><source srcset="${f}.webp" type="image/webp"><img src="${f}.jpg" width="${w}" height="${h}" alt="" ${lazy?'loading="lazy" ':''}decoding="async" onerror="this.closest('.np-ph').classList.add('np-noimg')"></picture>
-   ${face}${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?`<div class="np-board">${sponsorLogoHTML(im.board)||`<bdi>${esc(im.board)}</bdi>`}</div>`:''}</div>
+   ${face}${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?npSignHTML(im.board):''}</div>
    <figcaption><b>${esc(im.cap.split(' · ')[0])}:</b> ${esc(im.cap.split(' · ')[1]||'')}</figcaption></figure>`}
 const yrs=n=>n==null?null:`${n} ${n>1?'עונות':'עונה'}`;
 function npFacts(st){const ev=st.ev||{},t=npTypeOf(st);const c=club(st.team)||null;const F=[];const add=(l,v)=>{if(v!=null&&v!=='')F.push([l,v])};

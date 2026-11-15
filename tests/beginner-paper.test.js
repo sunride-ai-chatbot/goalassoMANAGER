@@ -30,8 +30,21 @@ const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));const page=()=>$('#npModal
 
   // ---- two stories at once: one after the other, with a button for the next
   w.eval("BpaperSponsor('חברת הדוגמה',900000);BpaperOffer({name:'מועדון הדוגמה',until:9});Brender()");await tick();
-  assert.match($('#npModal .np-hl').textContent,/חתמה עם חברת הדוגמה/);assert.match($('#npModal [data-npnext]').textContent,/1/);$('#npModal [data-npnext]').click();await tick(40);
+  assert.match($('#npModal .np-hl').textContent,/חתמה עם חברת הדוגמה/);assert.match($('#npModal [data-npnext]').textContent,/1/);
+  // the sponsor's sign hangs on the stage behind the smoke: a brand the catalogue does not know gets its name on the plate, and the old black board is gone
+  assert.equal($('#npModal .np-sign.txt .np-plate bdi').textContent,'חברת הדוגמה');assert.ok($('#npModal .np-ph .np-smoke'),'the smoke is laid over the sign');assert.equal($('#npModal .np-board'),null);
+  assert.ok($('#npModal .np-sign').compareDocumentPosition($('#npModal .np-smoke'))&4,'the smoke comes after the sign, so it is drawn in front of it');
+  $('#npModal [data-npnext]').click();await tick(40);
   assert.match($('#npModal .np-hl').textContent,/מועדון הדוגמה רוצה את דני רופא/);assert.equal($('#npModal [data-npnext]'),null);await closePaper();assert.equal(page(),null);
+
+  // ---- a brand of the catalogue: its own logo on a plate that hugs it (the build measures every logo), on the logo's own background
+  const brands=run("SPONSOR_CATALOG.map(b=>({name:b.name,logo:b.logo,bg:b.logoBg,ar:b.ar}))");assert.ok(brands.every(b=>b.ar>0.2&&b.ar<20),'every logo has its proportions');
+  assert.ok(brands.find(b=>b.ar<1.2)&&brands.find(b=>b.ar>5),'square marks and long words both exist, which is why the plate follows the logo');
+  for(const b of [brands.find(x=>x.ar<1.2),brands.find(x=>x.ar>5)]){const d=w.document.createElement('div');d.innerHTML=w.eval(`npSignHTML(${JSON.stringify(b.name)})`);const img=d.querySelector('.np-sign:not(.txt) .np-plate img');
+   assert.ok(img,b.name);assert.equal(img.getAttribute('src'),b.logo);assert.equal(img.getAttribute('alt'),b.name);assert.equal(img.style.getPropertyValue('--ar'),String(b.ar));assert.equal(d.querySelector('.np-plate').style.getPropertyValue('--sponsor-bg'),b.bg);
+   img.dispatchEvent(new w.Event('error'));assert.equal(d.querySelector('.np-sign.txt .np-plate bdi').textContent,b.name,'a logo that does not load leaves the name on the plate')}
+  // the paper sets its own type: the game's paragraph and h2 rules stop at its edge (they once painted the story pale grey on cream and shrank the headline under the line below it)
+  const css=fs.readFileSync(path.join(root,'beginner.html'),'utf8');assert.ok(!/\.beginner (p|h2)\{/.test(css),'no bare .beginner p / h2 rule');assert.ok(css.includes('.beginner p:where(:not(.np *))')&&css.includes('.beginner h2:where(:not(.np *))'));
 
   // ---- a rout is news for the archive, not a front page that opens by itself
   const n0=run('G.paper.length');const opp=run("G.clubs.find(x=>x.id!==G.me).id");
