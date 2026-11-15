@@ -120,8 +120,14 @@ The champion is announced with his coach's picture, his squad with the trophy an
    strips `qid`. `scripts/build-league-pool.py` writes `supabase/seed-league-pool.sql` from `data/`; apply it
    with `supabase db push` or `psql -f`, not the SQL editor. An empty pool sells nothing rather than
    everything for free, which is the safe way round.
-2. **Lobby and identity**: create and join by invitation (the anonymous session already works), name,
-   crest generator, kit. No match yet.
+2. **Lobby and identity** — built (`src/js/35d-crest.js`, `src/js/35e-league.js`, `src/styles/18-league.css`,
+   `tests/league-lobby.test.js`). The host opens a league for 2–8 managers and gets a `?league=<invitation>`
+   link; the invitation card says who is inviting and whether there is room before anybody signs in. Each
+   manager names his club and draws its crest and kit from a generator rather than choosing a real badge:
+   real badges are trademarks, and a generator gives endless combinations where a list gives a list. Free
+   offers six ready-made crests, custom opens shape, division, emblem and palette, premium adds the metal.
+   The client shows the prices; the server charges them, only on a step up, and never refunds a step down,
+   so a changed page cannot buy the gold for nothing. No match yet.
 3. **The market**: buy from the pool, sell back, offer a trade, accept. All server-side.
 4. **The round**: fixtures, both phones simulate from the server's seed and both submit the result; the
    server accepts it only if the two agree. This blocks a manager cheating on his own; two friends could
