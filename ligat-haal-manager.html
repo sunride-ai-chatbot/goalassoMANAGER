@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="b2f711eb2c63">
-<meta name="goalasso-built" content="15.11.2026 01:33">
+<meta name="goalasso-build" content="966f347300df">
+<meta name="goalasso-built" content="15.11.2026 02:14">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
 function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
@@ -5481,7 +5481,13 @@ const Rooms=(()=>{
  function boot(){if(arrival())void open()}
 
  const entry=()=>'<button type="button" class="btn room-entry" data-room-open>משחק רשת · הזמן חבר</button>';
- const intro=()=>`<section class="card room-intro"><h3>משחק רשת עם חבר</h3><p>הזמנה עם המועדון והסגל הקיימים · משחק ידידות בין שני מנהלים</p>${entry()}</section>`;
+ /* The friendly has no card of its own on the start and home screens any more: with the career card, the
+    penalty cup and the shared league above it the screen was a column of offers and nothing read. It is not
+    gone — an invitation link (`?join=CODE`) still opens it, and so does any `[data-room-open]` anywhere.
+    One flag brings the card back. */
+ const SHOW_CARD=false;
+ const introHTML=()=>`<section class="card room-intro"><h3>משחק רשת עם חבר</h3><p>הזמנה עם המועדון והסגל הקיימים · משחק ידידות בין שני מנהלים</p>${entry()}</section>`;
+ const intro=()=>SHOW_CARD?introHTML():'';
  const api=async()=>client||(client=await (window.__roomClientFactory?window.__roomClientFactory():mpClient()));
  async function rpc(name,args){const c=await api(),r=await c.rpc(name,args);if(r.error)throw r.error;return r.data}
  function snapshot(){if(!G||G.live&&!G.live.done||G.beginner?.live)throw Error('finish_match');ensureCareerIdentity(G);const c=me();ensureLineup(c);return JSON.parse(JSON.stringify({careerId:G.careerId,season:G.beginner?.season||G.season,round:G.beginner?.round??G.wk,club:{...c,country:c.country||'ישראל',youth:[]}}))}
@@ -5679,7 +5685,12 @@ const League=(()=>{
  const money=n=>'₪'+Math.round((+n||0)/1e5)/10+'M';   /* plain, for a status line */
  const cash=n=>`<bdi dir="ltr">${money(n)}</bdi>`;   /* a sum inside Hebrew keeps its own direction */
  const ERR={login_required:'צריך להתחבר לשירות לפני פתיחת ליגה.',invalid_name:'שם הליגה צריך להיות בין תו אחד ל־60.',invalid_team:'שם המועדון צריך להיות בין תו אחד ל־40.',invalid_capacity:'מספר המנהלים צריך להיות בין 2 ל־8.',too_many_leagues:'יש לך כבר עשר ליגות פתוחות. סגור אחת לפני שתפתח חדשה.',invitation_expired:'ההזמנה פגה או אינה תקינה.',league_started:'הליגה כבר יצאה לדרך ואי אפשר להצטרף אליה.',team_taken:'מישהו בליגה כבר לקח את השם הזה.',league_full:'הליגה מלאה.',not_a_member:'אין לחשבון הזה גישה לליגה.',invalid_crest:'הסמל אינו תקין.',invalid_kit:'המדים אינם תקינים.',no_money:'אין מספיק כסף בקופה.'};
- const err=e=>ERR[String(e&&e.message||e)]||String(e&&e.message||e);
+ /* A league whose SQL has not been installed in the project answers with PostgREST's own English sentence
+    about a missing function, which tells a player nothing. It is the one failure that is not his fault and
+    not a bug in the page, so it says what it is. */
+ const err=e=>{const m=String(e&&e.message||e);
+  if(/schema cache|does not exist|42883|PGRST202/i.test(m))return 'שירות הליגה עדיין לא הותקן בפרויקט. עד שיותקן, משחק רשת והזמנות עובדים כרגיל.';
+  return ERR[m]||m};
  const mine=()=>(state&&state.members||[]).find(m=>m.mine)||null;
 
  const entry=()=>'<button type="button" class="btn lg-entry" data-lg-open>ליגה משותפת · כמה מנהלים</button>';

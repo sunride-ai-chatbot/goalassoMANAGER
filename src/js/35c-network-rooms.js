@@ -19,7 +19,13 @@ const Rooms=(()=>{
  function boot(){if(arrival())void open()}
 
  const entry=()=>'<button type="button" class="btn room-entry" data-room-open>משחק רשת · הזמן חבר</button>';
- const intro=()=>`<section class="card room-intro"><h3>משחק רשת עם חבר</h3><p>הזמנה עם המועדון והסגל הקיימים · משחק ידידות בין שני מנהלים</p>${entry()}</section>`;
+ /* The friendly has no card of its own on the start and home screens any more: with the career card, the
+    penalty cup and the shared league above it the screen was a column of offers and nothing read. It is not
+    gone — an invitation link (`?join=CODE`) still opens it, and so does any `[data-room-open]` anywhere.
+    One flag brings the card back. */
+ const SHOW_CARD=false;
+ const introHTML=()=>`<section class="card room-intro"><h3>משחק רשת עם חבר</h3><p>הזמנה עם המועדון והסגל הקיימים · משחק ידידות בין שני מנהלים</p>${entry()}</section>`;
+ const intro=()=>SHOW_CARD?introHTML():'';
  const api=async()=>client||(client=await (window.__roomClientFactory?window.__roomClientFactory():mpClient()));
  async function rpc(name,args){const c=await api(),r=await c.rpc(name,args);if(r.error)throw r.error;return r.data}
  function snapshot(){if(!G||G.live&&!G.live.done||G.beginner?.live)throw Error('finish_match');ensureCareerIdentity(G);const c=me();ensureLineup(c);return JSON.parse(JSON.stringify({careerId:G.careerId,season:G.beginner?.season||G.season,round:G.beginner?.round??G.wk,club:{...c,country:c.country||'ישראל',youth:[]}}))}

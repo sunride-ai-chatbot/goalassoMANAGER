@@ -65,7 +65,7 @@ body.beginner{background:radial-gradient(ellipse at 90% 0%,#174c5255,transparent
 .bcountry>button,.bleagues button{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:58px;padding:10px 16px;border-radius:14px;border:1px solid var(--bline);background:#0f2031;color:#f4f8fc;font:inherit;text-align:start;cursor:pointer}
 .bcountry>button strong{font-size:19px}.bcountry small,.bleagues small{color:var(--bmuted);font-size:14px}
 .bcountry.open>button{border-color:var(--bmint);background:#12303a}
-.bleagues{display:grid;gap:6px;margin:6px 0 4px;padding-inline-start:14px;border-inline-start:3px solid var(--bmint)}
+.bout-leagues{display:grid;gap:6px;margin:6px 0 4px;padding-inline-start:14px;border-inline-start:3px solid var(--bmint)}
 .bleagues button{min-height:52px;background:#132a3d}
 .bcountry>button:active,.bleagues button:active{transform:translateY(1px)}
 .bcontract h2{display:flex;align-items:center;gap:12px;margin:6px 0 14px}.bcontract h2 .kit{width:52px;height:52px;flex:none}
@@ -97,7 +97,7 @@ body.beginner{background:radial-gradient(ellipse at 90% 0%,#174c5255,transparent
 .bpick .bcountry>button strong,.bmode strong{flex:1;font-size:21px;font-weight:800}
 .bpick .bcountry small,.bpick .bleagues small,.bmode small{color:#cfdbe6;font-size:14px;text-align:end}
 .bpick .bcountry.open>button{border-color:var(--bmint);background:rgba(16,58,60,.78)}
-.bpick .bleagues{margin:8px 0 6px;padding-inline-start:12px;border-inline-start:3px solid var(--bmint);gap:8px}
+.bpick .bout-leagues{margin:8px 0 6px;padding-inline-start:12px;border-inline-start:3px solid var(--bmint);gap:8px}
 .bpick .bleagues button{min-height:56px;background:rgba(14,34,50,.8)}.bpick .bleagues strong{flex:1;font-size:18px}
 .bmodes{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin:0 0 22px}
 .bmode{flex-wrap:wrap;row-gap:0}.bmode strong{flex:1 1 auto}.bmode small{flex:1 1 100%;text-align:start;padding-inline-start:50px;margin-top:-6px}
@@ -125,3 +125,14 @@ body.beginner{background:radial-gradient(ellipse at 90% 0%,#174c5255,transparent
 .bcl-ties .sides{font-weight:800;font-variant-numeric:tabular-nums}
 .bcl-pens,.bcl-verdict{text-align:center;margin:6px 0}.bcl-pens{color:#f2d68a;font-weight:700}
 .bcl-next{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:rgba(233,196,106,.12)}
+
+/* out of work: the league list behind "ליגה אחרת". Only the leagues whose clubs would have him answer, so the
+   list is a choice of career and not a catalogue. */
+.bout-leagues{display:grid;gap:14px;margin:18px 0}
+.bout-country h3{margin:0 0 8px;font-size:15px;opacity:.72;font-weight:600}
+.bout-country{display:flex;flex-wrap:wrap;gap:8px}
+.bout-country h3{flex:0 0 100%}
+.bout-country .bbtn{flex:1 1 auto;min-width:128px;padding-block:10px;font-size:14px}
+.bout-country .bbtn.off{opacity:.38;cursor:not-allowed}
+.bout-country .bbtn.off small{display:block;font-size:11px;font-weight:400;opacity:.8}
+.bout .bbtn.secondary[data-action="bout-leagues"]{width:100%;margin-top:14px}

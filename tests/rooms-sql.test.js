@@ -31,6 +31,12 @@ let PGlite;try{({PGlite}=require('@electric-sql/pglite'))}catch(e){console.log('
  }
  // the one-file installer is exactly the two migrations, in order
  assert.equal(sql('supabase/install-rooms.sql').replace(/^--.*\n/gm,'').trim(),(sql('supabase/migrations/20261024000000_rooms.sql')+'\n'+sql('supabase/migrations/20261024055611_room_friendlies.sql')).replace(/^--.*\n/gm,'').trim());
+ // and the league installer is the league migration plus the schema reload, so the file pasted into the SQL
+ // Editor is the file these tests just ran
+ const lg=sql('supabase/install-league.sql').replace(/^--.*\n/gm,'').trim();
+ assert.ok(lg.endsWith("notify pgrst, 'reload schema';"),'the installer tells PostgREST to re-read the schema');
+ assert.equal(lg.replace(/notify pgrst, 'reload schema';$/,'').trim(),sql('supabase/migrations/20261114210000_shared_league.sql').replace(/^--.*\n/gm,'').trim());
+ out.push('the league installer matches its migration');
  await db.close();
  console.log('rooms sql: '+out.join(' | ')+'; errors []');
 })().catch(e=>{console.error(e);console.log('errors',[String(e&&e.message||e)]);process.exit(1)});

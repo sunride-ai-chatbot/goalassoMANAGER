@@ -21,7 +21,12 @@ const League=(()=>{
  const money=n=>'₪'+Math.round((+n||0)/1e5)/10+'M';   /* plain, for a status line */
  const cash=n=>`<bdi dir="ltr">${money(n)}</bdi>`;   /* a sum inside Hebrew keeps its own direction */
  const ERR={login_required:'צריך להתחבר לשירות לפני פתיחת ליגה.',invalid_name:'שם הליגה צריך להיות בין תו אחד ל־60.',invalid_team:'שם המועדון צריך להיות בין תו אחד ל־40.',invalid_capacity:'מספר המנהלים צריך להיות בין 2 ל־8.',too_many_leagues:'יש לך כבר עשר ליגות פתוחות. סגור אחת לפני שתפתח חדשה.',invitation_expired:'ההזמנה פגה או אינה תקינה.',league_started:'הליגה כבר יצאה לדרך ואי אפשר להצטרף אליה.',team_taken:'מישהו בליגה כבר לקח את השם הזה.',league_full:'הליגה מלאה.',not_a_member:'אין לחשבון הזה גישה לליגה.',invalid_crest:'הסמל אינו תקין.',invalid_kit:'המדים אינם תקינים.',no_money:'אין מספיק כסף בקופה.'};
- const err=e=>ERR[String(e&&e.message||e)]||String(e&&e.message||e);
+ /* A league whose SQL has not been installed in the project answers with PostgREST's own English sentence
+    about a missing function, which tells a player nothing. It is the one failure that is not his fault and
+    not a bug in the page, so it says what it is. */
+ const err=e=>{const m=String(e&&e.message||e);
+  if(/schema cache|does not exist|42883|PGRST202/i.test(m))return 'שירות הליגה עדיין לא הותקן בפרויקט. עד שיותקן, משחק רשת והזמנות עובדים כרגיל.';
+  return ERR[m]||m};
  const mine=()=>(state&&state.members||[]).find(m=>m.mine)||null;
 
  const entry=()=>'<button type="button" class="btn lg-entry" data-lg-open>ליגה משותפת · כמה מנהלים</button>';

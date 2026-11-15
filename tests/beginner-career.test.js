@@ -34,7 +34,7 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   const st=run('({me:me().name,key:me().bkey,lg:Bstate().leagueId,n:Bstate().league.length,coach:Bstate().coach,k:Bstate().contract,board:Bstate().board,real:Bstate().league.every(id=>club(id).players.length>=14&&club(id).players.every(p=>p.real)),rounds:Bstate().schedule.length,clubs:G.clubs.length,size:localStorage.getItem(BK).length,mgr:G.manager.name})');
   assert.equal(st.me,pickName);assert.ok(st.key.startsWith('a:'));assert.equal(st.lg,'il3n');assert.equal(st.n,17);assert.equal(st.coach,'דני רופא');assert.equal(st.mgr,'דני רופא');assert.equal(st.board,55);assert.ok(st.real,'the whole league plays with its registered squads');
   assert.equal(st.k.years,2);assert.ok(st.k.goal>=1&&st.k.goal<=16&&st.k.wage>0);assert.equal(st.rounds,34,'17 clubs: 34 rounds, one resting each round');assert.ok(st.size<2.6e6,'the save stays small: '+st.size);
-  assert.ok($('.bcareer'),'the home screen shows coach, contract and board');assert.equal($('.btop [data-room-open]'),null);const homeBtns=$$('#main section');assert.ok(homeBtns[homeBtns.length-1].querySelector('[data-room-open]'),'network play is the last thing on the home screen');
+  assert.ok($('.bcareer'),'the home screen shows coach, contract and board');assert.equal($('.btop [data-room-open]'),null);assert.equal($('#main [data-room-open]'),null,'the friendly is unlisted: an invitation link opens it, no card offers it');assert.ok($$('#main section').length,'the home screen still has its cards');
   assert.ok(!w.document.body.classList.contains('btips-off')&&$$('.blearn').length>0,'tips for the first two rounds');assert.match($('.bcareer').textContent,/דני רופא/);assert.match($('.bcareer').textContent,/אמון ההנהלה/);
   w.eval("Btab='league';Brender()");assert.equal($$('.bleague-table tbody tr').length,17);
   // the market: any league can be searched, not only the coach's own
@@ -56,6 +56,36 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   // ---- resignation
   $('[data-action="resign"]').click();assert.match($('.bdialog').textContent,/אי אפשר לבטל/);$('.bdialog [data-bclose]').click();assert.equal(run('!!Bstate().out'),false,'changing one\'s mind keeps the job');
   $('[data-action="resign"]').click();$('[data-action="resign-yes"]').click();assert.equal(run('Bstate().out.why'),'resigned');assert.ok(run('Bstate().out.offers.length')>=2);
+  // ---- "another league": the list, a league that answers, and one that is out of his reach
+  assert.ok($('.bout [data-action="bout-leagues"]'),'out of work he can look elsewhere');
+  $('.bout [data-action="bout-leagues"]').click();
+  assert.ok($$('.bout .bout-country .bbtn').length>12,'every league of the catalogue is on the list');
+  assert.ok($$('.bout [data-boutleague]').length,'the leagues within reach are the ones he can press');
+  assert.equal($$('.bout .bout-country .bbtn.off:not([disabled])').length,0,'a league out of reach cannot be pressed');
+  assert.equal($$('.bout [data-boutleague]').filter(x=>run(`BleagueReach(BcatLeague(${JSON.stringify(x.dataset.boutleague)}))`)===0).length,0,'a league that is offered has somebody in it who would have him');
+  const band=run('BjobBand("resigned")');assert.ok(band.hi>band.lo,'a band, not a point: '+JSON.stringify(band));
+  assert.equal(run('Bresume()'),run('clamp(Bresume(),-8,14)'),'the resume stays inside its range');
+  // a league his resume opens: the clubs that answer are that league's own
+  const fit=run('(()=>{const b=BjobBand("resigned");for(const c of Bcat())for(const l of c.leagues)if(!l.cup&&l.clubs.filter(x=>x.key!==me().bkey&&x.str<=b.hi).length>=2)return l.id;return null})()');
+  assert.ok(fit,'some league is within reach of a coach who left on his own terms ');
+  $(`.bout [data-boutleague="${fit}"]`).click();
+  assert.equal(run('Bstate().out.league'),fit);
+  const drawn=run('Bstate().out.offers.map(o=>o.key)');
+  assert.ok(drawn.length&&drawn.every(k=>run(`BcatLeague(${JSON.stringify(fit)}).clubs.some(x=>x.key===${JSON.stringify(k)})`)),'the clubs come from the league he chose: '+JSON.stringify(drawn));
+  assert.ok(drawn.every(k=>k!==run('me().bkey')),'never the club he just left');
+  assert.equal($$('.bout [data-bjob]').length,drawn.length);
+  // a league far above the band answers with nothing rather than inventing a club that wants him
+  w.eval("(()=>{const b=Bstate();b.honours=[];b.jobs=[{season:1,club:'x',league:'y',end:'fired'},{season:2,club:'x',league:'y',end:'fired'}];b.board=4})()");
+  assert.ok(run('Bresume()')<0,'two dismissals and a board on the floor read as a poor resume');
+  $('.bout [data-action="bout-leagues"]').click();
+  const far=run('(()=>{const b=BjobBand("resigned");let best=null,s=-1;for(const c of Bcat())for(const l of c.leagues){if(l.cup)continue;const m=Math.min(...l.clubs.map(x=>x.str));if(m>b.hi&&m>s){s=m;best=l.id}}return best})()');
+  assert.ok(far,'some league sits entirely above a coach nobody kept');
+  assert.equal($(`.bout [data-boutleague="${far}"]`),null,'a league out of his reach is not offered at all');
+  assert.equal(run(`BleagueReach(BcatLeague(${JSON.stringify('')}||'${far}'))`),0,'and nobody in it would have him');
+  assert.ok([...$$('.bout .bbtn.off')].length,'it is shown greyed, so the resume is visible rather than implied');
+  // the offers he arrived with are still there when he goes back
+  $('.bout [data-action="bout-back"]').click();
+  assert.ok(run('Bstate().out.offers.length')>=2,'the original offers are never lost behind the list');
   // take a club of a league with stronger sides above it, for the offer that comes next
   w.eval("(()=>{const l=BcatLeague('es1');const x=l.clubs[l.clubs.length-1];Bstate().out.offers=[BjobOffer({key:x.key,league:l.id})];Brender()})()");$('.bout [data-bjob]').click();assert.equal(run('Bstate().leagueId'),'es1');assert.equal(run('Bstate().league.length'),12);
 

@@ -4,7 +4,7 @@ function client(user){return {auth:{getSession:async()=>({data:{session:{user:{i
 function boot(user){const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});return new JSDOM(html,{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};w.__roomClientFactory=async()=>client(user)}}).window}
 async function until(fn){for(let i=0;i<240;i++){if(fn())return;await new Promise(r=>setTimeout(r,25))}throw Error('network UI timed out')}
 (async()=>{const h=boot('host'),g=boot('guest');try{
- h.eval("Bcreate('mta')");g.eval("Bcreate('bje')");assert.ok(h.document.querySelector('[data-room-open]'));
+ h.eval("Bcreate('mta')");g.eval("Bcreate('bje')");assert.equal(h.document.querySelector('#main [data-room-open]'),null,'the friendly is unlisted on the home screen');
  await h.eval('Rooms.open()');h.document.querySelector('[data-room-action="create"]').click();await until(()=>h.eval('!!G.networkRoom'));
  await until(()=>h.document.querySelector('[data-room-action="share"]'));let shared=null,copied=null;
  Object.defineProperty(h.navigator,'share',{configurable:true,value:async data=>{shared=data}});
