@@ -31,12 +31,14 @@ function endSeason(){
   G.leumit=G.leumit.filter(x=>!promoted.includes(x));
   for(const p of promoted){p.league=true;p.div='top';p.group=null;p.money=Math.max(p.money||0,8e6);if(!G.clubs.includes(p))G.clubs.push(p)}
   G.clubs=G.clubs.filter(x=>x.league);
-  while(G.leumit.length<16)G.leumit.push(alefClub());
+  const cameUp=new Set();while(G.leumit.length<16){const nc=alefClub();cameUp.add(nc.id);G.leumit.push(nc)}
   news(`סיכום עונת ${seasonLabel()}: אלופה ${champ.name}, זוכת הגביע ${club(G.cupWinner)?.short||'—'}, אלופת הלאומית ${lchamp.short}. ירדו: ${rel.map(x=>x.short).join(', ')}. עלו: ${promoted.map(x=>x.short).join(', ')}.`);
   // contracts: expiring players leave or renew
   G.freeAgents=(G.freeAgents||[]).filter(p=>p.age<34).slice(0,6);
   for(const x of [...G.clubs,...G.leumit]){
-    for(const p of x.players.slice()){p.contract=(p.contract||1)-1;if(p.contract>0)continue;
+    /* a club that came up a moment ago has just registered its squad: nobody's contract runs out on the day he arrives. Without this a club
+       with exactly twenty names on file lost one or two here, had no name left to top itself up with, and was handed an invented player. */
+    if(!cameUp.has(x.id))for(const p of x.players.slice()){p.contract=(p.contract||1)-1;if(p.contract>0)continue;
       if(x.id===G.me){x.players=x.players.filter(q=>q!==p);if(p.age<34){G.freeAgents.push(p)}news(`${fullName(p)} סיים את החוזה ועזב את ${x.short} כשחקן חופשי.`)}
       else if(Math.random()<.75||x.players.length<=18){p.contract=ri(1,3);p.wage=playerWage(p)}
       else{x.players=x.players.filter(q=>q!==p);if(p.age<34)G.freeAgents.push(p)}}
