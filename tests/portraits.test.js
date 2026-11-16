@@ -68,6 +68,15 @@ async function main(){try{
  assert.ok(w.document.querySelector('#autoBtn'));assert.ok(w.eval('facePackFailures.size')>0);
  const states=[...w.document.querySelectorAll('.pp[data-visual-id]')].map(g=>g.getAttribute('data-pp-state'));assert.ok(states.length&&states.every(s=>s==='failed'),'failed packs show the fallback');
  for(const g of w.document.querySelectorAll('.pp'))assert.ok(g.querySelector('.pp-fb'),'every portrait carries its fallback');
+ // a player without a photograph is drawn from behind in his club's shirt with his name and number, never as initials and never with a face
+ {const fig=w.eval(`(()=>{const c=me(),p=c.players[0];p.no=7;p.last='לדוגמה';const one=portraitGroup(p,c,'tfig',{h:300});const q=Object.assign({},p,{id:p.id+1,no:null,last:'שםמשפחהארוךמאוד'});return [one,portraitGroup(q,{c1:'#123456',c2:'#ffffff'},'tfig2',{h:264})]})()`);
+  const fb=h=>{const d=w.document.createElement('div');d.innerHTML='<svg>'+h+'</svg>';return d.querySelector('.pp-fb')};const a=fb(fig[0]),b=fb(fig[1]);
+  assert.deepEqual([...a.querySelectorAll('text')].map(t=>t.textContent),['לדוגמה','7'],'surname and number on the back of the shirt');assert.equal(a.querySelector('image'),null);assert.equal(a.querySelector('circle'),null,'no disc with initials');
+  assert.equal(b.querySelectorAll('text').length,1,'a player outside any squad has a name and no number');assert.match(b.querySelector('text').textContent,/…$/);assert.ok(b.querySelector('text').getAttribute('textLength'),'a long name is squeezed, not clipped');
+  assert.ok(a.querySelector('path[fill="'+w.eval('portraitColors(me().players[0],me()).kit')+'"]'),'the shirt is the club\'s own colour')
+  // before a club's first match nobody has a number yet: the figure shows the one he will get, and drawing it changes nobody
+  const pre=w.eval(`(()=>{const c=G.clubs.find(x=>x.id!==G.me&&x.players.some(p=>!p.no));const before=JSON.stringify(c.players);const shown=c.players.map(p=>shirtNoPreview(p,c));const same=JSON.stringify(c.players)===before;const copy=JSON.parse(before);ensureNumbers({players:copy});return {same,shown,real:copy.map(p=>p.no)}})()`);
+  assert.ok(pre.same,'a preview never writes a number');assert.deepEqual(pre.shown,pre.real,'and it is the number ensureNumbers gives')}
  assert.deepEqual(errors,[]);console.log('official portraits, legacy identities, generated players, transfers and saves passed; errors []');
 }finally{await new Promise(resolve=>setImmediate(resolve));w.close()}}
 main().catch(e=>{console.error(e);process.exitCode=1});

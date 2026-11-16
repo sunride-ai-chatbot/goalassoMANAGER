@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="17717ef1f294">
-<meta name="goalasso-built" content="16.11.2026 00:22">
+<meta name="goalasso-build" content="8b12d6d92902">
+<meta name="goalasso-built" content="16.11.2026 08:06">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html */
 function beginnerFirst(l){return /^(www\.)?goal-m\.com$/.test(l.hostname)&&l.pathname==='/'&&!l.search&&!l.hash}
@@ -6756,11 +6756,40 @@ function portraitCreditHTML(p,vk,pack){if(p){const f=playerVisual(p);if(!f)retur
  return `<div class="pp-credit muted tiny" style="margin-top:4px">תמונה: <bdi>${esc(c.a)}</bdi> · <bdi>${esc(c.l)}</bdi> · ויקישיתוף${c.u?` · <a href="${esc(c.u)}" target="_blank" rel="noopener noreferrer">מקור</a>`:''}</div>`}
 function portraitInitials(p){const a=String(p.first||'').trim(),b=String(p.last||'').trim();return (a.slice(0,1)+(b&&b!==a?b.slice(0,1):'')).trim()||'?'}
 function portraitColors(p,c){c=c||{};const kit=p.pos==='GK'?'#159263':(c.c1||'#26384a');const trim=c.c2||'#d2deed';return {kit,trim:colDist(kit,trim)<60?inkFor(kit):trim}}
+/* A player the game has no photograph of. He used to be a disc with his initials, which read as a placeholder: a squad of
+   them looked unfinished. He is now drawn from behind under the floodlights — the back of his club's shirt with the two
+   things the game does know about him, his name and his number — and **never with a face**: a real player is not given
+   features somebody invented. The head is a rim-lit silhouette for the same reason (no skin tone is claimed either); three
+   outlines of it, picked by his id, only keep a squad from being eleven copies. Drawn in the canonical 240-wide frame. */
+/* the number a player without one will be given at his club's first match (ensureNumbers, same order), worked out without
+   touching him: drawing a screen must never change a career, which tests/network-arrival.test.js holds the game to */
+const shirtNoCache=new WeakMap();
+function shirtNoPreview(p,c){if(p.no!=null)return p.no;if(!c||!Array.isArray(c.players)||!c.players.includes(p))return null;
+ const sig=c.players.reduce((s,x)=>s+x.id*31+(x.no||0),c.players.length);let m=shirtNoCache.get(c);
+ if(!m||m.sig!==sig){const used=new Set(c.players.filter(x=>x.no).map(x=>x.no)),order={GK:0,DF:1,MF:2,FW:3},ps=c.players.filter(x=>!x.no).sort((x,y)=>(order[x.pos]-order[y.pos])||(y.ovr-x.ovr)),map=new Map();let n=1;
+  for(const x of ps){if(x.pos==='GK'&&!used.has(1)){map.set(x.id,1);used.add(1);continue}while(used.has(n)||n===1)n++;map.set(x.id,n);used.add(n)}m={sig,map};shirtNoCache.set(c,m)}
+ return m.map.get(p.id)??null}
+function portraitFigure(p,c,id,h,kit,trim,ink){const k=esc(kit),t=esc(trim),cy=Math.round(h*.3),sh=h-128,v=Math.abs(+p.id||0)%3;
+ const pn=shirtNoPreview(p,c),no=pn!=null?String(pn):'',raw=String(p.last||p.first||'').trim(),name=raw.length>13?raw.slice(0,12)+'…':raw,long=name.length>8;
+ const rx=v===1?42:39,ry=v===1?48:45;   /* 0 short hair, 1 fuller hair, 2 shaved: the outline and the tone change, nothing else */
+ return `<g class="pp-fb"><defs><linearGradient id="${id}fs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset=".3" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".42"/></linearGradient><radialGradient id="${id}fh" cx="36%" cy="24%" r="85%"><stop offset="0" stop-color="${v===2?'#5b6d7e':'#2b3743'}"/><stop offset="1" stop-color="${v===2?'#1c2833':'#05080c'}"/></radialGradient><linearGradient id="${id}fn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#46586a"/><stop offset="1" stop-color="#1d2935"/></linearGradient><radialGradient id="${id}fg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="${k}" stop-opacity=".55"/><stop offset="1" stop-color="${k}" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="120" cy="${cy+6}" rx="104" ry="${Math.round(h*.34)}" fill="url(#${id}fg)"/>
+  <path d="M105 ${cy+28}H135L139 ${sh+12}H101Z" fill="url(#${id}fn)"/>
+  <path d="M-6 ${h}V${h-56}Q0 ${h-102} 46 ${h-118}L92 ${sh}Q120 ${sh+13} 148 ${sh}L194 ${h-118}Q240 ${h-102} 246 ${h-56}V${h}Z" fill="${k}"/>
+  <path d="M50 ${h-116}Q34 ${h-60} 30 ${h}M190 ${h-116}Q206 ${h-60} 210 ${h}" fill="none" stroke="${t}" stroke-opacity=".5" stroke-width="5"/>
+  <path d="M-6 ${h}V${h-56}Q0 ${h-102} 46 ${h-118}L92 ${sh}Q120 ${sh+13} 148 ${sh}L194 ${h-118}Q240 ${h-102} 246 ${h-56}V${h}Z" fill="url(#${id}fs)"/>
+  <path d="M90 ${sh-1}Q120 ${sh+15} 150 ${sh-1}" fill="none" stroke="${t}" stroke-width="7" stroke-linecap="round"/>
+  <path d="M2 ${h-92}Q14 ${h-108} 46 ${h-118}L90 ${sh-2}M150 ${sh-2}L194 ${h-118}Q226 ${h-108} 238 ${h-92}" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="${120-rx+1}" cy="${cy+9}" rx="6" ry="10" fill="#3a4a5a"/><ellipse cx="${120+rx-1}" cy="${cy+9}" rx="6" ry="10" fill="#243140"/>
+  <ellipse cx="120" cy="${cy}" rx="${rx}" ry="${ry}" fill="url(#${id}fh)"/>${v===2?'':`<path d="M${120-rx+9} ${cy+ry-15}Q120 ${cy+ry+7} ${120+rx-9} ${cy+ry-15}" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>`}
+  <path d="M${120-rx+3} ${cy-16}C${120-rx+8} ${cy-ry-4} ${120+6} ${cy-ry-12} ${120+rx-12} ${cy-ry+14}" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="120" y="${no?h-86:h-58}" text-anchor="middle" direction="rtl" font-family="Heebo,Arial,sans-serif" font-weight="800" font-size="${no?23:28}" fill="${ink}" fill-opacity=".92"${long?` textLength="${no?150:172}" lengthAdjust="spacingAndGlyphs"`:''}>${esc(name)}</text>
+  ${no?`<text x="120" y="${h-16}" text-anchor="middle" font-family="Heebo,Arial,sans-serif" font-weight="900" font-style="italic" font-size="${no.length>1?74:80}" fill="${ink}">${esc(no)}</text>`:''}</g>`}
 /* the portrait group, in canonical frame units (240 wide); `h` = visible height (264 for busts, 300 for the full frame) */
 function portraitGroup(p,c,id,o){o=o||{};const f=playerVisual(p),key=playerVisualId(p);const src=f?facePackCache.get(f.pack)?.[key]:null;if(f&&!src)loadFacePack(f.pack);
  const {kit,trim}=portraitColors(p,c);const ink=inkFor(kit);const h=o.h||264;
  const bg=o.bg===false?'':`<defs><radialGradient id="${id}bg" cx="50%" cy="34%" r="72%"><stop offset="0" stop-color="${esc(kit)}" stop-opacity=".62"/><stop offset="1" stop-color="${esc(kit)}" stop-opacity=".08"/></radialGradient></defs><rect width="240" height="${h}" fill="#0b1520"/><rect width="240" height="${h}" fill="url(#${id}bg)"/>`;
- const fb=`<g class="pp-fb"><path d="M14 ${h}V${h-30}Q20 ${h-66} 80 ${h-80}L120 ${h-58}L160 ${h-80}Q220 ${h-66} 226 ${h-30}V${h}Z" fill="${esc(kit)}"/><path d="M80 ${h-80}L120 ${h-58}L160 ${h-80}" fill="none" stroke="${esc(trim)}" stroke-width="9" stroke-linejoin="round"/><circle cx="120" cy="${h*.4}" r="${h*.22}" fill="${esc(kit)}" stroke="${esc(trim)}" stroke-width="7"/><text x="120" y="${h*.4}" dy=".36em" text-anchor="middle" font-family="Heebo,Arial,sans-serif" font-weight="800" font-size="${h*.2}" fill="${ink}">${esc(portraitInitials(p))}</text></g>`;
+ const fb=portraitFigure(p,c,id,h,kit,trim,ink);
  /* a head whose photo ends at the chin gets a drawn neck and kit: a soft-edged neck in the player's skin tone, a little
     darker than the face (the shadow under a chin), and the collar right below it; soft edges keep it from reading as
     a block when the head is turned */
@@ -6782,7 +6811,7 @@ const CINE_HEAD={x:262,y:-115,w:500,h:625},CINE_NECK='M120 -260H904V238H560V266H
 function cinematicPlayerHTML(c,p,key){const f=playerVisual(p),gk=p.pos==='GK',color=gk?'#159263':c.c1;const rgb=hexRGB(color);const id='cineKit'+String(key).replace(/[^a-zA-Z0-9]/g,'');const brand=sponsorName(c);const vk=playerVisualId(p);const skin=(f&&f.skin)||['#c5987b','#98694e','#d4ac91','#77533e'][p.id%4];
  const tone=hexRGB(skin).map(v=>v/255);const jersey='M440 229Q512 283 586 229L658 270Q700 290 712 340L734 452L654 469L635 390L642 579L658 720Q512 735 367 721L390 579L379 392L369 470L289 456L307 354Q316 298 355 275Z';
  const src=f?facePackCache.get(f.pack)?.[vk]:null;if(f&&!src)loadFacePack(f.pack);const {trim}=portraitColors(p,c);
- const head=`<g class="pp" data-pp-state="${portraitState(f,vk)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(vk)}"`:''}>${f?`<g clip-path="url(#${id}neck)"><image class="pp-photo" ${src?`href="${src}"`:''} x="${CINE_HEAD.x}" y="${CINE_HEAD.y}" width="${CINE_HEAD.w}" height="${CINE_HEAD.h}" preserveAspectRatio="xMidYMin meet" onerror="var g=this.closest('.pp');if(g)g.setAttribute('data-pp-state','failed')"/></g>`:''}<g class="pp-fb"><circle cx="512" cy="118" r="104" fill="${esc(color)}" stroke="${esc(trim)}" stroke-width="16"/><text x="512" y="118" dy=".36em" text-anchor="middle" font-family="Heebo,Arial,sans-serif" font-weight="800" font-size="92" fill="${inkFor(color)}">${esc(portraitInitials(p))}</text></g></g>`;
+ const head=`<g class="pp" data-pp-state="${portraitState(f,vk)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(vk)}"`:''}>${f?`<g clip-path="url(#${id}neck)"><image class="pp-photo" ${src?`href="${src}"`:''} x="${CINE_HEAD.x}" y="${CINE_HEAD.y}" width="${CINE_HEAD.w}" height="${CINE_HEAD.h}" preserveAspectRatio="xMidYMin meet" onerror="var g=this.closest('.pp');if(g)g.setAttribute('data-pp-state','failed')"/></g>`:''}<g class="pp-fb"><defs><radialGradient id="${id}fh" cx="36%" cy="24%" r="85%"><stop offset="0" stop-color="#3c4b5a"/><stop offset="1" stop-color="#080c11"/></radialGradient></defs><ellipse cx="512" cy="126" rx="150" ry="150" fill="${esc(color)}" opacity=".22"/><path d="M468 190H556L566 262H458Z" fill="#26323e"/><ellipse cx="512" cy="112" rx="88" ry="104" fill="url(#${id}fh)"/><path d="M432 82C448 6 548 -14 590 62" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="6" stroke-linecap="round"/></g></g>`;
  return `<span class="player-figure" aria-hidden="true" data-player-visual="${f?vk:'fallback'}"><svg viewBox="0 0 1024 1536"><defs><clipPath id="${id}neck"><path d="${CINE_NECK}"/></clipPath><clipPath id="${id}clip"><path d="${jersey}"/></clipPath><clipPath id="${id}skin"><path d="M284 450L370 468L327 680L309 716L321 790L289 866L227 827L238 746Z M655 467L737 449L780 746L783 827L726 860L696 784L706 713L688 675Z M352 925L487 940L435 1054L345 1045Z M551 940L674 926L680 1046L596 1054Z"/></clipPath><filter id="${id}skinTint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${tone[0]*.6} ${tone[0]*1.1} ${tone[0]*.3} 0 0 ${tone[1]*.6} ${tone[1]*1.1} ${tone[1]*.3} 0 0 ${tone[2]*.6} ${tone[2]*1.1} ${tone[2]*.3} 0 0 0 0 0 1 0"/></filter><clipPath id="${id}body"><rect x="0" y="250" width="1024" height="1286"/></clipPath><filter id="${id}tint" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${rgb[0]/255} 0 0 0 0 0 ${rgb[1]/255} 0 0 0 0 0 ${rgb[2]/255} 0 0 0 0 0 1 0"/></filter></defs>${head}<image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}body)"/><image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}clip)" filter="url(#${id}tint)"/><image href="assets/cinematic-player.webp" width="1024" height="1536" clip-path="url(#${id}skin)" filter="url(#${id}skinTint)"/><g clip-path="url(#${id}clip)" opacity=".85"><path d="M440 229Q512 283 586 229" fill="none" stroke="${esc(c.c2||'#17233b')}" stroke-width="23"/><path d="M309 438L374 452M651 452L722 438" stroke="${esc(c.c2||'#17233b')}" stroke-width="17"/></g><path d="M578 354l20 -9 20 9v24l-20 14-20-14z" fill="${esc(c.c2||'#16273b')}" opacity=".85"/>${brand?(sponsorLogoSVG(c.sponsor,392,450,240,66,'kit-contract-sponsor')||`<text class="kit-contract-sponsor" x="512" y="490" text-anchor="middle" direction="rtl" fill="${inkFor(color)}" font-family="Heebo,Arial,sans-serif" font-weight="900" font-size="37" textLength="225" lengthAdjust="spacingAndGlyphs">${esc(brand)}</text>`):''}</svg></span>`}
 /* Lineup on the stadium photo (assets/lineup-arena.*): round portraits with a name plate in the club colours, no
    cards. ARENA maps the layout (u across −1..1, v 0 = attack, 1 = own goal) to the stage. The same tokens draw the
