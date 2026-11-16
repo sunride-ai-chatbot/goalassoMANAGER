@@ -150,7 +150,7 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   w.eval("document.querySelector('.bdialog')?.remove();Btab='league';Brender()");assert.match($('.bcl').textContent,/רבע הגמר/);assert.equal($$('.bcl-ties li').length,12,'the played round and the draw of the next');assert.ok($$('.bcl-ties .sides').length>=8);w.eval("Btab='home';Brender()");
   // all the way: quarter-final, semi-final, final
   for(const st of [1,2,3]){playTo(k.at[st],70);assert.ok(run('BclTie()'),'evening '+st);clPlay([2,0]);k=run('Bstate().cl');assert.equal(k.stage,st+1)}
-  assert.ok(k.won&&!k.out);assert.equal(k.champion,run('G.me'));assert.match($('.bdialog').textContent,/אלופי אירופה/);assert.deepEqual(run('Bstate().honours.map(h=>h.what)'),['ליגת האלופות']);assert.equal(k.res[3].length,1);assert.equal(run('BclTie()'),null);
+  assert.ok(k.won&&!k.out);assert.equal(k.champion,run('G.me'));assert.ok($('#reveal.mo'),'the cup is lifted before anybody reads a score');assert.equal($('.bdialog'),null);assert.match($('#reveal .mo-plate').textContent,/ליגת האלופות/);$('#moClose').click();assert.match($('.bdialog').textContent,/אלופי אירופה/);assert.deepEqual(run('Bstate().honours.map(h=>h.what)'),['ליגת האלופות']);assert.equal(k.res[3].length,1);assert.equal(run('BclTie()'),null);
   w.eval("document.querySelector('.bdialog')?.remove();Brender()");assert.match($('.bcl').textContent,/הגביע שלכם/);
   // knocked out: the competition goes on without the coach and still gets its champion
   fresh(es[0],'es1');k=run('Bstate().cl');playTo(k.at[0],70);clPlay([0,1]);k=run('Bstate().cl');assert.ok(k.out);assert.equal(k.stage,1);assert.match($('.bdialog').textContent,/המסע באירופה הסתיים/);assert.equal(run('BclTie()'),null);

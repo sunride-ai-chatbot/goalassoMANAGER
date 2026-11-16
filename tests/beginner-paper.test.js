@@ -18,8 +18,9 @@ const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));const page=()=>$('#npModal
 
   // ---- a signing: the paper waits for the welcome dialog, then shows the player
   const pick=run("(()=>{const o=G.clubs.filter(x=>x.id!==G.me).flatMap(c=>c.players.map(p=>({p,c}))).filter(x=>playerVisual(x.p)).sort((a,b)=>Bvalue(a.p)-Bvalue(b.p))[0];me().money=5e8;return {id:o.p.id,name:fullName(o.p),club:o.c.name,fee:Math.round(Bvalue(o.p))}})()");
-  w.eval(`Bsign(${pick.id},${pick.fee},false)`);assert.ok($('.bdialog .bsigning'),'the welcome');await tick();assert.equal(page(),null,'never over a dialog');
-  $('[data-action="signed"]').click();await tick();assert.ok(page());assert.ok($('#npModal .np-hl').textContent.includes(pick.name+' חתם במכבי תל אביב'));assert.match($('#npModal .np-ribbon').textContent,/רכש חדש/);
+  w.eval(`Bsign(${pick.id},${pick.fee},false)`);assert.ok($('#reveal.rv'),'the signing moment of the full game');assert.equal($('.bdialog'),null);assert.ok($('#reveal .rv-plate').textContent.includes(pick.name.split(' ').pop()),'his name on the peg');
+  assert.deepEqual($$('#reveal .rv-actions button').map(x=>x.id),['rvClose'],'one way out, to the squad');await tick();assert.equal(page(),null,'never over the moment');
+  $('#rvClose').click();await tick();assert.equal(run('Btab'),'squad');assert.ok(page());assert.ok($('#npModal .np-hl').textContent.includes(pick.name+' חתם במכבי תל אביב'));assert.match($('#npModal .np-ribbon').textContent,/רכש חדש/);
   assert.ok($('#npModal .np-face'),'his own face on the stage');assert.ok($('#npModal .np-sub').textContent.includes(pick.club));await closePaper();
   assert.equal(run('G.paper[0].ev.type'),'sign');assert.equal(run('G.paper[0].ev.pid'),pick.id);
 

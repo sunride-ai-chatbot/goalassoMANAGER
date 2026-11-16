@@ -10,11 +10,12 @@ function paperQuote(st){const m=st.body&&st.body.match(/"([^"]{8,90})"/);if(m)re
 /* ====================== NEWSPAPER · front-page component ======================
    Stories are stored at publication time with structured `ev` data (names, clubs, terms as they were then), so the
    archive never rewrites history. Presentation only: opening or closing a paper never touches the event itself. */
-const NP_IMG={manager:['np-manager',900,600],stage:['np-stage',400,267],champ:['np-champ',900,600],cup:['np-cup',900,600],ashdod:['np-ashdod',863,561]};
-const NP_RIBBON={loanOut:'יוצא בהשאלה',depart:'סוף דרך',appoint:'מינוי חדש',sign:'רכש חדש',loan:'רכש חדש · השאלה',sale:'יוצא מהמועדון',sponsor:'עסקים וספורט',champ:'לילה של אלופים',cup:'לילה של גביע'};
+const NP_IMG={match:['np-match',900,600],manager:['np-manager',900,600],stage:['np-stage',400,267],champ:['np-champ',900,600],cup:['np-cup',900,600],ashdod:['np-ashdod',863,561]};
+const NP_RIBBON={loanOut:'יוצא בהשאלה',depart:'סוף דרך',appoint:'מינוי חדש',sign:'רכש חדש',loan:'רכש חדש · השאלה',sale:'יוצא מהמועדון',sponsor:'עסקים וספורט',champ:'לילה של אלופים',cup:'לילה של גביע',match:'סיכום המשחק'};
 function npSeasonOf(st){const y=2026+(st.s||1)-1;return `${y}/${String(y+1).slice(2)}`}
 function npTypeOf(st){if(st.ev&&st.ev.type)return st.ev.type;const h=st.h||'';if(/אלופת המדינה/.test(h))return 'champ';if(/זכתה בגביע|זכתה ב.*גביע/.test(h))return 'cup';return null}
 function npImage(st){const t=npTypeOf(st),ev=st.ev||{};
+  if(t==='match')return {k:'match',score:ev,cap:(ev.stadium||'האצטדיון')+' · אילוסטרציה'};
   if(t==='champ')return {k:'champ',cap:'חגיגות האליפות · אילוסטרציה'};if(t==='cup')return {k:'cup',cap:'הגביע מונף · אילוסטרציה'};
   if(t==='depart')return {k:'manager',cap:'רגע הפרידה · אילוסטרציה'};
   if(t==='appoint')return ev.clubId==='l_ash'?{k:'ashdod',cap:'רגע החתימה · אילוסטרציה'}:{k:'manager',cap:'בדרך אל הדשא · אילוסטרציה'};
@@ -32,9 +33,13 @@ function npFaceHTML(st){const ev=st.ev||{};let hit=npPlayerOf(ev);
    lit like the wall it hangs on, with the photograph's own smoke laid over it again (.np-smoke, assets/np-stage-smoke.webp). It used to be a black board in front of everything. */
 function npSignHTML(name){const b=sponsorBrand(name);
   return `<div class="np-sign${b?'':' txt'}"><div class="np-plate"${b?` style="--sponsor-bg:${b.logoBg}"`:''}>${b?`<img src="${b.logo}" alt="${esc(b.name)}" style="--ar:${+b.ar||2.7}" decoding="async" onerror="var t=document.createElement('bdi');t.textContent=this.alt;this.closest('.np-sign').classList.add('txt');this.replaceWith(t)">`:`<bdi>${esc(name)}</bdi>`}</div></div><i class="np-smoke" aria-hidden="true"></i>`}
+/* a match report: the full-time plate of a broadcast along the bottom of the photograph — both kits, the score between them
+   (home first, on the right), never one left-to-right string */
+function npScoreHTML(ev){const h=club(ev.h)||{c1:'#26384a',c2:'#d2deed',id:'h'},a=club(ev.a)||{c1:'#8a2b2b',c2:'#ffffff',id:'a'};
+  return `<div class="np-score"><span class="np-side">${kitSVG(h,'lg')}<b>${esc(ev.hName||h.name||'')}</b></span>${scoreSides(ev.gh,ev.ga,{label:(ev.hName||'')+' '+ev.gh+', '+(ev.aName||'')+' '+ev.ga})}<span class="np-side">${kitSVG(a,'lg')}<b>${esc(ev.aName||a.name||'')}</b></span></div>`}
 function npFigure(st,lazy){const im=npImage(st);const [f,w,h]=NP_IMG[im.k];const ev=st.ev||{};const face=im.shirt?npFaceHTML(st):'';const c=im.shirt&&!face?npShirtFor(st):null;
   return `<figure class="np-fig"><div class="np-ph"><picture><source srcset="${f}.webp" type="image/webp"><img src="${f}.jpg" width="${w}" height="${h}" alt="" ${lazy?'loading="lazy" ':''}decoding="async" onerror="this.closest('.np-ph').classList.add('np-noimg')"></picture>
-   ${face}${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?npSignHTML(im.board):''}</div>
+   ${face}${c?`<div class="np-shirt">${shirtSVG(c,ev.type==='sale'?null:ev.no,'np'+Math.random().toString(36).slice(2,6))}</div>`:''}${im.board?npSignHTML(im.board):''}${im.score?npScoreHTML(im.score):''}</div>
    <figcaption><b>${esc(im.cap.split(' · ')[0])}:</b> ${esc(im.cap.split(' · ')[1]||'')}</figcaption></figure>`}
 const yrs=n=>n==null?null:`${n} ${n>1?'עונות':'עונה'}`;
 function npFacts(st){const ev=st.ev||{},t=npTypeOf(st);const c=club(st.team)||null;const F=[];const add=(l,v)=>{if(v!=null&&v!=='')F.push([l,v])};
@@ -45,26 +50,27 @@ function npFacts(st){const ev=st.ev||{},t=npTypeOf(st);const c=club(st.team)||nu
   else if(t==='loanOut'){add('המועדון המקבל',ev.to);add('עד',ev.until?`סוף ${ev.until}`:null);add('עמדה',ev.pos&&POSHE[ev.pos])}
   else if(t==='sale'){add('הקונה',ev.buyer);add('הסכום',ev.fee!=null?NIS(ev.fee):null);add('גיל',ev.age!=null?String(ev.age):null)}
   else if(t==='sponsor'){add('נותן החסות',ev.sponsor);add('לעונה',ev.annual!=null?NIS(ev.annual):null);add('משך',yrs(ev.years))}
+  else if(t==='match'){add('התוצאה',`${ev.gh}:${ev.ga}`);add('שחקן המשחק',ev.star?`${ev.star.name} · ${ev.star.r}`:null);add('המקום בטבלה',ev.place!=null?String(ev.place):null)}
   else if(t==='champ'){add('העונה',ev.season);add('נקודות',ev.pts!=null?String(ev.pts):null);add('סגנית',ev.second)}
   else if(t==='cup'){add('המפעל',ev.comp);add('תוצאת הגמר',ev.score?`${ev.score}${ev.pens?' (פנדלים)':''}`:null);add('היריבה',ev.opp)}
   if(F.length<3){add('המועדון',c?(c.short||c.name):null);add('המדור',st.kind);add('העונה',npSeasonOf(st))}
   const seen=new Set();return F.filter(([l])=>!seen.has(l)&&seen.add(l)).slice(0,3)}
 function npTeaser(st,live){if(live){try{const nx=myNextMatch();if(nx)return `המשחק הבא: ${nx.h.id===G.me?'נגד '+nx.a.short:'ב'+nx.h.short}`}catch(e){}}
-  const t=npTypeOf(st);return {depart:'האתגר הבא: מועדון חדש',appoint:'האתגר הבא: בניית הסגל',sign:'האתגר הבא: מקום בהרכב',loan:'האתגר הבא: להוכיח את עצמו',sale:'האתגר הבא: למלא את החסר',sponsor:'האתגר הבא: להחזיר על ההשקעה',champ:'האתגר הבא: להגן על התואר',cup:'האתגר הבא: עוד תואר'}[t]||'עוד בעיתון: הכתבות של השבוע'}
+  const t=npTypeOf(st);return {depart:'האתגר הבא: מועדון חדש',appoint:'האתגר הבא: בניית הסגל',sign:'האתגר הבא: מקום בהרכב',loan:'האתגר הבא: להוכיח את עצמו',sale:'האתגר הבא: למלא את החסר',sponsor:'האתגר הבא: להחזיר על ההשקעה',match:'עוד במהדורה: כל תוצאות המחזור והטבלה',champ:'האתגר הבא: להגן על התואר',cup:'האתגר הבא: עוד תואר'}[t]||'עוד בעיתון: הכתבות של השבוע'}
 function npSplit(text){const parts=String(text||'').split(/(?<=[.!?״"])\s+/).filter(Boolean);if(parts.length<2)return [text||'',''];const half=Math.ceil(parts.length/2);return [parts.slice(0,half).join(' '),parts.slice(half).join(' ')]}
 function npQuote(st){const m=st.body&&st.body.match(/"([^"]{8,90})"/);if(m)return m[1];return st.q||null}
 function frontPageHTML(st,o){o=o||{};const t=npTypeOf(st);const c=club(st.team);const [b1,b2]=npSplit(st.body);const q=npQuote(st)||(st.ev&&st.ev.q)||null;
-  const ribbon=NP_RIBBON[t]||st.kind;const by=st.by||'מאת הכתב הספורטיבי';
+  const ribbon=(st.ev&&st.ev.ribbon)||NP_RIBBON[t]||st.kind;const by=st.by||'מאת הכתב הספורטיבי';
   return `<article class="np" dir="rtl" aria-labelledby="npH">
    <header class="np-head"><div class="np-brand"><span class="np-logo" dir="ltr"><b>GOAL</b><i>ASSO</i></span><small>מהדורת המועדון</small></div>
     <div class="np-title">${PAPER_NAME}</div>
-    <div class="np-meta"><span>עונת <bdi dir="ltr">${npSeasonOf(st)}</bdi> · שבוע ${st.wk+1}</span><span class="np-red" aria-hidden="true"></span><span>${esc(o.label||(st.demo?'הדגמה':'מהדורה מיוחדת'))}</span></div></header>
+    <div class="np-meta"><span>עונת <bdi dir="ltr">${npSeasonOf(st)}</bdi> · ${G&&G.beginner?'מחזור':'שבוע'} ${st.wk+1}</span><span class="np-red" aria-hidden="true"></span><span>${esc(o.label||(st.demo?'הדגמה':'מהדורה מיוחדת'))}</span></div></header>
    <div class="np-ribbon">${esc(ribbon)}</div>
    <h2 class="np-hl" id="npH">${esc(st.h)}</h2>${st.sub?`<p class="np-sub">${esc(st.sub)}</p>`:''}
    ${npFigure(st,o.lazy)}
    <div class="np-cols ${b2?'':'one'}"><div class="np-text"><p class="np-by">${esc(by)}</p><p>${esc(b1)}</p>${b2?`<p>${esc(b2)}</p>`:''}</div>${q?`<blockquote class="np-q"><p>"${esc(q)}"</p><footer>מתוך הסיקור הבדיוני של המשחק</footer></blockquote>`:''}</div>
    <dl class="np-facts">${npFacts(st).map(([l,v])=>`<div><dt>${esc(l)}</dt><dd><bdi>${esc(v)}</bdi></dd></div>`).join('')}</dl>
-   <div class="np-banner"><span>${esc(npTeaser(st,!st.demo&&o.live))}</span><svg viewBox="0 0 40 20" aria-hidden="true"><path d="M22 3l-7 7 7 7M34 3l-7 7 7 7" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+   <div class="np-banner"><span>${esc(npTeaser(st,!st.demo&&o.live))}</span><svg viewBox="0 0 40 20" aria-hidden="true"><path d="M22 3l-7 7 7 7M34 3l-7 7 7 7" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>${o.extra||''}
    <footer class="np-foot">חדשות מתוך עולם המשחק</footer></article>`}
 /* ---- modal: own dialog (focus, Escape, scroll lock, safe areas). Never mutates the story's event. ---- */
 let NPM=null;
@@ -73,7 +79,7 @@ function fitMasthead(root){const el=root&&root.querySelector('.np-title');if(!el
 function openFrontPage(st,opts){opts=opts||{};closeFrontPage(true);const prevFocus=document.activeElement;const sy=window.scrollY;
   const root=document.createElement('div');root.id='npModal';root.className='npm';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-labelledby','npH');
   const nextN=opts.queue?G.paperPop.length:(opts.more||0);   /* a caller with a queue of its own (the beginner career) passes how many wait and what shows the next */
-  root.innerHTML=`<div class="npm-scroll"><button class="npm-x" type="button" data-npclose aria-label="סגור">✕</button>${frontPageHTML(st,{live:opts.live,lazy:false})}</div>
+  root.innerHTML=`<div class="npm-scroll"><button class="npm-x" type="button" data-npclose aria-label="סגור">✕</button>${frontPageHTML(st,{live:opts.live,lazy:false,label:opts.label,extra:opts.extra})}</div>
    <div class="npm-bar">${nextN?`<button class="btn" type="button" data-npnext>לכתבה הבאה (${nextN})</button>`:''}<button class="btn ${nextN?'sec':''}" type="button" data-npclose>סגור</button>${opts.queue?`<button class="btn sec" type="button" data-npoff>בלי פופ-אפים של עיתון</button>`:''}</div>`;
   document.body.appendChild(root);const lockPrev=document.body.style.overflow;document.body.style.overflow='hidden';fitMasthead(root);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>fitMasthead(root));
   const onKey=e=>{if(e.key==='Escape'){e.preventDefault();closeFrontPage()}else if(e.key==='Tab'){const f=[...root.querySelectorAll('button')];if(!f.length)return;const i=f.indexOf(document.activeElement);if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus()}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus()}}};

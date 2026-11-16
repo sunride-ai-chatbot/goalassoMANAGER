@@ -168,8 +168,12 @@ print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), '
 
 # Separate beginner surface; source engine and player identities remain shared.
 # Replace only the boot entry, leaving the Pro output above unchanged.
-beginner = out.replace(read(os.path.join(SRC, 'js', '38-boot.js')), read(os.path.join(SRC, 'beginner', 'app.js')))
-beginner = beginner.replace('</style>', '\n' + read(os.path.join(SRC, 'beginner', 'style.css')) + '\n' + read(os.path.join(SRC, 'beginner', 'arena.css')) + '\n</style>', 1)
+# The beginner game is one script scope in file order; boot.js runs it and so stands last (a `const` of a later file is not
+# there yet for code that already runs). The styles follow the same idea: arena.css repaints style.css, the rest add to it.
+BEGINNER_JS = ['app.js', 'engage.js', 'daily.js', 'edition.js', 'boot.js']
+BEGINNER_CSS = ['style.css', 'arena.css', 'engage.css']
+beginner = out.replace(read(os.path.join(SRC, 'js', '38-boot.js')), '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_JS))
+beginner = beginner.replace('</style>', '\n' + '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_CSS) + '\n</style>', 1)
 beginner = beginner.replace('<title>GOALASSO</title>', '<title>GOALASSO START · מתחילים</title>')
 beginner = beginner.replace('<link rel="manifest" href="assets/manifest.webmanifest">', '')
 with open(os.path.join(ROOT, 'beginner.html'), 'w', encoding='utf8') as fh:

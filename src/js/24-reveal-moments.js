@@ -29,7 +29,9 @@ function txTerms(tx){const t=[];
   else if(tx.kind==='loan'){if(tx.from)t.push(`בהשאלה מ<bdi>${esc(tx.from)}</bdi>`);t.push(`עד סוף עונת <bdi dir="ltr">${esc(tx.seasonLabel)}</bdi>`);if(tx.buy)t.push(`אופציית רכישה <bdi dir="ltr">${NIS(tx.buy)}</bdi>`)}
   else{t.push('ללא דמי העברה');if(tx.years)t.push(`חוזה ל-${tx.years} ${tx.years>1?'עונות':'עונה'}`)}
   return t}
-function openReveal(tx){const c=club(tx.club)||me();if(!c)return;closeReveal(true);revealOpen=true;
+/* `o` lets another surface use the reveal as it is (the beginner career): `o.actions` replaces the three buttons of the full
+   game under the final card (one of them must be #rvClose), `o.onClose` runs when the reveal is closed by the user */
+function openReveal(tx,o){o=o||{};const c=club(tx.club)||me();if(!c)return;closeReveal(true);revealOpen=true;
   const reduced=revealReduced();const root=document.createElement('div');root.id='reveal';root.className='rv'+(reduced?' rv-final':' rv-p0');root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',`חתימה: ${tx.name}`);
   root.style.setProperty('--k1',c.c1);root.style.setProperty('--k2',c.c2||'#ffffff');
   // the player's own verified cut-out (never another player's face) stands on the stage when the pack has one
@@ -53,18 +55,18 @@ function openReveal(tx){const c=club(tx.club)||me();if(!c)return;closeReveal(tru
     <div class="rv-layer rv-l3"><div class="rv-official">רשמי</div><div class="rv-head">${SIGN_HEAD[tx.kind]}</div><div class="rv-sub"><bdi>${esc(tx.name)}</bdi> · <bdi>${esc(tx.clubName)}</bdi></div></div>
     <div class="rv-card" id="rvCard" aria-live="polite"><div class="rv-official sm">רשמי</div><div class="rv-cardtop"><div class="rv-shirtwrap sm">${shirtSVG(c,tx.no,'b')}</div><div><div class="rv-cardhead">${SIGN_HEAD[tx.kind]}</div><div class="rv-cardname">${esc(tx.name)}</div><div class="rv-cardclub">${esc(tx.clubName)} · ${SIGN_KIND[tx.kind]}</div></div></div>
       ${facts?`<div class="rv-facts">${facts}</div>`:''}${terms?`<ul class="rv-terms">${terms}</ul>`:''}
-      <div class="rv-actions"><button class="btn" id="rvCardBtn" type="button">לכרטיס השחקן</button><button class="btn sec" id="rvLineup" type="button">שבץ בהרכב</button><button class="btn sec" id="rvClose" type="button">סגור</button></div></div>
+      <div class="rv-actions">${o.actions||'<button class="btn" id="rvCardBtn" type="button">לכרטיס השחקן</button><button class="btn sec" id="rvLineup" type="button">שבץ בהרכב</button><button class="btn sec" id="rvClose" type="button">סגור</button>'}</div></div>
   </div>`;
   document.body.appendChild(root);document.body.style.overflow='hidden';
-  const R={root,tx,raf:0,video:null,mode:reduced?'static':'video',t0:performance.now(),phase:-1,done:reduced,listeners:[]};PX_REVEAL=R;
+  const R={root,tx,raf:0,video:null,mode:reduced?'static':'video',t0:performance.now(),phase:-1,done:reduced,listeners:[],onClose:o.onClose||null};PX_REVEAL=R;
   const on=(el,ev,fn,o)=>{el.addEventListener(ev,fn,o);R.listeners.push([el,ev,fn,o])};
-  const finish=()=>{if(R.done&&root.classList.contains('rv-final'))return;R.done=true;root.className='rv rv-final';if(R.video){try{R.video.pause()}catch(e){}}cancelAnimationFrame(R.raf);setTimeout(()=>{const b=$('rvCardBtn');try{b&&b.focus({preventScroll:true})}catch(e){}},50)};
+  const finish=()=>{if(R.done&&root.classList.contains('rv-final'))return;R.done=true;root.className='rv rv-final';if(R.video){try{R.video.pause()}catch(e){}}cancelAnimationFrame(R.raf);setTimeout(()=>{const b=$('rvCardBtn')||$('rvClose');try{b&&b.focus({preventScroll:true})}catch(e){}},50)};
   R.finish=finish;
   on(root,'click',e=>{const t=e.target;if(t.closest('#rvSkip'))return finish();if(t.closest('#rvClose'))return closeReveal();
     if(t.closest('#rvCardBtn')){const pid=tx.pid,demo=tx.demo;closeReveal();if(me()&&me().players.some(p=>p.id===pid))playerModal(pid);else if(demo)toast('בהדגמה השחקן לא בסגל שלך');return}
     if(t.closest('#rvLineup')){const pid=tx.pid;closeReveal();if(tx.demo)return toast('בהדגמה אין שיבוץ, השחקן לא הצטרף לסגל');const p=me().players.find(x=>x.id===pid);if(!p)return;if(G.phase!=='play')return toast('אפשר לשבץ כשהעונה פעילה');G.view='lineup';const inXI=(me().lineup||[]).includes(pid);lineupSel=(inXI||p.inj||p.susp)?null:{pid};render();toast(inXI?`${tx.name} כבר בהרכב`:p.inj||p.susp?'השחקן לא זמין כרגע':`בחר משבצת בהרכב עבור ${tx.name}`);return}});
   on(document,'keydown',e=>{if(e.key==='Escape'){if(!R.done)finish();else closeReveal()}});
-  if(reduced){setTimeout(()=>{const b=$('rvCardBtn');try{b&&b.focus({preventScroll:true})}catch(e){}},50);return}
+  if(reduced){setTimeout(()=>{const b=$('rvCardBtn')||$('rvClose');try{b&&b.focus({preventScroll:true})}catch(e){}},50);return}
   // video: created only now (load on demand); the browser HTTP cache keeps it for later signings
   const media=root.querySelector('.rv-media');const v=document.createElement('video');R.video=v;
   v.muted=true;v.defaultMuted=true;v.setAttribute('muted','');v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');v.preload='auto';v.loop=false;v.poster=REVEAL_ASSETS.poster;v.disablePictureInPicture=true;v.setAttribute('aria-hidden','true');const s1=document.createElement('source');s1.src=REVEAL_ASSETS.video;s1.type='video/mp4';const s2=document.createElement('source');s2.src=REVEAL_ASSETS.webm;s2.type='video/webm';v.appendChild(s1);v.appendChild(s2);media.appendChild(v);
@@ -78,16 +80,16 @@ function openReveal(tx){const c=club(tx.club)||me();if(!c)return;closeReveal(tru
   R.raf=requestAnimationFrame(tick)}
 let PX_REVEAL=null;
 function closeReveal(silent){const R=PX_REVEAL;PX_REVEAL=null;const root=$('reveal');if(R){cancelAnimationFrame(R.raf);for(const [el,ev,fn,o] of R.listeners){try{el.removeEventListener(ev,fn,o)}catch(e){}}R.listeners=[];if(R.video){try{R.video.pause();R.video.querySelectorAll('source').forEach(x=>x.remove());R.video.removeAttribute('src');R.video.load()}catch(e){}R.video.remove();R.video=null}}
-  if(root)root.remove();revealOpen=false;document.body.style.overflow='';if(!silent)setTimeout(maybeShowQueued,300)}
+  if(root)root.remove();revealOpen=false;document.body.style.overflow='';if(!silent){setTimeout(maybeShowQueued,300);if(R&&R.onClose){try{R.onClose()}catch(e){console.warn(e)}}}}
 /* ---- trophy moments ---- */
 const MOMENT_TXT={cup:{btn:'חוגגים עם האוהדים',label:t=>`מחזיקת ${t}`},champ:{btn:'ממשיכים לעשות היסטוריה',label:()=>'עונה בלתי נשכחת'}};
 function laurel(side){return `<svg class="ml-laurel ${side}" viewBox="0 0 24 48" aria-hidden="true"><path d="M18 46C8 38 5 24 9 4" fill="none" stroke="currentColor" stroke-width="1.6"/>${[8,15,22,29,36].map((y,i)=>`<ellipse cx="${side==='l'?6+i*.6:6+i*.6}" cy="${y}" rx="4.2" ry="2" transform="rotate(${-40+i*6} ${6+i*.6} ${y})" fill="currentColor"/><ellipse cx="${13+i*.5}" cy="${y+3}" rx="4" ry="1.9" transform="rotate(${35-i*4} ${13+i*.5} ${y+3})" fill="currentColor"/>`).join('')}</svg>`}
-function openMoment(m){closeReveal(true);revealOpen=true;const c=club(m.club)||me();const T=MOMENT_TXT[m.kind]||MOMENT_TXT.cup;const img=m.kind==='champ'?REVEAL_ASSETS.champ:REVEAL_ASSETS.cup;
+function openMoment(m,o){closeReveal(true);revealOpen=true;const c=club(m.club)||me();const T=MOMENT_TXT[m.kind]||MOMENT_TXT.cup;const img=m.kind==='champ'?REVEAL_ASSETS.champ:REVEAL_ASSETS.cup;
   const root=document.createElement('div');root.id='reveal';root.className='mo';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',m.kind==='champ'?'אליפות':'זכייה בגביע');if(c){root.style.setProperty('--k1',c.c1);root.style.setProperty('--k2',c.c2||'#fff')}
   root.innerHTML=`<div class="rv-bg" style="background-image:url(${img})"></div><div class="mo-card" style="background-image:url(${img})">${m.demo?'<div class="rv-demo">הדגמה</div>':''}
-   <div class="mo-ui"><div class="mo-plate">${laurel('l')}<div><small>${esc(T.label(m.comp))}</small><b>${esc(m.clubName)}</b><span>${m.kind==='champ'?'אלופת המדינה':esc(m.comp)} · <bdi dir="ltr">${esc(m.season)}</bdi></span></div>${laurel('r')}</div>
+   <div class="mo-ui"><div class="mo-plate">${laurel('l')}<div><small>${esc(T.label(m.comp))}</small><b>${esc(m.clubName)}</b><span>${m.title?esc(m.title):m.kind==='champ'?'אלופת המדינה':esc(m.comp)} · <bdi dir="ltr">${esc(m.season)}</bdi></span></div>${laurel('r')}</div>
    <button class="mo-btn" id="moClose" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>${T.btn}</button></div></div>`;
-  document.body.appendChild(root);document.body.style.overflow='hidden';const R={listeners:[],video:null,raf:0};PX_REVEAL=R;
+  document.body.appendChild(root);document.body.style.overflow='hidden';const R={listeners:[],video:null,raf:0,onClose:(o&&o.onClose)||null};PX_REVEAL=R;
   const fn=e=>{if(e.target.closest('#moClose'))closeReveal()};root.addEventListener('click',fn);R.listeners.push([root,'click',fn]);
   const kf=e=>{if(e.key==='Escape')closeReveal()};document.addEventListener('keydown',kf);R.listeners.push([document,'keydown',kf]);
   if(!revealReduced()){try{confetti(4500);SFX.win()}catch(e){}}setTimeout(()=>{try{$('moClose').focus({preventScroll:true})}catch(e){}},60)}
