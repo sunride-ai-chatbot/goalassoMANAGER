@@ -26,7 +26,7 @@ function BeditionStory(M,wk){const F=BeditionFacts(M),{c,opp,home,gf,ga,res}=F,b
     h=gf===0?`תיקו מאופס בין ${c.name} ל${opp.name}`:late&&F.lastMine?`דקה ${F.last.m}: ${F.last.name||c.name} מציל נקודה ל${c.name}`:late&&!F.lastMine?`${c.name} איבדה ניצחון בדקות הסיום`:pick([`${c.name} ו${opp.name} נפרדו בתיקו ${sc}`,`נקודה אחת ל${c.name} מול ${opp.name}`])}
   else{ribbon=F.derby?'הדרבי שלהם':'הפסד';
     h=F.derby?`${F.derby}: ערב קשה ל${c.name}`:ga-gf>=3?`ערב שחור ל${c.name}`:F.led?`${c.name} הובילה, ונשארה בלי נקודות`:late&&!F.lastMine&&ga-gf===1?`שער בדקה ${F.last.m} שבר את ${c.name}`:pick([`${opp.name} גברה על ${c.name} ${sc}`,`${c.name} נכנעה ל${opp.name} ${sc}`])}
-  const list=s=>s.map(x=>`${x.name} (${x.m.map(m=>m+'′').join(', ')})`).join(', '),place=Bplace(),prev=b.rnd&&b.rnd.prev?b.rnd.prev[c.id]:null,stadium=(home?c:opp).stadium||'';
+  const list=s=>s.map(x=>`${x.name} (דק׳ ${x.m.join(', ')})`).join(', ')   /* plain text in a right-to-left line: a prime after the digits would land on their wrong side */,place=Bplace(),prev=b.rnd&&b.rnd.prev?b.rnd.prev[c.id]:null,stadium=(home?c:opp).stadium||'';
   const body=[F.mineSc.length?`הכובשים של ${c.name}: ${list(F.mineSc)}.`:gf?'':`${c.name} לא מצאה את הרשת.`,F.oppSc.length?`ל${opp.name} כבשו ${list(F.oppSc)}.`:'',
     F.star?(F.star.team===c.id?`${F.star.name} נבחר לשחקן המשחק עם ציון ${F.star.r.toFixed(1)}.`:`שחקן המשחק היה ${F.star.name} מ${opp.name}, עם ציון ${F.star.r.toFixed(1)}.`):'',F.reds?`${c.name} סיימה את המשחק בחיסרון מספרי.`:'',
     prev&&place<prev?`עם ${res==='W'?'הניצחון':'הנקודה'} עלתה ${c.name} למקום ${place} בטבלה.`:prev&&place>prev?`${c.name} ירדה למקום ${place} בטבלה.`:`${c.name} במקום ${place} בטבלה.`,

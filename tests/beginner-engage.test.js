@@ -79,7 +79,7 @@ const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));
   {const H=(gh,ga,ev,home=true)=>run(fix(`BeditionStory(${M(gh,ga,ev,home)},3).h`));
    assert.match(H(3,0,[g(5,7),g(40,7),g(77,7)]),/שלושער/);assert.match(H(2,1,[g(10,1,false),g(50,7),g(70,8)]),/מהפך/);assert.match(H(1,0,[g(88,7)]),/דקה 88/);
    assert.match(H(0,0,[]),/תיקו מאופס/);assert.match(H(1,2,[g(10,7),g(50,1,false),g(60,1,false)]),/הובילה/);assert.match(H(0,4,[g(1,1,false),g(2,1,false),g(3,1,false),g(4,1,false)]),/ערב שחור/);assert.match(H(1,1,[g(10,1,false),g(89,7)]),/מציל נקודה/);
-   const st=run(fix(`BeditionStory(${M(2,1,[g(10,1,false),g(50,7),g(70,8)])},3)`));assert.equal(st.ev.res,'W');assert.deepEqual([st.ev.gh,st.ev.ga],[2,1]);assert.match(st.body,/50′/)}
+   const st=run(fix(`BeditionStory(${M(2,1,[g(10,1,false),g(50,7),g(70,8)])},3)`));assert.equal(st.ev.res,'W');assert.deepEqual([st.ev.gh,st.ev.ga],[2,1]);assert.match(st.body,/דק׳ 50/)}
   // an evening of fans: the next home gate pays more, and the evenings run out
   {const r=run(`(()=>{const b=Bstate(),c=me();b.boost.gate=1;let n=0;while(n++<6&&b.boost.gate>0){const pair=Bnext();if(!pair){BfinishRound();continue}const home=pair[0]===c.id;BfinishRound();document.querySelector('.bdialog')?.remove();if(home)return b.ledger.filter(x=>/ערב אוהדים/.test(x.label)).length}return -1})()`);assert.equal(r,1);assert.equal(run('Bstate().boost.gate'),0)}
 
