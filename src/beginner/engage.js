@@ -126,7 +126,7 @@ function BtipAsk(p,c){const core=c&&c.players.slice().sort((a,b)=>b.ovr-a.ovr).s
 function BtipFor(p){const b=Bstate(),t=b&&b.tip;return t&&p&&t.pid===p.id&&t.s===b.season&&b.round<=t.until?t:null}
 function BtipPrice(p,c){const t=BtipFor(p),ask=BtipAsk(p,c);return t?Math.max(0,Math.round(ask*(1-t.pct/100)/10000)*10000):ask}
 /* a real player of another club who would walk into this eleven and whom the club can pay for at the reduced price */
-function BscoutPick(pct){const c=me(),xi=c.players.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,11),floor=xi.length?xi[xi.length-1].ovr:50,spare=c.money-Bcommitment(),ids=new Set(Bstate().league),out=[];
+function BscoutPick(pct){const c=me(),xi=c.players.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,11),floor=xi.length?xi[xi.length-1].ovr:50,spare=Math.min(Bbudget(),c.money),ids=new Set(Bstate().league),out=[];
   if(c.players.length>=35)return null;
   for(const k of G.clubs){if(k.id===c.id||k.players.length<=14)continue;for(const p of k.players){if(inventedPlayer(p)||p.ovr<floor+1)continue;const fee=Math.round(BtipAsk(p,k)*(1-pct/100)/10000)*10000;if(fee+Byear(p)*Bremaining()<=spare)out.push({p,c:k,fee,near:ids.has(k.id)})}}
   if(!out.length)return null;out.sort((x,y)=>y.p.ovr-x.p.ovr||(y.near-x.near));return pick(out.slice(0,Math.min(6,out.length)))}

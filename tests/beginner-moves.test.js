@@ -50,6 +50,32 @@ const whole=()=>{const k=il().flatMap(l=>l.keys);assert.equal(new Set(k).size,k.
   assert.ok(run("Bstate().league.every(id=>club(id)&&club(id).players.length>=14)"),'every club of the new league has a squad');
   quiet();w.eval("Btab='league';Brender()");assert.equal($$('.bleague-table tr').length,15);assert.equal($$('.bleague-table tr.bz-down').length,2);assert.equal($$('.bleague-table tr.bz-up').length,0);assert.equal($$('.bleague-table tr.bz-cl').length,3);assert.match($('.bzones-new').textContent,/הפועל כפר סבא \(עלתה\)/);
   same('renders leave the career as it was');
+  // ---- the market after going up: his country, one league at a time, his own first
+  w.eval("Btab='market';Bcategory='league';Bsort='asc';Bquery='';Bpos='all';Brender()");assert.deepEqual($$('.btabs .bbtn').map(x=>x.textContent),['ישראל','בכל הליגות','שחקנים חופשיים'],'the first tab is the country, not "my league"');
+  const chips=()=>$$('.bchip').map(x=>({id:x.dataset.bhomeleague,on:x.getAttribute('aria-pressed')==='true',t:x.textContent}));assert.deepEqual(chips().map(c=>c.id),['il1','il2','il3n','il3s']);assert.deepEqual(chips().filter(c=>c.on).map(c=>c.id),['il1'],'it opens on the league he plays in now');assert.match(chips()[0].t,/ליגת העל.*הליגה שלי/);
+  const leaguesOf=()=>run("[...new Set(BmarketPool().map(x=>BcatFind(x.c.bkey).l.id))]");assert.deepEqual(leaguesOf(),['il1'],'and lists that league only: no club of the one he left');assert.ok(run('BmarketPool().length')>=100);assert.ok(run('BmarketPool().every(x=>x.c.id!==G.me)'));
+  same('the market only reads');
+  w.eval("Btab='market';Brender()");$('[data-bhomeleague="il2"]').click();assert.deepEqual(chips().filter(c=>c.on).map(c=>c.id),['il2']);assert.deepEqual(leaguesOf(),['il2']);assert.match($('#bresults').previousElementSibling.textContent,/ליגה לאומית/);
+  {const n=run('G.clubs.length');$('[data-bhomeleague="il3n"]').click();assert.deepEqual(leaguesOf(),['il3n']);assert.ok(run('G.clubs.length')>n,'a league\'s clubs are built when he chooses it');const a=snap();w.eval('Brender();Brender()');assert.equal(snap()===a,true,'and not by drawing the list')}
+  $('[data-bhomeleague="il1"]').click();assert.deepEqual(leaguesOf(),['il1']);
+  // best first
+  assert.deepEqual([...$('#bsort').options].map(o=>o.value),['ovr','desc','asc']);assert.match($('#bsort').options[0].textContent,/דירוג גבוה/);$('#bsort').value='ovr';$('#bsort').dispatchEvent(new w.Event('change',{bubbles:true}));
+  {const o=run('BmarketPool().map(x=>x.p.ovr)');assert.ok(o.every((v,i)=>!i||o[i-1]>=v),'sorted by rating, best first');assert.equal(o[0],run("Math.max(...Bstate().league.filter(id=>id!==G.me).flatMap(id=>club(id).players.map(p=>p.ovr)))"),'the best player of the league leads the list');assert.equal(w.localStorage.getItem('goalasso.beginner.sort'),'ovr','the order is remembered')}
+  w.eval("Bsort='asc'");
+  // what can be spent: the sponsor's signed money counts, so a promoted club can act
+  const bud=()=>run('({money:me().money,commit:Bcommitment(),budget:Bbudget(),sp:me().sponsor?me().sponsor.annual*Bremaining():0})');
+  {const b0=bud();assert.equal(b0.sp,0);assert.equal(b0.budget,b0.money-b0.commit);w.eval("Btab='market';Brender()");assert.ok($('.bbudget'),'the market says what can be spent');assert.match($('.bbudget').textContent,/עוד לא בחרת חסות/);assert.ok($('.bbudget [data-tab="finance"]'));
+   w.eval("Btab='finance';Brender()");$('[data-sponsor-b]').click();quiet();const b1=bud();assert.ok(b1.sp>0);assert.equal(b1.budget,Math.round(b1.money+b1.sp-b1.commit),'cash + what the sponsor still owes − wages and costs to the end of the season');assert.ok(b1.budget>b0.budget)}
+  w.eval("Btab='market';Bcategory='league';Bsort='ovr';Brender()");if(run('Bbudget()')<=0){assert.ok($('.bbudget.low'),'a season in the red leaves nothing to spend, and the market says so');assert.equal($$('.bafford').length,0)}
+  w.eval("me().money+=7000000;Brender()");assert.equal($('.bbudget.low'),null);assert.equal($('.bbudget [data-tab=\"finance\"]'),null);   /* (the test's club lost money in the season it played without a sponsor: it is given some, to have a market to look at) */
+  {const t=run("BmarketPool().map(x=>({id:x.p.id,buy:BcanPay(BtipPrice(x.p,x.c),x.p),loan:BcanPay(Math.round(Bvalue(x.p)*.08),x.p)}))"),cards=$$('#bresults .bplayer');assert.equal(cards.length,t.length);
+   t.forEach((x,i)=>{const tag=cards[i].querySelector('.bafford');assert.equal(tag?tag.className.replace('bafford ',''):'',x.buy?'buy':x.loan?'loan':'','card '+i)});assert.ok(t.some(x=>x.buy),'somebody is within the budget');assert.ok(t.some(x=>!x.buy&&x.loan),'and somebody only on loan');
+   // a signing over the budget is refused, one within it goes through
+   const over=t.find(x=>!x.buy&&!x.loan)||t.find(x=>!x.buy),ok=t.find(x=>x.buy);const m0=run('me().money'),n0=run('me().players.length');
+   w.eval(`Bsign(${over.id},BtipPrice(Bfind(${over.id}).p,Bfind(${over.id}).c),false)`);assert.equal(run('me().players.length'),n0,'not beyond the budget');assert.equal(run('me().money'),m0);
+   w.eval(`Bdetail(${over.id})`);$('[data-action="offer"]').click();if(!$('#breply').textContent)w.eval('void 0');w.eval("(()=>{const c=document.querySelector('[data-action=\"counter\"]');if(c){c.click();document.querySelector('[data-action=\"offer\"]').click()}})()");assert.match($('#breply').textContent,/התקציב הפנוי לרכש הוא/,'and he is told what the budget is');quiet();
+   const fee=run(`BtipPrice(Bfind(${ok.id}).p,Bfind(${ok.id}).c)`),b2=bud();w.eval(`Bsign(${ok.id},${fee},false)`);quiet();assert.equal(run('me().players.length'),n0+1);assert.equal(run('me().money'),m0-fee);assert.ok(run('Bbudget()')>=0,'the budget never goes under');assert.ok(run('Bbudget()')<b2.budget-fee+1)}
+  w.eval("Bsort='asc';Btab='home';Brender()");quiet();
   // the save still fits, and comes back as it was
   assert.ok(w.eval('Bwrite()'));assert.ok(w.localStorage.getItem('goalasso.beginner.v1').length<4.5e6,'the save fits a phone');w.eval('Bload();Brender()');assert.equal(run('Bstate().leagueId'),'il1');assert.deepEqual(il(),after);
 

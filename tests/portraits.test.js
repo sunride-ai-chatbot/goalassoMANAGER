@@ -53,6 +53,13 @@ async function main(){try{
  assert.equal(w.eval("me().players.find(p=>fullName(p)==='דור פרץ').visualId"),before);
  w.eval("G.view='lineup';G.paperPop=[];render()");w.document.querySelector('#autoBtn').click();
  for(const node of w.document.querySelectorAll('.cine-sub'))assert.ok(node.querySelector('.player-portrait'));
+ // A head whose photograph ends at the chin: the photo is masked under the jaw and the club's shirt is drawn in front of it
+ // (it used to lie behind, under whatever collar or hood the cut-out still held).
+ {const r=JSON.parse(w.eval(`(()=>{const F=PLAYER_VISUALS.faces,cut=Object.keys(F).find(k=>F[k].status==='ok'&&!F[k].bust),full=Object.keys(F).find(k=>F[k].status==='ok'&&F[k].bust);
+   const g=k=>portraitGroup({id:9001,first:'א',last:'ב',pos:'MF',visualId:k},{id:'x',c1:'#d81e1e',c2:'#ffffff'},'tq',{});return JSON.stringify({cut:g(cut),full:g(full),n:Object.values(F).filter(f=>f.status==='ok'&&!f.bust).length})})()`));
+  assert.ok(r.n>50,'faces without shoulders: '+r.n);const kits=[...r.cut.matchAll(/class="pp-kit"/g)].map(m=>m.index),ph=r.cut.indexOf('class="pp-photo"');assert.equal(kits.length,2,'a neck behind and a shirt in front');assert.ok(kits[0]<ph&&ph<kits[1],'the photograph lies between them');
+  assert.match(r.cut,/<image class="pp-photo"[^>]*mask="url\(#tqmk\)"/,'masked under the jaw');assert.match(r.cut,/<mask id="tqmk"/);assert.match(r.cut,/fill="#d81e1e"/,'the shirt is the club\'s');
+  assert.equal(/pp-kit|mask=/.test(r.full),false,'a photograph with shoulders is left alone')}
  // Real on-demand loader: one request per pack and correct photos after DOM insertion.
  const requests=[];w.fetch=async url=>{requests.push(url);return {ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,url)))}};
  w.eval('render()');await Promise.all(w.eval('[...facePackRequests.values()]'));

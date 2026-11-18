@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="8f45b13b5efb">
-<meta name="goalasso-built" content="16.11.2026 15:39">
+<meta name="goalasso-build" content="83cab3c9c66f">
+<meta name="goalasso-built" content="18.11.2026 15:00">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html. The daily challenge is part of the
    beginner page, so its link (/?daily) is sent on with its query; every other query stays here */
@@ -6876,13 +6876,21 @@ function portraitGroup(p,c,id,o){o=o||{};const f=playerVisual(p),key=playerVisua
  const {kit,trim}=portraitColors(p,c);const ink=inkFor(kit);const h=o.h||264;
  const bg=o.bg===false?'':`<defs><radialGradient id="${id}bg" cx="50%" cy="34%" r="72%"><stop offset="0" stop-color="${esc(kit)}" stop-opacity=".62"/><stop offset="1" stop-color="${esc(kit)}" stop-opacity=".08"/></radialGradient></defs><rect width="240" height="${h}" fill="#0b1520"/><rect width="240" height="${h}" fill="url(#${id}bg)"/>`;
  const fb=portraitFigure(p,c,id,h,kit,trim,ink);
- /* a head whose photo ends at the chin gets a drawn neck and kit: a soft-edged neck in the player's skin tone, a little
-    darker than the face (the shadow under a chin), and the collar right below it; soft edges keep it from reading as
-    a block when the head is turned */
- const neckCol=f&&!f.bust?'#'+hexRGB(f.skin||'#c99a7c').map(v=>Math.round(v*.8).toString(16).padStart(2,'0')).join(''):'';
- const kitG=f&&!f.bust?`<g class="pp-kit"><defs><linearGradient id="${id}nk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${neckCol}" stop-opacity="0"/><stop offset=".3" stop-color="${neckCol}"/><stop offset=".7" stop-color="${neckCol}"/><stop offset="1" stop-color="${neckCol}" stop-opacity="0"/></linearGradient></defs><rect x="82" y="150" width="76" height="66" fill="url(#${id}nk)"/><path d="M14 ${h}V${h-34}Q22 ${h-70} 82 ${h-82}L120 ${h-58}L158 ${h-82}Q218 ${h-70} 226 ${h-34}V${h}Z" fill="${esc(kit)}"/><path d="M82 ${h-82}L120 ${h-58}L158 ${h-82}" fill="none" stroke="${esc(trim)}" stroke-width="8" stroke-linejoin="round"/></g>`:'';
- const photo=f?`<image class="pp-photo" ${src?`href="${src}"`:''} x="0" y="0" width="240" height="300" preserveAspectRatio="xMidYMin meet" onerror="var g=this.closest('.pp');if(g)g.setAttribute('data-pp-state','failed')"/>`:'';
- return `<g class="pp" data-pp-state="${portraitState(f,key)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(key)}"`:''}>${bg}${kitG}${photo}${fb}</g>`}
+ /* A head whose photo ends at the chin (bust:0, about one face in sixteen) is finished by drawing: a neck in the player's own
+    skin tone, a little darker than the face (the shadow under a chin), and his club's shirt. The shirt used to be a flat
+    dome BEHIND the photograph, so whatever the cut-out still held under the jaw — the collar of a jacket, a hood, a scarf —
+    lay on top of it and the head read as pasted on. Now the photograph is masked below the jaw line to the jaw itself and a
+    column of neck (soft edges, so a turned head is not sliced), and the shirt is drawn IN FRONT of it: shoulders at a
+    believable width for the head, a neckline the real neck shows through, the kit's own shading. The canonical cut-out
+    puts the eyes at 36% and the mouth at 48.5% of 300 (build-portraits.py), so the chin is near y 170 in every one. */
+ const cut=!!(f&&!f.bust),neckCol=cut?'#'+hexRGB(f.skin||'#c99a7c').map(v=>Math.round(v*.8).toString(16).padStart(2,'0')).join(''):'';
+ const neck=cut?`<g class="pp-kit"><defs><linearGradient id="${id}nk" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${neckCol}" stop-opacity="0"/><stop offset=".28" stop-color="${neckCol}"/><stop offset=".72" stop-color="${neckCol}"/><stop offset="1" stop-color="${neckCol}" stop-opacity="0"/></linearGradient>
+   <filter id="${id}mf" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="3.2"/></filter><mask id="${id}mk" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="300"><g filter="url(#${id}mf)"><rect x="-10" y="-10" width="260" height="150" fill="#fff"/><ellipse cx="120" cy="140" rx="47" ry="37" fill="#fff"/><rect x="99" y="150" width="42" height="58" rx="12" fill="#fff"/></g></mask>
+   <linearGradient id="${id}sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".42"/></linearGradient></defs><rect x="88" y="150" width="64" height="${h-150}" fill="url(#${id}nk)"/></g>`:'';
+ const body=`M0 ${h}V234Q4 206 62 196L95 188Q120 222 145 188L178 196Q236 206 240 234V${h}Z`,collar='M95 188Q120 222 145 188';
+ const shirt=cut?`<g class="pp-kit"><path d="${body}" fill="${esc(kit)}"/><path d="${body}" fill="url(#${id}sh)"/><path d="M62 196L50 ${h}M178 196L190 ${h}" stroke="#000" stroke-opacity=".16" stroke-width="2"/><path d="${collar}" fill="none" stroke="${esc(trim)}" stroke-width="7" stroke-linecap="round"/><path d="${collar}" fill="none" stroke="#000" stroke-opacity=".18" stroke-width="1.5" transform="translate(0 4.5)"/></g>`:'';
+ const photo=f?`<image class="pp-photo" ${src?`href="${src}"`:''} x="0" y="0" width="240" height="300" preserveAspectRatio="xMidYMin meet"${cut?` mask="url(#${id}mk)"`:''} onerror="var g=this.closest('.pp');if(g)g.setAttribute('data-pp-state','failed')"/>`:'';
+ return `<g class="pp" data-pp-state="${portraitState(f,key)}"${f?` data-pack="${esc(f.pack)}" data-visual-id="${esc(key)}"`:''}>${bg}${neck}${photo}${shirt}${fb}</g>`}
 function playerPortraitHTML(p,c,key){c=c||playerClub(p)||{c1:'#26384a',c2:'#d2deed'};const id='pp'+String(key||p.id).replace(/[^a-zA-Z0-9]/g,'');
  return `<span class="player-portrait" aria-hidden="true" data-portrait="${playerVisual(p)?playerVisualId(p):'fallback'}"><svg viewBox="0 0 240 264" preserveAspectRatio="xMidYMin slice">${portraitGroup(p,c,id)}</svg></span>`}
 /* Round avatars (lineup circles, broadcast plates): the circle shows a 207 px window of the 240 px frame (zoom 1.16).

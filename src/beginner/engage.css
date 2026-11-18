@@ -188,3 +188,27 @@
 .beginner .bleague-table tr.bz-cl td:first-child{box-shadow:inset -4px 0 0 #f2c94c;color:#f7dc85;font-weight:800}
 .beginner .bzones-new{margin:2px 0 10px}
 .bpr-owed .bpr{margin-top:0}.bpr-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.bpr-acts .bbtn{flex:1 1 220px}
+
+/* ---- the market's first tab: the leagues of the coach's country (BmarketHomeHTML) ---- */
+.bchips{display:grid;grid-template-columns:repeat(auto-fit,minmax(136px,1fr));gap:8px;margin:0 0 14px}
+.bchip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:48px;padding:8px 10px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(180deg,rgba(36,48,84,.9),rgba(14,21,46,.92));color:#dbe6f3;font:700 15px/1.2 Heebo,Arial,sans-serif;cursor:pointer;transition:transform var(--t-fast,.12s),box-shadow var(--t-fast,.12s)}
+.bchip small{font-size:11.5px;font-weight:700;color:#8fa3b8}
+.bchip[aria-pressed="true"]{border-color:#00FF9D;background:linear-gradient(180deg,rgba(0,255,157,.22),rgba(0,255,157,.08));color:#fff;box-shadow:0 0 18px rgba(0,255,157,.2),inset 0 0 0 1px rgba(0,255,157,.35)}
+.bchip[aria-pressed="true"] small{color:#00FF9D}
+.bchip:active{transform:translateY(1px)}
+.bchip:focus-visible{outline:3px solid #fff;outline-offset:2px}
+
+/* ---- the market: what can be spent, and who is within it (BbudgetHTML, BaffordHTML) ---- */
+.bbudget{margin:0 0 14px;padding:14px 16px;border-radius:16px;border:1px solid rgba(0,255,157,.35);background:linear-gradient(180deg,rgba(0,255,157,.12),rgba(0,255,157,.04))}
+.beginner .bbudget p{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0;color:#dbe6f3;font-size:16px}
+.bbudget strong{font-size:26px;line-height:1.1;color:#00FF9D;font-weight:900}
+.bbudget small{display:block;margin-top:6px;font-size:13.5px;line-height:1.45;color:#a9b9cb}
+.bbudget .bbtn{margin-top:10px;width:100%}
+.bbudget.low{border-color:rgba(255,196,87,.45);background:linear-gradient(180deg,rgba(255,196,87,.12),rgba(255,196,87,.04))}.bbudget.low strong{color:#ffd27a}
+.bafford{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin:2px 0 8px;padding:4px 10px;border-radius:999px;font-size:13px;font-weight:800;line-height:1.3}
+.bafford::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.bafford.buy{color:#00FF9D;background:rgba(0,255,157,.12);border:1px solid rgba(0,255,157,.4)}
+.bafford.loan{color:#ffd27a;background:rgba(255,196,87,.12);border:1px solid rgba(255,196,87,.4)}
+
+/* ---- the bottom bar and the keyboard (boot.js): away while a name is typed, and held to the screen's own bottom ---- */
+@media(max-width:900px){.beginner .bnav.anav{transform:translateY(var(--bnav-fix,0px))}body.bkb .bnav.anav{visibility:hidden}}
