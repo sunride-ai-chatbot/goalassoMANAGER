@@ -7,11 +7,11 @@
                       written to the news; the envelope only reveals it, like the signing reveal does.
      postMatchFlow()  after the report and the press conference of a live match: the envelope if there is one, then the
                       next-week card with one button that leads to the next match. */
-const HOOK_TAG={derby:'דרבי',top:'צמרת',six:'שש נקודות',rel:'תחתית',cup:'גביע',euro:'אירופה',under:'אנדרדוג',streak:'רצף',goal:'שחקן',ach:'הישג',board:'הנהלה',back:'חוזר'};
+const HOOK_TAG={derby:'דרבי',classic:'קלאסיקו',rival:'יריבות',top:'צמרת',six:'שש נקודות',rel:'תחתית',cup:'גביע',euro:'אירופה',under:'אנדרדוג',streak:'רצף',goal:'שחקן',ach:'הישג',board:'הנהלה',back:'חוזר'};
 function nextHooks(max){const out=[];if(!G||G.phase!=='play')return out;const c=me();const nm=myNextMatch();const C=carEnsure();
   const add=(k,html)=>{if(!out.some(x=>x.k===k))out.push({k,html})};
-  if(nm&&nm.a&&nm.h){const opp=nm.h.id===G.me?nm.a:nm.h;const dl=derbyLabel(nm.h.id,nm.a.id);
-    if(dl)add('derby',`${esc(dl)} מול ${esc(opp.name)}, ${nm.neutral?'במגרש ניטרלי':nm.h.id===G.me?'אצלך בבית':'בחוץ'}`);
+  if(nm&&nm.a&&nm.h){const opp=nm.h.id===G.me?nm.a:nm.h;const dw=derbyWords(nm.h.id,nm.a.id),dl=dw&&dw.label;
+    if(dl)add(dw.kind==='city'?'derby':dw.kind,`${esc(dl)} מול ${esc(opp.name)}, ${nm.neutral?'במגרש ניטרלי':nm.h.id===G.me?'אצלך בבית':'בחוץ'}`);
     if(nm.kind==='league'){const tab=standings();const i=tab.findIndex(x=>x.id===G.me),j=tab.findIndex(x=>x.id===opp.id);
       if(i>=0&&j>=0&&tab[i].P>=3){const pts=tab[i].pts,top=tab[0];
         if(i>0&&(pts+3>top.pts||(pts+3===top.pts&&top.id===opp.id)))add('top','ניצחון יכול להעלות אותך למקום הראשון');

@@ -1,7 +1,17 @@
 /* ====================== REALISM SYSTEMS: derbies, fans & attendance, fitness, morale, training, newspaper ====================== */
-const DERBIES=[['mta','hta','דרבי תל אביב'],['mhf','hhf','דרבי חיפה'],['bje','hje','דרבי ירושלים'],['mpt','hpt','דרבי פתח תקווה'],['mta','mhf','הקלאסיקו הישראלי'],['bje','mta','יריבות גדולה'],['hbs','bje','יריבות גדולה'],['hta','mhf','יריבות ותיקה']];
+/* A derby is two clubs of ONE city, and nothing else is ever called one. The other pairs are rivalries between cities: they fill the stand
+   and raise the stakes the same way (isDerby = any charged fixture) and are spoken of in their own words (derbyWords).
+   Beitar against Be'er Sheva used to be on this list and was announced as a derby, "the match the whole city is waiting for": two cities,
+   and not a rivalry the press names either. It is off; the two it does name are on (Beitar and Hapoel Tel Aviv, Be'er Sheva and Maccabi Tel Aviv). */
+const DERBIES=[['mta','hta','דרבי תל אביב'],['mhf','hhf','דרבי חיפה'],['bje','hje','דרבי ירושלים'],['mpt','hpt','דרבי פתח תקווה'],['mta','mhf','הקלאסיקו הישראלי'],['bje','hta','יריבות גדולה'],['bje','mta','יריבות גדולה'],['hbs','mta','יריבות גדולה'],['hta','mhf','יריבות ותיקה']];
 function derbyLabel(a,b){const d=DERBIES.find(([x,y])=>(x===a&&y===b)||(x===b&&y===a));return d?d[2]:null}
 function isDerby(a,b){return !!derbyLabel(a,b)}
+function cityDerby(a,b){const l=derbyLabel(a,b);return l&&l.startsWith('דרבי')?l:null}
+/* tag: the one word on a chip · name: the fixture as a noun in a sentence (its own name when it has one) · win, hero: what the winner and its scorer are called */
+function derbyWords(a,b){const l=derbyLabel(a,b);if(!l)return null;
+  if(l.startsWith('דרבי'))return {kind:'city',label:l,tag:'דרבי',name:l,win:'ניצחון בדרבי',hero:'גיבור הדרבי'};
+  if(l.includes('קלאסיקו'))return {kind:'classic',label:l,tag:'קלאסיקו',name:l,win:'ניצחון בקלאסיקו',hero:'גיבור הקלאסיקו'};
+  return {kind:'rival',label:l,tag:'יריבות',name:'משחק היריבות',win:'ניצחון על יריבה גדולה',hero:'גיבור משחק היריבות'}}
 const FOCUS_HE={bal:'מאוזן',fit:'כושר גופני',att:'התקפה',def:'הגנה',youth:'נוער',rec:'התאוששות'};
 const FOCUS_DESC={bal:'התפתחות רגילה לכל הסגל.',fit:'המשחקים שוחקים פחות (-15%) ופציעות נדירות יותר, התפתחות איטית יותר.',att:'חלוצים וקשרים מתפתחים מהר (x1.4), מגנים ושוערים לאט.',def:'מגנים ושוערים מתפתחים מהר (x1.4), התקפה לאט.',youth:'הנוער מתפתח x1.6, הבוגרים קצת לאט יותר.',rec:'התאוששות מהירה (+6 כושר גופני בשבוע) ופצועים חוזרים מהר יותר, התפתחות איטית.'};
 const INT_HE={low:'קל',mid:'רגיל',high:'אינטנסיבי'};
@@ -83,7 +93,7 @@ function saleStory(p,c,to,fee){paperMajor('העברות',`${fullName(p)} עוז�
 function sponsorStory(c,o){paperMajor('כספים',`${c.name} חתמה עם ${o.name}`,`חסות חולצה של ${NIS(o.annual)} לעונה ל-${o.years} ${o.years>1?'עונות':'עונה'}`,`הלוגו של ${o.name} יופיע על חולצת ${c.name} כבר במשחק הבא. ${o.bonusTitle?`החוזה כולל בונוסים על אליפות (${NIS(o.bonusTitle)}) ועל יציאה לאירופה (${NIS(o.bonusEuro)}).`:'מדובר בחוזה קבוע בלי בונוסים.'} במועדון מסבירים שהכסף יופנה לשכר השחקנים ולתשתיות.`,c.id,{type:'sponsor',sponsor:o.name,club:c.name,clubId:c.id,annual:o.annual,years:o.years})}
 function resultStory(M,h,a){
   const mineHome=h.id===G.me;const my=mineHome?h:a,opp=mineHome?a:h;const gf=mineHome?M.gh:M.ga,ga=mineHome?M.ga:M.gh;
-  const score=`${M.gh}:${M.ga}`;const derby=derbyLabel(h.id,a.id);const stronger=strength(opp)>strength(my)+3;
+  const score=`${M.gh}:${M.ga}`;const dw=derbyWords(h.id,a.id),derby=dw&&dw.name;const stronger=strength(opp)>strength(my)+3;
   const scorers=M.ev.filter(e=>(e.t==='goal'||e.t==='pen')&&e.team===my.id).map(e=>e.name);const motm=M.motm&&M.motm.team===my.id?M.motm.name:null;
   if(M.ctx.kind==='friendly'||(M.ctx.kind==='toto'&&M.ctx.stage!=='F'))return;
   if(gf-ga>=3)paper('ליגה',`${my.name} ${pick(['ריסקה','פירקה','הביסה','השפילה','מחצה'])} את ${opp.short} ${gf}:${ga}`,derby?`${derby} הסתיים בפסטיבל`:`${M.ctx.label}: ערב גדול ל${my.short}`,`${scorers.length?`השערים: ${scorers.join(', ')}. `:''}${motm?`שחקן המשחק: ${motm}. `:''}${pick(['הקהל חגג עד השריקה.','המנג\'ר יצא מהמשחק מרוצה מאוד.','זו תוצאה שתיזכר לאורך העונה.'])}`,my.id);

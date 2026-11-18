@@ -66,6 +66,16 @@ const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));
   // ---- what the next match is about: read from the state, at most two lines
   {const s=run(`(()=>{const b=Bstate();b.cl=null;b.round=5;b.st.w=3;b.board=20;for(const id of b.league){const c=club(id);c.P=5;c.pts=id===G.me?15:6}return Bstakes().map(x=>x.k)})()`);assert.ok(s.length&&s.length<=2);assert.ok(s.includes('top'));
    w.eval("Btab='home';Brender()");assert.ok($$('.astakes li').length>=1);w.eval("Bstate().round=1;Bstate().board=55;Brender()")}
+  // ---- a derby is two clubs of ONE city. Beitar against Be'er Sheva was once announced as one, "the match the whole city is waiting for"
+  {const d=run(`(()=>{const b=Bstate(),keep=[G.me,b.schedule[b.round],b.cl];b.cl=null;
+     const st=(a,o)=>{G.me=a;b.schedule[b.round]=[[a,o]];return Bstakes().filter(x=>x.k==='derby').map(x=>[x.t,x.h])[0]||null};
+     const out={list:DERBIES.map(([a,o,l])=>[club(a).name,club(o).name,l]),bs:[derbyLabel('bje','hbs'),isDerby('hbs','bje'),st('bje','hbs')],city:st('bje','hje'),rival:st('hbs','mta'),classic:st('mta','mhf'),win:[['bje','hje'],['mta','mhf'],['hbs','mta']].map(p=>derbyWords(...p).win)};
+     G.me=keep[0];b.schedule[b.round]=keep[1];b.cl=keep[2];return out})()`);
+   assert.deepEqual(d.bs,[null,false,null],'two cities, and no rivalry anybody names');
+   let cities=0;for(const [a,o,l] of d.list)if(l.startsWith('דרבי ')){const city=l.slice(5);cities++;assert.ok(a.endsWith(city)&&o.endsWith(city),l+': '+a+', '+o)}else assert.ok(!l.includes('דרבי'),l);assert.ok(cities>=4);
+   assert.equal(d.city[0],'דרבי');assert.match(d.city[1],/דרבי ירושלים.*כל העיר/);
+   assert.equal(d.rival[0],'יריבות');assert.doesNotMatch(d.rival[1],/דרבי|העיר/);assert.equal(d.classic[0],'קלאסיקו');assert.doesNotMatch(d.classic[1],/דרבי|העיר/);
+   assert.deepEqual(d.win,['ניצחון בדרבי','ניצחון בקלאסיקו','ניצחון על יריבה גדולה'])}
 
   // ---- a round: every result kept, a match report written from the match, and the edition around it
   w.eval("G.paper=[];Bstate().paperPop=[]");$('.aorb').click();w.eval("if(document.querySelector('.bdialog [data-action=\"play\"]'))document.querySelector('.bdialog [data-action=\"play\"]').click();BstopBroadcast();while(Bstate().live)Btick(true)");
@@ -80,6 +90,10 @@ const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));
    assert.match(H(3,0,[g(5,7),g(40,7),g(77,7)]),/שלושער/);assert.match(H(2,1,[g(10,1,false),g(50,7),g(70,8)]),/מהפך/);assert.match(H(1,0,[g(88,7)]),/דקה 88/);
    assert.match(H(0,0,[]),/תיקו מאופס/);assert.match(H(1,2,[g(10,7),g(50,1,false),g(60,1,false)]),/הובילה/);assert.match(H(0,4,[g(1,1,false),g(2,1,false),g(3,1,false),g(4,1,false)]),/ערב שחור/);assert.match(H(1,1,[g(10,1,false),g(89,7)]),/מציל נקודה/);
    const st=run(fix(`BeditionStory(${M(2,1,[g(10,1,false),g(50,7),g(70,8)])},3)`));assert.equal(st.ev.res,'W');assert.deepEqual([st.ev.gh,st.ev.ga],[2,1]);assert.match(st.body,/דק׳ 50/)}
+  // the report calls a derby a derby and a rivalry between two cities by the rival's name (the coach here is Maccabi Tel Aviv)
+  {const Hd=(o,gh,ga)=>run(`BeditionStory({h:G.me,a:${JSON.stringify(o)},gh:${gh},ga:${ga},ev:[],ps:{},ratings:true},3).h`);
+   assert.match(Hd('hta',1,0),/^דרבי תל אביב: .*חוגגת/);assert.match(Hd('hta',0,1),/^דרבי תל אביב: ערב קשה/);assert.match(Hd('mhf',1,0),/^הקלאסיקו הישראלי: /);
+   assert.match(Hd('hbs',1,0),/גברה על היריבה הגדולה הפועל באר שבע/);assert.match(Hd('hbs',0,1),/ערב קשה.*היריבה הגדולה/);assert.doesNotMatch(Hd('hbs',1,0)+Hd('hbs',0,1)+Hd('bje',1,0),/דרבי/)}
   // an evening of fans: the next home gate pays more, and the evenings run out
   {const r=run(`(()=>{const b=Bstate(),c=me();b.boost.gate=1;let n=0;while(n++<6&&b.boost.gate>0){const pair=Bnext();if(!pair){BfinishRound();continue}const home=pair[0]===c.id;BfinishRound();document.querySelector('.bdialog')?.remove();if(home)return b.ledger.filter(x=>/ערב אוהדים/.test(x.label)).length}return -1})()`);assert.equal(r,1);assert.equal(run('Bstate().boost.gate'),0)}
 

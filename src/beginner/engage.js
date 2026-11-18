@@ -35,9 +35,9 @@ function BxpMatch(M){const b=BxpEnsure(),c=me();if(!b||!M||(M.h!==c.id&&M.a!==c.
   if(!b.ct.played)add('המשחק הראשון שלך',40);
   add(res==='W'?(pens?'ניצחון בפנדלים':'ניצחון'):res==='D'?'תיקו':'שיחקת עד השריקה',res==='W'?40:res==='D'?20:10);
   add(gf===1?'שער אחד':gf+' שערים',Math.min(15,gf*3));if(ga===0)add('שער נקי',10);
-  const gap=opp?Math.round(strength(opp)-strength(c)):0,derby=typeof derbyLabel==='function'&&derbyLabel(M.h,M.a);
+  const gap=opp?Math.round(strength(opp)-strength(c)):0,derby=typeof derbyWords==='function'&&derbyWords(M.h,M.a);
   if(res==='W'&&gap>=3)add('ניצחון על קבוצה חזקה ממך',15);else if(res==='D'&&gap>=5)add('נקודה מול קבוצה חזקה',8);
-  if(res==='W'&&derby)add('ניצחון בדרבי',15);if(res==='W'&&M.bCL!=null)add('לילה אירופי',15);
+  if(res==='W'&&derby)add(derby.win,15);if(res==='W'&&M.bCL!=null)add('לילה אירופי',15);
   /* the counters the missions read */
   const ct=b.ct,bump=(k,n)=>{ct[k]=(ct[k]||0)+(n==null?1:n)};bump('played');bump('goals',gf);if(res==='W')bump('wins');if(ga===0)bump('clean');if(res==='W'&&!home&&M.bCL==null)bump('awayW');if(res==='W'&&gap>=3)bump('giant');
   const mine=M.ev.filter(e=>(e.t==='goal'||e.t==='pen')&&e.team===c.id);bump('young',mine.filter(e=>{const p=c.players.find(p=>p.id===e.pid);return p&&p.age<=21}).length);
@@ -83,7 +83,8 @@ function BmsHTML(){const b=Bstate();if(!b||!b.ms||!b.ms.length)return '';
 function Bstakes(){const b=Bstate(),c=me();if(!b||!c)return [];const cup=BclTie(),pair=cup||Bnext();if(!pair)return [];const op=club(pair.find(id=>id!==c.id));if(!op)return [];const home=pair[0]===c.id,out=[],st=b.st||{},vs=b.vs||{};
   const add=(k,t,h)=>{if(out.length<2&&!out.some(x=>x.k===k))out.push({k,t,h})};
   if(cup)add('cup','אירופה',b.cl.stage===3?'הגמר: תשעים דקות מהגביע':'נוקאאוט: מי שמפסידה נשארת בבית');
-  const dl=typeof derbyLabel==='function'&&derbyLabel(pair[0],pair[1]);if(dl)add('derby','דרבי',`${esc(dl)}: המשחק שכל העיר מחכה לו`);
+  const dw=typeof derbyWords==='function'&&derbyWords(pair[0],pair[1]);   /* only two clubs of one city are a derby, and only a derby is what a whole city waits for */
+  if(dw)add('derby',dw.tag,dw.kind==='city'?`${esc(dw.label)}: המשחק שכל העיר מחכה לו`:`${esc(dw.label)} מול ${esc(op.name)}: משחק ששני המחנות מחכים לו כל העונה`);
   if(!cup){const tab=Bstandings(),i=tab.findIndex(x=>x.id===c.id),j=tab.findIndex(x=>x.id===op.id),left=b.schedule.length-b.round;
     if(i>=0&&j>=0&&b.round>=3){const top=tab[0];
       if(i>0&&(c.pts+3>top.pts||(c.pts+3===top.pts&&top.id===op.id)))add('top','צמרת','ניצחון יכול להעלות אותך למקום הראשון');

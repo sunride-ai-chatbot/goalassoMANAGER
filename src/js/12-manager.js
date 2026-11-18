@@ -58,7 +58,7 @@ function isBigMatch(M){const h=club(M.h),a=club(M.a);const opp=h.id===G.me?a:h;c
   return isDerby(h.id,a.id)||M.ctx.kind==='euro'||(M.ctx.kind==='toto'&&M.ctx.stage==='F')||(M.ctx.kind==='cup'&&['QF','SF','F'].includes(M.ctx.stage))||opp.tier===1||(ev.t==='league'&&ev.n>=30)||G.board.conf<30}
 function teamMorale(d,filter){me().players.forEach(p=>{if(!filter||filter(p))p.morale=clamp(p.morale+d*persMoraleMult(p),10,100)})}
 function pressQuestionsPre(M){
-  const c=me();const h=club(M.h),a=club(M.a);const opp=h.id===G.me?a:h;const qs=[];const derby=derbyLabel(h.id,a.id);const stronger=strength(c)>strength(opp)+3;
+  const c=me();const h=club(M.h),a=club(M.a);const opp=h.id===G.me?a:h;const qs=[];const dw=derbyWords(h.id,a.id),derby=dw&&dw.name;const stronger=strength(c)>strength(opp)+3;
   const quote=(t)=>()=>paper('מסיבת עיתונאים',`${G.manager.name}: "${t}"`,`לקראת ${M.ctx.label} מול ${opp.short}`,`המנג'ר של ${c.name} דיבר עם העיתונאים לפני המשחק. ${pick(['האווירה במועדון טובה.','השאלות עסקו בעיקר בהרכב.','העיתונאים ניסו להוציא ממנו הצהרה.'])}`);
   if(derby)qs.push({q:`${derby} מחר. איך מתמודדים עם הלחץ?`,a:[
     {t:'האוהדים ראויים לניצחון. נילחם על כל כדור.',fx:()=>{teamMorale(2);me().fans=clamp(me().fans+2,10,100);quote('האוהדים ראויים לניצחון')()},r:'האוהדים אהבו. הקבוצה נדלקה.'},
