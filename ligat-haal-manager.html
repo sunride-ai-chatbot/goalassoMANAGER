@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="a6a5be454196">
-<meta name="goalasso-built" content="16.11.2026 15:35">
+<meta name="goalasso-build" content="8f45b13b5efb">
+<meta name="goalasso-built" content="16.11.2026 15:39">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html. The daily challenge is part of the
    beginner page, so its link (/?daily) is sent on with its query; every other query stays here */
@@ -430,6 +430,35 @@ h3{font-size:18px}
 .mo-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;min-height:58px;border:0;border-radius:16px;background:linear-gradient(180deg,#d8ff5c,#b6f03c);color:#0b1004;font-family:var(--display);font-size:clamp(19px,5.8vw,26px);cursor:pointer;box-shadow:0 8px 28px rgba(182,240,60,.35),inset 0 1px 0 rgba(255,255,255,.6)}
 .mo-btn svg{width:22px;height:22px;flex:0 0 auto}
 .mo .rv-demo{top:max(10px,env(safe-area-inset-top))}
+/* the shout across the top, and the championship plate between it and the name (moDishHTML) */
+.mo-card::before{content:"";position:absolute;inset:0 0 auto;height:34%;background:linear-gradient(180deg,rgba(4,6,12,.82),rgba(4,6,12,.38) 58%,transparent);pointer-events:none}
+.mo-top{position:absolute;inset:max(14px,calc(env(safe-area-inset-top) + 8px)) 0 auto;z-index:1;text-align:center;padding:0 6%}
+.mo-shout{margin:0;font-family:var(--display);font-weight:400;line-height:1;font-size:min(17vw,9.4dvh,96px);letter-spacing:.5px;background:linear-gradient(180deg,#fffbe2 8%,#f5d77a 46%,#c8962a 78%,#8a6414);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 rgba(60,38,4,.9)) drop-shadow(0 10px 22px rgba(0,0,0,.7));animation:moShout .7s var(--ease-out) both .1s}
+@keyframes moShout{from{opacity:0;transform:scale(1.5)}to{opacity:1;transform:none}}
+.mo-dish{--d:min(72vw,38dvh,360px);position:absolute;left:50%;top:calc(max(14px,env(safe-area-inset-top)) + min(17vw,9.4dvh,96px) + 3dvh);width:var(--d);height:var(--d);margin-left:calc(var(--d) / -2);z-index:1;animation:moDish .8s var(--ease-out) both .3s}
+@keyframes moDish{from{opacity:0;transform:translateY(-26px) scale(.82) rotate(-10deg)}to{opacity:1;transform:none}}
+.mo-rays{position:absolute;inset:-46%;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,224,140,.26) 0 5deg,transparent 5deg 20deg);-webkit-mask:radial-gradient(circle,#000 26%,transparent 68%);mask:radial-gradient(circle,#000 26%,transparent 68%);animation:moSpin 46s linear infinite}
+@keyframes moSpin{to{transform:rotate(360deg)}}
+/* the rim is gold, the plate itself silver: a fluted border, then a well that sits lower, a wreath engraved in it and the champion's shirt on the boss */
+.mo-disc{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 205deg,#6f5210,#f9e79a,#b8860b,#fff6c4,#8a6a1a,#f1d37a,#6f5210,#ffeeb0,#a67c1a,#f7e08a,#6f5210);box-shadow:0 calc(var(--d) * .07) calc(var(--d) * .16) rgba(0,0,0,.66),0 0 calc(var(--d) * .3) rgba(255,208,96,.38),inset 0 0 0 1.5px rgba(255,250,220,.6),inset 0 -3px 6px rgba(60,38,4,.6)}
+.mo-disc::before{content:"";position:absolute;inset:5%;border-radius:50%;background:conic-gradient(from 30deg,#f6f8fa,#8b949d,#eef1f4,#69727b,#ffffff,#98a1aa,#e4e8ec,#757e87,#fbfcfd,#8b949d,#f6f8fa);box-shadow:inset 0 0 0 1.5px rgba(40,30,6,.55),inset 0 calc(var(--d) * .02) calc(var(--d) * .03) rgba(255,255,255,.8),inset 0 calc(var(--d) * -.02) calc(var(--d) * .04) rgba(20,26,34,.45)}
+.mo-beads{position:absolute;inset:1.6%;border-radius:50%;border:calc(var(--d) * .014) dotted rgba(255,246,206,.95);filter:drop-shadow(0 1px 0 rgba(70,46,6,.8))}
+.mo-flutes{position:absolute;inset:5.6%;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(30,38,48,.3) 0 2.2deg,rgba(255,255,255,.55) 2.2deg 4.6deg,rgba(255,255,255,0) 4.6deg 7.5deg);-webkit-mask:radial-gradient(circle,transparent 0 56.5%,#000 57.5% 69.5%,transparent 70.5%);mask:radial-gradient(circle,transparent 0 56.5%,#000 57.5% 69.5%,transparent 70.5%)}
+.mo-well{position:absolute;inset:17.5%;border-radius:50%;background:radial-gradient(circle at 36% 26%,rgba(255,255,255,.85),transparent 46%),conic-gradient(from 250deg,#dfe4e9,#7d8690,#f4f6f8,#8a939c,#e6eaee,#69727b,#f9fafb,#8f98a1,#dfe4e9);box-shadow:0 0 0 calc(var(--d) * .011) #e9c46a,0 0 0 calc(var(--d) * .017) #7a5a12,inset 0 calc(var(--d) * .035) calc(var(--d) * .055) rgba(14,20,28,.62),inset 0 calc(var(--d) * -.02) calc(var(--d) * .03) rgba(255,255,255,.7)}
+.mo-wreath{position:absolute;inset:17.5%;width:65%;height:65%;z-index:1;fill:#b98a22;filter:drop-shadow(0 1px 0 rgba(255,248,214,.95)) drop-shadow(0 -1px 0 rgba(70,46,6,.5))}
+.mo-boss{position:absolute;inset:36%;border-radius:50%;z-index:2;display:grid;place-items:center;background:var(--k1,#1f8a3a);background:radial-gradient(circle at 36% 28%,color-mix(in srgb,var(--k1,#1f8a3a) 68%,#fff),var(--k1,#1f8a3a) 58%,color-mix(in srgb,var(--k1,#1f8a3a) 58%,#000));box-shadow:0 0 0 calc(var(--d) * .016) #e9c46a,0 0 0 calc(var(--d) * .023) #7a5a12,0 calc(var(--d) * .018) calc(var(--d) * .035) rgba(0,0,0,.55),inset 0 calc(var(--d) * -.018) calc(var(--d) * .035) rgba(0,0,0,.4)}
+.mo-boss .rv-shirt{width:78%;height:78%;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
+.mo-glint{position:absolute;inset:0;border-radius:50%;overflow:hidden;z-index:3;pointer-events:none}
+.mo-glint::before{content:"";position:absolute;inset:-20% auto -20% -60%;width:42%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);animation:moGlint 4.2s ease-in-out infinite 1.1s}
+@keyframes moGlint{0%{left:-60%}38%,100%{left:130%}}
+.mo-ribbon{position:absolute;top:58%;width:19%;height:62%;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.28),transparent 22%,rgba(255,255,255,.2) 50%,transparent 78%,rgba(0,0,0,.3)),linear-gradient(90deg,var(--k1,#1f8a3a) 0 34%,var(--k2,#fff) 34% 66%,var(--k1,#1f8a3a) 66%);clip-path:polygon(0 0,100% 0,100% 100%,50% 84%,0 100%);filter:drop-shadow(0 6px 10px rgba(0,0,0,.55))}
+.mo-ribbon.l{left:16%;transform:rotate(13deg);transform-origin:50% 0}.mo-ribbon.r{right:16%;transform:rotate(-13deg);transform-origin:50% 0}
+.mo-band{position:absolute;left:-4%;right:-4%;bottom:-6%;width:108%;height:auto;z-index:4;filter:drop-shadow(0 5px 9px rgba(0,0,0,.6))}
+.mo-note{margin:0;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:9px 14px;border-radius:14px;background:linear-gradient(180deg,rgba(0,255,157,.2),rgba(0,255,157,.09));border:1px solid rgba(0,255,157,.55);color:#eafff6;font-weight:800;font-size:clamp(16px,4.6vw,19px);box-shadow:0 0 22px rgba(0,255,157,.22);animation:moRise var(--t-slow) var(--ease-out) both .35s}
+.mo-note i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#00FF9D;color:#00240f;font-style:normal;font-size:12px;flex:none}
+@media (max-height:560px){.mo-dish{display:none}}
+@media (prefers-reduced-motion:reduce){.mo-shout,.mo-dish,.mo-rays,.mo-glint::before,.mo-note{animation:none}.mo-glint{display:none}}
+@supports not (height:100dvh){.mo-shout{font-size:min(17vw,9.4vh,96px)}.mo-dish{--d:min(72vw,38vh,360px);top:calc(max(14px,env(safe-area-inset-top)) + min(17vw,9.4vh,96px) + 3vh)}}
 
 /* the presented player's cut-out on the stage; the shirt moves down and shrinks under it */
 .rv-facewrap{width:min(62%,260px);margin-top:4px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.75))}
@@ -4855,13 +4884,27 @@ let PX_REVEAL=null;
 function closeReveal(silent){const R=PX_REVEAL;PX_REVEAL=null;const root=$('reveal');if(R){cancelAnimationFrame(R.raf);for(const [el,ev,fn,o] of R.listeners){try{el.removeEventListener(ev,fn,o)}catch(e){}}R.listeners=[];if(R.video){try{R.video.pause();R.video.querySelectorAll('source').forEach(x=>x.remove());R.video.removeAttribute('src');R.video.load()}catch(e){}R.video.remove();R.video=null}}
   if(root)root.remove();revealOpen=false;document.body.style.overflow='';if(!silent){setTimeout(maybeShowQueued,300);if(R&&R.onClose){try{R.onClose()}catch(e){console.warn(e)}}}}
 /* ---- trophy moments ---- */
-const MOMENT_TXT={cup:{btn:'חוגגים עם האוהדים',label:t=>`מחזיקת ${t}`},champ:{btn:'ממשיכים לעשות היסטוריה',label:()=>'עונה בלתי נשכחת'}};
+const MOMENT_TXT={cup:{btn:'חוגגים עם האוהדים',label:t=>`מחזיקת ${t}`,shout:'הגביע שלנו!'},champ:{btn:'ממשיכים לעשות היסטוריה',label:()=>'עונה בלתי נשכחת',shout:'אלופים!'}};
+/* The championship plate. The photograph behind a title was a stadium full of confetti and nothing else: no trophy, and
+   the club's name only in small type at the bottom. The plate is drawn, not photographed, so it can carry what a picture
+   cannot: the champion's own name on its band, its shirt in the middle and its colours on the ribbons. Metal is conic
+   gradients (.mo-disc), the name is SVG text squeezed into the band so a long one shrinks instead of being cut. */
+function moDishHTML(c,m){const name=String(m.clubName||(c&&c.name)||''),k=c||{c1:'#1f8a3a',c2:'#ffffff'},long=name.length>13;
+  return `<div class="mo-dish" aria-hidden="true"><i class="mo-rays"></i><i class="mo-ribbon l"></i><i class="mo-ribbon r"></i>
+   <div class="mo-disc"><i class="mo-beads"></i><i class="mo-flutes"></i><i class="mo-well"></i>
+    <svg class="mo-wreath" viewBox="0 0 200 200">${[-1,1].map(sd=>Array.from({length:8},(_,i)=>{const t=(24+i*15.5)*Math.PI/180,deg=24+i*15.5;return [[74,30],[63,-30]].map(([r,tilt])=>{const x=(100+sd*Math.sin(t)*r).toFixed(1),y=(100+Math.cos(t)*r).toFixed(1);return `<ellipse cx="${x}" cy="${y}" rx="10.5" ry="4.3" transform="rotate(${(sd*(-deg+tilt)).toFixed(1)} ${x} ${y})"/>`}).join('')}).join('')).join('')}<path d="M100 12l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3-9.3-4.9-9.3 4.9 1.8-10.3-7.5-7.3 10.4-1.5z"/></svg>
+    <div class="mo-boss">${shirtSVG(k,null,'mo')}</div><i class="mo-glint"></i></div>
+   <svg class="mo-band" viewBox="0 0 300 62"><defs><linearGradient id="moBandG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset=".45" stop-color="#e9c46a"/><stop offset="1" stop-color="#a87a1c"/></linearGradient></defs>
+    <path d="M6 20l22 4v32L6 60l10-18z" fill="#8a6414"/><path d="M294 20l-22 4v32l22 4-10-18z" fill="#8a6414"/><path d="M24 8c60-8 192-8 252 0v40c-60-8-192-8-252 0z" fill="url(#moBandG)" stroke="#6b4d0f" stroke-width="1.5"/>
+    <text x="150" y="35" text-anchor="middle" font-size="${long?22:25}" font-weight="900" font-family="Heebo, Arial, sans-serif" fill="#2b1d02"${long?' textLength="226" lengthAdjust="spacingAndGlyphs"':''}>${esc(name)}</text></svg></div>`}
 function laurel(side){return `<svg class="ml-laurel ${side}" viewBox="0 0 24 48" aria-hidden="true"><path d="M18 46C8 38 5 24 9 4" fill="none" stroke="currentColor" stroke-width="1.6"/>${[8,15,22,29,36].map((y,i)=>`<ellipse cx="${side==='l'?6+i*.6:6+i*.6}" cy="${y}" rx="4.2" ry="2" transform="rotate(${-40+i*6} ${6+i*.6} ${y})" fill="currentColor"/><ellipse cx="${13+i*.5}" cy="${y+3}" rx="4" ry="1.9" transform="rotate(${35-i*4} ${13+i*.5} ${y+3})" fill="currentColor"/>`).join('')}</svg>`}
 function openMoment(m,o){closeReveal(true);revealOpen=true;const c=club(m.club)||me();const T=MOMENT_TXT[m.kind]||MOMENT_TXT.cup;const img=m.kind==='champ'?REVEAL_ASSETS.champ:REVEAL_ASSETS.cup;
   const root=document.createElement('div');root.id='reveal';root.className='mo';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',m.kind==='champ'?'אליפות':'זכייה בגביע');if(c){root.style.setProperty('--k1',c.c1);root.style.setProperty('--k2',c.c2||'#fff')}
-  root.innerHTML=`<div class="rv-bg" style="background-image:url(${img})"></div><div class="mo-card" style="background-image:url(${img})">${m.demo?'<div class="rv-demo">הדגמה</div>':''}
+  const champ=m.kind==='champ';
+  root.innerHTML=`<div class="rv-bg" style="background-image:url(${img})"></div><div class="mo-card ${champ?'champ':'cup'}" style="background-image:url(${img})">${m.demo?'<div class="rv-demo">הדגמה</div>':''}
+   <div class="mo-top"><h1 class="mo-shout">${T.shout}</h1></div>${champ?moDishHTML(c,m):''}
    <div class="mo-ui"><div class="mo-plate">${laurel('l')}<div><small>${esc(T.label(m.comp))}</small><b>${esc(m.clubName)}</b><span>${m.title?esc(m.title):m.kind==='champ'?'אלופת המדינה':esc(m.comp)} · <bdi dir="ltr">${esc(m.season)}</bdi></span></div>${laurel('r')}</div>
-   <button class="mo-btn" id="moClose" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>${T.btn}</button></div></div>`;
+   ${m.note?`<p class="mo-note"><i aria-hidden="true">▲</i>${esc(m.note)}</p>`:''}<button class="mo-btn" id="moClose" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>${T.btn}</button></div></div>`;
   document.body.appendChild(root);document.body.style.overflow='hidden';const R={listeners:[],video:null,raf:0,onClose:(o&&o.onClose)||null};PX_REVEAL=R;
   const fn=e=>{if(e.target.closest('#moClose'))closeReveal()};root.addEventListener('click',fn);R.listeners.push([root,'click',fn]);
   const kf=e=>{if(e.key==='Escape')closeReveal()};document.addEventListener('keydown',kf);R.listeners.push([document,'keydown',kf]);
@@ -5143,12 +5186,13 @@ function paperQuote(st){const m=st.body&&st.body.match(/"([^"]{8,90})"/);if(m)re
    Stories are stored at publication time with structured `ev` data (names, clubs, terms as they were then), so the
    archive never rewrites history. Presentation only: opening or closing a paper never touches the event itself. */
 const NP_IMG={match:['np-match',900,600],manager:['np-manager',900,600],stage:['np-stage',400,267],champ:['np-champ',900,600],cup:['np-cup',900,600],ashdod:['np-ashdod',863,561]};
-const NP_RIBBON={loanOut:'יוצא בהשאלה',depart:'סוף דרך',appoint:'מינוי חדש',sign:'רכש חדש',loan:'רכש חדש · השאלה',sale:'יוצא מהמועדון',sponsor:'עסקים וספורט',champ:'לילה של אלופים',cup:'לילה של גביע',match:'סיכום המשחק'};
+const NP_RIBBON={loanOut:'יוצא בהשאלה',depart:'סוף דרך',appoint:'מינוי חדש',sign:'רכש חדש',loan:'רכש חדש · השאלה',sale:'יוצא מהמועדון',sponsor:'עסקים וספורט',champ:'לילה של אלופים',cup:'לילה של גביע',match:'סיכום המשחק',promo:'עולים ליגה',releg:'יורדים ליגה'};
 function npSeasonOf(st){const y=2026+(st.s||1)-1;return `${y}/${String(y+1).slice(2)}`}
 function npTypeOf(st){if(st.ev&&st.ev.type)return st.ev.type;const h=st.h||'';if(/אלופת המדינה/.test(h))return 'champ';if(/זכתה בגביע|זכתה ב.*גביע/.test(h))return 'cup';return null}
 function npImage(st){const t=npTypeOf(st),ev=st.ev||{};
   if(t==='match')return {k:'match',score:ev,cap:(ev.stadium||'האצטדיון')+' · אילוסטרציה'};
   if(t==='champ')return {k:'champ',cap:'חגיגות האליפות · אילוסטרציה'};if(t==='cup')return {k:'cup',cap:'הגביע מונף · אילוסטרציה'};
+  if(t==='promo')return {k:'champ',cap:'חגיגות העלייה · אילוסטרציה'};if(t==='releg')return {k:'manager',cap:'לילה קשה · אילוסטרציה'};
   if(t==='depart')return {k:'manager',cap:'רגע הפרידה · אילוסטרציה'};
   if(t==='appoint')return ev.clubId==='l_ash'?{k:'ashdod',cap:'רגע החתימה · אילוסטרציה'}:{k:'manager',cap:'בדרך אל הדשא · אילוסטרציה'};
   if(t==='sign'||t==='loan'||t==='sale'||t==='loanOut')return {k:'stage',shirt:true,cap:t==='sale'||t==='loanOut'?'רגע הפרידה · אילוסטרציה':'במת ההצגה · אילוסטרציה'};
@@ -5184,11 +5228,12 @@ function npFacts(st){const ev=st.ev||{},t=npTypeOf(st);const c=club(st.team)||nu
   else if(t==='sponsor'){add('נותן החסות',ev.sponsor);add('לעונה',ev.annual!=null?NIS(ev.annual):null);add('משך',yrs(ev.years))}
   else if(t==='match'){add('התוצאה',`${ev.gh}:${ev.ga}`);add('שחקן המשחק',ev.star?`${ev.star.name} · ${ev.star.r}`:null);add('המקום בטבלה',ev.place!=null?String(ev.place):null)}
   else if(t==='champ'){add('העונה',ev.season);add('נקודות',ev.pts!=null?String(ev.pts):null);add('סגנית',ev.second)}
+  else if(t==='promo'||t==='releg'){add('הליגה החדשה',ev.to);add(t==='promo'?'נפרדים מ':'יורדים מ',ev.from);add('העונה',npSeasonOf(st))}
   else if(t==='cup'){add('המפעל',ev.comp);add('תוצאת הגמר',ev.score?`${ev.score}${ev.pens?' (פנדלים)':''}`:null);add('היריבה',ev.opp)}
   if(F.length<3){add('המועדון',c?(c.short||c.name):null);add('המדור',st.kind);add('העונה',npSeasonOf(st))}
   const seen=new Set();return F.filter(([l])=>!seen.has(l)&&seen.add(l)).slice(0,3)}
 function npTeaser(st,live){if(live){try{const nx=myNextMatch();if(nx)return `המשחק הבא: ${nx.h.id===G.me?'נגד '+nx.a.short:'ב'+nx.h.short}`}catch(e){}}
-  const t=npTypeOf(st);return {depart:'האתגר הבא: מועדון חדש',appoint:'האתגר הבא: בניית הסגל',sign:'האתגר הבא: מקום בהרכב',loan:'האתגר הבא: להוכיח את עצמו',sale:'האתגר הבא: למלא את החסר',sponsor:'האתגר הבא: להחזיר על ההשקעה',match:'עוד במהדורה: כל תוצאות המחזור והטבלה',champ:'האתגר הבא: להגן על התואר',cup:'האתגר הבא: עוד תואר'}[t]||'עוד בעיתון: הכתבות של השבוע'}
+  const t=npTypeOf(st);return {depart:'האתגר הבא: מועדון חדש',appoint:'האתגר הבא: בניית הסגל',sign:'האתגר הבא: מקום בהרכב',loan:'האתגר הבא: להוכיח את עצמו',sale:'האתגר הבא: למלא את החסר',sponsor:'האתגר הבא: להחזיר על ההשקעה',match:'עוד במהדורה: כל תוצאות המחזור והטבלה',champ:'האתגר הבא: להגן על התואר',cup:'האתגר הבא: עוד תואר',promo:'האתגר הבא: להישאר בליגה',releg:'האתגר הבא: לחזור מיד'}[t]||'עוד בעיתון: הכתבות של השבוע'}
 function npSplit(text){const parts=String(text||'').split(/(?<=[.!?״"])\s+/).filter(Boolean);if(parts.length<2)return [text||'',''];const half=Math.ceil(parts.length/2);return [parts.slice(0,half).join(' '),parts.slice(half).join(' ')]}
 function npQuote(st){const m=st.body&&st.body.match(/"([^"]{8,90})"/);if(m)return m[1];return st.q||null}
 function frontPageHTML(st,o){o=o||{};const t=npTypeOf(st);const c=club(st.team);const [b1,b2]=npSplit(st.body);const q=npQuote(st)||(st.ev&&st.ev.q)||null;

@@ -41,7 +41,7 @@ function BeditionRestStory(wk){const b=Bstate(),r=b.rnd,top=(r.res||[]).slice().
 function BeditionRound(mine){const b=Bstate();if(!b||!b.rnd)return;const wk=b.rnd.r;let st=null;try{st=mine?BeditionStory(mine,wk):BeditionRestStory(wk)}catch(e){console.warn('edition',e)}
   if(st){G.paper=[st,...(G.paper||[])].slice(0,40);b.rnd.h=st.h}b.rnd.seen=false}
 function BeditionLead(){const b=Bstate(),r=b&&b.rnd;if(!r)return null;return (G.paper||[]).find(s=>s.ev&&s.ev.type==='match'&&s.s===r.s&&s.wk===r.r)||null}
-function BeditionExtraHTML(){const b=Bstate(),r=b.rnd,c=me(),tab=Bstandings(),res=r.res||[];
+function BeditionExtraHTML(){const b=Bstate(),r=b.rnd,c=me(),tab=Bstandings(),res=r.res||[],cur=r.s===b.season;   /* once the season has turned, the table and the scorers on screen are the new season's (and maybe another league's): the old round keeps its results only */
   /* the surprise of the round: the winner that was weaker by the most */
   let upset=null;for(const x of res){if(x[2]===x[3])continue;const w=club(x[2]>x[3]?x[0]:x[1]),l=club(x[2]>x[3]?x[1]:x[0]);if(!w||!l)continue;const d=strength(l)-strength(w);if(d>=3&&(!upset||d>upset.d))upset={x,d}}
   const results=res.map(x=>{const h=club(x[0]),a=club(x[1]);if(!h||!a)return '';const mine=x[0]===c.id||x[1]===c.id;return `<li class="${mine?'me':''}"><span>${esc(h.name)}</span><b>${scoreSides(x[2],x[3],{label:h.name+' '+x[2]+', '+a.name+' '+x[3]})}</b><span>${esc(a.name)}</span>${upset&&upset.x===x?'<em>הפתעת המחזור</em>':''}</li>`}).join('');
@@ -50,8 +50,8 @@ function BeditionExtraHTML(){const b=Bstate(),r=b.rnd,c=me(),tab=Bstandings(),re
   const sc=Bleaders('goals').slice(0,3).map((s,k)=>`<li><b><bdi>${k+1}</bdi></b><span><strong>${esc(s.name)}</strong><small>${esc(club(s.clubId)?.name||'')}</small></span><em><bdi>${s.goals}</bdi></em></li>`).join('');
   const pair=BclTie()||Bnext(),op=pair?club(pair.find(id=>id!==c.id)):null,stakes=Bstakes(),more=(G.paper||[]).map((s,k)=>({s,k})).filter(({s})=>s.s===r.s&&s.wk>=r.r&&(!s.ev||s.ev.type!=='match')).slice(0,3);
   return `<div class="np-ed"><section class="np-box"><h3>תוצאות המחזור</h3><ul class="np-res">${results}</ul></section>
-   <section class="np-box"><h3>הטבלה</h3><table class="np-tab"><thead><tr><th scope="col">#</th><th scope="col">קבוצה</th><th scope="col">מש׳</th><th scope="col">הפרש</th><th scope="col">נק׳</th></tr></thead><tbody>${table}</tbody></table></section>
-   ${sc?`<section class="np-box"><h3>מלך השערים</h3><ol class="np-sc">${sc}</ol></section>`:''}
+   ${cur?`<section class="np-box"><h3>הטבלה</h3><table class="np-tab"><thead><tr><th scope="col">#</th><th scope="col">קבוצה</th><th scope="col">מש׳</th><th scope="col">הפרש</th><th scope="col">נק׳</th></tr></thead><tbody>${table}</tbody></table></section>`:''}
+   ${sc&&cur?`<section class="np-box"><h3>מלך השערים</h3><ol class="np-sc">${sc}</ol></section>`:''}
    ${op?`<section class="np-box np-next"><h3>המחזור הבא</h3><p><strong>${pair[0]===c.id?`${esc(c.name)} מארחת את ${esc(op.name)}`:`${esc(c.name)} מתארחת אצל ${esc(op.name)}`}</strong></p>${stakes.length?`<ul>${stakes.map(x=>`<li><b>${x.t}:</b> ${x.h}</li>`).join('')}</ul>`:''}</section>`:''}
    ${more.length?`<section class="np-box"><h3>עוד בעיתון</h3><ul class="np-more">${more.map(({s,k})=>`<li><button type="button" data-bpaper="${k}"><small>${esc(s.kind)}</small>${esc(s.h)}</button></li>`).join('')}</ul></section>`:''}</div>`}
 function BeditionOpen(){const b=Bstate(),lead=BeditionLead();if(!b||!b.rnd||!lead)return BpaperArchive();document.querySelector('.bdialog')?.remove();if(!b.rnd.seen){b.rnd.seen=true;Bwrite()}

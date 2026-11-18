@@ -82,13 +82,27 @@ let PX_REVEAL=null;
 function closeReveal(silent){const R=PX_REVEAL;PX_REVEAL=null;const root=$('reveal');if(R){cancelAnimationFrame(R.raf);for(const [el,ev,fn,o] of R.listeners){try{el.removeEventListener(ev,fn,o)}catch(e){}}R.listeners=[];if(R.video){try{R.video.pause();R.video.querySelectorAll('source').forEach(x=>x.remove());R.video.removeAttribute('src');R.video.load()}catch(e){}R.video.remove();R.video=null}}
   if(root)root.remove();revealOpen=false;document.body.style.overflow='';if(!silent){setTimeout(maybeShowQueued,300);if(R&&R.onClose){try{R.onClose()}catch(e){console.warn(e)}}}}
 /* ---- trophy moments ---- */
-const MOMENT_TXT={cup:{btn:'חוגגים עם האוהדים',label:t=>`מחזיקת ${t}`},champ:{btn:'ממשיכים לעשות היסטוריה',label:()=>'עונה בלתי נשכחת'}};
+const MOMENT_TXT={cup:{btn:'חוגגים עם האוהדים',label:t=>`מחזיקת ${t}`,shout:'הגביע שלנו!'},champ:{btn:'ממשיכים לעשות היסטוריה',label:()=>'עונה בלתי נשכחת',shout:'אלופים!'}};
+/* The championship plate. The photograph behind a title was a stadium full of confetti and nothing else: no trophy, and
+   the club's name only in small type at the bottom. The plate is drawn, not photographed, so it can carry what a picture
+   cannot: the champion's own name on its band, its shirt in the middle and its colours on the ribbons. Metal is conic
+   gradients (.mo-disc), the name is SVG text squeezed into the band so a long one shrinks instead of being cut. */
+function moDishHTML(c,m){const name=String(m.clubName||(c&&c.name)||''),k=c||{c1:'#1f8a3a',c2:'#ffffff'},long=name.length>13;
+  return `<div class="mo-dish" aria-hidden="true"><i class="mo-rays"></i><i class="mo-ribbon l"></i><i class="mo-ribbon r"></i>
+   <div class="mo-disc"><i class="mo-beads"></i><i class="mo-flutes"></i><i class="mo-well"></i>
+    <svg class="mo-wreath" viewBox="0 0 200 200">${[-1,1].map(sd=>Array.from({length:8},(_,i)=>{const t=(24+i*15.5)*Math.PI/180,deg=24+i*15.5;return [[74,30],[63,-30]].map(([r,tilt])=>{const x=(100+sd*Math.sin(t)*r).toFixed(1),y=(100+Math.cos(t)*r).toFixed(1);return `<ellipse cx="${x}" cy="${y}" rx="10.5" ry="4.3" transform="rotate(${(sd*(-deg+tilt)).toFixed(1)} ${x} ${y})"/>`}).join('')}).join('')).join('')}<path d="M100 12l4.6 9.4 10.4 1.5-7.5 7.3 1.8 10.3-9.3-4.9-9.3 4.9 1.8-10.3-7.5-7.3 10.4-1.5z"/></svg>
+    <div class="mo-boss">${shirtSVG(k,null,'mo')}</div><i class="mo-glint"></i></div>
+   <svg class="mo-band" viewBox="0 0 300 62"><defs><linearGradient id="moBandG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3bf"/><stop offset=".45" stop-color="#e9c46a"/><stop offset="1" stop-color="#a87a1c"/></linearGradient></defs>
+    <path d="M6 20l22 4v32L6 60l10-18z" fill="#8a6414"/><path d="M294 20l-22 4v32l22 4-10-18z" fill="#8a6414"/><path d="M24 8c60-8 192-8 252 0v40c-60-8-192-8-252 0z" fill="url(#moBandG)" stroke="#6b4d0f" stroke-width="1.5"/>
+    <text x="150" y="35" text-anchor="middle" font-size="${long?22:25}" font-weight="900" font-family="Heebo, Arial, sans-serif" fill="#2b1d02"${long?' textLength="226" lengthAdjust="spacingAndGlyphs"':''}>${esc(name)}</text></svg></div>`}
 function laurel(side){return `<svg class="ml-laurel ${side}" viewBox="0 0 24 48" aria-hidden="true"><path d="M18 46C8 38 5 24 9 4" fill="none" stroke="currentColor" stroke-width="1.6"/>${[8,15,22,29,36].map((y,i)=>`<ellipse cx="${side==='l'?6+i*.6:6+i*.6}" cy="${y}" rx="4.2" ry="2" transform="rotate(${-40+i*6} ${6+i*.6} ${y})" fill="currentColor"/><ellipse cx="${13+i*.5}" cy="${y+3}" rx="4" ry="1.9" transform="rotate(${35-i*4} ${13+i*.5} ${y+3})" fill="currentColor"/>`).join('')}</svg>`}
 function openMoment(m,o){closeReveal(true);revealOpen=true;const c=club(m.club)||me();const T=MOMENT_TXT[m.kind]||MOMENT_TXT.cup;const img=m.kind==='champ'?REVEAL_ASSETS.champ:REVEAL_ASSETS.cup;
   const root=document.createElement('div');root.id='reveal';root.className='mo';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label',m.kind==='champ'?'אליפות':'זכייה בגביע');if(c){root.style.setProperty('--k1',c.c1);root.style.setProperty('--k2',c.c2||'#fff')}
-  root.innerHTML=`<div class="rv-bg" style="background-image:url(${img})"></div><div class="mo-card" style="background-image:url(${img})">${m.demo?'<div class="rv-demo">הדגמה</div>':''}
+  const champ=m.kind==='champ';
+  root.innerHTML=`<div class="rv-bg" style="background-image:url(${img})"></div><div class="mo-card ${champ?'champ':'cup'}" style="background-image:url(${img})">${m.demo?'<div class="rv-demo">הדגמה</div>':''}
+   <div class="mo-top"><h1 class="mo-shout">${T.shout}</h1></div>${champ?moDishHTML(c,m):''}
    <div class="mo-ui"><div class="mo-plate">${laurel('l')}<div><small>${esc(T.label(m.comp))}</small><b>${esc(m.clubName)}</b><span>${m.title?esc(m.title):m.kind==='champ'?'אלופת המדינה':esc(m.comp)} · <bdi dir="ltr">${esc(m.season)}</bdi></span></div>${laurel('r')}</div>
-   <button class="mo-btn" id="moClose" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>${T.btn}</button></div></div>`;
+   ${m.note?`<p class="mo-note"><i aria-hidden="true">▲</i>${esc(m.note)}</p>`:''}<button class="mo-btn" id="moClose" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>${T.btn}</button></div></div>`;
   document.body.appendChild(root);document.body.style.overflow='hidden';const R={listeners:[],video:null,raf:0,onClose:(o&&o.onClose)||null};PX_REVEAL=R;
   const fn=e=>{if(e.target.closest('#moClose'))closeReveal()};root.addEventListener('click',fn);R.listeners.push([root,'click',fn]);
   const kf=e=>{if(e.key==='Escape')closeReveal()};document.addEventListener('keydown',kf);R.listeners.push([document,'keydown',kf]);

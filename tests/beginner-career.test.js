@@ -113,7 +113,7 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
 
   // ---- saving and loading keep the career; a career from before contracts gets one when its league is on the list
   w.eval('Bwrite()');const saved=w.localStorage.getItem(w.eval('BK'));w.eval('G=null;Bload();Brender()');assert.equal(run('Bstate().coach'),'דני רופא');assert.ok($('.bcareer'));
-  w.eval(`(()=>{const d=JSON.parse(${JSON.stringify(saved)});const b=d.G.beginner;for(const c of d.G.clubs)delete c.bkey;for(const k of ['contract','board','leagueId','coach','jobs','offer','out','verdict'])delete b[k];
+  w.eval(`(()=>{const d=JSON.parse(${JSON.stringify(saved)});const b=d.G.beginner;for(const c of d.G.clubs)delete c.bkey;for(const k of ['contract','board','leagueId','coach','jobs','offer','out','verdict','moves','pr','prV','prLast','prOwed'])delete b[k];   /* a career that old has no promotions to remember either */
     const top=d.G.clubs.filter(c=>META[c.id]);d.G.me='mhf';b.league=top.map(c=>c.id);b.round=0;localStorage.setItem(BK,JSON.stringify(d));G=null;Bload();Bseason();Brender()})()`);
   const old=run('({lg:Bstate().leagueId,k:!!Bstate().contract,key:me().bkey,keys:G.clubs.filter(c=>!c.bkey).length})');assert.equal(old.lg,'il1');assert.ok(old.k,'an older career in a listed league gets a contract');assert.equal(old.key,'mhf');
   w.eval(`(()=>{const d=JSON.parse(localStorage.getItem(BK));const b=d.G.beginner;for(const c of d.G.clubs)delete c.bkey;for(const k of ['contract','board','leagueId','coach','jobs'])delete b[k];b.league=b.league.slice(0,6);localStorage.setItem(BK,JSON.stringify(d));G=null;Bload();Bseason();Brender()})()`);
@@ -156,7 +156,7 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   fresh(es[0],'es1');k=run('Bstate().cl');playTo(k.at[0],70);clPlay([0,1]);k=run('Bstate().cl');assert.ok(k.out);assert.equal(k.stage,1);assert.match($('.bdialog').textContent,/המסע באירופה הסתיים/);assert.equal(run('BclTie()'),null);
   playTo(run('Bstate().schedule.length'),70);k=run('Bstate().cl');assert.equal(k.stage,4);assert.ok(k.champion&&k.champion!==run('G.me'));assert.deepEqual(k.res.map(r=>r.length),[8,4,2,1]);w.eval('Brender()');assert.match($('.bcl').textContent,/הודחתם בשמינית הגמר/);assert.match($('.bcl').textContent,/האלופה/);
   // the table decides who plays it next season
-  const q=run("BclPlaces(BcatLeague('es1'))");w.eval("(()=>{const t=Bstandings();t.forEach((c,i)=>c.pts=200-i);me().pts=1})()");w.eval("Bsummary()");assert.equal($('.bcl-next'),null);
+  const q=run("BclPlaces(BcatLeague('es1'))");w.eval("(()=>{const t=Bstandings();t.forEach((c,i)=>c.pts=200-i);me().pts=194.5})()");w.eval("Bsummary()");assert.equal($('.bcl-next'),null);   /* mid-table: outside Europe's places, and above the two that go down (tests/beginner-moves.test.js) */
   w.eval("document.querySelector('.bdialog')?.remove();Bstate().board=70;Bstate().verdict=null;Bsummary();document.querySelector('[data-action=\"newseason\"]')?.click()");
   if(run('!Bstate().out')&&run('Bstate().season')===2){assert.equal(run('Bstate().clq.keys.length'),q);assert.equal(run('Bstate().cl||null'),null,'outside the places of the table: no Champions League this season')}
   w.eval("(()=>{const b=Bstate();while(b.round<b.schedule.length)BfinishRound();document.querySelector('.bdialog')?.remove();Bstandings().forEach((c,i)=>c.pts=100-i);me().pts=500;b.board=80;b.verdict=null;Bsummary()})()");assert.match($('.bcl-next').textContent,/בליגת האלופות/);

@@ -173,3 +173,18 @@
 
 .beginner .rv-actions .btn,.beginner .mo-btn{color:#00240f;border:0;border-radius:16px;font-weight:900;background:linear-gradient(180deg,#7dffcc 0,#1ef0a0 38%,#00d184 62%,#00a868 100%);box-shadow:inset 0 2px 0 rgba(255,255,255,.7),inset 0 -5px 0 rgba(0,84,50,.5),0 5px 0 #00603a,0 0 24px rgba(0,255,157,.42)}
 @media (prefers-reduced-motion:reduce){.apk,.apk-card,.apk-pack .apk-art,.apk-cta,.axps-bar i{animation:none}.amis-bar i,.aflash{transition:none}}
+
+/* ---- promotion and relegation (moves.js): the line in the season's summary, the places that move in the table ---- */
+.bpr{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;margin:12px 0;text-align:start}
+.bpr>b{display:grid;place-items:center;width:42px;height:42px;flex:none;border-radius:50%;font-size:18px;line-height:1}
+.beginner .bpr p{margin:0;color:#e6eef8;font-size:16px;line-height:1.4}.bpr strong{display:block;font-size:20px;line-height:1.25}
+.bpr.up{background:linear-gradient(180deg,rgba(0,255,157,.16),rgba(0,255,157,.07));border:1px solid rgba(0,255,157,.45);box-shadow:0 0 22px rgba(0,255,157,.16)}.bpr.up>b{background:#00FF9D;color:#00240f}.bpr.up strong{color:#00FF9D}
+.bpr.down{background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.4)}.bpr.down>b{background:#ff6b6b;color:#2a0606}.bpr.down strong{color:#ffb4a8}
+.beginner .bpr-others{display:flex;flex-direction:column;gap:2px;margin:0 0 12px;font-size:14.5px;color:#b9c7d8;text-align:start}
+.beginner .bleague-table tr.bz-up td:first-child{box-shadow:inset -4px 0 0 #00FF9D;color:#00FF9D;font-weight:800}
+.beginner .bleague-table tr.bz-down td:first-child{box-shadow:inset -4px 0 0 #ff6b6b;color:#ffb4a8;font-weight:800}
+.bzones{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px;margin:14px 0 4px;padding:0;font-size:14.5px;color:#d5e0ec}
+.bzones li{display:flex;align-items:center;gap:8px}.bzones i{width:12px;height:12px;border-radius:3px;flex:none}.bzones .up i{background:#00FF9D}.bzones .down i{background:#ff6b6b}.bzones .cl i{background:#f2c94c}
+.beginner .bleague-table tr.bz-cl td:first-child{box-shadow:inset -4px 0 0 #f2c94c;color:#f7dc85;font-weight:800}
+.beginner .bzones-new{margin:2px 0 10px}
+.bpr-owed .bpr{margin-top:0}.bpr-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.bpr-acts .bbtn{flex:1 1 220px}

@@ -89,7 +89,13 @@ function Bstakes(){const b=Bstate(),c=me();if(!b||!c)return [];const cup=BclTie(
       if(i>0&&(c.pts+3>top.pts||(c.pts+3===top.pts&&top.id===op.id)))add('top','צמרת','ניצחון יכול להעלות אותך למקום הראשון');
       else if(i===0&&tab[1])add('top','צמרת',tab[1].id===op.id?'אתה ראשון, והיריבה היא הרודפת שלך':`אתה ראשון, <bdi>${c.pts-tab[1].pts}</bdi> נקודות מעל ${esc(tab[1].name)}`);
       else if(Math.abs(i-j)<=2)add('six','שש נקודות',`${esc(op.name)} במקום <bdi>${j+1}</bdi>, אתה במקום <bdi>${i+1}</bdi>`);
-      if(i>=tab.length-3&&b.round>=5)add('rel','תחתית',`מקום <bdi>${i+1}</bdi> מתוך <bdi>${tab.length}</bdi>: כל נקודה חשובה`);
+      /* a league with a ladder: the places that go up, and the red line at the bottom */
+      const z=BprZones(BcatLeague(b.leagueId)),n=tab.length;
+      if(z.up&&i>0&&i<z.up)add('up','עלייה',`מקום <bdi>${i+1}</bdi>: כרגע במקום שמעלה ל${esc(z.upTo.name)}`);
+      else if(z.up&&i>=z.up&&c.pts+3>=tab[z.up-1].pts)add('up','עלייה',`ניצחון יכול להכניס אותך למקום שמעלה ל${esc(z.upTo.name)}`);
+      if(z.down&&b.round>=5&&i>=n-z.down)add('rel','הקו האדום',`מקום <bdi>${i+1}</bdi> מתוך <bdi>${n}</bdi>: כרגע במקום שמוריד ליגה`);
+      else if(z.down&&b.round>=5&&i>=n-z.down-2)add('rel','הקו האדום',`רק <bdi>${c.pts-tab[n-z.down].pts}</bdi> נקודות מעל המקומות שיורדים`);
+      else if(!z.down&&i>=n-3&&b.round>=5)add('rel','תחתית',`מקום <bdi>${i+1}</bdi> מתוך <bdi>${n}</bdi>: כל נקודה חשובה`);
       if(left<=3)add('end','ישורת אחרונה',left===1?'המחזור האחרון של העונה':`עוד <bdi>${left}</bdi> מחזורים לסיום העונה`)}}
   if((st.w||0)>=2)add('streak','רצף',`<bdi>${st.w}</bdi> ניצחונות רצופים. עוד אחד יאריך את הרצף`);
   const v=vs[op.id];if(v&&v.s===b.season&&v.r==='L'&&!cup)add('rev','נקמה',`בסיבוב הקודם הם ניצחו אותך <bdi dir="ltr">${v.ga}:${v.gf}</bdi>`);
