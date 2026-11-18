@@ -11,7 +11,7 @@ function paperQuote(st){const m=st.body&&st.body.match(/"([^"]{8,90})"/);if(m)re
    Stories are stored at publication time with structured `ev` data (names, clubs, terms as they were then), so the
    archive never rewrites history. Presentation only: opening or closing a paper never touches the event itself. */
 const NP_IMG={match:['np-match',900,600],manager:['np-manager',900,600],stage:['np-stage',400,267],champ:['np-champ',900,600],cup:['np-cup',900,600],ashdod:['np-ashdod',863,561]};
-const NP_RIBBON={loanOut:'יוצא בהשאלה',depart:'סוף דרך',appoint:'מינוי חדש',sign:'רכש חדש',loan:'רכש חדש · השאלה',sale:'יוצא מהמועדון',sponsor:'עסקים וספורט',champ:'לילה של אלופים',cup:'לילה של גביע',match:'סיכום המשחק',promo:'עולים ליגה',releg:'יורדים ליגה'};
+const NP_RIBBON={loanOut:'יוצא בהשאלה',depart:'סוף דרך',appoint:'מינוי חדש',sign:'רכש חדש',loan:'רכש חדש · השאלה',sale:'יוצא מהמועדון',sponsor:'עסקים וספורט',champ:'לילה של אלופים',cup:'לילה של גביע',match:'סיכום המשחק',promo:'עולים ליגה',releg:'יורדים ליגה',bid:'הצעה על השולחן'};
 function npSeasonOf(st){const y=2026+(st.s||1)-1;return `${y}/${String(y+1).slice(2)}`}
 function npTypeOf(st){if(st.ev&&st.ev.type)return st.ev.type;const h=st.h||'';if(/אלופת המדינה/.test(h))return 'champ';if(/זכתה בגביע|זכתה ב.*גביע/.test(h))return 'cup';return null}
 function npImage(st){const t=npTypeOf(st),ev=st.ev||{};
@@ -20,6 +20,7 @@ function npImage(st){const t=npTypeOf(st),ev=st.ev||{};
   if(t==='promo')return {k:'champ',cap:'חגיגות העלייה · אילוסטרציה'};if(t==='releg')return {k:'manager',cap:'לילה קשה · אילוסטרציה'};
   if(t==='depart')return {k:'manager',cap:'רגע הפרידה · אילוסטרציה'};
   if(t==='appoint')return ev.clubId==='l_ash'?{k:'ashdod',cap:'רגע החתימה · אילוסטרציה'}:{k:'manager',cap:'בדרך אל הדשא · אילוסטרציה'};
+  if(t==='bid')return {k:'stage',shirt:true,cap:'מבוקש · אילוסטרציה'};
   if(t==='sign'||t==='loan'||t==='sale'||t==='loanOut')return {k:'stage',shirt:true,cap:t==='sale'||t==='loanOut'?'רגע הפרידה · אילוסטרציה':'במת ההצגה · אילוסטרציה'};
   if(t==='sponsor')return {k:'stage',board:ev.sponsor,cap:'מעמד ההכרזה · אילוסטרציה'};
   const k=st.kind;if(k==='העברות'||k==='כספים'||k==='מסחרי')return {k:'stage',cap:'אילוסטרציה'};return {k:'manager',cap:'אילוסטרציה'}}
@@ -53,12 +54,13 @@ function npFacts(st){const ev=st.ev||{},t=npTypeOf(st);const c=club(st.team)||nu
   else if(t==='sponsor'){add('נותן החסות',ev.sponsor);add('לעונה',ev.annual!=null?NIS(ev.annual):null);add('משך',yrs(ev.years))}
   else if(t==='match'){add('התוצאה',`${ev.gh}:${ev.ga}`);add('שחקן המשחק',ev.star?`${ev.star.name} · ${ev.star.r}`:null);add('המקום בטבלה',ev.place!=null?String(ev.place):null)}
   else if(t==='champ'){add('העונה',ev.season);add('נקודות',ev.pts!=null?String(ev.pts):null);add('סגנית',ev.second)}
+  else if(t==='bid'){add('המציעה',ev.buyer);add('ההצעה',ev.fee!=null?NIS(ev.fee):null);add('שווי שוק',ev.value!=null?NIS(ev.value):null)}
   else if(t==='promo'||t==='releg'){add('הליגה החדשה',ev.to);add(t==='promo'?'נפרדים מ':'יורדים מ',ev.from);add('העונה',npSeasonOf(st))}
   else if(t==='cup'){add('המפעל',ev.comp);add('תוצאת הגמר',ev.score?`${ev.score}${ev.pens?' (פנדלים)':''}`:null);add('היריבה',ev.opp)}
   if(F.length<3){add('המועדון',c?(c.short||c.name):null);add('המדור',st.kind);add('העונה',npSeasonOf(st))}
   const seen=new Set();return F.filter(([l])=>!seen.has(l)&&seen.add(l)).slice(0,3)}
 function npTeaser(st,live){if(live){try{const nx=myNextMatch();if(nx)return `המשחק הבא: ${nx.h.id===G.me?'נגד '+nx.a.short:'ב'+nx.h.short}`}catch(e){}}
-  const t=npTypeOf(st);return {depart:'האתגר הבא: מועדון חדש',appoint:'האתגר הבא: בניית הסגל',sign:'האתגר הבא: מקום בהרכב',loan:'האתגר הבא: להוכיח את עצמו',sale:'האתגר הבא: למלא את החסר',sponsor:'האתגר הבא: להחזיר על ההשקעה',match:'עוד במהדורה: כל תוצאות המחזור והטבלה',champ:'האתגר הבא: להגן על התואר',cup:'האתגר הבא: עוד תואר',promo:'האתגר הבא: להישאר בליגה',releg:'האתגר הבא: לחזור מיד'}[t]||'עוד בעיתון: הכתבות של השבוע'}
+  const t=npTypeOf(st);return {depart:'האתגר הבא: מועדון חדש',appoint:'האתגר הבא: בניית הסגל',sign:'האתגר הבא: מקום בהרכב',loan:'האתגר הבא: להוכיח את עצמו',sale:'האתגר הבא: למלא את החסר',sponsor:'האתגר הבא: להחזיר על ההשקעה',match:'עוד במהדורה: כל תוצאות המחזור והטבלה',champ:'האתגר הבא: להגן על התואר',cup:'האתגר הבא: עוד תואר',promo:'האתגר הבא: להישאר בליגה',releg:'האתגר הבא: לחזור מיד',bid:'ההחלטה אצל המאמן'}[t]||'עוד בעיתון: הכתבות של השבוע'}
 function npSplit(text){const parts=String(text||'').split(/(?<=[.!?״"])\s+/).filter(Boolean);if(parts.length<2)return [text||'',''];const half=Math.ceil(parts.length/2);return [parts.slice(0,half).join(' '),parts.slice(half).join(' ')]}
 function npQuote(st){const m=st.body&&st.body.match(/"([^"]{8,90})"/);if(m)return m[1];return st.q||null}
 function frontPageHTML(st,o){o=o||{};const t=npTypeOf(st);const c=club(st.team);const [b1,b2]=npSplit(st.body);const q=npQuote(st)||(st.ev&&st.ev.q)||null;

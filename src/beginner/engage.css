@@ -212,3 +212,11 @@
 
 /* ---- the bottom bar and the keyboard (boot.js): away while a name is typed, and held to the screen's own bottom ---- */
 @media(max-width:900px){.beginner .bnav.anav{transform:translateY(var(--bnav-fix,0px))}body.bkb .bnav.anav{visibility:hidden}}
+
+/* ---- an offer for one of his players (bids.js) ---- */
+.bbid{border-color:rgba(242,201,76,.5)!important;box-shadow:0 0 26px rgba(242,201,76,.14)}
+.bbid .beyebrow{color:#f2c94c}
+.bbid-row{display:flex;gap:14px;align-items:center;margin:8px 0 12px}
+.bbid-row .bportrait{flex:none;width:86px;height:104px;border-radius:14px;overflow:hidden}
+.beginner .bbid-row h2{font-size:21px;line-height:1.25;margin:0 0 4px}.beginner .bbid-row p{margin:0;font-size:15px;color:#c9d6e4}
+.bbid-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.bbid-acts .bbtn{flex:1 1 150px}.bbid-acts .bbtn.primary{flex-basis:100%}
