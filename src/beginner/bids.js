@@ -26,7 +26,8 @@ function BbidBuyer(p){const b=Bstate(),c=me(),l=BcatLeague(b.leagueId),z=l?BprZo
   for(const x of shuffle(xs.slice())){const k=BaddClub(x);if(k&&k.id!==c.id&&k.players.length<35)return k}return null}
 /* above the market value, and something for every goal: what a scorer has done is worth more than his rating says */
 function BbidFee(p,star){const g=star.why==='goals',k=g?[1.6,1.45,1.3][star.rank-1]:[1.4,1.3][star.rank-1],v=Bvalue(p),per=clamp(v*.06,20000,120000)*(g?1:.6);return Math.max(300000,Math.round((v*(k||1.25)+per*(star.n||0))/50000)*50000)}
-function BbidMake(star){const b=Bstate(),c=me(),p=star&&c.players.find(x=>x.id===star.pid);if(!p||b.out||BsaleBlocked(p))return null;const buyer=BbidBuyer(p);if(!buyer)return null;
+function BbidMake(star){if(window.__noBids)return null;   /* suites about other things: an offer is one more story in the paper and one more card on the home page */
+  const b=Bstate(),c=me(),p=star&&c.players.find(x=>x.id===star.pid);if(!p||b.out||BsaleBlocked(p))return null;const buyer=BbidBuyer(p);if(!buyer)return null;
   b.bid={pid:p.id,buyer:buyer.id,fee:BbidFee(p,star),until:b.round+BBID_LIFE,s:b.season,why:star.why,rank:star.rank,n:star.n,last:!!star.last,asked:false};
   try{BpaperBid(p,buyer,b.bid)}catch(e){console.warn('paper',e)}return b.bid}
 /* an offer whose time has passed, or whose player is no longer his, is gone */

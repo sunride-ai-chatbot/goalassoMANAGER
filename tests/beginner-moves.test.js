@@ -44,7 +44,7 @@ const whole=()=>{const k=il().flatMap(l=>l.keys);assert.equal(new Set(k).size,k.
   assert.equal(run('BleagueName()'),'ליגת העל');assert.equal(run("BcatFind(me().bkey).l.id"),'il1');assert.ok(run('BmyStr()')>=58,'a club of the top division is rated as one');
   assert.equal(b1.contract.goal,12);assert.equal(b1.contract.zone,'stay','the board asks a promoted club to stay up');
   assert.ok(b1.ledger.some(x=>x.season===2&&/מענק עלייה לליגת העל/.test(x.label)&&x.amount===2000000),'a promotion grant, in the new season\'s books');assert.equal(run('me().money'),before+2000000);
-  assert.match(run('G.paper[0].h'),/הפועל כפר סבא עולה לליגת העל/);assert.equal(run('G.paper[0].ev.type'),'promo');assert.ok(b1.paperPop.some(s=>s.ev&&s.ev.type==='promo'),'and the paper opens with it');
+  assert.match(run("G.paper.find(s=>s.ev&&s.ev.type==='promo').h"),/הפועל כפר סבא עולה לליגת העל/);   /* (found by its kind: a club may bid for his top scorer the same summer, and that story is newer) */assert.ok(b1.paperPop.some(s=>s.ev&&s.ev.type==='promo'),'and the paper opens with it');
   whole();const after=il();const gone=base[0].keys.filter(k=>!after[0].keys.includes(k));assert.equal(gone.length,2);assert.ok(gone.every(k=>after[1].keys.includes(k)),'the two that went down are in Leumit');assert.ok(after[0].keys.includes('l:l_ksa'));
   assert.ok(run("Bcat().find(c=>c.id==='il').leagues[1].clubs.filter(x=>x.was==='il1').every(x=>x.str<=59)"),'a relegated club is not rated above its new league');
   assert.ok(run("Bstate().league.every(id=>club(id)&&club(id).players.length>=14)"),'every club of the new league has a squad');
@@ -83,7 +83,7 @@ const whole=()=>{const k=il().flatMap(l=>l.keys);assert.equal(new Set(k).size,k.
   season(0);assert.equal(run('Bplace()'),14);$('[data-action="season"]').click();assert.equal($('#reveal'),null,'no trophy for the last place');assert.ok($('.bdialog .bpr.down'));assert.match($('.bdialog .bpr.down').textContent,/יורדים ליגה.*בליגה לאומית/);
   assert.ok($('.bdialog [data-action="newseason"]'),'two places under the goal: the board gives another season');$('[data-action="newseason"]').click();
   assert.equal(run('Bstate().leagueId'),'il2');assert.equal(run('Bstate().league.length'),16);assert.ok(run('Bstate().league.includes(G.me)'));assert.equal(run("Bstate().moves['l:l_ksa']||null"),null,'home again: nothing left to remember');assert.equal(run('Bstate().contract.zone'),null);
-  assert.match(run('G.paper[0].h'),/יורדת לליגה לאומית/);assert.equal(run('G.paper[0].ev.type'),'releg');whole();quiet();
+  assert.match(run("G.paper.find(s=>s.ev&&s.ev.type==='releg').h"),/יורדת לליגה לאומית/);whole();quiet();
 
   // ---- mid-table: the club stays, two of its rivals change
   season(5);const l0=run('Bstate().league.slice()'),tail=run('Bstandings().slice(-2).map(c=>c.id)'),head=run('Bstandings().slice(0,2).map(c=>c.id)');$('[data-action="season"]').click();assert.equal($('.bdialog .bpr'),null);assert.match($('.bdialog .bpr-others').textContent,/עולות: .+יורדות: .+/);

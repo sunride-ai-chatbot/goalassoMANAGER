@@ -5,7 +5,7 @@ const assert=require('node:assert/strict');const fs=require('fs');const path=req
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const html=fs.readFileSync(path.join(root,'beginner.html'),'utf8');
 const open=(url,store)=>new JSDOM(html,{url,runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__ilmNoSplash=1;w.__dailyDate='2026-11-16';w.matchMedia=()=>({matches:true});w.scrollTo=()=>{};if(store)for(const [k,v] of Object.entries(store))w.localStorage.setItem(k,v)}}).window;
+  beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__dailyDate='2026-11-16';w.matchMedia=()=>({matches:true});w.scrollTo=()=>{};if(store)for(const [k,v] of Object.entries(store))w.localStorage.setItem(k,v)}}).window;
 const w=open('https://engage.test/beginner.html');
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));
