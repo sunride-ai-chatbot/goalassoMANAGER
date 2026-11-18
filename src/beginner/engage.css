@@ -220,3 +220,12 @@
 .bbid-row .bportrait{flex:none;width:86px;height:104px;border-radius:14px;overflow:hidden}
 .beginner .bbid-row h2{font-size:21px;line-height:1.25;margin:0 0 4px}.beginner .bbid-row p{margin:0;font-size:15px;color:#c9d6e4}
 .bbid-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.bbid-acts .bbtn{flex:1 1 150px}.bbid-acts .bbtn.primary{flex-basis:100%}
+
+/* ---- a window's ways on stay in view (.bdock: before the whistle; .bresult-foot: after the match) ---- */
+.bdialog .bdock{position:sticky;bottom:-30px;z-index:3;display:flex;gap:10px;align-items:stretch;margin:6px -30px -30px;padding:18px 30px 22px;background:linear-gradient(180deg,rgba(7,13,32,0),#070d20 18px)}
+.bdialog .bdock .bbtn{margin:0;white-space:nowrap;min-height:56px}.bdialog .bdock .bbtn.primary{flex:1 1 auto;font-size:19px}.bdialog .bdock .bbtn.secondary{flex:0 0 auto;font-size:15px;padding-inline:16px}
+.beginner .bdialog .bresult-foot{background:linear-gradient(180deg,rgba(7,13,32,0),#070d20 18px)}
+@media(max-width:600px){.bdialog .bdock{bottom:-20px;margin:6px -20px -20px;padding:18px 20px 18px}}
+@media(max-width:380px){.bdialog .bdock{gap:8px}.bdialog .bdock .bbtn.primary{font-size:16px;padding-inline:10px}.bdialog .bdock .bbtn.secondary{font-size:13px;padding-inline:10px}}
+/* the close button keeps the focus ring it is given when a window opens: the first words beside it need the room */
+.bdialog>.bclose{margin-inline-end:12px}
