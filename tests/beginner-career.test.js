@@ -50,7 +50,9 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   assert.ok($('.bout'),'the screen of offers');assert.equal($$('.bout [data-bjob]').length,out.offers.length);assert.equal($('.bnav'),null,'no club to run while out of work');
   const o1=out.offers[0];const before=run('({season:Bstate().season,old:G.me})');$(`.bout [data-bjob="${o1.key.replace(/"/g,'\\"')}"]`).click();
   const job=run('({me:me().name,key:me().bkey,lg:Bstate().leagueId,season:Bstate().season,round:Bstate().round,out:Bstate().out,board:Bstate().board,k:Bstate().contract,zero:Bstate().league.every(id=>club(id).P===0),inLeague:Bstate().league.includes(G.me),jobs:Bstate().jobs.length,xi:me().lineup.filter(Boolean).length,money:me().money>0})');
-  assert.equal(job.key,o1.key);assert.equal(job.lg,o1.league);assert.equal(job.season,before.season+1,'a new season at the new club');assert.equal(job.round,0);assert.equal(job.out,null);assert.equal(job.board,55);assert.ok(job.zero&&job.inLeague);assert.equal(job.jobs,2);assert.equal(job.xi,11);assert.ok(job.money);assert.equal(job.k.since,job.season);
+  // the league is the one the club is in now: the job starts a new season, and the club that made the offer may have gone up or down as it turned
+  // (about one run in forty it had, and this line asked for the league the offer was written in)
+  assert.equal(job.key,o1.key);assert.equal(job.lg,run('(Bstate().moves||{})[me().bkey]||null')||o1.league);assert.equal(job.season,before.season+1,'a new season at the new club');assert.equal(job.round,0);assert.equal(job.out,null);assert.equal(job.board,55);assert.ok(job.zero&&job.inLeague);assert.equal(job.jobs,2);assert.equal(job.xi,11);assert.ok(job.money);assert.equal(job.k.since,job.season);
   assert.ok($('.bnav')&&$('.bcareer'));
 
   // ---- resignation

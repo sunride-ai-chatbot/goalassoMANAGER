@@ -87,7 +87,10 @@ const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));
   w.eval('BpaperArchive()');assert.ok($('.bdialog .bedition-card'),'the edition leads the archive');w.eval("document.querySelector('.bdialog').remove()");
   // the headline follows the match, not only the score
   {const H=(gh,ga,ev,home=true)=>run(fix(`BeditionStory(${M(gh,ga,ev,home)},3).h`));
-   assert.match(H(3,0,[g(5,7),g(40,7),g(77,7)]),/שלושער/);assert.match(H(2,1,[g(10,1,false),g(50,7),g(70,8)]),/מהפך/);assert.match(H(1,0,[g(88,7)]),/דקה 88/);
+   assert.match(H(3,0,[g(5,7),g(40,7),g(77,7)]),/^שלושער ל/);
+   // the word counts the goals: four and five are not a hat-trick (a paper led with "hat-trick" over a list of five minutes)
+   assert.match(H(4,0,[g(5,7),g(40,7),g(77,7),g(80,7)]),/^רביעייה ל/);assert.match(H(6,1,[g(12,7),g(20,7),g(30,7),g(44,7),g(60,7),g(70,8),g(80,1,false)]),/^חמישייה ל.*6:1/);assert.match(H(6,0,[5,10,15,20,25,30].map(m=>g(m,7))),/^6 שערים ל/);
+   assert.match(H(7,0,[g(1,8),g(2,8),g(3,8),g(10,7),g(20,7),g(30,7),g(40,7)]),/^רביעייה ל/,'the man with the most leads');assert.deepEqual([2,3,4,5,6,1].map(n=>w.eval(`goalsWord(${n})`)),['צמד','שלושער','רביעייה','חמישייה','6 שערים','']);assert.match(H(2,1,[g(10,1,false),g(50,7),g(70,8)]),/מהפך/);assert.match(H(1,0,[g(88,7)]),/דקה 88/);
    assert.match(H(0,0,[]),/תיקו מאופס/);assert.match(H(1,2,[g(10,7),g(50,1,false),g(60,1,false)]),/הובילה/);assert.match(H(0,4,[g(1,1,false),g(2,1,false),g(3,1,false),g(4,1,false)]),/ערב שחור/);assert.match(H(1,1,[g(10,1,false),g(89,7)]),/מציל נקודה/);
    const st=run(fix(`BeditionStory(${M(2,1,[g(10,1,false),g(50,7),g(70,8)])},3)`));assert.equal(st.ev.res,'W');assert.deepEqual([st.ev.gh,st.ev.ga],[2,1]);assert.match(st.body,/דק׳ 50/)}
   // the report calls a derby a derby and a rivalry between two cities by the rival's name (the coach here is Maccabi Tel Aviv)
@@ -141,6 +144,22 @@ const tick=(ms=160)=>new Promise(r=>setTimeout(r,ms));
   {const d=JSON.parse(career());for(const k of ['lvl','xp','xpAll','packs','ct','st','hist','boost','ms','vs','rnd','gain','tip'])delete d.G.beginner[k];
    const w4=open('https://engage.test/beginner.html',{'goalasso.beginner.v1':JSON.stringify(d)});await tick(60);const b=JSON.parse(w4.eval('JSON.stringify([Bstate().lvl,Bstate().xp,Bstate().ms.length,Bstate().packs])'));assert.deepEqual(b,[1,0,3,[]]);
    assert.ok(w4.document.querySelector('.amis'));assert.equal(w4.localStorage.getItem('goalasso.beginner.v1'),JSON.stringify(d),'loading does not write');w4.close()}
+  // ---- five more missions (a comeback, a win by three, a hat-trick, three different scorers, a rating point won in training) and what feeds them
+  {const ct=()=>run("['comeback','big','hat','spread'].map(k=>Bstate().ct[k]||0)"),d=(gh,ga,ev,home=true)=>{const a=ct();w.eval(fix(`BxpMatch(${M(gh,ga,ev,home)})`));return ct().map((x,i)=>x-a[i])};
+   assert.deepEqual(d(2,1,[g(10,1,false),g(50,7),g(70,8)]),[1,0,0,0],'behind, and won');assert.deepEqual(d(1,1,[g(10,1,false),g(80,7)]),[1,0,0,0],'behind, and a point');
+   assert.deepEqual(d(1,2,[g(10,1,false),g(50,7),g(70,1,false)]),[0,0,0,0],'behind and beaten is no comeback');assert.deepEqual(d(1,1,[g(5,3,true,'own'),g(60,7)]),[1,0,0,0],'an own goal puts him behind too');
+   assert.deepEqual(d(3,0,[g(10,7),g(50,7),g(70,7)]),[0,1,1,0],'three by one man, and by three goals');assert.deepEqual(d(3,2,[g(10,7),g(20,8),g(30,9),g(40,1,false),g(50,1,false)]),[0,0,0,1],'three different scorers');
+   assert.deepEqual(d(2,1,[g(10,1,false),g(20,1,false),g(30,7)],false),[0,0,0,0],'away and beaten 2:1, the sides read the right way round');assert.deepEqual(d(1,2,[g(10,1,false),g(20,7),g(30,8)],false),[1,0,0,0],'away, behind, and won');
+   assert.deepEqual(['comeback','big','hat','spread','grow'].map(k=>run(`BMS_DEF.${k}.role`)),['m','m','p','p','c']);assert.match(run('BMS_DEF.hat.text({n:1})'),/שלושער/);assert.match(run('BMS_DEF.comeback.text({n:1})'),/חזור מפיגור/);assert.equal(run('BMS_DEF.grow.go'),'training');
+   assert.equal(run('BMS_DEF.hat.ok()'),run('BmsTopHalf()'),'the ones that need goals are offered to the stronger half of the league');
+   // given, finished by the match, worth a gold pack
+   w.eval("Bstate().ms[1]=Object.assign({k:'hat',p:0,done:false,from:Bstate().ct.hat||0},BMS_DEF.hat.make())");assert.deepEqual(run('[Bstate().ms[1].xp,Bstate().ms[1].pack,Bstate().ms[1].d.s===Bstate().season]'),[180,'g',true]);
+   w.eval('Brender()');assert.match($('.amis').textContent,/שלושער/);w.eval(fix(`BxpMatch(${M(2,0,[g(10,7),g(50,7)])})`));assert.equal(run('Bstate().ms[1].done'),false,'two are not three');w.eval(fix(`BxpMatch(${M(4,0,[g(10,7),g(50,7),g(60,7),g(70,7)])})`));assert.equal(run('Bstate().ms[1].done'),true);
+   // not done by the end of its season: it makes room (nothing can be swapped by hand)
+   w.eval("Bstate().ms[0]=Object.assign({k:'comeback',p:0,done:false,from:Bstate().ct.comeback||0},BMS_DEF.comeback.make());BmsFill()");assert.equal(run('Bstate().ms[0].k'),'comeback','it stays through its season');
+   w.eval('Bstate().season++;BmsFill()');assert.notEqual(run('Bstate().ms[0].k'),'comeback');assert.equal(run("BMS_DEF[Bstate().ms[0].k].role"),'m');assert.equal(run('Bstate().ms[1].k'),'hat','a finished one waits to be collected');w.eval('Bstate().season--');
+   // a rating point won on the training ground
+   const gr=run("(()=>{const c=me(),b=Bstate(),p=c.players.find(p=>p.pos==='FW'&&!p.inj);p.pot=p.ovr+3;p.bTraining=7;b.tr=null;b.live=null;const a=b.ct.grow||0,o=p.ovr;const r=BtrainSolo(p.id);return {up:b.ct.grow-a,ovr:p.ovr-o,ok:!!r}})()");assert.deepEqual(gr,{up:1,ovr:1,ok:true})}
   assert.deepEqual(errors,[]);
   console.log('beginner engage: levels and experience, packs (choose one of three), missions, stakes, the round edition and its headlines, signing and trophy moments, the daily challenge (same plan, sandbox, one attempt, share, link), older careers; errors []');
  }catch(e){console.error(e);errors.push(String(e&&e.message||e));console.log('beginner engage errors',JSON.stringify(errors.slice(0,3)));process.exitCode=1}

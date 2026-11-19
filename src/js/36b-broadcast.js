@@ -11,6 +11,10 @@
 const BC={q:[],cur:null,timer:null,seq:0};
 const BC_KIND={goal:['שער','goal',3],pen:['שער מפנדל','goal',3],own:['שער עצמי','own',3],red:['כרטיס אדום','red',2],penmiss:['פנדל הוחמץ','red',2],
   yellow:['כרטיס צהוב','yel',1],sub:['חילוף','sub',1],inj:['פציעה','inj',1],save:['הצלה','save',0],post:['קורה','save',0]};
+/* what a player's goals in one match are called: a brace, a hat-trick, then four and five by their own names. Every count from three up
+   used to be a "hat-trick", so a paper led with a hat-trick for a man whose five goals were listed under it. (Here and not in 02-util.js:
+   that file is part of the shared league's match fingerprint, and a word is no reason to make every phone update.) */
+function goalsWord(n){return n===2?'צמד':n===3?'שלושער':n===4?'רביעייה':n===5?'חמישייה':n>5?n+' שערים':''}
 function bcLayer(){return document.getElementById('bcLayer')}
 function bcReset(){clearTimeout(BC.timer);BC.timer=null;BC.q=[];BC.cur=null}
 function bcMount(){bcReset();const arena=document.getElementById('arena');
@@ -26,7 +30,7 @@ function bcPlateFor(M,e){const key=e.t==='shot'?e.sub:e.t;const K=BC_KIND[key];i
   let sub='';
   if(key==='goal'||key==='pen'){const mine=M.ev.filter(x=>(x.t==='goal'||x.t==='pen')&&x.team===e.team&&x.pid===e.pid&&M.ev.indexOf(x)<=M.ev.indexOf(e)).length;
     const season=p&&M.ctx.kind!=='friendly'?(p.goals||0)+mine:0;
-    const parts=[];if(mine===2)parts.push('צמד');else if(mine>=3)parts.push('שלושער');
+    const parts=[];if(mine>=2)parts.push(goalsWord(mine));
     if(season>0)parts.push(`שער <bdi>${season}</bdi> העונה`);if(e.asstName)parts.push('בישול: '+esc(e.asstName));sub=parts.join(' · ')}
   else if(key==='own')sub='לזכות '+esc(club(other(cid))?.short||'');
   else if(key==='red')sub=`נשארים ב-<bdi>${M.xi[cid]?M.xi[cid].length:10}</bdi> שחקנים`;

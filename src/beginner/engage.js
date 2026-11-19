@@ -41,6 +41,10 @@ function BxpMatch(M){const b=BxpEnsure(),c=me();if(!b||!M||(M.h!==c.id&&M.a!==c.
   /* the counters the missions read */
   const ct=b.ct,bump=(k,n)=>{ct[k]=(ct[k]||0)+(n==null?1:n)};bump('played');bump('goals',gf);if(res==='W')bump('wins');if(ga===0)bump('clean');if(res==='W'&&!home&&M.bCL==null)bump('awayW');if(res==='W'&&gap>=3)bump('giant');
   const mine=M.ev.filter(e=>(e.t==='goal'||e.t==='pen')&&e.team===c.id);bump('young',mine.filter(e=>{const p=c.players.find(p=>p.id===e.pid);return p&&p.age<=21}).length);
+  /* what the match itself was like: behind at some point and not beaten, a win by three, one man's three goals, three different scorers */
+  {let f=0,a=0,behind=false;for(const e of M.ev.filter(e=>e.t==='goal'||e.t==='pen'||e.t==='own').slice().sort((x,y)=>x.m-y.m)){if(e.t==='own'?e.team!==c.id:e.team===c.id)f++;else a++;if(f<a)behind=true}
+   const per={};for(const e of mine)if(e.pid!=null)per[e.pid]=(per[e.pid]||0)+1;const tally=Object.values(per);
+   if(behind&&res!=='L')bump('comeback');if(gf-ga>=3)bump('big');if(tally.some(n=>n>=3))bump('hat');if(tally.length>=3)bump('spread')}
   try{if(!M.ratings)matchRatings(M,club(M.h),club(M.a));if(Object.values((M.ps&&M.ps[c.id])||{}).some(s=>s.r>=8))bump('star')}catch(e){}
   b.st.w=res==='W'?(b.st.w||0)+1:0;b.hist.push(res);if(b.hist.length>8)b.hist.shift();if(opp&&M.bCL==null)b.vs[opp.id]={r:res,gf,ga,s:b.season};
   for(const m of b.ms){if(!m||m.done)continue;if(m.k==='streak')m.p=res==='W'?(m.p||0)+1:0;if(m.k==='scorer')m.p=(m.p||0)+mine.filter(e=>e.pid===m.d.pid).length}
@@ -49,6 +53,7 @@ function BxpMatch(M){const b=BxpEnsure(),c=me();if(!b||!M||(M.h!==c.id&&M.a!==c.
 
 /* ---- missions ---- */
 function BmsStriker(){const c=me(),top=Bleaders('goals').find(s=>s.clubId===c.id),p=(top&&c.players.find(x=>x.id===top.pid))||c.players.filter(x=>(x.pos==='FW'||x.pos==='MF')&&!x.inj).sort((x,y)=>(y.pos==='FW')-(x.pos==='FW')||y.ovr-x.ovr)[0];return p||null}
+function BmsTopHalf(){const s=(Bstate().league||[]).map(id=>club(id)).filter(Boolean).map(x=>strength(x)).sort((x,y)=>y-x);return !s.length||strength(me())>=s[Math.floor(s.length/2)]}
 function BmsStrongerAhead(){const b=Bstate(),s=strength(me());for(let r=b.round;r<b.schedule.length;r++){const pr=b.schedule[r].find(p=>p.includes(G.me));if(!pr)continue;const o=club(pr.find(id=>id!==G.me));if(o&&strength(o)-s>=3)return true}return false}
 const BMS_DEF={
   win:{role:'m',ic:'trophy',ct:'wins',make:()=>{const n=pick([2,3]);return {n,xp:30*n+10}},text:m=>m.n>1?`נצח <bdi>${m.n}</bdi> משחקים`:'נצח במשחק הבא שלך'},
@@ -57,11 +62,18 @@ const BMS_DEF={
   clean:{role:'m',ic:'shield',ct:'clean',make:()=>{const n=pick([1,2]);return {n,xp:45*n+15}},text:m=>m.n>1?`שמור על שער נקי ב־<bdi>${m.n}</bdi> משחקים`:'סיים משחק בלי לספוג שער'},
   away:{role:'m',ic:'stadium',ct:'awayW',make:()=>({n:1,xp:70}),text:()=>'נצח במשחק חוץ'},
   giant:{role:'m',ic:'trophy',ct:'giant',ok:()=>BmsStrongerAhead(),make:()=>({n:1,xp:110,pack:'s'}),text:()=>'נצח קבוצה חזקה ממך'},
+  /* the rare ones are for one season: what is not done by its end makes room for another (nothing can be swapped by hand, so a mission
+     that waits for a hat-trick would hold its place for as long as it takes). The three that need goals are offered to the stronger half. */
+  comeback:{role:'m',ic:'ball',ct:'comeback',alive:m=>!m.d||m.d.s===Bstate().season,make:()=>({n:1,xp:120,pack:'s',d:{s:Bstate().season}}),text:()=>'חזור מפיגור וסיים עם נקודה לפחות'},
+  big:{role:'m',ic:'trophy',ct:'big',ok:()=>BmsTopHalf(),alive:m=>!m.d||m.d.s===Bstate().season,make:()=>({n:1,xp:100,d:{s:Bstate().season}}),text:()=>'נצח בהפרש של <bdi>3</bdi> שערים ומעלה'},
   scorer:{role:'p',ic:'boot',ok:()=>!!BmsStriker(),alive:m=>me().players.some(p=>p.id===m.d.pid),make:()=>{const p=BmsStriker(),n=pick([2,3]);return {n,xp:35*n,d:{pid:p.id,name:p.last||p.first}}},text:m=>m.n>1?`${esc(m.d.name)} יכבוש <bdi>${m.n}</bdi> שערים`:`${esc(m.d.name)} יכבוש שער`},
   young:{role:'p',ic:'shirt',ct:'young',ok:()=>me().players.some(p=>p.age<=21&&p.pos!=='GK'),make:()=>({n:1,xp:80}),text:()=>'שחקן עד גיל <bdi>21</bdi> יכבוש שער'},
+  hat:{role:'p',ic:'boot',ct:'hat',ok:()=>BmsTopHalf(),alive:m=>!m.d||m.d.s===Bstate().season,make:()=>({n:1,xp:180,pack:'g',d:{s:Bstate().season}}),text:()=>'שלושער: שחקן שלך יכבוש <bdi>3</bdi> שערים במשחק אחד'},
+  spread:{role:'p',ic:'shirt',ct:'spread',ok:()=>BmsTopHalf(),alive:m=>!m.d||m.d.s===Bstate().season,make:()=>({n:1,xp:90,d:{s:Bstate().season}}),text:()=>'<bdi>3</bdi> שחקנים שונים יכבשו באותו משחק'},
   star:{role:'p',ic:'bell',ct:'star',make:()=>{const n=pick([1,2]);return {n,xp:50*n+10}},text:m=>m.n>1?`<bdi>${m.n}</bdi> משחקים עם שחקן בציון <bdi>8</bdi> ומעלה`:'שחקן שלך יקבל ציון <bdi>8</bdi> ומעלה'},
   sponsor:{role:'c',ic:'coins',ct:'sponsors',go:'finance',ok:()=>!me().sponsor,make:()=>({n:1,xp:50}),text:()=>'בחר נותן חסות למועדון'},
   sign:{role:'c',ic:'transfer',ct:'signs',go:'market',make:()=>({n:1,xp:80}),text:()=>'החתם שחקן חדש'},
+  grow:{role:'c',ic:'boot',ct:'grow',go:'training',ok:()=>me().players.some(p=>!BtrainCapped(p)),make:()=>({n:1,xp:90}),text:()=>'העלה שחקן בנקודת דירוג באימונים'},
   train:{role:'c',ic:'boot',ct:'train',go:'training',make:()=>{const n=pick([3,5]);return {n,xp:20*n}},text:m=>`השלם <bdi>${m.n}</bdi> אימונים`},
   stadium:{role:'c',ic:'stadium',ct:'builds',go:'stadium',ok:()=>{const n=Blevels.find(l=>l.cap>me().cap);return !!n&&!Bstate().build&&me().money>=n.cost*.7},make:()=>({n:1,xp:120,pack:'s'}),text:()=>'התחל להרחיב את האצטדיון'},
   place:{role:'c',ic:'trophy',ok:()=>{const b=Bstate();return b.round>=2&&Bplace()>1&&b.schedule.length-b.round>=4},alive:m=>m.d.s===Bstate().season,make:()=>({n:1,xp:100,d:{place:Math.max(1,Bplace()-pick([1,2])),s:Bstate().season}}),text:m=>`עלה למקום <bdi>${m.d.place}</bdi> בטבלה`},

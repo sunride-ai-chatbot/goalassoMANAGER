@@ -27,11 +27,11 @@ function BtrainTeam(unit){const b=Bstate(),c=me(),t=BtrainNow(),u=BTRAIN_UNITS.f
   const line=c.players.filter(p=>p.pos===unit),ps=line.filter(p=>!BtrainCapped(p)),cap=line.length-ps.length;if(!ps.length)return null;   /* a line that is all at its ceiling has nothing to train */
   const ups=ps.filter(p=>BtrainGain(p,1)>0);b.tr={k:t.k,team:unit,solo:t.solo.slice()};b.focus=unit;
   BTRAIN_LAST={k:t.k,text:`אימון ${u[1]} הושלם: <bdi>${ps.length}</bdi> שחקנים התקדמו צעד${cap?` (<bdi>${cap}</bdi> כבר בשיא הדירוג שלהם)`:''}.${ups.length?' '+ups.map(p=>`${esc(fullName(p))} עלה לדירוג <bdi>${p.ovr}</bdi>`).join(', ')+'.':''}`};
-  try{Bcount('train')}catch(e){}Bwrite();return {n:ps.length,ups}}
+  try{Bcount('train');if(ups.length)Bcount('grow',ups.length)}catch(e){}Bwrite();return {n:ps.length,ups}}
 function BtrainSolo(pid){const b=Bstate(),c=me(),t=BtrainNow(),p=c.players.find(x=>x.id===pid);if(!b||b.live||b.out||!p||t.solo.includes(pid)||t.solo.length>=BTRAIN_SOLO)return null;
   const use=BtrainUse(p);if(!use)return null;const up=use==='rate'?BtrainGain(p,BTRAIN_GAIN):0,was=p.morale??65;p.morale=clamp(was+3,10,100);b.tr={k:t.k,team:t.team,solo:t.solo.concat(pid)};
   BTRAIN_LAST={k:t.k,text:use==='mood'?`אימון אישי עם ${esc(fullName(p))} הושלם: הוא כבר בשיא הדירוג שלו, אז האימון העלה רק את המורל שלו (עכשיו ${moraleWord(p.morale)}).`:`אימון אישי עם ${esc(fullName(p))} הושלם: ${up?`הדירוג עלה ל־<bdi>${p.ovr}</bdi>`:`<bdi>${BTRAIN_GAIN}</bdi> צעדים קדימה`}${p.morale>was?', והמורל עלה':''}.`};
-  try{Bcount('train')}catch(e){}Bwrite();return {p,up}}
+  try{Bcount('train');if(up>0)Bcount('grow',up)}catch(e){}Bwrite();return {p,up}}
 /* ---- the screen ---- */
 const BtrainRing=()=>'<svg class="btr-ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="trk" cx="50" cy="50" r="46"/><circle class="arc" cx="50" cy="50" r="46" pathLength="100"/></svg>';
 const BtrainSecs=()=>Math.round((window.__trainMs||BTRAIN_MS)/1000);
