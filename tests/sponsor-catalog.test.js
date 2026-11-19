@@ -13,7 +13,8 @@ const run=code=>JSON.parse(w.eval('JSON.stringify('+code+')'));
 async function main(){try{
  for(const sel of ['[data-pick="mta"]','#signBtn','[data-sponsor="0"]','[data-board="none"]'])w.document.querySelector(sel).click();
  w.eval("G.pressMode='off';G.paperPop=[]");
- const coverage=run(`(()=>{const c={tier:4,div:'leumit',squadValue:3000000,fans:40},seen=new Set();let invalid=false,priority=true;for(let i=0;i<50;i++){const offers=sponsorOffers(c);if(new Set(offers.map(o=>o.name)).size!==3)invalid=true;for(const o of offers){const b=sponsorBrand(o);seen.add(b.id);if(!b.priority&&b.level!=='local')invalid=true;if(o.annual>1500000||o.annual<=0)invalid=true}priority=priority&&offers.slice(0,2).every(o=>sponsorBrand(o).priority)}return {seen:seen.size,invalid,priority}})()`);
+ const coverage=run(`(()=>{const c={tier:4,div:'leumit',squadValue:3000000,fans:40},seen=new Set();let invalid=false,priority=true;for(let i=0;i<400;i++){const offers=sponsorOffers(c);if(new Set(offers.map(o=>o.name)).size!==3)invalid=true;for(const o of offers){const b=sponsorBrand(o);seen.add(b.id);if(!b.priority&&b.level!=='local')invalid=true;if(o.annual>1500000||o.annual<=0)invalid=true}priority=priority&&offers.slice(0,2).every(o=>sponsorBrand(o).priority)}return {seen:seen.size,invalid,priority}})()`);
+ // 400 deals, not 50: the rarest of the twenty-six brands a small club may be offered was missed in fifty about one run in a few dozen
  assert.equal(coverage.invalid,false);assert.equal(coverage.priority,true);assert.equal(coverage.seen,26);
  assert.ok(w.eval("sponsorBudget({tier:1,squadValue:200e6,fans:90},SPONSOR_CATALOG[0])>sponsorBudget({tier:4,div:'leumit',squadValue:3e6,fans:40},SPONSOR_CATALOG[0])"));
  // Upgrading an old career refreshes unsigned offers, without paying or changing active contracts.
