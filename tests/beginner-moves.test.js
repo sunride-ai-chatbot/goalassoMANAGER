@@ -5,7 +5,7 @@
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});vc.on('warn',(...a)=>{if(/moves|paper|engage/.test(String(a[0])))errors.push('warn: '+a.map(String).join(' '))});
 const w=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://moves.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__ilmNoSplash=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
+  beforeParse(w){w.__ilmNoSplash=1;w.__noInjStop=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const il=()=>run("Bcat().find(c=>c.id==='il').leagues.map(l=>({id:l.id,n:l.clubs.length,keys:l.clubs.map(x=>x.key)}))");
 /* a season: the first one is played to its last round, the others two rounds and then the calendar is turned to the end (a round costs a third of a second here; what is tested is what happens after the last one). Europe is another suite's subject: no ties here. Then the table the test wants: `place` for the coach's club (1 = champion, 0 = last, null = as played) */

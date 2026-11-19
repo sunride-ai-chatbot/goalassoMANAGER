@@ -4,7 +4,7 @@ const {JSDOM,VirtualConsole}=require('jsdom');
 function boot(file){
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message);});
  const html=fs.readFileSync(file,'utf8').replace("await import('./assets/demo3d/live.js')",'await window.rendererModule');
- const w=new JSDOM(html,{url:'https://game.test/'+file,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};}}).window;
+ const w=new JSDOM(html,{url:'https://game.test/'+file,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noInjStop=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};}}).window;
  w.rendererModule={createLiveView(){const view={busy:false,clips:[],sync(s){this.snapshot=s;},enqueue(cs){this.clips.push(...cs);this.busy=this.busy||cs.length>0;},setPaused(v){this.paused=v;},dispose(){this.busy=false;this.disposed=true;}};w.testRenderer=view;return view;}};
  return {w,errors};
 }
@@ -14,7 +14,7 @@ const enable=async w=>{await w.document.querySelector('[data-m3-toggle]').onclic
  try{
   w.eval("Bcreate(Bdefs().find(d=>d.name==='ברצלונה').key);Bplay();clearInterval(BmatchTimer);");await enable(w);
   const mounted=w.testRenderer;
-  w.eval(`BsubOut=xiPlayers(Bstate().live.M,me()).find(x=>x.p.pos==='DF').p.id;BsubIn=bench(Bstate().live.M,me())[0].id;window.incoming3D=BsubIn;BconfirmSub();`);
+  w.eval(`BsubOuts=[xiPlayers(Bstate().live.M,me()).find(x=>x.p.pos==='DF').p.id];BsubIns=[bench(Bstate().live.M,me())[0].id];window.incoming3D=BsubIns[0];BconfirmSub();`);
   assert.equal(w.testRenderer,mounted,'substitution must keep the active 3D view');assert.ok(!mounted.disposed);assert.ok(mounted.snapshot.players.some(p=>p.pid===w.incoming3D));
   w.document.querySelector('#bpause').click();
   // Deterministic event producer at the engine boundary; the real UI/settlement code runs.

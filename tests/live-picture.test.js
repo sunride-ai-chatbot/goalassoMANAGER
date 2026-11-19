@@ -2,7 +2,7 @@
 // 3D highlights) and the player ratings of both sides after the final whistle.
 const assert=require('node:assert/strict');const fs=require('fs');const {JSDOM,VirtualConsole}=require('jsdom');
 const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
-const w=new JSDOM(fs.readFileSync('beginner.html','utf8'),{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{}}}).window;
+const w=new JSDOM(fs.readFileSync('beginner.html','utf8'),{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__noInjStop=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{}}}).window;
 const run=s=>JSON.parse(w.eval(`JSON.stringify(${s})`));const $=s=>w.document.querySelector(s);
 async function main(){
   // ---- the score element: home first in the markup, so on the right of a right-to-left row
@@ -82,7 +82,7 @@ async function main(){
     xi.forEach((p,i)=>{p.foreign=i>0&&i<=MAX_FOREIGN_XI});const b=bench(M,c);b.forEach((p,i)=>{p.foreign=i<2});const isr=xi.find(p=>!p.foreign&&p.pos!=='GK'),fo=xi.find(p=>p.foreign);
     const out={limited:foreignLimited(c),on:foreignOnPitch(M,c),blocked:subBreaksForeign(M,c,isr.id,b[0]),swapOk:!subBreaksForeign(M,c,fo.id,b[0]),localOk:!subBreaksForeign(M,c,isr.id,b[2])};
     out.refused=doSub(M,c,isr.id,b[0].id)===false;out.still=foreignOnPitch(M,c);
-    BsubOut=isr.id;BsubIn=undefined;BsubDialog();out.disabled=[...document.querySelectorAll('[data-bsub-in]')].filter(x=>x.disabled).map(x=>+x.dataset.bsubIn);out.want=b.filter(p=>p.foreign).map(p=>p.id);document.querySelector('.bdialog').remove();
+    BsubOuts=[isr.id];BsubIns=[];BsubDialog();out.disabled=[...document.querySelectorAll('[data-bsub-in]')].filter(x=>x.disabled).map(x=>+x.dataset.bsubIn);out.want=b.filter(p=>p.foreign).map(p=>p.id);document.querySelector('.bdialog').remove();
     out.accepted=doSub(M,c,fo.id,b[0].id)!==false;out.after=foreignOnPitch(M,c);   // before the simulated matches below can injure anybody
     for(let k=0;k<400;k++){const m2=createMatch(c,G.clubs.find(x=>x.id!==c.id),{kind:'friendly'});while(!m2.done)stepMinute(m2);out.max=Math.max(out.max||0,foreignOnPitch(m2,c));if(k>25)break}
     const eu={country:'אירופה'};out.euro=foreignLimited(eu);return out})()`);

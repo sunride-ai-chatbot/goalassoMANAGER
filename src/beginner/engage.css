@@ -255,6 +255,25 @@
 .bsub-sum b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff;font-weight:800}
 .bsub-sum .todo b{color:rgba(255,255,255,.58);font-weight:600}
 .bsub-sum small{color:#fbbf24;font-size:12px;line-height:1.3}
+/* several changes at once: a line for each (who goes off beside who comes on), the one button under them at full width */
+.bsub-pair{display:grid;gap:4px;min-width:0}
+.bsub-sum small.bad{color:#ff9a9a}
+.bdialog .bsub-dock.multi{flex-direction:column;align-items:stretch;gap:10px}
+.bsub-dock.multi .bsub-sum{flex:none;gap:6px}
+.bsub-dock.multi .bsub-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:14px;row-gap:1px}
+.bsub-dock.multi .bsub-pair small{grid-column:1/-1}
+.bdialog .bsub-dock.multi .bbtn{width:100%;min-height:52px}
+#bsub-bench small{font-size:13px;font-weight:600;color:var(--bmuted)}
+/* a player who left injured: his place is empty, so he is the first line of "who goes off" and says what happened */
+.bsub-player.hurt{border-color:rgba(255,120,120,.6);background:rgba(120,30,40,.34)}
+.bsub-player.hurt .bportrait{filter:grayscale(.75)}
+.bsub-player.hurt small{color:#ffb3b3}
+.bsub-player.hurt em{display:inline-block;margin-top:7px;font-style:normal;font-size:13px;font-weight:800;color:#fff;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22)}
+.bsub-player.hurt[aria-pressed="true"]{border:2px solid #7debd0;background:#20584f}
+.bsub-player.hurt[aria-pressed="true"] em{background:rgba(0,255,157,.16);border-color:rgba(0,255,157,.5);color:#baffe4}
+.bsub-player.hurt[aria-pressed="true"] small{color:#e6fff5}
+.beginner .bbtn.secondary.bsubs-open.need{background:linear-gradient(180deg,#a23344,#5e1b2c);border-color:#ffb3b3;color:#fff}
+.bsub-sum .hurt i{color:#ff9a9a}
 .bdialog .bsub-dock .bbtn.primary{flex:0 0 auto;font-size:17px;padding-inline:20px}
 @media(max-width:380px){.bdialog .bsub-dock .bbtn.primary{font-size:15px;padding-inline:12px}.bsub-sum span{font-size:13px}}
 /* the close button keeps the focus ring it is given when a window opens: the first words beside it need the room */

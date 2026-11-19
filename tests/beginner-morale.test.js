@@ -6,7 +6,7 @@
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://morale.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
+  beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__noInjStop=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const quiet=()=>w.eval("(()=>{Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}try{closeReveal(true)}catch(e){}document.querySelector('.bdialog')?.remove()})()");
 try{
@@ -47,7 +47,7 @@ try{
   // ---- the substitution window: two meters on every row, the pitch tired and the bench fresh
   w.eval("me().players.forEach((p,i)=>{p.morale=i%2?40:80;p.bOut=i%3?0:4});BensureXI(me());Bplay();BstopBroadcast();for(let i=0;i<70;i++)Btick(true);Bstate().live.paused=true;Brender()");
   $('[data-blive="subs"]').click();
-  const outs=$$('[data-bsub-out]:not([data-bsub-out="0"])');assert.ok(outs.length>=10);
+  const outs=$$('[data-bsub-out]:not([data-bsub-fill])');assert.ok(outs.length>=10);
   assert.ok(outs.every(b=>b.querySelector('.bmeter[data-fit]')&&b.querySelector('.bmeter[data-morale]')),'fitness and morale on every player of the eleven');
   const fits=outs.map(b=>+b.querySelector('[data-fit]').dataset.fit);assert.ok(fits.every(f=>f<100&&f>=15)&&fits.some(f=>f<90),'seventy minutes cost energy: '+fits.join(','));
   assert.equal(fits[0],run("(()=>{const M=Bstate().live.M,c=me(),x=xiPlayers(M,c)[0];return liveEnergy(M,c,x.p,x.e,M.m)})()"),'the number is the one the engine plays with');

@@ -59,7 +59,7 @@ const base=process.argv[2]||'http://127.0.0.1:8765',out=process.argv[3]||'/tmp/m
  await p.evaluate(()=>{const M=Bstate().live.M;M.xi[M.h].splice(1,1);B3d.update();});
  assert.equal(await p.evaluate(()=>Match3D.active.diagnostics.players),21);
  // Actual UI substitution writes through the engine, then updates the same view with the new XI.
- await p.locator('[data-blive="subs"]').click();await p.locator('[data-bsub-out]').first().click();await p.locator('[data-bsub-in]').first().click();await p.locator('[data-blive="sub-confirm"]').click();
+ await p.locator('[data-blive="subs"]').click();await p.locator('[data-bsub-out]:not([data-bsub-fill])').first().click();await p.locator('[data-bsub-in]').first().click();await p.locator('[data-blive="sub-confirm"]').click();
  await p.evaluate(()=>clearInterval(BmatchTimer));
  assert.equal(await p.evaluate(()=>Bstate().live.M.subs[G.me]),1);
  assert.equal(await p.evaluate(()=>Match3D.active.enabled),true);assert.equal(await p.evaluate(()=>Match3D.active.diagnostics.players),21);
