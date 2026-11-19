@@ -241,6 +241,27 @@
 .bclub-summary .bout-chip{color:#ffb3b3;border-color:rgba(255,107,107,.5);background:rgba(255,107,107,.12)}
 .bnote.bad{border-color:rgba(255,107,107,.42);background:rgba(255,107,107,.1);color:#ffd9d9}
 .beginner h3.boff-h{margin:18px 0 8px;font-size:15px;color:#bdcfd9}
+/* the line-up picker's two ways: from the bench, or a change of places inside the eleven */
+.bseg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:14px 0 4px;padding:5px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.bseg button{min-height:44px;border:0;border-radius:10px;background:transparent;color:#c9d3e6;font:inherit;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap}
+.bseg button[aria-selected="true"]{background:linear-gradient(180deg,#00e87a,#00b871);color:#001a0a;box-shadow:0 0 14px rgba(0,255,157,.35)}
+.bswap-to{display:block;margin-top:4px;font-style:normal;font-size:13px;line-height:1.35;color:#9af5d0}.bswap-to+.bswap-to{margin-top:1px}.bswap-to i{font-style:normal;color:#fbbf24}
+@media(max-width:380px){.bseg button{font-size:13px}}
+/* injured: a red badge with a white cross; suspended: a red card. Over the corner of his picture wherever he is listed */
+.bcross{position:absolute;z-index:2;top:10px;inset-inline-start:10px;width:34px;height:34px;border-radius:50%;background:#e11d48;box-shadow:0 0 0 3px rgba(8,13,30,.92),0 0 16px rgba(225,29,72,.8);font-style:normal}
+.bcross::before,.bcross::after{content:"";position:absolute;left:50%;top:50%;background:#fff;border-radius:2px;transform:translate(-50%,-50%)}
+.bcross::before{width:18%;height:60%}.bcross::after{width:60%;height:18%}
+.bcross.card{width:24px;height:33px;border-radius:5px;transform:rotate(-8deg)}.bcross.card::before,.bcross.card::after{display:none}
+.bplayer,.bsub-player{position:relative}
+.bplayer.out{border-color:rgba(255,120,120,.55)}
+.bsub-player>.bcross{top:4px;inset-inline-start:5px;width:25px;height:25px;box-shadow:0 0 0 2px rgba(8,13,30,.92),0 0 10px rgba(225,29,72,.7)}
+.bsub-player>.bcross.card{width:17px;height:24px}
+.bout-chip .bcross,.bout-strip .bcross{position:relative;top:auto;inset-inline-start:auto;flex:none;display:inline-block;width:20px;height:20px;box-shadow:none}
+.bout-chip .bcross{vertical-align:-5px;margin-inline-end:6px}.bout-chip .bcross.card,.bout-strip .bcross.card{width:14px;height:20px}
+.bout-strip{margin:12px 0 14px;padding:12px 14px;border-radius:14px;border:1px solid rgba(255,120,120,.5);background:rgba(120,30,40,.3)}
+.bout-strip strong{display:block;color:#ffb3b3;font-size:15px;margin-bottom:8px}
+.bout-strip ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.bout-strip li{display:flex;gap:10px;align-items:center;font-size:15px;line-height:1.35;color:#e8eef7}.bout-strip li b{color:#fff}
 .bsub-player.off{opacity:.78;cursor:default}.bsub-player.off .bportrait{filter:grayscale(.7)}
 .bwhy{display:block;margin-top:5px;font-style:normal;font-size:13px;font-weight:700;line-height:1.35;color:#ff9a9a}
 /* a note that is part of the screen, not a beginner's tip: .blearn is put away after two rounds, and it took "all the substitutions are used" with it */
@@ -320,5 +341,8 @@
 .btr-steps i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}
 .btr-steps i.on{background:#00ff9d}
 .btr-cap{font-size:11px;font-weight:700;color:#fbbf24;margin:1px 0}
+/* nothing left to train: locked, and it says so (not merely dimmed like a session that waits for the next match) */
+.btr-hold.capped:disabled{opacity:.42}.btr-hold.capped .btr-face{filter:grayscale(.8)}.btr-hold.capped .btr-ring{opacity:.35}
+.btr-hold.capped .btr-cap{color:#bdcfd9}
 .adot.calm{background:#00b871;box-shadow:0 0 10px rgba(0,255,157,.6)}
 @media(prefers-reduced-motion:reduce){.btr-hold.let-go{animation:none}.btr-pic{transition:none}.btr-hold.holding .btr-pic{transform:none}}
