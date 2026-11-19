@@ -68,3 +68,20 @@
 .splash .sp-err{width:100%;min-height:0;margin:-6px 4px 0;font-size:14.5px;color:#ffd0d4;text-shadow:0 1px 6px #000;text-align:start}
 .splash .sp-err:empty{display:none}
 .splash .sp-link{display:inline-block;min-height:44px;padding:11px 14px 0;font-size:14.5px;color:#d9d2c2;text-decoration:underline;text-underline-offset:4px}
+
+/* the entry page of the beginner game: a career, the league this phone is in, and network play, which opens its two ways */
+.splash .sp-ui{max-height:100dvh;overflow-y:auto;overscroll-behavior:contain}
+.splash .sp-cont{flex-direction:row;gap:8px;min-height:54px;font-size:clamp(19px,5.6vw,26px)}
+.splash .sp-lg{border-color:rgba(0,255,157,.6);color:#d9ffef}
+.splash .sp-lg{padding-inline:16px;font-size:clamp(18px,5.2vw,24px)}
+.splash .sp-lg span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-align:center;overflow-wrap:anywhere}   /* a long name takes a second line and is cut only after it */
+.splash #spNetwork::after{content:"";width:10px;height:10px;border:solid currentColor;border-width:0 2.5px 2.5px 0;transform:translateY(-3px) rotate(45deg);transition:transform .2s ease;flex:none}
+.splash #spNetwork[aria-expanded="true"]::after{transform:translateY(2px) rotate(-135deg)}
+.splash .sp-net{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.splash .sp-net[hidden]{display:none}
+.splash .sp-sub{display:grid;gap:4px;align-content:center;min-height:76px;padding:10px 8px;border-radius:14px;border:1.5px solid rgba(230,210,170,.5);background:rgba(20,22,28,.9);color:#f4ecdc;text-align:center;cursor:pointer;font:inherit;animation:spin .3s ease both}
+.splash .sp-sub b{font:400 clamp(20px,5.8vw,26px)/1.05 var(--display)}
+.splash .sp-sub small{font:500 12.5px/1.35 var(--body);color:#cbbf9f}
+.splash .sp-sub:active{transform:scale(.98)}.splash .sp-sub:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media (max-height:700px){.splash .sp-ui{gap:9px;padding-top:12px}.splash .sp-btn{min-height:50px}.splash .sp-tag{display:none}.splash .sp-sub{min-height:66px}}
+@media (prefers-reduced-motion:reduce){.splash .sp-sub{animation:none}.splash #spNetwork::after{transition:none}}

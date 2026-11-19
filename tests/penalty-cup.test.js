@@ -1,6 +1,7 @@
 // אלוף הפנדלים (36j-penalty-cup.js): the rules of a duel kick, the throw-away state around a career, a shoot-out against
-// the computer, two people on one phone, two phones over an injected channel (lost messages, a second guest, a forged
-// reveal), and the beginner page: the entry, its own career untouched, the highlights speed and the shout bar.
+// the computer, two phones over an injected channel (lost messages, a second guest, a forged reveal), and the beginner
+// page: penalty practice inside a career (his own club, straight into the shoot-out), online penalties from the entry
+// page, its own career untouched, the highlights speed and the shout bar. Two people on one phone is gone.
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];
 const open=(file,url,extra)=>{const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
@@ -39,7 +40,8 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.ok($('[data-pcup-open]'),'entry on the home screen');$('[data-pcup-open]').click();await until(()=>$('#pcup'),'the lobby over a career');
   assert.equal(w.eval('G.pcup'),true);assert.notEqual(w.eval('G.me'),null);await w.ILM.whenSaved();const disk=w.eval("Object.keys(localStorage).filter(k=>/^ilm2/.test(k)).sort().map(k=>k+':'+localStorage.getItem(k).length).join()+'|'+localStorage.getItem('ilm2').slice(0,4000)");
   const euro=$$('[data-pc-team]').find(b=>b.dataset.pcTeam.startsWith('e:'));assert.ok(euro,'a European club in the list');euro.click();
-  assert.equal($$('[data-pc-mode]').length,3,'computer, one phone, online');assert.match($('#pcup').textContent,/בלוטות/,'says plainly what a browser cannot do');
+  assert.deepEqual($$('[data-pc-mode]').map(b=>b.dataset.pcMode),['cpu','net'],'the computer or a friend online');assert.doesNotMatch($('#pcup').textContent,/טלפון אחד/,'two on one phone is gone');
+  assert.equal(w.eval("typeof pcupSeat+typeof pcupAskBoth+typeof pcupSwipeDir"),'undefinedundefinedundefined');
 
   // against the computer: the shoot-out of the full game, with a way out
   $('[data-pc-mode="cpu"]').click();assert.equal($('#penGame'),null);assert.ok($$('[data-pc-cpuopp]').length>=30,'against the computer the opponent is chosen too');const rival=$$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp==='i:mta');rival.click();assert.ok($('#penGame'),'the penalty overlay');assert.match($('#penGame .pg-meta').textContent,/מכבי ת"א|מכבי תל אביב/,'the chosen opponent');assert.ok($('#penGame .pc-quit'),'a way out of the overlay');
@@ -64,38 +66,9 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   // leaving in the middle records nothing
   $('[data-pc-mode="cpu"]').click();$('[data-pc-cpuopp="?"]').click();assert.ok($('#penGame'),'or drawn by lot');$('#penGame .pc-quit').click();assert.equal($('#penGame'),null);assert.equal(run('pcupRec()').played,rec1.played);
 
-  // ---- two people on one phone, both at once, facing each other: a strip each, a slide of the finger chooses
-  assert.deepEqual(run("[[30,0],[30,-30],[0,-30],[-30,-30],[-30,0],[-30,30],[0,30],[30,30],[5,5],[0,0]].map(v=>pcupSwipeDir(v[0],v[1]))"),['R','UR','U','UL','L','DL','D','DR',null,null],'eight directions on the screen; a touch that does not travel chooses nothing');
-  $('[data-pc-mode="seat"]').click();const same=w.eval('PCUP.my.key');$$('[data-pc-opp]').find(b=>b.dataset.pcOpp===same).click();assert.ok($('#penGame'),'the duel');
-  assert.notEqual(w.eval("PCUP.clubs[PCUP.my.key].id"),w.eval("PCUP.clubs[PCUP.my.key+'#2'].id"),'the twin has its own id');
-  w.eval("window.__seat=[];(()=>{const real=pcupResolve;pcupResolve=function(kd,gd){window.__seat.push([kd,gd]);return real.apply(this,arguments)}})()");
-  const slide=(el,dx,dy,pid)=>{const mk=(t,x,y)=>{const e=new w.MouseEvent(t,{bubbles:true,cancelable:true,clientX:x,clientY:y});if(pid!=null)Object.defineProperty(e,'pointerId',{value:pid});return e};el.dispatchEvent(mk('pointerdown',100,100));el.dispatchEvent(mk('pointermove',100+dx/2,100+dy/2));el.dispatchEvent(mk('pointerup',100+dx,100+dy))};
-  let kicks=0;const roles=[],expect=[];guard=0;const TURN={U:'D',D:'U',L:'R',R:'L',UL:'DR',UR:'DL',DL:'UR',DR:'UL'};
-  while(!$('#pgDone')){if(++guard>6000)throw new Error('the one-phone duel never ended');
-    if(w.eval('!!(PCUP&&PCUP.asking)')){const zs=$$('.pc-zone');assert.equal(zs.length,2,'a strip for each player');assert.ok($('.pc-zone[data-zone="b"]').classList.contains('far')&&$('.pc-zone[data-zone="a"]').classList.contains('near'),'the second club at the far edge and turned to its player, the first at the near edge');
-      assert.equal($$('.pc-zone button,.pc-pad,.pg-dirs').length,0,'no buttons and no arrows: the finger slides');assert.deepEqual(zs.map(z=>z.dataset.role).sort(),['keep','kick'],'one kicks, one keeps goal');assert.equal($('#pcReady'),null,'the phone never changes hands');
-      const kick=$('.pc-zone[data-role="kick"]'),keep=$('.pc-zone[data-role="keep"]');roles.push(kick.dataset.zone);assert.ok($('#penGame').classList.contains('pc-face'),'the picture takes the whole screen');
-      // the pitch turns to the kicker: when the far player kicks, the picture is turned and a slide is read in the turned picture
-      const flip=$('#pgStage').classList.contains('pc-flip');assert.equal(flip,kick.dataset.zone==='b','the taker\'s back is at the kicker\'s own edge');assert.ok($('#pgStage #pgView'));const see=d=>flip?TURN[d]:d;
-      // nothing runs until one press; it starts the count of three seconds
-      assert.ok($('.pc-go'),'one button in the middle');assert.ok($('.pc-turn').hidden,'no count before the press');if(kicks===2){await tick(900);assert.ok(w.eval('PCUP.asking'),'it waits as long as nobody presses');}
-      if(kicks>=1){$('.pc-go').click();assert.equal($('.pc-go'),null);assert.ok(!$('.pc-turn').hidden);assert.equal($('.pc-turn').textContent,'3')}
-      if(kicks===0){   // nobody slid a finger: the kick still happens, the keeper stays in the middle
-       }else if(kicks===1){   // the last slide before the whistle counts; two fingers at the same moment are both heard; a tap is nothing
-        slide(keep,-40,40,1);assert.ok(keep.classList.contains('set'));assert.ok(!kick.classList.contains('set'),'only the one who chose is marked');
-        const d1=(t,x,y,pid)=>{const e=new w.MouseEvent(t,{bubbles:true,cancelable:true,clientX:x,clientY:y});Object.defineProperty(e,'pointerId',{value:pid});return e};
-        keep.dispatchEvent(d1('pointerdown',50,50,7));kick.dispatchEvent(d1('pointerdown',200,300,8));keep.dispatchEvent(d1('pointerup',10,10,7));kick.dispatchEvent(d1('pointerup',260,300,8));slide(kick,3,2,9);
-        assert.equal($$('.pc-zone [data-dir],.pc-zone .on').length,0,'a strip never shows which way');assert.doesNotMatch(keep.textContent+kick.textContent,/UL|שמאל|ימין|למעלה|למטה/);assert.deepEqual(run('PCUP.pads()'),kick.dataset.zone==='a'?{a:'R',b:'UL'}:{a:see('UL'),b:see('R')});expect[1]=[see('R'),see('UL')];
-       }else{slide(kick,40,-40);slide(keep,-40,40);expect[kicks]=[see('UR'),see('DL')]}
-      const want=run('PCUP.pads()');kicks++;w.eval('PCUP.whistle()');assert.equal(w.eval('PCUP.asking'),false);assert.equal($$('.pc-zone,.pc-go').length,0,'the strips leave at the whistle and the picture is clear');
-      const chips=$$('.pc-chose');assert.equal(chips.length,2,'each choice is shown at its own edge once the kick is on');const near=chips.find(c=>c.classList.contains('near')),far=chips.find(c=>c.classList.contains('far'));
-      if(want.a)assert.equal(near.dataset.dir,want.a);if(want.b)assert.equal(far.dataset.dir,want.b);if(kicks===1)assert.ok(chips.some(c=>c.dataset.dir===''),'the keeper who did not slide is shown standing')}
-    await tick(5)}
-  assert.ok(kicks>=6,'at least six kicks decide a shoot-out, got '+kicks);assert.ok(roles.every((r,i)=>i===0||r!==roles[i-1]),'kicker and keeper swap with every kick: '+roles.join(''));
-  const seat=run('window.__seat');assert.equal(seat.length,kicks);assert.ok(seat[0][0]&&seat[0][1]===null,'no slide: the ball goes somewhere, the keeper stays');assert.deepEqual(seat[1],expect[1],'the last slide of each player, read in the picture as it lay');for(let i=2;i<kicks;i++)assert.deepEqual(seat[i],expect[i],'kick '+i);assert.ok(expect.slice(1).some(e=>e[0]==='UR')&&expect.slice(1).some(e=>e[0]==='DL'||e[0]==='L'),'both orientations were played');assert.equal($('#pgStage').classList.contains('pc-flip'),false,'the picture is upright again at the end');
-  const sc=run('({a:PCUP.duel.S.a,b:PCUP.duel.S.b})');assert.ok(w.eval(`penShootoutDone(${JSON.stringify(sc.a)},${JSON.stringify(sc.b)})`),'ended by the shoot-out rule');
-  {const sum=x=>x.reduce((t,v)=>t+v,0);endOK(w.document,sum(sc.a),sum(sc.b),'one phone');assert.match($('.pg-endsc').children[0].textContent+$('.pg-endsc').children[2].textContent,/./)}
-  $('#pgDone').click();assert.equal(run('pcupRec()').duels,(rec1.duels||0)+1);assert.equal(run('pcupRec()').played,rec1.played,'a duel between two people is not a win of mine');
+  // the same club on both sides: the second one is a twin with its own id
+  {const same=w.eval('PCUP.my.key');$('[data-pc-mode="cpu"]').click();$$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp===same).click();assert.ok($('#penGame'),'a club against itself');
+   assert.notEqual(w.eval("PCUP.clubs[PCUP.my.key].id"),w.eval("PCUP.clubs[PCUP.my.key+'#2'].id"),'the twin has its own id');$('#penGame .pc-quit').click();assert.equal(run('pcupRec()').played,rec1.played)}
 
   // ---- close: the career is exactly as it was, nothing was written
   w.eval('save()');await w.ILM.whenSaved();assert.equal(w.eval("Object.keys(localStorage).filter(k=>/^ilm2/.test(k)).sort().map(k=>k+':'+localStorage.getItem(k).length).join()+'|'+localStorage.getItem('ilm2').slice(0,4000)"),disk,'nothing is written while the lobby is open, not even by save()');
@@ -140,7 +113,8 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.equal(w.eval('PCUP.net.code'),'QQ77ZZ','the same room, no new code');
   const meta=q=>{const el=q('.pg-meta');return el?el.textContent:''};
   assert.match(meta($),/הפועל ב/,'the host plays his new club');assert.match(meta(G2.$),/הפועל ב/,'and the guest sees it too');
-  w.eval("pcupNetStop();PCUP.stage='mode';pcupPaint()");g.eval("pcupNetStop();PCUP.stage='mode';pcupPaint()");await tick(5);
+  w.eval("pcupNetStop();PCUP.stage='mode';pcupPaint()");g.eval("pcupNetStop();PCUP.stage=pcupBase();pcupPaint()");await tick(5);
+  assert.equal(g.eval('PCUP.only'),'net','a link on the beginner page opens the lobby for the net alone');assert.equal(G2.$$('[data-pc-mode]').length,0,'no other mode to choose there');assert.ok(G2.$('[data-pc-net="host"]'));
   ch3.close();
 
   // ---- a forged reveal (not the committed direction) stops the match on the phone that sees it
@@ -157,11 +131,25 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   w.__pcupNet=()=>Promise.reject(new Error('offline'));$('[data-pc-mode="net"]').click();$('[data-pc-net="host"]').click();await until(()=>$('.pc-err'),'the error line');assert.match($('.pc-err').textContent,/לא זמין כרגע/);assert.ok($('[data-pc-go="mode"]'),'and a way back to the other modes');
   $('#pcup [data-pc-x]').click();assert.deepEqual(run("({me:G.me,wk:G.wk,uid})"),{me:before.me,wk:before.wk,uid:before.uid});
 
-  // ---- beginner page: its own career is not touched by the lobby; highlights speed and shouts in its live match
-  G2.$('#pcup [data-pc-x]').click();assert.equal(G2.$('#pcup'),null);assert.ok(G2.$('.pc-entry [data-pcup-open]'),'entry on the beginner start screen');
-  g.eval("Bcreate('mta')");const bk=g.eval("localStorage.getItem(BK)");assert.ok(bk,'a beginner career is stored');assert.ok(G2.$('.pc-entry [data-pcup-open]'),'entry on the beginner home');
-  G2.$('[data-pcup-open]').click();await until(()=>G2.$('#pcup'),'beginner lobby');assert.equal(g.eval('!!G.beginner'),false);g.document.dispatchEvent(new g.Event('visibilitychange'));g.dispatchEvent(new g.Event('pagehide'));
-  G2.$$('[data-pc-team]')[0].click();G2.$('#pcup [data-pc-x]').click();assert.equal(g.eval("localStorage.getItem(BK)"),bk,'the beginner career on disk is the same bytes');assert.equal(g.eval('!!G.beginner'),true);assert.ok(G2.$('.bnav'),'the beginner screen is back');
+  // ---- beginner page: network play is on the entry page only; a career carries penalty practice and nothing else
+  G2.$('#pcup [data-pc-x]').click();assert.equal(G2.$('#pcup'),null);assert.equal(G2.$('#main .pc-entry,#main [data-pcup-open],#main [data-lg-open],#main [data-room-open]'),null,'no cards before a career');
+  // the entry page: a career, and network play, which opens its two ways
+  g.eval('showSplash()');assert.match(G2.$('#spRegular').textContent,/התחל קריירה/);assert.equal(G2.$('#spLeague'),null,'no league on this phone yet');assert.ok(G2.$('#spNet').hidden,'the two ways are closed');
+  G2.$('#spNetwork').click();assert.equal(G2.$('#spNet').hidden,false);assert.equal(G2.$('#spNetwork').getAttribute('aria-expanded'),'true');assert.equal(g.eval('splashOpen()'),true,'the page stays');assert.deepEqual(G2.$$('#spNet button').map(b=>b.id),['spPens','spLg']);
+  g.__pcupNet=makeBus().factory();G2.$('#spPens').click();await until(()=>G2.$('#pcup'),'online penalties from the entry page');assert.equal(g.eval('splashOpen()'),false);assert.match(G2.$('#pcup h1').textContent,/פנדלים אונליין/);
+  G2.$$('[data-pc-team]')[0].click();assert.equal(G2.$$('[data-pc-mode]').length,0);assert.ok(G2.$('[data-pc-net="host"]')&&G2.$('[data-pc-joinform]'),'a club, then the room');assert.ok(G2.$('[data-pc-go="team"]'),'and a way back to the clubs');
+  G2.$('#pcup [data-pc-x]').click();assert.equal(G2.$('#pcup'),null);assert.equal(g.eval('splashOpen()'),true,'closing leads back to the entry page');
+  g.eval("localStorage.setItem('goalasso.league.id','lg1');localStorage.setItem('goalasso.league.name','ליגת השכונה');renderSplash()");assert.match(G2.$('#spLeague').textContent,/המשך ליגת ליגת השכונה/);assert.deepEqual(g.eval('JSON.stringify(League.saved())'),'{"id":"lg1","name":"ליגת השכונה"}');
+  g.eval("localStorage.removeItem('goalasso.league.id');localStorage.removeItem('goalasso.league.name');hideSplash()");await tick(500);
+  g.eval("Bcreate('mta');Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}");const bk=g.eval("localStorage.getItem(BK)");assert.ok(bk,'a beginner career is stored');
+  assert.ok(G2.$('.pc-entry [data-pcup-train]'),'penalty practice on the beginner home');assert.match(G2.$('.pc-entry').textContent,/אימון פנדלים/);assert.equal(G2.$('#main [data-pcup-open],#main [data-lg-open],#main [data-room-open]'),null,'and no network card');
+  assert.ok(G2.$('.bfooter [data-action="entry"]'),'a way back to the entry page');
+  G2.$('[data-pcup-train]').click();await until(()=>G2.$('#penGame'),'straight into a shoot-out');assert.equal(g.eval('!!G.beginner'),false);assert.equal(g.eval('PCUP.only'),'train');assert.equal(g.eval('PCUP.my.name'),'מכבי תל אביב','with his own club');
+  assert.equal(g.eval('G.me'),'pcme');assert.equal(g.eval("club('pcme').players.length"),g.eval("PCUP.keep.G.clubs.find(c=>c.id===PCUP.keep.G.me).players.length"),'the squad of the career, copied');
+  {const meta=G2.$('#penGame .pg-meta').textContent,mine=g.eval("club('pcme').short||club('pcme').name");assert.equal(meta.split(mine).length-1,1,'against another club, not against itself: '+meta);assert.match(meta,/אימון פנדלים/)}
+  g.document.dispatchEvent(new g.Event('visibilitychange'));g.dispatchEvent(new g.Event('pagehide'));
+  G2.$('#penGame .pc-quit').click();assert.equal(G2.$('#penGame'),null);assert.ok(G2.$('#pcup [data-pc-cpuopp="?"]'),'another round is one press away');assert.equal(G2.$$('#pcup [data-pc-mode],#pcup [data-pc-team]').length,0,'no lobby to walk through');assert.match(G2.$('#pcup h1').textContent,/אימון פנדלים/);
+  G2.$('#pcup [data-pc-x]').click();assert.equal(g.eval("localStorage.getItem(BK)"),bk,'the beginner career on disk is the same bytes');assert.equal(g.eval('!!G.beginner'),true);assert.ok(G2.$('.bnav'),'the beginner screen is back');assert.equal(g.eval('splashOpen()'),false);
   g.eval("Bplay()");assert.ok(G2.$('[data-bspeed="hl"]'),'the highlights speed');assert.equal(G2.$$('#shoutBar [data-shout]').length,4,'the shout bar');assert.ok(G2.$$('[data-shout]').every(b=>b.disabled),'no voice at kick-off');
   g.eval("Bstate().live.paused=false;Bstate().live.M.voice=100;Btick()");assert.ok(G2.$$('[data-shout]').every(b=>!b.disabled),'the voice is ready');
   const stored=g.eval("Object.keys(localStorage).filter(k=>/^ilm2/.test(k)).sort().map(k=>k+':'+localStorage.getItem(k).length).join()");G2.$('[data-shout="press"]').click();assert.equal(g.eval("Bstate().live.M.shout[G.me].k"),'press');assert.equal(g.eval("Bstate().live.M.voice"),0);
@@ -170,7 +158,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   assert.ok(g.eval("hlHoldMs([{t:'goal'}])")>g.eval("hlHoldMs([])"),'a minute with a goal holds the clock');
   g.eval("BstopBroadcast&&BstopBroadcast()");
 
-  assert.deepEqual(errors,[]);console.log('penalty cup: rules, sandbox, computer, one phone, two phones (loss, a rematch in the same room with a new club, third phone, forged reveal, leaver), beginner entry + highlights + shouts; errors',errors);
+  assert.deepEqual(errors,[]);console.log('penalty cup: rules, sandbox, computer, two phones (loss, a rematch in the same room with a new club, third phone, forged reveal, leaver), the beginner entry page (network play, the league this phone is in), penalty practice in a career, highlights + shouts; errors',errors);
  }catch(e){console.error(e);console.log('errors',[String(e&&e.message||e)].concat(errors));process.exitCode=1}
  finally{for(const x of wins){try{x.close()}catch(e){}}}
 })();

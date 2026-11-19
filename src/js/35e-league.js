@@ -26,7 +26,9 @@ function lgErr(e){const m=String(e&&e.message||e);if(/schema cache|does not exis
 const lgApi=async()=>LG.client||(LG.client=await (window.__lgClientFactory?window.__lgClientFactory():mpClient()));
 async function lgRpc(name,args){const c=await lgApi(),r=await c.rpc(name,args);if(r.error)throw r.error;return r.data}
 const lgSaved=()=>{try{return localStorage.getItem(LG_KEY)||''}catch(e){return ''}};
-const lgRemember=id=>{try{id?localStorage.setItem(LG_KEY,id):localStorage.removeItem(LG_KEY)}catch(e){}};
+const LG_NAME_KEY='goalasso.league.name';   /* the name of the league this phone is in, for the entry page's "המשך ליגת …": the page has no session to ask with */
+const lgRemember=id=>{try{if(id)localStorage.setItem(LG_KEY,id);else{localStorage.removeItem(LG_KEY);localStorage.removeItem(LG_NAME_KEY)}}catch(e){}};
+const lgSavedName=()=>{try{return localStorage.getItem(LG_NAME_KEY)||''}catch(e){return ''}};
 const lgInvited=()=>{try{return new URL(location.href).searchParams.get('league')||''}catch(e){return ''}};
 const lgLinkFor=inv=>{try{const u=new URL(location.href);u.search='';u.hash='';u.searchParams.set('league',inv);return u.href}catch(e){return '?league='+inv}};
 function lgClearInvite(){try{const u=new URL(location.href);u.searchParams.delete('league');history.replaceState(null,'',u.href)}catch(e){}}
@@ -43,9 +45,11 @@ function lgBody(html){const el=document.getElementById('lg-body');if(el){el.inne
 const League={entry:()=>`<button type="button" class="btn lg-entry" data-lg-open>${lgSaved()?'לליגה שלי':'ליגה משותפת · כמה מנהלים'}</button>`,
  intro:()=>`<section class="card lg-intro"><h3>ליגה משותפת</h3><p>עד שמונה מנהלים, מאגר שחקנים אחד. כל אחד בונה מועדון משלו: שם, סמל, מדים וסגל — ומי שחתם על שחקן, הוא שלו.</p>${League.entry()}</section>`,
  /* only an invitation opens the league by itself; a manager who already has one finds it behind its button */
- open:()=>lgOpen(),close:()=>lgClose(),boot(){if(lgInvited())void lgOpen()},get state(){return LG.state}};
+ /* o.back: opened from the entry page, which is where its close button leads again */
+ open:o=>{const p=lgOpen();LG.back=!!(o&&o.back);return p},close:()=>lgClose(),boot(){if(lgInvited())void lgOpen()},get state(){return LG.state},
+ saved:()=>lgSaved()?{id:lgSaved(),name:lgSavedName()}:null};
 
-function lgClose(){LG.gen++;clearTimeout(LG.poll);LG.poll=null;clearInterval(LG.kickTimer);LG.kickTimer=null;LG.kick=null;try{lgMatchStop()}catch(e){}if(LG.root)LG.root.remove();LG.root=null;LG.busy=false;LG.draft=null;LG.sheet=null;LG.offer=null;LG.confirm=null}
+function lgClose(){LG.gen++;LG.back=false;clearTimeout(LG.poll);LG.poll=null;clearInterval(LG.kickTimer);LG.kickTimer=null;LG.kick=null;try{lgMatchStop()}catch(e){}if(LG.root)LG.root.remove();LG.root=null;LG.busy=false;LG.draft=null;LG.sheet=null;LG.offer=null;LG.confirm=null}
 async function lgOpen(){lgClose();const gen=LG.gen;
   LG.root=document.createElement('div');LG.root.className='lg-overlay';
   LG.root.innerHTML='<section class="lg-dialog" role="dialog" aria-modal="true" aria-label="ליגה משותפת"><header class="lg-top"><button type="button" class="lg-close" data-lg="close" aria-label="סגור">×</button><div class="lg-title"><h2 id="lg-name-h">ליגה משותפת</h2><small id="lg-sub"></small></div><div class="lg-cash" id="lg-cash"></div></header><div id="lg-body">מתחבר לשירות…</div><p id="lg-status" role="status" aria-live="polite"></p><nav class="lg-tabs" id="lg-tabs" hidden></nav></section>';
@@ -64,7 +68,7 @@ async function lgEnter(gen){
    catch(e){if(/not_a_member|invitation_expired/.test(String(e.message||e)))lgRemember('');else lgMsg(lgErr(e))}}
   LG.state=null;await lgLobby(gen)}
 /* everything the league shows comes from this one call */
-async function lgLoad(){const s=await lgRpc('lg_get',{p_league:lgSaved()});LG.state=s;LG.setup=lgCleanSetup(s.setup);LG.clubCache=null;try{lgKickSync()}catch(e){}return s}
+async function lgLoad(){const s=await lgRpc('lg_get',{p_league:lgSaved()});LG.state=s;try{if(s&&s.name)localStorage.setItem(LG_NAME_KEY,String(s.name).slice(0,60))}catch(e){}LG.setup=lgCleanSetup(s.setup);LG.clubCache=null;try{lgKickSync()}catch(e){}return s}
 async function lgReload(){const gen=LG.gen;await lgLoad();if(gen===LG.gen)lgPaint()}
 function lgSchedule(gen){clearTimeout(LG.poll);LG.poll=setTimeout(async()=>{if(gen!==LG.gen)return;
   /* only the screens that show other people's news refresh by themselves; a screen being typed into is left alone */
@@ -206,7 +210,7 @@ document.addEventListener('click',async e=>{
   if(e.target.closest('[data-lg-open]')){void lgOpen();return}
   const btn=e.target.closest('[data-lg]');if(!btn||!LG.root||!LG.root.contains(btn))return;
   const a=btn.dataset.lg,v=btn.dataset.v,k=btn.dataset.k,gen=LG.gen,d=LG.draft;
-  if(a==='close'){lgClose();return}
+  if(a==='close'){const back=LG.back;lgClose();if(back){try{showSplash()}catch(x){}}return}
   if(a==='tab'){LG.view=v;LG.sheet=null;LG.confirm=null;lgMsg('');lgPaint();const b=document.getElementById('lg-body');if(b)b.scrollTop=0;return}
   if(a==='back'){LG.draft=null;LG.view=lgV2()?'club':'home';lgPaint();return}
   if(a==='identity'){LG.view='identity';lgPaint();return}

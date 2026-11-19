@@ -1,19 +1,20 @@
 /* ====================== אלוף הפנדלים: penalties only ======================
-   A button outside every career: pick a club and take penalties. Three ways to play, all on the penalty overlay of
-   36f-penalty.js (the close-up from behind the taker):
-     cpu   a shoot-out against the computer: the sight when we kick, the eight arrows when we keep goal (penShootout)
-     seat  two people on one phone at the same moment, facing each other: each slides a finger across his own strip
-     net   two phones, a room code: the same duel, each player's choice travels over a Supabase Realtime broadcast channel
+   Penalties only, on the penalty overlay of 36f-penalty.js (the close-up from behind the taker). Two ways to play:
+     cpu   a shoot-out against the computer: the sight when we kick, the pull when we keep goal (penShootout)
+     net   two phones, a room code: a duel, each player's choice travels over a Supabase Realtime broadcast channel
+   and three ways in (pcupOpen(o)): the lobby with both (the full game's card), {only:'net'} — the beginner entry page's
+   "משחק רשת → פנדלים", a club and then the room — and {only:'train'} — "אימון פנדלים" inside a beginner career: the coach's
+   own club as it is, straight into a shoot-out against a drawn club of its level, no lobby in between.
    A duel kick is decided by pcupResolve(kick direction, dive direction, finisher, keeper, random source): pure, so both
    phones reach the same result from the same seed. Online choices are exchanged commit-first (a hash of direction+nonce,
    then the reveal), so neither side can wait for the other's choice; the seed is made of both nonces.
    Like the quick tournament it runs on a throw-away state: G is swapped for a newGame() state flagged G.pcup, SANDBOX
-   blocks every save, pcupClose() restores G and uid. Only the record (PCUP_KEY) is kept. A browser cannot open a
-   Bluetooth link to another phone or find one on the same network by itself, so "same room" is the one-phone mode. */
+   blocks every save, pcupClose() restores G and uid. Only the record (PCUP_KEY) is kept. There used to be a third way,
+   two people on one phone facing each other; the owner took it out: one phone is for practice, a friend has his own. */
 const PCUP_KEY='goalasso_pcup_v1';let PCUP=null;
 function pcupRec(){const base={played:0,wins:0,streak:0,best:0,duels:0};try{return Object.assign(base,JSON.parse(localStorage.getItem(PCUP_KEY)||'{}'))}catch(e){return base}}
 function pcupSave(r){try{localStorage.setItem(PCUP_KEY,JSON.stringify(r))}catch(e){}}
-function pcupEntryHTML(kind){const r=pcupRec();if(kind==='b')return `<section class="bpanel pc-entry pc-entry-b"><div><h2>אלוף הפנדלים</h2><p>רק פנדלים: מול המחשב, שניים על טלפון אחד או מול חבר אונליין.${r.played?` <bdi>${r.wins}</bdi> ניצחונות מ־<bdi>${r.played}</bdi>.`:''}</p></div><button type="button" class="bbtn secondary" data-pcup-open>לפנדלים</button></section>`;return `<div class="card bz-entry pc-entry"><div><h3 class="sec">אלוף הפנדלים</h3><div class="muted small">רק פנדלים: מול המחשב, שניים על טלפון אחד או מול חבר אונליין.${r.played?` <bdi>${r.wins}</bdi> ניצחונות מ־<bdi>${r.played}</bdi>, רצף שיא <bdi>${r.best}</bdi>.`:''}</div></div><button type="button" class="btn" data-pcup-open>שחק</button></div>`}
+function pcupEntryHTML(kind){const r=pcupRec();if(kind==='b')return `<section class="bpanel pc-entry pc-entry-b"><div><h2>אימון פנדלים</h2><p>חמש בעיטות לכל צד מול המחשב, עם הקבוצה שלך. אתה בועט, ואתה גם בשער.${r.played?` <bdi>${r.wins}</bdi> ניצחונות מ־<bdi>${r.played}</bdi>.`:''}</p></div><button type="button" class="bbtn secondary" data-pcup-train>לאימון</button></section>`;return `<div class="card bz-entry pc-entry"><div><h3 class="sec">אלוף הפנדלים</h3><div class="muted small">רק פנדלים: מול המחשב או מול חבר אונליין.${r.played?` <bdi>${r.wins}</bdi> ניצחונות מ־<bdi>${r.played}</bdi>, רצף שיא <bdi>${r.best}</bdi>.`:''}</div></div><button type="button" class="btn" data-pcup-open>שחק</button></div>`}
 /* ---- rules of a duel kick ---- */
 function pcupRng(seed){let a=seed>>>0;return ()=>{a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296}}
 function pcupHash(s){let h1=0xdeadbeef,h2=0x41c6ce57;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return (h2>>>0).toString(16).padStart(8,'0')+(h1>>>0).toString(16).padStart(8,'0')}
@@ -35,28 +36,36 @@ function pcupSide(c){try{ensureNumbers(c)}catch(e){}const xi=bestXI(c);const ord
   return {c,ord,gk,sk:ord.map(p=>Math.round(penShootSkill(p))),gkS:Math.round(penKeepSkill(gk)),oi:ord.map(p=>c.players.indexOf(p)),gi:c.players.indexOf(gk)}}
 function pcupSideFrom(c,d){const mine=pcupSide(c);if(!d||!Array.isArray(d.sk)||!Array.isArray(d.oi))return mine;const ord=d.oi.map(i=>c.players[i]).filter(Boolean);if(ord.length===d.sk.length&&ord.length){mine.ord=ord;mine.gk=c.players[d.gi]||mine.gk}
   mine.sk=mine.ord.map((p,i)=>clamp(+d.sk[i]||70,30,99));mine.gkS=clamp(+d.gk||70,30,99);return mine}
-function pcupMatch(a,b){a.lineup=autoLineupFor(a);G.me=a.id;return createMatch(a,b,{kind:'friendly',neutral:true,ko:true,label:'אלוף הפנדלים'})}
-function pcupOpen(){if(PCUP)return;if(typeof BLITZ!=='undefined'&&BLITZ)return toast('סיים קודם את טורניר הבזק');if(G&&((G.live&&!G.live.settled)||(G.beginner&&G.beginner.live)))return toast('סיים קודם את המשחק הפעיל');if(G&&G.mp&&typeof mpIsOn==='function'&&mpIsOn())return toast('אלוף הפנדלים לא זמין בזמן משחק רשת');
+function pcupMatch(a,b){a.lineup=autoLineupFor(a);G.me=a.id;return createMatch(a,b,{kind:'friendly',neutral:true,ko:true,label:pcupTitle()})}
+const pcupBase=()=>PCUP&&PCUP.only==='train'?'train':PCUP&&PCUP.only==='net'?'net':'mode';   /* where "back" leads: the lobby this visit was opened for */
+const pcupTitle=()=>PCUP&&PCUP.only==='train'?'אימון פנדלים':PCUP&&PCUP.only==='net'?'פנדלים אונליין':'אלוף הפנדלים';
+/* training inside a career: the coach's own club as it is, copied into the throw-away state (it may be a club the lobby does not list) */
+function pcupTrainSide(){const P=PCUP,src=P.keep.G,mc=src&&src.clubs&&src.clubs.find(c=>c.id===src.me);if(!mc||!mc.players||mc.players.filter(p=>!p.inj&&!p.susp).length<11)return false;
+  let c;try{c=JSON.parse(JSON.stringify(mc))}catch(e){return false}c.id='pcme';(G.pseudo=G.pseudo||{})[c.id]=c;(P.clubs=P.clubs||{}).me=c;
+  P.my={key:'me',name:c.name,short:c.short||c.name,c1:c.c1,c2:c.c2,str:Math.round(strength(c))};return true}
+function pcupOpen(o){o=o||{};if(PCUP)return;if(typeof BLITZ!=='undefined'&&BLITZ)return toast('סיים קודם את טורניר הבזק');if(G&&((G.live&&!G.live.settled)||(G.beginner&&G.beginner.live)))return toast('סיים קודם את המשחק הפעיל');if(G&&G.mp&&typeof mpIsOn==='function'&&mpIsOn())return toast('אלוף הפנדלים לא זמין בזמן משחק רשת');
   const keep={G,uid,sandbox:SANDBOX};const go=()=>{SANDBOX=true;try{newGame(Object.keys(META)[0],'')}catch(e){G=keep.G;uid=keep.uid;SANDBOX=keep.sandbox;console.warn('pcup',e);return toast('לא הצלחנו לפתוח את אלוף הפנדלים')}
     const src=keep.G||{};Object.assign(G,{pcup:true,phase:'play',sound:src.sound,vol:src.vol,motion:src.motion,haptic:src.haptic,pen3d:src.pen3d,penGame:true,paperPopOff:true,paperPop:[]});
-    PCUP={keep,stage:'team',my:null,net:null};const root=document.createElement('div');root.id='pcup';root.className='pcup';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','אלוף הפנדלים');document.body.appendChild(root);
-    root.addEventListener('click',pcupClick);root.addEventListener('keydown',e=>{if(e.key==='Escape'&&!PG)pcupClose()});try{hideSplash()}catch(e){}const code=pcupLinkCode();if(code){PCUP.join=code}pcupPaint()};
+    PCUP={keep,stage:'team',my:null,net:null,only:o.only==='net'||o.only==='train'?o.only:null,back:!!o.back};const root=document.createElement('div');root.id='pcup';root.className='pcup';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','אלוף הפנדלים');document.body.appendChild(root);
+    root.addEventListener('click',pcupClick);root.addEventListener('keydown',e=>{if(e.key==='Escape'&&!PG)pcupClose()});try{hideSplash()}catch(e){}const code=pcupLinkCode();if(code){PCUP.join=code;try{const u=new URL(location.href);u.searchParams.delete('pen');history.replaceState(null,'',u.href)}catch(e){}}   /* an invitation is used once: the next visit to the lobby is not sent into the same room */
+    if(PCUP.only==='train'){if(pcupTrainSide()){PCUP.stage='train';pcupPaint();return pcupCpu('?')}PCUP.only=null}   /* no club to train with: the lobby */
+    pcupPaint()};
   if(keep.G&&!keep.G.beginner&&typeof save==='function'&&!SANDBOX)return Promise.resolve(save()).then(go,go);go()}
 function pcupClose(){if(!PCUP)return;const P=PCUP;try{penClose()}catch(e){}pcupNetStop();const r=document.getElementById('pcup');if(r)r.remove();G=P.keep.G;uid=P.keep.uid;SANDBOX=P.keep.sandbox;PCUP=null;
-  try{render()}catch(e){document.querySelectorAll('.pc-entry').forEach(el=>{el.outerHTML=pcupEntryHTML()})}}
+  try{render()}catch(e){document.querySelectorAll('.pc-entry').forEach(el=>{el.outerHTML=pcupEntryHTML()})}
+  if(P.back){try{showSplash()}catch(e){}}}   /* opened from the entry page: that is where closing leads */
 /* the penalty overlay has no way out in a career; here every picture gets one */
-function pcupExitBtn(onExit){const top=PG&&PG.root.querySelector('.pg-top');if(!top)return;const b=document.createElement('button');b.type='button';b.className='pc-quit';b.textContent='יציאה';top.classList.add('has-quit');   /* the header makes room for it instead of printing the title under it */b.onclick=()=>{onExit&&onExit();penClose();if(PCUP){PCUP.stage='mode';pcupPaint()}};top.appendChild(b)}
+function pcupExitBtn(onExit){const top=PG&&PG.root.querySelector('.pg-top');if(!top)return;const b=document.createElement('button');b.type='button';b.className='pc-quit';b.textContent='יציאה';top.classList.add('has-quit');   /* the header makes room for it instead of printing the title under it */b.onclick=()=>{onExit&&onExit();penClose();if(PCUP){PCUP.stage=pcupBase();pcupPaint()}};top.appendChild(b)}
 /* ---- screens ---- */
 function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)return;const P=PCUP,r=pcupRec(),T=pcupTeams();const grid=attr=>`<div class="pc-grid">${T.map(t=>`<button type="button" class="pc-team" ${attr}="${esc(t.key)}">${kitSVG(t,'lg')}<strong>${esc(t.name)}</strong></button>`).join('')}</div>`;
   let body='';
   if(P.stage==='team')body=`<h2>${P.roomTeam?'קבוצה אחרת':'בחר קבוצה'}</h2>${P.roomTeam?'<p class="pc-note">החדר נשאר פתוח. אחרי הבחירה אפשר לצאת למשחק חוזר.</p>':''}${P.join?`<p class="pc-note">הוזמנת לדו־קרב <bdi dir="ltr">${esc(P.join)}</bdi>. בחר קבוצה ונכנסים.</p>`:''}${grid('data-pc-team')}`;
   else if(P.stage==='mode')body=`<div class="pc-mine">${kitSVG(P.my,'lg')}<div><strong>${esc(P.my.name)}</strong><button type="button" class="pc-link" data-pc-go="team">החלף קבוצה</button></div></div>
     <button type="button" class="pc-mode" data-pc-mode="cpu"><b>אימון מול המחשב</b><small>בוחרים יריבה ויוצאים לדו־קרב של חמש בעיטות לכל צד. אתה בועט, ואתה גם בשער.</small></button>
-    <button type="button" class="pc-mode" data-pc-mode="seat"><b>שניים על טלפון אחד</b><small>יושבים זה מול זה והטלפון באמצע. לחיצה אחת מתחילה ספירה של 3 שניות, וכל אחד מחליק אצבע בצד שלו: אחד בועט, השני בשער.</small></button>
-    <button type="button" class="pc-mode" data-pc-mode="net"><b>אונליין מול חבר</b><small>פותחים חדר, שולחים קוד, וכל אחד משחק מהטלפון שלו.</small></button>
-    <p class="pc-note">משחק דרך בלוטות׳ או חיפוש טלפון באותה רשת לא אפשריים בדפדפן. באותו חדר משחקים על טלפון אחד, ובכל מקום אחר עם קוד.</p>`;
+    <button type="button" class="pc-mode" data-pc-mode="net"><b>אונליין מול חבר</b><small>פותחים חדר, שולחים קוד, וכל אחד משחק מהטלפון שלו.</small></button>`;
+  else if(P.stage==='train')body=`<div class="pc-mine">${kitSVG(P.my,'lg')}<div><strong>${esc(P.my.name)}</strong><small>אימון מול המחשב</small></div></div>${P.last?`<p class="pc-note pc-last" role="status">${P.last.won?'ניצחת בדו־קרב.':'הפסדת בדו־קרב.'} אפשר לצאת לעוד אחד.</p>`:''}
+    <button type="button" class="pc-mode" data-pc-cpuopp="?"><b>${P.last?'עוד סיבוב':'מתחילים'}</b><small>חמש בעיטות לכל צד מול יריבה ברמה שלך. אתה בועט, ואתה גם בשער.</small></button><button type="button" class="pc-link" data-pc-x>חזרה למשחק</button>`;
   else if(P.stage==='cpu')body=`<h2>מול מי?</h2><button type="button" class="pc-mode" data-pc-cpuopp="?"><b>יריבה בהגרלה</b><small>קבוצה ברמה דומה לשלך.</small></button>${grid('data-pc-cpuopp')}<button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`;
-  else if(P.stage==='seat')body=`<h2>מי היריבה?</h2><p class="pc-note">${esc(P.my.name)} משחקת בצד התחתון של הטלפון. בחר את הקבוצה של מי שיושב מולך.</p>${grid('data-pc-opp')}<button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`;
   else if(P.stage==='net'&&P.net&&P.net.state==='over'){const n=P.net,o=n.over||{};
     body=`<h2>${o.won?'ניצחת':'הפסדת'}</h2><div class="pc-mine">${kitSVG(P.my,'lg')}<div><strong>${esc(P.my.name)}</strong><button type="button" class="pc-link" data-pc-newteam>החלף קבוצה</button></div></div>
     ${o.gone?`<p class="pc-note">היריב יצא מהחדר.</p><button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`
@@ -67,41 +76,41 @@ function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)
     ${n.code&&n.host?`<p class="pc-note">שלח לחבר את הקוד. המשחק מתחיל כשהוא נכנס.</p><div class="pc-code" dir="ltr">${esc(n.code)}</div><button type="button" class="btn" data-pc-share>שתף קישור</button><p class="pc-wait" role="status">${n.state==='open'?'ממתין לחבר…':'מתחבר…'}</p>`
      :n.code?`<p class="pc-wait" role="status">מתחבר לחדר <bdi dir="ltr">${esc(n.code)}</bdi>…</p>`
      :`<button type="button" class="pc-mode" data-pc-net="host"><b>פתח חדר</b><small>תקבל קוד לשלוח לחבר.</small></button><form class="pc-join" data-pc-joinform><label for="pcCode">יש לך קוד?</label><div><input id="pcCode" inputmode="latin" autocapitalize="characters" autocomplete="off" maxlength="6" dir="ltr" placeholder="ABC123" value="${esc(P.join||'')}"><button type="submit" class="btn">הצטרף</button></div></form>`}
-    <button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`}
-  root.innerHTML=`<header class="pc-top"><button type="button" class="pc-x" data-pc-x aria-label="סגור">×</button><h1>אלוף הפנדלים</h1><p>${r.played?`<bdi>${r.wins}</bdi> ניצחונות מ־<bdi>${r.played}</bdi> · רצף <bdi>${r.streak}</bdi> · שיא <bdi>${r.best}</bdi>`:'רק אתה, הכדור והשוער.'}</p></header><div class="pc-body">${body}</div>`}
-function pcupClick(e){const P=PCUP;if(!P)return;const t=e.target.closest('button,[data-pc-team],[data-pc-opp],[data-pc-cpuopp]');if(!t)return;
-  if(t.dataset.pcX!=null)return pcupClose();if(t.dataset.pcGo){pcupNetStop();P.roomTeam=false;P.stage=t.dataset.pcGo;return pcupPaint()}
+    ${P.only==='net'?(n.code?'<button type="button" class="pc-link" data-pc-go="mode">ביטול</button>':'<button type="button" class="pc-link" data-pc-go="team">החלף קבוצה</button>'):'<button type="button" class="pc-link" data-pc-go="mode">חזרה</button>'}`}
+  root.innerHTML=`<header class="pc-top"><button type="button" class="pc-x" data-pc-x aria-label="סגור">×</button><h1>${pcupTitle()}</h1><p>${r.played?`<bdi>${r.wins}</bdi> ניצחונות מ־<bdi>${r.played}</bdi> · רצף <bdi>${r.streak}</bdi> · שיא <bdi>${r.best}</bdi>`:'רק אתה, הכדור והשוער.'}</p></header><div class="pc-body">${body}</div>`}
+function pcupClick(e){const P=PCUP;if(!P)return;const t=e.target.closest('button,[data-pc-team],[data-pc-cpuopp]');if(!t)return;
+  if(t.dataset.pcX!=null)return pcupClose();if(t.dataset.pcGo){pcupNetStop();P.roomTeam=false;P.stage=t.dataset.pcGo==='mode'?pcupBase():t.dataset.pcGo;return pcupPaint()}
   if(t.dataset.pcAgain!=null){const n=P.net;if(n&&n.ask)n.ask();return}
   if(t.dataset.pcNewteam!=null){P.roomTeam=true;P.stage='team';return pcupPaint()}
-  if(t.dataset.pcTeam){P.my=pcupTeams().find(x=>x.key===t.dataset.pcTeam);if(P.roomTeam){P.roomTeam=false;P.stage='net';const n=P.net;if(n){n.wantAgain=false;n.theirAgain=false}return pcupPaint()}if(P.join){P.stage='net';pcupPaint();return pcupNetStart(false,P.join)}P.stage='mode';return pcupPaint()}
-  if(t.dataset.pcMode==='cpu'){P.stage='cpu';return pcupPaint()}if(t.dataset.pcCpuopp)return pcupCpu(t.dataset.pcCpuopp);if(t.dataset.pcMode==='seat'){P.stage='seat';return pcupPaint()}if(t.dataset.pcMode==='net'){P.stage='net';P.net=null;return pcupPaint()}
-  if(t.dataset.pcOpp)return pcupSeat(t.dataset.pcOpp);if(t.dataset.pcNet==='host')return pcupNetStart(true,pcupNewCode());
-  if(t.dataset.pcShare!=null){const u=new URL(location.href);u.search='';u.searchParams.set('pen',P.net.code);const url=u.href;if(navigator.share)navigator.share({title:'אלוף הפנדלים',text:'דו־קרב פנדלים: '+P.net.code,url}).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(url).then(()=>toast('הקישור הועתק'),()=>{});return}}
-document.addEventListener('click',e=>{if(e.target.closest&&e.target.closest('[data-pcup-open]')){e.preventDefault();pcupOpen()}});
+  if(t.dataset.pcTeam){P.my=pcupTeams().find(x=>x.key===t.dataset.pcTeam);if(P.roomTeam){P.roomTeam=false;P.stage='net';const n=P.net;if(n){n.wantAgain=false;n.theirAgain=false}return pcupPaint()}if(P.join){P.stage='net';pcupPaint();return pcupNetStart(false,P.join)}P.stage=pcupBase();return pcupPaint()}
+  if(t.dataset.pcMode==='cpu'){P.stage='cpu';return pcupPaint()}if(t.dataset.pcCpuopp)return pcupCpu(t.dataset.pcCpuopp);if(t.dataset.pcMode==='net'){P.stage='net';P.net=null;return pcupPaint()}
+  if(t.dataset.pcNet==='host')return pcupNetStart(true,pcupNewCode());
+  if(t.dataset.pcShare!=null){const u=new URL(location.href);u.search='';u.searchParams.set('pen',P.net.code);const url=u.href;if(navigator.share)navigator.share({title:'דו־קרב פנדלים',text:'דו־קרב פנדלים: '+P.net.code,url}).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(url).then(()=>toast('הקישור הועתק'),()=>{});return}}
+document.addEventListener('click',e=>{const t=e.target.closest&&e.target.closest('[data-pcup-open],[data-pcup-train],[data-pcup-net]');if(!t)return;e.preventDefault();pcupOpen(t.hasAttribute('data-pcup-train')?{only:'train'}:t.hasAttribute('data-pcup-net')?{only:'net'}:null)});
 document.addEventListener('submit',e=>{if(PCUP&&e.target.matches&&e.target.matches('[data-pc-joinform]')){e.preventDefault();const v=(e.target.querySelector('input').value||'').toUpperCase().replace(/[^A-Z0-9]/g,'');if(v.length<4)return toast('הקוד קצר מדי');pcupNetStart(false,v)}});
-function pcupResult(won,stay){const r=pcupRec();r.played++;if(won){r.wins++;r.streak++;r.best=Math.max(r.best,r.streak)}else r.streak=0;pcupSave(r);if(PCUP&&!stay){PCUP.stage='mode';pcupPaint()}}
+function pcupResult(won,stay){const r=pcupRec();r.played++;if(won){r.wins++;r.streak++;r.best=Math.max(r.best,r.streak)}else r.streak=0;pcupSave(r);if(PCUP&&!stay){PCUP.last={won:!!won};PCUP.stage=pcupBase();pcupPaint()}}
 /* ---- against the computer: the shoot-out of the full game ---- */
-function pcupCpu(opp){const P=PCUP,a=pcupClub(P.my.key);const pool=pcupTeams().filter(t=>t.key!==P.my.key);const near=pool.filter(t=>Math.abs(t.str-P.my.str)<=5);const b=opp&&opp!=='?'?pcupClub(opp,opp===P.my.key):pcupClub(pick(near.length?near:pool).key);if(!a||!b)return toast('לא הצלחנו לבנות את הקבוצות');
+function pcupCpu(opp){const P=PCUP,a=pcupClub(P.my.key);const pool=pcupTeams().filter(t=>t.key!==P.my.key&&t.name!==P.my.name),gap=t=>Math.abs(t.str-P.my.str);const near=pool.filter(t=>gap(t)<=5);const b=opp&&opp!=='?'?pcupClub(opp,opp===P.my.key):pcupClub(pick(near.length?near:pool.slice().sort((x,y)=>gap(x)-gap(y)).slice(0,5)).key);if(!a||!b)return toast('לא הצלחנו לבנות את הקבוצות');
   const M=pcupMatch(a,b);penShootout(M,a,b,res=>{pcupResult(res.win==='h')});pcupExitBtn()}
 /* ---- a duel between two people ----
    D: {A,B: pcupSide + owner label, first:'a'|'b', choose(k,side,ctx) → Promise<{kd,gd,seed}>, mine: 'a'|'b'|null (which side this phone plays), end(win)} */
-function pcupDuel(D){const A=D.A,B=D.B;const root=penOverlay({title:'אלוף הפנדלים',meta:`<bdi>${esc(A.c.short||A.c.name)}</bdi> נגד <bdi>${esc(B.c.short||B.c.name)}</bdi>`});if(D.face)root.classList.add('pc-face');const pg=PG;const S={a:[],b:[]};let side=D.first,k=0,over=false;PCUP.duel={S,stop:()=>{over=true}};
+function pcupDuel(D){const A=D.A,B=D.B;const root=penOverlay({title:pcupTitle(),meta:`<bdi>${esc(A.c.short||A.c.name)}</bdi> נגד <bdi>${esc(B.c.short||B.c.name)}</bdi>`});const pg=PG;const S={a:[],b:[]};let side=D.first,k=0,over=false;PCUP.duel={S,stop:()=>{over=true}};
   const sum=x=>x.reduce((t,v)=>t+v,0);const dots=key=>{const n=Math.max(5,S[key].length+(S.a.length+S.b.length>=10&&S.a.length===S.b.length?1:0));let o='';for(let i=0;i<n;i++)o+=`<i class="${S[key][i]==null?'':S[key][i]?'in':'no'}"></i>`;return o};
   const paint=()=>{const el=root.querySelector('#pgSo');if(el)el.innerHTML=`<div class="pg-so-row${side==='a'?' on':''}"><b>${esc(A.c.short||A.c.name)}</b><span>${dots('a')}</span><strong>${sum(S.a)}</strong></div><div class="pg-so-row${side==='b'?' on':''}"><b>${esc(B.c.short||B.c.name)}</b><span>${dots('b')}</span><strong>${sum(S.b)}</strong></div>`};
   const alive=()=>!over&&PG===pg&&!!PCUP;
   const finish=(win,why)=>{if(!alive())return;over=true;const won=D.mine?win===D.mine:null;const W=win==='a'?A:B;
-    penPanel(`<div class="pg-end ${why?'':won===false?'bad':'good'}"><small>אלוף הפנדלים</small><h2${why?' style="font-size:34px;line-height:1.1"':''}>${why?esc(why):won==null?esc(W.c.short||W.c.name)+' ניצחה':won?'ניצחת!':'הפסדת'}</h2><div class="pg-endsc"><bdi>${esc(A.c.short||A.c.name)}</bdi> ${scoreSides(sum(S.a),sum(S.b))} <bdi>${esc(B.c.short||B.c.name)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
-    root.querySelector('#pgBot').innerHTML='';root.querySelector('#pgStage').classList.remove('pc-flip');side=null;paint();if(won!==false&&!why){try{SFX.win()}catch(e){}confetti(2200);buzz('win')}
+    penPanel(`<div class="pg-end ${why?'':won===false?'bad':'good'}"><small>${pcupTitle()}</small><h2${why?' style="font-size:34px;line-height:1.1"':''}>${why?esc(why):won==null?esc(W.c.short||W.c.name)+' ניצחה':won?'ניצחת!':'הפסדת'}</h2><div class="pg-endsc"><bdi>${esc(A.c.short||A.c.name)}</bdi> ${scoreSides(sum(S.a),sum(S.b))} <bdi>${esc(B.c.short||B.c.name)}</bdi></div><button type="button" class="btn big" id="pgDone">המשך</button></div>`);
+    root.querySelector('#pgBot').innerHTML='';side=null;paint();if(won!==false&&!why){try{SFX.win()}catch(e){}confetti(2200);buzz('win')}
     root.querySelector('#pgDone').onclick=()=>{penClose();D.end(win,won,!!why)}};
   D.abort=why=>finish(sum(S.a)>=sum(S.b)?'a':'b',why);
   const next=()=>{if(!alive())return;const w=penShootoutDone(S.a,S.b);if(w)return finish(w==='h'?'a':'b');paint();const T=side==='a'?A:B,O=side==='a'?B:A,i=S[side].length%Math.max(1,T.ord.length),tk=T.ord[i];
-    const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');if(D.face)host.classList.toggle('pc-flip',side==='b');   /* two on one phone: the pitch turns to the kicker, see pcupAskBoth */
+    const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');
     host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
     bot.innerHTML=`<div class="pg-who">${penFaceHTML(tk,T.c,'pc'+tk.id)}<div><b>${esc(fullName(tk))}</b><small>בועט עבור ${esc(T.c.short||T.c.name)} · בשער ${esc(O.gk?fullName(O.gk):'השוער')}</small></div></div><div class="pg-hint" id="pgHint"></div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
     const kickNo=k++;penMakeStage(view,'kick',{...penKits(T.c,O.c,A.c.id),number:tk.no||9}).then(st=>{if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
       PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();
       D.choose(kickNo,side,{host,st,root,taker:tk,T,O,alive}).then(c=>{if(!alive()||!c)return;host.querySelectorAll('.pc-turn').forEach(x=>x.remove());const r=pcupResolve(c.kd,c.gd,T.sk[i]==null?70:T.sk[i],O.gkS,pcupRng(c.seed));try{SFX.whistle()}catch(e){}buzz('kick');
-        st.shoot({x:r.x,y:r.y,how:r.how,dive:c.gd||'C'},penOnce(()=>{if(!alive())return;const mode=D.mine?(D.mine===side?'kick':'keep'):'kick';const fl=penFlash(host,mode,r.how);S[side].push(r.out==='goal'?1:0);side=side==='a'?'b':'a';paint();setTimeout(()=>{fl.remove();host.querySelectorAll('.pc-chose').forEach(x=>x.remove());next()},penQuick()?0:1300)},penQuick()?0:3400))})})};
+        st.shoot({x:r.x,y:r.y,how:r.how,dive:c.gd||'C'},penOnce(()=>{if(!alive())return;const mode=D.mine?(D.mine===side?'kick':'keep'):'kick';const fl=penFlash(host,mode,r.how);S[side].push(r.out==='goal'?1:0);side=side==='a'?'b':'a';paint();setTimeout(()=>{fl.remove();next()},penQuick()?0:1300)},penQuick()?0:3400))})})};
   pcupExitBtn(()=>{over=true;D.quit&&D.quit()});penPreload();paint();next();return D}
 /* eight arrows over the stage; resolves with the direction tapped, or with fallback() when the time is up */
 function pcupAsk(ctx,o){return new Promise(res=>{const {host,st,root}=ctx;const hint=root.querySelector('#pgHint'),tEl=root.querySelector('#pgTime');if(hint)hint.textContent=o.label;const turn=document.createElement('div');turn.className='pc-turn';turn.setAttribute('role','status');turn.textContent=o.label;host.appendChild(turn);let done=false,raf=0;const ck=penClock(performance.now());
@@ -111,41 +120,6 @@ function pcupAsk(ctx,o){return new Promise(res=>{const {host,st,root}=ctx;const 
   pad.addEventListener('click',e=>{const b=e.target.closest('[data-dir]');if(b){buzz('tap');fin(b.dataset.dir)}});
   (function loop(){if(done)return;if(!ctx.alive()){done=true;pad.remove();aim.remove();turn.remove();return res(null)}const left=1-ck.tick(performance.now())/(o.ms||12000);if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;aim.place();for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}if(left<=0)return fin(o.fallback());raf=requestAnimationFrame(loop)})()})}
 const pcupAnyDir=()=>pick(Object.keys(PEN_DIRS));
-/* one phone, both at once, the players facing each other with the phone between them. The picture takes the whole screen
-   (root.pc-face: no title, no bottom bar). Each player has a strip over his own edge of the picture (the first club at the
-   bottom, the second at the top and turned to face its player) and the roles swap with every kick. Nothing runs until one
-   of them presses the button in the middle; that starts a count of three seconds, then the kick. The pitch, not the
-   phone, turns round: the kicker always has the taker's back at his own edge and the keeper has the goal at his, so
-   when the far player kicks the picture is turned by half a circle (#pgStage.pc-flip). A player chooses by
-   sliding a finger across his strip towards the place in the picture he means: the direction is where the finger went on
-   the screen, read in the picture as it lies at that moment (pcupSwipeDir, turned back when the pitch is turned). He may choose before the count and change his mind
-   until the whistle; the strip shows only that a choice was made. At the whistle each choice is shown by a small arrow at
-   its own edge, so both can see that the keeper went where he was sent. No slide: the kicker's ball goes anywhere, the
-   keeper stays in the middle. */
-const PCUP_COUNT=3000,PCUP_SWIPE=22;
-function pcupSwipeDir(dx,dy,min){if(Math.hypot(dx,dy)<(min==null?PCUP_SWIPE:min))return null;const a=(Math.atan2(-dy,dx)*180/Math.PI+360)%360;return ['R','UR','U','UL','L','DL','D','DR'][Math.round(a/45)%8]}
-function pcupAskBoth(ctx,side,D){return new Promise(res=>{const {root,host}=ctx;
-  const ARW={U:0,UR:45,R:90,DR:135,D:180,DL:225,L:270,UL:315};
-  const zone=key=>{const S=key==='a'?D.A:D.B,kick=key===side,nm=S.c.short||S.c.name,z=document.createElement('div');z.dataset.zone=key;host.appendChild(z);
-    z.className='pc-zone '+(key==='a'?'near':'far')+(kick?' kick':' keep');z.dataset.role=kick?'kick':'keep';z.innerHTML=`<div class="pc-zone-in"><b>${esc(nm)}</b><span>${kick?'בועט':'שוער'}</span><small>${kick?'החלק אצבע לכיוון הבעיטה':'החלק אצבע לכיוון הזינוק'}</small></div>`;return z};
-  const za=zone('a'),zb=zone('b');PCUP.asking=true;
-  const go=document.createElement('button');go.type='button';go.className='pc-go';go.innerHTML='<b>מתחילים</b><small>לחיצה אחת, ואז 3 שניות עד הבעיטה</small>';host.appendChild(go);
-  const turn=document.createElement('div');turn.className='pc-turn pc-count';turn.setAttribute('aria-hidden','true');turn.hidden=true;host.appendChild(turn);
-  const pick={a:null,b:null},touch={};let done=false,raf=0,shown=0,ck=null;const id=e=>e.pointerId==null?'m':e.pointerId;
-  const flip=host.classList.contains('pc-flip'),sg=flip?-1:1;
-  const slide=(t,e)=>{const d=pcupSwipeDir(sg*(e.clientX-t.x),sg*(e.clientY-t.y));if(!d)return;const k=t.z.dataset.zone;if(!pick[k])buzz('tap');pick[k]=d;t.z.classList.add('set')};
-  const down=e=>{const z=e.target.closest&&e.target.closest('.pc-zone');if(!z||done)return;touch[id(e)]={z,x:e.clientX,y:e.clientY};try{z.setPointerCapture&&e.pointerId!=null&&z.setPointerCapture(e.pointerId)}catch(_){ }e.preventDefault()};
-  const move=e=>{const t=touch[id(e)];if(t&&!done)slide(t,e)},up=e=>{const t=touch[id(e)];if(!t)return;delete touch[id(e)];if(!done)slide(t,e)};
-  const evs=[['pointerdown',down],['pointermove',move],['pointerup',up],['pointercancel',e=>{delete touch[id(e)]}]];for(const [n,f] of evs)root.addEventListener(n,f);
-  const chip=(key,d,kick)=>{const c=document.createElement('div');c.className='pc-chose '+(key==='a'?'near':'far');c.innerHTML=`<span>${kick?'בעיטה':'זינוק'}</span>${d?`<svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]+(flip?180:0)}deg)"><path d="M12 4l7 8h-4.4v8h-5.2v-8H5z"/></svg>`:'<i aria-hidden="true"></i>'}`;c.dataset.dir=d||'';host.appendChild(c)};
-  const fin=()=>{if(done)return;done=true;cancelAnimationFrame(raf);for(const [n,f] of evs)root.removeEventListener(n,f);PCUP.asking=false;za.remove();zb.remove();turn.remove();go.remove();
-    if(!ctx.alive())return res(null);const other=side==='a'?'b':'a',kd=pick[side]||pcupAnyDir(),gd=pick[other];chip(side,kd,true);chip(other,gd,false);res({kd,gd,seed:(Math.random()*4294967296)>>>0})};
-  const start=()=>{if(ck||done)return;ck=penClock(performance.now());go.remove();turn.hidden=false;buzz('tap');loop()};go.addEventListener('click',start);
-  function loop(){if(done)return;if(!ctx.alive())return fin();const left=PCUP_COUNT-ck.tick(performance.now());const n=Math.max(1,Math.ceil(left/1000));if(n!==shown){shown=n;turn.textContent=String(n)}if(left<=0)return fin();raf=requestAnimationFrame(loop)}
-  PCUP.go=start;PCUP.whistle=fin;PCUP.pads=()=>Object.assign({},pick);
-  (function watch(){if(done)return;if(!ctx.alive())return fin();if(!ck)setTimeout(watch,400)})()})}
-function pcupSeat(oppKey){const P=PCUP,a=pcupClub(P.my.key),b=pcupClub(oppKey,oppKey===P.my.key);if(!a||!b)return toast('לא הצלחנו לבנות את הקבוצות');G.me=a.id;const A=pcupSide(a),B=pcupSide(b);
-  const D=pcupDuel({A,B,face:true,first:Math.random()<.5?'a':'b',mine:null,end:()=>{const r=pcupRec();r.duels++;pcupSave(r);if(PCUP){PCUP.stage='mode';pcupPaint()}},choose:(k,side,ctx)=>pcupAskBoth(ctx,side,D)})}
 /* ---- two phones ----
    Messages (all carry v:1): guest → hi{team}; host → start{a,b,first} (keys and the skills both phones must use);
    every kick: c{k,h} (commit), then r{k,d,n} (reveal) once the other side's commit is in. Unanswered messages are sent again. */
@@ -184,7 +158,7 @@ function pcupNetStart(host,code){const P=PCUP;pcupNetStop();const n=P.net={host,
     n.send(n.start);begin(A,B,n.start.first,'a')};
   n.ask=()=>{if(!n||n.duel)return;n.wantAgain=true;n.send({t:'again',team:P.my.key});pcupPaint();if(host)again()};
   const begin=(A,B,first,mine)=>{n.state='play';n.duel=pcupDuel({A,B,first,mine,quit:()=>pcupNetStop(),end:(win,won,aborted)=>{
-      if(aborted||won==null){pcupNetStop();if(PCUP){PCUP.stage='mode';pcupPaint()}return}
+      if(aborted||won==null){pcupNetStop();if(PCUP){PCUP.stage=pcupBase();pcupPaint()}return}
       pcupResult(won,true);over(won)},
     choose:async(k,side,ctx)=>{const km=side===mine;const d=await pcupAsk(ctx,{label:km?'אתה בועט: משוך לכיוון השער':'אתה בשער: משוך לכיוון הזינוק',after:'ממתין ליריב…',fallback:km?pcupAnyDir:()=>'D'});if(d==null||!ctx.alive()||P.net!==n)return null;
       const K=kickOf(k);K.mine={d,n:pcupHash(String(Math.random())+Date.now()+k)};K.kickerMine=km;n.send({t:'c',k,h:pcupHash(d+':'+K.mine.n)});return new Promise(res=>{K.res=res;step(k)})}})};
@@ -196,9 +170,9 @@ function pcupNetStart(host,code){const P=PCUP;pcupNetStop();const n=P.net={host,
       /* say again whatever the other phone may have missed: the open kick, and the reveal of the kick before it */
       for(const k of ks.slice(0,2)){const K=n.kicks[k];if(!K.mine)continue;sent=true;if(K.res)n.send({t:'c',k,h:pcupHash(K.mine.d+':'+K.mine.n)});if(K.sentR)n.send({t:'r',k,d:K.mine.d,n:K.mine.n})}
       if(!sent)n.send({t:'p'})},1200);
-    if(!host)n.send({t:'hi',team:P.my.key})},e=>{console.warn('pcup net',e);fail(typeof mpAvailable==='function'&&!mpAvailable()&&!window.__pcupNet?'משחק אונליין לא מוגדר בגרסה הזו':navigator.onLine===false?'אין חיבור לאינטרנט. בדקו את החיבור ונסו שוב.':'שירות המשחק ברשת לא זמין כרגע. בינתיים אפשר לשחק שניים על טלפון אחד.')})}
+    if(!host)n.send({t:'hi',team:P.my.key})},e=>{console.warn('pcup net',e);fail(typeof mpAvailable==='function'&&!mpAvailable()&&!window.__pcupNet?'משחק אונליין לא מוגדר בגרסה הזו':navigator.onLine===false?'אין חיבור לאינטרנט. בדקו את החיבור ונסו שוב.':'שירות המשחק ברשת לא זמין כרגע. נסו שוב בעוד כמה דקות.')})}
 /* opened from a shared link (?pen=CODE): straight to the team choice of that duel */
 /* `?pen=CODE` joins a room; a bare `?pen` is the direct link to the lobby itself */
 function pcupLinkOpen(){try{return new URLSearchParams(location.search).has('pen')}catch(e){return false}}
-function pcupFromLink(){if(!pcupLinkOpen()||PCUP)return;const go=()=>setTimeout(()=>{try{pcupOpen()}catch(e){console.warn(e)}},400);const rd=window.ILM&&window.ILM.ready;   /* the full game loads its career first: the lobby must keep the real one */
+function pcupFromLink(){if(!pcupLinkOpen()||PCUP)return;const go=()=>setTimeout(()=>{try{pcupOpen(window.BEGINNER?{only:'net'}:null)}catch(e){console.warn(e)}},400);   /* the beginner page keeps the lobby for the net; training is inside a career */const rd=window.ILM&&window.ILM.ready;   /* the full game loads its career first: the lobby must keep the real one */
   if(rd&&rd.then)rd.then(go,go);else go()}

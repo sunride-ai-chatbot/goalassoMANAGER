@@ -108,14 +108,22 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
   await bp.evaluate(()=>document.querySelector('[data-blive="skip"]').click());await bp.waitForSelector('.bresult .bratings');await bp.waitForTimeout(300);await bp.screenshot({path:OUT+'beginner-ratings.png'});
   B.ratings=await bp.evaluate(()=>({teams:[...document.querySelectorAll('.bratings-cols h4')].map(h=>h.textContent),rows:[...document.querySelectorAll('.bratings-cols>div')].map(d=>d.querySelectorAll('li').length),star:document.querySelector('.bratings-star strong')?.textContent||null}));await bp.close();
  }catch(e){R.beginner.error=String(e&&e.message||e).slice(0,300)}
- // אלוף הפנדלים: the lobby, a shoot-out against the computer, and two phones in one room over the real Realtime channel
+ // penalties on the beginner page: practice inside a career (his own club, straight into a shoot-out against the computer), then
+ // the entry page's "משחק רשת → פנדלים" and two phones in one room over the real Realtime channel
  R.pcup={};try{const P=R.pcup;const mk=async url=>{const c=await b.newContext({...devices['iPhone 13'],locale:'he-IL'});const p=await c.newPage();p.on('pageerror',e=>errs.push('pcup: '+String(e).slice(0,200)));await p.addInitScript(()=>{window.__ilmNoSplash=1});await p.goto(url,{waitUntil:'load',timeout:90000});return p};
   const tap=(p,sel)=>p.evaluate(s=>document.querySelector(s).click(),sel);
-  const ub=new URL(BASE);ub.pathname=ub.pathname.replace(/[^/]*$/,'')+'beginner.html';const host=await mk(ub.href);await host.waitForSelector('[data-pcup-open]',{timeout:60000});await tap(host,'[data-pcup-open]');await host.waitForSelector('#pcup [data-pc-team]');
-  P.teams=await host.locator('[data-pc-team]').count();await tap(host,'[data-pc-team="i:mta"]');await host.waitForSelector('[data-pc-mode]');P.modes=await host.locator('[data-pc-mode]').count();await host.screenshot({path:OUT+'pcup-modes.png'});
-  await host.evaluate(()=>{G.pen3d=false});await tap(host,'[data-pc-mode="cpu"]');await host.waitForSelector('[data-pc-cpuopp]');P.rivals=await host.locator('[data-pc-cpuopp]').count();await tap(host,'[data-pc-cpuopp="?"]');await tap(host,'#pgGo');await host.waitForFunction(()=>PG&&PG.stage&&(PG.fire||PG.pick),null,{timeout:60000});
+  const ub=new URL(BASE);ub.pathname=ub.pathname.replace(/[^/]*$/,'')+'beginner.html';const host=await mk(ub.href);await host.waitForFunction(()=>typeof Bcreate==='function',null,{timeout:60000});
+  await host.evaluate(()=>{Bcreate('mta');Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}G.pen3d=false;Brender()});await host.waitForSelector('[data-pcup-train]',{timeout:60000});
+  P.home={train:true,network:await host.evaluate(()=>!!document.querySelector('#main [data-pcup-open],#main [data-lg-open],#main [data-room-open]'))};   /* network play is on the entry page only */
+  await tap(host,'[data-pcup-train]');await host.waitForSelector('#penGame #pgGo',{timeout:60000});P.train=await host.evaluate(()=>({club:PCUP.my.name,meta:document.querySelector('#penGame .pg-meta').textContent}));
+  await tap(host,'#pgGo');await host.waitForFunction(()=>PG&&PG.stage&&(PG.fire||PG.pick),null,{timeout:60000});
   P.cpu=await host.evaluate(()=>({view:PG.stage.kind,mode:PG.pick?'keep':'kick'}));await host.waitForTimeout(400);await host.screenshot({path:OUT+'pcup-cpu.png'});await tap(host,'.pc-quit');
-  await tap(host,'[data-pc-mode="net"]');await tap(host,'[data-pc-net="host"]');await host.waitForFunction(()=>PCUP.net&&(PCUP.net.state==='open'||PCUP.net.err),null,{timeout:40000});
+  P.train.again=await host.evaluate(()=>!!document.querySelector('#pcup [data-pc-cpuopp="?"]'));await tap(host,'#pcup [data-pc-x]');
+  await host.evaluate(()=>showSplash());await host.waitForSelector('#spNetwork');await tap(host,'#spNetwork');await host.waitForTimeout(300);await host.screenshot({path:OUT+'entry.png'});
+  P.entry=await host.evaluate(()=>[...document.querySelectorAll('#spUI button')].filter(b=>!b.closest('[hidden]')).map(b=>b.textContent.trim().slice(0,40)));
+  await tap(host,'#spPens');await host.waitForSelector('#pcup [data-pc-team]');P.teams=await host.locator('[data-pc-team]').count();await tap(host,'[data-pc-team="i:mta"]');await host.waitForSelector('[data-pc-net="host"]');
+  P.modes=await host.locator('[data-pc-mode]').count();await host.screenshot({path:OUT+'pcup-modes.png'});await host.evaluate(()=>{G.pen3d=false});
+  await tap(host,'[data-pc-net="host"]');await host.waitForFunction(()=>PCUP.net&&(PCUP.net.state==='open'||PCUP.net.err),null,{timeout:40000});
   const net=await host.evaluate(()=>({err:PCUP.net.err||null,code:PCUP.net.code||null}));
   if(net.err){P.online={error:net.err};   // say why: is the service configured, does the library load, does the server answer, what does a channel report
    P.online.probe=await host.evaluate(async()=>{const o={configured:mpAvailable()};try{o.lib=await mpLoadLib();o.health=await fetch(SUPABASE_CFG.url+'/auth/v1/health',{headers:{apikey:SUPABASE_CFG.key}}).then(r=>r.status,e=>'fetch: '+String(e&&e.message||e).slice(0,80));
@@ -136,7 +144,7 @@ const shotList=async n=>{await settle();await page.evaluate(()=>{const l=documen
  R.rooms={};try{const Q=R.rooms;const mk=async(url,club)=>{const c=await b.newContext({...devices['iPhone 13'],locale:'he-IL'});const p=await c.newPage();p.on('pageerror',e=>errs.push('rooms: '+String(e).slice(0,200)));await p.addInitScript(()=>{window.__ilmNoSplash=1;window.__ilmUnlock=1});await p.goto(url,{waitUntil:'load',timeout:90000});await p.waitForFunction(()=>typeof Bcreate==='function',{timeout:60000});if(club)await p.evaluate(c=>Bcreate(c),club);return p};
   const tap=(p,sel)=>p.evaluate(s=>document.querySelector(s).click(),sel);
   const ub=new URL(BASE);ub.pathname=ub.pathname.replace(/[^/]*$/,'')+'beginner.html';
-  const host=await mk(ub.href,'mta');await tap(host,'[data-room-open]');
+  const host=await mk(ub.href,'mta');await host.evaluate(()=>{void Rooms.open()});   /* the friendly has no card: an invitation link opens it, and Rooms.open() */
   await host.waitForFunction(()=>document.querySelector('#room-invite')||document.querySelector('#room-email'),{timeout:60000});
   Q.asked=await host.evaluate(()=>document.querySelector('#room-email')?'address':'nothing');
   Q.note=await host.evaluate(()=>document.getElementById('room-status')?.textContent||'');
