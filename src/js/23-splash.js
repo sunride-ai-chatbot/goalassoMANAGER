@@ -3,12 +3,13 @@ function latestSlot(){let best=null;for(let n=1;n<=SLOTS;n++){const m=slotMeta(n
 function emptySlot(){const c=curSlot();if(!slotMeta(c)&&!G)return c;for(let n=1;n<=SLOTS;n++)if(!slotMeta(n))return n;return 0}
 function splashMetaLine(m){if(!m)return '';const bits=[m.club,m.season,m.wk!=null?'שבוע '+(m.wk+1):''].filter(Boolean);return bits.map(esc).join(' · ')}
 /* The full game: regular / network. The beginner page is the entry page of everything: a career (a new coach writes his name
-   here, a returning one continues), the shared league this phone is already in ("המשך ליגת …", from League.saved()), and
-   "משחק רשת", which opens the two ways to play with friends — a penalty duel on two phones or a shared league. Network play
-   lives here and nowhere else: the league screen and the home screen of a career used to carry a card for each. */
+   here, a returning one continues) and "משחק רשת", which opens the two ways to play with friends — a penalty duel on two
+   phones or a shared league; when this phone is already in a league, that button says which ("המשך ליגת …", from
+   League.saved()). The league had a large button of its own on the page as well and the owner took it out: it is one press
+   away. Network play lives here and nowhere else: the league screen and the home screen of a career used to carry a card for each. */
 let SP_NET=false;
 function renderSplash(){const ui=$('spUI');if(!ui)return;const beg=!!window.BEGINNER,fresh=beg&&!(G&&G.beginner);let lg=null;try{lg=beg&&typeof League!=='undefined'&&League.saved?League.saved():null}catch(e){}
- ui.innerHTML=beg?`${fresh?`<label class="sp-name" for="spName"><span>שם המאמן</span><input id="spName" maxlength="24" autocomplete="name" enterkeyhint="go" placeholder="איך קוראים לך?"></label><div class="sp-err" id="spErr" role="alert"></div>`:''}<button type="button" class="sp-btn sp-new" id="spRegular">${fresh?'התחל קריירה':'המשך קריירה'}</button>${lg?`<button type="button" class="sp-btn sp-cont sp-lg" id="spLeague"><span>${lg.name?`המשך ליגת <bdi>${esc(lg.name)}</bdi>`:'המשך לליגה שלי'}</span></button>`:''}<button type="button" class="sp-btn sp-cont" id="spNetwork" aria-expanded="${SP_NET}" aria-controls="spNet">משחק רשת</button><div class="sp-net" id="spNet"${SP_NET?'':' hidden'}><button type="button" class="sp-sub" id="spPens"><b>פנדלים</b><small>דו־קרב מול חבר, כל אחד בטלפון שלו</small></button><button type="button" class="sp-sub" id="spLg"><b>ליגה משותפת</b><small><bdi>2</bdi> עד <bdi>8</bdi> חברים בליגה אחת</small></button></div><div class="sp-tag">${fresh?'הקבוצה שלך. הדרך שלך.':'הקריירה שלך מחכה לך'}</div><a class="sp-link" href="index.html">למשחק הפרו</a>`
+ ui.innerHTML=beg?`${fresh?`<label class="sp-name" for="spName"><span>שם המאמן</span><input id="spName" maxlength="24" autocomplete="name" enterkeyhint="go" placeholder="איך קוראים לך?"></label><div class="sp-err" id="spErr" role="alert"></div>`:''}<button type="button" class="sp-btn sp-new" id="spRegular">${fresh?'התחל קריירה':'המשך קריירה'}</button><button type="button" class="sp-btn sp-cont" id="spNetwork" aria-expanded="${SP_NET}" aria-controls="spNet">משחק רשת</button><div class="sp-net" id="spNet"${SP_NET?'':' hidden'}><button type="button" class="sp-sub" id="spPens"><b>פנדלים</b><small>דו־קרב מול חבר, כל אחד בטלפון שלו</small></button><button type="button" class="sp-sub${lg?' has':''}" id="spLg"><b>ליגה משותפת</b><small>${lg?(lg.name?`המשך ליגת <bdi>${esc(lg.name)}</bdi>`:'המשך לליגה שלי'):'<bdi>2</bdi> עד <bdi>8</bdi> חברים בליגה אחת'}</small></button></div><div class="sp-tag">${fresh?'הקבוצה שלך. הדרך שלך.':'הקריירה שלך מחכה לך'}</div><a class="sp-link" href="index.html">למשחק הפרו</a>`
   :`<button type="button" class="sp-btn sp-new" id="spRegular">משחק רגיל</button><button type="button" class="sp-btn sp-cont" id="spNetwork">משחק רשת</button><div class="sp-tag">${G?'הקריירה שלך מחכה לך':'הקבוצה שלך. הדרך שלך.'}</div>`;
 }
 const INTRO={mp4:'assets/launch.mp4',poster:'assets/launch-poster.jpg'};let INTRO_R=null;
@@ -23,7 +24,7 @@ let SP_HIDE=0;
 function showSplash(){const sp=$('splash');if(!sp)return;clearTimeout(SP_HIDE);sp.classList.remove('hide','out');document.body.style.overflow='hidden';renderSplash();playIntro(sp);
  sp.onclick=e=>{if(e.target.closest('#spNetwork')){if(window.BEGINNER){SP_NET=!SP_NET;const b=$('spNetwork'),n=$('spNet');if(b)b.setAttribute('aria-expanded',String(SP_NET));if(n){n.hidden=!SP_NET;if(SP_NET)$('spPens')?.focus({preventScroll:true})}return}hideSplash();void Rooms.open();return}
  if(e.target.closest('#spPens')){hideSplash();pcupOpen({only:'net',back:true});return}
- if(e.target.closest('#spLg,#spLeague')){hideSplash();void League.open({back:true});return}
+ if(e.target.closest('#spLg')){hideSplash();void League.open({back:true});return}
  if(e.target.closest('#spRegular')){if(window.BEGINNER){if(typeof BsplashGo==='function'&&!BsplashGo())return;hideSplash();return}if(G){hideSplash();return}if(cloud.ready&&cloud.meta){hideSplash();return cloudLoad()}splashNew()}};
  sp.onkeydown=e=>{if(e.key==='Enter'&&e.target.id==='spName'){e.preventDefault();$('spRegular')?.click()}};
  $('spRegular')?.focus({preventScroll:true});

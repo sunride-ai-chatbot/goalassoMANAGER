@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="a557503b7442">
-<meta name="goalasso-built" content="19.11.2026 10:44">
+<meta name="goalasso-build" content="065d737d50de">
+<meta name="goalasso-built" content="19.11.2026 10:48">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html. The daily challenge is part of the
    beginner page, so its link (/?daily) is sent on with its query; every other query stays here */
@@ -541,16 +541,14 @@ h3{font-size:18px}
 /* the entry page of the beginner game: a career, the league this phone is in, and network play, which opens its two ways */
 .splash .sp-ui{max-height:100dvh;overflow-y:auto;overscroll-behavior:contain}
 .splash .sp-cont{flex-direction:row;gap:8px;min-height:54px;font-size:clamp(19px,5.6vw,26px)}
-.splash .sp-lg{border-color:rgba(0,255,157,.6);color:#d9ffef}
-.splash .sp-lg{padding-inline:16px;font-size:clamp(18px,5.2vw,24px)}
-.splash .sp-lg span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-align:center;overflow-wrap:anywhere}   /* a long name takes a second line and is cut only after it */
 .splash #spNetwork::after{content:"";width:10px;height:10px;border:solid currentColor;border-width:0 2.5px 2.5px 0;transform:translateY(-3px) rotate(45deg);transition:transform .2s ease;flex:none}
 .splash #spNetwork[aria-expanded="true"]::after{transform:translateY(2px) rotate(-135deg)}
 .splash .sp-net{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .splash .sp-net[hidden]{display:none}
 .splash .sp-sub{display:grid;gap:4px;align-content:center;min-height:76px;padding:10px 8px;border-radius:14px;border:1.5px solid rgba(230,210,170,.5);background:rgba(20,22,28,.9);color:#f4ecdc;text-align:center;cursor:pointer;font:inherit;animation:spin .3s ease both}
 .splash .sp-sub b{font:400 clamp(20px,5.8vw,26px)/1.05 var(--display)}
-.splash .sp-sub small{font:500 12.5px/1.35 var(--body);color:#cbbf9f}
+.splash .sp-sub small{font:500 12.5px/1.35 var(--body);color:#cbbf9f;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+.splash .sp-sub.has{border-color:rgba(0,255,157,.6)}.splash .sp-sub.has small{color:#9dffd6;font-weight:700}   /* this phone is already in a league: the button says which */
 .splash .sp-sub:active{transform:scale(.98)}.splash .sp-sub:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @media (max-height:700px){.splash .sp-ui{gap:9px;padding-top:12px}.splash .sp-btn{min-height:50px}.splash .sp-tag{display:none}.splash .sp-sub{min-height:66px}}
 @media (prefers-reduced-motion:reduce){.splash .sp-sub{animation:none}.splash #spNetwork::after{transition:none}}
@@ -4773,12 +4771,13 @@ function latestSlot(){let best=null;for(let n=1;n<=SLOTS;n++){const m=slotMeta(n
 function emptySlot(){const c=curSlot();if(!slotMeta(c)&&!G)return c;for(let n=1;n<=SLOTS;n++)if(!slotMeta(n))return n;return 0}
 function splashMetaLine(m){if(!m)return '';const bits=[m.club,m.season,m.wk!=null?'שבוע '+(m.wk+1):''].filter(Boolean);return bits.map(esc).join(' · ')}
 /* The full game: regular / network. The beginner page is the entry page of everything: a career (a new coach writes his name
-   here, a returning one continues), the shared league this phone is already in ("המשך ליגת …", from League.saved()), and
-   "משחק רשת", which opens the two ways to play with friends — a penalty duel on two phones or a shared league. Network play
-   lives here and nowhere else: the league screen and the home screen of a career used to carry a card for each. */
+   here, a returning one continues) and "משחק רשת", which opens the two ways to play with friends — a penalty duel on two
+   phones or a shared league; when this phone is already in a league, that button says which ("המשך ליגת …", from
+   League.saved()). The league had a large button of its own on the page as well and the owner took it out: it is one press
+   away. Network play lives here and nowhere else: the league screen and the home screen of a career used to carry a card for each. */
 let SP_NET=false;
 function renderSplash(){const ui=$('spUI');if(!ui)return;const beg=!!window.BEGINNER,fresh=beg&&!(G&&G.beginner);let lg=null;try{lg=beg&&typeof League!=='undefined'&&League.saved?League.saved():null}catch(e){}
- ui.innerHTML=beg?`${fresh?`<label class="sp-name" for="spName"><span>שם המאמן</span><input id="spName" maxlength="24" autocomplete="name" enterkeyhint="go" placeholder="איך קוראים לך?"></label><div class="sp-err" id="spErr" role="alert"></div>`:''}<button type="button" class="sp-btn sp-new" id="spRegular">${fresh?'התחל קריירה':'המשך קריירה'}</button>${lg?`<button type="button" class="sp-btn sp-cont sp-lg" id="spLeague"><span>${lg.name?`המשך ליגת <bdi>${esc(lg.name)}</bdi>`:'המשך לליגה שלי'}</span></button>`:''}<button type="button" class="sp-btn sp-cont" id="spNetwork" aria-expanded="${SP_NET}" aria-controls="spNet">משחק רשת</button><div class="sp-net" id="spNet"${SP_NET?'':' hidden'}><button type="button" class="sp-sub" id="spPens"><b>פנדלים</b><small>דו־קרב מול חבר, כל אחד בטלפון שלו</small></button><button type="button" class="sp-sub" id="spLg"><b>ליגה משותפת</b><small><bdi>2</bdi> עד <bdi>8</bdi> חברים בליגה אחת</small></button></div><div class="sp-tag">${fresh?'הקבוצה שלך. הדרך שלך.':'הקריירה שלך מחכה לך'}</div><a class="sp-link" href="index.html">למשחק הפרו</a>`
+ ui.innerHTML=beg?`${fresh?`<label class="sp-name" for="spName"><span>שם המאמן</span><input id="spName" maxlength="24" autocomplete="name" enterkeyhint="go" placeholder="איך קוראים לך?"></label><div class="sp-err" id="spErr" role="alert"></div>`:''}<button type="button" class="sp-btn sp-new" id="spRegular">${fresh?'התחל קריירה':'המשך קריירה'}</button><button type="button" class="sp-btn sp-cont" id="spNetwork" aria-expanded="${SP_NET}" aria-controls="spNet">משחק רשת</button><div class="sp-net" id="spNet"${SP_NET?'':' hidden'}><button type="button" class="sp-sub" id="spPens"><b>פנדלים</b><small>דו־קרב מול חבר, כל אחד בטלפון שלו</small></button><button type="button" class="sp-sub${lg?' has':''}" id="spLg"><b>ליגה משותפת</b><small>${lg?(lg.name?`המשך ליגת <bdi>${esc(lg.name)}</bdi>`:'המשך לליגה שלי'):'<bdi>2</bdi> עד <bdi>8</bdi> חברים בליגה אחת'}</small></button></div><div class="sp-tag">${fresh?'הקבוצה שלך. הדרך שלך.':'הקריירה שלך מחכה לך'}</div><a class="sp-link" href="index.html">למשחק הפרו</a>`
   :`<button type="button" class="sp-btn sp-new" id="spRegular">משחק רגיל</button><button type="button" class="sp-btn sp-cont" id="spNetwork">משחק רשת</button><div class="sp-tag">${G?'הקריירה שלך מחכה לך':'הקבוצה שלך. הדרך שלך.'}</div>`;
 }
 const INTRO={mp4:'assets/launch.mp4',poster:'assets/launch-poster.jpg'};let INTRO_R=null;
@@ -4793,7 +4792,7 @@ let SP_HIDE=0;
 function showSplash(){const sp=$('splash');if(!sp)return;clearTimeout(SP_HIDE);sp.classList.remove('hide','out');document.body.style.overflow='hidden';renderSplash();playIntro(sp);
  sp.onclick=e=>{if(e.target.closest('#spNetwork')){if(window.BEGINNER){SP_NET=!SP_NET;const b=$('spNetwork'),n=$('spNet');if(b)b.setAttribute('aria-expanded',String(SP_NET));if(n){n.hidden=!SP_NET;if(SP_NET)$('spPens')?.focus({preventScroll:true})}return}hideSplash();void Rooms.open();return}
  if(e.target.closest('#spPens')){hideSplash();pcupOpen({only:'net',back:true});return}
- if(e.target.closest('#spLg,#spLeague')){hideSplash();void League.open({back:true});return}
+ if(e.target.closest('#spLg')){hideSplash();void League.open({back:true});return}
  if(e.target.closest('#spRegular')){if(window.BEGINNER){if(typeof BsplashGo==='function'&&!BsplashGo())return;hideSplash();return}if(G){hideSplash();return}if(cloud.ready&&cloud.meta){hideSplash();return cloudLoad()}splashNew()}};
  sp.onkeydown=e=>{if(e.key==='Enter'&&e.target.id==='spName'){e.preventDefault();$('spRegular')?.click()}};
  $('spRegular')?.focus({preventScroll:true});
