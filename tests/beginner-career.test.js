@@ -96,6 +96,9 @@ const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out
   const tbl=run('Bstandings().map(c=>c.id+":"+c.P+":"+c.pts)');const oldClub=run('G.me');$('.bcareer [data-bjob]').click();
   const mid=run('({key:me().bkey,season:Bstate().season,round:Bstate().round,offer:Bstate().offer,P:me().P,board:Bstate().board,since:Bstate().contract.since,table:Bstandings().map(c=>c.id+":"+c.P+":"+c.pts)})');
   assert.equal(mid.key,off.key);assert.equal(mid.round,half,'the season goes on');assert.equal(mid.offer,null);assert.ok(mid.P>=half-1,'he takes over the club with its matches played');assert.deepEqual(mid.table,tbl,'the table is the one being played');assert.notEqual(run('G.me'),oldClub);
+  // the club he joins in mid-season has a sponsor already: he is not sent to choose one, and its money goes on for the rounds that are left
+  {const sp=run('({s:me().sponsor,offers:Bstate().sponsorOffers.length,left:Bremaining(),budget:Bbudget(),money:me().money,commit:Bcommitment()})');assert.ok(sp.s&&sp.s.name&&sp.s.annual>=300000&&sp.s.was===1,'a name on the shirt');assert.equal(sp.offers,0);assert.ok(run('SPONSOR_CATALOG.some(x=>x.id===me().sponsor.brandId)'));
+   assert.equal(sp.budget,Math.round(sp.money+sp.s.annual*sp.left-sp.commit),'what it still owes this season counts');w.eval("Btab='finance';Brender()");assert.equal($('[data-sponsor-b]'),null,'nothing to choose');assert.match($('.bpartner').textContent,/נחתם לפני שהגעת/);w.eval("Btab='home';Brender()")}
   // an offer can be declined, and it lapses by itself
   w.eval("Bstate().offer=Object.assign(BjobOffers(0,200,1,true)[0],{until:Bstate().round+1});Brender()");$('[data-action="decline"]').click();assert.equal(run('Bstate().offer'),null);
   w.eval("Bstate().offer=Object.assign(BjobOffers(0,200,1,true)[0],{until:Bstate().round+1});Bstate().board=50");playTo(half+1,50);assert.equal(run('Bstate().offer'),null,'an unanswered offer lapses');
