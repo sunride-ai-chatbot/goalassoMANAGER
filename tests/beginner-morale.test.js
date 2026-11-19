@@ -61,7 +61,9 @@ try{
   w.eval("document.querySelector('.bdialog').remove();BstopBroadcast();Bdetail(me().players.find(p=>p.bOut>=3).id)");
   assert.match($('.bdialog .bclub-summary').textContent,/מורל (נמוך|טוב)/);assert.match($('.bdialog .bnote').textContent,/לא שיחק 4 משחקים ברצף/);assert.equal($('.bdialog .bnote').classList.contains('blearn'),false);
   // ---- a player who cannot be picked is shown with the reason: a goalkeeper was simply missing from the picker, on a page that called him 100% fit
-  quiet();w.eval("Bstate().live=null;BensureXI(me())");
+  // (nobody else may be out: the round played above injures somebody about one run in eight, and a defender hurt there stood first in the
+  //  list where the suspended one was looked for, which failed a deploy)
+  quiet();w.eval("Bstate().live=null;for(const p of me().players){p.inj=0;p.susp=0}BensureXI(me())");
   {const g=run("(()=>{const c=me(),gk=c.players.filter(p=>p.pos==='GK'&&!c.lineup.includes(p.id)).sort((a,b)=>b.ovr-a.ovr)[0];gk.inj=3;gk.injT='מתיחה';const o=c.players.find(p=>p.pos==='DF'&&!c.lineup.includes(p.id));o.susp=1;return {gk:gk.id,name:fullName(gk),df:o.id,slot:slotsFor(c.formation).indexOf('GK'),dslot:slotsFor(c.formation).indexOf('DF')}})()");
    w.eval(`BchooseLineup(${g.slot})`);assert.equal($(`[data-lineup-in="${g.gk}"]`),null,'he cannot be picked');const off=$$('.bsub-player.off');assert.equal(off.length,1,'and he is not left out of the list');
    assert.ok(off[0].textContent.includes(g.name));assert.match(off[0].textContent,/פצוע \(מתיחה\) · חוזר בעוד 3 משחקים/);assert.equal(off[0].tagName,'DIV');assert.match($('.bdialog').textContent,/לא זמינים כרגע/);
