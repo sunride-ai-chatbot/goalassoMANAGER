@@ -11,6 +11,13 @@ const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)]
 const quiet=()=>w.eval("(()=>{Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}try{closeReveal(true)}catch(e){}document.querySelector('.bdialog')?.remove()})()");
 try{
   w.eval("Bcreate('mta',{name:'דני',league:'il1'})");quiet();w.eval("G.penGame=false;Bstate().cl=null;for(const p of me().players){p.morale=66;p.bOut=0;p.inj=0;p.susp=0}");
+  // ---- the home panel: each club's strength stands under that club. The home side is on the right, so away from home "yours" is on the left
+  {const rounds=run("(()=>{const s=Bstate().schedule,at=h=>s.findIndex(r=>r.some(p=>p[h?0:1]===G.me));return [at(true),at(false)]})()");assert.ok(rounds.every(i=>i>=0));
+   for(const [i,r] of rounds.entries()){w.eval(`Bstate().round=${r};Btab='home';Brender()`);const teams=$$('.amatch .ateam strong').map(e=>e.textContent),labs=$$('.amatch .apower-l span'),mine=labs.findIndex(e=>e.classList.contains('mine')),my=run('me().name');
+     assert.equal(teams.indexOf(my),i,i?'away: second, on the left':'at home: first, on the right');assert.equal(mine,i,'his number stands under his club');assert.equal(labs.length,2);
+     assert.equal(labs[mine].querySelector('bdi').textContent,String(run('Math.round(strength(me()))')));assert.match(labs[mine].textContent,/הכוח שלך/);assert.match(labs[1-mine].textContent,/הכוח שלהם/);
+     assert.equal($('.amatch .apower').classList.contains('away'),!!i,'and the bar fills from his side')}
+   w.eval("Bstate().round=0;Brender()")}
   // ---- the rule, on a match made by hand: eleven played and won, everybody else was fit and sat out
   const after=(gh,ga,extra='')=>run(`(()=>{const c=me();BensureXI(c);const xi=c.lineup.slice();${extra};const M={h:c.id,a:Bstate().league.find(id=>id!==c.id),gh:${gh},ga:${ga},xi:{[c.id]:xi.map(pid=>({pid}))},used:{[c.id]:[]}};
     const before=Object.fromEntries(c.players.map(p=>[p.id,p.morale]));BmoraleAfter(M);BmoraleAfter(M);const k=BmoraleRank(c);
