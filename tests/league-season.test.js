@@ -170,8 +170,12 @@ async function until(fn,what,ms=20000){const t=Date.now();let last;while(Date.no
   assert.ok($(H,'#penGame'),'the penalty picture is open over the league');
   const pen0=JSON.parse(H.eval('JSON.stringify(LG.match.res.pen)'));
   $(H,'#penGame .pg-dirs [data-dir="UL"]').click();
+  // every later penalty of that match is answered the same way: one left to the picture's own clock takes ten seconds of shown frames,
+  // which on a loaded build server is longer than this suite waits (it timed out there once, when the match happened to hold a second one)
+  const nextOrEnd=()=>H.eval('LG.match&&(LG.match.phase==="end"&&LG.match.result||LG.match.phase==="pen"&&typeof LG.penPick==="function")');
+  await until(nextOrEnd,'full time or the next penalty',40000);
+  for(let i=0;i<10&&H.eval('LG.match.phase')==='pen';i++){H.eval('LG.penPick("UL")');await sleep(30);await until(nextOrEnd,'the penalty after it',40000)}
   await until(()=>H.eval('LG.match&&LG.match.phase==="end"&&LG.match.result'),'full time',40000);
-  // every later penalty of that match is answered the same way
   assert.equal(H.eval('LG.match.result'),'waiting','one answer is not a result');
   const penRow=(await sqlOne(`select pens from public.lg_fixtures where id='${fx1.id}'`)).pens;
   assert.ok(penRow.length>=1&&penRow.every(p=>p.done),'every penalty was settled');
