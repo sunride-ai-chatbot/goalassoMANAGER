@@ -90,6 +90,16 @@ try{
    assert.deepEqual(run('(BensureXI(me()),me().lineup)'),after,'and the game leaves them where he put them');
    w.eval(`BchooseLineup(${z.gk})`);assert.equal($('.bdialog .bseg'),null,'the goal is no part of a change of places');w.eval(`BlineupSlot=${z.mf}`);assert.equal(w.eval(`BswapLineup(${z.xi[z.gk]})`),false);assert.deepEqual(run('me().lineup'),after);quiet();
    w.eval("Bstate().live=null;Bplay();BstopBroadcast()");assert.equal(run(`Bstate().live.M.xi[G.me].find(e=>e.pid===${z.xi[z.fw]}).slot`),'MF','the match plays him where he was put');assert.equal(run(`Bstate().live.M.xi[G.me].find(e=>e.pid===${z.xi[z.mf]}).slot`),'FW')}
+  // ---- a scorer who was sold keeps his goals in the league's list, but not under the club that sold him
+  //      (a man sold to Tottenham rounds earlier still led the list as Maccabi Tel Aviv's)
+  {const r=run("(()=>{const b=Bstate(),c=me();try{BstopBroadcast()}catch(e){}b.live=null;const fw=c.players.filter(p=>p.pos==='FW'),p=fw[0],q=fw[1];b.playerStats={};for(const [x,g] of [[p,9],[q,4]])b.playerStats[x.id]={pid:x.id,name:fullName(x),clubId:c.id,goals:g,assists:1};const to=G.clubs.find(x=>!b.league.includes(x.id)&&x.players.length>=14);c.players=c.players.filter(x=>x.id!==p.id);to.players.push(p);BensureXI(c);Btab='league';Brender();return {p:p.id,q:q.id,to:to.name,was:c.name}})()");
+   const rows=$$('.bleader').filter(x=>x.closest('.bpanel').querySelector('h2').textContent.includes('שערים')),gone=rows.find(x=>x.dataset.player==String(r.p)),stay=rows.find(x=>x.dataset.player==String(r.q));
+   assert.equal(rows[0],gone,'nine goals are still nine goals');assert.ok(gone.classList.contains('gone'));assert.ok(gone.querySelector('small').textContent.includes('עבר ל'+r.to),gone.querySelector('small').textContent);assert.ok(gone.querySelector('small').textContent.includes('כבש ב'+r.was));
+   assert.ok(!stay.classList.contains('gone'));assert.equal(stay.querySelector('small').textContent,r.was);
+   assert.equal(run('BleaderOf(me()).pid'),r.q,'the club\'s own top scorer is somebody it still has');assert.equal(run('BmsStriker().id'),r.q);
+   // moved to another club of the same league: listed under the club he is at
+   const o=run(`(()=>{const b=Bstate(),c=me(),q=c.players.find(p=>p.id===${r.q}),o=club(b.league.find(id=>id!==G.me));c.players=c.players.filter(x=>x.id!==q.id);o.players.push(q);BensureXI(c);Brender();return o.name})()`);
+   const moved=$$('.bleader').find(x=>x.dataset.player==String(r.q));assert.ok(!moved.classList.contains('gone'));assert.equal(moved.querySelector('small').textContent,o);assert.equal(run('BleaderOf(me())'),null);w.eval("Btab='home';Brender()")}
   console.log('beginner morale: the rule (played, left out by expectation, floors, the way back, injured, summer), a real round, screens only read, two meters on every row of the substitution window, the player page; errors',JSON.stringify(errors));
   if(errors.length)process.exitCode=1;
 }catch(e){console.error(e);errors.push(String(e&&e.message||e));console.log('beginner morale errors',JSON.stringify(errors.slice(0,3)));process.exitCode=1}

@@ -1,5 +1,11 @@
 /* The beginner page starts here: every other file of src/beginner is declared above (see BEGINNER_JS in src/build.py). */
 try{const s=localStorage.getItem('goalasso.beginner.sort');if(s==='ovr'||s==='desc')Bsort=s}catch(e){}   /* the market opens in the order he last chose */
+/* The page is laid out for the phone's own width and is not to be pinch-zoomed. A zoomed page is drawn again at the zoom's scale — every
+   fixed layer, every blurred bar and every portrait's shadow at nine times the memory for a threefold zoom — and an iPhone answers that by
+   closing the page and, the second time, with "A problem repeatedly occurred", which is what the owner reported after zooming. Three locks,
+   because no single one holds on every iOS: the viewport, the gesture events, and touch-action on the page (engage.css). */
+try{const vp=document.querySelector('meta[name="viewport"]');if(vp&&!/maximum-scale/.test(vp.getAttribute('content')||''))vp.setAttribute('content',(vp.getAttribute('content')||'width=device-width, initial-scale=1')+', maximum-scale=1, user-scalable=no')}catch(e){}
+for(const n of ['gesturestart','gesturechange','gestureend'])document.addEventListener(n,e=>{try{e.preventDefault()}catch(_){}},{passive:false});
 Bload();if(G?.beginner?.live)G.beginner.live.paused=true;Brender();/* the recorded stadium is decoded after the first tap, as in the full game: without it the crowd is only the
    synthesized fallback */
 document.addEventListener('pointerdown',function unlock(){try{if(typeof audPreload==='function')audPreload()}catch(e){}document.removeEventListener('pointerdown',unlock)},{once:true});try{updateWatch()}catch(e){}try{pcupFromLink()}catch(e){}try{BdailyFromLink()}catch(e){}window.BEGINNER={get state(){return G},create:Bcreate,render:Brender,play:Bplay,save:Bwrite};

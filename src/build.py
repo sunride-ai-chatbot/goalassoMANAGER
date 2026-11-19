@@ -148,8 +148,14 @@ out = page.replace('__CLUBS_JSON__', enc(clubs)).replace('__EURO_JSON__', enc(eu
 for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISUALS__', '__CLUBS_JSON__', '__EURO_JSON__', '__DATA_META__', '__SUPABASE_BUILD__', '__YOUTH_JSON__', '__ALEF_JSON__', '__SIM_SRC__'):
     assert ph not in out, 'unfilled placeholder ' + ph
 # build stamp: a hash of the page content, so a live check can tell which build a server is actually serving
+# The beginner page is this page with its own boot files and styles, so they are part of what is hashed: the id used to be a hash of the full
+# game alone, and a change to src/beginner only (most of them) shipped under the old id — the open page never learned that a newer build was
+# up (36i-version.js compares ids), and two different beginner builds carried the same ?v= in their address.
 import hashlib
-build_id = hashlib.sha256(out.encode('utf8')).hexdigest()[:12]
+BEGINNER_JS = ['app.js', 'engage.js', 'daily.js', 'edition.js', 'moves.js', 'bids.js', 'train.js', 'cups.js', 'boot.js']
+BEGINNER_CSS = ['style.css', 'arena.css', 'engage.css']
+beginner_src = '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_JS + BEGINNER_CSS)
+build_id = hashlib.sha256((out + beginner_src).encode('utf8')).hexdigest()[:12]
 # ...and the time of the commit it was built from (Israel time), shown to the player as the version; version.json carries
 # the same pair so an open page can find out that the server has a newer build (36i-version.js)
 import subprocess
@@ -170,8 +176,6 @@ print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), '
 # Replace only the boot entry, leaving the Pro output above unchanged.
 # The beginner game is one script scope in file order; boot.js runs it and so stands last (a `const` of a later file is not
 # there yet for code that already runs). The styles follow the same idea: arena.css repaints style.css, the rest add to it.
-BEGINNER_JS = ['app.js', 'engage.js', 'daily.js', 'edition.js', 'moves.js', 'bids.js', 'train.js', 'cups.js', 'boot.js']
-BEGINNER_CSS = ['style.css', 'arena.css', 'engage.css']
 beginner = out.replace(read(os.path.join(SRC, 'js', '38-boot.js')), '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_JS))
 beginner = beginner.replace('</style>', '\n' + '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_CSS) + '\n</style>', 1)
 beginner = beginner.replace('<title>GOALASSO</title>', '<title>GOALASSO START · מתחילים</title>')

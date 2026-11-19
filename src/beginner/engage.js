@@ -52,7 +52,7 @@ function BxpMatch(M){const b=BxpEnsure(),c=me();if(!b||!M||(M.h!==c.id&&M.a!==c.
   b.gain={rows,total,from,to:{lvl:b.lvl,xp:b.xp},ups,done,res};return b.gain}
 
 /* ---- missions ---- */
-function BmsStriker(){const c=me(),top=Bleaders('goals').find(s=>s.clubId===c.id),p=(top&&c.players.find(x=>x.id===top.pid))||c.players.filter(x=>(x.pos==='FW'||x.pos==='MF')&&!x.inj).sort((x,y)=>(y.pos==='FW')-(x.pos==='FW')||y.ovr-x.ovr)[0];return p||null}
+function BmsStriker(){const c=me(),top=BleaderOf(c),p=(top&&c.players.find(x=>x.id===top.pid))||c.players.filter(x=>(x.pos==='FW'||x.pos==='MF')&&!x.inj).sort((x,y)=>(y.pos==='FW')-(x.pos==='FW')||y.ovr-x.ovr)[0];return p||null}
 function BmsTopHalf(){const s=(Bstate().league||[]).map(id=>club(id)).filter(Boolean).map(x=>strength(x)).sort((x,y)=>y-x);return !s.length||strength(me())>=s[Math.floor(s.length/2)]}
 function BmsStrongerAhead(){const b=Bstate(),s=strength(me());for(let r=b.round;r<b.schedule.length;r++){const pr=b.schedule[r].find(p=>p.includes(G.me));if(!pr)continue;const o=club(pr.find(id=>id!==G.me));if(o&&strength(o)-s>=3)return true}return false}
 const BMS_DEF={
@@ -115,7 +115,7 @@ function Bstakes(){const b=Bstate(),c=me();if(!b||!c)return [];const x=Bextra(),
   if((st.w||0)>=2)add('streak','רצף',`<bdi>${st.w}</bdi> ניצחונות רצופים. עוד אחד יאריך את הרצף`);
   const v=vs[op.id];if(v&&v.s===b.season&&v.r==='L'&&!cup)add('rev','נקמה',`בסיבוב הקודם הם ניצחו אותך <bdi dir="ltr">${v.ga}:${v.gf}</bdi>`);
   const d=Math.round(strength(op)-strength(c));if(d>=4)add('under','אנדרדוג',`${esc(op.name)} חזקה ממך ב־<bdi>${d}</bdi> נקודות. ניצחון כאן שווה יותר`);
-  const s=Bleaders('goals').find(x=>x.clubId===c.id);if(s&&s.goals>=4&&(s.goals+1)%5===0)add('mile','אבן דרך',`${esc(s.name)} במרחק שער אחד מ־<bdi>${s.goals+1}</bdi> שערים העונה`);
+  const s=BleaderOf(c);if(s&&s.goals>=4&&(s.goals+1)%5===0)add('mile','אבן דרך',`${esc(s.name)} במרחק שער אחד מ־<bdi>${s.goals+1}</bdi> שערים העונה`);
   if(b.contract&&b.board!=null&&b.board<30)add('board','לחץ','ההנהלה מאבדת סבלנות. ניצחון ירגיע את הרוחות');
   if(!out.length&&d<=-4)add('fav','פייבוריט',home?'אתה הפייבוריט, והקהל בבית מצפה לניצחון':'אתה הפייבוריט גם במשחק חוץ');
   return out}

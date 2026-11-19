@@ -354,3 +354,16 @@
 .btr-hold.capped .btr-cap{color:#bdcfd9}
 .adot.calm{background:#00b871;box-shadow:0 0 10px rgba(0,255,157,.6)}
 @media(prefers-reduced-motion:reduce){.btr-hold.let-go{animation:none}.btr-pic{transition:none}.btr-hold.holding .btr-pic{transform:none}}
+
+/* ---- phones: no pinch-zoom, and no effect that costs a layer for every element it sits on ----
+   touch-action is the third lock on the zoom (boot.js has the other two). The blurs and the portraits' shadows are what a phone pays most
+   for: a blur behind the bar and behind every window is recomputed over whatever scrolls under it, and a drop-shadow filter makes every
+   portrait of a list of thirty its own off-screen picture. The bar and the scrim are all but opaque already, so nothing is seen to change. */
+html,body.beginner{touch-action:pan-x pan-y}
+@media (hover:none) and (pointer:coarse){
+ .beginner .bnav,.beginner .bnav.anav{-webkit-backdrop-filter:none;backdrop-filter:none}
+ dialog.bdialog::backdrop,.bdialog::backdrop{-webkit-backdrop-filter:none;backdrop-filter:none}
+ .beginner .bportrait{filter:none}
+}
+/* a scorer who has left the league keeps his goals in the list and says where he went */
+.bleader.gone{opacity:.72}.bleader .bleft{color:#fbbf24}
