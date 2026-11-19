@@ -227,6 +227,17 @@
 .beginner .bdialog .bresult-foot{background:linear-gradient(180deg,rgba(7,13,32,0),#070d20 18px)}
 @media(max-width:600px){.bdialog .bdock{bottom:-20px;margin:6px -20px -20px;padding:18px 20px 18px}}
 @media(max-width:380px){.bdialog .bdock{gap:8px}.bdialog .bdock .bbtn.primary{font-size:16px;padding-inline:10px}.bdialog .bdock .bbtn.secondary{font-size:13px;padding-inline:10px}}
+/* fitness and morale, wherever a player is chosen (BcondHTML) */
+.bcond{display:flex;flex-wrap:wrap;gap:5px 10px;margin-top:8px}
+.bmeter{display:inline-flex;align-items:center;gap:5px;font-size:12px;line-height:1;color:#bdcfd9;white-space:nowrap}
+.bmeter i{font-style:normal;font-weight:700}
+.bmeter b{display:block;width:30px;height:6px;border-radius:99px;background:rgba(255,255,255,.16);overflow:hidden}
+.bmeter u{display:block;height:100%;border-radius:99px;background:currentColor;text-decoration:none;color:#00ff9d}
+.bmeter em{font-style:normal;font-weight:800;color:#fff}
+.bmeter.mid u{color:#9db8ff}.bmeter.warn u,.bmeter.warn em{color:#fbbf24}.bmeter.bad u{color:#ff6b6b}.bmeter.bad em{color:#ff9a9a}
+.bcond-tip{margin-top:-4px}.bp-mor.low{color:#fbbf24;font-weight:700}
+/* a note that is part of the screen, not a beginner's tip: .blearn is put away after two rounds, and it took "all the substitutions are used" with it */
+.bnote{margin:14px 0;padding:12px 14px;border-radius:12px;border:1px solid rgba(251,191,36,.34);background:rgba(251,191,36,.08);color:#fde9b4;font-size:15px;line-height:1.5}
 /* the substitution window: who goes off, who comes on and the button that makes it so ride the same bar */
 .bdialog .bsub-dock{align-items:center}
 #bsub-bench{scroll-margin-top:66px}   /* the second list opens under the close button, not behind it */
