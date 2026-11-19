@@ -99,6 +99,9 @@ function ensureWorldLeague(lg){
 /* v9: careers saved with 7-player world lists get the full real squads; players remember their origin club so their
    face resolves after a transfer. v11 runs it again for the November 2026 data: clubs that gained a real squad, players
    the squads gained (on loan from other clubs) and the strength correction in fillRealWorldSquad. */
+/* save v15: players whose market value the data does not know are priced by their rating (fixUnknownValue in 04-euro-clubs.js) */
+function migrateUnknownValues(){for(const c of [...(G.clubs||[]),...(G.leumit||[])])for(const p of c.players||[])fixUnknownValue(p);for(const p of G.freeAgents||[])fixUnknownValue(p);
+  for(const [lg,l] of Object.entries(G.world||{})){const L=WORLD_LEAGUES[lg];for(const c of l.clubs||[]){let any=false;for(const p of c.players||[])if(fixUnknownValue(p)){any=true;if(L)prepWorldPlayer(p,lg,L,c.str)}if(any&&c.realSquad)markWorldCore(c)}}}
 function migrateWorldSquads(){if(!G.world)return;for(const [lg,l] of Object.entries(G.world)){if(!WORLD_LEAGUES[lg])continue;for(const c of l.clubs||[]){if(!c.realSquad&&!worldClubHasData(c))continue;if(c.realSquad&&!c.squadV)c.squadV=1;if(c.squadV!==WORLD_SQUAD_V)fillRealWorldSquad(c,lg)}}}
 /* v12: clubs that left the data (no real squad to show) leave old careers too, with any talks about their players;
    invented free agents and the invented reserves of real second-tier squads go; players whose Hebrew spelling was

@@ -53,6 +53,20 @@ try{
   // the page of one of his own players says it too, in a note that is not a beginner's tip (those are put away after two rounds)
   w.eval("document.querySelector('.bdialog').remove();BstopBroadcast();Bdetail(me().players.find(p=>p.bOut>=3).id)");
   assert.match($('.bdialog .bclub-summary').textContent,/מורל (נמוך|טוב)/);assert.match($('.bdialog .bnote').textContent,/לא שיחק 4 משחקים ברצף/);assert.equal($('.bdialog .bnote').classList.contains('blearn'),false);
+  // ---- a player who cannot be picked is shown with the reason: a goalkeeper was simply missing from the picker, on a page that called him 100% fit
+  quiet();w.eval("Bstate().live=null;BensureXI(me())");
+  {const g=run("(()=>{const c=me(),gk=c.players.filter(p=>p.pos==='GK'&&!c.lineup.includes(p.id)).sort((a,b)=>b.ovr-a.ovr)[0];gk.inj=3;gk.injT='מתיחה';const o=c.players.find(p=>p.pos==='DF'&&!c.lineup.includes(p.id));o.susp=1;return {gk:gk.id,name:fullName(gk),df:o.id,slot:slotsFor(c.formation).indexOf('GK'),dslot:slotsFor(c.formation).indexOf('DF')}})()");
+   w.eval(`BchooseLineup(${g.slot})`);assert.equal($(`[data-lineup-in="${g.gk}"]`),null,'he cannot be picked');const off=$$('.bsub-player.off');assert.equal(off.length,1,'and he is not left out of the list');
+   assert.ok(off[0].textContent.includes(g.name));assert.match(off[0].textContent,/פצוע \(מתיחה\) · חוזר בעוד 3 משחקים/);assert.equal(off[0].tagName,'DIV');assert.match($('.bdialog').textContent,/לא זמינים כרגע/);
+   w.eval(`BchooseLineup(${g.dslot})`);assert.match($('.bsub-player.off').textContent,/מורחק · חוזר בעוד משחק אחד/);
+   w.eval(`document.querySelector('.bdialog').remove();Bdetail(${g.gk})`);assert.doesNotMatch($('.bdialog .bclub-summary').textContent,/כושר/,'an injured player is not called 100% fit');assert.match($('.bdialog .bclub-summary .bout-chip').textContent,/פצוע/);
+   assert.match($('.bdialog .bnote.bad').textContent,/חוזר בעוד 3 משחקים\. עד אז אי אפשר לשבץ אותו בהרכב/);quiet();
+   w.eval("Btab='squad';Brender()");assert.ok($$('.bplayer .bp-bad').length>=2,'the squad marks who is out');assert.ok($$('.bplayer .bp-pos').every(x=>!/· ·/.test(x.textContent.replace(/\s+/g,' '))),'one dot between the parts');
+   // every goalkeeper out: somebody still stands in goal (the place was left empty and the club played with ten), and the picker says so
+   const ten=run("(()=>{const c=me();for(const p of c.players){p.susp=0;p.inj=p.pos==='GK'?2:0}BensureXI(c);const s=slotsFor(c.formation).indexOf('GK'),k=c.players.find(p=>p.id===c.lineup[s]);return {n:c.lineup.filter(Boolean).length,uniq:new Set(c.lineup).size,pos:k&&k.pos,weakest:k&&k.ovr<=Math.min(...c.lineup.filter((id,i)=>i!==s).map(id=>c.players.find(p=>p.id===id).ovr)),s}})()");
+   assert.deepEqual([ten.n,ten.uniq],[11,11],'eleven on the pitch');assert.notEqual(ten.pos,'GK');assert.ok(ten.weakest,'the man the eleven can spare');
+   w.eval(`BchooseLineup(${ten.s})`);assert.match($('.bdialog .bnote.bad').textContent,/אין לך שוער כשיר/);assert.ok($$('[data-lineup-in]').length>=3,'an outfield player may be chosen for the goal');assert.ok($$('.bsub-player.off').length>=2);quiet();
+   w.eval("for(const p of me().players){p.inj=0;p.susp=0}BensureXI(me())");assert.equal(run("(()=>{const c=me();return c.players.find(p=>p.id===c.lineup[slotsFor(c.formation).indexOf('GK')]).pos})()"),'GK','and a keeper takes it back the moment one is fit')}
   console.log('beginner morale: the rule (played, left out by expectation, floors, the way back, injured, summer), a real round, screens only read, two meters on every row of the substitution window, the player page; errors',JSON.stringify(errors));
   if(errors.length)process.exitCode=1;
 }catch(e){console.error(e);errors.push(String(e&&e.message||e));console.log('beginner morale errors',JSON.stringify(errors.slice(0,3)));process.exitCode=1}

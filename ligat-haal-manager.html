@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta name="goalasso-build" content="065d737d50de">
-<meta name="goalasso-built" content="19.11.2026 10:48">
+<meta name="goalasso-build" content="b7690e4bb685">
+<meta name="goalasso-built" content="19.11.2026 11:06">
 <meta charset="utf-8">
 <script>/* goal-m.com has always opened on the beginner game; there the full game is index.html. The daily challenge is part of the
    beginner page, so its link (/?daily) is sent on with its query; every other query stays here */
@@ -2150,10 +2150,19 @@ const euroNoFace=new WeakSet();
 function euroVisualIdFor(p){if(!p||!p.en||euroNoFace.has(p))return null;const F=PLAYER_VISUALS.faces;let k=euroVisualId(p.from,p.en);
   if(!k&&typeof G!=='undefined'&&G&&G.world){for(const l of Object.values(G.world))for(const c of l.clubs||[])if(c.realSquad&&c.players.includes(p)){k=euroVisualId(c.name,p.en);break}}
   if(!k)k=(PLAYER_VISUALS.euroEn||{})[p.en]||null;if(k&&F[k])return k;euroNoFace.add(p);return null}
+/* A player whose market value the data does not know (eighteen of eight thousand, all of them youngsters of the biggest clubs) has no
+   p.rv: he is worth what the game's own curve says his rating is worth (p.value), and rawSquad stands him behind every team-mate the market
+   does know. He used to get a placeholder of 200–800 thousand beside a rating taken from his club's level, so an eighteen-year-old of Bayern
+   was rated near eighty and sold for 450 thousand. */
+function rawValueUnknown(p){if(!p||!p.en||!p.from||typeof RAW_EURO==='undefined'||!RAW_EURO)return false;const raw=RAW_EURO[p.from],r=raw&&raw.find(x=>x.en===p.en);return !!r&&r.value_m==null}
+/* a career saved while he still carried the placeholder: his price becomes the price of his rating. true when it changed */
+function fixUnknownValue(p){if(!p||!p.rv||!rawValueUnknown(p))return false;delete p.rv;p.value=playerValue(p);return true}
 function fromRawEuro(r,fallback,club){const age=r.age??ri(20,31);const nat=r.nat||'זר';const natHe=NAT_HE[nat]||nat;const ovr=euroRating(r.value_m,age)??clamp(Math.round(fallback-14+gauss()*3),46,72);const [first,last]=splitName(r.he);
-  const p=finalize({id:uid++,first,last,pos:r.pos||'MF',age,nat:natHe,foreign:natHe!=='ישראל',ovr,pot:potentialFor(ovr,age),form:0,yellow:0,inj:0,susp:0,goals:0,apps:0,contract:ri(1,4),morale:65,fit:100,real:true,visualId:euroVisualId(club,r.en)});p.rv=r.value_m!=null?Math.round(r.value_m*1e6):Math.round((2+ri(0,6))*1e5);p.en=r.en||null;if(club)p.from=club;if(r.nat2)p.nat2=NAT_HE[r.nat2]||r.nat2;if(p.nat2==='ישראל')p.foreign=false;return p}
+  const p=finalize({id:uid++,first,last,pos:r.pos||'MF',age,nat:natHe,foreign:natHe!=='ישראל',ovr,pot:potentialFor(ovr,age),form:0,yellow:0,inj:0,susp:0,goals:0,apps:0,contract:ri(1,4),morale:65,fit:100,real:true,visualId:euroVisualId(club,r.en)});if(r.value_m!=null)p.rv=Math.round(r.value_m*1e6);p.en=r.en||null;if(club)p.from=club;if(r.nat2)p.nat2=NAT_HE[r.nat2]||r.nat2;if(p.nat2==='ישראל')p.foreign=false;return p}
 /* shift a real squad so its best-14 average matches the club's designed strength (keeps the within-squad order from real market values) */
-function rawSquad(name,str){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)return null;const ps=raw.map(r=>fromRawEuro(r,str,name));const top=ps.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const mean=top.reduce((a,b)=>a+b,0)/top.length;const shift=clamp(Math.round(str+1-mean),-7,7);
+function rawSquad(name,str){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)return null;const ps=raw.map(r=>fromRawEuro(r,str,name));
+  const known=ps.filter(p=>p.rv);if(known.length&&known.length<ps.length){const low=Math.min(...known.map(p=>p.ovr));for(const p of ps)if(!p.rv&&p.ovr>=low){p.ovr=Math.max(46,low-1);p.pot=potentialFor(p.ovr,p.age);p.value=playerValue(p);p.wage=playerWage(p)}}
+  const top=ps.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const mean=top.reduce((a,b)=>a+b,0)/top.length;const shift=clamp(Math.round(str+1-mean),-7,7);
   if(shift)for(const p of ps){p.ovr=clamp(p.ovr+shift,46,94);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.value=playerValue(p);p.wage=playerWage(p)}return ps}
 /* A real squad is never padded with invented players: a thin position group is covered by the line-up picker (bestXI
    fills from the rest of the squad). */
@@ -2980,6 +2989,9 @@ function ensureWorldLeague(lg){
 /* v9: careers saved with 7-player world lists get the full real squads; players remember their origin club so their
    face resolves after a transfer. v11 runs it again for the November 2026 data: clubs that gained a real squad, players
    the squads gained (on loan from other clubs) and the strength correction in fillRealWorldSquad. */
+/* save v15: players whose market value the data does not know are priced by their rating (fixUnknownValue in 04-euro-clubs.js) */
+function migrateUnknownValues(){for(const c of [...(G.clubs||[]),...(G.leumit||[])])for(const p of c.players||[])fixUnknownValue(p);for(const p of G.freeAgents||[])fixUnknownValue(p);
+  for(const [lg,l] of Object.entries(G.world||{})){const L=WORLD_LEAGUES[lg];for(const c of l.clubs||[]){let any=false;for(const p of c.players||[])if(fixUnknownValue(p)){any=true;if(L)prepWorldPlayer(p,lg,L,c.str)}if(any&&c.realSquad)markWorldCore(c)}}}
 function migrateWorldSquads(){if(!G.world)return;for(const [lg,l] of Object.entries(G.world)){if(!WORLD_LEAGUES[lg])continue;for(const c of l.clubs||[]){if(!c.realSquad&&!worldClubHasData(c))continue;if(c.realSquad&&!c.squadV)c.squadV=1;if(c.squadV!==WORLD_SQUAD_V)fillRealWorldSquad(c,lg)}}}
 /* v12: clubs that left the data (no real squad to show) leave old careers too, with any talks about their players;
    invented free agents and the invented reserves of real second-tier squads go; players whose Hebrew spelling was
@@ -4552,7 +4564,7 @@ function chooseSponsor(i){const c=me();const o=G.sponsorOffers[i];c.sponsor={...
    Browsers without IndexedDB (and the jsdom test suites) use the legacy localStorage layout unchanged: key ilm2 / ilm2_sN,
    ilm2_*_backup and ilm2_meta_N, written synchronously. Legacy localStorage careers are migrated into IndexedDB at boot
    and deleted only after the new record was read back and compared. */
-const SAVE_VERSION=14;const SLOTS=3;
+const SAVE_VERSION=15;const SLOTS=3;
 const DB_NAME='goalasso',DB_STORE='careers';
 function curSlot(){try{return clamp(parseInt(localStorage.getItem('ilm2_cur'))||1,1,SLOTS)}catch(e){return 1}}
 function setCurSlot(n){try{localStorage.setItem('ilm2_cur',String(n))}catch(e){}}
@@ -4685,7 +4697,7 @@ function installCareer(json,slot){const old=G,oldUid=uid;const fail=()=>{G=old;u
   // an explicit install (import, cloud, backup) brings a deleted career back on purpose
   if(G&&G.careerId)SV.deleted.delete(G.careerId);SV.blocked=null;return Promise.resolve(save({force:true})).then(ok=>{if(!ok){G=old;uid=oldUid;return false}return true})}
 
-const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}],[8,'מזהה קריירה ומונה גרסאות',()=>ensureCareerIdentity(G)],[9,'סגלים מלאים בשוק העולמי ופנים אירופיות',()=>migrateWorldSquads()],[10,'סגלים אמיתיים בליגה הלאומית',()=>migrateLeumitSquads()],[11,'סגלים מעודכנים בליגות העולם ובלאומית',()=>{migrateWorldSquads();migrateLeumitSquads()}],[12,'רק שחקנים אמיתיים בשוק; שמות בעברית בלאומית',()=>migrateRealOnly()],[13,'ספר הקריירה: תארים, שיאים והישגים',()=>carBackfill()],[14,'סגלים אמיתיים לעולות מליגה א׳ ושמות אמיתיים בנוער',()=>migrateAlefYouth()]];
+const MIGRATIONS=[[5,'נתוני משחק מפורטים',()=>{}],[6,'רפואה, יועץ מנטלי, פרסום',()=>migrateM2()],[7,'צוות, כימיה, מוניטין',()=>{ensureStaff();seedChem();ensureRep()}],[8,'מזהה קריירה ומונה גרסאות',()=>ensureCareerIdentity(G)],[9,'סגלים מלאים בשוק העולמי ופנים אירופיות',()=>migrateWorldSquads()],[10,'סגלים אמיתיים בליגה הלאומית',()=>migrateLeumitSquads()],[11,'סגלים מעודכנים בליגות העולם ובלאומית',()=>{migrateWorldSquads();migrateLeumitSquads()}],[12,'רק שחקנים אמיתיים בשוק; שמות בעברית בלאומית',()=>migrateRealOnly()],[13,'ספר הקריירה: תארים, שיאים והישגים',()=>carBackfill()],[14,'סגלים אמיתיים לעולות מליגה א׳ ושמות אמיתיים בנוער',()=>migrateAlefYouth()],[15,'מחיר לפי דירוג לשחקנים בלי שווי שוק ידוע',()=>migrateUnknownValues()]];
 function runMigrations(){const from=G.v||4;for(const [v,,fn] of MIGRATIONS){if(from<v){fn()}}G.v=SAVE_VERSION;if(from<SAVE_VERSION)G.migratedFrom=from}
 function hydrateCareer(){const all=[...G.clubs,...G.leumit,...Object.values(G.pseudo)];const wall=G.world?Object.values(G.world).flatMap(l=>l.clubs):[];uid=Math.max(uid,...all.concat(wall).flatMap(c=>[...c.players,...(c.youth||[])].map(p=>p.id)),...(G.scouts||[]).map(s=>s.id),...(G.scoutMarket||[]).map(s=>s.id),...(G.negs||[]).map(n=>n.id))+1;if(!G.paper)G.paper=[];if(!G.world)G.world={};if(!G.scouts)G.scouts=[];if(!G.scoutMarket)G.scoutMarket=[];if(!G.reports)G.reports=[];if(!G.negs)G.negs=[];if(!G.payables)G.payables=[];if(G.manager&&G.manager.trust==null)G.manager.trust=60;G.clubs.forEach(c=>{if(!c.div)c.div='top'});G.leumit.forEach(c=>{if(!c.div)c.div='leumit';if(c.tier==null)c.tier=4});if(G.leumit.length<16){const have=new Set(G.leumit.map(c=>c.name));for(const d of LEUMIT16){if(G.leumit.length>=16)break;if(!have.has(d.name)&&!G.clubs.some(c=>c.name===d.name))G.leumit.push(buildLeumitClub(d))}}if(!G.lfx||!G.lsched){buildLeumitSeason();G.leumit.forEach(c=>Object.assign(c,{P:0,W:0,D:0,L:0,GF:0,GA:0,pts:0}))}if(!G.toto)buildToto();if(!G.hist)G.hist=[];computeLeumitPrestige();for(const c of all){if(c.scouting==null)c.scouting=1;for(const p of [...c.players,...(c.youth||[])])assignPers(p);if(c.fans==null)c.fans=baseFans(c);if(!c.focus)c.focus='bal';if(!c.intensity)c.intensity='mid';for(const p of [...c.players,...(c.youth||[])]){if(p.morale==null)p.morale=65;if(p.fit==null)p.fit=100}}migrateM2();ensureStaff();seedChem();runMigrations();if(G.phase==='play'&&G.cal&&G.wk<G.cal.length)ensureDraws();}
 
@@ -6262,7 +6274,7 @@ document.addEventListener('keydown',e=>{if(!LG.root)return;
 
    LG_SIM_SRC is a hash of the engine's source files, filled in by the build. With a hash of the player data it
    makes lgSimId(): two phones with different ids would simulate different matches, and are told so. */
-const LG_SIM_SRC='106f14bf06fa';
+const LG_SIM_SRC='fa35cac4bea7';
 const LG_DIRS=['UL','U','UR','L','R','DL','D','DR'];
 function lgRng(seed){let a=seed>>>0;return ()=>{a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296}}
 function lgHashN(s){let h=2166136261;s=String(s);for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0}

@@ -58,7 +58,7 @@ const $=s=>w.document.querySelector(s);const run=code=>JSON.parse(w.eval(`JSON.s
     const t=g.clubs.find(x=>x.id==='mta');t.youth=makeYouth(7).map(strip);const m=g.clubs.concat(g.leumit).find(x=>x.id===g.me);m.youth=makeYouth(7).map(strip);window.__mine={y:m.youth.map(p=>p.first+' '+p.last),p:m.players.map(p=>p.id)};return JSON.stringify(g)})()`);
   w.eval(`installCareer(${JSON.stringify(old)},2)`);await w.ILM.whenSaved();
   const mig=run(`(()=>{const c=G.leumit.find(x=>x.name===window.__alef),t=G.clubs.find(x=>x.id==='mta'),m=me();return {v:G.v,from:G.migratedFrom,alefReal:c.players.every(p=>p.real),alefN:c.players.length,data:RAW_EURO[c.name].length,rs:c.realSquad,mtaGen:t.youth.filter(generatedPlayer).length,mtaOwn:t.youth.every(y=>RAW_YOUTH[t.name].includes(fullName(y))),mineY:m.youth.map(p=>p.first+' '+p.last),mineP:m.players.map(p=>p.id)}})()`);
-  assert.equal(mig.v,14);assert.equal(mig.from,13);assert.ok(mig.alefReal&&mig.rs);assert.equal(mig.alefN,mig.data);assert.equal(mig.mtaGen,0);assert.ok(mig.mtaOwn);
+  assert.equal(mig.v,w.eval('SAVE_VERSION'));assert.equal(mig.from,13);assert.ok(mig.alefReal&&mig.rs);assert.equal(mig.alefN,mig.data);assert.equal(mig.mtaGen,0);assert.ok(mig.mtaOwn);
   const mine=run('window.__mine');assert.deepEqual(mig.mineY,mine.y,'the manager\'s own prospects keep their names');assert.deepEqual(mig.mineP,mine.p,'and his squad is untouched');
   // the sources screen says what is real and what the game decided
   w.eval("G.view='datainfo'");const info=w.eval('viewDataInfo()');assert.match(info,/ליגה א׳ ונוער/);assert.match(info,/עמדה, גיל, דירוג ושווי/);

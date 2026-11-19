@@ -152,9 +152,9 @@ function BpackCardInfo(x){const c=me(),f=x.pid!=null?Bfind(x.pid):null;
   return {ic:'ball',t:'',v:'',d:''}}
 function BpackApply(x){const b=Bstate(),c=me();let note='';
   if(x.k==='cash'){Bledger(c.sponsor?'בונוס מנותן החסות':'מענק מההנהלה',x.v);note=`${NIS(x.v)} נכנסו לקופה`}
-  else if(x.k==='camp'){let up=0;for(const p of c.players){const was=p.bTraining||0;p.bTraining=was+x.v;const n=Math.floor(p.bTraining/8)-Math.floor(was/8);if(n>0&&p.ovr<(p.pot||99)){p.ovr=Math.min(p.pot||99,p.ovr+n);up++}}note=up?`${up} שחקנים עלו בדירוג`:'הסגל התקדם באימונים'}
+  else if(x.k==='camp'){let up=0;for(const p of c.players){const was=p.bTraining||0;p.bTraining=was+x.v;const n=Math.floor(p.bTraining/8)-Math.floor(was/8);if(n>0&&p.ovr<(p.pot||99)){BrateUp(p,n);up++}}note=up?`${up} שחקנים עלו בדירוג`:'הסגל התקדם באימונים'}
   else if(x.k==='gate'){b.boost.gate=(b.boost.gate||0)+x.v;note=`${x.v} משחקי הבית הקרובים יכניסו יותר`}
-  else if(x.k==='talent'){const p=c.players.find(p=>p.id===x.pid);if(p){p.ovr=Math.min(p.pot||99,p.ovr+x.v);note=`${fullName(p)} עלה ל־${p.ovr}`}}
+  else if(x.k==='talent'){const p=c.players.find(p=>p.id===x.pid);if(p){BrateUp(p,x.v);note=`${fullName(p)} עלה ל־${p.ovr}`}}
   else if(x.k==='scout'){b.tip={pid:x.pid,pct:x.v,until:b.round+4,s:b.season};const f=Bfind(x.pid);note=f?`${fullName(f.p)} מחכה לך בשוק במחיר מיוחד`:''}
   else if(x.k==='physio'){for(const p of c.players){p.inj=0;p.fit=100}try{BensureXI(c)}catch(e){}note='כל הסגל כשיר'}
   else if(x.k==='board'){b.board=Math.min(100,(b.board==null?55:b.board)+x.v);note='אמון ההנהלה עלה'}

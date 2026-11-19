@@ -104,10 +104,19 @@ const euroNoFace=new WeakSet();
 function euroVisualIdFor(p){if(!p||!p.en||euroNoFace.has(p))return null;const F=PLAYER_VISUALS.faces;let k=euroVisualId(p.from,p.en);
   if(!k&&typeof G!=='undefined'&&G&&G.world){for(const l of Object.values(G.world))for(const c of l.clubs||[])if(c.realSquad&&c.players.includes(p)){k=euroVisualId(c.name,p.en);break}}
   if(!k)k=(PLAYER_VISUALS.euroEn||{})[p.en]||null;if(k&&F[k])return k;euroNoFace.add(p);return null}
+/* A player whose market value the data does not know (eighteen of eight thousand, all of them youngsters of the biggest clubs) has no
+   p.rv: he is worth what the game's own curve says his rating is worth (p.value), and rawSquad stands him behind every team-mate the market
+   does know. He used to get a placeholder of 200–800 thousand beside a rating taken from his club's level, so an eighteen-year-old of Bayern
+   was rated near eighty and sold for 450 thousand. */
+function rawValueUnknown(p){if(!p||!p.en||!p.from||typeof RAW_EURO==='undefined'||!RAW_EURO)return false;const raw=RAW_EURO[p.from],r=raw&&raw.find(x=>x.en===p.en);return !!r&&r.value_m==null}
+/* a career saved while he still carried the placeholder: his price becomes the price of his rating. true when it changed */
+function fixUnknownValue(p){if(!p||!p.rv||!rawValueUnknown(p))return false;delete p.rv;p.value=playerValue(p);return true}
 function fromRawEuro(r,fallback,club){const age=r.age??ri(20,31);const nat=r.nat||'זר';const natHe=NAT_HE[nat]||nat;const ovr=euroRating(r.value_m,age)??clamp(Math.round(fallback-14+gauss()*3),46,72);const [first,last]=splitName(r.he);
-  const p=finalize({id:uid++,first,last,pos:r.pos||'MF',age,nat:natHe,foreign:natHe!=='ישראל',ovr,pot:potentialFor(ovr,age),form:0,yellow:0,inj:0,susp:0,goals:0,apps:0,contract:ri(1,4),morale:65,fit:100,real:true,visualId:euroVisualId(club,r.en)});p.rv=r.value_m!=null?Math.round(r.value_m*1e6):Math.round((2+ri(0,6))*1e5);p.en=r.en||null;if(club)p.from=club;if(r.nat2)p.nat2=NAT_HE[r.nat2]||r.nat2;if(p.nat2==='ישראל')p.foreign=false;return p}
+  const p=finalize({id:uid++,first,last,pos:r.pos||'MF',age,nat:natHe,foreign:natHe!=='ישראל',ovr,pot:potentialFor(ovr,age),form:0,yellow:0,inj:0,susp:0,goals:0,apps:0,contract:ri(1,4),morale:65,fit:100,real:true,visualId:euroVisualId(club,r.en)});if(r.value_m!=null)p.rv=Math.round(r.value_m*1e6);p.en=r.en||null;if(club)p.from=club;if(r.nat2)p.nat2=NAT_HE[r.nat2]||r.nat2;if(p.nat2==='ישראל')p.foreign=false;return p}
 /* shift a real squad so its best-14 average matches the club's designed strength (keeps the within-squad order from real market values) */
-function rawSquad(name,str){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)return null;const ps=raw.map(r=>fromRawEuro(r,str,name));const top=ps.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const mean=top.reduce((a,b)=>a+b,0)/top.length;const shift=clamp(Math.round(str+1-mean),-7,7);
+function rawSquad(name,str){const raw=RAW_EURO&&RAW_EURO[name];if(!raw||raw.length<14)return null;const ps=raw.map(r=>fromRawEuro(r,str,name));
+  const known=ps.filter(p=>p.rv);if(known.length&&known.length<ps.length){const low=Math.min(...known.map(p=>p.ovr));for(const p of ps)if(!p.rv&&p.ovr>=low){p.ovr=Math.max(46,low-1);p.pot=potentialFor(p.ovr,p.age);p.value=playerValue(p);p.wage=playerWage(p)}}
+  const top=ps.map(p=>p.ovr).sort((a,b)=>b-a).slice(0,14);const mean=top.reduce((a,b)=>a+b,0)/top.length;const shift=clamp(Math.round(str+1-mean),-7,7);
   if(shift)for(const p of ps){p.ovr=clamp(p.ovr+shift,46,94);p.pot=Math.max(p.pot,potentialFor(p.ovr,p.age));p.value=playerValue(p);p.wage=playerWage(p)}return ps}
 /* A real squad is never padded with invented players: a thin position group is covered by the line-up picker (bestXI
    fills from the rest of the squad). */

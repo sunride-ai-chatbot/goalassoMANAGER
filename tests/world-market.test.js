@@ -103,6 +103,14 @@ async function main(){try{
  assert.equal(a12.freeFake,0,'no invented free agents');assert.equal(a12.name,'רוי חזן','Hebrew spelling from the data');assert.equal(a12.hzFake,0);assert.equal(a12.hz,v12.hz-1);assert.equal(a12.v,w.eval('SAVE_VERSION'));
  // only real players are offered: the Israeli market, the search and the free-agent list
  assert.equal(w.eval("(()=>{const c=G.clubs.find(c=>c.id!==G.me);c.players.push(makePlayer('FW',80));marketTab='buy';marketCategory='all';marketSearch='';G.view='market';render();return marketSearchPool().filter(x=>inventedPlayer(x.p)).length})()"),0);
+ // v15: a player the market does not know (no value in the data) is priced by his rating and stands behind the team-mates it does know.
+ // An eighteen-year-old of Bayern used to be rated near eighty with a placeholder price of 200-800 thousand.
+ const v15=JSON.parse(w.eval(`JSON.stringify((()=>{const l=ensureWorldLeague('bundes'),c=l.clubs.find(c=>c.name==='באיירן מינכן'),p=c.players.find(rawValueUnknown),kn=c.players.filter(x=>x.rv&&x.from===c.name).map(x=>x.ovr);
+   const fresh={rv:p.rv||0,ovr:p.ovr,low:Math.min(...kn),price:marketValue(p),value:p.value,vm:p.vmult,lv:WORLD_LEAGUES.bundes.vmult};
+   p.ovr=80;p.value=playerValue(p);p.rv=450000;prepWorldPlayer(p,'bundes',WORLD_LEAGUES.bundes,c.str);const cheap=marketValue(p);const q=c.players.find(x=>x.rv&&x!==p),rq=q.rv;
+   migrateUnknownValues();return {fresh,cheap,rv:p.rv||0,price:marketValue(p),value:p.value,vm:p.vmult,q:q.rv===rq,again:fixUnknownValue(p)}})())`));
+ assert.equal(v15.fresh.rv,0,'no placeholder');assert.ok(v15.fresh.ovr<v15.fresh.low,'behind the weakest player the market knows: '+v15.fresh.ovr+' / '+v15.fresh.low);assert.equal(v15.fresh.vm,v15.fresh.lv,'priced like any player of that league');
+ assert.ok(v15.cheap<v15.value*.2,'the old career: an 80 for a tenth of his worth');assert.equal(v15.rv,0);assert.equal(v15.vm,v15.fresh.lv);assert.ok(v15.price>=v15.value&&v15.price>v15.cheap*5,'the migration prices him by his rating: '+v15.cheap+' → '+v15.price);assert.ok(v15.q,'a real value is left alone');assert.equal(v15.again,false);
  assert.deepEqual(errors,[]);console.log('world market: real players only (v12), full squads, not-for-sale core, faces after migration, v11 squad refresh, legionnaires, suggestions, nationality and price sorts passed; errors []');
 }finally{await new Promise(r=>setImmediate(r));w.close()}}
 main().catch(e=>{console.error(e);process.exitCode=1});

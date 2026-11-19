@@ -17,7 +17,7 @@ const BtrainKey=()=>{const b=Bstate();return b.season+':'+b.round};
 function BtrainNow(){const t=Bstate().tr;return t&&t.k===BtrainKey()?t:{k:BtrainKey(),team:null,solo:[]}}
 function BtrainLeft(){const t=BtrainNow();return {team:t.team?0:1,solo:Math.max(0,BTRAIN_SOLO-t.solo.length)}}
 /* steps for one player; returns the rating points they made */
-function BtrainGain(p,n){const was=p.bTraining||0;p.bTraining=was+n;const up=Math.floor(p.bTraining/BTRAIN_STEP)-Math.floor(was/BTRAIN_STEP);if(up<=0||p.ovr>=(p.pot||99))return 0;const o=p.ovr;p.ovr=Math.min(p.pot||99,p.ovr+up);return p.ovr-o}
+function BtrainGain(p,n){const was=p.bTraining||0;p.bTraining=was+n;const up=Math.floor(p.bTraining/BTRAIN_STEP)-Math.floor(was/BTRAIN_STEP);if(up<=0||p.ovr>=(p.pot||99))return 0;return BrateUp(p,up)}
 function BtrainTeam(unit){const b=Bstate(),c=me(),t=BtrainNow(),u=BTRAIN_UNITS.find(x=>x[0]===unit);if(!b||b.live||b.out||t.team||!u)return null;
   const ps=c.players.filter(p=>p.pos===unit),ups=ps.filter(p=>BtrainGain(p,1)>0);b.tr={k:t.k,team:unit,solo:t.solo.slice()};b.focus=unit;
   BTRAIN_LAST={k:t.k,text:`אימון ${u[1]} הושלם: <bdi>${ps.length}</bdi> שחקנים התקדמו צעד.${ups.length?' '+ups.map(p=>`${esc(fullName(p))} עלה לדירוג <bdi>${p.ovr}</bdi>`).join(', ')+'.':''}`};

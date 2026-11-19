@@ -236,6 +236,13 @@
 .bmeter em{font-style:normal;font-weight:800;color:#fff}
 .bmeter.mid u{color:#9db8ff}.bmeter.warn u,.bmeter.warn em{color:#fbbf24}.bmeter.bad u{color:#ff6b6b}.bmeter.bad em{color:#ff9a9a}
 .bcond-tip{margin-top:-4px}.bp-mor.low{color:#fbbf24;font-weight:700}
+/* who cannot be picked: said in the squad, on his page and in the line-up picker, where he used to be simply missing */
+.bp-bad{color:#ff8a8a}
+.bclub-summary .bout-chip{color:#ffb3b3;border-color:rgba(255,107,107,.5);background:rgba(255,107,107,.12)}
+.bnote.bad{border-color:rgba(255,107,107,.42);background:rgba(255,107,107,.1);color:#ffd9d9}
+.beginner h3.boff-h{margin:18px 0 8px;font-size:15px;color:#bdcfd9}
+.bsub-player.off{opacity:.78;cursor:default}.bsub-player.off .bportrait{filter:grayscale(.7)}
+.bwhy{display:block;margin-top:5px;font-style:normal;font-size:13px;font-weight:700;line-height:1.35;color:#ff9a9a}
 /* a note that is part of the screen, not a beginner's tip: .blearn is put away after two rounds, and it took "all the substitutions are used" with it */
 .bnote{margin:14px 0;padding:12px 14px;border-radius:12px;border:1px solid rgba(251,191,36,.34);background:rgba(251,191,36,.08);color:#fde9b4;font-size:15px;line-height:1.5}
 /* the substitution window: who goes off, who comes on and the button that makes it so ride the same bar */
