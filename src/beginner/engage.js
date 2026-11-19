@@ -62,6 +62,7 @@ const BMS_DEF={
   star:{role:'p',ic:'bell',ct:'star',make:()=>{const n=pick([1,2]);return {n,xp:50*n+10}},text:m=>m.n>1?`<bdi>${m.n}</bdi> משחקים עם שחקן בציון <bdi>8</bdi> ומעלה`:'שחקן שלך יקבל ציון <bdi>8</bdi> ומעלה'},
   sponsor:{role:'c',ic:'coins',ct:'sponsors',go:'finance',ok:()=>!me().sponsor,make:()=>({n:1,xp:50}),text:()=>'בחר נותן חסות למועדון'},
   sign:{role:'c',ic:'transfer',ct:'signs',go:'market',make:()=>({n:1,xp:80}),text:()=>'החתם שחקן חדש'},
+  train:{role:'c',ic:'boot',ct:'train',go:'training',make:()=>{const n=pick([3,5]);return {n,xp:20*n}},text:m=>`השלם <bdi>${m.n}</bdi> אימונים`},
   stadium:{role:'c',ic:'stadium',ct:'builds',go:'stadium',ok:()=>{const n=Blevels.find(l=>l.cap>me().cap);return !!n&&!Bstate().build&&me().money>=n.cost*.7},make:()=>({n:1,xp:120,pack:'s'}),text:()=>'התחל להרחיב את האצטדיון'},
   place:{role:'c',ic:'trophy',ok:()=>{const b=Bstate();return b.round>=2&&Bplace()>1&&b.schedule.length-b.round>=4},alive:m=>m.d.s===Bstate().season,make:()=>({n:1,xp:100,d:{place:Math.max(1,Bplace()-pick([1,2])),s:Bstate().season}}),text:m=>`עלה למקום <bdi>${m.d.place}</bdi> בטבלה`},
   daily:{role:'c',ic:'ball',ct:'daily',go:'daily',ok:()=>typeof BdailyDoneToday==='function'&&!BdailyDoneToday(),make:()=>({n:1,xp:60}),text:()=>'שחק באתגר היומי'}};

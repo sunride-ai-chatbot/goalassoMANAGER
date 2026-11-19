@@ -252,3 +252,47 @@
 @media(max-width:380px){.bdialog .bsub-dock .bbtn.primary{font-size:15px;padding-inline:12px}.bsub-sum span{font-size:13px}}
 /* the close button keeps the focus ring it is given when a window opens: the first words beside it need the room */
 .bdialog>.bclose{margin-inline-end:12px}
+
+/* where each side stands in the table, under its name on the eve of a match */
+.ateam .apos{display:block;margin-top:-3px;font-size:13px;font-weight:700;line-height:1.2;color:rgba(255,255,255,.78);text-shadow:0 1px 6px rgba(0,0,0,.9);white-space:nowrap}
+/* ---- the training ground: a session is held, not tapped (train.js) ---- */
+.btr-result{margin:0 0 14px;padding:12px 14px;border-radius:12px;border:1px solid rgba(0,255,157,.34);background:rgba(0,255,157,.08);color:#d6ffee;font-size:15px;line-height:1.5}
+.beginner .btr-left{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding:14px 16px}
+.btr-left>span{flex:1 1 100%;color:#bdcfd9;font-size:14px}
+.btr-left div{display:flex;align-items:center;gap:8px;font-size:15px}
+.btr-dots{display:inline-flex;gap:5px}
+.btr-dots i{width:12px;height:12px;border-radius:50%;border:2px solid rgba(255,255,255,.3)}
+.btr-dots i.on{background:#00ff9d;border-color:#00ff9d;box-shadow:0 0 8px rgba(0,255,157,.6)}
+.beginner h2.btr-h{margin:26px 0 2px}
+.btr-units,.btr-players{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 8px}
+@media(min-width:900px){.btr-players{grid-template-columns:repeat(6,minmax(0,1fr))}.btr-units{max-width:720px}}
+.btr-hold{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0;padding:12px 6px 10px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,#111c3c,#080e22);color:#fff;font:inherit;text-align:center;cursor:pointer;touch-action:pan-y;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;transition:border-color .2s ease}
+.btr-hold *{pointer-events:none}   /* the press lands on the button itself: no picture to save, drag or select under a long press */
+.btr-hold strong{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px;font-weight:800;line-height:1.25}
+.btr-hold small{font-size:12px;line-height:1.3;color:#bdcfd9}
+.btr-pic{position:relative;display:block;width:min(100%,92px);aspect-ratio:1;margin-bottom:5px;transition:transform .25s ease}
+.btr-face{position:absolute;inset:8px;display:block;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 110%,#1c3a5c,#0a1226 70%)}
+.btr-face .bportrait{width:100%;aspect-ratio:240/300}
+.btr-face.ic{display:grid;place-items:center}.btr-face.ic img{width:72%;height:72%}
+.btr-ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);pointer-events:none}
+.btr-ring circle{fill:none;stroke-width:6;stroke-linecap:round}
+.btr-ring .trk{stroke:rgba(255,255,255,.14)}
+.btr-ring .arc{stroke:#fbbf24;stroke-dasharray:100;stroke-dashoffset:100}
+.btr-hold.holding{border-color:rgba(0,255,157,.55)}
+.btr-hold.holding .btr-pic{transform:scale(1.06)}
+.btr-hold.holding .arc{stroke:#00ff9d;stroke-dashoffset:0;transition:stroke-dashoffset var(--hold,7s) linear,stroke var(--hold,7s) ease-in}   /* the ring closes and turns green over the length of the hold */
+.btr-hold.done{border-color:rgba(0,255,157,.45)}
+.btr-hold.done .arc{stroke:#00ff9d;stroke-dashoffset:0}
+.btr-hold:disabled{cursor:default}
+.btr-hold:disabled:not(.done){opacity:.5}
+.btr-hint{min-height:1.35em;font-style:normal;font-size:12px;font-weight:700;line-height:1.35;color:#fbbf24}
+.btr-hint.ok{color:#00ff9d}
+.btr-hold:disabled:not(.done) .btr-hint{color:#bdcfd9}
+.btr-hold.let-go{animation:btrshake .35s ease}
+@keyframes btrshake{25%{transform:translateX(4px)}75%{transform:translateX(-4px)}}
+.btr-steps{display:inline-flex;gap:3px;margin:3px 0 1px}
+.btr-steps i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}
+.btr-steps i.on{background:#00ff9d}
+.btr-cap{font-size:11px;font-weight:700;color:#fbbf24;margin:1px 0}
+.adot.calm{background:#00b871;box-shadow:0 0 10px rgba(0,255,157,.6)}
+@media(prefers-reduced-motion:reduce){.btr-hold.let-go{animation:none}.btr-pic{transition:none}.btr-hold.holding .btr-pic{transform:none}}

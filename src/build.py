@@ -170,7 +170,7 @@ print('clubs:', len(clubs), 'players:', sum(len(c['players']) for c in clubs), '
 # Replace only the boot entry, leaving the Pro output above unchanged.
 # The beginner game is one script scope in file order; boot.js runs it and so stands last (a `const` of a later file is not
 # there yet for code that already runs). The styles follow the same idea: arena.css repaints style.css, the rest add to it.
-BEGINNER_JS = ['app.js', 'engage.js', 'daily.js', 'edition.js', 'moves.js', 'bids.js', 'boot.js']
+BEGINNER_JS = ['app.js', 'engage.js', 'daily.js', 'edition.js', 'moves.js', 'bids.js', 'train.js', 'boot.js']
 BEGINNER_CSS = ['style.css', 'arena.css', 'engage.css']
 beginner = out.replace(read(os.path.join(SRC, 'js', '38-boot.js')), '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_JS))
 beginner = beginner.replace('</style>', '\n' + '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_CSS) + '\n</style>', 1)
