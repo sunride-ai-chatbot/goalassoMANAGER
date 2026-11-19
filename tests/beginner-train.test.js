@@ -7,7 +7,7 @@
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://train.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__noInjStop=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
+  beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__noInjStop=1;w.__noExtras=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const tick=ms=>new Promise(r=>setTimeout(r,ms));
 const quiet=()=>w.eval("(()=>{Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}try{closeReveal(true)}catch(e){}document.querySelector('.bdialog')?.remove()})()");
@@ -73,6 +73,25 @@ const steps=()=>run("Object.fromEntries(me().players.map(p=>[p.id,[p.pos,p.bTrai
   // the keyboard holds too: a key kept down, released early and then held
   let mf=$('.btr-unit[data-unit="MF"]');const key=(el,t)=>el.dispatchEvent(new w.KeyboardEvent(t,{key:' ',bubbles:true,cancelable:true}));key(mf,'keydown');assert.ok(mf.classList.contains('holding'));key(mf,'keyup');assert.ok(!mf.classList.contains('holding'));
   key(mf,'keydown');await tick(120);assert.equal(run('Bstate().tr.team'),'MF');
+  // ---- extra sessions, bought with the club's money: a mental coach, a goalkeeping coach, one more individual session
+  {const P=k=>`.btr-buy[data-unit="${k}"]`;w.eval("(()=>{const c=me(),b=Bstate();b.tr=null;BTRAIN_LAST=null;c.money=5e6;for(const p of c.players){p.morale=60;p.pot=p.ovr+5;p.bTraining=0}Btab='training';Brender()})()");
+   assert.deepEqual($$('.btr-buy').map(x=>x.dataset.unit),['mind','gk','solo']);assert.ok($$('.btr-buy').every(x=>!x.disabled&&x.querySelector('.btr-price')&&x.querySelector('.btr-ring .arc')));
+   const cost=run("['mind','gk','solo'].map(BtrainCost)"),wages=run('Bsum()');assert.deepEqual(cost,[Math.max(50000,Math.round(wages*.008/1e4)*1e4),Math.max(40000,Math.round(wages*.005/1e4)*1e4),Math.max(40000,Math.round(wages*.005/1e4)*1e4)],'the price follows the wage bill');
+   assert.ok($(P('mind')).textContent.includes(w.eval(`NIS(${cost[0]})`)));assert.match($('main').textContent,/בתשלום מקופת המועדון/);
+   // a tap buys nothing; held to the end, the squad's spirits rise and the money is gone
+   ev($(P('mind')),'pointerdown');ev($(P('mind')),'pointerup');await tick(90);assert.equal(run('me().money'),5e6);assert.equal(run('Bstate().tr||null'),null);
+   ev($(P('mind')),'pointerdown');await tick(120);assert.equal(run('me().money'),5e6-cost[0]);assert.ok(run('me().players.every(p=>p.morale===65)'),'five points for everybody');assert.deepEqual(run('Bstate().tr.buy'),['mind']);
+   assert.ok(run("Bstate().ledger.some(x=>x.label==='אימון אקסטרא · מאמן מנטלי'&&x.amount===-"+cost[0]+")"));assert.match($('.btr-result').textContent,/המאמן המנטלי/);assert.ok($(P('mind')).disabled&&$(P('mind')).classList.contains('done'));assert.equal(w.eval("BtrainBuy('mind')"),null,'once between two matches');
+   assert.deepEqual(run('BtrainLeft()'),{team:1,solo:2},'it takes none of the free sessions');
+   // the goalkeeping coach: three steps for every keeper, and for nobody else
+   const g0=steps();ev($(P('gk')),'pointerdown');await tick(120);const g1=steps();for(const id in g0)assert.equal(g1[id][1]-g0[id][1],g0[id][0]==='GK'?3:0);assert.equal(run('me().money'),5e6-cost[0]-cost[1]);assert.match($('.btr-result').textContent,/מאמן השוערים/);
+   // one more individual session: three players instead of two
+   ev($(P('solo')),'pointerdown');await tick(120);assert.deepEqual(run('BtrainLeft()'),{team:1,solo:3});assert.equal($$('.btr-left .btr-dots')[1].querySelectorAll('i').length,3);
+   const three=run("me().players.filter(p=>p.pos==='DF').slice(0,4).map(p=>p.id)");for(const id of three.slice(0,3))assert.ok(w.eval(`!!BtrainSolo(${id})`));assert.equal(w.eval(`BtrainSolo(${three[3]})`),null,'and not four');assert.deepEqual(run('Bstate().tr.buy'),['mind','gk','solo'],'what was bought is kept through the sessions');
+   // a new round opens them again; what cannot help is locked and says why, and so is what the club cannot pay for
+   w.eval("(()=>{const c=me(),b=Bstate();b.tr=null;for(const p of c.players){p.morale=90;if(p.pos==='GK')p.pot=p.ovr}c.money=1000;Brender()})()");
+   assert.match($(P('mind')).querySelector('.btr-hint').textContent,/המורל כבר גבוה/);assert.match($(P('gk')).querySelector('.btr-hint').textContent,/השוערים בשיא/);assert.match($(P('solo')).querySelector('.btr-hint').textContent,/אין מספיק כסף/);assert.ok($$('.btr-buy').every(x=>x.disabled&&x.classList.contains('capped')));
+   assert.deepEqual(['mind','gk','solo'].map(k=>w.eval(`BtrainBuy('${k}')`)),[null,null,null]);assert.equal(run('me().money'),1000);w.eval("(()=>{const c=me();c.money=5e6;for(const p of c.players){p.morale=60;p.pot=p.ovr+5}Bstate().tr=null})()")}
   // ---- no training while a match is on
   w.eval("Bstate().tr=null;Bplay();BstopBroadcast();Bstate().live.paused=true");assert.equal(w.eval("BtrainTeam('FW')"),null);assert.equal(w.eval('BtrainWaiting()'),0);
   console.log('beginner training: the screen, a tap and an early release, a finger that slides away, a team session, individual sessions, the rating point and the ceiling, a new round, the keyboard, a live match; errors',JSON.stringify(errors));

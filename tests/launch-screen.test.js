@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),{JSDOM,VirtualConsole}=require('jsdom');
 async function boot(mode,saved={},query=''){
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
- const w=new JSDOM(fs.readFileSync(mode==='beginner'?'beginner.html':'ligat-haal-manager.html','utf8'),{url:'https://example.test/'+(mode==='beginner'?'beginner.html':'')+query,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmUnlock=1;w.scrollTo=()=>{};w.matchMedia=()=>({matches:true});w.HTMLMediaElement.prototype.pause=()=>{};w.HTMLMediaElement.prototype.load=()=>{};for(const [k,v] of Object.entries(saved))w.localStorage.setItem(k,v);w.__roomClientFactory=async()=>({auth:{getSession:async()=>({data:{session:null}})}})}}).window;
+ const w=new JSDOM(fs.readFileSync(mode==='beginner'?'beginner.html':'ligat-haal-manager.html','utf8'),{url:'https://example.test/'+(mode==='beginner'?'beginner.html':'')+query,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__noExtras=1;w.__ilmUnlock=1;w.scrollTo=()=>{};w.matchMedia=()=>({matches:true});w.HTMLMediaElement.prototype.pause=()=>{};w.HTMLMediaElement.prototype.load=()=>{};for(const [k,v] of Object.entries(saved))w.localStorage.setItem(k,v);w.__roomClientFactory=async()=>({auth:{getSession:async()=>({data:{session:null}})}})}}).window;
  if(mode==='pro')await w.ILM.ready;return {w,errors};
 }
 (async()=>{for(const mode of ['beginner','pro']){

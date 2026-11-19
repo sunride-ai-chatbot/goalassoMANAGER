@@ -37,7 +37,7 @@ function BxpMatch(M){const b=BxpEnsure(),c=me();if(!b||!M||(M.h!==c.id&&M.a!==c.
   add(gf===1?'שער אחד':gf+' שערים',Math.min(15,gf*3));if(ga===0)add('שער נקי',10);
   const gap=opp?Math.round(strength(opp)-strength(c)):0,derby=typeof derbyWords==='function'&&derbyWords(M.h,M.a);
   if(res==='W'&&gap>=3)add('ניצחון על קבוצה חזקה ממך',15);else if(res==='D'&&gap>=5)add('נקודה מול קבוצה חזקה',8);
-  if(res==='W'&&derby)add(derby.win,15);if(res==='W'&&M.bCL!=null)add('לילה אירופי',15);
+  if(res==='W'&&derby)add(derby.win,15);if(res==='W'&&M.bCL!=null)add('לילה אירופי',15);if(res==='W'&&M.bX)add('ניצחון בגביע',10);
   /* the counters the missions read */
   const ct=b.ct,bump=(k,n)=>{ct[k]=(ct[k]||0)+(n==null?1:n)};bump('played');bump('goals',gf);if(res==='W')bump('wins');if(ga===0)bump('clean');if(res==='W'&&!home&&M.bCL==null)bump('awayW');if(res==='W'&&gap>=3)bump('giant');
   const mine=M.ev.filter(e=>(e.t==='goal'||e.t==='pen')&&e.team===c.id);bump('young',mine.filter(e=>{const p=c.players.find(p=>p.id===e.pid);return p&&p.age<=21}).length);
@@ -46,7 +46,7 @@ function BxpMatch(M){const b=BxpEnsure(),c=me();if(!b||!M||(M.h!==c.id&&M.a!==c.
    const per={};for(const e of mine)if(e.pid!=null)per[e.pid]=(per[e.pid]||0)+1;const tally=Object.values(per);
    if(behind&&res!=='L')bump('comeback');if(gf-ga>=3)bump('big');if(tally.some(n=>n>=3))bump('hat');if(tally.length>=3)bump('spread')}
   try{if(!M.ratings)matchRatings(M,club(M.h),club(M.a));if(Object.values((M.ps&&M.ps[c.id])||{}).some(s=>s.r>=8))bump('star')}catch(e){}
-  b.st.w=res==='W'?(b.st.w||0)+1:0;b.hist.push(res);if(b.hist.length>8)b.hist.shift();if(opp&&M.bCL==null)b.vs[opp.id]={r:res,gf,ga,s:b.season};
+  b.st.w=res==='W'?(b.st.w||0)+1:0;b.hist.push(res);if(b.hist.length>8)b.hist.shift();if(opp&&M.bCL==null&&!M.bX)b.vs[opp.id]={r:res,gf,ga,s:b.season};
   for(const m of b.ms){if(!m||m.done)continue;if(m.k==='streak')m.p=res==='W'?(m.p||0)+1:0;if(m.k==='scorer')m.p=(m.p||0)+mine.filter(e=>e.pid===m.d.pid).length}
   const total=rows.reduce((s,r)=>s+r.x,0),ups=BxpAdd(total),done=BmsCheck();
   b.gain={rows,total,from,to:{lvl:b.lvl,xp:b.xp},ups,done,res};return b.gain}
@@ -93,9 +93,10 @@ function BmsHTML(){const b=Bstate();if(!b||!b.ms||!b.ms.length)return '';
     return `<li class="amis-row${m.done?' done':''}">${Bui(D.ic)}<div class="amis-body"><strong>${D.text(m)}</strong><div class="amis-bar" role="img" aria-label="${p} מתוך ${m.n}"><i style="width:${pct}%"></i></div><small>${m.done?'הושלמה':now}${m.pack&&!m.done?` · פרס: ${BPK_HE[m.pack]}`:''}</small></div>${m.done?`<button type="button" class="amis-claim" data-bms="${i}">אסוף <bdi>+${m.xp}</bdi> <small>XP</small></button>`:D.go?`<button type="button" class="amis-go" data-bms-go="${D.go}" aria-label="לשם"><bdi>+${m.xp}</bdi><small>XP</small><i aria-hidden="true">‹</i></button>`:`<span class="amis-xp"><bdi>+${m.xp}</bdi><small>XP</small></span>`}</li>`}).join('')}</ul></section>`}
 
 /* ---- what the next match is about ---- */
-function Bstakes(){const b=Bstate(),c=me();if(!b||!c)return [];const cup=BclTie(),pair=cup||Bnext();if(!pair)return [];const op=club(pair.find(id=>id!==c.id));if(!op)return [];const home=pair[0]===c.id,out=[],st=b.st||{},vs=b.vs||{};
+function Bstakes(){const b=Bstate(),c=me();if(!b||!c)return [];const x=Bextra(),cup=!!x,pair=x?x.pair:Bnext();if(!pair)return [];const op=club(pair.find(id=>id!==c.id));if(!op)return [];const home=pair[0]===c.id,out=[],st=b.st||{},vs=b.vs||{};
   const add=(k,t,h)=>{if(out.length<2&&!out.some(x=>x.k===k))out.push({k,t,h})};
-  if(cup)add('cup','אירופה',b.cl.stage===3?'הגמר: תשעים דקות מהגביע':'נוקאאוט: מי שמפסידה נשארת בבית');
+  if(x&&x.kind==='pre'){add('pre','הכנה','התוצאה לא נספרת. הזדמנות לנסות הרכב ולתת דקות לכולם');return out}
+  if(x)add('cup',x.kind==='cl'?'אירופה':'גביע',x.final?'הגמר: תשעים דקות מהגביע':'נוקאאוט: מי שמפסידה נשארת בבית');
   const dw=typeof derbyWords==='function'&&derbyWords(pair[0],pair[1]);   /* only two clubs of one city are a derby, and only a derby is what a whole city waits for */
   if(dw)add('derby',dw.tag,dw.kind==='city'?`${esc(dw.label)}: המשחק שכל העיר מחכה לו`:`${esc(dw.label)} מול ${esc(op.name)}: משחק ששני המחנות מחכים לו כל העונה`);
   if(!cup){const tab=Bstandings(),i=tab.findIndex(x=>x.id===c.id),j=tab.findIndex(x=>x.id===op.id),left=b.schedule.length-b.round;
