@@ -51,7 +51,26 @@ try{
   w.eval('BchooseLineup(5)');assert.ok($$('.bsub-player>.bportrait').length>0&&$$('.bsub-player>.bportrait').every(x=>/\bbpos-(GK|DF|MF|FW)\b/.test(x.className)),'and in the lists');quiet();
   const css=fs.readFileSync(path.join(root,'beginner.html'),'utf8');for(const k of ['GK','DF','MF','FW'])assert.match(css,new RegExp('\\.bpos-'+k+'\\{--pos:#[0-9a-f]{6}\\}'));
   assert.equal(new Set(['GK','DF','MF','FW'].map(k=>css.match(new RegExp('\\.bpos-'+k+'\\{--pos:(#[0-9a-f]{6})'))[1])).size,4,'four different colours');
-  console.log('beginner depth: the approach before and during a match, the captain, a colour for each line; errors',JSON.stringify(errors));
+  // ---- the foreign-player limit refuses a change that adds a foreigner past it, and nothing else
+  // reported: "an Israeli for an Israeli, six foreigners in the eleven, and it says מגבלת זרים". The game itself could put a seventh there.
+  w.eval("(()=>{const c=me();for(const p of c.players){p.inj=0;p.susp=0;p.foreign=false}BensureXI(c);c.lineup.slice(1,8).forEach(id=>c.players.find(p=>p.id===id).foreign=true);Btab='squad'})()");
+  assert.equal(run('BforeignXI(me())'),7,'seven in the eleven, as an older career can hold');
+  w.eval('BensureXI(me())');assert.equal(run('BforeignXI(me())'),6,'the game does not keep an eleven over the limit: the weakest foreigner makes way');assert.equal(run('me().lineup.filter(Boolean).length'),11);
+  w.eval('Brender()');assert.match($('.bfor-line').textContent,/זרים בהרכב: 6 מתוך 6/);assert.equal($$('.bplayer .bfor').length,7,'a foreigner is marked on his card');
+  const isrSlot=run('me().lineup.findIndex((id,i)=>i>0&&!me().players.find(p=>p.id===id).foreign)'),isrIn=run(`available(me()).find(p=>!p.foreign&&p.pos!=='GK'&&!me().lineup.includes(p.id)).id`);
+  w.eval(`BchooseLineup(${isrSlot})`);assert.match($('.bdialog .bfor-line').textContent,/זרים בהרכב: 6 מתוך 6 מותרים\. זר נוסף יכול להיכנס רק במקום זר/);
+  assert.equal(w.eval(`BsetLineup(${isrIn})`),true,'an Israeli for an Israeli with six foreigners in the eleven');assert.equal(run(`me().lineup[${isrSlot}]`),isrIn);assert.equal($('.bdialog'),null);
+  // a seventh is refused, with the reason and his name
+  const spare=run(`(p=>{p.foreign=true;return p.id})(available(me()).find(p=>p.pos!=='GK'&&!me().lineup.includes(p.id)))`),isr2=run('me().lineup.findIndex((id,i)=>i>0&&!me().players.find(p=>p.id===id).foreign)');
+  w.eval(`BchooseLineup(${isr2})`);assert.ok($(`[data-lineup-in="${spare}"] .bfor`),'and in the list he is chosen from');const keep=run(`me().lineup[${isr2}]`);
+  assert.equal(w.eval(`BsetLineup(${spare})`),false);assert.match($('.bdialog').textContent,/מגבלת זרים/);assert.match($('.bdialog').textContent,/רק במקום זר אחר/);assert.equal(run(`me().lineup[${isr2}]`),keep);quiet();
+  // a foreigner for a foreigner is always a change that may be made
+  const forSlot=run('me().lineup.findIndex((id,i)=>i>0&&me().players.find(p=>p.id===id).foreign)');w.eval(`BchooseLineup(${forSlot})`);assert.equal(w.eval(`BsetLineup(${spare})`),true,'a foreigner in a foreigner\'s place');assert.equal(run('BforeignXI(me())'),6);
+  // and with an eleven already over the limit and nobody to repair it with, a change that does not add one still goes through
+  w.eval("(()=>{const c=me();for(const p of c.players)p.foreign=true;BensureXI(c)})()");assert.equal(run('BforeignXI(me())'),11);
+  const any=run('available(me()).find(p=>p.pos!==\'GK\'&&!me().lineup.includes(p.id)).id');w.eval('BchooseLineup(4)');assert.equal(w.eval(`BsetLineup(${any})`),true);
+  w.eval("(()=>{const c=me();for(const p of c.players)p.foreign=false;BensureXI(c);Brender()})()");quiet();
+  console.log('beginner depth: the approach before and during a match, the captain, a colour for each line, the foreign limit in the line-up; errors',JSON.stringify(errors));
   if(errors.length)process.exitCode=1;
 }catch(e){console.error(e);errors.push(String(e&&e.message||e));console.log('beginner depth errors',JSON.stringify(errors.slice(0,3)));process.exitCode=1}
 finally{w.close()}
