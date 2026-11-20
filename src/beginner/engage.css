@@ -247,6 +247,7 @@
 .bseg button[aria-selected="true"]{background:linear-gradient(180deg,#00e87a,#00b871);color:#001a0a;box-shadow:0 0 14px rgba(0,255,157,.35)}
 .bswap-to{display:block;margin-top:4px;font-style:normal;font-size:13px;line-height:1.35;color:#9af5d0}.bswap-to+.bswap-to{margin-top:1px}.bswap-to i{font-style:normal;color:#fbbf24}
 @media(max-width:380px){.bseg button{font-size:13px}}
+.bseg.bsquad-show{margin:26px 0 10px}.bseg.bsquad-show button{font-size:17px;min-height:50px}
 /* injured: a red badge with a white cross; suspended: a red card. Over the corner of his picture wherever he is listed */
 .bcross{position:absolute;z-index:2;top:10px;inset-inline-start:10px;width:34px;height:34px;border-radius:50%;background:#e11d48;box-shadow:0 0 0 3px rgba(8,13,30,.92),0 0 16px rgba(225,29,72,.8);font-style:normal}
 .bcross::before,.bcross::after{content:"";position:absolute;left:50%;top:50%;background:#fff;border-radius:2px;transform:translate(-50%,-50%)}
