@@ -69,8 +69,11 @@ const BACH=[
   ['t1','תואר ראשון','אליפות או גביע',b=>[(b.honours||[]).length,1],300],['t3','ארון מתמלא','שלושה תארים',b=>[(b.honours||[]).length,3],600],
   ['s3','ותיק','שלוש עונות על הקווים',(b,k)=>[k.hist.length,3],120],['sign5','בונה סגל','חמש החתמות',b=>[(b.ct&&b.ct.signs)||0,5],60],['hag3','סוחר','שלוש קניות מתחת למחיר המבוקש',(b,k)=>[k.n.hag||0,3],80],
   ['tr30','מגרש האימונים','שלושים אימונים',b=>[(b.ct&&b.ct.train)||0,30],80],['st3','לא לבד','שלושה אנשי צוות',b=>[Object.values(b.staff||{}).filter(Boolean).length,3],80],['lv10','מאמן מנוסה','הגע לרמה 10',b=>[b.lvl||1,10],100]];
-function BbookEnsure(){const b=Bstate();if(!b||b.daily)return null;if(b.book)return b.book;const ct=b.ct||{},old=(ct.played||0)>0;
-  const k=b.book={n:{m:ct.played||0,w:ct.wins||0,d:0,l:0,gf:ct.goals||0,ga:0,cs:0},cur:{w:(b.st&&b.st.w)||0,u:0},rec:{},ach:{},fresh:[],hist:[]};
+/* A winning run is an unbeaten run, so the two can never disagree. The book of a career from before opened with the winning run the game
+   already kept (b.st.w) and an unbeaten run of nothing, and four wins later it said "11 wins in a row" over "4 matches without defeat". */
+function BbookMend(k){k.cur=k.cur||{w:0,u:0};if((k.cur.u||0)<(k.cur.w||0))k.cur.u=k.cur.w;const R=k.rec||(k.rec={});if(R.run&&(!R.unb||R.unb.v<R.run.v))R.unb={v:R.run.v,s:R.run.s};return k}
+function BbookEnsure(){const b=Bstate();if(!b||b.daily)return null;if(b.book)return BbookMend(b.book);const ct=b.ct||{},old=(ct.played||0)>0;
+  const k=b.book={n:{m:ct.played||0,w:ct.wins||0,d:0,l:0,gf:ct.goals||0,ga:0,cs:0},cur:{w:(b.st&&b.st.w)||0,u:(b.st&&b.st.w)||0},rec:{},ach:{},fresh:[],hist:[]};
   if(old)for(const [id,,,fn] of BACH){const [v,t]=fn(b,k);if(v>=t)k.ach[id]=0}return k}
 function BbookCheck(){const b=Bstate(),k=b&&b.book;if(!k||b.daily||window.__noBook)return [];const got=[];for(const [id,name,,fn,xp] of BACH){if(k.ach[id]!=null)continue;const [v,t]=fn(b,k);if(v>=t){k.ach[id]=b.season;k.fresh.push(id);got.push(name);try{BxpAdd(xp)}catch(e){}}}return got}
 function BbookAfter(M){const k=BbookEnsure(),b=Bstate(),c=me();if(!k||(M.bX&&M.bX.kind==='pre'))return;const home=M.h===c.id,gf=home?M.gh:M.ga,ga=home?M.ga:M.gh,op=club(home?M.a:M.h),pk=M.pens?((M.pens==='h')===home?1:-1):0,w=gf>ga||pk>0,l=gf<ga||pk<0,n=k.n,R=k.rec,tag={s:b.season,op:op?op.name:''};

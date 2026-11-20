@@ -174,6 +174,11 @@ try{
   // a career from before the book: what it had already reached is entered without a prize
   const x1=run("(()=>{const b=Bstate();delete b.book;b.ct.played=40;b.ct.wins=25;b.honours=[];const x=b.xpAll;BbookEnsure();const g=BbookCheck();return [b.book.ach.w1,b.book.ach.w10,b.book.fresh.length,b.xpAll-x,g.includes('ניצחון ראשון')]})()");
   assert.deepEqual(x1.slice(0,3),[0,0,0]);assert.equal(x1[4],false);
+  // a winning run is an unbeaten run: reported as "11 wins in a row" over "4 matches without defeat"
+  const runs=run(`(()=>{const b=Bstate(),op=b.league.find(id=>id!==G.me),win=()=>BbookAfter({h:me().id,a:op,gh:1,ga:0,ev:[]});delete b.book;b.st={w:7};BbookEnsure();const a=[b.book.cur.w,b.book.cur.u];for(let i=0;i<4;i++)win();const R=b.book.rec;return [a,[R.run.v,R.unb.v]]})()`);
+  assert.deepEqual(runs,[[7,7],[11,11]],'a book that opens in the middle of a run counts both from it');
+  assert.deepEqual(run("(()=>{const k=Bstate().book;k.cur={w:11,u:4};k.rec.run={v:11,s:8};k.rec.unb={v:4,s:8};BbookEnsure();return [k.cur.u,k.rec.unb.v,k.rec.unb.s]})()"),[11,11,8],'and a book saved with the two apart is put right when the career loads');
+  assert.deepEqual(run(`(()=>{const b=Bstate(),op=b.league.find(id=>id!==G.me);BbookAfter({h:me().id,a:op,gh:1,ga:1,ev:[]});BbookAfter({h:me().id,a:op,gh:2,ga:0,ev:[]});const k=b.book;return [k.cur.w,k.cur.u,k.rec.run.v,k.rec.unb.v]})()`),[1,13,11,13],'a draw ends the wins and not the unbeaten run');
   // ---- the haggle
   const hp=run("(()=>{const o=G.clubs.find(c=>c.id!==G.me&&Bstate().league.includes(c.id)&&c.players.length>16),ps=o.players.slice().sort((a,b)=>a.ovr-b.ovr);return [ps[1].id,ps[2].id,ps[3].id]})()");
   const price=id=>run(`(()=>{const f=Bfind(${id}),ask=Math.round(Bvalue(f.p)*1.12/50000)*50000;return [ask,BnegFloor(f.p,ask,false)]})()`);const offer=v=>{$('#boffer').value=v;$('[data-action="offer"]').click()};
