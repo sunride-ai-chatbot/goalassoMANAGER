@@ -1,0 +1,128 @@
+/* GOALASSO START — depth: what a season needs beyond the next match.
+   Fitness that carries from one match to the next, the numbers of a match at the break and at the end, the season's calendar, and the
+   people beside the coach. Everything here changes a career from an event (a match that ended, a button) and never while a screen is drawn. */
+
+/* ---------- fitness between matches ----------
+   Everybody used to start every match at 100. A match now costs whoever played it (BFIT_COST for ninety minutes, a goalkeeper far less) and
+   the days until the next one give it back: a week after a league round, a few days after a cup tie or a European night, which are played
+   in midweek. With one match a week a regular is back at 100 — nothing to manage; in a week of two matches he starts the second at 86
+   and a third at 74, where the engine already takes rating off him (effOvr under 85, minuteFatigue late in a match) and injures him more
+   often, and a week of rest after it brings him back to about 96. That is the reason to rotate. Only the coach's club is modelled: the other clubs have no line-up to manage. */
+const BFIT_COST=26,BFIT_WEEK=30,BFIT_MID=8,BFIT_TIRED=75,BFIT_WARN=82,BFIT_FLOOR=35;
+const BfitOf=p=>Math.round(p.fit??100);
+function BfitOn(){const b=Bstate();return !!b&&!b.daily&&!window.__noFatigue}
+function BfitAfter(M){const c=me();if(!BfitOn()||!c||!M)return;const k=1-.06*BstaffLv('fit');
+  const pay=(pid,mins)=>{const p=c.players.find(x=>x.id===pid);if(p)p.fit=clamp(Math.round((p.fit??100)-mins/90*BFIT_COST*(p.pos==='GK'?.4:1)*k),BFIT_FLOOR,100)};
+  for(const e of (M.xi&&M.xi[c.id])||[])pay(e.pid,Math.max(0,Math.min(M.m,90)-(e.since||0)));
+  for(const pid of (M.used&&M.used[c.id])||[])pay(pid,Math.min(90,(M.mins&&M.mins[c.id]&&M.mins[c.id][pid])??60));
+  if(M.bCL!=null||M.bX)BfitRest(M.bX&&M.bX.kind==='pre'?BFIT_WEEK:BFIT_MID)}   /* a friendly has a week after it, like a league round */
+function BfitRest(base){const c=me();if(!BfitOn()||!c)return;const add=base+(base>=BFIT_WEEK?3:1)*BstaffLv('fit');for(const p of c.players){const f=p.fit??100;if(f<100)p.fit=clamp(Math.round(f+add+(100-f)*.15),0,100)}}
+const BfitXI=c=>(c.lineup||[]).map(id=>c.players.find(p=>p.id===id)).filter(Boolean);
+const BfitTired=c=>BfitXI(c).filter(p=>BfitOf(p)<BFIT_TIRED).sort((a,b)=>BfitOf(a)-BfitOf(b));
+function BfitChip(p){const f=BfitOf(p);return p.inj||p.susp||f>=BFIT_WARN?'':`<span class="bfit-chip ${f<BFIT_TIRED?'bad':'warn'}">כושר <bdi>${f}%</bdi></span>`}
+function BfitStripHTML(c){const t=BfitTired(c);return t.length?`<div class="bout-strip tired" role="status"><strong>עייפים בהרכב</strong><ul>${t.map(p=>`<li><span><b>${esc(fullName(p))}</b> · ${POSHE[p.pos]} · כושר <bdi>${BfitOf(p)}%</bdi></span></li>`).join('')}</ul><small>שחקן עייף משחק פחות טוב ונפצע בקלות. משחק אחד על הספסל מחזיר אותו.</small></div>`:''}
+
+/* ---------- the numbers of a match ----------
+   The live screen showed shots and possession; the break was a pause and the end was a score, scorers and ratings. The break is now a
+   window of its own — the score, who scored, the numbers, the approach for the second half, who is running out of legs, and the way to
+   the substitutions — and the same numbers stand under every result. */
+function BstatRows(M){const h=M.h,a=M.a,tp=(M.poss[h]||0)+(M.poss[a]||0),ph=tp?Math.round((M.poss[h]||0)/tp*100):50,sot=M.sot||{},cnt=(t,id)=>M.ev.filter(e=>e.t===t&&e.team===id).length;
+  let xh=0,xa=0;try{xh=bcXG(M,h)||0;xa=bcXG(M,a)||0}catch(e){}
+  const rows=[['בעיטות לשער',M.shots[h]||0,M.shots[a]||0],['מהן למסגרת',sot[h]||0,sot[a]||0],['החזקת כדור',ph,100-ph,'%'],['שערים צפויים',+xh.toFixed(1),+xa.toFixed(1)],['קרנות',cnt('corner',h),cnt('corner',a)],['כרטיסים צהובים',cnt('yellow',h),cnt('yellow',a)]];
+  if(cnt('red',h)+cnt('red',a))rows.push(['כרטיסים אדומים',cnt('red',h),cnt('red',a)]);return rows}
+function BmatchStatsHTML(M){let rows,col={h:{fill:'#00FF9D'},a:{fill:'#8fa3c4'}};try{rows=BstatRows(M);col=matchColors(club(M.h),club(M.a))}catch(e){if(!rows)return ''}
+  return `<section class="bstats" style="--hc:${esc(col.h.fill)};--ac:${esc(col.a.fill)}"><h3>המשחק במספרים</h3>${rows.map(([l,vh,va,u])=>{const t=vh+va,wh=t?vh/t*100:50;return `<div class="bstat"><bdi class="v">${vh}${u||''}</bdi><span class="m"><span class="l">${l}</span><span class="bars"><i class="h" style="width:${wh.toFixed(1)}%"></i><i class="a" style="width:${(100-wh).toFixed(1)}%"></i></span></span><bdi class="v">${va}${u||''}</bdi></div>`}).join('')}</section>`}
+function BmatchFactsHTML(M,bare){return BmatchFacts0(M)+(bare?'':BmatchStatsHTML(M))}
+function BhalfDialog(M){const c=me(),ment=liveMentality(M,c),left=MAX_SUBS-((M.subs&&M.subs[c.id])||0);
+  const tired=xiPlayers(M,c).map(x=>({p:x.p,en:liveEnergy(M,c,x.p,x.e,M.m)})).filter(x=>x.p.pos!=='GK'&&x.en<BFIT_TIRED).sort((x,y)=>x.en-y.en).slice(0,3);
+  Bdialog(`<div class="bresult bhalf"><span class="beyebrow">מחצית</span>${BresultBoard(M)}${BmatchFacts0(M)}${BmatchStatsHTML(M)}<section class="bmatch-tactics bhalf-ment"><span>איך נשחק במחצית השנייה?</span>${BMENT.map(([k,t])=>Bbutton(t,`data-bmentality="${k}" aria-pressed="${k===ment}"`,'secondary')).join('')}<p class="bment-note bment-live" data-k="${ment}">${BMENT_WHAT[ment]}</p></section>${tired.length?`<p class="bnote">הכי עייפים על המגרש: ${tired.map(x=>`${esc(fullName(x.p))} <bdi>${x.en}%</bdi>`).join(' · ')}.${left>0?' מחליף רענן ייתן יותר במחצית השנייה.':''}</p>`:''}<div class="bdock">${Bbutton('למחצית השנייה','data-bhalf-go')}${left>0?Bbutton('⇄ חילופים','data-blive="subs"','secondary'):''}</div></div>`)}
+
+/* ---------- the season's calendar ----------
+   The coach saw the next match and nothing after it. Every match of his club this season in one list: friendlies, league rounds, cup
+   ties and European nights in the order they are played, the results of what was played and what is still ahead. What was played is kept
+   in b.cal (one short record a match, this season only); a league round played before this existed is listed without its score. */
+function BcalLog(M){const b=Bstate(),c=me();if(!b||b.daily||!c||!M)return;const home=M.h===c.id,op=club(home?M.a:M.h);if(!op)return;
+  const k=M.bCL!=null?'cl':M.bX?M.bX.kind:'lg';b.cal=(b.cal||[]).filter(x=>x.s===b.season);
+  b.cal.push({s:b.season,k,r:b.round,t:k==='lg'?'':k==='cl'?'ליגת האלופות · '+BCL_STAGES[M.bCL]:BextraLabel(M),op:op.name,home,nt:!!(M.ctx&&M.ctx.neutral),gf:home?M.gh:M.ga,ga:home?M.ga:M.gh,pk:M.pens?((M.pens==='h')===home?1:-1):0})}
+function BcalRows(){const b=Bstate(),c=me(),n=b.schedule.length,log=(b.cal||[]).filter(x=>x.s===b.season),rows=[];
+  const lg=r=>{const pair=b.schedule[r].find(p=>p.includes(c.id));if(!pair)return {k:'lg',r,rest:1};const op=club(pair.find(id=>id!==c.id));return {k:'lg',r,op:op?op.name:'',home:pair[0]===c.id}};
+  for(let r=0;r<b.round;r++){for(const x of log)if(x.r===r&&x.k!=='lg')rows.push({...x,past:1});const L=log.find(x=>x.r===r&&x.k==='lg');rows.push(L?{...L,past:1}:{...lg(r),past:1,unk:1})}
+  for(const x of log)if(x.r===b.round&&x.k!=='lg')rows.push({...x,past:1});
+  /* ahead: the matches that are not league rounds, each before the league round it is played ahead of */
+  const ahead=[];if(b.pre&&b.pre.season===b.season&&b.round===0&&!b.pre.skip)for(const f of b.pre.list)if(!f.res&&club(f.id))ahead.push({at:0,o:0,k:'pre',t:'משחק הכנה',op:club(f.id).name,home:!!f.home});
+  for(const kind of BCUP_KINDS){const K=b.cups&&b.cups[kind];if(!K||K.out||K.won||K.season!==b.season)continue;for(let st=K.stage;st<K.names.length;st++){const fin=st===K.names.length-1,row={at:Math.max(K.at[st],b.round),o:kind==='toto'?1:2,k:kind,t:K.name+' · '+K.names[st],nt:fin};
+      if(st===K.stage){const t=K.ties.find(t=>t.includes(c.bkey));if(!t){if(!(K.bye||[]).includes(c.bkey))break;row.bye=1}else{row.op=BcupName(t[0]===c.bkey?t[1]:t[0]);row.home=t[0]===c.bkey}}else row.maybe=1;ahead.push(row)}}
+  const k=b.cl;if(k&&!k.out&&!k.won&&k.season===b.season&&k.alive.includes(c.id))for(let st=k.stage;st<4;st++){const row={at:Math.max(k.at[st],b.round),o:3,k:'cl',t:'ליגת האלופות · '+BCL_STAGES[st],nt:st===3};
+      if(st===k.stage){const t=k.ties.find(t=>t.includes(c.id));if(!t)break;const op=club(t[0]===c.id?t[1]:t[0]);row.op=op?op.name:'';row.home=t[0]===c.id}else row.maybe=1;ahead.push(row)}
+  for(let r=b.round;r<n;r++){for(const x of ahead.filter(x=>x.at===r).sort((p,q)=>p.o-q.o))rows.push(x);rows.push(lg(r))}
+  const nx=rows.find(x=>!x.past&&!x.rest&&!x.bye&&!x.maybe);if(nx)nx.next=1;return rows}
+function BcalRowHTML(x){const b=Bstate(),when=x.k==='lg'?`מחזור <bdi>${x.r+1}</bdi>`:esc(x.t),place=x.nt?'מגרש ניטרלי':x.home?'בית':'חוץ';
+  if(x.rest)return `<li class="bcal-row rest${x.past?' past':''}"><span class="bcal-when">${when}</span><span class="bcal-op"><b>מנוחה</b><small>הקבוצה לא משחקת במחזור הזה</small></span></li>`;
+  if(x.bye)return `<li class="bcal-row rest"><span class="bcal-when">${when}</span><span class="bcal-op"><b>עולים בלי משחק</b><small>הקבוצה פטורה מהשלב הזה</small></span></li>`;
+  if(x.maybe)return `<li class="bcal-row maybe"><span class="bcal-when">${when}</span><span class="bcal-op"><b>אם תעלו</b><small>היריבה תיקבע בהגרלה</small></span></li>`;
+  let res='';if(x.past&&!x.unk){const w=x.gf>x.ga||x.pk>0,l=x.gf<x.ga||x.pk<0,cls=w?'w':l?'l':'d';res=`<span class="bcal-res ${cls}"><b>${w?'ניצחון':l?'הפסד':'תיקו'}</b><bdi>${Math.max(x.gf,x.ga)}:${Math.min(x.gf,x.ga)}</bdi>${x.pk?'<small>בפנדלים</small>':''}</span>`}
+  else if(x.past)res='<span class="bcal-res"><small>שוחק</small></span>';else if(x.next)res='<span class="bcal-res next"><b>המשחק הבא</b></span>';
+  return `<li class="bcal-row ${x.k}${x.past?' past':''}${x.next?' next':''}"><span class="bcal-when">${when}</span><span class="bcal-op"><b>${esc(x.op||'')}</b><small>${place}</small></span>${res}</li>`}
+function BcalendarHTML(){const b=Bstate(),rows=BcalRows(),played=rows.filter(x=>x.past&&!x.unk&&!x.rest&&x.k!=='pre'),w=played.filter(x=>x.gf>x.ga||x.pk>0).length,l=played.filter(x=>x.gf<x.ga||x.pk<0).length;
+  return `<section class="bpanel bcal"><h2>לוח המשחקים · עונה <bdi>${b.season}</bdi></h2><p class="bmuted">כל המשחקים של ${esc(me().name)} העונה, לפי הסדר: ליגה, גביעים${b.cl&&b.cl.season===b.season?', אירופה':''} ומשחקי הכנה.${played.length?` עד עכשיו: <bdi>${w}</bdi> ניצחונות, <bdi>${played.length-w-l}</bdi> תיקו, <bdi>${l}</bdi> הפסדים.`:''}</p><ol class="bcal-list">${rows.map(BcalRowHTML).join('')}</ol></section>`}
+function BtilesMoreHTML(){const book=typeof BbookView==='function',n=book&&typeof BbookFresh==='function'?BbookFresh():0;
+  return `<div class="atiles three"><button type="button" class="atile" data-tab="staff">${Bui('tactics')}<span>צוות מקצועי</span></button><button type="button" class="atile" data-calendar>${Bui('ball')}<span>לוח משחקים</span></button>${book?`<button type="button" class="atile" data-tab="book">${Bui('trophy')}${n?`<b class="adot new"><bdi>${n}</bdi></b>`:''}<span>ספר הקריירה</span></button>`:''}</div>`}
+let Bleagueview='table';
+const BleagueSeg=()=>`<div class="bseg bleague-view" role="tablist"><button type="button" role="tab" data-leagueview="table" aria-selected="${Bleagueview!=='cal'}">טבלאות</button><button type="button" role="tab" data-leagueview="cal" aria-selected="${Bleagueview==='cal'}">לוח משחקים</button></div>`;
+
+/* ---------- the people beside the coach ----------
+   Five roles, three levels each, hired with the club's money: a signing fee and a yearly salary that is paid a little every round like
+   every other running cost. Each gives something a match or a week can feel — nothing here is a number for its own sake. The staff is the
+   coach's own and goes with him to his next club. */
+const BSTAFF={
+  asst:{name:'עוזר מאמן',ic:'tactics',lv:['לפני כל משחק הוא אומר איזו גישה מתאימה ומי עייף','כל אימון קבוצתי נותן צעד נוסף','כל אימון אישי נותן צעד נוסף']},
+  fit:{name:'מאמן כושר',ic:'boot',lv:['השחקנים מתאוששים מהר יותר בין משחקים','התאוששות מהירה עוד יותר, ומשחק מעייף פחות','הסגל עומד גם בשבוע של שני משחקים']},
+  phys:{name:'רופא הקבוצה',ic:'shield',lv:['פציעה של שלושה משחקים ומעלה מתקצרת במשחק','כל פציעה של שני משחקים ומעלה מתקצרת במשחק','פציעות ארוכות מתקצרות בשני משחקים']},
+  anal:{name:'אנליסט',ic:'gear',lv:['דו״ח על היריבה לפני כל משחק, והקבוצה מגיעה מוכנה יותר','הדו״ח כולל גם את הכובש שלהם ואיך הם ישחקו, והיתרון גדל','היתרון הגדול ביותר שהכנה למשחק יכולה לתת']},
+  scout:{name:'סקאוט',ic:'transfer',lv:['רואים את תקרת הדירוג של כל שחקן בשוק','מועדונים מוכנים לרדת יותר במחיר במיקוח','המחיר הטוב ביותר שאפשר להשיג במיקוח']}};
+const BSTAFF_MAX=3;
+function BstaffLv(k){const b=Bstate();return (b&&!b.daily&&b.staff&&b.staff[k])||0}
+function BstaffFee(to){return Math.max(80000*to,Math.round(Bsum()*.008*to/10000)*10000)}
+function BstaffWage(lv){return lv?Math.max(30000*lv,Math.round(Bsum()*.004*lv/10000)*10000):0}
+function BstaffPay(){const b=Bstate();if(!b||!b.staff)return 0;return Object.keys(BSTAFF).reduce((t,k)=>t+BstaffWage(b.staff[k]||0),0)}
+function BstaffWhy(k){const b=Bstate(),lv=BstaffLv(k);if(!b||b.live||b.out)return 'לא עכשיו';if(lv>=BSTAFF_MAX)return 'הרמה הגבוהה ביותר';if(me().money<BstaffFee(lv+1))return 'אין מספיק כסף בקופה';return ''}
+function BstaffHire(k){const b=Bstate(),S=BSTAFF[k];if(!S||BstaffWhy(k))return false;const to=BstaffLv(k)+1,fee=BstaffFee(to);b.staff={...(b.staff||{}),[k]:to};Bledger('צוות מקצועי · '+S.name+(to>1?' · רמה '+to:''),-fee);try{Bcount('staff')}catch(e){}Bwrite();return true}
+function BstaffOut(k){const b=Bstate();if(!b||b.live||!BstaffLv(k))return false;b.staff={...(b.staff||{}),[k]:0};Bwrite();return true}
+function BstaffCardHTML(k){const S=BSTAFF[k],lv=BstaffLv(k),why=BstaffWhy(k),max=lv>=BSTAFF_MAX;
+  return `<article class="bstaff-card${lv?' on':''}">${Bui(S.ic)}<div class="bstaff-head"><h3>${S.name}</h3><span class="bstaff-pips" role="img" aria-label="רמה ${lv} מתוך ${BSTAFF_MAX}">${[1,2,3].map(i=>`<i class="${i<=lv?'on':''}"></i>`).join('')}</span></div>
+    ${lv?`<ul class="bstaff-has">${S.lv.slice(0,lv).map(t=>`<li>${t}</li>`).join('')}</ul>`:'<p class="bmuted">עוד לא בצוות.</p>'}
+    ${max?'<p class="bstaff-next done">הרמה הגבוהה ביותר</p>':`<p class="bstaff-next"><b>${lv?'ברמה הבאה':'מה הוא נותן'}:</b> ${S.lv[lv]}</p><p class="bstaff-price">דמי חתימה <strong>${Bmoney(BstaffFee(lv+1))}</strong> · שכר <strong>${Bmoney(BstaffWage(lv+1))}</strong> לשנה</p>`}
+    <div class="bstaff-acts">${max?'':`<button type="button" class="bbtn${why?' secondary':''}" data-staff-up="${k}"${why?' disabled':''}>${why&&why!=='הרמה הגבוהה ביותר'?why:lv?'שדרג לרמה '+(lv+1):'העסק'}</button>`}${lv?`<button type="button" class="blink" data-staff-out="${k}">שחרר</button>`:''}</div></article>`}
+function BstaffView(){const pay=BstaffPay();return `${Bheader('האנשים שלצדך','צוות מקצועי','כל איש צוות עולה דמי חתימה ושכר שנתי, ונותן יתרון אמיתי: במשחק, באימון, בהתאוששות או בשוק.')}<div class="bmetrics"><article><span>כסף זמין עכשיו</span><strong>${Bmoney(me().money)}</strong></article><article><span>שכר הצוות לשנה</span><strong>${Bmoney(pay)}</strong><small>${pay?'משולם בהדרגה בכל מחזור':'עוד לא העסקת אף אחד'}</small></article></div><div class="bstaff-grid">${Object.keys(BSTAFF).map(BstaffCardHTML).join('')}</div><p class="bnote">הצוות הוא שלך: אם תעבור למועדון אחר, הוא עובר איתך.</p>`}
+function BstaffAsk(k){const S=BSTAFF[k],lv=BstaffLv(k);if(!S||BstaffWhy(k))return;Bdialog(`<h2>${lv?'לשדרג את '+S.name+'?':'להעסיק '+S.name+'?'}</h2><p>${S.lv[lv]}.</p><div class="btransaction"><span>דמי חתימה, עכשיו</span>${Bmoney(BstaffFee(lv+1))}</div><div class="btransaction"><span>שכר לשנה, בהדרגה</span>${Bmoney(BstaffWage(lv+1))}</div><div class="bdock">${Bbutton('אישור',`data-staff-ok="${k}"`)}${Bbutton('ביטול','data-bclose','secondary')}</div>`)}
+/* what the staff says before a match: the assistant on the approach and on tired legs, the analyst on the opponent */
+function BstaffBriefHTML(pair){const c=me(),op=pair?club(pair.find(id=>id!==c.id)):null;if(!op)return '';const out=[],as=BstaffLv('asst'),an=BstaffLv('anal');
+  if(as){const d=strength(c)-strength(op)+(pair[0]===c.id?1.5:-1.5),k=d>=5?'att':d<=-5?'def':'bal',t=BfitTired(c);
+    out.push(`<li><b>עוזר המאמן:</b> ${k==='att'?'אתם חזקים מהם בבירור. הייתי משחק <strong>התקפי</strong>.':k==='def'?'הם חזקים יותר. הייתי משחק <strong>הגנתי</strong> ומחכה להזדמנות.':'הכוחות קרובים. <strong>מאוזן</strong> הוא הבחירה הבטוחה.'}${t.length?` ${t.map(p=>esc(p.last||p.first||fullName(p))).join(', ')} ${t.length>1?'עייפים':'עייף'}: שווה לתת ${t.length>1?'להם':'לו'} לנוח.`:''}</li>`)}
+  if(an){const xi=bestXI(op),avg=pos=>{const ps=xi.filter(p=>p.pos===pos);return ps.length?ps.reduce((s,p)=>s+p.ovr,0)/ps.length:0},L=[['DF','ההגנה'],['MF','הקישור'],['FW','ההתקפה']].map(([k,t])=>({t,v:avg(k)})).filter(x=>x.v).sort((a,b)=>a.v-b.v);
+    let txt=L.length>1?(Math.round(L[0].v)===Math.round(L[L.length-1].v)?`שלוש החוליות שלהם שקולות (<bdi>${Math.round(L[0].v)}</bdi>): אין להם נקודת תורפה ברורה.`:`החוליה החלשה שלהם היא ${L[0].t} (<bdi>${Math.round(L[0].v)}</bdi>), והחזקה היא ${L[L.length-1].t} (<bdi>${Math.round(L[L.length-1].v)}</bdi>).`):'';
+    if(an>=2){let s=null;try{s=BleaderOf(op,'goals')}catch(e){}const d=strength(op)-strength(c)+(pair[0]===op.id?1.5:-1.5);txt+=`${s&&s.goals?` הכובש שלהם: ${esc(s.name)} (<bdi>${s.goals}</bdi>).`:''} צפויים לשחק ${d>=5?'התקפי':d<=-5?'הגנתי':'מאוזן'}.`}
+    out.push(`<li><b>האנליסט:</b> ${txt} הקבוצה מגיעה מוכנה: <bdi>+${(.3*an).toFixed(1)}</bdi> לכוח.</li>`)}
+  return out.length?`<ul class="bbrief">${out.join('')}</ul>`:''}
+/* at the whistle: what preparation is worth in this match */
+function BdepthKick(M){const b=Bstate();if(!b||b.daily||!M||M.bDaily!=null)return;let v=.3*BstaffLv('anal');
+  if(b.boost&&b.boost.rep&&!(M.bX&&M.bX.kind==='pre')){v+=b.boost.rep;delete b.boost.rep}
+  if(v){M.boost=M.boost||{};M.boost[G.me]=(M.boost[G.me]||0)+v}}
+
+/* ---------- one hook after every match of the coach's own club ---------- */
+function BdepthAfter(M){const b=Bstate(),c=me();if(!b||b.daily||!c||!M||M.bDep||M.bDaily!=null||(M.h!==c.id&&M.a!==c.id))return;M.bDep=1;
+  try{const L=BstaffLv('phys');if(L)for(const e of M.ev)if(e.t==='inj'&&e.team===c.id){const p=c.players.find(x=>x.id===e.pid);if(!p||!p.inj)continue;const cut=L>=3&&p.inj>=4?2:(L>=2?p.inj>=2:p.inj>=3)?1:0;if(cut)p.inj=Math.max(1,p.inj-cut)}}catch(e){console.warn('staff',e)}
+  try{BfitAfter(M)}catch(e){console.warn('fit',e)}try{BcalLog(M)}catch(e){console.warn('cal',e)}
+  try{BbookAfter(M)}catch(e){console.warn('book',e)}
+  try{BenvSettle(M);if(M.bCL!=null||M.bX)BenvTurn()}catch(e){console.warn('env',e)}}
+
+/* a new club: the calendar, the table he left and whatever named a player of the old squad go; the staff and the book are his and stay */
+function BdepthMoved(){const b=Bstate();if(!b)return;b.cal=[];b.negOff={};if(b.boost)delete b.boost.rep;if(b.env){b.env.bet=null;b.env.pr=null;b.env.note=[];if(b.env.got&&!b.env.got.read)b.env.got=null}for(const p of (me()?me().players:[]))if(p.fit==null)p.fit=100}
+document.addEventListener('click',e=>{const t=e.target&&e.target.closest?e.target:null;if(!t||!G||!G.beginner)return;let el;
+  if((el=t.closest('[data-bhalf-go]'))){const live=Bstate().live;document.querySelector('.bdialog')?.remove();if(live){live.paused=false;Bwrite();BpaintBroadcast()}return}
+  if((el=t.closest('[data-leagueview]'))){Bleagueview=el.dataset.leagueview==='cal'?'cal':'table';Brender();return}
+  if((el=t.closest('[data-calendar]'))){Btab='league';Bleagueview='cal';Brender();const nx=document.querySelector('.bcal-row.next');if(nx&&nx.scrollIntoView)nx.scrollIntoView({block:'center'});else window.scrollTo?.(0,0);return}
+  if((el=t.closest('[data-staff-up]'))){BstaffAsk(el.dataset.staffUp);return}
+  if((el=t.closest('[data-staff-ok]'))){const ok=BstaffHire(el.dataset.staffOk);document.querySelector('.bdialog')?.remove();if(ok)Brender();return}
+  if((el=t.closest('[data-staff-out]'))){const k=el.dataset.staffOut,S=BSTAFF[k];if(!S||!BstaffLv(k))return;Bdialog(`<h2>לשחרר את ${S.name}?</h2><p>השכר שלו ייחסך מהמחזור הבא. דמי החתימה לא חוזרים, ואם תרצה אותו שוב תתחיל מרמה 1.</p><div class="bdock">${Bbutton('שחרר',`data-staff-bye="${k}"`)}${Bbutton('ביטול','data-bclose','secondary')}</div>`);return}
+  if((el=t.closest('[data-staff-bye]'))){BstaffOut(el.dataset.staffBye);document.querySelector('.bdialog')?.remove();Brender();return}});

@@ -11,7 +11,7 @@ const fs=require('node:fs'),path=require('node:path');
 const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errs=[];
 const open=file=>{const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errs.push(file+': '+e.message)});
- return new JSDOM(fs.readFileSync(path.join(root,file),'utf8'),{url:'https://goalasso.test/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__noExtras=1;w.__ilmNoSplash=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true})}}).window};
+ return new JSDOM(fs.readFileSync(path.join(root,file),'utf8'),{url:'https://goalasso.test/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__noExtras=1;w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true})}}).window};
 const A=open('ligat-haal-manager.html'),B=open('beginner.html');
 const J=(w,code)=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 /* two squads of real players by price band, chosen by a seeded generator so both windows pick the same men */

@@ -27,7 +27,7 @@ function BxpTitle(l){let t=BXP_TITLES[0][1];for(const [n,s] of BXP_TITLES)if(l>=
 function BpackTier(l){return l%5===0?'g':l%2===0?'s':'b'}
 function BxpEnsure(){const b=G&&G.beginner;if(!b)return null;if(b.lvl==null){b.lvl=1;b.xp=0;b.xpAll=0}b.packs=b.packs||[];b.ct=b.ct||{};b.st=b.st||{w:0};b.hist=b.hist||[];b.boost=b.boost||{};b.ms=b.ms||[];b.vs=b.vs||{};return b}
 function BxpAdd(n){const b=BxpEnsure();n=Math.max(0,Math.round(n));const ups=[];b.xp+=n;b.xpAll=(b.xpAll||0)+n;while(b.xp>=BxpNeed(b.lvl)){b.xp-=BxpNeed(b.lvl);b.lvl++;const t=BpackTier(b.lvl);b.packs.push(t);ups.push({lvl:b.lvl,pack:t})}return ups}
-function Bcount(k,n){const b=BxpEnsure();if(!b)return;b.ct[k]=(b.ct[k]||0)+(n==null?1:n);BmsCheck()}
+function Bcount(k,n){const b=BxpEnsure();if(!b)return;b.ct[k]=(b.ct[k]||0)+(n==null?1:n);BmsCheck();try{BbookCheck()}catch(e){}}
 
 /* ---- a match of the coach's club: experience, the running counters, the missions that count matches ---- */
 function BxpMatch(M){const b=BxpEnsure(),c=me();if(!b||!M||(M.h!==c.id&&M.a!==c.id))return null;const home=M.h===c.id,gf=home?M.gh:M.ga,ga=home?M.ga:M.gh,opp=club(home?M.a:M.h);
@@ -75,6 +75,7 @@ const BMS_DEF={
   sign:{role:'c',ic:'transfer',ct:'signs',go:'market',make:()=>({n:1,xp:80}),text:()=>'החתם שחקן חדש'},
   grow:{role:'c',ic:'boot',ct:'grow',go:'training',ok:()=>me().players.some(p=>!BtrainCapped(p)),make:()=>({n:1,xp:90}),text:()=>'העלה שחקן בנקודת דירוג באימונים'},
   train:{role:'c',ic:'boot',ct:'train',go:'training',make:()=>{const n=pick([3,5]);return {n,xp:20*n}},text:m=>`השלם <bdi>${m.n}</bdi> אימונים`},
+  staff:{role:'c',ic:'tactics',ct:'staff',go:'staff',ok:()=>{try{return !Object.values(Bstate().staff||{}).some(Boolean)&&Bstate().round>=2&&me().money>=BstaffFee(1)*3}catch(e){return false}},make:()=>({n:1,xp:80}),text:()=>'העסק איש צוות ראשון'},
   stadium:{role:'c',ic:'stadium',ct:'builds',go:'stadium',ok:()=>{const n=Blevels.find(l=>l.cap>me().cap);return !!n&&!Bstate().build&&me().money>=n.cost*.7},make:()=>({n:1,xp:120,pack:'s'}),text:()=>'התחל להרחיב את האצטדיון'},
   place:{role:'c',ic:'trophy',ok:()=>{const b=Bstate();return b.round>=2&&Bplace()>1&&b.schedule.length-b.round>=4},alive:m=>m.d.s===Bstate().season,make:()=>({n:1,xp:100,d:{place:Math.max(1,Bplace()-pick([1,2])),s:Bstate().season}}),text:m=>`עלה למקום <bdi>${m.d.place}</bdi> בטבלה`},
   daily:{role:'c',ic:'ball',ct:'daily',go:'daily',ok:()=>typeof BdailyDoneToday==='function'&&!BdailyDoneToday(),make:()=>({n:1,xp:60}),text:()=>'שחק באתגר היומי'}};
@@ -158,8 +159,8 @@ function BpackCardInfo(x){const c=me(),f=x.pid!=null?Bfind(x.pid):null;
     case 'cash':return {ic:'coins',t:c.sponsor?'בונוס מנותן החסות':'מענק מההנהלה',v:NIS(x.v),d:'נכנס לקופת המועדון מיד'};
     case 'camp':return {ic:'boot',t:'מחנה אימון',v:`${x.v} אימונים`,d:'כל הסגל מתקדם, וכל שמונה אימונים מוסיפים נקודת דירוג'};
     case 'gate':return {ic:'stadium',t:'ערב אוהדים',v:`${x.v} משחקי בית`,d:'הכנסה גדולה ב־30% מכרטיסים במשחקי הבית הקרובים'};
-    case 'talent':return {p:f&&f.p,c,t:'קפיצת כישרון',v:`דירוג +${x.v}`,d:f?`${fullName(f.p)} עולה ל־${Math.min(f.p.pot||99,f.p.ovr+x.v)}`:''};
-    case 'scout':return {p:f&&f.p,c:f&&f.c,t:'טיפ מהסקאוט',v:`${x.v}% הנחה`,d:f?`${fullName(f.p)} מ${f.c?f.c.name:'השוק'}, דירוג ${f.p.ovr}. המחיר המיוחד בתוקף לארבעה מחזורים`:''};
+    case 'talent':return {p:f&&f.p,c,t:'קפיצת כישרון',v:`דירוג +${x.v}`,d:f?`${fullName(f.p)} (${POSHE[f.p.pos]}) עולה ל־${Math.min(f.p.pot||99,f.p.ovr+x.v)}`:''};
+    case 'scout':return {p:f&&f.p,c:f&&f.c,t:'טיפ מהסקאוט',v:`${x.v}% הנחה`,d:f?`${fullName(f.p)} · ${POSHE[f.p.pos]} · דירוג ${f.p.ovr} · ${f.c?f.c.name:'שחקן חופשי'}. המחיר המיוחד בתוקף לארבעה מחזורים`:''};
     case 'physio':return {ic:'shield',t:'הצוות הרפואי',v:'כולם כשירים',d:'כל הפצועים חוזרים לסגל כבר למשחק הבא'};
     case 'board':return {ic:'trophy',t:'ערב עם ההנהלה',v:`אמון +${x.v}`,d:'ההנהלה נרגעת ונותנת לך יותר זמן לעבוד'}}
   return {ic:'ball',t:'',v:'',d:''}}
@@ -168,7 +169,7 @@ function BpackApply(x){const b=Bstate(),c=me();let note='';
   else if(x.k==='camp'){let up=0;for(const p of c.players){const was=p.bTraining||0;p.bTraining=was+x.v;const n=Math.floor(p.bTraining/8)-Math.floor(was/8);if(n>0&&p.ovr<(p.pot||99)){BrateUp(p,n);up++}}note=up?`${up} שחקנים עלו בדירוג`:'הסגל התקדם באימונים'}
   else if(x.k==='gate'){b.boost.gate=(b.boost.gate||0)+x.v;note=`${x.v} משחקי הבית הקרובים יכניסו יותר`}
   else if(x.k==='talent'){const p=c.players.find(p=>p.id===x.pid);if(p){BrateUp(p,x.v);note=`${fullName(p)} עלה ל־${p.ovr}`}}
-  else if(x.k==='scout'){b.tip={pid:x.pid,pct:x.v,until:b.round+4,s:b.season};const f=Bfind(x.pid);note=f?`${fullName(f.p)} מחכה לך בשוק במחיר מיוחד`:''}
+  else if(x.k==='scout'){b.tip={pid:x.pid,pct:x.v,until:b.round+4,s:b.season};const f=Bfind(x.pid);note=f?`${fullName(f.p)} (${POSHE[f.p.pos]}) מחכה לך בשוק במחיר מיוחד`:''}
   else if(x.k==='physio'){for(const p of c.players){p.inj=0;p.fit=100}try{BensureXI(c)}catch(e){}note='כל הסגל כשיר'}
   else if(x.k==='board'){b.board=Math.min(100,(b.board==null?55:b.board)+x.v);note='אמון ההנהלה עלה'}
   b.ct.packs=(b.ct.packs||0)+1;return note}

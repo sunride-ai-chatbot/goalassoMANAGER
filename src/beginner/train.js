@@ -26,12 +26,12 @@ function BtrainUse(p){return !BtrainCapped(p)?'rate':(p.morale??65)<BTRAIN_MOOD?
 function BtrainGain(p,n){const was=p.bTraining||0;p.bTraining=was+n;const up=Math.floor(p.bTraining/BTRAIN_STEP)-Math.floor(was/BTRAIN_STEP);if(up<=0||p.ovr>=(p.pot||99))return 0;return BrateUp(p,up)}
 function BtrainTeam(unit){const b=Bstate(),c=me(),t=BtrainNow(),u=BTRAIN_UNITS.find(x=>x[0]===unit);if(!b||b.live||b.out||t.team||!u)return null;
   const line=c.players.filter(p=>p.pos===unit),ps=line.filter(p=>!BtrainCapped(p)),cap=line.length-ps.length;if(!ps.length)return null;   /* a line that is all at its ceiling has nothing to train */
-  const ups=ps.filter(p=>BtrainGain(p,1)>0);b.tr={k:t.k,team:unit,solo:t.solo.slice(),buy:(t.buy||[]).slice()};b.focus=unit;
-  BTRAIN_LAST={k:t.k,text:`אימון ${u[1]} הושלם: <bdi>${ps.length}</bdi> שחקנים התקדמו צעד${cap?` (<bdi>${cap}</bdi> כבר בשיא הדירוג שלהם)`:''}.${ups.length?' '+ups.map(p=>`${esc(fullName(p))} עלה לדירוג <bdi>${p.ovr}</bdi>`).join(', ')+'.':''}`};
+  const st=1+(BstaffLv('asst')>=2?1:0),ups=ps.filter(p=>BtrainGain(p,st)>0);b.tr={k:t.k,team:unit,solo:t.solo.slice(),buy:(t.buy||[]).slice()};b.focus=unit;
+  BTRAIN_LAST={k:t.k,text:`אימון ${u[1]} הושלם: <bdi>${ps.length}</bdi> שחקנים התקדמו ${st>1?'שני צעדים (העוזר מוסיף אחד)':'צעד'}${cap?` (<bdi>${cap}</bdi> כבר בשיא הדירוג שלהם)`:''}.${ups.length?' '+ups.map(p=>`${esc(fullName(p))} עלה לדירוג <bdi>${p.ovr}</bdi>`).join(', ')+'.':''}`};
   try{Bcount('train');if(ups.length)Bcount('grow',ups.length)}catch(e){}Bwrite();return {n:ps.length,ups}}
 function BtrainSolo(pid){const b=Bstate(),c=me(),t=BtrainNow(),p=c.players.find(x=>x.id===pid);if(!b||b.live||b.out||!p||t.solo.includes(pid)||t.solo.length>=BtrainSoloMax(t))return null;
-  const use=BtrainUse(p);if(!use)return null;const up=use==='rate'?BtrainGain(p,BTRAIN_GAIN):0,was=p.morale??65;p.morale=clamp(was+3,10,100);b.tr={k:t.k,team:t.team,solo:t.solo.concat(pid),buy:(t.buy||[]).slice()};
-  BTRAIN_LAST={k:t.k,text:use==='mood'?`אימון אישי עם ${esc(fullName(p))} הושלם: הוא כבר בשיא הדירוג שלו, אז האימון העלה רק את המורל שלו (עכשיו ${moraleWord(p.morale)}).`:`אימון אישי עם ${esc(fullName(p))} הושלם: ${up?`הדירוג עלה ל־<bdi>${p.ovr}</bdi>`:`<bdi>${BTRAIN_GAIN}</bdi> צעדים קדימה`}${p.morale>was?', והמורל עלה':''}.`};
+  const use=BtrainUse(p);if(!use)return null;const gn=BTRAIN_GAIN+(BstaffLv('asst')>=3?1:0),up=use==='rate'?BtrainGain(p,gn):0,was=p.morale??65;p.morale=clamp(was+3,10,100);b.tr={k:t.k,team:t.team,solo:t.solo.concat(pid),buy:(t.buy||[]).slice()};
+  BTRAIN_LAST={k:t.k,text:use==='mood'?`אימון אישי עם ${esc(fullName(p))} הושלם: הוא כבר בשיא הדירוג שלו, אז האימון העלה רק את המורל שלו (עכשיו ${moraleWord(p.morale)}).`:`אימון אישי עם ${esc(fullName(p))} הושלם: ${up?`הדירוג עלה ל־<bdi>${p.ovr}</bdi>`:`<bdi>${gn}</bdi> צעדים קדימה`}${p.morale>was?', והמורל עלה':''}.`};
   try{Bcount('train');if(up>0)Bcount('grow',up)}catch(e){}Bwrite();return {p,up}}
 /* ---- extra sessions, bought with the club's money (the game's own shekels: nothing in this game is sold for real money) ----
    Each can be taken once between two matches and is held like every other session. A specialist does what the free sessions cannot: the

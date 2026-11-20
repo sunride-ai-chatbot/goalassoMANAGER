@@ -152,7 +152,7 @@ for ph in ('__CSS__', '__JS__', '__SPLASH_IMG__', '__LOGO_IMG__', '__PLAYER_VISU
 # game alone, and a change to src/beginner only (most of them) shipped under the old id — the open page never learned that a newer build was
 # up (36i-version.js compares ids), and two different beginner builds carried the same ?v= in their address.
 import hashlib
-BEGINNER_JS = ['app.js', 'engage.js', 'daily.js', 'edition.js', 'moves.js', 'bids.js', 'train.js', 'cups.js', 'boot.js']
+BEGINNER_JS = ['app.js', 'engage.js', 'daily.js', 'edition.js', 'moves.js', 'bids.js', 'train.js', 'cups.js', 'depth.js', 'book.js', 'boot.js']
 BEGINNER_CSS = ['style.css', 'arena.css', 'engage.css']
 beginner_src = '\n'.join(read(os.path.join(SRC, 'beginner', f)) for f in BEGINNER_JS + BEGINNER_CSS)
 build_id = hashlib.sha256((out + beginner_src).encode('utf8')).hexdigest()[:12]

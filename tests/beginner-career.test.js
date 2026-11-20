@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://career.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__noInjStop=1;w.__noExtras=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{};w.localStorage.setItem('ilm2','PRO_SENTINEL')}}).window;
+  beforeParse(w){w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noBids=1;w.__noInjStop=1;w.__noExtras=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{};w.localStorage.setItem('ilm2','PRO_SENTINEL')}}).window;
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const LEUM=[];const type=(sel,v)=>{const el=$(sel);el.value=v;el.dispatchEvent(new w.Event('input',{bubbles:true}))};const submit=sel=>$(sel).dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));
 const playTo=(n,keep)=>w.eval(`(()=>{const b=Bstate();while(b.round<${n}&&!b.out){${keep==null?'':`b.board=${keep};`}BfinishRound();document.querySelector('.bdialog')?.remove()}})()`);

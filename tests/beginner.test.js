@@ -1,7 +1,7 @@
 const assert=require('node:assert/strict');const fs=require('fs');const {JSDOM,VirtualConsole}=require('jsdom');
 const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const html=fs.readFileSync('beginner.html','utf8');
-const w=new JSDOM(html,{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__noInjStop=1;w.__noExtras=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};w.localStorage.setItem('ilm2','PRO_SENTINEL')}}).window;
+const w=new JSDOM(html,{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noBids=1;w.__noInjStop=1;w.__noExtras=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};w.localStorage.setItem('ilm2','PRO_SENTINEL')}}).window;
 try{assert.deepEqual(errors,[]);
 // the page is not to be pinch-zoomed (an iPhone closes a zoomed page of this weight): the viewport, the gesture events and touch-action
 {const vp=w.document.querySelector('meta[name="viewport"]').getAttribute('content');assert.match(vp,/maximum-scale=1/);assert.match(vp,/user-scalable=no/);assert.match(vp,/width=device-width/);

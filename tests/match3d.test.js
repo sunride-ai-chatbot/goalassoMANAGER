@@ -40,7 +40,7 @@ async function main(){
  w.loader=async()=>{throw Error('network unavailable');};const failed=mount(R);await w.document.querySelector('[data-m3-toggle]').onclick();assert.equal(failed.enabled,false);assert.equal(failed.busy,false);failed.dispose();w.close();
  // Exact same seeded engine inputs produce exact same engine output with/without sampling.
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message);});
- const game=new JSDOM(fs.readFileSync('beginner.html','utf8'),{url:'https://test.invalid/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__noExtras=1;w.__ilmNoSplash=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};}}).window;
+ const game=new JSDOM(fs.readFileSync('beginner.html','utf8'),{url:'https://test.invalid/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__noExtras=1;w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};}}).window;
  try{
    game.eval("Bcreate(Bdefs().find(d=>d.name==='ברצלונה').key);window.baseCareer=JSON.stringify(G);");
    const run=enabled=>game.eval(`(()=>{G=JSON.parse(window.baseCareer);let seed=921;const old=Math.random;Math.random=()=>{seed=(1664525*seed+1013904223)>>>0;return seed/4294967296;};try{const h=me(),a=G.clubs.find(c=>c.id!==h.id);const M=createMatch(h,a,{kind:'friendly'});let cursor=0;while(!M.done){const before=${enabled}&&Match3D.snapshot(M,h,a);stepMinute(M);if(${enabled}){const after=Match3D.snapshot(M,h,a);while(cursor<M.ev.length){Match3D.adapt(M.ev[cursor],cursor,before,after);cursor++;}}}return JSON.stringify({M,G});}finally{Math.random=old;}})()`);

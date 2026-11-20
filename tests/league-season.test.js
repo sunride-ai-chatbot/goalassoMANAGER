@@ -46,7 +46,7 @@ async function until(fn,what,ms=20000){const t=Date.now();let last;while(Date.no
 
  function openWindow(uid,file,url){const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(uid.slice(0,4)+': '+e.message)});
   const w=new JSDOM(read(file),{url:url||'https://goalasso.test/',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,
-   beforeParse(w){w.__noExtras=1;w.__ilmNoSplash=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true});const c=client(uid);w.__lgClientFactory=async()=>c;w.__mpClientFactory=async()=>c;
+   beforeParse(w){w.__noExtras=1;w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true});const c=client(uid);w.__lgClientFactory=async()=>c;w.__mpClientFactory=async()=>c;
     w.requestAnimationFrame=cb=>setTimeout(()=>cb(Date.now()),16);w.cancelAnimationFrame=clearTimeout}}).window;
   w.addEventListener('unhandledrejection',e=>errors.push(uid.slice(0,4)+' rejection: '+(e.reason&&e.reason.message||e.reason)));return w}
  const B=w=>w.document.getElementById('lg-body'),S=w=>w.document.getElementById('lg-status').textContent,$=(w,q)=>w.document.querySelector(q),$$=(w,q)=>[...w.document.querySelectorAll(q)];

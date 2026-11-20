@@ -7,14 +7,14 @@
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://cups.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__ilmNoSplash=1;w.__noBids=1;w.__noInjStop=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
+  beforeParse(w){w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noBids=1;w.__noInjStop=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const quiet=()=>w.eval("(()=>{Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}try{closeReveal(true)}catch(e){}document.querySelector('.bdialog')?.remove()})()");
 const fresh=(key,lg)=>{w.eval(`(()=>{document.querySelector('.bdialog')?.remove();localStorage.removeItem(BK);localStorage.removeItem(BK+'.backup');G=null;BsaveRev=0;Bcreate(${JSON.stringify(key)},{name:'דני',league:${JSON.stringify(lg)}});G.penGame=false})()`);quiet()};
 // the match that is next, ended at a given score for the coach's club
 const play=res=>w.eval(`(()=>{document.querySelector('.bdialog')?.remove();Bplay();const M=Bstate().live.M,home=M.h===G.me,r=${JSON.stringify(res)};window.__M=M;M.m=90;M.done=true;M.gh=home?r[0]:r[1];M.ga=home?r[1]:r[0];Btick(true)})()`);
 // league rounds up to a round; a match that is not a league round and comes first is played and won
-const advance=n=>{let g=0;while(run('Bstate().round')<n&&g++<80){if(run('!!Bextra()')){play([2,0]);if($('#moClose'))$('#moClose').click()}else w.eval('BfinishRound()');quiet()}};
+const advance=n=>{let g=0;while(run('Bstate().round')<n&&g++<80){if(run('!!Bextra()')){play([2,0]);if($('#moClose'))$('#moClose').click()}else w.eval('Bstate().board=60;BfinishRound()');quiet()}};
 try{
   fresh('hrg','il1');   // the weakest club of the top division: it sits no evening out and plays no European night
   const b0=run('({pre:Bstate().pre,toto:Bstate().cups.toto,state:Bstate().cups.state,mine:me().bkey,n:Bstate().schedule.length,lg:Bstate().league.map(id=>club(id).bkey),season:Bstate().season})');

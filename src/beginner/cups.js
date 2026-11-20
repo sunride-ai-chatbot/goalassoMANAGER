@@ -60,7 +60,7 @@ function BcupsNight(){const b=Bstate(),mine=me()&&me().bkey;if(!b||!b.cups||!min
 /* ---- after the whistle ---- */
 function BextraFinish(M){return M.bX.kind==='pre'?BpreFinish(M):BcupFinish(M)}
 function BresultBoard(M){return `<h2 class="bresult-board"><span>${kitSVG(club(M.h),'lg')}<strong>${esc(club(M.h).name)}</strong></span>${scoreSides(M.gh,M.ga,{label:club(M.h).name+' '+M.gh+', '+club(M.a).name+' '+M.ga})}<span>${kitSVG(club(M.a),'lg')}<strong>${esc(club(M.a).name)}</strong></span></h2>`}
-function BpreFinish(M){const b=Bstate(),c=me(),home=M.h===c.id,f=b.pre&&b.pre.list.find(x=>!x.res&&x.id===(home?M.a:M.h));document.querySelector('.bdialog')?.remove();if(f)f.res={gf:home?M.gh:M.ga,ga:home?M.ga:M.gh};
+function BpreFinish(M){const b=Bstate(),c=me(),home=M.h===c.id,f=b.pre&&b.pre.list.find(x=>!x.res&&x.id===(home?M.a:M.h));document.querySelector('.bdialog')?.remove();if(f)f.res={gf:home?M.gh:M.ga,ga:home?M.ga:M.gh};try{BdepthAfter(M)}catch(e){console.warn('depth',e)}
   /* minutes are minutes: whoever played is no longer waiting for a match, and nobody is counted as left out of one that counts for nothing */
   try{const on=new Set([...(M.xi[c.id]||[]).map(e=>e.pid),...((M.used&&M.used[c.id])||[])]);for(const p of c.players)if(on.has(p.id)){p.bOut=0;p.morale=clamp((p.morale??65)+1,10,100)}}catch(e){}
   const left=b.pre?b.pre.list.filter(x=>!x.res).length:0;Btab='home';Bwrite();Brender();
@@ -71,7 +71,7 @@ function BpaperCup(K,M,st,won,final){const c=me(),home=M.h===c.id,opp=club(home?
   else Bpaper('גביע',`${c.name} עלתה ${BstTo(K.names[st+1])} ב${K.name}`,tail,`${c.name} ממשיכה בגביע. ${pick(['ההגרלה כבר ידועה.','החלום ממשיך.'])}`,null,false)}
 function BcupFinish(M){const b=Bstate(),K=b.cups[M.bX.kind],st=K.stage,c=me(),home=M.h===c.id,final=st===K.names.length-1,cash=[];document.querySelector('.bdialog')?.remove();
   if(home&&!final){const crowd=Math.min(c.cap,Math.round((c.baseDemand||c.cap*.75)*(K.kind==='state'?1.05:.6))),sum=crowd*(c.ticket||80);Bledger(`הכנסה מכרטיסים · ${K.name} · ${crowd.toLocaleString('he')} אוהדים`,sum);cash.push(['כרטיסים',sum])}
-  BcupClose(K,M);BmoraleAfter(M);const won=!K.out;try{BpaperCup(K,M,st,won,final)}catch(e){console.warn('paper',e)}
+  BcupClose(K,M);BmoraleAfter(M);try{BdepthAfter(M)}catch(e){console.warn('depth',e)}const won=!K.out;try{BpaperCup(K,M,st,won,final)}catch(e){console.warn('paper',e)}
   if(won){if(K.prize[st]){Bledger(final?`פרס הזכייה ב${K.name}`:`פרס ${K.name} · עלייה ${BstTo(K.names[st+1])}`,K.prize[st]);cash.push([final?'פרס הזכייה':'פרס העלייה',K.prize[st]])}b.board=clamp((b.board==null?55:b.board)+(final?8:2),0,100);if(final)(b.honours=b.honours||[]).push({season:b.season,what:K.name,club:c.name})}
   BcupsNight();BclNight();Btab='home';let gain=null;try{gain=BxpMatch(M)}catch(e){console.warn('engage',e)}Bwrite();Brender();
   const pens=M.gh===M.ga?`<p class="bcl-pens">${won?'ניצחון':'הפסד'} בפנדלים${M.penScore?` <bdi>${M.penScore[home?0:1]}:${M.penScore[home?1:0]}</bdi>`:''}</p>`:'';
