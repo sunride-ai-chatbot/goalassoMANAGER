@@ -122,8 +122,8 @@
 
 .pg-flash{top:11%;font-size:clamp(26px,5vw,54px)}
 .pg-stage,.pg-stage *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-.pg-charge{position:relative;height:9px;margin:5px auto;width:min(240px,75%);background:#485159;border-radius:5px;direction:ltr}
-.pg-charge span,.pg-charge i{position:absolute;height:100%;background:#fff8d9}
+.pg-charge{position:absolute;z-index:4;bottom:14px;left:50%;transform:translateX(-50%);width:min(310px,65%);height:14px;background:#263139;border:2px solid #0d161c;border-radius:7px;box-shadow:0 1px 6px #0009;direction:ltr;pointer-events:none}
+.pg-charge span,.pg-charge i{position:absolute;top:0;height:100%;background:#fff}
 .pg-charge i{width:3px;background:#eaca36;box-shadow:0 0 0 1px #111}
 
 .pg-so-row i{width:clamp(14px,3vw,20px);height:clamp(14px,3vw,20px)}

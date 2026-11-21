@@ -218,7 +218,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
   const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
   const kick=o.mode==='kick';const tp=o.taker.p,kp=o.keeper&&o.keeper.p;const skill=penShootSkill(tp),gk=penKeepSkill(kp);const myP=kick?tp:kp,myC=kick?o.taker.c:(o.keeper&&o.keeper.c);
   bot.innerHTML=`<div class="pg-who">${myP?penFaceHTML(myP,myC,'pg'+myP.id+(kick?'k':'g')):''}<div><b>${esc(myP?fullName(myP):'')}</b><small>${kick?`בעיטה <bdi>${Math.round(skill)}</bdi> · מול ${esc(kp?fullName(kp):'השוער')}`:`רפלקסים <bdi>${Math.round(gk)}</bdi> · בועט ${esc(fullName(tp))}`}</small></div></div>
-    <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'לחץ, כוון אל הפינה ושחרר':'משוך לכיוון שאליו השוער יזנק, לפני הבעיטה'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
+    <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'החזק, כוון ושחרר כשהסמן באזור הלבן':'משוך לכיוון שאליו השוער יזנק, לפני הבעיטה'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
   /* a kick belongs to the overlay and the turn it was started in: once either is gone (the overlay was closed, the next
      kick began) nothing of it may run any more */
   let over=false;const token=PG.tok=(PG.tok||0)+1;const alive=()=>!!PG&&PG.root===root&&PG.tok===token;const finish=r=>{if(over||!alive())return;over=true;cb(r)};
@@ -239,13 +239,13 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
       const timingWidth=.025+.095*clamp((skill-35)/59,0,1);
       const strength=()=>heldAt===null?.73:.08+.92*(1-Math.cos((performance.now()-heldAt)*.0036))*.5;
       const meter=document.createElement('div');
-      meter.className='pg-charge';meter.hidden=true;
+      meter.className='pg-charge';meter.setAttribute('aria-label','מד דיוק הבעיטה');
       meter.innerHTML='<span></span><i></i>';
       meter.firstChild.style.left=(.73-timingWidth/2)*100+'%';
       meter.firstChild.style.width=timingWidth*100+'%';
-      bot.appendChild(meter);
+      host.appendChild(meter);
       const cur=()=>{const t=ck.ms/1000;return {x:aim.x+Math.sin(t*5.3)*wob+Math.sin(t*9.1+1)*wob*.35,y:Math.max(.05,aim.y+Math.sin(t*4.1+.7)*wob*.55)}};
-      const place=()=>{if(!meter.hidden)meter.lastChild.style.left=strength()*100+'%';const c=cur();const [px,py]=st.toScreen(c.x,c.y);aimEl.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`;aimEl.classList.toggle('out',penFrame(c.x,c.y)!=='in')};
+      const place=()=>{meter.lastChild.style.left=(heldAt===null?0:strength()*100)+'%';const c=cur();const [px,py]=st.toScreen(c.x,c.y);aimEl.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`;aimEl.classList.toggle('out',penFrame(c.x,c.y)!=='in')};
       const fire=auto=>{if(fired||!alive())return;fired=true;stop();aimEl.remove();let x,y;
         if(auto&&!touched){const s=penAiShot(skill);x=s.x;y=s.y}else{const c=cur();x=c.x+gauss()*wob*.3;y=Math.max(.05,c.y+gauss()*wob*.24)}
         if(heldAt!==null&&!auto){
@@ -254,9 +254,9 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
         }
         meter.remove();const r=penKickOutcome(x,y,gk);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:6000))};
       const setAim=ev=>{const r=rect();const touch=ev.pointerType==='touch';const [x,y]=st.fromScreen(ev.clientX-r.left,ev.clientY-r.top-(touch?56:0));aim={x:clamp(x,-4.5,4.5),y:clamp(y,.12,3.1)};touched=true};
-      on(host,'pointerdown',ev=>{ev.preventDefault();down=true;heldAt=performance.now();meter.hidden=false;try{host.setPointerCapture(ev.pointerId)}catch(e){}setAim(ev);place()});
+      on(host,'pointerdown',ev=>{ev.preventDefault();down=true;heldAt=performance.now();try{host.setPointerCapture(ev.pointerId)}catch(e){}setAim(ev);place()});
       on(host,'pointermove',ev=>{if(down){ev.preventDefault();setAim(ev)}});
-      on(host,'pointerup',ev=>{if(down){down=false;setAim(ev);fire(false)}});on(host,'pointercancel',()=>{down=false;heldAt=null;meter.hidden=true});
+      on(host,'pointerup',ev=>{if(down){down=false;setAim(ev);fire(false)}});on(host,'pointercancel',()=>{down=false;heldAt=null;place()});
       on(host,'keydown',ev=>{const k=ev.key;if(k==='ArrowLeft'){aim.x=clamp(aim.x-.35,-4.5,4.5);touched=true}else if(k==='ArrowRight'){aim.x=clamp(aim.x+.35,-4.5,4.5);touched=true}else if(k==='ArrowUp'){aim.y=clamp(aim.y+.25,.12,3.1);touched=true}else if(k==='ArrowDown'){aim.y=clamp(aim.y-.25,.12,3.1);touched=true}else if(k==='Enter'||k===' '){touched=true;fire(false)}else return;ev.preventDefault()});
       PG.auto=()=>fire(true);PG.fire=(x,y)=>{aim={x,y};touched=true;fire(false)};PG.aim=()=>aim;
       (function loop(){if(dead||!alive())return;const left=1-ck.tick(performance.now())/PEN_TIME;if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;place();if(left<=0)return fire(true);raf=requestAnimationFrame(loop)})();
