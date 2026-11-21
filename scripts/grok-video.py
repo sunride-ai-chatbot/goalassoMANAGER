@@ -35,7 +35,7 @@ def main():
     clips = [c for c in cfg['clips'] if not only or c['id'] in only]
     if a.dry_run:
         for c in clips:
-            print(c['id'], c['seconds'], 's ·', (cfg['style'] + ' ' + c['prompt'])[:110], '…')
+            print(c['id'], c['seconds'], 's ·', c.get('aspect', '9:16'), '·', (c.get('style', cfg['style']) + ' ' + c['prompt'])[:110], '…')
         print(len(clips), 'clips,', sum(c['seconds'] for c in clips), 'seconds in total'); return
     key = os.environ.get('XAI_API_KEY', '').strip()
     if not key:
@@ -44,9 +44,9 @@ def main():
     mp = os.path.join(a.out, 'manifest.json'); manifest = json.load(open(mp, encoding='utf8')) if os.path.isfile(mp) else {}
     failed = 0
     for c in clips:
-        prompt = cfg['style'] + ' ' + c['prompt']
+        prompt = c.get('style', cfg['style']) + ' ' + c['prompt']   # a clip that is not a coach's-eye shot carries its own style and shape
         try:
-            start = call('POST', API + '/generations', key, {'model': a.model, 'prompt': prompt, 'duration': c['seconds'], 'aspect_ratio': '9:16',
+            start = call('POST', API + '/generations', key, {'model': a.model, 'prompt': prompt, 'duration': c['seconds'], 'aspect_ratio': c.get('aspect', '9:16'),
                                                              'resolution': a.resolution, 'generate_audio': bool(a.audio)})
             rid = start.get('request_id') or start.get('id')
             if not rid:
