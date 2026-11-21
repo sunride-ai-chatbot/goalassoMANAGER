@@ -4,7 +4,7 @@ const {JSDOM,VirtualConsole}=require('jsdom');
 function boot(file){
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message);});
  const html=fs.readFileSync(file,'utf8').replace("await import('./assets/demo3d/live.js')",'await window.rendererModule');
- const w=new JSDOM(html,{url:'https://game.test/'+file,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noInjStop=1;w.__noExtras=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};}}).window;
+ const w=new JSDOM(html,{url:'https://game.test/'+file,runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noWindow=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noInjStop=1;w.__noExtras=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{};}}).window;
  w.rendererModule={createLiveView(){const view={busy:false,clips:[],sync(s){this.snapshot=s;},enqueue(cs){this.clips.push(...cs);this.busy=this.busy||cs.length>0;},setPaused(v){this.paused=v;},dispose(){this.busy=false;this.disposed=true;}};w.testRenderer=view;return view;}};
  return {w,errors};
 }

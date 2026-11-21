@@ -28,12 +28,12 @@ function BbidBuyer(p){const b=Bstate(),c=me(),l=BcatLeague(b.leagueId),z=l?BprZo
 function BbidFee(p,star){const g=star.why==='goals',k=g?[1.6,1.45,1.3][star.rank-1]:[1.4,1.3][star.rank-1],v=Bvalue(p),per=clamp(v*.06,20000,120000)*(g?1:.6);return Math.max(300000,Math.round((v*(k||1.25)+per*(star.n||0))/50000)*50000)}
 function BbidMake(star){if(window.__noBids)return null;   /* suites about other things: an offer is one more story in the paper and one more card on the home page */
   const b=Bstate(),c=me(),p=star&&c.players.find(x=>x.id===star.pid);if(!p||b.out||BsaleBlocked(p))return null;const buyer=BbidBuyer(p);if(!buyer)return null;
-  b.bid={pid:p.id,buyer:buyer.id,fee:BbidFee(p,star),until:b.round+BBID_LIFE,s:b.season,why:star.why,rank:star.rank,n:star.n,last:!!star.last,asked:false};
+  b.bid={pid:p.id,buyer:buyer.id,fee:BbidFee(p,star),until:Math.min(b.round+BBID_LIFE,BwinInfo().close||1e9),s:b.season,why:star.why,rank:star.rank,n:star.n,last:!!star.last,asked:false};
   try{BpaperBid(p,buyer,b.bid)}catch(e){console.warn('paper',e)}return b.bid}
 /* an offer whose time has passed, or whose player is no longer his, is gone */
 function BbidTidy(){const b=Bstate();if(b&&b.bid&&(b.out||b.bid.s!==b.season||b.round>=b.bid.until||!me().players.some(p=>p.id===b.bid.pid)))b.bid=null}
 /* after a round: the two windows of a season */
-function BbidRound(){const b=Bstate();if(!b||b.out||b.daily||!b.schedule)return;BbidTidy();if(b.bid)return;const n=b.schedule.length,slot=b.round===Math.round(n*.4)?1:b.round===Math.round(n*.72)?2:0;
+function BbidRound(){const b=Bstate();if(!b||b.out||b.daily||!b.schedule)return;BbidTidy();if(b.bid)return;const n=b.schedule.length,w=BwinInfo(),slot=w.none?(b.round===Math.round(n*.4)?1:b.round===Math.round(n*.72)?2:0):(w.open&&w.name==='חלון החורף'?(w.first?1:w.left===1?2:0):0);
   if(!slot||b.bidAt===b.season+':'+slot)return;b.bidAt=b.season+':'+slot;const star=BbidStar(false);if(star)BbidMake(star)}
 function BbidWhy(o){const g=o.why==='goals',t=o.last?'בעונה שעברה':'העונה';
   return o.rank===1?(g?`מלך השערים של הליגה ${t}, עם <bdi>${o.n}</bdi> שערים`:`מלך הבישולים של הליגה ${t}, עם <bdi>${o.n}</bdi> בישולים`):(g?`מהכובשים המובילים בליגה ${t}: <bdi>${o.n}</bdi> שערים`:`מהמבשלים המובילים בליגה ${t}: <bdi>${o.n}</bdi> בישולים`)}
@@ -46,7 +46,7 @@ function BbidCardHTML(){const b=Bstate(),o=b&&b.bid;if(!o||b.out||o.s!==b.season
    <div class="btransaction"><span>ההצעה</span><strong class="bpositive">${Bmoney(o.fee)}</strong></div><div class="btransaction"><span>שווי שוק</span>${Bmoney(Bvalue(p))}</div><div class="btransaction"><span>שכר שנתי שייחסך</span>${Bmoney(Byear(p))}</div>
    ${blocked?`<p class="bmuted">${esc(blocked)}</p>`:''}<div class="bbid-acts">${blocked?'':Bbutton('מוכר ב־'+Bmoney(o.fee),'data-action="bid-sell"')}${blocked||o.asked?'':Bbutton('לבקש יותר','data-action="bid-more"','secondary')}${Bbutton('דוחה, הוא נשאר','data-action="bid-no"','secondary')}</div></section>`}
 function BbidAccept(){const b=Bstate(),o=b.bid,c=me();if(!o)return false;const p=c.players.find(x=>x.id===o.pid),buyer=club(o.buyer);if(!p||!buyer||BsaleBlocked(p)||b.round>=o.until){b.bid=null;Bwrite();Brender();return false}
-  buyer.money=Math.max(0,(buyer.money||0)-o.fee);c.players=c.players.filter(x=>x.id!==p.id);buyer.players.push(p);Bledger('מכירת '+fullName(p)+' ל'+buyer.name,o.fee);try{BpaperSale(p,buyer,o.fee)}catch(e){console.warn('paper',e)}
+  buyer.money=Math.max(0,(buyer.money||0)-o.fee);c.players=c.players.filter(x=>x.id!==p.id);buyer.players.push(p);Bledger('מכירת '+fullName(p)+' ל'+buyer.name,o.fee);try{BdealSold(p,o.fee)}catch(e){console.warn('deal',e)}try{BpaperSale(p,buyer,o.fee)}catch(e){console.warn('paper',e)}
   c.lineup=(c.lineup||[]).map(id=>id===p.id?null:id);BensureXI(c);ensureCaptain(c);b.bid=null;try{Bcount('sales');BmsFill()}catch(e){}Bwrite();Btab='home';Brender();
   Bdialog(`<h2>המכירה הושלמה</h2><p>${esc(fullName(p))} עבר ל${esc(buyer.name)} תמורת ${Bmoney(o.fee)}. הכסף כבר בקופה, ואפשר לחפש לו מחליף ברכש.</p>${Bbutton('לרכש','data-tab="market" data-bclose')}<button type="button" class="blink" data-bclose>אחר כך</button>`);return true}
 document.addEventListener('click',e=>{const el=e.target.closest&&e.target.closest('[data-action^="bid-"]');if(!el||!G||!G.beginner)return;const b=Bstate(),o=b.bid,a=el.dataset.action;if(!o||b.live)return;const c=me(),p=c.players.find(x=>x.id===o.pid),buyer=club(o.buyer);if(!p||!buyer){b.bid=null;Bwrite();Brender();return}

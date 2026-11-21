@@ -2,7 +2,7 @@
 // 3D highlights) and the player ratings of both sides after the final whistle.
 const assert=require('node:assert/strict');const fs=require('fs');const {JSDOM,VirtualConsole}=require('jsdom');
 const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
-const w=new JSDOM(fs.readFileSync('beginner.html','utf8'),{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noBids=1;w.__noInjStop=1;w.__noExtras=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{}}}).window;
+const w=new JSDOM(fs.readFileSync('beginner.html','utf8'),{url:'https://goalasso.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:vc,beforeParse(w){w.__ilmNoSplash=1;w.__noWindow=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noBids=1;w.__noInjStop=1;w.__noExtras=1;w.matchMedia=()=>({matches:false});w.scrollTo=()=>{}}}).window;
 const run=s=>JSON.parse(w.eval(`JSON.stringify(${s})`));const $=s=>w.document.querySelector(s);
 async function main(){
   // ---- the score element: home first in the markup, so on the right of a right-to-left row

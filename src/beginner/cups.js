@@ -51,7 +51,7 @@ function BcupQuick(h,a,neutral){const d=BcupStr(h)-BcupStr(a)+(neutral?0:1.5),po
 /* an evening is closed: the coach's match as it was played, every other tie by the dice, then the draw of the next round */
 function BcupClose(K,M){const mine=me().bkey,st=K.stage,fin=st===K.names.length-1,row=[],next=st===0?K.bye.slice():[];
   for(const [h,a] of K.ties){const ch=BclubByKey(h),ca=BclubByKey(a);let r;
-    if(M&&ch&&ca&&M.h===ch.id&&M.a===ca.id)r={h,a,gh:M.gh,ga:M.ga,pens:M.gh===M.ga?(M.penScore||true):null,w:M.gh>M.ga||(M.gh===M.ga&&M.pens==='h')?h:a};else r=BcupQuick(h,a,fin);row.push(r);next.push(r.w)}
+    if(M&&ch&&ca&&M.h===ch.id&&M.a===ca.id)r={h,a,gh:M.gh,ga:M.ga,pens:M.gh===M.ga?(M.penScore||true):null,w:M.gh>M.ga||(M.gh===M.ga&&M.pens==='h')?h:a};else{r=BcupQuick(h,a,fin);try{BfitQuick(ch);BfitQuick(ca)}catch(e){}}row.push(r);next.push(r.w)}
   K.res.push(row);K.alive=next;K.stage=st+1;if(!next.includes(mine))K.out=true;if(fin){K.champion=next[0];K.won=next[0]===mine;if(!K.won)K.out=true;K.ties=[]}else{K.ties=BcupPairs(next);if(!K.out)BcupReady(K)}}
 /* evenings he has no part in (knocked out, or sitting one out) are played without him, so every cup gets its winner */
 function BcupsNight(){const b=Bstate(),mine=me()&&me().bkey;if(!b||!b.cups||!mine)return;for(const k of BCUP_KINDS){const K=b.cups[k];if(!K)continue;let guard=0;

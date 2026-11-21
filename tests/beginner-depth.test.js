@@ -6,7 +6,7 @@
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://depth.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__noExtras=1;w.__noInjStop=1;w.__ilmNoSplash=1;w.__noEnv=1;w.__noHalf=1;w.__noBids=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
+  beforeParse(w){w.__noExtras=1;w.__noInjStop=1;w.__ilmNoSplash=1;w.__noWindow=1;w.__noEnv=1;w.__noHalf=1;w.__noBids=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const quiet=()=>w.eval("(()=>{Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}try{closeReveal(true)}catch(e){}document.querySelector('.bdialog')?.remove()})()");
 const snap=()=>w.eval('JSON.stringify([G.clubs.find(c=>c.id===G.me),Bstate()])');
@@ -118,11 +118,16 @@ try{
   assert.ok(xs.every((x,i)=>!i||x[3]>xs[i-1][3]),'each before the league round it is played ahead of');
   // ---- the people beside the coach
   w.eval("me().money=5e7;Btab='staff';Brender()");assert.equal($$('.bstaff-card').length,5);assert.equal($$('.bstaff-card.on').length,0);assert.equal(run('BstaffPay()'),0);
-  const fee=run('BstaffFee(1)'),m0=run('me().money');$('[data-staff-up="asst"]').click();assert.match($('.bdialog').textContent,/להעסיק עוזר מאמן/);$('[data-staff-ok="asst"]').click();
-  assert.equal(run("BstaffLv('asst')"),1);assert.equal(run('me().money'),m0-fee,'the signing fee is paid at once');assert.match(run('Bstate().ledger[Bstate().ledger.length-1].label'),/צוות מקצועי · עוזר מאמן/);
-  assert.equal($$('.bstaff-card.on').length,1);assert.equal($$('.bstaff-card.on .bstaff-pips i.on').length,1);assert.ok(run('BstaffPay()')>0);
+  const cands=run("BstaffCands('asst')");assert.equal(cands.length,3);assert.equal(new Set(cands.map(c=>c.name)).size,3,'three different people');assert.ok(cands.every(c=>c.lv>=1&&c.lv<=3&&c.fee>0&&c.wage>0&&c.tag));
+  assert.ok(cands.some(c=>c.lv===1),'somebody a small club can afford');assert.deepEqual(run("BstaffCands('asst')"),cands,'drawing the list deals nothing');assert.equal($$('.bstaff-cands li').length,15);
+  const pick=cands[0],m0=run('me().money');$('[data-staff-up="asst:0"]').click();assert.match($('.bdialog').textContent,/להעסיק עוזר מאמן/);assert.ok($('.bdialog').textContent.includes(pick.name));$('[data-staff-ok="asst:0"]').click();
+  assert.equal(run("BstaffLv('asst')"),pick.lv);assert.equal(run("BstaffOf('asst').name"),pick.name,'the staff are people');assert.equal(run('me().money'),m0-pick.fee,'the signing fee is paid at once');assert.match(run('Bstate().ledger[Bstate().ledger.length-1].label'),/צוות מקצועי · עוזר מאמן · /);
+  assert.equal($$('.bstaff-card.on').length,1);assert.ok($('.bstaff-card.on .bstaff-who').textContent.includes(pick.name));assert.equal($$('.bstaff-card.on .bstaff-who .bstaff-pips i.on').length,pick.lv);assert.equal(run('BstaffPay()'),pick.wage);
+  const again=run("BstaffCands('asst')");assert.ok(!again.some(c=>c.name===pick.name),'three new candidates come, and he is not among them');assert.ok(pick.lv===3||again.some(c=>c.lv>pick.lv),'a better man is always on the list while there is one');
+  $('[data-staff-up="asst:1"]').click();assert.match($('.bdialog').textContent,/להחליף את עוזר מאמן/);assert.match($('.bdialog').textContent,/יעזוב את המועדון/);quiet();
   assert.equal(run("Math.round((Bsum()+Boperating()+BstaffPay())*Bremaining())"),run('Bcommitment()'),'the salary is a running cost like every other');
-  w.eval("me().money=0;Brender()");assert.ok($('[data-staff-up="fit"]').disabled);assert.match($('[data-staff-up="fit"]').textContent,/אין מספיק כסף/);assert.equal(w.eval("BstaffHire('fit')"),false);w.eval('me().money=5e7');
+  w.eval("me().money=0;Brender()");assert.ok($('[data-staff-up="fit:0"]').disabled);assert.match($('[data-staff-up="fit:0"]').textContent,/אין מספיק כסף/);assert.equal(w.eval("BstaffHire('fit',0)"),false);w.eval('me().money=5e7');
+  assert.deepEqual(run("(()=>{const b=Bstate(),keep=b.staff;b.staff={asst:3,fit:0};BstaffMend();const v=b.staff.asst,r=[typeof v,v.lv,!!v.name,BstaffLv('fit')];b.staff=keep;return r})()"),['object',3,true,0],'a career saved with levels gets a man of that level');
   w.eval('Bprematch()');assert.match($('.bbrief').textContent,/עוזר המאמן/);assert.match($('.bbrief').textContent,/התקפי|הגנתי|מאוזן/);quiet();
   w.eval("Bstate().staff={asst:3,fit:2,phys:2,anal:2,scout:1}");
   assert.equal(fake()[1],77,'a fitness coach: a match costs less');w.eval('BfitRest(BFIT_MID)');assert.equal(run('me().players.find(p=>p.id===me().lineup[1]).fit'),90,'and the days between give more');w.eval('for(const p of me().players)p.fit=100');
@@ -153,7 +158,7 @@ try{
   w.eval(`BenvSettle({h:me().id,a:-1,gh:0,ga:0,xi:{[me().id]:[{pid:${ask}}]},used:{}})`);assert.equal(run(`me().players.find(p=>p.id===${ask}).morale`),62,'a promise kept lifts him');assert.equal(run('Bstate().env.pr'),null);
   w.eval(`(()=>{Bstate().env.pr={pid:${ask},name:'x'};BenvSettle({h:me().id,a:-1,gh:0,ga:0,xi:{[me().id]:[]},used:{}})})()`);assert.equal(run(`me().players.find(p=>p.id===${ask}).morale`),52,'and one that was not kept hurts him');
   // every kind can arrive and says who it is from
-  w.eval("(()=>{const c=me(),e=Bstate().env;e.bet=null;e.pr=null;delete (Bstate().boost||{}).rep;c.players[2].susp=1;[6,7,8].forEach(i=>c.players[i].fit=70);const r=available(c).find(p=>!c.lineup.includes(p.id)&&p.pos!=='GK');r.bOut=3;r.morale=50})()");
+  w.eval("(()=>{const c=me(),e=Bstate().env;e.bet=null;e.pr=null;delete (Bstate().boost||{}).rep;for(const p of c.players)p.susp=0;c.players[2].susp=1;[6,7,8].forEach(i=>c.players[i].fit=70);const r=available(c).find(p=>!c.lineup.includes(p.id)&&p.pos!=='GK');r.bOut=3;r.morale=50})()");
   for(const k of run('Object.keys(BENV)')){assert.ok(run(`(()=>{const x=BENV['${k}'];return !x.ok||!!x.ok(Bstate(),me())})()`),k+' is possible');const g=run(`BENV['${k}'].make(Bstate(),me())`);assert.ok(g.from&&g.title&&g.body&&g.fx.length,k+' has a sender, a title, a body and what it gives');w.eval("Bstate().env.bet=null")}
   assert.equal(run('me().players[2].susp'),0,'the appeal lifted the suspension');assert.ok(Math.abs(run('Bstate().boost.rep')-.6)<1e-9);
   // about one match in three, never two in a row, never more than four without
@@ -190,7 +195,65 @@ try{
   w.eval(`Bdetail(${hp[1]})`);const [ask1,floor1]=price(hp[1]),h0=run('Bstate().book.n.hag||0');offer(floor1);assert.match($('.bdialog').textContent,/המועדון הסכים להצעה/,'an offer the club can live with is taken');assert.equal(run('Bstate().book.n.hag'),h0+1);quiet();
   w.eval(`Bdetail(${hp[2]})`);const [ask2]=price(hp[2]);offer(ask2);assert.match($('.bdialog').textContent,/המועדון הסכים להצעה/);assert.equal(run('Bstate().book.n.hag'),h0+1,'the asking price is not a bargain');quiet();
   assert.ok(run(`(()=>{const f=Bfind(${hp[2]});Bstate().staff={scout:3};const a=BnegFloor(f.p,${ask2},false);Bstate().staff={};return BnegFloor(f.p,${ask2},false)-a})()`)>0,'a scout moves the floor');
-  console.log('beginner depth: the approach before and during a match, the captain, a colour for each line, the foreign limit in the line-up, fitness between matches, the break and the numbers, the calendar, the staff, the envelope, the career book, the haggle; errors',JSON.stringify(errors));
+  // =====================================================================================================================
+  // ---- the transfer window: two of them, and outside them nothing is bought, borrowed or sold
+  calm();w.__noWindow=0;const R0=run('Bstate().round'),at=r=>w.eval(`Bstate().round=${r}`),win=r=>run(`(()=>{const b=Bstate(),k=b.round;b.round=${r};const v=BwinInfo();b.round=k;return v})()`);
+  const NR=run('Bstate().schedule.length'),S1=Math.max(3,Math.round(NR*.15)),W0=Math.round(NR*.46),W1=W0+Math.max(3,Math.round(NR*.12));
+  assert.deepEqual([win(0).open,win(0).left,win(S1-1).left,win(S1).open,win(S1).next,win(W0).open,win(W0).first,win(W1-1).left,win(W1).open,win(W1).next],[true,S1,1,false,W0-S1,true,true,1,false,null]);
+  w.eval("me().money=9e7");const oth=run("(()=>{const o=G.clubs.find(c=>c.id!==G.me&&Bstate().league.includes(c.id)&&c.players.length>18),ps=o.players.slice().sort((a,b)=>a.ovr-b.ovr);return {club:o.id,ids:ps.slice(0,6).map(p=>p.id)}})()");
+  at(S1);w.eval("Btab='market';Brender()");assert.match($('.bwin.shut').textContent,/חלון ההעברות סגור/);assert.match($('.bwin.shut').textContent,new RegExp('נפתח בעוד '+(W0-S1===1?'מחזור אחד':(W0-S1)+' מחזורים')));assert.match($('.bwin.shut').textContent,/שחקנים חופשיים אפשר להחתים תמיד/);
+  w.eval(`Bdetail(${oth.ids[0]})`);assert.match($('.bdialog .bnote.bad').textContent,/חלון ההעברות סגור/);$('#boffer').value=9e7;$('[data-action="offer"]').click();assert.match($('#breply').textContent,/סגור/);assert.doesNotMatch($('.bdialog').textContent,/המועדון הסכים/);
+  $('[data-action="loan"]').click();assert.match($('#breply').textContent,/סגור/);assert.equal($('.bdeal'),null);quiet();w.eval(`Bsign(${oth.ids[0]},100000,false)`);assert.equal(run(`me().players.some(p=>p.id===${oth.ids[0]})`),false,'not through the back door either');quiet();
+  const mineAny=run("me().players.slice().sort((a,b)=>a.ovr-b.ovr)[2].id");w.eval(`BsaleDialog(${mineAny})`);assert.match($('.bdialog').textContent,/אי אפשר גם למכור/);assert.equal(run('Bstate().saleOffer||null'),null);quiet();
+  const free=run(`(()=>{const o=G.clubs.find(c=>c.id===${JSON.stringify(oth.club)}),p=o.players.find(x=>x.id===${oth.ids[5]});o.players=o.players.filter(x=>x!==p);G.freeAgents.push(p);return p.id})()`);w.eval(`Bsign(${free},0,false)`);assert.equal(run(`me().players.some(p=>p.id===${free})`),true,'a free agent has no club to release him');calm();w.eval("try{closeReveal(true)}catch(e){}");
+  const banner=r=>{at(r);w.eval("Btab='home';Brender()");const el=$('.bwin-banner');return el?el.textContent:''};
+  assert.match(banner(S1-2),/נסגר בעוד 2 מחזורים/);assert.ok($('.bwin-banner.warn'));assert.match(banner(S1-1),/נסגר אחרי המשחק הבא/);assert.equal(banner(S1),'','nothing to say while it is shut');assert.match(banner(W0),/חלון החורף נפתח/);
+  if(S1>3)assert.equal(banner(0),'','and nothing while there is plenty of time');const s5=snap();w.eval("Brender();Btab='market';Brender();Brender()");assert.equal(snap(),s5,'the window is read from the round and nothing else');
+  at(1);assert.deepEqual(run('BtipUntil()'),{until:S1-1,s:run('Bstate().season')},'a scout\'s tip lasts as long as the window');at(S1);assert.equal(run('BtipUntil().until'),W1-1,'one dealt while it is shut waits for the next');
+  at(S1-1);assert.equal(run('BscoutPick(25)'),null,'no tip when the window closes after this match');at(W1);assert.equal(run('BscoutPick(25)'),null,'nor when no window is left this season');
+  // ---- more than one way to agree
+  at(1);const pid1=oth.ids[1],val1=run(`Bvalue(Bfind(${pid1}).p)`);
+  const lens=run(`(()=>{const f=Bfind(${pid1}),L=[],B=[];for(let i=0;i<60;i++){L.push(BdealLoanList(f.p,f.c).map(d=>d.t));B.push(BdealBuyList(f.p,f.c,2000000).map(d=>d.t))}return [L,B]})()`);
+  assert.ok(lens[0].every(l=>l.length>=1&&l.length<=3&&l[0]==='loan'),'one to three ways to borrow him, the ordinary one always');assert.ok(new Set(lens[0].map(l=>l.length)).size===3,'drawn: sometimes one, sometimes three');
+  assert.ok(lens[1].every(l=>l.length>=1&&l.length<=3&&l[0]==='sellon'&&l.every(t=>['sellon','split','bonus','loanbuy'].includes(t))));assert.ok(new Set(lens[1].flat()).size>=4,'every shape turns up');
+  assert.ok(run(`BdealBuyList(Bfind(${pid1}).p,Bfind(${pid1}).c,2000000)[0].fee`)<2000000,'a share of a future sale is a lower price now');
+  w.__dealRnd=()=>.99;w.eval(`Bdetail(${pid1})`);$('[data-action="loan"]').click();assert.equal($$('#breply .bdeal').length,3);assert.equal(run('Bdeals.list.length'),3);assert.equal(run(`BdealsFor(Bfind(${pid1}).p,Bfind(${pid1}).c,'loan')===Bdeals`),true,'dealt once for a talk');
+  const loanFee=run('Bdeals.list[0].fee');assert.ok(loanFee>=val1*.055&&loanFee<=val1*.095);$('[data-deal="0"]').click();assert.match($('.bdialog').textContent,/השאלה עד סוף העונה/);const lm=run('me().money');$('.bdialog [data-sign]').click();
+  assert.equal(run(`me().players.some(p=>p.id===${pid1})`),true);assert.equal(run(`Bstate().loans.some(l=>l.pid===${pid1})`),true);assert.equal(run('me().money'),lm-loanFee);calm();w.eval("try{closeReveal(true)}catch(e){}");
+  // a talk about a price lays oth shapes of the deal beside the club's price
+  const pid2=oth.ids[2];w.eval(`Bdetail(${pid2})`);const [ask2b,floor2b]=price(pid2);offer(floor2b-20000);assert.ok($$('#breply .bdeal').length>=1,'the refusal comes with oth ways to do it');assert.match($('#breply .bdeal h4').textContent,/ממכירה עתידית/);
+  w.eval(`(()=>{const f=Bfind(${pid2});Bdeals={key:'t',pid:${pid2},kind:'buy',dem:${ask2b},list:[{t:'sellon',pct:10,fee:${ask2b}*.9,title:'10% ממכירה עתידית',lines:['x']}]};Bselected=${pid2}})()`);assert.equal(w.eval('BdealPick(0)'),true);assert.match($('.bdialog').textContent,/סיכום העסקה/);$('.bdialog [data-sign]').click();calm();w.eval("try{closeReveal(true)}catch(e){}");
+  assert.deepEqual(run(`(p=>[p.bSellOn.pct,p.bSellOn.to===G.clubs.find(c=>c.id===${JSON.stringify(oth.club)}).name])(me().players.find(p=>p.id===${pid2}))`),[10,true],'what was agreed stays on the player');
+  w.eval(`Bdetail(${pid2})`);assert.match($('.bdialog .bdeal-notes').textContent,/10% ממכירה שלו/);quiet();
+  assert.deepEqual(run(`(()=>{const p=me().players.find(p=>p.id===${pid2}),m=me().money,cut=BdealSold(p,2000000);return [cut,m-me().money,p.bSellOn||null,Bstate().ledger[Bstate().ledger.length-1].label.startsWith('10% ל')]})()`),[200000,200000,null,true],'and is paid when he is sold');
+  // two payments, a bonus that depends on the season, a fine for a loan that was promised matches, a wage that is shared, a purchase agreed for the summer
+  const dl=run(`(()=>{const b=Bstate(),c=me(),o=G.clubs.find(x=>x.id===${JSON.stringify(oth.club)}),p=c.players.find(x=>x.id===${pid2}),out={};b.owed=[];b.clauses=[];
+    BdealApply(p,o,{t:'split',later:700000});out.owed=[b.owed.length,b.owed[0].v,b.owed[0].s-b.season];const m0=c.money;BdealSeasonStart();out.early=m0-c.money;b.season++;BdealSeasonStart();out.paid=m0-c.money;out.left=b.owed.length;b.season--;
+    BdealApply(p,o,{t:'bonus',kind:'goals',need:2,amount:500000});BdealAfter({ev:[{t:'goal',team:c.id,pid:p.id},{t:'pen',team:c.id,pid:p.id},{t:'goal',team:-1,pid:p.id}],xi:{[c.id]:[{pid:p.id}]},used:{}});out.have=b.clauses[0].have;
+    BdealApply(p,o,{t:'loanfree',kind:'apps',need:5,amount:300000,fine:true});BdealAfter({ev:[],xi:{[c.id]:[{pid:p.id}]},used:{}});out.apps=b.clauses[1].have;const m1=c.money,notes=BdealSeasonEnd();out.settled=m1-c.money;out.notes=notes.length;out.clauses=b.clauses.length;
+    const y=Byear(p);p.bPay=.6;out.pay=Math.abs(Byear(p)-y*.6)<2;delete p.bPay;
+    const l={pid:p.id,club:o.id,buy:1000000};out.buy=[BdealLoanBuy(l),m1-800000-c.money];c.money=10;out.poor=BdealLoanBuy(l);c.money=9e7;return out})()`);
+  assert.deepEqual(dl,{owed:[1,700000,1],early:0,paid:700000,left:0,have:2,apps:1,settled:800000,notes:2,clauses:0,pay:true,buy:[true,1000000],poor:false});
+  w.eval(`(()=>{const b=Bstate(),p=me().players.find(x=>x.id===${pid2});b.owed=[{t:'תשלום שני על '+fullName(p),v:700000,s:b.season+1}];b.clauses=[{pid:p.id,name:fullName(p),kind:'goals',need:6,have:1,amount:500000,to:'x',s:b.season}];Btab='finance';Brender()})()`);assert.equal($$('.bowed li').length,2,'what is owed from deals is listed with the money');w.eval("Bstate().owed=[];Bstate().clauses=[]");
+  // a buyer can be pressed twice; the third time he walks away
+  const sell=run("me().players.slice().sort((a,b)=>a.ovr-b.ovr)[1].id");w.eval(`BsaleDialog(${sell})`);const f0=run('Bstate().saleOffer.fee');assert.ok($('.bdialog [data-sale-more]'));$('.bdialog [data-sale-more]').click();const f1=run('Bstate().saleOffer.fee');assert.ok(f1>f0,'a first request raises the offer');
+  assert.match($('.bdialog').textContent,/העלו את ההצעה|המילה האחרונה/);$('.bdialog [data-sale-more]').click();const f2=run('Bstate().saleOffer.fee');assert.ok(f2>=f1&&f2<=f0*1.14+10000);assert.equal(run('Bstate().saleOffer.last'),true);assert.match($('.bdialog').textContent,/המילה האחרונה שלהם/);
+  $('.bdialog [data-sale-more]').click();assert.equal(run('Bstate().saleOffer||null'),null);assert.match($('.bdialog').textContent,/ירדה מהשולחן/);quiet();w.eval(`BsaleDialog(${sell})`);assert.match($('.bdialog').textContent,/משך את ההצעה/);quiet();
+  w.__dealRnd=null;w.__noWindow=1;at(R0);
+  // ---- fitness is every club's: both sides pay for a match, and a tie decided without one costs the same
+  const opp=run("(()=>{const o=G.clubs.find(c=>c.id!==G.me&&Bstate().league.includes(c.id));for(const c of G.clubs)for(const p of c.players)p.fit=100;const xi=bestXI(o);return {id:o.id,gk:xi.find(p=>p.pos==='GK').id,out:xi.find(p=>p.pos!=='GK').id}})()");
+  const both=run(`(()=>{const c=me(),o=G.clubs.find(x=>x.id===${JSON.stringify(opp.id)}),M={h:c.id,a:o.id,m:90,gh:0,ga:0,ev:[],xi:{[c.id]:[{pid:c.lineup[1],since:0}],[o.id]:[{pid:${opp.out},since:0},{pid:${opp.gk},since:0}]},used:{},mins:{}};BfitAfter(M);const f=id=>o.players.find(p=>p.id===id).fit,a=[c.players.find(p=>p.id===c.lineup[1]).fit,f(${opp.out}),f(${opp.gk})];BfitRest(BFIT_WEEK);return [a,[f(${opp.out}),f(${opp.gk})]]})()`);
+  assert.deepEqual(both,[[74,74,90],[100,100]],'the opponent\'s legs are counted like the coach\'s own');
+  assert.deepEqual(run(`(()=>{const o=G.clubs.find(x=>x.id===${JSON.stringify(opp.id)});BfitQuick(o);const xi=bestXI(o),v=[...new Set(xi.filter(p=>p.pos!=='GK').map(p=>p.fit))];for(const p of o.players)p.fit=100;return v})()`),[86]);
+  w.eval(`G.clubs.find(x=>x.id===${JSON.stringify(opp.id)}).players.find(p=>p.id===${opp.out}).fit=60`);assert.deepEqual(run(`BfitTiredOp(G.clubs.find(x=>x.id===${JSON.stringify(opp.id)})).map(p=>p.id)`),[opp.out],'and the staff can say who is tired on the other side');w.eval(`G.clubs.find(x=>x.id===${JSON.stringify(opp.id)}).players.find(p=>p.id===${opp.out}).fit=100`);
+  play();assert.ok(run('G.clubs.filter(c=>Bstate().league.includes(c.id)).every(c=>c.players.every(p=>(p.fit??100)>=88))'),'a week rests every club (only a man just back from an injury is still short)');calm();
+  // back from an injury he is not at once the player he was
+  assert.deepEqual(run("(()=>{const c=me(),p=c.players.find(x=>!c.lineup.includes(x.id));p.inj=1;p.fit=100;const q=G.clubs.find(x=>x.id!==G.me).players[0];q.inj=1;q.fit=100;Bplay();BstopBroadcast();const r=[p.inj,p.fit,q.fit];delete Bstate().live;Bstate().staff={phys:2};p.fit=100;BfitBack(p,c);r.push(p.fit);Bstate().staff={};p.fit=100;q.fit=100;return r})()"),[0,80,80,88],'eighty, and a doctor brings him back nearer the top');w.eval('Brender()');
+  // ---- what was played before the calendar and the book existed is read from what the game still holds
+  assert.deepEqual(run("(()=>{const b=Bstate(),c=me(),keep=b.cal,kp=G.paper;b.cal=b.cal.filter(x=>x.r!==0);G.paper=[{wk:0,s:b.season,ev:{type:'match',h:-5,a:c.id,gh:1,ga:3}},...G.paper.filter(x=>!(x.wk===0&&x.s===b.season))];const r=BcalRows()[0],v=[r.past,!!r.unk,r.gf,r.ga];G.paper=G.paper.filter(x=>x.wk!==0||x.s!==b.season);const u=!!BcalRows()[0].unk;b.cal=keep;G.paper=kp;return [v,u]})()"),[[1,false,3,1],true],'a round the paper still reports has its score; one it does not is listed as played');
+  const bf=run("(()=>{const b=Bstate(),c=me();delete b.book;b.ct.played=40;b.ct.wins=20;b.honours=[{season:2,what:'אליפות ליגת העל',club:'מועדון ישן'},{season:3,what:'גביע המדינה',club:'מועדון ישן'}];G.paper=[{s:b.season,wk:0,ev:{type:'match',hName:c.name,aName:'יריבה',gh:6,ga:1}},...G.paper];const k=BbookEnsure();return [k.hist.filter(h=>h.old).map(h=>[h.s,h.place,h.lg]),k.rec.win&&k.rec.win.d>=5,k.bf]})()");
+  assert.deepEqual(bf,[[[2,1,'ליגת העל']],true,1],'a title is a line of the seasons\' table, and the paper gives the season\'s biggest win');w.eval("Btab='book';Brender()");assert.match($('.bbook-tbl').textContent,/ליגת העל/);
+  console.log('beginner depth: the transfer window, deals in more than one shape, every club\'s legs, the approach before and during a match, the captain, a colour for each line, the foreign limit in the line-up, fitness between matches, the break and the numbers, the calendar, the staff, the envelope, the career book, the haggle; errors',JSON.stringify(errors));
   if(errors.length)process.exitCode=1;
 }catch(e){console.error(e);errors.push(String(e&&e.message||e));console.log('beginner depth errors',JSON.stringify(errors.slice(0,3)));process.exitCode=1}
 finally{w.close()}

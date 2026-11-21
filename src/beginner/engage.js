@@ -142,7 +142,7 @@ function BtipAsk(p,c){const core=c&&c.players.slice().sort((a,b)=>b.ovr-a.ovr).s
 function BtipFor(p){const b=Bstate(),t=b&&b.tip;return t&&p&&t.pid===p.id&&t.s===b.season&&b.round<=t.until?t:null}
 function BtipPrice(p,c){const t=BtipFor(p),ask=BtipAsk(p,c);return t?Math.max(0,Math.round(ask*(1-t.pct/100)/10000)*10000):ask}
 /* a real player of another club who would walk into this eleven and whom the club can pay for at the reduced price */
-function BscoutPick(pct){const c=me(),xi=c.players.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,11),floor=xi.length?xi[xi.length-1].ovr:50,spare=Math.min(Bbudget(),c.money),ids=new Set(Bstate().league),out=[];
+function BscoutPick(pct){{const w=BwinInfo();if(!w.none&&(w.open?w.left<2:!w.next))return null}const c=me(),xi=c.players.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,11),floor=xi.length?xi[xi.length-1].ovr:50,spare=Math.min(Bbudget(),c.money),ids=new Set(Bstate().league),out=[];
   if(c.players.length>=35)return null;
   for(const k of G.clubs){if(k.id===c.id||k.players.length<=14)continue;for(const p of k.players){if(inventedPlayer(p)||p.ovr<floor+1)continue;const fee=Math.round(BtipAsk(p,k)*(1-pct/100)/10000)*10000;if(fee+Byear(p)*Bremaining()<=spare)out.push({p,c:k,fee,near:ids.has(k.id)})}}
   if(!out.length)return null;out.sort((x,y)=>y.p.ovr-x.p.ovr||(y.near-x.near));return pick(out.slice(0,Math.min(6,out.length)))}
@@ -160,7 +160,7 @@ function BpackCardInfo(x){const c=me(),f=x.pid!=null?Bfind(x.pid):null;
     case 'camp':return {ic:'boot',t:'מחנה אימון',v:`${x.v} אימונים`,d:'כל הסגל מתקדם, וכל שמונה אימונים מוסיפים נקודת דירוג'};
     case 'gate':return {ic:'stadium',t:'ערב אוהדים',v:`${x.v} משחקי בית`,d:'הכנסה גדולה ב־30% מכרטיסים במשחקי הבית הקרובים'};
     case 'talent':return {p:f&&f.p,c,t:'קפיצת כישרון',v:`דירוג +${x.v}`,d:f?`${fullName(f.p)} (${POSHE[f.p.pos]}) עולה ל־${Math.min(f.p.pot||99,f.p.ovr+x.v)}`:''};
-    case 'scout':return {p:f&&f.p,c:f&&f.c,t:'טיפ מהסקאוט',v:`${x.v}% הנחה`,d:f?`${fullName(f.p)} · ${POSHE[f.p.pos]} · דירוג ${f.p.ovr} · ${f.c?f.c.name:'שחקן חופשי'}. המחיר המיוחד בתוקף לארבעה מחזורים`:''};
+    case 'scout':return {p:f&&f.p,c:f&&f.c,t:'טיפ מהסקאוט',v:`${x.v}% הנחה`,d:f?`${fullName(f.p)} · ${POSHE[f.p.pos]} · דירוג ${f.p.ovr} · ${f.c?f.c.name:'שחקן חופשי'}. ${(w=>w.none?'המחיר המיוחד בתוקף לארבעה מחזורים':w.open?'המחיר המיוחד בתוקף עד סגירת חלון ההעברות':'המחיר המיוחד יחכה לך בחלון ההעברות הבא')(BwinInfo())}`:''};
     case 'physio':return {ic:'shield',t:'הצוות הרפואי',v:'כולם כשירים',d:'כל הפצועים חוזרים לסגל כבר למשחק הבא'};
     case 'board':return {ic:'trophy',t:'ערב עם ההנהלה',v:`אמון +${x.v}`,d:'ההנהלה נרגעת ונותנת לך יותר זמן לעבוד'}}
   return {ic:'ball',t:'',v:'',d:''}}
@@ -169,7 +169,7 @@ function BpackApply(x){const b=Bstate(),c=me();let note='';
   else if(x.k==='camp'){let up=0;for(const p of c.players){const was=p.bTraining||0;p.bTraining=was+x.v;const n=Math.floor(p.bTraining/8)-Math.floor(was/8);if(n>0&&p.ovr<(p.pot||99)){BrateUp(p,n);up++}}note=up?`${up} שחקנים עלו בדירוג`:'הסגל התקדם באימונים'}
   else if(x.k==='gate'){b.boost.gate=(b.boost.gate||0)+x.v;note=`${x.v} משחקי הבית הקרובים יכניסו יותר`}
   else if(x.k==='talent'){const p=c.players.find(p=>p.id===x.pid);if(p){BrateUp(p,x.v);note=`${fullName(p)} עלה ל־${p.ovr}`}}
-  else if(x.k==='scout'){b.tip={pid:x.pid,pct:x.v,until:b.round+4,s:b.season};const f=Bfind(x.pid);note=f?`${fullName(f.p)} (${POSHE[f.p.pos]}) מחכה לך בשוק במחיר מיוחד`:''}
+  else if(x.k==='scout'){b.tip={pid:x.pid,pct:x.v,...BtipUntil()};const f=Bfind(x.pid);note=f?`${fullName(f.p)} (${POSHE[f.p.pos]}) מחכה לך בשוק במחיר מיוחד`:''}
   else if(x.k==='physio'){for(const p of c.players){p.inj=0;p.fit=100}try{BensureXI(c)}catch(e){}note='כל הסגל כשיר'}
   else if(x.k==='board'){b.board=Math.min(100,(b.board==null?55:b.board)+x.v);note='אמון ההנהלה עלה'}
   b.ct.packs=(b.ct.packs||0)+1;return note}

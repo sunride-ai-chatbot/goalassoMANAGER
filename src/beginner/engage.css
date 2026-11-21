@@ -314,6 +314,26 @@
 /* the haggle */
 .bneg-pat{display:flex;align-items:center;gap:8px;font-size:14px;color:#dfe7f4}.bneg-pips{display:inline-flex;gap:4px}.bneg-pips i{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.16)}.bneg-pips i.on{background:#fbbf24;box-shadow:0 0 8px rgba(251,191,36,.6)}
 .bneg-chips{display:flex;gap:8px;margin-top:10px}.bneg-chips .bchip{flex:1}
+.bstaff-who{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0}.bstaff-who strong{color:#fff}
+.beginner .bstaff-ch{margin:14px 0 6px;font-size:13px;color:#aab6cc;font-weight:800}
+.bstaff-cands{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.bstaff-cands li{display:flex;align-items:center;gap:10px;padding:10px;border-radius:12px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.08)}
+.bstaff-cands li>div{flex:1;min-width:0}.bstaff-cands strong{color:#fff;margin-inline-end:6px}.bstaff-cands small{display:block;font-size:12.5px;line-height:1.45;color:#c9d3e6}.bstaff-cands .bstaff-cost{color:#fbbf24}
+.bstaff-cands .bbtn{flex:none;min-width:76px;padding-inline:10px;white-space:nowrap}
+/* the transfer window */
+.bwin{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:0 0 14px;padding:10px 14px;border-radius:14px;border:1px solid rgba(0,255,157,.35);background:rgba(0,255,157,.07);font-size:14px;color:#dfe7f4}
+.bwin strong{color:#7dffd0}.bwin.warn{border-color:rgba(255,190,80,.7);background:rgba(255,170,40,.12)}.bwin.warn strong{color:#ffd28a}
+.bwin.shut{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.05)}.bwin.shut strong{color:#fff}
+.bwin-banner{display:block;width:100%;margin:14px 0;padding:12px 16px;border-radius:16px;border:1px solid rgba(0,255,157,.45);background:rgba(0,255,157,.08);color:#fff;font:inherit;text-align:start;cursor:pointer}
+.bwin-banner strong{display:block;font-size:16.5px}.bwin-banner span{font-size:13.5px;color:#c9d3e6}
+.bwin-banner.warn{border-color:rgba(255,190,80,.8);background:rgba(255,170,40,.14);box-shadow:0 0 20px -8px rgba(255,170,40,.8)}.bwin-banner.warn strong{color:#ffd28a}
+/* more than one way to agree on a player */
+.bdeals{display:grid;gap:10px;margin-top:12px}.bdeals-h{margin:0;font-size:14px;color:#c9d3e6}
+.bdeal{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.beginner .bdeal h4{margin:0 0 6px;font-size:16px;color:#7dffd0}.bdeal ul{margin:0 0 10px;padding:0 18px 0 0;font-size:14px;line-height:1.5;color:#e3eaf6}.bdeal .bbtn{width:100%}
+.bdeal-line{margin:4px 0;font-size:14.5px}
+.bdeal-notes{margin:10px 0;padding:10px 28px 10px 12px;border-radius:12px;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.35);font-size:14px;line-height:1.5;color:#f1e6c8}
+.bowed li{grid-template-columns:1fr auto}.bowed b{font:800 16px/1.2 Heebo,Arial,sans-serif;font-style:normal}
 /* the approach: the button in force is lit, and a line under the three says what it does */
 .beginner .bmatch-tactics .bbtn[aria-pressed="true"]{background:linear-gradient(180deg,#00e87a,#00b871);border-color:#00FF9D;color:#001a0a;box-shadow:0 0 16px rgba(0,255,157,.4)}
 .bment-note{flex:1 0 100%;margin:2px 0 0;font-size:14px;line-height:1.4;color:#c9d3e6}

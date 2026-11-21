@@ -6,7 +6,7 @@ const assert=require('node:assert/strict');const fs=require('fs');const path=req
 const root=path.join(__dirname,'..');const errors=[];
 const open=(file,url,extra)=>{const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
   return new JSDOM(fs.readFileSync(path.join(root,file),'utf8'),{url,runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-    beforeParse(w){w.__ilmNoSplash=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noInjStop=1;w.__noExtras=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{};if(extra)extra(w)}}).window};
+    beforeParse(w){w.__ilmNoSplash=1;w.__noWindow=1;w.__noEnv=1;w.__noBook=1;w.__noHalf=1;w.__noInjStop=1;w.__noExtras=1;w.__ilmUnlock=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{};if(extra)extra(w)}}).window};
 const tick=(ms=0)=>new Promise(r=>setTimeout(r,ms));
 const until=async(test,what,ms=15000)=>{const t0=Date.now();while(!test()){if(Date.now()-t0>ms)throw new Error('timed out waiting for '+what);await tick(10)}};
 const tools=w=>({$:s=>w.document.querySelector(s),$$:s=>[...w.document.querySelectorAll(s)],run:code=>JSON.parse(w.eval(`JSON.stringify(${code})`))});

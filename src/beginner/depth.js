@@ -11,14 +11,24 @@
 const BFIT_COST=26,BFIT_WEEK=30,BFIT_MID=8,BFIT_TIRED=75,BFIT_WARN=82,BFIT_FLOOR=35;
 const BfitOf=p=>Math.round(p.fit??100);
 function BfitOn(){const b=Bstate();return !!b&&!b.daily&&!window.__noFatigue}
-function BfitAfter(M){const c=me();if(!BfitOn()||!c||!M)return;const k=1-.06*BstaffLv('fit');
-  const pay=(pid,mins)=>{const p=c.players.find(x=>x.id===pid);if(p)p.fit=clamp(Math.round((p.fit??100)-mins/90*BFIT_COST*(p.pos==='GK'?.4:1)*k),BFIT_FLOOR,100)};
-  for(const e of (M.xi&&M.xi[c.id])||[])pay(e.pid,Math.max(0,Math.min(M.m,90)-(e.since||0)));
-  for(const pid of (M.used&&M.used[c.id])||[])pay(pid,Math.min(90,(M.mins&&M.mins[c.id]&&M.mins[c.id][pid])??60));
-  if(M.bCL!=null||M.bX)BfitRest(M.bX&&M.bX.kind==='pre'?BFIT_WEEK:BFIT_MID)}   /* a friendly has a week after it, like a league round */
-function BfitRest(base){const c=me();if(!BfitOn()||!c)return;const add=base+(base>=BFIT_WEEK?3:1)*BstaffLv('fit');for(const p of c.players){const f=p.fit??100;if(f<100)p.fit=clamp(Math.round(f+add+(100-f)*.15),0,100)}}
+/* Both sides of every match pay for it, and every club rests in the week between two rounds: the opponent who played a cup tie on
+   Wednesday arrives with the legs of one. A tie that is decided without a match (the cups' other ties) costs its eleven the same. */
+function BfitAfter(M){if(!BfitOn()||!M)return;const mid=M.bCL!=null||!!M.bX,pre=!!(M.bX&&M.bX.kind==='pre');
+  for(const id of [M.h,M.a]){const c=club(id);if(!c)continue;const k=id===G.me?1-.06*BstaffLv('fit'):1;
+    const pay=(pid,mins)=>{const p=c.players.find(x=>x.id===pid);if(p)p.fit=clamp(Math.round((p.fit??100)-mins/90*BFIT_COST*(p.pos==='GK'?.4:1)*k),BFIT_FLOOR,100)};
+    for(const e of (M.xi&&M.xi[id])||[])pay(e.pid,Math.max(0,Math.min(M.m,90)-(e.since||0)));
+    for(const pid of (M.used&&M.used[id])||[])pay(pid,Math.min(90,(M.mins&&M.mins[id]&&M.mins[id][pid])??60));
+    if(mid)BfitRestClub(c,pre?BFIT_WEEK:BFIT_MID)}}   /* a cup tie or a European night is midweek; a friendly has a week after it */
+function BfitRestClub(c,base){if(!c)return;const add=base+(c.id===G.me?(base>=BFIT_WEEK?3:1)*BstaffLv('fit'):0);for(const p of c.players){const f=p.fit??100;if(f<100)p.fit=clamp(Math.round(f+add+(100-f)*.15),0,100)}}
+function BfitRest(base){if(!BfitOn())return;for(const c of G.clubs)BfitRestClub(c,base)}
+function BfitQuick(c){if(!BfitOn()||!c||c.id===G.me)return;let xi=[];try{xi=bestXI(c)}catch(e){}for(const p of xi)p.fit=clamp(Math.round((p.fit??100)-BFIT_COST*(p.pos==='GK'?.4:1)),BFIT_FLOOR,100);BfitRestClub(c,BFIT_MID)}
+function BfitSummer(){for(const c of G.clubs)for(const p of c.players)if(p.fit!=null&&p.fit<100)p.fit=100}
+/* back from an injury he is not at once the player he was: BFIT_BACK, and a doctor on the staff brings him back nearer the top */
+const BFIT_BACK=80;
+function BfitBack(p,c){if(!BfitOn())return;p.fit=Math.min(p.fit??100,BFIT_BACK+(c&&c.id===G.me?4*BstaffLv('phys'):0))}
 const BfitXI=c=>(c.lineup||[]).map(id=>c.players.find(p=>p.id===id)).filter(Boolean);
 const BfitTired=c=>BfitXI(c).filter(p=>BfitOf(p)<BFIT_TIRED).sort((a,b)=>BfitOf(a)-BfitOf(b));
+function BfitTiredOp(c){let xi=[];try{xi=bestXI(c)}catch(e){}return xi.filter(p=>BfitOf(p)<BFIT_TIRED)}
 function BfitChip(p){const f=BfitOf(p);return p.inj||p.susp||f>=BFIT_WARN?'':`<span class="bfit-chip ${f<BFIT_TIRED?'bad':'warn'}">כושר <bdi>${f}%</bdi></span>`}
 function BfitStripHTML(c){const t=BfitTired(c);return t.length?`<div class="bout-strip tired" role="status"><strong>עייפים בהרכב</strong><ul>${t.map(p=>`<li><span><b>${esc(fullName(p))}</b> · ${POSHE[p.pos]} · כושר <bdi>${BfitOf(p)}%</bdi></span></li>`).join('')}</ul><small>שחקן עייף משחק פחות טוב ונפצע בקלות. משחק אחד על הספסל מחזיר אותו.</small></div>`:''}
 
@@ -46,7 +56,7 @@ function BcalLog(M){const b=Bstate(),c=me();if(!b||b.daily||!c||!M)return;const 
   b.cal.push({s:b.season,k,r:b.round,t:k==='lg'?'':k==='cl'?'ליגת האלופות · '+BCL_STAGES[M.bCL]:BextraLabel(M),op:op.name,home,nt:!!(M.ctx&&M.ctx.neutral),gf:home?M.gh:M.ga,ga:home?M.ga:M.gh,pk:M.pens?((M.pens==='h')===home?1:-1):0})}
 function BcalRows(){const b=Bstate(),c=me(),n=b.schedule.length,log=(b.cal||[]).filter(x=>x.s===b.season),rows=[];
   const lg=r=>{const pair=b.schedule[r].find(p=>p.includes(c.id));if(!pair)return {k:'lg',r,rest:1};const op=club(pair.find(id=>id!==c.id));return {k:'lg',r,op:op?op.name:'',home:pair[0]===c.id}};
-  for(let r=0;r<b.round;r++){for(const x of log)if(x.r===r&&x.k!=='lg')rows.push({...x,past:1});const L=log.find(x=>x.r===r&&x.k==='lg');rows.push(L?{...L,past:1}:{...lg(r),past:1,unk:1})}
+  for(let r=0;r<b.round;r++){for(const x of log)if(x.r===r&&x.k!=='lg')rows.push({...x,past:1});const L=log.find(x=>x.r===r&&x.k==='lg');if(L){rows.push({...L,past:1});continue}const base=lg(r),st=(G.paper||[]).find(x=>x.ev&&x.ev.type==='match'&&x.s===b.season&&x.wk===r&&(x.ev.h===c.id||x.ev.a===c.id));rows.push(st&&!base.rest?{...base,past:1,gf:st.ev.h===c.id?st.ev.gh:st.ev.ga,ga:st.ev.h===c.id?st.ev.ga:st.ev.gh,pk:0}:{...base,past:1,unk:1})}
   for(const x of log)if(x.r===b.round&&x.k!=='lg')rows.push({...x,past:1});
   /* ahead: the matches that are not league rounds, each before the league round it is played ahead of */
   const ahead=[];if(b.pre&&b.pre.season===b.season&&b.round===0&&!b.pre.skip)for(const f of b.pre.list)if(!f.res&&club(f.id))ahead.push({at:0,o:0,k:'pre',t:'משחק הכנה',op:club(f.id).name,home:!!f.home});
@@ -81,20 +91,34 @@ const BSTAFF={
   anal:{name:'אנליסט',ic:'gear',lv:['דו״ח על היריבה לפני כל משחק, והקבוצה מגיעה מוכנה יותר','הדו״ח כולל גם את הכובש שלהם ואיך הם ישחקו, והיתרון גדל','היתרון הגדול ביותר שהכנה למשחק יכולה לתת']},
   scout:{name:'סקאוט',ic:'transfer',lv:['רואים את תקרת הדירוג של כל שחקן בשוק','מועדונים מוכנים לרדת יותר במחיר במיקוח','המחיר הטוב ביותר שאפשר להשיג במיקוח']}};
 const BSTAFF_MAX=3;
-function BstaffLv(k){const b=Bstate();return (b&&!b.daily&&b.staff&&b.staff[k])||0}
+/* The staff are people. Each role has three candidates at a time — a name, one to three stars, a word about him, and his own price
+   (a good man can be a bargain and a famous one dear). Hiring one replaces whoever holds the role, and three new candidates come.
+   The list is a function of the coach, the season, the role and how many he has hired for it, so drawing the screen deals nothing. */
+const BSTAFF_FIRST=['אבי','יוסי','רוני','אלי','מוטי','שלומי','גיא','ניר','עומר','איתי','דני','רן','אורן','טל','עידו','יניב','ברק','אסף','נועם','שי','מיכאל','דוד','אלון','יובל'];
+const BSTAFF_LAST=['לוי','כהן','מזרחי','פרץ','ביטון','אוחנה','דהן','אברהם','פרידמן','אזולאי','שפירא','גבאי','חדד','מלכה','סויסה','בן דוד','קליין','רוזן','נחום','טייב','זכאי','אשכנזי','עמר','וקנין'];
+const BSTAFF_TAG=['ותיק עם שנים של ניסיון','צעיר, רעב ומעודכן','עבד שנים בחו״ל','גדל במחלקות הנוער','שחקן עבר שעבר לצוות','אוסף תעודות מכל קורס אפשרי','שקט, יסודי ולא מפספס פרט','אהוב על השחקנים'];
+function BstaffOf(k){const b=Bstate(),v=b&&!b.daily&&b.staff?b.staff[k]:null;return typeof v==='number'?(v?{lv:v,name:'',f:1}:null):(v&&v.lv?v:null)}
+function BstaffLv(k){const v=BstaffOf(k);return v?v.lv:0}
 function BstaffFee(to){return Math.max(80000*to,Math.round(Bsum()*.008*to/10000)*10000)}
 function BstaffWage(lv){return lv?Math.max(30000*lv,Math.round(Bsum()*.004*lv/10000)*10000):0}
-function BstaffPay(){const b=Bstate();if(!b||!b.staff)return 0;return Object.keys(BSTAFF).reduce((t,k)=>t+BstaffWage(b.staff[k]||0),0)}
-function BstaffWhy(k){const b=Bstate(),lv=BstaffLv(k);if(!b||b.live||b.out)return 'לא עכשיו';if(lv>=BSTAFF_MAX)return 'הרמה הגבוהה ביותר';if(me().money<BstaffFee(lv+1))return 'אין מספיק כסף בקופה';return ''}
-function BstaffHire(k){const b=Bstate(),S=BSTAFF[k];if(!S||BstaffWhy(k))return false;const to=BstaffLv(k)+1,fee=BstaffFee(to);b.staff={...(b.staff||{}),[k]:to};Bledger('צוות מקצועי · '+S.name+(to>1?' · רמה '+to:''),-fee);try{Bcount('staff')}catch(e){}Bwrite();return true}
+function BstaffPay(){const b=Bstate();if(!b||!b.staff)return 0;return Object.keys(BSTAFF).reduce((t,k)=>{const v=BstaffOf(k);return t+(v?Math.round(BstaffWage(v.lv)*(v.f||1)/10000)*10000:0)},0)}
+function BstaffCands(k){const b=Bstate(),rnd=lgRng(lgHashN('goalasso-staff:'+(b.coach||'')+':'+b.season+':'+k+':'+((b.staffN&&b.staffN[k])||0))),cur=BstaffOf(k),taken=new Set(Object.keys(BSTAFF).map(x=>(BstaffOf(x)||{}).name)),out=[];
+  const lvs=[0,0,0].map(()=>{const r=rnd();return r<.4?1:r<.78?2:3});if(cur&&cur.lv<BSTAFF_MAX&&!lvs.some(l=>l>cur.lv))lvs[0]=cur.lv+1;if(!cur&&!lvs.includes(1))lvs[2]=1;
+  for(let i=0;i<3;i++){let name='';for(let g=0;g<20&&(!name||taken.has(name));g++)name=BSTAFF_FIRST[Math.floor(rnd()*BSTAFF_FIRST.length)]+' '+BSTAFF_LAST[Math.floor(rnd()*BSTAFF_LAST.length)];taken.add(name);
+    const f=Math.round((.8+rnd()*.5)*20)/20,lv=lvs[i];out.push({i,name,lv,f,tag:BSTAFF_TAG[Math.floor(rnd()*BSTAFF_TAG.length)],fee:Math.round(BstaffFee(lv)*f/10000)*10000,wage:Math.round(BstaffWage(lv)*f/10000)*10000})}
+  return out}
+function BstaffWhy(k,cand){const b=Bstate();if(!b||b.live||b.out)return 'לא עכשיו';if(!cand)return 'אין מועמד';if(me().money<cand.fee)return 'אין מספיק כסף';return ''}
+function BstaffHire(k,i){const b=Bstate(),S=BSTAFF[k],cand=S&&BstaffCands(k)[i];if(!S||BstaffWhy(k,cand))return false;b.staff={...(b.staff||{}),[k]:{lv:cand.lv,name:cand.name,f:cand.f}};b.staffN={...(b.staffN||{}),[k]:((b.staffN&&b.staffN[k])||0)+1};Bledger('צוות מקצועי · '+S.name+' · '+cand.name,-cand.fee);try{Bcount('staff')}catch(e){}Bwrite();return true}
 function BstaffOut(k){const b=Bstate();if(!b||b.live||!BstaffLv(k))return false;b.staff={...(b.staff||{}),[k]:0};Bwrite();return true}
-function BstaffCardHTML(k){const S=BSTAFF[k],lv=BstaffLv(k),why=BstaffWhy(k),max=lv>=BSTAFF_MAX;
-  return `<article class="bstaff-card${lv?' on':''}">${Bui(S.ic)}<div class="bstaff-head"><h3>${S.name}</h3><span class="bstaff-pips" role="img" aria-label="רמה ${lv} מתוך ${BSTAFF_MAX}">${[1,2,3].map(i=>`<i class="${i<=lv?'on':''}"></i>`).join('')}</span></div>
-    ${lv?`<ul class="bstaff-has">${S.lv.slice(0,lv).map(t=>`<li>${t}</li>`).join('')}</ul>`:'<p class="bmuted">עוד לא בצוות.</p>'}
-    ${max?'<p class="bstaff-next done">הרמה הגבוהה ביותר</p>':`<p class="bstaff-next"><b>${lv?'ברמה הבאה':'מה הוא נותן'}:</b> ${S.lv[lv]}</p><p class="bstaff-price">דמי חתימה <strong>${Bmoney(BstaffFee(lv+1))}</strong> · שכר <strong>${Bmoney(BstaffWage(lv+1))}</strong> לשנה</p>`}
-    <div class="bstaff-acts">${max?'':`<button type="button" class="bbtn${why?' secondary':''}" data-staff-up="${k}"${why?' disabled':''}>${why&&why!=='הרמה הגבוהה ביותר'?why:lv?'שדרג לרמה '+(lv+1):'העסק'}</button>`}${lv?`<button type="button" class="blink" data-staff-out="${k}">שחרר</button>`:''}</div></article>`}
-function BstaffView(){const pay=BstaffPay();return `${Bheader('האנשים שלצדך','צוות מקצועי','כל איש צוות עולה דמי חתימה ושכר שנתי, ונותן יתרון אמיתי: במשחק, באימון, בהתאוששות או בשוק.')}<div class="bmetrics"><article><span>כסף זמין עכשיו</span><strong>${Bmoney(me().money)}</strong></article><article><span>שכר הצוות לשנה</span><strong>${Bmoney(pay)}</strong><small>${pay?'משולם בהדרגה בכל מחזור':'עוד לא העסקת אף אחד'}</small></article></div><div class="bstaff-grid">${Object.keys(BSTAFF).map(BstaffCardHTML).join('')}</div><p class="bnote">הצוות הוא שלך: אם תעבור למועדון אחר, הוא עובר איתך.</p>`}
-function BstaffAsk(k){const S=BSTAFF[k],lv=BstaffLv(k);if(!S||BstaffWhy(k))return;Bdialog(`<h2>${lv?'לשדרג את '+S.name+'?':'להעסיק '+S.name+'?'}</h2><p>${S.lv[lv]}.</p><div class="btransaction"><span>דמי חתימה, עכשיו</span>${Bmoney(BstaffFee(lv+1))}</div><div class="btransaction"><span>שכר לשנה, בהדרגה</span>${Bmoney(BstaffWage(lv+1))}</div><div class="bdock">${Bbutton('אישור',`data-staff-ok="${k}"`)}${Bbutton('ביטול','data-bclose','secondary')}</div>`)}
+/* a career saved while the staff were levels: each level becomes a man of that level */
+function BstaffMend(){const b=Bstate();if(!b||b.daily||!b.staff)return;for(const k of Object.keys(BSTAFF)){const v=b.staff[k];if(typeof v==='number'&&v>0){const rnd=lgRng(lgHashN('goalasso-staff-was:'+(b.coach||'')+':'+k));b.staff={...b.staff,[k]:{lv:Math.min(BSTAFF_MAX,v),name:BSTAFF_FIRST[Math.floor(rnd()*BSTAFF_FIRST.length)]+' '+BSTAFF_LAST[Math.floor(rnd()*BSTAFF_LAST.length)],f:1}}}}}
+const BstaffStars=lv=>`<span class="bstaff-pips" role="img" aria-label="${lv} כוכבים מתוך ${BSTAFF_MAX}">${[1,2,3].map(i=>`<i class="${i<=lv?'on':''}"></i>`).join('')}</span>`;
+function BstaffCardHTML(k){const S=BSTAFF[k],cur=BstaffOf(k),lv=cur?cur.lv:0,cands=BstaffCands(k);
+  return `<article class="bstaff-card${lv?' on':''}">${Bui(S.ic)}<div class="bstaff-head"><h3>${S.name}</h3>${cur?`<p class="bstaff-who"><strong>${esc(cur.name||'איש הצוות שלך')}</strong> ${BstaffStars(lv)}</p>`:'<p class="bmuted">התפקיד פנוי.</p>'}</div>
+    ${lv?`<ul class="bstaff-has">${S.lv.slice(0,lv).map(t=>`<li>${t}</li>`).join('')}</ul><p class="bstaff-price">שכר <strong>${Bmoney(Math.round(BstaffWage(lv)*(cur.f||1)/10000)*10000)}</strong> לשנה <button type="button" class="blink" data-staff-out="${k}">שחרר</button></p>`:`<p class="bstaff-next"><b>מה התפקיד נותן:</b> ${S.lv[0]}</p>`}
+    <h4 class="bstaff-ch">מועמדים</h4><ul class="bstaff-cands">${cands.map(c=>{const why=BstaffWhy(k,c),same=cur&&c.lv===lv;return `<li><div><strong>${esc(c.name)}</strong> ${BstaffStars(c.lv)}<small>${c.tag}${c.lv>lv?` · מוסיף: ${S.lv[c.lv-1]}`:same?' · אותה רמה כמו עכשיו':c.lv<lv?' · רמה נמוכה יותר, שכר נמוך יותר':''}</small><small class="bstaff-cost">חתימה ${Bmoney(c.fee)} · שכר ${Bmoney(c.wage)} לשנה</small></div><button type="button" class="bbtn${why||c.lv<=lv?' secondary':''}" data-staff-up="${k}:${c.i}"${why?' disabled':''}>${why==='אין מספיק כסף'?why:cur?'החלף':'העסק'}</button></li>`}).join('')}</ul></article>`}
+function BstaffView(){const pay=BstaffPay();return `${Bheader('האנשים שלצדך','צוות מקצועי','לכל תפקיד יש שלושה מועמדים: שם, רמה (כוכבים) ומחיר משלו. מי שנבחר מחליף את מי שבתפקיד, ואחריו מגיעים מועמדים חדשים.')}<div class="bmetrics"><article><span>כסף זמין עכשיו</span><strong>${Bmoney(me().money)}</strong></article><article><span>שכר הצוות לשנה</span><strong>${Bmoney(pay)}</strong><small>${pay?'משולם בהדרגה בכל מחזור':'עוד לא העסקת אף אחד'}</small></article></div><div class="bstaff-grid">${Object.keys(BSTAFF).map(BstaffCardHTML).join('')}</div><p class="bnote">הצוות הוא שלך: אם תעבור למועדון אחר, הוא עובר איתך.</p>`}
+function BstaffAsk(k,i){const S=BSTAFF[k],cand=S&&BstaffCands(k)[i],cur=BstaffOf(k);if(!cand||BstaffWhy(k,cand))return;Bdialog(`<h2>${cur?`להחליף את ${S.name}?`:`להעסיק ${S.name}?`}</h2><p><strong>${esc(cand.name)}</strong> · ${cand.tag}.</p><ul class="bstaff-has">${S.lv.slice(0,cand.lv).map(t=>`<li>${t}</li>`).join('')}</ul>${cur?`<p class="bnote">${esc(cur.name||'איש הצוות הנוכחי')} יעזוב את המועדון. דמי החתימה ששולמו עליו לא חוזרים.</p>`:''}<div class="btransaction"><span>דמי חתימה, עכשיו</span>${Bmoney(cand.fee)}</div><div class="btransaction"><span>שכר לשנה, בהדרגה</span>${Bmoney(cand.wage)}</div><div class="bdock">${Bbutton('אישור',`data-staff-ok="${k}:${i}"`)}${Bbutton('ביטול','data-bclose','secondary')}</div>`)}
 /* what the staff says before a match: the assistant on the approach and on tired legs, the analyst on the opponent */
 function BstaffBriefHTML(pair){const c=me(),op=pair?club(pair.find(id=>id!==c.id)):null;if(!op)return '';const out=[],as=BstaffLv('asst'),an=BstaffLv('anal');
   if(as){const d=strength(c)-strength(op)+(pair[0]===c.id?1.5:-1.5),k=d>=5?'att':d<=-5?'def':'bal',t=BfitTired(c);
@@ -102,7 +126,7 @@ function BstaffBriefHTML(pair){const c=me(),op=pair?club(pair.find(id=>id!==c.id
   if(an){const xi=bestXI(op),avg=pos=>{const ps=xi.filter(p=>p.pos===pos);return ps.length?ps.reduce((s,p)=>s+p.ovr,0)/ps.length:0},L=[['DF','ההגנה'],['MF','הקישור'],['FW','ההתקפה']].map(([k,t])=>({t,v:avg(k)})).filter(x=>x.v).sort((a,b)=>a.v-b.v);
     let txt=L.length>1?(Math.round(L[0].v)===Math.round(L[L.length-1].v)?`שלוש החוליות שלהם שקולות (<bdi>${Math.round(L[0].v)}</bdi>): אין להם נקודת תורפה ברורה.`:`החוליה החלשה שלהם היא ${L[0].t} (<bdi>${Math.round(L[0].v)}</bdi>), והחזקה היא ${L[L.length-1].t} (<bdi>${Math.round(L[L.length-1].v)}</bdi>).`):'';
     if(an>=2){let s=null;try{s=BleaderOf(op,'goals')}catch(e){}const d=strength(op)-strength(c)+(pair[0]===op.id?1.5:-1.5);txt+=`${s&&s.goals?` הכובש שלהם: ${esc(s.name)} (<bdi>${s.goals}</bdi>).`:''} צפויים לשחק ${d>=5?'התקפי':d<=-5?'הגנתי':'מאוזן'}.`}
-    out.push(`<li><b>האנליסט:</b> ${txt} הקבוצה מגיעה מוכנה: <bdi>+${(.3*an).toFixed(1)}</bdi> לכוח.</li>`)}
+    const tw=BfitTiredOp(op);if(tw.length)txt+=` עייפים אצלם: ${tw.slice(0,3).map(p=>esc(p.last||p.first||fullName(p))).join(', ')}.`;out.push(`<li><b>האנליסט:</b> ${txt} הקבוצה מגיעה מוכנה: <bdi>+${(.3*an).toFixed(1)}</bdi> לכוח.</li>`)}
   return out.length?`<ul class="bbrief">${out.join('')}</ul>`:''}
 /* at the whistle: what preparation is worth in this match */
 function BdepthKick(M){const b=Bstate();if(!b||b.daily||!M||M.bDaily!=null)return;let v=.3*BstaffLv('anal');
@@ -113,7 +137,7 @@ function BdepthKick(M){const b=Bstate();if(!b||b.daily||!M||M.bDaily!=null)retur
 function BdepthAfter(M){const b=Bstate(),c=me();if(!b||b.daily||!c||!M||M.bDep||M.bDaily!=null||(M.h!==c.id&&M.a!==c.id))return;M.bDep=1;
   try{const L=BstaffLv('phys');if(L)for(const e of M.ev)if(e.t==='inj'&&e.team===c.id){const p=c.players.find(x=>x.id===e.pid);if(!p||!p.inj)continue;const cut=L>=3&&p.inj>=4?2:(L>=2?p.inj>=2:p.inj>=3)?1:0;if(cut)p.inj=Math.max(1,p.inj-cut)}}catch(e){console.warn('staff',e)}
   try{BfitAfter(M)}catch(e){console.warn('fit',e)}try{BcalLog(M)}catch(e){console.warn('cal',e)}
-  try{BbookAfter(M)}catch(e){console.warn('book',e)}
+  try{BbookAfter(M)}catch(e){console.warn('book',e)}try{BdealAfter(M)}catch(e){console.warn('deal',e)}
   try{BenvSettle(M);if(M.bCL!=null||M.bX)BenvTurn()}catch(e){console.warn('env',e)}}
 
 /* a new club: the calendar, the table he left and whatever named a player of the old squad go; the staff and the book are his and stay */
@@ -122,7 +146,7 @@ document.addEventListener('click',e=>{const t=e.target&&e.target.closest?e.targe
   if((el=t.closest('[data-bhalf-go]'))){const live=Bstate().live;document.querySelector('.bdialog')?.remove();if(live){live.paused=false;Bwrite();BpaintBroadcast()}return}
   if((el=t.closest('[data-leagueview]'))){Bleagueview=el.dataset.leagueview==='cal'?'cal':'table';Brender();return}
   if((el=t.closest('[data-calendar]'))){Btab='league';Bleagueview='cal';Brender();const nx=document.querySelector('.bcal-row.next');if(nx&&nx.scrollIntoView)nx.scrollIntoView({block:'center'});else window.scrollTo?.(0,0);return}
-  if((el=t.closest('[data-staff-up]'))){BstaffAsk(el.dataset.staffUp);return}
-  if((el=t.closest('[data-staff-ok]'))){const ok=BstaffHire(el.dataset.staffOk);document.querySelector('.bdialog')?.remove();if(ok)Brender();return}
-  if((el=t.closest('[data-staff-out]'))){const k=el.dataset.staffOut,S=BSTAFF[k];if(!S||!BstaffLv(k))return;Bdialog(`<h2>לשחרר את ${S.name}?</h2><p>השכר שלו ייחסך מהמחזור הבא. דמי החתימה לא חוזרים, ואם תרצה אותו שוב תתחיל מרמה 1.</p><div class="bdock">${Bbutton('שחרר',`data-staff-bye="${k}"`)}${Bbutton('ביטול','data-bclose','secondary')}</div>`);return}
+  if((el=t.closest('[data-staff-up]'))){const [k,i]=el.dataset.staffUp.split(':');BstaffAsk(k,+i);return}
+  if((el=t.closest('[data-staff-ok]'))){const [k,i]=el.dataset.staffOk.split(':'),ok=BstaffHire(k,+i);document.querySelector('.bdialog')?.remove();if(ok)Brender();return}
+  if((el=t.closest('[data-staff-out]'))){const k=el.dataset.staffOut,S=BSTAFF[k];if(!S||!BstaffLv(k))return;Bdialog(`<h2>לשחרר את ${S.name}?</h2><p>השכר שלו ייחסך מהמחזור הבא, והתפקיד יישאר פנוי. דמי החתימה לא חוזרים.</p><div class="bdock">${Bbutton('שחרר',`data-staff-bye="${k}"`)}${Bbutton('ביטול','data-bclose','secondary')}</div>`);return}
   if((el=t.closest('[data-staff-bye]'))){BstaffOut(el.dataset.staffBye);document.querySelector('.bdialog')?.remove();Brender();return}});
