@@ -140,6 +140,13 @@ let BflashT=0;function Bflash(html){let el=document.getElementById('aflash');if(
 /* ---- packs ---- */
 function BtipAsk(p,c){const core=c&&c.players.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,11).includes(p);return c?Math.round(Bvalue(p)*(core?1.5:1.12)/50000)*50000:0}
 function BtipFor(p){const b=Bstate(),t=b&&b.tip;return t&&p&&t.pid===p.id&&t.s===b.season&&b.round<=t.until?t:null}
+function BscoutMarketCard(){
+  const b=Bstate(),tip=b.tip;
+  if(!tip||tip.s<b.season||(tip.s===b.season&&b.round>tip.until))return '';
+  const target=Bfind(tip.pid);
+  if(!target||target.c?.id===G.me)return '';
+  return `<button type="button" class="bwin-banner" data-player="${tip.pid}"><strong>המלצת הסקאוט · ${esc(fullName(target.p))}</strong><span>${POSHE[target.p.pos]} · דירוג ${target.p.ovr} · ${tip.pct}% הנחה${tip.s>b.season?' בחלון הבא':''} · לכרטיס השחקן ›</span></button>`;
+}
 function BtipPrice(p,c){const t=BtipFor(p),ask=BtipAsk(p,c);return t?Math.max(0,Math.round(ask*(1-t.pct/100)/10000)*10000):ask}
 /* a real player of another club who would walk into this eleven and whom the club can pay for at the reduced price */
 function BscoutPick(pct){{const w=BwinInfo();if(!w.none&&(w.open?w.left<2:!w.next))return null}const c=me(),xi=c.players.slice().sort((a,b)=>b.ovr-a.ovr).slice(0,11),floor=xi.length?xi[xi.length-1].ovr:50,spare=Math.min(Bbudget(),c.money),ids=new Set(Bstate().league),out=[];
@@ -180,7 +187,7 @@ function BpackPaint(){const b=Bstate(),o=b&&b.packOpen,root=document.getElementB
   root.className='apk '+o.tier+(o.step==='sealed'?' sealed':' dealt')+(picked?' picked':'')+(o.fresh?'':' still');
   root.innerHTML=o.step==='sealed'?`<div class="apk-stage"><p class="apk-kick">רמת מאמן <bdi>${b.lvl}</bdi></p><h2 id="bpackH">${BPK_HE[o.tier]}</h2><button type="button" class="apk-pack" data-bpk="open" aria-label="פתח את החבילה">${BpackArt(o.tier)}</button><p class="apk-hint">בפנים שלושה קלפים. אתה בוחר אחד מהם.</p><button type="button" class="bbtn primary" data-bpk="open">פתח את החבילה</button><button type="button" class="blink" data-bpk="later">אחר כך</button></div>`
    :`<div class="apk-stage"><p class="apk-kick">${BPK_HE[o.tier]}</p><h2 id="bpackH">${picked?'הקלף שלך':'בחר קלף אחד'}</h2><div class="apk-cards">${o.cards.map((x,k)=>BpackCardHTML(x,k,o)).join('')}</div>
-     ${picked?`<p class="apk-note" role="status"><strong>${esc(o.note||I.v)}</strong>${o.cards[o.pick].k==='scout'?'<span>תמצא אותו ברכש. המחיר המיוחד כבר מופיע בהצעה.</span>':''}</p><button type="button" class="bbtn primary" data-bpk="${more?'next':'done'}">${more?`לחבילה הבאה (<bdi>${more}</bdi>)`:'מעולה'}</button>${more?'<button type="button" class="blink" data-bpk="done">סגור</button>':''}`
+     ${picked?`<p class="apk-note" role="status"><strong>${esc(o.note||I.v)}</strong>${o.cards[o.pick].k==='scout'?'<span>השחקן מחכה לך בראש מסך הרכש.</span>':''}</p>${o.cards[o.pick].k==='scout'?'<button type="button" class="bbtn primary" data-bpk="player">לשחקן ברכש</button>':''}<button type="button" class="bbtn primary" data-bpk="${more?'next':'done'}">${more?`לחבילה הבאה (<bdi>${more}</bdi>)`:'מעולה'}</button>${more?'<button type="button" class="blink" data-bpk="done">סגור</button>':''}`
       :I?`<p class="apk-note" role="status"><strong>${esc(I.t)} · <bdi>${esc(I.v)}</bdi></strong><span>${esc(I.d)}</span></p><button type="button" class="bbtn primary" data-bpk="take">קח את הקלף הזה</button>`
         :`<p class="apk-hint">הקש על קלף כדי לראות מה הוא נותן. לוקחים רק אחד.</p>`}</div>`;
   o.fresh=false;const f=root.querySelector('.bbtn')||root.querySelector('.apk-card');try{f&&f.focus({preventScroll:true})}catch(e){}}
@@ -190,6 +197,10 @@ function BpackStep(a,i){const b=Bstate(),o=b&&b.packOpen;if(!o)return;
   if(a==='open'&&o.step==='sealed'){o.cards=BpackDeal(o.tier);o.step='dealt';o.sel=null;o.fresh=true;Bwrite();BpackPaint();try{buzz('open')}catch(e){}return}
   if(a==='sel'&&o.step==='dealt'&&o.pick==null&&o.cards[i]){o.sel=i;BpackPaint();try{buzz('tap')}catch(e){}return}
   if(a==='take'&&o.step==='dealt'&&o.pick==null&&o.sel!=null&&o.cards[o.sel]){o.pick=o.sel;o.note=BpackApply(o.cards[o.pick]);BmsCheck();Bwrite();BpackPaint();try{buzz('win')}catch(e){}return}
+  if(a==='player'&&o.pick!=null&&o.cards[o.pick]?.k==='scout'){
+    const id=o.cards[o.pick].pid;
+    b.packOpen=null;Btab='market';Bwrite();BpackPaint();Brender();Bdetail(id);return;
+  }
   if(a==='later'&&o.step==='sealed'){b.packs.unshift(o.tier);b.packOpen=null;Bwrite();BpackPaint();Brender();return}
   if((a==='done'||a==='next')&&o.pick!=null){b.packOpen=null;Bwrite();if(a==='next'&&b.packs.length){BpackOpen();return}BpackPaint();Brender()}}
 document.addEventListener('click',e=>{const el=e.target.closest('button');if(!el||!G||!G.beginner)return;
