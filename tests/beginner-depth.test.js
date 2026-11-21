@@ -6,7 +6,7 @@
 const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.join(__dirname,'..');const errors=[];const vc=new VirtualConsole();vc.on('jsdomError',e=>{if(e.type==='unhandled exception')errors.push(e.message)});
 const w=new JSDOM(fs.readFileSync(path.join(root,'beginner.html'),'utf8'),{url:'https://depth.test/beginner.html',runScripts:'dangerously',pretendToBeVisual:true,storageQuota:3e7,virtualConsole:vc,
-  beforeParse(w){w.__noExtras=1;w.__noInjStop=1;w.__ilmNoSplash=1;w.__noWindow=1;w.__noEnv=1;w.__noHalf=1;w.__noBids=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
+  beforeParse(w){w.__noExtras=1;w.__noInjStop=1;w.__ilmNoSplash=1;w.__noWindow=1;w.__noEnv=1;w.__noHalf=1;w.__noBids=1;w.__noStrain=1;w.matchMedia=()=>({matches:true});w.scrollTo=()=>{}}}).window;
 const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];const run=code=>JSON.parse(w.eval(`JSON.stringify(${code})`));
 const quiet=()=>w.eval("(()=>{Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}try{closeReveal(true)}catch(e){}document.querySelector('.bdialog')?.remove()})()");
 const snap=()=>w.eval('JSON.stringify([G.clubs.find(c=>c.id===G.me),Bstate()])');
@@ -76,12 +76,23 @@ try{
   const calm=()=>{quiet();w.eval("document.getElementById('bpack')?.remove();document.getElementById('envelope')?.remove()")};
   const fake=(o,keep)=>JSON.parse(w.eval(`(()=>{const c=me(),ids=c.lineup.slice();if(!${!!keep})for(const p of c.players)p.fit=100;const M={h:c.id,a:-1,m:90,gh:1,ga:0,ev:[],xi:{[c.id]:[{pid:ids[1],since:0},{pid:ids[2],since:60},{pid:ids[0],since:0}]},used:{[c.id]:[ids[3]]},mins:{[c.id]:{[ids[3]]:60}}};Object.assign(M,${JSON.stringify(o||{})});BfitAfter(M);return JSON.stringify(ids.slice(0,5).map(id=>c.players.find(p=>p.id===id).fit))})()`));
   assert.equal(run("slotsFor(me().formation)[0]"),'GK');
-  assert.deepEqual(fake(),[90,74,91,83,100],'ninety minutes cost 26, half an hour a third of it, a goalkeeper far less, the bench nothing');
+  assert.deepEqual(fake(),[88,70,90,80,100],'ninety minutes cost 30, half an hour a third of it, a goalkeeper far less, the bench nothing');
   w.eval('BfitRest(BFIT_WEEK)');assert.deepEqual(run('me().lineup.slice(0,5).map(id=>me().players.find(p=>p.id===id).fit)'),[100,100,100,100,100],'a week gives it back: one match a week leaves nothing to manage');
-  assert.deepEqual(fake({bX:{kind:'state',stage:0}}),[100,86,100,94,100],'a cup tie is midweek: only a few days until the league round');
-  assert.deepEqual(fake({bCL:0}),[100,86,100,94,100],'and so is a European night');
+  assert.equal(run('Bstate().round'),0);assert.deepEqual(fake({bX:{kind:'toto',stage:0}}),[100,100,100,100,100],'an evening before the first league round has a week after it: nobody opens a season on tired legs');
+  w.eval('Bstate().round=3');
+  assert.deepEqual(fake({bX:{kind:'state',stage:0}}),[94,79,96,87,100],'a cup tie is midweek: three days give next to nothing back, and Saturday begins at 79');
+  assert.deepEqual(fake({bCL:0}),[94,79,96,87,100],'and so is a European night');
+  assert.equal(run('BfitAfterMid()'),79,'which the window before a midweek match can say ahead of time');
   assert.deepEqual(fake({bX:{kind:'pre'}}),[100,100,100,100,100],'a friendly has a week after it');
-  fake({bX:{kind:'state',stage:0}});assert.equal(fake({bX:{kind:'state',stage:1}},true)[1],74,'a second match in the same week starts lower and ends lower');assert.equal(fake({bX:{kind:'state',stage:2}},true)[1],64);
+  // the debt of a midweek match is paid slowly while he keeps playing, and at once by one match on the bench
+  const seq=(steps)=>JSON.parse(w.eval(`(()=>{const c=me(),p=c.players.find(x=>x.id===c.lineup[1]),out=[];for(const x of c.players)x.fit=100;for(const k of ${JSON.stringify(steps)}){if(k!=='bench')BfitAfter({h:c.id,a:-1,m:90,gh:0,ga:0,ev:[],xi:{[c.id]:[{pid:p.id,since:0}]},used:{},mins:{},...(k==='mid'?{bCL:0}:{})});if(k!=='mid')BfitRest(BFIT_WEEK);out.push(p.fit)}return JSON.stringify(out)})()`));
+  w.__noStrain=1;
+  assert.deepEqual(seq(['lg','lg','lg']),[100,100,100],'one match a week: always fresh');
+  assert.deepEqual(seq(['mid','lg','lg','lg','lg']),[79,87,93,99,100],'after a midweek match: 79 on Saturday, then 87, 93, 99');
+  assert.deepEqual(seq(['mid','lg','mid']),[79,87,67],'a second midweek running: 67');
+  assert.deepEqual(seq(['mid','lg','mid','lg','lg','lg']),[79,87,67,76,84,91],'and a long way back');
+  assert.deepEqual(seq(['mid','lg','mid','bench']),[79,87,67,100],'one match on the bench pays all of it');
+  w.__noStrain=0;w.eval('Bstate().round=0');
   w.eval('me().players.find(p=>p.id===me().lineup[1]).fit=40');assert.equal(fake({},true)[1],35,'never under the floor');
   w.eval('Bstate().daily=1');assert.deepEqual(fake(),[100,100,100,100,100],'the daily challenge is not a career');w.eval('delete Bstate().daily');
   assert.ok(run("(p=>{p.fit=66;const a=effOvr(p);p.fit=100;return effOvr(p)-a})(me().players.find(p=>p.id===me().lineup[1]))")>2,'the engine already plays a tired man below his rating');
@@ -93,10 +104,10 @@ try{
   calm();
   // who is tired is said where the eleven is chosen
   w.eval("(()=>{const c=me();for(const p of c.players)p.fit=100;[3,5,8].forEach((i,k)=>c.players.find(p=>p.id===c.lineup[i]).fit=[66,72,79][k]);Btab='squad';Brender()})()");
-  assert.equal($$('.bout-strip.tired li').length,2,'under 75 is tired');assert.equal($$('.bformation-player .bfit-low').length,3,'under 82 is marked on the board');assert.equal($$('.bformation-player .bfit-low.bad').length,2);
+  assert.equal($$('.bout-strip.tired .bfit-row').length,3,'whoever is under 85 is on the strip');assert.equal($$('.bout-strip.tired .bfit-row.bad').length,2,'under 75 in red');assert.equal($$('.bformation-player .bfit-low').length,3,'and marked on the board');assert.equal($$('.bformation-player .bfit-low.bad').length,2);
   assert.equal($$('.bplayer .bp-mor.low').filter(x=>/עייף/.test(x.textContent)).length,2);
   const s1=snap();w.eval('Brender();Brender();Bprematch();Bprematch()');assert.equal(snap(),s1,'drawing these screens changes nothing');
-  assert.equal($$('.blineup-player .bfit-chip').length,3);assert.match($('.bfit-note').textContent,/2 שחקנים בהרכב עייפים/);assert.equal($('.bbrief'),null,'nobody on the staff yet');quiet();
+  assert.equal($$('.blineup-player .bfit-chip').length,3);assert.match($('.bfit-note').textContent,/העייפות מורידה מההרכב שלך/);assert.equal($('.bbrief'),null,'nobody on the staff yet');quiet();
   // ---- the break: a window of its own
   w.__noHalf=0;w.eval("(()=>{for(const p of me().players){p.inj=0;p.susp=0;p.fit=100}Bplay();BstopBroadcast();const L=Bstate().live;while(L.M.m<44)Btick(true);window.__M=L.M;try{Bpitch.hold=0}catch(e){}Btick()})()");
   assert.equal(run('__M.m'),45);assert.ok($('.bdialog .bhalf'),'the break opens its window');assert.equal(run('Bstate().live.paused'),true);assert.ok($$('.bhalf .bstat').length>=6);assert.equal($$('.bhalf [data-bmentality]').length,3);
@@ -130,7 +141,7 @@ try{
   assert.deepEqual(run("(()=>{const b=Bstate(),keep=b.staff;b.staff={asst:3,fit:0};BstaffMend();const v=b.staff.asst,r=[typeof v,v.lv,!!v.name,BstaffLv('fit')];b.staff=keep;return r})()"),['object',3,true,0],'a career saved with levels gets a man of that level');
   w.eval('Bprematch()');assert.match($('.bbrief').textContent,/עוזר המאמן/);assert.match($('.bbrief').textContent,/התקפי|הגנתי|מאוזן/);quiet();
   w.eval("Bstate().staff={asst:3,fit:2,phys:2,anal:2,scout:1}");
-  assert.equal(fake()[1],77,'a fitness coach: a match costs less');w.eval('BfitRest(BFIT_MID)');assert.equal(run('me().players.find(p=>p.id===me().lineup[1]).fit'),90,'and the days between give more');w.eval('for(const p of me().players)p.fit=100');
+  assert.equal(fake()[1],74,'a fitness coach: a match costs less');w.eval('BfitRest(BFIT_MID)');assert.equal(run('me().players.find(p=>p.id===me().lineup[1]).fit'),84,'and the days between give more');assert.equal(run('BfitAfterMid()'),84,'79 without him');w.eval('for(const p of me().players)p.fit=100');
   const tp=run("me().players.find(p=>p.pos==='MF'&&p.ovr<(p.pot||99)).id"),t0=run(`me().players.find(p=>p.id===${tp}).bTraining||0`);assert.ok(w.eval(`BtrainSolo(${tp})`));assert.equal(run(`me().players.find(p=>p.id===${tp}).bTraining`),t0+3,'the assistant at his third level: an individual session is three steps');
   const dfs=run("me().players.filter(p=>p.pos==='DF'&&p.ovr<(p.pot||99)).map(p=>[p.id,p.bTraining||0])");assert.ok(w.eval("BtrainTeam('DF')"));assert.deepEqual(run("me().players.filter(p=>p.pos==='DF'&&"+JSON.stringify(dfs.map(x=>x[0]))+".includes(p.id)).map(p=>[p.id,p.bTraining])"),dfs.map(x=>[x[0],x[1]+2]),'and a team session two');
   w.eval('Bprematch()');assert.match($('.bbrief').textContent,/האנליסט/);assert.match($('.bbrief').textContent,/\+0\.6/);quiet();
@@ -243,9 +254,9 @@ try{
   // ---- fitness is every club's: both sides pay for a match, and a tie decided without one costs the same
   const opp=run("(()=>{const o=G.clubs.find(c=>c.id!==G.me&&Bstate().league.includes(c.id));for(const c of G.clubs)for(const p of c.players)p.fit=100;const xi=bestXI(o);return {id:o.id,gk:xi.find(p=>p.pos==='GK').id,out:xi.find(p=>p.pos!=='GK').id}})()");
   const both=run(`(()=>{const c=me(),o=G.clubs.find(x=>x.id===${JSON.stringify(opp.id)}),M={h:c.id,a:o.id,m:90,gh:0,ga:0,ev:[],xi:{[c.id]:[{pid:c.lineup[1],since:0}],[o.id]:[{pid:${opp.out},since:0},{pid:${opp.gk},since:0}]},used:{},mins:{}};BfitAfter(M);const f=id=>o.players.find(p=>p.id===id).fit,a=[c.players.find(p=>p.id===c.lineup[1]).fit,f(${opp.out}),f(${opp.gk})];BfitRest(BFIT_WEEK);return [a,[f(${opp.out}),f(${opp.gk})]]})()`);
-  assert.deepEqual(both,[[74,74,90],[100,100]],'the opponent\'s legs are counted like the coach\'s own');
-  assert.deepEqual(run(`(()=>{const o=G.clubs.find(x=>x.id===${JSON.stringify(opp.id)});BfitQuick(o);const xi=bestXI(o),v=[...new Set(xi.filter(p=>p.pos!=='GK').map(p=>p.fit))];for(const p of o.players)p.fit=100;return v})()`),[86]);
-  w.eval(`G.clubs.find(x=>x.id===${JSON.stringify(opp.id)}).players.find(p=>p.id===${opp.out}).fit=60`);assert.deepEqual(run(`BfitTiredOp(G.clubs.find(x=>x.id===${JSON.stringify(opp.id)})).map(p=>p.id)`),[opp.out],'and the staff can say who is tired on the other side');w.eval(`G.clubs.find(x=>x.id===${JSON.stringify(opp.id)}).players.find(p=>p.id===${opp.out}).fit=100`);
+  assert.deepEqual(both,[[70,70,88],[100,100]],'the opponent\'s legs are counted like the coach\'s own');
+  assert.deepEqual(run(`(()=>{const o=G.clubs.find(x=>x.id===${JSON.stringify(opp.id)}),xi=bestXI(o);BfitQuick(o);const v=[...new Set(xi.filter(p=>p.pos!=='GK').map(p=>p.fit))];for(const p of o.players)p.fit=100;return v})()`),[79],'a tie decided without a match costs the eleven that would have played it');
+  assert.equal(run(`(()=>{const o=G.clubs.find(x=>x.id===${JSON.stringify(opp.id)});for(const p of o.players)if(p.pos!=='GK')p.fit=70;const n=BfitTiredOp(o).length;for(const p of o.players)p.fit=100;return n})()`),10,'and the staff can say who is tired on the other side');
   play();assert.ok(run('G.clubs.filter(c=>Bstate().league.includes(c.id)).every(c=>c.players.every(p=>(p.fit??100)>=88))'),'a week rests every club (only a man just back from an injury is still short)');calm();
   // back from an injury he is not at once the player he was
   assert.deepEqual(run("(()=>{const c=me(),p=c.players.find(x=>!c.lineup.includes(x.id));p.inj=1;p.fit=100;const q=G.clubs.find(x=>x.id!==G.me).players[0];q.inj=1;q.fit=100;Bplay();BstopBroadcast();const r=[p.inj,p.fit,q.fit];delete Bstate().live;Bstate().staff={phys:2};p.fit=100;BfitBack(p,c);r.push(p.fit);Bstate().staff={};p.fit=100;q.fit=100;return r})()"),[0,80,80,88],'eighty, and a doctor brings him back nearer the top');w.eval('Brender()');
@@ -253,6 +264,68 @@ try{
   assert.deepEqual(run("(()=>{const b=Bstate(),c=me(),keep=b.cal,kp=G.paper;b.cal=b.cal.filter(x=>x.r!==0);G.paper=[{wk:0,s:b.season,ev:{type:'match',h:-5,a:c.id,gh:1,ga:3}},...G.paper.filter(x=>!(x.wk===0&&x.s===b.season))];const r=BcalRows()[0],v=[r.past,!!r.unk,r.gf,r.ga];G.paper=G.paper.filter(x=>x.wk!==0||x.s!==b.season);const u=!!BcalRows()[0].unk;b.cal=keep;G.paper=kp;return [v,u]})()"),[[1,false,3,1],true],'a round the paper still reports has its score; one it does not is listed as played');
   const bf=run("(()=>{const b=Bstate(),c=me();delete b.book;b.ct.played=40;b.ct.wins=20;b.honours=[{season:2,what:'אליפות ליגת העל',club:'מועדון ישן'},{season:3,what:'גביע המדינה',club:'מועדון ישן'}];G.paper=[{s:b.season,wk:0,ev:{type:'match',hName:c.name,aName:'יריבה',gh:6,ga:1}},...G.paper];const k=BbookEnsure();return [k.hist.filter(h=>h.old).map(h=>[h.s,h.place,h.lg]),k.rec.win&&k.rec.win.d>=5,k.bf]})()");
   assert.deepEqual(bf,[[[2,1,'ליגת העל']],true,1],'a title is a line of the seasons\' table, and the paper gives the season\'s biggest win');w.eval("Btab='book';Brender()");assert.match($('.bbook-tbl').textContent,/ליגת העל/);
+  // ---- playing tired costs: what the legs take off a man, what the engine takes, and who rests
+  w.__noStrain=1;w.eval("(()=>{for(const c of G.clubs)for(const p of c.players){p.fit=100;p.inj=0;p.susp=0}Bstate().staff={};BensureXI(me())})()");
+  const loss=run("[100,93,87,79,75,67,60].map(f=>+BfitLoss({fit:f,pos:'MF'}).toFixed(2))");
+  assert.equal(loss[0],0);assert.ok(loss.every((v,i)=>!i||v>loss[i-1]),'the lower the legs, the more they cost');
+  assert.ok(loss[1]<.5&&loss[2]<1,'above 85 next to nothing');assert.ok(loss[3]>2.2&&loss[3]<3.2,'at 79 about three rating points');assert.ok(loss[5]>5.5,'at 67 more than five');
+  assert.ok(run("BfitLoss({fit:88,pos:'GK'})")<.2,'a goalkeeper hardly tires');
+  // the number shown is the engine's own: effOvr at the whistle and minuteFatigue minute by minute, against the same man fresh
+  const eng=run(`(()=>{const L=G.clubs.filter(x=>x.id!==G.me&&Bstate().league.includes(x.id)),c=L[0],o=L[1],M=createMatch(c,o,{kind:'friendly',neutral:false}),e=M.xi[c.id].find(e=>c.players.find(p=>p.id===e.pid).pos==='MF'),p=c.players.find(p=>p.id===e.pid);
+    const at=f=>{p.fit=f;let s=0;for(let m=1;m<=90;m++){M.m=m;s+=minuteFatigue(M,p,e)}return effOvr(p)-s/90},full=at(100),v=[full-at(79),BfitLoss({fit:79,pos:'MF'}),full-at(67),BfitLoss({fit:67,pos:'MF'})];
+    p.fit=100;M.m=60;const a=unitStrength(M,c);for(const x of M.xi[c.id]){const q=c.players.find(p=>p.id===x.pid);if(q.pos!=='GK')q.fit=79}const b=unitStrength(M,c);for(const q of c.players)q.fit=100;return v.concat([a.att-b.att,a.def-b.def,a.mid-b.mid])})()`);
+  assert.ok(eng[0]>eng[1]*.7&&eng[0]<eng[1]*1.5,'79: '+eng[0]+' against '+eng[1]);assert.ok(eng[2]>eng[3]*.7&&eng[2]<eng[3]*1.5,'67: '+eng[2]+' against '+eng[3]);
+  assert.ok(eng[4]>2&&eng[5]>1.8&&eng[6]>2,'an eleven at 79 attacks, defends and holds the middle two points and more under itself: '+eng.slice(4).map(v=>v.toFixed(1)));
+  // the other clubs rest a tired man when the man behind him would play better today, which the engine's own choice does not see
+  const rot=run(`(()=>{const o=G.clubs.find(x=>x.id===${JSON.stringify(opp.id)});for(const p of o.players){p.fit=100;p.inj=0;p.susp=0;p.form=0;p.morale=65}const xi=bestXI(o),pos='MF',st=xi.filter(p=>p.pos===pos).sort((a,b)=>a.ovr-b.ovr),P=st[0],Q=o.players.filter(p=>p.pos===pos&&!xi.includes(p)).sort((a,b)=>b.ovr-a.ovr)[0],rest=o.players.filter(p=>p.pos===pos&&!xi.includes(p)&&p!==Q),keep=[Q.ovr,Q.foreign,P.foreign,xi.map(p=>p.foreign),rest.map(p=>p.ovr)];
+    Q.ovr=P.ovr-3;Q.foreign=false;P.foreign=false;rest.forEach(p=>p.ovr=Math.min(p.ovr,P.ovr-12));const r={};const has=()=>{const ids=bestXI(o).map(p=>p.id);return [ids.includes(P.id),ids.includes(Q.id),ids.length]};
+    r.fresh=has();P.fit=84;r.f84=has();P.fit=70;r.f70=has();r.engine=bestXI0(o).map(p=>p.id).includes(P.id);
+    Bstate().daily=1;r.daily=has();delete Bstate().daily;window.__noFatigue=1;r.off=has();window.__noFatigue=0;
+    xi.forEach(p=>p.foreign=false);xi.filter(p=>p!==P&&p.pos!=='GK').slice(0,MAX_FOREIGN_XI).forEach(p=>p.foreign=true);Q.foreign=true;r.lim=[foreignLimited(o),bestXI(o).includes(Q),bestXI(o).filter(p=>p.foreign).length<=MAX_FOREIGN_XI];P.foreign=true;r.forfor=has();
+    P.fit=100;Q.ovr=keep[0];Q.foreign=keep[1];P.foreign=keep[2];xi.forEach((p,i)=>p.foreign=keep[3][i]);rest.forEach((p,i)=>p.ovr=keep[4][i]);return r})()`);
+  assert.deepEqual(rot.fresh,[true,false,11]);assert.deepEqual(rot.f84,[true,false,11],'a little tired and still the better man');
+  assert.equal(rot.engine,true,'the engine by itself keeps a man at 70 in front of one three points under him');assert.deepEqual(rot.f70,[false,true,11],'he rests, and the man behind him plays');
+  assert.deepEqual(rot.daily,[true,false,11],'not in the daily challenge');assert.deepEqual(rot.off,[true,false,11],'and not with fatigue off');
+  assert.deepEqual(rot.lim,[true,false,true],'never a foreigner past the limit');assert.deepEqual(rot.forfor,[false,true,11],'a foreigner for a foreigner is no more foreigners');
+  // the coach: the strip says what today costs, and one press rests whoever has a better man behind him
+  const mineIds=run(`(()=>{const c=me();for(const p of c.players){p.fit=100;p.inj=0;p.susp=0;p.form=0;p.morale=65}Bstate().staff={};c.lineup=autoLineupFor(c);const sl=slotsFor(c.formation),at=pos=>c.lineup.map((id,i)=>({p:c.players.find(p=>p.id===id),i})).filter(x=>sl[x.i]===pos&&x.p.pos===pos).sort((a,b)=>a.p.ovr-b.p.ovr);
+    const P=at('MF')[0],Q=c.players.filter(p=>p.pos==='MF'&&!c.lineup.includes(p.id)).sort((a,b)=>b.ovr-a.ovr)[0],R=at('DF').slice(-1)[0];window.__keep={Q:[Q.id,Q.ovr,Q.foreign],df:c.players.filter(p=>(p.pos==='DF'||p.pos==='MF')&&!c.lineup.includes(p.id)&&p!==Q).map(p=>[p.id,p.ovr])};
+    Q.ovr=P.p.ovr-2;Q.foreign=!!P.p.foreign;for(const p of c.players)if(!c.lineup.includes(p.id)&&p!==Q){if(p.pos==='DF')p.ovr=Math.min(p.ovr,R.p.ovr-8);if(p.pos==='MF')p.ovr=Math.min(p.ovr,P.p.ovr-12)}P.p.fit=67;R.p.fit=79;Btab='squad';Brender();return {P:P.p.id,slot:P.i,Q:Q.id,R:R.p.id,Pn:P.p.last||P.p.first,Qn:Q.last||Q.first,ovr:P.p.ovr}})()`);
+  assert.equal($$('.bout-strip.tired .bfit-row').length,2,'whoever is under 85');assert.equal($$('.bout-strip.tired .bfit-row.bad').length,1,'and under 75 in red');
+  assert.match($('.bout-strip.tired strong').textContent,/ההרכב חלש היום בנקודת כוח אחת/);assert.match($('.bout-strip.tired .bfit-row.bad').textContent,new RegExp('כושר 67% · משחק כמו '+(mineIds.ovr-7)));
+  assert.match($('.bout-strip.tired [data-action="freshen"]').textContent,/תן לעייף לנוח/);assert.match($('.bout-strip.tired .bfit-act').textContent,new RegExp(mineIds.Qn+' מהספסל ישחק היום טוב ממנו'));
+  assert.equal($$('.bplayer .bp-mor.low').filter(x=>/עייף 67%/.test(x.textContent)).length,1);assert.equal($$('.bplayer .bp-mor.low').filter(x=>/כושר 79%/.test(x.textContent)).length,1);
+  const pw=run('[Math.round(strength(me())),+BfitTeam(me()).toFixed(2)]');assert.ok(pw[1]>.7&&pw[1]<1,'two tired men of eleven: '+pw[1]);
+  w.eval("Btab='home';Brender()");assert.match($('.amatch .apower-l .mine').textContent,new RegExp('הכוח שלך '+Math.round(run('strength(me())-BfitTeam(me())'))));assert.match($('.amatch .apow-tired').textContent,/עייפות\s*−1/,'the power bar is today\'s power');
+  const sFit=snap();w.eval("Brender();Btab='squad';Brender();Bprematch();Bprematch()");assert.equal(snap(),sFit,'drawing these screens changes nothing');
+  assert.match($('.bdialog .bfit-note').textContent,/העייפות מורידה מההרכב שלך נקודת כוח אחת/);assert.match($('.bdialog .bfit-note').textContent,/67%/);assert.ok($('.bdialog [data-action="freshen-pre"]'));
+  $('.bdialog [data-action="freshen-pre"]').click();assert.equal(run(`me().lineup[${mineIds.slot}]`),mineIds.Q,'the fresher man takes the very place');assert.ok(run(`me().lineup.includes(${mineIds.R})`),'and whoever has nobody better behind him plays on');
+  assert.ok($('.bdialog'),'the window before the whistle is still open');assert.equal($('.bdialog [data-action="freshen-pre"]'),null);quiet();
+  w.eval("Btab='squad';Brender()");assert.equal($$('.bout-strip.tired .bfit-row').length,1);assert.equal($('.bout-strip.tired [data-action="freshen"]'),null);assert.match($('.bout-strip.tired .bfit-none').textContent,/אין כרגע בספסל/);
+  w.eval(`(()=>{const c=me();c.lineup[${mineIds.slot}]=${mineIds.P};Brender()})()`);$('.bout-strip.tired [data-action="freshen"]').click();assert.equal(run(`me().lineup[${mineIds.slot}]`),mineIds.Q,'the same from the squad screen');
+  w.eval(`(()=>{const c=me();c.lineup[${mineIds.slot}]=${mineIds.P};Brender()})()`);$('[data-action="auto"]').click();assert.ok(!run(`me().lineup.includes(${mineIds.P})`)&&run(`me().lineup.includes(${mineIds.Q})`),'and the recommended eleven rests him too');
+  // whoever the button rested comes back by himself when the match he sat out is over and his legs are back; a place the coach changed since is the coach's
+  w.eval(`(()=>{const c=me();c.lineup[c.lineup.indexOf(${mineIds.Q})]=${mineIds.P};Bstate().rest=[];c.players.find(p=>p.id===${mineIds.P}).fit=67;Btab='squad';Brender()})()`);$('.bout-strip.tired [data-action="freshen"]').click();
+  assert.deepEqual(run('Bstate().rest'),[{i:mineIds.slot,out:mineIds.P,in:mineIds.Q}]);
+  w.eval(`me().players.find(p=>p.id===${mineIds.P}).fit=76;BfitReturn()`);assert.equal(run(`me().lineup[${mineIds.slot}]`),mineIds.Q,'three days were not enough: he waits one match more');assert.equal(run('Bstate().rest.length'),1);
+  w.eval('BfitRest(BFIT_WEEK);BfitReturn()');assert.equal(run(`me().lineup[${mineIds.slot}]`),mineIds.P,'a week later he has his place back');assert.deepEqual(run('Bstate().rest'),[]);
+  w.eval(`(()=>{const c=me();c.players.find(p=>p.id===${mineIds.P}).fit=67;BfitFreshen(c);const o=c.players.find(p=>p.pos==='MF'&&!c.lineup.includes(p.id)&&p.id!==${mineIds.P});c.lineup[${mineIds.slot}]=o.id;window.__o=o.id;BfitRest(BFIT_WEEK);BfitReturn()})()`);
+  assert.equal(run(`me().lineup[${mineIds.slot}]`),run('window.__o'),'the coach put somebody else there: his choice stands');assert.deepEqual(run('Bstate().rest'),[]);
+  w.eval(`(()=>{const c=me();c.lineup[${mineIds.slot}]=${mineIds.P};c.players.find(p=>p.id===${mineIds.P}).fit=67;BfitFreshen(c)})()`);play();assert.equal(run(`me().lineup[${mineIds.slot}]`),mineIds.P,'and through a real round: rested for the match, back for the next');calm();
+  w.eval(`(()=>{const c=me();for(const p of c.players){p.inj=0;p.susp=0;p.fit=100}c.players.find(p=>p.id===${mineIds.P}).fit=67;c.players.find(p=>p.id===${mineIds.R}).fit=79;c.lineup=autoLineupFor(c);c.lineup[${mineIds.slot}]=${mineIds.P};const q=c.lineup.indexOf(${mineIds.Q});if(q>=0&&q!==${mineIds.slot})c.lineup[q]=c.players.find(p=>p.pos==='MF'&&!c.lineup.includes(p.id)).id;Bstate().rest=[];Bstate().staff={}})()`);
+  // the assistant names the change, and a player's page says what his legs are worth today
+  w.eval(`(()=>{Bstate().staff={asst:{lv:1,name:'בדיקה',f:1}};Bprematch()})()`);
+  assert.match($('.bbrief').textContent,new RegExp('הייתי נותן מנוחה: '+mineIds.Qn+' במקום '+mineIds.Pn+' \\(67%\\)'));assert.doesNotMatch($('.bdialog .bfit-note').textContent,new RegExp(mineIds.Pn+' 67%'),'the note does not repeat the names the assistant gave');quiet();
+  w.eval(`Bstate().staff={};Bdetail(${mineIds.P})`);assert.match($('.bdialog .bnote.bad').textContent,new RegExp('כושר 67%: היום הוא משחק כמו '+(mineIds.ovr-7)+' ולא כמו '+mineIds.ovr));quiet();
+  // before a midweek match the window says what it will leave for Saturday
+  assert.match(w.eval("BfitPreHTML({kind:'state'})"),/בעוד שלושה ימים משחק ליגה מול .+ יגיע אליו בכושר של כ־<bdi>79%<\/bdi>/);assert.doesNotMatch(w.eval("BfitPreHTML({kind:'pre'})"),/שלושה ימים/);assert.doesNotMatch(w.eval('BfitPreHTML(null)'),/שלושה ימים/);
+  assert.doesNotMatch(w.eval("(()=>{const b=Bstate(),k=b.round;b.round=0;const v=BfitPreHTML({kind:'toto'});b.round=k;return v})()"),/שלושה ימים/,'not before the first league round');
+  assert.doesNotMatch(w.eval("(()=>{Bstate().staff={fit:{lv:3,name:'בדיקה',f:1}};const v=BfitPreHTML({kind:'state'});Bstate().staff={};return v})()"),/שלושה ימים/,'nor when the fitness coach brings them to Saturday fresh');
+  w.eval(`(()=>{const c=me(),k=window.__keep;for(const p of c.players){p.fit=100;if(p.id===k.Q[0]){p.ovr=k.Q[1];p.foreign=k.Q[2]}const d=k.df.find(x=>x[0]===p.id);if(d)p.ovr=d[1]}c.lineup=autoLineupFor(c);Bstate().rest=[];Brender()})()`);
+  // tired legs pull a muscle: under 75 only, a half or more only, never in a friendly
+  const strain=(fit,since,extra)=>run(`(()=>{const c=me(),p=c.players.find(x=>x.id===c.lineup[1]);for(const x of c.players){x.fit=100;x.inj=0}p.fit=${fit};const M={h:c.id,a:-1,m:90,gh:0,ga:0,ev:[],xi:{[c.id]:[{pid:p.id,since:${since||0}}]},used:{},mins:{},...${JSON.stringify(extra||{})}};const r=Math.random;Math.random=()=>0;try{BfitAfter(M)}finally{Math.random=r}const v=[p.inj||0,p.inj?p.injT:'',(M.bStrain||[]).length,M.bStrain?BmatchFactsHTML(Object.assign(M,{a:c.id}),true):''];p.inj=0;p.fit=100;return v})()`);
+  w.__noStrain=0;const st=strain(60);assert.deepEqual(st.slice(0,3),[2,'מתיחת שריר מעומס',1]);assert.match(st[3],/bfit-strain[^>]*>.*שיחק עייף \(<bdi>60%<\/bdi>\) ומתח שריר: <bdi>2<\/bdi> משחקים בחוץ/);
+  assert.equal(strain(80)[0],0,'not at 80');assert.equal(strain(60,60)[0],0,'not for half an hour');assert.equal(strain(60,0,{bX:{kind:'pre'}})[0],0,'not in a friendly');w.__noStrain=1;assert.equal(strain(60)[0],0);
   console.log('beginner depth: the transfer window, deals in more than one shape, every club\'s legs, the approach before and during a match, the captain, a colour for each line, the foreign limit in the line-up, fitness between matches, the break and the numbers, the calendar, the staff, the envelope, the career book, the haggle; errors',JSON.stringify(errors));
   if(errors.length)process.exitCode=1;
 }catch(e){console.error(e);errors.push(String(e&&e.message||e));console.log('beginner depth errors',JSON.stringify(errors.slice(0,3)));process.exitCode=1}

@@ -45,7 +45,7 @@ try{
   // ---- drawing a screen changes nothing
   {const snap=()=>run("me().players.map(p=>[p.id,p.morale,p.bOut||0])");const a=JSON.stringify(snap());w.eval("Btab='squad';Brender();Btab='home';Brender();Bdetail(me().players[3].id)");quiet();assert.equal(JSON.stringify(snap()),a)}
   // ---- the substitution window: two meters on every row, the pitch tired and the bench fresh
-  w.eval("me().players.forEach((p,i)=>{p.morale=i%2?40:80;p.bOut=i%3?0:4});BensureXI(me());Bplay();BstopBroadcast();for(let i=0;i<70;i++)Btick(true);Bstate().live.paused=true;Brender()");
+  w.eval("me().players.forEach((p,i)=>{p.morale=i%2?40:80;p.bOut=i%3?0:4;p.inj=0;p.susp=0;p.fit=100});BensureXI(me());Bplay();BstopBroadcast();for(let i=0;i<70;i++)Btick(true);Bstate().live.paused=true;Brender()");
   $('[data-blive="subs"]').click();
   const outs=$$('[data-bsub-out]:not([data-bsub-fill])');assert.ok(outs.length>=10);
   assert.ok(outs.every(b=>b.querySelector('.bmeter[data-fit]')&&b.querySelector('.bmeter[data-morale]')),'fitness and morale on every player of the eleven');
