@@ -1,0 +1,34 @@
+/* Arena in the full game and in the shared league: the look the beginner game wears (src/beginner/arena.css) — a night arena, neon green
+   for identity and action, gold kept for prestige, panels of deep navy glass, buttons with depth.
+   Step one is a repaint and nothing else: the tokens every later stylesheet already reads, then the handful of rules
+   07-theme-direction-a.css painted by hand. No size, spacing, font or layout changes, so nothing moves on any screen and every class a
+   test reads stays. The scope is written with :where(), which adds no weight: each rule here has exactly the weight of the rule it
+   repaints, and wins only by coming last — so whatever was more specific than the old theme is still more specific than this.
+   The beginner page carries this file too and is left alone (body.beginner), except for the overlays it shares with the full game. */
+body:not(.beginner),.lg-overlay,.pcup{--bg:#030817;--bg2:#07112a;--panel:#0c1731;--panel2:#081024;--line:rgba(148,178,255,.16);--line2:rgba(148,178,255,.3);--fg:#f8fafc;--muted:#a9b6d1;--accent:#00FF9D;--accent-deep:#00c97c;--gold:#fbbf24}
+body:not(.beginner){background:radial-gradient(120% 60% at 50% -10%,#12285a 0%,#030817 58%) fixed,#030817}
+:where(body:not(.beginner)) #top{background:linear-gradient(180deg,#0c1836,#060d20);border-bottom:1px solid rgba(0,255,157,.24)}
+:where(body:not(.beginner)) #nav{background:linear-gradient(180deg,#0a1430,#050a1a);border-top:1px solid rgba(0,255,157,.22)}
+:where(body:not(.beginner)) #nav button.on{color:var(--accent)}
+:where(body:not(.beginner)) #nav button.on::before{background:var(--accent);box-shadow:0 0 12px rgba(0,255,157,.75)}
+:where(body:not(.beginner),.lg-overlay,.pcup) .card{background:linear-gradient(165deg,rgba(22,38,80,.94),rgba(8,15,34,.97));border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 18px 34px -24px rgba(0,0,0,.9)}
+:where(body:not(.beginner)) .sec:not(.btn)::before{background:var(--accent);box-shadow:0 0 10px rgba(0,255,157,.55)}
+:where(body:not(.beginner),.lg-overlay,.pcup) .btn{background:linear-gradient(180deg,#46ffbb 0%,#00e08c 55%,#00b871 100%);color:#00210f;box-shadow:0 3px 0 #00754c,0 10px 22px -8px rgba(0,255,157,.5),inset 0 1px 0 rgba(255,255,255,.55)}
+:where(body:not(.beginner),.lg-overlay,.pcup) .btn.sec{background:linear-gradient(180deg,#1b2c5a,#0e1936);color:var(--fg);box-shadow:inset 0 0 0 1px var(--line2),0 3px 0 #040a1a}
+:where(body:not(.beginner),.lg-overlay,.pcup) .btn.sec:hover{box-shadow:inset 0 0 0 1px rgba(0,255,157,.55),0 3px 0 #040a1a}
+:where(body:not(.beginner)) .tabs button{background:#0a1430;border-color:var(--line)}
+:where(body:not(.beginner)) .tabs button.on{background:linear-gradient(180deg,#0f3a36,#0a2630);color:#7dffd0;border-color:rgba(0,255,157,.6)}
+:where(body:not(.beginner)) .mt button.on{background:linear-gradient(180deg,#0f3a36,#0a2630)!important;color:#7dffd0!important;box-shadow:inset 0 0 0 1px rgba(0,255,157,.6)!important}
+:where(body:not(.beginner)) .tag{background:#13214a;color:var(--muted)}
+:where(body:not(.beginner)) .tag.info{background:rgba(0,255,157,.12);color:#7dffd0}
+:where(body:not(.beginner)) .pl{background:rgba(10,20,46,.94);border-color:var(--line)}
+:where(body:not(.beginner)) .hero-top h1{text-shadow:0 0 30px rgba(0,255,157,.28)}
+:where(body:not(.beginner)) .hero-top h1 span{color:var(--accent)}
+:where(body:not(.beginner)) .hero-top::before{background:radial-gradient(ellipse at center,rgba(0,255,157,.16),transparent 65%)}
+:where(body:not(.beginner)) .ev-hero{border-color:rgba(0,255,157,.3)}
+:where(body:not(.beginner)) .ev-hero .board{background:rgba(3,8,23,.66)}
+:where(body:not(.beginner)) .teamcard{background:linear-gradient(165deg,#14244e,#0a1430);border-color:var(--line)}
+/* the shared league: its screens are written on the tokens above, so only the shell needs a hand */
+.lg-overlay{background:rgba(2,6,23,.9)}
+.lg-dialog{background:radial-gradient(120% 46% at 50% 0,#12285a 0%,#030817 62%)}
+.lg-tabs{background:linear-gradient(180deg,#0a1430,#050a1a);border-top-color:rgba(0,255,157,.22)}
