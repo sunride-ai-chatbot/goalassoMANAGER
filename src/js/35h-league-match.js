@@ -128,7 +128,7 @@ function lgPenStart(){const M=LG.match;if(!M||M.phase==='pen')return;const info=
   host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
   bot.innerHTML=`<div class="pg-who">${penFaceHTML(tk,T,'lgpen'+info.idx)}<div><b>${esc(info.taker)}</b><small>בועט עבור ${esc(T.name)} · בשער ${esc(info.keeper||'השוער')}</small></div></div><div class="pg-hint" id="pgHint"></div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
   const back=()=>{if(LG.match!==M)return;try{penClose()}catch(e){}M.penOpen=false;M.phase='play';lgMatchPaint();lgMatchTick()};
-  penMakeStage(view,'kick',{...penKits(T,O,'lgh'),number:9}).then(async st=>{if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
+  penMakeStage(view,'kick',{...penKits(T,O,'lgh'),number:tk.no||9,name:info.taker}).then(async st=>{if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
     PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();
     const dir=await lgPenAsk({host,st,root,alive},{label:kicking?'לאן לבעוט? משוך באצבע או הקש על חץ':'לאן לזנק? משוך באצבע או הקש על חץ',after:'הבחירה נשלחה. מחכים ליריב…',ms:12000,fallback:()=>pick(LG_DIRS)});
     if(!alive()||!dir)return;
@@ -143,4 +143,4 @@ function lgPenStart(){const M=LG.match;if(!M||M.phase==='pen')return;const info=
     host.querySelectorAll('.pc-turn').forEach(x=>x.remove());try{SFX.whistle()}catch(e){}try{buzz('kick')}catch(e){}
     const quick=LG.fast||penQuick();
     st.shoot({x:shot.x,y:shot.y,how:shot.how,dive:shot.gd||'C'},penOnce(()=>{if(!alive())return;try{penCheer(shot.how,kicking)}catch(e){}const fl=penFlash(host,mode,shot.how);
-      setTimeout(()=>{try{fl.remove()}catch(e){}back()},quick?0:1500)},quick?0:3400))})}
+      setTimeout(()=>{try{fl.remove()}catch(e){}back()},quick?0:1500)},quick?0:6000))})}

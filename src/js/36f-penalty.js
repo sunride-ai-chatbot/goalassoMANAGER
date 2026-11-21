@@ -84,7 +84,7 @@ let pen3dMod=null,pen3dBad=false;
 function pen3dOK(){try{if(pen3dBad||typeof WebGLRenderingContext==='undefined'||motionLevel()!=='full'||(G&&G.pen3d===false))return false;
   const any=!!(G&&G.pen3d===true),k=any?'any':'gl';
   if(pen3dOK[k]==null){const c=document.createElement('canvas'),o=any?undefined:{failIfMajorPerformanceCaveat:true};pen3dOK[k]=!!(c.getContext('webgl2',o)||c.getContext('webgl',o))}return pen3dOK[k]}catch(e){return false}}
-function penPreload(){if(!pen3dOK()||pen3dMod)return;try{pen3dMod=import('./assets/demo3d/penalty.js').catch(()=>{pen3dBad=true;pen3dMod=null;return null})}catch(e){pen3dBad=true}}
+function penPreload(){if(!pen3dOK()||pen3dMod)return;try{pen3dMod=import('./assets/penalties29/demo3d/penalty.js').catch(()=>{pen3dBad=true;pen3dMod=null;return null})}catch(e){pen3dBad=true}}
 function penMakeStage(host,mode,o){const flat=()=>penStage2d(host,mode,o);const pg=PG;
   if(pg&&pg.view3d&&pen3dBad){try{pg.view3d.dispose()}catch(e){}pg.view3d=null}   /* the device proved too slow for it during the last kick */
   if(pg&&pg.view3d){try{pg.view3d.reset(mode,o);return Promise.resolve(pg.view3d)}catch(e){pen3dBad=true;try{pg.view3d.dispose()}catch(e2){}pg.view3d=null}}
@@ -93,7 +93,7 @@ function penMakeStage(host,mode,o){const flat=()=>penStage2d(host,mode,o);const 
   return new Promise(res=>{let settled=false;const fin=st=>{if(settled){try{st&&st.kind==='3d'&&st.dispose()}catch(e){}return}settled=true;res(st)};
     const t=setTimeout(()=>fin(flat()),3200);
     pen3dMod.then(mod=>{if(settled)return;if(!mod||!host.isConnected||PG!==pg){clearTimeout(t);return fin(flat())}
-      let st=null;try{st=mod.createPenaltyView(host,{mode,kit:o.kit,trim:o.trim,gkKit:o.gkKit,oppKit:o.oppKit,oppTrim:o.oppTrim,number:o.number,onError:()=>{pen3dBad=true},onSlow:()=>{pen3dBad=true}})}catch(e){pen3dBad=true;st=null}
+      let st=null;try{st=mod.createPenaltyView(host,{mode,kit:o.kit,trim:o.trim,gkKit:o.gkKit,oppKit:o.oppKit,oppTrim:o.oppTrim,number:o.number,name:o.name,onError:()=>{pen3dBad=true},onSlow:()=>{pen3dBad=true}})}catch(e){pen3dBad=true;st=null}
       clearTimeout(t);if(st&&pg)pg.view3d=st;fin(st||flat())}).catch(()=>{clearTimeout(t);fin(flat())})})}
 function penAnim(ms,step,done){if(ms<=0){step(1);done&&done();return}const t0=performance.now();(function fr(){const u=Math.min(1,(performance.now()-t0)/ms);step(u);if(u<1)requestAnimationFrame(fr);else done&&done()})()}
 function penQuick(){return typeof revealReduced==='function'&&revealReduced()}
@@ -205,7 +205,13 @@ function penClear(){if(!PG)return null;const host=PG.root.querySelector('#pgStag
 function penPanel(html){const host=penClear();if(!host)return null;const d=document.createElement('div');d.className='pg-panel';d.innerHTML=html;host.appendChild(d);return d}
 function penOnce(fn,ms){let done=false;const go=()=>{if(done)return;done=true;fn()};if(ms)setTimeout(go,ms);return go}
 const PEN_WORD={kick:{goal:'שער!',save:'נהדף',post:'קורה!',off:'החוצה'},keep:{goal:'שער',save:'הצלה!',post:'קורה!',off:'החוצה!'}};
-function penFlash(host,mode,how){const good=mode==='kick'?how==='goal':how!=='goal';const el=document.createElement('div');el.className='pg-flash '+(good?'good':'bad');el.textContent=PEN_WORD[mode][how];host.appendChild(el);buzz(good?(how==='goal'?'goal':'save'):'conceded');return el}
+const penGoalCalls=['הרשת רועדת','גוללללללל!','והכדור ברשת!','GOAL!','שערררר!!!!','זה בפנים!','יש שער!','איזה גול!','היציע באוויר!','תוציאו מהאמצע!'];
+let penCalls=[];
+function penGoalCall(){
+  if(!penCalls.length)penCalls=penGoalCalls.slice();
+  return penCalls.splice(Math.floor(Math.random()*penCalls.length),1)[0];
+}
+function penFlash(host,mode,how){const good=mode==='kick'?how==='goal':how!=='goal';const el=document.createElement('div');el.className='pg-flash '+(good?'good':'bad');el.textContent=how==='goal'&&mode==='kick'?penGoalCall():PEN_WORD[mode][how];host.appendChild(el);buzz(good?(how==='goal'?'goal':'save'):'conceded');return el}
 /* One kick inside an open overlay. o: {mode:'kick'|'keep', taker:{p,c}, keeper:{p,c}|null, energy, pressure, sfx}
    cb({out:'goal'|'miss', how:'goal'|'save'|'post'|'off', auto}) */
 function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.76?'goal':'miss',how:null,auto:true});return}
@@ -220,7 +226,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
     try{penCheer(r.how,kick)}catch(e){}
     setTimeout(()=>{fl.remove();finish(r)},penQuick()?0:1150)};
   try{ensureNumbers(o.taker.c)}catch(e){}
-  penMakeStage(view,'kick',{...penKits(o.taker.c,o.keeper&&o.keeper.c,o.home),number:tp.no||9}).then(st=>{
+  penMakeStage(view,'kick',{...penKits(o.taker.c,o.keeper&&o.keeper.c,o.home),number:tp.no||9,name:fullName(tp)}).then(st=>{
     if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
     PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();try{SFX.whistle()}catch(e){}
     const ac=new AbortController();const on=(el,ev,fn)=>el.addEventListener(ev,fn,{signal:ac.signal,passive:false});
@@ -229,15 +235,28 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
     if(kick){
       const wob=penWobble(skill,o.energy==null?100:o.energy,o.pressure);const aimEl=document.createElement('div');aimEl.className='pg-aim';host.appendChild(aimEl);
       let aim={x:0,y:1.15},touched=false,down=false,fired=false;const ck=penClock(performance.now());
+      let heldAt=null;
+      const timingWidth=.025+.095*clamp((skill-35)/59,0,1);
+      const strength=()=>heldAt===null?.73:.08+.92*(1-Math.cos((performance.now()-heldAt)*.0036))*.5;
+      const meter=document.createElement('div');
+      meter.className='pg-charge';meter.hidden=true;
+      meter.innerHTML='<span></span><i></i>';
+      meter.firstChild.style.left=(.73-timingWidth/2)*100+'%';
+      meter.firstChild.style.width=timingWidth*100+'%';
+      bot.appendChild(meter);
       const cur=()=>{const t=ck.ms/1000;return {x:aim.x+Math.sin(t*5.3)*wob+Math.sin(t*9.1+1)*wob*.35,y:Math.max(.05,aim.y+Math.sin(t*4.1+.7)*wob*.55)}};
-      const place=()=>{const c=cur();const [px,py]=st.toScreen(c.x,c.y);aimEl.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`;aimEl.classList.toggle('out',penFrame(c.x,c.y)!=='in')};
+      const place=()=>{if(!meter.hidden)meter.lastChild.style.left=strength()*100+'%';const c=cur();const [px,py]=st.toScreen(c.x,c.y);aimEl.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`;aimEl.classList.toggle('out',penFrame(c.x,c.y)!=='in')};
       const fire=auto=>{if(fired||!alive())return;fired=true;stop();aimEl.remove();let x,y;
         if(auto&&!touched){const s=penAiShot(skill);x=s.x;y=s.y}else{const c=cur();x=c.x+gauss()*wob*.3;y=Math.max(.05,c.y+gauss()*wob*.24)}
-        const r=penKickOutcome(x,y,gk);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:3400))};
+        if(heldAt!==null&&!auto){
+          const error=Math.max(0,Math.abs(strength()-.73)-timingWidth/2);
+          x+=(Math.random()*2-1)*error*4;y+=(Math.random()*2-1)*error*3;
+        }
+        meter.remove();const r=penKickOutcome(x,y,gk);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:6000))};
       const setAim=ev=>{const r=rect();const touch=ev.pointerType==='touch';const [x,y]=st.fromScreen(ev.clientX-r.left,ev.clientY-r.top-(touch?56:0));aim={x:clamp(x,-4.5,4.5),y:clamp(y,.12,3.1)};touched=true};
-      on(host,'pointerdown',ev=>{ev.preventDefault();down=true;try{host.setPointerCapture(ev.pointerId)}catch(e){}setAim(ev);place()});
+      on(host,'pointerdown',ev=>{ev.preventDefault();down=true;heldAt=performance.now();meter.hidden=false;try{host.setPointerCapture(ev.pointerId)}catch(e){}setAim(ev);place()});
       on(host,'pointermove',ev=>{if(down){ev.preventDefault();setAim(ev)}});
-      on(host,'pointerup',ev=>{if(down){down=false;setAim(ev);fire(false)}});on(host,'pointercancel',()=>{down=false});
+      on(host,'pointerup',ev=>{if(down){down=false;setAim(ev);fire(false)}});on(host,'pointercancel',()=>{down=false;heldAt=null;meter.hidden=true});
       on(host,'keydown',ev=>{const k=ev.key;if(k==='ArrowLeft'){aim.x=clamp(aim.x-.35,-4.5,4.5);touched=true}else if(k==='ArrowRight'){aim.x=clamp(aim.x+.35,-4.5,4.5);touched=true}else if(k==='ArrowUp'){aim.y=clamp(aim.y+.25,.12,3.1);touched=true}else if(k==='ArrowDown'){aim.y=clamp(aim.y-.25,.12,3.1);touched=true}else if(k==='Enter'||k===' '){touched=true;fire(false)}else return;ev.preventDefault()});
       PG.auto=()=>fire(true);PG.fire=(x,y)=>{aim={x,y};touched=true;fire(false)};PG.aim=()=>aim;
       (function loop(){if(dead||!alive())return;const left=1-ck.tick(performance.now())/PEN_TIME;if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;place();if(left<=0)return fire(true);raf=requestAnimationFrame(loop)})();
@@ -254,7 +273,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
         if(autoStay&&!dir){const g=penKeeperGuess(shot.x,gk),f=penFrame(shot.x,shot.y);dir=g==='C'?'D':g;r=f!=='in'?{out:'miss',how:f}:g===penSide(shot.x)&&Math.random()<penSaveP(shot.x,shot.y,gk)?{out:'miss',how:'save'}:{out:'goal',how:'goal'}}
         else r=penKeep8(shot.x,shot.y,dir,gk,skill);
         buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}
-        st.shoot({x:shot.x,y:shot.y,how:r.how,dive:dir||'C'},penOnce(()=>end({out:r.out,how:r.how,dir:dir||null,zone:penZone(shot.x,shot.y),auto:autoStay},st),penQuick()?0:3400))};
+        st.shoot({x:shot.x,y:shot.y,how:r.how,dive:dir||'C'},penOnce(()=>end({out:r.out,how:r.how,dir:dir||null,zone:penZone(shot.x,shot.y),auto:autoStay},st),penQuick()?0:6000))};
       on(pad,'click',ev=>{const b=ev.target.closest('[data-dir]');if(b){ev.preventDefault();pick(b.dataset.dir)}});
       on(host,'keydown',ev=>{const k={ArrowLeft:'L',ArrowRight:'R',ArrowUp:'U',ArrowDown:'D'}[ev.key];if(!k)return;ev.preventDefault();pick(k)});
       PG.auto=()=>{autoStay=true;root.querySelector('#pgAuto').disabled=true;strike()};PG.go=d=>{pick(d==='C'?'D':d);strike()};PG.pick=pick;PG.shot=shot;PG.strike=strike;

@@ -1,0 +1,143 @@
+import * as T from './vendor/three.js';
+import {filmedTaker} from './filmed-taker.js?v=27';
+import {buildWorld,animateNet} from './world.js?v=28';
+import {makeRosterPlayer,posePlayer,makeBall,applyStrike} from './actors.js?v=24';
+
+// Penalty view for src/js/36f-penalty.js. Presentation only: it is told where the ball goes and how the kick ends, and
+// draws it. No game globals, no persistence, no random outcome.
+// One picture for every kick: a close-up from behind and above the taker. His back and the ball are at the bottom, the
+// keeper faces the camera in the goal. Goal coordinates (as in the game code): x metres from the middle of the goal,
+// positive = right of the picture, y metres above the grass.
+const GX=52.5,SPOT=41.5,KEEP_X=52.2,CAM_X=SPOT-5.3;
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const ease=u=>1-Math.pow(1-u,2);
+
+export function createPenaltyView(host,opts){
+  const wrap=document.createElement('div');wrap.className='pg-3d';host.prepend(wrap);
+  let renderer,world,ball,observer,raf=0,disposed=false,mode=opts.mode,keeper=null,taker=null,extras=[],clock=0,last=0;
+  const scene=new T.Scene(),camera=new T.PerspectiveCamera(56,1,.1,320),ray=new T.Raycaster(),v3=new T.Vector3(),v2=new T.Vector2();
+  // what is being played right now: {t, dur, step(u,t), done} — one at a time, queued by the game one call after another
+  let reaction=null,reactionStart=0;
+  let film=null, shotStart=null, approachClip=2, contactClock=null;
+  let act=null,netT=-1,netZ=0;
+  // can this device draw the scene? After half a second of warm-up, 1.2 seconds of frames are timed; under ten frames a
+  // second the game is told once (opts.onSlow) and plays later kicks on its flat picture. Time in the background is not counted.
+  const perf={t:0,n:0,from:0,skip:false,done:false};const onVis=()=>{perf.skip=true};document.addEventListener('visibilitychange',onVis);
+  function measure(now,gap){if(!perf.from){perf.from=now;return}if(now-perf.from<900)return;   /* a longer warm-up: the first frames carry shader compilation and texture upload, and counting them once marked a good machine slow for the rest of its session */
+    if(perf.skip||document.hidden||gap>5000){perf.skip=false;return}
+    perf.t+=gap;perf.n++;if(perf.t<1200)return;perf.done=true;document.removeEventListener('visibilitychange',onVis);
+    if(perf.n*1000/perf.t<10){try{opts.onSlow&&opts.onSlow()}catch(e){}}}
+  const K={z:0,dive:0,side:0,lift:0,landing:0,sway:true};          // keeper pose
+  const B={x:SPOT,y:.145,z:0};                           // ball
+  const RUN={x:SPOT-2.5,z:-.52};                         // where the taker waits: behind the ball, a step to the left
+  const R={x:RUN.x,z:RUN.z,speed:0,kick:0,cele:0,phase:0,strike:-1}; // taker
+  function disposeObject(object){const geometries=new Set(),materials=new Set(),textures=new Set();
+    object.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.skeleton)o.skeleton.dispose();for(const m of (Array.isArray(o.material)?o.material:o.material?[o.material]:[])){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v)}});
+    textures.forEach(t=>t.dispose());geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose())}
+  function drop(a){if(!a)return;scene.remove(a.group,a.shadow);disposeObject(a.group);disposeObject(a.shadow)}
+  function dispose(){if(disposed)return;disposed=true;cancelAnimationFrame(raf);observer?.disconnect();document.removeEventListener('visibilitychange',onVis);const a=act;act=null;world?.crowdVideo?.dispose();disposeObject(scene);renderer?.dispose();wrap.remove();if(a&&a.done)a.done()}
+  function fail(){dispose();try{opts.onError&&opts.onError()}catch(e){}}
+  function cast(o){
+    drop(keeper);drop(taker);extras.forEach(drop);extras=[];
+    keeper=makeRosterPlayer(scene,{slot:'GK',side:1,number:1,kit:o.gkKit||'#f2b233',trim:'#10151d',pid:'k',team:'k'},0);
+    taker=makeRosterPlayer(scene,{slot:'FW',side:0,number:o.number||9,kit:o.kit||'#c6f24e',trim:o.trim||'#10151d',pid:o.pid||'t',team:'t',name:o.name||'GOAL-M'},o.variant??1);
+    film?.identify(o);
+    // the others wait on the edge of the area
+    [[-8.6,0],[-5.2,1],[-2.4,0],[2.9,1],[5.6,0],[9.1,1]].forEach(([z,s],i)=>{const a=makeRosterPlayer(scene,{slot:'MF',side:s,number:4+i,kit:s?o.oppKit||'#e9edf2':o.kit||'#c6f24e',trim:(s?o.oppTrim:o.trim)||'#10151d',pid:'x'+i,team:'x'},i+2);posePlayer(a,{x:35.2-(i%2)*.7,z,angle:Math.PI/2,speed:0,kick:0,dive:0,celebrate:0,keeper:false},0);extras.push(a)});
+  }
+  function frameCamera(){
+    camera.fov=50;camera.position.set(CAM_X,2.95,.22);camera.lookAt(GX,.9,0);
+    camera.updateProjectionMatrix();
+  }
+  function resize(){if(disposed)return;const w=wrap.clientWidth,h=wrap.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;
+    // a narrow portrait stage: keep the whole goal mouth in the picture
+    {const need=2*Math.atan(4.25/(GX-CAM_X));const hf=2*Math.atan(Math.tan(T.MathUtils.degToRad(25))*camera.aspect);camera.fov=hf<need?T.MathUtils.radToDeg(2*Math.atan(Math.tan(need/2)/camera.aspect)):camera.aspect>1.3?42:50}
+    camera.updateProjectionMatrix();draw()}
+  function poseKeeper(t){
+    const b=keeper.bones,n=keeper.names;const sway=K.sway?Math.sin(t*2.6)*.38:0;
+    posePlayer(keeper,{x:KEEP_X,z:K.z+sway,angle:-Math.PI/2,speed:0,kick:0,dive:0,celebrate:0,keeper:true},t);
+    if(K.dive>0){const d=K.dive,s=K.side||1;  // facing the taker, his left hand is on the camera's right: the lean follows the side he goes to
+      const airborneHip=.9-.3*d+K.lift*d;
+      b[n.hips].rotation.z=-s*d*(1.2+.29*K.landing);
+      b[n.hips].position.y=airborneHip+(.24-airborneHip)*K.landing;
+      b[n.Larm].rotation.z=s>0?-1.5*d:2.1*d;b[n.Rarm].rotation.z=s>0?-2.1*d:1.5*d;b[n.Lfore].rotation.x=-.15;b[n.Rfore].rotation.x=-.15;b[n.Lthigh].rotation.x=-.25;b[n.Rthigh].rotation.x=.15}
+  }
+  function draw(){
+    if(disposed||document.hidden)return;
+    poseKeeper(clock);
+    posePlayer(taker,{x:R.x,z:R.z,angle:Math.PI/2,speed:R.speed,kick:R.kick,dive:0,celebrate:R.cele,keeper:false,phase:R.speed?R.phase:undefined},clock);
+    if(film){
+      const afterContact=contactClock===null?0:clock-contactClock;
+      const clip=shotStart===null?clock%1.75:Math.min(6,approachClip+afterContact);
+      const approach=clamp((R.x-RUN.x)/(SPOT-.28-RUN.x));
+      film.pose(clip,R.x+.28*approach,R.z+(.105-(181-104)*3.15/376)*approach,reaction,clock-reactionStart);taker.group.visible=!film.group.visible;
+    }
+    ball.ball.position.set(B.x,B.y,B.z);const travel=B.x-SPOT;
+    ball.ball.rotation.set(travel*.25,0,-travel*.6);// Project the ball toward the turf along the main floodlight direction.
+    ball.shadow.position.set(B.x+B.y*1.04,.022,B.z-B.y*.45);
+    const clearance=Math.max(0,B.y-.145);
+    ball.shadow.scale.setScalar(1+.15*clearance);
+    ball.shadow.material.opacity=.68/(1+.55*clearance);
+    if(netT>=0)animateNet(world.goals[1],netT,netZ);
+    if(R.strike>=0)applyStrike(taker,R.strike);
+    renderer.render(scene,camera);
+  }
+  function frame(now){raf=0;if(disposed)return;try{
+    if(!perf.done)measure(now,now-last);
+    const dt=clamp((now-last)/1000,0,.05);last=now;clock+=dt;if(netT>=0)netT+=dt;
+    if(world&&world.crowd){world.crowd.time=clock;world.crowd.decay(dt)}
+    if(act){act.t+=dt;const u=clamp(act.t/act.dur);act.step(u,act.t);if(u>=1){const a=act;act=null;a.done&&a.done()}}
+    draw()}catch(e){console.error(e);return fail()}
+    if(!disposed)raf=requestAnimationFrame(frame)}
+  function play(dur,step,done){act={t:0,dur:Math.max(.001,dur),step,done}}
+  const api={kind:'3d',get mode(){return mode},
+    toScreen(x,y){v3.set(GX,y,x).project(camera);return [(v3.x*.5+.5)*wrap.clientWidth,(-v3.y*.5+.5)*wrap.clientHeight]},
+    fromScreen(px,py){v2.set(px/Math.max(1,wrap.clientWidth)*2-1,-(py/Math.max(1,wrap.clientHeight)*2-1));ray.setFromCamera(v2,camera);const o=ray.ray.origin,d=ray.ray.direction;if(d.x<=1e-4)return [0,3];const t=(GX-o.x)/d.x;return [o.z+d.z*t,o.y+d.y*t]},
+    // the taker runs up and strikes, the ball leaves the spot for (x,y); the keeper goes to `dive`: a side ('L'|'C'|'R')
+    // or one of eight directions ('UL','U','UR','L','R','DL','D','DR'), whose first letter is the height
+    shoot(r,done){
+      const d=String(r.dive||'C'),dv=d.indexOf('L')>=0?-1:d.indexOf('R')>=0?1:0,row=d[0]==='U'?2:d[0]==='D'?0:1,reach=r.how==='save';K.side=dv;K.lift=reach?clamp((r.y-.9)/1.6)*.55:[0,.12,.42][row];
+      const kz=dv*(reach?clamp(Math.abs(r.x)-.35,.7,3.0):1.9),tx=r.how==='goal'?GX+.9:GX-.05,from={x:SPOT,y:.145,z:0};
+      shotStart=clock;
+      play(1.84,u=>{approachClip=2+1.84*u;R.x=RUN.x+(SPOT-.28-RUN.x)*u;R.z=RUN.z+(-.105-RUN.z)*u;R.speed=u<.92?3.1:0;R.phase=u*8;R.kick=0},()=>{R.speed=0;R.strike=0;
+      play(52/12-3.84,u=>{approachClip=3.84+(52/12-3.84)*u;R.strike=u*.62},()=>{approachClip=52/12;contactClock=clock;R.strike=.62;K.sway=false;opts.onContact?.();
+      play(r.style==='chip'?.83:r.style==='power'?.40:.55,u=>{R.strike=.62+.38*clamp(u*1.5);R.kick=0;const e=u;B.x=from.x+(tx-from.x)*e;B.z=from.z+(r.x-from.z)*e;B.y=from.y+(r.y-from.y)*e+Math.sin(u*Math.PI)*(r.style==='chip'?2.1:.35);
+        const k=clamp((u-.12)/.7);K.z=kz*ease(k);K.dive=dv?ease(k):0},()=>{
+        reaction=r.how==='goal'?'goal':'miss';
+        reactionStart=clock;
+        const p={x:B.x,y:B.y,z:B.z};
+        function finishFlight(duration,moveBall,complete){
+          play(duration,(u,time)=>{
+            if(dv){
+              const fall=clamp(time/.38);
+              K.landing=fall*fall;
+              K.z=kz+dv*.20*ease(clamp(time/.48));
+            }
+            moveBall(u);
+          },complete);
+        }
+        if(r.how==='goal'){netT=0;netZ=r.x;api.cheer(1);finishFlight(.7,u=>{B.x=p.x+.55*u;B.y=Math.max(.145,p.y-(p.y-.145)*u*u);B.z=p.z},done)}
+        else if(r.how==='save'){const s=r.x>=0?1:-1;finishFlight(.6,u=>{B.x=p.x-2.6*u;B.z=p.z+s*3.2*u;B.y=Math.max(.145,p.y+1.1*Math.sin(u*Math.PI)-(p.y-.145)*u)},done)}
+        else if(r.how==='post'){const s=r.x>=0?-1:1;finishFlight(.65,u=>{B.x=p.x-4.5*u;B.z=p.z+s*1.8*u;B.y=Math.max(.145,p.y+.6*Math.sin(u*Math.PI)-(p.y-.145)*u)},done)}
+        else finishFlight(.5,u=>{B.x=p.x+9*u;B.z=p.z+(p.z)*.7*u;B.y=p.y+1.6*u},done)})})})},
+    // a new kick in the same stadium
+    reset(m,o){if(disposed)throw new Error('disposed');mode=m;reaction=null;shotStart=null;contactClock=null;approachClip=2;act=null;netT=-1;clock=0;animateNet(world.goals[1],-1,0);Object.assign(K,{z:0,dive:0,side:0,lift:0,landing:0,sway:true});Object.assign(B,{x:SPOT,y:.145,z:0});Object.assign(R,{x:RUN.x,z:RUN.z,speed:0,kick:0,cele:0,phase:0,strike:-1});
+      cast(o||opts);frameCamera();resize()},
+    cheer(v){if(world&&world.crowd)world.crowd.cheer=v==null?1:v},
+    dispose};
+  try{
+    renderer=new T.WebGLRenderer({antialias:true,powerPreference:'default'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.type=T.PCFSoftShadowMap;
+    const phone=innerWidth<=900;renderer.setPixelRatio(Math.min(devicePixelRatio||1,phone?1.25:1.5));renderer.shadowMap.enabled=true;wrap.append(renderer.domElement);
+    world=buildWorld(scene,renderer);
+    // Restrict the shadow camera to the penalty area to resolve bodies and feet cleanly.
+    scene.traverse(o=>{if(o.isDirectionalLight&&o.castShadow){o.shadow.mapSize.set(1024,1024);Object.assign(o.shadow.camera,{left:-14,right:14,top:14,bottom:-14});o.target.position.set(45,0,0);o.shadow.camera.updateProjectionMatrix()}});try{world.crowd.dress(opts.kit||'#c6f24e',opts.oppKit||'#e9edf2')}catch(e){}ball=makeBall(scene);
+    // the evening is `buildWorld`'s own now — sky, haze and the light that goes with them — so nothing is overridden here
+    renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();if(!disposed)fail()});
+    film=filmedTaker(scene);
+    api.reset(mode,opts);renderer.domElement.setAttribute('aria-label','מגרש פנדלים תלת־ממדי');
+    observer=new ResizeObserver(()=>{try{resize()}catch(e){fail()}});observer.observe(wrap);
+    last=performance.now();raf=requestAnimationFrame(frame);
+  }catch(e){dispose();throw e}
+  return api;
+}
+
