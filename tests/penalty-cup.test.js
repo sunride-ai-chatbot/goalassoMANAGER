@@ -41,7 +41,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   await w.ILM.whenSaved();const before=run("({me:G.me,wk:G.wk,money:me().money,uid,n:me().players.length})");
   assert.ok($('[data-pcup-open]'),'entry on the home screen');$('[data-pcup-open]').click();await until(()=>$('#pcup'),'the lobby over a career');
   assert.equal(w.eval('G.pcup'),true);assert.notEqual(w.eval('G.me'),null);await w.ILM.whenSaved();const disk=w.eval("Object.keys(localStorage).filter(k=>/^ilm2/.test(k)).sort().map(k=>k+':'+localStorage.getItem(k).length).join()+'|'+localStorage.getItem('ilm2').slice(0,4000)");
-  const euro=$$('[data-pc-team]').find(b=>b.dataset.pcTeam.startsWith('e:'));assert.ok(euro,'a European club in the list');euro.click();
+  league($,'en','en1');const euro=$('[data-pc-team]').find(b=>b.dataset.pcTeam.startsWith('e:'));assert.ok(euro,'a European club in the list');euro.click();
   assert.deepEqual($$('[data-pc-mode]').map(b=>b.dataset.pcMode),['cpu','net'],'the computer or a friend online');assert.doesNotMatch($('#pcup').textContent,/טלפון אחד/,'two on one phone is gone');
   assert.equal(w.eval("typeof pcupSeat+typeof pcupAskBoth+typeof pcupSwipeDir"),'undefinedundefinedundefined');
 
