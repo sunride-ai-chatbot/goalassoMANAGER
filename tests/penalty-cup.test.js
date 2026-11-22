@@ -30,7 +30,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
 
   // ---- the entry on the first screen; it opens without a career
   assert.ok($('[data-pcup-open]'),'entry on the start screen');$('[data-pcup-open]').click();await until(()=>$('#pcup'),'the lobby');
-  assert.equal(w.eval('G.pcup'),true);assert.equal(w.eval('SANDBOX'),true);assert.ok($('[data-pc-country]').length>=9,'career countries are available');
+  assert.equal(w.eval('G.pcup'),true);assert.equal(w.eval('SANDBOX'),true);assert.ok($$('[data-pc-country]').length>=9,'career countries are available');
   const league=(query,c,l)=>{query('[data-pc-country="'+c+'"]').click();query('[data-pc-league="'+l+'"]').click()};
   league($,'en','en1');
   $('#pcup [data-pc-x]').click();assert.equal($('#pcup'),null);assert.equal(w.eval('G'),null,'no career was invented');assert.equal(w.eval('SANDBOX'),false);
@@ -41,12 +41,12 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   await w.ILM.whenSaved();const before=run("({me:G.me,wk:G.wk,money:me().money,uid,n:me().players.length})");
   assert.ok($('[data-pcup-open]'),'entry on the home screen');$('[data-pcup-open]').click();await until(()=>$('#pcup'),'the lobby over a career');
   assert.equal(w.eval('G.pcup'),true);assert.notEqual(w.eval('G.me'),null);await w.ILM.whenSaved();const disk=w.eval("Object.keys(localStorage).filter(k=>/^ilm2/.test(k)).sort().map(k=>k+':'+localStorage.getItem(k).length).join()+'|'+localStorage.getItem('ilm2').slice(0,4000)");
-  league($,'en','en1');const euro=$('[data-pc-team]').find(b=>b.dataset.pcTeam.startsWith('e:'));assert.ok(euro,'a European club in the list');euro.click();
+  league($,'en','en1');const euro=$$('[data-pc-team]').find(b=>b.dataset.pcTeam.startsWith('e:'));assert.ok(euro,'a European club in the list');euro.click();
   assert.deepEqual($$('[data-pc-mode]').map(b=>b.dataset.pcMode),['cpu','net'],'the computer or a friend online');assert.doesNotMatch($('#pcup').textContent,/טלפון אחד/,'two on one phone is gone');
   assert.equal(w.eval("typeof pcupSeat+typeof pcupAskBoth+typeof pcupSwipeDir"),'undefinedundefinedundefined');
 
   // against the computer: the shoot-out of the full game, with a way out
-  $('[data-pc-mode="cpu"]').click();assert.equal($('#penGame'),null);league($,'il','il1');assert.ok($('[data-pc-cpuopp]').length>=10,'domestic opponents');const rival=$$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp==='i:mta');rival.click();assert.ok($('#penGame'),'the penalty overlay');assert.match($('#penGame .pg-meta').textContent,/מכבי ת"א|מכבי תל אביב/,'the chosen opponent');assert.ok($('#penGame .pc-quit'),'a way out of the overlay');
+  $('[data-pc-mode="cpu"]').click();assert.equal($('#penGame'),null);league($,'il','il1');assert.ok($$('[data-pc-cpuopp]').length>=10,'domestic opponents');const rival=$$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp==='i:mta');rival.click();assert.ok($('#penGame'),'the penalty overlay');assert.match($('#penGame .pg-meta').textContent,/מכבי ת"א|מכבי תל אביב/,'the chosen opponent');assert.ok($('#penGame .pc-quit'),'a way out of the overlay');
   assert.equal(w.eval('G.me'),w.eval('PCUP.clubs[PCUP.my.key].id'),'the chosen club is ours');assert.match($('#penGame .pg-meta').textContent,new RegExp(w.eval('PCUP.my.name').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
   $('#pgGo').click();await until(()=>w.eval('!!(PG&&(PG.fire||PG.strike||PG.pick))'),'the first kick');
   // the stand: three swaying bands of spectators and a few camera flashes, and it answers the kick
@@ -69,7 +69,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   $('[data-pc-mode="cpu"]').click();$('[data-pc-cpuopp="?"]').click();assert.ok($('#penGame'),'or drawn by lot');$('#penGame .pc-quit').click();assert.equal($('#penGame'),null);assert.equal(run('pcupRec()').played,rec1.played);
 
   // the same club on both sides: the second one is a twin with its own id
-  {const same=w.eval('PCUP.my.key');$('[data-pc-mode="cpu"]').click();if(!$('[data-pc-country]'))$('[data-pc-picker="leagues"]').click();if(!$('[data-pc-country]'))$('[data-pc-picker="countries"]').click();league($,'en','en1');$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp===same).click();assert.ok($('#penGame'),'a club against itself');
+  {const same=w.eval('PCUP.my.key');$('[data-pc-mode="cpu"]').click();if(!$('[data-pc-country]'))$('[data-pc-picker="leagues"]').click();if(!$('[data-pc-country]'))$('[data-pc-picker="countries"]').click();league($,'en','en1');$$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp===same).click();assert.ok($('#penGame'),'a club against itself');
    assert.notEqual(w.eval("PCUP.clubs[PCUP.my.key].id"),w.eval("PCUP.clubs[PCUP.my.key+'#2'].id"),'the twin has its own id');$('#penGame .pc-quit').click();assert.equal(run('pcupRec()').played,rec1.played)}
 
   // ---- close: the career is exactly as it was, nothing was written
@@ -81,10 +81,10 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   // ---- two phones. The channel loses the first start, the first commit of kick 0 and the first reveal of kick 1.
   const bus=makeBus();const lost={};bus.drop=p=>{const key=p.t==='start'?'start':p.t==='c'&&p.k===0?'c0:'+p.f:p.t==='r'&&p.k===1?'r1:'+p.f:null;if(!key||lost[key])return false;lost[key]=true;return true};
   const g=open('beginner.html','https://pcup.test/beginner.html?pen=QQ77ZZ',x=>{x.__pcupNet=bus.factory()});wins.push(g);const G2=tools(g);
-  w.__pcupNet=bus.factory();$('[data-pcup-open]').click();await until(()=>$('#pcup'),'host lobby');league($,'il','il1');$('[data-pc-team]').find(b=>b.dataset.pcTeam==='i:mhf').click();$('[data-pc-mode="net"]').click();
+  w.__pcupNet=bus.factory();$('[data-pcup-open]').click();await until(()=>$('#pcup'),'host lobby');league($,'il','il1');$$('[data-pc-team]').find(b=>b.dataset.pcTeam==='i:mhf').click();$('[data-pc-mode="net"]').click();
   w.eval("pcupNewCode=()=>'QQ77ZZ'");$('[data-pc-net="host"]').click();await until(()=>$('.pc-code'),'the room code');assert.equal($('.pc-code').textContent,'QQ77ZZ');assert.ok($('[data-pc-share]'));
   // the guest came through the link: the lobby opens by itself and goes straight into the room after the team choice
-  await until(()=>G2.$('#pcup'),'guest lobby from the link',8000);assert.match(G2.$('#pcup').textContent,/QQ77ZZ/);league(G2.$,'il','il1');G2.$('[data-pc-team]').find(b=>b.dataset.pcTeam==='i:mhf').click();
+  await until(()=>G2.$('#pcup'),'guest lobby from the link',8000);assert.match(G2.$('#pcup').textContent,/QQ77ZZ/);league(G2.$,'il','il1');G2.$$('[data-pc-team]').find(b=>b.dataset.pcTeam==='i:mhf').click();
   await until(()=>$('#penGame')&&G2.$('#penGame'),'both phones in the duel');assert.ok(lost.start,'the first start was lost and sent again');
   assert.equal(w.eval('PCUP.net.duel.mine'),'a');assert.equal(g.eval('PCUP.net.duel.mine'),'b');
   assert.deepEqual(G2.run('PCUP.net.duel.A.ord.map(p=>fullName(p)).concat(PCUP.net.duel.B.sk,PCUP.net.duel.A.gkS)'),run('PCUP.net.duel.A.ord.map(p=>fullName(p)).concat(PCUP.net.duel.B.sk,PCUP.net.duel.A.gkS)'),'both phones use the host\'s takers and skills');
@@ -139,7 +139,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   g.eval('showSplash()');assert.match(G2.$('#spRegular').textContent,/התחל קריירה/);assert.match(G2.$('#spLg').textContent,/2 עד 8 חברים/,'no league on this phone yet');assert.ok(G2.$('#spNet').hidden,'the two ways are closed');
   G2.$('#spNetwork').click();assert.equal(G2.$('#spNet').hidden,false);assert.equal(G2.$('#spNetwork').getAttribute('aria-expanded'),'true');assert.equal(g.eval('splashOpen()'),true,'the page stays');assert.deepEqual(G2.$$('#spNet button').map(b=>b.id),['spPens','spLg']);
   g.__pcupNet=makeBus().factory();G2.$('#spPens').click();await until(()=>G2.$('#pcup'),'online penalties from the entry page');assert.equal(g.eval('splashOpen()'),false);assert.match(G2.$('#pcup h1').textContent,/פנדלים אונליין/);
-  league(G2.$,'il','il1');G2.$('[data-pc-team]')[0].click();assert.equal(G2.$$('[data-pc-mode]').length,0);assert.ok(G2.$('[data-pc-net="host"]')&&G2.$('[data-pc-joinform]'),'a club, then the room');assert.ok(G2.$('[data-pc-go="team"]'),'and a way back to the clubs');
+  league(G2.$,'il','il1');G2.$$('[data-pc-team]')[0].click();assert.equal(G2.$$('[data-pc-mode]').length,0);assert.ok(G2.$('[data-pc-net="host"]')&&G2.$('[data-pc-joinform]'),'a club, then the room');assert.ok(G2.$('[data-pc-go="team"]'),'and a way back to the clubs');
   G2.$('#pcup [data-pc-x]').click();assert.equal(G2.$('#pcup'),null);assert.equal(g.eval('splashOpen()'),true,'closing leads back to the entry page');
   g.eval("localStorage.setItem('goalasso.league.id','lg1');localStorage.setItem('goalasso.league.name','ליגת השכונה');renderSplash()");assert.equal(G2.$('#spLeague'),null,'the league has no button of its own on the page');assert.match(G2.$('#spLg').textContent,/ליגה משותפת.*המשך ליגת ליגת השכונה/,'the way to it says which league waits');assert.deepEqual(G2.$$('#spUI button').map(b=>b.id),['spRegular','spNetwork','spPens','spLg']);assert.deepEqual(g.eval('JSON.stringify(League.saved())'),'{"id":"lg1","name":"ליגת השכונה"}');
   g.eval("localStorage.removeItem('goalasso.league.id');localStorage.removeItem('goalasso.league.name');hideSplash()");await tick(500);
