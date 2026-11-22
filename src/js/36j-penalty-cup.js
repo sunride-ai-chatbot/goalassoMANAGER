@@ -58,10 +58,11 @@ function pcupClose(){if(!PCUP)return;if(PCUP.landing){penClose();pcupNetStop();O
 function pcupExitBtn(onExit){const top=PG&&PG.root.querySelector('.pg-top');if(!top)return;const b=document.createElement('button');b.type='button';b.className='pc-quit';b.textContent='יציאה';top.classList.add('has-quit');   /* the header makes room for it instead of printing the title under it */b.onclick=()=>{onExit&&onExit();penClose();if(PCUP){PCUP.stage=pcupBase();pcupPaint()}};top.appendChild(b)}
 /* ---- screens ---- */
 function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)return;const P=PCUP;if(P.stage==='welcome'){
-    root.innerHTML=`<main dir="rtl" style="box-sizing:border-box;min-height:100%;display:grid;align-content:end;padding:clamp(26px,8vw,110px);background:linear-gradient(0deg,#071116 5%,rgba(7,17,22,.83) 34%,rgba(7,17,22,.1) 100%),url('./assets/cinematic-stadium.webp') center/cover;color:#fff3d8">
-    <div style="max-width:680px"><strong dir="ltr" style="color:#d5ff48;letter-spacing:.18em">GOAL–M</strong>
-    <h1 style="font-size:clamp(54px,10vw,128px);line-height:1;margin:.25em 0">דו־קרב<br>פנדלים</h1>
-    <p style="font-size:1.2rem">חמש בעיטות לכל צד. פעם בועטים, פעם מזנקים.</p>
+    root.innerHTML=`<main dir="rtl" style="position:relative;isolation:isolate;overflow:hidden;box-sizing:border-box;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:clamp(20px,5vh,56px) 24px;background:#101919 url('./assets/cinematic-stadium.webp') center/cover;color:white">
+    <video aria-hidden="true" autoplay muted playsinline loop style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2" src="./assets/penalty-intro.mp4"></video>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(0deg,#061013df,transparent 38%);z-index:-1"></div>
+    <img src="./assets/penalty-crest.webp" alt="Penalty_h.e.r.o" style="width:min(48vw,230px);max-height:25dvh;object-fit:contain">
+    <div style="width:min(100%,620px);text-align:center"><p>חמש בעיטות לכל צד. פעם בועטים, פעם מזנקים.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px">
     <button type="button" data-pc-entry="cpu" style="flex:1 1 180px;padding:18px;border:0;border-radius:10px;background:#d5ff48;color:#101710;font:inherit;font-size:1.3em;font-weight:800">מול המחשב</button>
     <button type="button" data-pc-entry="net" style="flex:1 1 180px;padding:18px;border:2px solid #fff3d8;border-radius:10px;background:#101b20;color:#fff3d8;font:inherit;font-size:1.3em;font-weight:800">מול חבר ברשת</button></div></div></main>`;
@@ -185,3 +186,13 @@ function pcupNetStart(host,code){const P=PCUP;pcupNetStop();const n=P.net={host,
 function pcupLinkOpen(){try{return new URLSearchParams(location.search).has('pen')}catch(e){return false}}
 function pcupFromLink(){if(!pcupLinkOpen()||PCUP)return;const go=()=>setTimeout(()=>{try{pcupOpen(window.BEGINNER?{only:'net'}:{landing:true})}catch(e){console.warn(e)}},400);   /* the beginner page keeps the lobby for the net; training is inside a career */const rd=window.ILM&&window.ILM.ready;   /* the full game loads its career first: the lobby must keep the real one */
   if(rd&&rd.then)rd.then(go,go);else go()}
+
+if(!window.BEGINNER && pcupLinkOpen()){
+  document.title='Penalty_h.e.r.o';
+  for(const [rel,href] of [['manifest','./assets/penalty.webmanifest'],['apple-touch-icon','./assets/penalty-180.png'],['icon','./assets/penalty-192.png']]){
+    document.head.querySelectorAll('link[rel="'+rel+'"]').forEach(el=>el.remove());
+    const link=document.createElement('link');link.rel=rel;link.href=href;document.head.append(link);
+  }
+  const name=document.querySelector('meta[name="apple-mobile-web-app-title"]')||document.createElement('meta');
+  name.name='apple-mobile-web-app-title';name.content='Penalty_h.e.r.o';document.head.append(name);
+}
