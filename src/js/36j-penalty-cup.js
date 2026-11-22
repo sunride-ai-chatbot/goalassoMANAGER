@@ -19,8 +19,8 @@ function pcupEntryHTML(kind){const r=pcupRec();if(kind==='b')return `<section cl
 function pcupRng(seed){let a=seed>>>0;return ()=>{a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296}}
 function pcupHash(s){let h1=0xdeadbeef,h2=0x41c6ce57;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return (h2>>>0).toString(16).padStart(8,'0')+(h1>>>0).toString(16).padStart(8,'0')}
 /* the kicker chose an area, the keeper a direction: where the ball really goes (a better finisher scatters less) and how it ends */
-function pcupResolve(kd,gd,sk,gk,rnd){const q=clamp((sk-50)/45,0,1),c=PEN_DIRS[kd]||PEN_DIRS.D,g=()=>(rnd()+rnd()+rnd()+rnd()-2)*1.732;
-  const x=+(c[0]+g()*(.52-.22*q)).toFixed(2),y=+clamp(c[1]+g()*(.34-.12*q),.1,3).toFixed(2),f=penFrame(x,y),roll=rnd();
+function pcupResolve(kd,gd,sk,gk,rnd,spread=1){const q=clamp((sk-50)/45,0,1),c=PEN_DIRS[kd]||PEN_DIRS.D,g=()=>(rnd()+rnd()+rnd()+rnd()-2)*1.732;
+  const x=+(c[0]+g()*spread*(.52-.22*q)).toFixed(2),y=+clamp(c[1]+g()*spread*(.34-.12*q),.1,3).toFixed(2),f=penFrame(x,y),roll=rnd();
   if(f!=='in')return {out:'miss',how:f,x,y};const z=penZone(x,y),d=gd||'D';if(penDirCol(d)!==penDirCol(z))return {out:'goal',how:'goal',x,y};
   const p=clamp([.84,.4,.1][Math.abs(penDirRow(d)-penDirRow(z))]+(gk-70)*.006-(sk-70)*.007,.04,.95);return roll<p?{out:'miss',how:'save',x,y}:{out:'goal',how:'goal',x,y}}
 /* ---- the throw-away state ---- */
@@ -173,16 +173,25 @@ function pcupDuel(D){const A=D.A,B=D.B;const root=penOverlay({title:pcupTitle(),
     bot.innerHTML=`<div class="pg-who">${penFaceHTML(tk,T.c,'pc'+tk.id)}<div><b>${esc(fullName(tk))}</b><small>בועט עבור ${esc(T.c.short||T.c.name)} · בשער ${esc(O.gk?fullName(O.gk):'השוער')}</small></div></div><div class="pg-hint" id="pgHint"></div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
     const kickNo=k++;penMakeStage(view,'kick',{...penKits(T.c,O.c,A.c.id),number:tk.no||9,name:fullName(tk)}).then(st=>{if(!alive()||!host.isConnected){try{st.kind==='2d'&&st.dispose()}catch(e){}return}
       PG.stage=st;const ld=host.querySelector('.pg-load');if(ld)ld.remove();
-      D.choose(kickNo,side,{host,st,root,taker:tk,T,O,alive}).then(c=>{if(!alive()||!c)return;host.querySelectorAll('.pc-turn').forEach(x=>x.remove());const r=pcupResolve(c.kd,c.gd,T.sk[i]==null?70:T.sk[i],O.gkS,pcupRng(c.seed));try{SFX.whistle()}catch(e){}buzz('kick');
+      D.choose(kickNo,side,{host,st,root,taker:tk,shotSkill:T.sk[i]??70,T,O,alive}).then(c=>{if(!alive()||!c)return;host.querySelectorAll('.pc-turn').forEach(x=>x.remove());const r=pcupResolve(c.kd,c.gd,T.sk[i]==null?70:T.sk[i],O.gkS,pcupRng(c.seed),c.spread);try{SFX.whistle()}catch(e){}buzz('kick');
         st.shoot({x:r.x,y:r.y,how:r.how,dive:c.gd||'C'},penOnce(()=>{if(!alive())return;const mode=D.mine?(D.mine===side?'kick':'keep'):'kick';const fl=penFlash(host,mode,r.how);S[side].push(r.out==='goal'?1:0);side=side==='a'?'b':'a';paint();setTimeout(()=>{fl.remove();next()},penQuick()?0:1300)},penQuick()?0:6000))})})};
   pcupExitBtn(()=>{over=true;D.quit&&D.quit()});penPreload();paint();next();return D}
 /* eight arrows over the stage; resolves with the direction tapped, or with fallback() when the time is up */
 function pcupAsk(ctx,o){return new Promise(res=>{const {host,st,root}=ctx;const hint=root.querySelector('#pgHint'),tEl=root.querySelector('#pgTime');if(hint)hint.textContent=o.label;const turn=document.createElement('div');turn.className='pc-turn';turn.setAttribute('role','status');turn.textContent=o.label;host.appendChild(turn);let done=false,raf=0;const ck=penClock(performance.now());
+  let meter=null;
+  const width=clamp(.025+.095*clamp((ctx.shotSkill-35)/59,0,1)-(ctx.O.gkS-70)*.0006,.018,.14);
+  const start=performance.now();
+  const position=()=>.08+.92*(1-Math.cos((performance.now()-start)*.0036))*.5;
+  if(o.timed){
+    meter=document.createElement('div');meter.className='pg-charge';meter.style.zIndex='9';
+    meter.setAttribute('aria-label','מד דיוק הבעיטה');meter.innerHTML='<span></span><i></i>';
+    meter.firstChild.style.left=(.73-width/2)*100+'%';meter.firstChild.style.width=width*100+'%';host.appendChild(meter);
+  }
   const ARW={U:0,UR:45,R:90,DR:135,D:180,DL:225,L:270,UL:315};const pad=document.createElement('div');pad.className='pg-dirs';pad.innerHTML=Object.keys(PEN_ARROW).map(d=>`<button type="button" data-dir="${d}" aria-label="${d}"><svg viewBox="0 0 24 24" aria-hidden="true" style="transform:rotate(${ARW[d]}deg)"><path d="M12 5l7 8h-4.4v6h-5.2v-6H5z"/></svg></button>`).join('');host.appendChild(pad);
   const aim=penAimPad(host,st,d=>{try{buzz('tap')}catch(e){}fin(d)});
-  const fin=d=>{if(done)return;done=true;cancelAnimationFrame(raf);pad.remove();aim.remove();if(o.after)turn.textContent=o.after;else turn.remove();if(tEl)tEl.style.transform='scaleX(0)';if(hint)hint.textContent=o.after||'';res(d)};PCUP.pick=d=>fin(d);
+  const fin=d=>{if(done)return;done=true;if(meter){ctx.timing=Math.round(100*clamp(Math.max(0,Math.abs(position()-.73)-width/2)/.65,0,1));meter.remove()}cancelAnimationFrame(raf);pad.remove();aim.remove();if(o.after)turn.textContent=o.after;else turn.remove();if(tEl)tEl.style.transform='scaleX(0)';if(hint)hint.textContent=o.after||'';res(d)};PCUP.pick=d=>fin(d);
   pad.addEventListener('click',e=>{const b=e.target.closest('[data-dir]');if(b){buzz('tap');fin(b.dataset.dir)}});
-  (function loop(){if(done)return;if(!ctx.alive()){done=true;pad.remove();aim.remove();turn.remove();return res(null)}const left=1-ck.tick(performance.now())/(o.ms||12000);if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;aim.place();for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}if(left<=0)return fin(o.fallback());raf=requestAnimationFrame(loop)})()})}
+  (function loop(){if(done)return;if(!ctx.alive()){done=true;meter?.remove();pad.remove();aim.remove();turn.remove();return res(null)}const left=1-ck.tick(performance.now())/(o.ms||12000);if(tEl)tEl.style.transform=`scaleX(${Math.max(0,left).toFixed(3)})`;if(meter)meter.lastChild.style.left=position()*100+'%';aim.place();for(const b of pad.children){const c=PEN_ARROW[b.dataset.dir];const [px,py]=st.toScreen(c[0],c[1]);b.style.transform=`translate(${px.toFixed(1)}px,${py.toFixed(1)}px)`}if(left<=0)return fin(o.fallback());raf=requestAnimationFrame(loop)})()})}
 const pcupAnyDir=()=>pick(Object.keys(PEN_DIRS));
 /* ---- two phones ----
    Messages (all carry v:1): guest → hi{team}; host → start{a,b,first} (keys and the skills both phones must use);
@@ -200,10 +209,10 @@ function pcupNetStart(host,code){const P=PCUP;pcupNetStop();const n=P.net={host,
   const onMsg=m=>{if(PCUP!==P||P.net!==n||!m||m.v!==1||!m.f||m.f===n.id)return;
     if(m.t==='hi'&&host){if(n.peer&&m.f!==n.peer)return n.send({t:'full',to:m.f});n.last=Date.now();if(n.state==='over')return;if(n.start)return n.send(n.start);
       const key=String(m.team||''),mine=pcupClub(P.my.key),theirs=pcupClub(key,key===P.my.key);if(!mine||!theirs)return n.send({t:'full',to:m.f,why:'team'});
-      n.peer=m.f;n.peerName=pcupName(m.nickname);n.peerTeam=key;G.me=mine.id;const A=pcupSide(mine),B=pcupSide(theirs);A.key=P.my.key;B.key=key;n.start={t:'start',to:m.f,a:{...wire(A),nickname:pcupName(P.nickname)},b:{...wire(B),nickname:n.peerName},first:Math.random()<.5?'a':'b'};n.send(n.start);return begin(A,B,n.start.first,'a')}
+      n.peer=m.f;n.timed=m.timed===true;n.peerName=pcupName(m.nickname);n.peerTeam=key;G.me=mine.id;const A=pcupSide(mine),B=pcupSide(theirs);A.key=P.my.key;B.key=key;n.start={t:'start',timed:n.timed,to:m.f,a:{...wire(A),nickname:pcupName(P.nickname)},b:{...wire(B),nickname:n.peerName},first:Math.random()<.5?'a':'b'};n.send(n.start);return begin(A,B,n.start.first,'a')}
     if(m.t==='full'&&!host&&m.to===n.id&&!n.duel)return fail(m.why==='team'?'הגרסאות של שני הטלפונים שונות. עדכנו את המשחק ונסו שוב.':'החדר הזה כבר מלא');
     if(m.t==='start'&&!host){if(m.to!==n.id||n.duel||!m.a||!m.b)return;const ca=pcupClub(m.a.key),cb=pcupClub(m.b.key,m.a.key===m.b.key);if(!ca||!cb)return fail('הגרסאות של שני הטלפונים שונות. עדכנו את המשחק ונסו שוב.');
-      n.peer=m.f;n.last=Date.now();n.over=null;n.wantAgain=false;n.theirAgain=false;G.me=cb.id;n.peerName=pcupName(m.a.nickname);return begin(pcupSideFrom(ca,m.a),pcupSideFrom(cb,m.b),m.first==='b'?'b':'a','b')}
+      n.peer=m.f;n.last=Date.now();n.over=null;n.wantAgain=false;n.theirAgain=false;G.me=cb.id;n.timed=m.timed===true;n.peerName=pcupName(m.a.nickname);return begin(pcupSideFrom(ca,m.a),pcupSideFrom(cb,m.b),m.first==='b'?'b':'a','b')}
     if(m.f!==n.peer)return;n.last=Date.now();
     if(m.t==='bye'){if(n.state==='over'){n.over={gone:true};n.theirAgain=false;return pcupPaint()}return fail('היריב עזב את המשחק')}
     if(m.t==='again'){if(n.duel)return;n.theirAgain=true;if(m.team)n.peerTeam=String(m.team);if(host)again();return pcupPaint()}
@@ -211,30 +220,30 @@ function pcupNetStart(host,code){const P=PCUP;pcupNetStop();const n=P.net={host,
     if(m.t==='r'){const K=kickOf(+m.k);if(!K.their&&K.theirH){if(!PEN_DIRS[m.d]||pcupHash(m.d+':'+m.n)!==K.theirH)return fail('הנתונים מהטלפון השני לא תואמים. המשחק הופסק.');K.their={d:m.d,n:String(m.n)}}return step(+m.k)}};
   /* a kick moves on as far as it can: my reveal goes out once the other commit is in, the result once both reveals are known */
   const step=k=>{const K=kickOf(k);if(!K.mine)return;if(K.theirH&&!K.sentR){K.sentR=true;n.send({t:'r',k,d:K.mine.d,n:K.mine.n})}
-    if(K.their&&K.sentR&&K.res){const km=K.kickerMine,res=K.res;K.res=null;const kd=km?K.mine.d:K.their.d,gd=km?K.their.d:K.mine.d,nk=km?K.mine.n:K.their.n,ng=km?K.their.n:K.mine.n;res({kd,gd,seed:parseInt(pcupHash(nk+'|'+ng+'|'+k).slice(0,8),16)})}};
+    if(K.their&&K.sentR&&K.res){const km=K.kickerMine,res=K.res;K.res=null;const kd=km?K.mine.d:K.their.d,gd=km?K.their.d:K.mine.d,nk=km?K.mine.n:K.their.n,ng=km?K.their.n:K.mine.n;const error=Number(nk.split('.')[1]);const spread=n.timed&&Number.isFinite(error)?.7+1.8*clamp(error,0,100)/100:1;res({kd,gd,spread,seed:parseInt(pcupHash(nk+'|'+ng+'|'+k).slice(0,8),16)})}};
   /* the room outlives the duel: nobody sends a new link for a second one */
   const over=won=>{if(PCUP!==P||P.net!==n)return;n.duel=null;n.kicks={};n.start=null;n.state='over';n.wantAgain=false;n.theirAgain=false;n.over={won};P.stage='net';pcupPaint()};
   const again=()=>{if(!host||n.duel||!n.wantAgain||!n.theirAgain)return;
     const mine=pcupClub(P.my.key),theirs=pcupClub(n.peerTeam,n.peerTeam===P.my.key);
     if(!mine||!theirs)return fail('הגרסאות של שני הטלפונים שונות. עדכנו את המשחק ונסו שוב.');
     G.me=mine.id;const A=pcupSide(mine),B=pcupSide(theirs);A.key=P.my.key;B.key=n.peerTeam;
-    n.over=null;n.wantAgain=false;n.theirAgain=false;n.start={t:'start',to:n.peer,a:{...wire(A),nickname:pcupName(P.nickname)},b:{...wire(B),nickname:n.peerName},first:Math.random()<.5?'a':'b'};
+    n.over=null;n.wantAgain=false;n.theirAgain=false;n.start={t:'start',timed:n.timed,to:n.peer,a:{...wire(A),nickname:pcupName(P.nickname)},b:{...wire(B),nickname:n.peerName},first:Math.random()<.5?'a':'b'};
     n.send(n.start);begin(A,B,n.start.first,'a')};
   n.ask=()=>{if(!n||n.duel)return;n.wantAgain=true;n.send({t:'again',team:P.my.key});pcupPaint();if(host)again()};
   const begin=(A,B,first,mine)=>{A.nickname=mine==='a'?pcupName(P.nickname):n.peerName;B.nickname=mine==='b'?pcupName(P.nickname):n.peerName;n.state='play';n.duel=pcupDuel({A,B,first,mine,quit:()=>pcupNetStop(),end:(win,won,aborted)=>{
       if(aborted||won==null){pcupNetStop();if(PCUP){PCUP.stage=pcupBase();pcupPaint()}return}
       pcupResult(won,true);over(won)},
-    choose:async(k,side,ctx)=>{const km=side===mine;const d=await pcupAsk(ctx,{label:km?'אתה בועט: משוך לכיוון השער':'אתה בשער: משוך לכיוון הזינוק',after:'ממתין ליריב…',fallback:km?pcupAnyDir:()=>'D'});if(d==null||!ctx.alive()||P.net!==n)return null;
-      const K=kickOf(k);K.mine={d,n:pcupHash(String(Math.random())+Date.now()+k)};K.kickerMine=km;n.send({t:'c',k,h:pcupHash(d+':'+K.mine.n)});return new Promise(res=>{K.res=res;step(k)})}})};
+    choose:async(k,side,ctx)=>{const km=side===mine;const d=await pcupAsk(ctx,{timed:km&&n.timed,label:km&&n.timed?'כוון ושחרר כשהסמן באזור הלבן':km?'אתה בועט: משוך לכיוון השער':'אתה בשער: משוך לכיוון הזינוק',after:'ממתין ליריב…',fallback:km?pcupAnyDir:()=>'D'});if(d==null||!ctx.alive()||P.net!==n)return null;
+      const K=kickOf(k);K.mine={d,n:pcupHash(String(Math.random())+Date.now()+k)+(km&&n.timed?'.'+ctx.timing:'')};K.kickerMine=km;n.send({t:'c',k,h:pcupHash(d+':'+K.mine.n)});return new Promise(res=>{K.res=res;step(k)})}})};
   pcupChannel(code,onMsg).then(ch=>{if(PCUP!==P||P.net!==n){try{ch.close()}catch(e){}return}n.ch=ch;n.state='open';n.last=Date.now();pcupPaint();
     n.tick=setInterval(()=>{if(PCUP!==P||P.net!==n)return clearInterval(n.tick);
       if(n.state==='over'){n.send(n.wantAgain?{t:'again',team:P.my.key}:{t:'p'});return}
-      if(!n.duel){if(!host)n.send({t:'hi',team:P.my.key,nickname:pcupName(P.nickname)});else if(Date.now()-n.last>600000)fail('אף אחד לא הצטרף לחדר');return}
+      if(!n.duel){if(!host)n.send({t:'hi',timed:true,team:P.my.key,nickname:pcupName(P.nickname)});else if(Date.now()-n.last>600000)fail('אף אחד לא הצטרף לחדר');return}
       if(Date.now()-n.last>30000)return fail('אין תשובה מהיריב. בדקו את החיבור ונסו שוב.');let sent=false;const ks=Object.keys(n.kicks).map(Number).sort((a,b)=>b-a);
       /* say again whatever the other phone may have missed: the open kick, and the reveal of the kick before it */
       for(const k of ks.slice(0,2)){const K=n.kicks[k];if(!K.mine)continue;sent=true;if(K.res)n.send({t:'c',k,h:pcupHash(K.mine.d+':'+K.mine.n)});if(K.sentR)n.send({t:'r',k,d:K.mine.d,n:K.mine.n})}
       if(!sent)n.send({t:'p'})},1200);
-    if(!host)n.send({t:'hi',team:P.my.key,nickname:pcupName(P.nickname)})},e=>{console.warn('pcup net',e);fail(typeof mpAvailable==='function'&&!mpAvailable()&&!window.__pcupNet?'משחק אונליין לא מוגדר בגרסה הזו':navigator.onLine===false?'אין חיבור לאינטרנט. בדקו את החיבור ונסו שוב.':'שירות המשחק ברשת לא זמין כרגע. נסו שוב בעוד כמה דקות.')})}
+    if(!host)n.send({t:'hi',timed:true,team:P.my.key,nickname:pcupName(P.nickname)})},e=>{console.warn('pcup net',e);fail(typeof mpAvailable==='function'&&!mpAvailable()&&!window.__pcupNet?'משחק אונליין לא מוגדר בגרסה הזו':navigator.onLine===false?'אין חיבור לאינטרנט. בדקו את החיבור ונסו שוב.':'שירות המשחק ברשת לא זמין כרגע. נסו שוב בעוד כמה דקות.')})}
 /* opened from a shared link (?pen=CODE): straight to the team choice of that duel */
 /* `?pen=CODE` joins a room; a bare `?pen` is the direct link to the lobby itself */
 function pcupLinkOpen(){try{return new URLSearchParams(location.search).has('pen')}catch(e){return false}}
@@ -250,3 +259,4 @@ if(!window.BEGINNER && pcupLinkOpen()){
   const name=document.querySelector('meta[name="apple-mobile-web-app-title"]')||document.createElement('meta');
   name.name='apple-mobile-web-app-title';name.content='Penalty_h.e.r.o';document.head.append(name);
 }
+
