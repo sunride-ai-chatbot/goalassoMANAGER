@@ -24,12 +24,49 @@ function pcupResolve(kd,gd,sk,gk,rnd){const q=clamp((sk-50)/45,0,1),c=PEN_DIRS[k
   if(f!=='in')return {out:'miss',how:f,x,y};const z=penZone(x,y),d=gd||'D';if(penDirCol(d)!==penDirCol(z))return {out:'goal',how:'goal',x,y};
   const p=clamp([.84,.4,.1][Math.abs(penDirRow(d)-penDirRow(z))]+(gk-70)*.006-(sk-70)*.007,.04,.95);return roll<p?{out:'miss',how:'save',x,y}:{out:'goal',how:'goal',x,y}}
 /* ---- the throw-away state ---- */
-function pcupTeams(){if(PCUP&&PCUP.teams)return PCUP.teams;const out=G.clubs.map(c=>({key:'i:'+c.id,name:c.name,short:c.short||c.name,c1:c.c1,c2:c.c2,str:Math.round(strength(c))}));
-  try{for(const d of blitzClubDefs().slice().sort((a,b)=>b[6]-a[6]).slice(0,24))out.push({key:'e:'+d[0],name:d[0],short:d[0],c1:d[4],c2:d[5],str:Math.round(d[6])})}catch(e){}if(PCUP)PCUP.teams=out;return out}
+function pcupKey(x){
+  if(META[x.key])return 'i:'+x.key;
+  if(/^eu\d+$/.test(x.key))return 'e:'+x.name;
+  return x.key;
+}
+function pcupTeams(){
+  if(!PCUP.teams){
+    const teams=new Map();
+    for(const country of BcatBase())for(const league of country.leagues)for(const x of league.clubs){
+      const key=pcupKey(x);
+      if(!teams.has(key))teams.set(key,{...x,key,short:x.name});
+    }
+    PCUP.teams=Array.from(teams.values());
+  }
+  return PCUP.teams;
+}
+function pcupBadge(t){
+  const spec={...crestDefault(parseInt(pcupHash(t.name).slice(0,8),16)),c1:t.c1,c2:t.c2,tier:'premium'};
+  return '<span aria-hidden="true" style="display:inline-block;width:54px">'+crestSVG(spec,{name:t.short||t.name})+'</span>';
+}
+function pcupPicker(P,attr){
+  const catalog=BcatBase(),countries=catalog.filter(c=>c.leagues.length);
+  const country=countries.find(c=>c.id===P.pickCountry);
+  const league=country?.leagues.find(l=>l.id===P.pickLeague);
+  const flag=c=>c.cup?'★':Bflag(c.id);
+  const back=(k,label)=>'<button class="pc-link" data-pc-picker="'+k+'">'+label+'</button>';
+  const card=(attr,value,art,name)=>`<button type="button" class="pc-team" ${attr}="${esc(value)}"><span style="display:grid;place-items:center;width:54px;margin:auto">${art}</span><strong>${esc(name)}</strong></button>`;
+  if(!country)return '<h3>בחר מדינה</h3><div class="pc-grid">'+countries.map(c=>card('data-pc-country',c.id,flag(c),c.name)).join('')+'</div>';
+  if(!league)return back('countries','חזרה למדינות')+'<h3>'+esc(country.name)+' · בחר ליגה</h3><div class="pc-grid">'+country.leagues.map(l=>card('data-pc-league',l.id,flag(country),l.name)).join('')+'</div>';
+  return back('leagues','חזרה לליגות')+'<h3>'+esc(league.name)+'</h3><div class="pc-grid">'+league.clubs.map(x=>card(attr,pcupKey(x),pcupBadge(x),x.name)).join('')+'</div>';
+}
 /* one club object per key; twin = the same club a second time (both players chose it), under its own id */
 function pcupClub(key,twin){key=String(key||'');const ck=key+(twin?'#2':'');const cache=PCUP.clubs||(PCUP.clubs={});if(cache[ck])return cache[ck];let c=null;
   if(key.slice(0,2)==='i:'){c=G.clubs.find(x=>x.id===key.slice(2))||null;if(c&&twin){c=JSON.parse(JSON.stringify(c));c.id+='_2';G.pseudo[c.id]=c}}
   else if(key.slice(0,2)==='e:'){const d=blitzClubDefs().find(x=>x[0]===key.slice(2));c=d?clubFromDef(d,'b'):null}
+  if(!c){
+    const x=pcupTeams().find(t=>t.key===key);
+    if(x?.def)c=clubFromDef(x.def,'b');
+    else if(x&&(key.startsWith('l:')||key.startsWith('a:'))){
+      const def=key.startsWith('l:')?LEUMIT16.find(d=>d.id===key.slice(2)):{...x,stadium:'אצטדיון '+x.city,cap:3500};
+      if(def){c=buildLeumitClub({...def,id:'pc'+(uid++),short:x.name});G.pseudo[c.id]=c}
+    }else if(x&&key.startsWith('e:')){const def=EURO_CLUBS.find(d=>d[0]===x.name);if(def)c=clubFromDef(def,'b')}
+  }
   if(c)cache[ck]=c;return c}
 /* the five who kick (best finishers of the best eleven first) and the keeper; oi/gi = their places in the squad list, which is the same on every phone */
 function pcupSide(c){try{ensureNumbers(c)}catch(e){}const xi=bestXI(c);const ord=xi.filter(p=>p.pos!=='GK').sort((p,q)=>penShootSkill(q)-penShootSkill(p));const gk=xi.find(p=>p.pos==='GK')||c.players.find(p=>p.pos==='GK')||null;
@@ -67,17 +104,17 @@ function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)
     <button type="button" data-pc-entry="cpu" style="flex:1 1 180px;padding:18px;border:0;border-radius:10px;background:#d5ff48;color:#101710;font:inherit;font-size:1.3em;font-weight:800">מול המחשב</button>
     <button type="button" data-pc-entry="net" style="flex:1 1 180px;padding:18px;border:2px solid #fff3d8;border-radius:10px;background:#101b20;color:#fff3d8;font:inherit;font-size:1.3em;font-weight:800">מול חבר ברשת</button></div></div></main>`;
     return;
-  }const r=pcupRec(),T=pcupTeams();const grid=attr=>`<div class="pc-grid">${T.map(t=>`<button type="button" class="pc-team" ${attr}="${esc(t.key)}">${kitSVG(t,'lg')}<strong>${esc(t.name)}</strong></button>`).join('')}</div>`;
+  }const r=pcupRec();const grid=attr=>pcupPicker(P,attr);
   let body='';
   if(P.stage==='team')body=`<h2>${P.roomTeam?'קבוצה אחרת':'בחר קבוצה'}</h2>${P.roomTeam?'<p class="pc-note">החדר נשאר פתוח. אחרי הבחירה אפשר לצאת למשחק חוזר.</p>':''}${P.join?`<p class="pc-note">הוזמנת לדו־קרב <bdi dir="ltr">${esc(P.join)}</bdi>. בחר קבוצה ונכנסים.</p>`:''}${grid('data-pc-team')}`;
-  else if(P.stage==='mode')body=`<div class="pc-mine">${kitSVG(P.my,'lg')}<div><strong>${esc(P.my.name)}</strong><button type="button" class="pc-link" data-pc-go="team">החלף קבוצה</button></div></div>
+  else if(P.stage==='mode')body=`<div class="pc-mine">${pcupBadge(P.my)}<div><strong>${esc(P.my.name)}</strong><button type="button" class="pc-link" data-pc-go="team">החלף קבוצה</button></div></div>
     <button type="button" class="pc-mode" data-pc-mode="cpu"><b>אימון מול המחשב</b><small>בוחרים יריבה ויוצאים לדו־קרב של חמש בעיטות לכל צד. אתה בועט, ואתה גם בשער.</small></button>
     <button type="button" class="pc-mode" data-pc-mode="net"><b>אונליין מול חבר</b><small>פותחים חדר, שולחים קוד, וכל אחד משחק מהטלפון שלו.</small></button>`;
-  else if(P.stage==='train')body=`<div class="pc-mine">${kitSVG(P.my,'lg')}<div><strong>${esc(P.my.name)}</strong><small>אימון מול המחשב</small></div></div>${P.last?`<p class="pc-note pc-last" role="status">${P.last.won?'ניצחת בדו־קרב.':'הפסדת בדו־קרב.'} אפשר לצאת לעוד אחד.</p>`:''}
+  else if(P.stage==='train')body=`<div class="pc-mine">${pcupBadge(P.my)}<div><strong>${esc(P.my.name)}</strong><small>אימון מול המחשב</small></div></div>${P.last?`<p class="pc-note pc-last" role="status">${P.last.won?'ניצחת בדו־קרב.':'הפסדת בדו־קרב.'} אפשר לצאת לעוד אחד.</p>`:''}
     <button type="button" class="pc-mode" data-pc-cpuopp="?"><b>${P.last?'עוד סיבוב':'מתחילים'}</b><small>חמש בעיטות לכל צד מול יריבה ברמה שלך. אתה בועט, ואתה גם בשער.</small></button><button type="button" class="pc-link" data-pc-x>חזרה למשחק</button>`;
   else if(P.stage==='cpu')body=`<h2>מול מי?</h2><button type="button" class="pc-mode" data-pc-cpuopp="?"><b>יריבה בהגרלה</b><small>קבוצה ברמה דומה לשלך.</small></button>${grid('data-pc-cpuopp')}<button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`;
   else if(P.stage==='net'&&P.net&&P.net.state==='over'){const n=P.net,o=n.over||{};
-    body=`<h2>${o.won?'ניצחת':'הפסדת'}</h2><div class="pc-mine">${kitSVG(P.my,'lg')}<div><strong>${esc(P.my.name)}</strong><button type="button" class="pc-link" data-pc-newteam>החלף קבוצה</button></div></div>
+    body=`<h2>${o.won?'ניצחת':'הפסדת'}</h2><div class="pc-mine">${pcupBadge(P.my)}<div><strong>${esc(P.my.name)}</strong><button type="button" class="pc-link" data-pc-newteam>החלף קבוצה</button></div></div>
     ${o.gone?`<p class="pc-note">היריב יצא מהחדר.</p><button type="button" class="pc-link" data-pc-go="mode">חזרה</button>`
      :`<button type="button" class="pc-mode" data-pc-again ${n.wantAgain?'disabled':''}><b>משחק חוזר</b><small>אותו חדר, אותו חבר — בלי לשלוח קוד מחדש.</small></button>
        <p class="pc-wait" role="status">${n.wantAgain&&n.theirAgain?'מתחיל…':n.wantAgain?'ממתין ליריב…':n.theirAgain?'היריב רוצה עוד אחד.':''}</p>
@@ -89,6 +126,10 @@ function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)
     ${P.only==='net'?(n.code?'<button type="button" class="pc-link" data-pc-go="mode">ביטול</button>':'<button type="button" class="pc-link" data-pc-go="team">החלף קבוצה</button>'):'<button type="button" class="pc-link" data-pc-go="mode">חזרה</button>'}`}
   root.innerHTML=`<header class="pc-top"><button type="button" class="pc-x" data-pc-x aria-label="סגור">×</button><h1>${pcupTitle()}</h1><p>${r.played?`<bdi>${r.wins}</bdi> ניצחונות מ־<bdi>${r.played}</bdi> · רצף <bdi>${r.streak}</bdi> · שיא <bdi>${r.best}</bdi>`:'רק אתה, הכדור והשוער.'}</p></header><div class="pc-body">${body}</div>`}
 function pcupClick(e){const P=PCUP;if(!P)return;const t=e.target.closest('button,[data-pc-team],[data-pc-cpuopp]');if(!t)return;
+  if(t.dataset.pcCountry){P.pickCountry=t.dataset.pcCountry;P.pickLeague=null;return pcupPaint()}
+  if(t.dataset.pcLeague){P.pickLeague=t.dataset.pcLeague;return pcupPaint()}
+  if(t.dataset.pcPicker){P.pickLeague=null;if(t.dataset.pcPicker==='countries')P.pickCountry=null;return pcupPaint()}
+  if(t.dataset.pcTeam||t.dataset.pcEntry||t.dataset.pcNewteam||t.dataset.pcGo){P.pickCountry=null;P.pickLeague=null}
   if(P.landing&&['cpu','net'].includes(t.dataset.pcEntry)){P.entryMode=t.dataset.pcEntry;P.stage='team';return pcupPaint()}if(t.dataset.pcX!=null)return pcupClose();if(t.dataset.pcGo){pcupNetStop();P.roomTeam=false;P.stage=t.dataset.pcGo==='mode'?pcupBase():t.dataset.pcGo;return pcupPaint()}
   if(t.dataset.pcAgain!=null){const n=P.net;if(n&&n.ask)n.ask();return}
   if(t.dataset.pcNewteam!=null){P.roomTeam=true;P.stage='team';return pcupPaint()}
