@@ -216,8 +216,8 @@ function penFlash(host,mode,how){const good=mode==='kick'?how==='goal':how!=='go
    cb({out:'goal'|'miss', how:'goal'|'save'|'post'|'off', auto}) */
 function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.76?'goal':'miss',how:null,auto:true});return}
   const host=penClear(),view=root.querySelector('#pgView'),bot=root.querySelector('#pgBot');host.insertAdjacentHTML('beforeend','<div class="pg-load">השופט מניח את הכדור על הנקודה…</div>');
-  const kick=o.mode==='kick';const tp=o.taker.p,kp=o.keeper&&o.keeper.p;const skill=penShootSkill(tp),gk=penKeepSkill(kp);const myP=kick?tp:kp,myC=kick?o.taker.c:(o.keeper&&o.keeper.c);
-  bot.innerHTML=`<div class="pg-who">${myP?penFaceHTML(myP,myC,'pg'+myP.id+(kick?'k':'g')):''}<div><b>${esc(myP?fullName(myP):'')}</b><small>${kick?`בעיטה <bdi>${Math.round(skill)}</bdi> · מול ${esc(kp?fullName(kp):'השוער')}`:`רפלקסים <bdi>${Math.round(gk)}</bdi> · בועט ${esc(fullName(tp))}`}</small></div></div>
+  const kick=o.mode==='kick';const tp=o.taker.p,kp=o.keeper&&o.keeper.p;const skill=penShootSkill(tp),gk=penKeepSkill(kp);const myP=tp,myC=o.taker.c;
+  bot.innerHTML=`<div class="pg-who">${penFaceHTML(myP,myC,'pg'+myP.id+'k')}<div><b>בועט: ${esc(fullName(tp))}</b><small>בעיטה <bdi>${Math.round(skill)}</bdi> · ${kick?'בשער':'אתה בשער'}: ${esc(kp?fullName(kp):'השוער')}</small></div></div>
     <button type="button" class="pg-skip" id="pgAuto">${kick?'שיבעט לבד':'שיעמוד לבד'}</button><div class="pg-hint" id="pgHint">${kick?'החזק, כוון ושחרר כשהסמן באזור הלבן':'משוך לכיוון שאליו השוער יזנק, לפני הבעיטה'}</div><div class="pg-timer" aria-hidden="true"><i id="pgTime"></i></div>`;
   /* a kick belongs to the overlay and the turn it was started in: once either is gone (the overlay was closed, the next
      kick began) nothing of it may run any more */
