@@ -132,7 +132,7 @@ function pcupPaint(){const root=document.getElementById('pcup');if(!root||!PCUP)
      :`<button type="button" class="pc-mode" data-pc-again ${n.wantAgain?'disabled':''}><b>משחק חוזר</b><small>אותו חדר, אותו חבר — בלי לשלוח קוד מחדש.</small></button>
        <p class="pc-wait" role="status">${n.wantAgain&&n.theirAgain?'מתחיל…':n.wantAgain?'ממתין ליריב…':n.theirAgain?'היריב רוצה עוד אחד.':''}</p>
        <button type="button" class="pc-link" data-pc-go="mode">יציאה מהחדר</button>`}`}
-  else if(P.stage==='net'){const n=P.net||{};body=`<h2>אונליין מול חבר</h2>${n.err?`<p class="pc-err" role="alert">${esc(n.err)}</p>`:''}
+  else if(P.stage==='net'){const n=P.net||{};body=`<h2>אונליין מול חבר</h2>${n.code?'':pcupNameField(P)}${n.err?`<p class="pc-err" role="alert">${esc(n.err)}</p>`:''}
     ${n.code&&n.host?`<p class="pc-note">שלח לחבר את הקוד. המשחק מתחיל כשהוא נכנס.</p><div class="pc-code" dir="ltr">${esc(n.code)}</div><button type="button" class="btn" data-pc-share>שתף קישור</button><p class="pc-wait" role="status">${n.state==='open'?'ממתין לחבר…':'מתחבר…'}</p>`
      :n.code?`<p class="pc-wait" role="status">מתחבר לחדר <bdi dir="ltr">${esc(n.code)}</bdi>…</p>`
      :`<button type="button" class="pc-mode" data-pc-net="host"><b>פתח חדר</b><small>תקבל קוד לשלוח לחבר.</small></button><form class="pc-join" data-pc-joinform><label for="pcCode">יש לך קוד?</label><div><input id="pcCode" inputmode="latin" autocapitalize="characters" autocomplete="off" maxlength="6" dir="ltr" placeholder="ABC123" value="${esc(P.join||'')}"><button type="submit" class="btn">הצטרף</button></div></form>`}
@@ -155,7 +155,14 @@ document.addEventListener('submit',e=>{if(PCUP&&e.target.matches&&e.target.match
 function pcupResult(won,stay){const r=pcupRec();r.played++;if(won){r.wins++;r.streak++;r.best=Math.max(r.best,r.streak)}else r.streak=0;pcupSave(r);if(PCUP&&!stay){PCUP.last={won:!!won};PCUP.stage=pcupBase();pcupPaint()}}
 /* ---- against the computer: the shoot-out of the full game ---- */
 function pcupCpu(opp){const P=PCUP,a=pcupClub(P.my.key);const pool=pcupTeams().filter(t=>t.key!==P.my.key&&t.name!==P.my.name),gap=t=>Math.abs(t.str-P.my.str);const near=pool.filter(t=>gap(t)<=5);const b=opp&&opp!=='?'?pcupClub(opp,opp===P.my.key):pcupClub(pick(near.length?near:pool.slice().sort((x,y)=>gap(x)-gap(y)).slice(0,5)).key);if(!a||!b)return toast('לא הצלחנו לבנות את הקבוצות');
-  const M=pcupMatch(a,b);penShootout(M,a,b,res=>{pcupResult(res.win==='h')});const meta=PG?.root.querySelector('.pg-meta');if(meta&&pcupName(P.nickname))meta.prepend(document.createTextNode(pcupName(P.nickname)+' · '));pcupExitBtn()}
+  const M=pcupMatch(a,b);penShootout(M,a,b,res=>{pcupResult(res.win==='h')});const root=PG?.root,meta=root?.querySelector('.pg-meta'),start=root?.querySelector('#pgGo');
+  if(start){
+    start.insertAdjacentHTML('beforebegin',pcupNameField(P));
+    const input=root.querySelector('[data-pc-name]'),label=document.createElement('bdi');meta?.prepend(label);
+    const nameChanged=()=>{P.nickname=input.value.slice(0,24);label.textContent=pcupName(P.nickname)?pcupName(P.nickname)+' · ':''};
+    input.addEventListener('input',nameChanged);nameChanged();
+  }
+  pcupExitBtn()}
 /* ---- a duel between two people ----
    D: {A,B: pcupSide + owner label, first:'a'|'b', choose(k,side,ctx) → Promise<{kd,gd,seed}>, mine: 'a'|'b'|null (which side this phone plays), end(win)} */
 function pcupDuel(D){const A=D.A,B=D.B;const root=penOverlay({title:pcupTitle(),meta:`<bdi>${esc([A.nickname,A.c.short||A.c.name].filter(Boolean).join(' · '))}</bdi> נגד <bdi>${esc([B.nickname,B.c.short||B.c.name].filter(Boolean).join(' · '))}</bdi>`});const pg=PG;const S={a:[],b:[]};let side=D.first,k=0,over=false;PCUP.duel={S,stop:()=>{over=true}};

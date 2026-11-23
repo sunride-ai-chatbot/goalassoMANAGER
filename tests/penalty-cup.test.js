@@ -48,7 +48,13 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   // against the computer: the shoot-out of the full game, with a way out
   $('[data-pc-mode="cpu"]').click();assert.equal($('#penGame'),null);league($,'il','il1');assert.ok($$('[data-pc-cpuopp]').length>=10,'domestic opponents');const rival=$$('[data-pc-cpuopp]').find(b=>b.dataset.pcCpuopp==='i:mta');rival.click();assert.ok($('#penGame'),'the penalty overlay');assert.match($('#penGame .pg-meta').textContent,/מכבי ת"א|מכבי תל אביב/,'the chosen opponent');assert.ok($('#penGame .pc-quit'),'a way out of the overlay');
   assert.equal(w.eval('G.me'),w.eval('PCUP.clubs[PCUP.my.key].id'),'the chosen club is ours');assert.match($('#penGame .pg-meta').textContent,new RegExp(w.eval('PCUP.my.name').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+  const participant=$('#penGame [data-pc-name]');assert.ok(participant,'editable name before the first penalty, also from inside the game');
+  participant.value='משתתף לבדיקה';participant.dispatchEvent(new w.Event('input',{bubbles:true}));
+  assert.equal(w.eval('PCUP.nickname'),'משתתף לבדיקה');assert.match($('#penGame .pg-meta').textContent,/משתתף לבדיקה/);
+  w.eval("window.__penaltyCast=[];penMakeStage=((original)=>(host,mode,options)=>{window.__penaltyCast.push(options);return original(host,mode,options)})(penMakeStage)");
   $('#pgGo').click();await until(()=>w.eval('!!(PG&&(PG.fire||PG.strike||PG.pick))'),'the first kick');
+  assert.equal(w.eval("(()=>{const o=window.__penaltyCast[0];return o&&Object.values(PCUP.clubs).some(c=>c.players.some(p=>fullName(p)===o.name&&p.no===o.number))})()"),true,'shirt name and number belong to the selected squads');
+  assert.notEqual(w.eval('window.__penaltyCast[0].name'),'משתתף לבדיקה','participant name does not replace the footballer');
   // the stand: three swaying bands of spectators and a few camera flashes, and it answers the kick
   assert.equal($$('#penGame .pg-crowd').length,3,'three bands in the stand');
   // the stand is drawn as paths, one per band and tone, and has to be full: thirteen rows of a few hundred
@@ -146,7 +152,7 @@ function makeBus(){const rooms={};const bus={drop:null,sent:[],factory:()=>(code
   g.eval("Bcreate('mta');Bstate().paperPop=[];try{closeFrontPage(true)}catch(e){}");const bk=g.eval("localStorage.getItem(BK)");assert.ok(bk,'a beginner career is stored');
   assert.ok(G2.$('.pc-entry [data-pcup-train]'),'penalty practice on the beginner home');assert.match(G2.$('.pc-entry').textContent,/אימון פנדלים/);assert.equal(G2.$('#main [data-pcup-open],#main [data-lg-open],#main [data-room-open]'),null,'and no network card');
   assert.ok(G2.$('.bfooter [data-action="entry"]'),'a way back to the entry page');
-  G2.$('[data-pcup-train]').click();await until(()=>G2.$('#penGame'),'straight into a shoot-out');assert.equal(g.eval('!!G.beginner'),false);assert.equal(g.eval('PCUP.only'),'train');assert.equal(g.eval('PCUP.my.name'),'מכבי תל אביב','with his own club');
+  G2.$('[data-pcup-train]').click();await until(()=>G2.$('#penGame'),'straight into a shoot-out');assert.ok(G2.$('#penGame [data-pc-name]'),'training has the name field before the first kick');assert.equal(g.eval('!!G.beginner'),false);assert.equal(g.eval('PCUP.only'),'train');assert.equal(g.eval('PCUP.my.name'),'מכבי תל אביב','with his own club');
   assert.equal(g.eval('G.me'),'pcme');assert.equal(g.eval("club('pcme').players.length"),g.eval("PCUP.keep.G.clubs.find(c=>c.id===PCUP.keep.G.me).players.length"),'the squad of the career, copied');
   {const meta=G2.$('#penGame .pg-meta').textContent,mine=g.eval("club('pcme').short||club('pcme').name");assert.equal(meta.split(mine).length-1,1,'against another club, not against itself: '+meta);assert.match(meta,/אימון פנדלים/)}
   g.document.dispatchEvent(new g.Event('visibilitychange'));g.dispatchEvent(new g.Event('pagehide'));
