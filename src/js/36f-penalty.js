@@ -20,9 +20,23 @@ function penSide(x){return x<-.9?'L':x>.9?'R':'C'}
 /* how hard a ball is to reach: 0 straight at the keeper, 1 the top corner */
 function penCorner(x,y){const ax=Math.abs(x);return clamp((ax-1.1)/2.5,0,1)*.62+clamp(y/PEN_G.h,0,1)*.38*(ax>.9?1:.4)}
 function penSaveP(x,y,gk,bonus){return clamp(.97-penCorner(x,y)*1.06+(gk-70)*.006+(bonus||0),.03,.96)}
+/* Power is committed before resolution; presentation never rolls its own result. */
+function penPoweredSave(x,y,gk,dive,power,roll,catchRoll){
+ const p=clamp(Number(power)||73,30,100),soft=(100-p)/70,side=penDirCol(dive)==='L'?-1:penDirCol(dive)==='R'?1:0;
+ const skill=clamp(gk,1,100)/100,time=48/p*(52.2-41.5)/11;
+ // A slow ball can be read before takeoff; never reverse an airborne dive.
+ const direction=time>=1?Math.sign(x):side,delay=time>=1?.40:(.30-.13*skill);
+ const reaction=Math.max(0,time-delay),destination=direction*(time>=1?Math.min(2.75,Math.abs(x)):2.55);
+ const z=direction*Math.min(Math.abs(destination),reaction*(4.1+skill)),distance=Math.abs(x-z),reach=.62+.20*soft+.18*skill;
+ const reachable=distance<=reach&&y<=1.58+.88*Math.min(1,reaction/.5);
+ const probability=reachable?clamp((.52+.40*soft)*(.65+.35*skill),0,.98):0;
+ const caught=catchRoll<(.12+.72*soft)*(.65+.35*skill)*(1-.65*Math.min(1,distance/reach))*(y>1.7?.65:1);
+ return {saved:roll<probability,catch:caught,power:p,dive:Math.abs(z)<.9?'C':z<0?'L':'R'};
+}
 /* an AI keeper: sometimes he reads the taker, otherwise he picks a side */
 function penKeeperGuess(x,gk){const read=clamp(.12+(gk-65)*.006,.05,.3);if(Math.random()<read)return penSide(x);const r=Math.random();return r<.42?'L':r<.84?'R':'C'}
-function penKickOutcome(x,y,gk){const dive=penKeeperGuess(x,gk);const f=penFrame(x,y);if(f!=='in')return {out:'miss',how:f,dive};
+function penKickOutcome(x,y,gk,power){const dive=penKeeperGuess(x,gk);const f=penFrame(x,y);if(f!=='in')return {out:'miss',how:f,dive};
+  if(power!=null){const k=penPoweredSave(x,y,gk,dive,power,Math.random(),Math.random());return {out:k.saved?'miss':'goal',how:k.saved?'save':'goal',dive:k.dive,power:k.power,catch:k.saved&&k.catch}}
   if(dive===penSide(x)&&Math.random()<penSaveP(x,y,gk))return {out:'miss',how:'save',dive};return {out:'goal',how:'goal',dive}}
 /* an AI taker: better finishers find the corners */
 function penAiShot(skill){const r=Math.random();const side=r<.43?-1:r<.86?1:0;const q=clamp((skill-50)/45,0,1);
@@ -84,7 +98,7 @@ let pen3dMod=null,pen3dBad=false;
 function pen3dOK(){try{if(pen3dBad||typeof WebGLRenderingContext==='undefined'||motionLevel()!=='full'||(G&&G.pen3d===false))return false;
   const any=!!(G&&G.pen3d===true),k=any?'any':'gl';
   if(pen3dOK[k]==null){const c=document.createElement('canvas'),o=any?undefined:{failIfMajorPerformanceCaveat:true};pen3dOK[k]=!!(c.getContext('webgl2',o)||c.getContext('webgl',o))}return pen3dOK[k]}catch(e){return false}}
-function penPreload(){if(!pen3dOK()||pen3dMod)return;try{pen3dMod=import('./assets/penalties29/demo3d/penalty.js').catch(()=>{pen3dBad=true;pen3dMod=null;return null})}catch(e){pen3dBad=true}}
+function penPreload(){if(!pen3dOK()||pen3dMod)return;try{pen3dMod=import('./assets/penalties29/demo3d/penalty.js?v=production9').catch(()=>{pen3dBad=true;pen3dMod=null;return null})}catch(e){pen3dBad=true}}
 function penMakeStage(host,mode,o){const flat=()=>penStage2d(host,mode,o);const pg=PG;
   if(pg&&pg.view3d&&pen3dBad){try{pg.view3d.dispose()}catch(e){}pg.view3d=null}   /* the device proved too slow for it during the last kick */
   if(pg&&pg.view3d){try{pg.view3d.reset(mode,o);return Promise.resolve(pg.view3d)}catch(e){pen3dBad=true;try{pg.view3d.dispose()}catch(e2){}pg.view3d=null}}
@@ -252,7 +266,7 @@ function penKick(o,cb){const root=PG&&PG.root;if(!root){cb({out:Math.random()<.7
           const error=Math.max(0,Math.abs(strength()-.73)-timingWidth/2);
           x+=(Math.random()*2-1)*error*4;y+=(Math.random()*2-1)*error*3;
         }
-        meter.remove();const r=penKickOutcome(x,y,gk);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:6000))};
+        meter.remove();const power=Math.round(strength()*100),r=penKickOutcome(x,y,gk,power);buzz('kick');try{tone(120,.09,'sine',.25)}catch(e){}st.shoot({x,y,how:r.how,dive:r.dive,power,catch:r.catch},penOnce(()=>end({out:r.out,how:r.how,x,y,auto:!!auto&&!touched},st),penQuick()?0:6000))};
       const setAim=ev=>{const r=rect();const touch=ev.pointerType==='touch';const [x,y]=st.fromScreen(ev.clientX-r.left,ev.clientY-r.top-(touch?56:0));aim={x:clamp(x,-4.5,4.5),y:clamp(y,.12,3.1)};touched=true};
       on(host,'pointerdown',ev=>{ev.preventDefault();down=true;heldAt=performance.now();try{host.setPointerCapture(ev.pointerId)}catch(e){}setAim(ev);place()});
       on(host,'pointermove',ev=>{if(down){ev.preventDefault();setAim(ev)}});

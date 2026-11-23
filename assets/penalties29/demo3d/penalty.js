@@ -1,5 +1,5 @@
 import * as T from './vendor/three.js';
-import {filmedTaker} from './filmed-taker.js?v=27';
+import {filmedTaker} from './filmed-taker.js?v=production9';
 import {buildWorld,animateNet} from './world.js?v=28';
 import {makeRosterPlayer,posePlayer,makeBall,applyStrike} from './actors.js?v=24';
 
@@ -19,7 +19,8 @@ export function createPenaltyView(host,opts){
   // what is being played right now: {t, dur, step(u,t), done} — one at a time, queued by the game one call after another
   let reaction=null,reactionStart=0;
   let film=null, shotStart=null, approachClip=2, contactClock=null;
-  let act=null,netT=-1,netZ=0;
+  let act=null,netT=-1,netZ=0,caughtAt=null;
+  const gloveL=new T.Vector3(),gloveR=new T.Vector3(),catchOrigin=new T.Vector3();
   // can this device draw the scene? After half a second of warm-up, 1.2 seconds of frames are timed; under ten frames a
   // second the game is told once (opts.onSlow) and plays later kicks on its flat picture. Time in the background is not counted.
   const perf={t:0,n:0,from:0,skip:false,done:false};const onVis=()=>{perf.skip=true};document.addEventListener('visibilitychange',onVis);
@@ -29,13 +30,13 @@ export function createPenaltyView(host,opts){
     if(perf.n*1000/perf.t<10){try{opts.onSlow&&opts.onSlow()}catch(e){}}}
   const K={z:0,dive:0,side:0,lift:0,landing:0,sway:true};          // keeper pose
   const B={x:SPOT,y:.145,z:0};                           // ball
-  const RUN={x:SPOT-2.5,z:-.52};                         // where the taker waits: behind the ball, a step to the left
+  const RUN={x:SPOT-1.65,z:-.52};                         // where the taker waits: behind the ball, a step to the left
   const R={x:RUN.x,z:RUN.z,speed:0,kick:0,cele:0,phase:0,strike:-1}; // taker
   function disposeObject(object){const geometries=new Set(),materials=new Set(),textures=new Set();
     object.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.skeleton)o.skeleton.dispose();for(const m of (Array.isArray(o.material)?o.material:o.material?[o.material]:[])){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v)}});
     textures.forEach(t=>t.dispose());geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose())}
   function drop(a){if(!a)return;scene.remove(a.group,a.shadow);disposeObject(a.group);disposeObject(a.shadow)}
-  function dispose(){if(disposed)return;disposed=true;cancelAnimationFrame(raf);observer?.disconnect();document.removeEventListener('visibilitychange',onVis);const a=act;act=null;world?.crowdVideo?.dispose();disposeObject(scene);renderer?.dispose();wrap.remove();if(a&&a.done)a.done()}
+  function dispose(){if(disposed)return;disposed=true;cancelAnimationFrame(raf);observer?.disconnect();document.removeEventListener('visibilitychange',onVis);const a=act;act=null;film?.dispose();world?.crowdVideo?.dispose();disposeObject(scene);renderer?.dispose();wrap.remove();if(a&&a.done)a.done()}
   function fail(){dispose();try{opts.onError&&opts.onError()}catch(e){}}
   function cast(o){
     drop(keeper);drop(taker);extras.forEach(drop);extras=[];
@@ -68,9 +69,16 @@ export function createPenaltyView(host,opts){
     posePlayer(taker,{x:R.x,z:R.z,angle:Math.PI/2,speed:R.speed,kick:R.kick,dive:0,celebrate:R.cele,keeper:false,phase:R.speed?R.phase:undefined},clock);
     if(film){
       const afterContact=contactClock===null?0:clock-contactClock;
-      const clip=shotStart===null?clock%1.75:Math.min(6,approachClip+afterContact);
-      const approach=clamp((R.x-RUN.x)/(SPOT-.28-RUN.x));
-      film.pose(clip,R.x+.28*approach,R.z+(.105-(181-104)*3.15/376)*approach,reaction,clock-reactionStart);taker.group.visible=!film.group.visible;
+      const clip=shotStart===null?0:contactClock===null?film.contact*clamp((clock-shotStart)/1.25):film.contact+Math.min(film.duration-film.contact,afterContact*(film.duration-film.contact)/1.15);
+      film.pose(clip,R.x+.28*clamp((R.x-RUN.x)/(SPOT-.28-RUN.x)),0,reaction,clock-reactionStart);taker.group.visible=!film.group.visible;
+    }
+    if(caughtAt!==null){
+      keeper.group.updateMatrixWorld(true);
+      keeper.bones[keeper.names.Lhand].getWorldPosition(gloveL);
+      keeper.bones[keeper.names.Rhand].getWorldPosition(gloveR);
+      gloveL.add(gloveR).multiplyScalar(.5);
+      catchOrigin.lerpVectors(catchOrigin.copy(caughtAt.point),gloveL,clamp((clock-caughtAt.time)/.18));
+      Object.assign(B,{x:catchOrigin.x,y:catchOrigin.y,z:catchOrigin.z});
     }
     ball.ball.position.set(B.x,B.y,B.z);const travel=B.x-SPOT;
     ball.ball.rotation.set(travel*.25,0,-travel*.6);// Project the ball toward the turf along the main floodlight direction.
@@ -99,9 +107,9 @@ export function createPenaltyView(host,opts){
       const d=String(r.dive||'C'),dv=d.indexOf('L')>=0?-1:d.indexOf('R')>=0?1:0,row=d[0]==='U'?2:d[0]==='D'?0:1,reach=r.how==='save';K.side=dv;K.lift=reach?clamp((r.y-.9)/1.6)*.55:[0,.12,.42][row];
       const kz=dv*(reach?clamp(Math.abs(r.x)-.35,.7,3.0):1.9),tx=r.how==='goal'?GX+.9:GX-.05,from={x:SPOT,y:.145,z:0};
       shotStart=clock;
-      play(1.84,u=>{approachClip=2+1.84*u;R.x=RUN.x+(SPOT-.28-RUN.x)*u;R.z=RUN.z+(-.105-RUN.z)*u;R.speed=u<.92?3.1:0;R.phase=u*8;R.kick=0},()=>{R.speed=0;R.strike=0;
-      play(52/12-3.84,u=>{approachClip=3.84+(52/12-3.84)*u;R.strike=u*.62},()=>{approachClip=52/12;contactClock=clock;R.strike=.62;K.sway=false;opts.onContact?.();
-      play(r.style==='chip'?.83:r.style==='power'?.40:.55,u=>{R.strike=.62+.38*clamp(u*1.5);R.kick=0;const e=u;B.x=from.x+(tx-from.x)*e;B.z=from.z+(r.x-from.z)*e;B.y=from.y+(r.y-from.y)*e+Math.sin(u*Math.PI)*(r.style==='chip'?2.1:.35);
+      play(1.25,u=>{approachClip=2+1.84*u;R.x=RUN.x+(SPOT-.28-RUN.x)*u;R.z=RUN.z+(-.105-RUN.z)*u;R.speed=u<.92?3.1:0;R.phase=u*8;R.kick=0},()=>{R.speed=0;R.strike=0;
+      play(.001,u=>{approachClip=3.84+(52/12-3.84)*u;R.strike=u*.62},()=>{approachClip=52/12;contactClock=clock;R.strike=.62;K.sway=false;opts.onContact?.();
+      play(48/Math.max(30,Math.min(100,r.power||73)),u=>{R.strike=.62+.38*clamp(u*1.5);R.kick=0;const e=u;B.x=from.x+(tx-from.x)*e;B.z=from.z+(r.x-from.z)*e;B.y=from.y+(r.y-from.y)*e+Math.sin(u*Math.PI)*(r.style==='chip'?2.1:.35);
         const k=clamp((u-.12)/.7);K.z=kz*ease(k);K.dive=dv?ease(k):0},()=>{
         reaction=r.how==='goal'?'goal':'miss';
         reactionStart=clock;
@@ -117,17 +125,18 @@ export function createPenaltyView(host,opts){
           },complete);
         }
         if(r.how==='goal'){netT=0;netZ=r.x;api.cheer(1);finishFlight(.7,u=>{B.x=p.x+.55*u;B.y=Math.max(.145,p.y-(p.y-.145)*u*u);B.z=p.z},done)}
+        else if(r.how==='save'&&r.catch){caughtAt={time:clock,point:new T.Vector3(p.x,p.y,p.z)};finishFlight(.6,()=>{},done)}
         else if(r.how==='save'){const s=r.x>=0?1:-1;finishFlight(.6,u=>{B.x=p.x-2.6*u;B.z=p.z+s*3.2*u;B.y=Math.max(.145,p.y+1.1*Math.sin(u*Math.PI)-(p.y-.145)*u)},done)}
         else if(r.how==='post'){const s=r.x>=0?-1:1;finishFlight(.65,u=>{B.x=p.x-4.5*u;B.z=p.z+s*1.8*u;B.y=Math.max(.145,p.y+.6*Math.sin(u*Math.PI)-(p.y-.145)*u)},done)}
         else finishFlight(.5,u=>{B.x=p.x+9*u;B.z=p.z+(p.z)*.7*u;B.y=p.y+1.6*u},done)})})})},
     // a new kick in the same stadium
-    reset(m,o){if(disposed)throw new Error('disposed');mode=m;reaction=null;shotStart=null;contactClock=null;approachClip=2;act=null;netT=-1;clock=0;animateNet(world.goals[1],-1,0);Object.assign(K,{z:0,dive:0,side:0,lift:0,landing:0,sway:true});Object.assign(B,{x:SPOT,y:.145,z:0});Object.assign(R,{x:RUN.x,z:RUN.z,speed:0,kick:0,cele:0,phase:0,strike:-1});
+    reset(m,o){if(disposed)throw new Error('disposed');mode=m;reaction=null;caughtAt=null;shotStart=null;contactClock=null;approachClip=2;act=null;netT=-1;clock=0;animateNet(world.goals[1],-1,0);Object.assign(K,{z:0,dive:0,side:0,lift:0,landing:0,sway:true});Object.assign(B,{x:SPOT,y:.145,z:0});Object.assign(R,{x:RUN.x,z:RUN.z,speed:0,kick:0,cele:0,phase:0,strike:-1});
       cast(o||opts);frameCamera();resize()},
     cheer(v){if(world&&world.crowd)world.crowd.cheer=v==null?1:v},
     dispose};
   try{
     renderer=new T.WebGLRenderer({antialias:true,powerPreference:'default'});renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.type=T.PCFSoftShadowMap;
-    const phone=innerWidth<=900;renderer.setPixelRatio(Math.min(devicePixelRatio||1,phone?1.25:1.5));renderer.shadowMap.enabled=true;wrap.append(renderer.domElement);
+    const phone=innerWidth<=900;renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));renderer.shadowMap.enabled=true;wrap.append(renderer.domElement);
     world=buildWorld(scene,renderer);
     // Restrict the shadow camera to the penalty area to resolve bodies and feet cleanly.
     scene.traverse(o=>{if(o.isDirectionalLight&&o.castShadow){o.shadow.mapSize.set(1024,1024);Object.assign(o.shadow.camera,{left:-14,right:14,top:14,bottom:-14});o.target.position.set(45,0,0);o.shadow.camera.updateProjectionMatrix()}});try{world.crowd.dress(opts.kit||'#c6f24e',opts.oppKit||'#e9edf2')}catch(e){}ball=makeBall(scene);
