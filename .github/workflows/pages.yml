@@ -28,6 +28,18 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
       - run: npm test
+      - name: Check out the approved Penalty Hero release
+        uses: actions/checkout@v4
+        with:
+          repository: sunride-ai-chatbot/penalty-hero
+          ref: b49e6f3e7e65fce82cef2cfb81d0b6898c7938b1
+          path: _penalty-hero
+          persist-credentials: false
+      - name: Test and build standalone Penalty Hero
+        working-directory: _penalty-hero
+        run: |
+          npm test
+          npm run build
       - run: |
           mkdir -p _site
           cp ligat-haal-manager.html _site/index.html
@@ -35,6 +47,8 @@ jobs:
           cp version.json _site/version.json
           find assets -maxdepth 1 -type f -exec cp {} _site/ \;
           cp -R assets _site/assets
+      - name: Install standalone Penalty Hero at its existing URL
+        run: node scripts/stage-penalty-hero.mjs _penalty-hero/dist _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

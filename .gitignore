@@ -1,4 +1,6 @@
 node_modules/
+/_site/
+/_penalty-hero/
 .env
 .env.*
 !.env.example
