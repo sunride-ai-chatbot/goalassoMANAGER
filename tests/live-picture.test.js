@@ -65,7 +65,12 @@ async function main(){
   const dlg=$('.bresult');assert.ok(dlg,'result dialog');const cols=[...dlg.querySelectorAll('.bratings-cols>div')];assert.equal(cols.length,2);
   assert.equal(cols[0].querySelector('h4').textContent,M0.hn,'home side first, like the board');assert.equal(cols[1].querySelector('h4').textContent,M0.an);
   for(const c of cols){const rows=[...c.querySelectorAll('li')];assert.ok(rows.length>=11&&rows.length<=16,'everyone who played, got '+rows.length);for(const r of rows){const v=+r.querySelector('.brate').textContent;assert.ok(v>=3&&v<=10);assert.ok(r.querySelector('span').textContent.trim().length>0)}}
-  assert.equal(dlg.querySelectorAll('li.bstar').length,1,'one man of the match');const best=Math.max(...[...dlg.querySelectorAll('.brate')].map(b=>+b.textContent));assert.equal(+dlg.querySelector('li.bstar .brate').textContent,best);
+  assert.equal(dlg.querySelectorAll('li.bmotm').length,1,'one man of the match');const best=Math.max(...[...dlg.querySelectorAll('.brate')].map(b=>+b.textContent));assert.equal(+dlg.querySelector('li.bmotm .brate').textContent,best);
+  // his row is a row like the others. It carried a class the cups' star badge also uses, became a 34 px disc and lost his name: no class
+  // of a ratings row may be styled by a rule written for something else
+  assert.match(dlg.querySelector('li.bmotm span').textContent,/\S+ ⭐/,'his name, then the star');assert.match(dlg.querySelector('.bratings-star strong').textContent,new RegExp(dlg.querySelector('li.bmotm span').textContent.replace(' ⭐','').trim().replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+  const css=[...w.document.querySelectorAll('style')].map(s=>s.textContent).join('\n').replace(/\/\*[\s\S]*?\*\//g,''),rowClasses=new Set([...dlg.querySelectorAll('.bratings li')].flatMap(li=>[...li.classList]));
+  for(const k of rowClasses){const bad=[...css.matchAll(/([^{}]+)\{/g)].flatMap(m=>m[1].split(',')).map(x=>x.trim()).filter(sel=>new RegExp('\\.'+k+'(?![\\w-])').test(sel)&&!/\.bratings/.test(sel));assert.deepEqual(bad,[],'.'+k+' on a ratings row is also styled by: '+bad.join(' | '))}
   const rb=dlg.querySelector('.bresult-board');assert.equal(rb.children[0].querySelector('strong').textContent,M0.hn);assert.equal(rb.querySelector('.sd-h').textContent,String(run('Bstate().last.gh')));assert.equal(rb.querySelector('.sd-a').textContent,String(run('Bstate().last.ga')));
   assert.ok(dlg.querySelector('.bresult-foot [data-bclose]'),'the way on is always in view');
   // scorers, assists and cards stand with the score, each side's under its own half of the board

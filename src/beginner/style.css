@@ -38,7 +38,8 @@ body.beginner{background:radial-gradient(ellipse at 90% 0%,#174c5255,transparent
 .bratings li{display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid #ffffff0d;font-size:15px;line-height:1.3;min-width:0}
 .bratings li span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bratings li small{flex:none;font-size:12px;white-space:nowrap}
-.bratings li.bstar span{color:#ffe08a;font-weight:800}
+/* the man of the match. The row was `li.bstar` until the cups' round star badge took the name `.bstar` (a 34 px gold disc): every man of the match was squeezed into that disc and his name pushed out of it, a 10.0 beside nobody */
+.bratings li.bmotm span{color:#ffe08a;font-weight:800}
 .brate{flex:none;min-width:38px;text-align:center;font:900 15px/1 Heebo,Arial;padding:5px 0;border-radius:7px;background:#31475c;color:#fff;font-variant-numeric:tabular-nums}
 .brate.top{background:#69ead1;color:#06231d}.brate.good{background:#2f9e73;color:#fff}.brate.ok{background:#3b566f}.brate.low{background:#b9483f}
 @media(max-width:600px){.bratings-cols{gap:10px}.bratings li{font-size:13px;gap:6px}.brate{min-width:33px;font-size:13px}.bratings li small{font-size:11px}.beginner .bratings h4{font-size:13px}}
